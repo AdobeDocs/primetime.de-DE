@@ -1,0 +1,53 @@
+---
+description: Sie können Blackouts in Live-Videostreams bearbeiten und alternative Inhalte während einer Blackout-Phase bereitstellen.
+seo-description: Sie können Blackouts in Live-Videostreams bearbeiten und alternative Inhalte während einer Blackout-Phase bereitstellen.
+seo-title: Umgang mit Stromausfällen in Live-Streams
+title: Umgang mit Stromausfällen in Live-Streams
+uuid: df933087-c8a8-49eb-a016-6dfd971c219c
+translation-type: tm+mt
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+
+---
+
+
+# Umgang mit Stromausfällen in Live-Streams{#handle-blackouts-in-live-streams}
+
+Sie können Blackouts in Live-Videostreams bearbeiten und alternative Inhalte während einer Blackout-Phase bereitstellen.
+
+Wenn eine Blackout-Meldung in einem Live-Stream auftritt, verwendet Ihr Player Ereignis-Handler, um die Blackout-Meldung zu erkennen und Benutzern, die nicht berechtigt sind, den Hauptstrom anzuschauen, alternative Inhalte bereitzustellen. Ihr Player erkennt den Beginn und das Ende der Blackout-Phase, wechselt die Wiedergabe vom Hauptstrom in einen alternativen Stream und wechselt zum Hauptstrom zurück, wenn die Blackout-Phase endet.
+
+In Ihrer Client-App abonnieren Sie Blackout-Tags in TVSDK. Nachdem Sie über neue *zeitgesteuerte Metadatenobjekte* benachrichtigt wurden, analysieren Sie die Daten des zeitgesteuerten Metadatenobjekts, um festzustellen, ob das Objekt einen Blackout-Eintrag oder -Ausstieg anzeigt. Bei identifizierten Blackouts rufen Sie die relevanten TVSDK-Elemente auf, um zu Beginn der Blackout-Meldung zu alternativen Inhalten zu wechseln und wieder zum Hauptinhalt zurückzukehren, wenn die Blackout-Meldung beendet ist.
+
+>[!TIP]
+>
+>Die Schlüssel werden weiterhin aus dem Manifest heruntergeladen, bevor der Inhalt wiedergegeben wird.
+
+Wenn ein Benutzer eine Verbindung zu einem Live-Stream herstellt, nachdem die Sperrfrist abgelaufen ist, und dann zu der Sperrfrist zurückkehrt, wird der Inhalt abgespielt.
+
+>[!IMPORTANT]
+>
+>Wenn alle Schlüsselanforderungen fehlschlagen, wird beim Analysieren des Manifests ein Fehler ausgegeben. Wenn einige Anforderungen fehlschlagen und einige erfolgreich sind, versucht TVSDK, den Inhalt wiederzugeben. Wenn TVSDK versucht, einen Abschnitt des Inhalts abzuspielen, aber kein gültiger Schlüssel zum Entschlüsseln dieses Inhalts vorhanden ist, wird ein Fehler zurückgegeben.
+
+So behandeln Sie Blackouts in Live-Streams:
+
+1. Richten Sie Ihre App so ein, dass Blackout-Tags erkannt werden, indem Sie Blackout-Tags in einem Live-Stream-Manifest abonnieren.
+
+   TVSDK erkennt keine Blackout-Tags allein. Sie müssen Blackout-Tags abonnieren, um eine Benachrichtigung zu erhalten, wenn die Tags während der Analyse der Manifestdatei gefunden werden.
+1. Erstellen Sie Ereignis-Listener für Tags, für die Ihr Player abonniert ist.
+
+   Wenn ein Tag auftritt, das Ihr Player abonniert hat (z. B. ein Blackout-Tag), entweder im Vordergrund (Hauptinhalt) oder im Hintergrund (alternativer Inhalt) Stream-Manifests, sendet TVSDK eine `TimedMetadataEvent` und erstellt eine `TimedMetadataObject` für die `TimedMetadataEvent`.
+1. Implementieren Sie Handler für die zeitgesteuerten Metadaten-Ereignis für den Vordergrund- und den Hintergrund-Stream.
+
+   Rufen Sie in diesen Handlern die Beginns- und Endzeiten für die Sperrfrist von den zeitgesteuerten Metadaten-Ereignis-Objekten ab.
+1. Bereiten Sie die `MediaPlayer` für Blackouts vor.
+
+   Wenn der `MediaPlayer` Status &quot;VORBEREITET&quot;auftritt, berechnen und bereiten Sie die Sperrbereiche vor und legen Sie sie auf das Objekt `MediaPlayer` fest.
+
+1. Überprüfen Sie für jede Aktualisierung auf die Abspielposition die Liste von `TimedMetadataObjects`.
+
+   Hier erkennt Ihr Spieler den Blackout-Beginn und das Ende und zeichnet die Zeitdauer des Blackout auf, während er eintritt.
+
+1. Erstellen Sie Methoden zum Wechseln von Inhalten am Beginn und am Ende der Sperrfrist.
+
+   Wenn die Sperrfrist Beginn ist, wechseln Sie den Hauptinhalt in den Hintergrund und wechseln Sie zum alternativen Inhalt, um der Hauptstrom zu werden. Rufen Sie weiterhin das ursprüngliche Manifest im Hintergrund ab und analysieren Sie es und suchen Sie nach dem Tag &quot;Blackout End&quot;, damit der Player wieder am ursprünglichen Stream teilnehmen kann, wenn das Blackout beendet wird.
+
