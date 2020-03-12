@@ -1,0 +1,30 @@
+---
+seo-title: Whitelist für Nicht-SWF-Anwendungen
+title: Whitelist für Nicht-SWF-Anwendungen
+uuid: d4f93b15-e556-4749-95ab-f7f58b1061d7
+translation-type: tm+mt
+source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+
+---
+
+
+# Whitelist für Nicht-SWF-Anwendungen {#non-swf-application-whitelisting}
+
+AIR war die erste Plattform mit einer Whitelist für Anwendungen und dem Namen der Eigenschaft, die Sie für Nicht-SWF-Anwendungen (Adobe AIR, iOS, Android usw.) verwenden. behält seinen ursprünglichen Namen bei: `policy.allowedAIRApplication.n`. Auf diese Weise können die Inhalte von allen Nicht-Flash-Anwendungen wiedergegeben werden, die vor der Veröffentlichung mit einem Signaturzertifikat signiert wurden. Dies wird als *Anwendungs-ID* bezeichnet. Sie können die Anwendungs-ID mithilfe des [!DNL AdobePublisherIDUtility.jar] Tools extrahieren. Diese Whitelist wird auf jedem Client erzwungen, der Primetime DRM unterstützt.
+
+Die Anwendungs-ID wird aus dem öffentlichen Schlüssel des Signaturzertifikats abgeleitet, mit dem eine bestimmte Anwendung signiert wird. Wenn der öffentliche Schlüssel im Zertifikat jemals abläuft, werden alle zuvor in der Positivliste eingetragenen Inhalte nur in Apps wiedergegeben, die mit dem alten Zertifikat signiert wurden, nicht in der neuen App (mit dem neuen Zertifikat signiert).
+
+Wenn Sie sich in einer Situation befinden, in der eine Inhaltsbibliothek für Anwendungen, die mit einem bestimmten Unterschriftszertifikat signiert wurden, freigegeben ist und dieses Zertifikat abläuft, und Sie ein neues Zertifikat (mit einem anderen öffentlichen/privaten Schlüsselzeichen) erhalten, werden Ihre alten Inhalte nicht in der neuen App wiedergegeben, *es sei denn* Sie haben eine der folgenden Aktionen:
+
+* Verwenden Sie einen `PolicyUpdateList` auf Ihrem Lizenzserver, um die eingehende Richtlinie zu überschreiben und einen neuen Eintrag der Whitelist für die Anwendung mit dem Digest Ihres neuen Signaturzertifikats einzufügen.
+* Aktualisieren Sie die Logik Ihres Lizenzservers, um die eingehende Richtlinie zu überschreiben und einen neuen Whitelist-Eintrag für die Anwendung einzufügen.
+* Fordern Sie an, dass der Aussteller des Unterschriftszertifikats Ihnen ein neues Zertifikat ausstellt, das denselben öffentlichen/privaten Schlüssel verwendet wie das vorherige Zertifikat.
+* Wenn Sie HDS-/HLS-Inhalte bereitstellen, die auf einen URL-Endpunkt verweisen, um die Daten abzurufen, `DRMMetadata`können Sie den `DRMMetadata` (mit dem Primetime DRM Java SDK) neu generieren, um eine neue DRM-Richtlinie einzufügen, die einen aktualisierten Eintrag in der AnwendungsWhitelist enthält.
+
+* Komprimieren Sie alle alten Inhalte mit einer neuen DRM-Richtlinie, die den Digest Ihres neuen Signaturzertifikats enthält.
+
+Weitere Informationen finden Sie `policy.allowedAIRApplication.n` unter *Konfigurationseigenschaften* .
+
+>[!NOTE]
+>
+>Für die Whitelisting einer iOS-Anwendung ist ein spezieller Ansatz erforderlich. Siehe [Whitelist Ihrer iOS-Anwendung](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-whitelist-your-ios-application.md) im *TVSDK for iOS-Programmierhandbuch*.
