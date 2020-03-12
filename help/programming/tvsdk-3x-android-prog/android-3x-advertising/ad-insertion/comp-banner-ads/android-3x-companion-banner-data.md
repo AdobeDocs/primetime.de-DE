@@ -1,0 +1,50 @@
+---
+description: Der Inhalt eines AdAsset beschreibt ein begleitendes Banner.
+seo-description: Der Inhalt eines AdAsset beschreibt ein begleitendes Banner.
+seo-title: Begleitbannerdaten
+title: Begleitbannerdaten
+uuid: f54aecea-5e11-45dd-97d0-5774ca631a4d
+translation-type: tm+mt
+source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+
+---
+
+
+# Begleitbannerdaten {#companion-banner-data}
+
+Der Inhalt eines AdAsset beschreibt ein begleitendes Banner.
+
+<!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
+
+Jeder `AdAsset` enthält Informationen zur Anzeige des Assets.
+
+<table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
+ <thead> 
+  <tr> 
+   <th colname="col1" class="entry"> <b>Verfügbare Informationen </b></th> 
+   <th colname="col2" class="entry"> <b>Beschreibung</b> </th> 
+  </tr> 
+ </thead>
+ <tbody> 
+  <tr> 
+   <td colname="col1"> width </td> 
+   <td colname="col2"> Breite des Begleitbanners in Pixel. </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> height </td> 
+   <td colname="col2"> Höhe des Begleitbanners in Pixel. </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> Ressourcentyp </td> 
+   <td colname="col2">Der Ressourcentyp für dieses begleitende Banner: 
+    <ul id="ul_A067787FE49E4B6095BE0AC1D447DBB3"> 
+     <li id="li_02B7224C67004095B3F6E50FD21E507E">html: Die Daten sind im HTML-Code enthalten. </li> 
+     <li id="li_5F37E14472424F808C6094F42009E676">iframe: Die Daten sind eine iframe-URL (src). </li> 
+    </ul> </td> 
+  </tr> 
+  <tr> 
+   <td colname="col1"> statische URL </td> 
+   <td colname="col2"> <p>Manchmal enthält das Begleitbanner auch eine <span class="codeph"> statischeURL</span> , die eine direkte URL zum Bild oder zu einer <span class="codeph"> .swf</span> -Datei (Flash-Banner) darstellt. </p> <p>Wenn Sie kein HTML oder iframe verwenden möchten, können Sie stattdessen eine direkte URL zu einem Bild oder einer SWF verwenden, um das Banner auf der Flash-Bühne anzuzeigen. In diesem Fall können Sie die <span class="codeph"> statischeURL</span> verwenden, um das Banner anzuzeigen. </p> <p>Wichtig:  Sie müssen überprüfen, ob die statische URL eine gültige Zeichenfolge ist, da diese Eigenschaft möglicherweise nicht immer verfügbar ist. </p> </td> 
+  </tr> 
+ </tbody> 
+</table>
