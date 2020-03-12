@@ -1,0 +1,25 @@
+---
+description: Nachdem Sie das MediaResource-Objekt erfolgreich geladen haben, erstellt TVSDK eine Instanz der MediaPlayerItem-Klasse, um Zugriff auf diese Ressource zu gewähren.
+seo-description: Nachdem Sie das MediaResource-Objekt erfolgreich geladen haben, erstellt TVSDK eine Instanz der MediaPlayerItem-Klasse, um Zugriff auf diese Ressource zu gewähren.
+seo-title: Info zur MediaPlayerItem-Klasse
+title: Info zur MediaPlayerItem-Klasse
+uuid: 2d37f358-d158-481b-81d5-27546e9c2e0e
+translation-type: tm+mt
+source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+
+---
+
+
+# Info zur MediaPlayerItem-Klasse {#about-the-mediaplayeritem-class}
+
+Das MediaPlayer-Objekt stellt Ihren Medienplayer dar. Ein MediaPlayerItem-Element stellt Audio- oder Videodateien auf Ihrem Player dar.
+
+Nachdem Sie das MediaResource-Objekt erfolgreich geladen haben, erstellt TVSDK eine Instanz der MediaPlayerItem-Klasse, um Zugriff auf diese Ressource zu gewähren.
+
+Die `MediaResource` stellt eine Anforderung dar, die von der Anwendungsebene an die `MediaPlayer` Instanz zum Laden von Inhalten gesendet wird.
+
+Das `MediaPlayer` Programm löst die Medienressource, lädt die zugehörige Manifestdatei und analysiert das Manifest. Dies ist der asynchrone Teil des Ressourcenladevorgangs. Die `MediaPlayerItem` Instanz wird erstellt, nachdem die Ressource aufgelöst wurde, und diese Instanz ist eine aufgelöste Version eines `MediaResource`. TVSDK bietet Zugriff auf die neu erstellte `MediaPlayerItem` Instanz über `MediaPlayer.CurrentItem`.
+
+>[!TIP]
+>
+>Sie müssen warten, bis die Ressource erfolgreich geladen wurde, bevor Sie auf das Medienplayer-Element zugreifen können.
