@@ -1,0 +1,34 @@
+---
+description: Der Kreativ-Umpackungsdienst (CRS) stellt sicher, dass ein Nicht-HLS-Anzeigenkreativ in HLS-Streams ordnungsgemäß wiedergegeben werden kann. Der Manifestserver ruft CRS auf, wenn eine Nicht-HLS-Anzeige auftritt.
+seo-description: Der Kreativ-Umpackungsdienst (CRS) stellt sicher, dass ein Nicht-HLS-Anzeigenkreativ in HLS-Streams ordnungsgemäß wiedergegeben werden kann. Der Manifestserver ruft CRS auf, wenn eine Nicht-HLS-Anzeige auftritt.
+seo-title: Übersicht über CRS
+title: Übersicht über CRS
+uuid: 3ae75fa7-397f-47ba-8e3d-50543ca25458
+translation-type: tm+mt
+source-git-commit: 4788a8de8ba47d7f448967066e1bd0fb73fdb7a8
+
+---
+
+
+# Übersicht über CRS {#overview-of-crs}
+
+Der Kreativ-Umpackungsdienst (CRS) stellt sicher, dass ein Nicht-HLS-Anzeigenkreativ in HLS-Streams ordnungsgemäß wiedergegeben werden kann. Der Manifestserver ruft CRS auf, wenn eine Nicht-HLS-Anzeige auftritt.
+
+>[!NOTE]
+>
+>CRS ist standardmäßig deaktiviert. Wenden Sie sich an Ihren technischen Kundenbetreuer von Adobe, um CRS für Ihr Konto zu aktivieren.
+>
+>Informationen zum Aktivieren von CRS in TVSDK-Apps finden Sie im Thema CRS in TVSDK-Anwendungen *aktivieren* im Programmierhandbuch für Ihre Plattform. Beispiel für Android 3.4 finden Sie unter CRS in TVSDK-Anwendungen [aktivieren](../../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-transcoding/android-3x-ad-transcoding.md)
+
+CRS bereitet das HTTP Live Streaming (HLS) und seine kreativen Elemente für den Inhaltsstream vor und fügt ID3-Pakete für die clientseitige Anzeigenverfolgung ein. Es transkodiert MP4-, FLV- und WebM-Dateien, die von Werbeservern, Werbenetzwerken und Agenturservern von Drittanbietern empfangen wurden, in das HLS-Format.
+
+Wenn beim Einfügen von Adobe Primetime-Anzeigen ein Nicht-HLS-Anzeigenkreativ auftritt, wird es zur Umverpackung an CRS gesendet, was in der Regel nicht länger als drei Minuten dauert. CRS sendet das transkodierte Werbekreativelement zur zukünftigen Verwendung an den CDN-Server. Das heißt **`just-in-time (JIT) repackaging`**. Sie können Werbescreativen auch transkodieren, bevor sie benötigt werden. Verwenden Sie dazu die [Neu-Verpackungs-API](../../dynamic-ad-insertion/creative-repackaging-service/api-repackage.md) . Das heißt *`asynchronous repackaging`*.
+
+Ihr technischer Kundenbetreuer von Adobe kann auch einige Standardverhalten von CRS ändern, wenn ein anderes Verhalten besser für Ihre Anwendung geeignet ist. Diese sind:
+
+* Priorität von Werbeformaten.
+
+   Der `MediaFiles` Abschnitt einer VAST/VMAP-Antwort kann Kreative mit verschiedenen `MediaFile` Typen enthalten. Standardmäßig wählt der Manifestserver eine Auswahl nach einem festen Satz von Prioritäten ( `application/x-mpegURL`, `application/vnd.apple.mpegURL`, `video/mp4`, `video/x-flv,video/webm`). Adobe kann die Prioritäten für Ihr Konto ändern.
+* Dauer der Zielgruppe der Anzeige.
+
+   Der Manifestserver erkennt die Zielgruppen- und Anzeigedauer aus der Inhaltswiedergabeliste und sendet sie an das CRS. Adobe kann dieses Verhalten ändern, sodass CRS immer eine feste Dauer verwendet, die Sie für Ihr Konto angeben.
