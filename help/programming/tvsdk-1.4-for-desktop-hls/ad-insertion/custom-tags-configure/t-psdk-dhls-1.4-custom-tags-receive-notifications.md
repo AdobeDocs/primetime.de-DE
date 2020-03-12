@@ -1,0 +1,59 @@
+---
+description: Um Benachrichtigungen über Tags im Manifest zu erhalten, registrieren Sie die entsprechenden Ereignis-Listener.
+seo-description: Um Benachrichtigungen über Tags im Manifest zu erhalten, registrieren Sie die entsprechenden Ereignis-Listener.
+seo-title: Hinzufügen Listener für zeitgesteuerte Metadaten-Benachrichtigungen
+title: Hinzufügen Listener für zeitgesteuerte Metadaten-Benachrichtigungen
+uuid: 419f4204-e3c3-4608-beb4-4cd259c8474d
+translation-type: tm+mt
+source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+
+---
+
+
+# Hinzufügen Listener für zeitgesteuerte Metadaten-Benachrichtigungen{#add-listeners-for-timed-metadata-notifications}
+
+Um Benachrichtigungen über Tags im Manifest zu erhalten, registrieren Sie die entsprechenden Ereignis-Listener.
+
+Sie können zeitgesteuerte Metadaten überwachen, indem Sie auf die folgenden Ereignis achten, die Ihre Anwendung über die zugehörige Aktivität informieren:
+
+* `MediaPlayerItemEvent.ITEM_CREATED`: Die anfängliche Liste von `TimedMetadata` Objekten ist nach dem Erstellen des `MediaPlayerItem` Objekts verfügbar.
+
+   Dieses Ereignis benachrichtigt Ihre Anwendung in diesem Fall.
+
+* `MediaPlayerItemEvent.ITEM_UPDATED`: Bei Live-/linearen Streams, bei denen die Manifest-/Wiedergabeliste regelmäßig aktualisiert wird, können in der aktualisierten Wiedergabeliste/dem Manifest zusätzliche benutzerdefinierte Tags angezeigt werden, sodass zusätzliche `TimedMetadata` Objekte der `MediaPlayerItem.timedMetadata` Eigenschaft hinzugefügt werden können.
+
+   Dieses Ereignis benachrichtigt Ihre Anwendung in diesem Fall.
+
+* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: Jedes Mal, wenn ein neues `TimedMetadata` Objekt erstellt wird, wird dieses Ereignis vom MediaPlayer ausgelöst.
+
+   Dieses Ereignis wird nicht für das `TimedMetadata` Objekt ausgelöst, das während der Initialisierungsphase erstellt wurde.
+
+1. Implementieren Sie die entsprechenden Listener.
+
+   ```
+   private function onItemCreated(event:MediaPlayerItemEvent):void { 
+       var timedMetadataCollection:Vector.<TimedMetadata> = event.item.timedMetadata; 
+       // process the timed metadata collection 
+   } 
+   
+   private function onItemUpdated(event:MediaPlayerItemEvent):void { 
+       var timedMetadataCollection:Vector.<TimedMetadata> = event.item.timedMetadata; 
+       // process the timed metadata collection 
+   } 
+   
+   private function onTimedMetadataAvailable(event:TimedMetadataEvent):void { 
+       var timedMetadata:TimedMetadata = event.timedMetadata; 
+       // process timed metadata 
+   }
+   ```
+
+1. Registrieren Sie die Ereignis-Listener.
+
+   ```
+   player.addEventListener(MediaPlayerItemEvent.ITEM_CREATED, onItemCreated); 
+   player.addEventListener(MediaPlayerItemEvent.ITEM_UPDATED, onItemUpdated); 
+   player.addEventListener(TimedMetadataEvent.TIMED_METADATA_AVAILABLE,  
+                           onTimedMetadataAvailable);
+   ```
+
+ID3-Metadaten werden durch die gleichen gesendet `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`. Dies sollte jedoch keine Verwirrung stiften, da Sie die `type` Eigenschaft eines TimedMetadata-Objekts verwenden können, um zwischen TAG und ID3 zu unterscheiden. Weitere Informationen zu ID3-Tags finden Sie unter [ID3-Tags](../../../tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md).
