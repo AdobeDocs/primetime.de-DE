@@ -1,0 +1,53 @@
+---
+description: Sie können ein Steuerelement der Benutzeroberfläche für die Lautstärke einrichten.
+seo-description: Sie können ein Steuerelement der Benutzeroberfläche für die Lautstärke einrichten.
+seo-title: Volumensteuerung bereitstellen
+title: Volumensteuerung bereitstellen
+uuid: c51e99b6-efd1-414e-9ef7-77bd53e0d6c0
+translation-type: tm+mt
+source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+
+---
+
+
+# Volumensteuerung bereitstellen{#provide-volume-control}
+
+Sie können ein Steuerelement der Benutzeroberfläche für die Lautstärke einrichten.
+
+1. Warten Sie, bis sich die MediaPlayer-Instanz in einem gültigen Status für diesen Befehl befindet.
+
+   Jeder Status außer RELEASED ist gültig.
+1. Rufen Sie die Lautstärkesatzmethode auf der `MediaPlayer` Instanz auf, um die Lautstärke festzulegen.
+
+   ```
+   public function set volume(value:Number):void
+   ```
+
+   Der Wert für das Volumen entspricht dem beantragten Volumen, ausgedrückt als Anteil des Höchstvolumens, wobei 0 stumm und 1 das Höchstvolumen ist.
+
+   <table id="table_144A2B1260374FBE8D976194F602DDC7"> 
+   <thead> 
+   <tr> 
+      <th colname="col1" class="entry"> Wenn das angegebene Volumen </th> 
+      <th colname="col2" class="entry"> Das resultierende Volumen ist </th> 
+   </tr> 
+   </thead>
+   <tbody> 
+   <tr> 
+      <td colname="col1"> Kleiner als 0 </td> 
+      <td colname="col2"> 0 </td> 
+   </tr> 
+   <tr> 
+      <td colname="col1"> Zwischen 0 und 1 </td> 
+      <td colname="col2"> Das angegebene Volumen </td> 
+   </tr> 
+   <tr> 
+      <td colname="col1"> Größer als 1 </td> 
+      <td colname="col2"> Der durch 100 geteilte Wert, der auf einen der folgenden Werte eingestellt ist: 
+      <ul id="ul_8C2282F0EDC44A408820F5768709214F"> 
+      <li id="li_B00BC6F4812D4000891358F762C8E492">Das Ergebnis, wenn es zwischen 0 und 1 liegt </li> 
+      <li id="li_03B7F30662554F299320040CAC2DEB7A">1, wenn das Ergebnis größer als 1 ist </li> 
+      </ul> <p>Tipp:  Diese Logik verarbeitet Werte, die von Clients basierend auf früheren Versionen der <span class="codeph">Wortgruppen/primetime-sdk-name</span>bereitgestellt werden, wobei die Volumenwerte zwischen 0 und 100 liegen. </p> </td> 
+   </tr> 
+   </tbody> 
+   </table>
