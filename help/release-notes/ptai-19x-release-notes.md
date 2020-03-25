@@ -2,7 +2,7 @@
 title: PTAI 19.11.1 - Versionshinweise
 description: Die Versionshinweise zu PTAI 19.11.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2019.
 translation-type: tm+mt
-source-git-commit: 8c1aa935c3ca75c41de82d52908054c109d1160b
+source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
 
 ---
 
@@ -133,7 +133,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
    * Neues Verhalten: Der SSAI-Bootstrap-URL wurde ein neuer Parameter vttdisk mit den akzeptierten Werten true und false hinzugefügt
       * vttdisk=true: EXT-X-DISCONTINUITY-Tags werden vor jeder eingefügten Anzeige und nach dem letzten Segment der eingefügten Werbeunterbrechung in das WebVTT-Manifest eingefügt, wobei das Verhalten für Audio-/Video- und Nur-Audio-Manifeste übereinstimmt
       * vttdisk=false (siehe vorheriges Verhalten): Entfernen Sie nur im WebVTT-Manifest EXT-X-DISCONTINUITY-Tags, die vor jeder eingefügten Anzeige und nach dem letzten Segment der eingefügten Werbeunterbrechung eingefügt werden.
-      * Wenn der vttdisk-Parameter weggelassen wird oder einen anderen Wert als true/false hat, lautet der Standardwert vttdisk true (wahr)
+      * Wenn der vttdisk-Parameter ausgelassen wird oder einen anderen Wert als true/false hat, lautet der Standardwert vttdisk true (wahr)
 * SAI: Sicherheitsaktualisierungen und Updates der Softwareversion
    * Java: Aktualisierung der Java-Version zur Unterstützung zusätzlicher ChiffrierSuites für Anzeigenaufrufe, die über TLS 1.2 (HTTPS) ausgelöst werden
 
@@ -159,7 +159,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
 
 **Was:** Komponente der Benutzeroberfläche für Primetime- und Entscheidungsfindung
 
-* Korrektur des Problems mit der Kalender-Benutzeroberfläche, bei dem der Benutzer kein Datum über den 31. Dezember 2018 hinaus aus der Kalenderkomponente auswählen konnte, während ein Campaign gehandelt oder ein Bericht abgerufen wurde.
+* Korrektur des Problems mit der Kalender-Benutzeroberfläche, bei dem der Benutzer kein Datum über den 31. Dezember 2018 hinaus aus der Kalenderkomponente auswählen konnte, während eine Kampagne weitergeleitet oder ein Bericht abgerufen wurde.
 
 ### Version 19.1.2
 
@@ -200,4 +200,3 @@ ZD#37503 - JSON-Antworten für die CRS-Regeln werden zwischengespeichert, um die
 **PTAI 19.7.1**
 
 Keine neue Einschränkung hinzugefügt.
-
