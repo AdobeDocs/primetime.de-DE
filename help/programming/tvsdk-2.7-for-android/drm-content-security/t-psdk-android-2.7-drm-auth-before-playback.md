@@ -5,7 +5,7 @@ seo-title: DRM-Authentifizierung vor der Wiedergabe
 title: DRM-Authentifizierung vor der Wiedergabe
 uuid: 6b4fbcfb-95fd-4591-bbb2-a17afd783383
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 16b88f07468811f2c84decb1324b0c5bd2372131
 
 ---
 
@@ -48,26 +48,25 @@ In diesem Beispiel können Sie `DRMHelper` Methoden verwenden, um den Inhalt der
 
 1. Implementieren Sie die Rückrufe im `DRMLoadMetadataListener`.
 
-       Die Datei &quot;loadDRMMetadata&quot;ruft diese Ereignis-Handler auf.
-       
- &quot;     java
-     public interface DRMLoadMetadataListener {
- public void onLoadMetadataUrlStart();     
-     public void onLoadMetadataUrlStart();
-       
- /**     *
- * @param authNeeded     
-     *, ob DRM-Authentifizierung erforderlich ist.
-       * @param drmMetadata
-     * die analysierte DRMMetadata erhalten.    */
-     public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata);
-       public void onLoadMetadataUrlError();
-       }
-     
- &quot;     
-     
-     Weitere Details zu den Handlern finden Sie hier:
+   Die `loadDRMMetadata` ruft diese Ereignis-Handler auf.
+
+   ```java
+   public interface DRMLoadMetadataListener { 
    
+       public void onLoadMetadataUrlStart(); 
+   
+       /** 
+       * @param authNeeded 
+       * whether DRM authentication is needed. 
+       * @param drmMetadata 
+       * the parsed DRMMetadata obtained.    */ 
+       public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
+       public void onLoadMetadataUrlError(); 
+   } 
+   ```
+
+   Im Folgenden finden Sie weitere Informationen zu den Handlern:
+
    * `onLoadMetadataUrlStart` erkennt, wann das Laden der Metadaten-URL begonnen hat.
    * `onLoadMetadataUrlComplete` erkennt, wann das Laden der Metadaten-URL abgeschlossen ist.
    * `onLoadMetadataUrlError` gibt an, dass das Laden der Metadaten fehlgeschlagen ist.
