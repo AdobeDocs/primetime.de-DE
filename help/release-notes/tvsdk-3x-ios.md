@@ -2,7 +2,7 @@
 title: TVSDK 3.11 für iOS-Versionshinweise
 description: TVSDK 3.11 für iOS-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK iOS 3.11.
 translation-type: tm+mt
-source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
+source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
 
 ---
 
@@ -45,7 +45,7 @@ iOS 13-Kompatibilität und Verarbeitung der iOS 13 UIWebView-API-Deaktivierung.
 
 **iOS TVSDK 3.7**
 
-Hotfix für ein Szenario, bei dem die Wiedergabe gestoppt wurde, wenn gleichzeitig eine große Anzahl von Anforderungen zur Anzeigenauflösung gestellt wurde.
+Hotfix für ein Szenario, in dem die Wiedergabe gestoppt wurde, wenn gleichzeitig eine große Anzahl von Anforderungen zur Anzeigenauflösung gestellt wurde.
 
 **iOS TVSDK 3.6**
 
@@ -183,7 +183,6 @@ In der `PTSDKConfig` Klasse wurde die forceHTTPS-API hinzugefügt.
 Die `PTSDKConfig` Klasse stellt Methoden zum Erzwingen von SSL für Anforderungen bereit, die an Adobe Primetime-Anzeigen-Entscheidungsfindungs-, DRM- und Video-Analytics-Server gesendet werden. Weitere Informationen finden Sie unter `forceHTTPS` und `isForcingHTTPS` -Methoden für diese Klasse. Wenn ein Manifest über HTTPS geladen wird, behält TVSDK die Inhaltsverwendung von HTTPS bei und berücksichtigt diese Verwendung, wenn relative URLs aus diesem Manifest geladen werden.
 
 >[!NOTE] Anforderungen an Drittanbieter-Domänen wie Anzeigenverfolgungspixel, Inhalts- und Anzeigen-URLs und ähnliche Anforderungen werden nicht geändert. Es liegt in der Verantwortung der Inhaltsanbieter und Anzeigenserver, URLs bereitzustellen, die über HTTPS unterstützt werden.
-> 
 
 **Version 1.4.18**
 
@@ -218,7 +217,6 @@ Primetime iOS TVSDK unterstützt jetzt VPAID 2.0-JavaScript-Kreative, um eine um
 **Version 1.4.13**
 
 >[!NOTE] Das Nielsen-Modul wurde aus dem TVSDK-Build entfernt, das TVSDK wird demnächst mit einem neuen Nielsen-Integrationsmodul aktualisiert.
-
 
 **Ad Fallback, Dissy-Verkettung in der Anzeigenauswahllogik (Zendesk #3103)**
 
@@ -342,7 +340,7 @@ Ein zeitweilig auftretender Absturz wurde behoben, der auftrat, wenn die STOP-Me
 * **Ticket#37080** - Duplikat-Anfragen für Manifestaufrufe.
 Korrektur der Duplikat-Anfragen, die während der Wiedergabe für Manifest-URLs gestellt wurden. TVSDK führt jetzt einen Aufruf pro Manifest durch.
 
-* **Ticket#37** - CRS-Normalisierungsregel schlägt mit eq-Übereinstimmungstyp fehl. Es wurde ein Fall behoben, bei dem der Player beim Auftreten der letzten Normalisierungsregel für Hostnamen mit dem Übereinstimmungstyp &quot;eq&quot;abstürzte.
+* **Ticket#37** - CRS-Normalisierungsregel schlägt mit eq-Übereinstimmungstyp fehl. Es wurde ein Fall behoben, bei dem der Player bei Auftreten der letzten Normalisierungsregel für Hostnamen mit dem Übereinstimmungstyp &quot;eq&quot;abstürzte.
 
 **Version 3.1**
 
@@ -810,7 +808,7 @@ Das Problem, bei dem die Wiedergabe fehlschlug, nachdem eine AES-verschlüsselte
 
 * (ZD #22074) - AUDVAST-Absturz unter iOS einmal pro Minute
 
-Dieses Problem wurde behoben, indem die Behandlung von VAST-Anzeigen-Tags von Drittanbietern, die ungültige Zeichen in der URL enthalten, verbessert wurde.
+Dieses Problem wurde behoben, indem die Handhabung von VAST-Anzeigentags von Drittanbietern, die ungültige Zeichen in der URL enthalten, verbessert wurde.
 
 * (ZD #22257) - TVSDK kann DRM-Stream nicht wiedergeben
 
@@ -889,7 +887,7 @@ Dieses Problem wurde behoben, indem TVSDK die Fehlerantwort als Fehler an die An
 
 In der aktuellen Implementierung wurden Ausweichanzeigen übersprungen und nicht neu verpackt, es sei denn, diese Anzeigen haben das Format m3u8. Dieses Problem wurde behoben, indem auch die Unterstützung für das Umpacken von Fallback-Anzeigen hinzugefügt wurde.
 
-* (ZD #19770) - Das TVSDK kann keine geschützten AES-Inhalte mit 302-Umleitung wiedergeben
+* (ZD #19770) - Das TVSDK kann keine geschützten AES-Inhalte mit 302-Umleitungen wiedergeben
 
 Das Umleitungsproblem wurde behoben, da die Umleitungs-URL von cleanConnectionData gelöscht wurde, bevor sie zur Analyse des Manifests verwendet werden konnte.
 
@@ -961,7 +959,7 @@ Alle Warnungen wurden behoben.
 
 * Zendesk #3875 - Tabulator-S stürzt während der Wiedergabe ab
 
-Rückgängigmachen der Abhängigkeit von OKHTTP auf Auditude für CRS, da TVSDK jetzt direkt die HTTPLILLconnection statt curl verwendet. Das Problem wurde durch Löschen von Ausnahmen behoben, bevor ein weiterer JNI-Aufruf durchgeführt wurde.
+Rückgängigmachen der Abhängigkeit von OKHTTP auf Auditude für CRS, da TVSDK jetzt direkt die httpurlconnection statt curl verwendet. Das Problem wurde durch Löschen von Ausnahmen behoben, bevor ein weiterer JNI-Aufruf durchgeführt wurde.
 
 * (Zendesk #4487) - Tracking Linear Kanal of Content
 
@@ -1108,9 +1106,11 @@ TVSDK unterstützt das Ping von URLs zur Verfolgung von Werbeunterbrechungen und
 ## Gerätezertifizierung und -unterstützung {#device-certification-and-support}
 
 >[!NOTE]
-Die folgenden Funktionen werden im TVSDK **nicht** unterstützt:
-* Langsames Bewegen auf jeder Plattform oder Version.
-* Live-Trick-Spiel.
+>
+>Die folgenden Funktionen werden im TVSDK **nicht** unterstützt:
+>
+>* Langsames Bewegen auf jeder Plattform oder Version.
+>* Live-Trick-Spiel.
 
 
 **Version 1.4.43**
