@@ -3,7 +3,7 @@ seo-title: Demo zum Verwendungsmodell aktivieren
 title: Demo zum Verwendungsmodell aktivieren
 uuid: 43930ebb-e936-4f48-990d-7ad19992e326
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 6e949c2f88deef88f0d0ac95b18c006da1c89d2f
 
 ---
 
@@ -15,12 +15,10 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
    Wenn Sie Inhalte mit dem Befehlszeilenwerkzeug von Media Packager verpacken, geben Sie Folgendes ein:
 
    ```
-   java -jar AdobeMediaPackager.jar [
-   
-<i>source_file</i>] [<i>dest_file</i>] -k RI_UsageModelDemo=true
+   java -jar AdobeMediaPackager.jar [<i>source_file</i>] [<i>dest_file</i>] -k RI_UsageModelDemo=true
+   ```
 
-```
->[!NOTE] {class="- topic/note "}
+>[!NOTE] {class=&quot;- topic/note &quot;
 >
->If you do not activate the optional demo mode at packaging time, the license server issues a license based on the first valid DRM policy it processes.
+>Wenn Sie den optionalen Demo-Modus nicht während der Paketerstellung aktivieren, gibt der Lizenzserver eine Lizenz aus, die auf der ersten gültigen DRM-Richtlinie basiert, die er verarbeitet.
 
