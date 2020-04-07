@@ -5,7 +5,7 @@ seo-title: Mit Cookies arbeiten
 title: Mit Cookies arbeiten
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
-source-git-commit: ad58732842eb651514a47dd565e31e3d98a84c46
+source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
 
 ---
 
@@ -64,8 +64,9 @@ So arbeiten Sie mit Cookies:
    `config.setNetworkConfiguration(networkConfiguration)`
 
    >[!NOTE]
-   Setzen Sie nach dem Setzen dieses &#39;setReadSetCookieHeader&#39; auf false die Cookies für die Schlüsselanforderungen mithilfe des JAVA-Cookie-Managers.
    >
+   >Setzen Sie nach dem Setzen dieses &#39;setReadSetCookieHeader&#39; auf false die Cookies für die Schlüsselanforderungen mithilfe des JAVA-Cookie-Managers.
+
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
 Diese Callback-API wird bei jeder Aktualisierung von C++-Cookies (Cookies, die von der HTTP-Antwort stammen) ausgelöst. Die Anwendung muss diesen Rückruf abhören und kann ihren JAVA CookieStore entsprechend aktualisieren, damit ihre Netzwerkaufrufe in JAVA die Cookies wie folgt verwenden können:
 
