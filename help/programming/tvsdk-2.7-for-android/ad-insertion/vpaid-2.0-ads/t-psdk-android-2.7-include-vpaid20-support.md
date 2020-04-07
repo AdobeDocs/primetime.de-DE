@@ -5,7 +5,7 @@ seo-title: Implementierung der VPAID 2.0-Integration
 title: Implementierung der VPAID 2.0-Integration
 uuid: fa5b9cdd-e684-4656-91b7-50781dc59e23
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 25f97c8d296f71deddc8f9d12b97007ddf73f603
 
 ---
 
@@ -43,26 +43,21 @@ So fügen Sie VPAID 2.0-Unterstützung hinzu:
    >Darüber hinaus sollten Sie Ihre benutzerdefinierte AnzeigenAnsicht nur erstellen, wenn Ihr Player den Status &quot;VORBEREITT&quot;aufweist.
    >
    >
-   >Entsorgen Sie die Ansicht der benutzerdefinierten Anzeige nur bei Aufruf des Zurücksetzens. Beispiel:    >
+   >Entsorgen Sie die Ansicht der benutzerdefinierten Anzeige nur bei Aufruf des Zurücksetzens. Beispiel:
    >
    >
-   ```>
+   ```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
    >       ... 
    >} 
+   >```
+   >
+   >Bevor Sie Ihre benutzerspezifische Anzeigendatei freigeben, müssen Sie sie schließlich aus der Ansicht `FrameLayout`entfernen. Beispiel:
    >
    >
-   ```   >
-   >
-
-
-
-   >Bevor Sie Ihre benutzerspezifische Anzeigendatei freigeben, müssen Sie sie schließlich aus der Ansicht `FrameLayout`entfernen. Beispiel:    >
-   >
-   >
-   ```>
-   if (_playerFrame != null) 
-      _playerFrame.removeAllViews(); 
    ```
+   >if (_playerFrame != null) 
+   >       _playerFrame.removeAllViews(); 
+   >```
