@@ -5,7 +5,7 @@ seo-title: Medienressource erstellen
 title: Medienressource erstellen
 uuid: f34a11a3-dac2-405e-8632-1d9617cc019d
 translation-type: tm+mt
-source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+source-git-commit: 1b7ec3759561159c55018b4b81f896ecc99a25e8
 
 ---
 
@@ -20,48 +20,48 @@ Die MediaResource-Klasse stellt den Inhalt dar, der von der MediaPlayer-Instanz 
 
    Der `MediaResource` Konstruktor erfordert die folgenden Parameter:
 
-   <table id="table_22886D6770FB45E99D35D0B90E6CC302"> 
-      <thead> 
-      <tr> 
-      <th colname="col1" class="entry"> Konstruktor-Parameter </th> 
-      <th colname="col2" class="entry"> Beschreibung </th> 
-      </tr> 
+   <table id="table_22886D6770FB45E99D35D0B90E6CC302">
+      <thead>
+      <tr>
+      <th colname="col1" class="entry"> Konstruktor-Parameter </th>
+      <th colname="col2" class="entry"> Beschreibung </th>
+      </tr>
       </thead>
-      <tbody> 
-      <tr> 
-      <td colname="col1"> <span class="codeph"> url </span> </td> 
-      <td colname="col2"> Eine Zeichenfolge, die die URL der Manifest-/Wiedergabeliste des Mediums darstellt. </td> 
-      </tr> 
-      <tr> 
-      <td colname="col1"> <span class="codeph"> type </span> </td> 
-      <td colname="col2"> Eines der folgenden Mitglieder der <span class="codeph"> MediaResource.Type- </span> Enum, entsprechend dem angegebenen Dateityp: 
-      <ul id="ul_C286ED3C31364B858A1C9AF3356E9282"> 
-      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li> 
-      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> - ISO-Basismedienformat (MP4) </li> 
-      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH </span> - Beschreibung der MPEG-DASH-Medienpräsentation (MPD) </li> 
-      </ul> </td> 
-      </tr> 
-      <tr> 
-      <td colname="col1"> <span class="codeph"> metadata </span> </td> 
-      <td colname="col2"> Eine Instanz der <span class="codeph"> Metadata- </span> Klasse (eine wörterbuchartige Struktur), die zusätzliche Informationen über den Inhalt enthält, der geladen werden soll, z. B. alternative Inhalte oder Anzeigeninhalte, die in den Hauptinhalt platziert werden sollen. Wenn Sie Werbung verwenden, richten Sie <span class="codeph"> AuditudeSettings ein, </span> bevor Sie diesen Konstruktor verwenden (siehe <a keyref="ad-insertion-metadata"></a>). </td> 
-      </tr> 
-      </tbody> 
+      <tbody>
+      <tr>
+      <td colname="col1"> <span class="codeph"> url </span> </td>
+      <td colname="col2"> Eine Zeichenfolge, die die URL der Manifest-/Wiedergabeliste des Mediums darstellt. </td>
+      </tr>
+      <tr>
+      <td colname="col1"> <span class="codeph"> type </span> </td>
+      <td colname="col2"> Eines der folgenden Mitglieder der <span class="codeph"> MediaResource.Type- </span> Enum, entsprechend dem angegebenen Dateityp:
+      <ul id="ul_C286ED3C31364B858A1C9AF3356E9282">
+      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li>
+      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> - ISO-Basismedienformat (MP4) </li>
+      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH </span> - Beschreibung der MPEG-DASH-Medienpräsentation (MPD) </li>
+      </ul> </td>
+      </tr>
+      <tr>
+      <td colname="col1"> <span class="codeph"> metadata </span> </td>
+      <td colname="col2"> Eine Instanz der <span class="codeph"> Metadata- </span> Klasse (eine wörterbuchartige Struktur), die zusätzliche Informationen über den Inhalt enthält, der geladen werden soll, z. B. alternative Inhalte oder Anzeigeninhalte, die in den Hauptinhalt platziert werden sollen. Wenn Sie Werbung verwenden, richten Sie <span class="codeph"> AuditudeSettings ein, </span> bevor Sie diesen Konstruktor verwenden. </td>
+      </tr>
+      </tbody>
    </table>
 
    >[!IMPORTANT]
    >
-   >TVSDK unterstützt die Wiedergabe nur für bestimmte Inhaltstypen. Wenn Sie versuchen, einen anderen Inhaltstyp zu laden, löst TVSDK ein Ereignis mit Fehler aus.
+   >TVSDK unterstützt die Wiedergabe nur für bestimmte Inhaltstypen. Wenn Sie versuchen, einen anderen Inhaltstyp zu laden, löst TVSDK ein Ereignis aus, bei dem ein Fehler auftritt.
    >
    >Bei MP4-Video-on-Demand-Inhalten (VOD) unterstützt TVSDK keine Trick-Wiedergabe, adaptive Bitrate (ABR)-Streaming, Anzeigeneinfügung, Untertitel oder DRM.
 
    Mit dem folgenden Code wird eine `MediaResource` Instanz erstellt:
 
    ```java
-   // To do: Create metadata here 
-   MediaResource res = new MediaResource( 
-     "https://www.example.com/video/some-video.m3u8",  
-     MediaResource.Type.HLS, 
-     metadata); 
+   // To do: Create metadata here
+   MediaResource res = new MediaResource(
+     "https://www.example.com/video/some-video.m3u8",
+     MediaResource.Type.HLS,
+     metadata);
    ```
 
    Nach diesem Schritt können Sie jederzeit mithilfe von `MediaResource` Accessoren (Gettern) den Typ, die URL und die Metadaten der Ressource überprüfen.
