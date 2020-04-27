@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
+source-git-commit: e41213acf027e4dc4d016ef31c2d3d1665f54dfc
 
 ---
 
@@ -486,7 +486,7 @@ Dieser Abschnitt enthält eine Zusammenfassung des Problems, das in der TVSDK 3.
 
 * ZD #31533 - Audiowiedergabe auf Android, nachdem die App in den Hintergrund gesendet wurde.
 
-   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player sich im Status &quot;VORBEREITT&quot;befindet), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
+   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player den Status &quot;VORBEREITET&quot;aufweist), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
 
 **Android TVSDK 2.5.5**
 
