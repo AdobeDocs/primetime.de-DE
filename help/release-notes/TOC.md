@@ -2,9 +2,9 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Release Notes
+user-guide-title: Primetime-Versionshinweise
 translation-type: tm+mt
-source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
+source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 
 ---
 
@@ -19,7 +19,7 @@ source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
    + [TVSDK 3.11 für iOS-Versionshinweise](tvsdk-3x-ios.md)
    + [TVSDK 1.4 für iOS-Versionshinweise](tvsdk-1-4-ios.md)
 + TVSDK für Android {#tvsdk-android}
-   + [TVSDK 3.10 für Android-Versionshinweise](tvsdk-3x-android.md)
+   + [TVSDK 3.11 für Android-Versionshinweise](tvsdk-3x-android.md)
    + [TVSDK 2.7 für Android-Versionshinweise](tvsdk-27-android.md)
    + [TVSDK 2.4.1 für Android-Versionshinweise](tvsdk-24-android.md)
    + [TVSDK 1.4 für Android-Versionshinweise](tvsdk-1-4-android.md)
