@@ -1,21 +1,21 @@
 ---
-title: TVSDK 3.10 für Android-Versionshinweise
-seo-title: TVSDK 3.10 für Android-Versionshinweise
-description: TVSDK 3.10 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.10
-seo-description: TVSDK 3.10 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.10
+title: TVSDK 3.11 für Android-Versionshinweise
+seo-title: TVSDK 3.11 für Android-Versionshinweise
+description: TVSDK 3.11 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.10
+seo-description: TVSDK 3.11 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.11
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: c4d5b2d5c942a96eadb8f40203ce25a29fe3e1ae
+source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 
 ---
 
 
-# TVSDK 3.10 für Android-Versionshinweise {#tvsdk-for-android-release-notes}
+# TVSDK 3.11 für Android-Versionshinweise {#tvsdk-for-android-release-notes}
 
-TVSDK 3.10 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.10.
+TVSDK 3.11 für Android Versionshinweise beschreiben neue oder geänderte Funktionen, gelöste und bekannte Probleme und Geräteprobleme in TVSDK Android 3.11.
 
 Der Android-Referenzplayer ist im Verzeichnis samples/ Ihrer Distribution im Lieferumfang von Android TVSDK enthalten. In der zugehörigen Datei README.md wird beschrieben, wie Sie den Referenz-Player erstellen.
 
@@ -35,11 +35,20 @@ Die umfassenden Funktionen, die unterstützt und nicht unterstützt werden, find
 
 <!-- ## New features {#new-features} -->
 
-## Android TVSDK 3.10
+## Android TVSDK 3.11
 
-Die aktuelle Version konzentriert sich auf die Behebung der wichtigsten Kundenprobleme, wie im Abschnitt [gelöste Probleme](#resolved-issues) beschrieben.
+**Box (Protection System specific Header, PSSH), Abrufen zulässig**
+
+TVSDK ermöglicht jetzt das Abrufen des Schutzsystem-spezifischen Kopfzeilenfelds, das mit der aktuell geladenen Medienressource verknüpft ist. Neue API `getPSSH()` wurde hinzugefügt `com.adobe.mediacore.drm.DRMManager`.
+Weitere Informationen finden Sie unter [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
+
+Die wichtigsten in der aktuellen Version behobenen Kundenprobleme werden im Abschnitt [gelöste Probleme](#resolved-issues) beschrieben.
 
 ### Neue Funktionen und Verbesserungen in früheren Versionen
+
+**Android TVSDK 3.10**
+
+Diese Version konzentrierte sich auf die Behebung der wichtigsten Kundenprobleme, wie im Abschnitt [gelöste Probleme](#resolved-issues) beschrieben.
 
 **Android TVSDK 3.9**
 
@@ -204,12 +213,17 @@ Android TVSDK v2.5.3 Angebot die folgenden Updates und API-Änderungen.
 * API-Änderungen:
 
    * Ein neues Ereignis CookiesUpdatedEvent wird hinzugefügt. Er wird vom Medienplayer ausgelöst, wenn sein Cookie aktualisiert wird.
+
    * Eine neue API wird zu NetworkConfiguration::set/ getCustomUserAgent() hinzugefügt, um einen benutzerdefinierten Benutzeragent zu verwenden.
+
    * Eine neue API wird zu NetworkConfiguration::set/ getEncodedUrlForTracking hinzugefügt, um die Kodierung von unsicheren Zeichen zu erzwingen.
+
    * Eine neue API wird zu NetworkConfiguration::getNetworkDownVerificationUrl() hinzugefügt, um im Falle eines Failover eine URL für die Netzwerküberprüfung festzulegen.
+
    * Eine neue Eigenschaft wird TextFormat::handleSpaceAsAlphaNum hinzugefügt, die definiert, ob Leerzeichen bei der Anzeige von Beschriftungen als alphanumerisch behandelt werden sollen.
 
 * Änderungen in SizeAvailableEvent: Zuvor gaben die Methoden getHeight() und getWidth() von SizeAvailableEvent in 2.5.2 die Frame-Höhe und die Frame-Breite zurück, die vom Medienformat zurückgegeben wurden. Jetzt gibt es Ausgabehöhe und -breite zurück, die vom Decoder zurückgegeben werden.
+
 * Änderungen im Pufferverhalten: Das Pufferverhalten wird geändert. Es bleibt dem App-Entwickler überlassen, was er tun möchte, wenn der Puffer leer ist. 2.5.3 verwendet die Wiedergabepuffergröße bei einer leeren Puffersituation.
 
 **Version 2.5.2**
@@ -223,21 +237,33 @@ Die wichtigen neuen Funktionen, die in Android 2.5.1 veröffentlicht wurden.
 * **Leistungsverbesserungen** Die neue TVSDK 2.5.1 Architektur bietet eine Reihe von Leistungsverbesserungen. Basierend auf Statistiken aus einer Drittanbieter-Benchmarking-Studie bietet die neue Architektur eine 5fache Reduzierung der Startzeit und 3,8fache Reduzierung der Dropdown-Rahmen im Vergleich zum Branchendurchschnitt:
 
    * **Sofort für VOD und live - Wenn Sie Sofortzugriff aktivieren, initialisiert und puffert das TVSDK Medien vor dem Beginn der Wiedergabe.** Da Sie mehrere MediaPlayerItemLoader-Instanzen gleichzeitig im Hintergrund starten können, können Sie mehrere Streams puffern. Wenn ein Benutzer den Kanal ändert und der Stream ordnungsgemäß gepuffert wurde, wird die Wiedergabe sofort auf den Beginn des neuen Kanals wiedergegeben. TVSDK 2.5.1 unterstützt auch Instant On für **Live** Streams. Die Live-Streams werden erneut gepuffert, wenn das Live-Fenster verschoben wird.
+
    * **Verbesserte ABR-Logik -** Die neue ABR-Logik basiert auf der Pufferlänge, der Änderungsrate der Pufferlänge und der gemessenen Bandbreite. Dadurch wird sichergestellt, dass die ABR die richtige Bitrate wählt, wenn die Bandbreite schwankt, und auch die Anzahl der auftretenden Bitratenwechsel optimiert wird, indem die Rate überwacht wird, mit der sich die Pufferlänge ändert.
+
    * **Teilweiser Segmentdownload/Untersegmentierung - TVSDK verringert die Größe der einzelnen Fragmente weiter, um so schnell wie möglich Beginn abspielen zu können.** Das zugehörige Fragment muss alle zwei Sekunden über einen Schlüsselrahmen verfügen.
+
    * **Verzögerte Anzeigenauflösung -** TVSDK wartet nicht auf die Auflösung von Nicht-Preroll-Anzeigen, bevor die Wiedergabe gestartet wird, wodurch die Startzeit verringert wird. APIs wie Suchen und Trick-play sind immer noch nicht zulässig, bis alle Anzeigen aufgelöst sind. Dies gilt für VOD-Streams, die mit CSAI verwendet werden. Vorgänge wie Suchen und Vorwärts sind erst nach Abschluss der Anzeigenauflösung zulässig. Bei Live-Streams kann diese Funktion nicht für die Anzeigenauflösung während eines Live-Ereignisses aktiviert werden.
+
    * **Persistente Netzwerkverbindungen -** Diese Funktion ermöglicht es TVSDK, eine interne Liste persistenter Netzwerkverbindungen zu erstellen und zu speichern. Diese Verbindungen werden für mehrere Anforderungen wiederverwendet, anstatt für jede Netzwerkanforderung eine neue Verbindung zu öffnen und anschließend zu zerstören. Dadurch wird die Effizienz erhöht und die Latenz im Netzwerkcode verringert, was zu einer schnelleren Wiedergabe führt.
 Wenn TVSDK eine Verbindung öffnet, fordert es den Server auf, eine Verbindung *aufrechtzuerhalten* . Einige Server unterstützen diese Art der Verbindung möglicherweise nicht. In diesem Fall greift TVSDK zurück, um für jede Anforderung erneut eine Verbindung herzustellen. Auch wenn persistente Verbindungen standardmäßig aktiviert sind, verfügt TVSDK jetzt über eine Konfigurationsoption, damit Apps persistente Verbindungen bei Bedarf deaktivieren können.
+
    * **Paralleler Download -** Das parallele Herunterladen von Video und Audio statt in Serie reduziert die Startverzögerungen. Diese Funktion ermöglicht die Wiedergabe von HLS Live- und VOD-Dateien, optimiert die verfügbare Bandbreitennutzung von einem Server, verringert die Wahrscheinlichkeit, in Puffersituationen zu gelangen, und minimiert die Verzögerung zwischen Download und Wiedergabe.
+
    * **Parallele Anzeigendownloads - TVSDKs rufen Anzeigen parallel zur Inhaltswiedergabe ab, bevor sie auf die Werbeunterbrechungen zutreffen. Dadurch wird eine nahtlose Wiedergabe von Anzeigen und Inhalten ermöglicht.**
 
 * **Wiedergabe**
 
    * **MP4 Content Play-back -** MP4-Kurzclips müssen nicht neu transkodiert werden, um innerhalb von TVSDK wiedergegeben zu werden.
-Hinweis: ABR-Switching, Trick Play, Anzeigeneinfügung, späte Audiobindung und Untersegmentierung werden für die MP4-Wiedergabe nicht unterstützt.
+      > [!NOTE]
+      >
+      > ABR-Switching, Trick Play, Anzeigeneinfügung, späte Audiobindung und Untersegmentierung werden für die MP4-Wiedergabe nicht unterstützt.
+
    * **Trick play with adaptive bit rate (ABR) -** Diese Funktion ermöglicht TVSDK, während der Trick Play-Modus zwischen iFrame-Streams zu wechseln. Sie können Profil ohne iFrame verwenden, um Tricks mit geringeren Geschwindigkeiten auszuführen.
+
    * **Glättere Trick-Wiedergabe -** Diese Verbesserungen verbessern die Benutzerfreundlichkeit:
+
       * Adaptive Auswahl der Bitrate und Bildrate während der Trick-Wiedergabe, basierend auf Profil von Bandbreite und Puffer
+
       * Verwendung des Hauptstreams anstelle des IDR-Streams, um eine schnelle Wiedergabe mit bis zu 30 fps zu erzielen.
 
 * **Inhaltsschutz**
@@ -247,14 +273,15 @@ Hinweis: ABR-Switching, Trick Play, Anzeigeneinfügung, späte Audiobindung und 
 * **Workflow-Unterstützung**
 
    * **Integration der direkten Rechnungsstellung -** Hiermit werden Rechnungsmetriken an das Adobe Analytics-Back-End gesendet, das von Adobe Primetime für vom Kunden verwendete Streams zertifiziert wurde.
-
-      TVSDK sammelt automatisch Metriken, wobei der Kaufvertrag des Kunden eingehalten wird, um regelmäßige Nutzungsberichte zu erstellen, die für die Abrechnung erforderlich sind. Auf jedem Stream-Beginn-Ereignis verwendet TVSDK die Adobe Analytics-Dateneinfüge-API, um Rechnungsmetriken wie Inhaltstyp, durch Anzeigeneinfügung aktivierte Flags und DRM-aktivierte Flags - je nach Dauer des abrechnungsfähigen Streams - an die Adobe Analytics Primetime-Report Suite zu senden. Dies beeinträchtigt oder wird nicht in die eigenen Adobe Analytics Report Suites oder Server-Aufrufe des Kunden aufgenommen. Auf Anfrage wird dieser Bericht zur Rechnungsnutzung regelmäßig an Kunden gesendet. Dies ist die erste Phase der Abrechnungsfunktion, die nur die Nutzungsabrechnung unterstützt. Sie kann mithilfe der in der Dokumentation beschriebenen APIs auf Grundlage des Kaufvertrags konfiguriert werden. Diese Funktion ist standardmäßig aktiviert. Um diese Funktion zu deaktivieren, lesen Sie das Referenz-Player-Beispiel.
+   TVSDK sammelt automatisch Metriken, wobei der Kaufvertrag des Kunden eingehalten wird, um regelmäßige Nutzungsberichte zu erstellen, die für die Abrechnung erforderlich sind. Auf jedem Stream-Beginn-Ereignis verwendet TVSDK die Adobe Analytics-Dateneinfüge-API, um Rechnungsmetriken wie Inhaltstyp, durch Anzeigeneinfügung aktivierte Flags und DRM-aktivierte Flags - je nach Dauer des abrechnungsfähigen Streams - an die Adobe Analytics Primetime-Report Suite zu senden. Dies beeinträchtigt oder wird nicht in die eigenen Adobe Analytics Report Suites oder Server-Aufrufe des Kunden aufgenommen. Auf Anfrage wird dieser Bericht zur Rechnungsnutzung regelmäßig an Kunden gesendet. Dies ist die erste Phase der Abrechnungsfunktion, die nur die Nutzungsabrechnung unterstützt. Sie kann mithilfe der in der Dokumentation beschriebenen APIs auf Grundlage des Kaufvertrags konfiguriert werden. Diese Funktion ist standardmäßig aktiviert. Um diese Funktion zu deaktivieren, lesen Sie das Referenz-Player-Beispiel.
 
    * **Verbesserte Failover-Unterstützung -** Zusätzliche Strategien wurden implementiert, um die unterbrechungsfreie Wiedergabe fortzusetzen, obwohl Host-Server, Wiedergabelistendateien und Segmente ausfallen.
+
 
 * **Werbung**
 
    * **Moat-Integration -** Unterstützung für Anzeigenanzeigbarkeitsmessung von Moat.
+
    * **Begleitbanner -** Neben einer linearen Anzeige werden begleitende Banner angezeigt, die nach dem Ende der Anzeige oft auf der Ansicht angezeigt werden. Diese Banner können vom Typ &quot;html&quot;(ein HTML-Snippet) oder &quot;iframe&quot;(eine URL zu einer iframe-Seite) sein.
 
 * **Analytics**
@@ -265,17 +292,18 @@ Hinweis: ABR-Switching, Trick Play, Anzeigeneinfügung, späte Audiobindung und 
 
    * getHeight()- und getWidth()-Methoden von SizeAvailableEvent geben nun die Ausgabe in Höhe bzw. Breite zurück. Das Anzeigeseitenverhältnis kann wie folgt berechnet werden:
 
-      SizeAvailableEvent e;
+   ```java
+   SizeAvailableEvent e;
+   DAR = e.getWidth()/ e.getHeight();
+   ```
 
-      DAR = e.getWidth()/ e.getHeight();
+   Das Seitenverhältnis der Datenspeicherung in Bezug auf die Breite und Höhe der Breite kann auch zur Berechnung der Rahmenbreite und -höhe verwendet werden:
 
-      Das Seitenverhältnis der Datenspeicherung in Bezug auf die Breite und Höhe der Breite kann auch zur Berechnung der Rahmenbreite und -höhe verwendet werden:
-
-      SAR = e.getSarWidth()/e.getSarHeight();
-
-      frameHeight = e.getHeight();
-
-      frameWidth = e.getWidth()/SAR;
+   ```java
+   SAR = e.getSarWidth()/e.getSarHeight();
+   frameHeight = e.getHeight();
+   frameWidth = e.getWidth()/SAR;
+   ```
 
 * **Cookies**
 
@@ -291,7 +319,7 @@ In den unten stehenden Funktionstabellen gibt ein &quot;Y&quot;an, dass die Funk
 |---|---|---|
 | Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | VOD + Live | Y |
 | FER - Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | FER VOD | Y |
-| Suchen, wann eine Anzeige abgespielt wird | VOD + Live | Nicht unterstützt |
+| Suchen, wann eine Anzeige abgespielt wird | Live | Nicht unterstützt |
 | AC3 | VOD + Live | Nicht unterstützt |
 | MP3 | VOD | Nicht unterstützt |
 | MP4-Inhaltswiedergabe | VOD | Y |
@@ -357,7 +385,7 @@ In den unten stehenden Funktionstabellen gibt ein &quot;Y&quot;an, dass die Funk
 | DRM | VOD + Live | Nur Primetime-DRM (Zukunft: Widevine) |
 | Externe Wiedergabe (RBOP) | VOD + Live | Nur Primetime-DRM |
 | Lizenzdrehung | VOD + Live | Nur Primetime-DRM |
-| Schlüsseldrehung | VOD + Live | Nur Primetime-DRM |
+| Schlüsseldrehung | VOD + Live | Primetime DRM und Widevine DRM |
 
 | Funktion | Inhaltstyp | HLS |
 |---|---|---|
@@ -368,13 +396,17 @@ In den unten stehenden Funktionstabellen gibt ein &quot;Y&quot;an, dass die Funk
 
 Wenn die Auflösung mit einem gemeldeten Problem verbunden ist, wird ein Zendesk-Verweis angezeigt, z. B. ZD#xxxxx.
 
-**Android TVSDK 3.10**
+**Android TVSDK 3.11**
 
-Dieser Abschnitt enthält eine Zusammenfassung des Problems, das in der TVSDK 3.10-Android-Version behoben wurde.
+Dieser Abschnitt enthält eine Zusammenfassung des Problems, das in der TVSDK 3.11-Android-Version behoben wurde.
 
-* ZD#40340 - Anwendungsabstürze mit dem Fehler &quot;App reagiert nicht&quot;beim Versuch der Wiedergabe nach der Blacklist aller TS-(TypeScript-)Dateien.
+* ZD# - Koreanische Zeichen werden als fehlende Glyphensymbole für HLS-Manifeste mit WebVTT in der Android TVSDK-Referenz-App angezeigt.
 
 ### Behobene Probleme in früheren Versionen
+
+**Android TVSDK 3.10**
+
+* ZD#40340 - Anwendungsabstürze mit dem Fehler &quot;App reagiert nicht&quot;beim Versuch der Wiedergabe nach der Blacklist aller TS-(TypeScript-)Dateien.
 
 **Android TVSDK 3.8**
 
@@ -454,7 +486,7 @@ Dieser Abschnitt enthält eine Zusammenfassung des Problems, das in der TVSDK 3.
 
 * ZD #31533 - Audiowiedergabe auf Android, nachdem die App in den Hintergrund gesendet wurde.
 
-   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player den Status &quot;VORBEREITET&quot;aufweist), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
+   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player sich im Status &quot;VORBEREITT&quot;befindet), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
 
 **Android TVSDK 2.5.5**
 
@@ -603,11 +635,15 @@ WebViewDebbuging ist standardmäßig auf False eingestellt. Um das Debugging zu 
 
 ## Bekannte Probleme und Einschränkungen {#known-issues-and-limitations}
 
-**Android TVSDK 3.10**
+**Android TVSDK 3.11**
 
 * Keine neuen Einschränkungen hinzugefügt.
 
 ### Bekannte Probleme und Einschränkungen in früheren Versionen
+
+**Android TVSDK 3.10**
+
+* Keine neuen Einschränkungen hinzugefügt.
 
 **Android TVSDK 3.8**
 
