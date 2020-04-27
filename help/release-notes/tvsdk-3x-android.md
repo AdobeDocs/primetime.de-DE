@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e41213acf027e4dc4d016ef31c2d3d1665f54dfc
+source-git-commit: 3e5078c25a1426c3991669809426eefab0386ac9
 
 ---
 
@@ -290,20 +290,16 @@ Wenn TVSDK eine Verbindung öffnet, fordert es den Server auf, eine Verbindung *
 
 * **SizeAvaliableEventListener**
 
-   * getHeight()- und getWidth()-Methoden von SizeAvailableEvent geben nun die Ausgabe in Höhe bzw. Breite zurück. Das Anzeigeseitenverhältnis kann wie folgt berechnet werden:
+   * `getHeight()` und `getWidth()` Methoden von `SizeAvailableEvent` gibt nun Ausgabe in Höhe und Breite zurück. Das Anzeigeseitenverhältnis kann wie folgt berechnet werden:
 
-   ```java
-   SizeAvailableEvent e;
-   DAR = e.getWidth()/ e.getHeight();
-   ```
+      SizeAvailableEvent e;
+DAR = e.getWidth()/ e.getHeight();
 
-   Das Seitenverhältnis der Datenspeicherung in Bezug auf die Breite und Höhe der Breite kann auch zur Berechnung der Rahmenbreite und -höhe verwendet werden:
+      Das Seitenverhältnis der Datenspeicherung in Bezug auf die Breite und Höhe der Breite kann auch zur Berechnung der Rahmenbreite und -höhe verwendet werden:
 
-   ```java
-   SAR = e.getSarWidth()/e.getSarHeight();
-   frameHeight = e.getHeight();
-   frameWidth = e.getWidth()/SAR;
-   ```
+      SAR = e.getSarWidth()/e.getSarHeight();
+frameHeight = e.getHeight();
+frameWidth = e.getWidth()/SAR;
 
 * **Cookies**
 
@@ -486,7 +482,7 @@ Dieser Abschnitt enthält eine Zusammenfassung des Problems, das in der TVSDK 3.
 
 * ZD #31533 - Audiowiedergabe auf Android, nachdem die App in den Hintergrund gesendet wurde.
 
-   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player den Status &quot;VORBEREITET&quot;aufweist), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
+   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player sich im Status &quot;VORBEREITT&quot;befindet), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
 
 **Android TVSDK 2.5.5**
 
