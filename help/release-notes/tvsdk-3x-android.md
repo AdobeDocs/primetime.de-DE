@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 34ec714ec190e77a70bf4e966d6df02ec0c99cb3
+source-git-commit: 1f03dd8975fed27836a34159a403ba4aeec199c1
 
 ---
 
@@ -46,7 +46,7 @@ TVSDK now allows fetching of Protection System Specific Header Box associated wi
 For more information, see [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
 Top customer issues fixed in the current release are mentioned in [resolved issues](#resolved-issues) section. -->
 
-### Neue Funktionen und Verbesserungen in früheren Versionen
+## Neue Funktionen und Verbesserungen in früheren Versionen
 
 **Android TVSDK 3.9**
 
@@ -479,7 +479,7 @@ This section provides a summary of the issue resolved in TVSDK 3.11 Android rele
 
 * ZD #31533 - Audiowiedergabe auf Android, nachdem die App in den Hintergrund gesendet wurde.
 
-   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player den Status &quot;VORBEREITET&quot;aufweist), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
+   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player sich im Status &quot;VORBEREITT&quot;befindet), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
 
 **Android TVSDK 2.5.5**
 
