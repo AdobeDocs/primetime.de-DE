@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e84c50037557e157a044b1cec1fdea84cb156ea0
+source-git-commit: b71ac860652f53b171926b570c004db2351d3d3a
 
 ---
 
@@ -136,8 +136,9 @@ Diese Version konzentrierte sich auf die Behebung der wichtigsten Kundenprobleme
 
    Weitere Informationen finden Sie unter TVSDK 3.0 für Android-Programmierhandbuch zu API- und Ereignis-Änderungen.
 
-* **Aktualisierung `targetSdkVersion` auf neueste Version\
-   **Aktualisierung `targetSdkVersion` von 19 auf 27 für reibungslose Funktionsweise.
+* **Aktualisierung`targetSdkVersion`auf neueste Version**
+
+   Aktualisierung `targetSdkVersion` von 19 auf 27 für reibungslose Funktionsweise.
 
 * **Placement.Type getPlacementType() ist jetzt eine Methode auf der Schnittstelle TimelineMarker**
 
@@ -482,7 +483,7 @@ Dieser Abschnitt enthält eine Zusammenfassung des Problems, das in der TVSDK 3.
 
 * ZD #31533 - Audiowiedergabe auf Android, nachdem die App in den Hintergrund gesendet wurde.
 
-   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player sich im Status &quot;VORBEREITT&quot;befindet), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
+   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player den Status &quot;VORBEREITET&quot;aufweist), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
 
 **Android TVSDK 2.5.5**
 
