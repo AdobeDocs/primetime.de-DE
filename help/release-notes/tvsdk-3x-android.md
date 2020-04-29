@@ -1,14 +1,14 @@
 ---
 title: TVSDK 3.11 für Android-Versionshinweise
 seo-title: TVSDK 3.11 für Android-Versionshinweise
-description: TVSDK 3.11 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.10
+description: TVSDK 3.11 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.11
 seo-description: TVSDK 3.11 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.11
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 26b0622f807405eaec9cfe162799111ed340e02c
+source-git-commit: dbb4aceaea1f3db2fcc5a2aa2168ee8a1cd4c785
 
 ---
 
@@ -97,46 +97,58 @@ Diese Version konzentrierte sich auf die Behebung der wichtigsten Kundenprobleme
 * **Unterstützung für parallele Anzeigenauflösung und Manifestdownload**
 
    * TVSDK 3.2 unterstützt die gleichzeitige Auflösung anstelle der sequenziellen Auflösung für alle Anzeigenanforderungen und Werbeunterbrechungen mit Ausnahme von VMAP.
+
    * Alle Anzeigenmanifeste in einer Werbeunterbrechung werden gleichzeitig heruntergeladen.
+
 * **Unterstützung für Anzeigenauflösung und Manifestdownload-Timeout aktiviert.**
 
    * Benutzer können jetzt den Timeout-Wert für die gesamte Anzeigenauflösung und Manifestdownloads festlegen.  Bei VMAP gilt der Timeout-Wert für einzelne Werbeunterbrechungen, da alle Werbeunterbrechungen sequenziell gelöst werden.
+
 * **Neue APIs in der AdvertisingMetadata-Klasse:**
 
-   * void setAdResolutionTimeout(int adResolutionTimeout)
-   * int getAdResolutionTimeout()
-   * void setAdManifestTimeout(int adManifestTimeout)
-   * int getAdManifestTimeout()
+   * `void setAdResolutionTimeout(int adResolutionTimeout)`
+
+   * `int getAdResolutionTimeout()`
+
+   * `void setAdManifestTimeout(int adManifestTimeout)`
+
+   * `int getAdManifestTimeout()`
+
 * **Unter APIs aus der AdvertisingMetadata-Klasse entfernt:**
 
-   * void setAdRequestTimeout(int adRequestTimeout)
-   * int getAdRequestTimeout()
+   * `void setAdRequestTimeout(int adRequestTimeout)`
+
+   * `int getAdRequestTimeout()`
+
 * **Wiedergabe von Streams mit AC3/EAC3-Audio-Codec aktiviert**
 
-   * void alwaysUseAC3OnSupportedDevices(boolean val)in der MediaPlayer-Klasse
+   * `void alwaysUseAC3OnSupportedDevices(boolean val)` in `MediaPlayer` Klasse
+
 * **TVSDK unterstützt die Wiedergabe von CMAF- und Nur-Streams für verschlüsselte Widevine CTR.**
+
 * **Die Wiedergabe von 4K HEVC-Streams wird jetzt unterstützt.**
+
 * **Parallele Anzeigenaufrufanforderungen** - TVSDK ruft jetzt parallel 20 Anzeigenaufrufanforderungen ab.
 
 **Version 3.0**
 
 * **TVSDK 3.0 unterstützt HEVC-Streams (High Efficiency Video Coding).**
 
-* **Just in Time - Auflösen von Anzeigen näher an Anzeigenmarkierungen**
+* **Just in Time - Durch das Beheben von Anzeigen, die näher an Anzeigenmarken** liegen, wird jetzt jede Werbeunterbrechung unabhängig voneinander gelöst. Zuvor war die Anzeigenauflösung ein zweistufiger Ansatz: Pre-Roll-Aufnahmen wurden vor dem Beginn der Wiedergabe aufgelöst und alle Mid-/Post-Roll-Slots nach dem Start der Wiedergabe kombiniert. Mit dieser erweiterten Funktion wird jeder Werbeunterbrechung nun zu einem bestimmten Zeitpunkt vor dem Anzeigen-Cue-Point aufgelöst.
 
-   Beim Auflösen von verzögerter Anzeige werden jetzt alle Werbeunterbrechungen unabhängig voneinander gelöst. Zuvor war die Anzeigenauflösung ein zweistufiger Ansatz: Pre-Roll-Aufnahmen wurden vor dem Beginn der Wiedergabe aufgelöst und alle Mid-/Post-Roll-Slots nach dem Start der Wiedergabe kombiniert. Mit dieser erweiterten Funktion wird jeder Werbeunterbrechung nun zu einem bestimmten Zeitpunkt vor dem Anzeigen-Cue-Point aufgelöst.
+> [!NOTE]
+>
+> Die verzögerte Anzeigenauflösung wurde jetzt standardmäßig deaktiviert und muss explizit aktiviert werden.
 
-   **Bitte beachten Sie: Die verzögerte Anzeigenauflösung wurde jetzt standardmäßig deaktiviert und muss explizit aktiviert werden.**
+Eine neue API wird hinzugefügt, `AdvertisingMetadata::setDelayAdLoadingTolerance` um die Toleranz für verzögertes Laden der Anzeige im Zusammenhang mit diesen Advertising Metadata abzurufen.\
+Die Suche ist jetzt unmittelbar nach der Vorbereitung zulässig, wenn Sie nach Werbeunterbrechungen suchen, wird eine sofortige Auflösung vor Abschluss der Suche erzielt.\
+Signalisierungsmodi `SERVER_MAP` und - `MANIFEST_CUES` funktionen werden unterstützt.
 
-   Eine neue API wird zu *AdvertisingMetadata::setDelayAdLoadingTolerance* hinzugefügt, um die Toleranz für das verzögerte Laden von Anzeigen im Zusammenhang mit diesen Advertising-Metadaten abzurufen.\
-   Die Suche ist nun unmittelbar nach der Vorbereitung zulässig. Wenn Sie nach Werbeunterbrechungen suchen, wird eine sofortige Auflösung vor Abschluss der Suche erzielt.\
-   Signalisierungsmodi SERVER_MAP und MANIFEST_CUES werden unterstützt.
+Weitere Informationen finden Sie unter [TVSDK 3.0 für Android-Programmierhandbuch](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/c-lazy-ad-resolving/c-lazy-ad-resolving.md) zu API- und Ereignis-Änderungen.
 
-   Weitere Informationen finden Sie unter TVSDK 3.0 für Android-Programmierhandbuch zu API- und Ereignis-Änderungen.
+* **Auf`targetSdkVersion`neueste Version aktualisiert**
 
-* **Aktualisierung`targetSdkVersion`auf neueste Version**
-
-   Aktualisierung `targetSdkVersion` von 19 auf 27 für reibungslose Funktionsweise.
+Aktualisierung `targetSdkVersion` von 19 auf 27 für reibungslose Funktionsweise.
 
 * **Placement.Type getPlacementType() ist jetzt eine Methode auf der Schnittstelle TimelineMarker**
 
@@ -167,6 +179,7 @@ TVSDK bricht jetzt bei Bedarf den Download des aktuellen Segments ab und wechsel
    Beispiel: Der Benutzer schließt sich in der Mitte (40 Sekunden) einer 90-Sekunden-Werbeunterbrechung an, die aus drei 30-Sekunden-Anzeigen besteht. Dies ist 10 Sekunden nach der zweiten Anzeige in der Pause.
 
    * Die zweite Anzeige wird während der verbleibenden Dauer (20 Sekunden) und die dritte Anzeige abgespielt.
+
    * Anzeigentracker für die teilweise wiedergegebene Anzeige (zweite Anzeige) werden nicht ausgelöst. Die Tracker für nur die dritte Anzeige werden ausgelöst.
 
 * **Sicheres Laden der Anzeige über HTTPS**
@@ -175,7 +188,7 @@ TVSDK bricht jetzt bei Bedarf den Download des aktuellen Segments ab und wechsel
 
 * **Zu CRS-Anforderungen hinzugefügte AdSystem- und Creative-ID**
 
-   * Jetzt einschließlich &#39;AdSystem&#39; und &#39;CreativeId&#39; als neue Parameter in den Anforderungen 1401 und 1403.
+   Jetzt auch `AdSystem` und `CreativeId` als neue Parameter in den 1401- und 1403-Anforderungen.
 
 * **API setEncodeUrlForTracking in der NetworkConfiguration-Klasse entfernt** , da die unsicheren Zeichen in einer URL kodiert werden sollten.
 
@@ -183,17 +196,17 @@ TVSDK bricht jetzt bei Bedarf den Download des aktuellen Segments ab und wechsel
 
 Android TVSDK v2.5.4 Angebote mit den folgenden Aktualisierungen und API-Änderungen:
 
-* Änderungen am Standardwert für WebViewDebbuging
+* Änderungen am Standardwert für `WebViewDebbuging`
 
-   Der Wert von WebViewDebbuging ist standardmäßig auf False eingestellt. Rufen Sie dazu setWebContentsDebuggingEnabled(true) in der Anwendung auf.
+   `WebViewDebbuging` ist standardmäßig auf `Fals`e eingestellt. Rufen Sie zur Aktivierung `setWebContentsDebuggingEnabled(true)` in der Anwendung auf.
 
-* Aktualisierung der OpenSSL- und Curl-Version
+* **Aktualisierung der OpenSSL- und Curl-Version**
 
    Aktualisierung von libcurl auf v7.57.0 und OpenSSL auf v1.0.2k.
 
 * Zugriff auf App-Ebene für VAST-Antwortobjekt
 
-   Es wurde eine neue API NetworkAdInfo::getVastXml() eingeführt, die Zugriff auf das VAST-Antwortobjekt der Anwendung ermöglicht.
+   Es wurde eine neue API eingeführt, `NetworkAdInfo::getVastXml()` die den Zugriff auf das VAST-Antwortobjekt auf die Anwendung ermöglicht.
 
 **Version 2.5.3**
 
@@ -205,23 +218,24 @@ Android TVSDK v2.5.3 Angebot die folgenden Updates und API-Änderungen.
 
 * Benutzeragent von TVSDK anpassbar: haben wir einige neue APIs hinzugefügt, um die Benutzeragenten anzupassen.
 
-   * setCustomUserAgent(String-Wert)
-   * getCustomUserAgent()
+   * `setCustomUserAgent(String value)`
+   * `getCustomUserAgent()`
 
 * Freigeben von Cookies zwischen Android-Anwendung und TVSDK: Android TVSDK unterstützt jetzt den Zugriff auf Cookies zwischen der JAVA-Ebene (gespeichert im CookieStore der Android-Anwendung) und der C++ TVSDK-Ebene. Jetzt ist es möglich, Cookies in der nativen C++-Ebene einzustellen und/oder zu ändern, da sie dem Java Cookie Store ausgesetzt werden.
+
 * API-Änderungen:
 
-   * Ein neues Ereignis CookiesUpdatedEvent wird hinzugefügt. Er wird vom Medienplayer ausgelöst, wenn sein Cookie aktualisiert wird.
+   * Ein neues Ereignis `CookiesUpdatedEvent` wird hinzugefügt. Er wird vom Medienplayer ausgelöst, wenn sein Cookie aktualisiert wird.
 
-   * Eine neue API wird zu NetworkConfiguration::set/ getCustomUserAgent() hinzugefügt, um einen benutzerdefinierten Benutzeragent zu verwenden.
+   * Es wird eine neue API hinzugefügt, `NetworkConfiguration::set/ getCustomUserAgent()` um benutzerdefinierte Benutzeragenten zu verwenden.
 
-   * Eine neue API wird zu NetworkConfiguration::set/ getEncodedUrlForTracking hinzugefügt, um die Kodierung von unsicheren Zeichen zu erzwingen.
+   * Eine neue API wird hinzugefügt, um die Kodierung von unsicheren Zeichen `NetworkConfiguration::set/ getEncodedUrlForTracking` zu erzwingen.
 
-   * Eine neue API wird zu NetworkConfiguration::getNetworkDownVerificationUrl() hinzugefügt, um im Falle eines Failover eine URL für die Netzwerküberprüfung festzulegen.
+   * Eine neue API wird hinzugefügt, `NetworkConfiguration::getNetworkDownVerificationUrl()` um im Falle eines Failover eine URL für die Netzwerküberprüfung festzulegen.
 
-   * Eine neue Eigenschaft wird TextFormat::handleSpaceAsAlphaNum hinzugefügt, die definiert, ob Leerzeichen bei der Anzeige von Beschriftungen als alphanumerisch behandelt werden sollen.
+   * Eine neue Eigenschaft wird hinzugefügt, `TextFormat::treatSpaceAsAlphaNum` die definiert, ob Leerzeichen bei der Anzeige von Beschriftungen als alphanumerisch behandelt werden sollen.
 
-* Änderungen in SizeAvailableEvent: Zuvor gaben die Methoden getHeight() und getWidth() von SizeAvailableEvent in 2.5.2 die Frame-Höhe und die Frame-Breite zurück, die vom Medienformat zurückgegeben wurden. Jetzt gibt es Ausgabehöhe und -breite zurück, die vom Decoder zurückgegeben werden.
+* Änderungen in `SizeAvailableEvent`. Bisher wurden die Höhe `getHeight()` und die Breite des Rahmens mit `getWidth()` den Methoden `SizeAvailableEvent` in 2.5.2 zurückgegeben, die vom Medienformat zurückgegeben wurden. Jetzt gibt es Ausgabehöhe und -breite zurück, die vom Decoder zurückgegeben werden.
 
 * Änderungen im Pufferverhalten: Das Pufferverhalten wird geändert. Es bleibt dem App-Entwickler überlassen, was er tun möchte, wenn der Puffer leer ist. 2.5.3 verwendet die Wiedergabepuffergröße bei einer leeren Puffersituation.
 
@@ -233,37 +247,38 @@ Android TVSDK v2.5.2 Angebot wichtige Fehlerbehebungen und einige API-Änderunge
 
 Die wichtigen neuen Funktionen, die in Android 2.5.1 veröffentlicht wurden.
 
-* **Leistungsverbesserungen** Die neue TVSDK 2.5.1 Architektur bietet eine Reihe von Leistungsverbesserungen. Basierend auf Statistiken aus einer Drittanbieter-Benchmarking-Studie bietet die neue Architektur eine 5fache Reduzierung der Startzeit und 3,8fache Reduzierung der Dropdown-Rahmen im Vergleich zum Branchendurchschnitt:
+* **Leistungsverbesserungen -** Die neue TVSDK 2.5.1 Architektur bringt eine Reihe von Leistungsverbesserungen. Basierend auf Statistiken aus einer Drittanbieter-Benchmarking-Studie bietet die neue Architektur eine 5fache Reduzierung der Startzeit und 3,8fache Reduzierung der Dropdown-Rahmen im Vergleich zum Branchendurchschnitt:
 
-   * **Sofort für VOD und live - Wenn Sie Sofortzugriff aktivieren, initialisiert und puffert das TVSDK Medien vor dem Beginn der Wiedergabe.** Da Sie mehrere MediaPlayerItemLoader-Instanzen gleichzeitig im Hintergrund starten können, können Sie mehrere Streams puffern. Wenn ein Benutzer den Kanal ändert und der Stream ordnungsgemäß gepuffert wurde, wird die Wiedergabe sofort auf den Beginn des neuen Kanals wiedergegeben. TVSDK 2.5.1 unterstützt auch Instant On für **Live** Streams. Die Live-Streams werden erneut gepuffert, wenn das Live-Fenster verschoben wird.
+* **Sofort für VOD und live - Wenn Sie Sofortzugriff aktivieren, initialisiert und puffert das TVSDK Medien vor dem Beginn der Wiedergabe.** Da Sie mehrere MediaPlayerItemLoader-Instanzen gleichzeitig im Hintergrund starten können, können Sie mehrere Streams puffern. Wenn ein Benutzer den Kanal ändert und der Stream ordnungsgemäß gepuffert wurde, wird die Wiedergabe sofort auf den Beginn des neuen Kanals wiedergegeben. TVSDK 2.5.1 unterstützt auch Instant On für **Live** Streams. Die Live-Streams werden erneut gepuffert, wenn das Live-Fenster verschoben wird.
 
-   * **Verbesserte ABR-Logik -** Die neue ABR-Logik basiert auf der Pufferlänge, der Änderungsrate der Pufferlänge und der gemessenen Bandbreite. Dadurch wird sichergestellt, dass die ABR die richtige Bitrate wählt, wenn die Bandbreite schwankt, und auch die Anzahl der auftretenden Bitratenwechsel optimiert wird, indem die Rate überwacht wird, mit der sich die Pufferlänge ändert.
+* **Verbesserte ABR-Logik -** Die neue ABR-Logik basiert auf der Pufferlänge, der Änderungsrate der Pufferlänge und der gemessenen Bandbreite. Dadurch wird sichergestellt, dass die ABR die richtige Bitrate wählt, wenn die Bandbreite schwankt, und auch die Anzahl der auftretenden Bitratenwechsel optimiert wird, indem die Rate überwacht wird, mit der sich die Pufferlänge ändert.
 
-   * **Teilweiser Segmentdownload/Untersegmentierung - TVSDK verringert die Größe der einzelnen Fragmente weiter, um so schnell wie möglich Beginn abspielen zu können.** Das zugehörige Fragment muss alle zwei Sekunden über einen Schlüsselrahmen verfügen.
+* **Teilweiser Segmentdownload/Untersegmentierung - TVSDK verringert die Größe der einzelnen Fragmente weiter, um so schnell wie möglich Beginn abspielen zu können.** Das zugehörige Fragment muss alle zwei Sekunden über einen Schlüsselrahmen verfügen.
 
-   * **Verzögerte Anzeigenauflösung -** TVSDK wartet nicht auf die Auflösung von Nicht-Preroll-Anzeigen, bevor die Wiedergabe gestartet wird, wodurch die Startzeit verringert wird. APIs wie Suchen und Trick-play sind immer noch nicht zulässig, bis alle Anzeigen aufgelöst sind. Dies gilt für VOD-Streams, die mit CSAI verwendet werden. Vorgänge wie Suchen und Vorwärts sind erst nach Abschluss der Anzeigenauflösung zulässig. Bei Live-Streams kann diese Funktion nicht für die Anzeigenauflösung während eines Live-Ereignisses aktiviert werden.
+* **Verzögerte Anzeigenauflösung -** TVSDK wartet nicht auf die Auflösung von Nicht-Preroll-Anzeigen, bevor die Wiedergabe gestartet wird, wodurch die Startzeit verringert wird. APIs wie Suchen und Trick-play sind immer noch nicht zulässig, bis alle Anzeigen aufgelöst sind. Dies gilt für VOD-Streams, die mit CSAI verwendet werden. Vorgänge wie Suchen und Vorwärts sind erst nach Abschluss der Anzeigenauflösung zulässig. Bei Live-Streams kann diese Funktion nicht für die Anzeigenauflösung während eines Live-Ereignisses aktiviert werden.
 
-   * **Persistente Netzwerkverbindungen -** Diese Funktion ermöglicht es TVSDK, eine interne Liste persistenter Netzwerkverbindungen zu erstellen und zu speichern. Diese Verbindungen werden für mehrere Anforderungen wiederverwendet, anstatt für jede Netzwerkanforderung eine neue Verbindung zu öffnen und anschließend zu zerstören. Dadurch wird die Effizienz erhöht und die Latenz im Netzwerkcode verringert, was zu einer schnelleren Wiedergabe führt.
+* **Persistente Netzwerkverbindungen -** Diese Funktion ermöglicht es TVSDK, eine interne Liste persistenter Netzwerkverbindungen zu erstellen und zu speichern. Diese Verbindungen werden für mehrere Anforderungen wiederverwendet, anstatt für jede Netzwerkanforderung eine neue Verbindung zu öffnen und anschließend zu zerstören. Dadurch wird die Effizienz erhöht und die Latenz im Netzwerkcode verringert, was zu einer schnelleren Wiedergabe führt.
 Wenn TVSDK eine Verbindung öffnet, fordert es den Server auf, eine Verbindung *aufrechtzuerhalten* . Einige Server unterstützen diese Art der Verbindung möglicherweise nicht. In diesem Fall greift TVSDK zurück, um für jede Anforderung erneut eine Verbindung herzustellen. Auch wenn persistente Verbindungen standardmäßig aktiviert sind, verfügt TVSDK jetzt über eine Konfigurationsoption, damit Apps persistente Verbindungen bei Bedarf deaktivieren können.
 
-   * **Paralleler Download -** Das parallele Herunterladen von Video und Audio statt in Serie reduziert die Startverzögerungen. Diese Funktion ermöglicht die Wiedergabe von HLS Live- und VOD-Dateien, optimiert die verfügbare Bandbreitennutzung von einem Server, verringert die Wahrscheinlichkeit, in Puffersituationen zu gelangen, und minimiert die Verzögerung zwischen Download und Wiedergabe.
+* **Paralleler Download -** Das parallele Herunterladen von Video und Audio statt in Serie reduziert die Startverzögerungen. Diese Funktion ermöglicht die Wiedergabe von HLS Live- und VOD-Dateien, optimiert die verfügbare Bandbreitennutzung von einem Server, verringert die Wahrscheinlichkeit, in Puffersituationen zu gelangen, und minimiert die Verzögerung zwischen Download und Wiedergabe.
 
-   * **Parallele Anzeigendownloads - TVSDKs rufen Anzeigen parallel zur Inhaltswiedergabe ab, bevor sie auf die Werbeunterbrechungen zutreffen. Dadurch wird eine nahtlose Wiedergabe von Anzeigen und Inhalten ermöglicht.**
+* **Parallele Anzeigendownloads - TVSDKs rufen Anzeigen parallel zur Inhaltswiedergabe ab, bevor sie auf die Werbeunterbrechungen zutreffen. Dadurch wird eine nahtlose Wiedergabe von Anzeigen und Inhalten ermöglicht.**
 
 * **Wiedergabe**
 
-   * **MP4 Content Play-back -** MP4-Kurzclips müssen nicht neu transkodiert werden, um innerhalb von TVSDK wiedergegeben zu werden.
-      > [!NOTE]
-      >
-      > ABR-Switching, Trick Play, Anzeigeneinfügung, späte Audiobindung und Untersegmentierung werden für die MP4-Wiedergabe nicht unterstützt.
+* **MP4 Content Play-back -** MP4-Kurzclips müssen nicht neu transkodiert werden, um innerhalb von TVSDK wiedergegeben zu werden.
 
-   * **Trick play with adaptive bit rate (ABR) -** Diese Funktion ermöglicht TVSDK, während der Trick Play-Modus zwischen iFrame-Streams zu wechseln. Sie können Profil ohne iFrame verwenden, um Tricks mit geringeren Geschwindigkeiten auszuführen.
+   > [!NOTE]
+   >
+   > ABR-Switching, Trick Play, Anzeigeneinfügung, späte Audiobindung und Untersegmentierung werden für die MP4-Wiedergabe nicht unterstützt.
 
-   * **Glättere Trick-Wiedergabe -** Diese Verbesserungen verbessern die Benutzerfreundlichkeit:
+* **Trick play with adaptive bit rate (ABR) -** Diese Funktion ermöglicht TVSDK, während der Trick Play-Modus zwischen iFrame-Streams zu wechseln. Sie können Profil ohne iFrame verwenden, um Tricks mit geringeren Geschwindigkeiten auszuführen.
 
-      * Adaptive Auswahl der Bitrate und Bildrate während der Trick-Wiedergabe, basierend auf Profil von Bandbreite und Puffer
+* **Glättere Trick-Wiedergabe -** Diese Verbesserungen verbessern die Benutzerfreundlichkeit:
 
-      * Verwendung des Hauptstreams anstelle des IDR-Streams, um eine schnelle Wiedergabe mit bis zu 30 fps zu erzielen.
+   * Adaptive Auswahl der Bitrate und Bildrate während der Trick-Wiedergabe, basierend auf Profil von Bandbreite und Puffer
+
+   * Verwendung des Hauptstreams anstelle des IDR-Streams, um eine schnelle Wiedergabe mit bis zu 30 fps zu erzielen.
 
 * **Inhaltsschutz**
 
@@ -291,18 +306,22 @@ Wenn TVSDK eine Verbindung öffnet, fordert es den Server auf, eine Verbindung *
 
    * `getHeight()` und `getWidth()` Methoden von `SizeAvailableEvent` gibt nun Ausgabe in Höhe und Breite zurück. Das Anzeigeseitenverhältnis kann wie folgt berechnet werden:
 
+      ```java
       SizeAvailableEvent e;
-DAR = e.getWidth()/ e.getHeight();
+      DAR = e.getWidth()/ e.getHeight();
+      ```
 
       Das Seitenverhältnis der Datenspeicherung in Bezug auf die Breite und Höhe der Breite kann auch zur Berechnung der Rahmenbreite und -höhe verwendet werden:
 
+      ```java
       SAR = e.getSarWidth()/e.getSarHeight();
-frameHeight = e.getHeight();
-frameWidth = e.getWidth()/SAR;
+      frameHeight = e.getHeight();
+      frameWidth = e.getWidth()/SAR;
+      ```
 
 * **Cookies**
 
-   * Android TVSDK unterstützt jetzt den Zugriff auf JAVA-Cookies, die im CookieStore der Android-Anwendung gespeichert sind. Eine Callback-API (onCookiesUpdated) wird bereitgestellt, um zu protokollieren, wann immer ein neues Cookie als Teil des Antwortheaders &quot;Set-Cookie&quot;eingeht. Diese Cookies stehen als Liste von HttpCookie(s) zur Verfügung, die für eine andere URI/Domäne verwendet werden, indem diese Cookie-Werte mithilfe von CookieStore für diese bestimmte URI/Domäne festgelegt werden. Gleichermaßen werden die Cookie-Werte in TVSDK mithilfe der CookieStore Add-API aktualisiert.
+   * Android TVSDK unterstützt jetzt den Zugriff auf JAVA-Cookies, die im CookieStore der Android-Anwendung gespeichert sind. Eine Callback-API (onCookiesUpdated) wird bereitgestellt, um aufzuzeichnen, wann immer ein neues Cookie als Teil des **Set-Cookie** Response-Headers erscheint. Diese Cookies stehen als Liste von HttpCookie(s) zur Verfügung, die für eine andere URI/Domäne verwendet werden, indem diese Cookie-Werte mithilfe von CookieStore für diese bestimmte URI/Domäne festgelegt werden. Gleichermaßen werden die Cookie-Werte in TVSDK mithilfe der CookieStore Add-API aktualisiert.
 
 ## Funktionsmatrix {#feature-matrix}
 
