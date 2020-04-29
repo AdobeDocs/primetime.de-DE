@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: dbb4aceaea1f3db2fcc5a2aa2168ee8a1cd4c785
+source-git-commit: fdb4e4eb741dd066017d96205cea8cbd15dcbc7b
 
 ---
 
@@ -333,7 +333,7 @@ In den unten stehenden Funktionstabellen gibt ein &quot;Y&quot;an, dass die Funk
 |---|---|---|
 | Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | VOD + Live | Y |
 | FER - Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | FER VOD | Y |
-| Suchen, wann eine Anzeige abgespielt wird | Live | Nicht unterstützt |
+| Suchen, wann eine Anzeige abgespielt wird | VOD + Live | Nicht unterstützt |
 | AC3 | VOD + Live | Nicht unterstützt |
 | MP3 | VOD | Nicht unterstützt |
 | MP4-Inhaltswiedergabe | VOD | Y |
@@ -399,7 +399,7 @@ In den unten stehenden Funktionstabellen gibt ein &quot;Y&quot;an, dass die Funk
 | DRM | VOD + Live | Nur Primetime-DRM (Zukunft: Widevine) |
 | Externe Wiedergabe (RBOP) | VOD + Live | Nur Primetime-DRM |
 | Lizenzdrehung | VOD + Live | Nur Primetime-DRM |
-| Schlüsseldrehung | VOD + Live | Primetime DRM und Widevine DRM |
+| Schlüsseldrehung | VOD + Live | Nur Primetime-DRM |
 
 | Funktion | Inhaltstyp | HLS |
 |---|---|---|
@@ -414,7 +414,7 @@ Wenn die Auflösung mit einem gemeldeten Problem verbunden ist, wird ein Zendesk
 
 Dieser Abschnitt enthält eine Zusammenfassung des Problems, das in der TVSDK 3.11-Android-Version behoben wurde.
 
-* ZD#41252 - Koreanische Zeichen werden als fehlende Glyphensymbole für HLS-Manifeste mit WebVTT in der Android TVSDK-Referenz-App angezeigt.
+* ZD#41252 - Koreanische Zeichen in WebVTT, die nach Android 7.1 beschädigt wurden.
 
 ### Behobene Probleme in früheren Versionen
 
@@ -500,7 +500,7 @@ Dieser Abschnitt enthält eine Zusammenfassung des Problems, das in der TVSDK 3.
 
 * ZD #31533 - Audiowiedergabe auf Android, nachdem die App in den Hintergrund gesendet wurde.
 
-   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player sich im Status &quot;VORBEREITT&quot;befindet), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
+   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player den Status &quot;VORBEREITET&quot;aufweist), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
 
 **Android TVSDK 2.5.5**
 
