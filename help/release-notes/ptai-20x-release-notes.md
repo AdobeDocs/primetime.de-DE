@@ -1,17 +1,40 @@
 ---
 title: PTAI 20.3.3 - Versionshinweise
-description: Die Versionshinweise zu PTAI 20.3.3 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
+description: Die Versionshinweise zu PTAI 20.5.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme bei der Primetime Dynamic Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
+source-git-commit: 2a5866be64895ba13994720bf943dc676c2595bf
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
 
-# Primetime Dynamic Ad Insertion 20.3.3 - Versionshinweise
+# Primetime Dynamic Ad Insertion 20.5.1 - Versionshinweise
 
-Versionshinweise zur dynamischen Anzeigeneinfügung 20.3.3 beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme bei der Primetime-Einfügen dynamischer Anzeigen im Jahr 2020.
+Versionshinweise zur dynamischen Anzeigeneinfügung 20.5.1 beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme bei der Primetime-Einfügen dynamischer Anzeigen im Jahr 2020.
 
-## Neue Funktionen in PTAI 20.3.3
+## Neue Funktionen in PTAI 20.5.1
+
+**Wenn:** Dienstag, 5. Mai 2020 von 04:00 Uhr bis 05:00 Uhr OST
+
+* Es wurde ein Fehler behoben, der sicherstellte, dass beim Senden von if-Modified-Since-Headern die korrekten CORS-Header bereitgestellt wurden.
+
+* Fehlerbehebungen im CRS-Dashboard.
+
+* Aktualisierungen der Wartung.
+
+## Änderungen in früheren Versionen
+
+### Version 20.3.4
+
+**Wenn:** Mittwoch, 1. April 2020 von 03:00 Uhr bis 04:00 Uhr OST
+
+* Es wurde ein Fehler behoben, der dazu führte, dass Untertitel nach dem Einfügen der Anzeige in VOD/WebVTT nicht mehr synchronisiert wurden.
+
+* Sicherheitsaktualisierungen.
+
+### Version 20.3.3
 
 **Wenn:** Donnerstag, 26. März 2020 von 03:00 Uhr bis 04:00 Uhr OST
 
@@ -19,17 +42,19 @@ Versionshinweise zur dynamischen Anzeigeneinfügung 20.3.3 beschreiben, was neu 
 
 * Es wurde ein Problem mit X-Forwarded-For-Headern behoben, bei dem IPv6-Adressen nicht korrekt URL-kodiert wurden, wenn sie an die Anzeigen-Server weitergeleitet wurden.
 
-* Es wurde ein Problem mit CMAF/demuxed Audio-Streams behoben, bei dem EXT-X-MEDIA-SEQUENCE-Nummern in bestimmten Szenarien falsch inkrementiert wurden
+* Es wurde ein Problem mit CMAF/demuxed Audio-Streams behoben, bei dem EXT-X-MEDIA-SEQUENCE-Nummern in bestimmten Szenarien falsch inkrementiert wurden.
 
-## Änderungen in früheren Versionen
+### Version 20.1.3
 
-### Version
+**Wenn:** Dienstag, 28. Januar 2020 von 2:00 Uhr bis 03:00 Uhr OSTSEE
 
-**Wenn:**
+* **VMAP mit FER-Unterstützung für &quot;nbc&quot; CueFormat** Konvertieren von Cue-FER-Streams in FW-Timeline-Außerkraftsetzungsparameter, wenn ptcueformat=nbc verwendet wird und der Stream ein VOD-Stream mit In-Manifest-Hinweisen und Backed-In-Anzeigen ist.
 
-### Version
+* Bereinigen Sie das Feld &quot;user-agent&quot;im HTTP-Header, bevor Sie es an Drittanbieter/CDN weiterleiten.
 
-**Wenn:**
+* Filtern Sie vor dem Senden an Auditude und andere Anbieter von Anzeigen, CDNs, die Steuerelemente/nicht druckbare Zeichen (ASCII-Code &lt; 32) aus HTTP-Headern des &quot;Benutzeragents&quot; heraus. Auditude Ad-Call hat bei solchen ungültigen Headern früher nicht funktioniert.
+
+* Entfernen Sie alte V1-Objekte aus NetStorage-Gruppen, um die Objektanzahl innerhalb sicherer Grenzen von Akamai zu halten.
 
 ## Behobene Probleme
 
