@@ -1,10 +1,10 @@
 ---
-title: PTAI 20.3.3 - Versionshinweise
+title: PTAI 20.5.1 - Versionshinweise
 description: Die Versionshinweise zu PTAI 20.5.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme bei der Primetime Dynamic Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: 2a5866be64895ba13994720bf943dc676c2595bf
+source-git-commit: 266b884707e9160d539a06fd089732ef8ade21ba
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Versionshinweise zur dynamischen Anzeigeneinfügung 20.5.1 beschreiben, was neu 
 
 **Wenn:** Dienstag, 5. Mai 2020 von 04:00 Uhr bis 05:00 Uhr OST
 
-* Es wurde ein Fehler behoben, der sicherstellte, dass beim Senden von if-Modified-Since-Headern die korrekten CORS-Header bereitgestellt wurden.
+* Es wurde ein Fehler behoben, der sicherstellte, dass beim Senden von if-Modified-Since-Headern korrekte CORS-Header bereitgestellt werden.
 
 * Fehlerbehebungen im CRS-Dashboard.
 
@@ -48,11 +48,13 @@ Versionshinweise zur dynamischen Anzeigeneinfügung 20.5.1 beschreiben, was neu 
 
 **Wenn:** Dienstag, 28. Januar 2020 von 2:00 Uhr bis 03:00 Uhr OSTSEE
 
-* **VMAP mit FER-Unterstützung für &quot;nbc&quot; CueFormat** Konvertieren von Cue-FER-Streams in FW-Timeline-Außerkraftsetzungsparameter, wenn ptcueformat=nbc verwendet wird und der Stream ein VOD-Stream mit In-Manifest-Hinweisen und Backed-In-Anzeigen ist.
+* **VMAP mit FER-Unterstützung für nbc CueFormat**
+
+   Konvertieren Sie Hinweise vom FER-Stream in die FW-Zeitleiste, um Parameter zu überschreiben, wenn der Stream verwendet `ptcueformat=nbc` wird und ein VOD-Stream mit In-Manifest-Hinweisen und Backed-In-Anzeigen ist.
 
 * Bereinigen Sie das Feld &quot;user-agent&quot;im HTTP-Header, bevor Sie es an Drittanbieter/CDN weiterleiten.
 
-* Filtern Sie vor dem Senden an Auditude und andere Anbieter von Anzeigen, CDNs, die Steuerelemente/nicht druckbare Zeichen (ASCII-Code &lt; 32) aus HTTP-Headern des &quot;Benutzeragents&quot; heraus. Auditude Ad-Call hat bei solchen ungültigen Headern früher nicht funktioniert.
+* Filtern Sie vor dem Senden an Auditude und andere Anzeigenanbieter (CDNs) die Steuerungs-/Nicht-Druckzeichen (ASCII-Code &lt; 32) aus HTTP-Headern des Benutzeragents heraus. Auditude Ad-Call hat bei solchen ungültigen Headern früher nicht funktioniert.
 
 * Entfernen Sie alte V1-Objekte aus NetStorage-Gruppen, um die Objektanzahl innerhalb sicherer Grenzen von Akamai zu halten.
 
