@@ -2,9 +2,9 @@
 title: PTAI 20.5.1 - Versionshinweise
 description: Die Versionshinweise zu PTAI 20.5.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme bei der Primetime Dynamic Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: 90f75f263e96ea37dd93a91f4392077ea2c70f32
+source-git-commit: 4f97591b819d705891a053961eccd50a3cd05aa2
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,26 @@ Versionshinweise zur dynamischen Anzeigeneinfügung 20.5.1 beschreiben, was neu 
 * Es wurde ein Problem mit X-Forwarded-For-Headern behoben, bei dem IPv6-Adressen nicht korrekt URL-kodiert wurden, wenn sie an die Anzeigen-Server weitergeleitet wurden.
 
 * Es wurde ein Problem mit CMAF/demuxed Audio-Streams behoben, bei dem EXT-X-MEDIA-SEQUENCE-Nummern in bestimmten Szenarien falsch inkrementiert wurden.
+
+### Version 20.3.2
+
+**Wenn:** Mittwoch, 11. März 2020 von 05:30 Uhr bis 07:00 Uhr östliche Zeit
+
+* Verbesserte SCTE35-Signalverarbeitung.
+
+* Aktualisierungen der Wartung.
+
+### Version 20.3.1
+
+**Wenn:** Donnerstag, 05. März 2020 von 02:30 Uhr bis 04:30 Uhr Eastern Time
+
+* Leistungsverbesserungen:
+
+   * Cache-Unterstützung für Master-/Media m3u8-Manifeste hinzugefügt. Diese Manifeste reagieren jetzt auf die Cachesteuerung: öffentliche und Max-Age-Kopfzeilen, die häufig die Leistung von Video-Beginn verbessern können.
+
+   * Es wurde Unterstützung hinzugefügt, um zu erzwingen, dass HTTPS-kreative Elemente über HTTP abgerufen werden, was auch die Leistung von Video-Beginn verbessern kann.
+
+* Sicherheits- und Wartungs-Fehlerbehebungen.
 
 ### Version 20.2.1
 
