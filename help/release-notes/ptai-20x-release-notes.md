@@ -2,9 +2,9 @@
 title: PTAI 20.5.1 - Versionshinweise
 description: Die Versionshinweise zu PTAI 20.5.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme bei der Primetime Dynamic Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: 4f97591b819d705891a053961eccd50a3cd05aa2
+source-git-commit: 9c117678a049e34bfcf960e992a4ce7361968f3e
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,16 @@ Versionshinweise zur dynamischen Anzeigeneinfügung 20.5.1 beschreiben, was neu 
 ## Behobene Probleme
 
 Wenn die Lösung mit einem gemeldeten Problem verbunden ist, wird ein Zendesk-Verweis angezeigt. Beispiel: ZD#xxxxx.
+
+**PTAI 20.5.1**
+
+* Probleme mit CORS-Headern beim Senden von if-Modified-Since-Headern.
+
+* Probleme im CRS-Dashboard.
+
+**PTAI 20.3.4**
+
+* Problem, das dazu führte, dass Untertitel nach dem Einfügen der Anzeige in VOD/WebVTT nicht mehr synchronisiert wurden.
 
 **PTAI 20.3.3**
 
