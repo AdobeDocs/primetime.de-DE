@@ -2,9 +2,9 @@
 title: PTAI 20.5.1 - Versionshinweise
 description: Die Versionshinweise zu PTAI 20.5.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme bei der Primetime Dynamic Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: 75f95c1ddbca6fc9aa2a722635b1bfb6f097f8cc
+source-git-commit: e5fb84a7199e16a5eb7b6fd61aa7a1e50bb05c73
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Versionshinweise zur dynamischen Anzeigeneinfügung 20.5.1 beschreiben, was neu 
 
 **Wenn:** Donnerstag, 26. März 2020 von 03:00 Uhr bis 04:00 Uhr Eastern Time
 
-* SSAI 4XX- und 5XX-Antworten liefern nun korrekt CORS-bezogene Header, sodass domänenübergreifende JavaScript-/Webview-Clients Fehlerantworten erfolgreich lesen können.
+* SSAI 4XX- und 5XX-Antworten liefern jetzt korrekt CORS-bezogene Header, sodass domänenübergreifende JavaScript-Webview-Clients Fehlerantworten erfolgreich lesen können.
 
 * Es wurde ein Problem mit X-Forwarded-For-Headern behoben, bei dem IPv6-Adressen nicht korrekt URL-kodiert wurden, wenn sie an die Anzeigen-Server weitergeleitet wurden.
 
@@ -85,7 +85,7 @@ Versionshinweise zur dynamischen Anzeigeneinfügung 20.5.1 beschreiben, was neu 
 
 * Entfernen Sie alte V1-Objekte aus NetStorage-Gruppen, um die Objektanzahl innerhalb sicherer Grenzen von Akamai zu halten.
 
-### [Hotfix für Version 20.1.2]
+### Version 20.1.2 (Hotfix)
 
 **Wenn:** Montag, 20. Januar 2020 von 02:00 Uhr bis 03:00 Uhr Eastern Time
 
@@ -103,7 +103,7 @@ Versionshinweise zur dynamischen Anzeigeneinfügung 20.5.1 beschreiben, was neu 
 
 ## Behobene Probleme
 
-Wenn die Lösung mit einem gemeldeten Problem verbunden ist, wird ein Zendesk-Verweis angezeigt. Beispiel: ZD#xxxxx.
+Wenn die Lösung mit einem gemeldeten Problem verbunden ist, wird ein Zendesk-Verweis angezeigt. Beispiel: `ZD#xxxxx`
 
 **PTAI 20.5.1**
 
