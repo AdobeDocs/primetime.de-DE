@@ -1,29 +1,36 @@
 ---
-title: TVSDK 3.11 für iOS-Versionshinweise
-description: TVSDK 3.11 für iOS-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK iOS 3.11.
+title: TVSDK 3.12 für iOS-Versionshinweise
+description: TVSDK 3.12 für iOS-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
+source-git-commit: f6a0fbaec3d164dd0c15d2738b58c7486bbc6e57
+workflow-type: tm+mt
+source-wordcount: '7665'
+ht-degree: 0%
 
 ---
 
 
-# TVSDK 3.11 für iOS-Versionshinweise {#tvsdk-for-ios-release-notes}
+# TVSDK 3.12 für iOS-Versionshinweise {#tvsdk-for-ios-release-notes}
 
-TVSDK 3.11 für iOS-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK iOS 3.11.
+TVSDK 3.12 für iOS-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK iOS 3.12.
 
 ## System- und Softwareanforderungen {#system-software-requirements}
 
-Bevor Sie iOS 3.11 herunterladen, stellen Sie sicher, dass Ihre Hardware, Ihr Betriebssystem und Ihre Anwendungsversionen die folgenden Anforderungen erfüllen:
+Bevor Sie iOS 3.12 herunterladen, stellen Sie sicher, dass Ihre Hardware, Ihr Betriebssystem und Ihre Anwendungsversionen die folgenden Anforderungen erfüllen:
 
 Betriebssystem: iOS 8.0 oder höher.
 
-## iOS TVSDK 3.11
+## iOS TVSDK 3.12
 
-Es wurden Fehlerbehebungen für Kundenprobleme bereitgestellt, bei denen `isFallbackOnInvalidCreativeEnabled` und Methoden zum Absturz der Anwendung `customParams` führen.
+Es wurde ein Problem behoben, bei dem der Live-Stream nach 15 Minuten Wiedergabe fehlschlug.
 
 Fehlerbehebungen in der aktuellen Version finden Sie unter Behobene [Kundenprobleme](#resolved-issues) und Einschränkungen im Abschnitt [bekannte Probleme und Einschränkungen](#known-issues-and-limitations) .
 
 ### Neue Funktionen und Fehlerbehebungen in früheren Versionen {#whats-new-previous}
+
+**iOS TVSDK 3.11**
+
+Es wurden Fehlerbehebungen für Kundenprobleme bereitgestellt, bei denen `isFallbackOnInvalidCreativeEnabled` und Methoden zum Absturz der Anwendung `customParams` führen.
 
 **iOS TVSDK 3.10**
 
@@ -45,7 +52,7 @@ iOS 13-Kompatibilität und Verarbeitung der iOS 13 UIWebView-API-Deaktivierung.
 
 **iOS TVSDK 3.7**
 
-Hotfix für ein Szenario, in dem die Wiedergabe gestoppt wurde, wenn gleichzeitig eine große Anzahl von Anforderungen zur Anzeigenauflösung gestellt wurde.
+Hotfix für ein Szenario, bei dem die Wiedergabe gestoppt wurde, wenn gleichzeitig eine große Anzahl von Anforderungen zur Anzeigenauflösung gestellt wurde.
 
 **iOS TVSDK 3.6**
 
@@ -291,14 +298,17 @@ Comment Type: draft
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
 </note>
  -->
+**iOS TVSDK 3.12**
+
+* Der Live-Stream schlägt nach 15 Minuten der Wiedergabe fehl, wenn TVSDK für iOS 3.10 verwendet wird.
+
+### Behobene Probleme in früheren Versionen {#resolved-issues-previous}
 
 **iOS TVSDK 3.11**
 
 * (ZD#40998) - Die `isFallbackOnInvalidCreativeEnabled` Ursache für einen Absturz der Anwendung.
 
 * (ZD#41289) - `NSInvalidArgumentException` wird mit der Methode beobachtet, die zum Absturz der Anwendung `customParams` führt.
-
-### Behobene Probleme in früheren Versionen {#resolved-issues-previous}
 
 **iOS TVSDK 3.10**
 
@@ -499,7 +509,7 @@ Verbesserte Korrektur für das geschlossene Problem 34385 in Version 1.4.42. Es 
 
 Verwendung von kreativen IDs und AdSystem in CRS-Anforderungen basierend auf CRS-Normalisierungsregeln
 
-* (ZD #29176) - Absturz beim `PTAdPolicyDeligate``satAdBreakAsWatched:position`
+* (ZD #29176) - Absturz `PTAdPolicyDeligate` `satAdBreakAsWatched:position`
 
 Absturz aufgrund leerer AdBreak wird jetzt behandelt.
 
@@ -808,7 +818,7 @@ Das Problem, bei dem die Wiedergabe fehlschlug, nachdem eine AES-verschlüsselte
 
 * (ZD #22074) - AUDVAST-Absturz unter iOS einmal pro Minute
 
-Dieses Problem wurde behoben, indem die Handhabung von VAST-Anzeigentags von Drittanbietern, die ungültige Zeichen in der URL enthalten, verbessert wurde.
+Dieses Problem wurde behoben, indem die Behandlung von VAST-Anzeigen-Tags von Drittanbietern, die ungültige Zeichen in der URL enthalten, verbessert wurde.
 
 * (ZD #22257) - TVSDK kann DRM-Stream nicht wiedergeben
 
@@ -887,7 +897,7 @@ Dieses Problem wurde behoben, indem TVSDK die Fehlerantwort als Fehler an die An
 
 In der aktuellen Implementierung wurden Ausweichanzeigen übersprungen und nicht neu verpackt, es sei denn, diese Anzeigen haben das Format m3u8. Dieses Problem wurde behoben, indem auch die Unterstützung für das Umpacken von Fallback-Anzeigen hinzugefügt wurde.
 
-* (ZD #19770) - Das TVSDK kann keine geschützten AES-Inhalte mit 302-Umleitungen wiedergeben
+* (ZD #19770) - Das TVSDK kann keine geschützten AES-Inhalte mit 302-Umleitung wiedergeben
 
 Das Umleitungsproblem wurde behoben, da die Umleitungs-URL von cleanConnectionData gelöscht wurde, bevor sie zur Analyse des Manifests verwendet werden konnte.
 
