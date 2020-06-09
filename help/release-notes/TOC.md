@@ -4,7 +4,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime-Versionshinweise
 translation-type: tm+mt
-source-git-commit: 1ec9411ac897ac6e7328aef9a6ddd614f533f1d0
+source-git-commit: 73c69ac4747db60cd17a1b385ab519f15b9003ac
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 + [Versionshinweise - Übersicht](home.md)
 + Primetime-Einfügen dynamischer Anzeigen {#ptai}
-   + [PTAI 20.5.1 - Versionshinweise](ptai-20x-release-notes.md)
+   + [PTAI 20.6.1 - Versionshinweise](ptai-20x-release-notes.md)
    + [PTAI 19.11.1 - Versionshinweise](ptai-19x-release-notes.md)
 + TVSDK für iOS {#tvsdk-ios}
    + [TVSDK 3.12 für iOS-Versionshinweise](tvsdk-3x-ios.md)
