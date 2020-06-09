@@ -1,20 +1,40 @@
 ---
-title: PTAI 20.5.1 - Versionshinweise
-description: Die Versionshinweise zu PTAI 20.5.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme bei der Primetime Dynamic Ad Insertion im Jahr 2020.
+title: PTAI 20.6.1 - Versionshinweise
+description: Die Versionshinweise zu PTAI 20.6.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: e5fb84a7199e16a5eb7b6fd61aa7a1e50bb05c73
+source-git-commit: fc09f185489ff7e3decb7c77b495825e4c9c7c09
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
 
 
-# Primetime Dynamic Ad Insertion 20.5.1 - Versionshinweise
+# Primetime Dynamic Ad Insertion 20.6.1 - Versionshinweise
 
-Versionshinweise zur dynamischen Anzeigeneinfügung 20.5.1 beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme bei der Primetime-Einfügen dynamischer Anzeigen im Jahr 2020.
+Versionshinweise zur dynamischen Anzeigeneinfügung 20.6.1 beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme bei der Primetime-Einfügen dynamischer Anzeigen im Jahr 2020.
 
-## Neue Funktionen in PTAI 20.5.1
+## Neue Funktionen in PTAI 20.6.1
+
+**Wenn:** Dienstag, 2. Juni 2020 von 03:00 Uhr bis 05:00 Uhr Eastern Time
+
+**Neue Funktionen**
+
+Wenden Sie sich an den Adobe Support, um die folgenden neuen Funktionen über die serverseitige Konfiguration zu aktivieren:
+
+* Manifestverwaltung: HLS-Segment- und -Ressourcen-URLs können jetzt zwischen HTTP und HTTPS transformiert werden, um die Leistung zu erhöhen, indem TLS-Handshakes bei Back-End-Anforderungen reduziert werden. Sie kann auch verwendet werden, um Anzeigen-/Inhaltsfragmente auf denselben CDNs zu vereinheitlichen.
+
+* VOD: Langform Verbesserte APIs, um die Sitzung mit langen VOD-Assets am Leben zu erhalten.
+
+**Fehlerbehebungen**
+
+* Es wurde ein Problem behoben, bei dem WebVTT-Fragmente unabhängig vom angeforderten Originalprotokoll immer unter dem HTTP-Protokoll angefordert wurden.
+
+* Es wurde ein Problem behoben, bei dem EXT-X-DISCONTINUITY-Tags vom Anfang der Wiedergabeliste entfernt wurden, wenn von Anzeigen zu Inhalt zurückgekehrt wurde. Wenden Sie sich an den Adobe Support, um diese Fehlerbehebung zu aktivieren.
+
+## Änderungen in früheren Versionen
+
+### Version 20.5.1
 
 **Wenn:** Dienstag, 5. Mai 2020 von 04:00 Uhr bis 05:00 Uhr Eastern Time
 
@@ -23,8 +43,6 @@ Versionshinweise zur dynamischen Anzeigeneinfügung 20.5.1 beschreiben, was neu 
 * Fehlerbehebungen im CRS-Dashboard.
 
 * Aktualisierungen der Wartung.
-
-## Änderungen in früheren Versionen
 
 ### Version 20.3.4
 
