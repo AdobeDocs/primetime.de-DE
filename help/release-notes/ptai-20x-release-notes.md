@@ -2,9 +2,9 @@
 title: PTAI 20.6.1 - Versionshinweise
 description: Die Versionshinweise zu PTAI 20.6.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: fc09f185489ff7e3decb7c77b495825e4c9c7c09
+source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,6 @@ Wenden Sie sich an den Adobe Support, um die folgenden neuen Funktionen über di
 * Es wurde ein Problem behoben, bei dem WebVTT-Fragmente unabhängig vom angeforderten Originalprotokoll immer unter dem HTTP-Protokoll angefordert wurden.
 
 * Es wurde ein Problem behoben, bei dem EXT-X-DISCONTINUITY-Tags vom Anfang der Wiedergabeliste entfernt wurden, wenn von Anzeigen zu Inhalt zurückgekehrt wurde. Wenden Sie sich an den Adobe Support, um diese Fehlerbehebung zu aktivieren.
-
-## Änderungen in früheren Versionen
 
 ### Version 20.5.1
 
