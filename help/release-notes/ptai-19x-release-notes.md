@@ -2,7 +2,10 @@
 title: PTAI 19.11.1 - Versionshinweise
 description: Die Versionshinweise zu PTAI 19.11.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2019.
 translation-type: tm+mt
-source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
+source-git-commit: 0a58cce0d80ade581e32b5dd9376d336e02fac8b
+workflow-type: tm+mt
+source-wordcount: '1968'
+ht-degree: 0%
 
 ---
 
@@ -48,6 +51,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
 **Wenn:** Mittwoch, 21. August 2019, 2:00 Uhr bis 3:00 Uhr östliche Zeit
 
 * SSAI-Dashboard: Abschnitt &quot;Sitzungsstatistik&quot;. Sie können die Session-Ereignis über die Option CSV herunterladen exportieren.
+
 * Aktualisierungen der Wartung
 
 ### Version 19.8.1
