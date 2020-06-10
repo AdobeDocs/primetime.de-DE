@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: fdb4e4eb741dd066017d96205cea8cbd15dcbc7b
+source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+workflow-type: tm+mt
+source-wordcount: '5490'
+ht-degree: 0%
 
 ---
 
@@ -198,7 +201,7 @@ Android TVSDK v2.5.4 Angebote mit den folgenden Aktualisierungen und API-Änderu
 
 * Änderungen am Standardwert für `WebViewDebbuging`
 
-   `WebViewDebbuging` ist standardmäßig auf `Fals`e eingestellt. Rufen Sie zur Aktivierung `setWebContentsDebuggingEnabled(true)` in der Anwendung auf.
+   `WebViewDebbuging` ist standardmäßig auf `Fals`e eingestellt. Rufen Sie dazu `setWebContentsDebuggingEnabled(true)` in der Anwendung auf.
 
 * **Aktualisierung der OpenSSL- und Curl-Version**
 
@@ -334,7 +337,8 @@ In den unten stehenden Funktionstabellen gibt ein &quot;Y&quot;an, dass die Funk
 | Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | VOD + Live | Y |
 | FER - Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | FER VOD | Y |
 | Suchen, wann eine Anzeige abgespielt wird | VOD + Live | Nicht unterstützt |
-| AC3 | VOD + Live | Nicht unterstützt |
+| HEVC-Wiedergabe | VOD + Live | Nur fMP4-Container |
+| AC3 und EAC3 | VOD + Live | Nicht unterstützt |
 | MP3 | VOD | Nicht unterstützt |
 | MP4-Inhaltswiedergabe | VOD | Y |
 | Adaptive Bit Rate Switching Logic | VOD + Live | Y |
@@ -354,7 +358,6 @@ In den unten stehenden Funktionstabellen gibt ein &quot;Y&quot;an, dass die Funk
 | Verspätete Audiobindung | VOD + Live | Y |
 | 302 Umleitung | VOD + Live | Y |
 | Wiedergabe mit Versatz | VOD + Live | Y |
-| Wiedergabe nur Audio | VOD + Live | Y |
 | Trick Play | VOD + Live | Y |
 | Langsame Bewegung bei Trick Play | VOD + Live | Nicht unterstützt |
 | Glattes Trick Play (mit ABR) | VOD + Live | Y |
@@ -384,19 +387,43 @@ In den unten stehenden Funktionstabellen gibt ein &quot;Y&quot;an, dass die Funk
 | Verzögerte Anzeigenauflösung | VOD | Y |
 | Unterstützung von Diskontinuitätsmarken - SSAI | VOD + Live | Y |
 | Ergänzende Anzeigen, Banneranzeigen und anklickbare Anzeigen | VOD + Live | Y |
+| 302 Umleitungs-Stickiness | VOD + Live | Y |
+
+| Funktion | Inhaltstyp | HLS |
+|---|---|---|
+| Allgemeine Wiedergabe, Anzeige aktiviert | VOD + Live | Y |
+| FER-Inhalt mit aktivierten Anzeigen | VOD | Y |
+| Standardverhalten von Werbeanzeigen | VOD + Live | Y |
+| VAST 2.0/3.0 | VOD + Live | Y |
+| VMAP 1.0 | VOD + Live | Y |
+| MP4-Anzeigen | VOD + Live | Y (aus CRS) |
+| Trick Play mit aktivierten Anzeigen | VOD + Live | Y |
+| Nur Anzeige | VOD | Y |
+| Targeting-Parameter | VOD + Live | Y |
+| Benutzerdefinierte Parameter | VOD + Live | Y |
+| Benutzerdefiniertes Anzeigenverhalten | VOD + Live | Y |
+| Benutzerdefinierte Anzeigen-Tags | Live | Y |
+| Benutzerdefinierte Anzeigenauflösungen | VOD + Live | Y |
+| Freirad benutzerdefinierter Anzeigenauflösung | VOD | Y |
+| C3 | VOD + Live | Nicht unterstützt |
+| Verzögerte Anzeigenauflösung | VOD | Y |
+| Unterstützung von Diskontinuitätsmarken - SSAI | VOD + Live | Y |
+| Ergänzende Anzeigen, Banneranzeigen und anklickbare Anzeigen | VOD + Live | Y |
 | VPAID 2.0 | VOD + Live | Y (JS) |
 | Vorzeitiger Anzeigenausstieg | Live | Y |
 | Regelbasierte kreative Priorisierung | VOD + Live | Y |
 | CRS-Regeln | VOD + Live | Y |
 | JSON Ad Resolver | VOD + Live | Nicht unterstützt |
 | Mottenintegration | VOD + Live | Y |
+| Einfügen eines Teilformulars mit Werbeunterbrechung | Live | Y |
 
 | Funktion | Inhaltstyp | HLS |
 |---|---|---|
 | AES-Verschlüsselung | VOD + Live | Y |
 | Beispiel-AES-Verschlüsselung | VOD + Live | Y |
 | Tokenisierte Streams | VOD + Live | Y |
-| DRM | VOD + Live | Nur Primetime-DRM (Zukunft: Widevine) |
+| Widevine DRM | VOD + Live | Nur fMP4-Container |
+| Primetime DRM | VOD + Live | Y |
 | Externe Wiedergabe (RBOP) | VOD + Live | Nur Primetime-DRM |
 | Lizenzdrehung | VOD + Live | Nur Primetime-DRM |
 | Schlüsseldrehung | VOD + Live | Nur Primetime-DRM |
