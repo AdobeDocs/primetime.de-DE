@@ -4,7 +4,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Primetime-Versionshinweise
 translation-type: tm+mt
-source-git-commit: 73c69ac4747db60cd17a1b385ab519f15b9003ac
+source-git-commit: 106a523b0df22157c2ddc9246e959389869fbba5
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
    + [TVSDK 3.12 für iOS-Versionshinweise](tvsdk-3x-ios.md)
    + [TVSDK 1.4 für iOS-Versionshinweise](tvsdk-1-4-ios.md)
 + TVSDK für Android {#tvsdk-android}
-   + [TVSDK 3.11 für Android-Versionshinweise](tvsdk-3x-android.md)
+   + [TVSDK 3.12 für Android-Versionshinweise](tvsdk-3x-android.md)
    + [TVSDK 2.7 für Android-Versionshinweise](tvsdk-27-android.md)
    + [TVSDK 2.4.1 für Android-Versionshinweise](tvsdk-24-android.md)
    + [TVSDK 1.4 für Android-Versionshinweise](tvsdk-1-4-android.md)
