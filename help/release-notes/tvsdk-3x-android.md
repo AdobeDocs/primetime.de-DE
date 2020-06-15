@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: db3f488e29468fc29ea8bf033877124a9abdecd0
+source-git-commit: d1881d1fe97d416ee0f69f62828aef46c5ad21bb
 workflow-type: tm+mt
-source-wordcount: '5531'
+source-wordcount: '5415'
 ht-degree: 0%
 
 ---
@@ -371,28 +371,6 @@ In den unten stehenden Funktionstabellen gibt ein &quot;Y&quot;an, dass die Funk
 | Werbeunterbrechung | VOD + Live | Nicht unterstützt |
 | Sofort ein | VOD + Live | Nicht unterstützt |
 | Unterstützung von Diskontinuitätsmarken | VOD + Live | Y |
-| 302 Umleitungs-Stickiness | VOD + Live | Y |
-
-| Funktion | Inhaltstyp | HLS |
-|---|---|---|
-| Allgemeine Wiedergabe, Anzeige aktiviert | VOD + Live | Y |
-| FER-Inhalt mit aktivierten Anzeigen | VOD | Y |
-| Standardverhalten von Werbeanzeigen | VOD + Live | Y |
-| VAST 2.0/3.0 | VOD + Live | Y |
-| VMAP 1.0 | VOD + Live | Y |
-| MP4-Anzeigen | VOD + Live | Y (aus CRS) |
-| Trick Play mit aktivierten Anzeigen | VOD + Live | Y |
-| Nur Anzeige | VOD | Y |
-| Targeting-Parameter | VOD + Live | Y |
-| Benutzerdefinierte Parameter | VOD + Live | Y |
-| Benutzerdefiniertes Anzeigenverhalten | VOD + Live | Y |
-| Benutzerdefinierte Anzeigen-Tags | Live | Y |
-| Benutzerdefinierte Anzeigenauflösungen | VOD + Live | Y |
-| Freirad benutzerdefinierter Anzeigenauflösung | VOD | Y |
-| C3 | VOD + Live | Nicht unterstützt |
-| Verzögerte Anzeigenauflösung | VOD | Y |
-| Unterstützung von Diskontinuitätsmarken - SSAI | VOD + Live | Y |
-| Ergänzende Anzeigen, Banneranzeigen und anklickbare Anzeigen | VOD + Live | Y |
 | 302 Umleitungs-Stickiness | VOD + Live | Y |
 
 | Funktion | Inhaltstyp | HLS |
