@@ -3,7 +3,10 @@ seo-title: Whitelist für Nicht-SWF-Anwendungen
 title: Whitelist für Nicht-SWF-Anwendungen
 uuid: d4f93b15-e556-4749-95ab-f7f58b1061d7
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
@@ -27,4 +30,4 @@ Weitere Informationen finden Sie `policy.allowedAIRApplication.n` unter *Konfigu
 
 >[!NOTE]
 >
->Für die Whitelisting einer iOS-Anwendung ist ein spezieller Ansatz erforderlich. Siehe [Whitelist Ihrer iOS-Anwendung](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-whitelist-your-ios-application.md) im *TVSDK for iOS-Programmierhandbuch*.
+>Für das Auflisten einer iOS-Anwendung ist ein besonderer Ansatz erforderlich. Siehe [Zulassungsliste Ihrer iOS-Anwendung](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md) im *TVSDK for iOS-Programmierhandbuch*.
