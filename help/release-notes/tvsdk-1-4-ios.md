@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '6578'
+ht-degree: 0%
 
 ---
 
@@ -81,7 +84,7 @@ Jedes Mal, wenn TVSDK ein Stream-Beginn-Ereignis generiert, sendet der Player re
 
 In der PTSDKConfig-Klasse wurde die forceHTTPS-API hinzugefügt.
 
-Die PTSDKConfig-Klasse stellt Methoden zum Erzwingen von SSL für Anforderungen bereit, die an Adobe Primetime-Anzeigen, DRM- und Video Analytics-Server gesendet werden. Weitere Informationen finden Sie unter `forceHTTPS` und `isForcingHTTPS` -Methoden für diese Klasse. Wenn ein Manifest über HTTPS geladen wird, behält TVSDK die Inhaltsverwendung von HTTPS bei und berücksichtigt diese Verwendung beim Laden von relativen URLs aus diesem Manifest.
+Die PTSDKConfig-Klasse stellt Methoden zum Erzwingen von SSL für Anforderungen bereit, die an Adobe Primetime-Anzeigen, DRM- und Video-Analytics-Server gesendet werden. Weitere Informationen finden Sie unter `forceHTTPS` und `isForcingHTTPS` -Methoden für diese Klasse. Wenn ein Manifest über HTTPS geladen wird, behält TVSDK die Inhaltsverwendung von HTTPS bei und berücksichtigt diese Verwendung beim Laden von relativen URLs aus diesem Manifest.
 
 **Hinweis**: Anforderungen an Drittanbieter-Domänen wie Anzeigenverfolgungspixel, Inhalts- und Anzeigen-URLs und ähnliche Anforderungen werden nicht geändert. Es liegt in der Verantwortung der Inhaltsanbieter und Anzeigenserver, URLs bereitzustellen, die über HTTPS unterstützt werden.
 
@@ -269,7 +272,7 @@ Comment Type: draft
 * (ZD#34684) - Wenn die Richtlinie zum Überspringen von Anzeigen angewendet wird, werden die Pre-Roll-Anzeigenrahmen für einige Sekunden angezeigt. Eine neue API, enableVodPreroll, wurde eingeführt, um die Wiedergabe von Vorspänen in vod-Wiedergabe zu deaktivieren. Der Standardwert für diese API ist &quot;Ja&quot;. Die API stellt sicher, dass das Zuordnen von Werbeinhalten im Hauptinhalt übersprungen wird.
 * (ZD#34765) - Nach dem Aufruf von stop() werden immer noch wenige Segmente zu Transport-Streams heruntergeladen. Die Stopp()-API wurde verbessert, um den Download der zusätzlichen Segmente zu vermeiden.
 * (ZD#34865) - Pre-Roll-Anzeigen für Livestream werden unter iOS abgeschnitten. Im Zusammenhang mit iOS11 wird dieses Problem durch Hinzufügen einer zusätzlichen Prüfung zur Bestätigung, ob der Stream Pre-Roll oder Hauptinhalt ist, behoben.
-* (ZD#35093) - Es wurde ein Failover-Szenario behoben, bei dem, wenn die primäre Variante des Streams beim Start fehlschlug (gibt 404 zurück), die Wiedergabe nicht in den Sicherungsstream wechselt.
+* (ZD#35093) - Es wurde ein Failover-Szenario behoben, bei dem, wenn die Primär-Variante des Streams beim Start fehlschlug (gibt 404 zurück), die Wiedergabe nicht in den Backup-Stream wechselt.
 
 **Version 1.4.42 (1.4.42.118)**
 
@@ -311,9 +314,9 @@ Comment Type: draft
 * (ZD#31979) - Wird nicht kompiliert/ausgeführt, wenn iOS 10 oder höher für iPhone 7/iPhone 7+ ist
 
    Das Kompilieren von IB-Dokumenten für frühere Versionen als iOS 7 wird nicht mehr unterstützt
-* (ZD#32920) - weißer leerer Bildschirm innerhalb einer Werbeunterbrechung und ohne Abschluss der Werbeunterbrechung
+* (ZD#32920) - Leerer Bildschirm innerhalb einer Werbeunterbrechung und ohne Ende der Werbeunterbrechung
 
-   Wenn ein Werbeunterbrechung Anzeigeninstanzen anzeigt und nach Abschluss einer Anzeigeninstanz ein weißer leerer Bildschirm angezeigt wird
+   Wenn ein Werbeunterbrechung Anzeigeninstanzen anzeigt und nach Abschluss einer Anzeigeninstanz ein leerer Bildschirm angezeigt wird
 * (ZD#32509) - Deaktivieren der Bildschirmaufzeichnung &quot;iOS 11&quot;Deaktivieren der Bildschirmaufzeichnung unter iOS 11
 
 * (ZD#33179) - Zeitweiliger Ereignis-Fehler unter iOS 11
@@ -329,7 +332,7 @@ Comment Type: draft
 * (ZD #31951) - TVSDK-Fehler bei Lizenzrotationen.
 
    Problem mit der Lizenzrotation behoben.
-* (ZD #31951) - Weißer leerer Bildschirm innerhalb einer Werbeunterbrechung und ohne Abschluss der Werbeunterbrechung.
+* (ZD #31951) - Leerer Bildschirm innerhalb einer Werbeunterbrechung und ohne Abschluss der Werbeunterbrechung.
 
    Behebung eines Problems, bei dem Facebook VPAID-Anzeigen häufig mehrere CDATA-Blöcke in einem einzigen \&amp;lt;AdParameters\&amp;gt zurückgaben; VAST-Knoten.
 * (ZD #33336) - [iOS] TVSDK - Anzeigen-Pods werden nicht ausgefüllt, obwohl genügend Anzeigen von FreeWheel zurückgegeben wurden.
@@ -489,9 +492,9 @@ Dieses Problem wurde behoben, indem eine Problemumgehung für Streams ohne M3U8-
 
 Die folgenden Probleme wurden in dieser Version für TVSDK behoben:
 
-* (ZD# 24180) Hinzufügen einer benutzerdefinierten Kopfzeile zur weißen Liste
+* (ZD# 24180) Hinzufügen einer benutzerdefinierten Kopfzeile zum zulassungsliste
 
-Der White-Liste TVSDK wurde eine neue benutzerdefinierte Kopfzeile hinzugefügt.
+Der TVSDK-zulassungsliste wurde eine neue benutzerdefinierte Kopfzeile hinzugefügt.
 
 * (ZD# 25016) Failover-Stream wird zufällig ausgewählt, wenn ABR-Steuerungsparameter eingestellt werden
 
@@ -761,7 +764,7 @@ Dieses Problem wurde behoben, indem TVSDK die Fehlerantwort als Fehler an die An
 
 In der aktuellen Implementierung wurden Ausweichanzeigen übersprungen und nicht neu verpackt, es sei denn, diese Anzeigen haben das Format m3u8. Dieses Problem wurde behoben, indem auch die Unterstützung für das Umpacken von Fallback-Anzeigen hinzugefügt wurde.
 
-* (ZD #19770) - Das TVSDK kann keine geschützten AES-Inhalte mit 302-Umleitung wiedergeben
+* (ZD #19770) - Das TVSDK kann keine geschützten AES-Inhalte mit 302-Umleitungen wiedergeben
 
 Das Umleitungsproblem wurde behoben, da die Umleitungs-URL von cleanConnectionData gelöscht wurde, bevor sie zur Analyse des Manifests verwendet werden konnte.
 
@@ -900,7 +903,7 @@ Falsche Version MD5 in 3P-URL korrigiert.
 
 **Version 1.4.12** (1.4.12.463) für iOS 6.0+
 
-* (ZD #2751) CSAI und CRS| Verbesserung: Verarbeiten Sie dynamische Elemente in bestimmten Mediendatei-URLs.
+* (ZD #2751) CSAI und CRS | Verbesserung: Verarbeiten Sie dynamische Elemente in bestimmten Mediendatei-URLs.
 
 Der Dienst für kreative Umverpackungen wurde aktualisiert, um Anzeigen mit dynamischen kreativen URLs korrekt zu bearbeiten.
 
@@ -950,7 +953,7 @@ Unterstützung für das Ping von URLs zur Verfolgung von Werbeunterbrechungen, �
 
 **Version 1.4.5** (1.4.5.283)
 
-* (ZD #2141) Bei der Analytics-Implementierung der TreeHouse-App wurde AdobeAnalyticsPlugin.a eine Bibliothek zum Erstellen des Pakets hinzugefügt.
+* (ZD #2141) Die Analytics-Implementierung für die TreeHouse-App hat AdobeAnalyticsPlugin.a zum Erstellen des Pakets hinzugefügt.
 * Video Heartbeats Library Update auf 1.4.1.2
 * [PTPALY-4226] [in Zusammenhang mit ZD #2423) Das Ausführen des DRM-Resets kann zum Löschen der Daten des Application Dokument führen.
 
@@ -985,7 +988,7 @@ Unterstützung für das Ping von URLs zur Verfolgung von Werbeunterbrechungen, �
 * Es kann vorkommen, dass das Video zur Lizenzrotation unter iOS 11 nicht abgespielt wird und unter iOS 9.x und iOS 10.x korrekt wiedergegeben wird.
 * Bei der VPAID 2.0-Unterstützung werden VPAID-Anzeigen übersprungen, wenn die Wiedergabe über AirPlay aktiv ist.
 * Die Verknüpfung von &quot;drmNativeInterface.framework&quot;ist nicht korrekt, wenn die Zielgruppe auf &quot;iOS7 (oder höher)&quot;festgelegt ist.\
-   Problemumgehung: Geben Sie explizit die `libstdc++6`Variable an.  Dylib-Bibliothek wie folgt: Gehen Sie zu Zielgruppe->Build-Phasen->Link Binary with Libraries und fügen Sie `libstdc++.6.dylib`hinzu.
+   Problemumgehung: Geben Sie explizit die `libstdc++6`Variable an.  Dylib-Bibliothek wie folgt: Gehen Sie zu Target->Build-Phasen->Link Binary with Libraries und fügen Sie `libstdc++.6.dylib`hinzu.
 
 * Post-Roll-Anzeige wird nicht zum Ersetzen der API eingefügt.
 * Bei der Suche nach einer Werbeunterbrechung (ohne sie zu verlassen) werden dem Duplikat-Beginn und dem Werbeunterbrechungsbenachrichtigungen angezeigt
