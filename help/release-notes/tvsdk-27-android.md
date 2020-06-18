@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: bab78e9f-f9ba-4e1c-b778-0936ae704037
 translation-type: tm+mt
-source-git-commit: 36a1619b43d22ccc7286d4a4b74f2c6297d0fd47
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '4123'
+ht-degree: 0%
 
 ---
 
@@ -146,8 +149,8 @@ Hinweis: ABR-Switching, Trick Play, Anzeigeneinfügung, späte Audiobindung und 
 
 * **Workflow-Unterstützung**
 
-   * **Integration der direkten Rechnungsstellung -** Hiermit werden Rechnungsmetriken an das Adobe Analytics-Back-End gesendet, das von Adobe Primetime für vom Kunden verwendete Streams zertifiziert wurde.
-TVSDK sammelt automatisch Metriken, wobei der Kaufvertrag des Kunden eingehalten wird, um regelmäßige Nutzungsberichte zu erstellen, die für die Abrechnung erforderlich sind. Auf jedem Stream-Beginn-Ereignis verwendet TVSDK die Adobe Analytics-Dateneinfüge-API, um Rechnungsmetriken wie Inhaltstyp, durch Anzeigeneinfügung aktivierte Flags und DRM-aktivierte Flags - je nach Dauer des abrechnungsfähigen Streams - an die Adobe Analytics Primetime-Report Suite zu senden. Dies beeinträchtigt oder wird nicht in die eigenen Adobe Analytics Report Suites oder Server-Aufrufe des Kunden aufgenommen. Auf Anfrage wird dieser Bericht zur Rechnungsnutzung regelmäßig an Kunden gesendet. Dies ist die erste Phase der Abrechnungsfunktion, die nur die Nutzungsabrechnung unterstützt. Sie kann mithilfe der in der Dokumentation beschriebenen APIs auf Grundlage des Kaufvertrags konfiguriert werden. Diese Funktion ist standardmäßig aktiviert. Um diese Funktion zu deaktivieren, lesen Sie das Referenz-Player-Beispiel.
+   * **Integration der direkten Rechnungsstellung -** Hiermit werden Rechnungsmetriken an das Adobe Analytics-Backend gesendet, das von Adobe Primetime für vom Kunden verwendete Streams zertifiziert wurde.
+TVSDK sammelt automatisch Metriken, wobei der Kaufvertrag des Kunden eingehalten wird, um regelmäßige Nutzungsberichte zu erstellen, die für die Abrechnung erforderlich sind. Auf jedem Stream-Beginn-Ereignis verwendet TVSDK die Adobe Analytics-Dateneinfüge-API, um Abrechnungsmetriken wie Inhaltstyp, durch Anzeigeneinfügung aktivierte Flags und DRM-aktivierte Flags - je nach Dauer des abrechnungsfähigen Streams - an die Adobe Analytics Primetime-eigene Report Suite zu senden. Dies beeinträchtigt oder wird nicht in die eigenen Adobe Analytics Report Suites oder Serveraufrufe des Kunden aufgenommen. Auf Anfrage wird dieser Bericht zur Rechnungsnutzung regelmäßig an Kunden gesendet. Dies ist die erste Phase der Abrechnungsfunktion, die nur die Nutzungsabrechnung unterstützt. Sie kann mithilfe der in der Dokumentation beschriebenen APIs auf Grundlage des Kaufvertrags konfiguriert werden. Diese Funktion ist standardmäßig aktiviert. Um diese Funktion zu deaktivieren, lesen Sie das Referenz-Player-Beispiel.
    * **Verbesserte Failover-Unterstützung -** Zusätzliche Strategien wurden implementiert, um die unterbrechungsfreie Wiedergabe fortzusetzen, obwohl Host-Server, Wiedergabelistendateien und Segmente ausfallen.
 
 * **Werbung**
@@ -204,7 +207,7 @@ In den unten stehenden Funktionstabellen gibt ein &quot;Y&quot;an, dass die Funk
 | Erweiterte Failover | VOD + Live | Y |
 | Servicequalitäts- und Player-Benachrichtigungen | VOD + Live | Y |
 | Unterstützung für Cookie-Kopfzeilen | VOD + Live | Y |
-| Unterstützung für benutzerdefinierte HTTP-Kopfzeilen | VOD + Live | Y (Whitelist erforderlich) |
+| Unterstützung für benutzerdefinierte HTTP-Kopfzeilen | VOD + Live | Y (Aufnahme zulassen erforderlich) |
 | Puffersteuerungsparameter festlegen | VOD + Live | Y |
 | Festlegen der Steuerelemente für adaptive Bitraten | VOD + Live | Y |
 | Benutzerdefinierte Manifest-Tags | VOD + Live | Y |
@@ -283,7 +286,7 @@ Dieser Abschnitt enthält eine Zusammenfassung des Problems, das in der Version 
 * ZD #34149 - Player fordert weiterhin Manifeste an, auch wenn ein Fehler aufgetreten ist.
    * Korrektur des Problems, bei dem TVSDK wiederholende Aufrufe tätigte, selbst wenn alle Profil ausfielen (404-Fehler).
 * ZD #31533 - Audiowiedergabe auf Android, nachdem die App in den Hintergrund gesendet wurde.
-   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player den Status &quot;VORBEREITET&quot;aufweist), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
+   * Es wurde `enableAudioPlaybackInBackground` API von MediaPlayer hinzugefügt, die mit &quot;True&quot;als Argument aufgerufen werden sollte (wenn der Player sich im Status &quot;VORBEREITT&quot;befindet), um die Wiedergabe von Audio zu aktivieren, wenn die App im Hintergrund ausgeführt wird.
 
 **Android TVSDK 2.5.5**
 
