@@ -9,7 +9,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: f1ebc1a8-185a-493a-9c00-a6102dffb128
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '7913'
+ht-degree: 0%
 
 ---
 
@@ -248,7 +251,7 @@ TVSDK 1.4.43 wurde mit Android-Geräten mit Android 6.0.1/ 7.0 und 8.1 (Oreo) ze
 
 * Zendesk #33068 - Amazon-Lippensynchronisierungsproblem auf einem neuen Gerät. In diesen Versionen wurde ein Problem mit der Lip-Synchronisierung behoben.
 * Zendesk #32215 - Android TVSDK 1.4.38 Sicherheitsprobleme `[Hotlist]`. Aktualisiert auf die neuesten OpenSSL-1.1.0 und curl-7.5.1.
-* Zendesk #32920 - weißer leerer Bildschirm innerhalb einer Werbeunterbrechung und ohne Abschluss der Werbeunterbrechung. Es wurde ein Problem behoben, bei dem ein VPAID-Container in einen Status &quot;hängen&quot;versetzt und ein Problem behoben wurde, bei dem Facebook VPAID-Anzeigen häufig mehrere CDATA-Blöcke in einem einzigen \&amp;lt;AdParameters\&amp;gt zurückgaben; VAST-Knoten.
+* Zendesk #32920 - Leerer Bildschirm innerhalb einer Werbeunterbrechung und ohne Abschluss der Werbeunterbrechung. Es wurde ein Problem behoben, bei dem ein VPAID-Container in einen Status &quot;hängen&quot;versetzt und ein Problem behoben wurde, bei dem Facebook VPAID-Anzeigen häufig mehrere CDATA-Blöcke in einem einzigen \&amp;lt;AdParameters\&amp;gt zurückgaben; VAST-Knoten.
 
 **Version 1.4.39 (1744)**
 
@@ -336,7 +339,7 @@ Der Code wurde aktualisiert, damit die `cdn.auditude.com` Anzeigenanforderung GE
 
 * Zendesk #25067 - Absturz in VideoEngineTimelineDies geschieht, weil Objekte nicht korrekt gereinigt wurden und Ereignisse aufgerufen wurden, nachdem die Objekte zerstört wurden. Das Problem wurde behoben, indem Prüfungen hinzugefügt wurden, um Null-Ausnahmen zu verhindern.
 
-* Zendesk #25352 - Festlegen eines benutzerdefinierten HTTP-Headers Dieses Problem wurde behoben, indem der Whitelist auf TVSDK ein neuer benutzerdefinierter Header hinzugefügt wurde.
+* Zendesk #25352 - Festlegen eines benutzerdefinierten HTTP-Headers Dieses Problem wurde behoben, indem der zulassungsliste unter TVSDK ein neuer benutzerdefinierter Header hinzugefügt wurde.
 
 * Zendesk #25617 - Live-Stream-PTS-Rollover, der zu Diskontinuität des Players und zum Speicherabsturz führte. Dieses Problem wurde behoben, indem eine PTS-Rollover-Verarbeitung in FragmentedHTTPStreamer hinzugefügt wurde, wenn ein Rollover mitten in einem Segment stattfindet.
 
@@ -504,7 +507,7 @@ Dieses Problem wurde behoben, indem die Größe der DRM-Metadaten des Profils ü
 
 * Zendesk #3875 - Tab S stürzt während der Wiedergabe abRückkehren der Abhängigkeit von OKHTTP auf Auditude für CRS, da TVSDK jetzt direkt HTTPurlconnection statt curl verwendet. Das Problem wurde behoben, indem Ausnahmen gelöscht wurden, bevor ein anderer JNI-Aufruf erfolgte.
 
-* Zendesk #4487 - Tracking Linear Kanal of ContentDas Problem wurde behoben, indem die erneute Initialisierung des Video Heartbeat-Trackers während einer Sitzung zur linearen Stream-Wiedergabe ermöglicht wurde.
+* Zendesk #4487 - Tracking Linear Kanal of ContentDas Problem wurde behoben, indem die erneute Initialisierung des Video Heartbeat Tracker während einer linearen Stream-Wiedergabesitzung ermöglicht wurde.
 
 * Zendesk #17919 - Android - Inhaltssuche verursacht Heartbeat-FehlerDas Problem, bei dem der Heartbeat in einem Fehlerzustand ist, wenn eine Suche in einem Kapitel vorhanden ist, wurde behoben.
 
@@ -561,7 +564,7 @@ Eine Beschränkung für die Deaktivierung der kreativen Neuverpackung von Fallba
 
 **Version 1.4.12 (1388)**
 
-* Zendesk #2751 - CSAI und CRS| Verbesserung: Verarbeiten Sie dynamische Elemente in bestimmten Mediendatei-URLs.
+* Zendesk #2751 - CSAI und CRS | Verbesserung: Verarbeiten Sie dynamische Elemente in bestimmten Mediendatei-URLs.
 Der Dienst für kreative Umverpackungen wurde aktualisiert, um Anzeigen mit dynamischen kreativen URLs korrekt zu bearbeiten.
 
 * Zendesk #3965 - Beim Zurückschalten von der Trickplay-Wiedergabe auf die normale Wiedergabe erfolgt ein Sprung nach vorne, bevor die Wiedergabe gestartet wird.
@@ -585,9 +588,9 @@ setByteArray- und getByteArray-API hinzugefügt.
 
 **Version 1.4.11 (1363)**
 
-* Zendesk #2076 - Häufiger Stotter beim Abspielen von Videos auf Motorola Xoom mit Android 4.0.3Neue Geräte zur Whitelist hinzugefügt, um zu verhindern, dass sie versuchen, Inhalte mit hohem Profil abzuspielen.
+* Zendesk #2076 - Häufiger Stotter beim Abspielen von Videos auf Motorola Xoom mit Android 4.0.3Hinzufügen von Geräten zum zulassungsliste, um zu verhindern, dass sie versuchen, Inhalte mit hohem Profil wiederzugeben.
 
-* Zendesk #2197 - `[Ads]` Tracking ad errspatch OperationFailureEvent mit Warnmeldung. 
+* Zendesk #2197 - `[Ads]` Tracking ad errspatch OperationFailureEvent mit Warnmeldung.
 
 * Zendesk #3304 - VAST 3.0 `[ERRORCODE]` -Makro nicht gefüllt
    * Fehlercode 400 wird angezeigt, wenn Inline-Anzeige ein falsches kreatives Element enthält.
@@ -597,7 +600,7 @@ setByteArray- und getByteArray-API hinzugefügt.
 
 * Zendesk #2941 - Live-Assets haben im suchbaren Bereich nicht &quot;0&quot;. Zuvor gab es bei der Suche nach dem Anfang eines Live-Streams einen 3-Segmentpuffer, jetzt ist es möglich, bis zum Anfang eines Live-Streams zu suchen (d. h. bis zum Beginn des ersten Segments).
 
-* Zendesk #3169 - Update Reference Player with Adobe Analytics integration Der Referenz-Player wurde als Beispiel für die Implantation mit der Adobe Analytics-Bibliothek aktualisiert. 
+* Zendesk #3169 - Update Reference Player with Adobe Analytics integration Der Referenz-Player wurde mit der Adobe Analytics-Bibliothek als Beispiel für die Implantation aktualisiert.
 * Zendesk #3299 - Unerklärliches Verhalten bei Tricks
    * Es wurde ein Fehler behoben, durch den die Rückkehr zum Wiedergabestatus nach dem Beenden der Trick-Wiedergabe mehrere Sekunden dauern konnte (manchmal 25+ Sekunden).
    * Es wurde ein Fehler behoben, durch den beim Aufrufen von trick play ein zweites Mal auf demselben Medium der Stream zum aktuellen Zeitpunkt eingefroren werden konnte.
@@ -650,14 +653,14 @@ Dieses Problem wurde behoben, indem Latenzzeiten zwischen Videosegmentdownloads 
 
 * Zendesk #2908 - Arabische Untertitel, die nicht auf Nexust 5, 6 und 7 funktionieren, wurden korrigiert, indem 2 weitere Fallback-Schriftarten für arabische Skripten hinzugefügt wurden.
 * PTPLAY-4627 - Nielson-Apps auf Version 1.2.3.7 aktualisieren
-* PTPLAY-5084 - Unterstützung für Update-Failover für Live-Master-Manifest
+* PTPLAY-5084 - Unterstützung für Live-Master-Manifest-Update-Failover
 
 **Version 1.4.5 (1248)**
 
 * Zendesk #1757 - Nur abgespielter oder Player stürzt bei einigen Video-Bitrate-Profilen ab, Nexus 4 und Nexus 7 stürzten ab
 * Zendesk #2072 - TimedMetadata for AdEvent enthält nicht die vollständige URL nur &quot;http&quot;
 * Zendesk #2192 - Bitrate ist unter schlechten Netzwerkbedingungen nicht immer niedriger
-* Zendesk #2256 - Zugriff auf Master-Playlist, PSDK aktualisiert, um timedMetadata-Ereignis für abonnierte Tags in der Master-Playlist auszulösen.
+* Zendesk #2256 - Zugriff auf Master Playlist, PSDK aktualisiert, um timedMetadata-Ereignis für abonnierte Tags in der Master-Playlist auszulösen.
 * Zendesk #2269 - Zwei verschiedene Untertitelsprachen werden gleichzeitig mit WebVTT auf dem Bildschirm angezeigt
 * Zendesk #2417 - Player, der versucht, Untertitel vor dem Beginn der Wiedergabe herunterzuladen, verwendete WebVTT die falsche Segmentnummernvariable für die Segmentnummerübereinstimmung. Fehler werden nur für Medien angezeigt, deren Segmentindizes bei Null beginnen.
 * Zendesk #2470 - PSDK kehrt nicht aus dem Status AUSGESETZT zurück, wenn eine Bitratenänderung nach der Aussetzung erfolgt. In einer besonderen Situation, in der die intelligente Suche von RestoreGPUResource (Wiederherstellung des Players vom Aussetzzustand) aufgerufen und der Stream-Switch erkannt wird, bevor dies erfolgt, kann die intelligente Suche nicht abgeschlossen werden und führt zu einer konstanten Pufferung.
