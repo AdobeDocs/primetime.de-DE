@@ -2,7 +2,7 @@
 title: TVSDK 3.12 für iOS-Versionshinweise
 description: TVSDK 3.12 für iOS-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: f6a0fbaec3d164dd0c15d2738b58c7486bbc6e57
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -187,7 +187,7 @@ TVSDK-APIs bieten jetzt zusätzliche Informationen zu VAST-Antworten von Drittan
 
 In der `PTSDKConfig` Klasse wurde die forceHTTPS-API hinzugefügt.
 
-Die `PTSDKConfig` Klasse stellt Methoden zum Erzwingen von SSL für Anforderungen bereit, die an Adobe Primetime-Anzeigen-Entscheidungsfindungs-, DRM- und Video-Analytics-Server gesendet werden. Weitere Informationen finden Sie unter `forceHTTPS` und `isForcingHTTPS` -Methoden für diese Klasse. Wenn ein Manifest über HTTPS geladen wird, behält TVSDK die Inhaltsverwendung von HTTPS bei und berücksichtigt diese Verwendung, wenn relative URLs aus diesem Manifest geladen werden.
+Die `PTSDKConfig` Klasse stellt Methoden zum Erzwingen von SSL für Anforderungen bereit, die an Adobe Primetime-Ad-Entscheidungsfindungs-, DRM- und Video-Analytics-Server gesendet werden. Weitere Informationen finden Sie unter `forceHTTPS` und `isForcingHTTPS` -Methoden für diese Klasse. Wenn ein Manifest über HTTPS geladen wird, behält TVSDK die Inhaltsverwendung von HTTPS bei und berücksichtigt diese Verwendung, wenn relative URLs aus diesem Manifest geladen werden.
 
 >[!NOTE] Anforderungen an Drittanbieter-Domänen wie Anzeigenverfolgungspixel, Inhalts- und Anzeigen-URLs und ähnliche Anforderungen werden nicht geändert. Es liegt in der Verantwortung der Inhaltsanbieter und Anzeigenserver, URLs bereitzustellen, die über HTTPS unterstützt werden.
 
@@ -340,17 +340,18 @@ Keine neuen Probleme in dieser Version.
 
 **Version 3.3**
 
-(ZD#37820) - Neue Whitelist für benutzerdefinierte Header-HS-ID, HS-SSAI-TAG.
+(ZD#37820) - Aufnahme der benutzerdefinierten Kopfzeile HS-ID, HS-SSAI-TAG hinzugefügt.
 
 **Version 3.2**
 
 * **Ticket#36588** - Ein Absturz des Players wird beobachtet, wenn die MediaPlayer-STOP-Methode aufgerufen wird.
+
 Ein zeitweilig auftretender Absturz wurde behoben, der auftrat, wenn die STOP-Methode für einige Streams mit Untertiteln aufgerufen wurde.
 
 * **Ticket#37080** - Duplikat-Anfragen für Manifestaufrufe.
 Korrektur der Duplikat-Anfragen, die während der Wiedergabe für Manifest-URLs gestellt wurden. TVSDK führt jetzt einen Aufruf pro Manifest durch.
 
-* **Ticket#37** - CRS-Normalisierungsregel schlägt mit eq-Übereinstimmungstyp fehl. Es wurde ein Fall behoben, bei dem der Player bei Auftreten der letzten Normalisierungsregel für Hostnamen mit dem Übereinstimmungstyp &quot;eq&quot;abstürzte.
+* **Ticket#37** - CRS-Normalisierungsregel schlägt mit eq-Übereinstimmungstyp fehl. Es wurde ein Fall behoben, bei dem der Player beim Auftreten der letzten Normalisierungsregel für Hostnamen mit dem Übereinstimmungstyp &quot;eq&quot;abstürzte.
 
 **Version 3.1**
 
@@ -403,7 +404,7 @@ Verbesserte Korrektur für das geschlossene Problem 34385 in Version 1.4.42. Es 
 
 * (ZD#34865) - Pre-Roll-Anzeigen für Livestream werden unter iOS abgeschnitten. Im Zusammenhang mit iOS11 wird dieses Problem durch Hinzufügen einer zusätzlichen Prüfung zur Bestätigung, ob der Stream Pre-Roll oder Hauptinhalt ist, behoben.
 
-* (ZD#35093) - Es wurde ein Failover-Szenario behoben, bei dem, wenn die primäre Variante des Streams beim Start fehlschlug (gibt 404 zurück), die Wiedergabe nicht in den Sicherungsstream wechselt.
+* (ZD#35093) - Es wurde ein Failover-Szenario behoben, bei dem, wenn die Primär-Variante des Streams beim Start fehlschlug (gibt 404 zurück), die Wiedergabe nicht in den Backup-Stream wechselt.
 
 **1.4.42 (1.4.42.118)**
 
@@ -415,7 +416,7 @@ Verbesserte Korrektur für das geschlossene Problem 34385 in Version 1.4.42. Es 
 
 * (ZD#32678) - TVSDK erfasst nicht die richtigen Anzeigen-IDs unter iOS.
 
-   Die Anzeigen-ID des finalen Werbekreativen wird jetzt in VHL-Pings im Fall von VAST/VMAP-Umleitungen abgerufen.
+   Die Anzeigen-ID des finalen Werbekreativen wird jetzt im Fall von VAST/VMAP-Umleitungen in VHL-Pings aufgenommen.
 
 * (ZD#33904) - TVSDK ist nicht für AVFoundation-Benachrichtigungen `AVAudioSessionMediaServicesWereLostNotification` und `AVAudioSessionMediaServicesWereResetNotification`.
 
@@ -438,24 +439,29 @@ Verbesserte Korrektur für das geschlossene Problem 34385 in Version 1.4.42. Es 
    Korrektur des Fehlers, der die Wiedergabe von Inhalten auf Apple TV verhindert hat, wenn versucht wurde, diese vollständig wiederzugeben
 * (ZD #32146)- Für HLS Live-Inhalte `PTMediaPlayerStatusError` wird beim Blockieren von iOS 11 dev beta nicht empfangen
 
-   Für HLS Live- und VOD-Inhalte `PTMediaPlayerStatusError` zum Blockieren mit Charles (Drop-Verbindung und 403) wird keine Meldung empfangen
-* (ZD #29242) - Airplay Video Play-back schlägt fehl, wenn Anzeigen aktiviert sind
+   Für HLS Live- und VOD-Inhalte zum Sperren mit Charles (Drop-Verbindung und 403) `PTMediaPlayerStatusError` wird keine Meldung empfangen.
 
-   Wenn Anzeigen aktiviert sind und AirPlay aktiviert ist, um mit der Wiedergabe eines Videos zu beginnen, wird die Videowiedergabe nie zu Beginn und es wird kein Fehler angezeigt
-* (ZD#33341) - `DRMInterface.h` löst Buildwarnungen in Xcode 9 aus
+* (ZD #29242) - Airplay Video Play-back schlägt fehl, wenn Anzeigen aktiviert sind.
+
+   Wenn Anzeigen aktiviert sind und AirPlay aktiviert ist, um mit der Wiedergabe eines Videos zu beginnen, wird die Videowiedergabe nie zu Beginn und es wird kein Fehler angezeigt.
+
+* (ZD#33341) - `DRMInterface.h` löst Buildwarnungen in Xcode 9 aus.
 
    Es wurden zwei Blockprototypen behoben, in `DRMInterface.h` denen das Wort &quot;void&quot;in den Listen der Parameter fehlte.
-* (ZD#31979) - Wird nicht kompiliert/ausgeführt, wenn iOS 10 oder höher für iPhone 7/iPhone 7+ ist
 
-   Das Kompilieren von IB-Dokumenten für frühere Versionen als iOS 7 wird nicht mehr unterstützt
-* (ZD#32920) - weißer leerer Bildschirm innerhalb einer Werbeunterbrechung und ohne Abschluss der Werbeunterbrechung
+* (ZD#31979) - Wird nicht kompiliert/ausgeführt, wenn iOS 10 oder höher für iPhone 7/iPhone 7+ verwendet wird.
 
-   Wenn ein Werbeunterbrechung Anzeigeninstanzen anzeigt und nach Abschluss einer Anzeigeninstanz ein weißer leerer Bildschirm angezeigt wird
-* (ZD#32509) - Deaktivieren der Bildschirmaufzeichnung &quot;iOS 11&quot;Deaktivieren der Bildschirmaufzeichnung unter iOS 11
+   Das Kompilieren von IB-Dokumenten für frühere Versionen als iOS 7 wird nicht mehr unterstützt.
 
-* (ZD#33179) - Zeitweiliger Ereignis-Fehler unter iOS 11
+* (ZD#32920) - Leerer Bildschirm innerhalb einer Werbeunterbrechung und ohne Abschluss der Werbeunterbrechung.
 
-   Korrektur des Fehlers des Ereignisses unter iOS 11
+   Wenn ein Werbeunterbrechung Anzeigeninstanzen anzeigt und nach Abschluss einer Anzeigeninstanz ein leerer Bildschirm angezeigt wird.
+
+* (ZD#32509) - Deaktivieren Sie die iOS 11-Bildschirmwiederherstellung deaktivieren Sie die Bildschirmaufzeichnung unter iOS 11.
+
+* (ZD#33179) - Zeitweiliger Ereignis-Fehler unter iOS 11.
+
+   Korrektur des Fehlers des Ereignisses unter iOS 11.
 
 **Version 1.4.40** (1.4.40.72)
 
@@ -466,7 +472,7 @@ Verbesserte Korrektur für das geschlossene Problem 34385 in Version 1.4.42. Es 
 * (ZD #31951) - TVSDK-Fehler bei Lizenzrotationen.
 
    Problem mit der Lizenzrotation behoben.
-* (ZD #31951) - Weißer leerer Bildschirm innerhalb einer Werbeunterbrechung und ohne Abschluss der Werbeunterbrechung.
+* (ZD #31951) - Leerer Bildschirm innerhalb einer Werbeunterbrechung und ohne Abschluss der Werbeunterbrechung.
 
    Behebung eines Problems, bei dem Facebook VPAID-Anzeigen häufig mehrere CDATA-Blöcke in einem einzigen `<AdParameters>` VAST-Knoten zurückgaben.
 * (ZD #33336) - iOS TVSDK - Anzeigen-Pods werden nicht gefüllt, obwohl genügend Anzeigen von FreeWheel zurückgegeben werden.
@@ -625,9 +631,9 @@ Dieses Problem wurde behoben, indem eine Problemumgehung für Streams ohne M3U8-
 
 Die folgenden Probleme wurden in dieser Version für TVSDK behoben:
 
-* (ZD# 24180) Hinzufügen einer benutzerdefinierten Kopfzeile zur weißen Liste
+* (ZD# 24180) Hinzufügen eine benutzerdefinierte Kopfzeile zum zulassungsliste.
 
-Der White-Liste TVSDK wurde eine neue benutzerdefinierte Kopfzeile hinzugefügt.
+Der TVSDK-zulassungsliste wurde eine neue benutzerdefinierte Kopfzeile hinzugefügt.
 
 * (ZD# 25016) Failover-Stream wird zufällig ausgewählt, wenn ABR-Steuerungsparameter eingestellt werden
 
@@ -897,7 +903,7 @@ Dieses Problem wurde behoben, indem TVSDK die Fehlerantwort als Fehler an die An
 
 In der aktuellen Implementierung wurden Ausweichanzeigen übersprungen und nicht neu verpackt, es sei denn, diese Anzeigen haben das Format m3u8. Dieses Problem wurde behoben, indem auch die Unterstützung für das Umpacken von Fallback-Anzeigen hinzugefügt wurde.
 
-* (ZD #19770) - Das TVSDK kann keine geschützten AES-Inhalte mit 302-Umleitung wiedergeben
+* (ZD #19770) - Das TVSDK kann keine geschützten AES-Inhalte mit 302-Umleitungen wiedergeben
 
 Das Umleitungsproblem wurde behoben, da die Umleitungs-URL von cleanConnectionData gelöscht wurde, bevor sie zur Analyse des Manifests verwendet werden konnte.
 
@@ -969,7 +975,7 @@ Alle Warnungen wurden behoben.
 
 * Zendesk #3875 - Tabulator-S stürzt während der Wiedergabe ab
 
-Rückgängigmachen der Abhängigkeit von OKHTTP auf Auditude für CRS, da TVSDK jetzt direkt die httpurlconnection statt curl verwendet. Das Problem wurde durch Löschen von Ausnahmen behoben, bevor ein weiterer JNI-Aufruf durchgeführt wurde.
+Rückgängigmachen der Abhängigkeit von OKHTTP auf Auditude für CRS, da TVSDK jetzt direkt die HTTPLILLconnection statt curl verwendet. Das Problem wurde durch Löschen von Ausnahmen behoben, bevor ein weiterer JNI-Aufruf durchgeführt wurde.
 
 * (Zendesk #4487) - Tracking Linear Kanal of Content
 
@@ -1163,7 +1169,7 @@ Diese Version des TVSDK wurde mit dem FairPlay-Support für iOS und tvOS zertifi
 * Es kann vorkommen, dass das Video zur Lizenzrotation unter iOS 11 nicht abgespielt wird und unter iOS 9.x und iOS 10.x korrekt wiedergegeben wird.
 * Bei der VPAID 2.0-Unterstützung werden VPAID-Anzeigen übersprungen, wenn die Wiedergabe über AirPlay aktiv ist.
 * Die Verknüpfung von &quot;drmNativeInterface.framework&quot;ist nicht korrekt, wenn die Zielgruppe auf &quot;iOS7 (oder höher)&quot;festgelegt ist.
-Problemumgehung: Geben Sie die Bibliothek libstdc++.6.dylib explizit wie folgt an: Gehen Sie zu Zielgruppe->Build-Phasen->Link Binary with Libraries und fügen Sie libstdc++.6.dylib hinzu.
+Problemumgehung: Geben Sie die Bibliothek libstdc++.6.dylib explizit wie folgt an: Gehen Sie zu Target->Build-Phasen->Link Binary with Libraries und fügen Sie libstdc++.6.dylib hinzu.
 * Post-Roll-Anzeige wird nicht zum Ersetzen der API eingefügt.
 * Bei der Suche nach einer Werbeunterbrechung (ohne sie zu verlassen) werden eine Benachrichtigung zu Duplikat- und Beginn- und Werbeunterbrechungen ausgegeben
 * Das Festlegen von currentTimeUpdateInterval hat keine Auswirkungen.
