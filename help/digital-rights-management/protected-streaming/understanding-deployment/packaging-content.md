@@ -5,7 +5,10 @@ seo-title: Verpacken von Inhalten
 title: Verpacken von Inhalten
 uuid: 2e47a9a2-bbc6-4995-8ce5-6ca6b116349b
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -28,4 +31,4 @@ https://mylicenseserver.com:8080/flashaccessserver/tenant1
 
 Wenn jeder Mieter einen anderen Lizenzserver und eine andere Transportberechtigung verwendet, stellen Sie sicher, dass Sie im Packager das richtige Zertifikat des Mandanten angeben.
 
-Wenn Sie sicherstellen möchten, dass der Server Lizenzen nur für Inhalte bekannter Packager ausstellt, müssen Sie das Zertifikat des Packagers in die Whitelist des Pachtagers der Konfigurationsdatei aufnehmen.
+Wenn Sie sicherstellen möchten, dass der Server Lizenzen nur für Inhalte bekannter Packager ausstellt, müssen Sie das Paketzertifikat in die Packager-zulassungsliste der Mietkonfigurationsdatei aufnehmen.
