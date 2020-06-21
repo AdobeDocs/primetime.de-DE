@@ -5,7 +5,10 @@ seo-title: Mandantenkonfigurationsdatei
 title: Mandantenkonfigurationsdatei
 uuid: bc9ee4a1-63b6-4362-9929-3e9fe8251075
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '798'
+ht-degree: 0%
 
 ---
 
@@ -45,13 +48,13 @@ Die Mandant-Konfigurationsdatei enthält:
    * *Recht* abspielen — Es muss mindestens ein Recht festgelegt werden. Wenn Sie mehrere Rechte angeben, verwendet der Client die erste Berechtigung, die alle Anforderungen erfüllt.
 
       * *Output Protection* — Steuert, ob die Ausgabe auf externen Wiedergabegeräten geschützt werden soll.
-      * *AIR- und SWF-Anwendungsbeschränkungen* — Optionale Whitelist von SWF- und AIR-Anwendungen, die den Inhalt wiedergeben dürfen (z. B. sind nur die angegebenen Anwendungen zulässig). SWF-Anwendungen werden durch eine URL oder den Digest der SWF und die maximale Zeit für den Download und die Überprüfung der Zusammenfassung identifiziert.
+      * *AIR- und SWF-Anwendungsbeschränkungen* — Optionale zulassungsliste von SWF- und AIR-Anwendungen, die Inhalte wiedergeben können (z. B. sind nur die angegebenen Anwendungen zulässig). SWF-Anwendungen werden durch eine URL oder den Digest der SWF und die maximale Zeit für den Download und die Überprüfung der Zusammenfassung identifiziert.
 
          Informationen zur Berechnung der SWF-Zusammenfassung finden Sie unter *SWF-Hash-Rechner* .
 
          Eine Herausgeber-ID und eine optionale Anwendungs-ID, Mindest- und Höchstversion kennzeichnen AIR- und iOS-Anwendungen. Wenn Sie keine Anwendungseinschränkungen angeben, kann der Inhalt von jeder SWF- oder AIR-Anwendung wiedergegeben werden.
 
-      * *DRM- und Laufzeitmodul-Einschränkungen* — Gibt die Mindestsicherheitsstufe an, die für das DRM/Runtime-Modul erforderlich ist. Enthält optional eine schwarze Liste von Versionen, die den Inhalt nicht abspielen dürfen. Modulversionen werden durch Attribute wie Betriebssystem und/oder Versionsnummer identifiziert.
+      * *DRM- und Laufzeitmodul-Einschränkungen* — Gibt die Mindestsicherheitsstufe an, die für das DRM/Runtime-Modul erforderlich ist. Enthält optional eine blockierungsliste von Versionen, für die die Wiedergabe des Inhalts nicht zulässig ist. Modulversionen werden durch Attribute wie Betriebssystem und/oder Versionsnummer identifiziert.
 
          Einschränkungen für DRM-Module und Einschränkungen für Laufzeitmodule unterstützen jetzt die folgenden zusätzlichen Attribute:
 
