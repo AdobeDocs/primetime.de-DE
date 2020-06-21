@@ -5,7 +5,10 @@ seo-title: Häufig gestellte Fragen
 title: Häufig gestellte Fragen
 uuid: 7dcd337c-369a-474c-8768-409c48b5cee5
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +47,7 @@ Häufig gestellte Fragen zur Verwendung des auflösungsbasierten Ausgabeschutzes
 
    * 240, 480: Beide sind &lt;= 480; kein OP erforderlich ist und die Streams mit oder ohne HDCP geladen werden.
    * 600, 720: Beide sind &lt;= 720; HDCP ist für die Wiedergabe erforderlich
-   * 1080: > 720; der Stream ist auf der Blacklist (Fehler zurückgegeben), da er in den oben stehenden Regeln nicht gefunden wird.
+   * 1080: > 720; der Stream wird blockiert (Fehler zurückgegeben), da er in den oben stehenden Regeln nicht gefunden wird.
 
 
 * **Q.** Auf einigen meiner Android-Geräte werden die von mir definierten Einschränkungen für die Pixelanzahl nicht genau wie definiert angewendet. Was passiert?
