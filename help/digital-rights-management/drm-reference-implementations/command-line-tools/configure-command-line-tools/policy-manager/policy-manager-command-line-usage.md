@@ -5,7 +5,10 @@ seo-title: Befehlszeilenverwendung im Policy Manager
 title: Befehlszeilenverwendung im Policy Manager
 uuid: 9b17bc9a-0b1b-405f-a62b-0310c43c9255
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1228'
+ht-degree: 0%
 
 ---
 
@@ -85,7 +88,7 @@ java -jar AdobePolicyManager.jar
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Wiedergabefenster, d. h. die Anzahl der Minuten, in denen der Inhalt ab der ersten Wiedergabe angezeigt werden kann. </p> <p>Wenn nicht angegeben oder <span class="codeph"> -w ohne Angabe einer Anzahl von Minuten verwendet </span> wird, gibt es keine Einschränkung des Wiedergabefensters. Der Wert muss nicht negativ sein. </p> <p>Die optionale Option <span class="codeph"> aktiviertHS </span> - oder <span class="codeph"> DeaktivierungHS- </span> -Kennzeichensignale, unabhängig davon, ob ein harter Stopp aktiviert oder deaktiviert werden soll. Das Flag gibt an, ob der Entschlüsselungskontext am Ende des Wiedergabefensters zerstört (aktiviert) oder nicht zerstört (deaktiviert) wird. </p> <p>Um beispielsweise anzugeben, dass der Inhalt nur für 60 Minuten angezeigt werden darf und eine feste Unterbrechung erforderlich ist, müssen Sie Folgendes angeben: 
      <codeblock>
        -w&amp;nbsp;60,enableHS 
-     </codeblock> </p> <p>Hinweis:  In Flash Player, Android und iOS wird <i>Hard Stopp</i> derzeit nicht unterstützt. </p> </td> 
+     </codeblock> </p> <p>Hinweis:  <i>Die Verwendung von</i> Hard Stopp wird derzeit in Flash Player, Android und iOS nicht unterstützt. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l Minuten </span> </td> 
@@ -108,28 +111,28 @@ java -jar AdobePolicyManager.jar
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Anonymen Zugriff zulassen. </p> <p class="- topic/p ">Sie können diese Option nicht zusammen mit <span class="codeph"> -authNS anwenden </span>. </p> <p class="- topic/p ">Diese Option ist für Aktualisierungen nicht zulässig. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[: <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> min </span>]:[ <span class="+ topic/ph pr-d/codeph codeph"> max </span>]]] </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine Whitelist von AIR-Anwendungen, die geschützten Inhalt abspielen können. </p> <p class="- topic/p ">Sie können diese Option anwenden, um einzuschränken, welche Herausgeber, Anwendungen und Versionen auf die Inhalte zugreifen können, die mit dieser DRM-Richtlinie geschützt sind. </p> <p class="- topic/p ">Wenn Sie <i class="+ topic/ph hi-d/i ">appId</i>nicht angeben, sind alle Anwendungen für den Herausgeber <i class="+ topic/ph hi-d/i ">pubId</i> zulässig. </p> <p>Hinweis:  Die <i class="+ topic/ph hi-d/i ">Min</i> - und <i class="+ topic/ph hi-d/i ">Max</i> -Versionsnummern sind optional. </p> <p class="- topic/p ">Sie können mehrere <span class="codeph"> - air- </span> Optionen angeben, um mehrere Anwendungen zuzulassen. Wenn Sie keine AIR- oder SWF-Anwendung angeben, können alle Anwendungen auf diesen Inhalt zugreifen. Wenn Sie während einer Aktualisierung alle Einträge aus der Liste entfernen oder löschen möchten, wenden Sie <span class="codeph"> -air </span> ohne die restlichen Argumente an. </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[: <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> min </span>]:[ <span class="+ topic/ph pr-d/codeph codeph"> max </span>]] </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine zulassungsliste von AIR-Anwendungen, die geschützten Inhalt abspielen können. </p> <p class="- topic/p ">Sie können diese Option anwenden, um einzuschränken, welche Herausgeber, Anwendungen und Versionen auf die Inhalte zugreifen können, die mit dieser DRM-Richtlinie geschützt sind. </p> <p class="- topic/p ">Wenn Sie <i class="+ topic/ph hi-d/i ">appId</i>nicht angeben, sind alle Anwendungen für den Herausgeber <i class="+ topic/ph hi-d/i ">pubId</i> zulässig. </p> <p>Hinweis:  <i class="+ topic/ph hi-d/i ">Min</i> - und <i class="+ topic/ph hi-d/i ">Max</i> -Versionsnummern sind optional. </p> <p class="- topic/p ">Sie können mehrere <span class="codeph"> - air- </span> Optionen angeben, um mehrere Anwendungen zuzulassen. Wenn Sie keine AIR- oder SWF-Anwendung angeben, können alle Anwendungen auf diesen Inhalt zugreifen. Wenn Sie während einer Aktualisierung alle Einträge aus der Liste entfernen oder löschen möchten, wenden Sie <span class="codeph"> -air </span> ohne die restlichen Argumente an. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmBlacklist name </span> / <i class="+ topic/ph hi-d/i ">value</i><span class="+ topic/ph pr-d/codeph codeph"> - </span> <i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"> Paare </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Die DRM-Clients, die keinen Zugriff auf geschützte Inhalte haben. </p> <p class="- topic/p ">Der Wert unterstützt kommagetrennte Paare aus name:value im folgenden Format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> oder| release= stringValue </span> </p> <p class="- topic/p ">Beispiel: <span class="codeph"> os=Win,release=2.0.1 </span>. Wenn Sie während eines Updates alle Einträge aus der Liste entfernen möchten, wenden Sie <span class="codeph"> -drmBlacklist </span> ohne die restlichen Argumente an. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Die DRM-Clients, die keinen Zugriff auf geschützte Inhalte haben. </p> <p class="- topic/p ">Der Wert unterstützt kommagetrennte Paare aus name:value im folgenden Format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | release= stringValue </span> </p> <p class="- topic/p ">Beispiel: <span class="codeph"> os=Win,release=2.0.1 </span>. Wenn Sie während eines Updates alle Einträge aus der Liste entfernen möchten, wenden Sie <span class="codeph"> -drmBlacklist </span> ohne die restlichen Argumente an. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmLevel int </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt an, dass DRM-Clients über eine zugewiesene Mindestsicherheitsstufe verfügen müssen, um Zugriff auf geschützte Inhalte zu erhalten. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -opAnalog NO_PROTECTION| USE_IF_AVAILABLE| ERFORDERLICH| NO_PLAYBACK| REQUIRED_ACP| REQUIRED_CGMSA| USE_IF_AVAILABLE_ACP| USE_IF_AVAILABLE_CGMSA </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -opAnalog NO_PROTECTION | USE_IF_AVAILABLE | ERFORDERLICH | NO_PLAYBACK | REQUIRED_ACP | REQUIRED_CGMSA | USE_IF_AVAILABLE_ACP | USE_IF_AVAILABLE_CGMSA </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Analoge Ausgabeschutzeinschränkungen </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -opDigital NO_PROTECTION| USE_IF_AVAILABLE| ERFORDERLICH| NO_PLAYBACK </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -opDigital NO_PROTECTION | USE_IF_AVAILABLE | ERFORDERLICH | NO_PLAYBACK </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Einschränkungen beim digitalen Ausgabeschutz </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtimeBlacklist name </span> / <i class="+ topic/ph hi-d/i ">value</i><span class="+ topic/ph pr-d/codeph codeph"> - </span> <i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"> Paare </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Die Anwendungslaufzeiten, die vom Zugriff auf geschützte Inhalte eingeschränkt sind. </p> <p class="- topic/p ">Der Wert unterstützt kommagetrennte Paare aus name:value im folgenden Format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os| Antrag| release= stringValue </span> </p> <p class="- topic/p ">Beispiel: <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>. Wenn Sie während eines Updates alle Einträge aus der Liste entfernen möchten, wenden Sie <span class="codeph"> -runtimeBlacklist </span> ohne die restlichen Argumente an. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Die Anwendungslaufzeiten, die vom Zugriff auf geschützte Inhalte eingeschränkt sind. </p> <p class="- topic/p ">Der Wert unterstützt kommagetrennte Paare aus name:value im folgenden Format: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | Antrag | release= stringValue </span> </p> <p class="- topic/p ">Beispiel: <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>. Wenn Sie während eines Updates alle Einträge aus der Liste entfernen möchten, wenden Sie <span class="codeph"> -runtimeBlacklist </span> ohne die restlichen Argumente an. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -runtimeLevel int </span> </td> 
@@ -137,7 +140,7 @@ java -jar AdobePolicyManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf url </span> </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf file= swf_file </span>, <span class="+ topic/ph pr-d/codeph codeph"> time= max_time_to_verify </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine Whitelist von SWF-Anwendungen, die geschützte Inhalte wiedergeben dürfen. </p> <p class="- topic/p ">Sie können mehrere <span class="codeph"> -swf- </span> Optionen angeben, um mehrere Anwendungen zuzulassen. Wenn Sie keine AIR- oder SWF-Anwendungen angeben, können alle Anwendungen auf diesen Inhalt zugreifen. </p> <p>Wenn Sie während eines Updates alle Einträge aus der Liste entfernen möchten, wenden Sie <span class="codeph"> -swf </span> ohne die restlichen Argumente an. Wenn Sie eine SWF anhand ihres Hashwerts identifizieren möchten, müssen Sie die SWF-Datei angeben, für die der Hash berechnet werden soll, sowie die maximale Zeit, die für den Abschluss der SWF-Überprüfung erforderlich ist (in Sekunden). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine zulassungsliste von SWF-Anwendungen, die geschützte Inhalte abspielen dürfen. </p> <p class="- topic/p ">Sie können mehrere <span class="codeph"> -swf- </span> Optionen angeben, um mehrere Anwendungen zuzulassen. Wenn Sie keine AIR- oder SWF-Anwendungen angeben, können alle Anwendungen auf diesen Inhalt zugreifen. </p> <p>Wenn Sie während eines Updates alle Einträge aus der Liste entfernen möchten, wenden Sie <span class="codeph"> -swf </span> ohne die restlichen Argumente an. Wenn Sie eine SWF anhand ihres Hashwerts identifizieren möchten, müssen Sie die SWF-Datei angeben, für die der Hash berechnet werden soll, sowie die maximale Zeit, die für den Abschluss der SWF-Überprüfung erforderlich ist (in Sekunden). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k name= value </span> </td> 
@@ -148,8 +151,8 @@ java -jar AdobePolicyManager.jar
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fügt eine benutzerdefinierte Eigenschaft hinzu, die in der für jeden Client generierten Lizenz angezeigt wird. </p> <p class="- topic/p ">Sie können mehrere <span class="codeph"> -p- </span> Optionen angeben, um mehrere Eigenschaften hinzuzufügen. Während einer Aktualisierung müssen Sie <span class="codeph"> -p </span> ohne die restlichen Argumente anwenden, wenn Sie alle Eigenschaften entfernen möchten. Die Interpretation oder Verarbeitung dieser Daten wird durch die Implementierung der Client-Anwendung verwaltet. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> <span class="codeph"> -opOTA whitelist=&lt;Verbindungstypen&gt; </span></span> </td> 
-   <td colname="2" class="- topic/entry "> Über die Luft (OTA) Output Protection-Beschränkungen. Das <span class="codeph"> Whitelist- </span> Feld gibt an, welche Verbindungstypen zur Whitelist und das Format von &lt;connection types&gt; ist <span class="codeph"> [type(,type)*] </span>, wobei Typ eines der folgenden sein kann: MIRACAST, AIRPLAY, WIDI, DLNA </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> <span class="codeph"> -opOTA whitelist=&lt;Verbindungstypen&gt; </span> </span> </td> 
+   <td colname="2" class="- topic/entry "> Über die Luft (OTA) Output Protection-Beschränkungen. Das <span class="codeph"> Whitelist- </span> Feld gibt an, welche Verbindungstypen zu zulassungsliste und das Format von &lt;connection types&gt; ist <span class="codeph"> [type(,type)*] </span>, wobei type eines der folgenden sein kann: MIRACAST, AIRPLAY, WIDI, DLNA </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -opResolution &lt;filename&gt; </span> </td> 
