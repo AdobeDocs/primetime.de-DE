@@ -3,7 +3,10 @@ seo-title: Wichtigste Funktionen
 title: Wichtigste Funktionen
 uuid: b1bded0f-4e45-4ff8-a7ce-dac3d3ec0ab0
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1146'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +48,7 @@ Adobe Access bietet folgende wichtige Funktionen:
 * **Getrennte Inhaltsverpackung:** Für die Inhaltsverpackung ist keine Netzwerkverbindung mit dem Lizenzserver erforderlich. Dies ermöglicht sichere Back-End-Vorgänge, indem die Belichtung komprimierter Inhalte, die noch nicht geschützt sind, begrenzt wird.
 * **Kontrolle über Zeitrücklauf: **Adobe Access bietet eine sichere und genaue Berechnung der Zeit, um die Zeitrücknahme auf dem Clientcomputer zu erkennen. Dadurch werden Rechte im Zusammenhang mit dem Zugriff auf Inhalte für einen bestimmten Zeitraum erzwungen, und die Verbraucher werden daran gehindert, Zugangsrechte zu untergraben, indem die Zeit auf ihrem Computer verändert wird.
 * **Individualisierung**: Ermöglicht das Binden von Inhalten an einen bestimmten Computer.
-* **Whitelist der Anwendung:** Ermöglicht der Client-Laufzeit sicherzustellen, dass geschützter Inhalt nur in einer autorisierten SWF- oder AIR-Anwendung wiedergegeben wird.
+* **zulassungsliste:** Ermöglicht der Client-Laufzeit sicherzustellen, dass geschützter Inhalt nur in einer autorisierten SWF- oder AIR-Anwendung wiedergegeben wird.
 * **Widerruf beschädigter Clients: **Kompromisslose Client-Software kann gesperrt werden. Wenn festgestellt wird, dass die Flash Player- oder Adobe AIR-Laufzeitumgebung beeinträchtigt wurde, kann diesen Clients der Dienst verweigert werden, bis sie auf eine neuere und sicherere Version der Clientsoftware aktualisieren.
 * **Mehrere Richtlinien für dieselbe Videodatei: **Ein Videoinhalt kann mehrere Richtlinien während der Verpackung enthalten. Bei der Erteilung einer Lizenz kann der Lizenzserver entscheiden, welche der Richtlinien verwendet werden sollen, damit ein Content-Distributor dieselbe geschützte Datei für verschiedene Geschäftsmodelle (z. B. Vermietung und elektronischer Durchverkauf) verwenden kann.
 
