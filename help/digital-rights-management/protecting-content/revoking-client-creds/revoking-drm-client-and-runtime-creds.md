@@ -3,7 +3,10 @@ seo-title: DRM-Client- und Laufzeitberechtigungen sperren
 title: DRM-Client- und Laufzeitberechtigungen sperren
 uuid: 8e36536a-8eed-4d27-8a5f-8d3219817e57
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '413'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 DRM-/Laufzeitversionen werden nach Sicherheitsebene, Versionsnummer und anderen Attributen, einschließlich Betriebssystem und Laufzeit, identifiziert. Um die zulässigen DRM/Runtime-Versionen einzuschränken, legen Sie die Modulbeschränkungen in einer DRM-Richtlinie oder in einer `HandlerConfiguration`fest. Modulbeschränkungen können eine Mindestsicherheitsstufe und die Liste von Modulversionen umfassen, für die keine Lizenz erteilt werden darf.
 
-Einzelheiten zu den Attributen, die zur Identifizierung eines DRM-/Laufzeitmoduls verwendet werden, finden Sie unter [Blacklist der DRM-Clients, die keinen Zugriff auf geschützten Inhalt](../../protecting-content/introduction/usage-rules/runtime-application-restrictions/blacklist-drm-clients.md) haben.
+Einzelheiten zu den Attributen, die zur Identifizierung eines DRM-/Laufzeitmoduls verwendet werden, finden Sie unter [Blockierungsliste von DRM-Clients, die keinen Zugriff auf geschützten Inhalt](../../protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md) haben.
 
 Wenn die Mindestsicherheitsstufe festgelegt ist, muss die Version auf dem Client (im Gerätetoken angegeben) größer oder gleich dem angegebenen Wert sein.
 
@@ -24,6 +27,6 @@ Wenn Sie eine neuere Version der Adobe Flash Player/Adobe AIR Runtime oder der A
 
 Siehe [Aktualisieren einer Richtlinie mit der Java-API](../../protecting-content/working-policies-overview/updating-policy-using-java-api.md).
 
-Anschließend müssen Sie eine DRM Policy Update-Liste erstellen oder Einschränkungen `HandlerConfiguration` durch Aufrufen `HandlerConfiguration.setRuntimeModuleRequirements()` oder `HandlerConfiguration.setDRMModuleRequirements()`Einrichten festlegen. Wenn ein Benutzer eine neue Lizenz mit aktivierten Blacklists anfordert, müssen Sie die neuesten Laufzeitumgebungen und Bibliotheken installieren, bevor eine Lizenz erteilt werden kann.
+Anschließend müssen Sie eine DRM Policy Update-Liste erstellen oder Einschränkungen `HandlerConfiguration` durch Aufrufen `HandlerConfiguration.setRuntimeModuleRequirements()` oder `HandlerConfiguration.setDRMModuleRequirements()`Einrichten festlegen. Wenn ein Benutzer eine neue Lizenz mit aktivierten blockierungsliste anfordert, müssen Sie die neuesten Laufzeitumgebungen und Bibliotheken installieren, bevor eine Lizenz erteilt werden kann.
 
-Siehe Beispielcode unter [Aktualisieren einer Richtlinie mithilfe der Java-API. Ein Beispiel zur Blacklist von DRM- und Laufzeitversionen](../../protecting-content/working-policies-overview/updating-policy-using-java-api.md) finden Sie zum Beispiel in Blacklist DRM und Laufzeitversionen.
+Siehe Beispielcode unter [Aktualisieren einer Richtlinie mithilfe der Java-API. Ein Beispiel zu Blockauflistungen von DRM- und Laufzeitversionen](../../protecting-content/working-policies-overview/updating-policy-using-java-api.md) finden Sie zum Beispiel zur Blockauflistung von DRM- und Laufzeitversionen.
