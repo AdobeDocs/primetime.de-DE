@@ -5,7 +5,10 @@ seo-title: Konfigurationsdateien aktualisieren
 title: Konfigurationsdateien aktualisieren
 uuid: 34b3247c-3458-49de-b1b0-dc0ebbf61c88
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '644'
+ht-degree: 0%
 
 ---
 
@@ -34,4 +37,4 @@ Sie können das HSM-Kennwort jederzeit ändern [!DNL flashaccess-global.xml] . D
 
 ## Aktualisieren der Mandant-Konfigurationsdatei {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-Sie können jederzeit alle in der [!DNL flashaccess-tenant.xml] Datei angegebenen Werte ändern. Die Änderungen werden beim nächsten Laden der Konfigurationsdatei durch den Server wirksam. Der Server sucht außerdem nach allen Änderungen in allen Berechtigungsdateien ( [!DNL .pfx]) und in den Whitelist-Zertifikatdateien des Packager, auf die in der Mietkonfigurationsdatei verwiesen wird.
+Sie können jederzeit alle in der [!DNL flashaccess-tenant.xml] Datei angegebenen Werte ändern. Die Änderungen werden beim nächsten Laden der Konfigurationsdatei durch den Server wirksam. Der Server sucht außerdem nach allen Änderungen in allen Berechtigungsdateien ( [!DNL .pfx]) und Packager-zulassungsliste-Zertifikatdateien, auf die in der Mietkonfigurationsdatei verwiesen wird.
