@@ -3,7 +3,10 @@ seo-title: Übersicht
 title: Übersicht
 uuid: f45c6b58-53c5-41e0-be3d-590231dd214a
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
@@ -12,11 +15,11 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
 
 Beim Erstellen einer AIR-Datei generiert das AIR Developer Tool (ADT) automatisch eine Herausgeber-ID. Das AIR Publisher-ID-Dienstprogramm ( [!DNL AdobePublisherIDUtility.jar]) berechnet die Herausgeber-ID für eine AIR-Anwendung.
 
-Die Herausgeber-ID ist eindeutig für das Zertifikat, mit dem Sie eine AIR-Datei erstellen. Wenn Sie dasselbe Zertifikat für mehrere AIR-Anwendungen wiederverwenden, haben alle AIR-Anwendungen dieselbe Herausgeber-ID. In einer AIR-Version, die auf Version 1.5.2 folgt, wird die generierte Herausgeber-ID keiner Datei hinzugefügt. Wenn Sie daher eine Whitelist für eine AIR-Anwendung verwenden möchten, verwenden Sie dieses Tool, um die Herausgeber-ID zu ermitteln.
+Die Herausgeber-ID ist eindeutig für das Zertifikat, mit dem Sie eine AIR-Datei erstellen. Wenn Sie dasselbe Zertifikat für mehrere AIR-Anwendungen wiederverwenden, haben alle AIR-Anwendungen dieselbe Herausgeber-ID. In einer AIR-Version, die auf Version 1.5.2 folgt, wird die generierte Herausgeber-ID keiner Datei hinzugefügt. Wenn Sie daher eine zulassungsliste einer AIR-Anwendung verwenden möchten, verwenden Sie dieses Tool, um die Herausgeber-ID zu ermitteln.
 
 >[!NOTE] {class=&quot;- topic/note &quot;
 >
->Die Herausgeber-ID, die für die Durchsetzung der Whitelist in AIR verwendet wird, ist nicht mit der Herausgeber-ID identisch, die der Herausgeber der Anwendung in der [!DNL application.xml] Datei der Anwendung angibt.
+>Die Herausgeber-ID, die für die Durchsetzung der AIR-zulassungsliste verwendet wird, ist nicht mit der Herausgeber-ID identisch, die der Anwendungsherausgeber in der [!DNL application.xml] Anwendungsdatei angegeben hat.
 
 ## Befehlszeilenverwendung des AIR Publisher-ID-Dienstprogramms {#air-publisher-id-utility-command-line-usage}
 
