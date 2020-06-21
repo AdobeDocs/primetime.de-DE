@@ -3,7 +3,10 @@ seo-title: Übersicht über die Bereitstellung des Primetime-DRM-Key-Servers
 title: Übersicht über die Bereitstellung des Primetime-DRM-Key-Servers
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1077'
+ht-degree: 0%
 
 ---
 
@@ -153,7 +156,7 @@ Die **Xbox 360** -Mietkonfigurationsdatei enthält:
 
 * XSTS-Berechtigung - Gibt die Berechtigung des Anwendungsentwicklers zum Entschlüsseln von XSTS-Tokens an.
 * XSTS-Signaturzertifikat - Gibt das Zertifikat an, das zum Überprüfen der Signatur auf XSTS-Token verwendet wird.
-* Packager Whitelist - Packager-Zertifikate, denen der Key Server vertraut. Wenn in der Liste keine Packager-Zertifikate enthalten sind, werden alle Packager-Zertifikate als vertrauenswürdig eingestuft.
+* Packager Zulassungsliste - Packager-Zertifikate, denen der Key Server vertraut. Wenn in der Liste keine Packager-Zertifikate enthalten sind, werden alle Packager-Zertifikate als vertrauenswürdig eingestuft.
 
 ## Protokolldateien {#log-files}
 
