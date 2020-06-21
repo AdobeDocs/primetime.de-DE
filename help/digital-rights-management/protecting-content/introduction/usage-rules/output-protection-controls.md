@@ -3,7 +3,10 @@ seo-title: Ausgabenschutzkontrollen
 title: Ausgabenschutzkontrollen
 uuid: a0518392-cd33-4ef0-834c-f90145a9b421
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '655'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Der Parameter für Ausgabeschutz steuert, ob die Ausgabe auf externen Renderingg
 
 Steuert, ob die Ausgabe auf externe Renderinggeräte eingeschränkt werden soll. Ein externes Gerät ist definiert als ein Video- oder Audiogerät, das nicht in den Computer eingebettet ist. Integrierte Displays, z. B. in Notebooks, werden im Szenario mit Ausgabeschutzsteuerelementen nicht als extern betrachtet.
 
-Über die Luft (OTA) sind Verbindungstypen standardmäßig auf der Blacklist, können aber bei Bedarf explizit auf die Positivliste gesetzt werden. Zu den unterstützten OTA-Verbindungen zählen: Miracast, AirPlay, DLNA und WIDI.
+Über die Luft (OTA) Verbindungstypen sind standardmäßig alle Blöcke aufgelistet, können aber bei Bedarf explizit aufgeführt werden. Zu den unterstützten OTA-Verbindungen zählen: Miracast, AirPlay, DLNA und WIDI.
 
 **Auflösungsbasierter Ausgabeschutz: (Ab Version 5.3 verfügbar.) ** Dies bietet einen Ausgabeschutz, der auf der vertikalen Pixelanzahl des Inhalts basiert, sodass verschiedene Schutzanforderungen basierend auf der Anzahl der vertikalen Pixel festgelegt werden können.
 
