@@ -3,7 +3,10 @@ seo-title: Ausführen des DRM-Servers für geschütztes Streaming
 title: Ausführen des DRM-Servers für geschütztes Streaming
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '807'
+ht-degree: 0%
 
 ---
 
@@ -81,4 +84,4 @@ Sie können das HSM-Kennwort jederzeit ändern [!DNL flashaccess-global.xml] . D
 
 ### Aktualisieren der Mandant-Konfigurationsdatei {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-Sie können jederzeit alle in der [!DNL flashaccess-tenant.xml] Datei angegebenen Werte ändern. Die Änderungen werden beim nächsten Laden der Konfigurationsdatei durch den Server wirksam. Der Server sucht außerdem nach allen Änderungen in allen Berechtigungsdateien ( [!DNL .pfx]) und in den Whitelist-Zertifikatdateien des Packager, auf die in der Mietkonfigurationsdatei verwiesen wird.
+Sie können jederzeit alle in der [!DNL flashaccess-tenant.xml] Datei angegebenen Werte ändern. Die Änderungen werden beim nächsten Laden der Konfigurationsdatei durch den Server wirksam. Der Server sucht außerdem nach allen Änderungen in allen Berechtigungsdateien ( [!DNL .pfx]) und Packager-zulassungsliste-Zertifikatdateien, auf die in der Mietkonfigurationsdatei verwiesen wird.
