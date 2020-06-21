@@ -3,7 +3,10 @@ seo-title: Konfigurationsdateieigenschaften
 title: Konfigurationsdateieigenschaften
 uuid: aec5fee7-4d77-4299-8d85-3e9042b2bbd1
 translation-type: tm+mt
-source-git-commit: 99d7eea63b18a97d2b99d0bb7aab5cdc50ae5ffc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1121'
+ht-degree: 0%
 
 ---
 
@@ -72,11 +75,11 @@ Die Konfigurationsdatei gibt die folgenden Eigenschaften an. Bei eingeschlossene
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> - <i class="+ topic/ph hi-d/i ">Name/Wert-Paare</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">DRM-Clients haben keinen Zugriff auf geschützte Inhalte. Diese Option gibt eine Liste von nicht verwendeten DRM-Modulversionen an (schwarze Liste). Der Wert besteht aus durch Kommas getrennten Paaren "name=Wert"mit folgendem Format: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Weitere Name/Wert-Paare müssen durch Kommas getrennt werden. Beispiel: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
+   <td colname="2" class="- topic/entry ">DRM-Clients haben keinen Zugriff auf geschützte Inhalte. Diese Option gibt eine Liste von nicht verwendeten DRM-Modulen an (blockierungsliste). Der Wert besteht aus durch Kommas getrennten Paaren "name=Wert"mit folgendem Format: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Weitere Name/Wert-Paare müssen durch Kommas getrennt werden. Beispiel: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -runtimeBlacklsit</span> - <i class="+ topic/ph hi-d/i ">Name/Wert-Paare</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">Anwendungslaufzeiten sind vom Zugriff auf geschützte Inhalte eingeschränkt. Diese Option gibt eine Liste von nicht verwendeten Laufzeitmodulversionen an (schwarze Liste). Der Wert besteht aus durch Kommas getrennten Paaren "name=Wert"mit folgendem Format: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Weitere Name/Wert-Paare müssen durch Kommas getrennt werden. Beispiel: <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
+   <td colname="2" class="- topic/entry ">Anwendungslaufzeiten sind vom Zugriff auf geschützte Inhalte eingeschränkt. Diese Option gibt eine Liste von nicht verwendeten Laufzeitmodulversionen an (blockierungsliste). Der Wert besteht aus durch Kommas getrennten Paaren "name=Wert"mit folgendem Format: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Weitere Name/Wert-Paare müssen durch Kommas getrennt werden. Beispiel: <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapacityV1</span> <i class="+ topic/ph hi-d/i ">name/value-pair</i> </p> </td> 
@@ -145,11 +148,11 @@ Die Konfigurationsdatei gibt die folgenden Eigenschaften an. Bei eingeschlossene
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine weiße Liste von Adobe AIR- oder iOS-Anwendungen, die geschützte Inhalte abspielen dürfen. Die Eigenschaft muss das folgende Format verwenden: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]]] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine zulassungsliste von Adobe AIR- oder iOS-Anwendungen, die geschützte Inhalte abspielen dürfen. Die Eigenschaft muss das folgende Format verwenden: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]]] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedSWFApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine weiße Liste von SWF-Anwendungen, die geschützte Inhalte abspielen dürfen. Verwenden Sie das folgende Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> oder file=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_verify</i> <i class="+ topic/ph hi-d/i ">swf_file</i> ist die SWF-Datei, für die der Hash berechnet wird, und <i class="+ topic/ph hi-d/i ">max_time_to_verify</i> ist die maximale Zeit, die für den Download und die Überprüfung der SWF-Datei (in Sekunden) erforderlich ist. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine zulassungsliste von SWF-Anwendungen, die geschützte Inhalte abspielen dürfen. Verwenden Sie das folgende Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> oder file=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_verify</i> <i class="+ topic/ph hi-d/i ">swf_file</i> ist die SWF-Datei, für die der Hash berechnet wird, und <i class="+ topic/ph hi-d/i ">max_time_to_verify</i> ist die maximale Zeit, die für den Download und die Überprüfung der SWF-Datei (in Sekunden) erforderlich ist. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.license.customProp.n</span> </td> 
