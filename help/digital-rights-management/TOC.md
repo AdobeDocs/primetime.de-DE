@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Digital Rights Management Help
+user-guide-title: Primetime Digital Rights Management - Hilfe
 translation-type: tm+mt
-source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '2197'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
    + [Voraussetzungen](certificate-enrollment-guide/prerequisites.md)
    + [Zertifikatregistrierungsrollen](certificate-enrollment-guide/about-cert-enrollment.md)
    + [Hinzufügen](certificate-enrollment-guide/add-requesters.md)
-   + [Sekundärer Administrator erstellen](certificate-enrollment-guide/add-secondary-admin.md)
+   + [Sekundär Administrator erstellen](certificate-enrollment-guide/add-secondary-admin.md)
    + Zertifikate anfordern {#request-certs}
       + [Übersicht](certificate-enrollment-guide/request-certs/request-certs-overview.md)
       + [Zertifikatsignaturanforderung erstellen](certificate-enrollment-guide/request-certs/gen-cert-signing-req.md)
@@ -186,10 +189,10 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Zeitbasierte Regeln](protecting-content/introduction/usage-rules/authentication/time-based-rules.md)
       + [Anforderungen für die Synchronisierung](protecting-content/introduction/usage-rules/authentication/synchronization.md)
    + Laufzeit- und Anwendungsbeschränkungen {#runtime-application-restrictions}
-      + [Whitelist für Primetime DRM-Anwendungen erlaubt, geschützten Inhalt abzuspielen...](protecting-content/introduction/usage-rules/runtime-application-restrictions/whitelist-air.md)
-      + [Whitelist für Adobe® Flash® Player SWFs](protecting-content/introduction/usage-rules/runtime-application-restrictions/whitelist-flash.md)
-      + [Blacklist von DRM-Clients, die keinen Zugriff auf geschützte Inhalte haben](protecting-content/introduction/usage-rules/runtime-application-restrictions/blacklist-drm-clients.md)
-      + [Blacklist of application runtimes](protecting-content/introduction/usage-rules/runtime-application-restrictions/blacklist-app-runtimes.md)
+      + [Zulassungsliste für Primetime DRM-Anwendungen erlaubt, geschützten Inhalt abzuspielen...](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
+      + [Zulassungsliste für Adobe® Flash® Player SWFs](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
+      + [Blockierungsliste von DRM-Clients, die keinen Zugriff auf geschützten Inhalt haben](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
+      + [Blockierungsliste der Anwendungslaufzeiten](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
       + [Mindestsicherheitsstufe für DRM und Laufzeitumgebungen](protecting-content/introduction/usage-rules/runtime-application-restrictions/min-sec-level-for-drm.md)
       + [Gerätefunktionen, die zum Abspielen geschützter Inhalte erforderlich sind](protecting-content/introduction/usage-rules/runtime-application-restrictions/device-capabilities.md)
       + [Rechtsdurchsetzung (Adobe Primetime DRM erforderlich)](protecting-content/introduction/usage-rules/runtime-application-restrictions/jailbreak-enforcement.md)
@@ -278,8 +281,8 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [DRM Policy Manager](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-overview.md)
       + [Befehlszeilenverwendung im Policy Manager](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-command-line-usage.md)
       + [Konfigurationseigenschaften](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-config-file-properties.md)
-      + [Whitelist für Nicht-SWF-Anwendungen](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/non-swf-whitelisting.md)
-      + [Whitelist für SWF-Anwendungen](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/swf-whitelisting.md)
+      + [Nicht-SWF-Antrag Auf die Zulassungsliste setzend](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/non-swf-allowlisting.md)
+      + [SWF-Antrag Auf die Zulassungsliste setzend](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/swf-allowlisting.md)
    + [DRM Media Packager](drm-reference-implementations/command-line-tools/configure-command-line-tools/media-packager/media-packager-overview.md)
    + [DRM Policy Update Liste Manager](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-update-list-manager/policy-update-list-manager-overview.md)
    + [DRM Revocation Liste Manager](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-revocation-list-manager/policy-revocation-list-manager-overview.md)
@@ -398,7 +401,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Rollenerkennung](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection.md)
       + [Maschinenzahl bei Erteilung der Lizenzen](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection-machine-count.md)
       + [Wiederholungsschutz](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-replay-detection.md)
-      + [Whitelist von Paketen mit vertrauenswürdigen Inhalten verwalten](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-whitelist.md)
+      + [Verwalten einer zulassungsliste vertrauenswürdiger Inhaltspakete](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-allowlist.md)
       + [Timeout für Authentifizierungstoken](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-timeout-for-authn-tokens.md)
       + [Richtlinienoptionen überschreiben](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-override-policy-options.md)
       + [Vorgenerieren von Lizenzen](aaxs-secure-deployment-guidelines/issuing-licenses/pre-gen-licenses.md)
@@ -421,10 +424,10 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
    + [Benutzerauthentifizierung](aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md)
    + [Zeitbasierte Regeln](aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md)
    + Laufzeit- und Anwendungsbeschränkungen {#runtime-and-application-restrictions}
-      + [White-Liste für Adobe® Primetime-Anwendungen, die geschützte Inhalte abspielen dürfen](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-whitelist-air.md)
-      + [White-Liste für SWFs mit Adobe® Flash® Player, die geschützte Inhalte wiedergeben dürfen](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-whitelist-flash.md)
-      + [Schwarze Liste von DRM-Clients für den Zugriff auf geschützte Inhalte](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blacklist-drm-clients.md)
-      + [Blacklist der Anwendungslaufzeiten, die vom Zugriff auf geschützten Inhalt eingeschränkt sind](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blacklist-app-runtimes.md)
+      + [Zulassungsliste für Adobe® Primetime-Anwendungen, die geschützte Inhalte abspielen dürfen](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)
+      + [Zulassungsliste für Adobe® Flash® Player SWFs, die geschützte Inhalte wiedergeben dürfen](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-flash.md)
+      + [Blockierungsliste von DRM-Clients, die keinen Zugriff auf geschützten Inhalt haben](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-drm-clients.md)
+      + [Blockierungsliste von Anwendungslaufzeiten, die den Zugriff auf geschützten Inhalt einschränken](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-app-runtimes.md)
       + [Mindestsicherheitsstufe für DRM und Laufzeitumgebungen](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-min-sec-level-for-drm.md)
       + [Gerätefunktionen, die zum Abspielen geschützter Inhalte erforderlich sind](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-device-capabilities.md)
       + [Jailbreak-Durchsetzung (Adobe Primetime erforderlich)](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-jailbreak-enforcement.md)
