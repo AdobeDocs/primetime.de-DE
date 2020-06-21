@@ -3,7 +3,10 @@ seo-title: Mandantenkonfigurationsdatei
 title: Mandantenkonfigurationsdatei
 uuid: 6e5c82c9-b8f5-4fca-8325-a884b2c779f7
 translation-type: tm+mt
-source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '727'
+ht-degree: 0%
 
 ---
 
@@ -31,8 +34,8 @@ Die Mandant-Konfigurationsdatei enthält:
    * **Recht** abspielen — Es muss mindestens ein Recht angegeben werden. Wenn mehrere Rechte angegeben sind, verwendet der Kunde das erste Recht, für das er alle Anforderungen erfüllt.
 
       * **Output Protection** — Steuert, ob die Ausgabe auf externen Wiedergabegeräten geschützt werden soll.
-      * **AIR- und SWF-Anwendungsbeschränkungen** — Optionale Whitelist von SWF- und AIR-Anwendungen, die den Inhalt wiedergeben dürfen (d. h. nur die angegebenen Anwendungen sind zulässig). SWF-Anwendungen werden durch eine URL oder den Digest der SWF und die maximale Zeit für den Download und die Überprüfung der Zusammenfassung identifiziert. Informationen zur Berechnung der SWF-Zusammenfassung finden Sie im Abschnitt &quot;SWF-Hash-Rechner&quot;. AIR- und iOS-Anwendungen werden durch eine Herausgeber-ID und eine optionale Anwendungs-ID, Mindest- und Höchstversion gekennzeichnet. Wenn keine Anwendungseinschränkungen angegeben sind, kann der Inhalt von jeder SWF- oder AIR-Anwendung wiedergegeben werden.
-      * **DRM- und Laufzeitmodul-Einschränkungen** — Gibt die Mindestsicherheitsstufe an, die für das DRM/Runtime-Modul erforderlich ist. Enthält optional eine schwarze Liste von Versionen, die den Inhalt nicht abspielen dürfen. Modulversionen werden durch Attribute wie Betriebssystem und/oder Versionsnummer identifiziert. Einschränkungen für DRM-Module und Einschränkungen für Laufzeitmodule unterstützen jetzt die folgenden zusätzlichen Attribute:
+      * **AIR- und SWF-Anwendungsbeschränkungen** — Optionale zulassungsliste von SWF- und AIR-Anwendungen, die den Inhalt wiedergeben können (d. h. nur die angegebenen Anwendungen sind zulässig). SWF-Anwendungen werden durch eine URL oder den Digest der SWF und die maximale Zeit für den Download und die Überprüfung der Zusammenfassung identifiziert. Informationen zur Berechnung der SWF-Zusammenfassung finden Sie im Abschnitt &quot;SWF-Hash-Rechner&quot;. AIR- und iOS-Anwendungen werden durch eine Herausgeber-ID und eine optionale Anwendungs-ID, Mindest- und Höchstversion gekennzeichnet. Wenn keine Anwendungseinschränkungen angegeben sind, kann der Inhalt von jeder SWF- oder AIR-Anwendung wiedergegeben werden.
+      * **DRM- und Laufzeitmodul-Einschränkungen** — Gibt die Mindestsicherheitsstufe an, die für das DRM/Runtime-Modul erforderlich ist. Enthält optional eine blockierungsliste von Versionen, für die die Wiedergabe des Inhalts nicht zulässig ist. Modulversionen werden durch Attribute wie Betriebssystem und/oder Versionsnummer identifiziert. Einschränkungen für DRM-Module und Einschränkungen für Laufzeitmodule unterstützen jetzt die folgenden zusätzlichen Attribute:
 
          * `oemVendor`
          * `model`
