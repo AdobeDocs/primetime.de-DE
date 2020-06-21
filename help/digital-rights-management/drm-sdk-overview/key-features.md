@@ -3,7 +3,10 @@ seo-title: Wichtigste Funktionen
 title: Wichtigste Funktionen
 uuid: bee91fd7-a335-4881-abad-8972f28630d5
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1147'
+ht-degree: 0%
 
 ---
 
@@ -45,6 +48,6 @@ Adobe Primetime DRM bietet folgende wichtige Funktionen:
 * **Getrennte Inhaltsverpackung:** Für die Inhaltsverpackung ist keine Netzwerkverbindung mit dem Lizenzserver erforderlich. Dies ermöglicht sichere Back-End-Vorgänge, indem die Belichtung komprimierter Inhalte, die noch nicht geschützt sind, begrenzt wird.
 * **Kontrolle über Zeitrücklauf: **Primetime DRM ermöglicht die sichere und genaue Berechnung der Zeit, um die Zeitrücklaufzeit auf dem Client-Computer zu erkennen. Dadurch werden Rechte im Zusammenhang mit dem Zugriff auf Inhalte für einen bestimmten Zeitraum erzwungen, und die Verbraucher werden daran gehindert, Zugangsrechte zu untergraben, indem die Zeit auf ihrem Computer verändert wird.
 * **Individualisierung**: Ermöglicht das Binden von Inhalten an einen bestimmten Computer.
-* **Whitelist der Anwendung:** Ermöglicht der Client-Laufzeit sicherzustellen, dass geschützter Inhalt nur in einer autorisierten SWF- oder AIR-Anwendung wiedergegeben wird.
+* **zulassungsliste:** Ermöglicht der Client-Laufzeit sicherzustellen, dass geschützter Inhalt nur in einer autorisierten SWF- oder AIR-Anwendung wiedergegeben wird.
 * **Widerruf kompromittierter Clients:** Komprimierte Client-Software kann gesperrt werden. Wenn festgestellt wird, dass die Flash Player- oder Adobe AIR-Laufzeitumgebung beeinträchtigt wurde, kann diesen Clients der Dienst verweigert werden, bis sie auf eine neuere und sicherere Version der Clientsoftware aktualisieren.
 * **Mehrere Richtlinien für dieselbe Videodatei:** Bei einem Videoinhalt können mehrere Richtlinien während der Verpackung eingebettet sein. Bei der Erteilung einer Lizenz kann der Lizenzserver entscheiden, welche der Richtlinien verwendet werden sollen, damit ein Content-Distributor dieselbe geschützte Datei für verschiedene Geschäftsmodelle (z. B. Vermietung und elektronischer Durchverkauf) verwenden kann.
