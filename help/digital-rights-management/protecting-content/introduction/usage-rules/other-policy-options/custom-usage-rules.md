@@ -3,7 +3,10 @@ seo-title: Benutzerspezifische Nutzungsregeln
 title: Benutzerspezifische Nutzungsregeln
 uuid: ab2c7ac5-bd78-46bd-a7be-8a3651f24ae5
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
@@ -12,4 +15,4 @@ source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
 
 Sie können benutzerdefinierte Daten in alle Lizenzen einbeziehen, die der Lizenzserver ausgibt. Die Interpretation oder Verarbeitung dieser Daten wird durch die Implementierung der Client-Anwendung und des Lizenzservers bestimmt.
 
-Verwendungsbeispiel: Ermöglicht die Erweiterbarkeit von Nutzungsregeln, indem andere Geschäftsregeln im Rahmen der Primetime DRM-Richtlinie und/oder Inhaltslizenz sicher übertragen werden können. Aus Sicherheitsgründen sollten Sie diese Option zusammen mit der Whitelist-Option für AIR-Anwendungen oder Flash Player-SWFs anwenden, da diese Nutzungsregeln im benutzerdefinierten Clientanwendungscode erzwungen werden.
+Verwendungsbeispiel: Ermöglicht die Erweiterbarkeit von Nutzungsregeln, indem andere Geschäftsregeln im Rahmen der Primetime DRM-Richtlinie und/oder Inhaltslizenz sicher übertragen werden können. Aus Sicherheitsgründen sollten Sie diese Option zusammen mit der zulassungsliste-Option für AIR-Anwendungen oder Flash Player-SWFs anwenden, da diese Nutzungsregeln im benutzerdefinierten Clientanwendungscode erzwungen werden.
