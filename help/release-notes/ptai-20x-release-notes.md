@@ -2,9 +2,9 @@
 title: PTAI 20.6.1 - Versionshinweise
 description: Die Versionshinweise zu PTAI 20.6.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Wenden Sie sich an den Adobe Support, um die folgenden neuen Funktionen über di
 
 **Wenn:** Mittwoch, 15. Januar 2020 von 04:00 Uhr bis 05:00 Uhr östliche Zeit
 
-* Der Creative Repackage-Dienst ermöglicht jetzt eine schnellere Anzeigeneinfügung durch die automatische schwarze Liste fehlerhafter kreativer Elemente.
+* Der Creative Repackage-Dienst ermöglicht jetzt eine schnellere Anzeigeneinfügung, indem er die Auflistung fehlerhafter kreativer Elemente automatisch sperrt.
 
 * Unterstützung für Phase 1 für das neue Cue-Format SCTE 35 in serverseitiger Anzeigeneinfügung hinzugefügt.
 
