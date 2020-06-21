@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: baec714e-9d41-4e8b-b134-13a736885cbd
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1929'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ Neue Funktionen in den Versionen Primetime Streaming Server 1.3 und 1.4.
 
 * HLS AES-Verschlüsselung ist für Live- und VOD-Workflows verfügbar. Primetime Herkunft kann Just in Time HLS AES Verschlüsselung auf eingehende HLS-Streams oder MP4-Dateien anwenden.
 * Es kann auch eine JIT HLS AES-Verschlüsselung anwenden, wenn es zum Konvertieren eingehender HDS-Streams in HLS-Streams verwendet wird.
-* Primetime-Herkunft unterstützt jetzt die SWF-Whitelisting für PHLS-Streams. Früher wurde es nur für PHDS-Streams unterstützt
+* Primetime-Herkunft unterstützt jetzt SWF-Listen für PHLS-Streams. Früher wurde es nur für PHDS-Streams unterstützt
 
 **Primetime Live Packager**
 
@@ -39,7 +42,7 @@ Neue Funktionen in den Versionen Primetime Streaming Server 1.3 und 1.4.
 
 Die Zertifikate PHDS/PHLS wurden aktualisiert. Das neue Ablaufdatum für dasselbe Datum ist der 10.1.2016.
 
-### **Fehlerbehebungen in Version 1.4**{#bug-fixes-included-in-release}
+### **Fehlerbehebungen in Version 1.4** {#bug-fixes-included-in-release}
 
 * PTPUB-282- Das von OfflinePackager 1.3.1 erstellte HLS-Manifest verfügt nicht über Codec- und Auflösungsinformationen.
 * PTPUB-353 - PlayListCreator unterstützt nicht das Hinzufügen von WebVTT-Informationen zum Manifest auf der festgelegten Ebene
