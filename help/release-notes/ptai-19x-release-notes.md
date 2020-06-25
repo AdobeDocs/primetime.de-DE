@@ -2,9 +2,9 @@
 title: PTAI 19.11.1 - Versionshinweise
 description: Die Versionshinweise zu PTAI 19.11.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2019.
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 369dc8d987f5d49467ec376d4df5ffc46ea6d36c
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1974'
 ht-degree: 0%
 
 ---
@@ -148,7 +148,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
 * SAI: ClickThrough- und ClickTracking-URLs für Videoanzeigen wurden dem sidecar JSON v2-Format hinzugefügt
    * Unter der Eigenschaft &quot;trackingURLs&quot;lauten ihre &quot;Ereignis&quot;-Wertnamen &quot;Clickthrough&quot;und &quot;clickTracking&quot;
    * Ihre startTime-Werte sind der Anfang der Anzeige
-* SAI: Für CRS-Assets wurde eine Funktion hinzugefügt, mit der der Ablauffrist eines CRS-Assets um 30 Tage verlängert werden kann, sobald es eingefügt wird
+* SAI: Für CRS-Assets wurde eine Funktion hinzugefügt, mit der der Ablauf des Abfragedatensatzes eines CRS-Assets um 30 Tage verlängert werden kann, sobald es eingefügt wird
    * Vorheriges Verhalten: CRS-Asset-Nachschlagedatensätze werden in jedem Pod im memcache gespeichert. CRS-Asset-Lookup-Datensätze werden 30 Tage nach dem Hinzufügen zum memcache automatisch entfernt. Um den CRS-Asset-Nachschlagedatensatz eines kreativen Elements in einem Pod zu replizieren, nachdem er aus dem memcache entfernt wurde, muss dieses kreative Element in diesem Pod dreimal gefunden werden
    * Neues Verhalten: Wenn ein Pod auf einen CRS-Asset-Nachschlagedatensatz zugreift, um das CRS-Asset einzufügen, wird der Ablauf des CRS-Nachschlagedatensatzes in diesem Pod um 30 Tage verlängert. Daher werden häufig verwendete CRS-Elemente erst 30 Tage nach der letzten Verwendung aus dem Memcache eines Pods entfernt
    * Das neue Verhalten ist systemweit verfügbar und kann abgeschaltet werden, wenn ein Leistungsabfall erkannt wird
@@ -174,11 +174,11 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
    * Alte Lookup-Key-Struktur: Zonen-, Anzeigen- und Anzeigensystem-, Anzeigen-ID-, Kreativ-ID-, Kreativ-URL- und Formatparameter (Zielgruppe-Dauer, Ausgabeformat, Ziel-CDN)
    * Die Lookup-Keys für vorhandene CRS-Assets werden vor der Produktionsversion aktualisiert, um der neuen Struktur zu entsprechen. Beachten Sie jedoch, dass neue Assets, die zwischen der Lookup-Keys-Aktualisierung und der Produktionsversion transkodiert wurden, möglicherweise fehlen. In diesem Fall würden sie eine neue CRS-Anforderung starten, wenn sie nach der Veröffentlichung des Releases das nächste Mal auf sie stoßen
 
-* CRS: Es wurde die Möglichkeit hinzugefügt, CRS-Anforderungen von bestimmten Anzeigensystemen, Anzeigen-IDs, kreativen IDs, kreativen URLs und/oder kreativen Formaten auf blockierungsliste/zulassungsliste zu setzen
+* CRS: Die Möglichkeit zum blockierungsliste/zulassungsliste von CRS-Anforderungen von bestimmten Anzeigensystemen, Anzeigen-IDs, kreativen IDs, kreativen URLs und/oder kreativen Formaten wurde hinzugefügt
 
    >Hinweis
    >
-   >Adobe fügt blockierungsliste-Regeln hinzu, wenn Anzeigenanbieter mit dynamischen Werten (z. B. dynamischer Parameter in URL) für dieselbe Anzeige gefunden werden. Solche blockierungsliste-Regeln des  werden deaktiviert, nachdem die dynamische Komponente entweder vom Anbieter oder durch eine Normalisierungsregel aufgelöst wurde.
+   >Adobe fügt blockierungsliste-Regeln hinzu, wenn Anzeigenanbieter mit dynamischen Werten (z. B. dynamischer Parameter in URL) für dieselbe Anzeige gefunden werden. Solche blockierungsliste-Regeln werden deaktiviert, nachdem die dynamische Komponente entweder vom Anbieter oder durch eine Normalisierungsregel aufgelöst wurde.
 
    * Wenn Sie eine blockierungsliste- oder zulassungsliste-Regel für Ihre Zone hinzufügen möchten, wenden Sie sich bitte an Ihren technischen Kundenbetreuer.
 
