@@ -3,9 +3,9 @@ seo-title: Befehlszeilenverwendung
 title: Befehlszeilenverwendung
 uuid: e549a98e-b027-4472-8860-6aa1d56d4a8b
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1026'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ In der folgenden Tabelle werden die Befehlszeilenoptionen beschrieben, die zusam
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[: <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> min </span>]:[ <span class="+ topic/ph pr-d/codeph codeph"> max </span>]] </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine zulassungsliste von AIR-Anwendungen, die geschützte Inhalte abspielen dürfen. Verwenden Sie diese Option, um einzuschränken, welche Herausgeber, Anwendungen und Versionen auf Inhalte zugreifen dürfen, die mit dieser Richtlinie geschützt sind. </p> <p class="- topic/p ">Wenn <i class="+ topic/ph hi-d/i ">appId</i> nicht angegeben ist, sind alle Anwendungen für <i class="+ topic/ph hi-d/i ">pubId</i> des Herausgebers zulässig. </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">Min</i> - und <i class="+ topic/ph hi-d/i ">Max</i> -Versionsnummern sind optional. </p> <p class="- topic/p ">Es können mehrere <span class="codeph"> - air- </span> Optionen angegeben werden, um mehrere Anwendungen zuzulassen. Wenn keine AIR- oder SWF-Anwendungen angegeben sind, können alle Anwendungen auf diesen Inhalt zugreifen. Verwenden Sie während einer Aktualisierung -air ohne die restlichen Argumente, um alle Einträge aus der Liste zu entfernen. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine Zulassungsliste von AIR-Anwendungen, die geschützte Inhalte abspielen dürfen. Verwenden Sie diese Option, um einzuschränken, welche Herausgeber, Anwendungen und Versionen auf Inhalte zugreifen dürfen, die mit dieser Richtlinie geschützt sind. </p> <p class="- topic/p ">Wenn <i class="+ topic/ph hi-d/i ">appId</i> nicht angegeben ist, sind alle Anwendungen für <i class="+ topic/ph hi-d/i ">pubId</i> des Herausgebers zulässig. </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">Min</i> - und <i class="+ topic/ph hi-d/i ">Max</i> -Versionsnummern sind optional. </p> <p class="- topic/p ">Es können mehrere <span class="codeph"> - air- </span> Optionen angegeben werden, um mehrere Anwendungen zuzulassen. Wenn keine AIR- oder SWF-Anwendungen angegeben sind, können alle Anwendungen auf diesen Inhalt zugreifen. Verwenden Sie während einer Aktualisierung -air ohne die restlichen Argumente, um alle Einträge aus der Liste zu entfernen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmBlacklist name </span> / <i class="+ topic/ph hi-d/i ">value</i><span class="+ topic/ph pr-d/codeph codeph"> - </span> <i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"> Paare </span> </td> 
@@ -120,7 +120,7 @@ In der folgenden Tabelle werden die Befehlszeilenoptionen beschrieben, die zusam
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf url </span> </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf file= swf_file </span>, <span class="+ topic/ph pr-d/codeph codeph"> time= max_time_to_verify </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine zulassungsliste von SWF-Anwendungen, die geschützte Inhalte abspielen dürfen. Es können mehrere SWF-Optionen angegeben werden, um mehrere Anwendungen zuzulassen. Wenn keine AIR- oder SWF-Anwendungen angegeben sind, können alle Anwendungen auf diesen Inhalt zugreifen. Verwenden Sie während einer Aktualisierung -swf ohne die restlichen Argumente, um alle Einträge aus der Liste zu entfernen. Um eine SWF nach ihrem Hashwert zu identifizieren, geben Sie die SWF-Datei an, für die der Hash berechnet werden soll, und geben Sie die maximale Zeit an, die für den Abschluss der SWF-Überprüfung zulässig ist (in Sekunden). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine Zulassungsliste von SWF-Anwendungen, die geschützte Inhalte abspielen dürfen. Es können mehrere SWF-Optionen angegeben werden, um mehrere Anwendungen zuzulassen. Wenn keine AIR- oder SWF-Anwendungen angegeben sind, können alle Anwendungen auf diesen Inhalt zugreifen. Verwenden Sie während einer Aktualisierung -swf ohne die restlichen Argumente, um alle Einträge aus der Liste zu entfernen. Um eine SWF nach ihrem Hashwert zu identifizieren, geben Sie die SWF-Datei an, für die der Hash berechnet werden soll, und geben Sie die maximale Zeit an, die für den Abschluss der SWF-Überprüfung zulässig ist (in Sekunden). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k name= value </span> </td> 
