@@ -5,7 +5,7 @@ seo-title: Übersicht
 title: Übersicht
 uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -43,4 +43,4 @@ Das SDK stellt eine Java-API zur Verfügung, mit der diese Aufgaben ausgeführt 
 
 Gibt benutzerspezifische Nutzungsregeln an. Benutzerspezifische Daten können in vom Lizenzserver ausgestellte Lizenzen enthalten sein. Die Interpretation/Verarbeitung dieser Daten liegt vollständig bei der Implementierung des Client-Anwendungs- und Lizenzservers.
 
-Verwendungsbeispiel: Ermöglicht die Erweiterbarkeit von Nutzungsregeln, indem andere Geschäftsregeln im Rahmen der Richtlinie- und/oder Inhaltslizenz sicher übertragen werden können. Aus Sicherheitsgründen sollte diese Option zusammen mit den Optionen für die AIR-Anwendung oder die Flash Player-SWF-zulassungsliste verwendet werden, da diese Verwendungsregeln im benutzerdefinierten Clientanwendungscode erzwungen werden. Weitere Informationen finden Sie unter &quot;[Laufzeit- und Anwendungsbeschränkungen](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)&quot;.
+Verwendungsbeispiel: Ermöglicht die Erweiterbarkeit von Nutzungsregeln, indem andere Geschäftsregeln im Rahmen der Richtlinie- und/oder Inhaltslizenz sicher übertragen werden können. Aus Sicherheitsgründen sollte diese Option zusammen mit den Optionen für die AIR-Zulassungsliste oder die Flash Player-SWF- verwendet werden, da diese Nutzungsregeln im benutzerdefinierten Clientanwendungscode erzwungen werden. Weitere Informationen finden Sie unter [Laufzeit- und Anwendungsbeschränkungen](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md).
