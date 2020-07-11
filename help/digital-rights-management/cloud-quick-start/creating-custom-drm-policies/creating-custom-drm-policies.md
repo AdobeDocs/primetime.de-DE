@@ -3,9 +3,9 @@ seo-title: Benutzerdefinierte DRM-Richtlinien erstellen (optional)
 title: Benutzerdefinierte DRM-Richtlinien erstellen (optional)
 uuid: 701b51d9-6dde-4c21-bc5b-09e612582968
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Benutzerdefinierte DRM-Richtlinien erstellen (optional){#create-custom-drm-policies-optional}
 
-Das Primetime Cloud DRM Protection Kit enthält einige vorkonfigurierte Richtlinien, die beim Verpacken verwendet werden können. Wenn zusätzliche Richtlinienkonfigurationen gewünscht werden, z. B. eine bestimmte SWF-Auf die Zulassungsliste setzend Berechtigung, kann der enthaltene Primetime DRM Policy Manager zum Generieren benutzerdefinierter Richtlinien verwendet werden.
+Das Primetime Cloud DRM Protection Kit enthält einige vorkonfigurierte Richtlinien, die beim Verpacken verwendet werden können. Wenn zusätzliche Richtlinienkonfigurationen gewünscht werden, z. B. eine bestimmte SWF-Listenberechtigung, kann der enthaltene Primetime DRM Policy Manager zum Generieren benutzerdefinierter Richtlinien verwendet werden.
 
 >[!NOTE]
 >
