@@ -3,7 +3,7 @@ seo-title: Liste mit Nicht-SWF-Anwendungen zulassen
 title: Liste mit Nicht-SWF-Anwendungen zulassen
 uuid: d4f93b15-e556-4749-95ab-f7f58b1061d7
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -11,18 +11,18 @@ ht-degree: 0%
 ---
 
 
-# Liste mit Nicht-SWF-Anwendungen zulassen {#non-swf-application-allowlisting}
+# Liste mit Nicht-SWF-Anwendungen zulassen {#non-swf-application-isting}
 
-AIR war die erste Plattform, für die spezielle Anwendungen die Auflistung zulassen, und der Name der Eigenschaft, die Sie zum zulassungsliste von Nicht-SWF-Anwendungen (Adobe AIR, iOS, Android usw.) verwenden. behält seinen ursprünglichen Namen bei: `policy.allowedAIRApplication.n`. Auf diese Weise können die Inhalte von allen Nicht-Flash-Anwendungen wiedergegeben werden, die vor der Veröffentlichung mit einem Signaturzertifikat signiert wurden. Dies wird als *Anwendungs-ID* bezeichnet. Sie können die Anwendungs-ID mithilfe des [!DNL AdobePublisherIDUtility.jar] Tools extrahieren. Diese Zulässigkeitsliste wird auf jedem Client erzwungen, der Primetime DRM unterstützt.
+AIR war die erste Plattform, auf der spezielle Anwendungen die Auflistung zulassen, und der Name der Eigenschaft, die Sie zur Zulassungsliste von Nicht-SWF-Anwendungen (Adobe AIR, iOS, Android usw.) verwenden. behält seinen ursprünglichen Namen bei: `policy.allowedAIRApplication.n`. Auf diese Weise können die Inhalte von allen Nicht-Flash-Anwendungen wiedergegeben werden, die vor der Veröffentlichung mit einem Signaturzertifikat signiert wurden. Dies wird als *Anwendungs-ID* bezeichnet. Sie können die Anwendungs-ID mithilfe des [!DNL AdobePublisherIDUtility.jar] Tools extrahieren. Diese Zulässigkeitsliste wird auf jedem Client erzwungen, der Primetime DRM unterstützt.
 
 Die Anwendungs-ID wird aus dem öffentlichen Schlüssel des Signaturzertifikats abgeleitet, mit dem eine bestimmte Anwendung signiert wird. Wenn der öffentliche Schlüssel im Zertifikat jemals abläuft, ist es zulässig, dass alle zuvor aufgelisteten Inhalte nur in Apps wiedergegeben werden, die mit dem alten Zertifikat signiert wurden, nicht in der neuen App (mit dem neuen Zertifikat signiert).
 
 Wenn Sie sich in einer Situation befinden, in der eine Inhaltsbibliothek für Anwendungen, die mit einem bestimmten Unterschriftszertifikat signiert wurden, zugelassen ist und dieses Zertifikat abläuft und Sie ein neues Zertifikat erhalten (mit einem anderen öffentlichen/privaten Schlüssel), wird Ihr alter Inhalt nicht auf der neuen App abgespielt, *es sei denn* Sie führen einen der folgenden Schritte aus:
 
-* Verwenden Sie einen `PolicyUpdateList` auf Ihrem Lizenzserver, um die eingehende Richtlinie zu überschreiben und einen neuen Application Zulassungsliste-Eintrag mit dem Digest Ihres neuen Signaturzertifikats einzufügen.
-* Aktualisieren Sie die Logik Ihres Lizenzservers, um die eingehende Richtlinie zu überschreiben und einen neuen Application Zulassungsliste-Eintrag einzufügen.
+* Verwenden Sie einen `PolicyUpdateList` auf Ihrem Lizenzserver, um die eingehende Richtlinie zu überschreiben und einen neuen Eintrag für die Anwendungs-Zulassungsliste mit dem Digest Ihres neuen Signaturzertifikats einzufügen.
+* Aktualisieren Sie die Logik des Lizenzservers, um die eingehende Richtlinie zu überschreiben und einen neuen Eintrag für die Zulassungsliste einzufügen.
 * Fordern Sie an, dass der Aussteller des Unterschriftszertifikats Ihnen ein neues Zertifikat ausstellt, das denselben öffentlichen/privaten Schlüssel verwendet wie das vorherige Zertifikat.
-* Wenn Sie HDS-/HLS-Inhalte bereitstellen, die auf einen URL-Endpunkt verweisen, um die Daten abzurufen, `DRMMetadata`können Sie den `DRMMetadata` (mit dem Primetime DRM Java SDK) neu generieren, um eine neue DRM-Richtlinie einzufügen, die einen aktualisierten Application Zulassungsliste-Eintrag enthält.
+* Wenn Sie HDS-/HLS-Inhalte bereitstellen, die auf einen URL-Endpunkt verweisen, um die Daten abzurufen, `DRMMetadata`können Sie den `DRMMetadata` (mit dem Primetime DRM Java SDK) neu generieren, um eine neue DRM-Richtlinie einzufügen, die einen aktualisierten Eintrag zur Application Zulassungsliste enthält.
 
 * Komprimieren Sie alle alten Inhalte mit einer neuen DRM-Richtlinie, die den Digest Ihres neuen Signaturzertifikats enthält.
 
