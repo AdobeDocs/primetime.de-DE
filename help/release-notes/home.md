@@ -4,9 +4,9 @@ seo-title: Versionshinweise zu Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 8f8b9d167d7456968879edac847c51e6c9e1da3c
+source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Die Veröffentlichung konzentrierte sich auf die Aktualisierung der Grundierungs
 
 Weitere Informationen zur aktuellen Version für [Android](../release-notes/tvsdk-3x-android.md)finden Sie unter .
 
-## Erweiterungen und Fehlerbehebungen in PTAI 20.6.1
+## Erweiterungen und Fehlerbehebungen in PTAI 20.7.1
 
-Die Veröffentlichung konzentrierte sich auf Funktionen wie Manifestmanipulation und Verbesserung von APIs, um die Sitzung mit langen VOD-Assets am Leben zu erhalten. Die Version enthält außerdem Korrekturen zu den wichtigsten Kundenproblemen.
+Die Version konzentrierte sich auf die SCTE35-Verbesserung, das Hinzufügen weiterer Informationen in HTTP-Antwort-Kopfzeilen von X-ADBE-AI-X1, die verbesserte Metrikaggregation und das Bedienfeld &quot;Sitzungsstatistik&quot;.
 
 Weitere Informationen zur aktuellen Version der dynamischen Anzeigeneinfügung finden Sie unter [PTAI-Versionshinweise](ptai-20x-release-notes.md).
 
