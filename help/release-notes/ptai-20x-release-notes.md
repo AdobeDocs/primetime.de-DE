@@ -1,20 +1,44 @@
 ---
-title: PTAI 20.6.1 - Versionshinweise
-description: Die Versionshinweise zu PTAI 20.6.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
+title: PTAI 20.7.1 - Versionshinweise
+description: Die Versionshinweise zu PTAI 20.7.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
 
 
-# Primetime Dynamic Ad Insertion 20.6.1 - Versionshinweise
+# Primetime Dynamic Ad Insertion 20.7.1 - Versionshinweise
 
-Versionshinweise zur dynamischen Anzeigeneinfügung 20.6.1 beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme bei der Primetime-Einfügen dynamischer Anzeigen im Jahr 2020.
+Versionshinweise zur dynamischen Anzeigeneinfügung 20.7.1 beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme bei der Primetime-Einfügen dynamischer Anzeigen im Jahr 2020.
 
-## Neue Funktionen in PTAI 20.6.1
+## Neue Funktionen in PTAI 20.7.1
+
+**Wenn:** Donnerstag, 9. Juli 2020 von 03:00 Uhr bis 05:00 Uhr Eastern Time
+
+**Neue Funktionen und Verbesserungen**
+
+* SCTE35-Erweiterung, um entweder die Beginn-/Endmeldungen des Anbieters oder die Beginn-/Endmeldungen zu verwenden, um den Cue zu identifizieren.
+
+* X-ADBE-AI-X1-Header mit zusätzlichen Informationen zur Fehlerbehebung aktualisiert.
+
+* Erweiterte Metrikaggregation.
+
+* Erweitertes SSAI-Konsolen-Dashboard für das Bedienfeld &quot;Sitzungsstatistik&quot;.
+
+### Verbesserungen und Fehlerbehebungen in früheren Versionen
+
+#### Version 20.6.2
+
+**Wenn:** Donnerstag, 18. Juni 2020 von 03:00 Uhr bis 04:00 Uhr Eastern Time
+
+**Verbesserungen**
+
+Verbesserte Stream-Synchronisierung für Video-Clients, die eine Genauigkeit von Millisekunden erfordern. Wenden Sie sich an den Adobe Support, um die Genauigkeit von Millisekunden zu aktivieren `#EXT-X-PROGRAM-DATE-TIME tags`.
+
+#### Version 20.6.1
 
 **Wenn:** Dienstag, 2. Juni 2020 von 03:00 Uhr bis 05:00 Uhr Eastern Time
 
@@ -32,7 +56,7 @@ Wenden Sie sich an den Adobe Support, um die folgenden neuen Funktionen über di
 
 * Es wurde ein Problem behoben, bei dem EXT-X-DISCONTINUITY-Tags vom Anfang der Wiedergabeliste entfernt wurden, wenn von Anzeigen zu Inhalt zurückgekehrt wurde. Wenden Sie sich an den Adobe Support, um diese Fehlerbehebung zu aktivieren.
 
-### Version 20.5.1
+#### Version 20.5.1
 
 **Wenn:** Dienstag, 5. Mai 2020 von 04:00 Uhr bis 05:00 Uhr Eastern Time
 
@@ -42,7 +66,7 @@ Wenden Sie sich an den Adobe Support, um die folgenden neuen Funktionen über di
 
 * Aktualisierungen der Wartung.
 
-### Version 20.3.4
+#### Version 20.3.4
 
 **Wenn:** Mittwoch, 1. April 2020 von 03:00 Uhr bis 04:00 Uhr Eastern Time
 
@@ -50,7 +74,7 @@ Wenden Sie sich an den Adobe Support, um die folgenden neuen Funktionen über di
 
 * Sicherheitsaktualisierungen.
 
-### Version 20.3.3
+#### Version 20.3.3
 
 **Wenn:** Donnerstag, 26. März 2020 von 03:00 Uhr bis 04:00 Uhr Eastern Time
 
@@ -60,7 +84,7 @@ Wenden Sie sich an den Adobe Support, um die folgenden neuen Funktionen über di
 
 * Es wurde ein Problem mit CMAF/demuxed Audio-Streams behoben, bei dem EXT-X-MEDIA-SEQUENCE-Nummern in bestimmten Szenarien falsch inkrementiert wurden.
 
-### Version 20.3.2
+#### Version 20.3.2
 
 **Wenn:** Mittwoch, 11. März 2020 von 05:30 Uhr bis 07:00 Uhr östliche Zeit
 
@@ -68,26 +92,26 @@ Wenden Sie sich an den Adobe Support, um die folgenden neuen Funktionen über di
 
 * Aktualisierungen der Wartung.
 
-### Version 20.3.1
+#### Version 20.3.1
 
 **Wenn:** Donnerstag, 05. März 2020 von 02:30 Uhr bis 04:30 Uhr Eastern Time
 
 * Leistungsverbesserungen:
 
-   * Cache-Unterstützung für Master-/Media m3u8-Manifeste hinzugefügt. Diese Manifeste reagieren jetzt auf die Cachesteuerung: öffentliche und Max-Age-Kopfzeilen, die häufig die Leistung von Video-Beginn verbessern können.
+   * Cache-Unterstützung für Übergeordnet/media m3u8-Manifeste hinzugefügt. Diese Manifeste reagieren jetzt auf die Cachesteuerung: öffentliche und Max-Age-Kopfzeilen, die häufig die Leistung von Video-Beginn verbessern können.
 
    * Es wurde Unterstützung hinzugefügt, um zu erzwingen, dass HTTPS-kreative Elemente über HTTP abgerufen werden, was auch die Leistung von Video-Beginn verbessern kann.
 
 * Sicherheits- und Wartungs-Fehlerbehebungen.
 
-### Version 20.2.1
+#### Version 20.2.1
 
 **Wenn:** Donnerstag, 13. Februar 2020 von 04:30 Uhr bis 05:30 Uhr Ostzeit
 
 * Unterstützung für das Zusammenfügen von Anzeigenelementen mit mehreren reinen Audiostreams, basierend auf Sprache/Codec/Bitrate.
 * Geringfügige Leistungsverbesserungen und Wartungs-Updates.
 
-### Version 20.1.3
+#### Version 20.1.3
 
 **Wenn:** Dienstag, 28. Januar 2020 von 2:00 Uhr bis 03:00 Uhr östliche Zeit
 
@@ -101,13 +125,13 @@ Wenden Sie sich an den Adobe Support, um die folgenden neuen Funktionen über di
 
 * Entfernen Sie alte V1-Objekte aus NetStorage-Gruppen, um die Objektanzahl innerhalb sicherer Grenzen von Akamai zu halten.
 
-### Version 20.1.2 (Hotfix)
+#### Version 20.1.2 (Hotfix)
 
 **Wenn:** Montag, 20. Januar 2020 von 02:00 Uhr bis 03:00 Uhr Eastern Time
 
 * Aktualisierungen der Wartung.
 
-### Version 20.1.1
+#### Version 20.1.1
 
 **Wenn:** Mittwoch, 15. Januar 2020 von 04:00 Uhr bis 05:00 Uhr östliche Zeit
 
@@ -120,6 +144,12 @@ Wenden Sie sich an den Adobe Support, um die folgenden neuen Funktionen über di
 ## Behobene Probleme
 
 Wenn die Lösung mit einem gemeldeten Problem verbunden ist, wird ein Zendesk-Verweis angezeigt. Beispiel: `ZD#xxxxx`
+
+**PTAI 20.6.1**
+
+* `WebVTT` Fragmente wurden immer unter dem HTTP-Protokoll angefordert, unabhängig vom ursprünglichen Protokoll angefordert.
+
+* `EXT-X-DISCONTINUITY` -Tags werden von oben in der Wiedergabeliste entfernt, wenn von Anzeigen zurück zum Inhalt gewechselt wird. Wenden Sie sich an den Adobe Support, um diese Fehlerbehebung zu aktivieren.
 
 **PTAI 20.5.1**
 
