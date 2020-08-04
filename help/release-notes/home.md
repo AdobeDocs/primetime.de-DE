@@ -1,12 +1,12 @@
 ---
 title: Primetime-Versionshinweise
-seo-title: Versionshinweise zu Adobe Primetime
+seo-title: Adobe Primetime Versionshinweise
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
+source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -14,19 +14,19 @@ ht-degree: 0%
 
 # Primetime-Versionshinweise
 
-Willkommen bei den Versionshinweisen zu Adobe Primetime. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
+Willkommen bei den Adobe Primetime Versionshinweisen. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
+
+## Erweiterungen und Fehlerbehebungen in PTAI 20.8.1
+
+Die Version konzentrierte sich auf Wartungs-Updates.
+
+Weitere Informationen zur aktuellen Version von Dynamic Ad Insertion finden Sie unter [PTAI-Versionshinweise](ptai-20x-release-notes.md).
 
 ## Fehlerbehebungen in TVSDK 3.12 Android
 
 Die Veröffentlichung konzentrierte sich auf die Aktualisierung der Grundierungsversion der Primetime Reference-Anwendung auf Version 5.6.4.
 
 Weitere Informationen zur aktuellen Version für [Android](../release-notes/tvsdk-3x-android.md)finden Sie unter .
-
-## Erweiterungen und Fehlerbehebungen in PTAI 20.7.1
-
-Die Version konzentrierte sich auf die SCTE35-Verbesserung, das Hinzufügen weiterer Informationen in HTTP-Antwort-Kopfzeilen von X-ADBE-AI-X1, die verbesserte Metrikaggregation und das Bedienfeld &quot;Sitzungsstatistik&quot;.
-
-Weitere Informationen zur aktuellen Version der dynamischen Anzeigeneinfügung finden Sie unter [PTAI-Versionshinweise](ptai-20x-release-notes.md).
 
 ## Erweiterungen und Fehlerbehebungen in den iOS-Versionshinweisen zu TVSDK 3.12
 
@@ -43,12 +43,12 @@ Weitere Informationen zur aktuellen Version für [iOS](../release-notes/tvsdk-3x
 | [Referenzimplementierung](/help/android-reference-implementation/home.md) | Hilft, das TVSDK zu verstehen und ändern Sie die Funktionen Manager, um Ihren persönlichen Player anzupassen. |
 | [Primetime-API-Verweise](/help/reference/api-references.md) | Bietet detaillierte Informationen zu TVSDK-Funktionen, Datenstrukturen und anderen Programmierkonstrukten. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Hilft Ihnen, mehr über verschiedene Benutzerszenarien in Digital Rights Management (DRM) zu erfahren |
-| [Hilfe zum Einfügen dynamischer Anzeigen](/help/dynamic-ad-insertion/home.md) | Erläutert das Monetarisieren von Inhalten durch Einfügen benutzerspezifischer dynamischer Anzeigen auf dem Server und die Interaktion mit der Audience mit personalisierten Anzeigen. |
+| [Dynamische Ad Insertion-Hilfe](/help/dynamic-ad-insertion/home.md) | Erläutert das Monetarisieren von Inhalten durch Einfügen benutzerspezifischer dynamischer Anzeigen auf dem Server und die Interaktion mit der Audience mit personalisierten Anzeigen. |
 | [Archive](https://helpx.adobe.com/primetime/archives.html) | Laden Sie PDFs der archivierten Dokumentation herunter. |
 
 ## Hilfreiche Ressourcen
 
-* [Adobe Primetime](https://www.adobe.com/in/marketing/primetime.html)
+* [Adobe Primetime kennenlernen](https://www.adobe.com/in/marketing/primetime.html)
 
 * [Parallelüberwachung](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
 
