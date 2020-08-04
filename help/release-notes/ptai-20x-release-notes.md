@@ -1,20 +1,30 @@
 ---
-title: PTAI 20.7.1 - Versionshinweise
-description: Die Versionshinweise zu PTAI 20.7.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
+title: PTAI 20.8.1 - Versionshinweise
+description: Die Versionshinweise zu PTAI 20.8.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
+source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
 
 
-# Primetime Dynamic Ad Insertion 20.7.1 - Versionshinweise
+# Primetime Dynamic Ad Insertion 20.8.1 - Versionshinweise
 
-Versionshinweise zur dynamischen Anzeigeneinfügung 20.7.1 beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme bei der Primetime-Einfügen dynamischer Anzeigen im Jahr 2020.
+In den Versionshinweisen zur dynamischen Ad Insertion 20.8.1 wird beschrieben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme bei der Primetime Dynamic Ad Insertion im Jahr 2020.
 
-## Neue Funktionen in PTAI 20.7.1
+## Neue Funktionen in PTAI 20.8.1
+
+**Wenn:** Dienstag, 4. August 2020 von 3:00 Uhr bis 6:00 Uhr östliche Zeit
+
+**Verbesserungen und Fehlerbehebungen**
+
+Aktualisierungen der Wartung.
+
+### Verbesserungen und Fehlerbehebungen in früheren Versionen
+
+#### Version 20.7.1
 
 **Wenn:** Donnerstag, 9. Juli 2020 von 03:00 Uhr bis 05:00 Uhr Eastern Time
 
@@ -26,9 +36,7 @@ Versionshinweise zur dynamischen Anzeigeneinfügung 20.7.1 beschreiben, was neu 
 
 * Erweiterte Metrikaggregation.
 
-* Erweitertes SSAI-Konsolen-Dashboard für das Bedienfeld &quot;Sitzungsstatistik&quot;.
-
-### Verbesserungen und Fehlerbehebungen in früheren Versionen
+* Erweitertes SSAI-Konsolen-Dashboard für das Bedienfeld &quot;Sitzungsstatistik&quot;
 
 #### Version 20.6.2
 
@@ -36,7 +44,7 @@ Versionshinweise zur dynamischen Anzeigeneinfügung 20.7.1 beschreiben, was neu 
 
 **Verbesserungen**
 
-Verbesserte Stream-Synchronisierung für Video-Clients, die eine Genauigkeit von Millisekunden erfordern. Wenden Sie sich an den Adobe Support, um die Genauigkeit von Millisekunden zu aktivieren `#EXT-X-PROGRAM-DATE-TIME tags`.
+Verbesserte Stream-Synchronisierung für Video-Clients, die eine Genauigkeit von Millisekunden erfordern. Wenden Sie sich an die Support-Adobe, um die Millisekunden-Präzision für `#EXT-X-PROGRAM-DATE-TIME tags`.
 
 #### Version 20.6.1
 
@@ -44,7 +52,7 @@ Verbesserte Stream-Synchronisierung für Video-Clients, die eine Genauigkeit von
 
 **Neue Funktionen**
 
-Wenden Sie sich an den Adobe Support, um die folgenden neuen Funktionen über die serverseitige Konfiguration zu aktivieren:
+Wenden Sie sich an den Support für Adoben, um die folgenden neuen Funktionen über eine serverseitige Konfiguration zu aktivieren:
 
 * Manifestverwaltung: HLS-Segment- und -Ressourcen-URLs können jetzt zwischen HTTP und HTTPS transformiert werden, um die Leistung zu erhöhen, indem TLS-Handshakes bei Back-End-Anforderungen reduziert werden. Sie kann auch verwendet werden, um Anzeigen-/Inhaltsfragmente auf denselben CDNs zu vereinheitlichen.
 
@@ -54,7 +62,7 @@ Wenden Sie sich an den Adobe Support, um die folgenden neuen Funktionen über di
 
 * Es wurde ein Problem behoben, bei dem WebVTT-Fragmente unabhängig vom angeforderten Originalprotokoll immer unter dem HTTP-Protokoll angefordert wurden.
 
-* Es wurde ein Problem behoben, bei dem EXT-X-DISCONTINUITY-Tags vom Anfang der Wiedergabeliste entfernt wurden, wenn von Anzeigen zu Inhalt zurückgekehrt wurde. Wenden Sie sich an den Adobe Support, um diese Fehlerbehebung zu aktivieren.
+* Es wurde ein Problem behoben, bei dem EXT-X-DISCONTINUITY-Tags vom Anfang der Wiedergabeliste entfernt wurden, wenn von Anzeigen zu Inhalt zurückgekehrt wurde. Wenden Sie sich an den Support für Adoben, um diese Fehlerbehebung zu aktivieren.
 
 #### Version 20.5.1
 
@@ -149,7 +157,7 @@ Wenn die Lösung mit einem gemeldeten Problem verbunden ist, wird ein Zendesk-Ve
 
 * `WebVTT` Fragmente wurden immer unter dem HTTP-Protokoll angefordert, unabhängig vom ursprünglichen Protokoll angefordert.
 
-* `EXT-X-DISCONTINUITY` -Tags werden von oben in der Wiedergabeliste entfernt, wenn von Anzeigen zurück zum Inhalt gewechselt wird. Wenden Sie sich an den Adobe Support, um diese Fehlerbehebung zu aktivieren.
+* `EXT-X-DISCONTINUITY` -Tags werden von oben in der Wiedergabeliste entfernt, wenn von Anzeigen zurück zum Inhalt gewechselt wird. Wenden Sie sich an den Support für Adoben, um diese Fehlerbehebung zu aktivieren.
 
 **PTAI 20.5.1**
 
