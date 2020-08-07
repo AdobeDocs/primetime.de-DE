@@ -3,7 +3,10 @@ seo-title: Vorgenerieren von Lizenzen
 title: Vorgenerieren von Lizenzen
 uuid: 31430753-11f1-4ce5-b402-cf4279119a05
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
@@ -12,13 +15,13 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Um Lizenzen vorab zu generieren, verwenden Sie `com.adobe.flashaccess.sdk.license.pregen.LicenseFactory.getInstance()` zum Abrufen einer Instanz von `LicenseFactory`. Eine Lizenzserver-Berechtigung muss angegeben werden, um die von dieser Factory generierten Lizenzen zu signieren. Diese Klasse unterstützt das Generieren von Leaf-Lizenzen ohne Lizenzketten und Leaf- und Root-Lizenzen mit der [erweiterten Lizenzketten](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md).
 
-Beim Generieren einer Leaf-Lizenz müssen die Inhaltsmetadaten mit `initContentInfo()`angegeben werden. Wenn die Metadaten mehrere Richtlinien enthalten oder Sie eine Richtlinie verwenden möchten, die nicht in den Metadaten enthalten ist, geben Sie `setSelectedPolicy()` die Richtlinie an, die zum Generieren der Lizenz verwendet werden soll. Wenn Sie eine Liste zur Richtlinienaktualisierung verwenden, um Aktualisierungen von Richtlinien zu verfolgen, können Sie die Liste zur Richtlinienaktualisierung der Lizenzfabrik bereitstellen, bevor Sie die Metadaten mit `setPolicyUpdateList()`initialisieren.
+When generating a Leaf license, the content metadata must be specified using `initContentInfo()`. If the metadata includes multiple policies, or if you want to use a policy that was not in the metadata, use `setSelectedPolicy()` to specify the policy to use to generate the license. If you use a Policy Update List to track updates to policies, you can provide the Policy Update List to the License Factory before initializing the metadata using `setPolicyUpdateList()`.
 
-Beim Generieren einer Stammlizenz können die Inhaltsmetadaten wie oben beschrieben angegeben werden. Alternativ kann eine Root-Lizenz auch mithilfe einer Richtlinie ( `setSelectedPolicy()`) und einer Lizenzserver-URL ( `setLicenseServerURL()`) anstelle der Metadaten generiert werden.
+When generating a Root license, the content metadata may be specified as described above. Alternatively, a Root license can be generated using a policy ( `setSelectedPolicy()`) and license server URL ( `setLicenseServerURL()`) instead of the metadata.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->Eine Lizenzserver-URL ist erforderlich, auch wenn es keinen Adobe Access License Server gibt, über den die Clients eine Lizenz anfordern können. In diesem Fall sollte die URL des Lizenzservers eine URL angeben, die den Lizenzaussteller identifiziert.
+>A License Server URL is required even if there is no Adobe Access License Server from which the clients can request a license. In diesem Fall sollte die URL des Lizenzservers eine URL angeben, die den Lizenzaussteller identifiziert.
 
 Wenn die Richtlinie die erweiterte Lizenzketten verwendet, muss eine Lizenzserver-Berechtigung angegeben werden, um den Root Encryption Key in der Richtlinie ( `setRootKeyRetrievalInfo()`) zu entschlüsseln.
 
