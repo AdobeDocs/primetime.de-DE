@@ -1,39 +1,42 @@
 ---
 seo-title: Leistungsoptimierung
-title: Leistungsoptimierung
+title: Performance tuning
 uuid: db8889c7-ecf5-4551-a6fc-1d3ab992b9ff
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '404'
+ht-degree: 0%
 
 ---
 
 
-# Leistungsoptimierung{#performance-tuning}
+# Performance tuning{#performance-tuning}
 
-Verwenden Sie die folgenden Tipps, um die Leistung zu steigern:
+Use the following tips to help to increase performance:
 
 * Die Verwendung eines HSM-Netzwerks kann wesentlich langsamer sein als die Verwendung eines direkt angeschlossenen HSM.
 * Zur Verbesserung der Leistung können Sie optional die native Unterstützung für kryptografische Vorgänge aktivieren, indem Sie die plattformspezifischen Bibliotheken im [!DNL thirdparty/cryptoj] Ordner des SDK bereitstellen. Um die native Unterstützung zu aktivieren, fügen Sie dem Pfad die Bibliothek für Ihre Plattform (jsafe.dll für Windows oder libjsafe.so für Linux) hinzu.
 
-   >[!NOTE] {class=&quot;- topic/note &quot;
+   >[!NOTE]
    >
    >Wenn Sie mehrere Webanwendungen in derselben Tomcat-Instanz ausführen und sich `jsafe.dll` auf dem Pfad befinden, kann nur die erste Webanwendung, die geladen wird, die `jsafe.dll` Bibliothek laden. Daher erhält nur die erste Webanwendung die Vorteile der nativen Unterstützung. In solchen Fällen sollten Sie zur Verbesserung der Leistung aller Webanwendungen `cryptoj.jar`außerhalb der WAR-Datei platzieren. Beispiel: im `<tomcat_installation_folder>/lib` Verzeichnis.
 
-* Ein 64-Bit-Betriebssystem, wie die 64-Bit-Version von Red Hat® oder Windows, bietet eine wesentlich bessere Leistung als ein 32-Bit-Betriebssystem.
+* A 64-bit operating system, such as the 64-bit version of Red Hat® or Windows, provides much better performance over a 32-bit operating system.
 
-## Generieren von Zufallszahlen (Linux) {#section_3E2E936A538F40B7BF8892C65E117907}
+## Generating random numbers (Linux) {#section_3E2E936A538F40B7BF8892C65E117907}
 
-Unter bestimmten Bedingungen können Linux-Umgebung anhalten, wenn Primetime DRM-bezogene Vorgänge ausgeführt werden, die eine Zufallszahlengenerierung erfordern, einschließlich:
+Under certain conditions Linux environments may pause when conducting Primetime DRM-related operations that require random number generation, including:
 
-* Starten des Adobe Primetime DRM License Servers
-* Richtlinienerstellung mithilfe des [!DNL AdobePolicyManager] Dienstprogramms
+* Startup of the Adobe Primetime DRM License Server
+* Policy generation using the [!DNL AdobePolicyManager] utility
 * Verpacken von DRM-geschützten Inhalten mit Adobe Media Server oder Primetime OfflinePackager
 
-Verzögerungen während dieser Vorgänge sind häufig das Ergebnis eines niedrigen Entropie-Pools auf Ihrem Linux-Server.
+Delays during these operations are often the result of a low entropy pool on your Linux server.
 
-Unter Linux werden Zufallszahlen aus dem Entropiepool der Server-Umgebung generiert. Der Entropie-Pool wird normalerweise durch den Empfang von Hardwareunterbrechungen durch den Linux-Kernel gepflegt. Wenn ein Server isoliert ist und keine regelmäßige Eingabe von HW-Ressourcen (wie Maus oder Tastatur) erhält, können die Wartezeiten zum Auffüllen des Entropiepools verlängert werden. In diesem Szenario werden Vorgänge, die auf Daten warten, [!DNL /dev/random] möglicherweise angehalten.
+On Linux, random numbers are generated from the server environment&#39;s entropy pool. The entropy pool is normally maintained by receiving hardware interrupts by the Linux kernel. If a server is isolated and does not receive regular input from HW resources (such as a mouse or keyboard), the waits to refill the entropy pool may be extended. In this scenario, operations waiting for data from [!DNL /dev/random] may pause.
 
-Sie können Hardware-Zufallszahlengeneratoren auf Linux-Servern verwenden, um sicherzustellen, dass eine ausreichende Entropie erzeugt wird. Wenn jedoch in einem gegebenen Bereitstellungsszenario keine Hardware-Zufallszahlengeneratoren verfügbar sind, können Sie softwarebasierte Lösungen verwenden, um die Aktualisierungsrate des Entropiepools zu erhöhen. Eine solche Software-Lösung unter Linux ist [!DNL haveged] (HArdware Volatile Entropy Gathering and Expansion Daemon).
+You can use hardware random number generators on Linux servers to ensure that sufficient entropy is generated. However, if hardware random number generators are not available in a given deployment scenario, you can use software based solutions to augment the entropy pool refresh rate. Eine solche Software-Lösung unter Linux ist [!DNL haveged] (HArdware Volatile Entropy Gathering and Expansion Daemon).
 
 ## Bestimmen der verfügbaren Entropie {#section_686B311FE6144566B6939E9F20915ADC}
 
