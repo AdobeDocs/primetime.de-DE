@@ -1,14 +1,17 @@
 ---
-seo-title: Verbesserte Lizenzverkettung
-title: Verbesserte Lizenzverkettung
+seo-title: Enhanced license chaining
+title: Enhanced license chaining
 uuid: 5e4e825a-de84-4ab2-a652-02cc03153957
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '263'
+ht-degree: 0%
 
 ---
 
 
-# Verbesserte Lizenzverkettung {#enhanced-license-chaining}
+# Enhanced license chaining {#enhanced-license-chaining}
 
 Sie können erweiterte Lizenzketten verwenden, um eine Lizenz zu aktualisieren, indem Sie eine übergeordnete Stammlizenz für die Batch-Aktualisierung von Lizenzen verwenden.
 
@@ -16,7 +19,7 @@ Primetime DRM 2.0 unterstützt Lizenzketten, bei denen die Blatt- und Root-Lizen
 
 Wenn Sie die erweiterte Lizenzketten aktivieren möchten, müssen Sie einer Primetime-DRM-Richtlinie einen Root-Verschlüsselungsschlüssel zuweisen. Der Stamm-Verschlüsselungsschlüssel wird verwendet, um die Blattlizenz kryptografisch an die Root-Lizenz zu binden.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Verbesserte Lizenzketten werden von Primetime DRM-Clients Version 3.0 oder höher unterstützt. Wenn ein älterer Client eine Lizenz für Inhalte anfordert, die die erweiterte Lizenzverkettung unterstützen, kann der Lizenzserver diesem Client weiterhin eine Lizenz ausstellen, indem er die Lizenzverkettung verwendet, die von Primetime DRM 2.0 unterstützt wird.
 
