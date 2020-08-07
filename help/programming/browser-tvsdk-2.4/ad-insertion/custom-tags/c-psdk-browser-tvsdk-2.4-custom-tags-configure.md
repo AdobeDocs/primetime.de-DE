@@ -1,11 +1,14 @@
 ---
 description: Medienstreams können zusätzliche Metadaten in Form von Tags in der MPD-Datei (Media Presentation Description) enthalten. Diese Datei zeigt die Platzierung der Werbung an. Sie können benutzerdefinierte Tag-Namen angeben und benachrichtigt werden, wenn bestimmte Tags in der Manifestdatei angezeigt werden.
-seo-description: Medienstreams können zusätzliche Metadaten in Form von Tags in der MPD-Datei (Media Presentation Description) enthalten. Diese Datei zeigt die Platzierung der Werbung an. Sie können benutzerdefinierte Tag-Namen angeben und benachrichtigt werden, wenn bestimmte Tags in der Manifestdatei angezeigt werden.
+seo-description: Medienstreams können zusätzliche Metadaten in Form von Tags in der MPD-Datei (Media Presentation Description) enthalten. Diese Datei zeigt die Platzierung der Werbung an. You can specify custom tag names and be notified when certain tags appear in the manifest file.
 seo-title: Benutzerdefinierte Tags
-title: Benutzerdefinierte Tags
+title: Custom tags
 uuid: d1e34288-545b-440f-a262-2fb853f0e3c4
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 0%
 
 ---
 
@@ -20,15 +23,15 @@ Medienstreams können zusätzliche Metadaten in Form von Tags in der MPD-Datei (
 >
 >Diese Funktion ist für Safari auf Apple-Computern nicht verfügbar, da Browser TVSDK anstelle von Flash oder MSE das Video-Tag verwendet, um HLS-Inhalte wiederzugeben.
 
-Browser TVSDK bietet vordefinierte Unterstützung für bestimmte #EXT-Werbetags. Ihre Anwendung kann benutzerdefinierte Tags verwenden, um den Arbeitsablauf für Anzeigen zu verbessern oder Blackout-Szenarien zu unterstützen. Zur Unterstützung erweiterter Workflows können Sie mit Browser TVSDK zusätzliche Tags im Manifest angeben und abonnieren. Sie können benachrichtigt werden, wenn diese Tags in der Manifestdatei angezeigt werden.
+Browser TVSDK provides out-of-the-box support for specific #EXT advertising tags. Your application can use custom tags to enhance the advertising workflow or to support blackout scenarios. To support advanced workflows, Browser TVSDK allows you to specify and subscribe to additional tags in the manifest. You can be notified when these tags appear in the manifest file.
 
 >[!TIP]
 >
->Sie können benutzerdefinierte Tags sowohl für VOD- als auch für Live-/lineare Streams abonnieren.
+>You can subscribe to custom tags both for VOD and live/linear streams.
 
->[!NOTE] {othertype=&quot;Limitation&quot;}
+>[!NOTE]
 >
->Wenn HLS unter Verwendung des Video-Tags in Safari wiedergegeben wird und nicht mit Flash Fallback, ist diese Funktion in Safari nicht verfügbar.
+>Wenn HLS unter Verwendung des Video-Tags in Safari wiedergegeben wird und nicht unter Verwendung von Flash-Fallback, ist diese Funktion in Safari nicht verfügbar.
 
 ## Verwenden benutzerdefinierter HLS-Tags {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
