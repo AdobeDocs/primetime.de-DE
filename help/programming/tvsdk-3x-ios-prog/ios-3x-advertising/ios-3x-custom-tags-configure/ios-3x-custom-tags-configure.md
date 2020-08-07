@@ -5,7 +5,10 @@ seo-title: Benutzerdefinierte Tags
 title: Benutzerdefinierte Tags
 uuid: 103f4fff-2218-4d44-90bc-b80da467f282
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '370'
+ht-degree: 0%
 
 ---
 
@@ -20,19 +23,19 @@ Media-Streams können zusätzliche Metadaten in Form von Tags in der Wiedergabel
 >
 >Diese Funktion ist für Safari auf Apple-Computern nicht verfügbar, da TVSDK anstelle von Flash oder MSE das Video-Tag verwendet, um HLS-Inhalte wiederzugeben.
 
-TVSDK bietet vordefinierte Unterstützung für bestimmte #EXT-Werbetags. Ihre Anwendung kann benutzerdefinierte Tags verwenden, um den Arbeitsablauf für Anzeigen zu verbessern oder Blackout-Szenarien zu unterstützen. Zur Unterstützung erweiterter Workflows können Sie mit TVSDK zusätzliche Tags im Manifest angeben und abonnieren. Sie können benachrichtigt werden, wenn diese Tags in der Manifestdatei angezeigt werden.
+TVSDK bietet vordefinierte Unterstützung für bestimmte #EXT-Werbetags. Your application can use custom tags to enhance the advertising workflow or to support blackout scenarios. To support advanced workflows, TVSDK allows you to specify and subscribe to additional tags in the manifest. You can be notified when these tags appear in the manifest file.
 
 >[!TIP]
 >
->Sie können benutzerdefinierte Tags sowohl für VOD- als auch für Live-/lineare Streams abonnieren.
+>You can subscribe to custom tags both for VOD and live/linear streams.
 
->[!NOTE] {othertype=&quot;Limitation&quot;}
+>[!NOTE]
 >
->Wenn HLS unter Verwendung des Video-Tags in Safari wiedergegeben wird und nicht mit Flash Fallback, ist diese Funktion in Safari nicht verfügbar.
+>When HLS is played by using the Video tag in Safari, and not by using Flash Fallback, this feature will not be available in Safari.
 
-## Verwenden benutzerdefinierter HLS-Tags {#section_AD032318AEF5418393D2B1DF36B0BABB}
+## Use custom HLS tags {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
-Hier ein Beispiel für ein benutzerdefiniertes VOD-Asset:
+Here is an example of a customized VOD asset:
 
 ```
 #EXTM3U
