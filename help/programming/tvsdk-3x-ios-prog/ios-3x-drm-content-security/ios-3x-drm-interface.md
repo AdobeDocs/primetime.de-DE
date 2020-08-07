@@ -1,23 +1,26 @@
 ---
-description: Sie können die Funktionen des Primetime Digital Rights Management (DRM)-Systems verwenden, um sicheren Zugriff auf Ihre Videoinhalte zu bieten. Alternativ können Sie DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung von Adobe verwenden.
+description: Sie können die Funktionen des Primetime-Digital Rights Managements (DRM) verwenden, um einen sicheren Zugriff auf Ihre Videoinhalte zu ermöglichen. Alternativ dazu können Sie auch DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung der Adobe verwenden.
 keywords: DRM;DASH;HLS
-seo-description: Sie können die Funktionen des Primetime Digital Rights Management (DRM)-Systems verwenden, um sicheren Zugriff auf Ihre Videoinhalte zu bieten. Alternativ können Sie DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung von Adobe verwenden.
+seo-description: Sie können die Funktionen des Primetime-Digital Rights Managements (DRM) verwenden, um einen sicheren Zugriff auf Ihre Videoinhalte zu ermöglichen. Alternativ dazu können Sie auch DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung der Adobe verwenden.
 seo-title: Übersicht über die Primetime-DRM-Oberfläche
 title: Übersicht über die Primetime-DRM-Oberfläche
 uuid: 5e794147-cc58-448c-b8ec-065e80ef01fd
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '464'
+ht-degree: 0%
 
 ---
 
 
 # Übersicht über die Primetime-DRM-Oberfläche {#primetime-drm-interface-overview}
 
-Sie können die Funktionen des Primetime Digital Rights Management (DRM)-Systems verwenden, um sicheren Zugriff auf Ihre Videoinhalte zu bieten. Alternativ können Sie DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung von Adobe verwenden.
+Sie können die Funktionen des Primetime-Digital Rights Managements (DRM) verwenden, um einen sicheren Zugriff auf Ihre Videoinhalte zu ermöglichen. Alternativ dazu können Sie auch DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung der Adobe verwenden.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
-Wenden Sie sich an Ihren Adobe-Kundenbetreuer, um aktuelle Informationen zur Verfügbarkeit von DRM-Lösungen von Drittanbietern zu erhalten.
+Wenden Sie sich an Ihren Kundenbetreuer, um aktuelle Informationen zur Verfügbarkeit von DRM-Lösungen von Drittanbietern zu erhalten.
 
 Das wichtigste clientseitige Element des DRM-Systems (Primetime Digital Rights Management) ist der DRM Manager.
 
@@ -43,7 +46,7 @@ TVSDK gibt eine `PTMediaPlayerItemDRMMetadataChanged` Benachrichtigung aus, wenn
 
 Wenn der DRM-geschützte Stream mit mehreren Bitraten (MBR) kodiert ist, sollten die DRM-Metadaten, die für die Wiedergabeliste der Variante verwendet werden, mit den Metadaten übereinstimmen, die in allen Bitrate-Streams verwendet werden.
 
-[!TIP] {important=&quot;high&quot;}
+[!TIP]
 
 Wenn Sie in Ihrer iOS-App auf DRM-geschützte Asset-URLs verweisen, `?faxs=1` muss der Parameter für die Zeichenfolge der Abfrage an die (MBR) URL auf Einstellungsebene M3U8 angehängt werden. Beispiel:
 
@@ -51,7 +54,7 @@ Wenn Sie in Ihrer iOS-App auf DRM-geschützte Asset-URLs verweisen, `?faxs=1` mu
 https://your.domain.com/hls/[...]/index.m3u8?faxs=1
 ```
 
-Der Parameter `faxs=1` für die Zeichenfolge signalisiert, dass der Inhalt DRM-geschützt ist, und löst den DRM-Entschlüsselungs-Workflow im iOS TVSDK entsprechend aus. Sie können das `faxs=1` Tag auch an DRM-geschützte HLS-Asset-URLs anhängen, die für andere Plattformen bestimmt sind. es wird auf iOS wie erforderlich beobachtet oder als Nicht-Op-Player auf anderen Plattformen behandelt.
+The `faxs=1` query string parameter signals that the content is DRM protected, and triggers the DRM decryption workflow accordingly in the iOS TVSDK. Sie können das `faxs=1` Tag auch an DRM-geschützte HLS-Asset-URLs anhängen, die für andere Plattformen bestimmt sind. es wird auf iOS wie erforderlich beobachtet oder als Nicht-Op-Player auf anderen Plattformen behandelt.
 
 ## Primetime DRM in eine TSVDK-Anwendung implementieren {#implement-primetime-drm-in-a-tsvdk-application}
 
