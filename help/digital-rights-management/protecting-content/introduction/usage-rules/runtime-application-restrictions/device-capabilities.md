@@ -5,7 +5,10 @@ seo-title: Gerätefunktionen, die zum Abspielen geschützter Inhalte erforderlic
 title: Gerätefunktionen, die zum Abspielen geschützter Inhalte erforderlich sind
 uuid: 1490711b-65d9-4716-8779-ae1da7d2c82c
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '131'
+ht-degree: 0%
 
 ---
 
@@ -28,20 +31,20 @@ Die folgenden Attribute können die Gerätefunktionen identifizieren:
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Benutzerfreundlicher Bus </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">"true"oder "false" </p> </td> 
    <td colname="3" class="- topic/entry "> <p class="- topic/p ">Exakte Übereinstimmung </p> </td> 
-   <td colname="4" class="- topic/entry "> <p class="- topic/p ">Wenn "true", darf das Gerät keinen benutzerfreundlichen Bus haben. </p> </td> 
+   <td colname="4" class="- topic/entry "> <p class="- topic/p ">If true, device must not have a user-accessible bus. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Hardwarestamm von Trust </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">"true"oder "false" </p> </td> 
-   <td colname="3" class="- topic/entry "> <p class="- topic/p ">Exakte Übereinstimmung </p> </td> 
-   <td colname="4" class="- topic/entry "> <p class="- topic/p ">Wenn "true", muss das Gerät über einen Hardware-Stammordner für die Vertrauenswürdigkeit verfügen. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Hardware root of trust </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">“true” or “false” </p> </td> 
+   <td colname="3" class="- topic/entry "> <p class="- topic/p ">Exact Match </p> </td> 
+   <td colname="4" class="- topic/entry "> <p class="- topic/p ">If true, device must have a hardware root of trust. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->Diese Nutzungsregel wird von Adobe Primetime DRM-Clients Version 2.0.2 und höher unterstützt. Das Verhalten älterer Clients hängt von der vom Lizenzserver unterstützten Clientversion ab.
+>This usage rule is supported by Adobe Primetime DRM clients version 2.0.2 and later. The behavior on older clients depends on the minimum client version supported by the license server.
 >
->Siehe [Minimale Clientversion](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+>See [Minimum Client Version](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
 
