@@ -1,20 +1,23 @@
 ---
 description: Mit der TextFormat-Klasse können Sie Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle Untertitel festgelegt, die vom Player angezeigt werden.
-seo-description: Mit der TextFormat-Klasse können Sie Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle Untertitel festgelegt, die vom Player angezeigt werden.
-seo-title: Steuern des Stils für Untertitel
-title: Steuern des Stils für Untertitel
+seo-description: Mit der TextFormat-Klasse können Sie Stilinformationen für Untertitelspuren bereitstellen. This sets the style for any closed captions that are displayed by your player.
+seo-title: Control closed-caption styling
+title: Control closed-caption styling
 uuid: 331b0833-3e8a-482e-a3df-5e92b69d0a94
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
 
-# Steuern des Stils für Untertitel {#control-closed-caption-styling-overview}
+# Control closed-caption styling {#control-closed-caption-styling-overview}
 
-Mit der TextFormat-Klasse können Sie Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle Untertitel festgelegt, die vom Player angezeigt werden.
+You can provide styling information for closed-caption tracks using the TextFormat class. This sets the style for any closed captions that are displayed by your player.
 
-Diese Klasse kapselt Stilinformationen für Untertitel, wie Schriftart, Größe, Farbe und Hintergrunddeckkraft. Eine zugehörige Helper-Klasse `TextFormatBuilder`erleichtert die Arbeit mit Stileinstellungen für Untertitel.
+This class encapsulates closed-caption styling information such as the font type, size, color, and background opacity. Eine zugehörige Helper-Klasse `TextFormatBuilder`erleichtert die Arbeit mit Stileinstellungen für Untertitel.
 
 ## Stile für Untertitel festlegen {#set-closed-caption-styles}
 
@@ -144,8 +147,9 @@ public TextFormatBuilder(
  String bottomInset)
 ```
 
-[!TIP]
-In Optionen, die Standardwerte definieren (z. B. DEFAULT), bezieht sich dieser Wert auf die Einstellung, die bei der ursprünglichen Angabe der Beschriftung festgelegt wurde.
+>[!TIP]
+>
+>In Optionen, die Standardwerte definieren (z. B. DEFAULT), bezieht sich dieser Wert auf die Einstellung, die bei der ursprünglichen Angabe der Beschriftung festgelegt wurde.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -157,13 +161,13 @@ In Optionen, die Standardwerte definieren (z. B. DEFAULT), bezieht sich dieser W
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Schrift </td> 
-   <td colname="2"> <p>Der Schrifttyp. </p> <p>Kann nur auf einen Wert eingestellt werden, der von der <span class="codeph"> TextFormat.Font- </span> Auflistung definiert wird und beispielsweise mit oder ohne Serifen übereinstimmt. </p> <p>Tipp:  Die tatsächlichen Schriftarten, die auf einem Gerät verfügbar sind, können variieren und bei Bedarf werden Ersatzschriften verwendet. Monospace mit Serifen wird normalerweise als Ersatz verwendet, obwohl diese Ersetzung systemspezifisch sein kann. </p> </td> 
+   <td colname="2"> <p>Der Schrifttyp. </p> <p>Can be set only to a value that is defined by the <span class="codeph"> TextFormat.Font </span> enumeration and represents, for example, monospaced with or without serifs. </p> <p>Tip:  The actual fonts that are available on a device might vary, and substitutions are used when necessary. Monospace with serifs is typically used as a substitute, although this substitution can be system specific. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Größe </td> 
-   <td colname="2"> <p>Die Größe der Beschriftung. </p> <p> Kann nur auf einen Wert eingestellt werden, der von der <span class="codeph"> TextFormat.Size- </span> Auflistung definiert wird: 
+   <td colname="1"> Size </td> 
+   <td colname="2"> <p>The caption's size. </p> <p> Can be set only to a value defined by the <span class="codeph"> TextFormat.Size </span> enumeration: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM </span> - Standardgröße </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM </span> - The standard size </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GROSS </span> - Ca. 30 % größer als mittel </li> 
       <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> KLEIN </span> - Ca. 30 % kleiner als mittel </li> 
       <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - Die Standardgröße für die Beschriftung; gleich mittel </li> 
@@ -175,7 +179,7 @@ In Optionen, die Standardwerte definieren (z. B. DEFAULT), bezieht sich dieser W
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Schriftfarbe </td> 
-   <td colname="2"> <p>Die Schriftfarbe. </p> <p>Kann nur auf einen Wert eingestellt werden, der von der <span class="codeph"> TextFormat.Color- </span> Auflistung definiert wird. </p> </td> 
+   <td colname="2"> <p>Die Schriftfarbe. </p> <p>Can be set only to a value defined by the <span class="codeph"> TextFormat.Color </span> enumeration. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Kantenfarbe </td> 
@@ -187,15 +191,15 @@ In Optionen, die Standardwerte definieren (z. B. DEFAULT), bezieht sich dieser W
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Füllfarbe </td> 
-   <td colname="2"> <p>Die Hintergrundfarbe des Fensters, in dem sich der Text befindet. </p> <p>Kann auf einen beliebigen Wert eingestellt werden, der für die Schriftfarbe verfügbar ist. </p> </td> 
+   <td colname="2"> <p>The color of the background of the window in which the text is located. </p> <p>Can be set to any of the values that are available for the font color. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Schriftdeckkraft </td> 
-   <td colname="2"> <p>Die Deckkraft des Textes. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig undurchsichtig) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY </span> für die Schriftart ist 100. </p> </td> 
+   <td colname="1"> Font opacity </td> 
+   <td colname="2"> <p>The opacity of the text. </p> <p>Expressed as a percentage from 0 (fully transparent) to 100 (fully opaque). <span class="codeph"> DEFAULT_OPACITY </span> for the font is 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Hintergrunddeckkraft </td> 
-   <td colname="2"> <p>Die Deckkraft der Hintergrundzeichenzelle. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig undurchsichtig) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY </span> für den Hintergrund ist 100. </p> </td> 
+   <td colname="2"> <p>The opacity of the background character cell. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig undurchsichtig) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY </span> für den Hintergrund ist 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Fülldeckkraft </td> 
