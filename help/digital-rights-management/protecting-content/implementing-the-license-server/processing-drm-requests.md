@@ -1,32 +1,35 @@
 ---
-seo-title: Adobe Primetime DRM-Anforderungen verarbeiten
-title: Adobe Primetime DRM-Anforderungen verarbeiten
+seo-title: Process Adobe Primetime DRM requests
+title: Process Adobe Primetime DRM requests
 uuid: ee10504d-84f0-472a-b58a-2a87fdeedfc1
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1251'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Primetime DRM-Anforderungen verarbeiten {#process-adobe-primetime-drm-requests}
+# Process Adobe Primetime DRM requests {#process-adobe-primetime-drm-requests}
 
 Der allgemeine Ansatz zum Verwalten von Anforderungen besteht darin, einen Handler zu erstellen, die Anforderung zu analysieren, die Antwortdaten oder den Fehlercode festzulegen und den Handler zu schließen.
 
-Die Basisklasse, die für die Verarbeitung der Interaktion einzelner Anforderungen/Antworten verwendet wird, ist `com.adobe.flashaccess.sdk.protocol.MessageHandlerBase`. Eine Instanz der `HandlerConfiguration` Klasse wird zum Initialisieren des Handlers verwendet. `HandlerConfiguration` speichert Serverkonfigurationsinformationen, einschließlich Transport-Anmeldeinformationen, Zeitstempeltoleranz, Listen zur Richtlinienaktualisierung und Listen zum Sperren. Der Handler liest die Anforderungsdaten und analysiert die Anforderung in eine Instanz von `RequestMessageBase`. Der Aufrufer kann die Informationen in der Anforderung prüfen und entscheiden, ob ein Fehler oder eine erfolgreiche Antwort zurückgegeben wird (Unterklassen `RequestMessageBase` bieten eine Methode zum Festlegen von Antwortdaten).
+The base class used to handle single request/response interaction is `com.adobe.flashaccess.sdk.protocol.MessageHandlerBase`. An instance of the `HandlerConfiguration` class is used to initialize the handler. `HandlerConfiguration` stores server configuration information, including transport credentials, timestamp tolerance, policy update lists, and revocation lists.The handler reads the request data and parses the request into an instance of `RequestMessageBase`. Der Aufrufer kann die Informationen in der Anforderung prüfen und entscheiden, ob ein Fehler oder eine erfolgreiche Antwort zurückgegeben wird (Unterklassen `RequestMessageBase` bieten eine Methode zum Festlegen von Antwortdaten).
 
-Wenn die Anforderung erfolgreich ist, stellen Sie die Antwortdaten ein. andernfalls `RequestMessageBase.setErrorData()` bei Fehler aufrufen. Beenden Sie die Implementierung immer, indem Sie die `close()` Methode aufrufen (es wird empfohlen, dass sie im `close()` Block einer `finally` `try` Anweisung aufgerufen wird). Ein Beispiel zum Aufrufen des Handlers finden Sie in der `MessageHandlerBase` API-Referenzdokumentation.
+If the request is successful, set the response data; otherwise invoke `RequestMessageBase.setErrorData()` on failure. Beenden Sie die Implementierung immer, indem Sie die `close()` Methode aufrufen (es wird empfohlen, dass sie im `close()` Block einer `finally` `try` Anweisung aufgerufen wird). Ein Beispiel zum Aufrufen des Handlers finden Sie in der `MessageHandlerBase` API-Referenzdokumentation.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->HTTP-Statuscode 200 (OK) sollte als Antwort auf alle vom Handler verarbeiteten Anforderungen gesendet werden. Wenn der Handler aufgrund eines Serverfehlers nicht erstellt werden konnte, reagiert der Server möglicherweise mit einem anderen Statuscode, z. B. 500 (Interner Serverfehler).
+>HTTP status code 200 (OK) should be sent in response to all requests processed by the handler. Wenn der Handler aufgrund eines Serverfehlers nicht erstellt werden konnte, reagiert der Server möglicherweise mit einem anderen Statuscode, z. B. 500 (Interner Serverfehler).
 
-Der Client verwendet für alle an den Lizenzserver gesendeten Anforderungen die bei der Paketerstellung angegebene Lizenzserver-URL als Basis-URL. Wenn beispielsweise die Server-URL als &lt;[!DNL ht<span></span>tps://licenseserver.com/path]> angegeben ist, sendet der Client dann Anforderungen an &lt;[!DNL ht<span></span>tps://licenseserver.com/path/flashaccess/...]> In den folgenden Abschnitten finden Sie Einzelheiten zum jeweiligen Pfad, der für jeden Anforderungstyp verwendet wird. Stellen Sie bei der Implementierung des Lizenzservers sicher, dass der Server die für jeden Anforderungstyp erforderlichen Pfade einhält.
+Der Client verwendet für alle an den Lizenzserver gesendeten Anforderungen die bei der Paketerstellung angegebene Lizenzserver-URL als Basis-URL. Wenn beispielsweise die Server-URL als &lt;[!DNL ht<span></span>tps://licenseserver.com/path]> angegeben ist, sendet der Client dann Anforderungen an &lt;[!DNL ht<span></span>tps://licenseserver.com/path/flashaccess/...]> In den folgenden Abschnitten finden Sie Einzelheiten zum jeweiligen Pfad, der für jeden Anforderungstyp verwendet wird. When implementing your license server, be sure the server responds to the paths required for each type of request.
 
-Eine Lizenzanforderung kann ein Authentifizierungstoken enthalten. Wenn Benutzername/Kennwort-Authentifizierung verwendet wurde, enthält die Anforderung möglicherweise eine `AuthenticationToken` generierte, `AuthenticationHandler`und das SDK stellt sicher, dass das Token gültig ist, bevor eine Lizenz erteilt wird.
+A license request can contain an authentication token. If username/password authentication was used, the request may contain an `AuthenticationToken` generated by the `AuthenticationHandler`, and the SDK will ensure the token is valid before issuing a license.
 
-## Verwenden Sie die Maschinenkennungen {#use-machine-identifiers}
+## Use machine identifiers {#use-machine-identifiers}
 
-Alle DRM-Anforderungen von Adobe Primetime (mit Ausnahme von Anforderungen, die FMRMS-Kompatibilität unterstützen) enthalten Informationen über das Computertoken, das dem Client während der Individualisierung ausgegeben wurde. Das Gerätetoken enthält eine Computer-ID, eine ID, die während der Individualisierung zugewiesen wurde. Mit diesem Bezeichner können Sie die Anzahl der Computer zählen, auf denen ein Benutzer eine Lizenz beantragt oder einer Domäne beigetreten ist.
+All Adobe Primetime DRM requests (with the exception of requests supporting FMRMS compatibility) include information about the machine token that has been issued to the client during individualization. The machine token includes a Machine Id, which is an identifier that has ben assigned during individualization. Mit diesem Bezeichner können Sie die Anzahl der Computer zählen, auf denen ein Benutzer eine Lizenz beantragt oder einer Domäne beigetreten ist.
 
 Sie können einen Bezeichner wie folgt verwenden:
 
@@ -35,9 +38,9 @@ Sie können einen Bezeichner wie folgt verwenden:
 
 ## Benutzerauthentifizierung {#user-authentication}
 
-Eine Adobe Primetime-DRM-Anforderung kann ein Authentifizierungstoken enthalten.
+Eine Adobe Primetime DRM-Anforderung kann ein Authentifizierungstoken enthalten.
 
-Wenn Benutzername/Kennwort-Authentifizierung verwendet wurde, kann die Anforderung eine `AuthenticationToken` durch die `AuthenticationHandler`. Wenn Sie auf das Token zugreifen und es überprüfen möchten, müssen Sie es verwenden `RequestMessageBase.getAuthenticationToken()`. Verwenden Sie die `DRMManager.authenticate()` ActionScript- oder iOS-API, um eine Benutzername-/Kennwortanforderung auf dem Client zu starten.
+Wenn Benutzername/Kennwort-Authentifizierung verwendet wurde, kann die Anforderung eine `AuthenticationToken` durch die `AuthenticationHandler`. Wenn Sie auf das Token zugreifen und es überprüfen möchten, müssen Sie es verwenden `RequestMessageBase.getAuthenticationToken()`. Verwenden Sie die `DRMManager.authenticate()` ActionScript- oder iOS-API, um eine Benutzernamens-/Kennwortanfrage auf dem Client zu starten.
 
 Wenn Client und Server einen benutzerdefinierten Authentifizierungsmechanismus verwenden, ruft der Client über einen anderen Kanal ein Authentifizierungstoken ab und legt das benutzerdefinierte Authentifizierungstoken mithilfe der `DRMManager.setAuthenticationToken` ActionScript 3.0-API fest. Verwenden Sie `RequestMessageBase.getRawAuthenticationToken()` das benutzerdefinierte Authentifizierungstoken. Die Serverimplementierung bestimmt, ob das benutzerdefinierte Authentifizierungstoken gültig ist.
 
@@ -45,27 +48,27 @@ Wenn Client und Server einen benutzerdefinierten Authentifizierungsmechanismus v
 
 Zum Schutz der Wiederholung der Wiedergabe möchten Sie möglicherweise überprüfen, ob der Benachrichtigungsbezeichner vor kurzem durch Aufruf angezeigt wurde `RequestMessageBase.getMessageId()`. In diesem Fall versucht ein Angreifer möglicherweise, die Anfrage erneut abzuspielen, was verweigert werden sollte. Um Wiederholungsversuche zu erkennen, kann der Server eine Liste der kürzlich angezeigten Nachrichten-IDs speichern und jede eingehende Anforderung gegen die zwischengespeicherte Liste prüfen. Rufen Sie `HandlerConfiguration.setTimestampTolerance()`an, um die Dauer der Speicherung der Meldungskennungen zu begrenzen. Wenn diese Eigenschaft festgelegt ist, verweigert das SDK dann alle Anforderungen, die einen Zeitstempel für mehr als die angegebene Anzahl von Sekunden nach der Serverzeit enthalten.
 
-## Rollenerkennung {#rollback-detection}
+## Rollback detection {#rollback-detection}
 
-Für die Rollback-Erkennung müssen einige Verwendungsregeln vorsehen, dass der Client Statusinformationen zur Durchsetzung der Rechte aufbewahrt. Um beispielsweise die Nutzungsregel für das Wiedergabefenster durchzusetzen, speichert der Client das Datum und die Uhrzeit, zu der der Benutzer den Inhalt zum ersten Mal anzeigte. Dieses Ereignis löst den Beginn des Wiedergabefensters aus. Um das Wiedergabefenster sicher durchzusetzen, muss der Server sicherstellen, dass der Beginn nicht gesichert wird, und den Clientstatus wiederherstellen, um die auf dem Client gespeicherte Wiedergabefenster-Zeit zu entfernen. Der Server verfolgt dies, indem er den Wert des Rollback-Zählers des Clients verfolgt.
+Für die Rollback-Erkennung müssen einige Verwendungsregeln vorsehen, dass der Client Statusinformationen zur Durchsetzung der Rechte aufbewahrt. For example, to enforce the playback window usage rule, the client stores the date and time when the user first began viewing the content. This event triggers the start of the playback window. To securely enforce the playback window, the server needs to ensure that the user is not backing up and restoring the client state to remove the playback window start time stored on the client. The server does this by tracking the value of the client&#39;s rollback counter.
 
-Für jede Anforderung ruft der Server den Wert des Zählers ab, indem er `RequestMessageBase.getClientState()` zum Abrufen des `ClientState` Objekts aufruft und dann den aktuellen Wert des Clientstatuszählers abruft `ClientState.getCounter()` . Der Server sollte diesen Wert für jeden Client speichern ( `MachineId.getUniqueId()` um den Client zu identifizieren, der mit dem Rollback-Zählerwert verbunden ist) und dann aufrufen, den Zählerwert um 1 zu erhöhen `ClientState.incrementCounter()` . Wenn der Server erkennt, dass der Zählerwert kleiner als der letzte vom Server angezeigte Wert ist, wurde der Clientstatus möglicherweise zurückgenommen.
+For each request, the server gets the value of the counter by calling `RequestMessageBase.getClientState()` to obtain the `ClientState` object, then calling `ClientState.getCounter()` to obtain the current value of the client state counter. The server should store this value for each client (use `MachineId.getUniqueId()` to identify the client associated with the rollback counter value), and then call `ClientState.incrementCounter()` to increase the counter value by one. If the server detects that the counter value is less than the last value seen by the server, the client state may have been rolled back.
 
-Weitere Informationen zur Fehlererkennung im Clientstatus finden Sie in der `ClientState` API-Referenzdokumentation.
+See the `ClientState` API reference documentation for more information on client state tamper detection.
 
 ## Globale Serverkonfigurationsdaten{#global-server-configuration-data}
 
-Neben der vom Lizenzserver verwendeten Konfiguration werden `HandlerConfiguration` Konfigurationsinformationen gespeichert, die an den Client gesendet werden können, um zu steuern, wie Lizenzen erzwungen werden. Dies geschieht durch Erstellen einer `ServerConfigData` Klasse und Aufrufen `HandlerConfiguration.setServerConfigData()`. Diese Einstellungen gelten nur für Lizenzen, die von diesem Lizenzserver erteilt werden.
+Neben der vom Lizenzserver verwendeten Konfiguration werden `HandlerConfiguration` Konfigurationsinformationen gespeichert, die an den Client gesendet werden können, um zu steuern, wie Lizenzen erzwungen werden. This is done by creating a `ServerConfigData` class and calling `HandlerConfiguration.setServerConfigData()`. These settings apply only to licenses issued by this license server.
 
-Die Uhrzeitrückhaltetoleranz ist eine Eigenschaft, die vom Lizenzserver festgelegt werden kann, um zu steuern, wie der Client Lizenzen durchsetzt. Standardmäßig können Benutzer ihre Computeruhr auf 4 Stunden einstellen, ohne Lizenzen zu ungültigen. Wenn ein Lizenzserveroperator eine andere Einstellung verwenden möchte, kann der neue Wert in der `ServerConfigData` Klasse festgelegt werden. Wenn Sie den Wert einer dieser Einstellungen ändern, stellen Sie sicher, dass Sie die Versionsnummer durch Aufruf erhöhen `setVersion()`. Die neuen Werte werden nur dann an den Client gesendet, wenn die Version auf dem Client älter als die aktuelle `ServerConfigData` Version ist.
+The clock windback tolerance is one property that can be set by the license server to control how the client enforces licenses. By default, users may set their machine clock back 4 hours without invalidating licenses. If a license server operator wishes to use a different setting, the new value can be set in the `ServerConfigData` class. When you change the value of any of these settings, be sure to increment the version number by calling `setVersion()`. Die neuen Werte werden nur dann an den Client gesendet, wenn die Version auf dem Client älter als die aktuelle `ServerConfigData` Version ist.
 
 ## Cross-Domain DRM-Richtliniendatei {#crossdomain-drm-policy-file}
 
 Wenn der Lizenzserver auf einer anderen Domäne als die SWF-Datei für die Videowiedergabe gehostet wird, muss eine domänenübergreifende DRM-Richtliniendatei ( [!DNL crossdomain.xml]) erstellt werden, damit die SWF Lizenzen von einem Lizenzserver anfordern kann. Eine domänenübergreifende DRM-Richtliniendatei wird durch eine XML-Datei dargestellt, mit der der Server angeben kann, dass seine Daten und Dokumente für SWF-Dateien verfügbar sind, die von anderen Domänen bereitgestellt werden. Jede SWF-Datei, die von einer Domäne bereitgestellt wird, die in der domänenübergreifenden DRM-Richtliniendatei des Lizenzservers angegeben ist, darf auf Daten oder Assets von diesem Lizenzserver zugreifen.
 
-Adobe empfiehlt Entwicklern, bei der Bereitstellung der domänenübergreifenden Richtliniendatei die Best Practices zu befolgen, indem sie nur vertrauenswürdigen Domänen den Zugriff auf den Lizenzserver erlauben und den Zugriff auf den Unterordner der Lizenz auf dem Webserver beschränken.
+Adobe empfiehlt, dass Entwickler bei der Bereitstellung der domänenübergreifenden Richtliniendatei die Best Practices befolgen, indem sie nur vertrauenswürdigen Domänen den Zugriff auf den Lizenzserver erlauben und den Zugriff auf den Unterordner der Lizenz auf dem Webserver beschränken.
 
-Weitere Informationen zu domänenübergreifenden DRM-Richtliniendateien finden Sie in den folgenden Verzeichnissen:
+For more information on cross-domain DRM policy files, see the following locations:
 
-* Website-Steuerelemente (DRM-Richtliniendateien)
-* Domänenübergreifende DRM-Richtliniendateispezifikation: [https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html](https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html)
+* Web site controls (DRM policy files)
+* Cross-domain DRM policy file specification: [https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html](https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html)
