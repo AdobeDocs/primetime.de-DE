@@ -3,7 +3,10 @@ seo-title: Partielle Verschlüsselungsstufe
 title: Partielle Verschlüsselungsstufe
 uuid: 462ca2d0-0d37-43a8-b8a0-8a25ecf73ce1
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '272'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Gibt an, ob alle Frames oder nur eine Teilmenge von Frames verschlüsselt werden sollen. Es gibt drei Verschlüsselungsstufen: niedrig, mittel und hoch.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Nur für Videospuren in F4V/H.264-Dateien.
 
@@ -26,4 +29,4 @@ Aufgrund der Art der Videokodierung ist es nicht notwendig, 100 % des Videos zu 
 
 Diese Einstellungen wurden mit der folgenden Regel entwickelt: Alle Inhalte, die bei niedriger Einstellung verschlüsselt werden, werden auch bei der Einstellung Medium verschlüsselt. Dadurch wird sichergestellt, dass dasselbe Inhaltselement, das bei niedriger Verschlüsselung von einer Partei verteilt und bei mittlerer Verschlüsselung von einer anderen Partei verteilt wird, den Schutz des Inhalts nicht beeinträchtigt.
 
-Verwendungsbeispiel: Durch die Reduzierung des Verschlüsselungsgrads wird der Overhead bei der Entschlüsselung auf dem Client verringert und die Wiedergabeleistung auf Low-End-Computern verbessert.
+Example use case: Reducing the encryption level decreases the decryption overhead on the client and improves playback performance on low-end machines.
