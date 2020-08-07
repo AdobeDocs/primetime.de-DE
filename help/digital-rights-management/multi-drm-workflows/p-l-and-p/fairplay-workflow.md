@@ -5,7 +5,10 @@ seo-title: Multi-DRM Workflow für FairPlay
 title: Multi-DRM Workflow für FairPlay
 uuid: cd940a70-400c-435e-8322-55bd624164e1
 translation-type: tm+mt
-source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1514'
+ht-degree: 0%
 
 ---
 
@@ -28,10 +31,10 @@ Führen Sie die folgenden Schritte aus, um den ExpressPlay-Dienst für den Schut
 
    >[!NOTE]
    >
-   >Wählen Sie **[!UICONTROL Content Provider]** &quot;Primäre Rolle&quot;.
+   >Wählen Sie **[!UICONTROL Content Provider]** &quot;Primär Rolle&quot;.
 
    Nachdem Ihre Anforderung genehmigt wurde, sendet Apple Ihnen ein *FairPlay Streaming-Bereitstellungspaket*.
-1. Erstellen einer Zertifikatsignaturanforderung.
+1. Generate a Certificate Signing Request.
 
    Sie können Ihr öffentliches/privates Schlüsselpaar und Ihre mit Zertifikat signierte Anforderung (CSR) [!DNL openssl] generieren.
 
@@ -53,29 +56,29 @@ Führen Sie die folgenden Schritte aus, um den ExpressPlay-Dienst für den Schut
       >Die Anweisungen für diesen Schritt finden Sie in Ihrem *FairPlay Streaming-Bereitstellungspaket*, aber Sie finden sie hier. Wenn Sie Probleme mit diesem Teil des Prozesses haben, lesen Sie die Anweisungen in *FairPlayCertificateCreation.pdf* (in Ihrem Bereitstellungspaket).
 
 1. Laden Sie Ihr CSR über das Apple Developer Portal hoch.
-   1. Der Team Agent für Ihr Entwicklungsteam muss sich anmelden [!DNL developer.apple.com/account].
+   1. The Team Agent for your development team must log into [!DNL developer.apple.com/account].
    1. Klicken Sie auf **[!UICONTROL Certificates, Identifiers & Profiles]**, wählen Sie das **[!UICONTROL iOS, tvOS, watchOS]** Dropdown-Menü oben links auf der Seite und klicken Sie dann auf **[!UICONTROL Certificates->Production]** links auf der Seite.
    1. Klicken Sie auf die **[!UICONTROL +]** Schaltfläche oben rechts auf der Seite, um ein neues Zertifikat anzufordern. Wählen Sie die **[!UICONTROL FairPlay Streaming Certificate]** Option unter **[!UICONTROL Production]**.
 
       Das Dialogfeld *Hinzufügen iOS-Zertifikat* wird geöffnet.
-   1. Laden Sie im *Hinzufügen iOS-Zertifikat* die CSR-Datei hoch, die Sie in Schritt 2.b erstellt haben, und klicken Sie auf **[!UICONTROL Generate]**.
+   1. In the *Add iOS Certificate*, upload the CSR file you generated in Step 2.b., and click **[!UICONTROL Generate]**.
 
       Ihr Anwendungs-Geheimcode-Key (ASK) wird im selben Dialogfeld angezeigt.
-   1. Notieren Sie sich Ihren ASK und speichern Sie ihn an einem sicheren Ort.
-   1. Schlüssel in Ihrem ASK, um die Zertifikatgenerierung abzuschließen und klicken Sie auf **[!UICONTROL Continue]**.
-   1. Nachdem Sie sich vergewissert haben, dass Sie Ihr ASK gespeichert haben, klicken Sie auf **[!UICONTROL Generate]** , um fortzufahren.
+   1. Write down your ASK, and store it in a safe location.
+   1. Key in your ASK to complete certificate generation and click **[!UICONTROL Continue]**.
+   1. After you verify that you have saved your ASK, click **[!UICONTROL Generate]** to continue.
 
-      >[!NOTE] {important=&quot;high&quot;}
+      >[!NOTE]
       >
-      >Es ist wichtig, dass Sie eine Kopie Ihres ASK speichern und sicher speichern. *Wenn Ihr ASK beeinträchtigt wird, können Sie Ihre Inhalte nicht mehr mit FairPlay Streaming schützen.* Nur ein ASK (1) wird Ihrem Team zugeordnet. Der Wert wird nicht erneut bereitgestellt und kann nicht zu einem späteren Zeitpunkt abgerufen werden.
+      >It is important that you save a copy of your ASK and store it securely. *If your ASK is compromised, you will no longer be able to protect your content with FairPlay Streaming.* Only one (1) ASK is allocated to your team. The value will not be provided again and you cannot retrieve it at a later time.
 
-   1. Laden Sie das FPS-Zertifikat herunter.
+   1. Download your FPS Certificate.
 
-      Stellen Sie sicher, dass Sie eine Sicherungskopie Ihres privaten Schlüssels (ab Schritt 2.a) und Ihres öffentlichen Schlüssels (das FPS-Zertifikat, das Sie in diesem Schritt heruntergeladen haben) an einem sicheren Ort speichern.
-1. Richten Sie Ihr ExpressPlay-Konto mit Ihren FairPlay-Anmeldedaten ein.
-   1. Nehmen wir an, der Zertifikatsname, den Sie in Schritt 3.h heruntergeladen haben. el [!DNL fairplay.cer].
+      Be sure to save a backup copy of your private key (from Step 2.a.) and your public key (the FPS Certificate you downloaded in this step) in a safe place.
+1. Set up your ExpressPlay account with your FairPlay credentials.
+   1. Let&#39;s say the certificate name you downloaded in Step 3.h. is [!DNL fairplay.cer].
    1. Öffnen Sie die [!DNL fairplay.cer] Datei mit dem Apple Keychain Access-Dienstprogramm.
-   1. Filtern Sie Ihre vielen Zertifikate, indem Sie in das Suchfeld oben rechts &quot; `fairplay`&quot;eingeben.
+   1. Filter your many certificates by entering &quot; `fairplay`&quot; in the search field located up on the top right.
    1. Identifizieren Sie das FairPlay-Zertifikat Ihrer Firma.
 
       Ihr Firmen-Name sollte mit dem von Apple ausgestellten Zertifikat verknüpft sein.
@@ -100,7 +103,7 @@ Jetzt können Sie iOS-Anwendungen oder HTML5-Seiten mit FairPlay-Inhaltsschutz z
 
 ### Verpacken Sie Ihre Inhalte für FairPlay {#package-your-content-for-fairplay}
 
-Zum Verpacken Ihrer Inhalte können Sie entweder Adobe Offline Packager oder andere Werkzeuge wie den Bento4 Packager von ExpressPlay verwenden.
+Zum Verpacken von Inhalten können Sie entweder Adobe Offline Packager oder andere Tools wie z. B. den Bento4 Packager von ExpressPlay verwenden.
 
 Packager bereiten das Video für die Wiedergabe vor (z. B. Fragmentieren der Originaldatei und Einfügen in ein Manifest) und schützen das Video mit der ausgewählten DRM-Lösung (in diesem Fall FairPlay):
 
@@ -134,14 +137,15 @@ Packager bereiten das Video für die Wiedergabe vor (z. B. Fragmentieren der Ori
    * `in_path` - Dieser Eintrag verweist auf die Position des Quellvideos auf Ihrem lokalen Verpackungscomputer.
    * `out_type` - Dieser Eintrag beschreibt den Typ der verpackten Ausgabe, in diesem Fall HLS für FairPlay.
    * `out_path` - Der Speicherort auf dem lokalen Computer, auf den die Ausgabe gesendet werden soll.
-   * `drm_sys` - Die DRM-Lösung, für die Sie verpacken. Das ist `FAIRPLAY` in diesem Fall.
+   * `drm_sys` - Die DRM-Lösung, für die Sie verpacken. This is `FAIRPLAY` in this case.
    * `frag_dur` - Fragmentdauer in Sekunden.
    * `target_dur` - Die Dauer der Zielgruppe für die HLS-Ausgabe.
    * `key_file_path` - Dies ist der Speicherort der Lizenzdatei auf Ihrem Verpackungscomputer, der als Content Encryption Key (CEK) dient. Es handelt sich um eine Base-64-kodierte 16-Byte-Hex-Zeichenfolge.
-   * `iv_file_path` - Dies ist der Speicherort der Datei IV auf Ihrem Verpackungsgerät.
-   * `key_url` - Der URI-Parameter des `EXT-X-KEY` Tags der [!DNL .m3u8] Datei.
-   * `content_id` - Standardwert.
-   Wie in der [Packager-Dokumentation](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7)beschrieben, sollten Sie eine Konfigurationsdatei mit den allgemeinen Optionen erstellen, die Sie zum Generieren der Ausgaben verwenden möchten. Erstellen Sie dann die Ausgabe, indem Sie bestimmte Optionen als Befehlszeilenargument angeben.&quot;
+   * `iv_file_path` - This is the location of the IV file on your packaging machine.
+   * `key_url` - The URI parameter of the `EXT-X-KEY` tag of the [!DNL .m3u8] file.
+   * `content_id` - Default value.
+
+   As stated in the [Packager documentation](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=7), &quot;As a best practice, create a configuration file that contains the common options that you want to use for generating the outputs. Then, create the output by providing specific options as a command-line argument.&quot;
 
    ```
    java -jar OfflinePackager.jar -in_path sample.mp4 -out_type hls 
@@ -149,66 +153,66 @@ Packager bereiten das Video für die Wiedergabe vor (z. B. Fragmentieren der Ori
    -key_url "user_provided_value"
    ```
 
-   Die generierte M3U8-Datei verfügt über ein `EXT-X-KEY` Attribut, das wie folgt angezeigt wird:
+   The generated M3U8 file has an `EXT-X-KEY` attribute that appears as follows:
 
    ```
    #EXT-X-KEY:METHOD=SAMPLE-AES,URI="user_provided_value",​
    KEYFORMAT="com.apple.streamingkeydelivery",KEYFORMATVERSIONS="1" 
    ```
 
-### Richtlinien für FairPlay festlegen {#setting-policies-for-fairplay}
+### Setting policies for FairPlay {#setting-policies-for-fairplay}
 
-Sie können Richtlinien für FairPlay-geschützte Inhalte mithilfe eines Berechtigungsservers festlegen. Sie können einen eigenen Berechtigungsserver einrichten oder einen von Adobe bereitgestellten Beispielberechtigungsserver verwenden.
+You can set polices for FairPlay-protected content by using an entitlement server. You can set up your own, or make use of an Adobe-provided sample entitlement server.
 
-Adobe stellt einen Beispielserver für ExpressPlay-Berechtigungen (SEES) bereit, der zeigt, wie *zeitbasierte* und *gerätegebundene* Berechtigungen ausgeführt werden. Dieser Beispielberechtigungsserver basiert auf den ExpressPlay-Diensten.
+Adobe provides a Sample ExpressPlay Entitlement Server (SEES) that shows how to do *time-based* and *device-binding* entitlement. This sample entitlement server is built on top of ExpressPlay services.
 
-[Referenz-Server: Beispiel für einen ExpressPlay-Berechtigungsserver (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
+[Reference Server: Sample ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md)
 
-* [Referenz-Dienst: Zeitbasierte Berechtigung](../../multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
-* [Referenz-Dienst: Berechtigung für Gerätebindung](../../multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
+* [Reference Service: Time-based Entitlement](../../multi-drm-workflows/feature-topics/sees-reference-server-time-entitlement.md)
+* [Reference Service: Device-Binding Entitlement](../../multi-drm-workflows/feature-topics/sees-reference-server-binding-entitlement.md)
 
 ## Lizenzierung und Wiedergabe von FairPlay {#licensing-and-playback-for-fairplay}
 
 Die Lizenzierung und Wiedergabe von FairPlay-geschützten Inhalten erfordert den Austausch von URL-Schemata zwischen dem in der Videomanifestdatei verwendeten Schema (skd:) und dem Schema, das in ExpressPlay-Token-Anforderungen verwendet wird (https:).
 
-Anweisungen zum Implementieren der Lizenzierung und Wiedergabe von einem iOS TVSDK-Client finden Sie hier: Apple FairPlay in TVSDK-Anwendungen [aktivieren](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md). Sie können auch optional die Offline-Wiedergabe und Lizenzrotation für FairPlay implementieren.
+Anweisungen zum Implementieren der Lizenzierung und Wiedergabe von einem iOS TVSDK-Client finden Sie hier: [Aktivieren Sie Apple FairPlay in TVSDK-Anwendungen](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md). Sie können auch optional die Offline-Wiedergabe und Lizenzrotation für FairPlay implementieren.
 
 ## HLS Offline mit FairPlay {#section_047A05D1E3B64883858BC601CFC8F759}
 
-Sie können es Benutzern ermöglichen, FairPlay-geschützte Inhalte abzuspielen, wenn die Lizenzierung nicht abgerufen werden kann, da der Player aus dem Internet isoliert ist (z. B. auf einem Flugzeug).
+You may want to make it possible for users to play FairPlay-protected content when its licensing is not retrievable because the player is isolated from the web (such as on an airplane).
 
-Bevor Sie mit dieser Aufgabe beginnen, laden Sie das Apple-Dokument **&quot;Offline Play-back with FairPlay Streaming and HTTP Live Streaming&quot;** herunter und lesen Sie es. Lesen Sie das Handbuch, um zu erfahren, wie Sie Transport Stream (TS)-Segmente herunterladen und auf Ihrem lokalen Computer speichern können.
+Bevor Sie mit dieser Aufgabe beginnen, laden Sie das Apple-Dokument **&quot;Offline Play-back with FairPlay Streaming and HTTP Live Streaming&quot;** herunter und lesen Sie es. Read the guide to learn how to download Transport Stream (TS) segments and save them to your local machine.
 
-Implementieren Sie die Offline-Wiedergabe für FairPlay mit diesem Workflow:
+Implement offline play for FairPlay with this workflow:
 
-1. Laden Sie das Segment HLS TS herunter.
-1. Fordern Sie eine dauerhafte Mietlizenz vom FairPlay-Server an (siehe **&quot;FairPlay Persistent Rental Policy&quot;**).
-1. Speichern Sie die `persistentContentKey`.
-1. Wiedergabe des FairPlay-Inhalts offline.
+1. Download the HLS TS segment.
+1. Request Persistent Rental license from the FairPlay server (see **&quot;FairPlay Persistent Rental Policy&quot;**).
+1. Save the `persistentContentKey`.
+1. Play the FairPlay content offline.
 
 >[!NOTE]
 >
->FairPlay Streaming auf dem Client führt keine Entschlüsselung des Beginns durch, wenn der beibehaltene Inhaltsschlüssel abgelaufen ist. Das Benutzererlebnis wird jedoch fortgesetzt, wenn der Inhaltsschlüssel während der Wiedergabe abläuft.
+>FairPlay Streaming on the client does not start decryption if the persisted content key has expired. However, it will continue the user experience if the content key expires during playback.
 >
->Weitere Informationen finden Sie unter [Arbeiten mit dem HTTP Live Streaming](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html#//apple_ref/doc/uid/TP40016757-CH11-SW3) -Dokument.
+>See [Working with HTTP Live Streaming](https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/MediaPlaybackGuide/Contents/Resources/en.lproj/HTTPLiveStreaming/HTTPLiveStreaming.html#//apple_ref/doc/uid/TP40016757-CH11-SW3) document for more details.
 
-### FairPlay-Lizenzrotation {#section_D32AA08C61474B4F876AC2A5F18CB879}
+### FairPlay license rotation {#section_D32AA08C61474B4F876AC2A5F18CB879}
 
-Die Lizenzrotation ist ein Schema, mit dem verhindert werden soll, dass Inhalte, die lange Zeit wiedergegeben werden, in Lizenzen gehackt werden.
+License rotation is a scheme for preventing license hacking of content that plays for a long time.
 
-In einem M3U8-Manifest gilt jedes Schlüssel-Tag bis zum nächsten Schlüssel-Tag oder bis zum Ende der Datei für die folgenden TS-Segmente.
+In an M3U8 manifest, each key tag will apply to the following TS segments until the next key tag, or until the end of the file.
 
-Gehen Sie wie folgt vor, um die Lizenzrotation hinzuzufügen:
+To add license rotation, do the following:
 
-* Fügen Sie während der Lizenzdrehung ein neues FairPlay-Key-Tag ein.
+* Insert a new FairPlay key tag during license rotation time.
 
-   Es können beliebig viele wichtige Tags hinzugefügt werden.
+   Any number of key tags can be added.
 
-   Achten Sie bei linearen Inhalten darauf, das neueste Schlüssel-Tag im Fenster M3U8 beizubehalten. iOS fordert die nächste M3U8 an, wenn zwei TS-Segmente noch abgespielt werden müssen (etwa 20 Sekunden). Wenn das neue M3U8 neue Schlüssel-Tags enthält, werden alle wichtigen Anforderungen sofort ausgeführt. Die vorherigen vorhandenen Schlüssel werden nicht erneut angefordert. iOS wartet, bis alle wichtigen Anforderungen abgeschlossen sind, bevor die Wiedergabe Beginn wird.
+   For linear contents, make sure to maintain the most recent key tag in the M3U8 window. iOS will request the next M3U8 when there are about two TS segments left to be played (around 20 seconds). If the new M3U8 contains new key tags, all of the key requests will happen immediately. The previous existing keys will not be requested again. iOS will wait for all of the key requests to finish before playback will start.
 
-   Bei VOD-Inhalten mit Lizenzrotation erfolgen alle wichtigen Anforderungen am Anfang der Wiedergabe.
+   For VOD contents with license rotation, all of the key requests will happen at the beginning of playback.
 
-   Im Folgenden finden Sie ein Beispiel für M3U8 mit Schlüsselrotation:
+   Following is a sample M3U8 with key rotation:
 
    ```
    #EXTM3U
