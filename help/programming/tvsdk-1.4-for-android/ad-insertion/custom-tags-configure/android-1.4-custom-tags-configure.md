@@ -5,7 +5,10 @@ seo-title: Benutzerdefinierte Tags
 title: Benutzerdefinierte Tags
 uuid: d781385d-d8e6-4681-884f-92d9d21bdb62
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '370'
+ht-degree: 0%
 
 ---
 
@@ -26,13 +29,15 @@ TVSDK bietet vordefinierte Unterstützung für bestimmte #EXT-Werbetags. Ihre An
 >
 >Sie können benutzerdefinierte Tags sowohl für VOD- als auch für Live-/lineare Streams abonnieren.
 
->[!LIMITATION]
+>[!NOTE]
 >
->Wenn HLS unter Verwendung des `Video` Tags in Safari wiedergegeben wird und nicht mit Flash Fallback, ist diese Funktion in Safari nicht verfügbar.
+>**Einschränkung**
+>
+>Wenn HLS unter Verwendung des `Video` Tags in Safari wiedergegeben wird und nicht unter Verwendung von Flash Fallback, ist diese Funktion in Safari nicht verfügbar.
 
 ## Verwenden benutzerdefinierter HLS-Tags {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
-Hier ein Beispiel für ein benutzerdefiniertes VOD-Asset:
+Here is an example of a customized VOD asset:
 
 ```
 #EXTM3U
@@ -60,11 +65,11 @@ seg5.ts
 #EXT-X-ENDLIST
 ```
 
-Ihre Anwendung kann die folgenden Szenarien einrichten:
+Your application can set up the following scenarios:
 
-* Eine Benachrichtigung, wenn `#EXT-X-ASSET` Tags oder andere benutzerdefinierte Tag-Namen, für die Sie ein Abonnement abgeschlossen haben, in der Datei vorhanden sind.
-* Fügen Sie Anzeigen ein, wenn ein `#EXT-X-AD` Tag oder ein anderer benutzerdefinierter Tag-Name im Stream gefunden wird.
+* A notification when `#EXT-X-ASSET` tags, or any other set of custom tag names to which you have subscribed, exist in the file.
+* Insert ads when an `#EXT-X-AD` tag, or any other custom tag name, is found in the stream.
 
-Sie können die folgenden Tags als benutzerdefinierte Tags abonnieren: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Sie werden bei der Analyse der Manifestdateien mit einem `TimedMetadata` Ereignis benachrichtigt.
+You can subscribe to any of the following tags as custom tags: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. You are notified with a `TimedMetadata` event during parsing of manifest files.
 
-Es gibt einige Werbetags, wie `EXT-X-CUE`zum Beispiel, für die Sie bereits abonniert sind. Diese Anzeigen-Tags werden auch vom standardmäßigen Opportunitätsgenerator verwendet. Sie können festlegen, welche Anzeigen-Tags vom standardmäßigen Opportunitätsgenerator verwendet werden, indem Sie die `adTags` Eigenschaft festlegen.
+Es gibt einige Werbetags, wie `EXT-X-CUE`zum Beispiel, für die Sie bereits abonniert sind. These ad tags are also used by the default opportunity generator. Sie können festlegen, welche Anzeigen-Tags vom standardmäßigen Opportunitätsgenerator verwendet werden, indem Sie die `adTags` Eigenschaft festlegen.
