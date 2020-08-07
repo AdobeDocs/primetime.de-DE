@@ -1,11 +1,14 @@
 ---
-description: Sie können Anzeigen in Ihren VOD- und Live-/Lineareinhalt über die Adobe Primetime-Benutzeroberfläche für Anzeigenentscheidungen einfügen.
-seo-description: Sie können Anzeigen in Ihren VOD- und Live-/Lineareinhalt über die Adobe Primetime-Benutzeroberfläche für Anzeigenentscheidungen einfügen.
+description: You can insert ads in your VOD and live/linear content by using the Adobe Primetime ad decisioning interface.
+seo-description: Sie können Anzeigen in Ihre VOD- und Live-/Linearinhalte einfügen, indem Sie die Adobe Primetime-Benutzeroberfläche für die Anzeigenentscheidung verwenden.
 seo-title: Werbeanforderungen
 title: Werbeanforderungen
 uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '144'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 Bei VOD-Inhalten sollte die Wiedergabelistenzuordnung, bei der das Manifestladen des Hauptinhalts, die Anzeigenauflösung und das Laden des Anzeigenmanifests erforderlich sind, innerhalb von 35 Sekunden abgeschlossen werden.
 
-Bei Live-Inhalten sollte jedes Mal, wenn die Wiedergabeliste aktualisiert wird, die Synchronisierung der Wiedergabeliste innerhalb von 20 Sekunden abgeschlossen werden
+In case of Live content, each time the playlist is updated, playlist stitching should be completed within 20 seconds
 
-**Für AdResolution-Timeout relevante APIs**
+**APIs relevant to AdResolution Timeout**
 
 ```
 /** @name Properties */
@@ -29,7 +32,7 @@ Bei Live-Inhalten sollte jedes Mal, wenn die Wiedergabeliste aktualisiert wird, 
 @property (notatomic, assign) double adResolutionTimeout;
 ```
 
-Sie können adResolutionTimeout festlegen, indem Sie PTAdMetadata::adResolutionTimeout festlegen, wenn Sie Ihre Anzeigenmetadaten einrichten.
+You can set adResolutionTimeout by setting PTAdMetadata::adResolutionTimeout when setting up your ad metadata.
 
 ```
 // Create an instance of PTAuditudeMetadata and set its property
@@ -37,9 +40,9 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adResolutionTimeout = 15 seconds
 ```
 
-Folgen Sie anschließend dem Abschnitt: [Primetime- und Servermetadaten](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
+Thereafter follow the section: [Primetime ad server metadata](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
 
-**Für AdManifest-Timeout relevante APIs**
+**APIs relevant to AdManifest Timeout**
 
 ```
 /** @name Properties */
@@ -50,7 +53,7 @@ Folgen Sie anschließend dem Abschnitt: [Primetime- und Servermetadaten](../..//
  @property (notatomic, assign) double adManifestTimeout; 
 ```
 
-Sie können adManifestTimeout festlegen, indem Sie PTAdMetadata::adManifestTimeout festlegen, wenn Sie Ihre Anzeigenmetadaten einrichten.
+You can set adManifestTimeout by setting PTAdMetadata::adManifestTimeout when setting up your ad metadata.
 
 
 ```
@@ -59,4 +62,4 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adManifestTimeout = 5 seconds
 ```
 
-Folgen Sie anschließend dem Abschnitt: [Primetime- und Servermetadaten](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
+Thereafter follow the section: [Primetime ad server metadata](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
