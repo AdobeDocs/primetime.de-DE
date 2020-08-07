@@ -1,11 +1,14 @@
 ---
-description: Wenn Sie Adobe Primetime DRM Professional verwenden, können Sie Lizenzen vorab generieren und Lizenzen in Inhalte einbetten. Diese Funktion kann mit der erweiterten Lizenzketten kombiniert werden, sodass eine Leaf-Lizenz vorab generiert und in den Inhalt eingebettet wird und der Client eine Root-Lizenz (an einen Computer oder eine Domäne gebunden) von einem Lizenzserver anfordern kann. Alternativ können Clientanwendungen einen Arbeitsablauf implementieren, bei dem sich das Gerät bei einem Server vorab registriert, der Server Lizenzen vorab generiert, die an dieses Gerät gebunden sind, und der Client seine Lizenzen von einem einfachen HTTP-Webserver abruft.
-seo-description: Wenn Sie Adobe Primetime DRM Professional verwenden, können Sie Lizenzen vorab generieren und Lizenzen in Inhalte einbetten. Diese Funktion kann mit der erweiterten Lizenzketten kombiniert werden, sodass eine Leaf-Lizenz vorab generiert und in den Inhalt eingebettet wird und der Client eine Root-Lizenz (an einen Computer oder eine Domäne gebunden) von einem Lizenzserver anfordern kann. Alternativ können Clientanwendungen einen Arbeitsablauf implementieren, bei dem sich das Gerät bei einem Server vorab registriert, der Server Lizenzen vorab generiert, die an dieses Gerät gebunden sind, und der Client seine Lizenzen von einem einfachen HTTP-Webserver abruft.
+description: If you use Adobe Primetime DRM Professional, you can pre-generate licenses and embed licenses in content. This feature can be combined with Enhanced License Chaining, such that a Leaf license is pre-generated and embedded in the content, and the client can request a Root license (bound to a machine or domain) from a license server. Alternatively, client applications can implement a workflow where the device pre-registers with a server, the server pre-generates licenses that are bound to that device, and the client retrieves its licenses from a simple HTTP web server.
+seo-description: If you use Adobe Primetime DRM Professional, you can pre-generate licenses and embed licenses in content. This feature can be combined with Enhanced License Chaining, such that a Leaf license is pre-generated and embedded in the content, and the client can request a Root license (bound to a machine or domain) from a license server. Alternatively, client applications can implement a workflow where the device pre-registers with a server, the server pre-generates licenses that are bound to that device, and the client retrieves its licenses from a simple HTTP web server.
 seo-title: Vorgenerieren von Lizenzen
-title: Vorgenerieren von Lizenzen
+title: Pre-generating licenses
 uuid: aa7d5038-5a9b-40a2-a240-266622158b43
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '704'
+ht-degree: 0%
 
 ---
 
@@ -20,18 +23,18 @@ Beim Generieren einer Leaf-Lizenz müssen Sie die anzuwendenden Inhaltsmetadaten
 
 Beim Generieren einer Stammlizenz müssen Sie die Inhaltsmetadaten wie oben beschrieben angeben. Alternativ können Sie eine Root-Lizenz generieren, indem Sie eine DRM-Richtlinie ( `setSelectedPolicy()`) und eine Lizenz-Server-URL ( `setLicenseServerURL()`) anstelle von Metadaten anwenden.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->Eine Lizenzserver-URL ist erforderlich, auch wenn es keinen Adobe Primetime DRM License Server gibt, von dem die Clients eine Lizenz anfordern können. In diesem Fall sollte die URL des Lizenzservers eine URL angeben, die den Lizenzaussteller identifiziert.
+>Eine Lizenzserver-URL ist auch dann erforderlich, wenn kein Adobe Primetime DRM License Server vorhanden ist, von dem die Clients eine Lizenz anfordern können. In diesem Fall sollte die URL des Lizenzservers eine URL angeben, die den Lizenzaussteller identifiziert.
 
-Wenn die DRM-Richtlinie die erweiterte Lizenzketten verwendet, müssen Sie eine Lizenzserver-Berechtigung angeben, um den Root Encryption Key in der DRM-Richtlinie ( `setRootKeyRetrievalInfo()`) zu entschlüsseln.
+If the DRM policy uses Enhanced License Chaining, you must specify a License Server credential to decrypt the Root Encryption Key in the DRM policy ( `setRootKeyRetrievalInfo()`).
 
-Wenn für die DRM-Richtlinie eine domänengebundene Lizenz erforderlich ist, müssen Sie die Domänenaussteller angeben, von denen aus der Lizenzserver Domänentoken akzeptiert. `setDomainCAs()` Zur Überprüfung des Empfängers der Lizenz müssen ein oder mehrere CA-Domänenzertifikate bereitgestellt werden.
+Wenn für die DRM-Richtlinie eine domänengebundene Lizenz erforderlich ist, müssen Sie die Domänenaussteller angeben, von denen aus der Lizenzserver Domänentoken akzeptiert. `setDomainCAs()` One or more Domain CA certificates must be provided to validate the license recipient.
 
-Wenn die DRM-Richtlinie einen Remote-Key-Versand für iOS-Geräte erfordert, müssen Sie das Key-Server-Zertifikat durch Anwenden bereitstellen, `setKeyServerCertificate()` es sei denn, ein verkettetes Leaf wird generiert.
+If the DRM policy requires remote key delivery for iOS devices, you must provide the Key Server Certificate by applying `setKeyServerCertificate()` unless a chained Leaf is being generated.
 
-Wenn Sie eine Lizenz generieren möchten, müssen Sie den Lizenztyp (Leaf oder Root) und ein oder mehrere Empfänger-Zertifikate aufrufen `generateLicense()` und angeben. Das Empfänger-Zertifikat stellt je nach den in der DRM-Richtlinie festgelegten Anforderungen entweder ein Computerzertifikat oder ein Domänenzertifikat dar. Wenn Sie ein verkettetes Leaf generieren, ist kein Empfänger erforderlich. Nachdem die Lizenz generiert wurde, können Sie die in der DRM-Richtlinie festgelegten Nutzungsregeln außer Kraft setzen. Schließlich müssen Sie aufrufen, `signLicense()` um die Lizenz zu signieren und eine Instanz von zu erhalten `PreGeneratedLicense`. Die Lizenz kann jetzt gespeichert werden (zum Abrufen der serialisierten Lizenz oder zum Einbetten in verschlüsselte Inhalte `getBytes()` verwenden).
+If you want to generate a license, you must invoke `generateLicense()` and specify the license type (Leaf or Root) and one or more recipient certificates. The recipient certificate represents either a machine certificate or domain certificate, depending on the requirements that are specified in the DRM policy. If you generate a chained Leaf, a recipient is not required. After the license has been generated, you can override the usage rules that have been specified in the DRM policy. Schließlich müssen Sie aufrufen, `signLicense()` um die Lizenz zu signieren und eine Instanz von zu erhalten `PreGeneratedLicense`. The license can now be saved (use `getBytes()` to retrieve the serialized license or embedded in encrypted content.
 
-Siehe [Einbetten von Lizenzen](../../protecting-content/pre-generating-and-embedded-licenses/embedding-licenses.md).
+See [Embedding Licenses](../../protecting-content/pre-generating-and-embedded-licenses/embedding-licenses.md).
 
-Beispielcode für die Demonstration vorab generierter Lizenzen finden Sie `com.adobe.flashaccess.samples.licensegen.GenerateLicense` im Verzeichnis &quot;samples&quot;der Referenzimplementierungs-Befehlszeilenwerkzeuge.
+See `com.adobe.flashaccess.samples.licensegen.GenerateLicense` in the Reference Implementation Command Line Tools “samples” directory for sample code on how to demonstrate pre-generated licenses.
