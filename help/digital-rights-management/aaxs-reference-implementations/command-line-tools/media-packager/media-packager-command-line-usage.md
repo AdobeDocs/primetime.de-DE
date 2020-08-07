@@ -3,14 +3,17 @@ seo-title: Befehlszeilenverwendung
 title: Befehlszeilenverwendung
 uuid: 5f24f18d-09ef-400a-9404-50a9fcf4316d
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '567'
+ht-degree: 0%
 
 ---
 
 
 # Befehlszeilenverwendung {#command-line-usage}
 
-Bevor Sie Media Packager verwenden, stellen Sie sicher, dass Sie die unter &quot;Anforderungen&quot;aufgelisteten Anforderungen erfüllen und dass die Konfigurationsdatei die erforderlichen Informationen enthält (siehe Konfigurationsdatei im Abschnitt *Verwenden der Adobe Access-Referenzimplementierungen*.
+Bevor Sie Media Packager verwenden, stellen Sie sicher, dass Sie die unter Anforderungen aufgelisteten Anforderungen erfüllen und dass die Konfigurationsdatei die erforderlichen Informationen enthält (siehe Konfigurationsdatei im Abschnitt *Verwenden der Referenzimplementierungen für den Zugriff auf Adoben*).
 
 Media Packager befindet sich im [!DNL \Reference Implementation\Command Line tools] Ordner auf der DVD. Verwenden Sie zum Verschlüsseln einer einzelnen Datei die folgende Syntax:
 
@@ -48,7 +51,7 @@ java -jar AdobePackager.jar
 * `sourcefiles` ist eine Reihe von durch Leerzeichen getrennten Quelleinträgen, die die zu verschlüsselnden Dateien darstellen.
 * `dest-directory` gibt an, wo der verschlüsselte Inhalt geschrieben werden soll. Die verschlüsselten Dateien werden in diesem Ordner unter denselben Dateinamen wie die Quelldateien gespeichert, der Ordner darf jedoch nicht der Ordner sein, der die Quelldateien enthält.
 
-Verwenden Sie zur Ansicht von Informationen zu einer verschlüsselten Datei die folgende Syntax:
+To view information about an encrypted file, use the following syntax:
 
 ```
 java -jar AdobePackager.jar -d  
@@ -65,33 +68,33 @@ Um Informationen zu einer Metadatendatei Ansicht, verwenden Sie die folgende Syn
 java -jar AdobePackager.jar -dm <metadatafile> [-e]
 ```
 
-* `metadatafile` ist eine [!DNL .metadata] Datei, die die DRM-Metadaten enthält.
+* `metadatafile` is a [!DNL .metadata] file containing the DRM metadata.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->Beim Verpacken generiert der Media Packager standardmäßig keine .header-Datei mehr. Um diese Datei zu erstellen, verwenden Sie die `-h` Option beim Verpacken.
+>During packaging, the Media Packager will no longer generate a .header file by default. To generate this file, use the `-h` option during packaging.
 
-Die folgende Tabelle enthält Beschreibungen der Befehlszeilenoptionen, die in der obigen Syntax aufgeführt sind:
+The following table contains descriptions of the command line options shown in the syntax above:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_wgz_spy_n4"> 
  <thead class="- topic/thead "> 
   <tr rowsep="1" class="- topic/row "> 
-   <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">Befehlszeilenoption </p> </th> 
-   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Beschreibung </p> </th> 
+   <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">Command line option </p> </th> 
+   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Description </p> </th> 
   </tr> 
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-c <span class="+ topic/ph pr-d/codeph codeph"> configfile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt den Speicherort der Konfigurationsdatei an. Wenn diese Option nicht verwendet wird, sucht der Media Packager im Arbeitsverzeichnis nach <span class="filepath"> flashaccessStols.properties </span> . </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Specifies the location of the configuration file. If this option is not used the Media Packager will look for <span class="filepath"> flashaccesstools.properties </span> in the working directory. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <span class="+ topic/ph pr-d/codeph codeph"> encryptedfile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Zeigt Informationen zu einer Datei an, die bereits verpackt wurde. Die Quell- und Zieldateien sind nicht erforderlich. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Zeigt Informationen zu einer Datei an, die bereits verpackt wurde. The source and destination files are not required. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> metadataFile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Zeigt Informationen zu vorhandenen Metadaten an. Die Quell- und Zieldateien sind nicht erforderlich. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> metadatafile </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Shows information about existing metadata. The source and destination files are not required. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-e </p> </td> 
