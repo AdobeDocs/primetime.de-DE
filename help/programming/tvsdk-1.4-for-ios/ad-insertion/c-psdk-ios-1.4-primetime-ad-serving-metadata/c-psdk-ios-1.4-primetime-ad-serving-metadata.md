@@ -5,7 +5,10 @@ seo-title: Primetime-Anzeigenservermetadaten
 title: Primetime-Anzeigenservermetadaten
 uuid: 314f14c0-4da4-4da6-96f9-5a5ffea22a99
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '443'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 TVSDK unterstützt das Auflösen und Einfügen von Anzeigen für VOD- und Live/Lineare Streams.
 
->[!NOTE] {othertype=&quot;Prequisite&quot;}
+>[!NOTE]
 >
 >Bevor Sie Werbung in Ihren Videoinhalt aufnehmen können, geben Sie die folgenden Metadaten an:
 >
@@ -22,17 +25,18 @@ TVSDK unterstützt das Auflösen und Einfügen von Anzeigen für VOD- und Live/L
 >* Ihre `zoneID`, die Ihre Firma oder Website identifiziert.
 >* Ihre Anzeigenserverdomäne, die die Domäne des zugewiesenen Anzeigenservers angibt.
 >* Andere Targeting-Parameter.
+
 >
 
 
 
 ## Einrichten von Primetime-Anzeigenservermetadaten {#section_86C4A3B2DF124770B9B7FD2511394313}
 
-Ihre Anwendung muss TVSDK die erforderlichen `PTAuditudeMetadata` Informationen bereitstellen, um eine Verbindung zum Anzeigen-Server herzustellen.
+Your application must provide TVSDK with the required `PTAuditudeMetadata` information to connect to the ad server.
 
 So richten Sie die Ad-Server-Metadaten ein:
 
-1. Erstellen Sie eine Instanz von [PTAuditudeMetadata](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html) und legen Sie deren Eigenschaften fest.
+1. Create an instance of [PTAuditudeMetadata](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html) and set its properties.
 
    ```
    PTAuditudeMetadata *adMetadata = [[PTAuditudeMetadata alloc] init];  
@@ -42,7 +46,7 @@ So richten Sie die Ad-Server-Metadaten ein:
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. Legen Sie die `PTAuditudeMetadata` Instanz als Metadaten für die aktuellen `PTMediaPlayerItem` Metadaten fest, indem Sie `PTAdResolvingMetadataKey`.
+1. Set the `PTAuditudeMetadata` instance as metadata for the current `PTMediaPlayerItem` metadata by using `PTAdResolvingMetadataKey`.
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 
@@ -50,7 +54,7 @@ So richten Sie die Ad-Server-Metadaten ein:
    [adMetadata release];
    ```
 
-   Hier ein Beispiel:
+   Here is an example:
 
    ```
    PTMetadata *metadata = [self createMetadata]; 
@@ -70,15 +74,15 @@ So richten Sie die Ad-Server-Metadaten ein:
    }
    ```
 
-## Aktivieren von Anzeigen bei vollständiger Wiedergabe im Ereignis {#section_6016E1DAF03645C8A8388D03C6AB7571}
+## Enable ads in full-event replay {#section_6016E1DAF03645C8A8388D03C6AB7571}
 
-Full-Ereignis Replay (FER) ist ein VOD-Asset, das als Live-/DVR-Asset fungiert. Daher muss Ihre Anwendung Schritte unternehmen, um sicherzustellen, dass Anzeigen korrekt platziert werden.
+Full-event replay (FER) is a VOD asset that acts as a live/DVR asset, so your application must take steps to ensure that ads are placed correctly.
 
-Für Live-Inhalte verwendet TVSDK die Metadaten/Hinweise im Manifest, um zu bestimmen, wo Anzeigen platziert werden sollen. Manchmal ähneln Live-/Lineare Inhalte jedoch möglicherweise VOD-Inhalten. Wenn beispielsweise Live-Inhalte abgeschlossen sind, wird ein `EXT-X-ENDLIST` -Tag an das Live-Manifest angehängt. Bei HLS bedeutet das `EXT-X-ENDLIST` -Tag, dass der Stream ein VOD-Stream ist. TVSDK kann diesen Stream nicht automatisch von einem normalen VOD-Stream unterscheiden, um Anzeigen korrekt einzufügen.
+For live content, TVSDK uses the metadata/cues in the manifest to determine where to place ads. However, sometimes live/linear content might resemble VOD content. Wenn beispielsweise Live-Inhalte abgeschlossen sind, wird ein `EXT-X-ENDLIST` -Tag an das Live-Manifest angehängt. For HLS, the `EXT-X-ENDLIST` tag means that the stream is a VOD stream. TVSDK cannot automatically differentiate this stream from a normal VOD stream to correctly insert ads.
 
-Ihre Anwendung muss TVSDK mitteilen, ob der Inhalt live oder VOD ist, indem Sie die `PTAdSignalingMode`Angabe.
+Your application must tell TVSDK whether the content is live or VOD by specifying the `PTAdSignalingMode`.
 
-Bei einem FER-Stream sollte der Adobe Primetime-Anzeigenbestimmungsserver nicht die Liste von Werbeunterbrechungen bereitstellen, die vor dem Starten der Wiedergabe in die Zeitschiene eingefügt werden müssen. Dies ist der typische Prozess für VOD-Inhalte. Stattdessen liest TVSDK durch Angabe eines anderen Signalisierungsmodus alle Cue-Points aus dem FER-Manifest und wechselt für jeden Cue-Point zum Anzeigen-Server, um eine Werbeunterbrechung anzufordern. Dieser Prozess ähnelt Live-/DVR-Inhalten.
+Bei einem FER-Stream sollte der Adobe Primetime-Ad-Entscheidungsserver nicht die Liste von Werbeunterbrechungen bereitstellen, die vor dem Starten der Wiedergabe in die Zeitleiste eingefügt werden müssen. This is the typical process for VOD content. Stattdessen liest TVSDK durch Angabe eines anderen Signalisierungsmodus alle Cue-Points aus dem FER-Manifest und wechselt für jeden Cue-Point zum Anzeigen-Server, um eine Werbeunterbrechung anzufordern. Dieser Prozess ähnelt Live-/DVR-Inhalten.
 
 Zusätzlich zu jeder Anforderung, die mit einem Cue-Point verknüpft ist, stellt TVSDK eine zusätzliche Anzeigenanforderung für Pre-Roll-Anzeigen auf.
 
@@ -88,9 +92,9 @@ Zusätzlich zu jeder Anforderung, die mit einem Cue-Point verknüpft ist, stellt
 
    Die gültigen Werte sind `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues`und `PTAdSignalingModeServerMap`.
 
-   Sie müssen den Anzeigensignalisierungsmodus vor dem Aufruf festlegen `prepareToPlay`. Nachdem TVSDK-Beginn Anzeigen auflösen und auf der Zeitleiste platzieren, werden Änderungen am Anzeigensignalisierungsmodus ignoriert. Legen Sie den Modus fest, wenn Sie die Anzeigenmetadaten für die Ressource erstellen.
+   You must set the ad signaling mode before calling `prepareToPlay`. After TVSDK starts to resolve and place ads on the timeline, changes to the ad signaling mode are ignored. Legen Sie den Modus fest, wenn Sie die Anzeigenmetadaten für die Ressource erstellen.
 
-1. Fahren Sie mit der Wiedergabe fort.
+1. Continue to playback.
 
    ```
       PTMetadata *metadata = [[[PTMetadata alloc] init] autorelease]; 
