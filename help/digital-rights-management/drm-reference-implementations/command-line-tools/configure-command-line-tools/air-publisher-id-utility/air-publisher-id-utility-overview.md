@@ -1,11 +1,11 @@
 ---
-seo-title: Übersicht
+seo-title: Overview
 title: Übersicht
 uuid: f45c6b58-53c5-41e0-be3d-590231dd214a
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 Beim Erstellen einer AIR-Datei generiert das AIR Developer Tool (ADT) automatisch eine Herausgeber-ID. Das AIR Publisher-ID-Dienstprogramm ( [!DNL AdobePublisherIDUtility.jar]) berechnet die Herausgeber-ID für eine AIR-Anwendung.
 
-Die Herausgeber-ID ist eindeutig für das Zertifikat, mit dem Sie eine AIR-Datei erstellen. Wenn Sie dasselbe Zertifikat für mehrere AIR-Anwendungen wiederverwenden, haben alle AIR-Anwendungen dieselbe Herausgeber-ID. In einer AIR-Version, die auf Version 1.5.2 folgt, wird die generierte Herausgeber-ID keiner Datei hinzugefügt. Wenn Sie daher eine zulassungsliste einer AIR-Anwendung verwenden möchten, verwenden Sie dieses Tool, um die Herausgeber-ID zu ermitteln.
+Die Herausgeber-ID ist eindeutig für das Zertifikat, mit dem Sie eine AIR-Datei erstellen. Wenn Sie dasselbe Zertifikat für mehrere AIR-Anwendungen wiederverwenden, haben alle AIR-Anwendungen dieselbe Herausgeber-ID. In einer AIR-Version, die auf Version 1.5.2 folgt, wird die generierte Herausgeber-ID keiner Datei hinzugefügt. Wenn Sie daher eine AIR-Anwendungs-Zulassungsliste verwenden möchten, verwenden Sie dieses Tool, um die Herausgeber-ID zu ermitteln.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->Die Herausgeber-ID, die für die Durchsetzung der AIR-zulassungsliste verwendet wird, ist nicht mit der Herausgeber-ID identisch, die der Anwendungsherausgeber in der [!DNL application.xml] Anwendungsdatei angegeben hat.
+>Die Herausgeber-ID, die für die Durchsetzung der AIR-Zulassungsliste verwendet wird, ist nicht mit der Herausgeber-ID identisch, die der Anwendungsherausgeber in der [!DNL application.xml] Anwendungsdatei angegeben hat.
 
 ## Befehlszeilenverwendung des AIR Publisher-ID-Dienstprogramms {#air-publisher-id-utility-command-line-usage}
 
