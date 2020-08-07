@@ -5,7 +5,10 @@ seo-title: WARNUNGSBenachrichtigungscodes
 title: WARNUNGSBenachrichtigungscodes
 uuid: da1a561d-3b9a-468a-a24a-7b6fa62aa2e8
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 3%
 
 ---
 
@@ -25,12 +28,12 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
    <th colname="2" class="entry"><b>Name</b></th> 
    <th colname="3" class="entry"><b>InnerNotification&gt;/b&gt;</th> 
    <th colname="4" class="entry"><b>Metadatenschlüssel</b></th> 
-   <th colname="5" class="entry"><b>Kommentare</b></th> 
+   <th colname="5" class="entry"><b>Comments</b></th> 
   </tr> 
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Anzeigenauflösung</b> </td> 
+   <td colname="1"><b>Ad resolving</b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -38,8 +41,8 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 201002</span> </td> 
-   <td colname="2"><span class="codeph"> AD_ASSET_FAILED_TO_LOAD</span> </td> 
-   <td colname="3"> <p>Keines </p> </td> 
+   <td colname="2"><span class="codeph"> AD_ASSET_ FAILED_TO_LOAD</span> </td> 
+   <td colname="3"> <p>None </p> </td> 
    <td colname="4"><span class="codeph"> AD_ASSET, INTERNAL_ERROR</span> </td> 
    <td colname="5"> <p>Beim Versuch, eine Werbeanzeige zu laden, ist ein Fehler aufgetreten. </p> </td> 
   </tr> 
@@ -47,11 +50,11 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
    <td colname="1"><span class="codeph"> 201003</span> </td> 
    <td colname="2"><span class="codeph"> AD_RESOLVER_RETURNED_NO_ADS</span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"><span class="codeph"> INTERNAL_ERROR, AD_ID, BESCHREIBUNG</span> </td> 
-   <td colname="5"> <p>Die Anzeigenauflösung schlug aufgrund einer ungültigen VAST-URL oder weil keine Anzeige vom VAST-Wrapper zurückgegeben wurde. </p> </td> 
+   <td colname="4"><span class="codeph"> INTERNAL_ERROR, AD_ID,DESCRIPTION</span> </td> 
+   <td colname="5"> <p>Ad resolving failed because of an invalid VAST URL or because no ad was returned from the VAST wrapper. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Hintergrundmanifeste</b> </td> 
+   <td colname="1"><b>Background manifests</b> </td> 
    <td colname="2"> </td>
    <td colname="3"> </td>
    <td colname="4"> </td>
@@ -59,16 +62,16 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 204000 </span> </td> 
-   <td colname="2"><span class="codeph"> HINTERGRUND_MANIFEST_WARNUNG</span> </td> 
-   <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"><span class="codeph"> HINTERGRUND_MANIFEST_WARNING_ERROR</span><span class="codeph"> HINTERGRUND_MANIFEST_WARNING_NAME</span> <span class="codeph"> BESCHREIBUNG</span> </td> 
-   <td colname="5"> <p> Fehler beim Download des Hintergrundmanifests. Ein Fehler beim Aktualisieren des Hintergrundmanifests wird als TVSDK-Warnung ausgelöst und führt nicht dazu, dass die Wiedergabe angehalten wird. </p> </td> 
+   <td colname="2"><span class="codeph"> BACKGROUND_MANIFEST_ WARNING</span> </td> 
+   <td colname="3"> <p>None </p> </td> 
+   <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_ WARNING_ERROR</span> <span class="codeph"> BACKGROUND_MANIFEST_ WARNING_NAME</span> <span class="codeph"> DESCRIPTION</span> </td> 
+   <td colname="5"> <p> Error in background manifest download. Any issue in updating the background manifest is dispatched as a TVSDK warning and does not cause the playback to stop. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 204001 </span> </td> 
-   <td colname="2"><span class="codeph"> INVALID_SEEK_WARNUNG</span> </td> 
-   <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"><span class="codeph"> BESCHREIBUNG</span> </td> 
+   <td colname="2"><span class="codeph"> INVALID_SEEK_ WARNING</span> </td> 
+   <td colname="3"> <p>None </p> </td> 
+   <td colname="4"><span class="codeph"> DESCRIPTION</span> </td> 
    <td colname="5"> <p></p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -83,14 +86,14 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
    <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
    <td colname="4"> Keines </td> 
-   <td colname="5"> Der Anzeigensignalisierungsmodus ist als benutzerdefinierter Bereich definiert, es sind jedoch keine Bereiche definiert. </td> 
+   <td colname="5"> The ad signaling mode is defined as custom ranges but there are not any ranges defined. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 210001 </span> </td> 
    <td colname="2"><span class="codeph"> INVALID_TIME_RANGES </span> </td> 
-   <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"><span class="codeph"> BESCHREIBUNG </span> </td> 
-   <td colname="5"> <p> Ein oder mehrere Zeitbereiche sind ungültig und werden ignoriert oder geändert. </p> <p> BESCHREIBUNG ist eine Zeichenfolge, die eine Beschreibung der ungültigen Bereiche enthält. </p> </td> 
+   <td colname="3"> <p>None </p> </td> 
+   <td colname="4"><span class="codeph"> DESCRIPTION </span> </td> 
+   <td colname="5"> <p> One or more time ranges are invalid and will be ignored or modified. </p> <p> BESCHREIBUNG ist eine Zeichenfolge, die eine Beschreibung der ungültigen Bereiche enthält. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>iOS-spezifisch</b> </td> 
@@ -102,36 +105,36 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270000 </span> </td> 
    <td colname="2"><span class="codeph"> PLAYER_NOT_READY </span> </td> 
-   <td colname="3"> <p>Keines </p> </td> 
+   <td colname="3"> <p>None </p> </td> 
    <td colname="4"><span class="codeph"> BESCHREIBUNG </span> </td> 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270001 </span> </td> 
    <td colname="2"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
-   <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"> <p>Keines </p> </td> 
-   <td colname="5"> <p>Die Anzeige wurde nicht in den Stream eingefügt. </p> </td> 
+   <td colname="3"> <p>None </p> </td> 
+   <td colname="4"> <p>None </p> </td> 
+   <td colname="5"> <p>AD was not inserted on the stream. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270002 </span> </td> 
    <td colname="2"><span class="codeph"> AD_HLS_AUDIOONLY_MISSING </span> </td> 
    <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
-   <td colname="4"> <p>Keines </p> </td> 
-   <td colname="5"> <p>Anzeige enthält nicht den Stream "Nur Audio" </p> </td> 
+   <td colname="4"> <p>None </p> </td> 
+   <td colname="5"> <p>Ad does not contain Audio Only Stream </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270003 </span> </td> 
    <td colname="2"><span class="codeph"> AD_HLS_MATCHING_BITRATE_MISSING </span> </td> 
    <td colname="3"><span class="codeph"> AD_NOT_INSERTED </span> </td> 
-   <td colname="4"> <p>Keines </p> </td> 
+   <td colname="4"> <p>None </p> </td> 
    <td colname="5"> <p>Für die aktuelle Bitrate des Inhalts wurde kein übereinstimmender Anzeigenstream gefunden. </p> <p>  </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270005 </span> </td> 
    <td colname="2"><span class="codeph"> AVASSET_FAILED_TO_CREATE </span> </td> 
    <td colname="3"><span class="codeph"> PLAYBACK_ERROR </span> </td> 
-   <td colname="4"> <p>Keines </p> </td> 
+   <td colname="4"> <p>None </p> </td> 
    <td colname="5"> <p>Fehler beim Erstellen des AVAsset. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -144,9 +147,9 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 270007 </span> </td> 
    <td colname="2"><span class="codeph"> NETWORK_ERROR </span> </td> 
-   <td colname="3"> <p>Keines </p> </td> 
+   <td colname="3"> <p>None </p> </td> 
    <td colname="4"><span class="codeph"> URL </span> </td> 
-   <td colname="5"> <p>Fehler beim Abrufen von Daten aus dem Netzwerk. </p> </td> 
+   <td colname="5"> <p>Error getting data from the network. </p> </td> 
   </tr> 
  </tbody> 
 </table>
