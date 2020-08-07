@@ -5,7 +5,10 @@ seo-title: Implementieren der Rückgabe einer frühen Werbeunterbrechung
 title: Implementieren der Rückgabe einer frühen Werbeunterbrechung
 uuid: 984b6ed0-c929-49a3-9553-e30d1a7758ed
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '413'
+ht-degree: 0%
 
 ---
 
@@ -14,15 +17,15 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Beim Einfügen von Livestream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
 
->[!NOTE] {othertype=&quot;Prerequisite&quot;}
+>[!NOTE]
 >
->Sie müssen die Abmeldung-/In-Anzeigenmarken ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN`und `#EXT-X-CUE`) abonnieren.
+>You must subscribe to the splice out/in ad markers ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN`, and `#EXT-X-CUE`).
 
-Es gibt einige zu berücksichtigende Anforderungen:
+Here are some requirements to consider:
 
 * Parsen Sie Markierungen wie `EXT-X-CUE-IN` (oder ein äquivalentes Marker-Tag), die in den linearen oder FER-Streams angezeigt werden.
 
-   Registrieren Sie die Markierungen als Marker für den Anzeigenrückkehrpunkt. Wird nur `adBreaks` bis zu dieser Markerposition während der Wiedergabe abgespielt, wodurch die Dauer der `adBreak` durch die führende `EXE-X-CUE-OUT` Markierung markierten Markierung überschrieben wird.
+   Register the markers as being the marker for ad early return point. Wird nur `adBreaks` bis zu dieser Markerposition während der Wiedergabe abgespielt, wodurch die Dauer der `adBreak` durch die führende `EXE-X-CUE-OUT` Markierung markierten Markierung überschrieben wird.
 
 * Wenn zwei `EXT-X-CUE-IN` Markierungen für dieselbe `EXT-X-CUE-OUT` Markierung vorhanden sind, wird als erste `EXT-X-CUE-IN` Markierung die gezählte Markierung angezeigt.
 
@@ -30,11 +33,11 @@ Es gibt einige zu berücksichtigende Anforderungen:
 
    Wenn der führende `EXT-X-CUE-OUT` Marker in einem Live-Stream gerade aus dem Fenster gezogen ist, reagiert das TVSDK nicht darauf.
 
-* Wenn eine Werbeunterbrechung frühzeitig zurückgegeben wird, wird `adBreak` abgespielt, bis die Abspielleiste an die ursprüngliche Position zurückkehrt, an der die Werbeunterbrechung beendet werden sollte, und die Wiedergabe des Hauptinhalts von dieser Position an fortgesetzt.
+* When there is an early return from an ad break, the `adBreak` plays until the playhead returns to the original position when the ad break was supposed to end and resumes playing the main content from that position.
 
-## SpliceOut und SpliceIn {#section_36DD55BA58084E21BD3DC039BB245C82}
+## SpliceOut and SpliceIn {#section_36DD55BA58084E21BD3DC039BB245C82}
 
-`SpliceOut` und `SpliceIn` Markierungen markieren den Anfang und das Ende der Werbeunterbrechung. Die Dauer des `SpliceOut` Markentyps `EXE-X-CUE` kann null betragen, und der `SpliceIn` Typ der `EXE-X-CUE` Markierung markiert das Ende der Werbeunterbrechung. Sie werden in einem Tag angezeigt und unterscheiden sich nach Typ.
+`SpliceOut` and `SpliceIn` markers mark the begin and the end of the ad break. The duration of the `SpliceOut` type of the `EXE-X-CUE` marker might be zero and the `SpliceIn` type of `EXE-X-CUE` marker marks the end of the ad break. They appear in one tag and differ by type.
 
 **Eine Marke mit verschiedenen Typen**
 
