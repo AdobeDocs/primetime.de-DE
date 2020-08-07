@@ -1,11 +1,14 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: Anforderungen für die Synchronisierung
+seo-title: Requirements for Synchronization
 title: Anforderungen für die Synchronisierung
 uuid: 594a4bb2-c042-4485-9cae-73b8f9f93d82
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Das Synchronisierungsverhalten wird mithilfe der folgenden Parameter definiert:
 * **Hartes Stoppintervall** - (Optional). Die Wiedergabe ist nicht zulässig, wenn innerhalb der angegebenen Zeitspanne keine erfolgreiche Synchronisierung stattgefunden hat.
 * **Synchronisierungswahrscheinlichkeit erzwingen** - (Optional). Möglichkeit, mit der der Client vor dem nächsten Beginn eine Synchronisierungsmeldung senden soll.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Diese Nutzungsregel wird von Primetime DRM-Clients Version 3.0 oder höher unterstützt. Das Verhalten älterer Clients hängt von der vom Lizenzserver unterstützten Clientversion ab.
 
