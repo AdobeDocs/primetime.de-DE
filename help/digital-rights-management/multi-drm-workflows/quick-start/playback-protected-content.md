@@ -1,20 +1,23 @@
 ---
-description: Zum Testen Ihrer DRM-Lösung benötigen Sie eine Videoanwendung, mit der die jeweilige DRM-Lösung verarbeitet werden kann, mit der Sie arbeiten. Dieser Player kann ein von Adobe bereitgestellter Beispielplayer oder eine eigene TVSDK-basierte Videoanwendung sein.
-seo-description: Zum Testen Ihrer DRM-Lösung benötigen Sie eine Videoanwendung, mit der die jeweilige DRM-Lösung verarbeitet werden kann, mit der Sie arbeiten. Dieser Player kann ein von Adobe bereitgestellter Beispielplayer oder eine eigene TVSDK-basierte Videoanwendung sein.
+description: Zum Testen Ihrer DRM-Lösung benötigen Sie eine Videoanwendung, mit der die jeweilige DRM-Lösung verarbeitet werden kann, mit der Sie arbeiten. Dieser Player kann ein Beispielplayer sein, der von der Adobe zur Verfügung gestellt wird, oder eine eigene TVSDK-basierte Videoanwendung.
+seo-description: Zum Testen Ihrer DRM-Lösung benötigen Sie eine Videoanwendung, mit der die jeweilige DRM-Lösung verarbeitet werden kann, mit der Sie arbeiten. Dieser Player kann ein Beispielplayer sein, der von der Adobe zur Verfügung gestellt wird, oder eine eigene TVSDK-basierte Videoanwendung.
 seo-title: Wiedergabe des geschützten Inhalts
-title: Wiedergabe des geschützten Inhalts
+title: Playback your protected content
 uuid: 84f73ee7-43d0-481c-a5e7-14f92169323c
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '592'
+ht-degree: 0%
 
 ---
 
 
 # Wiedergabe des geschützten Inhalts {#playback-your-protected-content}
 
-Zum Testen Ihrer DRM-Lösung benötigen Sie eine Videoanwendung, mit der die jeweilige DRM-Lösung verarbeitet werden kann, mit der Sie arbeiten. Dieser Player kann ein von Adobe bereitgestellter Beispielplayer oder eine eigene TVSDK-basierte Videoanwendung sein.
+To test your DRM solution, you need a video application that can process the particular DRM solution you are working with. This player could be a sample player made available by Adobe, or your own TVSDK-based video application.
 
-1. Verwenden Sie die Lizenzserver-URL aus der Token-Antwort, die Sie vom ExpressPlay-Server zurückerhalten haben, um zu testen, ob Sie Ihre geschützten Inhalte wiedergeben können.
+1. Use the License Server URL from the token response you got back from the ExpressPlay server to test whether you can play back your protected content.
 
    * **Wind** - Verwenden Sie die Wind-Antwort direkt, wie sie von Ihrer ExpressPlay-Lizenz-Token-Anforderung erhalten wurde.
    * **PlayReady** - Rufen Sie die URL und das Token des Lizenzservers vom JSON-Objekt ab, das von Ihrer Lizenz-Token-Anforderung zurückgegeben wird.
@@ -26,7 +29,7 @@ Zum Testen Ihrer DRM-Lösung benötigen Sie eine Videoanwendung, mit der die jew
 
    Abhängig von der Schnittstelle, mit der Sie den Player testen, werden Sie möglicherweise aufgefordert, die Lizenz-URL und das Token als Zeichenfolgen in Eingabefeldern oder als JSON-Objekt, das in ein Textfeld eingefügt wird, oder vielleicht als Abfrage-Parameter in der URL separat anzugeben.
 
-   Einige Möglichkeiten für Testspieler sind hier aufgeführt:
+   Some possibilities for test players are listed here:
 
    * HTML5 Reference Player:
 
@@ -40,20 +43,20 @@ Zum Testen Ihrer DRM-Lösung benötigen Sie eine Videoanwendung, mit der die jew
       https://shaka-player-demo.appspot.com
       ```
 
-   * Beispiel TVSDK Player (in Entwicklung) -
+   * Sample TVSDK Player (under development) -
 
    ```
    https://drmtest2.adobe.com/TVSDK_HTML5/samples/reference/reference_player.html
    ```
 
-   **Wiedergabe beim Testen der FairPlay-Einrichtung überprüfen:** FairPlay erfordert einige zusätzliche Schritte, um Inhalte wiederzugeben, wenn Sie die ExpressPlay-Lizenzserver verwenden. Wenn Sie Ihre Verbindungen [!DNL curl] zum Testen verwenden (wie unter [Lizenzierung](../../multi-drm-workflows/quick-start/handle-the-licensing.md)beschrieben), müssen Sie Ihr M3U8-Manifest *(Ihren gepackten Inhalt) wie folgt* bearbeiten:
+   **Checking playback when testing your FairPlay setup:** FairPlay requires some extra steps to play back content when you are using the ExpressPlay license servers. If you are using [!DNL curl] to test your connections (as described in [Licensing](../../multi-drm-workflows/quick-start/handle-the-licensing.md)), you need to *edit your M3U8 manifest* (your packaged content) as follows:
 
-1. Hinzufügen die Antwort, die Sie von der Anforderung Ihres Lizenz-Tokens erhalten haben, an das `#EXT-X-KEY:` Tag im Manifest zurück; und
-1. Ändern Sie das Protokoll dieser URL von der Antwort (jetzt im Manifest) `https://` in `skd://`.
+1. hinzufügen die Antwort, die Sie von der Anforderung Ihres Lizenz-Tokens erhalten haben, an das `#EXT-X-KEY:` Tag im Manifest zurück; und
+1. Change the protocol of that URL from the response (now in the manifest), from `https://` to `skd://`.
 
    Im Folgenden finden Sie ein vollständiges Beispiel zum Testen der Wiedergabe mit FairPlay, einschließlich des Lizenzierungsschritts:
 
-1. Verwenden Sie die FairPlay-Lizenz-Token-Anforderung, um Ihre Lizenz-Token-URL abzurufen. (Verwenden Sie Ihren eigenen Produktions-Kundenauthentifizierer und stellen Sie sicher, dass Sie dasselbe CEK verwenden, das zum Verpacken Ihrer FairPlay-Inhalte verwendet `iv` wurde.) Führen Sie den folgenden Befehl aus, um die URL des Lizenztokens für den Beispielinhalt abzurufen:
+1. Verwenden Sie die FairPlay-Lizenz-Token-Anforderung, um Ihre Lizenz-Token-URL abzurufen. (Use your own Production Customer Authenticator, and be sure to use the same CEK and `iv` that was used to package your FairPlay content.) Run the following command to obtain the license token URL for the example content:
 
    ```
    curl -v "https://fp-gen.service.expressplay.com/hms/fp/token? 
@@ -71,7 +74,7 @@ Zum Testen Ihrer DRM-Lösung benötigen Sie eine Videoanwendung, mit der die jew
    SSwcDq1ZnRtXunFLueTw6LAL52aZllMLasCSzYRMaAVHw 
    ```
 
-1. Geben Sie die URL des zurückgegebenen Lizenztokens in Ihr M3U8-Manifest ein und *ändern Sie das Schema der Lizenz-Token-URL in* `sdk://` `https://`. Im Folgenden finden Sie ein Beispiel für das #EXT-X-KEY-Tag in Ihrem M3U8-Manifest:
+1. Geben Sie die URL des zurückgegebenen Lizenztokens in Ihr M3U8-Manifest ein und *ändern Sie das Schema der Lizenz-Token-URL in* `sdk://` `https://`. Following is an example of the #EXT-X-KEY tag in your M3U8 manifest:
 
    ```
    #EXT-X-KEY:METHOD=SAMPLE-AES, 
@@ -82,9 +85,9 @@ Zum Testen Ihrer DRM-Lösung benötigen Sie eine Videoanwendung, mit der die jew
    KEYFORMAT="com.apple.streamingkeydelivery",KEYFORMATVERSIONS="1"
    ```
 
-   >[!NOTE] {important=&quot;high&quot;}
+   >[!NOTE]
    >
-   >Die obigen Informationen gelten nur für das Testen Ihrer FairPlay-Einrichtung. Es kann je nach Konfiguration des FairPlay-Handlers nicht für Ihre Produktionseinrichtung gelten. Weitere Informationen finden Sie unter Apple FairPlay in iOS-Anwendungen [aktivieren](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md) .
+   >Die obigen Informationen gelten nur für das Testen Ihrer FairPlay-Einrichtung. Es kann je nach Konfiguration des FairPlay-Handlers nicht für Ihre Produktionseinrichtung gelten. See [Enable Apple FairPlay in iOS applications](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md) for details.
 
 Bei der Wiedergabe des Videos haben Sie den Inhalt erfolgreich gepackt und lizenziert. Wenn Ihr Video nicht abgespielt wird, finden Sie auf der Seite zur Fehlerbehebung einige Lösungsmöglichkeiten für Ihre Probleme.
 
