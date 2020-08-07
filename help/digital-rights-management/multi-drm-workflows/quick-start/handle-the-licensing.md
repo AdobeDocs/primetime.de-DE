@@ -1,20 +1,23 @@
 ---
-description: Die Lizenzierung ist der wichtigste Mechanismus, mit dem Benutzern die Wiedergabe geschützter Videoinhalte gestattet oder verweigert wird. Ein legitimer (berechtigter) Benutzer kann eine Lizenz (einen Schlüssel) zum Entschlüsseln und Abspielen eines bestimmten Teils des verschlüsselten Inhalts seines Inhalts-Providers erhalten.
-seo-description: Die Lizenzierung ist der wichtigste Mechanismus, mit dem Benutzern die Wiedergabe geschützter Videoinhalte gestattet oder verweigert wird. Ein legitimer (berechtigter) Benutzer kann eine Lizenz (einen Schlüssel) zum Entschlüsseln und Abspielen eines bestimmten Teils des verschlüsselten Inhalts seines Inhalts-Providers erhalten.
-seo-title: Lizenzierung
+description: Licensing is the primary mechanism by which users are allowed or denied the ability to play a piece of protected video content. A legitimate (entitled) user can be issued a license (a key) to decrypt and play a specific piece of their content provider's encrypted content.
+seo-description: Licensing is the primary mechanism by which users are allowed or denied the ability to play a piece of protected video content. A legitimate (entitled) user can be issued a license (a key) to decrypt and play a specific piece of their content provider's encrypted content.
+seo-title: Licensing
 title: Lizenzierung
 uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
 
 
-# Lizenzierung{#licensing}
+# Licensing{#licensing}
 
-Die Lizenzierung ist der wichtigste Mechanismus, mit dem Benutzern die Wiedergabe geschützter Videoinhalte gestattet oder verweigert wird. Ein legitimer (berechtigter) Benutzer kann eine Lizenz (einen Schlüssel) zum Entschlüsseln und Abspielen eines bestimmten Teils des verschlüsselten Inhalts seines Inhalts-Providers erhalten.
+Licensing is the primary mechanism by which users are allowed or denied the ability to play a piece of protected video content. A legitimate (entitled) user can be issued a license (a key) to decrypt and play a specific piece of their content provider&#39;s encrypted content.
 
-Bevor Ihre App oder Webseite auf dem Gerät eines Endbenutzers DRM-geschützte Inhalte wiedergeben kann, muss sie ein Token von einem Berechtigungs- oder Store-Server erwerben, den Sie, der Kunde, betreiben. Zu diesem Zweck stellt Adobe einen Beispiel-Referenzserver bereit: [Referenz-Server: Beispiel für einen ExpressPlay-Berechtigungsserver (SIEHE)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Before your app or web page on an end-user&#39;s device can play DRM-protected content, it must acquire a token from an entitlement or storefront server that you, the customer, operate. Adobe provides a sample reference server for this purpose: [Reference Server: Sample ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
 Ihr Berechtigungs- oder Schaufensterserver fordert vom jeweiligen ExpressPlay-Server ein Lizenz-Token erst dann an, wenn Sie mit Ihren eigenen Back-End-Systemen prüfen, ob der betreffende Benutzer berechtigt ist, den angeforderten Inhalt zu überwachen. Die von der Lizenztoken-Anforderung zurückgegebene Antwort ist entweder eine einsatzbereite URL für den Lizenzserver oder die Antwort enthält die URL in einer JSON-Struktur, je nachdem, mit welcher DRM-Lösung Sie arbeiten.
 
