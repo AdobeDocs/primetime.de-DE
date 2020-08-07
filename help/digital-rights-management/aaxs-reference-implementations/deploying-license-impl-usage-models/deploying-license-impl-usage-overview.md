@@ -3,7 +3,10 @@ seo-title: Implementieren der Übersicht über die Nutzungsmodelle
 title: Implementieren der Übersicht über die Nutzungsmodelle
 uuid: 1041bb84-9996-4284-b2a0-d6fc6d4b73d9
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '589'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Um die Demo des Gebrauchsmodells zu aktivieren, geben Sie die benutzerdefinierte
     java -jar AdobeMediaPackager.jar source.flv dest.flv -k RI_UsageModelDemo=true
 ```
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Wenn Sie den optionalen Demo-Modus nicht zur Verpackungszeit aktivieren, verwendet der Lizenzserver die beim Verpacken angegebene Richtlinie, um eine Lizenz auszustellen. Wenn mehrere Richtlinien angegeben wurden, verwendet der Lizenzserver die erste gültige Richtlinie.
 
