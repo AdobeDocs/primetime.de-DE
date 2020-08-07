@@ -5,7 +5,10 @@ seo-title: Apple FairPlay in TVSDK-Anwendungen aktivieren
 title: Apple FairPlay in TVSDK-Anwendungen aktivieren
 uuid: fafffdb9-09f9-45fb-9957-3c6e95ed55f9
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '193'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ Sie können Apple FairPlay Streaming, die DRM-Lösung von Apple, in Ihren TVSDK-
 
    Die `resourceLoader:shouldWaitForLoadingOfRequestedResource` Methode entspricht dem, was darin enthalten ist `AVAssetResourceLoaderDelegate`.
 
-   >[!IMPORTANT] {important=&quot;high&quot;}
+   >[!IMPORTANT]
    >
    >Um Inhalte wiederzugeben, ändern Sie im Szenario mit dem ExpressPlay-Lizenzserver das URL-Schema in der URL Ihrer ExpressPlay-Server-Lizenzanfrage von `skd://` in `https://` (oder `https://`).
 
