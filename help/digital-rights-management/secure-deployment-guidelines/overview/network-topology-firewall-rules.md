@@ -1,36 +1,39 @@
 ---
 description: 'Berücksichtigen Sie bei der Festlegung Ihrer Firewall-Regeln die folgenden Typen von URLs '
-seo-description: 'Berücksichtigen Sie bei der Festlegung Ihrer Firewall-Regeln die folgenden Typen von URLs '
+seo-description: 'When determining your firewall rules, consider the following types of URLs '
 seo-title: Firewall-Regeln
-title: Firewall-Regeln
+title: Firewall rules
 uuid: 309b35b5-8c0a-4cd7-9289-b6b035955697
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '383'
+ht-degree: 0%
 
 ---
 
 
-# Firewall-Regeln {#firewall-rules}
+# Firewall rules {#firewall-rules}
 
 Berücksichtigen Sie bei der Festlegung Ihrer Firewall-Regeln die folgenden URL-Typen:
 
-## Eingehende URLs {#section_F111526A9DB844CBBF21A3CAE5F50880}
+## Incoming URLs {#section_F111526A9DB844CBBF21A3CAE5F50880}
 
-Sie können Ihre äußere Firewall so konfigurieren, dass sie nur die URLs für die Anwendungsfunktionalität bereitstellt, die Sie Endbenutzern bereitstellen möchten.
+You can configure your outer firewall so that it exposes only the URLs for the application functionality that you want to provide to end users.
 
-Externe Benutzer können über die äußere Firewall auf die folgenden URLs zugreifen:
+External users can access the following URLs by using the outer firewall:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_bqs_whz_n4"> 
  <thead class="- topic/thead "> 
   <tr rowsep="1" class="- topic/row "> 
-   <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">Stamm-URL </p> </th> 
-   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Zweck </p> </th> 
+   <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">Root URL </p> </th> 
+   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Purpose </p> </th> 
   </tr> 
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/getServerVersion/v3</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Zur Bestimmung der Serverversion. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">To determine the server version. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -86,11 +89,11 @@ Externe Benutzer können über die äußere Firewall auf die folgenden URLs zugr
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Damit der Client FMRMS 1.x DRM-Metadaten in Primetime-DRM-Metadaten konvertieren kann. </p> <p>Hinweis:  Diese URL muss SSL (HTTPS) verwenden. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Damit der Client FMRMS 1.x DRM-Metadaten in Primetime-DRM-Metadaten konvertieren kann. </p> <p>Note:  This URL must use SSL (HTTPS). </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES-Webdienst-URL. Wenn Inhalte mit einer früheren Version von FMRMS veröffentlicht wurden, ermöglicht diese URL älteren Clients, eine Verbindung zum Server herzustellen. Diese Clients werden aufgefordert, ein Upgrade auf Adobe Primetime DRM durchzuführen. </p> <p class="- topic/p ">Hinweis: Diese URL muss SSL (HTTPS) verwenden. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES web service URL. If content has been published by using an earlier version of FMRMS, this URL allows older clients to connect to the server. These clients are prompted to upgrade to Adobe Primetime DRM. </p> <p class="- topic/p ">Note: This URL must use SSL (HTTPS). </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> 
@@ -98,18 +101,18 @@ Externe Benutzer können über die äußere Firewall auf die folgenden URLs zugr
      <li id="li_24B4D42BECF8405281C73B782F8E7310"><span class="filepath"> /flashaccess/lreturn/v5</span> </li> 
      <li id="li_6B79563205D1421F89131E650D71E83B"><span class="filepath"> /flashaccess/lreturn/v6</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p>Zurückgeben von Lizenzen. </p> <p> Die URL muss verfügbar sein, wenn Sie Unterstützung für die Lizenzrückgabe implementieren. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>To return licenses. </p> <p> The URL must be accessible if you implement license return support. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->Die interne Firewall sollte nur Verbindungen zum Primetime DRM-Lizenzserver über den Reverse-Proxy und nur die URLs in der Tabelle zulassen. Um die Skalierbarkeit zu verbessern, verwenden Sie HTTP für die Verbindungen zwischen dem Reverse-Proxy und Primetime-DRM.
+>The internal firewall should only allow connections to the Primetime DRM license server through the reverse proxy, and only to the URLs in the table. To improve scalability, use HTTP for the connections between the reverse proxy and Primetime DRM.
 
-## Ausgehende URLs {#section_FFF9F7BB353149F4A27F8788E9934A48}
+## Outgoing URLs {#section_FFF9F7BB353149F4A27F8788E9934A48}
 
-Ausgehende URLs ermöglichen es dem Lizenzserver, die Zertifikatsperrlisten von Adobe herunterzuladen.
+Outgoing URLs allow the license server to download the CRLs from Adobe.
 
 Im Folgenden finden Sie eine Liste der ausgehenden URLs, die Sie verwenden können:
 
