@@ -3,7 +3,10 @@ seo-title: Remote- und lokaler iOS-Key-Versand
 title: Remote- und lokaler iOS-Key-Versand
 uuid: 90f672e7-9301-4e14-adca-db2a8f951a83
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Adobe Primetime unterstützt die folgenden Optionen für wichtigen Versand von i
 
 Der Remote-Key-Versand wird über die Primetime-DRM-Richtlinie aktiviert, die zum Verpacken von Inhalten verwendet wird. Wenn Sie diese Einstellung ändern möchten, müssen Sie den Inhalt neu verpacken. Wenn Sie Remote-Key-Versand aktivieren, müssen Sie einen Primetime-DRM-Key-Server bereitstellen, der wichtige Anfragen von iOS-Clients verwalten kann. Der Arbeitsablauf für Clients auf anderen Plattformen wird jedoch nicht geändert.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->Die Auswahl der wichtigen Versand betrifft nur iOS-Clients. Alle anderen Geräte, die HLS-Inhalte verwenden, z. B. Android und Primetime auf dem Desktop (Flash Player), verwenden immer `Local` wichtigen Versand, selbst wenn `Remote` dieser angegeben wurde.
+>Die Auswahl der wichtigen Versand betrifft nur iOS-Clients. All other devices that use HLS content , such as Android and Primetime on Desktop (Flash Player), always use `Local` key delivery, even if `Remote` has been specified.
 
