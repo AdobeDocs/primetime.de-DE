@@ -5,7 +5,10 @@ seo-title: Password crambler
 title: Password crambler
 uuid: 56df0f49-f3fd-464d-b4ba-25e1b497158a
 translation-type: tm+mt
-source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 0%
 
 ---
 
@@ -43,6 +46,6 @@ Encrypted password:
 
 Alle Kennwörter, die Sie in den [!DNL flashaccess-global.xml] und [!DNL flashaccess-tenant.xml] Dateien angegeben haben, müssen verschlüsselt sein.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Das Dienstprogramm Password Scrambler im Primetime DRM Server for Protected Streaming ist nicht mit dem Programm, das mit dem Referenz-Implementierungslizenzserver bereitgestellt wird, austauschbar.
