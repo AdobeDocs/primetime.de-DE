@@ -5,7 +5,10 @@ seo-title: FairPlay-LizenzToken-Anforderung/Antwort
 title: FairPlay-LizenzToken-Anforderung/Antwort
 uuid: 10d4a760-8895-4fb3-8288-1c3a640df587
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '829'
+ht-degree: 5%
 
 ---
 
@@ -18,11 +21,11 @@ Die Benutzeroberfläche des FairPlay-Lizenz-Tokens bietet Produktions- und Testd
 
 **URLs:**
 
-* **Produktion:** `https://fp-gen.{prod_domain}/hms/fp/token`
+* **Production:** `https://fp-gen.{prod_domain}/hms/fp/token`
 
 * **Test:** `https://fp-gen.test.expressplay.com/hms/fp/token`
 
-* **Beispielanforderung:**
+* **Sample request:**
 
 ```<xref href="https: pr-gen.test.expressplay.com="" hms="" pr="" token?customerAuthenticator="201722,1ad8eed133edf43cbcc185f0236828ae&kid=b366360da82e9c6e0b0984002a362cf2&contentKey=b366360da82e9c6e0b0984002a362cf2&rightsType=BuyToOwn&analogVideoOPL=0&compressedDigitalAudioOPL=0&compressedDigitalVideoOPL=0&uncompressedDigitalAudioOPL=0&uncompressedDigitalVideoOPL=0&quot; format=&quot;html&quot; scope=&quot;external&quot;">
   https://fp-gen.test.expressplay.com/hms/fp/token?customerAuthenticator= 
@@ -37,56 +40,56 @@ Die Benutzeroberfläche des FairPlay-Lizenz-Tokens bietet Produktions- und Testd
    &uncompressedDigitalVideoOPL=0
 ```
 
-* **Beispielantwort:**
+* **Sample Response:**
 
    ```
    https://fp.service.expressplay.com:80/hms/fp/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
    ```
 
-**Anforderungsparameter für Abfragen**
+**Request Query Parameters**
 
-**Tabelle 4: Token-Abfragen-Parameter**
+**Tabelle 3: Token-Abfragen-Parameter**
 
 | Abfrage-Parameter | Beschreibung | Erforderlich? |
 |--- |--- |--- |
-| customerAuthenticator-Kundenauthentifizierer als Abfrage-Parameter customerAuthenticator FairPlay | Dies ist Ihr Kunde-API-Schlüssel, einer für Ihre Produktions- und Testing-Umgebung. Sie finden dies auf der Registerkarte &quot;ExpressPlay Admin-Dashboard&quot;. | Ja |
-| errorFormat | Entweder HTML oder JSON. Wenn html (Standard), wird eine HTML-Darstellung aller Fehler im Entitätstext der Antwort bereitgestellt. Wenn json angegeben ist, wird eine strukturierte Antwort im JSON-Format zurückgegeben. Weitere Informationen finden Sie unter [JSON-Fehler](https://www.expressplay.com/developer/restapi/#json-errors) . Der Mime-Typ der Antwort ist entweder text/uri-Liste bei Erfolg, text/html bei HTML-Fehlerformat oder application/json bei JSON-Fehlerformat. | Nein |
+| customerAuthenticator-Kundenauthentifizierer als Abfrage-Parameter customerAuthenticator FairPlay | This is your customer API key, one each for your production and test environments. You can find this on the ExpressPlay Admin Dashboard tab. | Yes |
+| errorFormat | Either html or json. If html  (the default) an HTML representation of any errors is provided in the entity body of the response. If json is specified, a structured response in JSON format is returned. See [JSON Errors](https://www.expressplay.com/developer/restapi/#json-errors) for details. The mime type of the response is either text/uri-list on success, text/html for HTML error format, or application/json for JSON error format. | No |
 
 **Tabelle 4: Lizenzparameter für Abfragen**
 
-| **Abfrage-Parameter** | **Beschreibung** | **Erforderlich?** |
+| **Abfrage-Parameter** | **Beschreibung** | **Required?** |
 |---|---|---|
-| `generalFlags` | Eine Hexadezimalzeichenfolge mit 4 Byte, die die Lizenzflags darstellt. &quot;0000&quot;ist der einzige zulässige Wert. | Nein |
-| `kek` | Schlüssel-Verschlüsselungsschlüssel (KEK). Schlüssel werden verschlüsselt mit einem KEK mit einem Schlüsselumbruch-Algorithmus (AES Key Wrap, RFC3394) gespeichert. Bei `kek` Bereitstellung muss entweder einer der Parameter `kid` oder der `ek` Parameter angegeben werden, *aber nicht beide*. | Nein |
-| `kid` | Eine hexadezimale 16-Byte-Zeichenfolgendarstellung des Inhaltsverschlüsselungsschlüssels oder einer Zeichenfolge `'^somestring'`. Die Länge der Zeichenfolge gefolgt vom Zeichen `'^'` darf 64 Zeichen nicht überschreiten. | Nein |
-| `ek` | Eine Hex-String-Darstellung des verschlüsselten Inhaltsschlüssels. | Nein |
-| `contentKey` | Eine hexadezimale 16-Byte-Zeichenfolgendarstellung des Inhaltsverschlüsselungsschlüssels | Ja, es sei denn, die `kek` und `ek` oder `kid` sind angegeben. |
+| `generalFlags` | A 4 byte hexadecimal string representing the license flags. ‘0000&#39; is the only allowed value. | No |
+| `kek` | Key Encryption Key (KEK). Schlüssel werden verschlüsselt mit einem KEK mit einem Schlüsselumbruch-Algorithmus (AES Key Wrap, RFC3394) gespeichert. If `kek` is supplied, either one of the `kid` or the `ek` parameters needs to be supplied, *but not both*. | No |
+| `kid` | A 16 byte hexadecimal string representation of the content encryption key or a string `'^somestring'`. Die Länge der Zeichenfolge gefolgt vom Zeichen `'^'` darf 64 Zeichen nicht überschreiten. | No |
+| `ek` | A hex string representation of the encrypted content key. | Nein |
+| `contentKey` | A 16 byte hexadecimal string representation of the content encryption key | Yes, unless the `kek` and `ek` or `kid` are provided. |
 | `iv` | Eine hexadezimale 16-Byte-Zeichenfolgendarstellung der Inhaltsverschlüsselung IV | Ja |
-| `rentalDuration` | Mietdauer in Sekunden (Standard - 0) | Nein |
-| `fpExtension` | Ein kurzer Formularumbruch `extensionType` und `extensionPayload`als kommagetrennte Zeichenfolge. Beispiel: […] `&fpExtension=wudo,AAAAAA==&`[…] | Nein, eine beliebige Zahl kann verwendet werden |
+| `rentalDuration` | Duration of the rental in seconds (default - 0) | No |
+| `fpExtension` | A short form wrapping `extensionType` and `extensionPayload`, as a comma separated string. Beispiel: […] `&fpExtension=wudo,AAAAAA==&`[…] | Nein, eine beliebige Zahl kann verwendet werden |
 
-**Tabelle 5: Token-Zugriffsparameter für Abfragen**
+**Table 5: Token Restriction Query Parameters**
 
 <table id="table_ar3_lsx_pv">  
  <thead> 
   <tr> 
-   <th class="entry"> <b>Abfrage-Parameter</b> </th> 
-   <th class="entry"> <b>Beschreibung</b> </th> 
-   <th class="entry"> <b>Erforderlich?</b> </th> 
+   <th class="entry"> <b>Query Parameter</b> </th> 
+   <th class="entry"> <b>Description</b> </th> 
+   <th class="entry"> <b>Required?</b> </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
    <td> <span class="codeph"> expirationTime </span> </td> 
-   <td> Ablaufzeit dieses Tokens. Dieser Wert MUSS eine Zeichenfolge im <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> Datums-/Uhrzeitformat im Z-Zonenbezeichner ("Zulu-Zeit") oder eine Ganzzahl mit vorangestelltem "+"-Zeichen sein. Ein Beispiel für einen RFC 3339 Datum/Uhrzeit ist <span class="codeph"> 2006-04-14T12:01:10Z </span>. <p>Wenn der Wert eine Zeichenfolge im <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339- </a> Datums-/Uhrzeitformat ist, stellt er ein absolutes Ablaufdatum/eine absolute Ablaufzeit für das Token dar. Wenn der Wert eine Ganzzahl ist, der ein "+"-Zeichen vorangestellt ist, wird als relative Anzahl von Sekunden ab Ausgabe interpretiert, dass das Token gültig ist. </p> Beispiel: <span class="codeph"> +60 </span> gibt eine Minute an. Die Gültigkeitsdauer des Tokens beträgt maximal 30 Tage (sofern nicht angegeben). </td> 
-   <td> Nein </td> 
+   <td> Ablaufzeit dieses Tokens. Dieser Wert MUSS eine Zeichenfolge im <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> Datums-/Uhrzeitformat im Z-Zonenbezeichner ("Zulu-Zeit") oder eine Ganzzahl mit vorangestelltem "+"-Zeichen sein. Ein Beispiel für einen RFC 3339 Datum/Uhrzeit ist <span class="codeph"> 2006-04-14T12:01:10Z </span>. <p>If the value is a string in <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> date/time format, then it represents an absolute expiration date/time for the token. If the value is an integer preceded by a '+' sign, then it is interpreted as a relative number of seconds, from issuance, that the token is valid. </p> For example, <span class="codeph"> +60 </span> specifies one minute. The maximum and default (if not specified) token lifetime is 30 days. </td> 
+   <td> No </td> 
   </tr> 
  </tbody> 
 </table>
 
-**Tabelle 6: Korrelationsparameter für Abfragen**
+**Table 6: Correlation Query Parameters**
 
-| **Abfrage-Parameter** | **Beschreibung** | **Erforderlich?** |
+| **Query Parameter** | **Description** | **Required?** |
 |---|---|---|
 | `cookie` | Eine beliebige Zeichenfolge mit einer Länge von bis zu 32 Zeichen, die im Token gespeichert und vom Token-Einlösungsserver protokolliert wird. Auf diese Weise können Protokolleinträge auf dem Einlöseserver und auf den Servern des Dienstleisters korreliert werden. | Nein |
 
@@ -94,99 +97,99 @@ Die Benutzeroberfläche des FairPlay-Lizenz-Tokens bietet Produktions- und Testd
 
 **Tabelle 7: HTTP-Antworten**
 
-| **HTTP-Statuscode** | **Beschreibung** | **Content-Type** | **Entitätstext enthält** |
+| **HTTP-Statuscode** | **Description** | **Content-Type** | **Entitätstext enthält** |
 |---|---|---|---|
-| `200 OK` | Kein Fehler. | `text/uri-list` | Lizenzerwerb-URL + Token |
-| `400 Bad Request` | Ungültige Artikel | `text/html` oder `application/json` | Fehlerbeschreibung |
-| `401 Unauthorized` | Autom fehlgeschlagen | `text/html` os `application/json` | Fehlerbeschreibung |
-| `404 Not found` | Ungültige URL | `text/html` oder `application/json` | Fehlerbeschreibung |
-| `50x Server Error` | Serverfehler | `text/html` os `application/json` | Fehlerbeschreibung |
+| `200 OK` | Kein Fehler. | `text/uri-list` | License acquisition URL + token |
+| `400 Bad Request` | Ungültige Artikel | `text/html` oder `application/json` | Error description |
+| `401 Unauthorized` | Auth failed | `text/html` or `application/json` | Error description |
+| `404 Not found` | Bad URL | `text/html` or `application/json` | Error description |
+| `50x Server Error` | Serverfehler | `text/html` or `application/json` | Error description |
 
-**Tabelle 8: Ereignis-Fehlercodes**
+**Table 8: Event Error Codes**
 
 <table id="table_i2c_zsx_pv">  
  <thead> 
   <tr> 
    <th class="entry"> <b>Code</b> </th> 
-   <th class="entry"> <b>Beschreibung</b> </th> 
+   <th class="entry"> <b>Description</b> </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
    <td> -2002 </td> 
-   <td> Ungültige Token-Ablaufzeit: &lt;details&gt; </td> 
+   <td> Invalid token expiration time: &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2003 </td> 
-   <td> Ungültige IP-Adresse </td> 
+   <td> Invalid IP address </td> 
   </tr> 
   <tr> 
    <td> -2005 </td> 
-   <td> Ungültiger Schlüssel zur Inhaltsverschlüsselung: &lt;details&gt; </td> 
+   <td> Invalid content encryption key: &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2008 </td> 
-   <td> Ungültige Ausgabesteuerungs-Flags angegeben: &lt;details&gt; </td> 
+   <td> Invalid output control flags specified: &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2017 </td> 
-   <td> Authentifizierungstoken muss angegeben werden </td> 
+   <td> Authentication token must be supplied </td> 
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td> Authentifizierungstoken ungültig: &lt;details&gt; <p>Hinweis:  Dies kann vorkommen, wenn der Authentifizierer falsch ist oder wenn der Zugriff auf die Test-API unter <span class="filepath"> </span> *.test.expressionSplay.com mit dem Produktionsauthentifizierer erfolgt und umgekehrt. </p> <p importance="high">Hinweis:  Das Test SDK und das Advanced Test Tool (ATT) funktionieren nur mit <span class="filepath"> *.test.expressplay.com </span>, während Produktionsgeräte <span class="filepath"> *.service.expressplay.com verwenden müssen </span>. </p> </td> 
+   <td> Authentication token invalid: &lt;details&gt; <p>Note:  This can happen if the authenticator is wrong or when accessing the test API at <span class="filepath"> *.test.expressplay.com </span> using the production authenticator and vice versa. </p> <p importance="high">Note:  The Test SDK and Advanced Test Tool (ATT) only work with <span class="filepath"> *.test.expressplay.com </span>, whereas production devices must use <span class="filepath"> *.service.expressplay.com </span>. </p> </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
-   <td> Nicht genügend Token verfügbar </td> 
+   <td> Insufficient tokens available </td> 
   </tr> 
   <tr> 
    <td> -2020 </td> 
-   <td> Typ der fehlenden Rechte </td> 
+   <td> Missing rights type </td> 
   </tr> 
   <tr> 
    <td> -2021 </td> 
-   <td> Ungültiger Berechtigungstyp </td> 
+   <td> Invalid rights type </td> 
   </tr> 
   <tr> 
    <td> -2022 </td> 
-   <td> Fehlende Endzeit des Mietzeitraums </td> 
+   <td> Missing rental period end time </td> 
   </tr> 
   <tr> 
    <td> -2023 </td> 
-   <td> Fehlende Wiedergabedauer </td> 
+   <td> Missing rental play duration </td> 
   </tr> 
   <tr> 
    <td> -2025 </td> 
-   <td> Ungültige Wiedergabedauer </td> 
+   <td> Invalid rental play duration </td> 
   </tr> 
   <tr> 
    <td> -2027 </td> 
-   <td> Der Schlüssel für die Inhaltsverschlüsselung muss 32-Hexadezimalziffern lang sein. </td> 
+   <td> Content encryption key must be 32-hexadecimal digits long </td> 
   </tr> 
   <tr> 
    <td> -2030 </td> 
-   <td> ExpressPlay Admin-Fehler: &lt;details&gt; </td> 
+   <td> ExpressPlay Admin error: &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2031 </td> 
-   <td> Dienst Account deaktiviert </td> 
+   <td> Service Account Disabled </td> 
   </tr> 
   <tr> 
    <td> -2033 </td> 
-   <td> Ungültiges Cookie </td> 
+   <td> Invalid cookie </td> 
   </tr> 
   <tr> 
    <td> -2034 </td> 
-   <td> Ungültige Ausgabesteuerung, Werte außerhalb des angegebenen Bereichs </td> 
+   <td> Invalid Output Control, values out of specified range </td> 
   </tr> 
   <tr> 
    <td> -2035 </td> 
-   <td> Kein entsprechender Wert angegeben </td> 
+   <td> No corresponding value specified </td> 
   </tr> 
   <tr> 
    <td> -2036 </td> 
-   <td> Erweiterungstyp sollte 4 Zeichen umfassen </td> 
+   <td> Extension type should be 4 characters </td> 
   </tr> 
   <tr> 
    <td> -2037 </td> 
@@ -222,7 +225,7 @@ Die Benutzeroberfläche des FairPlay-Lizenz-Tokens bietet Produktions- und Testd
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td> <span class="codeph"> Kind </span> muss 64 Zeichen lang nach ^ sein </td> 
+   <td> <span class="codeph"> kid </span> must be 64 characters long after the ^ </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
@@ -230,15 +233,15 @@ Die Benutzeroberfläche des FairPlay-Lizenz-Tokens bietet Produktions- und Testd
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td> Ungültiger verschlüsselter Schlüssel oder <span class="codeph"> ungültiger Schlüssel </span> </td> 
+   <td> Invalid encrypted key or <span class="codeph"> kek </span> </td> 
   </tr> 
   <tr> 
    <td> -5003 </td> 
-   <td> Ungültige allgemeine Flags </td> 
+   <td> Invalid general flags </td> 
   </tr> 
   <tr> 
    <td> -6001 </td> 
-   <td> Ungültige <span class="codeph"> FPExtension- </span> Parameter angegeben </td> 
+   <td> Invalid <span class="codeph"> FPExtension </span> parameters specified </td> 
   </tr> 
   <tr> 
    <td> -6002 </td> 
@@ -250,15 +253,15 @@ Die Benutzeroberfläche des FairPlay-Lizenz-Tokens bietet Produktions- und Testd
   </tr> 
   <tr> 
    <td> -6004 </td> 
-   <td> Fehler beim Generieren von CKC für FP </td> 
+   <td> Failed to generate CKC for FP </td> 
   </tr> 
   <tr> 
    <td> -6005 </td> 
-   <td> Ungültige Schlüsseldaten angegeben </td> 
+   <td> Invalid key data specified </td> 
   </tr> 
   <tr> 
    <td> -6006 </td> 
-   <td> Dienst nicht für FairPlay-Unterstützung autorisiert </td> 
+   <td> Service not authorized for FairPlay support </td> 
   </tr> 
   <tr> 
    <td> -6007 </td> 
@@ -270,7 +273,7 @@ Die Benutzeroberfläche des FairPlay-Lizenz-Tokens bietet Produktions- und Testd
   </tr> 
   <tr> 
    <td> -6009 </td> 
-   <td> FairPlay-Option deaktiviert </td> 
+   <td> FairPlay option disabled </td> 
   </tr> 
  </tbody> 
 </table>
