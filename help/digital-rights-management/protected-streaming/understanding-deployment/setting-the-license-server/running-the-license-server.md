@@ -3,9 +3,9 @@ seo-title: Ausführen des DRM-Servers für geschütztes Streaming
 title: Ausführen des DRM-Servers für geschütztes Streaming
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Ausführen des DRM-Servers für geschütztes Streaming {#running-the-drm-server-for-protected-streaming}
 
-Bevor Sie den Adobe Primetime DRM-Server für das geschützte Streaming Beginn ausführen können, sollten Sie die Gültigkeit der Einstellungen in den Konfigurationsdateien überprüfen.
+Bevor Sie den Adobe Primetime DRM-Server für geschütztes Streaming Beginn haben, sollten Sie die Gültigkeit der Einstellungen in den Konfigurationsdateien überprüfen.
 
 Sie können die Gültigkeit der Einstellungen mithilfe der Dienstprogramme überprüfen, die mit dem Lizenzserver bereitgestellt wurden. (Siehe *Configuration Validator* in diesem Handbuch.)
 
@@ -23,13 +23,13 @@ Nachdem der Server gestartet wurde, müssen Sie überprüfen, ob er korrekt konf
 
 ## Protokolldateien {#log-files}
 
-Die vom Adobe Primetime DRM Server für die geschützte Streaming-Anwendung generierten Protokolldateien befinden sich in dem von LicenseServer.LogRoot angegebenen Ordner.
+Die vom Adobe Primetime DRM-Server für die geschützte Streaming-Anwendung generierten Protokolldateien befinden sich in dem von LicenseServer.LogRoot angegebenen Ordner.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Wenn die aktuellen Protokolldateien während der Ausführung des Servers gelöscht oder verschoben werden, wird die Protokolldatei möglicherweise nicht erneut erstellt. Daher können einige Protokollinformationen gelöscht werden.
 
-### Protokollordnerstruktur {#section_F490A483D60145ADBC21038914C39203}
+### Log directory structure {#section_F490A483D60145ADBC21038914C39203}
 
 Protokollordner sind für eine einfache Verwendung strukturiert. Der Protokollordner hat die folgende Struktur:
 
@@ -54,19 +54,19 @@ Die globale Protokolldatei [!DNL flashaccess-global.log]befindet sich unter *Lic
 
 ### Partitionsprotokolldatei {#section_5660137CD6AA40519E72A4315534846B}
 
-Die Partitionsprotokolldatei [!DNL flashaccess-partition.log]befindet sich im [!DNL <LicenseServer.LogRoot>/flashaccesserver] Verzeichnis. Es enthält Protokollmeldungen, die während der Verarbeitung einer Lizenzanforderung generiert wurden.
+Die Partitionsprotokolldatei [!DNL flashaccess-partition.log]befindet sich im [!DNL <LicenseServer.LogRoot>/flashaccesserver] Verzeichnis. It includes log messages that have been generated during the processing of a license request.
 
-### Mandanten-Protokolldatei {#section_F0257CC0831647F18A746B4F02E3E910}
+### Tenant log file {#section_F0257CC0831647F18A746B4F02E3E910}
 
-Die Protokolldatei jedes Mandanten befindet sich [!DNL flashaccess-tenant.log]im Ordner [!DNL &lt;LicenseServer.LogRoot>/flashaccerver/tenants/<tenantname>]. Das Mandantenprotokoll enthält Informationen zum Audit, in denen jede für diesen Mandanten generierte Lizenz beschrieben wird.
+Each tenant&#39;s tenant log file, [!DNL flashaccess-tenant.log], is located in [!DNL &lt;LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>]. The tenant log includes audit information that describes each license that is generated for this tenant.
 
-## Konfigurationsdateien aktualisieren {#updating-configuration-files}
+## Updating configuration files {#updating-configuration-files}
 
-Sobald der Lizenzserver eine der Konfigurationsdateien des Lizenzservers liest (globale Konfiguration oder Mandantenkonfiguration), werden die Konfigurationsinformationen im Arbeitsspeicher zwischengespeichert. Daher müssen die Dateien nicht für jede Lizenzanforderung von der Festplatte gelesen werden. Der Server lässt jedoch auch zu, dass die meisten Werte in den Konfigurationsdateien geändert werden, ohne dass ein Neustart des Servers erforderlich ist, damit die Änderungen wirksam werden.
+As soon as the license server reads one of the license server configuration files (global or tenant configuration), the configuration information is cached in memory. Therefore the files do not have to be read from disk for every license request. However, the server also allows most values in the configuration files to be modified without requiring a server restart for the changes to take effect.
 
-Wenn Sie die Konfigurationsdatei ändern, speichert der Lizenzserver den Zeitpunkt, zu dem die Datei zuletzt geändert wurde. In einem konfigurierbaren Intervall prüft der Server, ob sich die Dateiänderungszeit geändert hat. Wenn er geändert wurde, lädt der Server automatisch den Inhalt der Konfigurationsdatei neu.
+Whenever you modify the configuration file, the license server stores the time that the file was last modified. At a configurable interval, the server checks if the file modification time has changed. If it has changed, the server automatically reloads the contents of the configuration file.
 
-Wenn Sie steuern möchten, wie oft der Server nach Updates sucht, müssen Sie das `refreshDelaySeconds` Attribut im Element der globalen Konfigurationsdatei `Caching` festlegen. Wenn `refreshDelaySeconds` die Konfiguration beispielsweise auf 3600 Sekunden festgelegt ist, aktualisiert der Server die Konfiguration innerhalb von höchstens einer Stunde nach der Änderungszeit der Konfigurationsdatei. Wenn der Wert auf 0 gesetzt `refreshDelaySeconds` ist, sucht der Server bei jeder Anforderung nach Konfigurationsaktualisierungen. Es wird nicht empfohlen, dass Sie in einer beliebigen Produktions-Umgebung `refreshDelaySeconds` auf einen niedrigen Wert setzen, da dies die Leistung beeinträchtigen kann.
+If you want to control how often the server checks for updates, you need to to set the `refreshDelaySeconds` attribute in the `Caching` element of the global configuration file. For example, if `refreshDelaySeconds` is set to 3600 seconds, the server will update the configuration within at most one hour from the modification time of the configuration file. If `refreshDelaySeconds` is set to 0, the server checks for configuration updates at every request. Es wird nicht empfohlen, dass Sie in einer beliebigen Produktions-Umgebung `refreshDelaySeconds` auf einen niedrigen Wert setzen, da dies die Leistung beeinträchtigen kann.
 
 Das `Caching` Element steuert auch, wie viele Mandantenkonfigurationen gleichzeitig zwischengespeichert werden. Sie können diesen Wert auf eine Zahl setzen, die kleiner als die Gesamtanzahl der Mieter ist, um die Menge des Speichers zu begrenzen, der zum Zwischenspeichern der Konfigurationsinformationen verwendet wird. Wenn eine Anforderung für einen Mandanten empfangen wird, der sich nicht im Cache befindet, wird die Konfiguration geladen, bevor die Anforderung verarbeitet werden kann. Wenn der Cache voll ist, wird der zuletzt verwendete Mandant aus dem Cache entfernt.
 
@@ -84,4 +84,4 @@ Sie können das HSM-Kennwort jederzeit ändern [!DNL flashaccess-global.xml] . D
 
 ### Aktualisieren der Mandant-Konfigurationsdatei {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-Sie können jederzeit alle in der [!DNL flashaccess-tenant.xml] Datei angegebenen Werte ändern. Die Änderungen werden beim nächsten Laden der Konfigurationsdatei durch den Server wirksam. Der Server sucht außerdem nach allen Änderungen in allen Berechtigungsdateien ( [!DNL .pfx]) und Packager-zulassungsliste-Zertifikatdateien, auf die in der Mietkonfigurationsdatei verwiesen wird.
+Sie können jederzeit alle in der [!DNL flashaccess-tenant.xml] Datei angegebenen Werte ändern. Die Änderungen werden beim nächsten Laden der Konfigurationsdatei durch den Server wirksam. Der Server sucht außerdem nach allen Änderungen in allen Berechtigungsdateien ( [!DNL .pfx]) und Packager-Zulassungslisten-Zertifikatdateien, auf die in der Mietkonfigurationsdatei verwiesen wird.
