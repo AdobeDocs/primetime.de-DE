@@ -1,11 +1,14 @@
 ---
-description: Diese Tabelle enthält detaillierte Informationen zu FEHLERTypbenachrichtigungen.
+description: This table provides detailed information about ERROR type notifications.
 seo-description: Diese Tabelle enthält detaillierte Informationen zu FEHLERTypbenachrichtigungen.
-seo-title: FEHLER-Benachrichtigungscodes
+seo-title: ERROR notification codes
 title: FEHLER-Benachrichtigungscodes
 uuid: cea75277-7747-4f9b-ad59-98f9f1a5ac2f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 5%
 
 ---
 
@@ -44,7 +47,7 @@ Die meisten Fehler enthalten relevante Metadaten, z. B. die URL der Ressource, d
    <td colname="5"></td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Wiedergabe</b> </td> 
+   <td colname="1"><b>Playback</b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -60,16 +63,16 @@ Die meisten Fehler enthalten relevante Metadaten, z. B. die URL der Ressource, d
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 101001 </span> </td> 
    <td colname="2"><span class="codeph"> NATIVE_PLAYBACK_ERROR </span> </td> 
-   <td colname="3"> Keines </td> 
-   <td colname="4"><span class="codeph"> BESCHREIBUNG </span><span class="codeph"> INTERNAL_ERROR- </span><span class="codeph"> URL </span> </td> 
+   <td colname="3"> None </td> 
+   <td colname="4"><span class="codeph"> DESCRIPTION </span><span class="codeph"> INTERNAL_ERROR </span><span class="codeph"> URL </span> </td> 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 101008 </span> </td> 
    <td colname="2"><span class="codeph"> SEEK_ERROR </span> </td> 
-   <td colname="3"> Keines </td> 
-   <td colname="4"><span class="codeph"> BESCHREIBUNG</span> </td> 
-   <td colname="5"> <p>Beim Durchführen eines Suchvorgangs ist ein Fehler aufgetreten. </p> </td> 
+   <td colname="3"> None </td> 
+   <td colname="4"><span class="codeph"> DESCRIPTION</span> </td> 
+   <td colname="5"> <p>An error has occurred while performing a seek operation. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 101009 </span> </td> 
@@ -154,14 +157,14 @@ Die meisten Fehler enthalten relevante Metadaten, z. B. die URL der Ressource, d
    <td colname="2"><span class="codeph"> SET_CC_VISIBILITY_ERROR </span> </td> 
    <td colname="3"> Keines </td> 
    <td colname="4"> <p>Keines </p> </td> 
-   <td colname="5"> <p>Beim Versuch, die Sichtbarkeit der CC-Tracks zu ändern, ist ein Fehler aufgetreten. </p> </td> 
+   <td colname="5"> <p>An error has occurred while attempting to change the visibility of the CC tracks. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 107003 </span> </td> 
-   <td colname="2"><span class="codeph"> SET_CC_STYLING_ERROR </span> </td> 
+   <td colname="2"><span class="codeph"> SET_CC_STYLING_ ERROR </span> </td> 
    <td colname="3"> <span class="codeph"> NATIVE_ERROR </span> </td> 
-   <td colname="4"> <p>Keines </p> </td> 
-   <td colname="5"> <p>Beim Versuch, die Formatierungsoptionen für die CC-Tracks zu ändern, ist ein Fehler aufgetreten. </p> </td> 
+   <td colname="4"> <p>None </p> </td> 
+   <td colname="5"> <p>An error has occurred while attempting to change the styling options for the CC tracks. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>iOS eindeutig</b> </td> 
@@ -194,21 +197,21 @@ Die meisten Fehler enthalten relevante Metadaten, z. B. die URL der Ressource, d
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170003 </span> </td> 
    <td colname="2"><span class="codeph"> WEBVTT_PARSER_ERROR </span> </td> 
-   <td colname="3"> Keines </td> 
-   <td colname="4"> Keines </td> 
-   <td colname="5"> <p>Webvtt konnte nicht analysiert werden. </p> </td> 
+   <td colname="3"> None </td> 
+   <td colname="4"> None </td> 
+   <td colname="5"> <p>Could not parse Webvtt. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170004 </span> </td> 
    <td colname="2"><span class="codeph"> HLS_SEGMENT_ERROR </span> </td> 
-   <td colname="3"> Keines </td> 
-   <td colname="4"><span class="codeph"> BESCHREIBUNG </span><span class="codeph"> URL </span><span class="codeph"> INTERNAL_ERROR </span> </td> 
-   <td colname="5"> <p>Das Segment überschreitet die angegebene Bandbreite für die Variante. </p> </td> 
+   <td colname="3"> None </td> 
+   <td colname="4"><span class="codeph"> DESCRIPTION </span><span class="codeph"> URL </span><span class="codeph"> INTERNAL_ERROR </span> </td> 
+   <td colname="5"> <p>Segment exceeds specified bandwidth for variant. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170005 </span> </td> 
    <td colname="2"><span class="codeph"> MBR_MEDIASEQUENCE_OFFSYNC </span> </td> 
-   <td colname="3"> Keines </td> 
+   <td colname="3"> None </td> 
    <td colname="4"> Keines </td> 
    <td colname="5"> <p>Die Mediensequenznummer ist nicht auf allen HLS-Streams dieses MBR synchron. </p> </td> 
   </tr> 
@@ -252,9 +255,11 @@ Die meisten Fehler enthalten relevante Metadaten, z. B. die URL der Ressource, d
    <td colname="2"><span class="codeph"> AD_ZIELGRUPPE_DURATION_INCOMPATIBLE </span> </td> 
    <td colname="3"> Keines </td> 
    <td colname="4"> <span class="codeph"> AD_ASSET</span> </td> 
-   <td colname="5"> <p>Die ZIELGRUPPE der Anzeige ist höher als die ZIELGRUPPE DAUER des Inhalts. </p> </td> 
+   <td colname="5"> <p>The TARGET DURATION of the ad is higher than the TARGET DURATION of the content. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
->[!NOTE] adID und source (URL) können über die `PTAdAsset` in den Benachrichtigungsmetadaten mit dem `AD_ASSET` Schlüssel abgerufen werden.
+>[!NOTE]
+>
+>adID and source (URL) can be retrieved through the `PTAdAsset` in the notification metadata with the `AD_ASSET` key.
