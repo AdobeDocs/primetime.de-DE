@@ -1,30 +1,30 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: Blockierungsliste von DRM-Clients, die keinen Zugriff auf geschützten Inhalt haben
-title: Blockierungsliste von DRM-Clients, die keinen Zugriff auf geschützten Inhalt haben
+seo-title: Blockierungsliste von DRM-Clients, die auf geschützten Inhalt zugreifen dürfen
+title: Blockierungsliste von DRM-Clients, die auf geschützten Inhalt zugreifen dürfen
 uuid: 38bc024e-0c5b-4c1c-8d4b-94b9e0fec67e
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
 
 
-# Blockierungsliste von DRM-Clients, die keinen Zugriff auf geschützten Inhalt haben {#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
+# Blockierungsliste von DRM-Clients, die auf geschützten Inhalt zugreifen dürfen {#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
 
-Diese blockierungsliste gibt die Primetime-DRM-Clients an, die nicht auf geschützten Inhalt zugreifen können. Sie blockierungsliste Clients nach Clientversion und -plattform.
+This block list specifies the Primetime DRM clients that cannot access protected content. You block list clients by client version and platform.
 
-Verwendungsbeispiel: Im Ereignis einer Sicherheitslücke kann eine neuere Version des Primetime DRM-Clients als Mindestversion für die Lizenzerfassung und Inhaltswiedergabe angegeben werden. Der Lizenzserver prüft, ob der Primetime DRM-Client, der die Lizenzanforderung durchführt, die Versionsanforderungen erfüllt, bevor eine Lizenz erteilt wird. Der Primetime-DRM-Client überprüft auch die Version in der Lizenz, bevor Inhalte wiedergegeben werden. Diese Clientprüfung ist erforderlich, wenn eine Lizenz auf einen anderen Computer übertragen werden kann.
+Example use case: In the event of a security breach, a newer version of the Primetime DRM client can be specified as the minimum version required for license acquisition and content playback. The license server checks that the Primetime DRM client making the license request meets the version requirements before issuing a license. The Primetime DRM client also checks the version in the license before playing content. This client check is required in the case of domains where a license may be transferred to another machine.
 
-Eine Primetime-DRM-Clientversion kann durch die in der folgenden Tabelle angegebenen Attribute identifiziert werden:
+A Primetime DRM client version may be identified by the attributes specified in the following table:
 
-| **Attribut** | **Unterstützte Werte** | **Übereinstimmungskriterien** | **Beschreibung** |
+| **Attribute** | **Supported Values** | **Übereinstimmungskriterien** | **Description** |
 |---|---|---|---|
 | Umgebung | `“PC”, “PortingKit”` | Exakte Übereinstimmung | Gibt an, ob der Client auf einem Desktop oder einem anderen Gerät ausgeführt wird. |
-| OS | `“Win”, “Mac”, “Linux”, “Android”, “iOS”, "ChromeOS"` | Exakte Übereinstimmung | Platform |
+| OS | `“Win”, “Mac”, “Linux”, “Android”, “iOS”, "ChromeOS"` | Exakte Übereinstimmung | Plattform |
 | Architektur | `“32”, “64”` | Exakte Übereinstimmung | 32 Bit oder 64 Bit |
 | Bildschirmtyp | `“PC”, “Mobile”, “TV”` | Exakte Übereinstimmung |  |
 | Laufzeitversion | Eine gültige Versionsnummer. Zum Beispiel `“2.0.0”, "3.0", "4.0", "11.0"`usw. | Sucht, wenn die Clientversion kleiner oder gleich der angegebenen Version ist. | Die Versionsnummer wird als Kombination aus Zahlen und Punkten (&quot;&quot;) angegeben. beliebiger Länge. |
@@ -32,7 +32,7 @@ Eine Primetime-DRM-Clientversion kann durch die in der folgenden Tabelle angegeb
 | OEM-Anbieter | OEM-Händlerzeichenfolge, die sich im Laufzeitzertifikat befinden kann, das einem Kunden ausgestellt wurde, der Primetime DRM auf ein Gerät portiert hat. | Exakte Übereinstimmung | Identifikationszeichenfolge des OEM-Herstellers für das Gerät, das das Portierungskit verwendet. |
 | Modell | Modellzeichenfolge, die sich im Laufzeitzertifikat befinden kann, das einem Kunden ausgestellt wurde, der Primetime DRM auf ein Gerät portiert hat. Beispiel: `"iOS_Mobile", "Android_Mobile", "Chrome", "ChromeOS_ARM", "WindowsOnARM", "AVE"` | Exakte Übereinstimmung | Gerätemodellidentifizierungszeichenfolge für das Gerät mit dem Portierungs-Kit. |
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->Beim Festlegen eines Eintrags in der blockierungsliste können Sie Werte für eines oder mehrere der in der vorherigen Tabelle genannten Attribute festlegen. Jedes Attribut, das nicht angegeben ist, wird als Platzhalter behandelt. Wenn der Primetime-DRM-Client mit allen in einem blockierungsliste-Eintrag angegebenen Werten übereinstimmt, kann der Zugriff auf geschützte Inhalte durch diesen Client nicht möglich sein.
+>When specifying an entry in the block list, you can set values for one or more of the attributes mentioned in the previous table. Any attribute that is not specified is treated as a wildcard. If the Primetime DRM client matches all the values specified in a block list entry, protected content may not be accessed by that client.
 
