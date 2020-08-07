@@ -1,33 +1,36 @@
 ---
-seo-title: 'Befehlszeilenwerkzeuge zum Verpacken von Inhalten und Erstellen von Listen für Sperrungen '
-title: 'Befehlszeilenwerkzeuge zum Verpacken von Inhalten und Erstellen von Listen für Sperrungen '
+seo-title: 'Command line tools for packaging content and creating revocations lists '
+title: 'Command line tools for packaging content and creating revocations lists '
 uuid: 2c740521-2004-4320-88e1-118b84e80e31
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '458'
+ht-degree: 0%
 
 ---
 
 
-# Befehlszeilenwerkzeuge zum Verpacken von Inhalten und Erstellen von Listen für Sperrungen {#command-line-tools-for-packaging-content-revocation-lists}
+# Command line tools for packaging content and creating revocations lists {#command-line-tools-for-packaging-content-revocation-lists}
 
 Die Referenzimplementierung umfasst die folgenden Befehlszeilenwerkzeuge:
 
-* Policy Manager: Ein Tool zum Erstellen und Verwalten von Richtlinien
-* Policy Update Liste Manager: Ein Tool zum Erstellen und Anzeigen von Listen zur Richtlinienaktualisierung
-* Revocation Liste Manager: Ein Tool zum Erstellen und Anzeigen von Listen für die Sperrung
-* Media Packager: Ein Tool zum Erstellen verschlüsselter FLV- und F4V-Dateien
-* AIR-Herausgeber-ID
+* Policy Manager: A tool for creating and managing policies
+* Policy Update List Manager: A tool for creating and viewing policy update lists
+* Revocation List Manager: A tool for creating and viewing revocation lists
+* Media Packager: A tool for creating encrypted FLV and F4V files
+* AIR Publisher ID
 * UtilityLicense Generator
 * Lizenzeinbettung
 
 ## Anforderungen {#requirements}
 
-Die in den Referenzimplementierungen verfügbaren Befehlszeilenwerkzeuge müssen wie folgt verwendet werden:
+The requirements for using the command line tools available in the reference implementations are as follows:
 
 * Alle Befehlszeilenwerkzeuge erfordern Java 1.5 oder höher.
-* Packager- und License Server-Anmeldeinformationen (Zertifikat und Kennwort), die von Adobe ausgestellt werden. Sie benötigen Anmeldeinformationen, um Videodateien zu verschlüsseln und zu signieren, Listen zur Richtlinienaktualisierung und -sperrung zu unterzeichnen und Lizenzen vorab zu generieren.
+* Packager- und License Server-Anmeldeinformationen (Zertifikat und Kennwort), die von der Adobe ausgegeben werden. Sie benötigen Anmeldeinformationen, um Videodateien zu verschlüsseln und zu signieren, Listen zur Richtlinienaktualisierung und -sperrung zu unterzeichnen und Lizenzen vorab zu generieren.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Aufgrund eines Java-Fehlers dürfen Argumente, die in der Befehlszeile verwendet werden (z. B. Dateinamen, Richtliniennamen oder Beschreibungen), nur Zeichen aus dem Standardzeichensatz des Betriebssystems verwenden.
 
@@ -44,7 +47,7 @@ Die Konfigurationsdatei verwendet das Dateiformat der Java-Eigenschaft. Wenn Wer
 
 Legen Sie Werte für Eigenschaften in der Konfigurationsdatei fest, bevor Sie die Werkzeuge ausführen. Bei einigen Befehlszeilenwerkzeugen können Sie die Werte für einige Optionen entweder über die Befehlszeile oder die Konfigurationsdatei festlegen. In diesen Fällen haben Werte, die über die Befehlszeile festgelegt werden, Vorrang vor allen Werten in der Konfigurationsdatei.
 
-## Befehlszeilenwerkzeuge installieren {#installing-the-command-line-tools}
+## Befehlszeilenwerkzeuge installieren  {#installing-the-command-line-tools}
 
 Sie können die erforderlichen Dateien aus dem [!DNL \Reference Implementation\Command Line Tools] Ordner auf der DVD kopieren, der die standardmäßige [!DNL flashaccesstools.properties] Konfigurationsdatei und einen [!DNL libs] Ordner enthält, der die JAR-Dateien für die Werkzeuge enthält.
 
