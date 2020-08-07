@@ -1,16 +1,19 @@
 ---
-seo-title: Server-Eigenschaftendateien
-title: Server-Eigenschaftendateien
+seo-title: Server properties files
+title: Server properties files
 uuid: 3d3a0ee3-009f-4d62-9587-7e487ecdcafd
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
-# Server-Eigenschaftendateien {#server-properties-files}
+# Server properties files {#server-properties-files}
 
-Der Server benötigt zwei Konfigurationsdateien, eine für den Lizenzserver und eine für den Packager. Beide Dateien müssen im Klassenpfad abgelegt werden. Die Eigenschaftendateien enthalten den Speicherort der von Adobe ausgestellten Anmeldeinformationen. Diese Anmeldeinformationen können als .pfx-Datei und -Kennwort oder durch Angabe eines Alias und eines Kennworts für eine auf einem HSM gespeicherte Berechtigung angegeben werden.
+Der Server benötigt zwei Konfigurationsdateien, eine für den Lizenzserver und eine für den Packager. Beide Dateien müssen im Klassenpfad abgelegt werden. The properties files contain the location of the credentials issued by Adobe. Diese Anmeldeinformationen können als .pfx-Datei und -Kennwort oder durch Angabe eines Alias und eines Kennworts für eine auf einem HSM gespeicherte Berechtigung angegeben werden.
 
 In den Eigenschaftsdateien finden Sie Informationen zu den jeweiligen Werten und zur Verwendung der einzelnen Parameter. Beispieleigenschaftsdateien finden Sie im Verzeichnis &quot;resources&quot;der Referenzimplementierung (Referenz Implementation\Server\resources).
 
@@ -32,7 +35,7 @@ So bereiten Sie das Kennwort Ihrer Berechtigung ordnungsgemäß vor:
    </i class="+ topic>
    ```
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
 >Im vorherigen Beispiel wird ein Semikolon (;) als Trennzeichen verwendet. Verwenden Sie für andere Plattformen als Microsoft Windows einen Doppelpunkt (:) als Trennzeichen.
 
