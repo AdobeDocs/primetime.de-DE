@@ -1,59 +1,62 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: Konfigurieren der Lizenzserverdatenbank
-title: Konfigurieren der Lizenzserverdatenbank
+seo-title: Configure the license server database
+title: Configure the license server database
 uuid: 6d34e849-1616-46bd-ad18-4f98e6c45af7
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurieren der Lizenzserverdatenbank{#configure-the-license-server-database}
 
-So konfigurieren Sie die Beispieldatenbank, indem Sie das Schema einrichten und die Datenbank mit Beispieldaten füllen:
+To configure the sample database by setting up the database schema and populating the database with sample data:
 
-1. Öffnen Sie die MySQL-Befehlszeile.
+1. Bring up the MySQL command line.
 
-   **Windows -** Klicken Sie auf **[!UICONTROL Window's Start Menu]** > **[!UICONTROL MySQL]** > **[!UICONTROL MySQL Server 5.1]** > **[!UICONTROL MySQL Command Line Client]**
+   **On Windows -** Click  **[!UICONTROL Window's Start Menu]** > **[!UICONTROL MySQL]** > **[!UICONTROL MySQL Server 5.1]** > **[!UICONTROL MySQL Command Line Client]**
 
-   **Unter Linux, etc.** - Typ `MySQL`.
+   **On Linux, etc.** - Type `MySQL`.
 
-1. Führen Sie das folgende SQL-Skript aus:
+1. Execute the following SQL script:
 
-   mysql> source &quot; `"[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\createsampledb.sql" dbscript\createsampledb.sql`&quot;
+   mysql> source “ `"[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\createsampledb.sql" dbscript\createsampledb.sql`”
 
-   Dieses Skript fügt das Benutzerkonto hinzu `dbuser`, stellt eine Verbindung über eine Webanwendung her und erstellt ein Datenbankkonto.
+   This script adds the user account `dbuser`, establishes a connection through a web application, and creates a database schema.
 
    >[!NOTE]
    >
-   >Stellen Sie sicher, dass am Ende des Skripts kein Semikolon ( `;`) steht.
+   >Ensure that there is no semicolon ( `;`) at the end of the script.
 
-1. Bearbeiten Sie das `PopulateSampleDB.sql` Skript, das Beispieldaten in den Tabellen ausfüllt, um Daten für Ihre Tests einzuschließen.
+1. Edit the `PopulateSampleDB.sql` script that populates sample data in the tables to include data for your testing.
 
-   Dieses Skript befindet sich im `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\ dbscript\` Ordner.
-1. Führen Sie das [!DNL PopulateSampleDB] Skript aus, um die Daten wie in Schritt 2 auszufüllen.
+   This script is located in the `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\ dbscript\` folder.
+1. Execute the [!DNL PopulateSampleDB] script to populate the data as you did in step 2.
 
-   >[!NOTE] {class=&quot;- topic/note &quot;
+   >[!NOTE]
    >
-   >Beim ersten Ausführen des [!DNL CreateSampleDB.sql] Skripts tritt der folgende Fehler auf:
+   >The first time that you run the [!DNL CreateSampleDB.sql] script the following error occurs:
 
-   Sie können diesen Fehler ignorieren. Es tritt nur beim ersten Ausführen dieses Skripts ein.
+   You can safely ignore this error. It only occurs the first time you run this script.
 
-Sie müssen die Datenbankverbindung-Zusammenführung (DBCP) konfigurieren, die den Jakarta-Commons-Datenbankverbindungspool verwendet. Eine JNDI-Datenquelle-TestDB ist so konfiguriert, dass sie diese Verbindungspools des Anwendungsservers nutzen kann. Um die Datenbankverbindung so zu ändern, dass sie auf einen MySQL-Server verweist, der sich nicht auf localhost befindet, ändern Sie eine der folgenden Dateien:
+You need to configure the Database Connection Pooling (DBCP), which uses the Jakarta-Commons Database Connection Pool. A JNDI Datasource TestDB is configured to take advantage of this application server connection pooling. To change the database connection to point to a MySQL server that is not on localhost, modify one of the following files:
 
-* Die [!DNL META-INF\context.xml] Datei, die den Speicherort, den Benutzernamen und das Kennwort der Datenbank des Lizenzservers angibt, die sich in der [!DNL flashaccess.war] Datei befindet.
+* The [!DNL META-INF\context.xml] file, which specifies the location, username, and password of the license server&#39;s database that is in the [!DNL flashaccess.war] file.
 
-* Die `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl\WebContent/META-INF\context.xml` Datei.
+* The `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl\WebContent/META-INF\context.xml` file.
 
-und erstellen Sie die WAR-Datei mithilfe der aktualisierten Dateien neu.
+and recreate the WAR file by using the updated files.
 
-Um diese Parameter zu ändern, bearbeiten Sie die [!DNL context.xml] Datei im Ordner und verwenden Sie das [!DNL WebContent] Ant-Skript, um die WAR-Datei neu zu erstellen. Um die Datenbank anzupassen, ändern Sie die JNDI-Datenquelleneinstellungen in dieser Datei.
+To change any of these parameters, edit the [!DNL context.xml] file in the [!DNL WebContent] directory and use the Ant script to recreate the WAR file. To tune the database, change the JNDI datasource settings in this file.
 
-Wenn Sie das Projekt &quot;Referenzimplementierung&quot;in Eclipse debuggen, fügen Sie es Ihrer run/debug-Konfiguration `$CATALINA_HOME\lib\tomcat-dbcp.jar` hinzu.
+If you debug the Reference Implementation project in Eclipse, add `$CATALINA_HOME\lib\tomcat-dbcp.jar` to your run/debug configuration.
 
 >[!NOTE]
 >
->Wenn Sie die [!DNL flashaccess.war] Datei auf einem eigenständigen Tomcat 6.0-Server ausführen, ist dieser Schritt nicht erforderlich.
+>If you run the [!DNL flashaccess.war] file on a standalone Tomcat 6.0 server, this step is not required.
 
