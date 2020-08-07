@@ -3,22 +3,25 @@ seo-title: Anforderungen für die Synchronisierung
 title: Anforderungen für die Synchronisierung
 uuid: 976a0ae1-bece-437e-b95b-6cd222525d13
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
 
 # Anforderungen für die Synchronisierung{#requirements-for-synchronization}
 
-Gibt die Häufigkeit an, mit der der Client seinen Status mit dem Server synchronisiert. Wenn dem Client eine Out-of-Band-Lizenz erteilt wurde (ohne dass ein Lizenzserver kontaktiert wird), können Nutzungsregeln festlegen, dass der Client Synchronisierungsmeldungen an den Server senden muss, um die sichere Zeit des Clients zu synchronisieren und den Clientstatus mit dem Server zu melden.
+Gibt die Häufigkeit an, mit der der Client seinen Status mit dem Server synchronisiert. If the client has been issued an out-of-band license (without a license server being contacted), usage rules may specify that the client must send synchronization messages to the server in order to synchronize the client&#39;s secure time and report client state to the server.
 
 Das Synchronisierungsverhalten wird mithilfe der folgenden Parameter definiert:
 
 * Beginn-Intervall — Gibt an, wie lange nach der letzten erfolgreichen Synchronisierung gewartet wird, bis eine weitere Synchronisierungsanforderung Beginn wird.
 * Hartes Stoppintervall — (Optional). Die Wiedergabe ist nicht zulässig, wenn innerhalb der angegebenen Zeitspanne keine erfolgreiche Synchronisierung stattgefunden hat.
-* Synchronisierungswahrscheinlichkeit erzwingen — (Optional). Möglichkeit, mit der der Client vor dem nächsten Beginn eine Synchronisierungsmeldung senden soll.
+* Synchronisierungswahrscheinlichkeit erzwingen — (Optional). Probability with which the client should send a synchronize message before the next start interval.
 
->[!NOTE] {class=&quot;- topic/note &quot;
+>[!NOTE]
 >
->Diese Nutzungsregel wird von Adobe Access-Clients ab Version 3.0 unterstützt. Das Verhalten älterer Clients hängt von der vom Lizenzserver unterstützten Clientversion ab. Siehe [Minimum Client Version](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
+>This usage rule is supported by Adobe Access clients version 3.0 and higher. The behavior on older clients depends on the minimum client version supported by the license server. See, [Minimum Client Version](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
 
