@@ -1,11 +1,14 @@
 ---
 description: Bei Untertiteln wird der Audioteil eines Videos als Text auf dem Bildschirm angezeigt, wenn der Ton nicht hörbar ist oder der Viewer schwer zu hören ist.
-seo-description: Bei Untertiteln wird der Audioteil eines Videos als Text auf dem Bildschirm angezeigt, wenn der Ton nicht hörbar ist oder der Viewer schwer zu hören ist.
+seo-description: Closed captioning displays the audio portion of a video as text on the screen when the sound is inaudible or the viewer is hard of hearing.
 seo-title: Wählen Sie eine aktuelle Beschriftungsspur aus den verfügbaren Spuren
 title: Wählen Sie eine aktuelle Beschriftungsspur aus den verfügbaren Spuren
 uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 53924aa8ba90555d58d15ee10fb14221c7dffaff
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 1%
 
 ---
 
@@ -41,13 +44,12 @@ Sie können eine Spur aus einer Liste von derzeit verfügbaren Untertitelspuren 
    for (int i = 0; i < ccTracks.size(); i++) { 
        ClosedCaptionsTrack track = ccTracks.get(i); 
        if (track.getName().equals(INITIAL_CC_TRACK)) { 
-   
-<b>mediaPlayer.getCurrentItem().selectClosedCaptionsTrack(track);</b>
-selectedClosedCaptionsIndex = i;
-}}
+           mediaPlayer.getCurrentItem().selectClosedCaptionsTrack(track); 
+           selectedClosedCaptionsIndex = i; 
+       } 
+   }
+   ```
 
-```
-1. Implement a listener for the event that indicates that more tracks are available. When TVSDK dispatches the event, retrieve the current list of available tracks.
+1. Implementieren Sie einen Listener für das Ereignis, der angibt, dass mehr Tracks verfügbar sind. Wenn TVSDK das Ereignis auslöst, rufen Sie die aktuelle Liste der verfügbaren Tracks ab.
 
-Retrieve the list each time that the event occurs to ensure that you always have the most current list.
-
+   Rufen Sie die Liste jedes Mal ab, wenn das Ereignis eintritt, um sicherzustellen, dass Sie immer über die aktuellste Liste verfügen.
