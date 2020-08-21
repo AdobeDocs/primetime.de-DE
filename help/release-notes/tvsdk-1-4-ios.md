@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
 workflow-type: tm+mt
 source-wordcount: '6578'
 ht-degree: 0%
@@ -74,17 +74,17 @@ VHL 2.0 in iOS TVSDK integrieren und zertifizieren: Reduzieren Sie die Barriere 
 
 **Version 1.4.31**
 
-* **Abrechnungsmetriken** Um Kunden, die nur für ihre Verwendung bezahlen möchten, anstelle eines festen Satzes unabhängig von der tatsächlichen Verwendung aufzunehmen, erfasst Adobe Nutzungsmetriken und ermittelt anhand dieser Metriken, wie viel die Kunden bezahlen müssen.
+* **Abrechnungsmetriken** Zur Aufnahme von Kunden, die nur für die von ihnen verwendeten Artikel bezahlen möchten, anstatt für einen festen Satz, unabhängig von der tatsächlichen Nutzung, erfasst Adobe Nutzungsmetriken und ermittelt anhand dieser Metriken, wie viel sie den Kunden in Rechnung stellen.
 
-Jedes Mal, wenn TVSDK ein Stream-Beginn-Ereignis generiert, sendet der Player regelmäßig HTTP-Nachrichten an das Rechnungssystem von Adobe. Der Zeitraum, der als abrechnungsfähige Dauer bezeichnet wird, kann für standardmäßige VOD-, Pro-VOD- (Mid-Roll-Anzeigen aktiviert) und Live-Inhalte unterschiedlich sein. Die Standarddauer für jeden Inhaltstyp beträgt 30 Minuten, aber Ihr Vertrag mit Adobe legt die tatsächlichen Werte fest.
+Jedes Mal, wenn TVSDK ein Stream-Beginn-Ereignis generiert, sendet der Player HTTP-Nachrichten regelmäßig an das Rechnungssystem der Adobe. Der Zeitraum, der als abrechnungsfähige Dauer bezeichnet wird, kann für standardmäßige VOD-, Pro-VOD- (Mid-Roll-Anzeigen aktiviert) und Live-Inhalte unterschiedlich sein. Die Standarddauer für jeden Inhaltstyp beträgt 30 Minuten, Ihr Vertrag mit der Adobe legt die tatsächlichen Werte fest.
 
-* **Multi-CDN-Unterstützung für CRS** AdsTVSDK unterstützt jetzt Multi-CDN für CRS-Anzeigen. Durch Angabe von FTP-Details für CRS-Anzeigen können Sie andere CDN-Orte als das standardmäßige, von Adobe gehörende CDN wie Akamai angeben.
+* **Multi-CDN-Unterstützung für CRS** AdsTVSDK unterstützt jetzt Multi-CDN für CRS-Anzeigen. Durch Angabe von FTP-Details für CRS-Anzeigen können Sie andere CDN-Orte als das standardmäßige CDN angeben, das sich im Besitz der Adobe befindet, z. B. Akamai.
 
 **Version 1.4.29**
 
 In der PTSDKConfig-Klasse wurde die forceHTTPS-API hinzugefügt.
 
-Die PTSDKConfig-Klasse stellt Methoden zum Erzwingen von SSL für Anforderungen bereit, die an Adobe Primetime-Anzeigen, DRM- und Video-Analytics-Server gesendet werden. Weitere Informationen finden Sie unter `forceHTTPS` und `isForcingHTTPS` -Methoden für diese Klasse. Wenn ein Manifest über HTTPS geladen wird, behält TVSDK die Inhaltsverwendung von HTTPS bei und berücksichtigt diese Verwendung beim Laden von relativen URLs aus diesem Manifest.
+Die PTSDKConfig-Klasse stellt Methoden zum Erzwingen von SSL für Anfragen bereit, die an Adobe Primetime-Ad-Decision-, DRM- und Video-Analytics-Server gesendet werden. Weitere Informationen finden Sie unter `forceHTTPS` und `isForcingHTTPS` -Methoden für diese Klasse. Wenn ein Manifest über HTTPS geladen wird, behält TVSDK die Inhaltsverwendung von HTTPS bei und berücksichtigt diese Verwendung, wenn relative URLs aus diesem Manifest geladen werden.
 
 **Hinweis**: Anforderungen an Drittanbieter-Domänen wie Anzeigenverfolgungspixel, Inhalts- und Anzeigen-URLs und ähnliche Anforderungen werden nicht geändert. Es liegt in der Verantwortung der Inhaltsanbieter und Anzeigenserver, URLs bereitzustellen, die über HTTPS unterstützt werden.
 
@@ -147,7 +147,7 @@ Als Teil des 1.4 TVSDK Updates unterstützen wir jetzt auch das Eingehen in und 
 
 * **Unterstützung der Personalisierung vor Ort**
 
-Unterstützung für lokale Installationen von Adobe Individualization Server, um die Individualisierungsanforderung des Kunden an einen anderen Endpunkt anzupassen.
+Unterstützung für lokale Installationen des Adobe Individualization Server, um die Individualisierungsanforderung des Kunden an einen anderen Endpunkt anzupassen.
 
 * **Auflösungsbasierter Ausgabeschutz**
 
@@ -157,7 +157,7 @@ Die DRM-Richtlinien können jetzt die höchste zulässige Auflösung festlegen, 
 
 * **Video Heartbeats Library (VHL) aktualisieren auf Version 1.4.1.1**
 
-   * Es wurde die Möglichkeit hinzugefügt, verschiedene Anwendungsfälle für Analysen - von anderen SDKs oder Playern - mit Adobe Analytics Video Essentials zu bündeln.
+   * Es wurde die Möglichkeit hinzugefügt, verschiedene Anwendungsfälle für Analysen - von anderen SDKs oder Playern - mit den Adobe Analytics Video Essentials zu bündeln.
    * Die Anzeigenverfolgung wurde optimiert, indem die Methoden trackAdBreakStart und trackAdBreakComplete entfernt wurden. Die Werbeunterbrechung wird aus den trackAdStart- und trackAdComplete-Methodenaufrufen abgeleitet.
    * Die Eigenschaft playhead ist bei der Verfolgung von Anzeigen nicht mehr erforderlich.
    * Unterstützung für die Marketing Cloud-Besucher-ID hinzugefügt.
@@ -198,7 +198,7 @@ Die DRM-Richtlinien können jetzt die höchste zulässige Auflösung festlegen, 
 
 * TVSDK 1.4.28 wurde für iOS 10 Beta 7 zertifiziert.
 * DRM-Unterstützung, um HTTPS durch Hinzufügen von forceHTTPS- und isForcingHTTPS-APIs zu erzwingen.
-* Die VHL-Bibliotheken wurden auf Version 1.5.8, die Adobe Mobile-Bibliotheken auf Version 4.8.4 und die Protokollprogrammbibliothek auf die Zielgruppe zur Bereitstellung der Version 7.0 aktualisiert.
+* Die VHL-Bibliotheken wurden auf Version 1.5.8, die Adobe Mobile-Bibliotheken auf Version 4.8.4 und die Logger-Dienstprogrammbibliothek auf die Zielgruppe zur Bereitstellung der Version 7.0 aktualisiert.
 
 **Version 1.4.19**
 
@@ -371,7 +371,7 @@ Comment Type: draft
 
 **Version 1.4.38** (1.4.38.860)
 
-* (ZD #29281) - iOS: Hinzufügen von AdSystem- und Creative-ID zu CRS-Anforderungen
+* (ZD #29281) - iOS: hinzufügen von AdSystem- und Creative-ID zu CRS-Anforderungen
 
 Verwendung von kreativen IDs und AdSystem in CRS-Anforderungen basierend auf CRS-Normalisierungsregeln
 
@@ -393,7 +393,7 @@ Zeitgesteuertes Metadaten-Ereignis wird nicht für # EXT-X-PROGRAMM-DATE-TIME-Ta
 
 Wiedergabeproblem, wenn # EXT-X-PLAYLIST-TYPE-Tag im Stream auf Ereignis anstatt auf VOD eingestellt ist
 
-* (ZD #29281) - iOS: Hinzufügen von AdSystem- und Creative-ID zu CRS-Anforderungen
+* (ZD #29281) - iOS: hinzufügen von AdSystem- und Creative-ID zu CRS-Anforderungen
 
 Verwendung von Creative ID und AdSystem in CRS-Anforderungen basierend auf CRS-Normalisierungsregeln.
 
@@ -447,9 +447,9 @@ Aktiviert, indem die ursprüngliche kreative URL für die CRS-Anforderung 1401 a
 
 Dieses Problem wurde behoben, indem das Laden der Ressourcen aktualisiert wurde, um alle verfügbaren Pakete anzuzeigen.
 
-* (ZD# 27460) Midroll first Ad call - POST to cdn.auditude<span></span>.com return 403.
+* (ZD# 27460) Midroll First Ad-Aufruf - POST auf cdn.auditude<span></span>.com, die 403 zurückgibt.
 
-Das neue CDN-Konto kann eine POST-CDN-Anforderung nicht bearbeiten. Dieses Problem wurde behoben, indem der Code aktualisiert wurde, damit die `cdn.auditude.com` Anzeigenanforderung GET anstelle von POST lautet.
+Das neue CDN-Konto kann eine POST-CDN-Anforderung nicht bearbeiten. Dieses Problem wurde behoben, indem der Code aktualisiert wurde, damit die `cdn.auditude.com` Anzeigenanforderung GET statt POST wurde.
 
 **Version 1.4.32** (1.4.32.792 für iOS 6.0+)
 
@@ -480,6 +480,7 @@ Dieses Problem wurde behoben, indem Diskontinuitäts-Tags über Variantenmanifes
 Dieses Problem wurde behoben, indem das PSDKLilibrary.framework wie gewünscht verpackt wurde.
 
 * (ZD# 26364) Multi-CDN-Unterstützung für CRS-Anzeigen
+
 <!-- 
 Comment Type: draft
 For more information, see [Multiple CDN support for CRS Ad Delivery](http://help.adobe.com/en_US/primetime/psdk/ios/1.4/index.html#PSDKs-concept-Multiple_CDN_support_for_CRS_ad_delivery).
@@ -492,9 +493,9 @@ Dieses Problem wurde behoben, indem eine Problemumgehung für Streams ohne M3U8-
 
 Die folgenden Probleme wurden in dieser Version für TVSDK behoben:
 
-* (ZD# 24180) Hinzufügen einer benutzerdefinierten Kopfzeile zum zulassungsliste
+* (ZD# 24180) Hinzufügen einer benutzerdefinierten Kopfzeile zur Zulassungsliste
 
-Der TVSDK-zulassungsliste wurde eine neue benutzerdefinierte Kopfzeile hinzugefügt.
+Der TVSDK-Zulassungsliste wurde eine neue benutzerdefinierte Kopfzeile hinzugefügt.
 
 * (ZD# 25016) Failover-Stream wird zufällig ausgewählt, wenn ABR-Steuerungsparameter eingestellt werden
 
@@ -677,7 +678,7 @@ Dieses Problem wurde behoben, indem ein zusätzlicher Schutz vor gleichzeitigen 
 
 * (ZD #21782) - iOS-Fehlercode 10100
 
-Das Problem, bei dem das TVSDK einen Fehler vom Typ 101000 zurückgab, während die Wiedergabe auf Adobe Access DRM-Streams gestartet wurde, wurde behoben.
+Das Problem, bei dem das TVSDK einen 101000-Fehler zurückgab, während die Wiedergabe auf Adobe Access DRM-Streams gestartet wurde, wurde behoben.
 
 * (ZD #21889) - Wiedergabe von Online-Anzeigen und Offlineinhalten schlägt fehl
 
@@ -689,13 +690,13 @@ Dieses Problem wurde behoben, indem die Behandlung von VAST-Anzeigen-Tags von Dr
 
 * (ZD #22257) - TVSDK kann DRM-Stream nicht wiedergeben
 
-Das Problem, bei dem das TVSDK, das einen Fehler 101000 zurückgegeben hat, während die Wiedergabe auf Adobe Access DRM-Streams gestartet wurde, behoben wurde.
+Das Problem, bei dem das TVSDK, das einen 101000-Fehler zurückgab, während die Wiedergabe auf Adobe Access DRM-Streams gestartet wurde, behoben wurde.
 
 **Version 1.4.22** (1.4.22.627) für iOS 6.0+
 
 * (ZD #18709) - Absturz im TVSDK für iOS
 
-Das Problem mit einem Absturz in einigen geschützten Streams von Adobe Access DRM wurde behoben.
+Das Problem mit einem Absturz in einigen DRM-geschützten Streams von Adobe Access wurde behoben.
 
 * (ZD #18850) - Aktualisieren der Logik der kreativen Auswahl auf Grundlage von CRS-Regeln
 
@@ -764,7 +765,7 @@ Dieses Problem wurde behoben, indem TVSDK die Fehlerantwort als Fehler an die An
 
 In der aktuellen Implementierung wurden Ausweichanzeigen übersprungen und nicht neu verpackt, es sei denn, diese Anzeigen haben das Format m3u8. Dieses Problem wurde behoben, indem auch die Unterstützung für das Umpacken von Fallback-Anzeigen hinzugefügt wurde.
 
-* (ZD #19770) - Das TVSDK kann keine geschützten AES-Inhalte mit 302-Umleitungen wiedergeben
+* (ZD #19770) - Das TVSDK kann keine geschützten AES-Inhalte mit 302-Umleitung wiedergeben
 
 Das Umleitungsproblem wurde behoben, da die Umleitungs-URL von cleanConnectionData gelöscht wurde, bevor sie zur Analyse des Manifests verwendet werden konnte.
 
@@ -866,7 +867,7 @@ Dieses Problem wurde behoben, indem Unterstützung für die Android CTS-Schriftz
 
 Metadaten wurden hinzugefügt, um Inhalte anzuzeigen, wenn die Benachrichtigung M3U8_PARSER_ERROR eintritt.
 
-* (ZD #4437) - Abstürze innerhalb des Adobe Primetime-SDK
+* (ZD #4437) - Abstürze innerhalb des Adobe Primetime SDK
 
 Ein gemeldeter Absturz beim Vorbereiten von Untertiteln/alternativen Audiodaten wurde behoben.
 
@@ -953,9 +954,9 @@ Unterstützung für das Ping von URLs zur Verfolgung von Werbeunterbrechungen, �
 
 **Version 1.4.5** (1.4.5.283)
 
-* (ZD #2141) Die Analytics-Implementierung für die TreeHouse-App hat AdobeAnalyticsPlugin.a zum Erstellen des Pakets hinzugefügt.
+* (ZD #2141) Bei der Analytics-Implementierung der TreeHouse-App wurde AdobeAnalyticsPlugin.a eine Bibliothek zum Erstellen des Pakets hinzugefügt.
 * Video Heartbeats Library Update auf 1.4.1.2
-* [PTPALY-4226] [in Zusammenhang mit ZD #2423) Das Ausführen des DRM-Resets kann zum Löschen der Daten des Application Dokument führen.
+* (PTPALY-4226) (im Zusammenhang mit ZD #2423) Das Ausführen des DRM-Resets kann zum Löschen der Daten des Application Dokument führen.
 
 **Version 1.4.4** (1.4.4.242)
 
@@ -988,7 +989,7 @@ Unterstützung für das Ping von URLs zur Verfolgung von Werbeunterbrechungen, �
 * Es kann vorkommen, dass das Video zur Lizenzrotation unter iOS 11 nicht abgespielt wird und unter iOS 9.x und iOS 10.x korrekt wiedergegeben wird.
 * Bei der VPAID 2.0-Unterstützung werden VPAID-Anzeigen übersprungen, wenn die Wiedergabe über AirPlay aktiv ist.
 * Die Verknüpfung von &quot;drmNativeInterface.framework&quot;ist nicht korrekt, wenn die Zielgruppe auf &quot;iOS7 (oder höher)&quot;festgelegt ist.\
-   Problemumgehung: Geben Sie explizit die `libstdc++6`Variable an.  Dylib-Bibliothek wie folgt: Gehen Sie zu Target->Build-Phasen->Link Binary with Libraries und fügen Sie `libstdc++.6.dylib`hinzu.
+   Problemumgehung: Geben Sie explizit die `libstdc++6`Variable an.  Dylib-Bibliothek wie folgt: Gehen Sie zu Zielgruppe->Build-Phasen->Link Binary with Libraries und fügen Sie `libstdc++.6.dylib`hinzu.
 
 * Post-Roll-Anzeige wird nicht zum Ersetzen der API eingefügt.
 * Bei der Suche nach einer Werbeunterbrechung (ohne sie zu verlassen) werden dem Duplikat-Beginn und dem Werbeunterbrechungsbenachrichtigungen angezeigt
@@ -998,4 +999,4 @@ Unterstützung für das Ping von URLs zur Verfolgung von Werbeunterbrechungen, �
 
 ## Hilfreiche Ressourcen {#helpful-resources}
 
-* Siehe vollständige Hilfedokumentation auf der Seite &quot; [Adobe Primetime - Training und Support](https://helpx.adobe.com/support/primetime.html) &quot;.
+* Weitere Informationen finden Sie in der vollständigen Hilfedokumentation auf der [Adobe Primetime-Seite &quot;Training und Support](https://helpx.adobe.com/support/primetime.html) &quot;.
