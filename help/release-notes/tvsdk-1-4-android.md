@@ -9,9 +9,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: f1ebc1a8-185a-493a-9c00-a6102dffb128
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
 workflow-type: tm+mt
-source-wordcount: '7913'
+source-wordcount: '7830'
 ht-degree: 0%
 
 ---
@@ -97,7 +97,7 @@ Fehlerkorrektur für Content Skip unter Android.
 **Version 1.4.31**
 
 **Multi-CDN-Unterstützung für CRS-Anzeigen**
-* Standardmäßig werden alle transkodierten Assets auf dem Adobe-eigenen CDN auf Akamai gehostet. Mit der aktuellen Version bietet Adobe Creative Repackage Service (CRS) die Möglichkeit, die transkodierten Kreativelemente wie vom Kunden angegeben in mehrere CDNs hochzuladen.
+* Standardmäßig werden alle transkodierten Assets auf einer CDN in Adobe auf Akamai gehostet. Mit der neuesten Version bietet Adobe Creative Repackage Service (CRS) die Möglichkeit, die transkodierten Kreativelemente wie vom Kunden angegeben in mehrere CDNs hochzuladen.
 * TVSDK werden neue APIs hinzugefügt, um die Angabe der endgültigen kreativen CRS-URL zu ermöglichen, wenn die Standard-URL nicht verwendet wird. Informationen zur Verwendung dieser neuen APIs finden Sie in der Dokumentation.
 
 **Version 1.4.18** Primetime Android TVSDK unterstützt jetzt JavaScript-kreative VPAID 2.0-Funktionen, um eine umfassende interaktive In-Stream-Anzeigenerfahrung zu ermöglichen. Weitere Informationen zu VPAID 2.0 finden Sie unter [VPAID-Anzeigenunterstützung](../programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-vpaid-ads.md).
@@ -118,17 +118,17 @@ Weitere Informationen finden Sie unter [Ad-Fallback für VAST- und VMAP-Anzeigen
 
 **Version 1.4.7**
 
-* **On-Premise-Individualisierung-** UnterstützungUnterstützung für lokale Installationen des Adobe Individualization Server, um die Individualisierungsanforderung des Kunden an einen anderen Endpunkt anzupassen.
+* **On-Premise-Individualisierung-** UnterstützungUnterstützung für lokale Installationen des Adobe-Individualisierungsservers, um die Individualisierungsanforderung des Kunden an einen anderen Endpunkt anzupassen.
 
 **Version 1.4.6**
 
-* **AES-Beispielverschlüsselung (Flash Player Version 17.0.0.134 erforderlich)**Sample-basierte AES-Verschlüsselung wird jetzt unterstützt.
+* **AES-Beispielverschlüsselung (Flash Player Version 17.0.0.134 erforderlich)**Beispielbasierte AES-Verschlüsselung wird jetzt unterstützt.
 
 **Version 1.4.2**
 
 * **Video Heartbeats Library (VHL) aktualisieren auf Version 1.4.0.1**
 
-   * Es wurde die Möglichkeit hinzugefügt, verschiedene Anwendungsfälle für Analysen - von anderen SDKs oder Playern - mit Adobe Analytics Video Essentials zu bündeln.
+   * Es wurde die Möglichkeit hinzugefügt, verschiedene Anwendungsfälle für Analysen - von anderen SDKs oder Playern - mit den Adobe Analytics Video Essentials zu bündeln.
    * Die Anzeigenverfolgung wurde optimiert, indem die Methoden trackAdBreakStart und trackAdBreakComplete entfernt wurden. Die Werbeunterbrechung wird aus den trackAdStart- und trackAdComplete-Methodenaufrufen abgeleitet.
    * Die Eigenschaft playhead ist bei der Verfolgung von Anzeigen nicht mehr erforderlich.
 
@@ -143,24 +143,26 @@ Weitere Informationen finden Sie unter [Ad-Fallback für VAST- und VMAP-Anzeigen
 * Die Schnittstelle PlaybackEventListener verfügt über eine neue Methode namens onReplaceMediaPlayerItem, mit der Sie auf ein neues Ereignis `ITEM_REPLACED`warten können. Dieses Ereignis wird immer dann ausgelöst, wenn eine MediaPlayerItem-Instanz in MediaPlayer ersetzt wird. Die Clientanwendung, die diese PlaybackEventListener implementiert, muss diese neue Methode implementieren oder überschreiben.
 * AdClientFactory verfügt über eine neue Funktion zur Klasse hinzugefügt, um sich für mehrere Opportunity-Detektoren zu registrieren:
 
-   public Liste&lt;PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem item);
-
-   Beispielsweise benötigen Sie für die Funktion zum frühen Ausstieg zwei Opportunity-Detektoren - eine für das Einfügen von Anzeigen und eine andere für den frühen Ausstieg `ad`.
-
-   Um diese neue Funktion außer Kraft zu setzen, erstellen Sie einen einzelnen Opportunity Detector, setzen Sie in ein Array und geben Sie Folgendes zurück:
-
-   @override
-
-   public Liste&lt;PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
-
-   Liste&lt;PlacementOpportunityDetector> OpportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector>();
-
-   OpportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
-
-   return Opportunitys;
-}
-
+   ```
+   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem item);
+   
+   For example for early ad exit feature, you need two Opportunity Detectors - one for ad insertion and another for  early  exit from  `ad`.
+   
+   To override this new function create a single Opportunity Detector, and put into an array and return:
+   
+   @Override
+   
+   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
+   
+   List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();
+   
+   opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
+   
+   return opportunityDetectors;
    }
+   
+   }
+   ```
 
 ## TVSDK-Änderungen für 1.4 {#tvsdk-changes}
 
@@ -168,25 +170,29 @@ Weitere Informationen finden Sie unter [Ad-Fallback für VAST- und VMAP-Anzeigen
 
 * AdClientFactory verfügt über eine neue Funktion zur Klasse hinzugefügt, um sich für mehrere Opportunity-Detektoren zu registrieren:
 
-public Liste`<PlacementOpportunityDetector>` createOpportunityDetectors(MediaPlayerItem item);
+```
+public List`<PlacementOpportunityDetector>` createOpportunityDetectors(MediaPlayerItem item);
+```
 
 Beispielsweise benötigen Sie für die Funktion zum Beenden der Anzeige zwei Opportunity-Detektoren - eine für das Einfügen von Anzeigen und eine andere für den frühen Ausstieg aus der Anzeige.
 
 Um diese neue Funktion außer Kraft zu setzen, erstellen Sie einen einzelnen Opportunity Detector, setzen Sie in ein Array und geben Sie Folgendes zurück:
 
-@override
+```
+@Override
 
-public Liste`<PlacementOpportunityDetector>` createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
+public List`<PlacementOpportunityDetector>` createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
 
-Liste`<PlacementOpportunityDetector>` OpportunityDetectors = new ArrayList`<PlacementOpportunityDetector>`();
+List`<PlacementOpportunityDetector>` opportunityDetectors = new ArrayList`<PlacementOpportunityDetector>`();
 
-OpportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
+opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
 
-return Opportunitys;
+return opportunityDetectors;
 
 }
 
 }
+```
 
 ## Gerätezertifizierung und Unterstützung in 1.4 {#device-certification-and-support-in}
 
@@ -294,7 +300,7 @@ Dieses Problem wird durch Senden der ursprünglichen kreativen URLs behoben.
 * Zendesk #25023 - Videowiedergabe mit langer Dauer: Videoeinfrieren, BildschirmflimmernDieses Problem wurde behoben, indem die maximalen Abmessungen des Videoformats für CenturyLink-Set-Top-Box-Geräte festgelegt wurden.
 
 * Zendesk #27460 - Das neue Akamai-Konto kann eine POST-CDN-Anforderung nicht bearbeiten.
-Der Code wurde aktualisiert, damit die `cdn.auditude.com` Anzeigenanforderung GET anstelle von POST lautet.
+Der Code wurde aktualisiert, damit die `cdn.auditude.com` Anzeigenanforderung GET statt POST ist.
 
 * Zendesk #28245 - Der Wiedergabestatus wird nicht korrekt gemeldet, wenn die App von Hintergrund zu Vordergrund wechselt. Dieses Problem wurde behoben, indem der Wiedergabestatus korrekt wiederhergestellt wurde, damit er wiedergegeben oder angehalten werden kann, wenn die Anwendung wieder im Vordergrund angezeigt wird.
 
@@ -316,7 +322,7 @@ Der Code wurde aktualisiert, damit die `cdn.auditude.com` Anzeigenanforderung GE
    * Korrektur durch Verbesserung der Handhabung der AV-Decoder-Threads. Insbesondere wird bei jeder Änderung der Eingabe- oder Ausgaberahmenwarteschlangen der für den Inhaltstyp des Rahmens spezifische Dekodierer-Thread ausgeführt.
 
 * Zendesk #26551 - Beheben von CRS-Fehlern
-   * Wenn die Anforderung HEAD (HTTP Head) ist, müssen wir den Inhalt nicht lesen, da er leer ist. Es ist zwar ok, es zu lesen, aber alte Android (4.0.x) hängt, während wir read() aufrufen, und neuere Android geben den korrekten Wert (-1) zurück, wenn wir read() aufrufen. Auf dieser Grundlage änderte der Code, sodass er keinen Inhalt für &quot;head&quot;liest
+   * Wenn die Anforderung HEAD (HTTP-Kopfzeile) lautet, müssen wir den Inhalt nicht lesen, da er leer ist. Es ist zwar ok, es zu lesen, aber alte Android (4.0.x) hängt, während wir read() aufrufen, und neuere Android geben den korrekten Wert (-1) zurück, wenn wir read() aufrufen. Auf dieser Grundlage änderte der Code, sodass er keinen Inhalt für &quot;head&quot;liest
 
 * Zendesk #26696 Null-Zeiger-Ausnahme beim Zugriff auf TrickPlayManager
    * Korrektur, indem überprüft wird, ob das TrickPlayManager-Objekt vor der Verwendung nicht null ist.
@@ -339,7 +345,7 @@ Der Code wurde aktualisiert, damit die `cdn.auditude.com` Anzeigenanforderung GE
 
 * Zendesk #25067 - Absturz in VideoEngineTimelineDies geschieht, weil Objekte nicht korrekt gereinigt wurden und Ereignisse aufgerufen wurden, nachdem die Objekte zerstört wurden. Das Problem wurde behoben, indem Prüfungen hinzugefügt wurden, um Null-Ausnahmen zu verhindern.
 
-* Zendesk #25352 - Festlegen eines benutzerdefinierten HTTP-Headers Dieses Problem wurde behoben, indem der zulassungsliste unter TVSDK ein neuer benutzerdefinierter Header hinzugefügt wurde.
+* Zendesk #25352 - Festlegen eines benutzerdefinierten HTTP-Headers Dieses Problem wurde behoben, indem der Zulassungsliste unter TVSDK ein neuer benutzerdefinierter Header hinzugefügt wurde.
 
 * Zendesk #25617 - Live-Stream-PTS-Rollover, der zu Diskontinuität des Players und zum Speicherabsturz führte. Dieses Problem wurde behoben, indem eine PTS-Rollover-Verarbeitung in FragmentedHTTPStreamer hinzugefügt wurde, wenn ein Rollover mitten in einem Segment stattfindet.
 
@@ -360,7 +366,7 @@ Der Code wurde aktualisiert, damit die `cdn.auditude.com` Anzeigenanforderung GE
 
 **Version 1.4.25 (1620)**
 
-* Zendesk #22900 - Live-Stream von Adobe Primetime DRM wird nicht auf dem Android-Referenzplayer wiedergegeben. Das Speicherzuordnungsproblem wurde behoben.
+* Zendesk #22900 - Live-Adobe Primetime DRM-Stream wird nicht auf dem Android-Referenzplayer wiedergegeben. Das Speicherzuordnungsproblem wurde behoben.
 * Zendesk #23176 - Anwendungsabstürze, wenn versucht wird, VPAID-Anzeigen wiederzugebenDer Absturz trat auf, weil die Anwendung keine benutzerdefinierte Ansicht für die Anzeige einer VPAID-Anzeige erstellt. Dieses Problem wurde behoben, indem die VPAID-Anzeigen in der Anzeigenserverantwort ignoriert wurden, wenn keine benutzerdefinierte Ansicht vorhanden ist.
 
 * Zendesk #23153 - SampleAES DRM Stream - Wiedergabe angehalten im TVSDK Reference PlayerDieses Problem ist mit Zendesk #22900 identisch.
@@ -443,7 +449,7 @@ Dieses Problem wurde behoben, indem TVSDK die Fehlerantwort als Fehler an die An
 
 * Zendesk #18358 - Player reagiert beim Bitratenwechsel nicht mehr synchron. Dieses Problem wurde behoben, indem die ABR-Heftkantenfälle ordnungsgemäß behandelt wurden.
 
-* Zendesk #19232 - App, die TVSDK 1.4.18 verwendet, verhalten sich merkwürdig auf älteren Amazon OS-Versionen 4Dieses Problem wurde behoben, indem die verborgene Web-Ansicht im TVSDK Player-Initialisierungsprozess entfernt wurde, um Konflikte mit Geräten zu vermeiden, die Android Webview nicht unterstützen.
+* Zendesk #19232 - App, die TVSDK 1.4.18 verwendet, verhält sich merkwürdig mit älteren Amazon OS-Versionen 4Dieses Problem wurde behoben, indem die verborgene Web-Ansicht-Erstellung im TVSDK Player-Initialisierungsprozess entfernt wurde, um Konflikte mit Geräten zu vermeiden, die Android Webview nicht unterstützen.
 
 * Zendesk #19585 - Wiedergabe mit langsamer Bewegung, wenn eine Transition der adaptiven Bitrate erfolgt.
 Wenn das neue Profil während des ABR-Switches eine andere Audio-Samplerate hat als das aktuelle Profil, wird die Wiedergabe schnell oder langsam. Der Grund dafür ist, dass der Videopräsentator nicht darüber informiert wird, dass sich das Audioformat geändert hat.
@@ -488,7 +494,7 @@ Wenn eine Werbeunterbrechung leer ist, wurden der Beginn der Werbeunterbrechung 
 
 * Zendesk #18229 - SetCCVisiblity(VISIBLE) wird nach dem MediaPlayer.reset()-Aufruf ignoriert. Dieses Problem wurde durch Hinzufügen von setCCVisibility(Visibility.INVISIBLE) behoben. zur Funktion reset() in der MediaPlayer-Klasse.
 
-* Zendesk #18328 - Problem mit Dropped Frames auf Amazon Fire TV 2nd Generation-Geräten für Inhalte mit 60FPSTdieses Problem wurde gelöst, indem die kodierte FPS für die Entscheidungsfindung über die Ruhezeit und mit einer besser kodierten FPS-Vorhersagelogik angewendet wurde.
+* Zendesk #18328 - Problem mit Dropped Frames auf Amazon Fire TV 2nd Generation-Geräten für Inhalte mit 60FPSTdieses Problem wurde gelöst, indem das kodierte FPS für die Entscheidungsfindung über die Ruhezeit und mit einer besser kodierten FPS-Prognoselogik angewendet wurde.
 
 **Version 1.4.17 (1472)**
 
@@ -507,7 +513,7 @@ Dieses Problem wurde behoben, indem die Größe der DRM-Metadaten des Profils ü
 
 * Zendesk #3875 - Tab S stürzt während der Wiedergabe abRückkehren der Abhängigkeit von OKHTTP auf Auditude für CRS, da TVSDK jetzt direkt HTTPurlconnection statt curl verwendet. Das Problem wurde behoben, indem Ausnahmen gelöscht wurden, bevor ein anderer JNI-Aufruf erfolgte.
 
-* Zendesk #4487 - Tracking Linear Kanal of ContentDas Problem wurde behoben, indem die erneute Initialisierung des Video Heartbeat Tracker während einer linearen Stream-Wiedergabesitzung ermöglicht wurde.
+* Zendesk #4487 - Tracking Linear Kanal of ContentDas Problem wurde behoben, indem die erneute Initialisierung des Video Heartbeat-Trackers während einer Sitzung zur linearen Stream-Wiedergabe ermöglicht wurde.
 
 * Zendesk #17919 - Android - Inhaltssuche verursacht Heartbeat-FehlerDas Problem, bei dem der Heartbeat in einem Fehlerzustand ist, wenn eine Suche in einem Kapitel vorhanden ist, wurde behoben.
 
@@ -588,7 +594,7 @@ setByteArray- und getByteArray-API hinzugefügt.
 
 **Version 1.4.11 (1363)**
 
-* Zendesk #2076 - Häufiger Stotter beim Abspielen von Videos auf Motorola Xoom mit Android 4.0.3Hinzufügen von Geräten zum zulassungsliste, um zu verhindern, dass sie versuchen, Inhalte mit hohem Profil wiederzugeben.
+* Zendesk #2076 - Häufiger Stotter beim Abspielen von Videos auf Motorola Xoom mit Android 4.0.3Geräte zur Zulassungsliste hinzugefügt, um zu verhindern, dass sie versuchen, Inhalte mit hohem Profil wiederzugeben.
 
 * Zendesk #2197 - `[Ads]` Tracking ad errspatch OperationFailureEvent mit Warnmeldung.
 
@@ -600,7 +606,7 @@ setByteArray- und getByteArray-API hinzugefügt.
 
 * Zendesk #2941 - Live-Assets haben im suchbaren Bereich nicht &quot;0&quot;. Zuvor gab es bei der Suche nach dem Anfang eines Live-Streams einen 3-Segmentpuffer, jetzt ist es möglich, bis zum Anfang eines Live-Streams zu suchen (d. h. bis zum Beginn des ersten Segments).
 
-* Zendesk #3169 - Update Reference Player with Adobe Analytics integration Der Referenz-Player wurde mit der Adobe Analytics-Bibliothek als Beispiel für die Implantation aktualisiert.
+* Zendesk #3169 - Update Reference Player with Adobe Analytics integration Der Referenz-Player wurde mit der Adobe Analytics-Bibliothek als Beispiel für Implantation aktualisiert.
 * Zendesk #3299 - Unerklärliches Verhalten bei Tricks
    * Es wurde ein Fehler behoben, durch den die Rückkehr zum Wiedergabestatus nach dem Beenden der Trick-Wiedergabe mehrere Sekunden dauern konnte (manchmal 25+ Sekunden).
    * Es wurde ein Fehler behoben, durch den beim Aufrufen von trick play ein zweites Mal auf demselben Medium der Stream zum aktuellen Zeitpunkt eingefroren werden konnte.
@@ -653,14 +659,14 @@ Dieses Problem wurde behoben, indem Latenzzeiten zwischen Videosegmentdownloads 
 
 * Zendesk #2908 - Arabische Untertitel, die nicht auf Nexust 5, 6 und 7 funktionieren, wurden korrigiert, indem 2 weitere Fallback-Schriftarten für arabische Skripten hinzugefügt wurden.
 * PTPLAY-4627 - Nielson-Apps auf Version 1.2.3.7 aktualisieren
-* PTPLAY-5084 - Unterstützung für Live-Master-Manifest-Update-Failover
+* PTPLAY-5084 - Unterstützung für Live Übergeordnet Manifest-Update-Failover
 
 **Version 1.4.5 (1248)**
 
 * Zendesk #1757 - Nur abgespielter oder Player stürzt bei einigen Video-Bitrate-Profilen ab, Nexus 4 und Nexus 7 stürzten ab
 * Zendesk #2072 - TimedMetadata for AdEvent enthält nicht die vollständige URL nur &quot;http&quot;
 * Zendesk #2192 - Bitrate ist unter schlechten Netzwerkbedingungen nicht immer niedriger
-* Zendesk #2256 - Zugriff auf Master Playlist, PSDK aktualisiert, um timedMetadata-Ereignis für abonnierte Tags in der Master-Playlist auszulösen.
+* Zendesk #2256 - Zugriff auf Übergeordnet Playlist, aktualisiertes PSDK zum Versenden von timedMetadata-Ereignissen für abonnierte Tags in der Übergeordnet Playlist.
 * Zendesk #2269 - Zwei verschiedene Untertitelsprachen werden gleichzeitig mit WebVTT auf dem Bildschirm angezeigt
 * Zendesk #2417 - Player, der versucht, Untertitel vor dem Beginn der Wiedergabe herunterzuladen, verwendete WebVTT die falsche Segmentnummernvariable für die Segmentnummerübereinstimmung. Fehler werden nur für Medien angezeigt, deren Segmentindizes bei Null beginnen.
 * Zendesk #2470 - PSDK kehrt nicht aus dem Status AUSGESETZT zurück, wenn eine Bitratenänderung nach der Aussetzung erfolgt. In einer besonderen Situation, in der die intelligente Suche von RestoreGPUResource (Wiederherstellung des Players vom Aussetzzustand) aufgerufen und der Stream-Switch erkannt wird, bevor dies erfolgt, kann die intelligente Suche nicht abgeschlossen werden und führt zu einer konstanten Pufferung.
@@ -674,7 +680,7 @@ Dieses Problem wurde behoben, indem Latenzzeiten zwischen Videosegmentdownloads 
 * Zendesk #1158 - Wiedergabe bei Huawei Valiant fehlgeschlagen (Y301A1)
 * Zendesk #1709 - Falsche Mediengröße und gestrecktes Video
 * Zendesk #1757 - Nur Audio, das nach dem Wechsel zwischen Streams mit identischen SPA/pps-Daten wiedergegeben wird
-* Zendesk #2095 - HTTP-307-Status (Umleitung) bewirkt, dass Adobe-Player die Wiedergabe stoppt
+* Zendesk #2095 - HTTP-307-Status (Umleitung) bewirkt, dass der Adobe-Player die Wiedergabe stoppt
 * Zendesk #2126 - Fehlendes TimedMetaData-Ereignis für letzten ADEVENT, abonnierte Tags, die nach dem letzten Segment existierten, wurden nicht von AVE an PSDK gemeldet
 * Zendesk #2227 - Lockups in VideoEngine nativeReset und nativePause
 * Fehler #3921755 - OpenSSL-Bibliotheksaktualisierung auf Version 1.0.1L
@@ -810,4 +816,4 @@ Der Media Player sendet MediaPlayerState.Complete fälschlicherweise während de
 
 ## Hilfreiche Ressourcen {#helpful-resources}
 
-* Siehe vollständige Hilfedokumentation auf der Seite &quot; [Adobe Primetime - Training und Support](https://helpx.adobe.com/support/primetime.html) &quot;.
+* Weitere Informationen finden Sie in der vollständigen Hilfedokumentation auf der [Adobe Primetime-Seite &quot;Training und Support](https://helpx.adobe.com/support/primetime.html) &quot;.
