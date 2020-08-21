@@ -4,7 +4,10 @@ seo-description: 'Diese Tabelle enthält detaillierte Informationen zu Umsatzopt
 seo-title: EINNAHMEN-Optimierungscode
 title: EINNAHMEN-Optimierungscode
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '763'
+ht-degree: 0%
 
 ---
 
@@ -15,12 +18,15 @@ Diese Tabelle enthält detaillierte Informationen zu Benachrichtigungen über UM
 
 ## Berichte zur Umsatzoptimierung aktivieren {#enable-revenue-optimization-reporting}
 
-Verwenden Sie zum Aktivieren dieses Berichte PTMediaPlayer api: `[mediaPlayer
-setRevenueOptimizationReportingLevel:PTNotificationTypeInfo]`.
+Verwenden Sie zum Aktivieren dieses Berichte PTMediaPlayer api: `[mediaPlayersetRevenueOptimizationReportingLevel:PTNotificationTypeInfo]`.
 
-[!NHinweis]: Die meisten Informationsbenachrichtigungen enthalten relevante Metadaten, z. B. die URL der Ressource, die nicht heruntergeladen werden konnte. Einige Benachrichtigungen enthalten Metadaten, um anzugeben, ob das Problem im Hauptvideoinhalt, im alternativen Audioinhalt oder in einer Anzeige aufgetreten ist.
+>[!NOTE]
+>
+>Die meisten Informationsbenachrichtigungen enthalten relevante Metadaten, z. B. die URL der Ressource, die nicht heruntergeladen werden konnte. Einige Benachrichtigungen enthalten Metadaten, um anzugeben, ob das Problem im Hauptvideoinhalt, im alternativen Audioinhalt oder in einer Anzeige aufgetreten ist.
 
-|Code|Name|Innen-Benachrichtigung|Metadatenschlüssel|Anmerkungen||—|—|—|—|—|—|| 401001| REVENUE_OPTIMIZATION_BERICHTE| Keine| Metadatenschlüssel auf Basis verschiedener Ereignis finden Sie in der folgenden Tabelle. | Keine|
+|Code |Name |Innen-Benachrichtigung |Metadatenschlüssel |Anmerkungen |
+|—|—|—|—|—|—|
+| 401001 | REVENUE_OPTIMIZATION_BERICHTE | Keine | Metadatenschlüssel auf Basis verschiedener Ereignis finden Sie in der folgenden Tabelle. | Keine |
 
 | Ereignis-Details | ContextMetadata |
 |---|---|
@@ -37,4 +43,4 @@ setRevenueOptimizationReportingLevel:PTNotificationTypeInfo]`.
 | **ADBREAK_PLAYBACK_BEGINN** wird in TVSDK ausgelöst, wenn ein Adbreak-Beginn die Wiedergabe durchführt. | clientTimestamp, Ereignis, Id, duration, time, clientId |
 | **ADBREAK_PLAYBACK_COMPLETE** wird in TVSDK ausgelöst, wenn die Wiedergabe eines Werbeunterbrechers abgeschlossen ist. | clientTimestamp, Ereignis, Id, clientId |
 | **CONTENT_PLAYBACK_COMPLETE** Wird in TVSDK ausgelöst, wenn ein Inhalt abgeschlossen ist. Dies kann vorkommen, wenn der Stream ersetzt wird, der Player einen Fehlerstatus eingibt, der Player zurückgesetzt wird oder der Inhalt tatsächlich abgeschlossen ist. Dieses Ereignis ist zur Verfolgung einer sessionId erforderlich. | clientTimestamp, Ereignis, clientId, url, status, errorMessage |
-| **AD_PLAYBACK_ERROR** Wird in TVSDK ausgelöst, wenn eine Anzeige einen Fehler bei der Wiedergabe aufweist (Variantenstream-Fehler). | Ereignis, error, Timestamp, manifestUrl, time, Id, url |
+| **AD_PLAYBACK_ERROR** Wird in TVSDK ausgelöst, wenn eine Anzeige einen Fehler bei der Wiedergabe aufweist (Variantenstream-Fehler). | ereignis, error, Timestamp, manifestUrl, time, Id, url |
