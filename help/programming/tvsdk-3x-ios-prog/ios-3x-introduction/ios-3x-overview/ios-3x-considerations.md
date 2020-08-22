@@ -5,7 +5,10 @@ seo-title: Überlegungen und Best Practices
 title: Überlegungen und Best Practices
 uuid: a65c9739-ed83-4519-8ae5-7ba4c8f1ca49
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '412'
+ht-degree: 0%
 
 ---
 
@@ -54,6 +57,6 @@ Hier finden Sie empfohlene Vorgehensweisen für TVSDK:
 
 Weitere Informationen finden Sie in den Methoden forceHTTPS und isForcingHTTPS in dieser Klasse.
 
-[!IMPORTANT]
-
-Anforderungen an Drittanbieter-Domänen wie Anzeigenverfolgungspixel, Inhalts- und Anzeigen-URLs und ähnliche Anforderungen werden nicht geändert. Es liegt in der Verantwortung der Inhaltsanbieter und Anzeigenserver, URLs bereitzustellen, die über HTTPS unterstützt werden.
+>[!IMPORTANT]
+>
+>Anforderungen an Drittanbieter-Domänen wie Anzeigenverfolgungspixel, Inhalts- und Anzeigen-URLs und ähnliche Anforderungen werden nicht geändert. Es liegt in der Verantwortung der Inhaltsanbieter und Anzeigenserver, URLs bereitzustellen, die über HTTPS unterstützt werden.
