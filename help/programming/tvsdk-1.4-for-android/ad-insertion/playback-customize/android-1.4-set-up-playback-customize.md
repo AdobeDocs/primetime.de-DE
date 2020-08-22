@@ -5,7 +5,10 @@ seo-title: Einrichten der benutzerdefinierten Wiedergabe
 title: Einrichten der benutzerdefinierten Wiedergabe
 uuid: 9cbf0bcf-7932-409e-a690-e79f284eaf74
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +33,7 @@ So passen Sie Anzeigenverhalten an:
 
 1. Weisen Sie die Richtlinieninstanz zu, die von TVSDK über die Werbefabrik verwendet werden soll.
 
->[!ATTENTION]
+>[!IMPORTANT]
 >
 >Benutzerdefinierte Anzeigenrichtlinien, die am Anfang von >Wiedergabe registriert werden, werden geleert, wenn die MediaPlayer-Instanz >nicht zugeordnet ist. Ihre Anwendung muss jedes Mal, wenn eine neue Wiedergabesitzung erstellt wird, eine Richtlinie > Selektorinstanz registrieren.
 
