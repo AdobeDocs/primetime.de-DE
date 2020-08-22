@@ -5,7 +5,10 @@ seo-title: VAST-Anzeigen
 title: VAST-Anzeigen
 uuid: 052dae0c-2425-456c-aebe-531f68bb5aa8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -56,14 +59,18 @@ Hier finden Sie weitere Informationen zu den Anzeigentypen:
       * `MediaFiles`
 
       * `MediaFile`
-         [!TIP]
-In diesem Element werden die Attribute `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`und `type` unterstützt.
+
+         >[!TIP]
+         >
+         >In diesem Element werden die Attribute `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`und `type` unterstützt.
 
 * **Nicht-lineare Anzeigen** Die folgenden Elemente werden unterstützt:
 
    * `Non-linear`
-      [!TIP]
-In diesem Element werden die Attribute `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`und `minSuggestedDuration` unterstützt.
+
+      >[!TIP]
+      >
+      >In diesem Element werden die Attribute `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`und `minSuggestedDuration` unterstützt.
 
       * `StaticResource`
       * `IFrameResource`
@@ -74,8 +81,10 @@ In diesem Element werden die Attribute `id`, `width`, `height`, `apiFramework`, 
 * **Ergänzende Anzeigen** Die folgenden Elemente werden unterstützt:
 
    * `Companion`
-      [!TIP]
-In diesem Element werden die Attribute `id`, `width`, `height`, `apiFramework`, `expandedWidth`und `expandedHeight` unterstützt.
+
+      >[!TIP]
+      >
+      >In diesem Element werden die Attribute `id`, `width`, `height`, `apiFramework`, `expandedWidth`und `expandedHeight` unterstützt.
 
       * `StaticResource`
       * `IFrameResource`
@@ -84,7 +93,8 @@ In diesem Element werden die Attribute `id`, `width`, `height`, `apiFramework`, 
 
 ## Erweiterungen {#section_17401C75F419453BAE83637EEB6E1E60}
 
-[!TIP]
-Nur Auditude-spezifische Erweiterungen werden unterstützt.
+>[!TIP]
+>
+>Nur Auditude-spezifische Erweiterungen werden unterstützt.
 
 * `Extension`
