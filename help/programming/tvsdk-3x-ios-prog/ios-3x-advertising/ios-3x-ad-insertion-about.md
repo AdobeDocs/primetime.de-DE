@@ -5,7 +5,10 @@ seo-title: Anzeigen einfügen
 title: Anzeigen einfügen
 uuid: 6e31cae5-7363-454f-82dd-e03c1e34cd3f
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 0%
 
 ---
 
@@ -79,7 +82,7 @@ Die Möglichkeit, eine Werbeunterbrechung frühzeitig zu beenden, wird durch ein
       [PTSDKConfig setSubscribedTags:[NSArray arrayWithObject:@"#EXT-X-CUE-IN"]];
       ```
 
-   1. Hinzufügen den Cue-in-Opportunitätsauflöser.
+   1. hinzufügen den Cue-in-Opportunitätsauflöser.
 
       ```
       // self.player is the PTMediaPlayer instance created for content and ad playback 
@@ -93,11 +96,11 @@ Die Möglichkeit, eine Werbeunterbrechung frühzeitig zu beenden, wird durch ein
 
 1. Wenn die Anwendung denselben Cue-Point verwendet, um Cue-out/SLICout und Cue-In/SLICE-In anzugeben, erweitern `PTDefaultAdOpportunityResolver` und implementieren Sie die `preparePlacementOpportunity` Methode.
 
-   [!TIP]
+   >[!TIP]
+   >
+   >Im folgenden Code wird davon ausgegangen, dass die App über eine Implementierung für die `isCueInOpportunity` Methode verfügt.
 
-   Im folgenden Code wird davon ausgegangen, dass die App über eine Implementierung für die `isCueInOpportunity` Methode verfügt.
-
-```
+   ```
    - (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
    { 
          if ([self isCueInOpportunity:timedMetadata]) 
@@ -109,7 +112,7 @@ Die Möglichkeit, eine Werbeunterbrechung frühzeitig zu beenden, wird durch ein
                return [super preparePlacementOpportunity:timedMetadata]; 
          } 
    }
-```
+   ```
 
 1. Registrieren Sie den Resolver für erweiterte Möglichkeiten auf der `PTDefaultMediaPlayerClientFactory` Instanz.
 
