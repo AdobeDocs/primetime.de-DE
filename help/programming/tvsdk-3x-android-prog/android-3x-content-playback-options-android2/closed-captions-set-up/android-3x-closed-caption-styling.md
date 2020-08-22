@@ -5,7 +5,10 @@ seo-title: Steuern des Stils für Untertitel
 title: Steuern des Stils für Untertitel
 uuid: b5d9c783-755f-47a2-acb1-966df9d6116e
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '871'
+ht-degree: 0%
 
 ---
 
@@ -123,20 +126,22 @@ Sie können den Untertiteltext mit TVSDK-Methoden formatieren.
       public void setTreatSpaceAsAlphaNum(bool)
       ```
 
-      [!IMPORTANT]
+      >[!IMPORTANT]
+      >
+      >**Farbeinstellungen:** In Android TVSDK 2.X wurde die Farbgestaltung von Bildunterschriften verbessert. Die Verbesserung ermöglicht das Festlegen von Untertitelfarben mithilfe einer Hex-Zeichenfolge, die RGB-Farbwerte darstellt. Bei der RGB-Hex-Farbdarstellung handelt es sich um die vertraute 6-Byte-Zeichenfolge, die Sie in Anwendungen wie Photoshop verwenden:
+      >
+      >* FFFFFF = Schwarz
+      >* 000000 = Weiß
+      >* FF0000 = Rot
+      >* 00FF00 = Grün
+      >* 0000FF = Blau
+         >und so weiter.
 
-      **Farbeinstellungen:** In Android TVSDK 2.X wurde die Farbgestaltung von Bildunterschriften verbessert. Die Verbesserung ermöglicht das Festlegen von Untertitelfarben mithilfe einer Hex-Zeichenfolge, die RGB-Farbwerte darstellt. Bei der RGB-Hex-Farbdarstellung handelt es sich um die vertraute 6-Byte-Zeichenfolge, die Sie in Anwendungen wie Fotoshop verwenden:
+      >
+      >Wenn Sie in Ihrer Anwendung Informationen zum Farbstil an `TextFormatBuilder`übergeben, verwenden Sie weiterhin die `Color` `getValue()` Auflistung wie bisher, aber jetzt müssen Sie der Farbe hinzufügen, um den Wert als Zeichenfolge abzurufen. Beispiel:
+      >
+      >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
-          * FFFFFFFF = Schwarz
-          * 000000 = Weiß
-          * FF0000 = Rot
-          * 00FF00 = Grün
-          * 0000FF = Blau
-      und so weiter.
-
-      Wenn Sie in Ihrer Anwendung Informationen zum Farbstil an `TextFormatBuilder`übergeben, verwenden Sie weiterhin die `Color` `getValue()` Auflistung wie bisher, aber jetzt müssen Sie der Farbe hinzufügen, um den Wert als Zeichenfolge abzurufen. Beispiel:
-
-      `tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
 
 Das Festlegen des Stils für Untertitel ist ein asynchroner Vorgang. Es kann daher einige Sekunden dauern, bis die Änderungen auf dem Bildschirm angezeigt werden.
