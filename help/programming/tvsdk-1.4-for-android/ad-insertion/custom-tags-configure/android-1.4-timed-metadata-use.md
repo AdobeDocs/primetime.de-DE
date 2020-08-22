@@ -5,7 +5,10 @@ seo-title: Verwenden von Zeitmetadaten
 title: Verwenden von Zeitmetadaten
 uuid: 98bb8c08-2794-42d6-b5c3-b1047ac804fe
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '168'
+ht-degree: 1%
 
 ---
 
@@ -21,41 +24,42 @@ Um diese gespeicherten `TimedMetadata` Objekte während der Wiedergabe zu verwen
 
    Mit diesen Objekten können Sie verschiedene Aktionen ausführen.
 
-[!IMPORTANT]
-Wenn Sie überprüfen, ob die aktuelle Wiedergabezeit mit `TimedMetadata` Objekten übereinstimmt, schließen Sie `shouldTriggerSubscribedTagEvent` diese als Bedingung ein.
+   >[!IMPORTANT]
+   >
+   >Wenn Sie überprüfen, ob die aktuelle Wiedergabezeit mit `TimedMetadata` Objekten übereinstimmt, schließen Sie `shouldTriggerSubscribedTagEvent` diese als Bedingung ein.
 
-Die Zeitschiene kann sich aufgrund verschiedener Anzeigenverhaltensweisen ändern. So können z. B. ein oder mehrere Werbeunterbrechungen von ihrer ursprünglichen Position in der Zeitleiste verschoben werden, es wird jedoch `shouldTriggerSubscribedTagEvent` sichergestellt, dass die Beginn des `TimeMetadata` Objekts mit der aktuellen Wiedergabedauer übereinstimmt.
+   Die Zeitschiene kann sich aufgrund verschiedener Anzeigenverhaltensweisen ändern. So können z. B. ein oder mehrere Werbeunterbrechungen von ihrer ursprünglichen Position in der Zeitleiste verschoben werden, es wird jedoch `shouldTriggerSubscribedTagEvent` sichergestellt, dass die Beginn des `TimeMetadata` Objekts mit der aktuellen Wiedergabedauer übereinstimmt.
 
-Beispiel:
+   Beispiel:
 
-```java
- _playbackClockEventListener = new Clock.ClockEventListener() {
-    @Override
-    public void onTick(String name) {
-        getActivity().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                /* handle timedmetadata object list  */ 
-                if (_mediaPlayer != null && _timedMetadataList != null && _timedMetadataList.size() > 0) {
-                    if (_lastKnownStatus == MediaPlayer.PlayerState.PLAYING) {
-                        long localTime = _mediaPlayer.getLocalTime();
-                        Iterator<TimedMetadata> iterator = _timedMetadataList.iterator(); 
-                        while (iterator.hasNext()) {
-                            TimedMetadata timedMetadata = iterator.next();
-                            long diff = localTime - timedMetadata.getTime();
-                            if (diff >= 0 &&
-                                diff <= PLAYBACK_CLOCK_INTERVAL &&
-                                _mediaPlayer.shouldTriggerSubscribedTagEvent()) {
-                                // use timed metadata object
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    }
-};
-_playbackClock.addClockEventListener(_playbackClockEventListener);
-```
+   ```java
+    _playbackClockEventListener = new Clock.ClockEventListener() {
+       @Override
+       public void onTick(String name) {
+           getActivity().runOnUiThread(new Runnable() {
+               @Override
+               public void run() {
+                   /* handle timedmetadata object list  */ 
+                   if (_mediaPlayer != null && _timedMetadataList != null && _timedMetadataList.size() > 0) {
+                       if (_lastKnownStatus == MediaPlayer.PlayerState.PLAYING) {
+                           long localTime = _mediaPlayer.getLocalTime();
+                           Iterator<TimedMetadata> iterator = _timedMetadataList.iterator(); 
+                           while (iterator.hasNext()) {
+                               TimedMetadata timedMetadata = iterator.next();
+                               long diff = localTime - timedMetadata.getTime();
+                               if (diff >= 0 &&
+                                   diff <= PLAYBACK_CLOCK_INTERVAL &&
+                                   _mediaPlayer.shouldTriggerSubscribedTagEvent()) {
+                                   // use timed metadata object
+                               }
+                           }
+                       }
+                   }
+               }
+           });
+       }
+   };
+   _playbackClock.addClockEventListener(_playbackClockEventListener);
+   ```
 
 1. Passen Sie regelmäßig statische `TimedMetadata` Instanzen von der Liste ab, um zu verhindern, dass der Speicher ständig wächst.
