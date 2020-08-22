@@ -6,7 +6,7 @@ seo-title: Übersicht über die Primetime-DRM-Oberfläche
 title: Übersicht über die Primetime-DRM-Oberfläche
 uuid: 5e794147-cc58-448c-b8ec-065e80ef01fd
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 0%
@@ -46,15 +46,15 @@ TVSDK gibt eine `PTMediaPlayerItemDRMMetadataChanged` Benachrichtigung aus, wenn
 
 Wenn der DRM-geschützte Stream mit mehreren Bitraten (MBR) kodiert ist, sollten die DRM-Metadaten, die für die Wiedergabeliste der Variante verwendet werden, mit den Metadaten übereinstimmen, die in allen Bitrate-Streams verwendet werden.
 
-[!TIP]
-
-Wenn Sie in Ihrer iOS-App auf DRM-geschützte Asset-URLs verweisen, `?faxs=1` muss der Parameter für die Zeichenfolge der Abfrage an die (MBR) URL auf Einstellungsebene M3U8 angehängt werden. Beispiel:
+>[!TIP]
+>
+>Wenn Sie in Ihrer iOS-App auf DRM-geschützte Asset-URLs verweisen, `?faxs=1` muss der Parameter für die Zeichenfolge der Abfrage an die (MBR) URL auf Einstellungsebene M3U8 angehängt werden. Beispiel:
 
 ```
 https://your.domain.com/hls/[...]/index.m3u8?faxs=1
 ```
 
-The `faxs=1` query string parameter signals that the content is DRM protected, and triggers the DRM decryption workflow accordingly in the iOS TVSDK. Sie können das `faxs=1` Tag auch an DRM-geschützte HLS-Asset-URLs anhängen, die für andere Plattformen bestimmt sind. es wird auf iOS wie erforderlich beobachtet oder als Nicht-Op-Player auf anderen Plattformen behandelt.
+Der Parameter `faxs=1` für die Zeichenfolge signalisiert, dass der Inhalt DRM-geschützt ist, und löst den DRM-Entschlüsselungs-Workflow im iOS TVSDK entsprechend aus. Sie können das `faxs=1` Tag auch an DRM-geschützte HLS-Asset-URLs anhängen, die für andere Plattformen bestimmt sind. es wird auf iOS wie erforderlich beobachtet oder als Nicht-Op-Player auf anderen Plattformen behandelt.
 
 ## Primetime DRM in eine TSVDK-Anwendung implementieren {#implement-primetime-drm-in-a-tsvdk-application}
 
