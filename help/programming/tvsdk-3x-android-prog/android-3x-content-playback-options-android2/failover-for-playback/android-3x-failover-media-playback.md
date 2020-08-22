@@ -5,7 +5,10 @@ seo-title: Medienwiedergabe und Failover
 title: Medienwiedergabe und Failover
 uuid: e0072eeb-8ad1-436f-bf4a-fee6885a25bd
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '649'
+ht-degree: 0%
 
 ---
 
@@ -45,9 +48,12 @@ Wenn TVSDK kein alternatives Segment abrufen kann, wird eine `CONTENT_ERROR` Feh
 
 Wenn die Video-Engine kontinuierlich keine Segmente abrufen kann, werden fortlaufende Segmentübergänge auf 5 begrenzt. Danach wird die Wiedergabe gestoppt und TVSDK gibt einen `NATIVE_ERROR` Code 5 aus.
 
->[!REinschränkungen]
+>[!NOTE]
+>
+>**Einschränkungen**
 >
 >Im Folgenden finden Sie einige Einschränkungen, die Sie beachten sollten:
+>
 >* Die ABR-Steuerungsparameter (adaptive Bitrate) werden bei einem Failover nicht berücksichtigt.
 >
 >  
