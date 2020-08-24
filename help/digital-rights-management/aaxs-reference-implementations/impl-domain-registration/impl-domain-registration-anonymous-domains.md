@@ -3,14 +3,17 @@ seo-title: Anonyme Domänen
 title: Anonyme Domänen
 uuid: ee29ae4d-65b2-48de-b441-18c8cf55de32
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 4f196bbd079edeb1a423afee6b4b7e249d380f40
+workflow-type: tm+mt
+source-wordcount: '380'
+ht-degree: 0%
 
 ---
 
 
 # Anonyme Domänen {#anonymous-domains}
 
-In diesem Fall gehören viele Geräte zu einer einzigen Domäne, und eine Authentifizierung ist ggf. nicht erforderlich. Um diesen Domänentyp mit der Referenz-Implementierung zu verwenden, erstellen Sie die Richtlinie, die angibt, dass die Domänenregistrierung erforderlich ist. Geben Sie die URL des Domänenservers an [*!DNL https:// host:port/flashaccess/domainserver/domainname/*] und geben Sie eine anonyme Authentifizierung an.
+In diesem Fall gehören viele Geräte zu einer einzigen Domäne, und eine Authentifizierung ist ggf. nicht erforderlich. Um diesen Domänentyp mit der Referenz-Implementierung zu verwenden, erstellen Sie die Richtlinie, die angibt, dass die Domänenregistrierung erforderlich ist. Geben Sie die URL des Domänenservers an `https:// host:port/flashaccess/domainserver/domainname/` und geben Sie eine anonyme Authentifizierung an.
 
 Die Referenzimplementierung implementiert die folgende Logik für die Domänenregistrierung:
 
