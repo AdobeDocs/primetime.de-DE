@@ -4,9 +4,9 @@ seo-description: 'Diese Tabelle enthält detaillierte Informationen zu Umsatzopt
 seo-title: EINNAHMEN-Optimierungscode
 title: EINNAHMEN-Optimierungscode
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: df3d60874701383325be1afdd1ec5fe036f855f8
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Verwenden Sie zum Aktivieren dieses Berichte PTMediaPlayer api: `[mediaPlayerset
 >
 >Die meisten Informationsbenachrichtigungen enthalten relevante Metadaten, z. B. die URL der Ressource, die nicht heruntergeladen werden konnte. Einige Benachrichtigungen enthalten Metadaten, um anzugeben, ob das Problem im Hauptvideoinhalt, im alternativen Audioinhalt oder in einer Anzeige aufgetreten ist.
 
-|Code |Name |Innen-Benachrichtigung |Metadatenschlüssel |Anmerkungen |
-|—|—|—|—|—|—|
-| 401001 | REVENUE_OPTIMIZATION_BERICHTE | Keine | Metadatenschlüssel auf Basis verschiedener Ereignis finden Sie in der folgenden Tabelle. | Keine |
+| Code | Name | Innen-Benachrichtigung | Metadatenschlüssel | Kommentare |
+|---|---|---|---|---|
+| 401001 | REVENUE_OPTIMIZATION_BERICHTE | Keines | Die folgende Tabelle enthält Metadatenschlüssel, die auf verschiedenen Ereignissen basieren. | Keines |
 
 | Ereignis-Details | ContextMetadata |
 |---|---|
