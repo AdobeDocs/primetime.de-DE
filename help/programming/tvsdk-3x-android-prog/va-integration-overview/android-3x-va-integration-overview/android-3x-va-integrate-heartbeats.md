@@ -5,7 +5,10 @@ seo-title: Videoanalyse initialisieren und konfigurieren
 title: Videoanalyse initialisieren und konfigurieren
 uuid: c49c77d9-66b9-4586-9d70-b139b4a97a7a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Bevor Sie die Videoverfolgung aktivieren (Video Heartbeats), stellen Sie sicher,
 * TVSDK 3.0 für Android.
 * Konfigurations-/Initialisierungsinformationen
 
-   Wenden Sie sich an Ihren Adobe-Kundenbetreuer, um Informationen zu Ihrem spezifischen Videoverfolgungskonto zu erhalten:
+   Wenden Sie sich an Ihren Kundenbetreuer, um Informationen zu Ihrem spezifischen Videoverfolgungskonto zu erhalten:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
@@ -28,7 +31,7 @@ Bevor Sie die Videoverfolgung aktivieren (Video Heartbeats), stellen Sie sicher,
   </tr> 
   <tr> 
    <td colname="col1"> Endpunkt des AppMeasurement-Tracking-Servers </td> 
-   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts von Adobe Analytics (ehemals SiteCatalyst). </td> 
+   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts Adobe Analytics (früher SiteCatalyst). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Endpunkt des Video Analytics-Trackingservers </td> 
@@ -39,7 +42,7 @@ Bevor Sie die Videoverfolgung aktivieren (Video Heartbeats), stellen Sie sicher,
    <td colname="col2"> Auch als Report Suite-ID (RSID) bezeichnet. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Marketing Cloud-Organisations-ID </td> 
+   <td colname="col1"> Organisations-ID des Marketing Cloud </td> 
    <td colname="col2"> Ein Zeichenfolgenwert, der zum Instanziieren der Besucher-Komponente erforderlich ist. </td> 
   </tr> 
  </tbody> 
@@ -49,38 +52,39 @@ So konfigurieren Sie die Videoverfolgung im Player:
 
 1. Vergewissern Sie sich, dass die Optionen für die Ladezeit in der `ADBMobileConfig.json` Ressourcendatei korrekt sind.
 
-       &quot;
-     {
-     &quot;version&quot;: &quot;1.1&quot;,
-     &quot;Analyse&quot;: {
-     &quot;rsids&quot; : &quot;adobedevelopment&quot;,
-     &quot;server&quot; : &quot;10.131.129.149:3000&quot;,
-     &quot;Zeichensatz&quot;: &quot;UTF-8&quot;,
-     &quot;ssl&quot; : false,
-     &quot;offlineEnabled&quot; : false,
-     &quot;lifecycleTimeout&quot; : 5,
-     &quot;batchLimit&quot; : 50,
-     &quot;privacyDefault&quot; : &quot;optedin&quot;,
-     &quot;poi&quot; : []
-     },
-     &quot;Marketing Cloud&quot;: {
-     &quot;org&quot;: &quot;ADOBE-BEREITGESTELLTER WERT&quot;
-     },
-     &quot;Zielgruppe&quot;: {
-     &quot;clientCode&quot; : &quot;&quot;,
-     &quot;timeout&quot; : 5
-     },
-     &quot;audienceManager&quot; : {
-     &quot;server&quot; : &quot;&quot;
-     }
- }     &quot;
-     
-     
-     Diese JSON-formatierte Konfigurationsdatei ist als Ressource mit TVSDK gebündelt. Ihr Player liest diese Werte nur zur Ladezeit und die Werte bleiben konstant, während Ihre Anwendung ausgeführt wird.
-       
- So konfigurieren Sie     die Optionen für die Ladezeit:
-   
-   1. Vergewissern Sie sich, dass die `ADBMobileConfig.json` Datei die entsprechenden Werte enthält (von Adobe bereitgestellt).
+   ```
+   { 
+       "version" : "1.1", 
+       "analytics" : { 
+           "rsids" : "adobedevelopment", 
+           "server" : "10.131.129.149:3000", 
+           "charset" : "UTF-8", 
+           "ssl" : false, 
+           "offlineEnabled" : false, 
+           "lifecycleTimeout" : 5, 
+           "batchLimit" : 50, 
+           "privacyDefault" : "optedin", 
+           "poi" : [] 
+       }, 
+       "marketingCloud": { 
+           "org": "ADOBE PROVIDED VALUE"  
+       }, 
+       "target" : { 
+           "clientCode" : "", 
+           "timeout" : 5 
+       }, 
+       "audienceManager" : { 
+           "server" : "" 
+       } 
+   }
+   ```
+
+   Diese JSON-formatierte Konfigurationsdatei ist als Ressource mit TVSDK gebündelt. Ihr Player liest diese Werte nur zur Ladezeit und die Werte bleiben konstant, während Ihre Anwendung ausgeführt wird.
+
+   So konfigurieren Sie die Optionen für die Ladezeit:
+
+
+   1. Vergewissern Sie sich, dass die `ADBMobileConfig.json` Datei die entsprechenden Werte enthält (von der Adobe bereitgestellt).
    1. Vergewissern Sie sich, dass sich diese Datei im `assets/` Ordner befindet.
 
       Dieser Ordner muss sich im Stammverzeichnis der Anwendungsquelle befinden.
