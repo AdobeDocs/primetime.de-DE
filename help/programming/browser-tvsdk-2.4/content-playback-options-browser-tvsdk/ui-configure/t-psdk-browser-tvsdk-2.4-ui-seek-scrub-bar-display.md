@@ -5,7 +5,10 @@ seo-title: Verarbeiten der Suche bei Verwendung der Suchleiste
 title: Verarbeiten der Suche bei Verwendung der Suchleiste
 uuid: a7c74141-581f-40a3-9d28-ce56ba56773c
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -38,15 +41,15 @@ In Browser TVSDK können Sie eine bestimmte Position (Zeit) in einem Stream such
 
 1. Warten Sie, bis Browser TVSDK das `AdobePSDK.PSDKEventType.SEEK_END` Ereignis auslöst, das die angepasste Position im `actualPosition` Attribut des Ereignisses zurückgibt:
 
-       &quot;js
-     player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete);
-       onSeekComplete = function (Ereignis) {
- // Ereignis.ISTPosition     
- }     &quot;
-     
-     
-     Dies ist wichtig, da die tatsächliche Position des Beginns nach der Suche von der angeforderten Position abweichen könnte. Es gelten möglicherweise einige der folgenden Regeln:
-   
+   ```js
+   player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
+   onSeekComplete = function (event) {
+       // event.actualPosition
+   }
+   ```
+
+   Dies ist wichtig, da sich die tatsächliche Position des Beginns nach der Suche von der angeforderten Position unterscheiden kann. Es gelten möglicherweise einige der folgenden Regeln:
+
    * Das Wiedergabeverhalten wird beeinträchtigt, wenn eine Suche oder eine andere Neupositionierung in der Mitte einer Werbeunterbrechung endet oder Werbeunterbrechungen übersprungen werden.
    * Sie können nur in der suchbaren Dauer des Assets suchen. Bei VOD ist dies von 0 bis zur Laufzeit des Assets.
 
