@@ -1,28 +1,44 @@
 ---
-title: PTAI 20.8.1 - Versionshinweise
-description: Die Versionshinweise zu PTAI 20.8.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
+title: PTAI 20.9.1 - Versionshinweise
+description: Die Versionshinweise zu PTAI 20.9.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
+source-git-commit: c23b052f14c6673d4ba2aae6a317a55a2e611e8a
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
 
 
-# Primetime Dynamic Ad Insertion 20.8.1 - Versionshinweise
+# Primetime Dynamic Ad Insertion 20.9.1 - Versionshinweise
 
-In den Versionshinweisen zur dynamischen Ad Insertion 20.8.1 wird beschrieben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme bei der Primetime Dynamic Ad Insertion im Jahr 2020.
+In den Versionshinweisen zur dynamischen Ad Insertion 20.9.1 werden neue oder geänderte Funktionen, gelöste Probleme und bekannte Probleme bei der Primetime Dynamic Ad Insertion im Jahr 2020 beschrieben.
 
-## Neue Funktionen in PTAI 20.8.1
+## Neue Funktionen in PTAI 20.9.1
+
+**Wenn:** Dienstag, 1. September 2020 von 3:30 Uhr bis 7:30 Uhr östliche Zeit
+
+**Fehlerbehebungen**
+
+* Korrektur des Fehlers bei Kunden, die HLS/CMAF verwenden, bei dem EXT-X-MAP manchmal CDN-Token oder EXT-X-MAP-Tags fehlten, die manchmal fälschlicherweise aus dem DVR-Fenster gerollt wurden.
+
+### Verbesserungen und Fehlerbehebungen in früheren Versionen
+
+#### Version 20.8.4
+
+**Wenn:** Mittwoch, 19. August 2020 von 03:30 Uhr bis 07:30 Uhr östliche Zeit
+
+**Verbesserungen und Fehlerbehebungen**
+
+Aktualisierungen der Wartung.
+
+#### Version 20.8.1
 
 **Wenn:** Dienstag, 4. August 2020 von 3:00 Uhr bis 6:00 Uhr östliche Zeit
 
 **Verbesserungen und Fehlerbehebungen**
 
 Aktualisierungen der Wartung.
-
-### Verbesserungen und Fehlerbehebungen in früheren Versionen
 
 #### Version 20.7.1
 
