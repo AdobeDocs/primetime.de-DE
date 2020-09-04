@@ -2,7 +2,7 @@
 title: TVSDK 3.12 für iOS-Versionshinweise
 description: TVSDK 3.12 für iOS-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -288,19 +288,19 @@ Wenn die Auflösung mit einem gemeldeten Problem verbunden ist, wird ein Zendesk
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
 <!--
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
  -->
 **iOS TVSDK 3.12**
 
@@ -979,7 +979,7 @@ Alle Warnungen wurden behoben.
 
 * Zendesk #3875 - Tabulator-S stürzt während der Wiedergabe ab
 
-Rückgängigmachen der Abhängigkeit von OKHTTP auf Auditude für CRS, da TVSDK jetzt direkt die HTTPLILLconnection statt curl verwendet. Das Problem wurde durch Löschen von Ausnahmen behoben, bevor ein weiterer JNI-Aufruf durchgeführt wurde.
+Rückgängigmachen der Abhängigkeit von OKHTTP auf Auditude für CRS, da TVSDK jetzt direkt die httpurlconnection statt curl verwendet. Das Problem wurde durch Löschen von Ausnahmen behoben, bevor ein weiterer JNI-Aufruf durchgeführt wurde.
 
 * (Zendesk #4487) - Tracking Linear Kanal of Content
 
@@ -1168,7 +1168,7 @@ Diese Version des TVSDK wurde mit dem FairPlay-Support für iOS und tvOS zertifi
    * VPAID-Anzeigen werden auf dem iPad 13 nicht wie erwartet abgespielt.
    * Begleitanzeigen werden nicht wie erwartet abgespielt.
 
-* In iOS TVSDK werden alle Anzeigen in das Inhaltsmanifest eingefügt. Anzeigenverhalten werden durch Suchen implementiert, die auf der Dauer des Inhalts und der Anzeigensegmente basieren. Wenn die Segmentdauer also nicht genau ist, endet die Suche möglicherweise nicht immer im exakten Rahmen des Anfangs- oder Endpunkts der Werbeunterbrechung. Auch wenn die Dauer bis zum Rahmen reicht, gibt es eine Toleranz, die die Plattform selbst der Suche auferlegt, und es können einige Frames oder Anzeigen oder Inhalte angezeigt werden. Dies ist eine Einschränkung der Plattform und der Funktionsweise von Anzeigeneinfügungen mit TVSDK unter iOS.
+* In iOS TVSDK werden alle Anzeigen in das Inhaltsmanifest eingefügt. Anzeigenverhalten werden durch Suchen implementiert, die auf der Dauer des Inhalts und der Anzeigensegmente basieren. Wenn die Segmentdauer also nicht genau ist, endet die Suche möglicherweise nicht immer im exakten Frame des Anfangs oder Endes der Werbeunterbrechung. Auch wenn die Dauer bis zum Rahmen reicht, gibt es eine Toleranz, die die Plattform selbst der Suche auferlegt, und es können einige Frames oder Anzeigen oder Inhalte angezeigt werden. Dies ist eine Einschränkung der Plattform und der Funktionsweise von Anzeigeneinfügungen mit TVSDK unter iOS.
 * Die Entscheidung zum Überspringen erfolgt in diesem Fall beim Ereignis Suchen. Da die Anzeigensegmentdauer im Manifest jedoch nicht genau die tatsächliche Dauer der Anzeige widerspiegelt, ist die Suche nicht Bildgenauigkeit. Daher sehen Sie einige Frames der Anzeige, wenn die Anzeigenrichtlinien angewendet werden.
 * Es kann vorkommen, dass das Video zur Lizenzrotation unter iOS 11 nicht abgespielt wird und unter iOS 9.x und iOS 10.x korrekt wiedergegeben wird.
 * Bei der VPAID 2.0-Unterstützung werden VPAID-Anzeigen übersprungen, wenn die Wiedergabe über AirPlay aktiv ist.
