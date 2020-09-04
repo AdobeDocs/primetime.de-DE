@@ -5,7 +5,10 @@ seo-title: Begleitbannerdaten
 title: Begleitbannerdaten
 uuid: b2c709da-9d19-49d1-8116-9c947371b77c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '190'
+ht-degree: 0%
 
 ---
 
@@ -46,9 +49,9 @@ Jeder `AdBannerAsset` enthält Informationen zur Anzeige des Assets.
   </tr> 
   <tr> 
    <td colname="col1">
-    <ph>
+    <pre>
       Bannerdaten
-    </ph> </td> 
+    </pre> </td> 
    <td colname="col2"> Die Daten des Typs, der von <span class="codeph"> resourceType</span> für dieses begleitende Banner angegeben wird. </td> 
   </tr> 
   <tr> 
