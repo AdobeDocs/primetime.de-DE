@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
 workflow-type: tm+mt
 source-wordcount: '6578'
 ht-degree: 0%
@@ -84,7 +84,7 @@ Jedes Mal, wenn TVSDK ein Stream-Beginn-Ereignis generiert, sendet der Player HT
 
 In der PTSDKConfig-Klasse wurde die forceHTTPS-API hinzugefügt.
 
-Die PTSDKConfig-Klasse stellt Methoden zum Erzwingen von SSL für Anfragen bereit, die an Adobe Primetime-Ad-Decision-, DRM- und Video-Analytics-Server gesendet werden. Weitere Informationen finden Sie unter `forceHTTPS` und `isForcingHTTPS` -Methoden für diese Klasse. Wenn ein Manifest über HTTPS geladen wird, behält TVSDK die Inhaltsverwendung von HTTPS bei und berücksichtigt diese Verwendung beim Laden von relativen URLs aus diesem Manifest.
+Die PTSDKConfig-Klasse stellt Methoden zum Erzwingen von SSL für Anfragen bereit, die an Adobe Primetime-Ad-Decision-, DRM- und Video-Analytics-Server gesendet werden. Weitere Informationen finden Sie unter `forceHTTPS` und `isForcingHTTPS` -Methoden für diese Klasse. Wenn ein Manifest über HTTPS geladen wird, behält TVSDK die Inhaltsverwendung von HTTPS bei und berücksichtigt diese Verwendung, wenn relative URLs aus diesem Manifest geladen werden.
 
 **Hinweis**: Anforderungen an Drittanbieter-Domänen wie Anzeigenverfolgungspixel, Inhalts- und Anzeigen-URLs und ähnliche Anforderungen werden nicht geändert. Es liegt in der Verantwortung der Inhaltsanbieter und Anzeigenserver, URLs bereitzustellen, die über HTTPS unterstützt werden.
 
@@ -221,22 +221,17 @@ Diese Version des TVSDK wurde mit dem FairPlay-Support für iOS und tvOS zertifi
 
 Comment Type: draft
 
-`<note type="note">` 
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-`</note>`
-
- -->
+-->
 
 <!-- 
 
 Comment Type: draft
 
-`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-`</note>`
 
- -->
+-->
 
 **Version 1.4.45{#ios-tvsdk}**
 
@@ -282,7 +277,7 @@ Comment Type: draft
 * (ZD#34373) - Endbenutzer können nicht an HDMI-verbundene Geräte streamen, wenn die Stream-Aufzeichnung deaktiviert ist.
 * (ZD#32678) - TVSDK erfasst nicht die richtigen Anzeigen-IDs unter iOS.
 
-   Die Anzeigen-ID des finalen Werbekreativen wird jetzt im Fall von VAST/VMAP-Umleitungen in VHL-Pings aufgenommen.
+   Die Anzeigen-ID des finalen Werbekreativen wird jetzt in VHL-Pings im Fall von VAST/VMAP-Umleitungen abgerufen.
 * (ZD#33904) - TVSDK ist nicht für AVFoundation-Benachrichtigungen AVAudioSessionMediaServicesWereLostNotification und AVAudioSessionMediaServicesWereResetNotification registriert.
 
    PTMediaServicesWereLostNotification und PTMediaServicesWereResetNotification können jetzt in der Player-App registriert werden, um die Benachrichtigungen abzurufen, wenn Media-Dienste zurückgesetzt oder verloren gehen.
@@ -686,7 +681,7 @@ Das Problem, bei dem die Wiedergabe fehlschlug, nachdem eine AES-verschlüsselte
 
 * (ZD #22074) - AUDVAST-Absturz unter iOS einmal pro Minute
 
-Dieses Problem wurde behoben, indem die Behandlung von VAST-Anzeigen-Tags von Drittanbietern, die ungültige Zeichen in der URL enthalten, verbessert wurde.
+Dieses Problem wurde behoben, indem die Handhabung von VAST-Anzeigentags von Drittanbietern, die ungültige Zeichen in der URL enthalten, verbessert wurde.
 
 * (ZD #22257) - TVSDK kann DRM-Stream nicht wiedergeben
 
