@@ -3,9 +3,9 @@ seo-title: Übersicht über die Bereitstellung des Primetime-DRM-Key-Servers
 title: Übersicht über die Bereitstellung des Primetime-DRM-Key-Servers
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -86,13 +86,13 @@ JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder”
 
 ## DRM-Anmeldeinformationen von Primetime {#primetime-drm-credentials}
 
-Um wichtige Anfragen von Primetime DRM iOS- und Xbox 360-Clients zu verarbeiten, muss der Primetime DRM Key Server mit einem von Adobe ausgestellten Berechtigungssatz konfiguriert werden. Diese Anmeldeinformationen können entweder in PKCS#12 ( [!DNL .pfx])-Dateien oder auf einem HSM gespeichert werden.
+Zur Verarbeitung von Schlüsselanforderungen von Primetime DRM iOS- und Xbox 360-Clients muss der Primetime-DRM-Schlüsselserver mit einem von der Adobe ausgestellten Berechtigungssatz konfiguriert werden. Diese Anmeldeinformationen können entweder in PKCS#12 ( [!DNL .pfx])-Dateien oder auf einem HSM gespeichert werden.
 
-Die [!DNL .pfx] Dateien können sich an einer beliebigen Stelle befinden. Aus Gründen der einfachen Konfiguration empfiehlt Adobe jedoch, die [!DNL .pfx] Dateien im Konfigurationsverzeichnis des Mandanten zu platzieren. Weitere Informationen finden Sie unter Konfigurationsdateien für [wichtige Server](#key-server-configuration-files).
+Die [!DNL .pfx] Dateien können sich an einer beliebigen Stelle befinden. Aus Gründen der einfachen Konfiguration empfiehlt es sich jedoch, die [!DNL .pfx] Dateien im Konfigurationsverzeichnis des Mandanten abzulegen. Weitere Informationen finden Sie unter Konfigurationsdateien für [wichtige Server](#key-server-configuration-files).
 
 ### HSM-Konfiguration {#section_13A19E3E32934C5FA00AEF621F369877}
 
-Wenn Sie sich dafür entscheiden, Ihre Serverberechtigungen mit einem HSM zu speichern, müssen Sie die privaten Schlüssel und Zertifikate auf das HSM laden und eine Konfigurationsdatei *pkcs11.cfg* erstellen. Diese Datei muss sich im Ordner *KeyServer.ConfigRoot* befinden. Siehe [!DNL <Primetime DRM Key Server>/configs] Verzeichnis für eine Beispielkonfigurationsdatei für PKCS 11. Informationen zum Format [!DNL pkcs11.cfg]finden Sie in der Dokumentation zum Sun PKCS11-Anbieter.
+Wenn Sie sich dafür entscheiden, Ihre Serverberechtigungen mit einem HSM zu speichern, müssen Sie die privaten Schlüssel und Zertifikate auf das HSM laden und eine Konfigurationsdatei *pkcs11.cfg* erstellen. Diese Datei muss sich im Ordner *KeyServer.ConfigRoot* befinden. Im `<Primetime DRM Key Server>/configs` Verzeichnis finden Sie eine Beispielkonfigurationsdatei für PKCS 11. Informationen zum Format [!DNL pkcs11.cfg]finden Sie in der Dokumentation zum Sun PKCS11-Anbieter.
 
 Um sicherzustellen, dass die HSM- und Sun PKCS11-Konfigurationsdateien ordnungsgemäß konfiguriert sind, können Sie den folgenden Befehl aus dem Ordner verwenden, in dem sich die [!DNL pkcs11.cfg] Datei befindet ( [!DNL keytool] ist mit Java JRE und JDK installiert):
 
@@ -112,7 +112,7 @@ Der Primetime-DRM-Key-Server erfordert zwei Arten von Konfigurationsdateien:
 
 Wenn Änderungen an den Konfigurationsdateien vorgenommen werden, muss der Server neu gestartet werden, damit die Änderungen wirksam werden.
 
-Um zu vermeiden, dass Passwörter in unverschlüsseltem Text in den Konfigurationsdateien verfügbar gemacht werden, müssen alle in den Konfigurationsdateien für Global und Mandant angegebenen Passwörter verschlüsselt sein. Weitere Informationen zum Verschlüsseln von Passwörtern finden Sie unter [*Password Scrambler *in* Verwenden des Primetime DRM-Servers für geschütztes Streaming *](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md).
+Um zu vermeiden, dass Passwörter in unverschlüsseltem Text in den Konfigurationsdateien verfügbar gemacht werden, müssen alle in den Konfigurationsdateien für Global und Mandant angegebenen Passwörter verschlüsselt sein. Weitere Informationen zum Verschlüsseln von Passwörtern finden Sie unter [*Password Scrambler* in *Verwenden des Primetime DRM-Servers für geschütztes Streaming*](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md).
 
 ## Konfigurationsordnerstruktur {#configuration-directory-structure}
 
@@ -136,7 +136,7 @@ Die [!DNL flashaccess-keyserver-global.xml] Konfigurationsdatei enthält Einstel
 * Protokollierung - Gibt die Protokollierungsstufe und die Häufigkeit des Rollovers von Protokolldateien an.
 * HSM-Kennwort: Nur erforderlich, wenn zum Speichern von Serverberechtigungen ein HSM verwendet wird.
 
-Siehe die Kommentare in der Beispiel-globalen Konfigurationsdatei unter [!DNL <Primetime DRM Key Server>/configs] für weitere Details.
+Weitere Informationen finden Sie in den Kommentaren in der Beispiel-globalen Konfigurationsdatei unter `<Primetime DRM Key Server>/configs` .
 
 ## Mandantenkonfigurationsdateien {#tenant-configuration-files}
 
@@ -146,7 +146,7 @@ Sie können alle Dateipfade in der Mietkonfigurationsdatei entweder als absolute
 
 Alle Mandant-Konfigurationsdateien umfassen:
 
-* Key Server Credentials - Gibt eine oder mehrere von Adobe ausgestellte Key Server-Anmeldeinformationen (Zertifikat und privater Schlüssel) an. Kann als Pfad zu einer [!DNL .pfx] Datei und einem Kennwort oder als Alias für eine auf einem HSM gespeicherte Berechtigung angegeben werden. Hier können mehrere solcher Berechtigungen angegeben werden, entweder als Dateipfade oder als Schlüssel-Aliase oder beides.
+* Key Server Credentials - Gibt eine oder mehrere von der Adobe ausgestellte Key Server-Anmeldeinformationen (Zertifikat und privater Schlüssel) an. Kann als Pfad zu einer [!DNL .pfx] Datei und einem Kennwort oder als Alias für eine auf einem HSM gespeicherte Berechtigung angegeben werden. Hier können mehrere solcher Berechtigungen angegeben werden, entweder als Dateipfade oder als Schlüssel-Aliase oder beides.
 
 Die **iOS** -Mietkonfigurationsdatei enthält:
 
@@ -156,7 +156,7 @@ Die **Xbox 360** -Mietkonfigurationsdatei enthält:
 
 * XSTS-Berechtigung - Gibt die Berechtigung des Anwendungsentwicklers zum Entschlüsseln von XSTS-Tokens an.
 * XSTS-Signaturzertifikat - Gibt das Zertifikat an, das zum Überprüfen der Signatur auf XSTS-Token verwendet wird.
-* Packager Zulassungsliste - Packager-Zertifikate, denen der Key Server vertraut. Wenn in der Liste keine Packager-Zertifikate enthalten sind, werden alle Packager-Zertifikate als vertrauenswürdig eingestuft.
+* Packager-Zulassungsliste - Packager-Zertifikate, denen der Schlüsselserver vertraut. Wenn in der Liste keine Packager-Zertifikate enthalten sind, werden alle Packager-Zertifikate als vertrauenswürdig eingestuft.
 
 ## Protokolldateien {#log-files}
 
