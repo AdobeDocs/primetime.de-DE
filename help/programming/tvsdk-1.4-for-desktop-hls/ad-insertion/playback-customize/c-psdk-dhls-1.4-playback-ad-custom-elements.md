@@ -5,7 +5,10 @@ seo-title: API-Elemente für die Anzeigenwiedergabe
 title: API-Elemente für die Anzeigenwiedergabe
 uuid: 61ebbfd7-696c-4a5b-8dbb-682770cd5840
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '259'
+ht-degree: 0%
 
 ---
 
@@ -27,9 +30,9 @@ Die folgenden API-Elemente eignen sich zum Anpassen der Wiedergabe:
   <tr> 
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
    <td colname="col2">Legen Sie fest, ob eine Werbeunterbrechung als von einem Viewer gesehen gekennzeichnet werden soll, und wann, wenn ja, wann sie markiert werden soll. Überwachte Richtlinie festlegen und abrufen mit 
-    <ph>
+    <pre>
      die <span class="codeph"> Eigenschaft adBreakAsWatched</span> .
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdBreakPolicy</span> </td> 
