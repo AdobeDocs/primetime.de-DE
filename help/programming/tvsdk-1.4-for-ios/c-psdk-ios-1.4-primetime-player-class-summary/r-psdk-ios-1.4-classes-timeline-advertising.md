@@ -5,7 +5,10 @@ seo-title: Zeitschienenwerbungskurse
 title: Zeitschienenwerbungskurse
 uuid: b36d128f-7f13-4c61-b925-dfa5cd94e255
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '529'
+ht-degree: 0%
 
 ---
 
@@ -25,40 +28,40 @@ Diese Klassen bieten Informationen zu Anzeigen, die innerhalb einer Zeitleiste a
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAd.html" format="html" scope="external"> PTAd</a> </td> 
    <td colname="2">Klasse, die die Abstraktion der Anzeige definiert und alle Anzeigeninformationen enthält. Er wird durch eine eindeutige ID, eine Dauer und eine MediaResource definiert. Die MediaResource enthält die URL, unter der sich der eigentliche Anzeigeninhalt befindet. 
-    <ph>
+    <pre>
       Stellt ein in den Inhalt aufgeteiltes primärer linearer Asset dar. Er kann optional ein Array mit begleitenden Assets enthalten, die zusammen mit dem linearen Asset angezeigt werden müssen.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdAsset.html" format="html" scope="external"> PTAdAsset</a> </td> 
    <td colname="2">Klasse, die ein anzuzeigendes Asset darstellt. 
-    <ph>
+    <pre>
       Stellt ein anzuzeigendes Asset dar.
-    </ph> 
-    <ph>
+    </pre> 
+    <pre>
       Klasse, die ein Anzeigenasset darstellt.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdBannerView.html" format="html" scope="external"> PTAdBannerView</a> </td> 
    <td colname="2">
-    <ph>
+    <pre>
       Zeigt ein Banner-Asset an. Ihre Anwendung muss eine neue Instanz dieser Dienstprogrammklasse erstellen, das Banner-Asset festlegen und es einer Ansicht hinzufügen. Die Impressions- und Klickverfolgung für das Banner wird intern von dieser Klasse verwaltet.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdBreak.html" format="html" scope="external"> PTAdBreak</a> </td> 
    <td colname="2">Klasse, die eine einheitliche Ansicht für mehrere Anzeigen bietet, die zu einem bestimmten Zeitpunkt während der Wiedergabe wiedergegeben werden. 
-    <ph>
+    <pre>
       Stellt eine kontinuierliche Folge von Anzeigen dar, die in den Inhalt aufgeteilt werden.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdClick.html" format="html" scope="external"> PTAdClick</a> </td> 
    <td colname="2">Klasse, die eine mit einem Asset verknüpfte Klickinstanz darstellt. Diese Instanz enthält Informationen zur Clickthrough-URL und zum Titel, mit denen dem Benutzer zusätzliche Informationen bereitgestellt werden können. 
-    <ph>
+    <pre>
       Stellt eine mit einem Asset verknüpfte Klickinstanz dar. Diese Instanz enthält Informationen zur Clickthrough-URL und zum Titel, mit denen dem Benutzer zusätzliche Informationen bereitgestellt werden können.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAdPolicyInfo.html" format="html" scope="external"> PTAdPolicyInfo</a> </td> 
@@ -74,10 +77,10 @@ Diese Klassen bieten Informationen zu Anzeigen, die innerhalb einer Zeitleiste a
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> 
-    <ph>
+    <pre>
      <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> PTContentResolver</a> -Klasse, <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> PTContentResolver</a> -Protokoll
-    </ph> </td> 
-   <td colname="2"> Klasse, die den Teil zur Anzeigenauflösung im Adobe Primetime-Anzeigenentscheidungsprozess verarbeitet. </td> 
+    </pre> </td> 
+   <td colname="2"> Klasse, die den Teil mit der Anzeigenauflösung im Adobe Primetime-Anzeigenentscheidungsprozess verarbeitet. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolverDelegate.html" format="html" scope="external"> PTContentResolverDelegate</a> </td> 
