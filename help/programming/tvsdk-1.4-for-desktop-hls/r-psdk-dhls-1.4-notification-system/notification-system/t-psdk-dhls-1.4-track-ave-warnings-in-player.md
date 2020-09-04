@@ -5,7 +5,10 @@ seo-title: AVE-Warnungen in Ihrem Player verfolgen
 title: AVE-Warnungen in Ihrem Player verfolgen
 uuid: 236aee5e-6b1a-4298-9d3b-f33b40416c19
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '187'
+ht-degree: 1%
 
 ---
 
@@ -76,7 +79,7 @@ public class NotificationEvent extends Event {
 }
 ```
 
-Hinzufügen Sie einen Ereignis-Listener für Ihren Player, um AVE-Warnungen zu erhalten.
+hinzufügen Sie einen Ereignis-Listener für Ihren Player, um AVE-Warnungen zu erhalten.
 
 Beispiel:
 
@@ -108,10 +111,10 @@ Im Folgenden finden Sie ein Beispiel für AVE-Warnungen, die mit `NotificationEv
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [runtimeCodeMessage:SEGMENT_SKIPPED_ON_FAILURE] 
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [eventType:Warning] 
  
-<ph>
+<pre>
   [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [description:url::= 
    https://xyz.corp.adobe.com/pmp/assets/abc/failover/tc.1.04/content/backup-01/ 
    low-res/main-stream4-4x3-info6.ts,periodIndex::=0, 
    sizeBytes::=0,downloadTime(ms)::=0,mediaDuration(ms)::=0] 
-</ph>
+</pre>
 ```
