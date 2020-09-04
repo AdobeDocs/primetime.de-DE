@@ -3,7 +3,10 @@ seo-title: Details zur NATIVE_ERROR-Benachrichtigung
 title: Details zur NATIVE_ERROR-Benachrichtigung
 uuid: 18c4da57-59de-41a8-a2ea-fef800565207
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '212'
+ht-degree: 0%
 
 ---
 
@@ -23,9 +26,9 @@ Wenn TVSDK einen nativen Fehler verarbeitet, werden einige oder alle der folgend
   <tr> 
    <td colname="col1"> <span class="codeph"> NATIVE_ERROR_CODE </span> </td> 
    <td colname="col2"> 
-    <ph>
+    <pre>
       Nativer Fehlercode aus der AVE. 
-    </ph> Diese Codes stellen Folgendes dar: 
+    </pre> Diese Codes stellen Folgendes dar: 
     <ul id="ul_330C626DE27B45A09E8851CC24768A07"> 
      <li id="li_0845A9BBB55545BDB49BD4F4802C0E54">DRM-Fehler (Codes 3300 bis 3367). Diese sind mit den entsprechenden Flash Player-Fehlercodes identisch. </li> 
      <li id="li_98A571480C154CF0AE1DC101FF0834C4">Fehler bei der Videowiedergabe (-1 bis 89). </li> 
@@ -38,11 +41,11 @@ Wenn TVSDK einen nativen Fehler verarbeitet, werden einige oder alle der folgend
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> NATIVE_SUBERROR_CODE </span> </td> 
-   <td colname="col2"> Bei DRM-Fehlern werden auch Suberror-Codes zurückgegeben. Diese Codes entsprechen dem <span class="codeph"> DRMErrorEvents- </span> Suberror-Code, der vom Flash Player zurückgegeben wird. Wenn Adobe Berichte-Fehler gemeldet werden, geben Sie diesen numerischen Wert zur Fehlerbehebung an. </td> 
+   <td colname="col2"> Bei DRM-Fehlern werden auch Suberror-Codes zurückgegeben. Diese Codes entsprechen dem <span class="codeph"> DRMErrorEvents- </span> Fehlercode, der vom Flash Player zurückgegeben wird. Wenn Berichte-Fehler bei der Adobe auftreten, geben Sie für die Fehlerbehebung diesen numerischen Wert ein. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING </span> </td> 
-   <td colname="col2"> Bei DRM ist dies Ihre benutzerdefinierte Fehlerzeichenfolge aus Ihrer DRM-Serverbereitstellung, sofern Sie eine definiert haben. Schließen Sie dies auch ein, wenn Berichte bei Adobe Fehler machen. </td> 
+   <td colname="col2"> Bei DRM ist dies Ihre benutzerdefinierte Fehlerzeichenfolge aus Ihrer DRM-Serverbereitstellung, sofern Sie eine definiert haben. Schließen Sie dies auch ein, wenn Berichte zu Adoben fehlern. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> BESCHREIBUNG </span> </td> 
@@ -55,4 +58,4 @@ TVSDK empfängt diese Fehlercodes und Zeichenfolgen von der Video-Engine.
 
 >[!IMPORTANT]
 >
->Eine vollständige Liste der Adobe Primetime DRM-Clientfehlercodes finden Sie unter [DRM-Client-Fehlermeldungsreferenz](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf).
+>Eine vollständige Liste der Adobe Primetime DRM-Client-Fehlercodes finden Sie unter [DRM-Client-Fehlermeldungsreferenz](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf).
