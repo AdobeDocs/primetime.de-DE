@@ -3,7 +3,10 @@ seo-title: Übersicht
 title: Übersicht
 uuid: 857390be-dd14-46c0-b8f7-2bc661c515d4
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '672'
+ht-degree: 0%
 
 ---
 
@@ -108,11 +111,11 @@ Bevor Sie License Generator ausführen, müssen Sie Werte für die Eigenschaften
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.minClientVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Legt die derzeit unterstützte Mindestversion des Clients fest. Wenn Sie diese Eigenschaft nicht festlegen, werden alle Versionen standardmäßig automatisch unterstützt. </p> <p>Sie können diesen Wert festlegen, um zu steuern, wie ältere Clients auf die Lizenzanforderungen reagieren, die sie nicht unterstützen. Geben Sie <span class="codeph"> x</span> (für Adobe Primetime DRM x.0) an, wobei <span class="codeph"> x</span> eine Hauptveröffentlichungsnummer darstellt. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Legt die derzeit unterstützte Mindestversion des Clients fest. Wenn Sie diese Eigenschaft nicht festlegen, werden alle Versionen standardmäßig automatisch unterstützt. </p> <p>Sie können diesen Wert festlegen, um zu steuern, wie ältere Clients auf die Lizenzanforderungen reagieren, die sie nicht unterstützen. Geben Sie <span class="codeph"> x</span> (für Adobe Primetime DRM x.0) an, wobei <span class="codeph"> x</span> eine größere Versionsnummer darstellt. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.keyServerCert</span> </td> 
-   <td colname="2" class="- topic/entry "> Key Server-Zertifikat, ein von Adobe ausgestelltes Lizenzserver-Zertifikat, das vom Key Server verwendet wird. Dieses Zertifikat wird nur angewendet, wenn die Metadaten-/DRM-Richtlinie angibt, dass ein Schlüsselserver für wichtigen Versand auf iOS-Geräten erforderlich ist. </td> 
+   <td colname="2" class="- topic/entry "> Key Server-Zertifikat, ein von der Adobe ausgestelltes Lizenzserverzertifikat, das vom Key Server verwendet wird. Dieses Zertifikat wird nur angewendet, wenn die Metadaten-/DRM-Richtlinie angibt, dass ein Schlüsselserver für wichtigen Versand auf iOS-Geräten erforderlich ist. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certfile</span> </td> 
@@ -128,16 +131,14 @@ Bevor Sie License Generator ausführen, müssen Sie Werte für die Eigenschaften
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
-    <lines>
-     <span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.asymmetric. licenseServerCredential.n</span>
-    </lines> </td> 
+    <code>licensegen.keys.asymmetric. licenseServerCredential.n</code>
+   </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Optionale PKCS12-Datei, die zusätzliche Lizenzserver-Anmeldeinformationen zum Entschlüsseln des CEK in den Metadaten- und DRM-Richtlinien enthält. Sie können zusätzliche Berechtigungen konfigurieren, wenn Inhalte zuvor mit einem Lizenzserver-Zertifikat gepackt wurden, das nicht mit den mit <span class="codeph"> licensegen.sign.certfile</span>angegebenen Anmeldeinformationen identisch ist. Diese Eigenschaft muss auf eine <span class="filepath"> .pfx</span> -Datei verweisen, die ein Zertifikat und einen privaten Schlüssel enthält. <span class="codeph">n</span> muss monotonisch erhöht werden, beginnend mit 1. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
-    <lines>
-     <span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.asymmetric. licenseServerCredential.n.password</span>
-    </lines> </td> 
+    <code>licensegen.keys.asymmetric. licenseServerCredential.n.password</code>
+   </td> 
    <td colname="2" class="- topic/entry "> <p>Das Kennwort wird angewendet, um die Datei zu schützen, die Sie mit der<span class="+ topic/ph pr-d/codeph codeph"> Eigenschaft licensegen.keys.asymmetric.licenseServerCredential.n</span> angegeben haben. </p> </td> 
   </tr> 
  </tbody> 
