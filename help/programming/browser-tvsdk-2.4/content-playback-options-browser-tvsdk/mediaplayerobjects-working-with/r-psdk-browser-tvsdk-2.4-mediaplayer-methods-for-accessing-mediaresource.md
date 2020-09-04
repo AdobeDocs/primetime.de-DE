@@ -5,7 +5,10 @@ seo-title: MediaPlayer-Attribute für den Zugriff auf MediaResource-Informatione
 title: MediaPlayer-Attribute für den Zugriff auf MediaResource-Informationen
 uuid: d26f39d6-0a6b-4072-b99a-8767a511a846
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -53,9 +56,9 @@ Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über d
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> selectedAudioTrack </span> </td> 
    <td colname="3"> 
-    <ph>
+    <pre>
       Ruft die aktuell ausgewählte Audiospur ab, die mit <span class="codeph"> selectAudioTrack ausgewählt wurde </span>. 
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Zeitgesteuerte Metadaten </td> 
@@ -68,7 +71,7 @@ Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über d
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Mehrere Profil (Bitraten) </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> Profile </span> </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> profile </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
