@@ -5,7 +5,10 @@ seo-title: Sichtbarkeit von Bildunterschriften steuern
 title: Sichtbarkeit von Bildunterschriften steuern
 uuid: 42913347-8158-474e-aa3c-ba4d38baba12
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
@@ -20,16 +23,15 @@ Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarke
 
 >[!NOTE]
 >
->Die Sichtbarkeitswerte für Untertitel werden in `MediaPlayer.Visibility`definiert. >
+>Die Sichtbarkeitswerte für Untertitel werden in `MediaPlayer.Visibility`definiert.
 >
-```java>
+>
+```java
 >enum Visibility { 
 >       VISIBLE,  
 >       INVISIBLE 
 >}
->```>
-
-
+>```
 
 1. Warten Sie, bis der MediaPlayer mindestens den Status &quot;VORBEREITET&quot;aufweist (siehe [Warten auf einen gültigen Status](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)).
 1. Um die aktuelle Sichtbarkeitseinstellung für Untertitel abzurufen, verwenden Sie die get-Methode in MediaPlayer, die einen Sichtbarkeitswert zurückgibt.
