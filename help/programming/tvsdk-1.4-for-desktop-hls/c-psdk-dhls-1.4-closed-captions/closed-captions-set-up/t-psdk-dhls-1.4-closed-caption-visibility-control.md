@@ -5,7 +5,10 @@ seo-title: Sichtbarkeit von Bildunterschriften steuern
 title: Sichtbarkeit von Bildunterschriften steuern
 uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
@@ -20,14 +23,13 @@ Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarke
 
 >[!NOTE]
 >
->Die Sichtbarkeitswerte für Untertitel werden in `ClosedCaptionsVisibility`definiert. >
+>Die Sichtbarkeitswerte für Untertitel werden in `ClosedCaptionsVisibility`definiert.
 >
-```>
+>
+```
 >public static const HIDDEN:String = hidden; 
 >public static const VISIBLE:String = visible;
->```>
-
-
+>```
 
 1. Warten Sie, bis der Status &quot;VORBEREITET&quot; `MediaPlayer` mindestens vorliegt (siehe [Warten auf einen gültigen Status](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
 1. Um die aktuelle Sichtbarkeitseinstellung für Untertitel abzurufen, verwenden Sie die get-Methode in `MediaPlayer`, die einen Sichtbarkeitswert zurückgibt.
