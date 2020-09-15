@@ -5,7 +5,10 @@ seo-title: Adaptive Bitraten (ABR) für Videoqualität
 title: Adaptive Bitraten (ABR) für Videoqualität
 uuid: e3d5ef90-067d-48e0-a025-081de931d842
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '1011'
+ht-degree: 0%
 
 ---
 
@@ -80,20 +83,17 @@ Diese Klasse umfasst auch die `toABRControlParameters()` Helper-Methode. Verwend
 
    >[!NOTE]
    >
-   >Im folgenden Beispiel werden alle Parameter auf die Standardwerte initialisiert, dann wird nur die Richtlinie auf konservativ eingestellt und die maximale Bitrate auf 1000000 beschränkt:    >
+   >Im folgenden Beispiel werden alle Parameter auf die Standardwerte initialisiert, dann wird nur die Richtlinie auf konservativ eingestellt und die maximale Bitrate auf 1000000 beschränkt:
    >
    >
-   ```>
+   ```
    >var abrBuilder:ABRControlParametersBuilder =  
    >   new ABRControlParametersBuilder(); 
    >abrBuilder.policy = ABRControlParameters.CONSERVATIVE_POLICY; 
    >abrBuilder.maxBitRate = 1000000; 
    >mediaPlayer.abrControlParameters =  
    >   abrBuilder.toABRControlParameters();
-   >```   >
-   >
-
-
+   >```
 
 1. Ändern Sie einzelne ABR-Parameter zur Laufzeit.
 
