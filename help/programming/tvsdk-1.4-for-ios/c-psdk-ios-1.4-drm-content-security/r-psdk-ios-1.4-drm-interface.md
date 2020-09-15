@@ -1,13 +1,13 @@
 ---
-description: The key client-side element of the Primetime digital rights management (DRM) system is the DRM Manager.
-seo-description: The key client-side element of the Primetime digital rights management (DRM) system is the DRM Manager.
-seo-title: Primetime DRM interface overview
-title: Primetime DRM interface overview
+description: Das wichtigste clientseitige Element des DRM-Systems (Primetime Digital Rights Management) ist der DRM Manager.
+seo-description: Das wichtigste clientseitige Element des DRM-Systems (Primetime Digital Rights Management) ist der DRM Manager.
+seo-title: Übersicht über die Primetime-DRM-Oberfläche
+title: Übersicht über die Primetime-DRM-Oberfläche
 uuid: 3aae7c7a-fd0c-430e-9018-fd72801ab778
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
@@ -47,14 +47,14 @@ Wenn der DRM-geschützte Stream mit mehreren Bitraten (MBR) kodiert ist, sollten
 
 >[!TIP]
 >
->Wenn Sie in Ihrer iOS-App auf DRM-geschützte Asset-URLs verweisen, `?faxs=1` muss der Parameter für die Zeichenfolge der Abfrage an die (MBR) URL auf Einstellungsebene M3U8 angehängt werden. Beispiel: >
+>Wenn Sie in Ihrer iOS-App auf DRM-geschützte Asset-URLs verweisen, `?faxs=1` muss der Parameter für die Zeichenfolge der Abfrage an die (MBR) URL auf Einstellungsebene M3U8 angehängt werden. Beispiel:
 >
-```>
+>
+```
 >https://your.domain.com/hls/[...]/index.m3u8?faxs=1
->```>
->The `faxs=1` query string parameter signals that the content is DRM protected, and triggers the DRM decryption workflow accordingly in the iOS TVSDK. You can also append the `faxs=1` tag on DRM-protected HLS asset URLs that are destined for other platforms; it is observed as required on iOS or treated as a non-op in players on other platforms.
-
-
+>```
+>
+>Der Parameter `faxs=1` für die Zeichenfolge signalisiert, dass der Inhalt DRM-geschützt ist, und löst den DRM-Entschlüsselungs-Workflow im iOS TVSDK entsprechend aus. Sie können das `faxs=1` Tag auch an DRM-geschützte HLS-Asset-URLs anhängen, die für andere Plattformen bestimmt sind. es wird unter iOS wie erforderlich beobachtet oder bei Playern auf anderen Plattformen als Nicht-Op behandelt.
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
