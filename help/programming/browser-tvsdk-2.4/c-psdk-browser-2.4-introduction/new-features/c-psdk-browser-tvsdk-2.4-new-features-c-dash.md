@@ -5,7 +5,10 @@ seo-title: Unterstützte DASH-Funktionen
 title: Unterstützte DASH-Funktionen
 uuid: 299516a4-09ed-4b8a-b0bf-a04f204f385a
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '506'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Browser TVSDK unterstützt eine Reihe von DASH-Funktionen, die Sie implementiere
 
 >[!TIP]
 >
->In der Tabelle mit der Funktionsmatrix unten ![](assets/supported15.png)>
+>In den unten stehenden Tabelle mit Funktionsmatrix wird  ![](assets/supported15.png)
 >bedeutet, dass die Funktion in der aktuellen Version unterstützt wird.
 
 Die folgenden Funktionen werden unterstützt:
@@ -91,26 +94,26 @@ Die folgenden Funktionen werden unterstützt:
 
 | Kategorie | Inhaltstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Anzeigeneinfügung | VOD | Nur Anzeige | Nicht unterstützt |
-| Anzeigeneinfügung | VOD | Targeting-Parameter | Nur VOD |
-| Anzeigeneinfügung | VOD | Benutzerdefinierte Parameter | Nur VOD |
-| Anzeigeneinfügung | VOD + Live | Benutzerspezifische Anzeigenrichtlinie | Nicht unterstützt |
-| Anzeigeneinfügung | VOD + Live | Verzögertes Laden von Werbeanzeigen | Nicht unterstützt |
-| Anzeigeneinfügung | VOD | Ergänzende Anzeigen, Banneranzeigen und anklickbare Anzeigen | Nicht unterstützt |
-| Anzeigeneinfügung | VOD | VPAID 2.0 | Nicht unterstützt |
+| Ad Insertion | VOD | Nur Anzeige | Nicht unterstützt |
+| Ad Insertion | VOD | Targeting-Parameter | Nur VOD |
+| Ad Insertion | VOD | Benutzerdefinierte Parameter | Nur VOD |
+| Ad Insertion | VOD + Live | Benutzerspezifische Anzeigenrichtlinie | Nicht unterstützt |
+| Ad Insertion | VOD + Live | Verzögertes Laden von Werbeanzeigen | Nicht unterstützt |
+| Ad Insertion | VOD | Ergänzende Anzeigen, Banneranzeigen und anklickbare Anzeigen | Nicht unterstützt |
+| Ad Insertion | VOD | VPAID 2.0 | Nicht unterstützt |
 
 ## DASH-Kern- und Einfügefunktionen (CSAI) {#dash-core-ad-insertion}
 
 | Kategorie | Inhaltstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Anzeigeneinfügung | VOD + Live | Pre-Roll | Nur VOD |
-| Anzeigeneinfügung | VOD + Live | Mid-Roll | Nur VOD |
-| Anzeigeneinfügung | VOD + Live | Post-Roll | Nur VOD |
-| Anzeigeneinfügung | FER VOD | Anzeigenauflösung und -verhalten | Nicht unterstützt |
-| Anzeigeneinfügung | VOD + Live | Standard-Anzeigenrichtlinie | Nur VOD |
-| Anzeigeneinfügung | VOD + Live | VAST 2.0/3.0 | Nur VOD |
-| Anzeigeneinfügung | VOD + Live | VMAP 1.0 | Nur VOD |
-| Anzeigeneinfügung | VOD + Live | CRS v3.1 | Nur VOD |
+| Ad Insertion | VOD + Live | Pre-Roll | Nur VOD |
+| Ad Insertion | VOD + Live | Mid-Roll | Nur VOD |
+| Ad Insertion | VOD + Live | Post-Roll | Nur VOD |
+| Ad Insertion | FER VOD | Anzeigenauflösung und -verhalten | Nicht unterstützt |
+| Ad Insertion | VOD + Live | Standard-Anzeigenrichtlinie | Nur VOD |
+| Ad Insertion | VOD + Live | VAST 2.0/3.0 | Nur VOD |
+| Ad Insertion | VOD + Live | VMAP 1.0 | Nur VOD |
+| Ad Insertion | VOD + Live | CRS v3.1 | Nur VOD |
 
 ## DASH-Inhaltsschutzfunktionen {#dash-content-protection}
 
