@@ -5,7 +5,10 @@ seo-title: Lizenzserver bereitstellen
 title: Lizenzserver bereitstellen
 uuid: bee7ead1-ed13-4894-80f9-5196bf2f818f
 translation-type: tm+mt
-source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '294'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
 
    >[!NOTE]
    >
-   >Wenn Sie zuvor WAR-Dateien des Lizenzservers bereitgestellt haben, müssen Sie möglicherweise die entpackten WAR-Ordner im [!DNL webapps] Ordner auf dem Tomcat-Server löschen:        >
+   >Wenn Sie zuvor WAR-Dateien des Lizenzservers bereitgestellt haben, müssen Sie möglicherweise die entpackten WAR-Ordner im [!DNL webapps] Ordner auf dem Tomcat-Server löschen:
    >
    >* [!DNL webapps/flashaccess]
    >* [!DNL webapps/edcws]
@@ -28,7 +31,7 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
 
    >[!NOTE]
    >
-   >Bereitstellung nur dann möglich, [!DNL edsws.war] wenn Sie eine Abwärtskompatibilität mit Flash Media Rights Management (FMRMS) v1.5-Inhalten benötigen. (Dies ist eine sehr seltene Anforderung.)
+   >Stellen Sie die Bereitstellung nur dann bereit, [!DNL edsws.war] wenn Sie eine Abwärtskompatibilität mit Flash Media Rights Management (FMRMS) v1.5-Inhalten benötigen. (Dies ist eine sehr seltene Anforderung.)
    >
    >Wenn Sie verhindern möchten, dass Tomcat WAR-Dateien entpackt, bearbeiten Sie `server.xml` im `conf` Verzeichnis und legen Sie `unpackWARs` die Einstellung auf `false`.
 
@@ -39,7 +42,8 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
    * [!DNL flashaccesstools.properties] - Die Eigenschaftendatei des Lizenzservers.
    * [!DNL log4j.xml] - Konfiguration der Lizenzserverprotokollierung
    * [!DNL *.pol] - Beispiel für DRM-Richtliniendateien.
-   Darüber hinaus können Sie die Adobe-Zertifizierungsdateien an diesen Speicherort kopieren.
+
+   Darüber hinaus können Sie auch die Zertifizierungsdateien für die Adobe an diesen Speicherort kopieren.
 
 1. Ändern Sie die Einstellungen des Lizenzservers in, [!DNL flashaccesstools.properties] um Ihre Servereinrichtung anzuzeigen.
 
