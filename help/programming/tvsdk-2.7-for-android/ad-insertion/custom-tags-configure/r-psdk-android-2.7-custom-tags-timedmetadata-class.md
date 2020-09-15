@@ -5,7 +5,10 @@ seo-title: Zeitgesteuerte Metadatenklasse
 title: Zeitgesteuerte Metadatenklasse
 uuid: 45bd0d9f-3641-4041-905a-a36658c8c9ce
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '418'
+ht-degree: 0%
 
 ---
 
@@ -65,16 +68,13 @@ Beachten Sie Folgendes:
 
    >[!TIP]
    >
-   >Komplexe Daten in benutzerdefinierten Tags im Manifest, z. B. Zeichenfolgen mit Sonderzeichen, müssen in Anführungszeichen gesetzt werden. Beispiel:   >
+   >Komplexe Daten in benutzerdefinierten Tags im Manifest, z. B. Zeichenfolgen mit Sonderzeichen, müssen in Anführungszeichen gesetzt werden. Beispiel:
    >
    >
-   ```>
+   ```
    >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url= 
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```  >
-   >
-
-
+   >```
 
 * Wenn die Extraktion aufgrund eines benutzerdefinierten Tag-Formats fehlschlägt, ist die Metadateneigenschaft leer und die eigentlichen Informationen müssen von Ihrer Anwendung extrahiert werden. In diesem Fall wird kein Fehler ausgegeben.
 
