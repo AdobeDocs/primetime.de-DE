@@ -5,7 +5,10 @@ seo-title: Zeitgesteuerte Metadatenklasse
 title: Zeitgesteuerte Metadatenklasse
 uuid: d76b2a6b-2995-4559-b15d-82ded4c27eea
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
@@ -60,16 +63,13 @@ Beachten Sie Folgendes:
 
    >[!TIP]
    >
-   >Komplexe Daten in benutzerdefinierten Tags im Manifest, z. B. Zeichenfolgen mit Sonderzeichen, müssen in Anführungszeichen gesetzt werden. Beispiel:   >
+   >Komplexe Daten in benutzerdefinierten Tags im Manifest, z. B. Zeichenfolgen mit Sonderzeichen, müssen in Anführungszeichen gesetzt werden. Beispiel:
    >
    >
-   ```>
+   ```
    >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url=
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```  >
-   >
-
-
+   >```
 
 * Wenn die Extraktion aufgrund eines benutzerdefinierten Tag-Formats fehlschlägt, enthält die content-Eigenschaft immer die Rohdaten des Tags, d. h. die Zeichenfolge nach dem Doppelpunkt. In diesem Fall wird kein Fehler ausgegeben.
 
