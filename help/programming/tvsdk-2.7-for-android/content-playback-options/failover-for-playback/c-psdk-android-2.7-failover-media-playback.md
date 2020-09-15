@@ -5,7 +5,10 @@ seo-title: Medienwiedergabe und Failover
 title: Medienwiedergabe und Failover
 uuid: 5189cef4-ee09-43b3-ae3d-1052fc535480
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '648'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +50,8 @@ Wenn die Video-Engine kontinuierlich keine Segmente abrufen kann, werden fortlau
 
 >[!NOTE]
 >
->Im Folgenden finden Sie einige Einschränkungen, die Sie beachten sollten: >
+>Im Folgenden finden Sie einige Einschränkungen, die Sie beachten sollten:
+>
 >* Die ABR-Steuerungsparameter (adaptive Bitrate) werden bei einem Failover nicht berücksichtigt.
 >
 >  
