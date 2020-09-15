@@ -5,7 +5,10 @@ seo-title: Steuern des Stils für Untertitel
 title: Steuern des Stils für Untertitel
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '882'
+ht-degree: 0%
 
 ---
 
@@ -128,21 +131,23 @@ Sie können den Untertiteltext mit TVSDK-Methoden formatieren.
 
       >[!IMPORTANT]
       >
-      >**Farbeinstellungen:** In Android TVSDK 2.X wurde die Farbgestaltung von Bildunterschriften verbessert. Die Verbesserung ermöglicht das Festlegen von Untertitelfarben mithilfe einer Hex-Zeichenfolge, die RGB-Farbwerte darstellt. Bei der RGB-Hex-Farbdarstellung handelt es sich um die vertraute 6-Byte-Zeichenfolge, die Sie in Anwendungen wie Fotoshop verwenden:       >
+      >**Farbeinstellungen:** In Android TVSDK 2.X wurde die Farbgestaltung von Bildunterschriften verbessert. Die Verbesserung ermöglicht das Festlegen von Untertitelfarben mithilfe einer Hex-Zeichenfolge, die RGB-Farbwerte darstellt. Bei der RGB-Hex-Farbdarstellung handelt es sich um die vertraute 6-Byte-Zeichenfolge, die Sie in Anwendungen wie Photoshop verwenden:
       >
       >    * FFFFFF = Schwarz
       >    * 000000 = Weiß
       >    * FF0000 = Rot
       >    * 00FF00 = Grün
       >    * 0000FF = Blau
+
       >
       >und so weiter.
       >
       >Wenn Sie in Ihrer Anwendung Informationen zum Farbstil an `TextFormatBuilder`übergeben, verwenden Sie weiterhin die `Color` `getValue()` Auflistung wie bisher, aber jetzt müssen Sie der Farbe hinzufügen, um den Wert als Zeichenfolge abzurufen. Beispiel:
-      >
+
       ```
-      >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
-      >```
+      tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
+      ```
+
 
 
 
@@ -169,8 +174,7 @@ public TextFormatBuilder(
 ```
 
 >[!TIP]
->
->In Optionen, die Standardwerte definieren (z. B. `DEFAULT`), bezieht sich dieser Wert auf die Einstellung, die bei der ursprünglichen Angabe der Beschriftung festgelegt wurde.
+In Optionen, die Standardwerte definieren (z. B. `DEFAULT`), bezieht sich dieser Wert auf die Einstellung, die bei der ursprünglichen Angabe der Beschriftung festgelegt wurde.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
