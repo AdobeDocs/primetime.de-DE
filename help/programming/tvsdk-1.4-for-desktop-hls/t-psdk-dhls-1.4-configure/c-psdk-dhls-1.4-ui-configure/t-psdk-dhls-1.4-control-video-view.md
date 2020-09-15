@@ -5,7 +5,10 @@ seo-title: Position und Größe der Video-Ansicht steuern
 title: Position und Größe der Video-Ansicht steuern
 uuid: 2231c574-03cd-45a8-ab00-4a42f8e044f0
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 0%
 
 ---
 
@@ -32,10 +35,10 @@ Sie können das standardmäßige Seitenverhältnis außer Kraft setzen, indem Si
    >TVSDK verwendet ein `StageVideo` Objekt zur Videoanzeige. Da sich `StageVideo` Objekte nicht in der Display-Liste befinden, enthält der `viewPort` Parameter die absoluten Koordinaten des Videos.
    >
    >
-   >Beispiel:    >
+   >Beispiel:
    >
    >
-   ```>
+   ```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
@@ -56,10 +59,7 @@ Sie können das standardmäßige Seitenverhältnis außer Kraft setzen, indem Si
    >               [...] 
    >       } 
    >}
-   >```   >
-   >
-
-
+   >```
 
 1. Weisen Sie Ihre Implementierung der `MediaPlayerView` Eigenschaft zu.
 
@@ -68,7 +68,7 @@ Sie können das standardmäßige Seitenverhältnis außer Kraft setzen, indem Si
    view.scalePolicy = new CustomScalePolicy();
    ```
 
-1. Hinzufügen Sie Ihre Ansicht auf die `view` Eigenschaft des Medienplayers.
+1. hinzufügen Sie Ihre Ansicht auf die `view` Eigenschaft des Medienplayers.
 
    ```
    addChild(view); 
