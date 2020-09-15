@@ -5,7 +5,10 @@ seo-title: Lineare VPAID-Anzeigen in einer Werbeunterbrechung anzeigen
 title: Lineare VPAID-Anzeigen in einer Werbeunterbrechung anzeigen
 uuid: 1f3a5426-79f5-49a1-a913-923708c09ade
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '263'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Um VPAID-Anzeigen korrekt anzuzeigen, müssen Sie einen Anzeigen-Container ( `Ad
 Einschränkungen für VPAID-Anzeigen:
 
 * VPAID-Anzeigen haben nicht unbedingt eine vordefinierte Dauer, da die Anzeige interaktiv sein kann. Daher entspricht die Anzeigendauer (durch die Anzeigenserverantwort definiert) möglicherweise nicht immer genau der tatsächlichen Dauer der Anzeige.
-* Für VPAID 1.0-Anzeigen muss Flash Player 14.0.0.160 oder höher auf dem Gerät installiert sein. Bei früheren Versionen des Flash Players ist diese Funktion deaktiviert und VPAID 1.0-Anzeigen werden übersprungen.
+* Für VPAID 1.0-Anzeigen erfordert TVSDK die Installation des Flash-Players 14.0.0.160 oder höher auf dem Gerät. Bei älteren Versionen des Flash-Players ist diese Funktion deaktiviert und VPAID 1.0-Anzeigen werden übersprungen.
 
 So richten Sie einen Container für die Anzeige von VPAID-Anzeigen (Version 1.0 oder 2.0) innerhalb einer Werbeunterbrechung ein:
 
@@ -46,16 +49,13 @@ So richten Sie einen Container für die Anzeige von VPAID-Anzeigen (Version 1.0 
 
    >[!NOTE]
    >
-   >Wenn Sie ein Ereignis zum Ändern des Vollbildmodus erhalten und die neue Größe auf dem Container der Anzeige festlegen, übergeben Sie den Anzeigestatus der Bühne wie folgt, um sicherzustellen, dass die Größe des  korrekt angepasst wird:    >
+   >Wenn Sie ein Ereignis zum Ändern des Vollbildmodus erhalten und die neue Größe auf dem Container der Anzeige festlegen, übergeben Sie den Anzeigestatus der Bühne wie folgt, um sicherzustellen, dass die Größe des  korrekt angepasst wird:
    >
    >
-   ```>
+   ```
    >private function onFullScreenChange(event:FullScreenEvent):void { 
    >if (_adContainer) 
    >{ _adContainer.setSize(stage.stageWidth, stage.stageHeight, stage.displayState); } 
    >}
-   >```   >
-   >
-
-
+   >```
 
