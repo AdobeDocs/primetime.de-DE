@@ -1,28 +1,43 @@
 ---
-title: PTAI 20.9.1 - Versionshinweise
-description: Die Versionshinweise zu PTAI 20.9.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
+title: PTAI 20.9.2 - Versionshinweise
+description: Die Versionshinweise zu PTAI 20.9.2 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: 699e6a463bce4f7853406cb7fe529fb09f87ca92
+source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '962'
 ht-degree: 0%
 
 ---
 
 
-# Primetime Dynamic Ad Insertion 20.9.1 - Versionshinweise
+# Primetime Dynamic Ad Insertion 20.9.2 - Versionshinweise
 
-In den Versionshinweisen zur dynamischen Ad Insertion 20.9.1 werden neue oder geänderte Funktionen, gelöste Probleme und bekannte Probleme bei der Primetime Dynamic Ad Insertion im Jahr 2020 beschrieben.
+In den Versionshinweisen zur dynamischen Ad Insertion 20.9.2 werden neue oder geänderte Funktionen, gelöste Probleme und bekannte Probleme bei der Primetime Dynamic Ad Insertion im Jahr 2020 beschrieben.
 
-## Neue Funktionen in PTAI 20.9.1
+## Neue Funktionen in PTAI 20.9.2
+
+**Wenn:** Dienstag, 15. September 2020 von 3:30 Uhr bis 6:30 Uhr östliche Zeit
+
+**Verbesserungen**
+
+* Unterstützung für die Einbeziehung nicht-linearer Anzeigentypen mit `EXT-X-MARKER` -Tags.
+Wenden Sie sich an Ihren Kundenbetreuer, um weitere Informationen zu erhalten oder diese Funktion zu aktivieren.
+
+* Unterstützung für die Begrenzung der gesamten Anzeigenauflösungszeit, wenn die Reaktion der Anbieter zu lange dauert. Um die Begrenzung zu aktivieren, setzen Sie den bootstrap-API-Parameter `ptadtimeout` auf einen Wert in Millisekunden.
+
+   >[!NOTE]
+   >
+   >Dieser Timeout gilt nur für Anzeigenanforderungen, nicht für Werbeanforderungen.
+
+### Verbesserungen und Fehlerbehebungen in früheren Versionen
+
+#### Version 20.9.1
 
 **Wenn:** Dienstag, 1. September 2020 von 3:30 Uhr bis 7:30 Uhr östliche Zeit
 
 **Änderungen**
 
 * Korrektur des Fehlers bei Kunden, die HLS/CMAF verwenden, bei dem EXT-X-MAP manchmal CDN-Token oder EXT-X-MAP-Tags fehlten, die manchmal fälschlicherweise aus dem DVR-Fenster gerollt wurden.
-
-### Verbesserungen und Fehlerbehebungen in früheren Versionen
 
 #### Version 20.8.4
 
@@ -86,7 +101,7 @@ Wenden Sie sich an den Support für Adoben, um die folgenden neuen Funktionen ü
 
 * Es wurde ein Fehler behoben, der sicherstellte, dass beim Senden von if-Modified-Since-Headern korrekte CORS-Header bereitgestellt werden.
 
-* Fehlerbehebungen im CRS-Dashboard.
+* Fehlerbehebungen am CRS-Dashboard.
 
 * Aktualisierungen der Wartung.
 
