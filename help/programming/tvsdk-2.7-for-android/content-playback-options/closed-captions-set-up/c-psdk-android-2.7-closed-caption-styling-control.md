@@ -5,7 +5,7 @@ seo-title: Steuern des Stils für Untertitel
 title: Steuern des Stils für Untertitel
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 4ccc99f1ad6536ceb5e09c898dba3f71fa2de3f3
+source-git-commit: b02dfafdc78ca209da5ba0ed855342952be4288f
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -133,11 +133,11 @@ Sie können den Untertiteltext mit TVSDK-Methoden formatieren.
       >
       >**Farbeinstellungen:** In Android TVSDK 2.X wurde die Farbgestaltung von Bildunterschriften verbessert. Die Verbesserung ermöglicht das Festlegen von Untertitelfarben mithilfe einer Hex-Zeichenfolge, die RGB-Farbwerte darstellt. Bei der RGB-Hex-Farbdarstellung handelt es sich um die vertraute 6-Byte-Zeichenfolge, die Sie in Anwendungen wie Photoshop verwenden:
       >
-      >    * FFFFFF = Schwarz
-      >    * 000000 = Weiß
-      >    * FF0000 = Rot
-      >    * 00FF00 = Grün
-      >    * 0000FF = Blau
+      >* FFFFFF = Schwarz
+      >* 000000 = Weiß
+      >* FF0000 = Rot
+      >* 00FF00 = Grün
+      >* 0000FF = Blau
 
       >
       >und so weiter.
