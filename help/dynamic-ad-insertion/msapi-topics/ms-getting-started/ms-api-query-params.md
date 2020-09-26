@@ -5,9 +5,9 @@ seo-title: Manifestserver-Abfrage
 title: Manifestserver-Abfrage
 uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 Die Parameter für die Abfrage geben dem Manifestserver an, welche Art von Client die Anforderung gesendet hat und was dieser Client vom Manifestserver tun möchte. Einige sind erforderlich, andere weisen bestimmte akzeptable Formate oder Werte auf.
 
-Die vollständige URL besteht aus der Basis-URL gefolgt von einem Fragezeichen und anschließend `parameterName=value` Argumenten, die durch ein kaufmännisches Und getrennt sind: `Base URL?name1=value1&name2=value2& . . .&name n=value n`
+Die vollständige URL besteht aus der Basis-URL gefolgt von einem Fragezeichen und anschließend `parameterName=value` Argumenten, die durch ein kaufmännisches Und getrennt sind: `Base URL?name1=value1&name2=value2& . . .&name n=value n`.
 
-## Erkannte Parameter {#section_072845B7FA94468C8068E9092983C9E6}
+## Erkannte Parameter {#recognized-parameters}
 
 Der Manifestserver erkennt die folgenden Parameter. Er verarbeitet sie oder übergibt sie zusammen mit allen nicht erkannten Parametern an den Anzeigen-Server.
 
@@ -50,3 +50,5 @@ Der Manifestserver erkennt die folgenden Parameter. Er verarbeitet sie oder übe
 | scteTracking | Rufen Sie M3U8 ab, bevor Sie SCTE-Verfolgungsinformationen in JSON V2 Sidecar abrufen können.  <br/>Dieser Parameter gibt dem Manifestserver an, dass der Player, der das M3U8 abruft, SCTE-Tag-Informationen abrufen muss. | Nein (Standard:  false ) | true oder false Hinweis:  Die SCTE-35-Daten werden im JSON-Sidecar mit der folgenden Kombination von Abfrage-Parameterwerten zurückgegeben: <ul><li>`ptcueformat=turner | elemental | nfl | DPIScte35` </li><li>pttrackingversion=v2 </li><li>scteTracking=true</li></ul> |
 | vetargetmultiplier | Die Anzahl der Segmente vom Live-Point Der Pre-Roll-Offset wird wie folgt konfiguriert:   `(  vetargetmultiplier  *  targetduration ) +  vebufferlength`  <br/><br/>**Hinweis**:  Nur Live/Linear | Nein (Standard:  3.0 ) | Float |
 | vebufferLength | Die Anzahl Sekunden ab dem Live-Point Hinweis:  Nur Live/Linear | Nein (Standard:  3.0 ) | Float |
+| ptadtimeout | Zur Begrenzung der gesamten Anzeigenauflösungszeit, wenn die Reaktion der Anbieter zu lange dauert. | Ja, um | Wert in Millisekunde |
+| ptparallelstream | Ermöglicht Kunden mit Playern, die parallel CMAF-demuxed Audio- oder Videostreams anfordern, um sicherzustellen, dass Anzeigen in Audio- und Videospuren konsistent sind. | Ja, um die Funktion zu aktivieren oder die Deaktivierung zu unterlassen. | true |
