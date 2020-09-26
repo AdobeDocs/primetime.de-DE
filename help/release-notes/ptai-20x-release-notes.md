@@ -1,20 +1,30 @@
 ---
-title: PTAI 20.9.2 - Versionshinweise
-description: Die Versionshinweise zu PTAI 20.9.2 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
+title: PTAI 20.9.3 - Versionshinweise
+description: Die Versionshinweise zu PTAI 20.9.3 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
 
 
-# Primetime Dynamic Ad Insertion 20.9.2 - Versionshinweise
+# Primetime Dynamic Ad Insertion 20.9.3 - Versionshinweise
 
-In den Versionshinweisen zur dynamischen Ad Insertion 20.9.2 werden neue oder geänderte Funktionen, gelöste Probleme und bekannte Probleme bei der Primetime Dynamic Ad Insertion im Jahr 2020 beschrieben.
+Die Versionshinweise zu dynamischen Ad Insertion 20.9.3 beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme bei Primetime Dynamic Ad Insertion im Jahr 2020.
 
-## Neue Funktionen in PTAI 20.9.2
+## Neue Funktionen in PTAI 20.9.3
+
+**Wenn:** Mittwoch, 30. September 2020 um 3:30 Uhr bis 6:30 Uhr östliche Zeit
+
+**Änderungen**
+
+* Der Bootstrap-API-Parameter wurde hinzugefügt `ptparallelstream`. Dadurch können Kunden mit Playern, die parallel CMAF-demuxed Audio- oder Videostreams anfordern, sicherstellen, dass Anzeigen in Audio- und Videospuren konsistent sind. Setzen Sie den Parameterwert auf true, um diese Funktion zu aktivieren oder zu deaktivieren.
+
+### Verbesserungen und Fehlerbehebungen in früheren Versionen
+
+#### Version 20.9.2
 
 **Wenn:** Dienstag, 15. September 2020 von 3:30 Uhr bis 6:30 Uhr östliche Zeit
 
@@ -28,8 +38,6 @@ Wenden Sie sich an Ihren Kundenbetreuer, um weitere Informationen zu erhalten od
    >[!NOTE]
    >
    >Dieser Timeout gilt nur für Anzeigenanforderungen, nicht für Werbeanforderungen.
-
-### Verbesserungen und Fehlerbehebungen in früheren Versionen
 
 #### Version 20.9.1
 
@@ -101,7 +109,7 @@ Wenden Sie sich an den Support für Adoben, um die folgenden neuen Funktionen ü
 
 * Es wurde ein Fehler behoben, der sicherstellte, dass beim Senden von if-Modified-Since-Headern korrekte CORS-Header bereitgestellt werden.
 
-* Fehlerbehebungen am CRS-Dashboard.
+* Fehlerbehebungen im CRS-Dashboard.
 
 * Aktualisierungen der Wartung.
 
