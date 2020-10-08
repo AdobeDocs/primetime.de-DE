@@ -5,7 +5,10 @@ seo-title: Anzeigen von QoS-Wiedergabe und Gerätestatistiken
 title: Anzeigen von QoS-Wiedergabe und Gerätestatistiken
 uuid: 8fc45a2f-03d4-4fa0-979b-eb816419c4f7
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
+workflow-type: tm+mt
+source-wordcount: '365'
+ht-degree: 0%
 
 ---
 
@@ -28,9 +31,11 @@ Die `QoSManager` Verfolgung von QoS-Statistiken durch Abrufen von Geräteinforma
 
    * So erstellen Sie einen QosManager:
       * Diese Anwendung muss die Funktion für den Arbeitsablauf für Anzeigen verwenden
+
    QoSManager qosManager = new QosManagerOn();
 
    * So verwenden Sie eine ManagerFactory, um die Anzeige der QoS-Statistiken zu aktivieren:
+
    qosManager = ManagerFactory.getQosManager(
    <b>true</b>, config, mediaPlayer);
 
@@ -38,7 +43,7 @@ Die `QoSManager` Verfolgung von QoS-Statistiken durch Abrufen von Geräteinforma
    >
    >Wenn Sie den booleschen Wert ändern, wird der QoS-Berichte `false` deaktiviert.
 
-2. Hinzufügen Ereignis-Listener:
+2. hinzufügen Ereignis-Listener:
 
    `qosManager.addEventListener(qosManagerEventListener);`
 
