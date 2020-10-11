@@ -2,9 +2,9 @@
 title: Erste Schritte mit Adobe Primetime Ad Insertion
 description: Erste Schritte mit Adobe Primetime Ad Insertion
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: 2a9bb089cda2b315f91b30d5cab0db9b3e372799
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Nachdem das System ordnungsgemäß eingerichtet wurde, könnte ein typischer Wor
 
 1. Primetime-Ad Insertion ruft die angeforderten Streams aus dem Content CDN ab, analysiert/liest Cue-Informationen, ruft den Anzeigenserver auf und ersetzt bei Bedarf Werbeunterbrechungen.
 
-1. Primetime-Ad Insertion normalisiert das Manifest, indem Ressourcen-URLs umgeschrieben werden und festgestellt wird, ob Werbekreative eine Transkodierung erfordern (siehe [Just-in-time-Anzeigentranskodierung](just-in-time-transcoding.md) und [Verpackung](just-in-time-repackaging.md)).
+1. Primetime-Ad Insertion normalisiert das Manifest, indem Ressourcen-URLs umgeschrieben und festgestellt wird, ob für Werbeinhalte Transkodierung erforderlich ist. <!-- see [Just-in-time ad transcoding](just-in-time-transcoding.md) and [packaging](just-in-time-repackaging.md).-->
 
 1. Primetime-Ad Insertion ruft die erforderlichen Anzeigenkreative ab und fügt die entsprechenden Fragmente in die Manifeste ein.
 
