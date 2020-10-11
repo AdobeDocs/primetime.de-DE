@@ -4,9 +4,9 @@ seo-title: Adobe Primetime Versionshinweise
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 Willkommen bei den Adobe Primetime Versionshinweisen. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
 
-## Erweiterungen und Fehlerbehebungen in PTAI 20.9.3
+## Erweiterungen und Fehlerbehebungen in PTAI 20.10.1
 
-Die Veröffentlichung konzentrierte sich auf die Bereitstellung des Bootstrap-API-Parameters `ptparallelstream`, damit Kunden mit Playern, die parallel demuxed Audio- oder Videostreams anfordern, CMAF-demuxed anfordern können, um sicherzustellen, dass Anzeigen in Audio- und Videospuren konsistent sind.
+Die Version konzentrierte sich auf Wartungs-Updates.
 
 ## Fehlerbehebungen in TVSDK 3.12 Android
 
