@@ -1,28 +1,36 @@
 ---
-title: PTAI 20.9.3 - Versionshinweise
-description: Die Versionshinweise zu PTAI 20.9.3 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2020.
+title: PTAI 20.10.1 - Versionshinweise
+description: Die Versionshinweise zu PTAI 20.10.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Ad Insertion im Jahr 2020.
 translation-type: tm+mt
-source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1027'
 ht-degree: 0%
 
 ---
 
 
-# Primetime Dynamic Ad Insertion 20.9.3 - Versionshinweise
+# Primetime Ad Insertion 20.10.1 - Versionshinweise
 
-Die Versionshinweise zu dynamischen Ad Insertion 20.9.3 beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme bei Primetime Dynamic Ad Insertion im Jahr 2020.
+Die Versionshinweise Primetime Ad Insertion 20.10.1 beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme in Primetime Ad Insertion im Jahr 2020.
 
-## Neue Funktionen in PTAI 20.9.3
+## Neue Funktionen in PTAI 20.10.1
+
+**Wenn:** Dienstag, 13. Oktober 2020 von 03:00 Uhr bis 07:00 Uhr östliche Zeit
+
+**Änderungen**
+
+* Aktualisierungen der Wartung.
+
+### Verbesserungen und Fehlerbehebungen in früheren Versionen
+
+#### Version 20.9.3
 
 **Wenn:** Mittwoch, 30. September 2020 um 3:30 Uhr bis 6:30 Uhr östliche Zeit
 
 **Änderungen**
 
 * Der Bootstrap-API-Parameter wurde hinzugefügt `ptparallelstream`. Dadurch können Kunden mit Playern, die parallel CMAF-demuxed Audio- oder Videostreams anfordern, sicherstellen, dass Anzeigen in Audio- und Videospuren konsistent sind. Setzen Sie den Parameterwert auf true, um diese Funktion zu aktivieren oder zu deaktivieren.
-
-### Verbesserungen und Fehlerbehebungen in früheren Versionen
 
 #### Version 20.9.2
 
@@ -109,7 +117,7 @@ Wenden Sie sich an den Support für Adoben, um die folgenden neuen Funktionen ü
 
 * Es wurde ein Fehler behoben, der sicherstellte, dass beim Senden von if-Modified-Since-Headern korrekte CORS-Header bereitgestellt werden.
 
-* Fehlerbehebungen im CRS-Dashboard.
+* Fehlerbehebungen am CRS-Dashboard.
 
 * Aktualisierungen der Wartung.
 
@@ -220,6 +228,6 @@ Wenn die Lösung mit einem gemeldeten Problem verbunden ist, wird ein Zendesk-Ve
 
 ## Bekannte Probleme und Einschränkungen
 
-**PTAI 20.3.3**
+**PTAI 20.10.1**
 
 Keine neue Einschränkung hinzugefügt.
