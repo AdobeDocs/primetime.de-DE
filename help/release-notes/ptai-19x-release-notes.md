@@ -1,18 +1,18 @@
 ---
 title: PTAI 19.11.1 - Versionshinweise
-description: Die Versionshinweise zu PTAI 19.11.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Dynamic Ad Insertion im Jahr 2019.
+description: Die Versionshinweise zu PTAI 19.11.1 beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Ad Insertion im Jahr 2019.
 translation-type: tm+mt
-source-git-commit: 369dc8d987f5d49467ec376d4df5ffc46ea6d36c
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1971'
 ht-degree: 0%
 
 ---
 
 
-# Primetime Dynamic Ad Insertion 19.11.1 - Versionshinweise
+# Primetime Ad Insertion 19.11.1 - Versionshinweise
 
-Versionshinweise zur dynamischen Anzeigeneinfügung 19.11.1 beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme bei der Primetime-Einführung dynamischer Anzeigen im Jahr 2019.
+Die Versionshinweise Primetime Ad Insertion 19.11.1 beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme in Primetime Ad Insertion im Jahr 2019.
 
 ## Neue Funktionen in PTAI 19.11.1
 
@@ -88,6 +88,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
    * Es wurde eine Regel zur kreativen URL-Normalisierung für Innovid hinzugefügt, die von SSAI verwendet wird
    * Die von CRS verwendete Normalisierungsregel wurde in einer früheren Version hinzugefügt
    * TVSDK: Die Normalisierungsregel, die in das JSON für CRS-Regeln eingefügt werden soll, wurde nach einer früheren Version bereitgestellt. Um jedoch sicher zu sein, wenden Sie sich an Ihren technischen Kundenbetreuer, um alle vorhandenen Normalisierungsregeln zu überprüfen.
+
       >[!NOTE]
       >
       >Die meisten Innovid-Kreativ-URLs werden ohne die Normalisierungsregel erfolgreich transkodiert und geheftet. Gelegentlich werden jedoch auch innovide kreative URLs mit dynamischen Parametern gefunden. Die Normalisierungsregel ist erforderlich, um diese Instanzen zu bearbeiten.
@@ -102,7 +103,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
    * CRS: Arbeitsablauf zum Neuverpacken von Anzeigen im CMAF-Format (HLS/fMP4) hinzugefügt
 * SAI: Es wurde ein Problem behoben, das verhindert hat, dass ungemuxed Anzeigen in ungemusterten Inhalt eingefügt wurden, wenn sowohl der Inhalt als auch die Anzeige keine reinen Audiostreams haben (EXT-X-STREAM-INF)
 * SAI: Unterstützung für CDN-Authentifizierungstoken für Limelight (LLNW) für Inhaltssegmente hinzugefügt
-   * Wenn `pttoken=limelight` oder der Bootstrap-URL hinzugefügt `pttoken=llnw` wird, fügen wir beim Abrufen der Quell-Master-Playlist einen geheimen Header hinzu, dann hängen wir die Abfragen-Parameter aus dem X-Adobe-Sig-Header von LLNW an die Inhaltssegmente an
+   * Wenn `pttoken=limelight` oder der Bootstrap-URL hinzugefügt `pttoken=llnw` wird, fügen wir beim Abrufen der Übergeordnet-Quellwiedergabeliste einen geheimen Header hinzu, dann hängen wir die Abfragen-Parameter aus dem X-Adobe-Sig-Header von LLNW an die Inhaltssegmente an
 * SAI: Es wurde ein weiterer pttoken-Wert (`pttoken=centurylink`) für die Unterstützung von CenturyLink-CDN-Authentifizierungstoken hinzugefügt, der am 30. Juli 2018 veröffentlicht wurde
    * `pttoken=centurylink` hat das gleiche Verhalten wie `pttoken=level3`und beide Werte sind gültig
 
@@ -113,15 +114,15 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
 * SAI: Sicherheitsaktualisierungen
 * CRS-Dashboard: Kürzung der Zeichenfolge &quot;FqAdId-Beispiel&quot;auf 255 Zeichen aufgrund von Einschränkungen der Datenspeicherung von Daten (8 Bit)
    * Die Zeichenfolge &quot;FqAdId-Beispiel&quot;enthält das Anzeigensystem und die Anzeigen-ID jeder XML-Antwort in der Wrapper-Kette der Anzeige für Einfügungen aller CRS-Anzeigen mit SSAI (Abschnitt &quot;Kreative Statistiken&quot;des CRS-Dashboards)
-* SSAI- und CRS-Dashboards: Softwareversionsaktualisierungen
+* SSAI- und CRS-Dashboards: Updates der Softwareversion
 
 ### Version 19.4.1
 
 **Wenn:** Mittwoch, 10. April 2010, 2:30 Uhr Ostzeit bis Mittwoch, 10.04.30 Uhr Ostzeit
 
-* CRS: Die CRS-Umpackungs-API unterstützt keine HTTP-POST-Befehle mehr. Die CRS-Umverpackungs-API leitet HTTP-POST-Befehle (301) automatisch an HTTPS weiter
-   * Ab dem 20. Mai wird die HTTP->HTTPS-Umleitung für HTTP POST-Befehle deaktiviert
-   * Wenn Sie die CRS-Umpackungs-API verwenden, um Anzeigen im Voraus zu verpacken, wechseln Sie bis zum 20. Mai zu HTTPS für Ihre POST-Befehle
+* CRS: Die CRS-Umpackungs-API unterstützt keine HTTP-POST mehr. Die CRS-Umpackungs-API leitet HTTP-POST-Befehle (301) automatisch an HTTPS weiter
+   * Ab dem 20. Mai wird die HTTP->HTTPS-Umleitung für HTTP-POST deaktiviert
+   * Wenn Sie die CRS-Umpackungs-API verwenden, um Anzeigen im Voraus zu verpacken, wechseln Sie bis zum 20. Mai zu HTTPS für Ihre POST
 * CRS: Architektur und Arbeitsablauf zum Hochladen von CRS-Assets in die CDN-Herkünfte von Kunden neu gestaltet
    * Auftragsabläufe pro CDN-Herkunft sind voneinander getrennt. Daher wirken sich Upload-Engpässe für eine CDN-Herkunft nicht auf Uploads in andere CDN-Herkünfte aus
    * Weitere Vorteile: Die Verarbeitungszeiten für CRS-Aufträge und die Upload-Raten auf die CDN-Herkünfte der Kunden wurden verbessert.
@@ -137,7 +138,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
    * Neues Verhalten: Der SSAI-Bootstrap-URL wurde ein neuer Parameter vttdisk mit den akzeptierten Werten true und false hinzugefügt
       * vttdisk=true: EXT-X-DISCONTINUITY-Tags werden vor jeder eingefügten Anzeige und nach dem letzten Segment der eingefügten Werbeunterbrechung in das WebVTT-Manifest eingefügt, wobei das Verhalten für Audio-/Video- und Nur-Audio-Manifeste übereinstimmt
       * vttdisk=false (siehe vorheriges Verhalten): Entfernen Sie nur im WebVTT-Manifest EXT-X-DISCONTINUITY-Tags, die vor jeder eingefügten Anzeige und nach dem letzten Segment der eingefügten Werbeunterbrechung eingefügt werden.
-      * Wenn der vttdisk-Parameter weggelassen wird oder einen anderen Wert als true/false hat, lautet der Standardwert vttdisk true (wahr)
+      * Wenn der vttdisk-Parameter ausgelassen wird oder einen anderen Wert als true/false hat, lautet der Standardwert vttdisk true (wahr)
 * SAI: Sicherheitsaktualisierungen und Updates der Softwareversion
    * Java: Aktualisierung der Java-Version zur Unterstützung zusätzlicher ChiffrierSuites für Anzeigenaufrufe, die über TLS 1.2 (HTTPS) ausgelöst werden
 
@@ -148,7 +149,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
 * SAI: ClickThrough- und ClickTracking-URLs für Videoanzeigen wurden dem sidecar JSON v2-Format hinzugefügt
    * Unter der Eigenschaft &quot;trackingURLs&quot;lauten ihre &quot;Ereignis&quot;-Wertnamen &quot;Clickthrough&quot;und &quot;clickTracking&quot;
    * Ihre startTime-Werte sind der Anfang der Anzeige
-* SAI: Für CRS-Assets wurde eine Funktion hinzugefügt, mit der der Ablauf des Abfragedatensatzes eines CRS-Assets um 30 Tage verlängert werden kann, sobald es eingefügt wird
+* SAI: Für CRS-Assets wurde eine Funktion hinzugefügt, mit der der Ablauffrist eines CRS-Assets um 30 Tage verlängert werden kann, sobald es eingefügt wird
    * Vorheriges Verhalten: CRS-Asset-Nachschlagedatensätze werden in jedem Pod im memcache gespeichert. CRS-Asset-Lookup-Datensätze werden 30 Tage nach dem Hinzufügen zum memcache automatisch entfernt. Um den CRS-Asset-Nachschlagedatensatz eines kreativen Elements in einem Pod zu replizieren, nachdem er aus dem memcache entfernt wurde, muss dieses kreative Element in diesem Pod dreimal gefunden werden
    * Neues Verhalten: Wenn ein Pod auf einen CRS-Asset-Nachschlagedatensatz zugreift, um das CRS-Asset einzufügen, wird der Ablauf des CRS-Nachschlagedatensatzes in diesem Pod um 30 Tage verlängert. Daher werden häufig verwendete CRS-Elemente erst 30 Tage nach der letzten Verwendung aus dem Memcache eines Pods entfernt
    * Das neue Verhalten ist systemweit verfügbar und kann abgeschaltet werden, wenn ein Leistungsabfall erkannt wird
@@ -174,13 +175,13 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
    * Alte Lookup-Key-Struktur: Zonen-, Anzeigen- und Anzeigensystem-, Anzeigen-ID-, Kreativ-ID-, Kreativ-URL- und Formatparameter (Zielgruppe-Dauer, Ausgabeformat, Ziel-CDN)
    * Die Lookup-Keys für vorhandene CRS-Assets werden vor der Produktionsversion aktualisiert, um der neuen Struktur zu entsprechen. Beachten Sie jedoch, dass neue Assets, die zwischen der Lookup-Keys-Aktualisierung und der Produktionsversion transkodiert wurden, möglicherweise fehlen. In diesem Fall würden sie eine neue CRS-Anforderung starten, wenn sie nach der Veröffentlichung des Releases das nächste Mal auf sie stoßen
 
-* CRS: Die Möglichkeit zum blockierungsliste/zulassungsliste von CRS-Anforderungen von bestimmten Anzeigensystemen, Anzeigen-IDs, kreativen IDs, kreativen URLs und/oder kreativen Formaten wurde hinzugefügt
+* CRS: Die Möglichkeit zur Blockierungsliste/Zulassungsliste von CRS-Anforderungen von bestimmten Anzeigensystemen, Anzeigen-IDs, kreativen IDs, kreativen URLs und/oder kreativen Formaten wurde hinzugefügt
 
    >Hinweis
    >
-   >Adobe fügt blockierungsliste-Regeln hinzu, wenn Anzeigenanbieter mit dynamischen Werten (z. B. dynamischer Parameter in URL) für dieselbe Anzeige gefunden werden. Solche blockierungsliste-Regeln werden deaktiviert, nachdem die dynamische Komponente entweder vom Anbieter oder durch eine Normalisierungsregel aufgelöst wurde.
+   >Adobe fügt Blockierungslisten hinzu, wenn Anzeigenanbieter mit dynamischen Werten (z. B. dynamischer Parameter in URL) für dieselbe Anzeige gefunden werden. Solche Blockierungslisten werden deaktiviert, nachdem die dynamische Komponente entweder vom Anbieter oder durch eine Normalisierungsregel aufgelöst wurde.
 
-   * Wenn Sie eine blockierungsliste- oder zulassungsliste-Regel für Ihre Zone hinzufügen möchten, wenden Sie sich bitte an Ihren technischen Kundenbetreuer.
+   * Wenn Sie eine Blockierungsliste- oder Zulassungsliste-Regel für Ihre Zone hinzufügen möchten, wenden Sie sich bitte an Ihren technischen Kundenbetreuer.
 
 ### Version 19.1.1
 
