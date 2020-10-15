@@ -2,21 +2,21 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime-Versionshinweise
-user-guide-description: Provides release-specific information, system requirements, limitations, fixed issues, and known issues.
+user-guide-title: Versionshinweise zu Primetime
+user-guide-description: Enthält versionsspezifische Informationen, Systemanforderungen, Einschränkungen sowie behobene und bekannte Probleme.
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 0%
+source-wordcount: '111'
+ht-degree: 15%
 
 ---
 
 
-# Primetime-Versionshinweise {#release-notes}
+# Versionshinweise zu Primetime {#release-notes}
 
 + [Versionshinweise - Übersicht](home.md)
-+ Primetime Dynamic Ad Insertion {#ptai}
++ Primetime-Ad Insertion {#ptai}
    + [PTAI 20.10.1 - Versionshinweise](ptai-20x-release-notes.md)
    + [PTAI 19.11.1 - Versionshinweise](ptai-19x-release-notes.md)
 + TVSDK für iOS {#tvsdk-ios}
