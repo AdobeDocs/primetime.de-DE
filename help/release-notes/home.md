@@ -1,18 +1,18 @@
 ---
-title: Primetime-Versionshinweise
+title: Versionshinweise zu Primetime
 seo-title: Adobe Primetime Versionshinweise
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
+source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 0%
+ht-degree: 33%
 
 ---
 
 
-# Primetime-Versionshinweise
+# Versionshinweise zu Primetime
 
 Willkommen bei den Adobe Primetime Versionshinweisen. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
 
@@ -36,12 +36,12 @@ Weitere Informationen zur aktuellen Version für [iOS](../release-notes/tvsdk-3x
 
 | Benutzerhandbuch | Beschreibung |
 |--- |--- |
-| [Hilfe zur Primetime-Programmierung](/help/programming/home.md) | Ermöglicht die Entwicklung von Anwendungen und Videoplayern mit Java auf Android-Geräten und Objective-C auf iOS-Geräten. |
-| [Hilfe zur Primetime-Migration und -Konversion](/help/migration-guides/home.md) | Erläutert den Konvertierungs- und Migrationsprozess zum Übergang von der vorhandenen Primetime TVSDK Suite zur Suite der nächsten Generation. |
-| [Referenzimplementierung](/help/android-reference-implementation/home.md) | Hilft, das TVSDK zu verstehen und ändern Sie die Funktionen Manager, um Ihren persönlichen Player anzupassen. |
-| [Primetime-API-Verweise](/help/reference/api-references.md) | Bietet detaillierte Informationen zu TVSDK-Funktionen, Datenstrukturen und anderen Programmierkonstrukten. |
+| [Hilfe zur Primetime-Programmierung](/help/programming/home.md) | Ermöglicht die Entwicklung von Anwendungen und Video-Playern mit Java auf Android-Geräten und Objective-C auf iOS-Geräten. |
+| [Hilfe zur Primetime-Migration und -Konversion](/help/migration-guides/home.md) | Erklärt den Konversions- und Migrationsprozess zum Übergang von der vorhandenen Primetime TVSDK-Suite zur Suite der nächsten Generation. |
+| [Referenzimplementierung](/help/android-reference-implementation/home.md) | Das Tutorial hilft, das TVSDK zu verstehen und die Funktions-Manager zu modifizieren, um Ihren persönlichen Player anzupassen. |
+| [Primetime-API-Verweise](/help/reference/api-references.md) | Enthält detaillierte Informationen über TVSDK-Funktionen, Datenstrukturen und andere Programmkonstrukte. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Hilft Ihnen, mehr über verschiedene Benutzerszenarien in Digital Rights Management (DRM) zu erfahren |
-| [Dynamische Ad Insertion-Hilfe](/help/dynamic-ad-insertion/home.md) | Erläutert das Monetarisieren von Inhalten durch Einfügen benutzerspezifischer dynamischer Anzeigen auf dem Server und die Interaktion mit der Audience mit personalisierten Anzeigen. |
+| [Primetime-Ad Insertion-Hilfe](/help/dynamic-ad-insertion/home.md) | Erklärt, wie man Inhalte durch Einfügen nutzergerechter dynamischer Anzeigen auf dem Server monetarisieren und die Zielgruppe mit personalisierten Anzeigen ansprechen kann. |
 | [Archive](https://helpx.adobe.com/primetime/archives.html) | Laden Sie PDFs der archivierten Dokumentation herunter. |
 
 ## Hilfreiche Ressourcen
