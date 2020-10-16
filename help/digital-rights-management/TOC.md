@@ -2,18 +2,18 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Hilfe zum Primetime-Digital Rights Management
-user-guide-description: Helps you learn more about various user scenarios in Digital Rights Management (DRM).
+user-guide-title: Hilfe zum Primetime Digital Rights Management
+user-guide-description: Das hilft Ihnen, mehr über verschiedene Benutzerszenarien in Digital Rights Management (DRM) zu erfahren.
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2215'
 ht-degree: 0%
 
 ---
 
 
-# Digital Rights Management-Hilfe {#drm}
+# Digital Rights Management Help {#drm}
 
 + [DRM-Übersicht](home.md)
 + Handbuch zur Zertifikatregistrierung {#certificate-enrollment-guide}
@@ -313,7 +313,7 @@ ht-degree: 0%
       + [Demogeschäftsregeln zum Gebrauchsmodell](drm-reference-implementations/impl-usage-models/usage-model-biz-rules.md)
    + Domänenregistrierung {#implement-domain-registration}
       + [Übersicht](drm-reference-implementations/impl-domain-registration/impl-domain-registration-overview.md)
-      + [Implementieren einer identitätsbasierten Domänenregistrierung](drm-reference-implementations/impl-domain-registration/implement-domain-based-reg.md)
+      + [Identitätsbasierte Domänenregistrierung implementieren](drm-reference-implementations/impl-domain-registration/implement-domain-based-reg.md)
       + [Identitätsbasierte Domänenregistrierungslogik](drm-reference-implementations/impl-domain-registration/impl-domain-registration-id-based-domains.md)
       + [Anonyme Domänenregistrierung implementieren](drm-reference-implementations/impl-domain-registration/implement-anon-domain-reg.md)
       + [Anonyme Domänenlogik](drm-reference-implementations/impl-domain-registration/impl-domain-registration-anonymous-domains.md)
@@ -397,7 +397,7 @@ ht-degree: 0%
       + [Kompatibilität mit Flash Media Rights Management Server 1.x sicherstellen](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-ensure-compat-fmrms.md)
    + Protect und Erteilung von Lizenzen {#issuing-licenses}
       + [Lokal generierte Zertifikatsperrlisten verwenden](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-local-crls.md)
-      + [Aufnahme von Zertifikatssperrlisten, veröffentlicht von der Adobe](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-crls-by-adobe.md)
+      + [Von der Adobe veröffentlichte Zertifikatsperrlisten verwenden](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-crls-by-adobe.md)
       + [Generieren von Zertifikatsperrlisten zur Ergänzung der von der Adobe veröffentlichten](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-gen-crls-to-supplement-adobe.md)
       + [Rollenerkennung](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection.md)
       + [Maschinenzahl bei Erteilung der Lizenzen](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection-machine-count.md)
