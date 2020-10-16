@@ -3,11 +3,11 @@ cloud: experience-cloud
 product: adobe primetime
 audience: end-user
 user-guide-title: Hilfe zur Primetime-Programmierung
-user-guide-description: Allows you to learn to develop applications and video players using Java on Android devices and Objective-C on iOS devices.
+user-guide-description: Ermöglicht die Entwicklung von Anwendungen und Video-Playern mit Java auf Android-Geräten und Objective-C auf iOS-Geräten.
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '4307'
+source-wordcount: '4327'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ ht-degree: 0%
       + Anzeigeneinfügemetadaten {#ad-insertion-metadata}
          + [Übersicht](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md)
          + [Einrichten von Anzeigeneinfügemetadaten](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata-set-up.md)
-         + [Aktivieren von Anzeigen bei vollständiger Wiedergabe im Ereignis](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-full-event-replay.md)
+         + [Anzeigen bei vollständiger Wiedergabe im Ereignis aktivieren](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-full-event-replay.md)
          + [Anzeigensignalisierungsmodus](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-signaling-mode.md)
       + Banneranzeigen {#companion-banner-ads}
          + [Best Practices für begleitende Banneranzeigen](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/comp-banner-ads/android-3x-banners-best-practices.md)
@@ -200,7 +200,7 @@ ht-degree: 0%
       + [Warten auf gültigen Status](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-ui-state-prepared-wait-for.md)
       + [Schaltfläche &quot;Abspielen/Anhalten&quot;implementieren](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-implement-pause-play.md)
       + [Dauer des Videos anzeigen](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-display-video-duration.md)
-      + [Aktuelle Zeit und verbleibende Zeit anzeigen](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-display-current-remaining-time.md)
+      + [Aktuelle Zeit und Restzeit anzeigen](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-display-current-remaining-time.md)
       + [Anzeigen einer Suchleiste mit der aktuellen Wiedergabezeitposition](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-display-seek-scrub-bar.md)
       + [Adaptive Bitraten (ABR) für Videoqualität](tvsdk-3x-ios-prog/ios-3x-content-playback-options/ios-3x-create-a-video-player/ios-3x-configure-ui/ios-3x-abr-control-quality.md)
    + [Qualität der Dienstleistungsstatistiken](tvsdk-3x-ios-prog/ios-3x-qos-statistics-monitor.md)
@@ -216,7 +216,7 @@ ht-degree: 0%
       + [Just-in-time-Anzeigenauflösung](tvsdk-3x-ios-prog/ios-3x-advertising/c-ios-lazy-ad-resolving.md)
    + Primetime- und Servermetriken {#ad-server-metadata}
       + [Einrichten von Primetime-Anzeigenservermetadaten](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)
-      + [Aktivieren von Anzeigen bei vollständiger Wiedergabe im Ereignis](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-full-event-replay.md)
+      + [Anzeigen bei vollständiger Wiedergabe im Ereignis aktivieren](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-full-event-replay.md)
       + [Anzeigensignalisierungsmodus](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-ad-signaling-mode.md)
    + [Banneranzeigen](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-companion-banner-ads/ios-3x-companion-banner-ads.md)
    + [Klickbare Anzeigen](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-clickable-ads.md)
@@ -380,7 +380,7 @@ ht-degree: 0%
       + Anzeigeneinfügemetadaten {#ad-insertion-metadata}
          + [Übersicht](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/c-psdk-android-2.7-ad-insertion-metadata.md)
          + [Einrichten von Anzeigeneinfügemetadaten](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/t-psdk-android-2.7-ad-insertion-metadata-set-up.md)
-         + [Aktivieren von Anzeigen bei vollständiger Wiedergabe im Ereignis](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/t-psdk-android-2.7-ad-full-event-replay.md)
+         + [Anzeigen bei vollständiger Wiedergabe im Ereignis aktivieren](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/t-psdk-android-2.7-ad-full-event-replay.md)
          + [Anzeigensignalisierungsmodus](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/r-psdk-android-2.7-ad-signaling-mode.md)
       + Banneranzeigen {#companion-banner-ads}
          + [Best Practices für begleitende Banneranzeigen](tvsdk-2.7-for-android/ad-insertion/comp-banner-ads/c-psdk-android-2.7-companion-banners-best-practices.md)
@@ -531,7 +531,7 @@ ht-degree: 0%
       + Anzeigeneinfügemetadaten {#ad-insertion-metadata}
          + [Übersicht](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata.md)
          + [Einrichten von Anzeigeneinfügemetadaten](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md)
-         + [Aktivieren von Anzeigen bei vollständiger Wiedergabe im Ereignis](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-full-event-replay.md)
+         + [Anzeigen bei vollständiger Wiedergabe im Ereignis aktivieren](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-full-event-replay.md)
          + [Anzeigensignalisierungsmodus](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-signaling-mode.md)
       + Klickbare Anzeigen {#clickable-ads}
          + [Übersicht](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-clickable-ads.md)
@@ -570,10 +570,10 @@ ht-degree: 0%
          + [Implementieren eines benutzerdefinierten Inhaltsauflösers](tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-implement.md)
       + Löschen und Ersetzen von Anzeigen in VOD-Streams {#delete-replace-ads}
          + [Benutzerdefinierte Zeitraumoperationen](tvsdk-1.4-for-android/delete-replace-content-vod/custom-time-range-ops/android-1.4-custom-time-range-ops.md)
-         + [Multiple initial PlacementInformation](tvsdk-1.4-for-android/delete-replace-content-vod/custom-time-range-ops/android-1.4-multi-initial-placementinfos.md)
+         + [Mehrere anfängliche Platzierungsinformationen](tvsdk-1.4-for-android/delete-replace-content-vod/custom-time-range-ops/android-1.4-multi-initial-placementinfos.md)
          + [Inhaltsauflöser für das Löschen und Ersetzen von Werbeanzeigen](tvsdk-1.4-for-android/delete-replace-content-vod/custom-time-range-ops/android-1.4-content-resolvers-ad-deletion.md)
          + [Auswirkungen auf Kombinationen aus Anzeigeneinfügung und -löschung im Anzeigensignalisierungsmodus und Anzeigenmetadaten](tvsdk-1.4-for-android/delete-replace-content-vod/android-1.4-signaling-metadata-combos.md)
-         + [Struktur des Anzeigeknotens mit TimeRanges](tvsdk-1.4-for-android/delete-replace-content-vod/android-1.4-ad-node-structure.md)
+         + [Werbeknotenstruktur mit TimeRanges](tvsdk-1.4-for-android/delete-replace-content-vod/android-1.4-ad-node-structure.md)
          + Anwendungsfälle zum Löschen und Ersetzen von Anzeigen {#use-cases}
             + [Markierbereiche](tvsdk-1.4-for-android/delete-replace-content-vod/ad-delete-replace-use-cases/android-1.4-mark-ranges.md)
             + [Ersetzen von Zeitbereichen durch eine Anzeige](tvsdk-1.4-for-android/delete-replace-content-vod/ad-delete-replace-use-cases/android-1.4-replace-ranges-with-aud.md)
@@ -657,7 +657,7 @@ ht-degree: 0%
       + [Warten auf gültigen Status](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-ui-state-prepared-wait-for.md)
       + [Schaltfläche &quot;Abspielen/Anhalten&quot;implementieren](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-implement-pause-play.md)
       + [Dauer des Videos anzeigen](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-display-video-duration.md)
-      + [Aktuelle Zeit und verbleibende Zeit anzeigen](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-display-current-remaining-time.md)
+      + [Aktuelle Zeit und Restzeit anzeigen](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-display-current-remaining-time.md)
       + [Zeigt eine Suchabgleichleiste mit der aktuellen Wiedergabedauer an...](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/t-psdk-ios-1.4-display-seek-scrub-bar.md)
       + [Adaptive Bitraten (ABR) für Videoqualität](tvsdk-1.4-for-ios/t-psdk-ios-1.4-create-a-video-player/c-psdk-ios-1.4-configure-ui/c-psdk-ios-1.4-abr-control-quality.md)
    + [Qualität der Dienstleistungsstatistiken](tvsdk-1.4-for-ios/c-psdk-ios-1.4-qos-statistics-monitor.md)
