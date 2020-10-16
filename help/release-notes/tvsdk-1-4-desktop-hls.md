@@ -9,7 +9,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: e4437a26-9454-4da1-ae87-0fce664aac3d
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
 workflow-type: tm+mt
 source-wordcount: '5222'
 ht-degree: 0%
@@ -195,7 +195,7 @@ Die Video Heartbeat Library (VHL) wurde auf Version 1.5.9 aktualisiert, um die f
 
 Dieses Problem wurde behoben, indem die Bitratenänderungen in VideoAnalyticsTracker verfolgt wurden.
 
-* Es wurde eine neue API, assetDuration, zu PTVideoAnalyticsTrackingMetadata hinzugefügt, um die Asset-Dauer für Live-/Linear-Streams zu aktualisieren.
+* Es wurde eine neue API, assetDuration, zu PTVideoAnalyticsTrackingMetadata hinzugefügt, um die Asset-Dauer für Live-/Lineare Streams zu aktualisieren.
 
 **Version 1.4.28** (848)
 
@@ -407,7 +407,7 @@ Dieses Problem wurde behoben, indem TVSDK das Manifest (HLS-Profile) ignorieren 
 
 Die gelegentlichen Änderungen, die beim Suchen in Google Chrome aufgetreten sind, wurden durch Herunterfahren der Abfragen behoben, wenn die Abfragen zu lange dauern, bis eine Antwort eingeht, oder wenn der Socket heruntergefahren wird.
 
-* Zendesk #19305 - Choppy-Wiedergabe bei der Wiedergabe eines Streams mit A/V-Unterbrechung aufgetreten.
+* Zendesk #19305 - Bei der Wiedergabe eines Streams mit A/V-Unterbrechungen trat eine Choppy-Wiedergabe auf.
 
 **Hinweis**: Für dieses Problem ist Flash Player 20.0.0.306 oder höher erforderlich.
 
@@ -453,7 +453,7 @@ Dieses Problem wurde behoben, indem die Lücke zwischen Zeitstempeln ignoriert u
 
 * Zendesk #19093 - Mid-Roll-Anzeigen können nur einmal mit Live- und Full-Ereignis-Replay-Inhalten (FER) angesehen werden. Diese Anzeigen konnten jedoch nicht mehr beobachtet werden, wenn sie schnell weitergeleitet oder über die Anzeigen hinaus gesucht wurden
 
-Wenn in Primetime in der standardmäßigen adPolicy-Auswahl eine Mid-Roll-Anzeige angezeigt wird, wird adBreak nach Abschluss einer Suche nicht an die gesuchte Position verschoben. Um die Anzeige nach der Suche erneut wiederzugeben, muss die Anwendung die Funktion selectAdBreaksToPlay() außer Kraft setzen.
+Wenn in Primetime in der standardmäßigen adPolicy-Auswahl eine Mid-Roll-Anzeige angezeigt wird, wird adBreak nach Abschluss einer Suche nicht an die gesuchte Position verschoben. Um die Anzeige nach der Suche erneut wiederzugeben, muss die Anwendung die Funktion selectAdBreaksToPlay() überschreiben.
 
 * Zendesk #19101 - Durch das Zurückspulen in ungelöste Midroll-Anzeigen wird die Anzeigenplatzierung entfernt.
 
@@ -616,7 +616,7 @@ Die grundlegende Wiedergabe von MP4-Inhalten wird jetzt unterstützt, einschlie�
 
 Folgendes erfordert Flash Player 18.0.0.225 oder höher:
 
-* Zendesk #3992 - Zusätzliche TrickPlay-Geschwindigkeiten.
+* Zendesk #3992 - Weitere TrickPlay-Geschwindigkeiten.
 
 TrickPlay akzeptiert jetzt Raten über 16x: +/- 32, +/-64 und +/-128.
 
@@ -640,7 +640,7 @@ Untertitelgrößen dürfen im WebVTT-Untertitelcode verwendet werden.
 
 Fehlerbehebung bei der Anzeige des Videos
 
-* Zendesk #3670 - INVALID_PARAMETER-Fehler bei VOD beim Suchen im Referenz-Player (Flash Player 18.0.0.200 erforderlich)
+* Zendesk #3670 - INVALID_PARAMETER error in VOD while searching in the Reference Player (erfordert Flash Player 18.0.0.200)
 
 InvalidateProfiles in ThreadSeek, wenn ein neuer Zeitraum erkannt wird.
 
@@ -734,9 +734,6 @@ Bei den MIME-Typen für das HLS-Format wurde zwischen Groß- und Kleinschreibung
 * Zendesk #1024 - Funktion zum Entfernen von Anzeigen aus dem Stream über Manifest
 * Zendesk #1423 - Fehler bei der HLS-Wiedergabe blockiert Flash Player (ohne Fehlermeldung)
 * Zendesk #1674 - ClosedCaption Nicht angezeigt, korrekte 708-Beschriftungsanzeige, wenn 0 x 03 ETX-Codes fehlen.
-
-</p>
-</details>
 
 ## Bekannte Probleme {#known-issues}
 
