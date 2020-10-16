@@ -3,12 +3,12 @@ cloud: experience-cloud
 product: primetime
 audience: end-user
 user-guide-title: Hilfe zur Implementierung der Primetime-Referenz
-user-guide-description: Helps understand the TVSDK and modify the feature managers to customize your personal player.
+user-guide-description: Das Tutorial hilft, das TVSDK zu verstehen und die Funktions-Manager zu modifizieren, um Ihren persönlichen Player anzupassen.
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 0%
+source-wordcount: '246'
+ht-degree: 7%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 0%
       + [Umgang mit Ereignissen](ref-implementation/using-feature-managers/handling-events.md)
    + Einrichten der Entwicklungs-Umgebung {#setup-dev}
       + [Einrichten der Entwicklungs-Umgebung](set-up-dev-environment/set-up-dev-environment-overview.md)
-      + [Grundlegende Software herunterladen und konfigurieren](set-up-dev-environment/download-prereqs-android.md)
+      + [Herunterladen und Konfigurieren der erforderlichen Software](set-up-dev-environment/download-prereqs-android.md)
       + [Primetime-Referenzimplementierung erstellen](set-up-dev-environment/install-the-ref-player-project.md)
    + Code {#explore-code}
       + [PlayerFragment](set-up-dev-environment/exploring-code/player-fragment.md)
@@ -58,7 +58,7 @@ ht-degree: 0%
    + Spätbindendes Audio {#late-binding-audio}
       + [Übersicht](late-binding-audio/late-binding-audio-overview.md)
       + [Integration von spätbindenden Audiodaten](late-binding-audio/aa-enable.md)
-      + [Auswählen der Audiospuren](late-binding-audio/select-audio-tracks.md)
+      + [Audiospuren auswählen](late-binding-audio/select-audio-tracks.md)
       + [Verwandte API-Dokumentation](late-binding-audio/aa-api-callbacks.md)
    + Berechtigungsabläufe für die Primetime-Authentifizierung {#primetime-authentications}
       + [Übersicht](paytvpass-entitlement/paytvpass-entitlement-overview.md)
