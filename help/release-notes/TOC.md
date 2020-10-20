@@ -2,18 +2,18 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Versionshinweise zu Primetime
+user-guide-title: Primetime-Versionshinweise
 user-guide-description: Enthält versionsspezifische Informationen, Systemanforderungen, Einschränkungen sowie behobene und bekannte Probleme.
 translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 15%
+ht-degree: 9%
 
 ---
 
 
-# Versionshinweise zu Primetime {#release-notes}
+# Primetime-Versionshinweise {#release-notes}
 
 + [Versionshinweise - Übersicht](home.md)
 + Primetime-Ad Insertion {#ptai}
