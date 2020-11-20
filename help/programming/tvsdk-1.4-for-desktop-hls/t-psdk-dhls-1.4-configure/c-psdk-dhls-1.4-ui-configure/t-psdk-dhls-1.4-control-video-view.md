@@ -37,8 +37,7 @@ Sie können das standardmäßige Seitenverhältnis außer Kraft setzen, indem Si
    >
    >Beispiel:
    >
-   >
-   ```
+   >```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
