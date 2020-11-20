@@ -1,18 +1,21 @@
 ---
-description: Dieses Beispiel zeigt die empfohlene Möglichkeit, TimeRange-Spezifikationen in die Wiedergabeschlüssel einzubeziehen.
-seo-description: Dieses Beispiel zeigt die empfohlene Möglichkeit, TimeRange-Spezifikationen in die Wiedergabeschlüssel einzubeziehen.
+description: Dieses Beispiel zeigt die empfohlene Methode, um TimeRange-Spezifikationen in die Zeitleiste der Wiedergabe einzubeziehen.
+seo-description: Dieses Beispiel zeigt die empfohlene Methode, um TimeRange-Spezifikationen in die Zeitleiste der Wiedergabe einzubeziehen.
 seo-title: Platzieren Sie TimeRange-Anzeigenmarken auf der Zeitleiste
 title: Platzieren Sie TimeRange-Anzeigenmarken auf der Zeitleiste
 uuid: cbcc4c84-0d56-4331-b555-b8e59f7d52d4
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: fd21a29bb186238142d43e0277bbf92f8406f6f7
+workflow-type: tm+mt
+source-wordcount: '430'
+ht-degree: 0%
 
 ---
 
 
 # Platzieren Sie TimeRange-Anzeigenmarken auf der Zeitleiste {#place-timerange-ad-markers-on-the-timeline}
 
-Dieses Beispiel zeigt die empfohlene Möglichkeit, TimeRange-Spezifikationen in die Wiedergabeschlüssel einzubeziehen.
+Dieses Beispiel zeigt die empfohlene Methode, um TimeRange-Spezifikationen in die Zeitleiste der Wiedergabe einzubeziehen.
 
 1. Übersetzen Sie die Out-of-Band-Positionierungsinformationen in eine Liste von `TimeRange` Spezifikationen (d. h. Instanzen der `TimeRange` Klasse).
 1. Verwenden Sie den Satz `TimeRange` an Spezifikationen, um eine Instanz der `TimeRangeCollection` Klasse zu füllen.
@@ -26,10 +29,9 @@ Dieses Beispiel zeigt die empfohlene Möglichkeit, TimeRange-Spezifikationen in 
 
 * Es wird davon ausgegangen, dass das Medienplayer-Element, das geladen wird, auf ein VOD-Asset verweist. TVSDK überprüft dies, wenn Ihre Anwendung versucht, eine Medienressource zu laden, deren Metadaten `TimeRange` Spezifikationen enthalten, die nur im Zusammenhang mit der Funktion für benutzerdefinierte Anzeigenmarkierungen verwendet werden können. Wenn das zugrunde liegende Asset nicht VOD ist, löst die TVSDK-Bibliothek eine Ausnahme aus.
 
-* Beim Umgang mit benutzerdefinierten Anzeigenmarken deaktiviert TVSDK andere Anzeigenauflösungsmechanismen (über Adobe Primetime-Anzeigenentscheidungsmechanismen (früher Auditude genannt) oder ein anderes Anzeigenbereitstellungssystem). Sie können eines der verschiedenen von TVSDK bereitgestellten Anzeigenauflöser-Module oder den benutzerdefinierten Anzeigenmarkierungsmechanismus verwenden. Bei Verwendung der benutzerdefinierten Anzeigen-Marker-API gilt der Anzeigeninhalt als bereits aufgelöst und in der Zeitleiste platziert.
->
-><!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
+* Beim Umgang mit benutzerdefinierten Anzeigenmarken deaktiviert TVSDK andere Anzeigenauflösungsmechanismen (über Adobe Primetime-Anzeigenentscheidungsfunktionen (früher Auditude genannt) oder andere Anzeigenbereitstellungssysteme). Sie können eines der verschiedenen von TVSDK bereitgestellten Anzeigenauflöser-Module oder den benutzerdefinierten Anzeigenmarkierungsmechanismus verwenden. Bei Verwendung der benutzerdefinierten Anzeigen-Marker-API gilt der Anzeigeninhalt als bereits aufgelöst und in der Zeitleiste platziert.
 
+<!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
 
 Das folgende Codefragment bietet ein einfaches Beispiel, bei dem drei `TimeRange` Spezifikationen als benutzerdefinierte Anzeigenmarken auf der Zeitleiste platziert werden.
 
