@@ -6,6 +6,9 @@ title: Benachrichtigungscodes
 uuid: edbce737-28fd-4309-be5a-2e33fcc156b6
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Benachrichtigungsobjekte liefern Informationen zum Status des Players. TVSDK ste
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> type</span> </td> 
-   <td colname="2">Der Benachrichtigungstyp. Abhängig von der Plattform bezieht sich diese Eigenschaft auf einen aufgezählten Typ mit möglichen Werten für <span class="codeph"> INFO</span>, <span class="codeph"> WARN</span>oder <span class="codeph"> ERROR</span>. Dies ist die Gruppierung auf oberster Ebene für Benachrichtigungen. </td> 
+   <td colname="2">Der Benachrichtigungstyp. Abhängig von der Plattform bezieht sich diese Eigenschaft auf einen aufgezählten Typ mit möglichen Werten von <span class="codeph"> INFO</span>, <span class="codeph"> WARN</span> oder <span class="codeph"> ERROR</span>. Dies ist die Gruppierung auf oberster Ebene für Benachrichtigungen. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> code</span> </td> 
@@ -43,11 +46,11 @@ Benachrichtigungsobjekte liefern Informationen zum Status des Players. TVSDK ste
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> metadata</span> </td> 
-   <td colname="2">Schlüssel/Wert-Paare, die zusätzliche relevante Informationen zur Benachrichtigung enthalten. Beispielsweise würde ein Schlüssel mit dem Namen <span class="codeph"> URL</span> mit einem Wert verknüpft, der eine URL im Zusammenhang mit der Benachrichtigung ist, z. B. eine ungültige URL, die einen Fehler verursacht hat. </td> 
+   <td colname="2">Schlüssel/Wert-Paare, die zusätzliche relevante Informationen zur Benachrichtigung enthalten. Beispielsweise würde ein Schlüssel mit dem Namen <span class="codeph"> URL</span> mit einem Wert verknüpft, der eine URL im Zusammenhang mit der Benachrichtigung ist, z. B. eine ungültige URL, die einen Fehler verursachte. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span> </td> 
-   <td colname="2">Ein Verweis auf ein anderes <span class="codeph"> MediaPlayerNotification</span> -Objekt, das diese Benachrichtigung direkt beeinflusste. Ein Beispiel könnte eine Benachrichtigung über einen Fehler beim Einfügen von Anzeigen sein, der direkt einem Einfügekonflikt in der Zeitleiste entspricht. Nicht alle Benachrichtigungen bieten eine interne Benachrichtigung. </td> 
+   <td colname="2">Ein Verweis auf ein anderes <span class="codeph">-MediaPlayerNotification</span>-Objekt, das diese Benachrichtigung direkt beeinflusste. Ein Beispiel könnte eine Benachrichtigung über einen Fehler beim Einfügen von Anzeigen sein, der direkt einem Einfügekonflikt in der Zeitleiste entspricht. Nicht alle Benachrichtigungen bieten eine interne Benachrichtigung. </td> 
   </tr> 
  </tbody> 
 </table>
