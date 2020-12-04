@@ -6,6 +6,9 @@ title: Primetime Player-Ereignis suchen
 uuid: bd0a428c-fa51-41a6-950a-9d6843c6e177
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Weitere Informationen zu Ereignissen:
 * Die Echtzeit-Natur der Videowiedergabe erfordert für viele TVSDK-Vorgänge eine asynchrone (nicht blockierende) Aktivität.
 * TVSDK unterstützt einen Ereignis-basierten Videoplayer.
 
-   Es stellt Ereignis bereit, die allen wichtigen Schritten im Ablauf entsprechen. Sie registrieren diese Ereignis mit dem Ereignis-Mechanismus Ihrer Plattform und erstellen Ereignis-Handler, die aufgerufen werden, wenn diese Ereignis auftreten. *`Event Handlers`* werden auch als Callback-Routinen oder Ereignis-Listener bezeichnet. TVSDK bietet eine umfassende Palette von Methoden, die von den Ereignis-Handlern verwendet werden können.
+   Es stellt Ereignis bereit, die allen wichtigen Schritten im Ablauf entsprechen. Sie registrieren diese Ereignis mit dem Ereignis-Mechanismus Ihrer Plattform und erstellen Ereignis-Handler, die aufgerufen werden, wenn diese Ereignis auftreten. *`Event Handlers`* werden auch als Callback-Routinen oder Ereignis-Listener bezeichnet. TVSDK bietet eine komplette Palette von Methoden, die von den Ereignis-Handlern verwendet werden können.
 * Ihre Anwendung initiiert im Allgemeinen Vorgänge zum Entfernen von Blockern, z. B. um anzufordern, dass ein Video-Beginn abgespielt wird.
 
    TVSDK kommuniziert asynchron mit Ihrer Anwendung, indem Ereignis ausgelöst werden, z. B. wenn die Beginn abgespielt werden und ein Ereignis nach Abschluss des Videos. Andere Ereignis können auf Statusänderungen in Ihrem Player und Fehlerbedingungen hinweisen. Ihre Ereignis-Handler ergreifen entsprechende Maßnahmen.
