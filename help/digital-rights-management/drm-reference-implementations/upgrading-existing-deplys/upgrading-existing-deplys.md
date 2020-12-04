@@ -6,6 +6,9 @@ title: Vorhandene Bereitstellungen aktualisieren
 uuid: 1a40aae9-f639-41fa-b42d-cf8cdfcde694
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '213'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +17,11 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
 
 Um einen Server zu aktualisieren, der Version 3.0 Reference Implementation License Server oder Watched Folder Packager unterstützt, müssen Sie die .war-Dateien, die auf einem Anwendungsserver bereitgestellt wurden, durch die Dateien ersetzen, die in Adobe Primetime DRM Reference Implementation Server enthalten sind.
 
-Um die Domänenregistrierung mit dem Referenz-Implementierungslizenzserver zu verwenden, sind mehrere neue Datenbanktabellen erforderlich. Sie müssen die gesamte Referenz-Implementierungsdatenbank neu erstellen und ausführen `CreateSampleDB.sql`.
+Um die Domänenregistrierung mit dem Referenz-Implementierungslizenzserver zu verwenden, sind mehrere neue Datenbanktabellen erforderlich. Sie müssen die gesamte Referenz-Implementierungsdatenbank neu erstellen und `CreateSampleDB.sql` ausführen.
 
 So bewahren Sie Datenbankdatensätze auf und fügen neue Tabellen hinzu:
 
-1. Öffnen `CreateSampleDB.sql` und führen Sie Befehle aus, die die folgenden Tabellen erstellen:
+1. Öffnen Sie `CreateSampleDB.sql` und führen Sie Befehle aus, die die folgenden Tabellen erstellen:
 
    * `DomainServerInfo`
    * `DomainKeys`
@@ -26,14 +29,14 @@ So bewahren Sie Datenbankdatensätze auf und fügen neue Tabellen hinzu:
    * `UserDomainMembership`
    * `UserDomainRefCount`
 
-1. Hinzufügen Sie die folgenden Eigenschaften, um die Domänenunterstützung zu verwenden: [!DNL flashaccess-refimpl.properties]
+1. hinzufügen Sie die folgenden Eigenschaften auf [!DNL flashaccess-refimpl.properties], um die Domänenunterstützung zu verwenden:
 
-   * `HandlerConfiguration.DomainCAs.n` os `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
+   * `HandlerConfiguration.DomainCAs.n` oder  `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
 
-   * `Domain RegistrationHandler.ServerCredential` und `DomainRegistrationHandler.ServerCredential.password``RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
+   * `Domain RegistrationHandler.ServerCredential` und  `DomainRegistrationHandler.ServerCredential.password` oder  `RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
 
    * `DomainRegistrationHandler.DomainServerUrl`
 
-1. Hinzufügen Sie die folgenden Eigenschaften, [!DNL flashaccess-refimpl.properties] um Remote-Key-Versand für iOS-Clients zu unterstützen:
+1. hinzufügen Sie die folgenden Eigenschaften zu [!DNL flashaccess-refimpl.properties], um Remote-Key-Versand für iOS-Clients zu unterstützen:
 
-   * `HandlerConfiguration.KeyServerCertificate` oder `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`
+   * `HandlerConfiguration.KeyServerCertificate` oder  `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`
