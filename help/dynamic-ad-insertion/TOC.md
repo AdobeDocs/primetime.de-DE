@@ -8,15 +8,15 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
 
-# Primetime Ad Insertion Help {#ad-insertion}
+# Hilfe zu Primetime Ad Insertion  {#ad-insertion}
 
 + [Primetime-Ad Insertion - Übersicht](home.md)
-+ Erste Schritte mit Primetime Ad Insertion{#get-started}
++ Erste Schritte mit Primetime-Ad Insertion{#get-started}
    + [Übersicht](get-started-ptai.md)
    + [Vorbereiten der Verwendung von Primetime Ad Insertion](setup-ptai.md)
    + [Anzeigen-Server integrieren](integrate-ad-server.md)
@@ -40,11 +40,11 @@ ht-degree: 9%
       + [Mehrere Bitratenströme](msapi-topics/ms-insert-ads/ms-api-mbr-streams.md)
       + [Einfügen eines Teilformulars mit Werbeunterbrechung](msapi-topics/ms-insert-ads/partial-ad-break-insetion.md)
       + [Mehrere CDN-Unterstützung für CRS und Versand](msapi-topics/ms-insert-ads/ms-api-multi-cdns-for-crs.md)
-   + VOD-Zeitschienen ersetzen {#replace-vod}
+   + VOD-Timelines ersetzen {#replace-vod}
       + [Änderungen an VOD](msapi-topics/ms-changes-vod-timeline/ms-replace-vod-timeline.md)
       + [VOD-Timeline-Format](msapi-topics/ms-changes-vod-timeline/ms-api-timeline-format.md)
       + [VOD-Timeline ersetzen](msapi-topics/ms-changes-vod-timeline/t-ms-replace-vod-timeline.md)
-   + Verfolgung der Anzeigeneffektivität {#ad}
+   + Anzeigeneffektivitäts-Tracking {#ad}
       + [Anzeigenverfolgung](msapi-topics/ms-at-effectiveness/ms-at-overview.md)
       + [Aktivieren der clientseitigen Anzeigenverfolgung](msapi-topics/ms-at-effectiveness/ms-enable-client-side-ad-tracking.md)
       + [Übersicht über die clientseitige Verfolgung ohne TVSDK](msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md)
@@ -52,7 +52,7 @@ ht-degree: 9%
       + [EXT-X-MARKER-Richtlinie](msapi-topics/ms-at-effectiveness/ms-api-playlists.md)
    + [Cookies](msapi-topics/ms-cookies.md)
    + [Unterstützung für WebVTT-Beschriftungen](msapi-topics/ms-webvtt-captions.md)
-   + Liste von Dateiformaten {#list}
+   + Liste der Dateiformate {#list}
       + [Dateiformate](msapi-topics/ms-list-file-formats/ms-api-file-formats.md)
       + [JSON-Format für URL zum Anfordern der varianten Manifestwiedergabeliste](msapi-topics/ms-list-file-formats/ms-json-m3u8.md)
       + [JSON-Formate für die Verfolgung von URLs](msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md)
