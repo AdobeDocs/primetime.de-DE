@@ -18,7 +18,7 @@ Die meisten Anzeigenkunden benötigen Informationen darüber, wann, wie lange un
 
 Bei der clientseitigen Anzeigenverfolgung sendet der Server dem Client eine JSON-, VMAP- oder In-Manifest-Struktur, die Tracking-Ereignis und URLs zusammen mit der Anzeigenliste angibt.
 
-Um die clientseitige Anzeigenverfolgung zu aktivieren, geben Sie die folgenden Parameter in der [Bootstrap-API](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md)an.
+Um die clientseitige Anzeigenverfolgung zu aktivieren, geben Sie die folgenden Parameter in der [Bootstrap-API](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) an.
 
 * `pttrackingmode=simple`
 
@@ -26,19 +26,19 @@ Um die clientseitige Anzeigenverfolgung zu aktivieren, geben Sie die folgenden P
 
 >[!NOTE]
 >
->Wenn Sie die Variable `pttrackingmode=simple` festlegen, gibt die anfängliche Bootstrap-API-Anforderung eine JSON-Antwort zurück, nicht ein HLS- oder DASH-Dokument.
+>Wenn Sie `pttrackingmode=simple` festlegen, gibt die anfängliche Bootstrap-API-Anforderung eine JSON-Antwort zurück, nicht ein HLS- oder DASH-Dokument.
 
-Weitere Informationen zu `pttrackingmode`und `pttrackingversion` Formaten finden Sie in der [API-Referenz: Manifestserver-Abfrage-Parameter](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
+Weitere Informationen zu den Formaten `pttrackingmode`, `pttrackingversion` finden Sie in der [API-Referenz: Manifestserver-Abfragen-Parameter](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
 
 ## Serverseitige Anzeigenverfolgung {#server-side-ad-tracking}
 
 Mit dieser Methode werden Anzeigenverfolgungsdaten vollständig serverseitig berechnet. Dies ist nützlich, wenn eine Aktualisierung der Clientanwendung nicht möglich ist. Die serverseitige Anzeigenverfolgung stimmt jedoch möglicherweise nicht mit der clientseitigen Wiedergabe-Aktivität überein. So betrachtet der Server z. B. eine Anzeige als wiedergegeben, nachdem die Segmente bereitgestellt wurden, auch wenn der Endbenutzer die gesamte Anzeige nicht Ansicht.
 
-Um die serverseitige Anzeigenverfolgung zu aktivieren, geben Sie den folgenden Parameter in der [Bootstrap-API](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md)an.
+Um die serverseitige Anzeigenverfolgung zu aktivieren, geben Sie den folgenden Parameter in der [Bootstrap-API](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) an.
 
 `pttrackingmode=sstm`
 
-Siehe `pttrackingmode` Abschnitte der [Bootstrap-API](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
+Siehe die Abschnitte `pttrackingmode` der [Bootstrap-API](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
 
 Alle Anzeigenverfolgungsbeacons werden mit den folgenden HTTP-Anforderungsheader gesendet:
 
@@ -48,7 +48,7 @@ Alle Anzeigenverfolgungsbeacons werden mit den folgenden HTTP-Anforderungsheader
 
 Diese Werte enthalten den Client/Player-Benutzeragent und die Client-IP-Adresse.
 
-## Hybrid-Anzeigenverfolgung {#hybrid-ad-tracking}
+## Hybride Anzeigenverfolgung {#hybrid-ad-tracking}
 
 Dieser Ansatz ähnelt der serverseitigen Verfolgung, aber die Clientanwendung fordert auch Sidecars von Primetime Ad Insertion für detaillierte Verfolgungsinformationen an. Bei der Hybrid-Anzeigenverfolgung können nichtlineare Anzeigen wie Überlagerungen und Begleiter an die Client-Anwendung gesendet werden, wobei Primetime-Ad Insertion weiterhin darauf angewiesen ist, einzelne Anzeigen-Tracking-URLs zu senden.
-Informationen zum Aktivieren der Hybrid-Anzeigenverfolgung finden Sie im `pttrackingmode` Parameter der [Bootstrap-API](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
+Informationen zum Aktivieren der Hybrid-Anzeigenverfolgung finden Sie im Parameter `pttrackingmode` in der [Bootstrap-API](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
