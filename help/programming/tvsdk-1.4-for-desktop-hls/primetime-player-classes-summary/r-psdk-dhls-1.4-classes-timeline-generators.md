@@ -6,11 +6,14 @@ title: Zeitleistengeneratoren-Klassen
 uuid: 1e36b738-0684-44f0-b3c3-dd656c70f705
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '214'
+ht-degree: 0%
 
 ---
 
 
-# Zeitleistengeneratoren-Klassen{#timeline-generators-classes}
+# Zeitgeneratorklassen{#timeline-generators-classes}
 
 Diese Klassen helfen dabei, Möglichkeiten in einer Zeitschiene für die Platzierung von Inhalten wie Anzeigen zu erkennen.
 
