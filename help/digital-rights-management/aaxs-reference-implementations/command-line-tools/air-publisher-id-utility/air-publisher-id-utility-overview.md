@@ -1,6 +1,6 @@
 ---
-seo-title: AIR Publisher ID utility overview
-title: AIR Publisher ID utility overview
+seo-title: Überblick über das AIR Publisher-ID-Dienstprogramm
+title: Überblick über das AIR Publisher-ID-Dienstprogramm
 uuid: 31aecc0e-ad9b-43ad-ba58-77d2c999f4a4
 translation-type: tm+mt
 source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
@@ -11,10 +11,10 @@ ht-degree: 0%
 ---
 
 
-# AIR Publisher ID utility overview {#air-publisher-id-utility-overview}
+# Überblick über das AIR Publisher ID-Dienstprogramm {#air-publisher-id-utility-overview}
 
-As part of the process of building an AIR file, the AIR Developer Tool (ADT) generates a Publisher ID. This is an identifier that is unique to the certificate used to build the AIR file. If you reuse the same certificate for multiple AIR applications, they will have the same Publisher ID.The AIR Publisher ID utility is used to compute the Publisher ID for an AIR application. AIR releases after 1.5.2 do not write the generated Publisher ID to a file, so it is necessary to use this tool to determine the Publisher ID if you are using an AIR application allow list.
+Während des Aufbaus einer AIR-Datei generiert das AIR Developer Tool (ADT) eine Herausgeber-ID. Dieser Bezeichner ist eindeutig für das Zertifikat, mit dem die AIR-Datei erstellt wurde. Wenn Sie dasselbe Zertifikat für mehrere AIR-Anwendungen wiederverwenden, haben diese dieselbe Herausgeber-ID. Das AIR-Herausgeber-ID-Dienstprogramm wird zur Berechnung der Herausgeber-ID für eine AIR-Anwendung verwendet. AIR-Versionen nach 1.5.2 schreiben die generierte Herausgeber-ID nicht in eine Datei. Daher ist es erforderlich, mit diesem Tool die Herausgeber-ID zu ermitteln, wenn Sie eine AIR-Anwendungs-Zulassungsliste verwenden.
 
 >[!NOTE]
 >
->The Publisher ID, used for AIR allow list enforcement, is not the same as the Publisher ID specified by the application publisher in the application&#39;s [!DNL application.xml] file.
+>Die Herausgeber-ID, die für die Durchsetzung der AIR-Zulassungsliste verwendet wird, ist nicht mit der Herausgeber-ID identisch, die vom Anwendungsherausgeber in der Anwendungsdatei [!DNL application.xml] angegeben wurde.
