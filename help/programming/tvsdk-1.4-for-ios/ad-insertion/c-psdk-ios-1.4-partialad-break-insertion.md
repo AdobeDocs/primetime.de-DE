@@ -6,11 +6,14 @@ title: Teilweise Einfügen von Werbeunterbrechungen
 uuid: b6ee62da-c4d1-42f2-b03d-f73247f8e585
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 0%
 
 ---
 
 
-# Teilweise Einfügen von Werbeunterbrechungen{#partial-ad-break-insertion}
+# Einfügen einer partiellen Werbeunterbrechung{#partial-ad-break-insertion}
 
 TVSDK bietet eine TV-ähnliche Erfahrung, in Live-Streams mitmachen zu können.
 
@@ -18,7 +21,7 @@ Die Funktion zum Einfügen von Werbeunterbrechungen ermöglicht es Ihnen, ein TV
 
 Wenn sich ein Benutzer beispielsweise in der Mitte einer 90-Sekunden-Werbeunterbrechung (3-30-Sekunden-Anzeige), 10 Sekunden nach der zweiten Anzeige (d. h. 40 Sekunden nach der Werbeunterbrechung) anmeldet, wird die zweite Anzeige für die verbleibende Dauer (20 Sekunden) und anschließend die dritte Anzeige wiedergegeben.
 
-## Werbeanzeige verfolgen {#section_03AFAEAA8DA44399952DC51C5E12951E}
+## Track-Anzeige {#section_03AFAEAA8DA44399952DC51C5E12951E}
 
 Anzeigentracker für die teilweise wiedergegebene Anzeige (die zweite Anzeige) werden nicht ausgelöst. Im obigen Beispiel wird nur der Tracker für die dritte Anzeige ausgelöst.
 
