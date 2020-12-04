@@ -4,6 +4,9 @@ title: Zertifikat anfordern (Anforderer)
 uuid: f0d7f65d-681d-430f-b67b-3bdceb4b6d37
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '118'
+ht-degree: 0%
 
 ---
 
@@ -27,9 +30,9 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 
       >[!NOTE]
       >
-      >Um die CSR-Informationen zu kopieren, wählen Sie den Text zwischen dem Start- `(-----BEGIN CERTIFICATE REQUEST-----)` und dem End-Tag (ohne Angabe des Tags) aus `(-----END CERTIFICATE REQUEST-----)`.
+      >Um die CSR-Informationen zu kopieren, wählen Sie den Text zwischen dem Start-Tag `(-----BEGIN CERTIFICATE REQUEST-----)` und dem End-Tag `(-----END CERTIFICATE REQUEST-----)`, jedoch nicht einschließlich, aus.
 
-1. Klicken Sie auf die **[!UICONTROL Submit Request]** Schaltfläche.
+1. Klicken Sie auf die Schaltfläche **[!UICONTROL Submit Request]**.
 
-   Eine E-Mail wird zur Überprüfung an das Konto und die sekundären Administratoren gesendet. Der Anforderer ist Cc&#39;d.
+   Eine E-Mail wird zur Überprüfung an das Konto und an Sekundär Administratoren gesendet. Der Anforderer ist Cc&#39;d.
 
