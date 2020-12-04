@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Anforderungen an Befehlszeilenwerkzeuge {#command-line-tools-requirements}
+# Befehlszeilenwerkzeug-Anforderungen {#command-line-tools-requirements}
 
 * Java 1.5 oder höher.
 * Von der Adobe ausgestellte Packager-, Transport- und Lizenzserverberechtigungen (Zertifikat und Kennwort).
