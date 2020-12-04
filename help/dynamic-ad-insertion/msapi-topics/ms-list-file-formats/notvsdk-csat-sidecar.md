@@ -6,6 +6,9 @@ title: JSON-Formate für die Verfolgung von URLs
 uuid: 4b17639b-c0de-4ef4-931b-aa7c4c036c0a
 translation-type: tm+mt
 source-git-commit: 2c7ac5c1b2d30b7eb819157ee4568739c1bdfb9d
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 2c7ac5c1b2d30b7eb819157ee4568739c1bdfb9d
 
 Wenn der Client Verfolgungsinformationen im JSON-Format anfordert, sendet der Manifestserver eine Datei in einem der JSON-Formate zurück.
 
-## JSON-Format zur Verfolgung von Version 1 {#json_v1}
+## JSON-Format für die Verfolgung der Version 1 {#json_v1}
 
-Die JSON-Datei, die der Manifestserver sendet, wenn `pttrackingversion=v1` das folgende allgemeine Format vorliegt:
+Die JSON-Datei, die der Manifestserver sendet, wenn `pttrackingversion=v1` das folgende allgemeine Format hat:
 
 ```
 { 
@@ -32,9 +35,9 @@ Die JSON-Datei, die der Manifestserver sendet, wenn `pttrackingversion=v1` das f
 }, ...]}
 ```
 
-## JSON-Format zur Verfolgung von Version 2 {#json_v2}
+## JSON-Format für die Verfolgung der Version 2 {#json_v2}
 
-Die JSON-Datei, die der Manifestserver sendet, wenn das Format des folgenden Beispiels `pttrackingversion=v2` vorliegt, das von einem typischen JSON-Block stammt.
+Die JSON-Datei, die der Manifestserver sendet, wenn `pttrackingversion=v2` das Format des folgenden Beispiels hat, das von einem typischen JSON-Block stammt.
 
 Es wurde gekürzt, um unnötige Wiederholungen zu vermeiden, sodass die Struktur klarer ist. Ein Auslassungszeichen (drei Punkte, durch Leerzeichen getrennt) zeigt an, dass in einigen URLs und zwischen einigen Codeblöcken keine Informationen vorhanden sind. Nicht gekürzte URLs werden in mehreren Zeilen angezeigt, auch wenn sie in der JSON-Datei in einer einzelnen Zeile stehen.
 
@@ -364,11 +367,11 @@ Es wurde gekürzt, um unnötige Wiederholungen zu vermeiden, sodass die Struktur
 
 >[!NOTE]
 >
->Der `offset` Wert des `scte35` Attributs, aus dem extrahiert wurde, `ad breaks` könnte negativ sein. Der Grund dafür ist, dass das JSON V2-Sidecar Informationen über die Werbeunterbrechungen enthält, die sich teilweise im aktuellen Wiedergabefenster befinden. Das `scte35` Attribut enthält also auch Informationen über solche Werbeunterbrechungen.
+>Der `offset`-Wert des `scte35`-Attributs, wie aus `ad breaks` extrahiert, könnte negativ sein. Der Grund dafür ist, dass das JSON V2-Sidecar Informationen über die Werbeunterbrechungen enthält, die sich teilweise im aktuellen Wiedergabefenster befinden. Das `scte35`-Attribut enthält daher auch Informationen zu diesen Werbeunterbrechungen.
 
-## JSON-Format für die Verfolgung von Version 3 {#json_v3}
+## JSON-Format für die Verfolgung der Version 3 {#json_v3}
 
-Die JSON-Datei, die der Manifestserver sendet, wenn `pttrackingversion=v3` das folgende allgemeine Format vorliegt:
+Die JSON-Datei, die der Manifestserver sendet, wenn `pttrackingversion=v3` das folgende allgemeine Format hat:
 
 ```
 { 
