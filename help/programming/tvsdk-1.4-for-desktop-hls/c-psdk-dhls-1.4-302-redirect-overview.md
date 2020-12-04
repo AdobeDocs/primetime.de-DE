@@ -6,6 +6,9 @@ title: HTTP 302 Umleitungsoptimierung
 uuid: 58593d5f-a639-4d87-9589-dba6b2dbba38
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '205'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Wenn eine Hauptmanifestanforderung umgeleitet wird und die 302-Optimierung im Pl
 
 Diese Funktion ist standardmäßig deaktiviert. Sie können diese Einstellung ändern.
 
-Wenn Sie diese Funktion aktivieren, funktioniert sie nur dann korrekt, wenn *alle* der folgenden Bedingungen erfüllt sind: Andernfalls findet keine Umleitungsoptimierung statt, und es werden weiterhin 302 Antworten angezeigt:
+Wenn Sie diese Funktion aktivieren, funktioniert sie nur dann fehlerfrei, wenn *alle* der folgenden Bedingungen wahr sind: Andernfalls findet keine Umleitungsoptimierung statt, und es werden weiterhin 302 Antworten angezeigt:
 
 * Ihre Anwendung wurde für Adobe Flash Player 11.8 mit `-swf-version` 21 oder höher kompiliert.
 * Ihre Endbenutzer haben Adobe Flash Player 11.8 oder höher installiert.
@@ -27,9 +30,9 @@ Wenn Sie diese Funktion aktivieren, funktioniert sie nur dann korrekt, wenn *all
 >
 >Um sicherzustellen, dass Cookies mit Anzeigenanforderungen übergeben werden, deaktivieren Sie die 302-Umleitung. Wenn 302-Umleitungen aktiviert sind, wird die Anzeigenanforderung möglicherweise in eine Domäne umgeleitet, die sich von der Domäne unterscheidet, von der das Cookie stammt.
 
-## Umleitungsoptimierung für 302 deaktivieren oder aktivieren {#section_D6687FC44C61446F878008B629A5FA19}
+## 302-Umleitungsoptimierung {#section_D6687FC44C61446F878008B629A5FA19} deaktivieren oder aktivieren
 
-Verwenden Sie die `useRedirectedUrl` Eigenschaft, um die 302-Umleitung zu aktivieren (true) oder zu deaktivieren (false).
+Verwenden Sie die Eigenschaft `useRedirectedUrl`, um die 302-Umleitung zu aktivieren (true) oder zu deaktivieren (false).
 
 <!--<a id="example_B886777252B745AAB48B1FCC42C97A25"></a>-->
 
