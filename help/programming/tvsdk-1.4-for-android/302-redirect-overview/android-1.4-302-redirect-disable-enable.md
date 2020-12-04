@@ -6,6 +6,9 @@ title: Umleitungsoptimierung für 302 deaktivieren oder aktivieren
 uuid: 7561839f-aec6-4a59-a07a-7e4fa043fdc2
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +23,7 @@ Diese Funktion ist standardmäßig aktiviert. Sie können diese Einstellung änd
 
 ## Umleitungsoptimierung für 302 deaktivieren oder aktivieren{#disable-or-enable-redirect-optimization}
 
-Verwenden Sie die `useRedirectedUrl` Eigenschaft, um die 302-Umleitung zu aktivieren (true) oder zu deaktivieren (false).
+Verwenden Sie die Eigenschaft `useRedirectedUrl`, um die 302-Umleitung zu aktivieren (true) oder zu deaktivieren (false).
 Beispiel:
 
 ```java
