@@ -6,6 +6,9 @@ title: Begleitbannerdaten
 uuid: f54aecea-5e11-45dd-97d0-5774ca631a4d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
@@ -16,12 +19,12 @@ Der Inhalt eines AdAsset beschreibt ein begleitendes Banner.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Jeder `AdAsset` enthält Informationen zur Anzeige des Assets.
+Jedes `AdAsset` stellt Informationen zum Anzeigen des Assets bereit.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
   <tr> 
-   <th colname="col1" class="entry"> <b>Verfügbare Informationen </b></th> 
+   <th colname="col1" class="entry"> <b>Verfügbare Informationen  </b></th> 
    <th colname="col2" class="entry"> <b>Beschreibung</b> </th> 
   </tr> 
  </thead>
@@ -44,7 +47,7 @@ Jeder `AdAsset` enthält Informationen zur Anzeige des Assets.
   </tr> 
   <tr> 
    <td colname="col1"> statische URL </td> 
-   <td colname="col2"> <p>Manchmal enthält das Begleitbanner auch eine <span class="codeph"> statischeURL</span> , die eine direkte URL zum Bild oder zu einer <span class="codeph"> .swf</span> -Datei (Flash-Banner) darstellt. </p> <p>Wenn Sie kein HTML oder iframe verwenden möchten, können Sie stattdessen eine direkte URL zu einem Bild oder einer SWF verwenden, um das Banner auf der Flash-Bühne anzuzeigen. In diesem Fall können Sie die <span class="codeph"> statischeURL</span> verwenden, um das Banner anzuzeigen. </p> <p>Wichtig:  Sie müssen überprüfen, ob die statische URL eine gültige Zeichenfolge ist, da diese Eigenschaft möglicherweise nicht immer verfügbar ist. </p> </td> 
+   <td colname="col2"> <p>Manchmal hat das Begleitbanner auch eine <span class="codeph"> staticURL</span>, die eine direkte URL zum Bild oder zu einer <span class="codeph"> .swf</span> (Flash-Banner) ist. </p> <p>Wenn Sie kein HTML oder iframe verwenden möchten, können Sie eine direkte URL zu einem Flash oder einer SWF verwenden, um das Banner stattdessen im Anzeigebereich ""anzuzeigen. In diesem Fall können Sie die statische URL <span class="codeph"> </span> verwenden, um das Banner anzuzeigen. </p> <p>Wichtig:  Sie müssen überprüfen, ob die statische URL eine gültige Zeichenfolge ist, da diese Eigenschaft möglicherweise nicht immer verfügbar ist. </p> </td> 
   </tr> 
  </tbody> 
 </table>
