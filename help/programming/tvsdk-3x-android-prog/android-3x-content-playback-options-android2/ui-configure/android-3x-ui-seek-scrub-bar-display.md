@@ -6,6 +6,9 @@ title: Anzeigen einer Suchleiste mit der aktuellen Wiedergabeposition
 uuid: 30a9237c-bbd5-457e-a93c-662570711986
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
@@ -29,8 +32,8 @@ TVSDK unterstützt die Suche nach einer bestimmten Position (Zeit), an der der S
 1. Warten Sie, bis der Player einen gültigen Status für die Suche hat.
 
    Die gültigen Status sind VORBEREITT, ABGESCHLOSSEN, ANGEHALTEN UND WIEDERGABE.
-1. Verwenden Sie den nativen `SeekBar` zur Einstellung, `OnSeekBarChangeListener`der festlegt, wann der Benutzer scrubbt.
-1. Übergeben Sie die angeforderte Suchposition (Millisekunden) an die `MediaPlayer.seek` Methode.
+1. Verwenden Sie das native `SeekBar`, um `OnSeekBarChangeListener` festzulegen, das festlegt, wann der Benutzer scrubbt.
+1. Übergeben Sie die angeforderte Suchposition (Millisekunden) an die `MediaPlayer.seek`-Methode.
 
    ```java
    void seek(long position) throws MediaPlayerException;
@@ -42,11 +45,11 @@ TVSDK unterstützt die Suche nach einer bestimmten Position (Zeit), an der der S
    >
    >Durch diesen Schritt wird der Abspielkopf an eine neue Position im Stream verschoben, aber die finale berechnete Position kann sich von der angegebenen Suchposition unterscheiden.
 
-1. Suchen Sie nach geeigneten Maßnahmen `MediaPlayerEvent.OPERATION_FAILED` und ergreifen Sie entsprechende Maßnahmen.
+1. Suchen Sie nach `MediaPlayerEvent.OPERATION_FAILED` und gehen Sie entsprechend vor.
 
    Dieses Ereignis gibt die entsprechende Warnung aus. Ihre Anwendung legt fest, wie Sie fortfahren. Zu den Optionen gehören der erneute Versuch der Suche oder die Fortsetzung der Wiedergabe von der vorherigen Position.
 
-1. Warten Sie, bis TVSDK den `MediaPlayerEvent.SEEK_END` Rückruf aufruft.
+1. Warten Sie, bis TVSDK den Rückruf `MediaPlayerEvent.SEEK_END` aufruft.
 1. Rufen Sie die endgültige angepasste Abspielposition mit dem Parameter position des Callbacks ab.
 
    Dies ist wichtig, da sich die tatsächliche Position des Beginns nach der Suche von der angeforderten Position unterscheiden kann. Regeln, einschließlich des Wiedergabeverhaltens, sind betroffen, wenn eine Suche oder eine andere Neupositionierung mitten in einer Werbeunterbrechung endet oder Werbeunterbrechungen übersprungen werden.
