@@ -6,11 +6,14 @@ title: Eine für DVR erweiterte Steuerleiste erstellen
 uuid: 08f943e8-90da-4860-92dd-dd289fd68cba
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
 
-# Eine für DVR erweiterte Steuerleiste erstellen{#construct-a-control-bar-enhanced-for-dvr}
+# Eine für DVR verbesserte Steuerleiste erstellen{#construct-a-control-bar-enhanced-for-dvr}
 
 Sie können eine Steuerleiste mit DVR-Unterstützung für VOD und Live-Streaming implementieren. DVR-Unterstützung beinhaltet das Konzept eines durchsuchbaren Fensters und des Client Live Point.
 
@@ -33,8 +36,8 @@ Sie können eine Steuerleiste mit DVR-Unterstützung für VOD und Live-Streaming
    * Sie können eine Steuerungsleiste implementieren, die für den Wiedergabebereich zugeordnet ist, aber auch den suchbaren Bereich anzeigt.
 
       Für eine Steuerleiste:
-   1. Hinzufügen eine Überlagerung auf die Steuerleiste, die den Wiedergabebereich darstellt.
-   1. Überprüfen Sie beim Beginn der Suche, ob sich die gewünschte Suchposition mithilfe der `MediaPlayer.seekableRange` Eigenschaft innerhalb des suchbaren Bereichs befindet.
+   1. hinzufügen eine Überlagerung auf die Steuerleiste, die den Wiedergabebereich darstellt.
+   1. Wenn der Beginn die Suche durchführt, prüfen Sie mithilfe der `MediaPlayer.seekableRange`-Eigenschaft, ob sich die gewünschte Suchposition im suchbaren Bereich befindet.
 
       Beispiel:
 
@@ -49,7 +52,7 @@ Sie können eine Steuerleiste mit DVR-Unterstützung für VOD und Live-Streaming
       }
       ```
 
-      Sie können auch den Live-Point des Clients mithilfe der `MediaPlayer.LIVE_POINT` Konstante suchen.
+      Sie können auch mit der Konstante `MediaPlayer.LIVE_POINT` nach dem Live-Point des Clients suchen.
 
       ```
       private function onSeekToLiveClick(event:MouseEvent):void { 
