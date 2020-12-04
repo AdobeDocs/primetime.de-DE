@@ -6,6 +6,9 @@ title: Anzeigenmessungen von Moat
 uuid: 4de4ea5e-ef52-4b6b-b215-7601a2dfdb96
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ TVSDK nimmt Informationen von FreeWheel und anderen Werbeservern mit VAST-Antwor
 
 Moat ist ein Dienst, der die Anzeige und Anzeige über viele Verwendungen hinweg misst, von Browsern bis hin zu Anwendungen. Moat generiert Marketinganalysedaten in Echtzeit über mehrere Plattformen hinweg.
 
-Die VAST-Antwort-XML verfügt über eine Eigenschaft und ein Element, das Ihr Code lesen kann, die äußerste `Ad id` Eigenschaft und das äußere `Extension` Element. In beiden Fällen kann Ihr Code TVSDK verwenden, um sowohl die `Ad id` Informationen als auch die `Extension` Informationen zu speichern, und dann die Informationen in einer Baumstruktur organisieren. Mit dieser Organisation kann Ihr Code die Daten von jeder beliebigen Ebene abrufen und an die gewünschte Stelle weiterleiten. Der Wert der äußersten `Ad id` Eigenschaft ermöglicht es Ihrem Code, Informationen aus dem zugehörigen Campaign zu koordinieren.
+Die VAST-Antwort-XML verfügt über eine Eigenschaft und ein Element, das Ihr Code lesen kann, die äußerste `Ad id`-Eigenschaft und das äußerste `Extension`-Element. In beiden Fällen kann Ihr Code TVSDK verwenden, um sowohl die `Ad id`-Informationen als auch die `Extension`-Informationen zu speichern und die Informationen dann in einer Baumstruktur zu organisieren. Mit dieser Organisation kann Ihr Code die Daten von jeder beliebigen Ebene abrufen und an die gewünschte Stelle weiterleiten. Der Wert der äußersten `Ad id`-Eigenschaft ermöglicht es Ihrem Code, Informationen aus der zugehörigen Kampagne zu koordinieren.
 
 Beispielsweise kann FreeWheel Daten in einem Extensions-Element zurückgeben. Nachfolgend finden Sie ein Beispielelement.
 
@@ -36,7 +39,7 @@ Beispielsweise kann FreeWheel Daten in einem Extensions-Element zurückgeben. Na
 </Extensions> 
 ```
 
-Wie im Beispiel unten dargestellt, kann auch FreeWheel die `id` Eigenschaft im `Ad` Element einstellen.
+Die Eigenschaft `id` kann auch im Element `Ad` festgelegt werden, wie im folgenden Beispiel gezeigt.
 
 ```xml
 <Ad id="118566" sequence="1">
