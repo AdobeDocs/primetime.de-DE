@@ -6,6 +6,9 @@ title: TimeRange-Klasse
 uuid: e5a176af-29b9-4aa6-848e-5aba7988584b
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
@@ -16,15 +19,15 @@ Mit benutzerdefinierten Anzeigenmarken können Sie eine Reihe von TimeRange-Spez
 
 <!--<a id="section_42EB6D62627A424ABA250E3246EFEFC3"></a>-->
 
-Jede `TimeRange` Spezifikation im Satz stellt ein Segment in der Wiedergabedauer dar, das intern von TVSDK gepflegt wird und entsprechend als anzeigenbezogener Zeitraum gekennzeichnet werden muss.
+Jede `TimeRange`-Spezifikation im Satz stellt ein Segment in der Wiedergabedauer dar, das intern von TVSDK gepflegt wird und entsprechend als anzeigenbezogener Zeitraum gekennzeichnet werden muss.
 
-Die `TimeRange` Klasse ist eine einfache Datenstruktur, die die Position des Beginns und die Endposition auf der Zeitleiste offen legt. Diese beiden schreibgeschützten Eigenschaften widerspiegeln die Vorstellung eines Zeitraums in der Wiedergabeschlüssel.
+Die `TimeRange`-Klasse ist eine einfache Datenstruktur, die die Position des Beginns und die Endposition auf der Zeitleiste offen legt. Diese beiden schreibgeschützten Eigenschaften widerspiegeln die Vorstellung eines Zeitraums in der Wiedergabeschlüssel.
 
 >[!TIP]
 >
 >Beide Werte werden in Millisekunden angegeben.
 
-Im Folgenden finden Sie eine Zusammenfassung der `TimeRange` Klasse:
+Im Folgenden finden Sie eine Zusammenfassung der `TimeRange`-Klasse:
 
 ```java
 public final class TimeRange {
