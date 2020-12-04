@@ -6,6 +6,9 @@ title: ExpressPlay Packager / Cloud DRM / TVSDK
 uuid: 0d2f5a8d-15c4-42ba-acb8-1dc8d5bc62de
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '505'
+ht-degree: 0%
 
 ---
 
@@ -14,28 +17,28 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 Sie können den Bento4-Packager von ExpressPlay verwenden, um Inhalte für jede der DRM-Lösungen vorzubereiten, die von Primetime Cloud DRM unterstützt werden, powered by ExpressPlay.
 
-In dieser Aufgabe wird beschrieben, wie Sie geschützte Inhalte, in diesem Fall *ExpressPlay Bento4 Tools*, mit einem Drittanbieter-Tool für eine Vielzahl von DRM-Lösungen vorbereiten. Weitere Informationen finden Sie in der Dokumentation zu *Bento4-Werkzeugen* auf der [ExpressPlay](https://www.expressplay.com/developer/) -Website.
+In dieser Aufgabe wird beschrieben, wie Sie geschützte Inhalte mithilfe eines Drittanbieter-Tools, in diesem Fall *ExpressPlay Bento4 Tools*, für eine Vielzahl von DRM-Lösungen vorbereiten. Weitere Informationen finden Sie in der Dokumentation *Bento4 tools* auf der [ExpressPlay](https://www.expressplay.com/developer/)-Website.
 1. Erwerben Sie ein ExpressPlay-Konto und erhalten Sie Ihre ExpressPlay-Kundenauthentifizierungsinformationen.
 
-   Siehe [Primetime DRM Cloud Quick-Beginn.](../../quick-start/quick-overview.md)
-1. Wenn Sie Inhalte für Primetime Access verschlüsseln, erwerben Sie das Primetime-Adobe Access-SDK von Adobe zusammen mit den erforderlichen Zertifikaten (Lizenz-, Transport- und Paketzertifikate).
+   Siehe [Primetime DRM Cloud Quick Beginn.](../../quick-start/quick-overview.md)
+1. Wenn Sie Inhalte für Primetime Access verschlüsseln, erwerben Sie das Primetime Adobe Access SDK von der Adobe zusammen mit den erforderlichen Zertifikaten (Lizenz-, Transport- und Paketzertifikate).
 1. Stellen Sie einen Content Encryption Key (CEK) und eine Content Encryption Key Datenspeicherung ID (CEKSID) für die Verwendung in DRM-Systemen bereit. (Sie generieren diese per Zufall mit OpenSSL oder Ähnlichem.)
 
-   Der CEK ist der eigentliche Schlüssel, den Sie zum Verschlüsseln Ihrer Videodatei(en) verwenden. Sie können sie entweder sicher auf Ihrem eigenen Server in Ihrem eigenen Schlüsselverwaltungssystem speichern oder die [Schlüssellösung](https://www.expressplay.com/developer/key-storage/)von ExpressPlay verwenden.
+   Der CEK ist der eigentliche Schlüssel, den Sie zum Verschlüsseln Ihrer Videodatei(en) verwenden. Sie können sie entweder sicher auf Ihrem eigenen Server in Ihrem eigenen Schlüsselverwaltungssystem speichern oder Sie können die [Schlüssellösung für die Datenspeicherung von ExpressPlay](https://www.expressplay.com/developer/key-storage/) verwenden.
 
    Eine CEKSID ist die Kennung für ein bestimmtes CEK. Sie geben den Verschlüsselungsschlüssel (normalerweise) nicht weiter. Wenn Sie beispielsweise ein Lizenz-Token anfordern, geben Sie die CEKSID an.
 
 1. Wenn Sie Inhalte für Access verschlüsseln, verwenden Sie Ihr CEK, um Primetime Access-Metadaten zu erstellen, die mit Ihren Inhalten verknüpft sind.
 
-1. Fragmentieren Sie Ihre Inhalte, um sie für das *Bento4 MP4DASH* -Tool vorzubereiten.
+1. Fragmentieren Sie Ihren Inhalt, um ihn für das *Bento4 MP4DASH*-Tool vorzubereiten.
 
-   Für diesen Schritt können Sie das *Tool MP4FRAGMENT* verwenden. Sie müssen Ihre Inhalte nur einmal fragmentieren. Beispiel:
+   Für diesen Schritt können Sie das Tool *MP4FRAGMENT* verwenden. Sie müssen Ihre Inhalte nur einmal fragmentieren. Beispiel:
 
    ```
    ./mp4fragment Unfragmented.mp4 Fragmented.mp4
    ```
 
-1. Verwenden Sie das *Bento4 MPDASH* -Tool, um &quot;DASH-ify&quot;zu verwenden und Ihre fragmentierten Inhalte zu verschlüsseln.
+1. Verwenden Sie das Werkzeug *Bento4 MPDASH*, um &quot;DASH-ify&quot;zu verwenden und Ihre fragmentierten Inhalte zu verschlüsseln.
 
    Verwenden Sie diesen Befehl, um alle DRM-Systeme anzugeben, die Sie verwenden möchten, und um alle Primetime Access-Metadaten, die aus den vorherigen Schritten generiert wurden, weiterzugeben. Beispiel:
 
