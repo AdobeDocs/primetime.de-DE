@@ -6,6 +6,9 @@ title: Verwenden von CRS zum Einfügen von ID3-Timed-Metadaten-Tags
 uuid: 491bbb9e-15de-4871-baa1-f7bb0ea0dde2
 translation-type: tm+mt
 source-git-commit: c2216a5089d23ca1fcbb77c87b4a01a6fa1807ff
+workflow-type: tm+mt
+source-wordcount: '165'
+ht-degree: 0%
 
 ---
 
@@ -20,10 +23,10 @@ Der Client-Player liest die ID3-Metadaten, um eine Frame-genaue Anzeigenverfolgu
 >
 >Die zeitgesteuerte Metadaten-Injektion von ID3 funktioniert nur in Safari unter iOS.
 
-## Arbeitsablauf für CRS für die ID3-Injektion {#workflow-for-crs-for-id3-injection}
+## Workflow für CRS für ID3-Injektion {#workflow-for-crs-for-id3-injection}
 
-Der Arbeitsablauf für die ID3-Injektion ist identisch mit dem in [Detaillierte Workflows für die JIT-Neuverpackung.](../creative-repackaging-service/jit-repackage.md) Wenn der Manifestserver den `ptplayer=ios-mobileweb` Parameter empfängt, weist er CRS an, ID3-Pakete in den transkodierten Werbekreativ einzuschleusen, bevor dieser auf den CDN-Server hochgeladen wird.
+Der Arbeitsablauf für die ID3-Injektion ist identisch mit dem in [Detaillierte Workflows für die JIT-Neuverpackung.](../creative-repackaging-service/jit-repackage.md) Wenn der Manifestserver den  `ptplayer=ios-mobileweb` Parameter empfängt, weist er CRS an, ID3-Pakete in das transkodierte Werbemittel-Kreativelement zu injizieren, bevor dieser auf den CDN-Server hochgeladen wird.
 
 >[!NOTE]
 >
->Bei einem Multi-CDN-Setup verwendet der Manifestserver den `ptcdn` Parameter in der Bootstrap-URL, um den CDN-Server für das Hochladen des Werbekreises zu identifizieren.
+>Bei einem Multi-CDN-Setup verwendet der Manifestserver den Parameter `ptcdn` in der Bootstrap-URL, um den CDN-Server für das Hochladen des Werbekreativen zu identifizieren.
