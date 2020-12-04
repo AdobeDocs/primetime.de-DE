@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '426'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
@@ -18,7 +18,7 @@ Ihre Betrachter schauen nicht nur im Fernsehen, sondern auch auf Smartphones, Ta
 
 Mit Adobe Primetime Ad Insertion können Sie zielgerichtete Anzeigenerlebnisse ohne Puffer- oder Wiedergabefehler erstellen. Sie können Anzeigen in Live-, Linear- oder VOD-Inhalte einfügen. Sie können die Komplexität auch minimieren, indem Sie die vorhandenen Primetime-Integrationen mit führenden Werbeservern nutzen. Bieten Sie überragende Anzeigenerlebnisse mit immer erreichbarer Sichtbarkeit und Unterstützung für übersprungene VAST-Anzeigen. Stellen Sie eine höhere Interaktion und mehr Umsatz für Sie sicher, indem Sie Ihren Kunden eine bessere Anzeige auf verschiedenen Geräten bieten.
 
-## Primetime Ad Insertion Help {#ad-insertion-user-guide}
+## Hilfe zu Primetime Ad Insertion {#ad-insertion-user-guide}
 
 In diesem Handbuch zur Selbsthilfe wird erläutert, wie Inhalte durch das Einfügen benutzerspezifischer dynamischer Anzeigen auf dem Server und die Interaktion mit der Audience mit personalisierten Anzeigen zu monetarisieren sind. Verwenden Sie die Navigation auf der linken Seite, um im Drilldown-Verfahren zu erfahren, wie verschiedene Konfigurationen interagieren und wie Anzeigeneinfügungen verfolgt werden.
 
