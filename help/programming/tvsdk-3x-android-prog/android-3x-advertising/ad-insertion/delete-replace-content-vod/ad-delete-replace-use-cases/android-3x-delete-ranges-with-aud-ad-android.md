@@ -6,21 +6,24 @@ title: Bereiche löschen
 uuid: 2aaea7a0-5d52-49a1-901c-f71e4b081d91
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 0%
 
 ---
 
 
-# Bereiche löschen {#delete-ranges}
+# Bereiche {#delete-ranges} löschen
 
-Sie können zwischen `TimeRanges` und `begin` in `end` `localTime` der Zeitleiste entfernen.
+Sie können `TimeRanges` zwischen `begin` und `end` in `localTime` aus der Zeitleiste entfernen.
 
 >[!TIP]
 >
->Um nur bestimmte Bereiche aus dem Inhalt zu entfernen, erstellen Sie eine `CustomRangeMetadata` Instanz und geben Sie den Typ als Vorgang mit den definierten benutzerdefinierten Bereichen `DELETE` an.
+>Um nur bestimmte Bereiche aus dem Inhalt zu entfernen, erstellen Sie eine `CustomRangeMetadata`-Instanz und geben Sie den Typ als `DELETE`-Vorgang mit den definierten benutzerdefinierten Bereichen an.
 
 Die Anzeigenzuordnung muss wie vom Anzeigenserver definiert verwendet werden.
 
-1. So löschen Sie Bereiche mit einer Adobe Primetime-Anzeige für Anzeigenentscheidungen:
+1. So löschen Sie Bereiche mit einer Adobe Primetime-Anzeige für die Entscheidungsfindung:
 
    ```
    {   
