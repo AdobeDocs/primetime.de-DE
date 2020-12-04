@@ -6,6 +6,9 @@ title: Teilweise Einfügen von Werbeunterbrechungen
 uuid: 799acdd8-fbb9-43b4-955a-3f56825d1e87
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Die Funktion zum Einfügen von Werbeunterbrechungen ermöglicht es Ihnen, ein TV
 
 Wenn sich ein Benutzer beispielsweise in der Mitte einer 90-Sekunden-Werbeunterbrechung (3-30-Sekunden-Anzeige), 10 Sekunden nach der zweiten Anzeige (d. h. 40 Sekunden nach der Werbeunterbrechung) anmeldet, wird die zweite Anzeige für die verbleibende Dauer (20 Sekunden) und anschließend die dritte Anzeige wiedergegeben.
 
-## Werbeanzeige verfolgen {#section_03AFAEAA8DA44399952DC51C5E12951E}
+## Track-Anzeige {#section_03AFAEAA8DA44399952DC51C5E12951E}
 
 Anzeigentracker für die teilweise wiedergegebene Anzeige (die zweite Anzeige) werden nicht ausgelöst. Im obigen Beispiel wird nur der Tracker für die dritte Anzeige ausgelöst.
 
