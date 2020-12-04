@@ -6,11 +6,14 @@ title: Benutzer können die Beschriftungsspur ändern
 uuid: 043dc492-1dd4-4b7f-8541-d60a1d3d7c4a
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
 
-# Benutzer können die Beschriftungsspur ändern {#allow-users-to-change-the-caption-track}
+# Benutzer können die Beschriftungsspur {#allow-users-to-change-the-caption-track} ändern
 
 Dieser Vorgang ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mit der ein Benutzer eine Untertitelspur auswählen kann.
 
