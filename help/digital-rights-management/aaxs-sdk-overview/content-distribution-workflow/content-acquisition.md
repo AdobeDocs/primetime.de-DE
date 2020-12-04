@@ -4,19 +4,22 @@ title: Inhaltsakquise
 uuid: f3d8b4ef-bc45-4c2d-962b-638512ca0ef3
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '638'
+ht-degree: 0%
 
 ---
 
 
 # Inhaltsakquise {#content-acquisition}
 
-Wenn ein Verbraucher eine geschützte Inhaltsdatei von einer Website oder einem CDN erwirbt, muss er auch eine Lizenz erwerben, die einen Schlüssel zum Entschlüsseln des Videos enthält, bevor es wiedergegeben werden kann. Die folgenden Schritte illustrieren einen gemeinsamen Arbeitsablauf für den Zugriff auf geschützte Inhalte auf einem Computer mit Flash Player oder Adobe AIR:
+Wenn ein Verbraucher eine geschützte Inhaltsdatei von einer Website oder einem CDN erwirbt, muss er auch eine Lizenz erwerben, die einen Schlüssel zum Entschlüsseln des Videos enthält, bevor es wiedergegeben werden kann. Die folgenden Schritte illustrieren einen gemeinsamen Arbeitsablauf für den Zugriff auf geschützte Inhalte auf einem Computer, auf dem Flash Player oder Adobe AIR ausgeführt wird:
 
-1. Der Verbraucher besucht die Website des Einzelhändlers und wählt ein Video aus, das er sehen möchte. Der Verbraucher versucht, das geschützte Video mit Flash Player oder einer Adobe AIR-Anwendung herunterzuladen oder auf seinen Computer zu übertragen.
+1. Der Verbraucher besucht die Website des Einzelhändlers und wählt ein Video aus, das er sehen möchte. Der Kunde versucht, das geschützte Video mit einem Flash Player oder einer Adobe AIR-Anwendung herunterzuladen oder auf seinen Computer zu übertragen.
 
-   Wenn der Kunde zum ersten Mal versucht hat, auf geschützten Inhalt mit diesem bestimmten Computer zuzugreifen, muss die Flash Player- oder Adobe AIR-Laufzeit zunächst individuell angepasst werden, wie in Schritt 2 beschrieben. Wenn der Laufzeitclient bereits individualisiert wurde, erfolgt der Erwerb einer Lizenz wie in Schritt 3 beschrieben.
+   Ist dies das erste Mal, dass der Kunde versucht hat, auf geschützten Inhalt mit diesem bestimmten Computer zuzugreifen, muss der Flash Player oder die Adobe AIR-Laufzeit zuerst individualisiert werden, wie in Schritt 2 beschrieben. Wenn der Laufzeitclient bereits individualisiert wurde, erfolgt der Erwerb einer Lizenz wie in Schritt 3 beschrieben.
 
-1. Der Flash Player- oder Adobe AIR-Laufzeitclient erhält ein eindeutiges digitales Zertifikat (als *Computerzertifikat* bezeichnet) von einem von Adobe gehosteten Server.
+1. Der Flash Player- oder Adobe AIR-Laufzeitclient erhält ein eindeutiges digitales Zertifikat (das als *Computerzertifikat* bezeichnet wird) von einem Adobe-gehosteten Server.
 
    Dieser Prozess der Zuweisung eines eindeutigen Zertifikats wird als *Individualisierung* bezeichnet. Die Individualisierung identifiziert eindeutig sowohl den Computer als auch die Flash Player- oder Adobe AIR-Laufzeitumgebung, mit der Inhalte wiedergegeben werden.
 
@@ -31,9 +34,9 @@ Wenn ein Verbraucher eine geschützte Inhaltsdatei von einer Website oder einem 
 
    Lizenzserver — die in die Abrechnungs- und Authentifizierungs-Infrastruktur des Einzelhändlers integriert werden können — kann eine Geschäftsregelprüfung durchführen, um zu überprüfen, ob der Benutzer zur Ansicht des angeforderten Inhalts berechtigt ist. Wenn die Geschäftsregeln dies zulassen, gibt der Lizenzserver eine Lizenz mit dem Schlüssel für die Inhaltsverschlüsselung aus, um den Inhalt und die mit dem Konto dieses Benutzers verknüpften Nutzungsregeln zu entschlüsseln. Zur Verarbeitung einer Lizenzanforderung entschlüsselt der Lizenzserver die Anforderung mit seinem privaten Transportschlüssel. Das CEK in den Metadaten wird mithilfe des privaten Schlüssels für License Server entschlüsselt und erneut verschlüsselt, um die Lizenz an das Gerät zu binden, auf dem die Anforderung ausgeführt wird. Die Lizenz wird mit dem privaten Lizenzserver-Schlüssel signiert. Die Lizenzantwort wird mit dem privaten Transportschlüssel signiert und verschlüsselt, bevor sie an den Client zurückgegeben wird.
 
-   Sofern die Lizenz dies zulässt, speichert der Client die Lizenz, um den *Offline-Zugriff* auf die Lizenz zu aktivieren. Die Lizenzzwischenspeicherung ermöglicht es dem Kunden, geschützte Inhalte Ansicht, ohne jedes Mal, wenn er Inhalte Ansicht, eine neue Lizenz zu erwerben.
+   Sofern die Lizenz dies zulässt, speichert der Client die Lizenz, um *Offline-Zugriff* für die Lizenz zu aktivieren. Die Lizenzzwischenspeicherung ermöglicht es dem Kunden, geschützte Inhalte Ansicht, ohne jedes Mal, wenn er Inhalte Ansicht, eine neue Lizenz zu erwerben.
 
-1. Sobald der Flash Player- oder Adobe AIR-Laufzeitclient über eine Lizenz verfügt, extrahiert der Client das CEK aus der Lizenz und der Kunde kann die Ansicht der Inhalte vornehmen, auf die er zugreifen darf.
+1. Sobald der Flash Player- oder Adobe AIR-Laufzeitclient über eine Lizenz verfügt, extrahiert der Client das CEK aus der Lizenz und der Kunde kann die Inhalte, auf die er zugreifen darf, Ansicht vornehmen.
 
    <!--<a id="fig_s43_gc2_44"></a>-->
 
