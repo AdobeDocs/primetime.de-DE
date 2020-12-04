@@ -6,11 +6,14 @@ title: Banneranzeigen
 uuid: 388a1683-342c-4f3b-97c8-cfcb6c5cfee1
 translation-type: tm+mt
 source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+workflow-type: tm+mt
+source-wordcount: '650'
+ht-degree: 0%
 
 ---
 
 
-# Banneranzeigen {#companion-banner-ads}
+# Begleitbanneranzeigen {#companion-banner-ads}
 
 TVSDK unterstützt begleitende Banneranzeigen, bei denen es sich um Anzeigen handelt, die eine lineare Anzeige begleiten und nach dem Ende der linearen Anzeige oft auf der Seite bleiben. Ihre Anwendung ist für die Anzeige der begleitenden Banner verantwortlich, die mit einer linearen Anzeige bereitgestellt werden.
 
@@ -35,8 +38,8 @@ Der Inhalt eines AdBannerAsset beschreibt ein begleitendes Banner.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Das `AdPlaybackEvent.AD_STARTED` Ereignis gibt eine `Ad` Instanz zurück, die eine `companionAssets` Eigenschaft ( `Vector.<AdAsset>`) enthält.
-Jeder `AdAsset` enthält Informationen zur Anzeige des Assets.
+Das `AdPlaybackEvent.AD_STARTED`-Ereignis gibt eine `Ad`-Instanz zurück, die eine `companionAssets`-Eigenschaft ( `Vector.<AdAsset>`) enthält.
+Jedes `AdAsset` stellt Informationen zum Anzeigen des Assets bereit.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -68,44 +71,44 @@ Jeder `AdAsset` enthält Informationen zur Anzeige des Assets.
   </tr> 
   <tr> 
    <td colname="col1"> statische URL </td> 
-   <td colname="col2"> <p>Manchmal enthält das Begleitbanner auch eine statische URL, die eine direkte URL zum Bild oder zu einer <span class="filepath"> .swf</span> -Datei (Flash-Banner) darstellt. </p> <p>Wenn Sie kein HTML oder iframe verwenden möchten, können Sie stattdessen eine direkte URL zu einem Bild oder einer SWF verwenden, um das Banner auf der Flash-Bühne anzuzeigen. In diesem Fall können Sie die staticURL verwenden, um das Banner anzuzeigen. </p> <p>Wichtig:  Sie müssen überprüfen, ob die statische URL eine gültige Zeichenfolge ist, da diese Eigenschaft möglicherweise nicht immer verfügbar ist. </p> </td> 
+   <td colname="col2"> <p>Manchmal verfügt das Begleitbanner auch über eine statische URL, die eine direkte URL zum Bild oder zu einer <span class="filepath"> .swf</span> (Flash-Banner) darstellt. </p> <p>Wenn Sie kein HTML oder iframe verwenden möchten, können Sie eine direkte URL zu einem Flash oder einer SWF verwenden, um das Banner stattdessen im Anzeigebereich ""anzuzeigen. In diesem Fall können Sie die staticURL verwenden, um das Banner anzuzeigen. </p> <p>Wichtig:  Sie müssen überprüfen, ob die statische URL eine gültige Zeichenfolge ist, da diese Eigenschaft möglicherweise nicht immer verfügbar ist. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Anzeigen von Bannerwerbung {#display-banner-ads}
+## Anzeigen von Banneranzeigen {#display-banner-ads}
 
 Um Banneranzeigen anzuzeigen, müssen Sie Bannerinstanzen erstellen und TVSDK erlauben, auf anzeigenbezogene Ereignis zu hören.
 
-TVSDK bietet eine Liste von begleitenden Banneranzeigen, die über das `AdPlaybackEvent.AD_STARTED` Ereignis-Ereignis mit einer linearen Anzeige verbunden sind.
+TVSDK bietet eine Liste von begleitenden Banneranzeigen, die über das `AdPlaybackEvent.AD_STARTED`-Ereignis-Ereignis mit einer linearen Anzeige verknüpft sind.
 
 Manifeste können begleitende Banneranzeigen wie folgt angeben:
 
 * Ein HTML-Snippet
 * Die URL einer iFrame-Seite
-* Die URL eines statischen Bildes oder einer Adobe Flash SWF-Datei
+* Die URL einer statischen Bilddatei oder einer Flash-SWF-Datei einer Adobe
 
 Für jede Begleitanzeige gibt TVSDK an, welche Typen für Ihre Anwendung verfügbar sind.
 
-Hinzufügen Sie einen Listener für das `AdPlaybackEvent.AD_STARTED` Ereignis, das Folgendes ausführt:
+hinzufügen Sie einen Listener für das `AdPlaybackEvent.AD_STARTED`-Ereignis, das Folgendes ausführt:
 
 1. Löscht vorhandene Anzeigen in der Bannerinstanz.
 
-1. Ruft die Liste der begleitenden Anzeigen ab `Ad.companionAssets`.
+1. Ruft die Liste der begleitenden Anzeigen von `Ad.companionAssets` ab.
 
 1. Wenn die Liste der begleitenden Anzeigen nicht leer ist, müssen Sie die Liste für Bannerinstanzen durchlaufen.
 
-   Jede Bannerinstanz ( an `AdBannerAsset`) enthält Informationen wie Breite, Höhe, Ressourcentyp (html, iframe oder statisch) und Daten, die zum Anzeigen des begleitenden Banners erforderlich sind.
+   Jede Bannerinstanz (`AdBannerAsset`) enthält Informationen wie Breite, Höhe, Ressourcentyp (html, iframe oder statisch) und Daten, die zum Anzeigen des begleitenden Banners erforderlich sind.
 
 1. Wenn bei einer Videoanzeige keine begleitenden Anzeigen gebucht wurden, enthält die Liste der begleitenden Assets keine Daten für diese Videoanzeige.
 
    Um eine eigenständige Anzeige anzuzeigen, fügen Sie die Logik zu Ihrem Skript hinzu, um ein normales DFP (DoubleClick for Publishers)-Display-Tag in der entsprechenden Bannerinstanz auszuführen.
 
-1. Sendet die Bannerinformationen an eine Funktion auf Ihrer Seite, üblicherweise JavaScript, `ExternalInterface`mit der die Banner an einer geeigneten Position angezeigt werden.
+1. Sendet die Bannerinformationen an eine Funktion auf Ihrer Seite, üblicherweise JavaScript, indem `ExternalInterface` verwendet wird, die die Banner an einer geeigneten Position anzeigt.
 
-   Dies ist in der Regel ein `div`und Ihre Funktion verwendet das `div ID` , um das Banner anzuzeigen. Beispiel:
+   Dies ist normalerweise ein `div` und Ihre Funktion verwendet das `div ID`, um das Banner anzuzeigen. Beispiel:
 
-   Hinzufügen Ereignis-Listener:
+   hinzufügen Ereignis-Listener:
 
    ```js
    _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
