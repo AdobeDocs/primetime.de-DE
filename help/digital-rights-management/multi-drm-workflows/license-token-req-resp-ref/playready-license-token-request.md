@@ -6,17 +6,20 @@ title: PlayReady-Lizenz-Token-Anforderung/Antwort
 uuid: 20ebd582-ebb9-4716-8c1e-df3e58d6ec14
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '913'
+ht-degree: 3%
 
 ---
 
 
-# PlayReady-Lizenz-Token-Anforderung/Antwort {#playready-license-token-request-response}
+# PlayReady-Lizenz-Token-Anfrage / Antwort {#playready-license-token-request-response}
 
 Die Oberfläche des PlayReady-LizenzTokens bietet Produktions- und Testdienste.
 
 Diese HTTP-Anforderung gibt ein Token zurück, das für eine PlayReady-Lizenz eingelöst werden kann.
 
-**Methode: GET, POST** (mit einem www-url-kodierten Textkörper, der Parameter für beide Methoden enthält)
+**Methode: GET, POST**  (mit einem www-url-kodierten Textkörper, der Parameter für beide Methoden enthält)
 
 **URLs:**
 
@@ -68,7 +71,7 @@ Diese HTTP-Anforderung gibt ein Token zurück, das für eine PlayReady-Lizenz ei
   </tr> 
   <tr> 
    <td><span class="codeph"> errorFormat</span> </td> 
-   <td>Entweder <span class="codeph"> html</span> oder <span class="codeph"> json</span>. Wenn <span class="codeph"> HTML</span> (Standard), wird eine HTML-Darstellung aller Fehler im Entitätstext der Antwort bereitgestellt. <p>Wenn <span class="codeph"> json</span> angegeben ist, wird eine strukturierte Antwort im JSON-Format zurückgegeben. Weitere Informationen finden Sie unter <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSON-Fehler</a> . </p> <p>Der Mime-Typ der Antwort lautet entweder <span class="codeph"> text/uri-Liste</span> bei Erfolg, <span class="codeph"> text/html</span> bei HTML-Fehlerformat oder <span class="codeph"> application/json</span> bei JSON-Fehlerformat. </p> </td> 
+   <td>Entweder <span class="codeph"> html</span> oder <span class="codeph"> json</span>. Wenn <span class="codeph"> html</span> (Standard), wird eine HTML-Darstellung aller Fehler im Entitätstext der Antwort bereitgestellt. <p>Wenn <span class="codeph"> json</span> angegeben ist, wird eine strukturierte Antwort im JSON-Format zurückgegeben. Weitere Informationen finden Sie unter <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> JSON-Fehler</a>. </p> <p>Der Mime-Typ der Antwort lautet entweder <span class="codeph"> text/uri-Liste</span> bei Erfolg, <span class="codeph"> text/html</span> bei HTML-Fehlerformat oder <span class="codeph"> application/json</span> bei JSON-Fehlerformat. </p> </td> 
    <td> Nein </td> 
   </tr> 
  </tbody> 
@@ -97,7 +100,7 @@ Diese HTTP-Anforderung gibt ein Token zurück, das für eine PlayReady-Lizenz ei
   </tr> 
   <tr> 
    <td><span class="codeph"> Kind</span> </td> 
-   <td>Eine hexadezimale 16-Byte-Zeichenfolgendarstellung des Inhaltsverschlüsselungsschlüssels oder eine Zeichenfolge <span class="codeph"> ^somestring'</span>. Die Länge der Zeichenfolge gefolgt von '^' darf 64 Zeichen nicht überschreiten. </td> 
+   <td>Eine hexadezimale 16-Byte-Zeichenfolgendarstellung des Inhaltsverschlüsselungsschlüssels oder eine Zeichenfolge <span class="codeph">^somestring'</span>. Die Länge der Zeichenfolge gefolgt von '^' darf 64 Zeichen nicht überschreiten. </td> 
    <td> Ja </td> 
   </tr> 
   <tr> 
@@ -108,21 +111,21 @@ Diese HTTP-Anforderung gibt ein Token zurück, das für eine PlayReady-Lizenz ei
   <tr> 
    <td><span class="codeph"> contentKey</span> </td> 
    <td> Eine hexadezimale 16-Byte-Zeichenfolgendarstellung des Inhaltsverschlüsselungsschlüssels </td> 
-   <td>Ja, es sei denn, <span class="codeph"> Kek</span> und <span class="codeph"> ek</span> oder <span class="codeph"> Kind</span> sind angegeben </td> 
+   <td>Ja, es sei denn, die Variablen <span class="codeph"> kek</span> und <span class="codeph"> ek</span> oder <span class="codeph"></span> </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> rightsType</span> </td> 
-   <td>Gibt die Art der Rechte an. Muss <span class="codeph"> BuyToOwn</span> oder <span class="codeph"> Miete</span>sein. </td> 
+   <td>Gibt die Art der Rechte an. Muss <span class="codeph"> BuyToOwn</span> oder <span class="codeph"> Rental</span> sein. </td> 
    <td> Ja </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> miet.periodEndTime</span> </td> 
-   <td>Mietende. Dieser Wert MUSS im Format "RFC 3339" _ Datum/Uhrzeit im Format "Z"-Zone-Bezeichner ("Zulu-Zeit") oder eine Ganzzahl mit vorangestelltem "+"-Zeichen sein. <p>Wenn der Wert ein <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339</a> Datums-/Uhrzeitformat ist, stellt er ein absolutes Ablaufdatum/eine absolute Ablaufzeit für die Lizenz dar. Ein Beispiel für ein RFC 3339 Datum/Uhrzeit ist 2006-04-14T12:01:10Z. </p> <p> Wenn der Wert eine Ganzzahl ist, der das Pluszeichen "+"vorangestellt ist, wird er als relative Anzahl von Sekunden ab dem Zeitpunkt der Ausgabe des Tokens verwendet. Der Inhalt kann nach dieser Zeit nicht mehr wiedergegeben werden. Nur gültig, wenn <span class="codeph"> Berechtigungstyp</span> <span class="codeph"> Miete</span>ist. </p> </td> 
-   <td>Ja, wenn <span class="codeph"> der</span> Berechtigungstyp <span class="codeph"> Miete</span>ist. </td> 
+   <td>Mietende. Dieser Wert MUSS im Format "RFC 3339" _ Datum/Uhrzeit im Format "Z"-Zone-Bezeichner ("Zulu-Zeit") oder eine Ganzzahl mit vorangestelltem "+"-Zeichen sein. <p>Wenn der Wert im Datums-/Uhrzeitformat <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339</a> angegeben ist, stellt er ein absolutes Ablaufdatum/eine absolute Ablaufzeit für die Lizenz dar. Ein Beispiel für ein RFC 3339 Datum/Uhrzeit ist 2006-04-14T12:01:10Z. </p> <p> Wenn der Wert eine Ganzzahl ist, der ein "+"-Zeichen vorangestellt ist, wird er als relative Anzahl von Sekunden ab dem Zeitpunkt der Ausgabe des Tokens verwendet. Der Inhalt kann nach dieser Zeit nicht mehr wiedergegeben werden. Nur gültig, wenn <span class="codeph"> rightsType</span> <span class="codeph"> Rental</span> ist. </p> </td> 
+   <td>Ja, wenn <span class="codeph"> rightsType</span> <span class="codeph"> Rental</span> ist. </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> rent.playDuration</span> </td> 
-   <td>Zeit (in Sekunden), die die Wiedergabe des Inhalts nach dem Start der Wiedergabe ermöglicht. Nur gültig, wenn <span class="codeph"> Berechtigungstyp</span> mieten ist. </td> 
+   <td>Zeit (in Sekunden), die die Wiedergabe des Inhalts nach dem Start der Wiedergabe ermöglicht. Nur gültig, wenn <span class="codeph"> rightsType</span> mieten ist. </td> 
    <td> Nein </td> 
   </tr> 
   <tr> 
@@ -152,7 +155,7 @@ Diese HTTP-Anforderung gibt ein Token zurück, das für eine PlayReady-Lizenz ei
   </tr> 
   <tr> 
    <td><span class="codeph"> unknownOutputBehavior</span> </td> 
-   <td>Erforderliches Verhalten, wenn die Ausgabe unbekannt ist. Zulässige Werte: <span class="codeph"> Nur</span>zulassen, <span class="codeph"> Nicht zulassen</span> oder <span class="codeph"> SDOnly</span> </td> 
+   <td>Erforderliches Verhalten, wenn die Ausgabe unbekannt ist. Zulässige Werte: <span class="codeph"> Allow</span>, <span class="codeph"> disallow</span> oder <span class="codeph"> SDOnly</span> </td> 
    <td> Nein </td> 
   </tr> 
   <tr> 
@@ -168,7 +171,7 @@ Diese HTTP-Anforderung gibt ein Token zurück, das für eine PlayReady-Lizenz ei
   <tr> 
    <td><span class="codeph"> extensionPayload</span> </td> 
    <td> Eine Base64-kodierte Zeichenfolge der Erweiterung. </td> 
-   <td>Ja, wenn <span class="codeph"> der Erweiterungstyp</span> angegeben ist. </td> 
+   <td>Ja, wenn <span class="codeph"> extensionType</span> angegeben ist. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -180,10 +183,10 @@ Diese HTTP-Anforderung gibt ein Token zurück, das für eine PlayReady-Lizenz ei
 | **HTTP-Statuscode** | **Beschreibung** | **Content-Type** | **Entitätstext enthält** |
 |---|---|---|---|
 | `200 OK` | Kein Fehler. | `text/uri-list` | Lizenzakquise-URL und -Token |
-| `400 Bad Request` | Ungültige Artikel | `text/html` os `application/json` | Fehlerbeschreibung |
-| `401 Unauthorized` | Autom fehlgeschlagen | `text/html` os `application/json` | Fehlerbeschreibung |
-| `404 Not found` | Ungültige URL | `text/html` os `application/json` | Fehlerbeschreibung |
-| `50x Server Error` | Serverfehler | `text/html` os `application/json` | Fehlerbeschreibung |
+| `400 Bad Request` | Ungültige Artikel | `text/html` oder  `application/json` | Fehlerbeschreibung |
+| `401 Unauthorized` | Autom fehlgeschlagen | `text/html` oder  `application/json` | Fehlerbeschreibung |
+| `404 Not found` | Ungültige URL | `text/html` oder  `application/json` | Fehlerbeschreibung |
+| `50x Server Error` | Serverfehler | `text/html` oder  `application/json` | Fehlerbeschreibung |
 
 **Tabelle 12: Ereignis-Fehlercodes**
 
@@ -217,7 +220,7 @@ Diese HTTP-Anforderung gibt ein Token zurück, das für eine PlayReady-Lizenz ei
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td>Authentifizierungstoken ungültig: &lt;details&gt; <p>Hinweis:  Dies kann vorkommen, wenn der Authentifizierer falsch ist oder wenn der Zugriff auf die Test-API unter *.test.expressplay.com mit dem Produktionsauthentifizierer erfolgt und umgekehrt. </p> <p importance="high">Hinweis: Das Test SDK und das Advanced Test Tool (ATT) funktionieren nur mit <span class="filepath"> *.test.expressplay.com</span>, während Produktionsgeräte <span class="filepath"> *.service.expressplay.com</span>verwenden müssen. </p> </td> 
+   <td>Authentifizierungstoken ungültig: &lt;details&gt; <p>Hinweis:  Dies kann vorkommen, wenn der Authentifizierer falsch ist oder wenn der Zugriff auf die Test-API unter *.test.expressplay.com mit dem Produktionsauthentifizierer erfolgt und umgekehrt. </p> <p importance="high">Hinweis: Das Test SDK und das Advanced Test Tool (ATT) funktionieren nur mit <span class="filepath"> *.test.expressplay.com</span>, während Produktionsgeräte <span class="filepath"> *.service.expressplay.com</span> verwenden müssen. </p> </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
@@ -277,7 +280,7 @@ Diese HTTP-Anforderung gibt ein Token zurück, das für eine PlayReady-Lizenz ei
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td><span class="codeph"> OutputControlFlag</span> muss 4 Byte kodieren </td> 
+   <td><span class="codeph"> </span> OutputControlFlagmust be encode 4 byte </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
@@ -297,19 +300,19 @@ Diese HTTP-Anforderung gibt ein Token zurück, das für eine PlayReady-Lizenz ei
   </tr> 
   <tr> 
    <td> -4020 </td> 
-   <td><span class="codeph"> Kind</span> muss 32 Hexadezimalzeichen lang sein </td> 
+   <td><span class="codeph"> Die </span> Niere muss 32 Hexadezimalzeichen lang sein </td> 
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td><span class="codeph"> Kind</span> muss 64 Zeichen lang nach dem ^ sein </td> 
+   <td><span class="codeph"> Die </span> Zeichenfolge darf 64 Zeichen nach dem ^ </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
-   <td>Ungültiges <span class="codeph"> Kind</span> </td> 
+   <td>Ungültige <span class="codeph"> Kind</span> </td> 
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td>Ungültiger verschlüsselter <span class="codeph"> Schlüssel</span> oder ungültiger Schlüssel </td> 
+   <td>Ungültige verschlüsselte <span class="codeph">-Taste</span> oder -Taste </td> 
   </tr> 
   <tr> 
    <td> -5001 </td> 
@@ -337,7 +340,7 @@ Diese HTTP-Anforderung gibt ein Token zurück, das für eine PlayReady-Lizenz ei
   </tr> 
   <tr> 
    <td> -5007 </td> 
-   <td>Es kann nur einer der <span class="codeph"> Tastenkombinationen</span> oder der <span class="codeph"> Inhaltsschlüssel</span> angegeben werden </td> 
+   <td>Es kann nur einer von <span class="codeph"> kek</span> oder <span class="codeph"> contentKey</span> angegeben werden </td> 
   </tr> 
  </tbody> 
 </table>
