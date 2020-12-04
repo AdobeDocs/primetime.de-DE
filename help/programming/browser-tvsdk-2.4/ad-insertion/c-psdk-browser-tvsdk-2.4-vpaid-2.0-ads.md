@@ -6,6 +6,9 @@ title: VPAID 2.0-Anzeigenunterstützung
 uuid: 462692b5-c4b3-4488-adb3-f309809d64ad
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '390'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ Die folgenden Funktionen werden unterstützt:
 * Im Flash-Ausweichmodus unterstützt Browser TVSDK nur Flash-basierte VPAID-Anzeigen.
 * Lineare JavaScript-VPAID-Anzeigen
 
-   VPAID-Anzeigen müssen JavaScript-basiert sein, und die Anzeigenantwort muss den Medientyp der VPAID-Anzeige als `application/javascript`.
+   VPAID-Anzeigen müssen JavaScript-basiert sein, und die Anzeigenantwort muss den Medientyp der VPAID-Anzeige als `application/javascript` identifizieren.
 
 Die folgenden Funktionen werden nicht unterstützt:
 
@@ -33,21 +36,21 @@ Die folgenden Funktionen werden nicht unterstützt:
 * Nichtlineare Anzeigen, wie Überlagerungsanzeigen, dynamische Begleithandanzeigen, minimierbare Anzeigen, reduzierbare Anzeigen und erweiterbare Anzeigen.
 * Vorabladen von VPAID-Anzeigen
 * VPAID-Anzeigen in Live-Inhalten
-* Flash VPAID-Anzeigen
+* Flash-VPAID-Anzeigen
 
 ## API {#section_0DB1D383CA5047B281BC808BC082C69B}
 
 Die folgenden API-Elemente unterstützen VPAID 2.0-Anzeigen:
 
-* Die `getCustomAdView` Methode `MediaPlayer` gibt ein `CustomAdView` Objekt zurück, das die Web-Ansicht darstellt, die die VPAID-Anzeige rendert.
+* Die `getCustomAdView`-Methode von `MediaPlayer` gibt ein `CustomAdView`-Objekt zurück, das die Web-Ansicht darstellt, die die VPAID-Anzeige rendert.
 
-   Weitere Informationen zur `getCustomAdView` Methode finden Sie in der Dokumentation zur [MediaPlayer-API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.MediaPlayer.html).
+   Weitere Informationen zur `getCustomAdView`-Methode finden Sie unter [MediaPlayer-API-Dokumentation](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.MediaPlayer.html).
 
 * `MediaPlayer.setCustomAdTimeout(int milliseconds)` legt den Timeout beim VPAID-Ladevorgang fest.
 
    Der Standardwert für das Timeout beträgt 10 Sekunden.
 
-* Mit der API können Sie `auditudeSettings.ignoreVPAIDAds`VPAID-Anzeigen ignorieren, die vom Auditude-Server empfangen wurden. Die API funktioniert nicht für Flash Fallback.
+* Mit der API `auditudeSettings.ignoreVPAIDAds` können Sie VPAID-Anzeigen ignorieren, die vom Auditude-Server empfangen wurden. Die API funktioniert nicht bei Flash Fallback.
 
 Während die VPAID-Anzeige abgespielt wird:
 
