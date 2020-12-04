@@ -4,6 +4,9 @@ title: Verwenden von Output Protection-Richtlinien
 uuid: f00d2a97-0036-41a6-ab44-391cc40b146e
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '183'
+ht-degree: 0%
 
 ---
 
@@ -21,6 +24,6 @@ Expressplay unterstützt derzeit nicht das Anschließen analoger Ausgabebeschrä
 
 **PlayReady-Ausgabenschutzrichtlinien**
 
-PlayReady unterstützt auch nativ sowohl analoge als auch digitale Ausgabeschränkungen. Die Werte für die Ausgabeschutzebene, die Sie festlegen können. Auf der Seite &quot; [Ausgabeschutzebenen](https://msdn.microsoft.com/en-us/library/dn468831.aspx) &quot;werden die Werte, die Sie festlegen können, und das erwartete Kundenverhalten Dokumente.
+PlayReady unterstützt auch nativ sowohl analoge als auch digitale Ausgabeschränkungen. Die Werte für die Ausgabeschutzebene, die Sie festlegen können. Die Seite [Output Protection Levels](https://msdn.microsoft.com/en-us/library/dn468831.aspx) Dokumente die Werte, die Sie festlegen können, und das erwartete Kundenverhalten.
 
-Wenn Sie &quot;Expressplay&quot;verwenden, fügen Sie Ausgabeschutzebenen zur Tokenerstellungszeit über das Flag &quot;compressionDigitalAudioOPL&quot;, &quot;uncompressionDigitalAudioOPL&quot;, &quot;compressionDigitalVideoOPL&quot;, &quot;uncompressionDigitalVideoOPL&quot;und das Flag &quot;unknownOutputBehavior&quot;an. Diese werden unter [PlayReady License Token Request dokumentiert.](https://www.expressplay.com/developer/restapi/#playready-license-token-request)
+Wenn Sie &quot;Expressplay&quot;verwenden, fügen Sie Ausgabeschutzebenen zur Tokenerstellungszeit über das Flag &quot;compressionDigitalAudioOPL&quot;, &quot;uncompressionDigitalAudioOPL&quot;, &quot;compressionDigitalVideoOPL&quot;, &quot;uncompressionDigitalVideoOPL&quot;und das Flag &quot;unknownOutputBehavior&quot;an. Diese werden unter [PlayReady License Token Request](https://www.expressplay.com/developer/restapi/#playready-license-token-request) dokumentiert.
