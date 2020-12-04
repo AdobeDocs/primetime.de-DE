@@ -21,16 +21,16 @@ Sie müssen private Schlüssel sorgfältig überwachen, um die Sicherheit Ihres 
 >
 >Adobe empfiehlt die Verwendung eines HSM für maximale Sicherheit.
 >
->See the *Adobe Primetime DRM Secure Deployment Guidelines* guide.
+>Siehe Handbuch *Adobe Primetime DRM Secure Deployment Guidelines*.
 
 >[!NOTE]
 >
->As of Java 1.7, 64-bit Sun Java for Windows no longer supports the PKCS11 interfaces that Primetime DRM requires for communicatation with HSM devices. If you plan to use an HSM, you need to use a 32-bit version of Java, or use a JDK that supports the full PKCS11 interfaces.
+>Ab Java 1.7 unterstützt Sun Java für Windows 64-Bit nicht mehr die PKCS11-Schnittstellen, die Primetime DRM für die Kommunikation mit HSM-Geräten benötigt. Wenn Sie ein HSM verwenden möchten, müssen Sie eine 32-Bit-Version von Java oder ein JDK verwenden, das die vollständigen PKCS11-Schnittstellen unterstützt.
 
-You can keep a private key on an HSM, and use the Primetime DRM SDK to pass in the credential you obtain from the HSM. If you want to use a credential that is stored on an HSM, you need to use a JCE provider that can communicate with an HSM to get a handle to the private key. Then you need to pass the private key handle, provider name, and certificate that includes the public key to `ServerCredentialFactory.getServerCredential()`.
+Sie können einen privaten Schlüssel auf einem HSM belassen und das Primetime DRM SDK verwenden, um die Berechtigung, die Sie über das HSM erhalten, weiterzugeben. Wenn Sie eine auf einem HSM gespeicherte Berechtigung verwenden möchten, müssen Sie einen JCE-Anbieter verwenden, der mit einem HSM kommunizieren kann, um einen Handle an den privaten Schlüssel zu erhalten. Dann müssen Sie den privaten Schlüsselhandgriff, den Anbieternamen und das Zertifikat, das den öffentlichen Schlüssel enthält, an `ServerCredentialFactory.getServerCredential()` übergeben.
 
-The SunPKCS11 provider represents one example of a JCE provider that you can use to access a private key on an HSM. Some HSMs are also included with a Java SDK that is bundled with a JCE provider.
+Der SunPKCS11-Anbieter stellt ein Beispiel für einen JCE-Anbieter dar, mit dem Sie auf einen privaten Schlüssel auf einem HSM zugreifen können. Einige HSMs sind auch mit einem Java-SDK enthalten, das zum Lieferumfang eines JCE-Anbieters gehört.
 
-See the Sun Java documentation for instructions on how to use this provider.
+Anweisungen zur Verwendung dieses Providers finden Sie in der Sun Java-Dokumentation.
 
-PEM und DER sind Methoden zum Kodieren eines Zertifikats mit öffentlichem Schlüssel. PEM is a base-64 encoding and DER is a binary encoding. Zertifikatdateien verwenden in der Regel die Erweiterung [!DNL .cer], [!DNL .pem]oder [!DNL .der]. Zertifikate werden verwendet, wenn nur ein öffentlicher Schlüssel erforderlich ist. Wenn für eine Komponente nur der öffentliche Schlüssel erforderlich ist, sollten Sie diese Komponente mit dem Zertifikat anstelle einer Berechtigung oder PKCS12-Datei bereitstellen.
+PEM und DER sind Methoden zum Kodieren eines Zertifikats mit öffentlichem Schlüssel. PEM ist eine Base-64-Kodierung und DER ist eine binäre Kodierung. Zertifikatdateien verwenden normalerweise die Erweiterungen [!DNL .cer], [!DNL .pem] oder [!DNL .der]. Zertifikate werden verwendet, wenn nur ein öffentlicher Schlüssel erforderlich ist. Wenn für eine Komponente nur der öffentliche Schlüssel erforderlich ist, sollten Sie diese Komponente mit dem Zertifikat anstelle einer Berechtigung oder PKCS12-Datei bereitstellen.
