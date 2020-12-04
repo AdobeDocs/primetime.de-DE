@@ -6,6 +6,9 @@ title: DRM-Authentifizierung während der Wiedergabe
 uuid: b3ff8edd-a3d4-470e-8899-580eca9fff4a
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Wenn die DRM-Metadaten für ein Video im Medienstream enthalten sind, können Sie während der Wiedergabe eine Authentifizierung durchführen.
 
-Bei der Lizenzrotation wird ein Asset mit mehreren DRM-Lizenzen verschlüsselt. Jedes Mal, wenn neue DRM-Metadaten gefunden werden, werden die `DRMHelper` Methoden verwendet, um zu überprüfen, ob die DRM-Metadaten DRM-Authentifizierung erfordern.
+Bei der Lizenzrotation wird ein Asset mit mehreren DRM-Lizenzen verschlüsselt. Jedes Mal, wenn neue DRM-Metadaten gefunden werden, werden die `DRMHelper`-Methoden verwendet, um zu prüfen, ob die DRM-Metadaten DRM-Authentifizierung erfordern.
 
 >[!TIP]
 >
@@ -35,7 +38,7 @@ Bei der Lizenzrotation wird ein Asset mit mehreren DRM-Lizenzen verschlüsselt. 
    };
    ```
 
-1. Mit der `DRMMetadata` können Sie überprüfen, ob eine Authentifizierung erforderlich ist.
+1. Verwenden Sie das `DRMMetadata`, um zu prüfen, ob eine Authentifizierung erforderlich ist.
 
    * Wenn keine Authentifizierung erforderlich ist, müssen Sie nichts tun, und die Wiedergabe wird ununterbrochen fortgesetzt.
    * Ist eine Authentifizierung erforderlich, führen Sie die DRM-Authentifizierung durch.
