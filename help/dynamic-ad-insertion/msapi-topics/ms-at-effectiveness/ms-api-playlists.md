@@ -1,66 +1,69 @@
 ---
-description: Der Manifestserver gibt Master-Playlisten im M3U8-Format zurück, die dem vorgeschlagenen HTTP Live Streaming-Standard entsprechen. Es besteht aus einer Reihe variabler Transport-Streams (TSs), die jeweils Darstellungen desselben Inhalts für verschiedene Bitraten und Formate enthalten. Adobe Primetime-Anzeigeneinfügung fügt das EXT-X-MARKER-Direktive-Tag hinzu, das von Client-Videoplayern interpretiert werden soll.
-seo-description: Der Manifestserver gibt Master-Playlisten im M3U8-Format zurück, die dem vorgeschlagenen HTTP Live Streaming-Standard entsprechen. Es besteht aus einer Reihe variabler Transport-Streams (TSs), die jeweils Darstellungen desselben Inhalts für verschiedene Bitraten und Formate enthalten. Adobe Primetime-Anzeigeneinfügung fügt das EXT-X-MARKER-Direktive-Tag hinzu, das von Client-Videoplayern interpretiert werden soll.
+description: Der Manifestserver gibt Übergeordnet Playlists im M3U8-Format zurück, die dem vorgeschlagenen HTTP Live Streaming-Standard entsprechen. Es besteht aus einer Reihe variabler Transport-Streams (TSs), die jeweils Darstellungen desselben Inhalts für verschiedene Bitraten und Formate enthalten. Adobe Primetime-Anzeigeneinfügung fügt das EXT-X-MARKER-Direktive-Tag hinzu, das von Client-Videoplayern interpretiert werden soll.
+seo-description: Der Manifestserver gibt Übergeordnet Playlists im M3U8-Format zurück, die dem vorgeschlagenen HTTP Live Streaming-Standard entsprechen. Es besteht aus einer Reihe variabler Transport-Streams (TSs), die jeweils Darstellungen desselben Inhalts für verschiedene Bitraten und Formate enthalten. Adobe Primetime-Anzeigeneinfügung fügt das EXT-X-MARKER-Direktive-Tag hinzu, das von Client-Videoplayern interpretiert werden soll.
 seo-title: EXT-X-MARKER-Richtlinie
 title: EXT-X-MARKER-Richtlinie
 uuid: e349bf89-b196-47b4-a362-9913fa28b2c6
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '807'
+ht-degree: 0%
 
 ---
 
 
-# EXT-X-MARKER-Richtlinie {#ext-x-marker-directive}
+# EXT-X-MARKER Directive {#ext-x-marker-directive}
 
-Der Manifestserver gibt Master-Playlisten im M3U8-Format zurück, die dem vorgeschlagenen HTTP Live Streaming-Standard entsprechen. Es besteht aus einer Reihe variabler Transport-Streams (TSs), die jeweils Darstellungen desselben Inhalts für verschiedene Bitraten und Formate enthalten. Adobe Primetime-Anzeigeneinfügung fügt das EXT-X-MARKER-Direktive-Tag hinzu, das von Client-Videoplayern interpretiert werden soll.
+Der Manifestserver gibt Übergeordnet Playlists im M3U8-Format zurück, die dem vorgeschlagenen HTTP Live Streaming-Standard entsprechen. Es besteht aus einer Reihe variabler Transport-Streams (TSs), die jeweils Darstellungen desselben Inhalts für verschiedene Bitraten und Formate enthalten. Adobe Primetime-Anzeigeneinfügung fügt das EXT-X-MARKER-Direktive-Tag hinzu, das von Client-Videoplayern interpretiert werden soll.
 
 Weitere Informationen zum EXT-X-MARKER-Tag finden Sie unter [Adobe Primetime HTTP Live Streaming Profil](https://wwwimages2.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeHLS_April2014.pdf).
 
 >[!NOTE]
 >
->Diese Funktion ist nur verfügbar, wenn die URL des Bootstrap-Manifestservers den `pttrackingmode` Parameter nicht enthält.
+>Diese Funktion ist nur verfügbar, wenn die URL des Bootstrap-Manifestservers den Parameter `pttrackingmode` nicht enthält.
 
 >[!NOTE]
 >
 >Das EXT-X-MARKER-Tag wird Anzeigensegmenten und nicht Inhaltssegmenten hinzugefügt.
 
-Der Standardentwurf bei [HTTP Live Streaming](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23) beschreibt Inhalt und Format der varianten Wiedergabelisten. Das EXT-X-MARKER-Tag weist den Client an, einen Rückruf aufzurufen. Es enthält die folgenden Komponenten:
+Der Standardentwurf unter [HTTP Live Streaming](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23) beschreibt den Inhalt und das Format der varianten Wiedergabelisten. Das EXT-X-MARKER-Tag weist den Client an, einen Rückruf aufzurufen. Es enthält die folgenden Komponenten:
 
-* **ID** Eindeutige ID (Zeichenfolge) für dieses Callback-Ereignis im Kontext des Programm-Streams.
+* **** IDUnique identifier (Zeichenfolge) für dieses Callback-Ereignis im Kontext des Programm-Streams.
 
-* **TYPE** -Typ (Zeichenfolge) des Callback-Ereignisses: PodBegin, PodEnd, PrerollPodBegin, PrerollPodEnd oder AdBegin
+* **** TYPEType (Zeichenfolge) des Callback-Ereignisses: PodBegin, PodEnd, PrerollPodBegin, PrerollPodEnd oder AdBegin
 
-* **DAUER** Die Zeitdauer (in Sekunden) ab dem Beginn des Segments, das das Tag enthält, für das die Richtlinie gültig bleibt.
+* **** DAURATIONSZEIT (in Sekunden) ab dem Beginn des Segments, das das Tag enthält, für das die Richtlinie gültig bleibt.
 
-* **OFFSET** optional. Der Offset (in Sekunden) relativ zum Anfang der Segmentwiedergabe, wenn der Rückruf aufgerufen werden muss.
+* **** OFFSETOptional. Der Offset (in Sekunden) relativ zum Anfang der Segmentwiedergabe, wenn der Rückruf aufgerufen werden muss.
 
-   * `PodBegin` und `PrerollPodBegin` enthalten Beacon-Informationen im DATA-Attribut und werden am Beginn des Segments ausgelöst. Das `OFFSET` Tag steht hier also nicht zur Verfügung.
+   * `PodBegin` und  `PrerollPodBegin` enthalten Beacon-Informationen im DATA-Attribut und werden am Beginn des Segments ausgelöst. Das `OFFSET`-Tag ist hier also nicht verfügbar.
 
-   * `AdBegin` enthält Beacon-Informationen im DATA-Attribut und Impressions-Tags werden am Beginn dieses Segments ausgelöst. Das `OFFSET` Tag steht auch hier nicht zur Verfügung.
+   * `AdBegin` enthält Beacon-Informationen im DATA-Attribut und Impressions-Tags werden am Beginn dieses Segments ausgelöst. Das `OFFSET`-Tag ist auch hier nicht verfügbar.
 
-   * `PodEnd` und `PrerollPodEnd` enthalten Beacon-Informationen im DATA-Attribut, werden jedoch am Ende des aktuellen Segments ausgelöst, da diese Tags voraussichtlich am Ende des letzten Segments der letzten Anzeige im Pod ausgelöst werden. In diesem Fall `OFFSET` wird `<duration of segment>` festgelegt, dass der Beacon am Ende des aktuellen Segments ausgelöst wird.
+   * `PodEnd` und  `PrerollPodEnd` enthalten Beacon-Informationen im DATA-Attribut, werden jedoch am Ende des aktuellen Segments ausgelöst, da diese Tags voraussichtlich am Ende des letzten Segments der letzten Anzeige im Pod ausgelöst werden. In diesem Fall ist `OFFSET` auf `<duration of segment>` eingestellt, um anzugeben, dass der Beacon am Ende des aktuellen Segments ausgelöst wird.
 
-* **DATA** Base64-kodierte Zeichenfolge, die in Dublette-Anführungszeichen mit den Daten eingeschlossen ist, die beim Aufrufen des Rückrufs an die Anwendung übergeben werden sollen. Es enthält Anzeigenverfolgungsinformationen, die den Spezifikationen VMAP1.0 und VAST3.0 entsprechen.
+* **In** Dubletten-Anführungszeichen eingeschlossene Zeichenfolge mit den Daten, die beim Aufrufen des Rückrufs an die Anwendung übergeben werden sollen, ist in der Variablen &quot;DATABase64-kodierte Zeichenfolge&quot;enthalten. Es enthält Informationen zur Anzeigenverfolgung, die den Spezifikationen VMAP1.0 und VAST3.0 entsprechen.
 
-* **COUNT** Anzahl der Anzeigen, die in der Werbeunterbrechung eingefügt werden.
+* **Anzahl** der Anzeigen, die in der Werbeunterbrechung eingefügt werden.
 
    Gilt nur, wenn die TYPE-Komponente auf PodBegin oder PrerollPodBegin festgelegt ist.
 
-* **BREAKDUR** Gesamtdauer (in Sekunden) der ausgefüllten Werbeunterbrechung
+* **** BREAKDURTinsgesamte Dauer (in Sekunden) der ausgefüllten Werbeunterbrechung.
 
    Gilt nur, wenn die TYPE-Komponente auf PodBegin oder PrerollPodBegin festgelegt ist.
 
 Interpretieren Sie beim Erstellen des Rückrufs die EXT-X-MARKER-Komponenten wie folgt:
 
-* Wenn das Tag enthält, starten Sie `OFFSET`den Rückruf am angegebenen Offset relativ zum Anfang der Inhaltswiedergabe in diesem Segment. Andernfalls wird der Rückruf ausgelöst, sobald der Inhalt in diesem Segment abgespielt wird.
-* Verwenden Sie diese Option `DURATION` zum Verfolgen des Fortschritts des Anzeigeninhalts und zum Anfordern von URLs zum Verfolgen von Ereignissen.
-* Übergeben `ID`, `TYPE`und `DATA` an den Rückruf.
+* Wenn das Tag `OFFSET` enthält, starten Sie den Rückruf am angegebenen Offset relativ zum Anfang der Inhaltswiedergabe in diesem Segment. Andernfalls wird der Rückruf ausgelöst, sobald der Inhalt in diesem Segment abgespielt wird.
+* Verwenden Sie `DURATION`, um den Fortschritt des Anzeigeninhalts zu verfolgen und URLs zum Verfolgen von Ereignissen anzufordern.
+* Übergeben Sie `ID`, `TYPE` und `DATA` an den Rückruf.
 
-Verwenden Sie die Werte `PrerollPodBegin`und `PrerollPodEnd` , um `TYPE` zu entscheiden, welches TS-Segment zuerst in Live-/linearen Streams wiedergegeben werden soll.
+Verwenden Sie die Werte `PrerollPodBegin` und `PrerollPodEnd` für `TYPE`, um zu entscheiden, welches TS-Segment zuerst in Live-/linearen Streams wiedergegeben werden soll.
 
 >[!NOTE]
 >
->Die Werte `PrerollPodBegin`und `PrerollPodEnd` sind nur verfügbar, wenn eine Pre-Roll-Anzeige in einen Live-Stream eingefügt wird.
+>Die Werte `PrerollPodBegin` und `PrerollPodEnd` stehen nur zur Verfügung, wenn eine Pre-Roll-Anzeige in einen Live-Stream eingefügt wird.
 
 Der Manifestserver enthält EXT-X-MARKER-Tags in den folgenden Segmenten:
 
@@ -93,7 +96,7 @@ Der Manifestserver sendet ein `VMAP1.0-conformant` XML-Dokument, um den Beginn u
 </AdTrackingFragments>
 ```
 
-Für jede Werbegestaltung, die der Manifestserver in den Programm-Inhalt einfügt, wird ein VAST3.0-konformes XML-Dokument gesendet, um diese Anzeige zu verfolgen. Jedes XML-Dokument enthält ein `<InLine>` Element, das das eingesetzte Kreativelement der linearen Anzeige beschreibt, oder ein `<Wrapper>` Element bei Wrapper-Anzeigen (d. h. verknüpfte oder umgeleitete Anzeigen), sowie alle damit verbundenen begleitenden Anzeigen und Erweiterungen. Wenn die VAST-Antwort ein Sequenzattribut enthält, z. B. wenn die Anzeige Teil eines Anzeigen-Pods ist, enthält das Dokument dieses Attribut. Im Folgenden finden Sie ein Beispiel für ein VAST3.0-konformes XML-Dokument zur Verfolgung einer einzelnen Anzeige:
+Für jede Werbegestaltung, die der Manifestserver in den Programm-Inhalt einfügt, wird ein VAST3.0-konformes XML-Dokument gesendet, um diese Anzeige zu verfolgen. Jedes XML-Dokument enthält ein `<InLine>`-Element, das das eingesetzte Kreativelement der linearen Anzeige beschreibt, oder ein `<Wrapper>`-Element bei Wrapper-Anzeigen (d. h. verknüpfte oder umgeleitete Anzeigen) sowie alle zugehörigen begleitenden Anzeigen und Erweiterungen. Wenn die VAST-Antwort ein Sequenzattribut enthält, z. B. wenn die Anzeige Teil eines Anzeigen-Pods ist, enthält das Dokument dieses Attribut. Im Folgenden finden Sie ein Beispiel für ein VAST3.0-konformes XML-Dokument zur Verfolgung einer einzelnen Anzeige:
 
 ```xml
 <?xml version="1.0"?> 
