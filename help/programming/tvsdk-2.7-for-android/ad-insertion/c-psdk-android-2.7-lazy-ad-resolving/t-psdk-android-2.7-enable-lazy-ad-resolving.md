@@ -7,21 +7,24 @@ title: Verzögerte Anzeigenauflösung aktivieren
 uuid: a084ee0b-53af-4600-91f6-d30ccc89699d
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '349'
+ht-degree: 0%
 
 ---
 
 
-# Verzögerte Anzeigenauflösung aktivieren {#enable-lazy-ad-resolving}
+# Verzögerte Anzeigenauflösung {#enable-lazy-ad-resolving} aktivieren
 
 Sie können die Funktion &quot;Lazy Ad Resolving&quot;über den vorhandenen Lazy Ad Loading Mechanismus aktivieren oder deaktivieren (Lazy Ad Resolving ist standardmäßig aktiviert).
 
-Sie können die Lazy Ad Resolving aktivieren oder deaktivieren, indem Sie [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) mit `true` oder `false`aufrufen.
+Sie können die Lazy Ad Resolving aktivieren oder deaktivieren, indem Sie [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) mit `true` oder `false` aufrufen.
 
-1. Verwenden Sie die booleschen `hasDelayAdLoading` und `setDelayAdLoading` Methoden, `AdvertisingMetadata` um die zeitliche Steuerung der Anzeigenauflösung und die Platzierung der Anzeigen in der Zeitleiste zu steuern:
+1. Verwenden Sie die booleschen `hasDelayAdLoading`- und `setDelayAdLoading`-Methoden in `AdvertisingMetadata`, um das Timing der Anzeigenauflösung und die Platzierung der Anzeigen auf der Zeitleiste zu steuern:
 
-   * Wenn &quot;false&quot; `hasDelayAdLoading` zurückgegeben wird, wartet TVSDK, bis alle Anzeigen aufgelöst und platziert wurden, bevor zum Status &quot;PREPARED&quot;gewechselt wird.
-   * Wenn &quot;true&quot; `hasDelayAdLoading` zurückgegeben wird, löst TVSDK nur die ersten Anzeigen und Transitionen in den Status &quot;VORBEREITT&quot;auf. Die verbleibenden Anzeigen werden während der Wiedergabe aufgelöst und platziert.
-   * Wenn `hasPreroll` oder `hasLivePreroll` &quot;false&quot;zurückgegeben wird, geht TVSDK davon aus, dass es keine Preroll-Anzeige gibt und Beginn die Inhaltswiedergabe sofort durchführen. Die Standardeinstellung lautet true.
+   * Wenn `hasDelayAdLoading` &quot;false&quot;zurückgibt, wartet TVSDK, bis alle Anzeigen aufgelöst und platziert wurden, bevor zum Status &quot;PREPARED&quot;gewechselt wird.
+   * Wenn `hasDelayAdLoading` &quot;true&quot;zurückgibt, löst TVSDK nur die ersten Anzeigen und Transitionen in den Status &quot;PREPARED&quot;auf. Die verbleibenden Anzeigen werden während der Wiedergabe aufgelöst und platziert.
+   * Wenn `hasPreroll` oder `hasLivePreroll` false zurückgeben, geht TVSDK davon aus, dass es keine Preroll-Anzeige gibt und Beginn die Wiedergabe des Inhalts sofort durchführen. Die Standardeinstellung lautet true.
 
       APIs für verzögerte Anzeigenauflösung:
 
@@ -40,7 +43,7 @@ Sie können die Lazy Ad Resolving aktivieren oder deaktivieren, indem Sie [Adver
       […]
       ```
 
-1. Um Anzeigen als Hinweise auf einer Scrubbing-Leiste genau wiederzugeben, sollten Sie auf das `TimelineEvent` Ereignis achten und die Scrubbing-Leiste jedes Mal neu zeichnen, wenn Sie dieses Ereignis erhalten.
+1. Um Anzeigen als Hinweise auf einer Scrubbing-Leiste genau wiederzugeben, sollten Sie auf das `TimelineEvent`-Ereignis achten und die Scrubbing-Leiste jedes Mal neu zeichnen, wenn Sie dieses Ereignis erhalten.
 
    Wenn die Option &quot;Lazy Ad Resolving&quot;für VOD-Streams aktiviert ist, werden nicht alle Anzeigen auf der Zeitleiste platziert, wenn Ihr Player in den Status &quot;PREPARED&quot;wechselt. Daher muss Ihr Player die Scrubbing-Leiste explizit neu zeichnen.
 
@@ -60,5 +63,5 @@ Sie können die Lazy Ad Resolving aktivieren oder deaktivieren, indem Sie [Adver
    } 
    ```
 
->Rufen Sie `AdvertisingMetadata.hasDelayAdLoading`an, um zu überprüfen, ob die Funktion zum Auflösen von Lazy-Anzeigen aktiviert oder deaktiviert ist. Ein Rückgabewert von `true` bedeutet, dass &quot;Lazy Ad Resolving&quot;aktiviert ist; `false` bedeutet, dass die Funktion deaktiviert ist.
+>Rufen Sie `AdvertisingMetadata.hasDelayAdLoading` auf, um zu überprüfen, ob die Funktion zum Auflösen von Lazy-Anzeigen aktiviert oder deaktiviert ist. Ein Rückgabewert von `true` bedeutet, dass &quot;Lazy Ad Resolving&quot;aktiviert ist. `false` bedeutet, dass die Funktion deaktiviert ist.
 
