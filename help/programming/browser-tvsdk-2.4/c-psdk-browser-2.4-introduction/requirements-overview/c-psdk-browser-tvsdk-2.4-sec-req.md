@@ -6,6 +6,9 @@ title: Sicherheitsaspekte
 uuid: 78edf2b0-363c-4ab6-b588-ab4748ee6096
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Für Browser TVSDK gibt es einige Sicherheitserwägungen.
 
    * Flash Player erlaubt keinen Zugriff auf Daten, die sich außerhalb der Domäne befinden, von der die SWF stammt.
 
-      Um Zugriff zuzulassen, hosten Sie eine domänenübergreifende Richtliniendatei mit den entsprechenden Berechtigungen im Stammordner des Servers, auf dem die Daten gehostet werden. Im Flash Fallback-Modus in Browser TVSDK (Flash Player Version 23 und höher) benötigen Sie das Autorisierungstoken für Ihre Domäne. Wenden Sie sich zum Generieren des Tokens an Ihren Adobe-Kundenbetreuer.
+      Um Zugriff zuzulassen, hosten Sie eine domänenübergreifende Richtliniendatei mit den entsprechenden Berechtigungen im Stammordner des Servers, auf dem die Daten gehostet werden. Im Flash-Fallback-Modus in Browser TVSDK (Flash Player Version 23 und höher) benötigen Sie das Autorisierungstoken für Ihre Domäne. Wenden Sie sich an Ihren Kundenbetreuer, um das Token zu generieren.
 
 * **JavaScript**
 
