@@ -4,6 +4,9 @@ title: Befehlszeilenverwendung
 uuid: b3a995de-653e-491a-9262-86dc56b9ce31
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '280'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Verwenden Sie zum Generieren einer Lizenz die folgende Syntax:
 </i class="+ topic>
 ```
 
-`metadata` ist eine Metadatendatei mit den Adobe Access DRM-Metadaten. Diese Datei kann mithilfe der `-d -m` Option Media Packager aus geschützten Inhalten abgerufen werden.
+`metadata` ist eine Metadatendatei mit den DRM-Metadaten für den Zugriff auf die Adobe. Diese Datei kann mit der Option `-d -m` von Media Packager aus geschütztem Inhalt abgerufen werden.
 
 Verwenden Sie die folgende Syntax, um eine zuvor generierte Lizenz anzuzeigen:
 
@@ -75,7 +78,7 @@ In der folgenden Tabelle werden die Befehlszeilenoptionen beschrieben, die zusam
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r Empfänger-cert</span> </td> 
-   <td colname="2" class="- topic/entry ">Generieren Sie eine Lizenz für den angegebenen Empfänger. Ein Geräte- oder Domänenzertifikat kann verwendet werden. Es können mehrere <span class="+ topic/ph pr-d/codeph codeph"> - r- </span>Optionen angegeben werden, um eine Lizenz für mehrere Empfänger zu erstellen. </td> 
+   <td colname="2" class="- topic/entry ">Generieren Sie eine Lizenz für den angegebenen Empfänger. Ein Geräte- oder Domänenzertifikat kann verwendet werden. Es können mehrere <span class="+ topic/ph pr-d/codeph codeph"> -r </span>Optionen angegeben werden, um eine Lizenz für mehrere Empfänger zu erstellen. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root root root-filename</span> </td> 
