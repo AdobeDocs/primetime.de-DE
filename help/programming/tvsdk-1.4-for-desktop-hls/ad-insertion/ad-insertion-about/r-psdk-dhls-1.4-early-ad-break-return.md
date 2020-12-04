@@ -13,31 +13,31 @@ ht-degree: 0%
 ---
 
 
-# Implementieren der Rückgabe einer frühen Werbeunterbrechung{#implementing-an-early-ad-break-return}
+# Implementieren einer Zeilenumbruch-Frühanzeige{#implementing-an-early-ad-break-return}
 
 Beim Einfügen von Livestream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
 
 >[!NOTE]
 >
->You must subscribe to the splice out/in ad markers ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN`, and `#EXT-X-CUE`).
+>Sie müssen die Splice-out-/In-Anzeigenmarken ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` und `#EXT-X-CUE`) abonnieren.
 
-Here are some requirements to consider:
+Es gibt einige zu berücksichtigende Anforderungen:
 
 * Parsen Sie Markierungen wie `EXT-X-CUE-IN` (oder ein äquivalentes Marker-Tag), die in den linearen oder FER-Streams angezeigt werden.
 
-   Register the markers as being the marker for ad early return point. Wird nur `adBreaks` bis zu dieser Markerposition während der Wiedergabe abgespielt, wodurch die Dauer der `adBreak` durch die führende `EXE-X-CUE-OUT` Markierung markierten Markierung überschrieben wird.
+   Registrieren Sie die Markierungen als Marker für den Anzeigenrückkehrpunkt. Wiedergabe von `adBreaks` nur bis zu dieser Markenposition während der Wiedergabe, wodurch die Dauer von `adBreak`, die durch die führende `EXE-X-CUE-OUT`-Markierung gekennzeichnet ist, außer Kraft gesetzt wird.
 
-* Wenn zwei `EXT-X-CUE-IN` Markierungen für dieselbe `EXT-X-CUE-OUT` Markierung vorhanden sind, wird als erste `EXT-X-CUE-IN` Markierung die gezählte Markierung angezeigt.
+* Wenn zwei `EXT-X-CUE-IN`-Markierungen für dieselbe `EXT-X-CUE-OUT`-Markierung vorhanden sind, wird die erste `EXT-X-CUE-IN`-Markierung angezeigt, die zählt.
 
-* Wenn die `EXE-X-CUE-IN` Markierung in der Zeitleiste ohne führende `EXT-X-CUE-OUT` Markierung angezeigt wird, wird die `EXE-X-CUE-IN` Markierung verworfen.
+* Wenn die `EXE-X-CUE-IN`-Markierung in der Zeitleiste ohne führende `EXT-X-CUE-OUT`-Markierung angezeigt wird, wird die `EXE-X-CUE-IN`-Markierung verworfen.
 
-   Wenn der führende `EXT-X-CUE-OUT` Marker in einem Live-Stream gerade aus dem Fenster gezogen ist, reagiert das TVSDK nicht darauf.
+   Wenn in einem Live-Stream die führende `EXT-X-CUE-OUT`-Markierung gerade aus dem Fenster verschoben wurde, reagiert das TVSDK nicht darauf.
 
-* When there is an early return from an ad break, the `adBreak` plays until the playhead returns to the original position when the ad break was supposed to end and resumes playing the main content from that position.
+* Bei einer frühen Rückkehr aus einer Werbeunterbrechung wird das `adBreak` so lange abgespielt, bis die Abspielleiste an die ursprüngliche Position zurückkehrt, an der die Werbeunterbrechung beendet werden sollte, und die Wiedergabe des Hauptinhalts von dieser Position an fortgesetzt.
 
-## SpliceOut and SpliceIn {#section_36DD55BA58084E21BD3DC039BB245C82}
+## SpliceOut und SpliceIn {#section_36DD55BA58084E21BD3DC039BB245C82}
 
-`SpliceOut` and `SpliceIn` markers mark the begin and the end of the ad break. The duration of the `SpliceOut` type of the `EXE-X-CUE` marker might be zero and the `SpliceIn` type of `EXE-X-CUE` marker marks the end of the ad break. They appear in one tag and differ by type.
+`SpliceOut` und  `SpliceIn` Markierungen markieren den Anfang und das Ende der Werbeunterbrechung. Die Dauer des `SpliceOut`-Typs der `EXE-X-CUE`-Markierung kann null sein, und der `SpliceIn`-Typ der `EXE-X-CUE`-Markierung markiert das Ende der Werbeunterbrechung. Sie werden in einem Tag angezeigt und unterscheiden sich nach Typ.
 
 **Eine Marke mit verschiedenen Typen**
 
@@ -68,11 +68,11 @@ https://server-host/path/file57.ts
 https://server-host/path/file58.ts
 ```
 
-Wenn die Dauer des `SpliceOut` Typs bei einer Marke mit verschiedenen Typen null ist, muss bei jeder Werbeunterbrechung der Wert `SpliceOut` und `SpliceIn` zusammenarbeiten. Derzeit ist eine `SpliceOut` Markierung mit einer Dauer von nicht null und ohne `SpliceIn` Pairing-Markierungen typischer.
+Wenn die Dauer des Typs `SpliceOut` bei einer Marke mit verschiedenen Typen null ist, müssen `SpliceOut` und `SpliceIn` bei jeder Werbeunterbrechung zusammenarbeiten. Derzeit ist eine `SpliceOut`-Markierung mit einer Dauer von ungleich null und benötigt keine Paarung von `SpliceIn`-Markern.
 
 **Zwei separate Markierungen**
 
-Das typischere Szenario ist ein `SpliceOut` Marker mit einer Dauer von ungleich null, der keine `SpliceIn` Paarungsmarkierungen benötigt. Hier markiert eine `SpliceIn` Paarungsmarke das Ende der Werbeunterbrechung während der Wiedergabe der Werbeunterbrechung, aber die Werbeunterbrechung wird an der `SpliceIn` Markerposition abgeschnitten und die Hauptinhaltsunterbrechung wird an dieser Position wiedergegeben.
+Das typischere Szenario ist ein `SpliceOut`-Marker mit einer Dauer von ungleich null, der keine Paarung `SpliceIn`-Markierungen benötigt. Hier markiert eine Paarung mit der Markierung `SpliceIn` das Ende der Werbeunterbrechung während der Wiedergabe der Werbeunterbrechung, aber der Werbeunterbrechung wird an der `SpliceIn`-Markenposition abgeschnitten und die Beginn mit dem Hauptinhalt an dieser Position.
 
 Hier sind beispielsweise zwei verschiedene Marker:
 
