@@ -4,6 +4,9 @@ title: Befehlszeilenverwendung
 uuid: 72117619-a723-49d3-9aa9-5eefcf5b0916
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '167'
+ht-degree: 0%
 
 ---
 
@@ -33,19 +36,19 @@ In der folgenden Tabelle werden die Befehlszeilenoptionen beschrieben, die zusam
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l license-filename </span> </td> 
-   <td colname="2" class="- topic/entry "> Name der Datei, die die einzubettende Lizenz enthält. Es können mehrere <span class="codeph"> -l- </span> Optionen angegeben werden, um mehrere Lizenzen einzubetten. </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l license-filename  </span> </td> 
+   <td colname="2" class="- topic/entry "> Name der Datei, die die einzubettende Lizenz enthält. Es können mehrere <span class="codeph"> -l </span>-Optionen angegeben werden, um mehrere Lizenzen einzubetten. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filename </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filename  </span> </td> 
    <td colname="2" class="- topic/entry "> Geben Sie die Inhaltsmetadaten an, für die eine Lizenz generiert werden soll. (Zum Generieren der Lizenz erforderlich) </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt </span> </td> 
-   <td colname="2" class="- topic/entry "> Fragen Sie nicht, ob die Zieldatei überschrieben werden soll. Wenn die Zieldatei bereits vorhanden ist und <span class="codeph"> -o nicht festgelegt </span> ist, wird ein Fehler zurückgegeben. </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt  </span> </td> 
+   <td colname="2" class="- topic/entry "> Fragen Sie nicht, ob die Zieldatei überschrieben werden soll. Wenn die Zieldatei bereits vorhanden ist und <span class="codeph"> -o </span> nicht eingestellt ist, wird ein Fehler zurückgegeben. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -o  </span> </td> 
    <td colname="2" class="- topic/entry "> Wenn die Zieldatei bereits vorhanden ist, überschreiben Sie sie ohne Eingabeaufforderung. </td> 
   </tr> 
  </tbody> 
