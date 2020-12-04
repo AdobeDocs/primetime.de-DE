@@ -6,6 +6,9 @@ title: Benutzerdefinierte Tags abonnieren
 uuid: 43480265-4951-466a-a347-6debfb6935ee
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
@@ -15,15 +18,15 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 TVSDK bereitet TimedMetadata-Objekte für abonnierte Tags vor, sobald diese Objekte im Inhaltsmanifest gefunden werden.
 
 Vor den Wiedergabe-Beginn müssen Sie die Tags abonnieren.
-Um Tags zu abonnieren, weisen Sie der `subscribedTags` Eigenschaft einen Vektor zu, der die benutzerdefinierten Tag-Namen enthält. Wenn Sie auch die vom standardmäßigen Opportunitätsgenerator verwendeten Anzeigen-Tags ändern müssen, weisen Sie der `adTags` Eigenschaft einen Vektor zu, der die benutzerdefinierten Tag-Namen der Anzeige enthält.
+Um Tags zu abonnieren, weisen Sie der Eigenschaft `subscribedTags` einen Vektor zu, der die benutzerdefinierten Tag-Namen enthält. Wenn Sie auch die vom standardmäßigen Opportunitätsgenerator verwendeten Anzeigen-Tags ändern müssen, weisen Sie der Eigenschaft `adTags` einen Vektor zu, der die benutzerdefinierten Tag-Namen der Anzeige enthält.
 
 So werden Sie über benutzerdefinierte Tags in HLS-Manifesten benachrichtigt:
 
-1. Legen Sie die benutzerdefinierten Tag-Namen global fest, indem Sie einen Vektor zuweisen, der die benutzerdefinierten Tags `subscribeTags` in enthält `MediaPlayerItemConfig`.
+1. Stellen Sie die benutzerdefinierten Tag-Namen global ein, indem Sie einen Vektor mit den benutzerdefinierten Tags `subscribeTags` in `MediaPlayerItemConfig` zuweisen.
 
    >[!IMPORTANT]
    >
-   >Beim Arbeiten mit HLS-Streams müssen Sie das `#` Präfix einschließen.
+   >Sie müssen beim Arbeiten mit HLS-Streams das Präfix `#` einschließen.
 
    Beispiel:
 
@@ -34,7 +37,7 @@ So werden Sie über benutzerdefinierte Tags in HLS-Manifesten benachrichtigt:
    PSDKConfig.subscribedTags = subscribedTags;
    ```
 
-1. Um die vom standardmäßigen Opportunitätsgenerator verwendeten Anzeigen-Tags global zu ändern, weisen Sie der `adTags` Eigenschaft in einen Vektor zu, der die benutzerdefinierten Tag-Namen der Anzeige enthält, `PSDKConfig`.
+1. Um die vom standardmäßigen Opportunitätsgenerator verwendeten Anzeigen-Tags global zu ändern, weisen Sie der Eigenschaft `adTags` in `PSDKConfig` einen Vektor zu, der die benutzerdefinierten Tag-Namen der Anzeige enthält.
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
@@ -55,7 +58,7 @@ So werden Sie über benutzerdefinierte Tags in HLS-Manifesten benachrichtigt:
       >
       >Am einfachsten ist es, eine standardmäßige Medienplayer-Elementkonfiguration zu erstellen.
 
-   1. Weisen Sie einen Vektor zu, der die benutzerdefinierten Tags `subscribeTags` in enthält `MediaPlayerItemConfig`.
+   1. Weisen Sie `subscribeTags` in `MediaPlayerItemConfig` einen Vektor zu, der die benutzerdefinierten Tags enthält.
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig =  
@@ -67,7 +70,7 @@ So werden Sie über benutzerdefinierte Tags in HLS-Manifesten benachrichtigt:
    mediaPlayerItemConfig.subscribeTags = subscribedTags;
    ```
 
-1. Um die vom standardmäßigen Opportunitätsgenerator im angegebenen Stream verwendeten Anzeigen-Tags zu ändern, weisen Sie der `adTags` Eigenschaft in `mediaPlayerItemConfig`
+1. Um die vom standardmäßigen Opportunitätsgenerator im angegebenen Stream verwendeten Anzeigen-Tags zu ändern, weisen Sie der `adTags`-Eigenschaft in `mediaPlayerItemConfig` einen Vektor zu, der die benutzerdefinierten Tag-Namen enthält
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
