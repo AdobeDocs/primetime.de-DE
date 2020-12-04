@@ -6,6 +6,9 @@ title: Implementierung der VPAID 2.0-Integration
 uuid: fa5b9cdd-e684-4656-91b7-50781dc59e23
 translation-type: tm+mt
 source-git-commit: 25f97c8d296f71deddc8f9d12b97007ddf73f603
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 2%
 
 ---
 
@@ -16,7 +19,7 @@ Um VPAID 2.0-Unterstützung hinzuzufügen, fügen Sie eine benutzerdefinierte An
 
 So fügen Sie VPAID 2.0-Unterstützung hinzu:
 
-1. Hinzufügen Sie die benutzerdefinierte Anzeigenschnittstelle auf die Player-Oberfläche, wenn der Player den Status &quot;VORBEREITT&quot;aufweist.
+1. hinzufügen Sie die benutzerdefinierte Anzeigenschnittstelle auf die Player-Oberfläche, wenn der Player den Status &quot;VORBEREITT&quot;aufweist.
 
    ```java
    ... 
@@ -37,7 +40,7 @@ So fügen Sie VPAID 2.0-Unterstützung hinzu:
 
    >[!IMPORTANT]
    >
-   >In einem VPAID 2.0-Arbeitsablauf ist es bei Ansichten mit benutzerdefinierten Anzeigen sehr wichtig, Ihre `CustomAdView` Instanz über `AdBreak` Beginn (Ereignis `AD_BREAK_START`) und `AdBreak` Abschlüsse (Ereignis `AD_BREAK_COMPLETE`) hinweg zu verwalten, vom Zeitpunkt der Erstellung der Ansicht der benutzerdefinierten Anzeige bis zum Zeitpunkt der Entsorgung. Erstellen Sie also nicht bei jedem Werbeunterbrechungs-Beginn eine benutzerdefinierte Ansicht und löschen Sie sie bei jedem Werbeunterbrechungsvorgang.
+   >In einem VPAID 2.0-Arbeitsablauf ist es bei Ansichten mit benutzerdefinierten Anzeigen sehr wichtig, die `CustomAdView`-Instanz über `AdBreak`-Beginn (Ereignis `AD_BREAK_START`) und `AdBreak`-Abschlüsse (Ereignis `AD_BREAK_COMPLETE`) zu verwalten, vom Zeitpunkt der Erstellung der Ansicht der benutzerdefinierten Anzeige bis zum Zeitpunkt der Entsorgung. Erstellen Sie also nicht bei jedem Werbeunterbrechungs-Beginn eine benutzerdefinierte Ansicht und löschen Sie sie bei jedem Werbeunterbrechungsvorgang.
    >
    >
    >Darüber hinaus sollten Sie Ihre benutzerdefinierte AnzeigenAnsicht nur erstellen, wenn Ihr Player den Status &quot;VORBEREITT&quot;aufweist.
@@ -54,7 +57,7 @@ So fügen Sie VPAID 2.0-Unterstützung hinzu:
    >} 
    >```
    >
-   >Bevor Sie Ihre benutzerspezifische Anzeigendatei freigeben, müssen Sie sie schließlich aus der Ansicht `FrameLayout`entfernen. Beispiel:
+   >Bevor Sie Ihre benutzerspezifische Anzeigendatei löschen, müssen Sie sie schließlich aus der Ansicht `FrameLayout` entfernen. Beispiel:
    >
    >
    ```
