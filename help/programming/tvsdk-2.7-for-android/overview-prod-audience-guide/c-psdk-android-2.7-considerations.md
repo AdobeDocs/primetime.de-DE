@@ -6,6 +6,9 @@ title: Überlegungen und Best Practices
 uuid: 049da1f4-028b-49d2-9ebd-e5d9edcbaf8a
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -52,4 +55,4 @@ Hier finden Sie empfohlene Vorgehensweisen für TVSDK:
 * Führen Sie die meisten TVSDK-Vorgänge auf dem Haupt-(UI-)Thread und nicht auf Hintergrundthreads aus.
 * Für TVSDK 2.5 für Android ist die verzögerte Anzeigenauflösung standardmäßig aktiviert.
 
-   Bei Inhalten ohne Pre-Roll- oder Mid-Roll-Funktion können Sie das Laden von Inhalten beschleunigen `AdvertisingMetadata.setPreroll(false)` .
+   Bei Inhalten ohne Pre-Roll oder Mid-Roll können Sie `AdvertisingMetadata.setPreroll(false)` verwenden, um das Laden von Inhalten zu beschleunigen.
