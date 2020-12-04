@@ -26,7 +26,7 @@ Browser TVSDK unterstützt eine Reihe von DASH-Funktionen, die Sie implementiere
 
 >[!TIP]
 >
->In den unten stehenden Tabelle mit Funktionsmatrix wird  ![](assets/supported15.png)
+>In der Tabelle mit Funktionsmatrix unten ![](assets/supported15.png)
 >bedeutet, dass die Funktion in der aktuellen Version unterstützt wird.
 
 Die folgenden Funktionen werden unterstützt:
@@ -90,7 +90,7 @@ Die folgenden Funktionen werden unterstützt:
 | Integrationen | VOD + Live | Rechnungsstellung | ![](assets/supported15.png) |
 | Integrationen | VOD + Live | Durchsuchen | ![](assets/supported15.png) |
 
-## Erweiterte DASH-Funktionen zum Einfügen von Anzeigen (CSAI) {#dash-advanced-insertion-features}
+## Erweiterte DASH-Anzeigeneinfügefunktionen (CSAI) {#dash-advanced-insertion-features}
 
 | Kategorie | Inhaltstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
@@ -102,7 +102,7 @@ Die folgenden Funktionen werden unterstützt:
 | Ad Insertion | VOD | Ergänzende Anzeigen, Banneranzeigen und anklickbare Anzeigen | Nicht unterstützt |
 | Ad Insertion | VOD | VPAID 2.0 | Nicht unterstützt |
 
-## DASH-Kern- und Einfügefunktionen (CSAI) {#dash-core-ad-insertion}
+## DASH-Kern-Anzeigeneinfügefunktionen (CSAI) {#dash-core-ad-insertion}
 
 | Kategorie | Inhaltstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
@@ -158,7 +158,7 @@ Die folgenden Funktionen werden unterstützt:
  </tbody> 
 </table>
 
-## Erweiterte DASH-Wiedergabefunktionen {#dash-advanced-playback}
+## Erweiterte DASH-Wiedergabe-Funktionen {#dash-advanced-playback}
 
 | Kategorie | Inhaltstyp | Funktion | HTML5, FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
@@ -172,7 +172,7 @@ Die folgenden Funktionen werden unterstützt:
 | Wiedergabe | VOD + Live | Rechnungsstellung | ![](assets/supported15.png) |
 | Wiedergabe | VOD + Live | Durchsuchen | ![](assets/supported15.png) |
 
-## DASH-Core-Wiedergabefunktionen {#dash-core-playback}
+## DASH-Core-Wiedergabe-Funktionen {#dash-core-playback}
 
 | Kategorie | Inhaltstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
