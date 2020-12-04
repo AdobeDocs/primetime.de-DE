@@ -1,16 +1,19 @@
 ---
-seo-title: Auswählen der Audiospuren
-title: Auswählen der Audiospuren
+seo-title: Audiospuren auswählen
+title: Audiospuren auswählen
 uuid: a827f426-956b-4a5f-90ba-db12010aa7c7
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
 
-# Auswählen der Audiospuren{#select-the-audio-tracks}
+# Wählen Sie die Audiospuren{#select-the-audio-tracks}
 
-Implementieren Sie [IAAConfig, um Audiospuren für späte Bindung auszuwählen](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html).
+Implementieren Sie [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html), um Audiospuren für späte Bindungen auszuwählen.
 
 | An... | Aufruf... |
 |---|---|
