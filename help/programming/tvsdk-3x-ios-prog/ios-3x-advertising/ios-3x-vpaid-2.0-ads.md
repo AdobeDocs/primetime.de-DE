@@ -6,6 +6,9 @@ title: VPAID 2.0-Anzeigenunterstützung
 uuid: b688d244-c5ac-4832-b5c2-cb25bc80ce8b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Die folgenden Funktionen werden unterstützt:
 * Lineare VPAID-Anzeigen auf Video-on-Demand (VOD)-Inhalten
 * JavaScript VPAID-Anzeigen
 
-   VPAID-Anzeigen müssen JavaScript-basiert sein, und die Anzeigenantwort muss den Medientyp der VPAID-Anzeige als `application/javascript`.
+   VPAID-Anzeigen müssen JavaScript-basiert sein, und die Anzeigenantwort muss den Medientyp der VPAID-Anzeige als `application/javascript` identifizieren.
 
 Die folgenden Funktionen werden nicht unterstützt:
 
@@ -31,25 +34,25 @@ Die folgenden Funktionen werden nicht unterstützt:
 * Nicht-lineare Anzeigen wie Überlagerungsanzeigen, dynamische begleitende Anzeigen, minimierbare Anzeigen, reduzierbare Anzeigen und erweiterbare Anzeigen
 * Vorabladen von VPAID-Anzeigen
 * VPAID-Anzeigen in Live-Inhalten
-* Flash VPAID-Anzeigen
+* Flash-VPAID-Anzeigen
 * VPAID-Anzeige nach dem Roll
 
 ## API-Änderungen {#section_D62F3E059C6C493592D34534B0BFC150}
 
 Die folgenden Änderungen wurden an der API vorgenommen:
 
-* `PTAuditudeMetadata` hat eine `customAdLoadTimeout` Eigenschaft, um den Standard-Timeout beim Laden von VPAID zu ändern.
+* `PTAuditudeMetadata` hat eine  `customAdLoadTimeout` Eigenschaft, um den Standard-Timeout beim Laden von VPAID zu ändern.
 
    Der Standardwert für das Timeout beträgt 10 Sekunden.
 
-* `PTMediaPlayerCustomAdNotification` wird von der `PTMediaPlayer` Instanz ausgelöst
+* `PTMediaPlayerCustomAdNotification` wird von der  `PTMediaPlayer` Instanz ausgelöst
 
 <!--<a id="section_495700E1C5404A7B85307A4137C740C5"></a>-->
 
 Während die VPAID-Anzeige abgespielt wird:
 
 * Die VPAID-Anzeige wird in einem Ansicht-Container über der Player-Ansicht angezeigt, sodass der Code, der auf dem Tippen von Benutzern auf der Player-Ansicht basiert, nicht funktioniert.
-* Der Hauptinhalt-Player wird angehalten, und es werden Aufrufe an `pause` und `play` an die Player-Instanz verwendet, um die VPAID-Anzeige anzuhalten und fortzusetzen.
+* Der Hauptinhalt-Player wird angehalten, und Aufrufe von `pause` und `play` auf der Player-Instanz werden verwendet, um die VPAID-Anzeige anzuhalten und fortzusetzen.
 
 * VPAID-Anzeigen haben keine vordefinierte Dauer, da die Anzeige interaktiv sein kann.
 
