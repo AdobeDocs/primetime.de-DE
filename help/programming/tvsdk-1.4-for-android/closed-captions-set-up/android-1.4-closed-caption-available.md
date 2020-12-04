@@ -1,6 +1,6 @@
 ---
 description: Bei Untertiteln wird der Audioteil eines Videos als Text auf dem Bildschirm angezeigt, wenn der Ton nicht hörbar ist oder der Viewer schwer zu hören ist.
-seo-description: Closed captioning displays the audio portion of a video as text on the screen when the sound is inaudible or the viewer is hard of hearing.
+seo-description: Bei Untertiteln wird der Audioteil eines Videos als Text auf dem Bildschirm angezeigt, wenn der Ton nicht hörbar ist oder der Viewer schwer zu hören ist.
 seo-title: Wählen Sie eine aktuelle Beschriftungsspur aus den verfügbaren Spuren
 title: Wählen Sie eine aktuelle Beschriftungsspur aus den verfügbaren Spuren
 uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
@@ -13,13 +13,13 @@ ht-degree: 1%
 ---
 
 
-# Wählen Sie eine aktuelle Beschriftungsspur aus den verfügbaren Spuren{#select-a-current-caption-track-from-among-available-tracks}
+# Wählen Sie eine aktuelle Untertitelspur unter den verfügbaren Spuren aus.{#select-a-current-caption-track-from-among-available-tracks}
 
 Sie können eine Spur aus einer Liste von derzeit verfügbaren Untertitelspuren auswählen. Dies wird zur aktuellen Spur, die angezeigt wird, wenn die Sichtbarkeit aktiviert ist. Einige Tracks sind möglicherweise nicht verfügbar, also suchen Sie nach dem Ereignis, das anzeigt, dass mehr verfügbar sind.
 
 >[!TIP]
 >
->Untertitel sind immer aktiviert. Alle standardmäßigen Untertitelspuren gelten als vorhanden. Standardspuren (z. B. CC1-CC4, CS1-CS6) werden in aufgezählt `ClosedCaptionsTrack.DefaultCCTypes`. Wenn die Wiedergabe beginnt, sucht TVSDK auf einem dieser Kanal nach Aktivität. Wenn er Aktivität findet, legt er die `isActive` Methode für diese Verfolgung fest und löst das `MediaPlayer.PlaybackEventListener.onUpdated` Ereignis aus.
+>Untertitel sind immer aktiviert. Alle standardmäßigen Untertitelspuren gelten als vorhanden. Standardspuren (z. B. CC1-CC4, CS1-CS6) werden in `ClosedCaptionsTrack.DefaultCCTypes` aufgezählt. Wenn die Wiedergabe beginnt, sucht TVSDK auf einem dieser Kanal nach Aktivität. Wenn Aktivität gefunden wird, legt sie die `isActive`-Methode für diese Verfolgung fest und löst das `MediaPlayer.PlaybackEventListener.onUpdated`-Ereignis aus.
 
 1. Warten Sie, bis der Medienplayer mindestens den Status &quot;VORBEREITT&quot;aufweist.
 1. Suchen Sie nach diesen Ereignissen:
