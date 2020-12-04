@@ -9,6 +9,9 @@ products: SG_PRIMETIME
 discoiquuid: a6dbcc4a-9e14-4452-9004-b39ed13fad6f
 translation-type: tm+mt
 source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+workflow-type: tm+mt
+source-wordcount: '1988'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ TVSDK 2.4.1 für Android Versionshinweise beschreiben die neuen und unterstützt
 
 Adobe veröffentlicht TVSDK 2.4.1 für Android.
 
-Um diese Version von TVSDK zu verwenden, stellen Sie sicher, dass Ihr System die unter [Systemanforderungen](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_2.5.pdf#page=6)beschriebenen Anforderungen erfüllt.
+Um diese Version von TVSDK zu verwenden, stellen Sie sicher, dass Ihr System die unter [Systemanforderungen](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android_2.5.pdf#page=6) beschriebenen Anforderungen erfüllt.
 
 Die Dokumentation finden Sie hier:
 
@@ -35,7 +38,7 @@ Die Javadocs sind die ultimative Autorität, da sie automatisch direkt aus dem T
 
 Jede Java-Klasse verfügt über eine entsprechende C++-Klasse. Die C++-Dokumentation enthält mehr erklärendes Material als die JavaAdocs. Lesen Sie daher die C++-Dokumentation, um ein tieferes Verständnis der Java-API zu erhalten.
 
-・ Migrationshandbuch ([TVSDK 2.4 für Android-Migrationshandbuch](../migration-guides/tvsdk-14-25-android.md))
+・ Migrationshandbuch ([TVSDK 2.4 für Android Migration Guide](../migration-guides/tvsdk-14-25-android.md))
 
 In diesem Handbuch wird beschrieben, was Sie ändern müssen, um eine Anwendung basierend auf TVSDK 1.4 zu einer Anwendung zu migrieren, die auf TVSDK 2.4 basiert.
 
@@ -49,12 +52,12 @@ Die wichtigsten neuen Funktionen in Version 2.4.1:
 
 * HLS-Version 4-Funktionen
 
-   * **Videowiedergabe** (Wiedergabe, Pause, Suche) mit Player-Steuerung für Live-, Linear- und VOD-Streams.
+   * **Videowiedergabe**  (Wiedergabe, Pause, Suche) mit Player-Steuerung für Live-, Linear- und VOD-Streams.
    * **Untertitel.** TVSDK kann 608/708 Untertitel mit einer Auswahl an Schriftarten, Schriftgrößen, Farben und Hintergrund anzeigen. Es kann auch Videos mit Rollup-Beschriftungen unterstützen und zwischen Sprachspuren wechseln, sofern diese verfügbar sind.
-   * **Der Trick Play-Modus** unterstützt schnelle Vorwärts- und Rückspulen für HLS-Streams, die I-Frames verwenden. Alle Steuerelemente für die Videowiedergabe funktionieren auf dem Inhalt. Für den externen Videowiedergabemodus ist Slow-Motion (forward) mit Raten zwischen 0 und 1 verfügbar.
-   * **Mit der adaptiven Bitrate (ABR)** kann der Player anhand von Netzwerk- und anderen Bedingungen dynamisch auswählen, welche Versionen desselben Inhaltsstreams wiedergegeben werden sollen. Sie können Parameter dynamisch oder in der Manifestdatei festlegen, um zwischen aggressiven, mäßigen und konservativen Auswahlrichtlinien zu wählen.
-   * **Byte-Bereiche** ermöglichen es einer einzelnen TS-Datei, mehrere TS-Segmente zu enthalten.
-   * **Alternative Audiodarstellungen** ermöglichen es dem Player, zwischen verfügbaren Audiospuren zu wechseln.
+   * **Trick play** Modeshows unterstützen schnelle Vorwärts- und Rückspulen für HLS-Streams, die I-Frames verwenden. Alle Steuerelemente für die Videowiedergabe funktionieren auf dem Inhalt. Für den externen Videowiedergabemodus ist Slow-Motion (forward) mit Raten zwischen 0 und 1 verfügbar.
+   * **Mit der adaptiven Bitrate (ABR)** kann der Player anhand von Netzwerk- und anderen Bedingungen dynamisch festlegen, welche von mehreren Versionen desselben Inhaltsstreams wiedergegeben werden sollen. Sie können Parameter dynamisch oder in der Manifestdatei festlegen, um zwischen aggressiven, mäßigen und konservativen Auswahlrichtlinien zu wählen.
+   * **Byte-** Übergänge ermöglichen es einer einzelnen TS-Datei, mehrere TS-Segmente zu enthalten.
+   * **Alternative Audiowiedergabe** ermöglicht es dem Player, zwischen verfügbaren Audiospuren zu wechseln.
    * **ID3-Unterstützung.** TVSDK kann HLS-Audio- und Videostreams mit ID3-Audio-Metadaten wie Künstlername, Titel und Album wiedergeben.
    * **Failover. **TVSDK verwendet Strategien, um die unterbrechungsfreie Wiedergabe fortzusetzen, obwohl Hostserver, Wiedergabelisten und Segmente fehlschlagen.
    * **Multi-Kanal Audio-Pass-Through (DD+).** TVSDK kann Dolby Digital Plus-Audiodaten (E-AC3) an unterstützende Hardware weitergeben.
@@ -70,26 +73,26 @@ Die wichtigsten neuen Funktionen in Version 2.4.1:
       * IV Drehung
 
 * **AES 128-Wiedergabe.** TVSDK kann erweiterte Verschlüsselungsstandard (AES) HLS-Inhalte mit Schlüsselgröße von 128 Bit abspielen.
-* **Protected HLS (PHLS)** bietet eine begrenzte Anzahl vordefinierter DRM-Richtlinien, eine Untergruppe der Funktionen von Adobe Access, um leichtes DRM über HLS für Live- und VOD-Streams zu aktivieren.
+* **Protected HLS (PHLS)** bietet eine begrenzte Anzahl vordefinierter DRM-Richtlinien, eine Untergruppe der Funktionen von Adobe Access, um leichtes DRM über HLS für Live- und VOD-Streams zu ermöglichen.
 
 * Funktionen für Werbung/alternative Inhalte und Monetarisierung
 
    * **Verfolgung von serverseitig eingefügten Anzeigen.** TVSDK kann Anzeigen verfolgen, die vom Adobe Cloud-Anzeigeneinfügedienst eingefügt wurden. Es unterstützt lineare Anzeigen in den Formaten VAST2, VAST3 und VMAP für VOD und Live/Lineare Streams.
-   * **Benutzerdefinierte HLS-Tags.** TVSDK verwendet seine `MediaPlayerConfig` Klasse, um die Benachrichtigung der Player-Anwendung zu aktivieren, wenn benutzerdefinierte HLS-Tags im Stream angezeigt werden.
-   * **Einfügen clientseitiger Anzeigen** Die Bibliothek für Auditude und Einfügung funktioniert mit Adobe Auditude-Servern, um Anzeigen für das dynamische Einfügen in Live-, Linear- und VOD-Inhalte bei Pre-Roll-, Mid-Roll- oder Post-Roll-Positionen zu lösen.
-   * **Benutzerdefinierte Anzeigenauflöser.** Die `ContentResolver, OpportunityGenerator,` und `MediaPlayerClientFactory` -Schnittstellen ermöglichen es Ihnen, einen benutzerdefinierten Content-Auflöser zu implementieren und einen benutzerdefinierten Opportunitätsdetektor für die Verwendung mit TVSDK zu registrieren. Die Klassen `TestAdResolver` und `AuditudeResolver` bieten C++-Beispiele für die Implementierung eines Content-Auflösers. Sie finden ein Javascript-Beispiel unter `samples/jspsdk/testapp/psdk.js`.
-   * **Konsistentes Anzeigenverhalten.** Verwenden Sie die `AdPolicySelector` Oberfläche, um ein konsistentes Verhalten aller Player für Vorgänge wie Suchen und Trick Play zu aktivieren, wenn Anzeigen im Inhalt vorhanden sind. Wenn Sie Ihre eigenen nicht implementieren, verwendet TVSDK `DefaultAdPolicySelector`.
+   * **Benutzerdefinierte HLS-Tags.** TVSDK verwendet seine  `MediaPlayerConfig` Klasse, um die Benachrichtigung der Player-Anwendung zu aktivieren, wenn benutzerdefinierte HLS-Tags im Stream angezeigt werden.
+   * **Einfügen clientseitiger Anzeigen** Die Zielgruppenbibliothek für Einfügen und Einfügen funktioniert mit Adobe Auditude-Servern, um Anzeigen für das dynamische Einfügen in Live-, Linear- und VOD-Inhalte bei Pre-Roll-, Mid-Roll- oder Post-Roll-Positionen aufzulösen.
+   * **Benutzerdefinierte Anzeigenauflöser.** Die  `ContentResolver, OpportunityGenerator,` und  `MediaPlayerClientFactory` Schnittstellen ermöglichen es Ihnen, einen benutzerdefinierten Content-Resolver zu implementieren und einen benutzerdefinierten Opportunitätsdetektor für die Arbeit mit TVSDK zu registrieren. Die Klassen `TestAdResolver` und `AuditudeResolver` bieten C++-Beispiele für die Implementierung eines Inhaltsauflösers. Sie finden ein JavaScript-Beispiel unter `samples/jspsdk/testapp/psdk.js`.
+   * **Konsistentes Anzeigenverhalten.** Verwenden Sie die  `AdPolicySelector` Oberfläche, um ein konsistentes Verhalten aller Player für Vorgänge wie Suchen und Trick Play zu aktivieren, wenn Anzeigen im Inhalt vorhanden sind. Wenn Sie keine eigene Implementierung durchführen, verwendet TVSDK `DefaultAdPolicySelector`.
    * **Entfernen/ersetzen Sie C3-Anzeigen.** Verwenden Sie die entsprechende TVSDK-API, um benutzerdefinierte Inhaltsbereiche zu entfernen und neue Anzeigen ohne zusätzliche Vorarbeit dynamisch einzufügen. Dies ist praktisch, wenn Live-/Lineare Inhalte gesendet und dann sofort ohne Bereinigung auf Anfrage verfügbar gemacht werden.
 
 Die wichtigsten neuen Funktionen Version 2.4:
 
-* **Sofort für VOD und live** Wenn Sie die Option &quot;Sofort aktivieren&quot;aktivieren, initialisiert und puffert das TVSDK Medien vor dem Beginn der Wiedergabe. Da Sie mehrere `MediaPlayerItemLoader` Instanzen gleichzeitig im Hintergrund starten können, können Sie mehrere Streams gleichzeitig puffern. Wenn ein Benutzer den Kanal ändert und der Stream ordnungsgemäß gepuffert wurde, wird die Wiedergabe sofort auf den Beginn des neuen Kanals wiedergegeben. TVSDK 2.4 unterstützt auch das Instant On für Live-Streams. Die Live-Streams werden erneut gepuffert, wenn das Live-Fenster verschoben wird.
+* **Sofortiges Aktivieren von VOD und** liveWenn Sie die Option &quot;Sofort aktivieren&quot;aktivieren, initialisiert und puffert das TVSDK Medien vor dem Beginn der Wiedergabe. Da Sie mehrere `MediaPlayerItemLoader`-Instanzen gleichzeitig im Hintergrund starten können, können Sie mehrere Streams puffern. Wenn ein Benutzer den Kanal ändert und der Stream ordnungsgemäß gepuffert wurde, wird die Wiedergabe sofort auf den Beginn des neuen Kanals wiedergegeben. TVSDK 2.4 unterstützt auch das Instant On für Live-Streams. Die Live-Streams werden erneut gepuffert, wenn das Live-Fenster verschoben wird.
 
 * **Leistungsverbesserungen **Die neue TVSDK 2.4-Architektur bietet verschiedene Leistungsverbesserungen:
 
-   * **Untersegmentierung** - TVSDK reduziert die Größe jedes Fragments so schnell wie möglich auf die Wiedergabe im Beginn.
-   * **Parallel-Anzeigendownloads** - TVSDK ruft Anzeigen parallel zur Inhaltswiedergabe ab, bevor die Werbeunterbrechungen angeklickt werden, sodass Anzeigen und Inhalte nahtlos wiedergegeben werden können.
-   * **Verzögerte Anzeigenauflösung** - Mit dieser Funktion warten wir nicht auf die Auflösung von Nicht-Preroll-Anzeigen, bevor die Wiedergabe beginnt, und verringern so die Startzeit. APIs wie Suchen und Trick-play sind immer noch nicht zulässig, bis alle Anzeigen aufgelöst sind.
+   * **Untersegmentierung** : TVSDK reduziert die Größe der einzelnen Fragmente so schnell wie möglich auf die Wiedergabe im Beginn.
+   * **Parallele Anzeigendownloads** : TVSDK ruft Anzeigen parallel zur Inhaltswiedergabe ab, bevor die Werbeunterbrechungen angeklickt werden, sodass Anzeigen und Inhalte nahtlos wiedergegeben werden können.
+   * **Verzögerte Anzeigenauflösung**  - Mit dieser Funktion warten wir nicht auf die Auflösung von Nicht-Preroll-Anzeigen, bevor die Wiedergabe beginnt, und verringern so die Startzeit. APIs wie Suchen und Trick-play sind immer noch nicht zulässig, bis alle Anzeigen aufgelöst sind.
 
 * **MP4-Inhaltswiedergabe**
 
@@ -121,7 +124,7 @@ Die neue ABR-Logik basiert auf der Pufferlänge, der Änderungsrate der Pufferl�
 
 * **Rechnungsstellung**
 
-TVSDK sammelt automatisch Metriken, wobei der Kaufvertrag des Kunden eingehalten wird, um regelmäßige Nutzungsberichte zu erstellen, die für die Abrechnung erforderlich sind. Auf jedem Stream-Beginn-Ereignis verwendet TVSDK die Adobe Analytics-Dateneinfüge-API, um Rechnungsmetriken wie Inhaltstyp, durch Anzeigeneinfügung aktivierte Flags und DRM-aktivierte Flags - je nach Dauer des abrechnungsfähigen Streams - an die Adobe Analytics Primetime-Report Suite zu senden. Dies beeinträchtigt oder wird nicht in die eigenen Adobe Analytics Report Suites oder Server-Aufrufe des Kunden aufgenommen. Auf Anfrage wird dieser Bericht zur Rechnungsnutzung regelmäßig an Kunden gesendet. Dies ist die erste Phase der Abrechnungsfunktion, die nur die Nutzungsabrechnung unterstützt. Sie kann mithilfe der in der Dokumentation beschriebenen APIs auf Grundlage des Kaufvertrags konfiguriert werden.
+TVSDK sammelt automatisch Metriken, wobei der Kaufvertrag des Kunden eingehalten wird, um regelmäßige Nutzungsberichte zu erstellen, die für die Abrechnung erforderlich sind. Auf jedem Stream-Beginn-Ereignis verwendet TVSDK die Adobe Analytics-Dateneinfüge-API, um Abrechnungsmetriken wie Inhaltstyp, durch Anzeigeneinfügung aktivierte Flags und DRM-aktivierte Flags - je nach Dauer des abrechnungsfähigen Streams - an die eigene Report Suite von Adobe Analytics Primetime zu senden. Dies beeinträchtigt oder wird nicht in die eigenen Adobe Analytics Report Suites oder Server-Aufrufe des Kunden aufgenommen. Auf Anfrage wird dieser Bericht zur Rechnungsnutzung regelmäßig an Kunden gesendet. Dies ist die erste Phase der Abrechnungsfunktion, die nur die Nutzungsabrechnung unterstützt. Sie kann mithilfe der in der Dokumentation beschriebenen APIs auf Grundlage des Kaufvertrags konfiguriert werden.
 
 ## Unterstützte Funktionen {#supported-features}
 
@@ -237,7 +240,7 @@ TVSDK für Android 2.4 unterstützt eine Reihe von Funktionen, die Sie implement
  </tbody>
 </table>
 
-### CSAI (Core Ad Insertion Features) {#core-ad-insertion-features-csai}
+### Hauptfunktionen der Ad Insertion (CSAI) {#core-ad-insertion-features-csai}
 
 | **Funktion** | **Inhaltstyp** | **HLS** | **DASH** |
 |---|---|---|---|
@@ -248,7 +251,7 @@ TVSDK für Android 2.4 unterstützt eine Reihe von Funktionen, die Sie implement
 | VMAP 1.0 | VOD + Live | √ | Ö (nur VOD-Vorrollen) |
 | MP4-Anzeigen | VOD + Live | Ö (aus CRS) | Ö (aus CRS, nur Vorrollen) |
 
-### Erweiterte Anzeigeneinfügefunktionen (CSAI) {#advanced-ad-insertion-features-csai}
+### Erweiterte Ad Insertion-Funktionen (CSAI) {#advanced-ad-insertion-features-csai}
 
 <table> 
  <tbody>
@@ -380,7 +383,7 @@ TVSDK für Android 2.4 unterstützt eine Reihe von Funktionen, die Sie implement
 | Adobe Analytics VHL-Integration | VOD + Live | √ | √ |
 | Rechnungsstellung | VOD + Live | √ | Nicht unterstützt |
 
-## Nicht unterstützte Funktionen {#features-not-supported}
+## Nicht unterstützte Funktionen{#features-not-supported}
 
 Diese Version von TVSDK unterstützt nicht:
 
@@ -408,4 +411,4 @@ Ohne Video gibt es keine Viewport-Dimension und ohne Viewport-Dimension können 
 
 ## Hilfreiche Ressourcen {#helpful-resources}
 
-* Siehe vollständige Hilfedokumentation auf der Seite &quot; [Adobe Primetime - Training und Support](https://helpx.adobe.com/support/primetime.html) &quot;.
+* Siehe vollständige Hilfedokumentation auf der Seite [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html).
