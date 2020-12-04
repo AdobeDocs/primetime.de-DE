@@ -6,6 +6,9 @@ title: Anzeigenverfolgung
 uuid: 184b8c36-5e51-42a7-b905-53f2b7b15e49
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '291'
+ht-degree: 0%
 
 ---
 
@@ -16,8 +19,8 @@ Die meisten Anzeigenkunden benötigen detaillierte Informationen darüber, wann,
 
 Bei Aktivierung der Anzeigenverfolgung gibt der Client einen der folgenden Ansätze an:
 
-* **Client-Seite** Zusammen mit der anzeigengegebundenen Wiedergabeliste sendet der Server dem Client eine JSON-, VMAP- oder In-Manifest-Struktur, die Verfolgungs-Ereignis und URLs angibt. Diese Methode entspricht dem IAB-Standard (Interactive Advertising Bureau)
+* **Client-** SeiteZusammen mit der Anzeigenliste sendet der Server dem Client eine JSON-, VMAP- oder In-Manifest-Struktur, die Tracking-Ereignis und URLs angibt. Diese Methode entspricht dem IAB-Standard (Interactive Advertising Bureau)
 
-* **Serverseite** Der Client nimmt nicht an der Anzeigenverfolgung teil. Der Server sendet alle Informationen zur Anzeigenverfolgung. Verfolgungsdaten werden nur serverseitig berechnet und stimmen möglicherweise nicht mit der clientseitigen Wiedergabe-Aktivität überein. Wenn ein Endbenutzer z. B. die gesamte Anzeige nicht Ansicht, wird die Anzeige nach Auslieferung der Segmente weiterhin vom Server abgespielt.
+* **Server-** SeiteDer Client nimmt nicht an der Anzeigenverfolgung teil. Der Server sendet alle Informationen zur Anzeigenverfolgung. Verfolgungsdaten werden nur serverseitig berechnet und stimmen möglicherweise nicht mit der clientseitigen Wiedergabe-Aktivität überein. Wenn ein Endbenutzer z. B. die gesamte Anzeige nicht Ansicht, wird die Anzeige nach Auslieferung der Segmente weiterhin vom Server abgespielt.
 
-* **Hybrid** Dies ist wie eine clientseitige Verfolgung, aber der Client sendet seine Berichte an den Manifestserver, der sie an die entsprechenden URLs weiterleitet. Werbetreibende erhalten dieselben Informationen wie bei der clientseitigen Verfolgung. Dieser Modus eignet sich für Kunden mit eingeschränktem Internetzugang.
+* **** HybridDies ist wie eine clientseitige Verfolgung, aber der Client sendet seine Berichte an den Manifestserver, der sie an die entsprechenden URLs weiterleitet. Werbetreibende erhalten dieselben Informationen wie bei der clientseitigen Verfolgung. Dieser Modus eignet sich für Kunden mit eingeschränktem Internetzugang.
