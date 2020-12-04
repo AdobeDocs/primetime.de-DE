@@ -6,6 +6,9 @@ title: API-Elemente für Ratenänderungen
 uuid: c2bcd20c-0641-4d75-802c-08098786d572
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 2%
 
 ---
 
@@ -27,6 +30,6 @@ Verwenden Sie die folgenden API-Elemente, um die Abspielraten zu ändern:
 | **Ratenwert** | **Auswirkungen auf die Wiedergabe** |
 |---|---|
 | 2.0, 4.0, 8.0, 16.0, 32.0, 64.0, 128.0 | Wechselt in den Vorwärtsmodus mit dem angegebenen Multiplikator schneller als normal (z. B. 4 ist viermal schneller als normal) |
-| -2.0, -4.0, -8.0, -16.0, -32.0, -64.0 , -128.0 | Wechselt in den Modus &quot;Fast-Retwind&quot; |
-| 1.0 | Wechselt in den normalen Wiedergabemodus (Aufruf `play` entspricht dem Einstellen der rate-Eigenschaft auf 1,0) |
-| 0.0 | Pausen (Aufruf `pause` entspricht dem Einstellen der rate-Eigenschaft auf 0,0) |
+| -2.0, -4.0, -8.0, -16.0, -32.0, -64.0, -128.0 | Wechselt in den Modus &quot;Fast-Retwind&quot; |
+| 1,0 | Wechselt in den normalen Wiedergabemodus (das Aufrufen von `play` entspricht dem Festlegen der rate-Eigenschaft auf 1,0) |
+| 0,0 | Pausen (Aufrufen von `pause` entspricht dem Festlegen der rate-Eigenschaft auf 0,0) |
