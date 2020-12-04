@@ -6,11 +6,14 @@ title: Banneranzeigen
 uuid: 522578ff-1f09-48f1-91f7-f074cfd34064
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 
 
-# Banneranzeigen {#companion-banner-ads}
+# Begleitbanneranzeigen {#companion-banner-ads}
 
 TVSDK unterstützt begleitende Banneranzeigen, bei denen es sich um Anzeigen handelt, die eine lineare Anzeige begleiten und nach dem Ende der linearen Anzeige oft auf der Seite bleiben. Ihre Anwendung ist für die Anzeige der begleitenden Banner verantwortlich, die mit einer linearen Anzeige bereitgestellt werden.
 
@@ -35,8 +38,8 @@ Der Inhalt eines PTAdAsset beschreibt ein begleitendes Banner.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Die `PTMediaPlayerAdStartedNotification` Benachrichtigung gibt eine `PTAd` Instanz zurück, die eine `companionAssets` Eigenschaft enthält (Array von `PtAdAsset`).
-Jeder `PtAdAsset` enthält Informationen zur Anzeige des Assets.
+Die `PTMediaPlayerAdStartedNotification`-Benachrichtigung gibt eine `PTAd`-Instanz zurück, die eine `companionAssets`-Eigenschaft enthält (Array von `PtAdAsset`).
+Jedes `PtAdAsset` stellt Informationen zum Anzeigen des Assets bereit.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -70,39 +73,39 @@ Jeder `PtAdAsset` enthält Informationen zur Anzeige des Assets.
  </tbody> 
 </table>
 
-## Anzeigen von Bannerwerbung {#display-banner-ads}
+## Anzeigen von Banneranzeigen {#display-banner-ads}
 
 Um Banneranzeigen anzuzeigen, müssen Sie Bannerinstanzen erstellen und TVSDK erlauben, auf anzeigenbezogene Ereignis zu hören.
 
-TVSDK bietet eine Liste von begleitenden Banneranzeigen, die über das `PTMediaPlayerAdPlayStartedNotification` Benachrichtigungs-Ereignis mit einer linearen Anzeige verbunden sind.
+TVSDK stellt eine Liste begleitender Banneranzeigen bereit, die über das `PTMediaPlayerAdPlayStartedNotification`-BenachrichtigungsEreignis mit einer linearen Anzeige verknüpft sind.
 
 Manifeste können begleitende Banneranzeigen wie folgt angeben:
 
 * Ein HTML-Snippet
 * Die URL einer iFrame-Seite
-* Die URL eines statischen Bildes oder einer Adobe Flash SWF-Datei
+* Die URL einer statischen Bilddatei oder einer Flash-SWF-Datei einer Adobe
 
 Für jede Begleitanzeige gibt TVSDK an, welche Typen für Ihre Anwendung verfügbar sind.
 
-1. Erstellen Sie eine `PTAdBannerView` Instanz für jeden begleitenden Anzeigensteckplatz auf Ihrer Seite.
+1. Erstellen Sie eine `PTAdBannerView`-Instanz für jeden begleitenden Anzeigensteckplatz auf Ihrer Seite.
 
        Stellen Sie sicher, dass folgende Informationen bereitgestellt wurden:
    
    * Damit keine begleitenden Anzeigen unterschiedlicher Größe abgerufen werden können, muss eine Bannerinstanz die Breite und Höhe angeben.
    * Standardmäßige Bannergrößen.
 
-1. Hinzufügen einen Beobachter für die `PTMediaPlayerAdStartedNotification` Folgendes:
+1. hinzufügen Sie einen Beobachter für das `PTMediaPlayerAdStartedNotification`, der Folgendes ausführt:
    1. Löscht vorhandene Anzeigen in der Bannerinstanz.
-   1. Ruft die Liste der begleitenden Anzeigen ab `Ad.getCompanionAssets``PTAd.companionAssets`.
+   1. Ruft die Liste der begleitenden Anzeigen von `Ad.getCompanionAssets` `PTAd.companionAssets` ab.
    1. Wenn die Liste der begleitenden Anzeigen nicht leer ist, müssen Sie die Liste für Bannerinstanzen durchlaufen.
 
-      Jede Bannerinstanz ( a `PTAdAsset`) enthält Informationen wie Breite, Höhe, Ressourcentyp (html, iframe oder statisch) und Daten, die zum Anzeigen des begleitenden Banners erforderlich sind.
+      Jede Bannerinstanz ( &lt; a0/>) enthält Informationen wie Breite, Höhe, Ressourcentyp (html, iframe oder statisch) und Daten, die zum Anzeigen des begleitenden Banners erforderlich sind.`PTAdAsset`
    1. Wenn bei einer Videoanzeige keine begleitenden Anzeigen gebucht wurden, enthält die Liste der begleitenden Assets keine Daten für diese Videoanzeige.
 
       Um eine eigenständige Anzeige anzuzeigen, fügen Sie die Logik zu Ihrem Skript hinzu, um ein normales DFP (DoubleClick for Publishers)-Display-Tag in der entsprechenden Bannerinstanz auszuführen.
    1. Sendet die Bannerinformationen an eine Funktion auf Ihrer Seite, die die Banner an einer geeigneten Position anzeigt.
 
-      Dies ist in der Regel ein `div`und Ihre Funktion verwendet das `div ID` , um das Banner anzuzeigen. Beispiel:
+      Dies ist normalerweise ein `div` und Ihre Funktion verwendet das `div ID`, um das Banner anzuzeigen. Beispiel:
 
       ```
       - (void) onMediaPlayerAdPlayStarted:(NSNotification *) notification { 
