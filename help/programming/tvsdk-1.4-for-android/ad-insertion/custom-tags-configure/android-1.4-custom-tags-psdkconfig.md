@@ -6,6 +6,9 @@ title: Methoden der Config-Klasse für Tags
 uuid: f2758085-8e49-4eaf-82bb-4a2e4dd8accb
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
@@ -25,23 +28,23 @@ TVSDK wendet die globale Konfiguration automatisch auf jeden Medienstream an, de
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public final String[] getSubscribedTags() </span> </td> 
+   <td colname="col1"> <span class="codeph"> public final String[] getSubscribedTags()  </span> </td> 
    <td colname="col2"> Ruft die aktuelle Liste der abonnierten Tags ab. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public final void setSubscribedTags(String[] tags); </span> </td> 
-   <td colname="col2"> Legt die Liste der abonnierten Tags fest, die der Anwendung angezeigt werden. <p>Ihre Anwendung wird auch automatisch für alle Tags abonniert, die über <span class="codeph"> setAdTags übertragen werden </span>. </p> </td> 
+   <td colname="col1"> <span class="codeph"> public final void setSubscribedTags(String[] tags);  </span> </td> 
+   <td colname="col2"> Legt die Liste der abonnierten Tags fest, die der Anwendung angezeigt werden. <p>Ihre Anwendung wird außerdem automatisch alle Tags abonniert, die über <span class="codeph"> setAdTags </span> übertragen werden. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <b>Anpassen der vom Standard-Opportunitätsdetektor verwendeten Anzeigen-Tags</b> </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public final String[] getAdTags(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public final String[] getAdTags();  </span> </td> 
    <td colname="col2"> Ruft die aktuelle Liste der Anzeigen-Tags ab. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public final void setAdTags(String[] tags); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public final void setAdTags(String[] tags);  </span> </td> 
    <td colname="col2"> Legt die Liste der Anzeigen-Tags fest, die vom standardmäßigen Opportunitätsgenerator verwendet werden. </td> 
   </tr> 
  </tbody> 
@@ -51,9 +54,9 @@ Beachten Sie Folgendes:
 
 * Die set-Methoden lassen nicht zu, dass der Parameter tags Null-Werte enthält.
 
-   Wenn ein TVSDK gefunden wird, wird ein `IllegalArgumentException`geworfen.
+   Wenn TVSDK gefunden, wird ein `IllegalArgumentException` ausgegeben.
 * Der benutzerdefinierte Tag-Name muss das #-Präfix enthalten.
 
-   Beispielsweise `#EXT-X-ASSET` ist ein korrekter benutzerdefinierter Tag-Name, aber `EXT-X-ASSET` falsch.
+   `#EXT-X-ASSET` ist beispielsweise ein korrekter benutzerdefinierter Tag-Name, `EXT-X-ASSET` ist jedoch nicht korrekt.
 * Sie können die Konfiguration nach dem Laden des Medienstreams nicht mehr ändern.
 
