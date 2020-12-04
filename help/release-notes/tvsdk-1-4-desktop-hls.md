@@ -23,7 +23,7 @@ TVSDK for Desktop HLS Versionshinweise beschreiben, was neu oder geändert ist, 
 
 ## Neue Funktionen {#new-features}
 
-**1.4.31**
+**1,4,31**
 
 * **Multi-CDN-Unterstützung für CRS-Anzeigen**
 
@@ -32,13 +32,13 @@ TVSDK for Desktop HLS Versionshinweise beschreiben, was neu oder geändert ist, 
 
 ### Neue Funktionen in früheren Versionen {#new-features-previous}
 
-**1.4.30**
+**1,4,30**
 
 * **Rechnungsmetriken**
 
 Um Kunden, die nur für ihre Nutzung zahlen möchten, anstatt für einen festen Satz unabhängig von der tatsächlichen Nutzung zu bezahlen, erfasst Adobe Nutzungsmetriken und ermittelt anhand dieser Metriken, wie viel sie den Kunden in Rechnung stellen.
 
-**1.4.24**
+**1,4,24**
 
 * **Persistente Netzwerkverbindung**
 
@@ -47,20 +47,20 @@ Persistente Netzwerkverbindungen erstellen und speichern eine interne Liste von 
 
 In dieser Version wird diese Funktion in Apple Safari und Mozilla Firefox auf einem Mac nicht unterstützt.
 
-**1.4.19**
+**1,4,19**
 
 * Stream-Integritätsunterstützung für VPAID-Anzeigen.
 * Aktiviert die Option für die Registerkarte &quot;Ton&quot;im Flash Player FP 20.0.0.267 für Firefox 42 und höher, indem das Problem beim Hängen behoben wird.
 
-**1.4.18**
+**1,4,18**
 
 * Primetime Desktop HLS TVSDK unterstützt jetzt VPAID 2.0 Lineare SWF-Kreative, um eine umfassende interaktive In-Stream-Anzeigenerfahrung zu ermöglichen.
 
 **1.4.10**
 
-* **Ad Fallback, Dissy-Verkettung in der Anzeigenauswahllogik (Zendesk #3103)** Bei VAST-Anzeigen (Kreativelemente) mit aktivierter Ausweichregel behandelt TVSDK eine Anzeige mit einem ungültigen MIME-Typ als leere Anzeige und versucht stattdessen, Ausweichanzeigen zu verwenden. Sie können einige Aspekte des Ausweichverhaltens konfigurieren.
+* **Ad Fallback, Daisy-Verkettung in der Anzeigenauswahllogik (Zendesk #3103)** Bei VAST-Anzeigen (Kreativelemente) mit aktivierter Ausweichregel behandelt TVSDK eine Anzeige mit einem ungültigen MIME-Typ als leere Anzeige und versucht stattdessen, Ausweichanzeigen zu verwenden. Sie können einige Aspekte des Ausweichverhaltens konfigurieren.
 
-Weitere Informationen finden Sie unter [Ad-Fallback für VAST- und VMAP-Anzeigen](../programming/tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md).
+Weitere Informationen finden Sie unter [Ad Fallback for VAST and VMAP ads](../programming/tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md).
 
 **1.4.8**
 
@@ -91,9 +91,9 @@ Die Beispiel-basierte AES-Verschlüsselung wird jetzt unterstützt.
 
 **1.4.0**
 
-* **Blackout-Signalisierung mit alternativem Content-Ersatz** Als Teil des 1.4 TVSDK-Updates unterstützt das TVSDK jetzt auch das Eingehen und Zurückkehren von regionalen Blackouts gegen lineare Inhalte. Das TVSDK kann nun zwei Manifestdateien parallel, main und alternative verarbeiten, um die Blackout-Signale auch dann zu überwachen, wenn anstelle der ursprünglichen Programmierung eine alternative Programmierung angezeigt wird.
+* **Blackout-Signalisierung mit Alternate Content** ReplacementIm Rahmen des 1.4 TVSDK-Updates unterstützt das TVSDK jetzt auch das Wechseln in regionale Blackouts und die Rückgabe von linearen Inhalten. Das TVSDK kann nun zwei Manifestdateien parallel, main und alternative verarbeiten, um die Blackout-Signale auch dann zu überwachen, wenn anstelle der ursprünglichen Programmierung eine alternative Programmierung angezeigt wird.
 
-* **Entfernen/Ersetzen von C3-Anzeigen** Jetzt ist keine zusätzliche Vorarbeit erforderlich, um dynamische neue Anzeigen in Video-on-Demand-Assets (VOD) einzufügen, die aus dem C3-Fenster herauskommen. Das TVSDK bietet jetzt eine API zum Entfernen benutzerdefinierter Inhaltsbereiche und zum dynamischen Einfügen neuer Anzeigen. Diese leistungsstarke neue Funktion ist auch in Fällen nützlich, in denen während der Übertragung Live-/Lineare Inhalte erscheinen und sofort zur Verwendung als On-Demand-Inhalte heruntergezogen werden, ohne dass genügend Zeit zum &quot;Bereinigen&quot;des Assets erforderlich ist.
+* **Entfernen/Ersetzen von C3-** AdsJetzt ist keine zusätzliche Vorarbeit erforderlich, um neue Anzeigen dynamisch in Video-on-Demand-Assets (VOD) einzufügen, die aus dem C3-Fenster herauskommen. Das TVSDK bietet jetzt eine API zum Entfernen benutzerdefinierter Inhaltsbereiche und zum dynamischen Einfügen neuer Anzeigen. Diese leistungsstarke neue Funktion ist auch in Fällen nützlich, in denen während der Übertragung Live-/Lineare Inhalte erscheinen und sofort zur Verwendung als On-Demand-Inhalte heruntergezogen werden, ohne dass genügend Zeit zum &quot;Bereinigen&quot;des Assets erforderlich ist.
 
 ## Behobene Probleme {#resolved-issues}
 
@@ -358,7 +358,7 @@ In dieser Version wurde der Zeitlimit für globale Anzeigenanforderungen hinzuge
 
 **Version 1.4.21** (782)
 
-* Zendesk #19580 TVSDK wartet vor dem Senden von `PTTimedMetadataChangedNotification` Benachrichtigungen auf den Abschluss des Content-Resolvers
+* Zendesk #19580 TVSDK wartet auf den Abschluss des Content-Resolvers, bevor `PTTimedMetadataChangedNotification`-Benachrichtigungen gesendet werden
 
 **Hinweis**: Für dieses Problem ist Flash Player 21.0.0.182 oder höher erforderlich.
 
@@ -658,11 +658,11 @@ Es wurden Probleme beim Suchen des Platzhaltertokens behoben, wenn pageDomain vo
 
 Es wurde ein gelegentlicher Flash Player-Absturz mit Firefox auf einem Mac behoben, der auftrat, wenn ein Stream auf einem externen Monitor zu einem höheren Bitratenstream wechselte.(Flash Player 18.0.0.160 erforderlich)
 
-* Zendesk #3268 - Desktop: Videoplayer-Beginn, die nach `+-` 40/50 Sekunden flackern und nach `+-` 90 Sekunden schwarz werden
+* Zendesk #3268 - Desktop: Videoplayer-Beginn, die nach `+-` 40/50 Sekunden flackern, und Beginn, die nach `+-` 90 Sekunden schwarz werden
 
 Es wurde ein Problem in Mac Chrome behoben, durch das Stream flackern und schließlich schwarz werden konnte. (Flash Player 18.0.0.161 erforderlich)
 
-* Zendesk #3304 - VAST 3.0 `[ERRORCODE]` -Makro nicht gefüllt
+* Zendesk #3304 - VAST 3.0 `[ERRORCODE]` Makro nicht gefüllt
 
    * Fehlercode 400 wird angezeigt, wenn Inline-Anzeige ein falsches kreatives Element enthält.
    * `[ERRORCODE]` Makro wird URL-kodiert
@@ -712,7 +712,7 @@ Bei den MIME-Typen für das HLS-Format wurde zwischen Groß- und Kleinschreibung
 **Version 1.4.4**
 
 * Zendesk #1561 - Siehe: `[Adobe Primetime]` Aktualisieren: Client-basierte HLS-Failover-Unterstützung für PROGRAMM-DATE-TIME im Desktop-PSDK (Flash Player Version 16.0.0.305 oder höher erforderlich)
-* Zendesk #2197 - `[Ads]` Verfolgung von Anzeigenfehlern
+* Zendesk #2197 - `[Ads]` Trackinganzeigefehler
 * Zendesk #2286 - Funktionsanforderung: Informationen zum Status des Anzeigenladens (VPAID) angeben
 * Zendesk #2285 - Funktionsanforderung: Anzeige nach einer bestimmten Timeout-Dauer überspringen
 * Fehler #3921755 - OpenSSL library update to version 1.0.1L in Flash Player (erfordert Flash Player Version 16.0.0.305 oder höher)
@@ -740,7 +740,7 @@ Bei den MIME-Typen für das HLS-Format wurde zwischen Groß- und Kleinschreibung
 * &quot;Untertitel&quot;funktioniert nicht mit reinen Audioinhalten, da das Untertitelsystem nur mit Videos arbeiten kann.
 Ohne Video gibt es keine Viewport-Dimension und ohne Viewport-Dimension können keine Grafiken für Beschriftungen angezeigt werden.
 * Die Stream-Integrität ist in Google Chrome aufgrund der Chrome-Sandbox-Beschränkungen etwas langsamer.
-* Wenn Sie in TVSDK 1.4 autoPlay deaktivieren, kann ein DRM-Fehler auftreten, wenn der Player mindestens eine Minute lang untätig bleibt. Um dieses Problem zu umgehen, ändern Sie, wenn Sie autoPlay deaktivieren, aber Assets vorladen, den Inhalt `ReferenceCore.as` von `onPlaybackManagerPrepared`:
+* Wenn Sie in TVSDK 1.4 autoPlay deaktivieren, kann ein DRM-Fehler auftreten, wenn der Player mindestens eine Minute lang untätig bleibt. Um dieses Problem zu umgehen, ändern Sie beim Deaktivieren von autoPlay, aber beim Vorausladen von Assets `ReferenceCore.as` den Inhalt von `onPlaybackManagerPrepared`:
 
 ```
 if (_playbackManager.autoPlay) {
@@ -751,9 +751,9 @@ _playbackManager.pause();
 }
 ```
 
-* **Version 1.4.13** PTPLAY-8501 - Wenn VMAP zwei direkte, nicht transkodierte MP4-Anzeigen zurückgibt, wird dieselbe Fallback-Anzeige zweimal wiedergegeben.
+* **Version 1.4.13** PTPLAY-8501 - Wenn VMAP zwei direkte, nicht transkodierte MP4-Anzeigen zurückgibt, wird dieselbe Fallback-Aktion zweimal wiedergegeben.
 
-* **Version 1.4.2** In der Version 16 des Flash Players wurde ein Problem mit der ABR-Logik &quot;Abschalten&quot;identifiziert, nachdem der Player in ein leeres Pufferverfahren-Ereignis umgewandelt wurde. Das Problem verhindert, dass die Bitrate in Umgebung mit schlechter Bandbreite heruntergeschaltet wird, sobald der Player in einen Pufferzustand wechselt. Um das Problem zu umgehen, stellen Sie sicher, dass Ihre App `BufferControlParameters.initialBufferTime` während der Pufferung (d. h. während eines `BufferControlParameters.playbackBufferTime` Ereignisses) die gleiche wie `BufferEvent.BUFFERING_BEGIN` vorübergehend ist, und setzen Sie sie dann auf die festgelegten Werte für das `BufferEvent.BUFFERING_END` Ereignis zurück. Die Fehlerbehebung für dieses Problem wird in der nächsten Patchversion von Flash Player 16 verfügbar sein.
+* **Version 1.4.2** In der Version 16 des Flash Players wurde ein Problem mit der ABR-Logik &quot;Abschalten&quot;identifiziert, nachdem der Player in ein leeres Pufferverfahren-Ereignis umgewandelt wurde. Das Problem verhindert, dass die Bitrate in Umgebung mit schlechter Bandbreite heruntergeschaltet wird, sobald der Player in einen Pufferzustand wechselt. Um das Problem zu umgehen, stellen Sie sicher, dass Ihre App `BufferControlParameters.initialBufferTime` während der Pufferung (d. h. bei einem `BufferEvent.BUFFERING_BEGIN`-Ereignis) mit `BufferControlParameters.playbackBufferTime` identisch ist, und setzen Sie sie dann auf die festgelegten Werte im `BufferEvent.BUFFERING_END`-Ereignis zurück. Die Fehlerbehebung für dieses Problem wird in der nächsten Patchversion von Flash Player 16 verfügbar sein.
 
 * **Version 1.4.0**
 
@@ -769,4 +769,4 @@ _playbackManager.pause();
 
 ## Hilfreiche Ressourcen {#helpful-resources}
 
-* Weitere Informationen finden Sie in der vollständigen Hilfedokumentation auf der [Adobe Primetime-Seite &quot;Training und Support](https://helpx.adobe.com/support/primetime.html) &quot;.
+* Siehe vollständige Hilfedokumentation auf der Seite [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html).
