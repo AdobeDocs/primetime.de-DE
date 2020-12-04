@@ -1,5 +1,5 @@
 ---
-seo-title: Overview
+seo-title: Übersicht
 title: Übersicht
 uuid: f45c6b58-53c5-41e0-be3d-590231dd214a
 translation-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# AIR Publisher-ID-Dienstprogramm {#air-publisher-id-utility}
+# AIR-Herausgeber-ID-Dienstprogramm {#air-publisher-id-utility}
 
 Beim Erstellen einer AIR-Datei generiert das AIR Developer Tool (ADT) automatisch eine Herausgeber-ID. Das AIR Publisher-ID-Dienstprogramm ( [!DNL AdobePublisherIDUtility.jar]) berechnet die Herausgeber-ID für eine AIR-Anwendung.
 
@@ -19,7 +19,7 @@ Die Herausgeber-ID ist eindeutig für das Zertifikat, mit dem Sie eine AIR-Datei
 
 >[!NOTE]
 >
->Die Herausgeber-ID, die für die Durchsetzung der AIR-Zulassungsliste verwendet wird, ist nicht mit der Herausgeber-ID identisch, die der Anwendungsherausgeber in der [!DNL application.xml] Anwendungsdatei angegeben hat.
+>Die Herausgeber-ID, die für die Durchsetzung der AIR-Zulassungsliste verwendet wird, ist nicht mit der Herausgeber-ID identisch, die der Anwendungsherausgeber in der Anwendungsdatei [!DNL application.xml] angegeben hat.
 
 ## Befehlszeilenverwendung des AIR Publisher-ID-Dienstprogramms {#air-publisher-id-utility-command-line-usage}
 
@@ -37,10 +37,10 @@ java -jar AdobePublisherIDUtility.jar
 ```
 
 * 
-   * `signaturefile`* gibt einen Pfad zur [!DNL signatures.xml] Datei der AIR-Anwendung an, die sich im Anwendungsverzeichnis befindet [!DNL META-INF]
+   * `signaturefile`* gibt einen Pfad zur  [!DNL signatures.xml] Datei der AIR-Anwendung an, die sich im  [!DNL META-INF] Anwendungsordner befindet.
 
 * `signingcert` gibt das Zertifikat an, das zum Signieren einer AIR-Anwendung verwendet wird
 
 >[!NOTE]
 >
->Um die Herausgeber-ID für eine Android-Anwendung zu ermitteln, müssen Sie mit der `-s` Option das Zertifikat angeben, das zum Signieren des Android-Anwendungspakets (APK) verwendet wird. Primetime DRM ist erforderlich, um Android-Anwendungen zu erstellen, die Primetime-DRM-geschützte Inhalte wiedergeben können.
+>Um die Herausgeber-ID für eine Android-Anwendung zu ermitteln, müssen Sie die Option `-s` verwenden, um das Zertifikat anzugeben, mit dem das Android-Anwendungspaket (APK) signiert wird. Primetime DRM ist erforderlich, um Android-Anwendungen zu erstellen, die Primetime-DRM-geschützte Inhalte wiedergeben können.
