@@ -6,6 +6,9 @@ title: Benutzerdefinierte Tags abonnieren
 uuid: f1a934bd-772e-435f-84b5-cb48db23c06e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 1%
 
 ---
 
@@ -16,11 +19,11 @@ TVSDK bereitet TimedMetadata-Objekte für abonnierte Tags vor, sobald diese Obje
 
 Vor den Wiedergabe-Beginn müssen Sie die Tags abonnieren. So werden Sie über benutzerdefinierte Tags in HLS-Manifesten benachrichtigt:
 
-1. Legen Sie die benutzerdefinierten Tag-Namen global fest, indem Sie ein Array übergeben, das die benutzerdefinierten Tags enthält, zu `setSubscribedTags` in `MediaPlayerItemConfig`.
+1. Stellen Sie die benutzerdefinierten Tag-Namen global ein, indem Sie ein Array mit den benutzerdefinierten Tags an `setSubscribedTags` in `MediaPlayerItemConfig` übergeben.
 
    >[!IMPORTANT]
    >
-   >Beim Arbeiten mit HLS-Streams müssen Sie das `#` Präfix einschließen.
+   >Sie müssen beim Arbeiten mit HLS-Streams das Präfix `#` einschließen.
 
    Beispiel:
 
