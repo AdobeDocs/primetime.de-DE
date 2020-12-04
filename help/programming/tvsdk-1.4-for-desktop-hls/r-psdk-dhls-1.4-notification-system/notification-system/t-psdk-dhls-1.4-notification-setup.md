@@ -6,6 +6,9 @@ title: Einrichten des Benachrichtigungssystems
 uuid: 2d1876c7-4ce6-491c-880b-dd94697d4feb
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 0%
 
 ---
 
@@ -21,12 +24,12 @@ Die NotificationHistory-Klasse stellt einen Mechanismus zum Akkumulieren von Ben
 So empfangen Sie Benachrichtigungen:
 
 * Benachrichtigungen abrufen
-* Hinzufügen Benachrichtigungen zum Benachrichtigungsverlauf
+* hinzufügen Benachrichtigungen zum Benachrichtigungsverlauf
 
 1. Suchen Sie nach Statusänderungen.
-1. Implementieren Sie den `MediaPlayer.StatusChangeEvent.STATUS_CHANGED` Ereignis-Listener.
-1. TVSDK übergibt eine `MediaPlayer.StatusChangeEvent` Instanz an den Ereignis-Listener, der zwei Parameter enthält:
+1. Implementieren Sie den `MediaPlayer.StatusChangeEvent.STATUS_CHANGED`-Ereignis-Listener.
+1. TVSDK übergibt eine `MediaPlayer.StatusChangeEvent`-Instanz an den Ereignis-Listener, der zwei Parameter enthält:
 
    * Der neue Status ( `MediaPlayer.Status`)
-   * Ein `MediaPlayerNotification` Objekt
+   * Ein `MediaPlayerNotification`-Objekt
 
