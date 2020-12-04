@@ -6,6 +6,9 @@ title: Pufferzeiten einstellen
 uuid: 5a3945a4-1935-4797-b19d-84989850a487
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '334'
+ht-degree: 0%
 
 ---
 
@@ -14,19 +17,19 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Um eine reibungslosere Anzeige zu ermöglichen, puffert TVSDK manchmal den Videostream. Sie können konfigurieren, wie der Player zwischenspeichert.
 
-TVSDK definiert eine Wiedergabepufferlänge von mindestens 30 Sekunden und eine anfängliche Pufferzeit von mindestens 2 Sekunden, bevor die Beginn abgespielt werden. Nach dem Aufruf der Applikation, `play` aber vor dem Start der Wiedergabe puffert TVSDK die Medien bis zum anfänglichen Zeitpunkt, um einen glatten Beginn zu erhalten, wenn die Beginn tatsächlich abgespielt werden.
+TVSDK definiert eine Wiedergabepufferlänge von mindestens 30 Sekunden und eine anfängliche Pufferzeit von mindestens 2 Sekunden, bevor die Beginn abgespielt werden. Nachdem die Anwendung &quot;`play`&quot;aufruft, aber bevor die Wiedergabe beginnt, puffert TVSDK die Medien bis zur Anfangsphase, um einen glatten Beginn zu erhalten, wenn die Wiedergabe tatsächlich Beginn ist.
 
 Sie können die Pufferzeiten ändern, indem Sie neue Pufferrichtlinien definieren und ändern, wann die anfängliche Pufferung erfolgt, indem Sie Instant-on verwenden.
 
-## Pufferzeiten einstellen {#set-buffering-times}
+## Pufferzeiten {#set-buffering-times} festlegen
 
-Die `MediaPlayer` bietet Methoden zum Festlegen und Abrufen der anfänglichen Pufferzeit und der Wiedergabepufferzeit.
+Das `MediaPlayer` stellt Methoden zum Festlegen und Abrufen der anfänglichen Pufferzeit und der Wiedergabepufferzeit bereit.
 
 >[!TIP]
 >
 >Wenn Sie die Parameter für die Puffersteuerung nicht vor Beginn der Wiedergabe festlegen, wird der Medienplayer standardmäßig auf 2 Sekunden für den anfänglichen Puffer und auf 30 Sekunden für die laufende Wiedergabepufferzeit eingestellt.
 
-1. Richten Sie das `BufferControlParameters` Objekt ein, das die Steuerungsparameter für die anfängliche Pufferzeit und die Wiedergabepufferzeit enthält:
+1. Richten Sie das `BufferControlParameters`-Objekt ein, das die Steuerungsparameter für die anfängliche Pufferzeit und die Wiedergabepufferzeit enthält:
 
        Diese Klasse stellt zwei Factory-Methoden bereit:
    
@@ -45,24 +48,24 @@ Die `MediaPlayer` bietet Methoden zum Festlegen und Abrufen der anfänglichen Pu
           long bufferTime)
       ```
 
-      Diese Methoden lösen einen Fehler aus, `IllegalArgumentException` wenn die Parameter nicht gültig sind, z. B. wenn:
+      Diese Methoden geben ein `IllegalArgumentException` aus, wenn die Parameter nicht gültig sind, z. B. wenn:
 
    * Die anfängliche Pufferzeit ist kleiner als null.
    * Die anfängliche Pufferzeit ist größer als die Pufferzeit.
 
-1. Verwenden Sie zum Festlegen der Pufferparameterwerte die folgende `MediaPlayer` Methode:
+1. Verwenden Sie zum Festlegen der Pufferparameterwerte die folgende `MediaPlayer`-Methode:
 
    ```java
    void setBufferControlParameters(BufferControlParameters params)
    ```
 
-1. Um die aktuellen Pufferparameterwerte abzurufen, verwenden Sie folgende `MediaPlayer` Methode:
+1. Um die aktuellen Pufferparameterwerte abzurufen, verwenden Sie die folgende `MediaPlayer`-Methode:
 
    ```java
       BufferControlParameters getBufferControlParameters()  
    ```
 
-   Wenn AVE die angegebenen Werte nicht festlegen kann, wird der Medienplayer mit dem `ERROR` Fehlercode in den Status versetzt `SET_BUFFER_PARAMETERS_ERROR`.
+   Wenn AVE die angegebenen Werte nicht festlegen kann, gibt der Medienplayer den Status `ERROR` mit dem Fehlercode `SET_BUFFER_PARAMETERS_ERROR` ein.
 
 <!--<a id="example_B5C5004188574D8D8AB8525742767280"></a>-->
 
