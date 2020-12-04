@@ -7,23 +7,26 @@ title: Verzögerte Anzeigenauflösung aktivieren
 uuid: 91884eea-a622-4f5d-b6a8-36bb0050ba1d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '320'
+ht-degree: 0%
 
 ---
 
 
-# Verzögerte Anzeigenauflösung aktivieren {#enable-lazy-ad-resolving}
+# Verzögerte Anzeigenauflösung {#enable-lazy-ad-resolving} aktivieren
 
 Sie können die Funktion &quot;Lazy Ad Resolving&quot;über den vorhandenen Lazy Ad Loading Mechanismus aktivieren oder deaktivieren (Lazy Ad Resolving ist standardmäßig deaktiviert).
 
-Sie können die Lazy Ad Resolving aktivieren oder deaktivieren, indem Sie AdvertisingMetadata.setDelayLoading [](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) mit true oder false aufrufen.
+Sie können die Lazy Ad Resolving aktivieren oder deaktivieren, indem Sie [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) mit true oder false aufrufen.
 
-* Verwenden Sie die booleschen *hasDelayAdLoading* - und *setDelayAdLoading* -Methoden in AdvertisingMetadata, um das Timing der Anzeigenauflösung und die Platzierung von Anzeigen in der Zeitleiste zu steuern:
+* Verwenden Sie die booleschen *hasDelayAdLoading*- und *setDelayAdLoading*-Methoden in AdvertisingMetadata, um die zeitliche Steuerung der Anzeigenauflösung und die Platzierung der Anzeigen auf der Zeitleiste zu steuern:
 
-   * Wenn *hasDelayAdLoading* &quot;false&quot;zurückgibt, wartet TVSDK, bis alle Anzeigen aufgelöst und platziert wurden, bevor der Status PREPARED erreicht wird.
-   * Wenn *hasDelayAdLoading* &quot;true&quot;zurückgibt, löst TVSDK nur die ersten Anzeigen und Transitionen in den Status &quot;PREPARED&quot;auf.
+   * Wenn *hasDelayAdLoading* &quot;false&quot;zurückgibt, wartet TVSDK, bis alle Anzeigen aufgelöst und platziert wurden, bevor zum Status &quot;PREPARED&quot;gewechselt wird.
+   * Wenn *hasDelayAdLoading* &quot;true&quot;zurückgibt, löst TVSDK nur die ersten Anzeigen und Transitionen in den Status &quot;VORBEREITET&quot;auf.
 
       * Die verbleibenden Anzeigen werden während der Wiedergabe aufgelöst und platziert.
-   * Wenn *hasPreroll *oder *hasLivePreroll* false zurückgibt, geht TVSDK davon aus, dass es keine Preroll-Anzeige gibt und Beginn sofort die Wiedergabe des Inhalts starten. Diese sind standardmäßig auf true eingestellt.
+   * Wenn *hasPreroll *oder *hasLivePreroll* false zurückgibt, geht TVSDK davon aus, dass es keine Preroll-Anzeige gibt und Beginn sofort die Wiedergabe des Inhalts durchführen. Diese sind standardmäßig auf true eingestellt.
 
 
 **APIs für verzögerte Anzeigenauflösung:**
@@ -48,7 +51,7 @@ Methods:
 
 Um Anzeigen als Hinweise auf einer Scrubbing-Leiste genau wiederzugeben, sollten Sie auf das `TimelineEvent`Ereignis achten und die Scrubbing-Leiste jedes Mal neu zeichnen, wenn Sie dieses Ereignis erhalten.
 
-Wenn &quot;Verzögerte Anzeigenauflösung&quot;für VOD-Streams aktiviert ist, werden alle Werbeunterbrechungen auf der Zeitleiste platziert. Viele Werbeunterbrechungen werden jedoch noch nicht behoben. Die Anwendung kann bestimmen, ob diese Marker gezeichnet werden sollen, indem sie die `TimelineMarker::getDuration()`Option Wenn der Wert größer als null ist, wurden die Anzeigen innerhalb der Werbeunterbrechung aufgelöst.
+Wenn &quot;Verzögerte Anzeigenauflösung&quot;für VOD-Streams aktiviert ist, werden alle Werbeunterbrechungen auf der Zeitleiste platziert. Viele Werbeunterbrechungen werden jedoch noch nicht behoben. Die Anwendung kann bestimmen, ob diese Marker gezeichnet werden sollen, indem Sie `TimelineMarker::getDuration()` aktivieren. Wenn der Wert größer als null ist, wurden die Anzeigen innerhalb der Werbeunterbrechung aufgelöst.
 
 TVSDK löst dieses Ereignis aus, wenn eine Werbeunterbrechung aufgelöst wurde und der Player in den Status &quot;VORBEREITT&quot;Transition wird.
 
