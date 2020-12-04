@@ -6,11 +6,14 @@ title: Arbeitsablauf für Schlüsselanforderungen auf Android PSDK
 uuid: 575163de-0f96-434d-a3ff-7e114caf72de
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
 
-# Arbeitsablauf für Schlüsselanforderungen auf Android PSDK{#key-request-workflow-on-android-psdk}
+# Arbeitsablauf für Schlüsselanforderungen auf Android-PSDK{#key-request-workflow-on-android-psdk}
 
 Client-Code gibt Daten an eine Android-API weiter.
 
