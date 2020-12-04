@@ -1,18 +1,21 @@
 ---
-description: Flash Media Rights Management Server 1.x und Adobe Primetime DRM verwenden unterschiedliche Metadaten, um Inhalte zu verpacken und Lizenzen anzufordern. Damit Primetime DRM den Inhalt von FMRMS Version 1.x verwenden kann, müssen die Metadaten konvertiert werden.
-seo-description: Flash Media Rights Management Server 1.x und Adobe Primetime DRM verwenden unterschiedliche Metadaten, um Inhalte zu verpacken und Lizenzen anzufordern. Damit Primetime DRM den Inhalt von FMRMS Version 1.x verwenden kann, müssen die Metadaten konvertiert werden.
+description: Flash Media Rights Management Server 1.x und Adobe Primetime DRM verwenden verschiedene Metadaten, um Inhalte zu verpacken und Lizenzen anzufordern. Damit Primetime DRM den Inhalt von FMRMS Version 1.x verwenden kann, müssen die Metadaten konvertiert werden.
+seo-description: Flash Media Rights Management Server 1.x und Adobe Primetime DRM verwenden verschiedene Metadaten, um Inhalte zu verpacken und Lizenzen anzufordern. Damit Primetime DRM den Inhalt von FMRMS Version 1.x verwenden kann, müssen die Metadaten konvertiert werden.
 seo-title: Kompatibilität mit Flash Media Rights Management Server 1.x sicherstellen
 title: Kompatibilität mit Flash Media Rights Management Server 1.x sicherstellen
 uuid: dd70941e-9015-4fb0-b265-557b6252e051
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '405'
+ht-degree: 0%
 
 ---
 
 
-# Kompatibilität mit Flash Media Rights Management Server 1.x sicherstellen {#ensuring-compatibility-with-flash-media-rights-management-server-x}
+# Gewährleistung der Kompatibilität mit Flash Media Rights Management Server 1.x {#ensuring-compatibility-with-flash-media-rights-management-server-x}
 
-Flash Media Rights Management Server 1.x und Adobe Primetime DRM verwenden unterschiedliche Metadaten, um Inhalte zu verpacken und Lizenzen anzufordern. Damit Primetime DRM den Inhalt von FMRMS Version 1.x verwenden kann, müssen die Metadaten konvertiert werden.
+Flash Media Rights Management Server 1.x und Adobe Primetime DRM verwenden verschiedene Metadaten, um Inhalte zu verpacken und Lizenzen anzufordern. Damit Primetime DRM den Inhalt von FMRMS Version 1.x verwenden kann, müssen die Metadaten konvertiert werden.
 
 Das Primetime-DRM-SDK unterstützt die folgenden Optionen zur Konvertierung von Metadaten:
 
@@ -27,6 +30,6 @@ Das Primetime-DRM-SDK unterstützt die folgenden Optionen zur Konvertierung von 
    >
    >Die Primetime DRM 1.x-Metadaten enthalten nicht den CEK.
 
-   Um die Metadaten zu konvertieren, benötigt Primetime DRM Zugriff auf die Primetime DRM 1.x-Inhaltsverschlüsselungsschlüssel. Wenn Sie von Flash Media Rights Management Server 1.x migrieren, können Sie die Schlüssel zur Inhaltsverschlüsselung weiterhin in der LiveCycle ES-Datenbank speichern oder eine benutzerdefinierte Lösung implementieren, um die Schlüssel zur Inhaltsverschlüsselung sicher an einem anderen Speicherort zu speichern. Wenn Sie beschließen, die Schlüssel zur Inhaltsverschlüsselung in der LiveCycle ES-Datenbank zu speichern, befolgen Sie die Empfehlungen unter *Schutz des Zugriffs auf vertrauliche Inhalte in der Datenbank* in **Härtung und Sicherheit für LiveCycle® ES2**.
+   Um die Metadaten zu konvertieren, benötigt Primetime DRM Zugriff auf die Primetime DRM 1.x-Inhaltsverschlüsselungsschlüssel. Wenn Sie von Flash Media Rights Management Server 1.x migrieren, können Sie die Schlüssel zur Inhaltsverschlüsselung weiterhin in der LiveCycle ES-Datenbank speichern oder eine benutzerdefinierte Lösung implementieren, um die Schlüssel zur Inhaltsverschlüsselung sicher an einem anderen Speicherort zu speichern. Wenn Sie die Schlüssel zur Inhaltsverschlüsselung in der LiveCycle ES-Datenbank speichern möchten, befolgen Sie die Anweisungen unter *Schutz des Zugriffs auf vertrauliche Inhalte in der Datenbank* in **Härtung und Sicherheit für LiveCycle® ES2**.
 
-Weitere Informationen zum Sicherstellen der Kompatibilität mit Inhalten, die mit Flash Media Rights Management Server 1.x verpackt wurden, finden Sie in den Adobe Primetime DRM-APIs unter [Adobe Primetime API-Referenzen](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
+Weitere Informationen zum Sicherstellen der Kompatibilität mit Inhalten, die mit Flash Media Rights Management Server 1.x verpackt wurden, finden Sie in den Adobe Primetime DRM-APIs unter [Adobe Primetime API References](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
