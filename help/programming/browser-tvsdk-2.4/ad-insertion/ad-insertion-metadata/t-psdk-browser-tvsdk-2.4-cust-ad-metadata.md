@@ -6,11 +6,14 @@ title: Anpassen von Anzeigeneinfügemetadaten
 uuid: 047470d3-45bd-48be-82ce-4e9d9fe6ea10
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
 
-# Anpassen von Anzeigeneinfügemetadaten{#customize-ad-insertion-metadata}
+# Anpassen der Anzeigeneinfügemetadaten{#customize-ad-insertion-metadata}
 
 Sie können Anzeigeneinfüge-Metadaten anpassen.
 
@@ -23,7 +26,7 @@ Sie können Anzeigeneinfüge-Metadaten anpassen.
    auditudeSettings.timeout = 10000; //this value is specified in milliseconds
    ```
 
-   Die `timeout` Eigenschaft wird in der `AdvertisingMetadata` -Klasse definiert. Dieser Timeout kann für alle benutzerdefinierten Anzeigeneinstellungen festgelegt werden, die von der `AdvertisingMetadata` Klasse abgeleitet werden. Wenn Benutzer beispielsweise benutzerdefinierte Einstellungen für einen FreeWheel-Auflöser definieren, können sie mithilfe dieser Einstellung einen Standard-Timeout festlegen.
+   Die `timeout`-Eigenschaft wird in der `AdvertisingMetadata`-Klasse definiert. Dieser Timeout kann für alle benutzerdefinierten Anzeigeneinstellungen festgelegt werden, die von der `AdvertisingMetadata`-Klasse abgeleitet werden. Wenn Benutzer beispielsweise benutzerdefinierte Einstellungen für einen FreeWheel-Auflöser definieren, können sie mithilfe dieser Einstellung einen Standard-Timeout festlegen.
 
 1. Erstellen Sie `MediaPlayerItemConfig` mit den Anzeigeneinstellungen in Schritt 2.
 
@@ -32,7 +35,7 @@ Sie können Anzeigeneinfüge-Metadaten anpassen.
    config.advertisingMetadata = auditudeSettings;
    ```
 
-1. Verwenden Sie diese Konfiguration beim `replaceCurrentResource` Anrufen `MediaPlayer`.
+1. Verwenden Sie diese Konfiguration, wenn Sie `replaceCurrentResource` für `MediaPlayer` aufrufen.
 
    ```js
    player.replaceCurrentResource(mediaResource, config);
