@@ -6,6 +6,9 @@ title: Produktübersicht, Audience und dieses Handbuch
 uuid: dd281a3e-a85f-4470-a730-2c5e87d0e490
 translation-type: tm+mt
 source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Dieses Handbuch enthält Informationen zur Entwicklung von Videoplayer-Anwendung
 
 <!--<a id="section_FC24E86A2E6442B8A3769160769BBDFA"></a>-->
 
-* Eine Liste der von TVSDK unterstützten Funktionen finden Sie unter [Primetime TVSDK-Funktionen](../../../tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-of-the-player.md).
+* Eine Liste der von TVSDK unterstützten Funktionen finden Sie unter [Primetime TVSDK features](../../../tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-of-the-player.md).
 * Spezifische Hardware- und Softwareanforderungen für die Verwendung von TVSDK finden Sie unter [Anforderungen](../../../tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md).
 * Eine Liste der verfügbaren APIs finden Sie unter [TVSDK Android-APIs](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html).
 
@@ -36,6 +39,6 @@ Dieses Handbuch enthält Informationen, mit denen Sie TVSDK-Funktionen mit Java 
 
 >[!TIP]
 >
->Das Präfix TVSDK API-Namensraum [!DNL com.adobe.mediacore] wird oft aus Gründen der Kürze ausgelassen.
+>Das TVSDK-API-Namensraum-Präfix [!DNL com.adobe.mediacore] wird oft aus Gründen der Kürze ausgelassen.
 >
 >Viele API-Elemente werden ohne ihren übergeordneten Klassenbezeichner referenziert, wenn der Kontext klar ist.
