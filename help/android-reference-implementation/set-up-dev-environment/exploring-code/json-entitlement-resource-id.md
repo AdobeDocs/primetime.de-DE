@@ -6,6 +6,9 @@ description: Der folgende Codeblock enthält ein Beispiel für ein JSON-Objekt, 
 seo-description: Der folgende Codeblock enthält ein Beispiel für ein JSON-Objekt, wenn die Berechtigungsressourcen-ID eine einfache Textzeichenfolge ist.
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
