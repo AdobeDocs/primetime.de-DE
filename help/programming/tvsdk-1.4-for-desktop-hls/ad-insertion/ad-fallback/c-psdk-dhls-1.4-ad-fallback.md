@@ -6,15 +6,18 @@ title: Ad-Fallback für VAST- und VMAP-Anzeigen
 uuid: 7b44abf9-50cf-4e39-b594-ceb52208a865
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '602'
+ht-degree: 0%
 
 ---
 
 
-# Ad-Fallback für VAST- und VMAP-Anzeigen {#ad-fallback-for-vast-and-vmap-ads}
+# Ad Fallback für VAST- und VMAP-Anzeigen {#ad-fallback-for-vast-and-vmap-ads}
 
 Für Anzeigen (oder kreative Anzeigen) mit digitaler Videoanzeigenserie (VAST), bei denen die Ausweichregel aktiviert ist, behandelt TVSDK eine Anzeige mit einem ungültigen Medientyp als leere Anzeige und versucht stattdessen Ausweichanzeigen zu verwenden. Sie können einige Aspekte des Ausweichverhaltens konfigurieren.
 
-Die VAST/Digital Video Multiple Ad Playlist (VMAP)-Spezifikation besagt, dass bei Anzeigen, bei denen VAST-Fallback aktiviert ist, leere Anzeigen automatisch die Verwendung von Fallback-Anzeigen auslösen. Wenn eine VAST-Anzeige leer ist, sucht TVSDK nach einem gültigen HLS-Medientyp-Ersatz unter den Fallback-Anzeigen. Wenn eine VAST-Anzeige in einem Wrapper einen ungültigen Medientyp hat, behandelt TVSDK diese Anzeige als leer. Sie können konfigurieren, ob TVSDK dasselbe für Inline-Anzeigen in einem VMAP tun soll. Weitere Informationen zur VAST- `fallbackOnNoAd` Funktion finden Sie unter Vorlage für [digitale Videoanzeigen (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
+Die VAST/Digital Video Multiple Ad Playlist (VMAP)-Spezifikation besagt, dass bei Anzeigen, bei denen VAST-Fallback aktiviert ist, leere Anzeigen automatisch die Verwendung von Fallback-Anzeigen auslösen. Wenn eine VAST-Anzeige leer ist, sucht TVSDK nach einem gültigen HLS-Medientyp-Ersatz unter den Fallback-Anzeigen. Wenn eine VAST-Anzeige in einem Wrapper einen ungültigen Medientyp hat, behandelt TVSDK diese Anzeige als leer. Sie können konfigurieren, ob TVSDK dasselbe für Inline-Anzeigen in einem VMAP tun soll. Weitere Informationen zur Funktion VAST `fallbackOnNoAd` finden Sie unter [Vorlage für digitale Videoanzeige (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
 
 Das Primetime- und das Einfügeende-Back-End behalten eine Reihe von Prioritäten bei, damit es in derselben VAST/VMAP-Antwort zwischen verschiedenen Medientypen wählen kann. Weitere Informationen zu dieser Prioritätsstufe und zu ihrer Änderung finden Sie unter [Übersicht über CRS](../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
@@ -22,7 +25,7 @@ Das Primetime- und das Einfügeende-Back-End behalten eine Reihe von Prioritäte
 
 Sie können die Ausweichmöglichkeit aktivieren, wenn eine VMAP-Inline-Anzeige einen ungültigen Medientyp enthält.
 
-1. Auf `fallbackOnInvalidCreative` &quot;true&quot;setzen, damit VMAP zurückfällt, wenn der Medientyp für eine lineare/Inline-Anzeige für HLS ungültig ist.
+1. Setzen Sie `fallbackOnInvalidCreative` auf &quot;true&quot;, damit VMAP zurückfällt, wenn der Medientyp für eine lineare/Inline-Anzeige für HLS ungültig ist.
 
    Der Standardwert ist false. Wenn eine lineare Anzeige fehlschlägt, weil sie einen ungültigen Medientyp hat oder weil die Anzeige nicht neu verpackt werden kann, erlaubt dieses Flag Primetime-Anzeigenentscheidung das gleiche Ausweichverhalten, als ob die Anzeige ein leerer VAST-Wrapper wäre.
 
@@ -31,7 +34,7 @@ Sie können die Ausweichmöglichkeit aktivieren, wenn eine VMAP-Inline-Anzeige e
    auditudeMetadata.fallbackOnInvalidCreative = true;
    ```
 
-## Verhalten von Ad-Fallback für VAST und VMAP {#ad-fallback-behavior-for-vast-and-vmap}
+## Ausweichverhalten von Anzeigen für VAST und VMAP {#ad-fallback-behavior-for-vast-and-vmap}
 
 Wenn bei der Primetime-Anzeigenentscheidung eine VAST-Anzeige (kreatives Element) gefunden wird, die leer ist oder einen Medientyp hat, der für HLS ungültig ist, werden die Fallback-Anzeigen ausgewertet, um zu bestimmen, was zurückgegeben werden soll.
 
