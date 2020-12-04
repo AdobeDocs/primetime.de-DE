@@ -6,11 +6,14 @@ title: Schaltfläche "Abspielen/Anhalten"implementieren
 uuid: b0ce4103-819e-4a1c-8238-1d7728ec8770
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '72'
+ht-degree: 0%
 
 ---
 
 
-# Schaltfläche &quot;Abspielen/Anhalten&quot;implementieren {#implement-a-play-pause-button}
+# Schaltfläche zum Abspielen/Anhalten {#implement-a-play-pause-button} implementieren
 
 Sie können Schaltflächen einrichten, mit denen TVSDK-Methoden aufgerufen werden, um die Medien anzuhalten und abzuspielen.
 
