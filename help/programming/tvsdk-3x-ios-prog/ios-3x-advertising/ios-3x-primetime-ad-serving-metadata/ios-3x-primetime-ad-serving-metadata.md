@@ -21,14 +21,14 @@ TVSDK unterstützt das Auflösen und Einfügen von Anzeigen für VOD- und Live/L
 
 Bevor Sie Werbung in Ihren Videoinhalt aufnehmen können, geben Sie die folgenden Metadaten an:
 
-* Eine `mediaID`, die den zu spielenden Inhalt identifiziert.
+* Ein `mediaID`, das den zu spielenden spezifischen Inhalt identifiziert.
 * Ihre `zoneID`, die Ihre Firma oder Website identifiziert.
 * Ihre Anzeigenserverdomäne, die die Domäne des zugewiesenen Anzeigenservers angibt.
 * Andere Targeting-Parameter.
 
-## Einrichten von Primetime-Anzeigenservermetadaten {#section_86C4A3B2DF124770B9B7FD2511394313}
+## Primetime-Anzeigenservermetadaten {#section_86C4A3B2DF124770B9B7FD2511394313} einrichten
 
-Ihre Anwendung muss TVSDK die erforderlichen `PTAuditudeMetadata` Informationen bereitstellen, um eine Verbindung zum Anzeigen-Server herzustellen.
+Ihre Anwendung muss TVSDK die erforderlichen `PTAuditudeMetadata`-Informationen bereitstellen, um eine Verbindung zum Anzeigen-Server herzustellen.
 
 So richten Sie die Ad-Server-Metadaten ein:
 
@@ -42,7 +42,7 @@ So richten Sie die Ad-Server-Metadaten ein:
    adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
    ```
 
-1. Legen Sie die `PTAuditudeMetadata` Instanz als Metadaten für die aktuellen `PTMediaPlayerItem` Metadaten fest, indem Sie `PTAdResolvingMetadataKey`.
+1. Stellen Sie die `PTAuditudeMetadata`-Instanz als Metadaten für die aktuellen `PTMediaPlayerItem`-Metadaten ein, indem Sie `PTAdResolvingMetadataKey` verwenden.
 
    ```
    // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 
