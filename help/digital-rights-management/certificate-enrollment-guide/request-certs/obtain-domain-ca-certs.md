@@ -4,13 +4,16 @@ title: Abrufen von CA-Domänenzertifikaten
 uuid: 41bbe02b-363a-47f4-9cc0-350730b6c787
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '115'
+ht-degree: 0%
 
 ---
 
 
-# Abrufen von CA-Domänenzertifikaten{#obtain-domain-ca-certificates}
+# CA-Domänenzertifikate abrufen{#obtain-domain-ca-certificates}
 
-Im Gegensatz zum Lizenzserver-, Packager- oder Transportzertifikat wird das CA-Zertifikat der Domäne nicht von Adobe ausgestellt. Sie können dieses Zertifikat von einer Zertifizierungsstelle abrufen oder ein selbst signiertes Zertifikat zu diesem Zweck generieren.
+Im Gegensatz zum Lizenzserver-, Packager- oder Transportzertifikat wird das CA-Domänenzertifikat nicht von der Adobe ausgestellt. Sie können dieses Zertifikat von einer Zertifizierungsstelle abrufen oder ein selbst signiertes Zertifikat zu diesem Zweck generieren.
 
 Das CA-Domänenzertifikat sollte einen 1024-Bit-Schlüssel verwenden und die Standardattribute enthalten, die für ein CA-Zertifikat erforderlich sind:
 
@@ -19,7 +22,7 @@ Das CA-Domänenzertifikat sollte einen 1024-Bit-Schlüssel verwenden und die Sta
 
 Bei Verwendung von OpenSSL kann beispielsweise ein selbst signiertes CA-Zertifikat wie folgt generiert werden:
 
-1. Erstellen Sie eine Datei mit dem Namen [!DNL ca-extensions.txt] :
+1. Erstellen Sie eine Datei mit dem Namen [!DNL ca-extensions.txt] mit:
 
    ```
    keyUsage=critical,keyCertSign  
