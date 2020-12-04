@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Blockierungsliste von DRM-Clients, die auf geschützten Inhalt zugreifen dürfen {#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
+# Blockierungsliste von DRM-Clients, die den Zugriff auf geschützte Inhalte untersagen. {#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
 
 **Adobe Access DRM-Modulversionen sind vom Zugriff auf geschützte Inhalte eingeschränkt.**
 
@@ -21,15 +21,15 @@ Verwendungsbeispiel: Im Ereignis einer Sicherheitslücke kann eine neuere Versio
 
 Eine DRM-Clientversion kann anhand der in der folgenden Tabelle angegebenen Attribute identifiziert werden:
 
-| **Attribut** | **Unterstützte Werte** | **Match Criteria** | **Beschreibung** |
+| **Attribut** | **Unterstützte Werte** | **Übereinstimmungskriterien** | **Beschreibung** |
 |---|---|---|---|
-| Environment | “PC”, “PortingKit” | Exakte Übereinstimmung | Gibt an, ob der Client auf einem Desktop oder einem anderen Gerät ausgeführt wird. |
-| OS | &quot;Win&quot;, &quot;Mac&quot;, &quot;Linux&quot;, &quot;Android&quot;, &quot;iOS&quot;, &quot;ChromeOS&quot; | Exact Match | Platform |
-| Architektur | “32”, “64” | Exakte Übereinstimmung | 32 Bit oder 64 Bit |
+| Umgebung | &quot;PC&quot;, &quot;PortingKit&quot; | Exakte Übereinstimmung | Gibt an, ob der Client auf einem Desktop oder einem anderen Gerät ausgeführt wird. |
+| OS | &quot;Win&quot;, &quot;Mac&quot;, &quot;Linux&quot;, &quot;Android&quot;, &quot;iOS&quot;, &quot;ChromeOS&quot; | Exakte Übereinstimmung | Plattform |
+| Architektur | &quot;32&quot;, &quot;64&quot; | Exakte Übereinstimmung | 32 Bit oder 64 Bit |
 | Bildschirmtyp | &quot;PC&quot;, &quot;Mobil&quot;, &quot;TV&quot; | Exakte Übereinstimmung |  |
-| Laufzeitversion | Eine gültige Versionsnummer. Beispiel: &quot;2.0.0&quot;, &quot;3.0&quot;, &quot;4.0&quot;, &quot;11.0&quot; usw. | Sucht, wenn die Clientversion kleiner oder gleich der angegebenen Version ist. | Version number is specified as a combination of numbers and periods (“.”) of any length. |
-| DRM Library Version | A valid version number. Beispiel: &quot;2.0.0&quot;. | Matches if client version is less than or equal to the specified version. | Version number is specified as a combination of numbers and periods (“.”) of any length. |
-| OEM Vendor | OEM Vendor string | Exact Match | Identifikationszeichenfolge des OEM-Herstellers für das Gerät, das das Portierungskit verwendet. |
+| Laufzeitversion | Eine gültige Versionsnummer. Beispiel: &quot;2.0.0&quot;, &quot;3.0&quot;, &quot;4.0&quot;, &quot;11.0&quot; usw. | Sucht, wenn die Clientversion kleiner oder gleich der angegebenen Version ist. | Die Versionsnummer wird als Kombination aus Zahlen und Punkten (&quot;&quot;) angegeben. beliebiger Länge. |
+| DRM-Bibliotheksversion | Eine gültige Versionsnummer. Beispiel: &quot;2.0.0&quot;. | Sucht, wenn die Clientversion kleiner oder gleich der angegebenen Version ist. | Die Versionsnummer wird als Kombination aus Zahlen und Punkten (&quot;&quot;) angegeben. beliebiger Länge. |
+| OEM-Anbieter | OEM-Händlerzeichenfolge | Exakte Übereinstimmung | Identifikationszeichenfolge des OEM-Herstellers für das Gerät, das das Portierungskit verwendet. |
 | Modell | Modellzeichenfolge. Beispiel: &quot;iOS_Mobile&quot;, &quot;Android_Mobile&quot;, &quot;Chrome&quot;, &quot;ChromeOS_ARM&quot;, &quot;WindowsOnARM&quot;, &quot;AVE&quot; | Exakte Übereinstimmung | Gerätemodellidentifizierungszeichenfolge für das Gerät mit dem Portierungs-Kit. |
 
 >[!NOTE]
