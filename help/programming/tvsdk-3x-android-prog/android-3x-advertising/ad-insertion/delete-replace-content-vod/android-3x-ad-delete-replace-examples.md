@@ -6,6 +6,9 @@ title: Beispiele zum Löschen und Ersetzen von Anzeigen
 uuid: 6bf9d71a-73fe-4033-b97a-6b0cff8687f2
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '68'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Im Folgenden finden Sie einige Beispiele für den Vorgang zum Löschen und Ersetzen von Anzeigen.
 
-Hier ein Beispiel für die Verwendung der `DELETE_RANGE`:
+Hier ein Beispiel für die Verwendung von `DELETE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means,  
@@ -43,7 +46,7 @@ config.setCustomRangeMetadata(customRangeMetadata);
 mediaPlayer.replaceCurrentResource(mediaResource, config);
 ```
 
-Hier ein Beispiel für die Verwendung der `REPLACE_RANGE`:
+Hier ein Beispiel für die Verwendung von `REPLACE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means, like 
