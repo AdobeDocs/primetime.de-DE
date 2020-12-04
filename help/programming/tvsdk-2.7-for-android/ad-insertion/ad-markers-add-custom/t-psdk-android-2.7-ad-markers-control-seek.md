@@ -6,6 +6,9 @@ title: Steuern des Wiedergabeverhaltens für die Suche nach benutzerdefinierten 
 uuid: 248e914e-81b7-4aa5-a4d5-06ca2666e006
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 0%
 
 ---
 
@@ -16,13 +19,13 @@ Sie können das Standardverhalten für den Umgang von TVSDK mit Suchvorgängen �
 
 Standardmäßig überspringt TVSDK die Anzeigen, wenn ein Benutzer in Abschnitte der Anzeige, die sich aus der Platzierung benutzerspezifischer Anzeigenmarken ergeben, einspringt oder sie vergangene Abschnitte durchsucht. Dies kann sich von dem aktuellen Wiedergabeverhalten bei Standard-Werbeunterbrechungen unterscheiden. Sie können TVSDK so einstellen, dass die Abspielleiste an den Anfang der zuletzt übersprungenen benutzerdefinierten Anzeige verschoben wird, wenn der Benutzer nach einer oder mehreren benutzerdefinierten Anzeigen sucht.
 
-1. Ruf `CustomRangeMetadata.setAdjustSeekPosition` bei `true`.
+1. Rufen Sie `CustomRangeMetadata.setAdjustSeekPosition` mit `true` auf.
 
    ```java
    customRangeMetadata.setAdjustSeekPosition (true);
    ```
 
-1. Verwendung `customRangeMetadata` in `MediaPlayerItemConfig`.
+1. Verwenden Sie `customRangeMetadata` in `MediaPlayerItemConfig`.
 
    ```java
    // Set customRangeMetadata 
