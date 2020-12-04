@@ -6,24 +6,27 @@ title: Verwenden von DRMContentData zum Vorausladen von Lizenzen
 uuid: 5cedd077-0613-4677-8fb0-81237d7ac61a
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
 
 # Verwenden von DRMContentData zum Vorausladen von Lizenzen{#using-drmcontentdata-to-pre-load-licenses}
 
-Die folgenden Schritte beschreiben den Arbeitsablauf zum Vorausfüllen der Lizenzierung für eine geschützte Mediendatei mit einem `DRMContentData` Objekt.
+Die folgenden Schritte beschreiben den Arbeitsablauf zum Vorausfüllen der Lizenzierung für eine geschützte Mediendatei mit einem `DRMContentData`-Objekt.
 
 1. Rufen Sie die binären DRM-Metadaten für den gepackten Inhalt ab.
 
-   Bei Verwendung des Primetime DRM Java Reference Implementierungs Packager wird diese Metadatendatei automatisch mit einer [!DNL .metadata] Erweiterung generiert. Sie können diese Metadaten beispielsweise mit der `URLLoader` Klasse herunterladen. Bei Verwendung von HLS- oder HDS-Inhalten werden die Metadaten in der Inhaltsmanifestdatei ( [!DNL .m3u8] oder [!DNL .f4m]) referenziert oder *in der Manifestdatei als Base64-kodierte Zeichenfolge enthalten* (die vor dem Verzehr Base64-dekodiert werden muss).
-1. Erstellen Sie ein `DRMContentData` Objekt und übergeben Sie die Metadaten an die Konstruktorfunktion:
+   Bei Verwendung des Primetime DRM Java Reference Implementierungs Packager wird diese Metadatendatei automatisch mit der Erweiterung [!DNL .metadata] generiert. Sie können diese Metadaten beispielsweise mit der `URLLoader`-Klasse herunterladen. Bei Verwendung von HLS- oder HDS-Inhalten werden die Metadaten in der Inhaltsmanifestdatei ( [!DNL .m3u8] oder [!DNL .f4m]) referenziert oder in der Manifestdatei (*) als Base64-kodierte Zeichenfolge (die vor dem Gebrauch Base64-dekodiert werden muss) eingeschlossen.*
+1. Erstellen Sie ein `DRMContentData`-Objekt, das die Metadaten an die Konstruktorfunktion übergibt:
 
    ```
    var drmData:DRMContentData = new DRMContentData( metadata );
    ```
 
-1. Die übrigen Schritte sind mit dem unter *Inhaltsschutzdetails* beschriebenen Arbeitsablauf identisch.
+1. Die restlichen Schritte sind identisch mit dem unter *Inhaltsschutz-Prozessdetails* beschriebenen Arbeitsablauf.
 
 <!--<a id="example_EBEDA8E10F6344CABA4DE31DC342B8F8"></a>-->
 
