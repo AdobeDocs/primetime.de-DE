@@ -13,17 +13,17 @@ ht-degree: 0%
 ---
 
 
-# Anzeigen von QoS-Wiedergabe und Gerätestatistiken {#display-qos-playback-and-device-statistics}
+# Anzeigen der QoS-Wiedergabe und Gerätestatistik {#display-qos-playback-and-device-statistics}
 
 Sie können Ihren Player so einrichten, dass er die Wiedergabe- und Gerätestatistiken des QoSProviders so oft wie nötig liest.
 
-Die `QoSProvider` Klasse stellt verschiedene Statistiken bereit, darunter die Bildrate, die Bitrate des Profils, die Gesamtdauer der Pufferung, die Anzahl der Pufferung-Versuche, die Zeit bis zum Abrufen des ersten Bytes aus dem ersten Videofragment, die Zeit bis zum Rendern des ersten Bilds, die aktuell gepufferte Länge und die Pufferzeit.
+Die `QoSProvider`-Klasse stellt verschiedene Statistiken bereit, darunter die Bildrate, die Bitrate des Profils, die Gesamtdauer der Pufferung, die Anzahl der Pufferung-Versuche, die Zeit bis zum Abrufen des ersten Bytes aus dem ersten Videofragment, die Zeit bis zum Rendern des ersten Bilds, die aktuell gepufferte Länge und die Pufferzeit.
 
-Die Referenz-Implementierung bietet eine `QoSManager` Klasse, mit der Sie die Anzeige der QoS-Überlagerung aktivieren können. Sie können die QoS-Sichtbarkeit auch in der Benutzeroberfläche &quot;Einstellungen&quot;aktivieren:
+Die Referenz-Implementierung stellt eine `QoSManager`-Klasse bereit, mit der Sie die Anzeige der QoS-Überlagerung aktivieren können. Sie können die QoS-Sichtbarkeit auch in der Benutzeroberfläche &quot;Einstellungen&quot;aktivieren:
 
 ![](assets/qos-configuration.jpg)
 
-Die `QoSManager` Verfolgung von QoS-Statistiken durch Abrufen von Geräteinformationen, Anhängen an den Medienplayer und Aktualisieren mit den neuesten Servicequalitätsinformationen.
+Die `QoSManager` verfolgt QoS-Statistiken, indem Geräteinformationen abgerufen, an den Medienplayer angehängt und mit den neuesten Servicequalitätsinformationen aktualisiert werden.
 
 **QoS-Statistiken-Berichte aktivieren oder deaktivieren**
 
@@ -41,7 +41,7 @@ Die `QoSManager` Verfolgung von QoS-Statistiken durch Abrufen von Geräteinforma
 
    >[!NOTE]
    >
-   >Wenn Sie den booleschen Wert ändern, wird der QoS-Berichte `false` deaktiviert.
+   >Wenn Sie den booleschen Wert in `false` ändern, wird der QoS-Berichte deaktiviert.
 
 2. hinzufügen Ereignis-Listener:
 
