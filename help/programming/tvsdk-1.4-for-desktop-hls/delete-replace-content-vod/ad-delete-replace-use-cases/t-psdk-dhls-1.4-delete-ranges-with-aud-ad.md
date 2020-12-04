@@ -6,6 +6,9 @@ title: Löschen von Bereichen mit Primetime-Anzeige und Entscheidungsfunktion
 uuid: efd36a2f-db61-434a-bc2a-50a866f44b33
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
