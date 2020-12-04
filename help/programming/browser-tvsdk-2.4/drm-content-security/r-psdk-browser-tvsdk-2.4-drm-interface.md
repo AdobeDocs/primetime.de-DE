@@ -6,6 +6,9 @@ title: Übersicht über die DRM-Oberfläche
 uuid: b553ebad-8310-4517-8d97-ef8a1c5f4340
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Browser TVSDK bietet eine DRM-Schnittstelle, mit der Sie Inhalte abspielen könn
 >
 >DRM-Unterstützung ist für MPEG-Dash-Streams verfügbar, die mit Microsoft PlayReady (im Internet Explorer unter Windows 8.1 und Edge) und Widevine (unter Google Chrome) DRM-Systemen geschützt sind. DRM-Unterstützung ist für HLS-Streams in Safari verfügbar, die mit FairPlay geschützt sind.
 
-Die wichtigste Schnittstelle des DRM-Workflows ist die `DRMManager`. Ein Verweis auf die `DRMManager` Instanz kann über die MediaPlayer-Instanz abgerufen werden:
+Die wichtigste Schnittstelle des DRM-Workflows ist das `DRMManager`. Ein Verweis auf die `DRMManager`-Instanz kann über die MediaPlayer-Instanz abgerufen werden:
 
 * `var mediaPlayer = new AdobePSDK.MediaPlayer();`
 * `var drmManager = mediaPlayer.drmManager;`
@@ -29,7 +32,7 @@ Die wichtigste Schnittstelle des DRM-Workflows ist die `DRMManager`. Ein Verweis
 
 Im Folgenden finden Sie einen Workflow auf hoher Ebene für die Wiedergabe von DRM-geschützten Inhalten:
 
-1. Um die DRM-systemspezifischen Daten anzuhängen, die von Browser TVSDK beim Lizenzerwerb für einen geschützten Stream verwendet werden, rufen Sie vor dem Aufrufen Folgendes auf `mediaPlayer.replaceCurrentResource`:
+1. Um die DRM-systemspezifischen Daten anzuhängen, die von Browser TVSDK beim Lizenzerwerb für einen geschützten Stream verwendet werden, führen Sie den folgenden Aufruf aus, bevor Sie `mediaPlayer.replaceCurrentResource` aufrufen:
 
    ```js
    var protectionData = { 
@@ -100,14 +103,14 @@ Im Folgenden finden Sie einen Workflow auf hoher Ebene für die Wiedergabe von D
 
 1. Standardmäßig ist der Sitzungstyp für die DRM-Lizenz temporär, d. h. die Lizenz wird nach dem Schließen der Sitzung nicht gespeichert.
 
-   Sie können einen Sitzungstyp mit einer API in angeben `DRMManager`.  Für die Abwärtskompatibilität umfassen die Sitzungstypen `temporary`, `persistent-license`, `persistent-usage-record`und `persistent`.
+   Sie können einen Sitzungstyp mit einer API in `DRMManager` angeben.  Zur Abwärtskompatibilität gehören die Sitzungstypen `temporary`, `persistent-license`, `persistent-usage-record` und `persistent`.
 
    ```js
    var drmManager = mediaPlayer.drmManager; 
     drmManager.setEMESessionType(“<YOUR_SESSION_TYPE>”); 
    ```
 
-1. Wenn die `sessionType` verwendete DRM-Lizenz verwendet wird `persistent-license` oder `persistent`, kann die DRM-Lizenz durch Aufrufen zurückgegeben werden `DRMManager.returnLicense`.
+1. Wenn `sessionType` oder `persistent-license` oder `persistent` verwendet wird, kann die DRM-Lizenz zurückgegeben werden, indem `DRMManager.returnLicense` aufgerufen wird.
 
    ```js
    var onLicenseReturnFunc = function () { 
