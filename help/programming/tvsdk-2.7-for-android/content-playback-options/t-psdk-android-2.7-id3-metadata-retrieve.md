@@ -6,6 +6,9 @@ title: ID3-Tags
 uuid: 3fa199cd-668d-4d26-928f-074b6114b84c
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 0%
 
 ---
 
@@ -23,13 +26,13 @@ Wenn TVSDK ID3-Metadaten erkennt, wird eine Benachrichtigung mit den folgenden D
 * TYPE = ID3
 * NAME = ID3
 
-1. Implementieren Sie einen Ereignis-Listener für `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` und registrieren Sie ihn beim `MediaPlayer` -Objekt.
+1. Implementieren Sie einen Ereignis-Listener für `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` und registrieren Sie ihn beim `MediaPlayer`-Objekt.
 
-   TVSDK ruft diesen Listener auf, wenn er `ID3` Metadaten erkennt.
+   TVSDK ruft diesen Listener auf, wenn er `ID3`-Metadaten erkennt.
 
    >[!TIP]
    >
-   >Benutzerdefinierte Anzeigenbezeichnungen verwenden dasselbe `onTimedMetadata` Ereignis, um die Erkennung eines neuen Tags anzuzeigen. Dies sollte keine Verwirrung stiften, da auf Manifestebene benutzerdefinierte Anzeigenbezeichnungen erkannt werden und ID3-Tags im Stream eingebettet werden. Weitere Informationen finden Sie unter [Benutzerdefinierte Tags](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md).
+   >Benutzerdefinierte Anzeigenbezeichnungen verwenden dasselbe `onTimedMetadata`-Ereignis, um die Erkennung eines neuen Tags anzuzeigen. Dies sollte keine Verwirrung stiften, da auf Manifestebene benutzerdefinierte Anzeigenbezeichnungen erkannt werden und ID3-Tags im Stream eingebettet werden. Weitere Informationen finden Sie unter [Benutzerspezifische Tags](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md).
 
 
 1. Abrufen der Metadaten.
