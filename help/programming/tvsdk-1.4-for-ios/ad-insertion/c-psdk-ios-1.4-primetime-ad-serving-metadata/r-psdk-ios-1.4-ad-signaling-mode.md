@@ -6,17 +6,20 @@ title: Anzeigensignalisierungsmodus
 uuid: 46f919f9-8ca1-46ff-b7a4-c9a03b5f1ccd
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
 
-# Anzeigensignalisierungsmodus{#ad-signaling-mode}
+# Anzeigensignalmodus{#ad-signaling-mode}
 
 Der Anzeigensignalisierungsmodus gibt an, wo der Videostream Werbeinformationen erhalten soll.
 
-Die gültigen Werte sind `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues`und `PTAdSignalingModeServerMap`.
+Die gültigen Werte sind `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues` und `PTAdSignalingModeServerMap`.
 
-Die folgende Tabelle beschreibt die Auswirkungen von `AdSignalingMode` Werten für verschiedene HLS-Stream-Typen:
+In der folgenden Tabelle werden die Auswirkungen von `AdSignalingMode`-Werten für verschiedene HLS-Stream-Typen beschrieben:
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
