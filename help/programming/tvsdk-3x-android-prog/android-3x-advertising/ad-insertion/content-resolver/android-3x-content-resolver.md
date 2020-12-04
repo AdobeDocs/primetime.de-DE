@@ -6,6 +6,9 @@ title: Anpassen von Opportunitätserzeugern und Inhaltsauflösungen
 uuid: 0d4fb0b2-98f3-4245-9bf1-4e968c5d0f36
 translation-type: tm+mt
 source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+workflow-type: tm+mt
+source-wordcount: '259'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Ein Opportunitätsgenerator identifiziert Platzierungsmöglichkeiten durch benut
 
 TVSDK umfasst die folgenden standardmäßigen Opportunitätsgeneratoren:
 
-* `ManifestCuesOpportunityGenerator` generiert Chancen aus den Standard-Anzeigenbezeichnungen ( `#EXT-X-CUE`).
+* `ManifestCuesOpportunityGenerator` generiert Chancen aus den Standard-Anzeigenbezeichnungen (  `#EXT-X-CUE`).
 
 * `AdSignalingModeOpportunityGenerator` generiert eine erste Möglichkeit für den angegebenen Anzeigensignalisierungsmodus. Dabei werden Hinweise oder zeitgesteuerte Metadaten ignoriert.
 * `CustomMarkerOpportunityGenerator` bietet Möglichkeiten zum Ersetzen von Back-In-C3-Anzeigen.
@@ -30,6 +33,6 @@ TVSDK enthält auch Standard-Inhaltsauflöser:
 
 Sie können die standardmäßigen Opportunitätserzeuger und Inhaltsauflöser außer Kraft setzen, um den Werbearbeitsablauf wie folgt anzupassen:
 
-* Erkennen Sie benutzerdefinierte Tags für das Einfügen von Anzeigen. Weitere Informationen finden Sie unter [Anpassen von Opportunitätserzeugern und Inhaltsauflösungen](../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver.md).
+* Erkennen Sie benutzerdefinierte Tags für das Einfügen von Anzeigen. Weitere Informationen finden Sie unter [Gelegenheitsgeneratoren und Inhaltsauflöser anpassen](../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver.md).
 * Erstellen Sie einen benutzerdefinierten Anzeigenanbieter.
 * Inhalt schwarz ausblenden.
