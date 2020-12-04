@@ -17,7 +17,7 @@ ht-degree: 3%
 
 Sie können Beschriftungen beim Abspielen von Videoinhalten anzeigen.
 
-Um Beschriftungen zu verarbeiten, müssen Sie den `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` Ereignis-Listener hinzufügen:
+Um Beschriftungen zu verarbeiten, müssen Sie den `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`-Ereignis-Listener hinzufügen:
 
 ```js
 ... 
