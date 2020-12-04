@@ -6,17 +6,20 @@ title: Medienressource erstellen
 uuid: 3d03d92f-69b3-4da8-9b16-25a264115ae5
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '276'
+ht-degree: 0%
 
 ---
 
 
-# Medienressource erstellen {#create-a-media-resource}
+# Medienressource {#create-a-media-resource} erstellen
 
 Initialisieren Sie für jeden neuen Videoinhalt eine MediaResource-Instanz mit Informationen zum Videoinhalt und laden Sie die Medienressource.
 
 Die MediaResource-Klasse stellt den Inhalt dar, der von der MediaPlayer-Instanz geladen werden soll.
 
-1. Erstellen Sie eine Datei, `MediaResource` indem Sie Informationen über das Medium an den `MediaResource` Konstruktor weiterleiten.
+1. Erstellen Sie ein `MediaResource`, indem Sie Informationen über das Medium an den `MediaResource`-Konstruktor übergeben.
 
    <table id="table_DD0D5D9129D54F73881399B9B4FF546A"> 
     <thead> 
@@ -40,7 +43,7 @@ Die MediaResource-Klasse stellt den Inhalt dar, der von der MediaPlayer-Instanz 
       </tr> 
       <tr> 
       <td colname="col1"><span class="codeph"> metadata</span> </td> 
-      <td colname="col2"> <p>Eine Instanz der <span class="codeph"> Metadata</span> -Klasse, die benutzerdefinierte Informationen über den zu ladenden Inhalt enthalten kann. </p> <p>Beispiele für Inhalte sind alternative Inhalte oder Anzeigeninhalte, die in den Hauptinhalt platziert werden sollen. Richten Sie bei Verwendung von Werbung <span class="codeph"> AuditudeSettings</span> ein, bevor Sie diesen Konstruktor verwenden. Weitere Informationen finden Sie unter <a href="../../../tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-metadata/c-psdk-dhls-1.4-ad-insertion-metadata.md" format="dita" scope="local"> Anzeigeneinfüge-Metadaten</a>. </p> </td> 
+      <td colname="col2"> <p>Eine Instanz der Klasse <span class="codeph"> Metadata</span>, die benutzerdefinierte Informationen über den zu ladenden Inhalt enthalten kann. </p> <p>Beispiele für Inhalte sind alternative Inhalte oder Anzeigeninhalte, die in den Hauptinhalt platziert werden sollen. Richten Sie bei Verwendung von Werbung <span class="codeph"> AuditudeSettings</span> ein, bevor Sie diesen Konstruktor verwenden. Weitere Informationen finden Sie unter <a href="../../../tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-metadata/c-psdk-dhls-1.4-ad-insertion-metadata.md" format="dita" scope="local"> Ad Insertion Metadata</a>. </p> </td> 
       </tr> 
     </tbody> 
    </table>
@@ -51,7 +54,7 @@ Die MediaResource-Klasse stellt den Inhalt dar, der von der MediaPlayer-Instanz 
    >
    >Bei MP4-Video-on-Demand-Inhalten (VOD) unterstützt TVSDK keine Trick-Wiedergabe, adaptive Bitrate (ABR)-Streaming, Anzeigeneinfügung, Untertitel oder DRM.
 
-   Mit dem folgenden Code wird eine `MediaResource` Instanz erstellt:
+   Der folgende Code erstellt eine `MediaResource`-Instanz:
 
    ```
    // To do: Create metadata here
@@ -63,12 +66,12 @@ Die MediaResource-Klasse stellt den Inhalt dar, der von der MediaPlayer-Instanz 
 
    >[!TIP]
    >
-   >An dieser Stelle können Sie mithilfe von `MediaResource` Accessoren (Gettern) den Typ, die URL und die Metadaten der Ressource untersuchen.
+   >An dieser Stelle können Sie `MediaResource`-Accessoren (Getter) verwenden, um den Typ, die URL und die Metadaten der Ressource zu untersuchen.
 
 1. Laden Sie die Medienressource mit einer der folgenden Methoden:
 
    * Ihre MediaPlayer-Instanz.
 
-      Weitere Informationen finden Sie unter [Laden einer Medienressource in MediaPlayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).
-   * Weitere Informationen `MediaPlayerItemLoader` finden Sie unter [Laden einer Medienressource in MediaPlayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).
+      Weitere Informationen finden Sie unter [Eine Medienressource in MediaPlayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md) laden.
+   * A `MediaPlayerItemLoader` Weitere Informationen finden Sie unter [Medienressource in MediaPlayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md) laden.
 
