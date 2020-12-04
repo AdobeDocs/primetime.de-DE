@@ -16,7 +16,7 @@ Die Versionshinweise Primetime Ad Insertion 20.10.1 beschreiben, was neu oder ge
 
 ## Neue Funktionen in PTAI 20.10.1
 
-**Wenn:** Dienstag, 13. Oktober 2020 von 03:00 Uhr bis 07:00 Uhr östliche Zeit
+**Wann:** Dienstag, 13. Oktober 2020 von 03:00 Uhr bis 07:00 Uhr Eastern Time
 
 **Änderungen**
 
@@ -26,22 +26,22 @@ Die Versionshinweise Primetime Ad Insertion 20.10.1 beschreiben, was neu oder ge
 
 #### Version 20.9.3
 
-**Wenn:** Mittwoch, 30. September 2020 um 3:30 Uhr bis 6:30 Uhr östliche Zeit
+**Wann:** Mittwoch, 30. September 2020 um 3:30 Uhr bis 6:30 Uhr östliche Zeit
 
 **Änderungen**
 
-* Der Bootstrap-API-Parameter wurde hinzugefügt `ptparallelstream`. Dadurch können Kunden mit Playern, die parallel CMAF-demuxed Audio- oder Videostreams anfordern, sicherstellen, dass Anzeigen in Audio- und Videospuren konsistent sind. Setzen Sie den Parameterwert auf true, um diese Funktion zu aktivieren oder zu deaktivieren.
+* Der Bootstrap-API-Parameter `ptparallelstream` wurde hinzugefügt. Dadurch können Kunden mit Playern, die parallel CMAF-demuxed Audio- oder Videostreams anfordern, sicherstellen, dass Anzeigen in Audio- und Videospuren konsistent sind. Setzen Sie den Parameterwert auf true, um diese Funktion zu aktivieren oder zu deaktivieren.
 
 #### Version 20.9.2
 
-**Wenn:** Dienstag, 15. September 2020 von 3:30 Uhr bis 6:30 Uhr östliche Zeit
+**Wann:** Dienstag, 15. September 2020, von 3:30 Uhr bis 6:30 Uhr östliche Zeit
 
 **Verbesserungen**
 
-* Unterstützung für die Einbeziehung nicht-linearer Anzeigentypen mit `EXT-X-MARKER` -Tags.
+* Unterstützung für die Einbeziehung nicht-linearer Anzeigentypen mit `EXT-X-MARKER`-Tags.
 Wenden Sie sich an Ihren Kundenbetreuer, um weitere Informationen zu erhalten oder diese Funktion zu aktivieren.
 
-* Unterstützung für die Begrenzung der gesamten Anzeigenauflösungszeit, wenn die Reaktion der Anbieter zu lange dauert. Um die Begrenzung zu aktivieren, setzen Sie den bootstrap-API-Parameter `ptadtimeout` auf einen Wert in Millisekunden.
+* Unterstützung für die Begrenzung der gesamten Anzeigenauflösungszeit, wenn die Reaktion der Anbieter zu lange dauert. Um die Begrenzung zu aktivieren, setzen Sie den Bootstrap-API-Parameter `ptadtimeout` auf einen Wert in Millisekunden.
 
    >[!NOTE]
    >
@@ -49,7 +49,7 @@ Wenden Sie sich an Ihren Kundenbetreuer, um weitere Informationen zu erhalten od
 
 #### Version 20.9.1
 
-**Wenn:** Dienstag, 1. September 2020 von 3:30 Uhr bis 7:30 Uhr östliche Zeit
+**Wann:** Dienstag, 1. September 2020, von 3:30 Uhr bis 7:30 Uhr östliche Zeit
 
 **Änderungen**
 
@@ -57,7 +57,7 @@ Wenden Sie sich an Ihren Kundenbetreuer, um weitere Informationen zu erhalten od
 
 #### Version 20.8.4
 
-**Wenn:** Mittwoch, 19. August 2020 von 03:30 Uhr bis 07:30 Uhr östliche Zeit
+**Wann:** Mittwoch, 19. August 2020 von 03:30 Uhr bis 07:30 Uhr Eastern Time
 
 **Verbesserungen und Fehlerbehebungen**
 
@@ -65,7 +65,7 @@ Aktualisierungen der Wartung.
 
 #### Version 20.8.1
 
-**Wenn:** Dienstag, 4. August 2020 von 3:00 Uhr bis 6:00 Uhr östliche Zeit
+**Wann:** Dienstag, 4. August 2020 von 3:00 Uhr bis 6:00 Uhr östliche Zeit
 
 **Verbesserungen und Fehlerbehebungen**
 
@@ -73,7 +73,7 @@ Aktualisierungen der Wartung.
 
 #### Version 20.7.1
 
-**Wenn:** Donnerstag, 9. Juli 2020 von 03:00 Uhr bis 05:00 Uhr Eastern Time
+**Wann:** Donnerstag, 9. Juli 2020 von 03:00 Uhr bis 05:00 Uhr Eastern Time
 
 **Neue Funktionen und Verbesserungen**
 
@@ -87,15 +87,15 @@ Aktualisierungen der Wartung.
 
 #### Version 20.6.2
 
-**Wenn:** Donnerstag, 18. Juni 2020 von 03:00 Uhr bis 04:00 Uhr Eastern Time
+**Wann:** Donnerstag, 18. Juni 2020 von 03:00 Uhr bis 04:00 Uhr Eastern Time
 
 **Verbesserungen**
 
-Verbesserte Stream-Synchronisierung für Video-Clients, die eine Genauigkeit von Millisekunden erfordern. Wenden Sie sich an die Support-Adobe, um die Millisekunden-Präzision für `#EXT-X-PROGRAM-DATE-TIME tags`.
+Verbesserte Stream-Synchronisierung für Video-Clients, die eine Genauigkeit von Millisekunden erfordern. Wenden Sie sich an die Support-Adobe, um die Millisekunden-Präzision für `#EXT-X-PROGRAM-DATE-TIME tags` zu aktivieren.
 
 #### Version 20.6.1
 
-**Wenn:** Dienstag, 2. Juni 2020 von 03:00 Uhr bis 05:00 Uhr Eastern Time
+**Wann:** Dienstag, 2. Juni 2020 von 03:00 Uhr bis 05:00 Uhr östliche Zeit
 
 **Neue Funktionen**
 
@@ -113,7 +113,7 @@ Wenden Sie sich an den Support für Adoben, um die folgenden neuen Funktionen ü
 
 #### Version 20.5.1
 
-**Wenn:** Dienstag, 5. Mai 2020 von 04:00 Uhr bis 05:00 Uhr Eastern Time
+**Wann:** Dienstag, 5. Mai 2020 von 04:00 Uhr bis 05:00 Uhr Eastern Time
 
 * Es wurde ein Fehler behoben, der sicherstellte, dass beim Senden von if-Modified-Since-Headern korrekte CORS-Header bereitgestellt werden.
 
@@ -123,7 +123,7 @@ Wenden Sie sich an den Support für Adoben, um die folgenden neuen Funktionen ü
 
 #### Version 20.3.4
 
-**Wenn:** Mittwoch, 1. April 2020 von 03:00 Uhr bis 04:00 Uhr Eastern Time
+**Wann:** Mittwoch, 1. April 2020 von 03:00 Uhr bis 04:00 Uhr Eastern Time
 
 * Es wurde ein Fehler behoben, der dazu führte, dass Untertitel nach dem Einfügen der Anzeige in VOD/WebVTT nicht mehr synchronisiert wurden.
 
@@ -131,7 +131,7 @@ Wenden Sie sich an den Support für Adoben, um die folgenden neuen Funktionen ü
 
 #### Version 20.3.3
 
-**Wenn:** Donnerstag, 26. März 2020 von 03:00 Uhr bis 04:00 Uhr Eastern Time
+**Wann:** Donnerstag, 26. März 2020 von 03:00 Uhr bis 04:00 Uhr Eastern Time
 
 * SSAI 4XX- und 5XX-Antworten liefern jetzt korrekt CORS-bezogene Header, sodass domänenübergreifende JavaScript-Webview-Clients Fehlerantworten erfolgreich lesen können.
 
@@ -141,7 +141,7 @@ Wenden Sie sich an den Support für Adoben, um die folgenden neuen Funktionen ü
 
 #### Version 20.3.2
 
-**Wenn:** Mittwoch, 11. März 2020 von 05:30 Uhr bis 07:00 Uhr östliche Zeit
+**Wann:** Mittwoch, 11. März 2020 von 05:30 Uhr bis 07:00 Uhr Eastern Time
 
 * Verbesserte SCTE35-Signalverarbeitung.
 
@@ -149,7 +149,7 @@ Wenden Sie sich an den Support für Adoben, um die folgenden neuen Funktionen ü
 
 #### Version 20.3.1
 
-**Wenn:** Donnerstag, 05. März 2020 von 02:30 Uhr bis 04:30 Uhr Eastern Time
+**Wann:** Donnerstag, 05. März 2020 von 02:30 Uhr bis 04:30 Uhr Eastern Time
 
 * Leistungsverbesserungen:
 
@@ -161,18 +161,18 @@ Wenden Sie sich an den Support für Adoben, um die folgenden neuen Funktionen ü
 
 #### Version 20.2.1
 
-**Wenn:** Donnerstag, 13. Februar 2020 von 04:30 Uhr bis 05:30 Uhr Ostzeit
+**Wann:** Donnerstag, 13. Februar 2020 von 04:30 Uhr bis 05:30 Uhr Eastern Time
 
 * Unterstützung für das Zusammenfügen von Anzeigenelementen mit mehreren reinen Audiostreams, basierend auf Sprache/Codec/Bitrate.
 * Geringfügige Leistungsverbesserungen und Wartungs-Updates.
 
 #### Version 20.1.3
 
-**Wenn:** Dienstag, 28. Januar 2020 von 2:00 Uhr bis 03:00 Uhr östliche Zeit
+**Wann:** Dienstag, 28. Januar 2020 von 2:00 Uhr bis 03:00 Uhr östliche Zeit
 
 * **VMAP mit FER-Unterstützung für nbc CueFormat**
 
-   Konvertieren Sie Hinweise vom FER-Stream in die FW-Zeitleiste, um Parameter zu überschreiben, wenn der Stream verwendet `ptcueformat=nbc` wird und ein VOD-Stream mit In-Manifest-Hinweisen und Backed-In-Anzeigen ist.
+   Konvertieren Sie Hinweise aus dem FER-Stream in Zeitleisten, um Parameter zu überschreiben, wenn `ptcueformat=nbc` verwendet wird und der Stream ein VOD-Stream mit In-Manifest-Hinweisen und Backed-In-Anzeigen ist.
 
 * Bereinigen Sie das Feld &quot;user-agent&quot;im HTTP-Header, bevor Sie es an Drittanbieter/CDN weiterleiten.
 
@@ -182,13 +182,13 @@ Wenden Sie sich an den Support für Adoben, um die folgenden neuen Funktionen ü
 
 #### Version 20.1.2 (Hotfix)
 
-**Wenn:** Montag, 20. Januar 2020 von 02:00 Uhr bis 03:00 Uhr Eastern Time
+**Wann:** Montag, 20. Januar 2020 von 02:00 Uhr bis 03:00 Uhr Eastern Time
 
 * Aktualisierungen der Wartung.
 
 #### Version 20.1.1
 
-**Wenn:** Mittwoch, 15. Januar 2020 von 04:00 Uhr bis 05:00 Uhr östliche Zeit
+**Wann:** Mittwoch, 15. Januar 2020 von 04:00 Uhr bis 05:00 Uhr Eastern Time
 
 * Der Creative Repackage-Dienst ermöglicht jetzt eine schnellere Anzeigeneinfügung, indem er die Auflistung fehlerhafter kreativer Elemente automatisch sperrt.
 
