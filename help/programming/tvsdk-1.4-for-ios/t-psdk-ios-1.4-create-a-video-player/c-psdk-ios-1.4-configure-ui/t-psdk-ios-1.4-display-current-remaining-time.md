@@ -1,16 +1,19 @@
 ---
 description: Sie können die aktuelle und die restliche Zeit des Inhalts anzeigen, der wiedergegeben wird.
 seo-description: Sie können die aktuelle und die restliche Zeit des Inhalts anzeigen, der wiedergegeben wird.
-seo-title: Aktuelle Zeit und verbleibende Zeit anzeigen
-title: Aktuelle Zeit und verbleibende Zeit anzeigen
+seo-title: Aktuelle Zeit und Restzeit anzeigen
+title: Aktuelle Zeit und Restzeit anzeigen
 uuid: 800996ff-afc0-4e17-9d70-5ec1e1fcfdc7
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
 
 
-# Aktuelle Zeit und verbleibende Zeit anzeigen {#display-the-current-time-and-remaining-time}
+# Aktuelle Zeit und verbleibende Zeit {#display-the-current-time-and-remaining-time} anzeigen
 
 Sie können die aktuelle und die restliche Zeit des Inhalts anzeigen, der wiedergegeben wird.
 
