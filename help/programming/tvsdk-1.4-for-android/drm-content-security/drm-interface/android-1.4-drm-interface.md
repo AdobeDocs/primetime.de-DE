@@ -1,24 +1,27 @@
 ---
-description: Sie können die Funktionen des Primetime Digital Rights Management (DRM)-Systems verwenden, um sicheren Zugriff auf Ihre Videoinhalte zu bieten. Alternativ können Sie DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung von Adobe verwenden.
-seo-description: Sie können die Funktionen des Primetime Digital Rights Management (DRM)-Systems verwenden, um sicheren Zugriff auf Ihre Videoinhalte zu bieten. Alternativ können Sie DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung von Adobe verwenden.
+description: Sie können die Funktionen des Primetime-Digital Rights Managements (DRM) verwenden, um einen sicheren Zugriff auf Ihre Videoinhalte zu ermöglichen. Alternativ dazu können Sie auch DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung der Adobe verwenden.
+seo-description: Sie können die Funktionen des Primetime-Digital Rights Managements (DRM) verwenden, um einen sicheren Zugriff auf Ihre Videoinhalte zu ermöglichen. Alternativ dazu können Sie auch DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung der Adobe verwenden.
 seo-title: Übersicht über die Primetime-DRM-Oberfläche
 title: Übersicht über die Primetime-DRM-Oberfläche
 uuid: 71479464-8356-4732-9774-da9f6084e6ad
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '429'
+ht-degree: 0%
 
 ---
 
 
 # Übersicht {#primetime-drm-interface-overview}
 
-Sie können die Funktionen des Primetime Digital Rights Management (DRM)-Systems verwenden, um sicheren Zugriff auf Ihre Videoinhalte zu bieten. Alternativ können Sie DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung von Adobe verwenden.
+Sie können die Funktionen des Primetime-Digital Rights Managements (DRM) verwenden, um einen sicheren Zugriff auf Ihre Videoinhalte zu ermöglichen. Alternativ dazu können Sie auch DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung der Adobe verwenden.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
-Wenden Sie sich an Ihren Adobe-Kundenbetreuer, um aktuelle Informationen zur Verfügbarkeit von DRM-Lösungen von Drittanbietern zu erhalten.
+Wenden Sie sich an Ihren Kundenbetreuer, um aktuelle Informationen zur Verfügbarkeit von DRM-Lösungen von Drittanbietern zu erhalten.
 
-Das wichtigste clientseitige Element des DRM-Systems (Primetime Digital Rights Management) ist der DRM Manager. Die im Android-SDK enthaltene Beispielanwendung enthält eine `DRMHelper` Klasse, die zeigt, wie bestimmte DRM-Vorgänge leichter implementiert werden können.
+Das wichtigste clientseitige Element des DRM-Systems (Primetime Digital Rights Management) ist der DRM Manager. Die im Android-SDK enthaltene Beispielanwendung enthält eine `DRMHelper`-Klasse, die zeigt, wie bestimmte DRM-Vorgänge leichter implementiert werden können.
 
 Primetime DRM bietet einen skalierbaren, effizienten Arbeitsablauf zur Implementierung des Inhaltsschutzes in TVSDK-Anwendungen. Sie schützen und verwalten die Rechte an Ihren Videoinhalten, indem Sie eine Lizenz für jede digitale Mediendatei erstellen.
 
@@ -34,13 +37,13 @@ Dies sind die wichtigsten API-Elemente für die Arbeit mit DRM:
 
    >[!TIP]
    >
-   >Diese API gibt ein gültiges `DRMManager` Objekt erst zurück, nachdem der `MediaPlayerEvent.DRM_METADATA` ausgelöst wurde. Wenn Sie `getDRMManager()` vor dem Auslösen dieses Ereignisses anrufen, wird möglicherweise NULL zurückgegeben.
+   >Diese API gibt ein gültiges `DRMManager`-Objekt erst zurück, nachdem das `MediaPlayerEvent.DRM_METADATA` ausgelöst wurde. Wenn Sie `getDRMManager()` aufrufen, bevor dieses Ereignis ausgelöst wird, wird möglicherweise NULL zurückgegeben.
 
 * Die `DRMHelper` Helper-Klasse, die bei der Implementierung von DRM-Workflows nützlich ist.
 
-   Sie können `DRMHelper` in sehen `ReferencePlayer`.
+   Sie können `DRMHelper` in `ReferencePlayer` sehen.
 
-* Eine `DRMHelper` Metadaten-Lader-Methode, die DRM-Metadaten lädt, wenn sie sich in einer separaten URL vom Medium befinden.
+* Eine `DRMHelper`-Metadaten-Lademethode, die DRM-Metadaten lädt, wenn sie sich in einer separaten URL vom Medium befinden.
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -48,7 +51,7 @@ Dies sind die wichtigsten API-Elemente für die Arbeit mit DRM:
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* Eine `DRMHelper` Methode zur Überprüfung der DRM-Metadaten, um festzustellen, ob eine Authentifizierung erforderlich ist.
+* Eine `DRMHelper`-Methode zur Überprüfung der DRM-Metadaten, um festzustellen, ob eine Authentifizierung erforderlich ist.
 
    ```java
    /** 
