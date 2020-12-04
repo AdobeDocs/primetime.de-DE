@@ -6,11 +6,14 @@ title: Mit Cookies arbeiten
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
 source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
 
-# Mit Cookies arbeiten {#work-with-cookies}
+# Arbeiten mit Cookies {#work-with-cookies}
 
 Sie können TVSDK verwenden, um beliebige Daten in Cookie-Headern für Sitzungsverwaltung, Gate-Zugriff usw. zu senden.
 
@@ -27,7 +30,7 @@ Hier finden Sie eine Beispielanforderung an den Schlüsselserver mit einer Authe
 
 So arbeiten Sie mit Cookies:
 
-1. Erstellen Sie eine `cookieManager` und fügen Sie Ihre Cookies für die URIs zu Ihrem cookieStore hinzu.
+1. Erstellen Sie ein `cookieManager` und fügen Sie Ihre Cookies für die URIs zu Ihrem cookieStore hinzu.
 
    Beispiel:
 
@@ -45,9 +48,9 @@ So arbeiten Sie mit Cookies:
    >
    >Wenn 302-Umleitungen aktiviert sind, kann die Anzeigenanforderung an eine Domäne weitergeleitet werden, die sich von der Domäne unterscheidet, zu der das Cookie gehört.
 
-   TVSDK Abfragen dies zur `cookieManager` Laufzeit, prüft, ob mit der URL verbundene Cookies vorhanden sind, und verwendet automatisch diese Cookies.
+   TVSDK Abfragen dieses `cookieManager` zur Laufzeit, prüft, ob mit der URL verbundene Cookies vorhanden sind, und verwendet automatisch diese Cookies.
 
-   Wenn die Cookies während der Wiedergabe in der Anwendung aktualisiert werden müssen, verwenden Sie nicht die `networkConfiguration.setCookieHeaders` API, da die Aktualisierung im JAVA-Cookie-Store erfolgt.
+   Wenn die Cookies während der Wiedergabe in der Anwendung aktualisiert werden müssen, verwenden Sie nicht die API `networkConfiguration.setCookieHeaders`, da die Aktualisierung im JAVA-Cookie-Store erfolgt.
 
    `networkConfiguration.setCookieHeaders` API setzt die Cookies auf den C++ CookieStore von TVSDK.
 
