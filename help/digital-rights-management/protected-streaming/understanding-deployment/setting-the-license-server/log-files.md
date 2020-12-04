@@ -42,12 +42,12 @@ Protokollordner sind für eine einfache Verwendung strukturiert. Der Protokollor
 
 ## Globale Protokolldatei {#section_1CFA90748142439C9F3BE380969539DA}
 
-Die globale Protokolldatei `flashaccess-global.log`befindet sich unter *LicenseServer.LogRoot*. Das Protokoll kann Protokollmeldungen enthalten, die das Adobe Primetime DRM Java SDK oder Protokollmeldungen während der Zeit generiert haben, in der der Server initialisiert wurde.
+Die globale Protokolldatei `flashaccess-global.log` befindet sich unter *LicenseServer.LogRoot*. Das Protokoll kann Protokollmeldungen enthalten, die das Adobe Primetime DRM Java SDK oder Protokollmeldungen während der Zeit generiert haben, in der der Server initialisiert wurde.
 
 ## Partitionsprotokolldatei {#section_5660137CD6AA40519E72A4315534846B}
 
-Die Partitionsprotokolldatei `flashaccess-partition.log`befindet sich im `<LicenseServer.LogRoot>/flashaccesserver` Verzeichnis. Es enthält Protokollmeldungen, die während der Verarbeitung einer Lizenzanforderung generiert wurden.
+Die Partitionsprotokolldatei `flashaccess-partition.log` befindet sich im Ordner `<LicenseServer.LogRoot>/flashaccesserver`. Es enthält Protokollmeldungen, die während der Verarbeitung einer Lizenzanforderung generiert wurden.
 
 ## Mandanten-Protokolldatei {#section_F0257CC0831647F18A746B4F02E3E910}
 
-Die Protokolldatei jedes Mandanten befindet sich `flashaccess-tenant.log`in `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. Das Mandantenprotokoll enthält Informationen zum Audit, in denen jede für diesen Mandanten generierte Lizenz beschrieben wird.
+Die Protokolldatei (`flashaccess-tenant.log`) jedes Mandanten befindet sich in `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. Das Mandantenprotokoll enthält Informationen zum Audit, in denen jede für diesen Mandanten generierte Lizenz beschrieben wird.
