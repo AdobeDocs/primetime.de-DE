@@ -6,11 +6,14 @@ title: Kapitelunterstützung implementieren
 uuid: b0e5ef1c-6568-4901-9ac7-261df71a0110
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
 
-# Kapitelunterstützung implementieren {#implement-chapter-support}
+# Kapitelunterstützung {#implement-chapter-support} implementieren
 
 Sie können Kapitel für die Videoverfolgung in einer TVSDK-basierten Anwendung wie folgt definieren und verfolgen:
 
