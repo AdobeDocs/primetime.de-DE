@@ -6,6 +6,9 @@ title: Wählen Sie eine aktuelle Beschriftungsspur aus den verfügbaren Spuren
 uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
@@ -24,5 +27,5 @@ TVSDK unterstützt das Rendering folgender Formate:
 Sie können:
 
 * Wählen Sie eine verfügbare Untertitelspur als aktuelle Spur aus und suchen Sie nach Ereignissen, die zusätzliche verfügbare Spuren anzeigen.
-* Schalten Sie die Untertitel über die `MediaPlayer` Benutzeroberfläche ein oder aus (sichtbar oder nicht sichtbar).
-* Wählen Sie Stiloptionen, die bestimmen, wie Untertitel von der zugrunde liegenden Video-Engine gerendert werden. Verwenden Sie die `MediaPlayerItem` Oberfläche, um Formate wie Schriftart oder Schriftfarbe auszuwählen.
+* Schalten Sie die Untertitel über die `MediaPlayer`-Schnittstelle ein oder aus (sichtbar oder nicht sichtbar).
+* Wählen Sie Stiloptionen, die bestimmen, wie Untertitel von der zugrunde liegenden Video-Engine gerendert werden. Verwenden Sie die `MediaPlayerItem`-Schnittstelle, um Formate wie Schriftart oder Schriftfarbe auszuwählen.
