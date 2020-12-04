@@ -4,6 +4,9 @@ title: Alternativaudio
 uuid: cc38ded2-45b7-4be4-8f46-a919fdaf79cf
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 0%
 
 ---
 
@@ -14,19 +17,19 @@ Mit alternativem oder spätgebundenem Audio können Sie zwischen den verfügbare
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-Wenn TVSDK die `MediaPlayerItem` Instanz für das aktuelle Video erstellt, wird für jede verfügbare Audiospur ein `AudioTrack` Element erstellt. Das Element enthält eine `name` Eigenschaft, eine Zeichenfolge, die in der Regel eine benutzererkennbare Beschreibung der Sprache dieser Verfolgung enthält. Das Element enthält auch Informationen darüber, ob diese Verfolgung standardmäßig verwendet werden soll.
+Wenn TVSDK die `MediaPlayerItem`-Instanz für das aktuelle Video erstellt, wird für jede verfügbare Audiospur ein `AudioTrack`-Element erstellt. Das Element enthält eine `name`-Eigenschaft, eine Zeichenfolge, die in der Regel eine benutzererkennbare Beschreibung der Sprache dieser Spur enthält. Das Element enthält auch Informationen darüber, ob diese Verfolgung standardmäßig verwendet werden soll.
 
 Wenn es Zeit ist, das Video abzuspielen, können Sie nach einer Liste der verfügbaren Audiospuren fragen, optional eine Audiospur auswählen und das Video mit der ausgewählten Spur abspielen lassen.
 
-Obwohl dies selten der Fall ist, löst TVSDK ein `MediaPlayerItem``MediaPlayerItem.AUDIO_UPDATED` Ereignis aus, wenn eine zusätzliche Audiospur verfügbar ist, nachdem sie erstellt wurde.
+Obwohl dies selten der Fall ist, löst TVSDK ein `MediaPlayerItem.AUDIO_UPDATED`-Ereignis aus, wenn eine zusätzliche Audiospur verfügbar wird, nachdem das `MediaPlayerItem` erstellt wurde.
 
-## APIs hinzugefügt {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
+## APIs {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE} hinzugefügt
 
 Die folgenden APIs wurden hinzugefügt, um alternative Audio zu unterstützen:
 
 **hasAlternateAudio**
 
-Wenn das angegebene Medium über eine andere Audiospur als die Standardspur verfügt, gibt diese boolesche Funktion zurück `true`. Wenn keine alternative Audiospur vorhanden ist, gibt die Funktion zurück `false`.
+Wenn das angegebene Medium über eine andere Audiospur als die Standardspur verfügt, gibt diese boolesche Funktion `true` zurück. Wenn keine alternative Audiospur vorhanden ist, gibt die Funktion `false` zurück.
 
 ```
 bool MediaPlayerItemImpl::hasAlternateAudio() const { 
