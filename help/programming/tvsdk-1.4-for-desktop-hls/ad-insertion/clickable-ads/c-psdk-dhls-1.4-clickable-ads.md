@@ -6,6 +6,9 @@ title: Klickbare Anzeigen
 uuid: edefbc66-2d30-441d-9c30-256588504463
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '397'
+ht-degree: 0%
 
 ---
 
@@ -16,13 +19,13 @@ TVSDK stellt Informationen bereit, damit Sie Clickthrough-Anzeigen bearbeiten k�
 
 Für TVSDK für Flash Runtime können nur lineare Anzeigen angeklickt werden.
 
-## Antworten auf Klicks auf Anzeigen {#respond-to-clicks-on-ads}
+## Antworten Sie auf Klicks auf Anzeigen {#respond-to-clicks-on-ads}
 
 Wenn ein Benutzer auf eine Anzeige oder eine zugehörige Schaltfläche klickt, ist Ihre Anwendung für die Beantwortung verantwortlich. TVSDK liefert Informationen zur Ziel-URL.
 
 Dieses Beispiel zeigt eine Möglichkeit, Anzeigenklicks zu verwalten.
 
-1. Bei jeder Wiedergabe einer Anzeige wird eine Schaltfläche über dem Medienplayer angezeigt. Ein Benutzer, der auf die Anzeige klickt, wird zur Anzeigen-URL umgeleitet. Diese Schaltfläche ist Teil der [!DNL ClickableAdsOverlay.xml].
+1. Bei jeder Wiedergabe einer Anzeige wird eine Schaltfläche über dem Medienplayer angezeigt. Ein Benutzer, der auf die Anzeige klickt, wird zur Anzeigen-URL umgeleitet. Diese Schaltfläche ist Teil von [!DNL ClickableAdsOverlay.xml].
 
    ```xml
       <?xml version="1.0"?> 
@@ -45,7 +48,7 @@ Dieses Beispiel zeigt eine Möglichkeit, Anzeigenklicks zu verwalten.
    </psdk:ClickableAdsOverlay
    ```
 
-1. Um die Ansicht nur bei der Wiedergabe einer Anzeige sichtbar zu machen, achten Sie auf die `onAdStart` und die `onAdComplete` Ereignis, die von gesendet werden.
+1. Um die Ansicht nur bei der Wiedergabe einer Anzeige sichtbar zu machen, suchen Sie nach den von ausgelösten Ereignissen `onAdStart` und `onAdComplete`.
 
    ```
    _player.addEventListener(AdPlaybackEvent.AD_STARTED, onAdStarted); 
@@ -72,9 +75,9 @@ Dieses Beispiel zeigt eine Möglichkeit, Anzeigenklicks zu verwalten.
    }
    ```
 
-1. Hör auf das `AdclickEvent.AD_CLICK` Ereignis!
+1. Suchen Sie nach dem Ereignis `AdclickEvent.AD_CLICK`.
 
-   Wenn eine Anzeige wiedergegeben wird, sendet TVSDK das `AdClickEvent.AD_CLICK` Ereignis, aus dem Sie die Clickthrough-URL und zugehörige Informationen abrufen können.
+   Bei der Wiedergabe einer Anzeige löst TVSDK das `AdClickEvent.AD_CLICK`-Ereignis aus, aus dem Sie die Clickthrough-URL und zugehörige Informationen abrufen können.
 
    ```
       _player.addEventListener(AdClickEvent.AD_CLICK, onAdClick);
