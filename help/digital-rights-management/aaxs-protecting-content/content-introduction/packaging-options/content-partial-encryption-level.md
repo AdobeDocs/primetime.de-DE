@@ -29,4 +29,4 @@ Aufgrund der Art der Videokodierung ist es nicht notwendig, 100 % des Videos zu 
 
 Diese Einstellungen wurden mit der folgenden Regel entwickelt: Alle Inhalte, die bei niedriger Einstellung verschlüsselt werden, werden auch bei der Einstellung Medium verschlüsselt. Dadurch wird sichergestellt, dass dasselbe Inhaltselement, das bei niedriger Verschlüsselung von einer Partei verteilt und bei mittlerer Verschlüsselung von einer anderen Partei verteilt wird, den Schutz des Inhalts nicht beeinträchtigt.
 
-Example use case: Reducing the encryption level decreases the decryption overhead on the client and improves playback performance on low-end machines.
+Verwendungsbeispiel: Durch die Reduzierung des Verschlüsselungsgrads wird der Overhead bei der Entschlüsselung auf dem Client verringert und die Wiedergabeleistung auf Low-End-Computern verbessert.
