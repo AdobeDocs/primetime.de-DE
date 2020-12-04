@@ -6,6 +6,9 @@ title: Unterstützte HLS-Funktionen
 uuid: 033d81f8-cea4-4687-b2fb-1524d9164d39
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 0%
 
 ---
 
@@ -23,11 +26,11 @@ Browser TVSDK unterstützt eine Reihe von HLS-Funktionen, die Sie implementieren
 
 >[!TIP]
 >
->In den unten stehenden Funktionsmatrix-Tabellen bedeutet das ![unterstützte Symbol](assets/supported15.png) , dass die Funktion in der aktuellen Version unterstützt wird.
+>In den unten stehenden Funktionsmatrix-Tabellen bedeutet ![unterstütztes Symbol](assets/supported15.png), dass die Funktion in der aktuellen Version unterstützt wird.
 
 >[!TIP]
 >
->In der Spalte &quot;Safari&quot;bedeutet &quot;Plattformbegrenzung&quot;, dass der Anwendungsfall nicht unterstützt wird, da diese Plattform die Implementierung der Unterstützung dafür nicht zulässt. Verwenden Sie im Falle eines Einfügens SSAI. Wenn für Sie Wiedergabebeschränkungen wichtig sind, erzwingen Sie die Ausweichmöglichkeit in Flash in Safari, bis die Plattform die Anwendungsfälle für die Anzeigeneinfügung unterstützt.
+>In der Spalte &quot;Safari&quot;bedeutet &quot;Plattformbegrenzung&quot;, dass der Anwendungsfall nicht unterstützt wird, da diese Plattform die Implementierung der Unterstützung dafür nicht zulässt. Verwenden Sie im Falle eines Einfügens SSAI. Wenn für Sie Wiedergabebeschränkungen wichtig sind, erzwingen Sie den Fallback in Safari auf Flash, bis die Plattform den Anwendungsfall für die Anzeigeneinfügung unterstützt.
 
 <!--<a id="section_9FB9193D5763448CB228B96164661738"></a>-->
 
@@ -87,29 +90,29 @@ Removed Nielsen row
 |--- |--- |--- |--- |--- |--- |
 | Integrationen | VOD + Live | Adobe Analytics VHL-Integration | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 
-## Erweiterte HLS-Funktionen zum Einfügen von Anzeigen (CSAI) {#hls-advanced-ad-insertion}
+## Erweiterte HLS-Anzeigeneinfügefunktionen (CSAI) {#hls-advanced-ad-insertion}
 
 | Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Anzeigeneinfügung | VOD | Nur Anzeige | Nicht unterstützt | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Anzeigeneinfügung | VOD + Live | Targeting-Parameter | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Anzeigeneinfügung | VOD + Live | Benutzerspezifische Anzeigenrichtlinie | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
-| Anzeigeneinfügung | VOD + Live | Verzögertes Laden von Werbeanzeigen | ![unterstütztes Symbol](assets/supported15.png) | Nicht unterstützt | Plattformbeschränkung |
-| Anzeigeneinfügung | VOD | Ergänzende Anzeigen, Banneranzeigen und anklickbare Anzeigen | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Anzeigeneinfügung | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
+| Ad Insertion | VOD | Nur Anzeige | Nicht unterstützt | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Ad Insertion | VOD + Live | Targeting-Parameter | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Ad Insertion | VOD + Live | Benutzerspezifische Anzeigenrichtlinie | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
+| Ad Insertion | VOD + Live | Verzögertes Laden von Werbeanzeigen | ![unterstütztes Symbol](assets/supported15.png) | Nicht unterstützt | Plattformbeschränkung |
+| Ad Insertion | VOD | Ergänzende Anzeigen, Banneranzeigen und klickbare Anzeigen | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Ad Insertion | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
 
 ## HLS-Kern-Anzeigeneinfügefunktionen (CSAI) {#hls-core-ad-insertion}
 
 | Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Anzeigeneinfügung | VOD + Live | Pre-Roll | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Anzeigeneinfügung | VOD + Live | Mid-Roll | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
-| Anzeigeneinfügung | VOD + Live | Post-Roll | Nur VOD | Nur VOD | Nur VOD |
-| Anzeigeneinfügung | FER VOD | Anzeigenauflösung und Verhalten | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
-| Anzeigeneinfügung | VOD + Live | Standard-Anzeigenrichtlinie | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
-| Anzeigeneinfügung | VOD + Live | VAST 2.0/3.0 | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Anzeigeneinfügung | VOD + Live | VMAP 1.0 | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Anzeigeneinfügung | VOD + Live | CRS v3.1 | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Ad Insertion | VOD + Live | Pre-Roll | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Ad Insertion | VOD + Live | Mid-Roll | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
+| Ad Insertion | VOD + Live | Post-Roll | Nur VOD | Nur VOD | Nur VOD |
+| Ad Insertion | FER VOD | Anzeigenauflösung und Verhalten | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
+| Ad Insertion | VOD + Live | Standard-Anzeigenrichtlinie | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
+| Ad Insertion | VOD + Live | VAST 2.0/3.0 | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Ad Insertion | VOD + Live | VMAP 1.0 | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Ad Insertion | VOD + Live | CRS v3.1 | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 
 ## HLS-Inhaltsschutzfunktionen {#hls-content-protection}
 
@@ -117,7 +120,7 @@ Removed Nielsen row
 |--- |--- |--- |--- |--- |--- |
 | Inhaltsschutz | VOD + Live | AES-128 | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 | Inhaltsschutz | VOD + Live | Beispiel-AES | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Inhaltsschutz | VOD | DRM | Adobe Access | Nicht unterstützt | FairPlay |
+| Inhaltsschutz | VOD | DRM | Zugriff auf Adoben | Nicht unterstützt | FairPlay |
 
 ## Erweiterte HLS-Wiedergabe-Funktionen {#hls-advanced-playback}
 
