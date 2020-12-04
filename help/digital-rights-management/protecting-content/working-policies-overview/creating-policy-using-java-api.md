@@ -4,16 +4,19 @@ title: DRM-Richtlinie mit der Java-API erstellen
 uuid: 1672a6d0-e38c-4330-97b0-02147f99db47
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 0%
 
 ---
 
 
-# DRM-Richtlinie mit der Java-API erstellen {#creating-a-drm-policy-with-the-java-api}
+# Erstellen einer DRM-Richtlinie mit der Java-API {#creating-a-drm-policy-with-the-java-api}
 
 So erstellen Sie eine DRM-Richtlinie mit der Java-API:
 
-1. Richten Sie Ihre Entwicklungs-Umgebung ein und fügen Sie alle JAR-Dateien in Ihr Projekt ein, die unter [Einrichten der Entwicklungs-Umgebung aufgeführt sind.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Erstellen Sie ein `com.adobe.flashaccess.sdk.policy.Policy` Objekt und geben Sie dessen Eigenschaften an, einschließlich der Rechte, der Cachedauer für Lizenzen und des Enddatums der DRM-Richtlinie.
+1. Richten Sie Ihre Development-Umgebung ein und fügen Sie alle JAR-Dateien in ein, die unter [Einrichten der Development-Umgebung.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md) aufgeführt sind.
+1. Erstellen Sie ein `com.adobe.flashaccess.sdk.policy.Policy`-Objekt und geben Sie dessen Eigenschaften an, einschließlich der Rechte, der Dauer der Lizenzzwischenspeicherung und des Enddatums der DRM-Richtlinie.
 
    ```java
    // Create a new DRM policy object.  
@@ -48,7 +51,7 @@ So erstellen Sie eine DRM-Richtlinie mit der Java-API:
    } 
    ```
 
-1. Serialisieren Sie das DRM- `Policy` Objekt und speichern Sie es in einer Datei oder Datenbank.
+1. Serialisieren Sie das DRM `Policy`-Objekt und speichern Sie es in einer Datei oder Datenbank.
 
    ```java
    // Serialize the DRM policy  
@@ -62,4 +65,4 @@ So erstellen Sie eine DRM-Richtlinie mit der Java-API:
    out.close(); 
    ```
 
-Die vollständige Quelle dieses Beispielcodes finden Sie [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] im [!DNL samples] Verzeichnis der Referenzimplementierungs-Befehlszeilenwerkzeuge.
+Die vollständige Quelle dieses Beispielcodes finden Sie unter [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] im Verzeichnis der Referenzimplementierungs-Befehlszeilenwerkzeuge [!DNL samples].
