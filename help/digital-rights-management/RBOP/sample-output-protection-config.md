@@ -6,6 +6,9 @@ title: Beispiel-RBOP-Konfiguration
 uuid: fa5ead93-36c5-4ad1-947b-c4f1f2632d9b
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Die folgende JSON-Beispielkonfiguration definiert eine Pixelausgaberichtlinie, d
 * Verschlüsselung des Videos auf Auflösungen von 1080 oder weniger beschränken
 * Besondere Einschränkungen für Auflösungen von 720 und 480 festlegen:
 
-   * Für eine Auflösung von 720: HDCP für digitale Ausgabe erforderlich; für analogen Ausgang *Kopiergenerierungssystem - Analog* -(CGMS-A-)Schutz erforderlich.
+   * Für eine Auflösung von 720: HDCP für digitale Ausgabe erforderlich; erfordern den Schutz des Analog *(CGMS-A) für den analogen Ausgang.*
    * Für eine Auflösung von 480: HDCP für digitale Ausgabe erforderlich; keinen Schutz für analoge
 
 ```
@@ -49,7 +52,7 @@ Die folgende JSON-Beispielkonfiguration definiert eine Pixelausgaberichtlinie, d
 
 Beachten Sie Folgendes zur obigen Beispielkonfiguration:
 
-* Die `pixelCount` Spezifikationen befinden sich in der JSON-Struktur innerhalb des `pixelConstraints` Abschnitts auf einer Ebene.
+* Die Spezifikationen für `pixelCount` befinden sich in der JSON-Struktur innerhalb des Abschnitts `pixelConstraints` auf einer Ebene nach unten.
 
 * Innerhalb jeder Pixelanzahl-Spezifikation wird der Ausgabeschutz für digitale und analoge Ausgabe angegeben.
 * In den Spezifikationen für die digitale Ausgabe werden HDCP-Versionen angegeben, obwohl der Client derzeit keine HDCP-Versionierung unterstützt. Weitere Informationen finden Sie in den häufig gestellten Fragen.
