@@ -6,17 +6,20 @@ title: Erstellen Sie einen mit BrowserSerify kompatiblen Player ohne UI-Framewor
 uuid: c4315bc8-c75d-4dd9-8680-946c1197be1e
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
-# Erstellen Sie einen mit BrowserSerify kompatiblen Player ohne UI-Framework{#create-a-browserify-compatible-player-without-the-ui-framework}
+# Erstellen Sie einen BrowserSerify-kompatiblen Player ohne UI-Framework{#create-a-browserify-compatible-player-without-the-ui-framework}
 
 Verwenden Sie die Browser TVSDK-Bibliotheksdatei in Ihrer App, um einen Browser-kompatiblen Player zu erstellen.
 
-Das Thema [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md) Liste den Satz von Browser TVSDK-Bibliotheken, die Sie normalerweise einschließen, wenn Sie einen einfachen Videoplayer erstellen. Dazu fügen Sie einfach `script` Tags mit `src` Attributen hinzu, die auf die Bibliotheken verweisen.
+Das Thema [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md) Liste den Satz von Browser TVSDK-Bibliotheken, die Sie normalerweise einschließen, wenn Sie einen Video-Player erstellen. Dazu fügen Sie einfach `script` Tags mit `src` Attributen hinzu, die auf die Bibliotheken zeigen.
 
-Der Vorgang unterscheidet sich geringfügig von der Erstellung eines mit BrowserSerify kompatiblen Players. Dazu verwenden Sie den `require` Befehl, um die (vom Browser TVSDK bereitgestellte) [!DNL AdobePSDK.module.js] Datei in Ihre App einzuschließen. Diese Datei bündelt die grundlegenden Player-Bibliotheksdateien in der richtigen Reihenfolge der Abhängigkeiten und gibt den `AdobePSDK` Namensraum zurück, den Sie zur Implementierung der Player-Funktionen verwenden.
+Der Vorgang unterscheidet sich geringfügig von der Erstellung eines mit BrowserSerify kompatiblen Players. Dazu verwenden Sie den Befehl `require`, um die [!DNL AdobePSDK.module.js]-Datei (die vom Browser TVSDK bereitgestellt wird) in Ihre App einzuschließen. Diese Datei bündelt die grundlegenden Player-Bibliotheksdateien in der richtigen Reihenfolge der Abhängigkeiten und gibt den `AdobePSDK`-Namensraum zurück, den Sie zur Implementierung der Player-Funktionen verwenden.
 
 Browser TVSDK bietet die folgende Beispielanwendung zum Durchsuchen und Erstellen von Dateien im Versionspaket:
 
@@ -27,7 +30,7 @@ Browser TVSDK bietet die folgende Beispielanwendung zum Durchsuchen und Erstelle
 
 So erstellen Sie einen mit BrowserSerify kompatiblen Videoplayer:
 
-1. Die mit dem BrowserSerify-kompatible Bibliotheksdatei, die den `AdobePSDK` Namensraum zurückgibt, muss wie folgt aussehen:
+1. Die mit dem BrowserSerify-kompatible Bibliotheksdatei anfordern, die den Namensraum `AdobePSDK` zurückgibt:
 
    ```
    var AdobePSDK = require('./AdobePSDK.module.js'); 
@@ -37,7 +40,7 @@ So erstellen Sie einen mit BrowserSerify kompatiblen Videoplayer:
    […]
    ```
 
-1. Erstellen Sie Ihren Player wie unter [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md).
+1. Erstellen Sie den Player wie unter [](../../../browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-create-a-basic-player/t-psdk-browser-tvsdk-2.4-create-basic-player-tvsdk.md) beschrieben.
 
    Schritt 1 in dieser Aufgabe ersetzt den Schritt in den Anweisungen für den einfachen Player, in dem Sie die einzelnen grundlegenden Player-Bibliotheken in Ihrer App-Datei bereitstellen.
 Sie können Ihre App-Dateien jetzt mit &quot;Durchsuchen&quot;bündeln.
