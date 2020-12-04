@@ -6,15 +6,18 @@ description: Details zum JSON-Objekt, wenn der Typwert "Direktwerbung"lautet
 seo-description: Details zum JSON-Objekt, wenn der Typwert "Direktwerbung"lautet
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '182'
+ht-degree: 0%
 
 ---
 
 
-# JSON-Objekt für direkte Werbeunterbrechungen{#json-object-for-direct-ad-breaks}
+# JSON-Objekt für Umbrüche mit Direktwerbung{#json-object-for-direct-ad-breaks}
 
 Der folgende Codeblock definiert das Details-JSON-Objekt, wenn der Typwert direkte Werbeunterbrechungen ist.
 
-Die `MetadataNode` zurückgegebene `IFeedItemAdapter:getStreamMetadata()` Datei enthält einen Eintrag mit Schlüssel vom Typ `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` und Wert einer Zeichenfolgen-Darstellung der Details JSON-Objektwert unten.
+Das von `IFeedItemAdapter:getStreamMetadata()` zurückgegebene `MetadataNode` enthält einen Eintrag mit dem Schlüssel des Typs `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` und den Wert einer Zeichenfolgendarstellung der Details des JSON-Objektwerts unten.
 
 ```
 “metadata”: { 
@@ -50,10 +53,10 @@ Die `MetadataNode` zurückgegebene `IFeedItemAdapter:getStreamMetadata()` Datei 
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `tag` | Eine Zeichenfolge, die dem Tag-Feld in `com.adobe.mediacore.timeline.advertising.AdBreak`zugeordnet wird. |
-| `time` | Gibt die Beginn-Zeit für den Werbeunterbrechungsvorgang an und ordnet sie dem Zeitfeld in `com.adobe.mediacore.timeline.advertising.AdBreak`zu. Der Wert 0 bedeutet eine Pre-Roll-Anzeige. |
-| `replace` | Gibt die Dauer des Anzeigenumbruchs an, die dem `replaceDuration` Feld in zugeordnet wird `com.adobe.mediacore.timeline.advertising.AdBreak`. |
-| `ad-list` | Eine Liste von Anzeigen, die während der Werbeunterbrechung abgespielt werden sollen, wird dem `List<Ad>` Feld in zugeordnet `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `tag` | Eine Zeichenfolge, die dem Tag-Feld in `com.adobe.mediacore.timeline.advertising.AdBreak` zugeordnet wird. |
+| `time` | Gibt die Beginn-Zeit für den Werbeunterbrechungszeitpunkt an, die dem Zeitfeld in `com.adobe.mediacore.timeline.advertising.AdBreak` zugeordnet wird. Der Wert 0 bedeutet eine Pre-Roll-Anzeige. |
+| `replace` | Gibt die Dauer des Anzeigenumbruchs an und ordnet sie dem Feld `replaceDuration` in `com.adobe.mediacore.timeline.advertising.AdBreak` zu. |
+| `ad-list` | Eine Liste von Anzeigen, die während der Werbeunterbrechung wiedergegeben werden sollen, wird dem Feld `List<Ad>` in `com.adobe.mediacore.timeline.advertising.AdBreak` zugeordnet. |
 
 Der folgende Codeblock definiert das JSON-Objekt für das Array &quot;ads-Liste&quot;.
 
@@ -74,7 +77,7 @@ Der folgende Codeblock definiert das JSON-Objekt für das Array &quot;ads-Liste&
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `url` | Die URL zum Anzeigeninhalt ordnet dem URL-Feld in `com.adobe.mediacore.timeline.advertising.Ad`zu. |
-| `duration` | Die Dauer der Anzeige wird dem Feld für die Dauer zugeordnet `com.adobe.mediacore.timeline.advertising.Ad`. |
+| `url` | Die URL zum Anzeigeninhalt ordnet dem URL-Feld in `com.adobe.mediacore.timeline.advertising.Ad` zu. |
+| `duration` | Die Dauer der Anzeige wird dem Feld für die Dauer in `com.adobe.mediacore.timeline.advertising.Ad` zugeordnet. |
 | `tag` | Eine Beschreibungszeichenfolge. |
 
