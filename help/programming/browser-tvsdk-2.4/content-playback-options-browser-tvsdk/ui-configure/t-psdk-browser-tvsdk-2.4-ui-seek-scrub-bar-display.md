@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Verarbeiten der Suche bei Verwendung der Suchleiste{#handle-seek-when-using-the-seek-bar}
+# Verarbeiten Sie die Suche bei Verwendung der Suchleiste{#handle-seek-when-using-the-seek-bar}
 
 In Browser TVSDK können Sie eine bestimmte Position (Zeit) in einem Stream suchen. Ein Stream kann ein Sliding-Window-Playlist oder Video-on-Demand (VOD)-Inhalt sein.
 
@@ -23,11 +23,11 @@ In Browser TVSDK können Sie eine bestimmte Position (Zeit) in einem Stream such
 
 1. Warten Sie, bis Browser TVSDK sich in einem gültigen Status für die Suche befindet.
 
-   Gültige Status sind &quot;VORBEREITEN&quot;, &quot;ABGESCHLOSSEN&quot;, &quot;ANGEHALTEN&quot;und &quot;WIEDERGABE&quot;. Wenn Sie sich in einem gültigen Status befinden, wird sichergestellt, dass die Medienressource erfolgreich geladen wurde. Wenn sich der Player nicht in einem gültigen, suchbaren Zustand befindet, wird beim Versuch, die folgenden Methoden aufzurufen, eine `IllegalStateException`zurückgegeben.
+   Gültige Status sind &quot;VORBEREITEN&quot;, &quot;ABGESCHLOSSEN&quot;, &quot;ANGEHALTEN&quot;und &quot;WIEDERGABE&quot;. Wenn Sie sich in einem gültigen Status befinden, wird sichergestellt, dass die Medienressource erfolgreich geladen wurde. Wenn sich der Player nicht in einem gültigen, suchbaren Zustand befindet, wird beim Versuch, die folgenden Methoden aufzurufen, ein `IllegalStateException` zurückgegeben.
 
-   Beispielsweise können Sie warten, bis Browser TVSDK `AdobePSDK.MediaPlayerStatusChangeEvent` mit einem `event.status` von ausgelöst wird `AdobePSDK.MediaPlayerStatus.PREPARED`.
+   Sie können beispielsweise warten, bis Browser TVSDK `AdobePSDK.MediaPlayerStatusChangeEvent` mit einem `event.status` von `AdobePSDK.MediaPlayerStatus.PREPARED` auslöst.
 
-1. Übergeben Sie die angeforderte Suchposition als Parameter an die `MediaPlayer.seek` Methode in Millisekunden.
+1. Übergeben Sie die angeforderte Suchposition als Parameter an die `MediaPlayer.seek`-Methode in Millisekunden.
 
    Dadurch wird der Abspielkopf an eine andere Position im Stream verschoben.
 
@@ -39,7 +39,7 @@ In Browser TVSDK können Sie eine bestimmte Position (Zeit) in einem Stream such
    void seek(long position) throws IllegalStateException;
    ```
 
-1. Warten Sie, bis Browser TVSDK das `AdobePSDK.PSDKEventType.SEEK_END` Ereignis auslöst, das die angepasste Position im `actualPosition` Attribut des Ereignisses zurückgibt:
+1. Warten Sie, bis Browser TVSDK das `AdobePSDK.PSDKEventType.SEEK_END`-Ereignis auslöst, das die angepasste Position im `actualPosition`-Attribut des Ereignisses zurückgibt:
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
@@ -53,7 +53,7 @@ In Browser TVSDK können Sie eine bestimmte Position (Zeit) in einem Stream such
    * Das Wiedergabeverhalten wird beeinträchtigt, wenn eine Suche oder eine andere Neupositionierung in der Mitte einer Werbeunterbrechung endet oder Werbeunterbrechungen übersprungen werden.
    * Sie können nur in der suchbaren Dauer des Assets suchen. Bei VOD ist dies von 0 bis zur Laufzeit des Assets.
 
-1. Suchen Sie für die im obigen Beispiel erstellte Suchleiste nach `setPositionChangeListener()` dem Zeitpunkt, zu dem der Benutzer scrubbt:
+1. Suchen Sie für die im obigen Beispiel erstellte Suchleiste nach `setPositionChangeListener()`, um zu sehen, wann der Benutzer scrubbt:
 
    ```js
    seekBar.setPositionChangeListener(function (pos) { 
