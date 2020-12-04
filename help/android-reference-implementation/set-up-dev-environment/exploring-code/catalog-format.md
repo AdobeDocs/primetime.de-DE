@@ -6,6 +6,9 @@ title: Katalogformat
 uuid: 6e1a526f-c0bb-403d-a792-666caf5479a5
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '644'
+ht-degree: 0%
 
 ---
 
@@ -75,7 +78,7 @@ Jeder Feed-Eintrag ist ein JSON-Objekt mit einem bestimmten Satz von Attributen:
 | `thumbnails` | Ein Array von JSON-Objekten mit URLs für verschiedene Miniaturansichten. Die JSON-Objektattribute werden unten definiert. |
 | `metadata` | Ein JSON-Objekt, das Metadaten für den Inhalt definiert. Derzeit sind diese Metadaten auf adbezogene Metadaten beschränkt. Das Metadatenobjekt wird unten definiert. |
 
-Der folgende Codeblock definiert die JSON-Objekte, die das Array der **Inhaltsobjekte** bilden:
+Der folgende Codeblock definiert die JSON-Objekte, die das Array von **content-Objekten** bilden:
 
 ```
 "content":  [
@@ -94,7 +97,7 @@ Der folgende Codeblock definiert die JSON-Objekte, die das Array der **Inhaltsob
 | format | Muss das Format m3u8 für Android haben. |
 | url | Die URL zum Videostream für das angegebene Format. |
 
-Der folgende Codeblock definiert die JSON-Objekte, die das Array der **Miniaturansichtsobjekte** bilden:
+Der folgende Codeblock definiert die JSON-Objekte, die das Array von **Miniaturansichtsobjekten** bilden:
 
 ```
 "thumbnails": [
@@ -141,5 +144,5 @@ Der folgende Codeblock definiert das **Metadatenobjekt**:
 | type | Der Wert kann Primetime Ads, Direct Ad Breaks oder Custom Ad Markers sein. <br/><br/>Das PSDK bietet integrierte Unterstützung für die folgenden Metadatentypen: Auditude-bezogene Metadaten für Primetime Ad Serving (Primetime Ads), direkte Werbeunterbrechungen mit Anzeigen-URLs (Direct Ad Breaks) und benutzerdefinierte Anzeigenmarken, die den TimeRange für jede Anzeigenmarke bereitstellen (benutzerdefinierte Anzeigenmarken). Jeder Typ verfügt über einen integrierten AdProvider im PSDK, der die Metadaten verarbeitet.  <br/><br/>Das JSON-Format für diese beiden wurden nachfolgend definiert. |
 | details | Umfasst die Attribute der Anzeigenmetadaten. Beide Arten von Anzeigenmetadaten haben ihren eigenen Satz von Attributen, der unten definiert wird. Für die integrierten Typen definieren die enthaltenen Attribute die vom PSDK für diesen Typ erwarteten Daten. |
 | Berechtigung | Berechtigungsbezogene Metadaten |
-| id | Medienressourcen-ID, die für Autorisierungsanfragen gegen den Bezahlfernsehpass-Dienst von Adobe Primetime verwendet wird. Die ID kann entweder eine Textzeichenfolge oder eine HTML-kodierte mRSS-Zeichenfolge sein. Medieninhalte, für die eine Autorisierung erforderlich ist, müssen eine gültige Ressourcen-ID enthalten. |
+| id | Medienressource-ID, die für Autorisierungsanfragen gegen den Adobe Primetime Pay-TV-Pass-Dienst verwendet wird. Die ID kann entweder eine Textzeichenfolge oder eine HTML-kodierte mRSS-Zeichenfolge sein. Medieninhalte, für die eine Autorisierung erforderlich ist, müssen eine gültige Ressourcen-ID enthalten. |
 
