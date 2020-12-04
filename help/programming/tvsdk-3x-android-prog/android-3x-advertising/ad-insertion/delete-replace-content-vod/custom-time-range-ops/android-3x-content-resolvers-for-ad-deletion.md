@@ -6,11 +6,14 @@ title: Inhaltsauflöser für das Löschen und Ersetzen von Werbeanzeigen
 uuid: d43d54be-e04a-49dd-a695-e4e8f981ccb4
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '51'
+ht-degree: 0%
 
 ---
 
 
-# Inhaltsauflöser für das Löschen und Ersetzen von Werbeanzeigen {#content-resolvers-for-ad-deletion-replacement}
+# Inhaltsauflöser für das Löschen und Ersetzen von Anzeigen {#content-resolvers-for-ad-deletion-replacement}
 
 Sie können mehrere Inhaltsauflöser verwenden, um verschiedene Zeitschienen-Vorgänge zu bearbeiten.
 
