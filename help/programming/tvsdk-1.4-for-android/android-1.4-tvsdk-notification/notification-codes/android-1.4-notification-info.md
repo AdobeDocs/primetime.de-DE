@@ -6,6 +6,9 @@ title: INFO-Benachrichtigungscodes
 uuid: 2b9f9328-4e09-44b7-8ea5-237c46e65e73
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '502'
+ht-degree: 4%
 
 ---
 
@@ -37,64 +40,64 @@ Die meisten Informationsbenachrichtigungen enthalten relevante Metadaten, z. B. 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300000 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_BEGINN </span> </td> 
+   <td colname="1"><span class="codeph"> 300000  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_BEGINN  </span> </td> 
    <td colname="3"> Keines </td> 
    <td colname="4"> Keines </td> 
    <td colname="5"> Die Wiedergabe wurde gestartet. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300001 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_COMPLETE </span> </td> 
+   <td colname="1"><span class="codeph"> 300001  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_COMPLETE  </span> </td> 
    <td colname="3"> Keines </td> 
    <td colname="4"> Keines </td> 
    <td colname="5"> Die Wiedergabe ist abgeschlossen. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300002 </span> </td> 
-   <td colname="2"><span class="codeph"> SEEK_BEGINN </span> </td> 
+   <td colname="1"><span class="codeph"> 300002  </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_BEGINN  </span> </td> 
    <td colname="3"> Keines </td> 
    <td colname="4"><span class="codeph"> SEEK_TIME</span> </td> 
    <td colname="5"> Ein Suchvorgang wurde initiiert. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300003 </span> </td> 
-   <td colname="2"><span class="codeph"> SEEK_COMPLETE </span> </td> 
+   <td colname="1"><span class="codeph"> 300003  </span> </td> 
+   <td colname="2"><span class="codeph"> SEEK_COMPLETE  </span> </td> 
    <td colname="3"> Keines </td> 
    <td colname="4"><span class="codeph"> SEEK_TIME</span> </td> 
    <td colname="5"> Ein Suchvorgang wurde abgeschlossen. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300004 </span> </td> 
-   <td colname="2"><span class="codeph"> CONTENT_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 300004  </span> </td> 
+   <td colname="2"><span class="codeph"> CONTENT_CHANGE  </span> </td> 
    <td colname="3"> Keines </td> 
-   <td colname="4"> <span class="codeph"> CONTENT_ID</span><span class="codeph"> CURRENT_MEDIA_TIME</span> </td> 
+   <td colname="4"> <span class="codeph"> CONTENT_</span> <span class="codeph"> IDCURRENT_MEDIA_TIME</span> </td> 
    <td colname="5"> Die aktuelle Wiedergabezeit überschreitet den Rand zwischen Haupt- und Alternativinhalt. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300005 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 300005  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYER_STATE_CHANGE  </span> </td> 
    <td colname="3"> <p>Jede FEHLERbenachrichtigung. </p> </td> 
-   <td colname="4"><span class="codeph"> STATUS </span> </td> 
+   <td colname="4"><span class="codeph"> STATUS  </span> </td> 
    <td colname="5"> Der Player-Status hat sich geändert. Wenn der Status FEHLER ist, ist die innere Benachrichtigung das Fehlerbenachrichtigungsobjekt, das den Wechsel zum FEHLER-Status ausgelöst hat. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300006 </span> </td> 
-   <td colname="2"><span class="codeph"> CONTENT_MARKER </span> </td> 
+   <td colname="1"><span class="codeph"> 300006  </span> </td> 
+   <td colname="2"><span class="codeph"> CONTENT_MARKER  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"><span class="codeph"> CONTENT_ID CURRENT_MEDIA_TIME </span> </td> 
+   <td colname="4"><span class="codeph"> CONTENT_ID CURRENT_MEDIA_TIME  </span> </td> 
    <td colname="5"> Inhaltsmarkierung empfangen. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300100 </span> </td> 
-   <td colname="2"><span class="codeph"> LOAD_INFO_AVAILABLE </span> </td> 
+   <td colname="1"><span class="codeph"> 300100  </span> </td> 
+   <td colname="2"><span class="codeph"> LOAD_INFO_AVAILABLE  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"> <span class="codeph"> FRAGMENT_URL</span> <span class="codeph"> FRAGMENT_SIZE</span> FRAGMENT_DOWNLOAD_DURATION <span class="codeph"></span> <span class="codeph"> PERIOD_INDEX</span> </td> 
+   <td colname="4"> <span class="codeph"> FRAGMENT_</span> <span class="codeph"> URLFRAGMENT_</span> <span class="codeph"> SIZEFRAGMENT_DOWNLOAD_</span> <span class="codeph"> DURATIONPERIOD_INDEX</span> </td> 
    <td colname="5"> Enthält Informationen zur Art und Weise, wie Videosegmente heruntergeladen werden. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 300101 </span> </td> 
-   <td colname="2"><span class="codeph"> VIDEO_SIZE_CHANGED </span> </td> 
+   <td colname="1"><span class="codeph"> 300101  </span> </td> 
+   <td colname="2"><span class="codeph"> VIDEO_SIZE_CHANGED  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
    <td colname="4"> <span class="codeph"> HÖHE</span> <p><span class="codeph"> BREITE</span> </p> </td> 
    <td colname="5"> Die Größe des Fensters für die Videowiedergabe hat sich geändert. </td> 
@@ -107,10 +110,10 @@ Die meisten Informationsbenachrichtigungen enthalten relevante Metadaten, z. B. 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 302000 </span> </td> 
-   <td colname="2"><span class="codeph"> BITRATE_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 302000  </span> </td> 
+   <td colname="2"><span class="codeph"> BITRATE_CHANGE  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"><span class="codeph"> BITRATE </span><span class="codeph"> CURRENT_MEDIA_TIME </span> </td> 
+   <td colname="4"><span class="codeph"> BITRATE  </span><span class="codeph"> CURRENT_MEDIA_TIME  </span> </td> 
    <td colname="5"> Die Bitrate des Videos änderte sich. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -121,64 +124,64 @@ Die meisten Informationsbenachrichtigungen enthalten relevante Metadaten, z. B. 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 303000 </span> </td> 
-   <td colname="2"><span class="codeph"> TIMELINE_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 303000  </span> </td> 
+   <td colname="2"><span class="codeph"> TIMELINE_CHANGE  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"><span class="codeph"> CONTENT_ID </span><span class="codeph"> PERIOD_INDEX </span> </td> 
+   <td colname="4"><span class="codeph"> CONTENT_ID  </span><span class="codeph"> PERIOD_INDEX  </span> </td> 
    <td colname="5"> Die Zeitschiene wurde geändert (z. B. wurden alternative Inhalte hinzugefügt oder entfernt). </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 303001 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_BREAK_PLACEMENT_COMPLETE </span> </td> 
+   <td colname="1"><span class="codeph"> 303001  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_BREAK_PLACEMENT_COMPLETE  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"> <span class="codeph"> PROPOSED_AD_BREAK</span><span class="codeph"> ACCEPTED_AD_BREAK</span> </td> 
-   <td colname="5"> Eine geplante Werbeunterbrechung wurde von <code>primetime-sdk-name</code> und (ganz oder teilweise) auf die Wiedergabedauer gesetzt. </td> 
+   <td colname="4"> <span class="codeph"> PROPOSED_AD_</span> <span class="codeph"> BREAKACCEPTED_AD_BREAK</span> </td> 
+   <td colname="5"> Eine Werbeunterbrechung wurde von <code>primetime-sdk-name</code> akzeptiert und (ganz oder teilweise) in die Wiedergabedauer eingefügt. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 303002 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_BREAK_BEGINN </span> </td> 
+   <td colname="1"><span class="codeph"> 303002  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_BREAK_BEGINN  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"><span class="codeph"> AD_BREAK </span> </td> 
+   <td colname="4"><span class="codeph"> AD_BREAK  </span> </td> 
    <td colname="5"> Die Wiedergabe einer bestimmten Werbeunterbrechung wurde gestartet. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 303003 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_BREAK_COMPLETE </span> </td> 
+   <td colname="1"><span class="codeph"> 303003  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_BREAK_COMPLETE  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"><span class="codeph"> AD_BREAK </span> </td> 
+   <td colname="4"><span class="codeph"> AD_BREAK  </span> </td> 
    <td colname="5"> Die Wiedergabe einer bestimmten Werbeunterbrechung ist abgeschlossen. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 303004 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_BEGINN </span> </td> 
+   <td colname="1"><span class="codeph"> 303004  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_BEGINN  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
    <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> AD</span> </p> </td> 
    <td colname="5"> Die Wiedergabe einer bestimmten Anzeige wurde gestartet. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 303005 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_COMPLETE </span> </td> 
+   <td colname="1"><span class="codeph"> 303005  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_COMPLETE  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
    <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> AD</span> </p> </td> 
    <td colname="5"> Die Wiedergabe einer bestimmten Anzeige ist abgeschlossen. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 303006 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_PROGRESS </span> </td> 
+   <td colname="1"><span class="codeph"> 303006  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_PROGRESS  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
    <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> AD</span> </p> <span class="codeph"> FORTSCHRITTE</span> </td> 
    <td colname="5"> Die Wiedergabe einer bestimmten Anzeige hat einen bestimmten Prozentsatz dieser Anzeige erreicht. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 303007 </span> </td> 
-   <td colname="2"><span class="codeph"> TIMED_METADATA_HINZUFÜGEN </span> </td> 
+   <td colname="1"><span class="codeph"> 303007  </span> </td> 
+   <td colname="2"><span class="codeph"> TIMED_METADATA_HINZUFÜGEN  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
    <td colname="4"> <span class="codeph"> TYP</span> <p><span class="codeph"> ID</span> </p> <span class="codeph"> NAME</span> <p><span class="codeph"> ZEIT</span> </p> </td> 
    <td colname="5"> Im Manifest wurde eine neue zeitgesteuerte Metadaten entdeckt. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 303008 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_CLICK </span> </td> 
+   <td colname="1"><span class="codeph"> 303008  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_CLICK  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
    <td colname="4"> <span class="codeph"> AD_BREAK</span> <p><span class="codeph"> AD</span> </p> <span class="codeph"> AD_CLICK</span> </td> 
    <td colname="5"> Gibt Informationen zu einer Anzeige zurück, auf die der Benutzer geklickt hat. </td> 
@@ -198,10 +201,10 @@ Die meisten Informationsbenachrichtigungen enthalten relevante Metadaten, z. B. 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 304000 </span> </td> 
-   <td colname="2"><span class="codeph"> AUDIO_TRACK_CHANGE </span> </td> 
+   <td colname="1"><span class="codeph"> 304000  </span> </td> 
+   <td colname="2"><span class="codeph"> AUDIO_TRACK_CHANGE  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"><span class="codeph"> TRACK_ID </span><span class="codeph"> CURRENT_MEDIA_TIME </span> </td> 
+   <td colname="4"><span class="codeph"> TRACK_ID  </span><span class="codeph"> CURRENT_MEDIA_TIME  </span> </td> 
    <td colname="5"> Die Audiospur wurde geändert. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -212,10 +215,10 @@ Die meisten Informationsbenachrichtigungen enthalten relevante Metadaten, z. B. 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 305000 </span> </td> 
-   <td colname="2"><span class="codeph"> DRM_METADATA_AVAILABLE </span> </td> 
+   <td colname="1"><span class="codeph"> 305000  </span> </td> 
+   <td colname="2"><span class="codeph"> DRM_METADATA_AVAILABLE  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"><span class="codeph"> PREFETCH_TIMESTAMP </span> </td> 
+   <td colname="4"><span class="codeph"> PREFETCH_TIMESTAMP  </span> </td> 
    <td colname="5"> Es stehen neue DRM-Daten zur Verfügung. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -226,8 +229,8 @@ Die meisten Informationsbenachrichtigungen enthalten relevante Metadaten, z. B. 
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"><span class="codeph"> 399999 </span> </td> 
-   <td colname="2"><span class="codeph"> GENERIC_INFO </span> </td> 
+   <td colname="1"><span class="codeph"> 399999  </span> </td> 
+   <td colname="2"><span class="codeph"> GENERIC_INFO  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
    <td colname="4"> <p>Keines </p> </td> 
    <td colname="5"> <p>Markiert ein generisches Ereignis zur Information. Nicht tatsächlich ausgestellt von TVSDK. Es ist nur ein Marker für das Ende der Reihe von numerischen Codes, die TVSDK Informations-Ereignisse. </p> </td> 
