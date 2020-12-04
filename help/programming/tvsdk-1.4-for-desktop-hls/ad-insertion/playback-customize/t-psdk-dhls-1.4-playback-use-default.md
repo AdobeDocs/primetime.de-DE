@@ -13,13 +13,13 @@ ht-degree: 0%
 ---
 
 
-# Verwenden des standardmäßigen Wiedergabeverhaltens{#use-the-default-playback-behavior}
+# Verwenden Sie das standardmäßige Wiedergabeverhalten{#use-the-default-playback-behavior}
 
 Sie können das standardmäßige Anzeigenverhalten verwenden.
 
 So verwenden Sie Standardverhalten:
 
-* Wenn Sie Ihre eigene `ContentFactory` Klasse implementieren, geben Sie eine neue Instanz von `DefaultAdPolicySelector` in Ihrer Implementierung von zurück `doRetrieveAdPolicySelector`.
+* Wenn Sie Ihre eigene `ContentFactory`-Klasse implementieren, geben Sie eine neue Instanz von `DefaultAdPolicySelector` in Ihrer Implementierung von `doRetrieveAdPolicySelector` zurück.
 
    ```
    public class CustomContentFactory extends ContentFactory { 
@@ -38,4 +38,4 @@ So verwenden Sie Standardverhalten:
    }
    ```
 
-* Wenn Sie keine benutzerdefinierte Implementierung für die `ContentFactory` Klasse haben, verwendet TVSDK `DefaultAdPolicySelector`.
+* Wenn Sie keine benutzerdefinierte Implementierung für die `ContentFactory`-Klasse haben, verwendet TVSDK `DefaultAdPolicySelector`.
