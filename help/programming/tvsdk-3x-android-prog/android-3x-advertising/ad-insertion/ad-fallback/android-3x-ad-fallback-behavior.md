@@ -6,11 +6,14 @@ title: Verhalten von Ad-Fallback für VAST und VMAP
 uuid: 612416b9-d070-42e2-b68b-74ba52023345
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
 
-# Verhalten von Ad-Fallback für VAST und VMAP {#ad-fallback-behavior-for-vast-and-vmap}
+# Ausweichverhalten von Anzeigen für VAST und VMAP {#ad-fallback-behavior-for-vast-and-vmap}
 
 Wenn Primetime und Decision eine VAST-Anzeige (kreativ) erzeugen, die leer ist oder einen Medientyp hat, der für HLS ungültig ist, werden die Fallback-Anzeigen ausgewertet, um zu bestimmen, was zurückgegeben werden soll.
 
