@@ -1,16 +1,19 @@
 ---
 description: Sie können Benachrichtigungen verwenden, um die Echtzeit-Anmeldung in Ihrer Videoanwendung zu implementieren.
 seo-description: Sie können Benachrichtigungen verwenden, um die Echtzeit-Anmeldung in Ihrer Videoanwendung zu implementieren.
-seo-title: Hinzufügen Echtzeit-Protokollierung und -Debugging
-title: Hinzufügen Echtzeit-Protokollierung und -Debugging
+seo-title: hinzufügen Echtzeit-Protokollierung und -Debugging
+title: hinzufügen Echtzeit-Protokollierung und -Debugging
 uuid: 037daf57-a1b3-4b42-ac51-81179fb36915
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
 
-# Hinzufügen Echtzeit-Protokollierung und -Debugging{#add-real-time-logging-and-debugging}
+# hinzufügen Echtzeit-Protokollierung und -Debugging{#add-real-time-logging-and-debugging}
 
 Sie können Benachrichtigungen verwenden, um die Echtzeit-Anmeldung in Ihrer Videoanwendung zu implementieren.
 
@@ -34,4 +37,4 @@ Im Folgenden finden Sie ein Beispiel zum Abrufen von Benachrichtigungen.
    Der Remote-Server könnte dann die bereitgestellten Daten grafisch in Echtzeit anzeigen.
 1. Um den Verlust von Benachrichtigungs-Ereignissen zu ermitteln, suchen Sie nach Lücken in der Sequenz von Ereignis-Indexwerten.
 
-   Jedes Benachrichtigungs-Ereignis verfügt über einen Indexwert, der automatisch von der `session.NotificationHistory` Klasse inkrementiert wird.
+   Jedes Benachrichtigungs-Ereignis verfügt über einen Indexwert, der automatisch durch die `session.NotificationHistory`-Klasse inkrementiert wird.
