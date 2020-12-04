@@ -6,11 +6,14 @@ title: Video abspielen und anhalten
 uuid: 4053ea9e-6b74-41e9-ad04-087ad13e3698
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '127'
+ht-degree: 0%
 
 ---
 
 
-# Video abspielen und anhalten{#play-and-pause-a-video}
+# Video{#play-and-pause-a-video} abspielen und anhalten
 
 Sie können Browser TVSDK-Verhalten hinzufügen, um Schaltflächen zum Anhalten und Abspielen hinzuzufügen.
 
@@ -28,7 +31,7 @@ Sie können Browser TVSDK-Verhalten hinzufügen, um Schaltflächen zum Anhalten 
       void pause() throws IllegalStateException;
       ```
 
-1. Suchen Sie nach dem `AdobePSDK.MediaPlayerStatusChangeEvent` Ereignis, um nach Fehlern zu suchen oder andere geeignete Maßnahmen zu ergreifen.
+1. Suchen Sie nach dem `AdobePSDK.MediaPlayerStatusChangeEvent`-Ereignis, um nach Fehlern zu suchen oder andere geeignete Maßnahmen zu ergreifen.
 
-   Browser TVSDK löst dieses Ereignis aus, wenn Pause- oder Wiedergabemethoden aufgerufen werden, und gibt Informationen über das Ereignis-Objekt, einschließlich des neuen Status, wie z. B. `MediaPlayerStatus.PLAYING` oder `MediaPlayerStatus.PAUSED`., weiter.
+   Browser TVSDK löst dieses Ereignis aus, wenn Pause- oder Wiedergabemethoden aufgerufen werden, und gibt Informationen zum Ereignis-Objekt, einschließlich des neuen Status, wie `MediaPlayerStatus.PLAYING` oder `MediaPlayerStatus.PAUSED` weiter.
 
