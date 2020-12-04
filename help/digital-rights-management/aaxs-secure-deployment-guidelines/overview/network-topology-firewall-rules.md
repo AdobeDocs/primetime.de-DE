@@ -21,7 +21,7 @@ Konfigurieren Sie Ihre äußere Firewall so, dass sie nur die URLs für die Anwe
  <thead class="- topic/thead "> 
   <tr rowsep="1" class="- topic/row "> 
    <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">Stamm-URL </p> </th> 
-   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Purpose </p> </th> 
+   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Zweck </p> </th> 
   </tr> 
  </thead>
  <tbody class="- topic/tbody "> 
@@ -37,7 +37,7 @@ Konfigurieren Sie Ihre äußere Firewall so, dass sie nur die URLs für die Anwe
      <li id="li-ED3C15EB4D194FFE99954BDB7D5C1E41"><span class="filepath"> /flashaccess/authn/v4/*</span> </li> 
      <li id="li-4DD6CBBE939F4E6EABA474E3DCCBD893"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs for user authentication. This URL must be accessible only if you use Adobe Access Client APIs to perform user authentication. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs für die Benutzerauthentifizierung. Auf diese URL muss nur zugegriffen werden können, wenn Sie zur Benutzerauthentifizierung Adobe Access Client-APIs verwenden. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -47,7 +47,7 @@ Konfigurieren Sie Ihre äußere Firewall so, dass sie nur die URLs für die Anwe
      <li id="li-E6C551DDA030429B9D0073D2685B778A"><span class="filepath"> /flashaccess/license/v4/*</span> </li> 
      <li id="li-57811F4CD7304DBDAFADD65244AED0D9"><span class="filepath"> /flashaccess/license/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs for issuing licenses to end users. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs für die Lizenzerteilung an Endbenutzer. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -56,7 +56,7 @@ Konfigurieren Sie Ihre äußere Firewall so, dass sie nur die URLs für die Anwe
      <li id="li-B333B85FFE8A46DD884595B0A620B4EE"><span class="filepath"> /flashaccess/sync/v4</span> </li> 
      <li id="li-E4771D3C5AA5454CA1EDCFAA3E027CC1"><span class="filepath"> /flashaccess/sync/v5</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs für Synchronisierungsanforderungen. This URL must be accessible only if you specify the synchronization requirements in your licenses. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs für Synchronisierungsanforderungen. Auf diese URL muss nur zugegriffen werden können, wenn Sie die Synchronisierungsanforderungen in Ihren Lizenzen angeben. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -74,15 +74,15 @@ Konfigurieren Sie Ihre äußere Firewall so, dass sie nur die URLs für die Anwe
      <li id="li-AB33657BC7E140E695767710DF7AEC72"><span class="filepath"> /flashaccess/dereg/v4</span> </li> 
      <li id="li-D15B32BCD4674269A3A2644DD5204707"><span class="filepath"> /flashaccess/dereg/v5</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs for domain de-registration. Auf diese URL muss nur zugegriffen werden können, wenn Sie die Domänenunterstützung implementieren. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs für die Domänenderegistrierung. Auf diese URL muss nur zugegriffen werden können, wenn Sie die Domänenunterstützung implementieren. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs, die vom Client zur Konvertierung von FMRMS 1.x DRM-Metadaten in DRM-Metadaten für den Zugriff auf Adoben verwendet werden. </p> <p class="- topic/p ">Hinweis: <i class="+ topic/ph hi-d/i ">Diese URL muss SSL (HTTPS)</i>verwenden. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs, die vom Client zur Konvertierung von FMRMS 1.x DRM-Metadaten in DRM-Metadaten für den Zugriff auf Adoben verwendet werden. </p> <p class="- topic/p ">Hinweis: <i class="+ topic/ph hi-d/i ">Diese URL muss SSL (HTTPS)</i> verwenden. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycles Rights Management ES-Webdienst-URL. Wenn Inhalte mit einer früheren FMRMS-Version veröffentlicht wurden, ermöglicht diese URL älteren Clients, eine Serververbindung herzustellen und aufgefordert zu werden, ein Upgrade auf Adobe Access durchzuführen. </p> <p class="- topic/p ">Hinweis: <i class="+ topic/ph hi-d/i ">Diese URL muss SSL (HTTPS)</i>verwenden. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycles Rights Management ES-Webdienst-URL. Wenn Inhalte mit einer früheren FMRMS-Version veröffentlicht wurden, ermöglicht diese URL älteren Clients, eine Serververbindung herzustellen und aufgefordert zu werden, ein Upgrade auf Adobe Access durchzuführen. </p> <p class="- topic/p ">Hinweis: <i class="+ topic/ph hi-d/i ">Diese URL muss SSL (HTTPS)</i> verwenden. </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/lreturn/v5</span> </td> 
@@ -99,7 +99,7 @@ Konfigurieren Sie Ihre äußere Firewall so, dass sie nur die URLs für die Anwe
 
 Der Lizenzserver benötigt Zugriff über die Firewall, um die folgenden Zertifikatsperrlisten von der Adobe herunterzuladen:
 
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
-* <span></span>https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
+* h<span></span>ttps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
+* ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
