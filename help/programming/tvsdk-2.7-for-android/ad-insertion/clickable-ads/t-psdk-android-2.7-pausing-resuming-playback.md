@@ -6,6 +6,9 @@ title: Wiedergabe anhalten und fortsetzen
 uuid: 229e2499-e30e-458c-bd6d-d035588c21cf
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Wenn ein Benutzer auf eine Anzeige klickt, sollte Ihre Anwendung die Wiedergabe des Hauptvideoinhalts anhalten.
 
-1. Überschreiben Sie die `onPause` und `onResume` die Android-Aktivität.
+1. Überschreiben Sie `onPause` und `onResume` aus der Android-Aktivität.
 
    ```java
    @Override 
