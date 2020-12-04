@@ -6,6 +6,9 @@ title: Loader-Ereignis
 uuid: 0ad37715-14b1-457c-892f-0db0d6220f0c
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
 
 TVSDK sendet Medienplayer-Element-Ereignis als Reaktion auf das Laden eines Medienelements.
 
-Diese Ereignis bieten einen alternativen Arbeitsablauf. Sie müssen diese Schnittstelle nicht implementieren, wenn Sie eine `MediaPlayer`erstellen. Verwenden Sie dies, wenn Sie eine `MediaPlayerItemLoader`haben möchten.
+Diese Ereignis bieten einen alternativen Arbeitsablauf. Sie müssen diese Schnittstelle nicht implementieren, wenn Sie ein `MediaPlayer` erstellen. Verwenden Sie dies, wenn Sie ein `MediaPlayerItemLoader` haben möchten.
 
-Um über Ereignisse im Zusammenhang mit dem Laden einer Medienplayer-Ressource informiert zu werden, registrieren Sie Listener für die folgenden Ereignis beim `MediaPlayerItemLoader` Objekt.
+Um über Ereignisse im Zusammenhang mit dem Laden einer Medienplayer-Ressource informiert zu werden, registrieren Sie Listener für die folgenden Ereignis mit dem `MediaPlayerItemLoader`-Objekt.
 
 | Ereignis | Bedeutung |
 |---|---|
