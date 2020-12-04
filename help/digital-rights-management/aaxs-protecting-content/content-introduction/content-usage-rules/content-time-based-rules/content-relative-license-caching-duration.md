@@ -4,6 +4,9 @@ title: Dauer der Lizenzzwischenspeicherung
 uuid: 378940a2-f072-478d-bee1-05ccba888b5c
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
@@ -14,4 +17,4 @@ Gibt an, wie lange eine Lizenz im lokalen Lizenzspeicher des Clients zwischenges
 
 Nach Ablauf des Cache-Ablaufdatums ist die Lizenz nicht mehr gültig und der Client muss eine neue Lizenz vom Lizenzserver anfordern.
 
-Verwendungsbeispiel: Verwenden Sie die Lizenzzwischenspeicherungsdauer, um eine feste Zeitdauer für eine bestimmte Lizenz anzugeben, z. B. im Fall einer Vermietung. Eine 30-tägige Vermietung kann angegeben werden (mit Lizenz-Caching), um die gesamte Lizenzdauer anzugeben, innerhalb derer die Inhalte genutzt werden sollen.
+Verwendungsbeispiel: Verwenden Sie die Lizenzzwischenspeicherungsdauer, um eine feste Zeitdauer anzugeben, die für eine bestimmte Lizenz gültig ist, z. B. im Fall einer Vermietung. Eine 30-tägige Vermietung kann angegeben werden (mit Lizenz-Caching), um die gesamte Lizenzdauer anzugeben, innerhalb derer die Inhalte genutzt werden sollen.
