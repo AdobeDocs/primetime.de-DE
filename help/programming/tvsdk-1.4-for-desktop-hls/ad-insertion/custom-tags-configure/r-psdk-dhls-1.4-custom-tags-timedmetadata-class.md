@@ -46,7 +46,7 @@ Die Klasse stellt die folgenden Elemente bereit:
   <tr> 
    <td colname="col1"><span class="codeph"> name</span> </td> 
    <td colname="col02"> Zeichenfolge </td> 
-   <td colname="col2">Der Name der zeitgesteuerten Metadaten. Wenn der Typ <span class="codeph"> TAG</span>ist, stellt der Wert den Cue/Tag-Namen dar. Wenn der Typ <span class="codeph"> ID3</span>ist, ist er null. </td> 
+   <td colname="col2">Der Name der zeitgesteuerten Metadaten. Wenn der Typ <span class="codeph"> TAG</span> ist, stellt der Wert den Cue/Tag-Namen dar. Wenn der Typ <span class="codeph"> ID3</span> ist, ist er null. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> time</span> </td> 
