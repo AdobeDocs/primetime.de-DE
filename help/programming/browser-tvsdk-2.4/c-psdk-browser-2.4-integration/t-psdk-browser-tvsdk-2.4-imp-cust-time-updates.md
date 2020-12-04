@@ -6,15 +6,18 @@ title: Implementieren benutzerdefinierter Zeitaktualisierungen
 uuid: 26a0592c-a47b-4d65-b984-5e51533dcddc
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '148'
+ht-degree: 0%
 
 ---
 
 
-# Implementieren benutzerdefinierter Zeitaktualisierungen{#implement-custom-time-updates}
+# Implementieren von benutzerdefinierten Zeitaktualisierungen{#implement-custom-time-updates}
 
 In einigen Analytics-Implementierungen sollte die Clientanwendung möglicherweise eine andere Abspielposition als die vom &quot;Browser TVSDK localTime&quot;-Wert gemeldete Position angeben.
 
-Beispielsweise kann während der Wiedergabe eines linearen Streams der Abspielkopf jedes Programms relativ zur Beginn-Zeit angegeben werden.
+Beispielsweise kann bei einer linearen Stream-Wiedergabe der Abspielkopf jedes Programms relativ zur Beginn-Zeit angegeben werden.
 
 >[!TIP]
 >
