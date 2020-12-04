@@ -6,6 +6,9 @@ title: 'null'
 uuid: 57b35a5f-87f8-41a2-ad85-300b999dc30b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 
@@ -18,9 +21,9 @@ Verwenden Sie die Tools Ihrer Plattform, um einen Player zu erstellen und ihn mi
 
 ## Flash-Fallback {#section_92D3884A13A6431F9A9CC5C79715D888}
 
-In Browser TVSDK interagiert Ihre Anwendung nur mit der `Primetime.js` API. Die zugrunde liegende Browser TVSDK-Implementierung entscheidet, welche Player-Technologie basierend auf der aktuellen Plattform und dem Ressourcentyp des Mediums, das abgespielt werden soll, verwendet werden soll.
+In Browser TVSDK interagiert Ihre Anwendung nur mit der API `Primetime.js`. Die zugrunde liegende Browser TVSDK-Implementierung entscheidet, welche Player-Technologie basierend auf der aktuellen Plattform und dem Ressourcentyp des Mediums, das abgespielt werden soll, verwendet werden soll.
 
-Die Entscheidung für die Player-Technologie wird erst getroffen, wenn Sie eine bestimmte Ressource `MediaPlayer.replaceCurrentResource` spielen.
+Die Entscheidung für die Player-Technologie wird erst getroffen, wenn Sie `MediaPlayer.replaceCurrentResource` aufrufen, um eine bestimmte Ressource abzuspielen.
 
 Beispiel:
 
@@ -32,7 +35,7 @@ var player = new AdobePSDK.MediaPlayer(),
               player.replaceCurrentResource(mediaResource);
 ```
 
-## Bestimmen des zu verwendenden Medienplayers {#section_D844E386AF5848688D204DEE258ECEE6}
+## Legen Sie den Medienplayer fest, der {#section_D844E386AF5848688D204DEE258ECEE6} verwenden soll.
 
 Dieses Beispielverfahren veranschaulicht den Prozess der Bestimmung der Player-Technologie:
 
@@ -41,13 +44,13 @@ Dieses Beispielverfahren veranschaulicht den Prozess der Bestimmung der Player-T
 >Der Vorgang kann je nach URL und Umgebung variieren.
 
 1. Wenn Media Source-Erweiterungen unterstützt werden, verwenden Sie sie ohne bekannte Einschränkungen.
-1. Falls unterstützt, verwenden Sie das `<video>` Tag direkt ohne MSE.
+1. Falls unterstützt, verwenden Sie das `<video>`-Tag direkt ohne MSE.
 1. Stellen Sie sicher, dass Sie mindestens Adobe Flash Player Version 23.0 verwenden.
-1. Wenn keine geeignete Wiedergabetechnologie gefunden wird, wird ein Fehler zurückgegeben `replaceCurrentResource` .
+1. Wenn keine geeignete Wiedergabetechnologie gefunden wird, gibt `replaceCurrentResource` einen Fehler zurück.
 
-Ein nachfolgender `replaceCurrentResource` Aufruf derselben `MediaPlayer` Instanz folgt demselben Vorgang. Auf diese Weise können Sie verschiedene Ressourcentypen wiedergeben, indem Sie dieselbe `MediaPlayer` Instanz im gleichen übergeordneten `<DIV>` Tag verwenden, das Sie beim Erstellen der `MediaPlayerView` Instanz angegeben haben.
+Ein nachfolgender `replaceCurrentResource`-Aufruf für dieselbe `MediaPlayer`-Instanz folgt demselben Vorgang. Auf diese Weise können Sie verschiedene Ressourcentypen wiedergeben, indem Sie dieselbe `MediaPlayer`-Instanz im selben übergeordneten `<DIV>`-Tag verwenden, das Sie beim Erstellen der `MediaPlayerView`-Instanz angegeben haben.
 
 >[!TIP]
 >
->Das SWF-Objekt und das `<video>` -Tag sind im übergeordneten `<DIV>` Tag verschachtelt.
+>Das SWF-Objekt und das `<video>`-Tag sind im übergeordneten `<DIV>`-Tag verschachtelt.
 
