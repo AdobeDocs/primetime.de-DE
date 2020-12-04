@@ -6,6 +6,9 @@ title: HSM-Konfiguration
 uuid: 3610840b-082e-4a73-8aa5-5065f9232e0b
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ Wenn Sie ein HSM auswählen, um Ihre Serverberechtigungen zu speichern, müssen 
 
 Sie müssen die Konfigurationsdatei im Ordner *LicenseServer.ConfigRoot* suchen.
 
-Eine Beispielkonfigurationsdatei für PKCS11 finden Sie im [!DNL Adobe Primetime DRM Server for Protected Streaming/configs] Verzeichnis auf der Adobe Primetime DRM-DVD.
+Eine Beispielkonfigurationsdatei für PKCS11 finden Sie im Ordner [!DNL Adobe Primetime DRM Server for Protected Streaming/configs] auf der Adobe Primetime DRM-DVD.
 
-Informationen zum Dateiformat finden Sie in der Sun PKCS11 Provider-Dokumentation. [!DNL pkcs11.cfg]
+Informationen zum Format der Datei [!DNL pkcs11.cfg] finden Sie in der Sun PKCS11-Provider-Dokumentation.
 
-Sie können den folgenden Befehl aus dem Ordner verwenden, in dem sich die [!DNL pkcs11.cfg] Datei befindet ( [!DNL keytool] mit Java JRE und JDK installiert ist), um zu überprüfen, ob die Konfigurationsdatei für HSM und Sun PKCS11 korrekt konfiguriert wurde:
+Sie können den folgenden Befehl aus dem Ordner verwenden, in dem sich die Datei [!DNL pkcs11.cfg] befindet ( [!DNL keytool] wird mit Java JRE und JDK installiert), um zu überprüfen, ob die Konfigurationsdatei für HSM und Sun PKCS11 korrekt konfiguriert wurde:
 
 ```
 keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunPKCS11 
