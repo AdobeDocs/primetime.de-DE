@@ -1,18 +1,21 @@
 ---
-description: Sie können Anzeigen in Ihren VOD- und Live-/Lineareinhalt über die Adobe Primetime-Benutzeroberfläche für Anzeigenentscheidungen einfügen.
-seo-description: Sie können Anzeigen in Ihren VOD- und Live-/Lineareinhalt über die Adobe Primetime-Benutzeroberfläche für Anzeigenentscheidungen einfügen.
+description: Sie können Anzeigen in Ihre VOD- und Live-/Linearinhalte einfügen, indem Sie die Adobe Primetime-Benutzeroberfläche für die Anzeigenentscheidung verwenden.
+seo-description: Sie können Anzeigen in Ihre VOD- und Live-/Linearinhalte einfügen, indem Sie die Adobe Primetime-Benutzeroberfläche für die Anzeigenentscheidung verwenden.
 seo-title: Werbeanforderungen
 title: Werbeanforderungen
 uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
 
 # Werbeanforderungen {#advertising-requirements}
 
-Sie können Anzeigen in Ihren VOD- und Live-/Lineareinhalt über die Adobe Primetime-Benutzeroberfläche für Anzeigenentscheidungen einfügen.
+Sie können Anzeigen in Ihre VOD- und Live-/Linearinhalte einfügen, indem Sie die Adobe Primetime-Benutzeroberfläche für die Anzeigenentscheidung verwenden.
 
 <!--<a id="section_A2966DC850E140FE9400A1D9E412F819"></a>-->
 
