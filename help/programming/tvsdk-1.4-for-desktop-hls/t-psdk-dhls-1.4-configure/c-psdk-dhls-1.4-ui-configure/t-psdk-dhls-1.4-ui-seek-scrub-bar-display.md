@@ -6,6 +6,9 @@ title: Anzeigen einer Suchleiste mit der aktuellen Wiedergabeposition
 uuid: f940b305-4893-4531-9a79-53670f5fd23f
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '313'
+ht-degree: 0%
 
 ---
 
@@ -28,10 +31,10 @@ TVSDK unterstützt die Suche nach einer bestimmten Position (Zeit), an der der S
 
 1. Warten Sie, bis der Player einen gültigen Status für die Suche hat.
 
-   Gültige Status sind &quot;VORBEREITET&quot;, &quot;ABGESCHLOSSEN&quot;, &quot;ANGEHALTEN&quot;und &quot;WIEDERGABE&quot;.
+   Gültige Status sind &quot;VORBEREITEN&quot;, &quot;ABGESCHLOSSEN&quot;, &quot;AUSGEHALTEN&quot;und &quot;WIEDERGABE&quot;.
 
 1. Suchen Sie nach dem entsprechenden Ereignis, um zu sehen, wann der Benutzer mit dem Scrubbing beginnt.
-1. Übergeben Sie die angeforderte Suchposition (Millisekunden) an die `MediaPlayer.seek` Methode.
+1. Übergeben Sie die angeforderte Suchposition (Millisekunden) an die `MediaPlayer.seek`-Methode.
 
    ```
    function seek(position:Number):void;
@@ -43,10 +46,10 @@ TVSDK unterstützt die Suche nach einer bestimmten Position (Zeit), an der der S
    >
    >Dadurch wird der Abspielkopf an eine neue Position im Stream verschoben, aber die finale berechnete Position kann sich von der angegebenen Suchposition unterscheiden.
 
-1. Warten Sie, bis TVSDK das `SeekEvent.SEEK_END` Ereignis auslöst.
+1. Warten Sie, bis TVSDK das `SeekEvent.SEEK_END`-Ereignis auslöst.
 1. Rufen Sie die endgültige angepasste Abspielposition mit Ereignis.ISTPosition ab.
 
-       Dies ist wichtig, da sich die tatsächliche Position des Beginns nach der Suche von der angeforderten Position unterscheiden kann. Es können verschiedene Regeln gelten, unter anderem:
+       Dies ist wichtig, da sich die tatsächliche Position des Beginns nach der Suche von der angeforderten Position unterscheiden kann. Es können verschiedene Regeln gelten, darunter:
    
    * Das Wiedergabeverhalten wirkt sich darauf aus, wenn eine Suche oder eine andere Neupositionierung mitten in einer Werbeunterbrechung endet oder Werbeunterbrechungen übersprungen werden.
    * Wenn Sie in der Nähe einer Segmentgrenze suchen, wird die Suchposition an den Anfang des Segments angepasst.
