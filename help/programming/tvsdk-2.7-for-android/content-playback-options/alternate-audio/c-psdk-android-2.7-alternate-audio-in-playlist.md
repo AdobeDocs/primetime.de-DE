@@ -6,6 +6,9 @@ title: Alternative Audiospuren in der Wiedergabeliste
 uuid: 47289392-ae4e-44b9-8d54-6ccee8fe1446
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '294'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Mit alternativen Audiospuren können Benutzer zwischen mehreren Sprachspuren fü
 >
 >Damit der alternative Ton mit der Videospur des Hauptmediums gemischt wird, müssen die Zeitstempel der alternativen Spur mit den Zeitstempeln des Tons in der Hauptspur übereinstimmen.
 
-Die Hauptaudiospur ist in der Audiospur mit der `default` Beschriftung enthalten. Metadaten für die alternativen Audio-Streams sind in der Wiedergabeliste in den `#EXT-X-MEDIA` Tags mit `TYPE=AUDIO`.
+Die Hauptaudiospur ist in der Audiospur mit der Beschriftung `default` enthalten. Metadaten für die alternativen Audio-Streams sind in der Wiedergabeliste der `#EXT-X-MEDIA`-Tags mit `TYPE=AUDIO` enthalten.
 
 Beispielsweise könnte ein M3U8-Manifest, das mehrere alternative Audiostreams angibt, wie folgt aussehen:
 
