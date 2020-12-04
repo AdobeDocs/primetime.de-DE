@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Identitätsbasierte Lizenzen {#identity-based-licenses}
 
-Wenn eine identitätsbasierte Lizenzierung verwendet wird, sucht der Server vor der Lizenzerteilung nach einem gültigen Authentifizierungstoken. Weitere Informationen zum Umgang mit Authentifizierungstoken finden Sie unter [Benutzerauthentifizierung](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md) .
+Wenn eine identitätsbasierte Lizenzierung verwendet wird, sucht der Server vor der Lizenzerteilung nach einem gültigen Authentifizierungstoken. Weitere Informationen zum Umgang mit Authentifizierungstoken finden Sie unter [Benutzerauthentifizierung](../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md).
 
 >[!NOTE]
 >
