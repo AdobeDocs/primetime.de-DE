@@ -6,6 +6,9 @@ title: NATIVE_ERROR-Werte für die Videowiedergabe
 uuid: fbc08ecd-2e28-41ad-955b-557358bccdc8
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '1430'
+ht-degree: 6%
 
 ---
 
@@ -44,7 +47,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
    <td colname="col3"> Vorgang aufgrund der Dateiende-Bedingung (EOF) nicht möglich. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3 </td> 
+   <td colname="col1"> 1 </td> 
    <td colname="col2"><span class="codeph"> DECODER_FAILED</span> </td> 
    <td colname="col3"> Der Decoder ist zur Laufzeit fehlgeschlagen. </td> 
   </tr> 
@@ -55,72 +58,72 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr> 
   <tr> 
    <td colname="col1"> 5 </td> 
-   <td colname="col2"><span class="codeph"> FILE_NOT_FOUND </span> </td> 
+   <td colname="col2"><span class="codeph"> FILE_NOT_FOUND  </span> </td> 
    <td colname="col3"> Die Ressource kann nicht gefunden werden. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 6 </td> 
-   <td colname="col2"><span class="codeph"> GENERIC_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> GENERIC_ERROR  </span> </td> 
    <td colname="col3"> Allgemeiner Fehler. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 7 </td> 
-   <td colname="col2"><span class="codeph"> IRRECOVERABLE_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> IRRECOVERABLE_ERROR  </span> </td> 
    <td colname="col3"> Eine Fehlerbedingung, von der die Video-Engine nicht wiederhergestellt werden kann. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 8 </td> 
-   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RECOVERABLE </span> </td> 
+   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RECOVERABLE  </span> </td> 
    <td colname="col3"> Netzwerkfehler beim Versuch der Wiederherstellung. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 9 </td> 
-   <td colname="col2"><span class="codeph"> NO_FIXED_SIZE </span> </td> 
+   <td colname="col2"><span class="codeph"> NO_FIXED_SIZE  </span> </td> 
    <td colname="col3"> Die Größe der Ressource kann nicht bestimmt werden. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 10 </td> 
-   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTITED </span> </td> 
+   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTITED  </span> </td> 
    <td colname="col3"> Funktion nicht implementiert. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 11 </td> 
-   <td colname="col2"><span class="codeph"> OUT_OF_MEMORY </span> </td> 
+   <td colname="col2"><span class="codeph"> OUT_OF_MEMORY  </span> </td> 
    <td colname="col3"> Nicht genügend Arbeitsspeicher. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 12 </td> 
-   <td colname="col2"><span class="codeph"> PARSE_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> PARSE_ERROR  </span> </td> 
    <td colname="col3"> Fehler beim Parsen der Mediendatei. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 13 </td> 
-   <td colname="col2"><span class="codeph"> SIZE_UNKNOWN </span> </td> 
+   <td colname="col2"><span class="codeph"> SIZE_UNKNOWN  </span> </td> 
    <td colname="col3"> Die Ressource hat eine Größe, aber sie ist unbekannt. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 14 </td> 
-   <td colname="col2"><span class="codeph"> UNDER_FLOW </span> </td> 
+   <td colname="col2"><span class="codeph"> UNDER_FLOW  </span> </td> 
    <td colname="col3"> Unterlaufbedingung. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 15 </td> 
-   <td colname="col2"><span class="codeph"> UNSUPPORTED_CONFIG </span> </td> 
+   <td colname="col2"><span class="codeph"> UNSUPPORTED_CONFIG  </span> </td> 
    <td colname="col3"> Konfiguration wird nicht unterstützt. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 16 </td> 
-   <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION </span> </td> 
+   <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION  </span> </td> 
    <td colname="col3"> Vorgang wird nicht unterstützt. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 17 </td> 
-   <td colname="col2"><span class="codeph"> WAITING_FOR_INIT </span> </td> 
+   <td colname="col2"><span class="codeph"> WAITING_FOR_INIT  </span> </td> 
    <td colname="col3"> Noch nicht initialisiert. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 18 </td> 
-   <td colname="col2"><span class="codeph"> INVALID_PARAMETER </span> </td> 
+   <td colname="col2"><span class="codeph"> INVALID_PARAMETER  </span> </td> 
    <td colname="col3"> Ungültiger Parameter. </td> 
   </tr> 
   <tr> 
@@ -145,7 +148,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr> 
   <tr> 
    <td colname="col1"> 23 </td> 
-   <td colname="col2"><span class="codeph"> SOURCE_NOT_SPECIFIED </span> </td> 
+   <td colname="col2"><span class="codeph"> SOURCE_NOT_SPECIFIED  </span> </td> 
    <td colname="col3"> Ressource nicht angegeben. </td> 
   </tr> 
   <tr> 
@@ -175,7 +178,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr> 
   <tr> 
    <td colname="col1"> 29 </td> 
-   <td colname="col2"><span class="codeph"> CONTAINER_NOT_SUPPORTED </span> </td> 
+   <td colname="col2"><span class="codeph"> CONTAINER_NOT_SUPPORTED  </span> </td> 
    <td colname="col3"> Container-Typ wird nicht unterstützt. </td> 
   </tr> 
   <tr> 
@@ -250,7 +253,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr> 
   <tr> 
    <td colname="col1"> 44 </td> 
-   <td colname="col2"><span class="codeph"> NETWORK_DOWN </span> </td> 
+   <td colname="col2"><span class="codeph"> NETWORK_DOWN  </span> </td> 
    <td colname="col3"> Die Netzwerkverbindung des Benutzers ist nicht verfügbar. Die Wiedergabe kann jeden Moment unterbrochen werden und wird fortgesetzt, sobald die Verbindung verfügbar ist. </td> 
   </tr> 
   <tr> 
@@ -300,7 +303,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr> 
   <tr> 
    <td colname="col1"> 54 </td> 
-   <td colname="col2"><span class="codeph"> LIVE_HOLD </span> </td> 
+   <td colname="col2"><span class="codeph"> LIVE_HOLD  </span> </td> 
    <td colname="col3"> Der Medienleser kann keine Segmente laden, da er das Ende des Live-Fensters erreicht hat. Das Laden des Segments wird fortgesetzt, wenn der Server neue Medien in das Live-Fenster einfügt. Dieser Status wird normalerweise erreicht, wenn: 
     <ul id="ul_FCFF658EDA4144E59970B317D6DEB624"> 
      <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">bufferTime ist zu hoch (gleich oder höher als die Live-Fensterdauer). </li> 
@@ -310,7 +313,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr> 
   <tr> 
    <td colname="col1"> 55 </td> 
-   <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLEAVING </span> </td> 
+   <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLEAVING  </span> </td> 
    <td colname="col3"> Das Audio- und Videointeragieren in den Medien wird nicht ordnungsgemäß ausgeführt. Dies ist ein Verpackungsfehler. Die Warnung wird ausgelöst, wenn der Unterschied zwei Sekunden überschreitet. </td> 
   </tr> 
   <tr> 
@@ -375,7 +378,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr> 
   <tr> 
    <td colname="col1"> 68 </td> 
-   <td colname="col2"><span class="codeph"> PROTOCOL_NOT_SUPPORTED </span> </td> 
+   <td colname="col2"><span class="codeph"> PROTOCOL_NOT_SUPPORTED  </span> </td> 
    <td colname="col3"> Das in der URL verwendete Webprotokoll wird nicht unterstützt. </td> 
   </tr> 
   <tr> 
@@ -424,7 +427,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
    <td colname="col3"> In einer internen Datenstruktur ist kein Audiobecken vorhanden. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 78 </td> 
+   <td colname="col1"> 58 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> Datei kann nicht geöffnet werden. </td> 
   </tr> 
@@ -445,7 +448,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr> 
   <tr> 
    <td colname="col1"> 82 </td> 
-   <td colname="col2"><span class="codeph"> SECURITY_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> SECURITY_ERROR  </span> </td> 
    <td colname="col3"> Das Laden des Inhalts ist aufgrund von Sicherheitsbeschränkungen fehlgeschlagen. </td> 
   </tr> 
   <tr> 
@@ -465,7 +468,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr> 
   <tr> 
    <td colname="col1"> 87 </td> 
-   <td colname="col2"><span class="codeph"> KEY_NOT_FOUND </span> </td> 
+   <td colname="col2"><span class="codeph"> KEY_NOT_FOUND  </span> </td> 
    <td colname="col3"> Schlüssel kann nicht gefunden werden. </td> 
   </tr> 
   <tr> 
@@ -496,7 +499,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr> 
    <td colname="col1"> 93 </td> 
    <td colname="col2"><span class="codeph"> TRICKPLAY_ENDED_DUE_TO_ERROR</span> </td> 
-   <td colname="col3">Beim Abspielen von Medien im <i>Trick Play</i> -Modus ist ein Fehler aufgetreten. Der Trick Play-Modus wird beendet und der Stream wird angehalten. Rufen Sie <span class="codeph"> Play()</span> auf, um die Medien im normalen Modus abzuspielen. </td> 
+   <td colname="col3">Beim Abspielen von Medien im Modus <i>trick play</i> ist ein Fehler aufgetreten. Der Trick Play-Modus wird beendet und der Stream wird angehalten. Rufen Sie <span class="codeph"> Play()</span> auf, um das Medium im normalen Modus abzuspielen. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 95 </td> 
