@@ -22,7 +22,7 @@ Browser TVSDK unterstützt eine Reihe von MP3- und MP4-Funktionen, die Sie imple
 
 >[!TIP]
 >
->In den unten stehenden Funktionsmatrix-Tabellen bedeutet das ![unterstützte Symbol](assets/supported15.png) , dass die Funktion in der aktuellen Version unterstützt wird.
+>In den unten stehenden Funktionsmatrix-Tabellen bedeutet ![unterstütztes Symbol](assets/supported15.png), dass die Funktion in der aktuellen Version unterstützt wird.
 
 ## MP3-Audiofunktionen {#section_C900C301291A40529D02EACC3CD4D55A}
 
