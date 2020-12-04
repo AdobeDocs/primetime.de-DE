@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Videoanalyse initialisieren und konfigurieren {#initialize-and-configure-video-analytics}
+# Videoanalyse initialisieren und konfigurieren{#initialize-and-configure-video-analytics}
 
 Sie können Ihren Player so konfigurieren, dass die Videonutzung verfolgt und analysiert wird.
 Bevor Sie die Videoverfolgung aktivieren (Video Heartbeats), stellen Sie sicher, dass Sie über Folgendes verfügen:
@@ -26,8 +26,8 @@ Bevor Sie die Videoverfolgung aktivieren (Video Heartbeats), stellen Sie sicher,
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>Wichtig:  Dieser JSON-Konfigurationsdateiname muss <span class="filepath"> ADBMobileConfig.json bleiben </span>. Der Name und der Pfad dieser Konfigurationsdatei können nicht geändert werden. Der Pfad zu dieser Datei muss <span class="filepath"> &lt;Quellstamm&gt;/assets lauten </span>. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
+   <td colname="col2"> <p>Wichtig:  Dieser JSON-Konfigurationsdateiname muss <span class="filepath"> ADBMobileConfig.json </span> bleiben. Der Name und der Pfad dieser Konfigurationsdatei können nicht geändert werden. Der Pfad zu dieser Datei muss <span class="filepath"> &lt;source root&gt;/assets </span> lauten. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Endpunkt des AppMeasurement-Tracking-Servers </td> 
@@ -35,7 +35,7 @@ Bevor Sie die Videoverfolgung aktivieren (Video Heartbeats), stellen Sie sicher,
   </tr> 
   <tr> 
    <td colname="col1"> Endpunkt des Video Analytics-Trackingservers </td> 
-   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts für die Videoanalyse. Hier werden alle Video Heartbeat-Verfolgungsaufrufe gesendet. <p>Tipp:  Die URL des Besucher-Trackingservers ist identisch mit der URL des Analytics-Trackingservers. Informationen zur Implementierung des Besucher-ID-Diensts finden Sie unter <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementieren des ID-Diensts </a>. </p> </td> 
+   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts für die Videoanalyse. Hier werden alle Video Heartbeat-Verfolgungsaufrufe gesendet. <p>Tipp:  Die URL des Besucher-Trackingservers ist identisch mit der URL des Analytics-Trackingservers. Informationen zur Implementierung des Besucher-ID-Diensts finden Sie unter <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementierungs-ID-Dienst </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Kontoname </td> 
@@ -50,7 +50,7 @@ Bevor Sie die Videoverfolgung aktivieren (Video Heartbeats), stellen Sie sicher,
 
 So konfigurieren Sie die Videoverfolgung im Player:
 
-1. Vergewissern Sie sich, dass die Optionen für die Ladezeit in der `ADBMobileConfig.json` Ressourcendatei korrekt sind.
+1. Vergewissern Sie sich, dass die Optionen für die Ladezeit in der Ressourcendatei `ADBMobileConfig.json` korrekt sind.
 
    ```
    { 
@@ -84,8 +84,8 @@ So konfigurieren Sie die Videoverfolgung im Player:
    So konfigurieren Sie die Optionen für die Ladezeit:
 
 
-   1. Vergewissern Sie sich, dass die `ADBMobileConfig.json` Datei die entsprechenden Werte enthält (von der Adobe bereitgestellt).
-   1. Vergewissern Sie sich, dass sich diese Datei im `assets/` Ordner befindet.
+   1. Vergewissern Sie sich, dass die `ADBMobileConfig.json`-Datei die entsprechenden Werte enthält (von der Adobe bereitgestellt).
+   1. Vergewissern Sie sich, dass sich diese Datei im Ordner `assets/` befindet.
 
       Dieser Ordner muss sich im Stammverzeichnis der Anwendungsquelle befinden.
 
@@ -135,13 +135,13 @@ So konfigurieren Sie die Videoverfolgung im Player:
       VideoAnalyticsProvider videoAnalyticsProvider = new VideoAnalyticsProvider(appContext); 
       ```
 
-   1. Legen Sie die Video Analytics-Metadaten für die `videoAnalyticsProvider` Instanz fest.
+   1. Legen Sie die Video Analytics-Metadaten auf der `videoAnalyticsProvider`-Instanz fest.
 
       ```java
       videoAnalyticsProvider.setVideoAnalyticsMetadata(vaMetadata);
       ```
 
-   1. Hängen Sie die Medienplayer-Instanz an die `videoAnalyticsProvider` Instanz an:
+   1. Hängen Sie die Medienplayer-Instanz an die `videoAnalyticsProvider`-Instanz an:
 
       ```java
       videoAnalyticsProvider.attachMediaPlayer(mediaPlayer); 
