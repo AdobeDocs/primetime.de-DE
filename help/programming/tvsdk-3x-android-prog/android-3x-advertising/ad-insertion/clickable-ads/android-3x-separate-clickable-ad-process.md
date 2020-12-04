@@ -6,17 +6,20 @@ title: Trennen des klickbaren Anzeigenprozesses
 uuid: a5254ac5-3005-483e-935e-acbbef03df0e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
 
-# Trennen des klickbaren Anzeigenprozesses {#separate-the-clickable-ad-process}
+# Trennen Sie den klickbaren Anzeigenprozess {#separate-the-clickable-ad-process}
 
 Sie sollten die Logik der Benutzeroberfläche Ihres Players von dem Prozess trennen, der die Verwaltung von Anzeigenklicks ausführt. Eine Möglichkeit dazu besteht darin, mehrere Fragmente für eine Aktivität zu implementieren.
 
-1. Implementieren Sie ein Fragment, um das `MediaPlayer`zu enthalten.
+1. Implementieren Sie ein Fragment, um das `MediaPlayer` zu enthalten.
 
-   Dieses Fragment sollte aufgerufen werden `notifyClick()` und ist für die Videowiedergabe verantwortlich.
+   Dieses Fragment sollte `notifyClick()` aufrufen und ist für die Videowiedergabe verantwortlich.
 
    ```java
    public class PlayerFragment extends SherlockFragment { 
@@ -28,9 +31,9 @@ Sie sollten die Logik der Benutzeroberfläche Ihres Players von dem Prozess tren
    } 
    ```
 
-1. Implementieren Sie ein anderes Fragment, um ein UI-Element anzuzeigen, das anzeigt, dass eine Anzeige anklickbar ist, überwachen Sie dieses UI-Element und teilen Sie dem Fragment, das das Fragment enthält, die Benutzerklicks mit `MediaPlayer`.
+1. Implementieren Sie ein anderes Fragment, um ein UI-Element anzuzeigen, das anzeigt, dass eine Anzeige anklickbar ist, überwachen Sie dieses UI-Element und teilen Sie dem Fragment mit, das das `MediaPlayer` enthält.
 
-   Dieses Fragment sollte eine Schnittstelle für die Fragmentkommunikation deklarieren. Das Fragment erfasst die Implementierung der Schnittstelle während der Lebenszyklusmethode und kann die Methoden der Schnittstelle aufrufen, um mit der Aktivität zu kommunizieren. `onAttach()`
+   Dieses Fragment sollte eine Schnittstelle für die Fragmentkommunikation deklarieren. Das Fragment erfasst die Implementierung der Schnittstelle während der Lebenszyklusmethode von `onAttach()` und kann die Schnittstellenmethoden aufrufen, um mit der Aktivität zu kommunizieren.
 
    ```java
    public class PlayerClickableAdFragment extends SherlockFragment { 
