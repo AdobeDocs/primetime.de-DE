@@ -6,6 +6,9 @@ title: SIEHE Öffentliche API
 uuid: f3a17d61-04ee-4bdb-9d64-a98066c6d1c8
 translation-type: tm+mt
 source-git-commit: 15403abbd53486e1faa2146cda83f41bd8116632
+workflow-type: tm+mt
+source-wordcount: '179'
+ht-degree: 0%
 
 ---
 
