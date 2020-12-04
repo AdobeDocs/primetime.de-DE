@@ -26,25 +26,25 @@ Sie können die folgenden Arten von Änderungen vornehmen:
 
 * Vordergrundfarbe von Schaltflächen und Text
 
-   Alle Steuerelemente mit Vordergrund verwenden die `vid-skin-fgcolor` Klasse. Um den Vordergrund aller Steuerelemente zu ändern, durchlaufen Sie alle Elemente mit der `vid-skin-fgcolor` Klasse und geben Sie die gewünschte Farbe an.
+   Alle Steuerelemente mit Vordergrund verwenden die `vid-skin-fgcolor`-Klasse. Um den Vordergrund aller Steuerelemente zu ändern, durchlaufen Sie alle Elemente mit der `vid-skin-fgcolor`-Klasse und geben Sie die gewünschte Farbe an.
 * Hintergrundfarbe von Schaltflächen und Text
 
-   Alle Steuerelemente mit Vordergrund verwenden die `vid-skin-bgcolor` Klasse. Um den Vordergrund aller Steuerelemente zu ändern, durchlaufen Sie alle Elemente mit `vid-skin-bgcolor` Klasse und geben Sie die gewünschte Farbe an.
+   Alle Steuerelemente mit Vordergrund verwenden die `vid-skin-bgcolor`-Klasse. Um den Vordergrund aller Steuerelemente zu ändern, durchlaufen Sie alle Elemente mit der Klasse `vid-skin-bgcolor` und geben Sie die gewünschte Farbe an.
 * Form des Abspielkopfs
 
-   Der Abspielkopf kann quadratisch oder rund sein. Um den Abspielkopf zu ändern, fügen Sie `square` oder `round` Klasse zu `playhead` Element hinzu.
+   Der Abspielkopf kann quadratisch oder rund sein. Um den Abspielkopf zu ändern, fügen Sie die Klasse `square` oder `round` dem Element `playhead` hinzu.
 * Stil der Pufferspinners
 
    Der Referenz-Player bietet die folgenden Stile von Spinnern können angezeigt werden, wenn der Player Inhalte puffert:
 
-   * Überlagerungstext ( `overlay-text`)
+   * Overlay-text ( `overlay-text`)
    * Rechteckige Kreisel ( `spinner`)
    * Signal ( `signal`)
    * Vertikale Balken ( `vertical`)
 
       >[!TIP]
       >
-      >Um einen der Pufferspiner zu verwenden, müssen Sie die Klasse im Puffer-Overlay-Element hinzufügen. Fügen Sie `overlay-text`der `BufferOverlay.js` Datei beispielsweise die folgenden Zeilen hinzu:
+      >Um einen der Pufferspiner zu verwenden, müssen Sie die Klasse im Puffer-Overlay-Element hinzufügen. Um beispielsweise `overlay-text` zu verwenden, fügen Sie der Datei `BufferOverlay.js` die folgenden Zeilen hinzu:
       >
       >
       ```js
