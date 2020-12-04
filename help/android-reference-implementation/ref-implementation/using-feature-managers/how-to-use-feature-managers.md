@@ -4,11 +4,14 @@ title: So verwenden Sie Feature Manager
 uuid: 29027635-e9ff-48c3-8d89-de1ed9889ec0
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
 
-# So verwenden Sie Feature Manager {#how-to-use-feature-managers}
+# Verwendung von Feature-Managern {#how-to-use-feature-managers}
 
 Es gibt zwei Möglichkeiten, Funktionen mithilfe der Funktionsmanager zu aktivieren, zu deaktivieren und zu konfigurieren:
 
