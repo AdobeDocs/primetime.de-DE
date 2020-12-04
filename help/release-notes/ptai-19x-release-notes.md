@@ -16,7 +16,7 @@ Die Versionshinweise Primetime Ad Insertion 19.11.1 beschreiben, was neu oder ge
 
 ## Neue Funktionen in PTAI 19.11.1
 
-**Wenn:** Montag, 4. November 2019 um 12:01 Uhr bis 01:00 Uhr OSTERN
+**Wann:** Montag, 4. November 2019 um 12:01 Uhr bis 01:00 UHR
 
 Aktualisierungen der Wartung.
 
@@ -24,31 +24,31 @@ Aktualisierungen der Wartung.
 
 ### Version 19.10.2
 
-**Wenn:** Donnerstag, 31. Oktober 2019 von 01:00 Uhr bis 03:00 Uhr morgens
+**Wann:** Donnerstag, 31. Oktober 2019 von 01:00 Uhr bis 03:00 Uhr morgens
 
 Aktualisierungen der Wartung.
 
 ### Version 19.10.1
 
-**Wenn:**  Dienstag, 22. Oktober um 01:00 Uhr bis 02:00 UHR OSTSEHR
+**Wann:**  Dienstag, 22. Oktober um 01:00 Uhr bis 02:00 Uhr OSTSEELN
 
 Aktualisierungen der Wartung.
 
 ### Version 19.9.1
 
-**Wenn:** Dienstag, 10. September 2019, 12:30 Uhr bis 2:00 Uhr östliche Zeit
+**Wann:** Dienstag, 10. September 2019, 12:30 Uhr bis 2:00 Uhr östliche Zeit
 
 Sicherheitsaktualisierungen
 
 ### Version 19.8.3
 
-**Wenn:** Mittwoch, 28. August 2019, 12:30 Uhr - 01:30 Uhr früh im Osten
+**Wann:** Mittwoch, 28. August 2019, 12:30 Uhr - 01:30 Uhr früh im Osten
 
 Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwartet abgebrochen haben, wenn Anzeigensegmente aus dem DVR-Fenster gerollt wurden.
 
 ### Version 19.8.2
 
-**Wenn:** Mittwoch, 21. August 2019, 2:00 Uhr bis 3:00 Uhr östliche Zeit
+**Wann:** Mittwoch, 21. August 2019, 2:00 Uhr bis 3:00 Uhr östliche Zeit
 
 * SSAI-Dashboard: Abschnitt &quot;Sitzungsstatistik&quot;. Sie können die Session-Ereignis über die Option CSV herunterladen exportieren.
 
@@ -56,7 +56,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
 
 ### Version 19.8.1
 
-**Wenn:** Dienstag, 6. August 2019, 2:30 Uhr Ostzeit bis Dienstag, 6. August 2019, 4:30 Uhr Ostzeit
+**Wann:** Dienstag, 6. August 2019, 2:30 Uhr Ostzeit bis Dienstag, 6. August 2019, 4:30 Uhr Ostzeit
 
 * SSAI-Dashboard: Der neue Abschnitt &quot;Sitzungsstatistik&quot;wurde zum SSAI-Dashboard hinzugefügt
    * Wenn Sie die Sitzungs-ID für eine SSAI-Sitzung haben, für die der Debug-Modus aktiviert war (ptdebug=true), können Sie die folgende Aktivität nachschlagen, die in dieser Sitzung aufgetreten ist:
@@ -69,7 +69,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
 
 ### Version 19.7.1
 
-**Wenn:** Mittwoch, 10. Juli
+**Wann:** Mittwoch, 10. Juli
 
 * SAI: Für ptcuformat-Werte, die die Ausf.-X-CUE-OUT-Anzeigenunterbrechungssignalisierung in Live-Streams unterstützen, wurde ein generisches Makro hinzugefügt, um Daten aus Attributen im EXT-X-ASSET-Tag-Beispiel zu übermitteln: Tag, das dem Tag #EXT-X-CUE-OUT beigefügt ist: #EXT-X-ASSET:CAID=75BCD15,GENRE=News,Programm=NewsAt10 Makros: # kann verwendet werden, um News (vom GENRE-Attribut) an eine Anzeigen-Aufruf-URL zu übergeben. # kann verwendet werden, um NewsAt10 (vom Programm-Attribut) an eine Anzeige-Aufruf-URL-Ausnahme zu übergeben: Für die Abwärtskompatibilität haben # und # dieselbe Funktionalität. Beide Makros können verwendet werden, um den Wert des CAID-Attributs zu übergeben, nachdem der Wert von hex in long konvertiert wurde Der lange Wert ist 123456789 für den Hexadezimalwert 75BCD15 im oben gezeigten Beispiel. Beide Makros werden verwendet, um 123456789 an eine Anzeigenaufruf-URL zu übergeben. Das Makro wird immer mit # Beginn. Beim Makro wird die Groß-/Kleinschreibung beachtet, das Attribut im EXT-X-ASSET-Tag jedoch nicht. Das heißt, PROGRAMM und Programm sind im EXT-X-ASSET-Tag zulässig.
 * SAI: Konfigurationsänderungen für einen bestimmten Kunden für Folgendes:
@@ -79,7 +79,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
 
 ### Version 19.6.1
 
-**Wenn:** Mittwoch, 12. Juni 2019, 11:30 PST bis Donnerstag, 13. Juni 2019, 12:30 PST
+**Wann:** Mittwoch, 12. Juni 2019, 11:30 Uhr PST bis Donnerstag, 13. Juni 2019, 12:30 Uhr PST
 
 * CRS: Normalisierungsregel für kreative Elemente aus RevJet
    * Es wurde eine Regel zur kreativen URL-Normalisierung für RevJet hinzugefügt, die von CRS und SSAI verwendet wird
@@ -95,7 +95,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
 
 ### Version 19.5.2
 
-**Wenn:** Mittwoch, 22. Mai 22:30 Uhr Ostzeit bis Mittwoch, 22. Mai 20:30 Uhr Ostzeit
+**Wann:** Mittwoch, 22. Mai 20:30 Uhr östliche Zeit bis Mittwoch, 22. Mai 22, 4:30 Uhr östliche Zeit
 
 * Unterstützung für CMAF (HLS/fMP4-Inhalt) hinzugefügt
    * SAI: Umgang mit CMAF-Manifesten
@@ -103,13 +103,13 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
    * CRS: Arbeitsablauf zum Neuverpacken von Anzeigen im CMAF-Format (HLS/fMP4) hinzugefügt
 * SAI: Es wurde ein Problem behoben, das verhindert hat, dass ungemuxed Anzeigen in ungemusterten Inhalt eingefügt wurden, wenn sowohl der Inhalt als auch die Anzeige keine reinen Audiostreams haben (EXT-X-STREAM-INF)
 * SAI: Unterstützung für CDN-Authentifizierungstoken für Limelight (LLNW) für Inhaltssegmente hinzugefügt
-   * Wenn `pttoken=limelight` oder der Bootstrap-URL hinzugefügt `pttoken=llnw` wird, fügen wir beim Abrufen der Übergeordnet-Quellwiedergabeliste einen geheimen Header hinzu, dann hängen wir die Abfragen-Parameter aus dem X-Adobe-Sig-Header von LLNW an die Inhaltssegmente an
+   * Wenn `pttoken=limelight` oder `pttoken=llnw` zur Bootstrap-URL hinzugefügt wird, fügen wir beim Abrufen der Übergeordnet-Quellplaylist einen geheimen Header hinzu, dann hängen wir die Abfragen-Parameter aus dem X-Adobe-Sig-Header von LLNW an die Inhaltssegmente an
 * SAI: Es wurde ein weiterer pttoken-Wert (`pttoken=centurylink`) für die Unterstützung von CenturyLink-CDN-Authentifizierungstoken hinzugefügt, der am 30. Juli 2018 veröffentlicht wurde
-   * `pttoken=centurylink` hat das gleiche Verhalten wie `pttoken=level3`und beide Werte sind gültig
+   * `pttoken=centurylink` hat das gleiche Verhalten wie  `pttoken=level3`und beide Werte sind gültig
 
 ### Version 19.5.1
 
-**Wenn:** Donnerstag, 9. Mai 20:30 UHR OSTZEIT bis Donnerstag, 9. Mai 4:30 UHR
+**Wann:** Donnerstag, 9. Mai 20:30 Uhr Eastern Time bis Donnerstag, 9. Mai um 9:30 Uhr Eastern Time
 
 * SAI: Sicherheitsaktualisierungen
 * CRS-Dashboard: Kürzung der Zeichenfolge &quot;FqAdId-Beispiel&quot;auf 255 Zeichen aufgrund von Einschränkungen der Datenspeicherung von Daten (8 Bit)
@@ -118,7 +118,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
 
 ### Version 19.4.1
 
-**Wenn:** Mittwoch, 10. April 2010, 2:30 Uhr Ostzeit bis Mittwoch, 10.04.30 Uhr Ostzeit
+**Wann:** Mittwoch, April 10, 2:30 Uhr Ostzeit bis Mittwoch, 10.04.30 Uhr Ostzeit
 
 * CRS: Die CRS-Umpackungs-API unterstützt keine HTTP-POST mehr. Die CRS-Umpackungs-API leitet HTTP-POST-Befehle (301) automatisch an HTTPS weiter
    * Ab dem 20. Mai wird die HTTP->HTTPS-Umleitung für HTTP-POST deaktiviert
@@ -144,7 +144,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
 
 ### Version 19.2.1
 
-**Wenn:** Mittwoch, 20. Februar 2019, 1:30 Uhr Ostzeit bis Mittwoch, 20. Februar 2019, 3:30 Uhr Ostzeit
+**Wann:** Mittwoch, 20. Februar 2019 1:30 Uhr Ostzeit bis Mittwoch, 20. Februar 2019 3:30 Uhr Ostzeit
 
 * SAI: ClickThrough- und ClickTracking-URLs für Videoanzeigen wurden dem sidecar JSON v2-Format hinzugefügt
    * Unter der Eigenschaft &quot;trackingURLs&quot;lauten ihre &quot;Ereignis&quot;-Wertnamen &quot;Clickthrough&quot;und &quot;clickTracking&quot;
@@ -160,15 +160,15 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
 
 ### Web UI-Version
 
-**Wenn:** Mittwoch, 13. Februar, 4:00 Uhr - 4:30 Uhr Pazifik
+**Wann:** Mittwoch, 13. Februar, 4:00 Uhr - 4:30 Uhr Pazifik
 
-**Was:** Komponente der Benutzeroberfläche für Primetime- und Entscheidungsfindung
+**Was:** Primetime und Entscheidungsfindung Web-UI-Komponente
 
 * Korrektur des Problems mit der Kalender-Benutzeroberfläche, bei dem der Benutzer kein Datum über den 31. Dezember 2018 hinaus aus der Kalenderkomponente auswählen konnte, während eine Kampagne weitergeleitet oder ein Bericht abgerufen wurde.
 
 ### Version 19.1.2
 
-**Wenn:** Mittwoch, 30. Januar 2019 1:30 Uhr Ostzeit bis Mittwoch, 30. Januar 30 Uhr Ostzeit
+**Wann:** Mittwoch, 30. Januar 2019 1:30 Uhr Ostzeit bis Mittwoch, 30. Januar 30 Uhr Ostzeit
 
 * SAI: Die Lookup-Key-Struktur, die SSAI zum Speichern und Abrufen von CRS-Assets verwendet, wurde aktualisiert, um Szenarios zu behandeln, in denen Anzeigenanbieter eine dynamische Anzeigen-ID oder eine Creative-ID für dieselbe Anzeige haben
    * Neue Lookup-Key-Struktur: Zone-, Creative URL- und Formatparameter (Zielgruppe, Ausgabeformat, Ziel-CDN)
@@ -185,7 +185,7 @@ Es wurde ein Fehler behoben, durch den Chromecast-Player die Wiedergabe unerwart
 
 ### Version 19.1.1
 
-**Wenn:** Mittwoch, 9. Januar 2019 1:30 Uhr Ostzeit bis Mittwoch, 9. Januar 3:30 Uhr Ostzeit
+**Wann:** Mittwoch, 9. Januar 2019 1:30 Uhr Ostzeit bis Mittwoch, 9. Januar 3:30 Uhr Ostzeit
 
 * Es wurde ein Problem behoben, bei dem eine fehlerhafte Interpretation von HTTP-Headern, die am Leben erhalten bleiben, zu einem Fehler führen kann, wenn eingehende kreative Elemente validiert werden, die auf total-stream.net gehostet werden.
 * Es wurde ein Problem behoben, bei dem einzelne Anführungszeichen (&#39;) und Anführungszeichen (&quot;) in der Anzeigen-ID, der Creative-ID und anderen Feldern für eine Umverpackungsanfrage dazu führten, dass die Anforderung zum Umpacken fehlschlug.
