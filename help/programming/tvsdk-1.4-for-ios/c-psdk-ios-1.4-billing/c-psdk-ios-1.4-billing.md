@@ -1,20 +1,23 @@
 ---
-description: Um Kunden, die nur für die von ihnen verwendeten Artikel bezahlen möchten, anstatt für einen festen Preis unabhängig von der tatsächlichen Verwendung zu bezahlen, sammelt Adobe Nutzungsmetriken und verwendet diese Metriken, um zu bestimmen, wie viel die Kunden bezahlen müssen.
-seo-description: Um Kunden, die nur für die von ihnen verwendeten Artikel bezahlen möchten, anstatt für einen festen Preis unabhängig von der tatsächlichen Verwendung zu bezahlen, sammelt Adobe Nutzungsmetriken und verwendet diese Metriken, um zu bestimmen, wie viel die Kunden bezahlen müssen.
+description: Um Kunden, die nur für ihre Nutzung zahlen möchten, anstatt für einen festen Satz unabhängig von der tatsächlichen Nutzung zu bezahlen, erfasst Adobe Nutzungsmetriken und ermittelt anhand dieser Metriken, wie viel sie den Kunden in Rechnung stellen.
+seo-description: Um Kunden, die nur für ihre Nutzung zahlen möchten, anstatt für einen festen Satz unabhängig von der tatsächlichen Nutzung zu bezahlen, erfasst Adobe Nutzungsmetriken und ermittelt anhand dieser Metriken, wie viel sie den Kunden in Rechnung stellen.
 seo-title: Rechnungsmetriken
 title: Rechnungsmetriken
 uuid: 658ffbcd-dedc-464c-8ec7-aa3bdfcb1512
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
 
 
 # Rechnungsmetriken {#billing-metrics}
 
-Um Kunden, die nur für die von ihnen verwendeten Artikel bezahlen möchten, anstatt für einen festen Preis unabhängig von der tatsächlichen Verwendung zu bezahlen, sammelt Adobe Nutzungsmetriken und verwendet diese Metriken, um zu bestimmen, wie viel die Kunden bezahlen müssen.
+Um Kunden, die nur für ihre Nutzung zahlen möchten, anstatt für einen festen Satz unabhängig von der tatsächlichen Nutzung zu bezahlen, erfasst Adobe Nutzungsmetriken und ermittelt anhand dieser Metriken, wie viel sie den Kunden in Rechnung stellen.
 
-Jedes Mal, wenn der Player ein Stream-Beginn-Ereignis generiert, senden TVSDK-Beginn HTTP-Nachrichten regelmäßig an das Rechnungssystem von Adobe. Der Zeitraum, der als abrechnungsfähige Dauer bezeichnet wird, kann für standardmäßige VOD-, Pro-VOD- (Mid-Roll-Anzeigen aktiviert) und Live-Inhalte unterschiedlich sein. Die Standarddauer für jeden Inhaltstyp beträgt 30 Minuten, aber Ihr Vertrag mit Adobe legt die tatsächlichen Werte fest.
+Jedes Mal, wenn der Player ein Stream-Beginn-Ereignis generiert, senden TVSDK-Beginn HTTP-Nachrichten regelmäßig an das Rechnungssystem der Adobe. Der Zeitraum, der als abrechnungsfähige Dauer bezeichnet wird, kann für standardmäßige VOD-, Pro-VOD- (Mid-Roll-Anzeigen aktiviert) und Live-Inhalte unterschiedlich sein. Die Standarddauer für jeden Inhaltstyp beträgt 30 Minuten, Ihr Vertrag mit der Adobe legt die tatsächlichen Werte fest.
 
 Die Meldungen enthalten die folgenden Informationen:
 
@@ -25,13 +28,13 @@ Die Meldungen enthalten die folgenden Informationen:
 * Ob der Stream durch DRM geschützt ist
 * TVSDK-Version und -Plattform
 
-Adobe konfiguriert diese Vereinbarung zwar vorab, sollte Sie sich jedoch an Ihren Adobe-Kundenbetreuer wenden, um die Vereinbarung zu ändern.
+Adobe konfiguriert diese Anordnung vorab. Wenn Sie die Anordnung jedoch ändern möchten, wenden Sie sich an Ihren Kundenbetreuer für Adobe-Aktivierung.
 
-Um die Statistiken zu überwachen, die TVSDK an Adobe sendet, rufen Sie die URL von Ihrem Adobe-Kundenbetreuer ab und verwenden Sie ein Netzwerk-Erfassungswerkzeug, z. B. Charles, um die Daten anzuzeigen.
+Um die Statistiken zu überwachen, die TVSDK an die Adobe sendet, rufen Sie die URL von Ihrem Kundenbetreuer für Adobe-Aktivierung ab und verwenden Sie ein Netzwerk-Erfassungswerkzeug, z. B. Charles, um die Daten anzuzeigen.
 
-## Rechnungsmetriken konfigurieren {#configure-billing-metrics}
+## Rechnungsmetriken {#configure-billing-metrics} konfigurieren
 
-Wenn Sie die Standardkonfiguration verwenden, müssen Sie nichts anderes tun, um die Rechnungsstellung zu aktivieren oder zu konfigurieren. Wenn Sie von Ihrem Adobe-Kundenbetreuer unterschiedliche Konfigurationsparameter erhalten haben, verwenden Sie die PTBillingMetricsConfiguration-Klasse, um diese Parameter vor dem Initialisieren des Medienplayers festzulegen.
+Wenn Sie die Standardkonfiguration verwenden, müssen Sie nichts anderes tun, um die Rechnungsstellung zu aktivieren oder zu konfigurieren. Wenn Sie von Ihrem Kundenbetreuer für die Aktivierung der Adobe unterschiedliche Konfigurationsparameter erhalten haben, verwenden Sie die PTBillingMetricsConfiguration-Klasse, um diese Parameter festzulegen, bevor Sie den Medienplayer initialisieren.
 
 Die meisten Kunden sollten die Standardkonfiguration verwenden.
 
@@ -54,13 +57,13 @@ So konfigurieren Sie Rechnungsmetriken:
    [metadata setMetadata:billingConfig forKey:PTBillingMetricsConfigurationMetadataKey];
    ```
 
-## Rechnungsmetriken übertragen {#transmit-billing-metrics}
+## Rechnungsmetriken senden {#transmit-billing-metrics}
 
-TVSDK sendet Rechnungsmetriken in einem XML-Format an Adobe.
+TVSDK sendet Rechnungsmetriken an die Adobe im XML-Format.
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-Wenn Sie ein Netzwerk-Erfassungswerkzeug verwenden, um die Statistiken zu überwachen, die TVSDK an Adobe sendet, sollten Sie Einheiten wie die folgenden sehen:
+Wenn Sie ein Netzwerkerfassungstool verwenden, um die Statistiken zu überwachen, die TVSDK an die Adobe sendet, sollten Sie Einheiten wie die folgenden sehen:
 
 ```
 <request> 
@@ -86,4 +89,4 @@ Wenn Sie ein Netzwerk-Erfassungswerkzeug verwenden, um die Statistiken zu überw
 </request>
 ```
 
-Die booleschen Eigenschaften `drmProtected`, `adsEnabled`und `midrollEnabled` werden nur angezeigt, wenn sie wahr sind.
+Die booleschen Eigenschaften `drmProtected`, `adsEnabled` und `midrollEnabled` werden nur angezeigt, wenn sie &quot;true&quot;sind.
