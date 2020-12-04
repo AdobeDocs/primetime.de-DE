@@ -3,6 +3,9 @@ title: PSDK-Fehlercodes
 description: Informationen zu verschiedenen Fehlercodes, Warnungen und systemeigenen Fehlercodes.
 translation-type: tm+mt
 source-git-commit: eddc327087411a6214cfd8dafef66b850a603f97
+workflow-type: tm+mt
+source-wordcount: '1897'
+ht-degree: 6%
 
 ---
 
@@ -94,7 +97,7 @@ Die folgende Tabelle enthält detaillierte Informationen zu FEHLERTypbenachricht
   <tr>
     <td>GENERIC_ERROR</td>
     <td>14</td>
-    <td>Ereignis für generische Fehler. Nicht tatsächlich ausgestellt von TVSDK. Dies ist nur eine Markierung für das Ende des numerischen Codebereichs, der TVSDK-Fehlermeldungen entspricht.</td>
+    <td>Ereignis für generische Fehler. Nicht tatsächlich ausgestellt von TVSDK. Dies ist nur eine Markierung für das Ende des Bereichs numerischer Ereignis, die TVSDK-Fehlermeldungen entsprechen.</td>
   </tr>
   <tr>
     <td>INVALID_SEEK_TIME</td>
@@ -223,7 +226,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr>
   <tr>
     <td>DECODER_FAILED</td>
-    <td>3</td>
+    <td>1</td>
     <td>Der Decoder ist zur Laufzeit fehlgeschlagen.</td>
   </tr>
   <tr>
@@ -598,7 +601,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr>
   <tr>  
     <td>FILE_OPEN_ERROR</td>
-    <td>78</td>
+    <td>58</td>
     <td>Datei kann nicht geöffnet werden.</td>
   </tr>
   <tr>
@@ -613,7 +616,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr>
   <tr>
     <td>ID3PARSE_ERROR</td>
-    <td>81</td>
+    <td>61</td>
     <td>Bei der Analyse der ID3-Daten ist ein Fehler aufgetreten.</td>
   </tr>
   <tr>
