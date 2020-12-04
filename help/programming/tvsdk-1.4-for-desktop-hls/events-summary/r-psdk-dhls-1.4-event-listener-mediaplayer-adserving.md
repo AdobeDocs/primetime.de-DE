@@ -6,15 +6,18 @@ title: Ereignisse für Werbeanzeigen/Zeitgesteuerte Metadaten
 uuid: fd50a937-0c9b-4c47-acb2-1ffc0592ad54
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '189'
+ht-degree: 0%
 
 ---
 
 
-# Ereignisse für Werbeanzeigen/Zeitgesteuerte Metadaten{#ad-serving-timed-metadata-events}
+# Ereignis für Anzeigen mit Bereitstellungs-/Zeitüberschreitung bei Metadaten{#ad-serving-timed-metadata-events}
 
 TVSDK sendet Adserving-Ereignis als Reaktion auf zeitgesteuerte Metadatenvorgänge.
 
-Um über alle entsprechenden Ereignis benachrichtigt zu werden, registrieren Sie Ereignis-Listener für die folgenden Ereignis beim `MediaPlayer` Objekt.
+Um über alle entsprechenden Ereignis benachrichtigt zu werden, registrieren Sie Ereignis-Listener für die folgenden Ereignis beim `MediaPlayer`-Objekt.
 
 | Ereignis | Bedeutung |
 |---|---|
