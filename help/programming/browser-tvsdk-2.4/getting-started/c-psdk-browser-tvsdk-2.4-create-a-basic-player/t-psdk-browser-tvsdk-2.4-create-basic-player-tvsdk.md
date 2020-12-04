@@ -6,6 +6,9 @@ title: Erstellen eines einfachen Players mit TVSDK
 uuid: ec15cf53-197f-4190-a6b2-600a57815390
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Führen Sie die folgenden Schritte aus, um einen einfachen Player mit dem Browse
 
 1. Erstellen Sie ein neues Verzeichnis, in dem Sie die komprimierten Dateien für Browser TVSDK herunterladen können.
 1. Laden Sie Browser TVSDK von Zendesk herunter, dekomprimieren Sie die Dateien und legen Sie den Ordner &quot;Frameworks&quot;im neuen Verzeichnis ab.
-1. Erstellen Sie eine einfache HTML-Vorlage für den Code mit einer `div` darin enthaltenen.
+1. Erstellen Sie eine einfache HTML-Vorlage für den Code mit einem `div`.
 1. Platzieren Sie diese Vorlage in einer HTML-Datei in dem Verzeichnis, das Sie in Schritt 1 erstellt haben.
 
    ```
@@ -33,7 +36,7 @@ Führen Sie die folgenden Schritte aus, um einen einfachen Player mit dem Browse
    </html>
    ```
 
-1. Hinzufügen Sie die Browser TVSDK Bibliotheken im Kopfabschnitt.
+1. hinzufügen Sie die Browser TVSDK Bibliotheken im Kopfabschnitt.
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
@@ -42,14 +45,14 @@ Führen Sie die folgenden Schritte aus, um einen einfachen Player mit dem Browse
    <script src= "frameworks/player/primetimeei.min.js"></script>
    ```
 
-1. Fügen Sie für das body-Tag den `onLoad` Abschnitt hinzu.
+1. Fügen Sie für das body-Tag den Abschnitt `onLoad` hinzu.
 
    ```
    <body onload="startVideo()">
    ```
 
-1. Beginn, der die `startVideo` Funktion implementiert.
-1. Hinzufügen Sie ein Skript-Tag und erstellen Sie die `startVideo` Funktion im Tag.
+1. Beginn, der die Funktion `startVideo` implementiert.
+1. hinzufügen Sie ein Skript-Tag und erstellen Sie die Funktion `startVideo` im Tag.
 
    Dies sollte im Kopfabschnitt der Seite sein.
 
@@ -60,17 +63,17 @@ Führen Sie die folgenden Schritte aus, um einen einfachen Player mit dem Browse
    </script>
    ```
 
-1. Erstellen Sie die `Adobe.MediaPlayer`.
+1. Erstellen Sie `Adobe.MediaPlayer`.
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. Erstellen Sie die `MediaPlayerView`.
+1. Erstellen Sie `MediaPlayerView`.
 
    >[!TIP]
    >
-   >Hier wird die zuvor erstellte Datei verwendet `div` .
+   >Hier wird das zuvor erstellte `div` verwendet.
 
    ```js
    var view = new AdobePSDK.MediaPlayerView( 
@@ -78,7 +81,7 @@ Führen Sie die folgenden Schritte aus, um einen einfachen Player mit dem Browse
    player.view = view;
    ```
 
-1. Hinzufügen Player-Ereignis-Listener.
+1. hinzufügen Player-Ereignis-Listener.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
@@ -141,7 +144,7 @@ Führen Sie die folgenden Schritte aus, um einen einfachen Player mit dem Browse
    }; 
    ```
 
-1. Erstellen Sie die `MediaResource`, die den M3U8-Link (oder mpd) übergibt.
+1. Erstellen Sie das `MediaResource`, das den M3U8-Link (oder mpd) übergibt.
 
    ```js
    var resourceUrl = "https://example.com/a/yourUrl.m3u8"; 
@@ -157,7 +160,7 @@ Führen Sie die folgenden Schritte aus, um einen einfachen Player mit dem Browse
    player.replaceCurrentResource(mediaResource, config);
    ```
 
-1. Wenn der Player den Status INITIALIZED aufweist, rufen Sie `prepareToPlay`an.
+1. Wenn sich der Player im INITIALIZED-Status befindet, rufen Sie `prepareToPlay` auf.
 
    ```js
    case INITIALIZED: 
@@ -165,7 +168,7 @@ Führen Sie die folgenden Schritte aus, um einen einfachen Player mit dem Browse
     break;
    ```
 
-1. Rufen Sie den Player auf, nachdem er sich im Status &quot;VORBEREITT&quot;befindet `play`.
+1. Wenn sich der Player im Status &quot;VORBEREITT&quot;befindet, rufen Sie `play` auf.
 
    ```js
    case PREPARED: 
