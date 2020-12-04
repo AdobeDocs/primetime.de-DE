@@ -6,6 +6,9 @@ title: Übersicht
 uuid: 0b3fb26c-f3d1-4cf2-9859-89b052501eb3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Das Adobe Primetime Software Development Kit (TVSDK) ist ein Toolkit, mit dem Sie Ihren Anwendungen erweiterte Funktionen zur Videowiedergabe hinzufügen können.
 
-* Eine Liste der von TVSDK unterstützten Funktionen finden Sie unter [Primetime Player TVSDK-Funktionen](../c-psdk-ios-1.4-overview/c-psdk-ios-1.4-overview-of-the-player.md).
+* Eine Liste der von TVSDK unterstützten Funktionen finden Sie unter [Primetime Player TVSDK features](../c-psdk-ios-1.4-overview/c-psdk-ios-1.4-overview-of-the-player.md).
 * Spezifische Hardware- und Softwareanforderungen für die Verwendung von TVSDK finden Sie unter [Anforderungen](../c-psdk-ios-1.4-overview/c-psdk-ios-1.4-requirements.md).
 
 ## Produktübersicht {#section_3C0C7E7FEF1F41BD9C65392C6C5E8D8E}
