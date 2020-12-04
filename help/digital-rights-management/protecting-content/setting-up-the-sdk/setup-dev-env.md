@@ -1,18 +1,21 @@
 ---
-description: Wenn Sie Primetime DRM einrichten möchten, kopieren Sie die Dateien von der DVD. Zu diesen Dateien gehören JAR-Dateien mit Code, Zertifikaten und Drittanbieterklassen. Darüber hinaus müssen Sie ein Zertifikat von Adobe Systems, Incorporated, anfordern. Adobe stellt Ihnen dann mehrere Berechtigungen zur Verfügung, die Sie zum Schutz der Integrität Ihrer gepackten Inhalte, Lizenzen und der Kommunikation zwischen Client und Server verwenden.
-seo-description: Wenn Sie Primetime DRM einrichten möchten, kopieren Sie die Dateien von der DVD. Zu diesen Dateien gehören JAR-Dateien mit Code, Zertifikaten und Drittanbieterklassen. Darüber hinaus müssen Sie ein Zertifikat von Adobe Systems, Incorporated, anfordern. Adobe stellt Ihnen dann mehrere Berechtigungen zur Verfügung, die Sie zum Schutz der Integrität Ihrer gepackten Inhalte, Lizenzen und der Kommunikation zwischen Client und Server verwenden.
+description: Wenn Sie Primetime DRM einrichten möchten, kopieren Sie die Dateien von der DVD. Zu diesen Dateien gehören JAR-Dateien mit Code, Zertifikaten und Drittanbieterklassen. Darüber hinaus müssen Sie ein Zertifikat von Adobe Systems, Incorporated, anfordern. Adobe erteilt Ihnen dann mehrere Berechtigungen, die Sie zum Schutz der Integrität Ihrer gepackten Inhalte, Lizenzen und der Kommunikation zwischen Client und Server verwenden.
+seo-description: Wenn Sie Primetime DRM einrichten möchten, kopieren Sie die Dateien von der DVD. Zu diesen Dateien gehören JAR-Dateien mit Code, Zertifikaten und Drittanbieterklassen. Darüber hinaus müssen Sie ein Zertifikat von Adobe Systems, Incorporated, anfordern. Adobe erteilt Ihnen dann mehrere Berechtigungen, die Sie zum Schutz der Integrität Ihrer gepackten Inhalte, Lizenzen und der Kommunikation zwischen Client und Server verwenden.
 seo-title: Einrichten der Entwicklungs-Umgebung
 title: Einrichten der Entwicklungs-Umgebung
 uuid: 68afefe8-7ec6-466e-89a8-bc0da8afb4c8
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '387'
+ht-degree: 0%
 
 ---
 
 
-# Einrichten der Entwicklungs-Umgebung {#set-up-your-development-environment}
+# Einrichten der Development-Umgebung {#set-up-your-development-environment}
 
-Wenn Sie Primetime DRM einrichten möchten, kopieren Sie die Dateien von der DVD. Zu diesen Dateien gehören JAR-Dateien mit Code, Zertifikaten und Drittanbieterklassen. Darüber hinaus müssen Sie ein Zertifikat von Adobe Systems, Incorporated, anfordern. Adobe stellt Ihnen dann mehrere Berechtigungen zur Verfügung, die Sie zum Schutz der Integrität Ihrer gepackten Inhalte, Lizenzen und der Kommunikation zwischen Client und Server verwenden.
+Wenn Sie Primetime DRM einrichten möchten, kopieren Sie die Dateien von der DVD. Zu diesen Dateien gehören JAR-Dateien mit Code, Zertifikaten und Drittanbieterklassen. Darüber hinaus müssen Sie ein Zertifikat von Adobe Systems, Incorporated, anfordern. Adobe erteilt Ihnen dann mehrere Berechtigungen, die Sie zum Schutz der Integrität Ihrer gepackten Inhalte, Lizenzen und der Kommunikation zwischen Client und Server verwenden.
 
 Adobe stellt das Primetime DRM SDK auf DVD bereit:
 
@@ -48,6 +51,6 @@ Adobe stellt das Primetime DRM SDK auf DVD bereit:
       >
       >32-Bit- und 64-Bit-Versionen dieser Bibliotheken sind verfügbar. Sie sollten die 64-Bit-Version nur dann verwenden, wenn Sie ein 64-Bit-Betriebssystem haben und die 64-Bit-Version von Java ausgeführt wird.
 
-1. (Optional) Für Funktionen im Zusammenhang mit der Kompatibilität mit Adobe Flash Media Rights Management Server (FMRMS) 1.x kopieren Sie `[DRM DVD]/SDK/adobe-flashaccess-lcrm.jar]` die Datei in Ihr Entwicklungssystem:
+1. (Optional) Für Funktionen im Zusammenhang mit der Adobe Flash Media Rights Management Server (FMRMS) 1.x-Kompatibilität kopieren Sie `[DRM DVD]/SDK/adobe-flashaccess-lcrm.jar]` in Ihr Entwicklungssystem:
 
    Stellen Sie dies nur bereit, wenn Sie zuvor FMRMS 1.x bereitgestellt haben und Ihre FMRMS-geschützten Inhalte nicht erneut verpacken möchten. In diesem Fall müssen Sie diese Unterstützung Ihrem Lizenzserver hinzufügen, damit er alte Inhalte und Clients verwalten kann.
