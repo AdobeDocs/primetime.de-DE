@@ -6,11 +6,14 @@ title: Anzeigen für ein DVR-Fenster laden
 uuid: 67bc3924-3d17-4d1a-b9a7-be8d0488a970
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
 
-# Anzeigen für ein DVR-Fenster laden {#load-ad-for-a-dvr-window}
+# Anzeige für ein DVR-Fenster {#load-ad-for-a-dvr-window} laden
 
 Sie können entscheiden, ob Sie nur die Anzeigen auflösen möchten, die nach dem aktuellen Live-Point des Benutzers auftreten, oder ob Sie Anzeigen auflösen möchten, die vor dem aktuellen Live-Point erscheinen.
 
@@ -24,11 +27,11 @@ Wenn ein Benutzer zu Beginn eines DVR-Streams auf Ansicht von Inhalten Beginn, l
 
 So steuern Sie die Anzeigenladung für ein DVR-Fenster:
 
-Um alle Anzeigen für den gesamten Stream zu laden, setzen Sie die `PTAdMetadata.enableDVRAds` Eigenschaft auf `YES`.
+Um alle Anzeigen für den gesamten Stream zu laden, setzen Sie die `PTAdMetadata.enableDVRAds`-Eigenschaft auf `YES`.
 
 >[!NOTE]
 >
->Der Standardwert ist `NO`und diese Option lädt Anzeigen nur vom aktuellen Live-Point.
+>Der Standardwert ist `NO`, und diese Option lädt Anzeigen nur vom aktuellen Live-Point.
 
 Beispiel:
 
