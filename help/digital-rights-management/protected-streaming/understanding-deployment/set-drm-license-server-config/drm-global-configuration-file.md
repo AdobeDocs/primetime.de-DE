@@ -17,15 +17,15 @@ ht-degree: 0%
 
 Die Konfigurationsdatei &quot;flashaccess-global.xml&quot;enthält Einstellungen, die für alle Mieter des Lizenzservers gelten.
 
-Sie müssen die Konfigurationsdatei im [!DNL LicenseServer.ConfigRoot] Verzeichnis ablegen.
+Sie müssen die Konfigurationsdatei im Ordner [!DNL LicenseServer.ConfigRoot] ablegen.
 
-Ein Beispiel für eine globale Konfigurationsdatei finden Sie im [!DNL configs] Verzeichnis.
+Ein Beispiel für eine globale Konfigurationsdatei finden Sie im Ordner [!DNL configs].
 
 Die globale Konfigurationsdatei enthält:
 
 * Zwischenspeicherung — Steuert die Zwischenspeicherung von Konfigurationsdateien im Speicher.
 
-   Informationen zu den Cacheeinstellungen finden Sie unter *Aktualisieren von Konfigurationsdateien* .
+   Informationen zu den Cacheeinstellungen finden Sie unter *Aktualisieren von Konfigurationsdateien*.
 * Protokollierung — Gibt die Protokollierungsstufe und die Häufigkeit des Rollovers von Protokolldateien an.
 * HSM-Kennwort — Nur erforderlich, wenn ein HSM zum Speichern von Serverberechtigungen verwendet wird.
 
