@@ -6,6 +6,9 @@ title: Medienwiedergabe
 uuid: 454f84fe-8077-4f37-8e62-1d6ba0fcde27
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Bei Live- und VOD-Beginn wird die Wiedergabe von Browser TVSDK durch Herunterlad
 
 Browser TVSDK wählt schnell die Wiedergabeliste mit hoher Bitrate und die zugehörigen Medien aus und setzt den Download fort.
 
-## Fehlendes Wiedergabelisten-Failover {#section_81A5822C108449E1A0E94A6E25DE9E8E}
+## Fehlendes Playlist-Failover {#section_81A5822C108449E1A0E94A6E25DE9E8E}
 
 Wenn eine vollständige Wiedergabeliste fehlt, z. B. wenn die in einer Manifestdatei der obersten Ebene angegebene M3U8-Datei nicht heruntergeladen wird, versucht Browser TVSDK eine Wiederherstellung. Wenn der Vorgang nicht wiederhergestellt werden kann, bestimmt Ihre Anwendung den nächsten Schritt.
 
