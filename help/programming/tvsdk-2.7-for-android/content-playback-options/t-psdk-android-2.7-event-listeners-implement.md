@@ -6,6 +6,9 @@ title: Implementieren von Ereignis-Listenern und -Rückrufen
 uuid: bb1980f3-340b-4d36-ae7e-c9fc1d145233
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '456'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Mit Ereignis-Handlern können Sie auf TVSDK-Ereignis reagieren.
 
 Wenn ein Ereignis auftritt, ruft der Ereignis-Mechanismus von TVSDK Ihren registrierten Ereignis-Handler auf und übergibt ihm die Informationen zum Ereignis.
 
-TVSDK definiert Listener als öffentliche interne Schnittstellen innerhalb der `MediaPlayer` Schnittstelle.
+TVSDK definiert Listener als öffentliche interne Schnittstellen innerhalb der `MediaPlayer`-Schnittstelle.
 
 Ihre Anwendung muss Ereignis-Listener für alle TVSDK-Ereignis implementieren, die Ihre Anwendung betreffen.
 
@@ -34,9 +37,9 @@ Ihre Anwendung muss Ereignis-Listener für alle TVSDK-Ereignis implementieren, d
 
    >[!NOTE]
    >
-   >Für die meisten Ereignisse übergibt TVSDK Argumente an die Ereignis-Listener. Diese Werte liefern Informationen über das Ereignis, mit dem Sie entscheiden können, was als Nächstes zu tun ist. Die `MediaPlayerEvent` Auflistung Liste alle Ereignis, die `MediaPlayer` ausgelöst werden. Weitere Informationen finden Sie unter Ereignisse-Zusammenfassung .
+   >Für die meisten Ereignisse übergibt TVSDK Argumente an die Ereignis-Listener. Diese Werte liefern Informationen über das Ereignis, mit dem Sie entscheiden können, was als Nächstes zu tun ist. Die `MediaPlayerEvent`-Auflistung Liste alle Ereignis, die `MediaPlayer` auslöst. Weitere Informationen finden Sie unter Ereignisse-Zusammenfassung .
 
-   Wenn `mPlayer` es sich beispielsweise um eine Instanz von `MediaPlayer`handelt, können Sie wie einen Ereignis-Listener hinzufügen und strukturieren:
+   Wenn `mPlayer` beispielsweise eine Instanz von `MediaPlayer` ist, können Sie wie einen Ereignis-Listener hinzufügen und strukturieren:
 
    ```java
    mPlayer.addEventListener(MediaPlayerEvent.STATUS_CHANGED, new StatusChangeEventListener() { 
@@ -51,35 +54,35 @@ Ihre Anwendung muss Ereignis-Listener für alle TVSDK-Ereignis implementieren, d
    }); 
    ```
 
-## Reihenfolge der Ereignis {#section_6D412C33ACE54E9D90DB1DAA9AA30272}
+## Reihenfolge der Wiedergabe-Ereignis {#section_6D412C33ACE54E9D90DB1DAA9AA30272}
 
 TVSDK sendet Ereignis/Benachrichtigungen in allgemein erwarteten Sequenzen. Ihr Player kann Aktionen auf der Grundlage von Ereignissen in der erwarteten Sequenz implementieren.
 
 Die folgenden Beispiele zeigen die Reihenfolge einiger Ereignis, die während der Wiedergabe auftreten.
 
-Beim erfolgreichen Laden einer Medienressource `MediaPlayer.replaceCurrentResource`lautet die Reihenfolge der Ereignis:
+Beim erfolgreichen Laden einer Medienressource über `MediaPlayer.replaceCurrentResource` lautet die Reihenfolge der Ereignis:
 
-1. `MediaPlayerEvent.STATUS_CHANGED` mit Status `MediaPlayerStatus.INITIALIZING`
+1. `MediaPlayerEvent.STATUS_CHANGED` mit Status  `MediaPlayerStatus.INITIALIZING`
 
-1. `MediaPlayerEvent.STATUS_CHANGED` mit Status `MediaPlayerStatus.INITIALIZED`
+1. `MediaPlayerEvent.STATUS_CHANGED` mit Status  `MediaPlayerStatus.INITIALIZED`
 
 >[!TIP]
 >
->Laden Sie Ihre Medienressource in den Hauptthread. Wenn Sie eine Medienressource in einen Hintergrund-Thread laden, kann dieser Vorgang oder nachfolgende Vorgänge einen Fehler auslösen, z. B. `MediaPlayerException`und beenden.
+>Laden Sie Ihre Medienressource in den Hauptthread. Wenn Sie eine Medienressource in einen Hintergrund-Thread laden, kann dieser Vorgang oder nachfolgende Vorgänge einen Fehler auslösen, z. B. `MediaPlayerException`, und beenden.
 
-Beim Vorbereiten der Wiedergabe durch `MediaPlayer.prepareToPlay`lautet die Reihenfolge der Ereignis:
+Beim Vorbereiten der Wiedergabe über `MediaPlayer.prepareToPlay` lautet die Reihenfolge der Ereignis:
 
-1. `MediaPlayerEvent.STATUS_CHANGED` mit Status `MediaPlayerStatus.PREPARING`
+1. `MediaPlayerEvent.STATUS_CHANGED` mit Status  `MediaPlayerStatus.PREPARING`
 
 1. `MediaPlayerEvent.TIMELINE_UPDATED` wenn Anzeigen eingefügt wurden.
-1. `MediaPlayerEvent.STATUS_CHANGED` mit Status `MediaPlayerStatus.PREPARED`
+1. `MediaPlayerEvent.STATUS_CHANGED` mit Status  `MediaPlayerStatus.PREPARED`
 
 Bei Live-/linearen Streams lautet die Reihenfolge der Ereignis während der Wiedergabe, während das Wiedergabefenster erweitert und weitere Möglichkeiten aufgelöst werden, wie folgt:
 
 1. `MediaPlayerEvent.ITEM_UPDATED`
 1. `MediaPlayerEvent.TIMELINE_UPDATED` wenn Anzeigen eingefügt wurden
 
-## Reihenfolge der Ereignis {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
+## Reihenfolge der Ereignis für Werbung {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
 Wenn Ihre Wiedergabe Werbung enthält, sendet TVSDK Ereignisse/Benachrichtigungen in allgemein erwarteten Sequenzen. Ihr Player kann Aktionen auf der Grundlage von Ereignissen innerhalb der erwarteten Sequenz implementieren.
 
@@ -141,8 +144,8 @@ mediaPlayer.addEventListener(MediaPlayerEvent.AD_CLICK, new AdClickedEventListen
 
 TVSDK sendet DRM-Ereignis (Digital Rights Management) als Reaktion auf DRM-bezogene Vorgänge, z. B. wenn neue DRM-Metadaten verfügbar werden. Ihr Player kann entsprechend diesen Ereignissen Aktionen implementieren.
 
-Um über alle DRM-bezogenen Ereignis informiert zu werden, suchen Sie nach `MediaPlayerEvent.DRM_METADATA`. TVSDK sendet zusätzliche DRM-Ereignis über die `DRMManager` Klasse.
+Um über alle DRM-bezogenen Ereignis informiert zu werden, suchen Sie nach `MediaPlayerEvent.DRM_METADATA`. TVSDK sendet zusätzliche DRM-Ereignis über die `DRMManager`-Klasse.
 
 ## Reihenfolge der Lader-Ereignis {#section_5638F8EDACCE422A9425187484D39DCC}
 
-TVSDK löst `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` bei Lader-Ereignissen aus.
+TVSDK löst `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` aus, wenn Lader-Ereignis auftreten.
