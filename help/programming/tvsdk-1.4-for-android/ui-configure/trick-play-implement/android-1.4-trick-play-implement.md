@@ -6,6 +6,9 @@ title: Schnelles Vorwärts- und Zurückspulen implementieren
 uuid: 2e5d0fd0-0290-4f08-b9c6-c8ecde26abb8
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 0%
 
 ---
 
@@ -16,10 +19,11 @@ Wenn Benutzer die Medien schnell vorwärts oder schnell zurückspulen, befinden 
 
 Um die Geschwindigkeit zu wechseln, müssen Sie einen Wert einstellen.
 
-1. Wechseln Sie vom normalen Wiedergabemodus (1x) zum Trick-play-Modus, indem Sie die Rate auf einen erlaubten `MediaPlayer` Wert einstellen.
+1. Wechseln Sie vom normalen Wiedergabemodus (1x) zum Trick-play-Modus, indem Sie die Rate für das `MediaPlayer` auf einen erlaubten Wert einstellen.
 
-   * Die `MediaPlayerItem` Klasse definiert die zulässigen Wiedergaberaten.
+   * Die `MediaPlayerItem`-Klasse definiert die zulässigen Wiedergaberaten.
    * TVSDK wählt die nächstzulässige Rate aus, wenn die angegebene Rate nicht zulässig ist.
+
    In diesem Beispiel wird die interne Wiedergaberate des Players auf die angeforderte Rate eingestellt.
 
    ```java
@@ -46,11 +50,11 @@ Um die Geschwindigkeit zu wechseln, müssen Sie einen Wert einstellen.
    }
    ```
 
-1. Sie können optional auf Ratenänderungen-Ereignis hören, die Sie darüber informieren, wann Sie eine Ratenänderung angefordert haben und wann eine Ratenänderung tatsächlich stattfindet.
+1. Sie können optional auf Ratenänderungen-Ereignis hören, die Sie darüber informieren, wann Sie eine Ratenänderung angefordert haben und wann tatsächlich eine Ratenänderung eintritt.
 
        TVSDK sendet die folgenden Ereignisse im Zusammenhang mit der Trickwiedergabe:
    
-   * `AdobePSDK.PSDKEventType.RATE_SELECTED` wenn sich der `rate` Wert in einen anderen Wert ändert.
+   * `AdobePSDK.PSDKEventType.RATE_SELECTED` wenn sich der  `rate` Wert in einen anderen Wert ändert.
 
    * `AdobePSDK.PSDKEventType.RATE_PLAYING` wenn die Wiedergabe mit der ausgewählten Rate fortgesetzt wird.
 
