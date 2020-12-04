@@ -1,20 +1,23 @@
 ---
-description: Sie können HTML-Überlagerungen mit StageVideo verwenden, um UI-Elemente in der Videoebene der Flash-Liste anzuzeigen. Diese Ebene befindet sich über der StageVideo-Ebene, sodass StageVideo immer hinter den Elementen der Flash-Liste angezeigt wird.
-seo-description: Sie können HTML-Überlagerungen mit StageVideo verwenden, um UI-Elemente in der Videoebene der Flash-Liste anzuzeigen. Diese Ebene befindet sich über der StageVideo-Ebene, sodass StageVideo immer hinter den Elementen der Flash-Liste angezeigt wird.
+description: Sie können HTML-Überlagerungen mit StageVideo verwenden, um UI-Elemente in der Videoebene "Liste"des Flashs anzuzeigen. Diese Ebene befindet sich über der StageVideo-Ebene, sodass StageVideo immer hinter den Elementen der Display-Liste eines Flashs angezeigt wird.
+seo-description: Sie können HTML-Überlagerungen mit StageVideo verwenden, um UI-Elemente in der Videoebene "Liste"des Flashs anzuzeigen. Diese Ebene befindet sich über der StageVideo-Ebene, sodass StageVideo immer hinter den Elementen der Display-Liste eines Flashs angezeigt wird.
 seo-title: StageVideo- und HTML-Überlagerungen
 title: StageVideo- und HTML-Überlagerungen
 uuid: 84e862ab-4c35-47a2-9c4e-f792d3ef5363
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '299'
+ht-degree: 0%
 
 ---
 
 
 # StageVideo- und HTML-Überlagerungen{#stagevideo-and-html-overlays}
 
-Sie können HTML-Überlagerungen mit StageVideo verwenden, um UI-Elemente in der Videoebene der Flash-Liste anzuzeigen. Diese Ebene befindet sich über der StageVideo-Ebene, sodass StageVideo immer hinter den Elementen der Flash-Liste angezeigt wird.
+Sie können HTML-Überlagerungen mit StageVideo verwenden, um UI-Elemente in der Videoebene &quot;Liste&quot;des Flashs anzuzeigen. Diese Ebene befindet sich über der StageVideo-Ebene, sodass StageVideo immer hinter den Elementen der Display-Liste eines Flashs angezeigt wird.
 
-HTML-Überlagerungen sind Elemente der Benutzeroberfläche, die Sie in der Flash-Anzeigeebene bei Videos anzeigen können, die von `StageVideo` einer eigenen Ebene gerendert werden. Vor Flash 15 konnten Sie keine HTML-Überlagerungen verwenden, wenn die Hardwarebeschleunigung nicht verfügbar war. Ab Flash 15 werden HTML-Überlagerungen angezeigt, wenn auf die Software-Wiedergabe zurückgegriffen `StageVideo` wird.
+HTML-Überlagerungen sind Benutzeroberflächenelemente, die Sie in der Videoanzeigeebene des Flashs anzeigen können, die von `StageVideo` auf der eigenen Ebene wiedergegeben wird. Vor Flash 15 konnten Sie keine HTML-Überlagerungen verwenden, wenn keine Hardwarebeschleunigung verfügbar war. Ab Flash 15 werden HTML-Überlagerungen angezeigt, wenn `StageVideo` auf das Software-Rendering zurückfällt.
 
 >[!IMPORTANT]
 >
@@ -22,17 +25,17 @@ HTML-Überlagerungen sind Elemente der Benutzeroberfläche, die Sie in der Flash
 
 Berücksichtigen Sie die folgenden Informationen:
 
-* In Flash Player 15:
+* Flash Player 15:
 
    * Sie können HTML-Überlagerungen unabhängig davon verwenden, ob Hardwarebeschleunigung verfügbar ist.
    * Um HTML-Überlagerungen zu verwenden, setzen Sie `wmode` auf `opaque`.
 
-* In Flash Player 14:
+* Flash Player 14:
 
-   * Wenn die Hardwarebeschleunigung verfügbar ist, `StageVideo` befindet sich diese unter der Flash-Liste, sodass Sie HTML-Überlagerungen verwenden können.
+   * Wenn die Hardwarebeschleunigung verfügbar ist, befindet sich `StageVideo` unter der Display-Liste des Flashs, sodass Sie HTML-Überlagerungen verwenden können.
    * Wenn die Hardwarebeschleunigung nicht verfügbar ist, wird das Video über allen anderen Elementen im Browser wiedergegeben, wodurch die Verwendung von HTML-Überlagerungen verhindert wird.
 
-Im Folgenden finden Sie die Mindestanforderungen an den Browser, mit denen Sie HTML-Überlagerungen verwenden können `StageVideo`:
+Hier finden Sie die Mindestanforderungen für den Browser, um HTML-Überlagerungen mit `StageVideo` zu verwenden:
 
 * Firefox Version 4 und höher
 * Safari Version 4 und höher
