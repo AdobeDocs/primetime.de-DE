@@ -1,7 +1,7 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: Requirements for Synchronization
+seo-title: Anforderungen für die Synchronisierung
 title: Anforderungen für die Synchronisierung
 uuid: 594a4bb2-c042-4485-9cae-73b8f9f93d82
 translation-type: tm+mt
@@ -19,9 +19,9 @@ Die Anforderungen für die Synchronisierung geben die Häufigkeit an, mit der de
 
 Das Synchronisierungsverhalten wird mithilfe der folgenden Parameter definiert:
 
-* **Beginn-Intervall** - Gibt an, wie lange nach der letzten erfolgreichen Synchronisierung gewartet wird, bis eine weitere Synchronisierungsanforderung Beginn wird.
-* **Hartes Stoppintervall** - (Optional). Die Wiedergabe ist nicht zulässig, wenn innerhalb der angegebenen Zeitspanne keine erfolgreiche Synchronisierung stattgefunden hat.
-* **Synchronisierungswahrscheinlichkeit erzwingen** - (Optional). Möglichkeit, mit der der Client vor dem nächsten Beginn eine Synchronisierungsmeldung senden soll.
+* **Beginn-Intervall** : Gibt an, wie lange nach der letzten erfolgreichen Synchronisierung gewartet wird, bis eine weitere Synchronisierungsanforderung Beginn wird.
+* **Hartes Stoppintervall**  - (Optional). Die Wiedergabe ist nicht zulässig, wenn innerhalb der angegebenen Zeitspanne keine erfolgreiche Synchronisierung stattgefunden hat.
+* **Synchronisierungswahrscheinlichkeit erzwingen**  - (Optional). Möglichkeit, mit der der Client vor dem nächsten Beginn eine Synchronisierungsmeldung senden soll.
 
 >[!NOTE]
 >
