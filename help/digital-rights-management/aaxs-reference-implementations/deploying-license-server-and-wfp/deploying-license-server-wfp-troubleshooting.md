@@ -4,6 +4,9 @@ title: Fehlerbehebung
 uuid: db76d6a4-c285-4d86-95a1-4f1a85ed3743
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ Nachstehend sind allgemeine Probleme und Lösungen für die Bereitstellung aufge
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   Vergewissern Sie sich, dass das Kennwort mit der bereitgestellten `ScrambleUtil` Klasse verschlüsselt ist.
+   Vergewissern Sie sich, dass das Kennwort mit der bereitgestellten `ScrambleUtil`-Klasse verschlüsselt ist.
 
 * Wenn der folgende Fehler angezeigt wird:
 
@@ -35,5 +38,5 @@ Nachstehend sind allgemeine Probleme und Lösungen für die Bereitstellung aufge
        "javax.crypto.BadPaddingException: Given final block not properly padded"
    ```
 
-   Vergewissern Sie sich, dass Sie die mit der Referenz-Implementierung bereitgestellte Kennwort-Verschachtelungsklasse verwendet haben (dieses Programm unterscheidet sich von dem mit Adobe® Access™ Server für geschütztes Streaming bereitgestellten Dienstprogramm).
+   Vergewissern Sie sich, dass Sie die mit der Referenz-Implementierung bereitgestellte Password crambler-Klasse verwendet haben (dieses Dienstprogramm unterscheidet sich von dem mit Adobe® Access™ Server für geschütztes Streaming bereitgestellten).
 
