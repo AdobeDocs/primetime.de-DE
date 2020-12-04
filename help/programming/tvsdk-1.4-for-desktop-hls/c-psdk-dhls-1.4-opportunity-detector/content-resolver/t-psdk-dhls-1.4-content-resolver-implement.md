@@ -6,6 +6,9 @@ title: Implementieren eines benutzerdefinierten Inhaltsauflösers
 uuid: 1714fcd9-45e0-48be-97f3-f702265128a4
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 2%
 
 ---
 
@@ -14,10 +17,10 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Sie können Ihre eigenen Inhaltsauflöser auf Basis der Standardauflöser implementieren.
 
-Wenn TVSDK eine neue Chance erkennt, durchläuft es die registrierten Content-Auflöser, die nach einer suchen, die diese Gelegenheit mit der `canResolve` Methode lösen kann. Das erste, das &quot;true&quot;zurückgibt, wird ausgewählt, um die Gelegenheit zu lösen. Wenn kein Inhaltsauflöser geeignet ist, wird diese Gelegenheit übersprungen. Da die Inhaltsauflösung normalerweise asynchron abläuft, ist der Content-Auflöser dafür verantwortlich, TVSDK zu benachrichtigen, wenn der Prozess abgeschlossen ist.
+Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Content-Auflöser, die nach einer suchen, die diese Gelegenheit mit der `canResolve`-Methode lösen kann. Das erste, das &quot;true&quot;zurückgibt, wird ausgewählt, um die Gelegenheit zu lösen. Wenn kein Inhaltsauflöser geeignet ist, wird diese Gelegenheit übersprungen. Da die Inhaltsauflösung normalerweise asynchron abläuft, ist der Content-Auflöser dafür verantwortlich, TVSDK zu benachrichtigen, wenn der Prozess abgeschlossen ist.
 
-* Der Content-Auflöser ruft `client.place` auf, um anzugeben, welche Zeitschienen-Operation TVSDK ausgeführt werden muss (üblicherweise eine Platzierung von Werbeunterbrechungen).
-* Der Inhaltsauflöser ruft auf, `client.notifyCompleted` wenn der Auflösungsprozess erfolgreich ist oder `client.notifyFailed` wenn der Prozess fehlschlägt.
+* Der Inhaltsauflöser ruft `client.place` auf, um anzugeben, welche Zeitschienen-Operation TVSDK ausgeführt werden muss (normalerweise eine Werbeunterbrechung).
+* Der Inhaltsauflöser ruft `client.notifyCompleted` auf, wenn der Auflösungsprozess erfolgreich ist, oder `client.notifyFailed`, wenn der Prozess fehlschlägt.
 
 1. Erstellen Sie einen benutzerdefinierten Opportunitätsauflöser.
 
