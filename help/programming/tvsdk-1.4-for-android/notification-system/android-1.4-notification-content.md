@@ -6,6 +6,9 @@ title: Benachrichtigungsinhalt
 uuid: 89fb8f63-b0d5-45cd-bdad-348529fd07d0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '739'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ MediaPlayerNotification-Objekte enthalten Informationen zu Änderungen im Player
 
 Ihre Anwendung kann die Benachrichtigungen und Statusinformationen abrufen. Sie können mithilfe der Benachrichtigungsinformationen auch ein Protokollierungssystem für die Diagnose und Überprüfung erstellen.
 
-Sie implementieren Ereignis-Listener, um Ereignis zu erfassen und darauf zu reagieren. In vielen Ereignissen werden `MediaPlayerNotification` Statusbenachrichtigungen bereitgestellt.
+Sie implementieren Ereignis-Listener, um Ereignis zu erfassen und darauf zu reagieren. In vielen Ereignissen werden Statusbenachrichtigungen für `MediaPlayerNotification` bereitgestellt.
 
 `MediaPlayerNotification` enthält Informationen zum Status des Spielers.
 
-TVSDK stellt eine chronologische Liste der `MediaPlayerNotification` Benachrichtigungen bereit. Jede Benachrichtigung enthält die folgenden Informationen:
+TVSDK stellt eine chronologische Liste der `MediaPlayerNotification`-Benachrichtigungen bereit. Jede Benachrichtigung enthält die folgenden Informationen:
 
 * Zeitstempel
 * Diagnostische Metadaten, die aus den folgenden Elementen bestehen:
@@ -28,9 +31,9 @@ TVSDK stellt eine chronologische Liste der `MediaPlayerNotification` Benachricht
    * `type`: INFO, WARN oder FEHLER.
    * `code`: Eine numerische Darstellung der Benachrichtigung.
    * `name`: Eine für Menschen lesbare Beschreibung der Anmeldung, z. B. SEEK_ERROR
-   * `metadata`: Schlüssel/Wert-Paare, die relevante Informationen zur Benachrichtigung enthalten. Ein Schlüssel mit dem Namen `URL` stellt beispielsweise einen Wert bereit, der eine URL im Zusammenhang mit der Benachrichtigung ist.
+   * `metadata`: Schlüssel/Wert-Paare, die relevante Informationen zur Benachrichtigung enthalten. Beispielsweise stellt ein Schlüssel mit dem Namen `URL` einen Wert bereit, der eine URL im Zusammenhang mit der Benachrichtigung ist.
 
-   * `innerNotification`: Ein Verweis auf ein anderes `MediaPlayerNotification` Objekt, das sich direkt auf diese Benachrichtigung auswirkt.
+   * `innerNotification`: Ein Verweis auf ein anderes  `MediaPlayerNotification` Objekt, das sich direkt auf diese Benachrichtigung auswirkt.
 
 Sie können diese Informationen zur späteren Analyse lokal speichern oder zur Protokollierung und grafischen Darstellung an einen Remote-Server senden.
 
@@ -38,23 +41,23 @@ Sie können diese Informationen zur späteren Analyse lokal speichern oder zur P
 
 Sie können auf Benachrichtigungen warten und eigene Benachrichtigungen zum Benachrichtigungsverlauf hinzufügen.
 
-Der Kern des Primetime Player-Benachrichtigungssystems ist die `Notification` Klasse, die eine eigenständige Benachrichtigung darstellt.
+Der Kern des Primetime Player-Benachrichtigungssystems ist die `Notification`-Klasse, die eine eigenständige Benachrichtigung darstellt.
 
-Die `NotificationHistory` Klasse bietet einen Mechanismus zum Ansammeln von Benachrichtigungen. Es speichert ein Protokoll von Benachrichtigungsobjekten (NotificationHistoryItem), das eine Sammlung von Benachrichtigungen darstellt.
+Die `NotificationHistory`-Klasse stellt einen Mechanismus zum Akkumulieren von Benachrichtigungen bereit. Es speichert ein Protokoll von Benachrichtigungsobjekten (NotificationHistoryItem), das eine Sammlung von Benachrichtigungen darstellt.
 
 So empfangen Sie Benachrichtigungen:
 
 * Benachrichtigungen abrufen
-* Hinzufügen Benachrichtigungen zum Benachrichtigungsverlauf
+* hinzufügen Benachrichtigungen zum Benachrichtigungsverlauf
 
 1. Suchen Sie nach Statusänderungen.
-1. Implementieren Sie den `MediaPlayer.PlaybackEventListener.onStateChanged` Rückruf.
+1. Implementieren Sie den Rückruf `MediaPlayer.PlaybackEventListener.onStateChanged`.
 1. TVSDK übergibt zwei Parameter an den Rückruf:
 
    * Der neue Status ( `MediaPlayer.PlayerState`)
-   * Ein `MediaPlayerNotification` Objekt
+   * Ein `MediaPlayerNotification`-Objekt
 
-## Hinzufügen Echtzeit-Protokollierung und -Debugging {#add-real-time-logging-and-debugging}
+## hinzufügen Echtzeit-Protokollierung und -Debugging {#add-real-time-logging-and-debugging}
 
 Sie können Benachrichtigungen verwenden, um die Echtzeit-Anmeldung in Ihrer Videoanwendung zu implementieren.
 
@@ -78,7 +81,7 @@ Im Folgenden finden Sie ein Beispiel zum Abrufen von Benachrichtigungen.
    Der Remote-Server könnte dann die bereitgestellten Daten grafisch in Echtzeit anzeigen.
 1. Um den Verlust von Benachrichtigungs-Ereignissen zu ermitteln, suchen Sie nach Lücken in der Sequenz von Ereignis-Indexwerten.
 
-   Jedes Benachrichtigungs-Ereignis verfügt über einen Indexwert, der automatisch von der `session.NotificationHistory` Klasse inkrementiert wird.
+   Jedes Benachrichtigungs-Ereignis verfügt über einen Indexwert, der automatisch durch die `session.NotificationHistory`-Klasse inkrementiert wird.
 
 ## ID3-Tags {#id-tags}
 
@@ -95,13 +98,13 @@ Wenn TVSDK ID3-Metadaten erkennt, wird eine Benachrichtigung mit den folgenden D
 * NAME = nicht vorhanden
 * ID = 0
 
-1. Implementieren Sie einen Ereignis-Listener für `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` und registrieren Sie ihn beim `MediaPlayer` -Objekt.
+1. Implementieren Sie einen Ereignis-Listener für `MediaPlayer.PlaybackEventListener#onTimedMetadata(TimeMetadata timeMetadata)` und registrieren Sie ihn beim `MediaPlayer`-Objekt.
 
    TVSDK ruft diesen Listener auf, wenn er ID3-Metadaten erkennt.
 
    >[!NOTE]
    >
-   >Benutzerdefinierte Anzeigenbezeichnungen verwenden dasselbe `onTimedMetadata` Ereignis, um die Erkennung eines neuen Tags anzuzeigen. Dies sollte keine Verwirrung stiften, da auf Manifestebene benutzerdefinierte Anzeigenbezeichnungen erkannt werden und ID3-Tags im Stream eingebettet werden. Weitere Informationen finden Sie unter custom-tags-configure .
+   >Benutzerdefinierte Anzeigenbezeichnungen verwenden dasselbe `onTimedMetadata`-Ereignis, um die Erkennung eines neuen Tags anzuzeigen. Dies sollte keine Verwirrung stiften, da auf Manifestebene benutzerdefinierte Anzeigenbezeichnungen erkannt werden und ID3-Tags im Stream eingebettet werden. Weitere Informationen finden Sie unter custom-tags-configure .
 
 1. Abrufen der Metadaten.
 
