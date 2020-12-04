@@ -6,6 +6,9 @@ description: Der Codeblock unten definiert das Details-JSON-Objekt, wenn der Typ
 seo-description: Der Codeblock unten definiert das Details-JSON-Objekt, wenn der Typwert Primetime-Anzeigen ist.
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -40,4 +43,4 @@ Der Codeblock unten definiert das Details-JSON-Objekt, wenn der Typwert Primetim
 | zoneid | Die Primetime-Anzeigenzone. Weitere Informationen finden Sie in der Dokumentation zu Primetime-Anzeigen. |
 | Targeting | Ein Array mit Schlüssel/Wert-Paaren, die für das Targeting bestimmter Anzeigen für den Inhalt verwendet werden. |
 
-Weitere Informationen zum Wert dieser Attribute finden Sie unter [com.adobe.mediacore.metadata.AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/metadata/AuditudeSettings.html) .
+Weitere Informationen zum Wert dieser Attribute finden Sie unter [com.adobe.mediacore.metadata.AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/metadata/AuditudeSettings.html).
