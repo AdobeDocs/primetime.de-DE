@@ -6,6 +6,9 @@ title: Anzeigen
 uuid: 9a5e8c83-18ce-41e8-9cb1-fdc9da903faf
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '120'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 Beim Abspielen von Inhalten kann Browser TVSDK Anzeigen anzeigen und Informationen über Anzeigen weitergeben, wenn das MediaResource-Objekt erstellt wird.
 
-Sie können optional die `prepareToPlay` Funktion nach dem Empfang aufrufen `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
+Sie können optional die Funktion `prepareToPlay` aufrufen, nachdem Sie `AdobePSDK.MediaPlayerStatus.INITIALIZED` erhalten haben.
 
 ```js
 function onStatusChange (event) { 
@@ -68,4 +71,4 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }; 
 ```
 
-Weitere Informationen zu den erforderlichen Metadaten `AuditudeSettings`finden Sie unter [Anzeigeneinfügemetadaten](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md).
+Weitere Informationen zu den erforderlichen `AuditudeSettings` finden Sie unter [Anzeigeneinfügemetadaten](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md).
