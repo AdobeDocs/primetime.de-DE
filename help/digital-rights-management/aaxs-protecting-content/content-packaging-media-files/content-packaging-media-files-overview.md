@@ -1,6 +1,6 @@
 ---
-seo-title: Overview
-title: Overview
+seo-title: Übersicht
+title: Übersicht
 uuid: 11cf1f1f-a4b2-4ac2-aae7-e925d96729d2
 translation-type: tm+mt
 source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Overview {#overview}
+# Übersicht {#overview}
 
-*Packaging* refers to the process of encrypting and applying a policy to FLV or F4V files. Use the media packaging APIs to package files. The Adobe Access Java SDK can only package progressive-download Flash and AIR content, such as FLV, F4V, and MP4. Um Inhalte mit Adobe Access DRM für andere Inhaltsformate wie Adobe HTTP Dynamic Streaming (HDS) oder Apple HTTP Live Streaming (HLS) zu verpacken, müssen Sie andere Tools verwenden, z. B. Adobe Media Server ( [https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html)) oder einen Encoder, der das Adobe Broadcast SDK implementiert ( [https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf)). Alternativ dazu haben Kunden die Wahl zwischen dem Java Primetime Packager-Werkzeugsatz der Adobe, der Inhalte für eine Vielzahl von Zielgruppen wie HDS, HLS und DASH verpacken kann.
+*&quot;* Verpacken&quot;bezeichnet den Prozess der Verschlüsselung und Anwendung einer Richtlinie auf FLV- oder F4V-Dateien. Verwenden Sie zum Verpacken von Dateien die Medienpaket-APIs. Das Adobe Access Java SDK kann nur progressiv heruntergeladene Flash- und AIR-Inhalte wie FLV, F4V und MP4 verpacken. Um Inhalte mit Adobe Access DRM für andere Inhaltsformate wie Adobe HTTP Dynamic Streaming (HDS) oder Apple HTTP Live Streaming (HLS) zu verpacken, müssen Sie andere Tools verwenden, z. B. Adobe Media Server ( [https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html)) oder einen Encoder, der die Adobe Broadcast SDK ( [https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf)) implementiert. Alternativ dazu haben Kunden die Wahl zwischen dem Java Primetime Packager-Werkzeugsatz der Adobe, der Inhalte für eine Vielzahl von Zielgruppen wie HDS, HLS und DASH verpacken kann.
 
 Die Verpackung wird vom Lizenzserver entkoppelt. Es ist nicht erforderlich, dass der Packager eine Verbindung zum Lizenzserver herstellt, um Informationen zum Inhalt auszutauschen. Alles, was der Lizenzserver zur Lizenzerteilung benötigt, ist in den Inhaltsmetadaten enthalten.
 
@@ -25,7 +25,7 @@ Es ist möglich, dass ein bestimmtes Inhaltselement mehrere Richtlinien hat. Die
 >
 >Die Architektur ermöglicht die Angabe von Nutzungsrichtlinien und die Bindung an Inhalte, wenn der Inhalt gepackt wird. Bevor ein Client Inhalte wiedergeben kann, muss der Client eine Lizenz für diesen Computer erwerben. Die Lizenz gibt die erzwungenen Nutzungsregeln an und stellt den Schlüssel bereit, der zum Entschlüsseln des Inhalts verwendet wird. Die Richtlinie ist eine Vorlage zum Generieren der Lizenz. Der Lizenzserver kann jedoch die Nutzungsregeln bei der Lizenzerteilung überschreiben. Beachten Sie, dass die Lizenz aufgrund von Einschränkungen wie Ablaufzeiten oder Wiedergabefenstern ungültig gemacht werden kann.
 
-Beim Verpacken von Inhalten stehen zahlreiche Optionen zur Verfügung. Diese werden in der `DRMParameters` Schnittstelle und in den Klassen, die diese Schnittstelle implementieren, angegeben, und zwar die `F4VDRMParameters` und `FLVDRMParameters`. Mit diesen Klassen können Sie Signatur- und Schlüsselparameter festlegen sowie angeben, ob Audioinhalte, Videoinhalte oder Skriptdaten verschlüsselt werden sollen. Informationen dazu, wie diese in der Referenzimplementierung implementiert sind, finden Sie in den Beschreibungen der Befehlszeilenoptionen in Media Packager, die unter *Verwenden der Referenzimplementierungen für den Zugriff auf Adoben beschrieben werden*. Diese Optionen basieren auf der Java-API und stehen daher zur programmatischen Nutzung zur Verfügung.
+Beim Verpacken von Inhalten stehen zahlreiche Optionen zur Verfügung. Diese werden in der `DRMParameters`-Schnittstelle und in den Klassen, die diese Schnittstelle implementieren, angegeben, die `F4VDRMParameters` und `FLVDRMParameters` sind. Mit diesen Klassen können Sie Signatur- und Schlüsselparameter festlegen sowie angeben, ob Audioinhalte, Videoinhalte oder Skriptdaten verschlüsselt werden sollen. Informationen dazu, wie diese in der Referenzimplementierung implementiert sind, finden Sie in den Beschreibungen der Befehlszeilenoptionen in Media Packager, die unter *Verwenden der Adobe Access Reference Implementierungen* beschrieben werden. Diese Optionen basieren auf der Java-API und stehen daher zur programmatischen Nutzung zur Verfügung.
 
 Die Verpackungsoptionen umfassen:
 
@@ -33,14 +33,14 @@ Die Verpackungsoptionen umfassen:
 * Lizenzserver-URL (der Client verwendet dies als Basis-URL für alle an den Lizenzserver gesendeten Anforderungen)
 * Lizenzservertransportzertifikat
 * Lizenzserver-Zertifikat zum Verschlüsseln des CEK.
-* Packager credential for signing metadata
+* Packager-Berechtigung zum Signieren von Metadaten
 
-Adobe Access provides an API for passing in the CEK. If no CEK is specified, the SDK randomly generates it. Typically you need a different CEK for each piece of content. However, in Dynamic Streaming, you would likely use the same CEK for all the files for that content, so the user only needs a single license and can seamlessly transition from one bit rate to another. To use the same key and license for multiple pieces of content, pass the same `DRMParameters` object to `MediaEncrypter.encryptContent()`, or pass in the CEK using `V2KeyParameters.setContentEncryptionKey()`. To use a different key and license for each piece of content, create a new `DRMParameters` instance for each file.
+Adobe Access stellt eine API zur Übergabe des CEK bereit. Wenn kein CEK angegeben ist, erzeugt das SDK ihn zufällig. Normalerweise benötigen Sie für jedes Inhaltselement einen anderen CEK. Beim dynamischen Streaming würden Sie jedoch wahrscheinlich für alle Dateien denselben CEK verwenden, sodass der Benutzer nur eine einzige Lizenz benötigt und nahtlos von einer Bitrate zur nächsten Transition wechseln kann. Um denselben Schlüssel und dieselbe Lizenz für mehrere Inhaltselemente zu verwenden, übergeben Sie dasselbe `DRMParameters`-Objekt an `MediaEncrypter.encryptContent()` oder geben Sie das CEK mit `V2KeyParameters.setContentEncryptionKey()` weiter. Um für jedes Inhaltselement einen anderen Schlüssel und eine andere Lizenz zu verwenden, erstellen Sie für jede Datei eine neue `DRMParameters`-Instanz.
 
-Beim Verpacken von Inhalten mit Schlüsselrotation können Sie die verwendeten Drehtasten und die Häufigkeit der Tastenkombinationen steuern. `F4VDRMParameters` und `FLVDRMParameters` implementieren Sie die `KeyRotationParameters` Schnittstelle. Über diese Oberfläche können Sie die Schlüsseldrehung aktivieren. Sie müssen auch eine `RotatingContentEncryptionKeyProvider`angeben. Für jedes verschlüsselte Beispiel bestimmt diese Klasse den zu verwendenden Drehschlüssel. Sie können einen eigenen Anbieter implementieren oder den im SDK `TimeBasedKeyProvider` enthaltenen verwenden. Diese Implementierung generiert nach dem Zufallsprinzip einen neuen Schlüssel nach einer bestimmten Anzahl von Sekunden.
+Beim Verpacken von Inhalten mit Schlüsselrotation können Sie die verwendeten Drehtasten und die Häufigkeit der Tastenkombinationen steuern. `F4VDRMParameters` und  `FLVDRMParameters` implementieren Sie die  `KeyRotationParameters` Schnittstelle. Über diese Oberfläche können Sie die Schlüsseldrehung aktivieren. Sie müssen auch ein `RotatingContentEncryptionKeyProvider` angeben. Für jedes verschlüsselte Beispiel bestimmt diese Klasse den zu verwendenden Drehschlüssel. Sie können einen eigenen Anbieter implementieren oder das im SDK enthaltene `TimeBasedKeyProvider` verwenden. Diese Implementierung generiert nach dem Zufallsprinzip einen neuen Schlüssel nach einer bestimmten Anzahl von Sekunden.
 
-In einigen Fällen müssen Sie die Inhaltsmetadaten möglicherweise als separate Datei speichern und sie dem Client separat vom Inhalt zur Verfügung stellen. Rufen Sie dazu auf `MediaEncrypter.encryptContent()`, wodurch ein `MediaEncrypterResult` Objekt zurückgegeben wird. Rufen Sie `MediaEncrypterResult.getKeyInfo()` das Ergebnis an und geben Sie es an `V2KeyStatus`. Then retrieve the content metadata and store it in a file.
+In einigen Fällen müssen Sie die Inhaltsmetadaten möglicherweise als separate Datei speichern und sie dem Client separat vom Inhalt zur Verfügung stellen. Rufen Sie dazu `MediaEncrypter.encryptContent()` auf, wodurch ein `MediaEncrypterResult`-Objekt zurückgegeben wird. Rufen Sie `MediaEncrypterResult.getKeyInfo()` auf und geben Sie das Ergebnis in `V2KeyStatus` ein. Rufen Sie dann die Inhaltsmetadaten ab und speichern Sie sie in einer Datei.
 
-Alle diese Aufgaben können mit der Java-API ausgeführt werden. Weitere Informationen zur Java-API, die in diesem Kapitel besprochen wird, finden Sie unter API-Referenz für den Zugriff auf *Adoben*.
+Alle diese Aufgaben können mit der Java-API ausgeführt werden. Weitere Informationen zur Java-API, die in diesem Kapitel behandelt werden, finden Sie unter *API-Referenz für den Zugriff auf Adoben*.
 
-Informationen zur Implementierung der Media Packager-Referenz finden Sie unter *Verwenden der Adobe Access Reference Implementierungen*.
+Weitere Informationen zur Media Packager-Referenzimplementierung finden Sie unter *Verwenden der Adobe Access Reference Implementierungen*.
