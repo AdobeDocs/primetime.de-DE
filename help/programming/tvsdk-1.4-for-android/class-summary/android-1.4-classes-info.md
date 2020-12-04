@@ -6,6 +6,9 @@ title: Info-Klassen
 uuid: 49d6dc60-573e-41a6-aef9-2094c2699673
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '176'
+ht-degree: 0%
 
 ---
 
@@ -26,11 +29,12 @@ Paket: [com.adobe.mediacore.info](https://help.adobe.com/en_US/primetime/api/psd
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/AudioTrack.html" format="html" scope="external"> AudioTrack</a></span></td> 
-   <td colname="2">Klasse, die Track <span class="codeph"></span> erweitert, um die Abstraktion der Audiospur zu definieren. </td> 
+   <td colname="2">Klasse, die <span class="codeph"> Track</span> erweitert, um die Audiospur-Abstraktion zu definieren. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/ClosedCaptionsTrack.html" format="html" scope="external"> ClosedCaptionsTrack</a> ClosedCaptionsTrack</span> </td> 
-   <td colname="2">Klasse, die <span class="codeph"> Track</span> erweitert, um die Untertitelabstraktion zu definieren. Klasse, die die <span class="codeph"> ClosedCaptions</span> -Abstraktion definiert. Eine Untertitelspur wird eindeutig durch ihren Namen UND ihren Diensttyp definiert. Verschiedene Diensttypen können denselben Namen verwenden.</td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/ClosedCaptionsTrack.html" format="html" scope="external"> </a> 
+   ClosedCaptionsTrackClosedCaptionsTrack</span> </td> 
+   <td colname="2">Klasse, die <span class="codeph"> Track</span> erweitert, um die Untertitel-Abstraktion zu definieren. Klasse, die die Abstraktion <span class="codeph"> ClosedCaptions</span> definiert. Eine Untertitelspur wird eindeutig durch ihren Namen UND ihren Diensttyp definiert. Verschiedene Diensttypen können denselben Namen verwenden.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Profile.html" format="html" scope="external"> Profil</a> </span></td> 
@@ -38,7 +42,7 @@ Paket: [com.adobe.mediacore.info](https://help.adobe.com/en_US/primetime/api/psd
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Track.html" format="html" scope="external"> verfolgen</a> </span></td> 
-   <td colname="2">Klasse, die die Verfolgungsabstraktion definiert, die beim Definieren von <span class="codeph"> AudioTrack</span> und <span class="codeph"> ClosedCaptionsTrack</span>verwendet wird. </td> 
+   <td colname="2">Klasse, die die Verfolgungsabstraktion definiert, die beim Definieren von <span class="codeph"> AudioTrack</span> und <span class="codeph"> ClosedCaptionsTrack</span> verwendet wird. </td> 
   </tr>
  </tbody>
 </table>
