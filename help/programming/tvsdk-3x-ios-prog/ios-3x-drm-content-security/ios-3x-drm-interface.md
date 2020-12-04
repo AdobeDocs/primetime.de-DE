@@ -40,7 +40,7 @@ Dies sind die wichtigsten API-Elemente für die Arbeit mit DRM:
 
 <!--<a id="section_F986DB1EDD6F44CD8E57419CCA0921E8"></a>-->
 
-TVSDK gibt eine `PTMediaPlayerItemDRMMetadataChanged` Benachrichtigung aus, wenn sich die DRM-Metadaten ändern. Diese Metadaten werden als Eingabe für fast alle Funktionen der `DRMManager` Klasse verwendet.
+TVSDK gibt eine `PTMediaPlayerItemDRMMetadataChanged`-Benachrichtigung aus, wenn sich die DRM-Metadaten ändern. Diese Metadaten werden als Eingabe für fast alle Funktionen der `DRMManager`-Klasse verwendet.
 
 <!--<a id="section_223DCF63BAB6438792A85352A79044CC"></a>-->
 
@@ -48,15 +48,15 @@ Wenn der DRM-geschützte Stream mit mehreren Bitraten (MBR) kodiert ist, sollten
 
 >[!TIP]
 >
->Wenn Sie in Ihrer iOS-App auf DRM-geschützte Asset-URLs verweisen, `?faxs=1` muss der Parameter für die Zeichenfolge der Abfrage an die (MBR) URL auf Einstellungsebene M3U8 angehängt werden. Beispiel:
+>Wenn Sie in Ihrer iOS-App auf DRM-geschützte Asset-URLs verweisen, muss der Abfrage-Zeichenfolgenparameter `?faxs=1` an die (MBR) URL auf Einstellungsebene M3U8 angehängt werden. Beispiel:
 
 ```
 https://your.domain.com/hls/[...]/index.m3u8?faxs=1
 ```
 
-Der Parameter `faxs=1` für die Zeichenfolge signalisiert, dass der Inhalt DRM-geschützt ist, und löst den DRM-Entschlüsselungs-Workflow im iOS TVSDK entsprechend aus. Sie können das `faxs=1` Tag auch an DRM-geschützte HLS-Asset-URLs anhängen, die für andere Plattformen bestimmt sind. es wird auf iOS wie erforderlich beobachtet oder als Nicht-Op-Player auf anderen Plattformen behandelt.
+Der Zeichenfolgenparameter `faxs=1` gibt an, dass der Abfrage DRM-geschützt ist, und löst den DRM-Entschlüsselungs-Workflow im iOS TVSDK entsprechend aus. Sie können das `faxs=1`-Tag auch an DRM-geschützte HLS-Asset-URLs anhängen, die für andere Plattformen bestimmt sind. es wird unter iOS wie erforderlich beobachtet oder bei Playern auf anderen Plattformen als Nicht-Op behandelt.
 
-## Primetime DRM in eine TSVDK-Anwendung implementieren {#implement-primetime-drm-in-a-tsvdk-application}
+## Primetime-DRM in eine TSVDK-Anwendung {#implement-primetime-drm-in-a-tsvdk-application} implementieren
 
 Primetime DRM ist in TVSDK integriert, was die Implementierung des Inhaltsschutzes in einer TVSDK Anwendung vereinfacht.
 
