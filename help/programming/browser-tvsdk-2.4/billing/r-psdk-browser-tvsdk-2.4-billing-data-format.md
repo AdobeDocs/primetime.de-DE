@@ -1,22 +1,25 @@
 ---
-description: Browser TVSDK sendet Rechnungsmetriken in einem XML-Format an Adobe.
-seo-description: Browser TVSDK sendet Rechnungsmetriken in einem XML-Format an Adobe.
+description: Browser TVSDK sendet Rechnungsmetriken an die Adobe im XML-Format.
+seo-description: Browser TVSDK sendet Rechnungsmetriken an die Adobe im XML-Format.
 seo-title: Rechnungsmetriken übertragen
 title: Rechnungsmetriken übertragen
 uuid: ed2638d2-7894-4840-b31a-51e48e0a3f49
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 0%
 
 ---
 
 
-# Rechnungsmetriken übertragen{#transmit-billing-metrics}
+# Rechnungsmetriken senden{#transmit-billing-metrics}
 
-Browser TVSDK sendet Rechnungsmetriken in einem XML-Format an Adobe.
+Browser TVSDK sendet Rechnungsmetriken an die Adobe im XML-Format.
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-Wenn Sie zur Überwachung der Statistiken, die Browser TVSDK an Adobe sendet, ein Netzwerk-Capture-Tool verwenden, sollten Sie die folgenden Einheiten sehen:
+Wenn Sie ein Netzwerkerfassungstool verwenden, um die Statistiken zu überwachen, die Browser TVSDK an die Adobe sendet, sollten Sie die folgenden Einheiten sehen:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -40,4 +43,4 @@ Wenn Sie zur Überwachung der Statistiken, die Browser TVSDK an Adobe sendet, ei
 </request>
 ```
 
-Die booleschen Eigenschaften `drmProtected`, `adsEnabled`und `midrollEnabled` werden nur angezeigt, wenn sie wahr sind.
+Die booleschen Eigenschaften `drmProtected`, `adsEnabled` und `midrollEnabled` werden nur angezeigt, wenn sie &quot;true&quot;sind.
