@@ -24,7 +24,7 @@ TVSDK 1.4 für iOS-Versionshinweise beschreiben, was neu oder geändert ist, die
 
 **Version 1.4.45**
 
-* Um Xcode10 zu erfüllen, hat TVSDK von &quot;`libstdc++`&quot; zu &quot;`libc++`&quot; verschoben, und infolgedessen ist die Mindestversion iOS 7 unterstützt. Früher war es iOS 6.
+* Um Xcode10 einzuhalten, wurde TVSDK von &quot;`libstdc++`&quot;zu &quot;`libc++`&quot;verschoben, und daher wird iOS 7 als Mindestversion unterstützt. Früher war es iOS 6.
 
 **Version 1.4.44**
 
@@ -59,7 +59,7 @@ Keine neuen Funktionen.
 **Version 1.4.39**
 
 * iOS TVSDK ist mit VHL 2.0.1 und mit VHL 2.0.1 mit Nielsen zertifiziert.
-* iOS TVSDK wird aktualisiert, um CRS-Anforderungen vom neuen Akamai-Host zu erstellen `primetime-a.akamaihd.net`.
+* iOS TVSDK wird aktualisiert, um CRS-Anforderungen des neuen Akamai-Hosts `primetime-a.akamaihd.net` zu erstellen.
 * Die neue Hostnamenkonfiguration bietet CRS-Asset-Versand sowohl über HTTP als auch über HTTPS (SSL) in größerem Umfang.
 
 **Version 1.4.36**
@@ -70,11 +70,11 @@ VHL 2.0 in iOS TVSDK integrieren und zertifizieren: Reduzieren Sie die Barriere 
 
 * Netzwerkanzeigeninformationen
 
-   TVSDK-APIs bieten jetzt zusätzliche Informationen zu VAST-Antworten von Drittanbietern. Anzeigen-ID, Anzeigensystem und VAST-Anzeigenerweiterungen werden in einer `PTNetworkAdInfo` Klasse bereitgestellt, auf die über eine Eigenschaft eines Anzeigenassets zugegriffen `networkAdInfo` werden kann. Diese Informationen können für die Integration mit anderen Ad-Analytics-Plattformen wie **Moat Analytics** verwendet werden.
+   TVSDK-APIs bieten jetzt zusätzliche Informationen zu VAST-Antworten von Drittanbietern. Anzeigen-ID, Anzeigensystem und VAST-Anzeigenerweiterungen werden in der `PTNetworkAdInfo`-Klasse bereitgestellt, auf die über die `networkAdInfo`-Eigenschaft eines Anzeigenassets zugegriffen werden kann. Diese Informationen können für die Integration mit anderen Ad-Analytics-Plattformen wie **Moat Analytics** verwendet werden.
 
 **Version 1.4.31**
 
-* **Abrechnungsmetriken** Zur Aufnahme von Kunden, die nur für die von ihnen verwendeten Artikel bezahlen möchten, anstatt für einen festen Satz, unabhängig von der tatsächlichen Nutzung, erfasst Adobe Nutzungsmetriken und ermittelt anhand dieser Metriken, wie viel sie den Kunden in Rechnung stellen.
+* **AbrechnungsmetrikenAdobe erfasst** für Kunden, die nur für die von ihnen verwendeten Artikel bezahlen möchten, anstelle eines festen Tarifs, unabhängig von der tatsächlichen Verwendung, Nutzungsmetriken und bestimmt anhand dieser Metriken, wie viel sie den Kunden in Rechnung stellen.
 
 Jedes Mal, wenn TVSDK ein Stream-Beginn-Ereignis generiert, sendet der Player HTTP-Nachrichten regelmäßig an das Rechnungssystem der Adobe. Der Zeitraum, der als abrechnungsfähige Dauer bezeichnet wird, kann für standardmäßige VOD-, Pro-VOD- (Mid-Roll-Anzeigen aktiviert) und Live-Inhalte unterschiedlich sein. Die Standarddauer für jeden Inhaltstyp beträgt 30 Minuten, Ihr Vertrag mit der Adobe legt die tatsächlichen Werte fest.
 
@@ -84,7 +84,7 @@ Jedes Mal, wenn TVSDK ein Stream-Beginn-Ereignis generiert, sendet der Player HT
 
 In der PTSDKConfig-Klasse wurde die forceHTTPS-API hinzugefügt.
 
-Die PTSDKConfig-Klasse stellt Methoden zum Erzwingen von SSL für Anfragen bereit, die an Adobe Primetime-Ad-Decision-, DRM- und Video-Analytics-Server gesendet werden. Weitere Informationen finden Sie unter `forceHTTPS` und `isForcingHTTPS` -Methoden für diese Klasse. Wenn ein Manifest über HTTPS geladen wird, behält TVSDK die Inhaltsverwendung von HTTPS bei und berücksichtigt diese Verwendung, wenn relative URLs aus diesem Manifest geladen werden.
+Die PTSDKConfig-Klasse stellt Methoden zum Erzwingen von SSL für Anfragen bereit, die an Adobe Primetime-Ad-Decision-, DRM- und Video-Analytics-Server gesendet werden. Weitere Informationen finden Sie in den Methoden `forceHTTPS` und `isForcingHTTPS` für diese Klasse. Wenn ein Manifest über HTTPS geladen wird, behält TVSDK die Inhaltsverwendung von HTTPS bei und berücksichtigt diese Verwendung beim Laden von relativen URLs aus diesem Manifest.
 
 **Hinweis**: Anforderungen an Drittanbieter-Domänen wie Anzeigenverfolgungspixel, Inhalts- und Anzeigen-URLs und ähnliche Anforderungen werden nicht geändert. Es liegt in der Verantwortung der Inhaltsanbieter und Anzeigenserver, URLs bereitzustellen, die über HTTPS unterstützt werden.
 
@@ -128,7 +128,7 @@ Weitere Informationen zu VPAID 2.0 finden Sie unter [VPAID-Anzeigenunterstützun
 
 Bei VAST-Anzeigen (kreativen Elementen) mit aktivierter Ausweichregel behandelt das TVSDK eine Anzeige mit einem ungültigen MIME-Typ als leere Anzeige und versucht stattdessen, Ausweichanzeigen zu verwenden. Sie können einige Aspekte des Ausweichverhaltens konfigurieren.
 
-Weitere Informationen finden Sie unter [Ad-Fallback für VAST- und VMAP-Anzeigen](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md).
+Weitere Informationen finden Sie unter [Ad Fallback for VAST and VMAP ads](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md).
 
 **Version 1.4.9**
 
@@ -180,7 +180,7 @@ Die DRM-Richtlinien können jetzt die höchste zulässige Auflösung festlegen, 
 
 >[!NOTE]
 >
->Die folgenden Funktionen werden im TVSDK **nicht** unterstützt:
+>Die folgenden Funktionen werden im TVSDK nicht unterstützt: **nicht**:
 >
 >* Langsames Bewegen auf jeder Plattform oder Version.
 >* Live-Trick-Spiel.
@@ -330,7 +330,7 @@ Comment Type: draft
 * (ZD #31951) - Leerer Bildschirm innerhalb einer Werbeunterbrechung und ohne Abschluss der Werbeunterbrechung.
 
    Behebung eines Problems, bei dem Facebook VPAID-Anzeigen häufig mehrere CDATA-Blöcke in einem einzigen \&amp;lt;AdParameters\&amp;gt zurückgaben; VAST-Knoten.
-* (ZD #33336) - [iOS] TVSDK - Anzeigen-Pods werden nicht ausgefüllt, obwohl genügend Anzeigen von FreeWheel zurückgegeben wurden.
+* (ZD #33336) - [iOS] TVSDK - Anzeigen-Pods werden nicht gefüllt, obwohl genügend Anzeigen von FreeWheel zurückgegeben werden.
 
    Erstellt eine über-/untergeordnete Beziehung zwischen Sequenzanzeige und Fallback-Anzeige und Sortierung basierend auf der übergeordneten Sequenz und dem Index.
 
@@ -442,9 +442,9 @@ Aktiviert, indem die ursprüngliche kreative URL für die CRS-Anforderung 1401 a
 
 Dieses Problem wurde behoben, indem das Laden der Ressourcen aktualisiert wurde, um alle verfügbaren Pakete anzuzeigen.
 
-* (ZD# 27460) Midroll First Ad-Aufruf - POST auf cdn.auditude<span></span>.com, die 403 zurückgibt.
+* (ZD# 27460) Midroll first Ad call - POST zu cdn.auditude<span></span>.com return 403.
 
-Das neue CDN-Konto kann eine POST-CDN-Anforderung nicht bearbeiten. Dieses Problem wurde behoben, indem der Code aktualisiert wurde, damit die `cdn.auditude.com` Anzeigenanforderung GET statt POST wurde.
+Das neue CDN-Konto kann eine POST-CDN-Anforderung nicht bearbeiten. Dieses Problem wurde behoben, indem der Code aktualisiert wurde, damit die `cdn.auditude.com`-Anzeigenanforderung anstelle der POST als GET festgelegt wird.
 
 **Version 1.4.32** (1.4.32.792 für iOS 6.0+)
 
@@ -512,7 +512,7 @@ Wenn die letzte Werbeunterbrechungszeit vom VMAP vor Abschluss der Gesamtdauer l
 
    * (ZD #22351) VHL - Analytics: Dauer des Live-Video-Assets
 
-Dieses Problem wurde behoben, indem die assetDuration-API hinzugefügt wurde, um die Asset-Dauer für Live/Lineare Streams zu aktualisieren und eine Logik zur Überprüfung des Live-Streams bereitzustellen. `PTVideoAnalyticsTrackingMetadata`
+Dieses Problem wurde behoben, indem die assetDuration-API zu `PTVideoAnalyticsTrackingMetadata` hinzugefügt wurde, um die Asset-Dauer für Live-/Lineare Streams zu aktualisieren und eine Logik zur Überprüfung des Livestreams bereitzustellen.
 
 * (ZD# 22675) VHL - Analytics: Aktualisieren der Dauer von Live-Video-Assets
 
@@ -693,7 +693,7 @@ Das Problem, bei dem das TVSDK, das einen 101000-Fehler zurückgab, während die
 
 Das Problem mit einem Absturz in einigen DRM-geschützten Streams von Adobe Access wurde behoben.
 
-* (ZD #18850) - Aktualisieren der Logik der kreativen Auswahl auf Grundlage von CRS-Regeln
+* (ZD #18850) - Aktualisieren der Logik der kreativen Auswahl basierend auf CRS-Regeln
 
 Dieses Problem wurde behoben, indem eine JSON-Konfigurationsdatei hinzugefügt wurde, um die Priorität für die kreative Auswahl anzugeben.
 
@@ -760,7 +760,7 @@ Dieses Problem wurde behoben, indem TVSDK die Fehlerantwort als Fehler an die An
 
 In der aktuellen Implementierung wurden Ausweichanzeigen übersprungen und nicht neu verpackt, es sei denn, diese Anzeigen haben das Format m3u8. Dieses Problem wurde behoben, indem auch die Unterstützung für das Umpacken von Fallback-Anzeigen hinzugefügt wurde.
 
-* (ZD #19770) - Das TVSDK kann keine geschützten AES-Inhalte mit 302-Umleitung wiedergeben
+* (ZD #19770) - Das TVSDK kann keine geschützten AES-Inhalte mit 302-Umleitungen wiedergeben
 
 Das Umleitungsproblem wurde behoben, da die Umleitungs-URL von cleanConnectionData gelöscht wurde, bevor sie zur Analyse des Manifests verwendet werden konnte.
 
@@ -790,7 +790,7 @@ Dieses Problem wurde behoben, indem die DRM m3u8-Wiedergabelistenumformulierung 
 
 Dieses Problem wurde behoben, indem die Implementierung der PTMediaPlayer.drmManager-API aktualisiert wurde, um DRMManager vom DRM-Framework abzurufen.
 
-**Version 1.4.18** (1.4.18.557) für iOS 6.0+
+**Version 1.4.18** ( 1.4.18.557) für iOS 6.0+
 
 * (ZD #18844) Tracking-Abspielkopf für Live-Inhalte im iOS-Player.
 
@@ -810,7 +810,7 @@ Anstatt einen Fehler zu senden, wenn der Inhalt nicht M3U8 ist, gibt das DRM-Fra
 
 Gleiche Auflösung wie Zendesk #2228
 
-* Zendesk #3304 - VAST 3.0 `[ERRORCODE]` -Makro nicht gefüllt
+* Zendesk #3304 - VAST 3.0 `[ERRORCODE]` Makro nicht gefüllt
 
 Das Problem, bei dem das Auditude-SDK keinen Ping sendet, wenn die Tracking-URL zu Beginn Leerzeichen enthält, wurde behoben.
 
@@ -818,7 +818,7 @@ Das Problem, bei dem das Auditude-SDK keinen Ping sendet, wenn die Tracking-URL 
 
 Ein möglicher Absturz, bei dem der Code des Kunden die Schlüsselkette verwendet, wurde behoben.
 
-* Zendesk #18008 - Cookies für iOS8+ unterstützen, um Tokenisierte Streams zu unterstützen
+* Zendesk #18008 - Cookies für iOS 8+ unterstützen, um Tokenisierte Streams zu unterstützen
 
 Akamai-tokenisierte Streams erfordern, dass Cookies bei Segmentanforderungen gesendet werden, was unter iOS 7 und früher nicht möglich war. Ab iOS 8 hat Apple eine API hinzugefügt, mit der Cookies für Segmentanforderungen übergeben werden können. Diese Unterstützung ist jetzt im TVSDK verfügbar. Es wurde auch Unterstützung für das Senden eines Benutzeragenten hinzugefügt, falls verfügbar.
 
@@ -832,7 +832,7 @@ Alle Warnungen wurden behoben.
 
 * Zendesk #3875 - Tabulator-S stürzt während der Wiedergabe ab
 
-Rückgängigmachen der Abhängigkeit von OKHTTP auf Auditude für CRS, da TVSDK jetzt direkt die HTTPLILLconnection statt curl verwendet. Das Problem wurde durch Löschen von Ausnahmen behoben, bevor ein weiterer JNI-Aufruf durchgeführt wurde.
+Rückgängigmachen der Abhängigkeit von OKHTTP auf Auditude für CRS, da TVSDK jetzt direkt die httpurlconnection statt curl verwendet. Das Problem wurde durch Löschen von Ausnahmen behoben, bevor ein weiterer JNI-Aufruf durchgeführt wurde.
 
 * Zendesk #4487 - Tracking Linear Kanal of Content
 
@@ -878,9 +878,9 @@ Es wurde ein zeitweiliger Absturz aufgrund von Parallelitätsproblemen behoben.
 
 **Version 1.4.13** (iOS 6.0+)
 
-* (ZD #3304) - VAST 3.0- `[ERRORCODE]` Makro nicht gefüllt
+* (ZD #3304) - Das Makro VAST 3.0 `[ERRORCODE]` wird nicht gefüllt
 
-   * Der Fehlercode 400 wird angezeigt, wenn Inline-Anzeige ein falsches kreatives Element enthält.
+   * Fehlercode 400 wird angezeigt, wenn Inline   Anzeige hat schlechte Kreativinhalte.
    * `[ERRORCODE]` Makro wird URL-kodiert.
 
 * (ZD #3865) Heartbeat-Integration mit IMA-Anzeigen
@@ -984,7 +984,7 @@ Unterstützung für das Ping von URLs zur Verfolgung von Werbeunterbrechungen, �
 * Es kann vorkommen, dass das Video zur Lizenzrotation unter iOS 11 nicht abgespielt wird und unter iOS 9.x und iOS 10.x korrekt wiedergegeben wird.
 * Bei der VPAID 2.0-Unterstützung werden VPAID-Anzeigen übersprungen, wenn die Wiedergabe über AirPlay aktiv ist.
 * Die Verknüpfung von &quot;drmNativeInterface.framework&quot;ist nicht korrekt, wenn die Zielgruppe auf &quot;iOS7 (oder höher)&quot;festgelegt ist.\
-   Problemumgehung: Geben Sie explizit die `libstdc++6`Variable an.  Dylib-Bibliothek wie folgt: Gehen Sie zu Zielgruppe->Build-Phasen->Link Binary with Libraries und fügen Sie `libstdc++.6.dylib`hinzu.
+   Problemumgehung: Geben Sie explizit `libstdc++6` an.  Dylib-Bibliothek wie folgt: Gehen Sie zu Zielgruppe->Build-Phasen->Link Binary with Libraries und fügen Sie `libstdc++.6.dylib` hinzu.
 
 * Post-Roll-Anzeige wird nicht zum Ersetzen der API eingefügt.
 * Bei der Suche nach einer Werbeunterbrechung (ohne sie zu verlassen) werden dem Duplikat-Beginn und dem Werbeunterbrechungsbenachrichtigungen angezeigt
@@ -994,4 +994,4 @@ Unterstützung für das Ping von URLs zur Verfolgung von Werbeunterbrechungen, �
 
 ## Hilfreiche Ressourcen {#helpful-resources}
 
-* Weitere Informationen finden Sie in der vollständigen Hilfedokumentation auf der [Adobe Primetime-Seite &quot;Training und Support](https://helpx.adobe.com/support/primetime.html) &quot;.
+* Siehe vollständige Hilfedokumentation auf der Seite [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html).
