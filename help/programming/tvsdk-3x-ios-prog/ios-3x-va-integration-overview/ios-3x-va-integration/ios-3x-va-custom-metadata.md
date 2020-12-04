@@ -6,11 +6,14 @@ title: Unterstützung benutzerdefinierter Metadaten implementieren
 uuid: 229681f5-ff77-4321-8022-b8ccf2928fb3
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 0%
 
 ---
 
 
-# Unterstützung benutzerdefinierter Metadaten implementieren {#implement-custom-metadata-support}
+# Implementieren der Unterstützung für benutzerdefinierte Metadaten {#implement-custom-metadata-support}
 
 Mithilfe von Rückruffunktionen können Sie benutzerdefinierte Metadaten zu Inhalts-, Anzeigen- und Kapitelverfolgungsaufrufen bereitstellen.
 
