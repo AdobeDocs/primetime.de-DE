@@ -17,25 +17,25 @@ ht-degree: 0%
 
 Die Konfigurationsdatei &quot;flashaccess-tenant.xml&quot;enthält Einstellungen, die für einen bestimmten Mandanten des Lizenzservers gelten.
 
-Jeder Mandant unterstützt seine eigene Instanz dieser Konfigurationsdatei, die sich in `<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`befindet. Siehe `configs/flashaccessserver/tenants/sampletenant` Verzeichnis für eine Beispielkonfigurationsdatei für Mandanten.
+Jeder Mandant unterstützt seine eigene Instanz dieser Konfigurationsdatei, die sich in `<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>` befindet. Eine Beispielkonfigurationsdatei für Mandanten finden Sie im Ordner `configs/flashaccessserver/tenants/sampletenant`.
 
-Sie können alle Dateipfade in der Mandanten-Konfigurationsdatei als absolute Pfade oder als Pfade angeben, die relativ zum Konfigurationsverzeichnis des Mandanten sind (`<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`).
+Sie können alle Dateipfade in der Mietkonfigurationsdatei als absolute Pfade oder als Pfade angeben, die relativ zum Konfigurationsverzeichnis des Mandanten (`<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`) sind.
 
 Die Mandant-Konfigurationsdatei enthält:
 
-* *Verkehrsberechtigung* — Gibt eine oder mehrere von der Adobe ausgestellte Transportberechtigungen (Zertifikat und privater Schlüssel) an. Kann als Pfad zu einer [!DNL .pfx] Datei und einem Kennwort oder als Alias für eine auf einem HSM gespeicherte Berechtigung angegeben werden. Hier können mehrere solcher Berechtigungen angegeben werden, entweder als Dateipfade oder als Schlüssel-Aliase oder beides.
+* *Verkehrsberechtigung* — Gibt eine oder mehrere von der Adobe ausgestellte Transportberechtigungen (Zertifikat und privater Schlüssel) an. Kann als Pfad zu einer [!DNL .pfx]-Datei und einem Kennwort oder als Alias für eine auf einem HSM gespeicherte Berechtigung angegeben werden. Hier können mehrere solcher Berechtigungen angegeben werden, entweder als Dateipfade oder als Schlüssel-Aliase oder beides.
 
-   Weitere Informationen dazu, wann zusätzliche Anmeldeinformationen benötigt werden, finden Sie unter *Umgang mit Zertifikataktualisierungen* in *Verwenden des Adobe Primetime DRM SDK für den Inhaltsschutz* .
+   Weitere Informationen dazu, wann zusätzliche Anmeldeinformationen benötigt werden, finden Sie unter *Bearbeiten von Zertifikataktualisierungen* in *Verwenden des Adobe Primetime DRM SDK für den Schutz von Inhalten*.
 
-* *Lizenzserver-Berechtigung* — Gibt eine oder mehrere Anmeldeinformationen des Lizenzservers (Zertifikat und privater Schlüssel) an, die von der Adobe ausgestellt wurden. Sie können die Anmeldeinformationen des Lizenzservers als Pfad zu einer [!DNL .pfx] Datei und einem Kennwort oder als Alias für eine auf einem HSM gespeicherte Berechtigung angeben. Hier können mehrere solcher Berechtigungen angegeben werden, entweder als Dateipfade oder als Schlüssel-Aliase oder beides.
+* *Lizenzserver-Berechtigung* — Gibt eine oder mehrere Anmeldeinformationen des Lizenzservers (Zertifikat und privater Schlüssel) an, die von der Adobe ausgestellt wurden. Sie können die Anmeldeinformationen des Lizenzservers als Pfad zu einer [!DNL .pfx]-Datei und einem Kennwort oder als Alias für eine auf einem HSM gespeicherte Berechtigung angeben. Hier können mehrere solcher Berechtigungen angegeben werden, entweder als Dateipfade oder als Schlüssel-Aliase oder beides.
 
-   Weitere Informationen dazu, wann zusätzliche Anmeldeinformationen benötigt werden, finden Sie unter *Umgang mit Zertifikataktualisierungen* in *Verwenden des Adobe Primetime DRM SDK für den Inhaltsschutz* .
+   Weitere Informationen dazu, wann zusätzliche Anmeldeinformationen benötigt werden, finden Sie unter *Bearbeiten von Zertifikataktualisierungen* in *Verwenden des Adobe Primetime DRM SDK für den Schutz von Inhalten*.
 
-* *Key Server Certificates* — Gibt optional das von der Adobe ausgestellte Lizenzserverzertifikat des Schlüsselservers an. Sie können das Lizenzserverzertifikat des Schlüsselservers als Pfad zu einer [!DNL .cer] Datei oder als Alias für ein Zertifikat angeben, das auf einem HSM gespeichert ist. Diese Option muss angegeben werden, um Lizenzen für Inhalte auszustellen, die mit einer DRM-Richtlinie verpackt sind, die Remote-Versand für iOS-Geräte erfordert.
+* *Key Server Certificates* — Gibt optional das von der Adobe ausgestellte Lizenzserverzertifikat des Schlüsselservers an. Sie können das Lizenzserverzertifikat des Schlüsselservers als Pfad zu einer [!DNL .cer]-Datei oder als Alias für ein Zertifikat angeben, das auf einem HSM gespeichert ist. Diese Option muss angegeben werden, um Lizenzen für Inhalte auszustellen, die mit einer DRM-Richtlinie verpackt sind, die Remote-Versand für iOS-Geräte erfordert.
 
 * *Benutzerdefinierte Autorisierer* — Gibt optional benutzerdefinierte Autorisierungsklassen an, die für jede Lizenzanforderung aufgerufen werden sollen. Wenn mehrere Autorisierer angegeben sind, werden sie in der aufgeführten Reihenfolge aufgerufen.
 * *Liste der zugelassenen Packstellen* — Gibt optional Zertifikate an, die Entitäten identifizieren, die zum Verpacken von Inhalten für diesen Lizenzserver berechtigt sind. Wenn keine Packager-Zertifikate angegeben sind, gibt der Server Lizenzen für Inhalte aus, die von einem Packager gepackt werden. Wenn der Server eine Lizenzanforderung von einem nicht autorisierten Packager erhält, wird die Anforderung verweigert.
-* *Mindestunterstützte Clientversion* Siehe Verwenden des Adobe Primetime DRM SDK zum Schützen von Inhalten.
+* *Minimal unterstützte Client-* VersionSiehe Verwenden des Adobe Primetime DRM SDK zum Schützen von Inhalten.
 
 * *Nutzungsregeln*
 
@@ -45,12 +45,12 @@ Die Mandant-Konfigurationsdatei enthält:
       >
       >Alle Lizenzen, die der Server für geschütztes Streaming erteilt hat, gelten für eine Gültigkeitsdauer von 24 Stunden (86400 Sekunden). Dieser Wert gilt implizit als Obergrenze, unabhängig davon, welches Enddatum oder welche Dauer für die Lizenzzwischenspeicherung festgelegt wurde, mit einem Maximalwert von 86400 Sekunden, auch wenn das Schema höhere Begrenzungen erzwingt.
 
-   * *Recht* abspielen — Es muss mindestens ein Recht festgelegt werden. Wenn Sie mehrere Rechte angeben, verwendet der Client die erste Berechtigung, die alle Anforderungen erfüllt.
+   * *Recht*  abspielen— Es muss mindestens ein Recht festgelegt werden. Wenn Sie mehrere Rechte angeben, verwendet der Client die erste Berechtigung, die alle Anforderungen erfüllt.
 
       * *Output Protection* — Steuert, ob die Ausgabe auf externen Wiedergabegeräten geschützt werden soll.
       * *AIR- und SWF-Anwendungsbeschränkungen* — Optionale Zulassungsliste von SWF- und AIR-Anwendungen, die Inhalte wiedergeben können (z. B. sind nur die angegebenen Anwendungen zulässig). SWF-Anwendungen werden durch eine URL oder den Digest der SWF und die maximale Zeit für den Download und die Überprüfung der Zusammenfassung identifiziert.
 
-         Informationen zur Berechnung der SWF-Zusammenfassung finden Sie unter *SWF-Hash-Rechner* .
+         Informationen zur Berechnung der SWF-Zusammenfassung finden Sie unter *SWF-Hash-Rechner*.
 
          Eine Herausgeber-ID und eine optionale Anwendungs-ID, Mindest- und Höchstversion kennzeichnen AIR- und iOS-Anwendungen. Wenn Sie keine Anwendungseinschränkungen angeben, kann der Inhalt von jeder SWF- oder AIR-Anwendung wiedergegeben werden.
 
@@ -66,8 +66,8 @@ Die Mandant-Konfigurationsdatei enthält:
 
          * `osVersion`
          * `version`
-      * *Anforderungen* an die Gerätefähigkeit — Gibt optional die Hardwarefunktionen an, die für den Zugriff auf Inhalte erforderlich sind.
-      * *Anforderungen* an die Erkennung von Järanlagen — Gibt optional an, dass die Wiedergabe auf Geräten, auf denen ein Jailbreak erkannt wird, nicht zulässig ist.
+      * *Anforderungen an die Gerätefähigkeit* — Gibt optional die Hardwarefunktionen an, die für den Zugriff auf Inhalte erforderlich sind.
+      * *Anforderungen an die*  Erkennung von Jägerspaltungen— Gibt optional an, dass die Wiedergabe auf Geräten, auf denen ein Jailbreak erkannt wird, nicht zulässig ist.
 
 
 
