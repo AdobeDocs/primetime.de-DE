@@ -6,15 +6,18 @@ title: Ersetzen von Zeitbereichen durch eine Anzeige
 uuid: 50cdcc06-7df5-414b-95d4-c684bc68dce3
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '107'
+ht-degree: 0%
 
 ---
 
 
-# Ersetzen von Zeitbereichen durch eine Anzeige{#replace-time-ranges-with-an-ad}
+# Ersetzen Sie Zeitbereiche durch eine Anzeige{#replace-time-ranges-with-an-ad}
 
 Sie können Anzeigen in VOD-Inhalte einfügen.
 
-In diesem Fall werden `TimeRanges` zwischen `begin` und `end` `localTime` in aus der Zeitleiste entfernt. Sie werden durch ein `AdBreak` von `begin` zu `begin+replaceDuration`ersetzen. Wenn die Ersatzdauer nicht als Parameter vorhanden ist, trifft der Server die Entscheidung für die zurückgegebene Adbreak.
+In diesem Fall werden `TimeRanges` zwischen `begin` und `end` in `localTime` aus der Zeitleiste entfernt. Sie werden durch `AdBreak` von `begin` bis `begin+replaceDuration` ersetzt. Wenn die Ersatzdauer nicht als Parameter vorhanden ist, trifft der Server die Entscheidung für die zurückgegebene Adbreak.
 
 >[!NOTE]
 >
