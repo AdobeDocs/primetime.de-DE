@@ -6,22 +6,25 @@ title: Videoanalyse
 uuid: 6351933b-c0f3-4e3e-ad27-bedc8eecc312
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '259'
+ht-degree: 0%
 
 ---
 
 
-# Videoanalyse{#video-analytics}
+# Videoanalysen{#video-analytics}
 
 Sie können die Videonutzung verfolgen, indem Sie Browser TVSDK mit Adobe Analytics integrieren.
 
-Die Videoverfolgung in Browser TVSDK verwendet den **Adobe Analytics Video Essentials** -Dienst, der Videonutzungsmetriken wie Video-Ansichten, Videobeendigungen, Anzeigenimpressionen, Besuchszeit für Videos usw. bereitstellt. Weitere Informationen zu diesem Dienst erhalten Sie von Ihrem Adobe-Kundenbetreuer.
+Die Videoverfolgung in Browser TVSDK verwendet den Dienst **Adobe Analytics Video Essentials**, der Videonutzungsmetriken bereitstellt, z. B. Ansichten, Videobeendigungen, Anzeigenimpressionen, Besuchszeit für Videos usw. Weitere Informationen zu diesem Dienst erhalten Sie von Ihrem Kundenbetreuer.
 
 Im folgenden Verfahren werden die Schritte zur Aktivierung der Videoverfolgung im Player zusammengefasst:
 
 1. Initialisieren und/oder konfigurieren Sie die folgenden Videoverfolgungskomponenten:
 
    * **AppMeasurement-Bibliothek** : Enthält die Basislogik für die Datenerfassung auf niedriger Ebene. Hier werden die Video Heartbeat-Daten gesammelt und über das Netzwerk gesendet.
-   * **Video Heartbeat Library** - Enthält die Core-Logik der Video-Heartbeat-Datenerfassung. Die Video Heartbeat Library greift auf eine Untergruppe der AppMeasurement Library APIs zu.
+   * **Video Heartbeat Library** : Enthält die Core-Logik der Video-Heartbeat-Datenerfassung. Die Video Heartbeat Library greift auf eine Untergruppe der AppMeasurement Library APIs zu.
 
       >[!TIP]
       >
