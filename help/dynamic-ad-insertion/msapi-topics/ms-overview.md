@@ -6,11 +6,14 @@ title: Übersicht über Manifest Server-Interaktionen
 uuid: 3e314a45-a4dd-492f-8915-19224a8fbbc7
 translation-type: tm+mt
 source-git-commit: 9dc8498593a1d70918b66016e429eb013cdc61f7
+workflow-type: tm+mt
+source-wordcount: '654'
+ht-degree: 0%
 
 ---
 
 
-# Übersicht über Manifest Server-Interaktionen {#overview-of-manifest-server-interactions}
+# Übersicht über Manifest-Server-Interaktionen {#overview-of-manifest-server-interactions}
 
 Der Manifestserver koordiniert die Systeme, die Inhalte bereitstellen, Anzeigen bereitstellen, Videos abspielen und Anzeigen verfolgen. Es empfängt M3U8-kodierte Playlisten (Manifeste), die Client-Videoplayer von Inhaltsanbietern erhalten, fügt Anzeigen von Anzeigenanbietern in die Manifeste ein und gibt die zugewiesenen Manifeste an Videoplayer weiter. Es unterstützt sowohl clientseitige als auch serverseitige Anzeigenverfolgung. Es führt seine Interaktionen über eine HTTP-basierte Webdienst-Schnittstelle durch.
 
@@ -24,28 +27,28 @@ Eine typische Konfiguration enthält:
 * Ein Anzeigenserver
 * Empfänger für Anzeigenverfolgungsberichte
 
-Der Arbeitsablauf variiert je nach Anzahl der Faktoren, z. B. wenn das CDN Akamai ist oder der Client eine Anzeigenverfolgung durchführt. Ein Diagramm des Workflows für die clientseitige Anzeigenverfolgung finden Sie unter Arbeitsablauf für die [clientseitige Verfolgung](../msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md#section_cst_flow).
+Der Arbeitsablauf variiert je nach Anzahl der Faktoren, z. B. wenn das CDN Akamai ist oder der Client eine Anzeigenverfolgung durchführt. Eine Darstellung des Workflows zur clientseitigen Anzeigenverfolgung finden Sie unter [Client-seitigen Verfolgungsarbeitsablauf](../msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md#section_cst_flow).
 
-Der Manifestserver interagiert mit Video-Versand-Clients, indem er HTTP GET-Anforderungen empfängt und darauf reagiert. Die Antworten sind M3U8-kodierte Manifeste, die anzeigeingenähten Inhalt beschreiben, optional einschließlich einer JSON- oder VMAP-Struktur (Sidecar) mit detaillierten Anweisungen zur Anzeigenverfolgung (siehe [Dateiformate](../msapi-topics/ms-list-file-formats/ms-api-file-formats.md)).
+Der Manifestserver interagiert mit Video-Versand-Clients, indem er HTTP-GET empfängt und darauf reagiert. Die Antworten sind M3U8-kodierte Manifeste, die anzeigeingenähten Inhalt beschreiben, optional einschließlich einer JSON- oder VMAP-Struktur (Sidecar) mit detaillierten Anweisungen zur Anzeigenverfolgung (siehe [Dateiformate](../msapi-topics/ms-list-file-formats/ms-api-file-formats.md)).
 
 Ein typischer Workflow sieht wie folgt aus:
 
 1. Der Herausgeber sendet die Inhalts-URL und die Informationen für den Anzeigen-Server an den Client.
-1. Der Client verwendet die Informationen des Herausgebers, um eine Manifestserver-URL zu generieren, und sendet eine GET-Anforderung an diese URL. Dies wird als Bootstrap-URL bezeichnet.
+1. Der Client verwendet die Informationen des Herausgebers, um eine Manifestserver-URL zu generieren, und sendet eine GET an diese URL. Dies wird als Bootstrap-URL bezeichnet.
 1. Der Manifestserver richtet eine Sitzung mit dem Client ein.
 1. Der Manifestserver ruft Inhaltsmanifeste vom CDN ab, die Informationen zu Werbeunterbrechungen enthalten können.
-1. Der Manifestserver leitet den Client an das Master-/Variantenmanifest weiter, das er für den Client generiert hat.
+1. Der Manifestserver leitet den Client an das Übergeordnet-/Variantenmanifest weiter, das er für den Client generiert hat.
 
    >[!NOTE]
    >
-   >Wenn die Parameter für die Bootstrap-URL-Abfrage die Einstellung `pttrackingmode=simple` oder `ptplayer=ios-mobileweb` enthalten, gibt der Manifestserver die Master-/Variantenmanifest-URL in einem JSON-Objekt zurück und der Client sendet eine GET-Anforderung an diese Manifest-URL der Variante.
+   >Wenn die Parameter für die Bootstrap-URL-Abfrage die Einstellung `pttrackingmode=simple` oder `ptplayer=ios-mobileweb` enthalten, gibt der Manifestserver die Übergeordnet/Variante-Manifest-URL in einem JSON-Objekt zurück und der Client sendet eine GET an diese Manifest-URL der Variante.
 
 1. Der Client wählt einen Stream im generierten Variantenmanifest zur Wiedergabe aus und sendet Anzeigeninformationen an den Manifestserver.
 1. Der Manifestserver leitet die vom Client bereitgestellten Informationen an den Anzeigen-Server weiter und empfängt Anzeigen und Anzeigen-Tracking-URLs vom Anzeigen-Server. Wenn eine bereitgestellte Anzeige nicht im HLS-Format vorliegt, sendet der Manifestserver sie zur Konvertierung in HLS an CRS.
 1. Der Manifestserver ordnet Anzeigen in das Inhaltsmanifest ein und sendet das neue zugewiesene Manifest an den Client.
 1. Der Client gibt den Inhalt mit den eingefügten Anzeigen wieder und sendet zu den angegebenen Zeitpunkten Anforderungen an die angegebenen Tracking-URLs.
 
-Primetime-Anzeigen unterstützen Clients auf vielen Video-Versand-Plattformen. Nicht alle Clients basieren auf dem Primetime TVSDK-Paket, sondern alle Clients senden GET-Anforderungen an die gleiche Basis-URL. Abfrage-Parameter unterscheiden eine Client-Anforderung von einer anderen, indem sie dem Manifestserver Folgendes mitteilen:
+Primetime-Anzeigen unterstützen Clients auf vielen Video-Versand-Plattformen. Nicht alle Clients basieren auf dem Primetime TVSDK-Paket, sondern alle Clients senden GET an die gleiche URL. Abfrage-Parameter unterscheiden eine Client-Anforderung von einer anderen, indem sie dem Manifestserver Folgendes mitteilen:
 
 * welcher Kunde die Anforderung stellt,
 * was der Kunde will,
@@ -53,7 +56,7 @@ Primetime-Anzeigen unterstützen Clients auf vielen Video-Versand-Plattformen. N
 
 ## CORS {#section_BEA7F298660944BE92801E4C82FCD038}
 
-Der Manifestserver verwendet den Cross-Herkunft Resource Sharing Standard (CORS). Es sucht nach einer `Origin` Kopfzeile in den Anforderungen, die es erhält. Wenn die Kopfzeile vorhanden ist, wird sie mit
+Der Manifestserver verwendet den Cross-Herkunft Resource Sharing Standard (CORS). Es wird nach einem `Origin`-Header in den Anforderungen gesucht, die es erhält. Wenn die Kopfzeile vorhanden ist, wird sie mit
 
 * `Access-Control-Allow-Origin: *`Zeichenfolge aus der Kopfzeile der Herkunft`*`
 * `Access-Control-Allow-Credentials: true`
