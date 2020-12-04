@@ -6,6 +6,9 @@ title: Aktivieren der Videowiedergabe
 uuid: ddc0defa-c40f-4ee6-a69f-d5eeca6c2fce
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
 
 Erstellen Sie einen PlaybackManager, der den HLS-Stream-Setup und -Wiedergabe-Vorgang verarbeitet. Es ist keine andere Konfiguration erforderlich.
 
-1. Erstellen Sie das Medienplayer-Objekt, indem Sie sicherstellen, dass der folgende Code in vorhanden ist [!DNL PlayerFragment.java]:
+1. Erstellen Sie das Medienplayer-Objekt, indem Sie sicherstellen, dass der folgende Code in [!DNL PlayerFragment.java] vorhanden ist:
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -24,20 +27,20 @@ Erstellen Sie einen PlaybackManager, der den HLS-Stream-Setup und -Wiedergabe-Vo
 
    <!-- I've duplicated this information. It also exists in the PlayerFragment section, just before the Feature manager section. I figured that I should have it here as well, in case they jump directly to this section.-->
 
-1. Erstellen Sie den Wiedergabe-Manager über `ManagerFactory`:
+1. Erstellen Sie den Wiedergabe-Manager über das `ManagerFactory`:
 
    ```java
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
    ```
 
-1. Implementieren Sie die `PlaybackManagerEventListener` in, um die Wiedergabe-Ereignis zu verarbeiten `PlayerFragment` :
+1. Implementieren Sie `PlaybackManagerEventListener` in `PlayerFragment`, um die Wiedergabe-Ereignis zu verarbeiten:
 
    ```java
    private final PlaybackManagerEventListener playbackManagerEventListener =  
      new PlaybackManagerEventListener() 
    ```
 
-1. Registrieren Sie den Ereignis-Listener im `PlayerFragment`:
+1. Registrieren Sie den Ereignis-Listener in `PlayerFragment`:
 
    ```
    playbackManager.addEventListener(playbackManagerEventListener);
@@ -49,7 +52,7 @@ Erstellen Sie einen PlaybackManager, der den HLS-Stream-Setup und -Wiedergabe-Vo
    playbackManager.setupVideo(url, adsManager); 
    ```
 
-1. Richten Sie die Steuerleistenvorgänge in der `PlayerFragment`:
+1. Richten Sie die Vorgänge der Steuerleiste in `PlayerFragment` ein:
 
    ```
    controlBar.pressPlay() { 
