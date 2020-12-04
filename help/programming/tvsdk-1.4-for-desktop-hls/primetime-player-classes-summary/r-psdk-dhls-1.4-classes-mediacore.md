@@ -6,6 +6,9 @@ title: Mediacore-Klassen
 uuid: f43d6968-cb08-4a8e-aebd-7934763df680
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '692'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 Sie können die Primetime Player-API verwenden, um das Verhalten des Players anzupassen. Diese Klassen beschreiben Ihren Medienplayer und seine Ressource.
 
-Die vollständige API-Dokumentation für TVSDK finden Sie in den [Adobe Primetime-API-Referenzen](https://help.adobe.com/en_US/primetime/api/index.html).
+Die vollständige API-Dokumentation für TVSDK finden Sie unter [Adobe Primetime API-Referenzen](https://help.adobe.com/en_US/primetime/api/index.html).
 
 Diese Klassen beschreiben Ihren Medienplayer und seine Ressourcen.
 Paket: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/package-detail.html)
@@ -28,7 +31,7 @@ Paket: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/asd
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> ABRControlParameters</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ABRControlParameters.html" format="html" scope="external"> ABRControlParameters</a> </span> </td> 
    <td colname="2"> Klasse, die alle Kontrollparameter für die adaptive Bitrate enthält. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -44,7 +47,7 @@ Paket: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/asd
    <td colname="2"> Klasse, die steuert, ob Untertitel sichtbar sind. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ContentFactory.html" format="html" scope="external"> ContentFactory</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/ContentFactory.html" format="html" scope="external"> ContentFactory</a> </span> </td> 
    <td colname="2"> Factory-Basisklasse zum Erstellen und Verwalten verschiedener Komponenten, die im Werbe-Workflow verwendet werden. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -53,14 +56,14 @@ Paket: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/asd
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultContentFactory.html" format="html" scope="external"> DefaultContentFactory</a></span> </td> 
-   <td colname="2">Standardimplementierung der <span class="codeph"> MediaPlayerClient</span> -Factory, die sowohl den Metadaten- als auch den Anzeigenauflösungsprozess unterstützt. </td> 
+   <td colname="2">Standardimplementierung der Factory <span class="codeph"> MediaPlayerClient</span>, die sowohl den Metadaten- als auch den Anzeigenauflösungsprozess unterstützt. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultMediaPlayer.html" format="html" scope="external"> DefaultMediaPlayer</a></span> </td> 
-   <td colname="2">Implementierung der Standardklasse der <span class="codeph"> MediaPlayer</span> -Schnittstelle. </td> 
+   <td colname="2">Implementierung der Standardklasse der <span class="codeph"> MediaPlayer</span>-Schnittstelle. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultMediaPlayerConfig.html" format="html" scope="external"> DefaultMediaPlayerConfig</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/DefaultMediaPlayerConfig.html" format="html" scope="external"> DefaultMediaPlayerConfig</a> </span> </td> 
    <td colname="2"> Konfigurationsklasse für die Standardimplementierung des Medienplayers. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -73,10 +76,10 @@ Paket: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/asd
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayer.html" format="html" scope="external"> MediaPlayer</a></span> </td> 
-   <td colname="2">Öffentliche Schnittstelle für die <span class="codeph"> DefaultMediaPlayer</span> -Klasse. Umfasst Auflistungen für Ereignis, PlayerState und Sichtbarkeit. </td> 
+   <td colname="2">Öffentliche Schnittstelle für die Klasse <span class="codeph"> DefaultMediaPlayer</span>. Umfasst Auflistungen für Ereignis, PlayerState und Sichtbarkeit. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerConfig.html" format="html" scope="external"> MediaPlayerConfig</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerConfig.html" format="html" scope="external"> MediaPlayerConfig</a> </span> </td> 
    <td colname="2"> Media Player-Konfigurationsklasse. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -93,7 +96,7 @@ Paket: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/asd
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerItemLoader.html" format="html" scope="external"> MediaPlayerItemLoader</a></span> </td> 
-   <td colname="2">Klasse, die eine Medienplayer-Ressource lädt und das entsprechende <span class="codeph"> MediaPlayerItem</span> -Objekt erstellt. </td> 
+   <td colname="2">Klasse, die eine Medienplayer-Ressource lädt und das entsprechende <span class="codeph"> MediaPlayerItem</span>-Objekt erstellt. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerStatus.html" format="html" scope="external"> MediaPlayerStatus</a></span> </td> 
@@ -101,7 +104,7 @@ Paket: [com.adobe.mediacore](https://help.adobe.com/en_US/primetime/api/psdk/asd
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerView.html" format="html" scope="external"> MediaPlayerView</a></span> </td> 
-   <td colname="2">Klasse für die Ansicht, die vom <span class="codeph"> MediaPlayer</span> für die Videowiedergabe verwendet wird. </td> 
+   <td colname="2">Klasse für die Ansicht, die von <span class="codeph"> MediaPlayer</span> für die Videowiedergabe verwendet wird. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaResource.html" format="html" scope="external"> MediaResource</a></span> </td> 
