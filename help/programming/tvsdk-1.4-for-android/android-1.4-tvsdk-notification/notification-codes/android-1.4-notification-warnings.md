@@ -6,6 +6,9 @@ title: WARNUNGSBenachrichtigungscodes
 uuid: 32b54e6c-f107-4e8e-aad6-34e1057719b0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '419'
+ht-degree: 2%
 
 ---
 
@@ -37,10 +40,10 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 200000 </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_OPERATION_FAIL </span> </td> 
-   <td colname="3"><span class="codeph"> AUDIO_TRACK_ERROR </span><span class="codeph"> SEEK_ERROR </span> </td> 
-   <td colname="4"><span class="codeph"> BESCHREIBUNG </span> </td> 
+   <td colname="1"><span class="codeph"> 200000  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_OPERATION_FAIL  </span> </td> 
+   <td colname="3"><span class="codeph"> AUDIO_TRACK_ERROR  </span><span class="codeph"> SEEK_ERROR  </span> </td> 
+   <td colname="4"><span class="codeph"> BESCHREIBUNG  </span> </td> 
    <td colname="5"> <p>Ein wiedergabebezogener Vorgang ist fehlgeschlagen, aber die Wiedergabe kann fortgesetzt werden. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -51,9 +54,9 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 201000 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL </span> </td> 
-   <td colname="3"><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL </span><span class="codeph"> RESOURCE_PLACEMENT_FAILED </span><span class="codeph"> AD_RESOLVER_METADATA_INVALID </span> </td> 
+   <td colname="1"><span class="codeph"> 201000  </span> </td> 
+   <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL  </span> </td> 
+   <td colname="3"><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL  </span><span class="codeph"> RESOURCE_PLACEMENT_FAILED  </span><span class="codeph"> AD_RESOLVER_METADATA_INVALID  </span> </td> 
    <td colname="4"> <p>Keines </p> </td> 
    <td colname="5"> <p>Der Anzeigenauflöser konnte den Anzeigeninhalt nicht auflösen/einfügen. Die Wiedergabe kann fortgesetzt werden. </p> </td> 
   </tr> 
@@ -79,14 +82,14 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204000 </span> </td> 
+   <td colname="1"><span class="codeph"> 204000  </span> </td> 
    <td colname="2"><span class="codeph"> HINTERGRUND_MANIFEST_WARNUNG</span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"><span class="codeph"> HINTERGRUND_MANIFEST_WARNING_ERROR</span><span class="codeph"> HINTERGRUND_MANIFEST_WARNING_NAME</span> <span class="codeph"> BESCHREIBUNG</span> </td> 
+   <td colname="4"><span class="codeph"> HINTERGRUND_MANIFEST_WARNING_</span> <span class="codeph"> ERRORHINTERGRUND_MANIFEST_WARNING_</span> <span class="codeph"> NAMEDESCRIPTION</span> </td> 
    <td colname="5"> <p> Fehler beim Download des Hintergrundmanifests. Ein Fehler beim Aktualisieren des Hintergrundmanifests wird als TVSDK-Warnung ausgelöst und führt nicht dazu, dass die Wiedergabe angehalten wird. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 204001 </span> </td> 
+   <td colname="1"><span class="codeph"> 204001  </span> </td> 
    <td colname="2"><span class="codeph"> INVALID_SEEK_WARNUNG</span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
    <td colname="4"><span class="codeph"> BESCHREIBUNG</span> </td> 
@@ -100,15 +103,15 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1" morerows="1"><span class="codeph"> 209100 </span> </td> 
-   <td colname="2" morerows="1"><span class="codeph"> NATIVE_WARNING </span> </td> 
+   <td colname="1" morerows="1"><span class="codeph"> 209100  </span> </td> 
+   <td colname="2" morerows="1"><span class="codeph"> NATIVE_WARNING  </span> </td> 
    <td colname="3" morerows="1"> <p>Keines </p> </td> 
-   <td colname="4"><b>AVE</b> <p><span class="codeph"> NATIVE_ERROR_CODE </span><span class="codeph"> NATIVE_ERROR_NAME </span><span class="codeph"> BESCHREIBUNG </span> </p> </td> 
-   <td colname="5"> <p>Die AVE-Bibliothek der unteren Ebene hat einen Fehler ausgegeben. </p> <p>Detaillierte Informationen zu den Werten für diese Metadatenfelder finden Sie unter <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> Details zu den NATIVE_ERROR-Benachrichtigungen</a> . </p> </td> 
+   <td colname="4"><b>AVE</b> <p><span class="codeph"> NATIVE_ERROR_CODE  </span><span class="codeph"> NATIVE_ERROR_NAME  </span><span class="codeph"> BESCHREIBUNG  </span> </p> </td> 
+   <td colname="5"> <p>Die AVE-Bibliothek der unteren Ebene hat einen Fehler ausgegeben. </p> <p>Detaillierte Informationen zu den Werten für diese Metadatenfelder finden Sie unter <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> Details für die NATIVE_ERROR-Benachrichtigungen</a>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="4"><b>DRM</b> <p><span class="codeph"> NATIVE_SUBERROR_CODE</span><span class="codeph"> DRM_ERROR_STRING</span> </p> </td> 
-   <td colname="5"> DRM-Fehlercode und DRM-Serverfehlerzeichenfolge. Detaillierte Informationen zu den Werten für diese Metadatenfelder finden Sie unter <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> Details zu den NATIVE_ERROR-Benachrichtigungen</a> .</td> 
+   <td colname="4"><b>DRM</b> <p><span class="codeph"> NATIVE_SUBERROR_</span> <span class="codeph"> CODEDRM_ERROR_STRING</span> </p> </td> 
+   <td colname="5"> DRM-Fehlercode und DRM-Serverfehlerzeichenfolge. Detaillierte Informationen zu den Werten für diese Metadatenfelder finden Sie unter <a href="../../../tvsdk-1.4-for-android/android-1.4-tvsdk-notification/notification-codes/native-error-summary/android-1.4-native-error-summary.md" format="html" scope="external"> Details für die NATIVE_ERROR-Benachrichtigungen</a>.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>TimeRangeCollection</b> </td> 
@@ -118,17 +121,17 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210000 </span> </td> 
-   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES </span> </td> 
+   <td colname="1"><span class="codeph"> 210000  </span> </td> 
+   <td colname="2"><span class="codeph"> UNDEFINED_TIME_RANGES  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
    <td colname="4"> Keines </td> 
    <td colname="5"> Der Anzeigensignalisierungsmodus ist als benutzerdefinierter Bereich definiert, es sind jedoch keine Bereiche definiert. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 210001 </span> </td> 
-   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES </span> </td> 
+   <td colname="1"><span class="codeph"> 210001  </span> </td> 
+   <td colname="2"><span class="codeph"> INVALID_TIME_RANGES  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
-   <td colname="4"><span class="codeph"> BESCHREIBUNG </span> </td> 
+   <td colname="4"><span class="codeph"> BESCHREIBUNG  </span> </td> 
    <td colname="5"> <p> Ein oder mehrere Zeitbereiche sind ungültig und werden ignoriert oder geändert. </p> <p> BESCHREIBUNG ist eine Zeichenfolge, die eine Beschreibung der ungültigen Bereiche enthält. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -139,7 +142,7 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> 280000 </span> </td> 
+   <td colname="1"><span class="codeph"> 280000  </span> </td> 
    <td colname="2"><span class="codeph"> TRICKPLAY_RATE_CHANGE_FAIL</span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
    <td colname="4"><span class="codeph"> BESCHREIBUNG</span> </td> 
@@ -153,8 +156,8 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
    <td colname="5"> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"><span class="codeph"> 299999 </span> </td> 
-   <td colname="2"><span class="codeph"> GENERIC_WARNING </span> </td> 
+   <td colname="1"><span class="codeph"> 299999  </span> </td> 
+   <td colname="2"><span class="codeph"> GENERIC_WARNING  </span> </td> 
    <td colname="3"> <p>Keines </p> </td> 
    <td colname="4"> <p>Keines </p> </td> 
    <td colname="5"> <p>Markiert ein generisches Warnhinweis-Ereignis. Nicht tatsächlich ausgestellt von TVSDK. Es ist nur ein Marker für das Ende des Zahlencodes, der den Warnungscodes entspricht. </p> </td> 
@@ -162,4 +165,4 @@ Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource
  </tbody> 
 </table>
 
->[HINWEIS!] adID und source (URL) können über das PTAdAsset in den Benachrichtigungsmetadaten mit dem `AD_ASSET` Schlüssel abgerufen werden.
+>[HINWEIS!] adID und source (URL) können über das PTAdAsset in den Benachrichtigungsmetadaten mit dem  `AD_ASSET` Schlüssel abgerufen werden.
