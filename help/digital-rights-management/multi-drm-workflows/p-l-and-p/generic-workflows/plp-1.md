@@ -1,20 +1,23 @@
 ---
-description: Sie können den Offline-Packager von Adobe verwenden, um Inhalte für alle DRM-Lösungen vorzubereiten, die von Primetime Cloud DRM unterstützt werden, powered by ExpressPlay.
-seo-description: Sie können den Offline-Packager von Adobe verwenden, um Inhalte für alle DRM-Lösungen vorzubereiten, die von Primetime Cloud DRM unterstützt werden, powered by ExpressPlay.
+description: Sie können den Offline Packager von Adobe verwenden, um Inhalte für alle DRM-Lösungen vorzubereiten, die von Primetime Cloud DRM unterstützt werden, powered by ExpressPlay.
+seo-description: Sie können den Offline Packager von Adobe verwenden, um Inhalte für alle DRM-Lösungen vorzubereiten, die von Primetime Cloud DRM unterstützt werden, powered by ExpressPlay.
 seo-title: Primetime Packager / Cloud DRM / TVSDK
 title: Primetime Packager / Cloud DRM / TVSDK
 uuid: e54a0e4d-c8ea-46d4-b1b0-bed8a680f8f5
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '465'
+ht-degree: 0%
 
 ---
 
 
 # Primetime Packager / Cloud DRM / TVSDK {#primetime-packager-cloud-drm-tvsdk}
 
-Sie können den Offline-Packager von Adobe verwenden, um Inhalte für alle DRM-Lösungen vorzubereiten, die von Primetime Cloud DRM unterstützt werden, powered by ExpressPlay.
+Sie können den Offline Packager von Adobe verwenden, um Inhalte für alle DRM-Lösungen vorzubereiten, die von Primetime Cloud DRM unterstützt werden, powered by ExpressPlay.
 
-Bei diesen Anweisungen wird davon ausgegangen, dass Sie bereits ein ExpressPlay-Admin-Konto eingerichtet haben: [Primetime DRM Cloud Quick-Beginn](../../../multi-drm-workflows/quick-start/quick-overview.md).
+Diese Anleitung setzt voraus, dass Sie bereits ein ExpressPlay-Admin-Konto eingerichtet haben: [Primetime DRM Cloud Quick-Beginn](../../../multi-drm-workflows/quick-start/quick-overview.md).
 1. Wählen Sie die Infrastruktur, die zum Verpacken Ihrer Inhalte verwendet werden soll. Primetime Packager unterstützt sowohl die Befehlszeilenverpackung als auch die Konfigurationsbasierte Verpackung von Inhalten für die Verwendung mit den DRMs FairPlay, Widevine und PlayReady. Die folgenden Formate und Verschlüsselungen werden derzeit in TVSDK unterstützt (weitere sind in Vorbereitung):
 
    * DASH (CENC) / PlayReady, Widevine - Für HTML5
@@ -34,7 +37,7 @@ Bei diesen Anweisungen wird davon ausgegangen, dass Sie bereits ein ExpressPlay-
 
    Die folgenden Beispielbefehle zeigen einige Beispiele für das Verpacken von Inhalten für verschiedene DRM-Lösungen:
 
-   * [Mit Primetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=19) verbinden (erzeugt MPD-Datei):
+   * [Mit Primetime Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf#page=19)  (erzeugt MPD-Datei) schließen:
 
       ```
       java -jar OfflinePackager.jar \ 
@@ -70,7 +73,7 @@ Bei diesen Anweisungen wird davon ausgegangen, dass Sie bereits ein ExpressPlay-
 
       >[!NOTE]
       >
-      >Der `key_url` Wert wird wie in der Datei M3U8 kopiert.
+      >Der Wert `key_url` wird wie in der Datei M3U8 kopiert.
 
 1. Erstellen Sie einen &quot;Schaufensterserver&quot;.
 
