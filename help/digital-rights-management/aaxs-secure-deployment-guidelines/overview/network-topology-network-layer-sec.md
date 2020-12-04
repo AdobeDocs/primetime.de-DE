@@ -4,6 +4,9 @@ title: Sicherheit der Netzwerkschicht
 uuid: bd53bccf-1130-4189-97ec-4259bd25762f
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ In dieser Tabelle werden gängige Techniken beschrieben, mit denen Sicherheitsl�
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Private IP-Adressen </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Verwenden Sie NAT (Network Address Translation) mit privaten IP-Adressen nach RFC 1918 auf Adobe Access-Anwendungsservern. Weisen Sie private IP-Adressen (10.0.0.0/8, 172.16.0.0/12 und 192.168.0.0/16) zu, um es einem Angreifer zu erschweren, Traffic über das Internet zu und von einem internen NAT-Host zu leiten. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Verwenden Sie NAT (Network Address Translation) mit RFC 1918 privaten IP-Adressen auf Anwendungsservern von Adobe Access. Weisen Sie private IP-Adressen (10.0.0.0/8, 172.16.0.0/12 und 192.168.0.0/16) zu, um es einem Angreifer zu erschweren, Traffic über das Internet zu und von einem internen NAT-Host zu leiten. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Firewalls </p> </td> 
