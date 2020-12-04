@@ -1,11 +1,14 @@
 ---
-description: Die Hauptkomponenten von Primetime DRM bestehen aus einem Java SDK und den Umgebung Flash Player und Adobe AIR Client Runtime.
-seo-description: Die Hauptkomponenten von Primetime DRM bestehen aus einem Java SDK und den Umgebung Flash Player und Adobe AIR Client Runtime.
-seo-title: Java SDK, Flash Player und Adobe AIR-Client
-title: Java SDK, Flash Player und Adobe AIR-Client
+description: Die Hauptkomponenten von Primetime DRM bestehen aus einem Java SDK und den Flash Player- und Adobe AIR Client-Laufzeitumgebung-Umgebung.
+seo-description: Die Hauptkomponenten von Primetime DRM bestehen aus einem Java SDK und den Flash Player- und Adobe AIR Client-Laufzeitumgebung-Umgebung.
+seo-title: Java SDK-, Flash Player- und Adobe AIR-Client
+title: Java SDK-, Flash Player- und Adobe AIR-Client
 uuid: e6daed27-3803-4ef7-ba25-4a180af7502f
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
@@ -46,10 +49,10 @@ Diese APIs werden verwendet, wenn ein Client eine Lizenz vom Server anfordert. D
 
    Die API zur Lizenzerstellung und Akquise wird verwendet, um eine Lizenz für den Benutzer zu generieren.
 
-* Unterstützung für Adobe AIR-Clients und -Inhalte der Version 1.5
+* Unterstützung von Clients und Inhalten der Adobe AIR Version 1.5
 
    Aus Gründen der Abwärtskompatibilität verfügt das SDK über APIs, um Anforderungen von AIR-Anwendungen zu bearbeiten, die für die Verwendung mit AIR-Clients der Version 1.5 und früher und geschützten Inhalten erstellt wurden.
 
-## Referenzimplementierung {#reference-implementation}
+## Referenz-Implementierung {#reference-implementation}
 
-Das SDK enthält eine Referenz-Implementierung, eine einfache Adobe Primetime DRM-Bereitstellung, die die Verwendung der Java-APIs demonstriert. Die Referenzimplementierung bietet eine License Server-, Watched Folder Packager-, Primetime DRM Manager AIR-Anwendung sowie Befehlszeilenwerkzeuge für die Inhaltspakete und Richtlinienverwaltung basierend auf den Java-APIs. Weitere Informationen zur Primetime DRM-Referenzimplementierung finden Sie unter Schutz von Inhalten.
+Das SDK enthält eine Referenzimplementierung, eine einfache Adobe Primetime DRM-Bereitstellung, die die Verwendung der Java-APIs veranschaulicht. Die Referenzimplementierung bietet eine License Server-, Watched Folder Packager-, Primetime DRM Manager AIR-Anwendung sowie Befehlszeilenwerkzeuge für die Inhaltspakete und Richtlinienverwaltung basierend auf den Java-APIs. Weitere Informationen zur Primetime DRM-Referenzimplementierung finden Sie unter Schutz von Inhalten.
