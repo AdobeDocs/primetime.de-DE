@@ -32,6 +32,6 @@ Nachdem das System ordnungsgemäß eingerichtet wurde, könnte ein typischer Wor
 
 1. Primetime Ad Insertion liefert die endgültigen gehefteten Manifeste einschließlich Anzeigen zur Wiedergabe an die Clientanwendung.
 
-1. Der Versand und die Sichtbarkeit der Anzeige können entweder über die clientseitige oder serverseitige Anzeigenverfolgung gemessen werden (siehe [Einrichten der Anzeigenverfolgung](set-up-ad-tracking.md)).
+1. Versand und Sichtbarkeit der Anzeige können entweder über die clientseitige oder serverseitige Anzeigenverfolgung gemessen werden, siehe [Einrichten der Anzeigenverfolgung](set-up-ad-tracking.md).
 
 Primetime Ad Insertion unterstützt die meisten Clientkonfigurationen für HLS/DASH.
