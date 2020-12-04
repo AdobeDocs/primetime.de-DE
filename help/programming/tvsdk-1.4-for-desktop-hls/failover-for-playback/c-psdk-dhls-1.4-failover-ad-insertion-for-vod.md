@@ -1,20 +1,23 @@
 ---
-description: Der Video-on-Demand-Anzeigeneinfügeprozess (VOD) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift sie geeignete Maßnahmen.
-seo-description: Der Video-on-Demand-Anzeigeneinfügeprozess (VOD) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift sie geeignete Maßnahmen.
+description: Der VOD-Anzeigeneinfügeprozess (video-on-demand) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift sie geeignete Maßnahmen.
+seo-description: Der VOD-Anzeigeneinfügeprozess (video-on-demand) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift sie geeignete Maßnahmen.
 seo-title: Insertion und Failover von Anzeigen für VOD
 title: Insertion und Failover von Anzeigen für VOD
 uuid: 98505f63-ac43-4ff5-9f7b-895b6135df47
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '694'
+ht-degree: 0%
 
 ---
 
 
-# Insertion und Failover von Anzeigen für VOD{#advertising-insertion-and-failover-for-vod}
+# Inserieren und Failover für VOD{#advertising-insertion-and-failover-for-vod}
 
-Der Video-on-Demand-Anzeigeneinfügeprozess (VOD) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift sie geeignete Maßnahmen.
+Der VOD-Anzeigeneinfügeprozess (video-on-demand) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift sie geeignete Maßnahmen.
 
-## Phase der Anzeigenauflösung {#section_0D45C6094D724B55868B48F9A3557A8B}
+## Phase zur Anzeigenauflösung {#section_0D45C6094D724B55868B48F9A3557A8B}
 
 TVSDK kontaktiert einen Anzeigen-Versand-Dienst, z. B. Adobe Primetime-Anzeigenentscheidung, und versucht, die primäre Wiedergabelistendatei abzurufen, die dem Videostream für die Anzeige entspricht. Während der Phase der Anzeigenauflösung führt TVSDK einen HTTP-Aufruf an den Remote-Ad-Versand-Server durch und analysiert die Antwort des Servers.
 
@@ -66,4 +69,4 @@ Für alle drei Fehlerklassen löste TVSDK weitergeleitete Ereignis in Ihrer Anwe
 
    Ihre Anwendung muss die entsprechenden Maßnahmen ergreifen.
 
-Ob Fehler auftreten oder nicht, TVSDK ruft `AdBreakPlaybackEvent.AD_BREAK_COMPLETE` für jeden `AdBreakPlaybackEvent.AD_BREAK_STARTED` und `AdPlaybackEvent.AD_COMPLETED` für jeden auf `AdPLaybackEvent.AD_STARTED`. Wenn Segmente jedoch nicht heruntergeladen werden konnten, kann es Lücken in der Zeitschiene geben. Wenn die Lücken groß genug sind, können die Werte in der Abspielposition und der gemeldete Anzeigenfortschritt möglicherweise Diskontinuitäten aufweisen.
+Unabhängig davon, ob Fehler auftreten, ruft TVSDK für jedes `AdBreakPlaybackEvent.AD_BREAK_COMPLETE`- und `AdBreakPlaybackEvent.AD_BREAK_STARTED`-Element `AdPlaybackEvent.AD_COMPLETED`- auf. `AdPLaybackEvent.AD_STARTED` Wenn Segmente jedoch nicht heruntergeladen werden konnten, kann es Lücken in der Zeitschiene geben. Wenn die Lücken groß genug sind, können die Werte in der Abspielposition und der gemeldete Anzeigenfortschritt möglicherweise Diskontinuitäten aufweisen.
