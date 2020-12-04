@@ -6,11 +6,14 @@ title: Gültige Mime-Typen
 uuid: ab2baac9-a9ef-44f1-83a1-2e6e471e3231
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
 
-# Gültige Mime-Typen{#valid-mime-types}
+# Gültige MIME-Typen{#valid-mime-types}
 
 Eine Anzeige kann mehrere kreative Elemente enthalten, von denen eines für die Wiedergabe ausgewählt ist.
 
@@ -24,6 +27,6 @@ var mimeTypes = [“video/mp4”, “application/x-mpegURL”];
 auditudeSettings.validMimeTypes = mimeTypes; 
 ```
 
-wobei `mimeTypes` es sich um ein Array von Strings handelt und jede Zeichenfolge einen Mime-Typ darstellt.
+wobei `mimeTypes` ein Array von Strings ist und jede Zeichenfolge einen Mime-Typ darstellt.
 
-Werden mehrere Mediendateien für eine Anzeige zurückgegeben, hängt die Auswahl von der Reihenfolge ab, in der die Mediendateien im `validMimeTypes` Array angezeigt werden. Die Mime-Typen mit niedrigerem Index erhalten eine Präferenz gegenüber den Mime-Typen mit höherem Index.
+Wenn mehrere Mediendateien für eine Anzeige zurückgegeben werden, hängt die Auswahl von der Reihenfolge ab, in der die Mediendateien im `validMimeTypes`-Array angezeigt werden. Die Mime-Typen mit niedrigerem Index erhalten eine Präferenz gegenüber den Mime-Typen mit höherem Index.
