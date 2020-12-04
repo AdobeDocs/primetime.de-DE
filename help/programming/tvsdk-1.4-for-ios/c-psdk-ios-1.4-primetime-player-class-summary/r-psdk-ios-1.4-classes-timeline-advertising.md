@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Zeitschienenwerbungskurse{#timeline-advertising-classes}
+# Zeitschienenwerbungsklassen{#timeline-advertising-classes}
 
 Diese Klassen bieten Informationen zu Anzeigen, die innerhalb einer Zeitleiste auftreten.
 
@@ -78,13 +78,14 @@ Diese Klassen bieten Informationen zu Anzeigen, die innerhalb einer Zeitleiste a
   <tr rowsep="1"> 
    <td colname="1"> 
     <pre>
-     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> PTContentResolver</a> -Klasse, <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> PTContentResolver</a> -Protokoll
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> </a> PTContentResolverclass,  
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> </a> PTContentResolverprotocol
     </pre> </td> 
    <td colname="2"> Klasse, die den Teil mit der Anzeigenauflösung im Adobe Primetime-Anzeigenentscheidungsprozess verarbeitet. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolverDelegate.html" format="html" scope="external"> PTContentResolverDelegate</a> </td> 
-   <td colname="2"> Protokoll, das die Methoden beschreibt, die der benutzerdefinierte Inhaltsauflöser ( <span class="codeph"> PTContentResolver</span> ) verwenden sollte, um dem Delegaten den Status der Inhaltsauflösung zu kommunizieren. </td> 
+   <td colname="2"> Protokoll, das die Methoden beschreibt, die der benutzerdefinierte Inhaltsauflöser ( <span class="codeph"> PTContentResolver</span>) verwenden sollte, um dem Delegaten den Status der Inhaltsauflösung zu kommunizieren. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Constants/PTPlacementType.html" format="html" scope="external"> PTPlacementType</a> </td> 
