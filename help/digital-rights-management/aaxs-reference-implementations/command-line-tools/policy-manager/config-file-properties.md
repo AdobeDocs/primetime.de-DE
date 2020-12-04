@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Konfigurationsdateieigenschaften {#configuration-file-properties}
 
-Die Konfigurationsdatei gibt die folgenden Eigenschaften an. Bei eingeschlossenen Eigenschaftsnamen `n``n` steht für eine Ganzzahl, die mit 1 beginnt und für jede Instanz der Eigenschaft erhöht wird.
+Die Konfigurationsdatei gibt die folgenden Eigenschaften an. Bei Eigenschaftennamen, die `n` enthalten, steht `n` für eine Ganzzahl, die mit 1 beginnt und für jede Instanz der Eigenschaft erhöht wird.
 
 <table class="+ topic/table " id="table_p3x_54y_n4"> 
  <thead class="- topic/thead "> 
@@ -24,31 +24,32 @@ Die Konfigurationsdatei gibt die folgenden Eigenschaften an. Bei eingeschlossene
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.name</span> <p class="- topic/p "><span class="codeph"> -n</span> <i class="+ topic/ph hi-d/i ">policyName</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.name</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">npoliciesName</i> </p> </td> 
    <td colname="2" class="- topic/entry "> Der für Menschen lesbare Richtlinienname. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.requireKeyServer</span> <p class="- topic/p "><span class="codeph"> -keyServer</span> <i class="+ topic/ph hi-d/i ">boolean</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.requireKeyServer</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">keyServerboolean</i> </p> </td> 
    <td colname="2" class="- topic/entry "> Wenn "true", ist ein HTTPS-Schlüsselserver für wichtigen Versand unter iOS erforderlich. Der Standardwert ist "false", wenn nicht angegeben. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.forceJailbreak</span> <p class="- topic/p "><span class="codeph"> -forceJailbreak</span> <i class="+ topic/ph hi-d/i ">boolean</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.forceJailbreak</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">forceJailbreakBoolean</i> </p> </td> 
    <td colname="2" class="- topic/entry "> Wenn "true", sollten Sie bei Geräten, die die Erkennung von Jailbreak unterstützen, die Wiedergabe nicht zulassen, wenn ein Jailbreak erkannt wurde. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.critical</span> <p class="- topic/p "><span class="codeph"> -kritisch</span> <i class="+ topic/ph hi-d/i ">boolesch</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.critical</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">kritisch-boolesch</i> </p> </td> 
    <td colname="2" class="- topic/entry "> Legen Sie die politische Kritikalität fest. Wenn "true", muss der Server alle Teile der Richtlinie verstehen (dies ist das Standardverhalten). Bei "false"ignoriert der Server möglicherweise Richtlinienattribute, die er nicht versteht. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.chwinning.asymmetric.certfile</span> </td> 
-   <td colname="2" class="- topic/entry ">Lizenzserverzertifikat, dessen öffentlicher Schlüssel zum Verschlüsseln des Stamm-Verschlüsselungsschlüssels für die <a href="../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md" format="dita" scope="local"> erweiterte Lizenzketten verwendet wird </a>Diese Eigenschaft gibt eine Datei an, die nur das Zertifikat enthält (entweder das PEM- oder das DER-Format ist akzeptabel). </td> 
+   <td colname="2" class="- topic/entry ">Lizenzserverzertifikat, dessen öffentlicher Schlüssel zum Verschlüsseln des Stammverschlüsselungsschlüssels für die <a href="../../../aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md" format="dita" scope="local"> Erweiterte Lizenzketten </a> verwendet wird
+   Diese Eigenschaft gibt eine Datei an, die nur das Zertifikat enthält (entweder das PEM- oder DAS-Format ist akzeptabel). </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.charing.rootKey</span> <p class="- topic/p "><span class="codeph"> -rootKey</span> <i class="+ topic/ph hi-d/i ">root-key</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.charing.rootKey</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">rootKeyroot-key</i> </p> </td> 
    <td colname="2" class="- topic/entry "> Geben Sie den Verschlüsselungsschlüssel für die erweiterte Lizenzketten an. Wenn kein Schlüssel angegeben ist und die erweiterte Lizenzketten aktiviert sind, wird ein zufälliger Schlüssel generiert. Der Schlüssel muss 16 Byte lang sein und als Hexadezimalwerte angegeben werden. Leerzeichen zwischen den Hex-Werten sind optional. Bei Updates ist die Befehlszeilenoption nicht zulässig und die Eigenschaft wird ignoriert. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.url</span> <p class="- topic/p "><span class="codeph"> -domainURL</span> <i class="+ topic/ph hi-d/i ">url</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.url</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">domainURLurl</i> </p> </td> 
    <td colname="2" class="- topic/entry "> URL des Domänenservers, wenn eine Domänenregistrierung erforderlich ist. Bei Updates ist die Befehlszeilenoption nicht zulässig und die Eigenschaft wird ignoriert. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -56,11 +57,11 @@ Die Konfigurationsdatei gibt die folgenden Eigenschaften an. Bei eingeschlossene
    <td colname="2" class="- topic/entry "> Gibt an, ob eine anonyme Domänenregistrierung zulässig ist. Setzen Sie die Eigenschaft auf true oder schließen Sie diese Befehlszeilenoption ein, um den anonymen Zugriff zuzulassen. Diese Option kann nicht mit -domainAuthNS verwendet werden. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.authNamespace</span> <p class="- topic/p "><span class="codeph"> -domainAuthNS</span> - <i class="+ topic/ph hi-d/i ">Namensraum</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.authNamespace</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">domainAuthNSnamespace</i> </p> </td> 
    <td colname="2" class="- topic/entry "> Der Authentifizierungs-Namensraum für die Domänenregistrierung. Falls angegeben, muss sich der Client mit einem Benutzernamen und einem Kennwort authentifizieren, das von der angegebenen Behörde ausgegeben wird. Bei Updates ist die Befehlszeilenoption nicht zulässig und die Eigenschaft wird ignoriert. Diese Option kann nicht mit -domainAnon verwendet werden. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.outputProtection.analog</span> <p class="- topic/p "><span class="codeph"> -opAnalog</span> <i class="+ topic/ph hi-d/i ">AnalogOption</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.outputProtection.analog</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">opAnalogAnalogOption</i> </p> </td> 
    <td colname="2" class="- topic/entry ">Analoge Ausgabeschutzeinschränkungen. Die folgenden Werte werden unterstützt: 
     <ul class="- topic/ul " id="ul_h4x_54y_n4"> 
      <li class="- topic/li " id="li_5BC8F39B61894E83A7B27570FF848F09"> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> NO_PROTECTION</span> </p> </li> 
@@ -74,41 +75,41 @@ Die Konfigurationsdatei gibt die folgenden Eigenschaften an. Bei eingeschlossene
     </ul> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> - <i class="+ topic/ph hi-d/i ">Name/Wert-Paare</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">DRM-Clients haben keinen Zugriff auf geschützte Inhalte. Diese Option gibt eine Liste von nicht verwendeten DRM-Modulen an (blockierungsliste). Der Wert besteht aus durch Kommas getrennten Paaren "name=Wert"mit folgendem Format: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Weitere Name/Wert-Paare müssen durch Kommas getrennt werden. Beispiel: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">drmBlacklistName/value-pair</i> </p> </td> 
+   <td colname="2" class="- topic/entry ">DRM-Clients haben keinen Zugriff auf geschützte Inhalte. Diese Option gibt eine Liste von nicht verwendeten DRM-Modulversionen an (Blockierungsliste). Der Wert besteht aus durch Kommas getrennten Paaren "name=Wert"mit folgendem Format: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Weitere Name/Wert-Paare müssen durch Kommas getrennt werden. Beispiel: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -runtimeBlacklsit</span> - <i class="+ topic/ph hi-d/i ">Name/Wert-Paare</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">Anwendungslaufzeiten sind vom Zugriff auf geschützte Inhalte eingeschränkt. Diese Option gibt eine Liste von nicht verwendeten Laufzeitmodulversionen an (blockierungsliste). Der Wert besteht aus durch Kommas getrennten Paaren "name=Wert"mit folgendem Format: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Weitere Name/Wert-Paare müssen durch Kommas getrennt werden. Beispiel: <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">runtimeBlacklsitname/value-pair</i> </p> </td> 
+   <td colname="2" class="- topic/entry ">Anwendungslaufzeiten sind vom Zugriff auf geschützte Inhalte eingeschränkt. Diese Option gibt eine Liste von nicht verwendeten Laufzeitmodulversionen an (Blockierungsliste). Der Wert besteht aus durch Kommas getrennten Paaren "name=Wert"mit folgendem Format: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Weitere Name/Wert-Paare müssen durch Kommas getrennt werden. Beispiel: <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapacityV1</span> <i class="+ topic/ph hi-d/i ">name/value-pair</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapability</span> <p class="- topic/p "><span class="codeph"> -devCapacityV1</span> <i class="+ topic/ph hi-d/i ">name/value-pair</i> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt die zum Zugriff auf geschützten Inhalt erforderlichen Gerätefunktionen an. Der Wert besteht aus durch Kommas getrennten Paaren "name=Wert"mit folgendem Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> nonUserAccessibleBus|hardwareRootOfTrust=true|false</span> </p> <p class="- topic/p ">Beispiel: <span class="codeph"> nonUserAccessibleBus=false,hardwareRootOfTrust=true</span>. Verwenden Sie während der Aktualisierung <span class="codeph"> -devCapabilityV1</span> ohne die verbleibenden Argumente, um die Einschränkung der Gerätefunktionen zu entfernen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.syncFrequency</span> <p class="- topic/p "><span class="codeph"> -sync</span> <i class="+ topic/ph hi-d/i ">name/value-pair</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Geben Sie an, wie oft Clients zum Senden von Synchronisierungsmeldungen an den Server erforderlich sind. Ist dies nicht der Fall, senden Clients keine Synchronisierungsmeldungen, wenn mit dieser Richtlinie geschützte Inhalte wiedergegeben werden. Der Wert besteht aus durch Kommas getrennten <span class="codeph"> Paaren namens=Wert</span> mit folgendem Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> Beginn|force|hardStop=numberValue</span> </p> <p class="- topic/p "> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.syncFrequency</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">syncname/value-pair</i> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Geben Sie an, wie oft Clients zum Senden von Synchronisierungsmeldungen an den Server erforderlich sind. Ist dies nicht der Fall, senden Clients keine Synchronisierungsmeldungen, wenn mit dieser Richtlinie geschützter Inhalt wiedergegeben wird. Der Wert besteht aus durch Kommas getrennten Paaren <span class="codeph"> name=value</span> mit folgendem Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> beginn|force|hardStop=numberValue</span> </p> <p class="- topic/p "> 
      <ul id="ul_a5j_q4t_44"> 
-      <li id="li_25CAF96C27F34848A95B2E3693847C71"><span class="codeph"> Beginn</span> (erforderlich) - Beginn-Intervall gibt an, dass der Beginn die Synchronisierung mit dem Server einige Minuten seit der letzten Synchronisierung durchführen soll. </li> 
-      <li id="li_CC9068CFE75645029C947C9E1B53351F"><span class="codeph"> force</span> (optional) - Die Wahrscheinlichkeit der erzwungenen Synchronisierung ist die Wahrscheinlichkeit (0-100), mit der der Client während der Wiedergabe eine Synchronisierungsmeldung erzwingen soll. </li> 
-      <li id="li_C31A6250F19348FBB8B7569D00C6314E"><span class="codeph"> hardStop</span> (optional) - Das Intervall für die feste Beendigung ist der Zeitraum in Minuten, nach dem der Client die Wiedergabe fehlschlägt, wenn eine Synchronisierung nicht möglich ist. Wenn festgelegt, muss das Intervall größer als der Beginn sein. </li> 
+      <li id="li_25CAF96C27F34848A95B2E3693847C71"><span class="codeph"> beginn</span>  (erforderlich) - Beginn-Intervall gibt an, dass der Client die Synchronisierung mit dem Server einige Minuten seit der letzten Synchronisierung durchführen soll. </li> 
+      <li id="li_CC9068CFE75645029C947C9E1B53351F"><span class="codeph"> force</span>  (optional) - Die Wahrscheinlichkeit der erzwungenen Synchronisierung ist die Wahrscheinlichkeit (0-100), mit der der Client während der Wiedergabe eine Synchronisierungsmeldung erzwingen soll. </li> 
+      <li id="li_C31A6250F19348FBB8B7569D00C6314E"><span class="codeph"> hardStop</span>  (optional) - Das Intervall für die feste Beendigung ist der Zeitraum in Minuten, nach dem der Client die Wiedergabe fehlschlägt, wenn eine Synchronisierung nicht möglich ist. Wenn festgelegt, muss das Intervall größer als der Beginn sein. </li> 
      </ul>Verwenden Sie während der Aktualisierung <span class="codeph"> -sync</span> ohne die restlichen Argumente, um die Synchronisierungsanforderungen zu entfernen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.useRootLicense</span> </td> 
-   <td colname="2" class="- topic/entry ">Gibt an, ob diese Richtlinie über eine Stammlizenz verfügt (siehe <i class="+ topic/ph hi-d/i ">Erweiterte Lizenzketten</i> in <i class="+ topic/ph hi-d/i ">Verwenden von Adobe Access zum Schutz von Inhalten</i>). </td> 
+   <td colname="2" class="- topic/entry ">Gibt an, ob diese Richtlinie über eine Stammlizenz verfügt (siehe <i class="+ topic/ph hi-d/i ">Verbesserte Lizenzverkettung</i> in <i class="+ topic/ph hi-d/i ">Verwenden von Adobe-Zugriff zum Schutz von Inhalten</i>). </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.startDate</span> </td> 
-   <td colname="2" class="- topic/entry ">Das Datum, nach dem der Inhalt gültig ist. Verwenden Sie das Format <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> (z. B. entspricht <span class="codeph"> 2009-01-31</span> dem 31. Januar um 12:00 Uhr) oder <span class="+ topic/ph pr-d/codeph codeph">yyy-mm-dd-h24:min:sec</span> (z. B. <span class="codeph"> 2009-01-31-1-1-1-1-1-14:4) 30:00</span> steht für den 31. Januar um 14:30 Uhr). </td> 
+   <td colname="2" class="- topic/entry ">Das Datum, nach dem der Inhalt gültig ist. Verwenden Sie das Format <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> (z. B. bedeutet <span class="codeph"> 2009-01-31</span> den 31. Januar um 12:00 Uhr) oder <span class="+ topic/ph pr-d/codeph codeph">yyyyy-mm-dd-h24:min:sec</span> (z. 6/&gt; 2009-01-31-14:30:00 </span> steht für den 31. Januar um 14:30 Uhr).<span class="codeph"> </span></td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.expiration.endDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Das Datum, vor dem der Inhalt gültig ist. Es ist nicht möglich, <span class="codeph"> policy.expiration.endDate</span> und policy.expiration.duration gleichzeitig anzugeben. Verwenden Sie das Format <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> oder <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span> (z. B. stellt 2009-01-31-14:30:00 den 31. Januar um 14:30 Uhr dar). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Das Datum, vor dem der Inhalt gültig ist. Sowohl <span class="codeph"> policy.expiration.endDate</span> als auch policy.expiration.duration können nicht gleichzeitig angegeben werden. Verwenden Sie das Format <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> oder <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span> (z. B. entspricht 2009-01-31-14:30:00 dem 31. Januar um 14:30 Uhr). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.expiration.duration</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Die Gültigkeitsdauer des Inhalts (in Minuten), beginnend mit dem Verpacken. Es ist nicht möglich, <span class="codeph"> policy.expiration.endDate</span> und <span class="codeph"> policy.expiration.duration</span> gleichzeitig anzugeben. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Die Gültigkeitsdauer des Inhalts (in Minuten), beginnend mit dem Verpacken. Es kann sein, dass <span class="codeph"> policy.expiration.endDate</span> und <span class="codeph"> policy.expiration.duration</span> nicht gleichzeitig angegeben werden. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.licenseCaching.duration</span> </td> 
@@ -148,11 +149,11 @@ Die Konfigurationsdatei gibt die folgenden Eigenschaften an. Bei eingeschlossene
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine zulassungsliste von Adobe AIR- oder iOS-Anwendungen, die geschützte Inhalte abspielen dürfen. Die Eigenschaft muss das folgende Format verwenden: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]]] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine Zulassungsliste von Adobe AIR- oder iOS-Anwendungen, die geschützte Inhalte abspielen dürfen. Die Eigenschaft muss das folgende Format verwenden: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">max</span>]]] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowedSWFApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine zulassungsliste von SWF-Anwendungen, die geschützte Inhalte abspielen dürfen. Verwenden Sie das folgende Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> oder file=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_verify</i> <i class="+ topic/ph hi-d/i ">swf_file</i> ist die SWF-Datei, für die der Hash berechnet wird, und <i class="+ topic/ph hi-d/i ">max_time_to_verify</i> ist die maximale Zeit, die für den Download und die Überprüfung der SWF-Datei (in Sekunden) erforderlich ist. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Eine Zulassungsliste von SWF-Anwendungen, die geschützte Inhalte abspielen dürfen. Verwenden Sie das folgende Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"></span> URLor file=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_</i> <i class="+ topic/ph hi-d/i ">verifyswf_</i> fileis Die SWF-Datei, für die der Hash berechnet werden soll, und  <i class="+ topic/ph hi-d/i ">max_time_to_</i> verifyis die maximale Zeit, die zum Herunterladen und Überprüfen der SWF-Datei benötigt wird (in Sekunden). </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.license.customProp.n</span> </td> 
