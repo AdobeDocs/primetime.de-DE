@@ -11,8 +11,8 @@ ht-degree: 0%
 ---
 
 
-# Zulassungsliste von Paketen mit vertrauenswürdigen Inhalten verwalten {#maintain-a-allowlist-of-trusted-content-packagers}
+# Eine Zulassungsliste vertrauenswürdiger Inhaltspakete {#maintain-a-allowlist-of-trusted-content-packagers} verwalten
 
-Eine **Zulassungsliste** ist eine Liste vertrauenswürdiger Entitäten. Bei Content Packagern handelt es sich um Organisationen, denen der Eigentümer des Inhalts vertraut, die FLV-/F4V-Videodateien zu verpacken (oder zu verschlüsseln) und DRM-geschützte Inhalte zu erstellen. Bei der Bereitstellung von Adobe Access wird empfohlen, eine Zulassungsliste von Paketen für vertrauenswürdige Inhalte zu verwalten und vor der Lizenzerteilung die Identität des in den DRM-Metadaten (DRM-Header) einer DRM-geschützten Datei enthaltenen Inhalts-Packagers zu überprüfen.
+Eine **Zulassungsliste** ist eine Liste vertrauenswürdiger Entitäten. Bei Content Packagern handelt es sich um Organisationen, denen der Eigentümer des Inhalts vertraut, die FLV-/F4V-Videodateien zu verpacken (oder zu verschlüsseln) und DRM-geschützte Inhalte zu erstellen. Bei der Bereitstellung von Adobe Access wird empfohlen, eine Zulassungsliste von Paketen mit vertrauenswürdigen Inhalten zu verwalten und vor der Lizenzerteilung die Identität des in den DRM-Metadaten (DRM-Header) einer DRM-geschützten  enthaltenen Content Packager zu überprüfen.
 
-Weitere Informationen zum Abrufen von Informationen zur Entität, die den Inhalt verpackt hat, finden Sie `V2ContentMetaData.getPackagerInfo()` in der *Adobe Access API-Referenz*.
+Weitere Informationen zum Abrufen von Informationen zur Entität, die den Inhalt verpackt hat, finden Sie unter `V2ContentMetaData.getPackagerInfo()` in der *API-Referenz für den Zugriff auf Adoben*.
