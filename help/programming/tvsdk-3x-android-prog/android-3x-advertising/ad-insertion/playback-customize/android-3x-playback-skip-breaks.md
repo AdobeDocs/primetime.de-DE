@@ -6,11 +6,14 @@ title: Werbeunterbrechungen für einen Zeitraum überspringen
 uuid: be39cb2b-c274-447a-8fb5-89b3e9598622
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '322'
+ht-degree: 0%
 
 ---
 
 
-# Werbeunterbrechungen für einen Zeitraum überspringen {#skip-ad-breaks-for-a-period-of-time}
+# Werbeunterbrechungen für einen Zeitraum {#skip-ad-breaks-for-a-period-of-time} überspringen
 
 Standardmäßig erzwingt TVSDK die Wiedergabe einer Werbeunterbrechung, wenn der Benutzer über eine Werbeunterbrechung sucht. Sie können das Verhalten anpassen, um einen Werbeunterbrechung zu überspringen, wenn der Zeitraum, der nach dem Abschluss eines vorherigen Umbruchs abgelaufen ist, innerhalb einer bestimmten Anzahl von Minuten liegt.
 
@@ -32,7 +35,7 @@ Um das standardmäßige Verhalten von TVSDK-Werbeunterbrechungen zu überschreib
 
    >[!NOTE]
    >
-   >Die `REMOVE` Richtlinie für Werbeunterbrechungen wird für die Einstellung festgelegt. Adobe empfiehlt die Verwendung der `SKIP` Werbeunterbrechungsrichtlinie anstelle von `REMOVE`.
+   >Die `REMOVE`-Richtlinie für Werbeunterbrechungen wird für eine Deaktivierung festgelegt. Adobe empfiehlt, die `SKIP`-Richtlinie für Werbeunterbrechungen anstelle von `REMOVE` zu verwenden.
 
 Im folgenden Beispiel einer benutzerdefinierten Anzeigenrichtlinienauswahl werden Anzeigen in den nächsten fünf Minuten (Pinnwandzeit) übersprungen, nachdem ein Benutzer eine Werbeunterbrechung gesehen hat.
 
@@ -49,7 +52,7 @@ Im folgenden Beispiel einer benutzerdefinierten Anzeigenrichtlinienauswahl werde
    }
    ```
 
-1. Erweitern `AdPolicySelector`.
+1. Erweitern Sie `AdPolicySelector`.
 
    ```java
    package com.adobe.mediacore.sample.advertising; 
