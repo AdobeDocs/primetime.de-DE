@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Verpacken Sie inkompatible Anzeigen mit dem Adobe Creative Repackage Service (CRS) neu. {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
+# Komprimieren Sie inkompatible Anzeigen mit dem Adobe Creative Repackage Service (CRS) {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
 
 Einige Anzeigen (oder kreative Elemente) von Drittanbietern können nicht in den HTTP Live Streaming (HLS)-Inhaltsstream eingefügt werden, da ihr Videoformat mit HLS nicht kompatibel ist. Primetime-Anzeigen und TVSDK können optional versuchen, inkompatible Anzeigen in kompatible M3U8-Videos zu verpacken.
 
@@ -27,7 +27,7 @@ Wenden Sie sich an Ihren Kundenbetreuer, um diese optionale CRS-Funktion zu akti
 >
 >Für Kunden mit CRS Version 3.0 (und früher) haben die folgenden Änderungen ab CRS Version 3.1 sowohl die Sicherheit als auch die Leistung verbessert:
 >
->* CRS 3.1 wird weiterhin verwendet, `https:` wenn der neu verpackte Inhalt verwendet `https:`. Dadurch wird das Potenzial einiger Player verringert, unsichere Inhalte zu präsentieren.
+>* CRS 3.1 fährt mit `https:` fort, wenn der neu verpackte Inhalt `https:` verwendet. Dadurch wird das Potenzial einiger Player verringert, unsichere Inhalte zu präsentieren.
    >
    >
 * Mit CRS 3.1 werden Netzwerkaufrufe erheblich minimiert, wodurch die Zeit des Videostarts erheblich verkürzt wird.
