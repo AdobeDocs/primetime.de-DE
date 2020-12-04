@@ -6,6 +6,9 @@ title: MediaPlayer-Methoden für den Zugriff auf MediaResource-Informationen
 uuid: 5d83491c-6577-46fe-98af-83f0fde7a7d0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '431'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über d
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> Liste&lt;String&gt; getAdTags() </span> </td> 
+   <td colname="2"> <span class="codeph"> &lt;string&gt; ListgetAdTags()  </span> </td> 
    <td colname="3"> <p>Stellt die Liste der Anzeigen-Tags bereit, die für den Anzeigenplatzierungsprozess verwendet werden. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -35,18 +38,18 @@ Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über d
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean isLive(); </span> </td> 
+   <td colname="2"> <span class="codeph"> boolean isLive();  </span> </td> 
    <td colname="3"> <p>True, wenn der Stream live ist; false, wenn es VOD ist. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>DRM-geschützt</b> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean isProtected(); </span> </td> 
+   <td colname="2"> <span class="codeph"> boolean isProtected();  </span> </td> 
    <td colname="3"> <p>True, wenn der Stream DRM-geschützt ist. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> Liste&lt;DRMMetadataInfo&gt; getDRMMetadataInfos(); </span> </td> 
+   <td colname="2"> <span class="codeph"> &lt;drmmetadatainfo&gt; ListgetDRMMetadataInfos();  </span> </td> 
    <td colname="3"> <p>Liste aller DRM-Metadatenobjekte, die im Manifest gefunden werden. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -54,19 +57,19 @@ Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über d
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean hasClosedCaptions(); </span> </td> 
+   <td colname="2"> <span class="codeph"> boolean hasClosedCaptions();  </span> </td> 
    <td colname="3"> <p>True, wenn Untertitel-Tracks verfügbar sind. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> Liste&lt;ClosedCaptionsTrack&gt; getClosedCationsTracks(); </span> </td> 
+   <td colname="2"> <span class="codeph"> &lt;closedcaptionstrack&gt; ListgetClosedCationsTracks();  </span> </td> 
    <td colname="3"> <p>Bietet eine Liste der verfügbaren Untertitelspuren. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> ClosedCaptionsTrack get SelectedClosedCaptionsTrack(); </span> </td> 
-   <td colname="3"> <p>Ruft die aktuelle Untertitelspur ab, die mit <span class="codeph"> SelectClosedCaptionsTrack ausgewählt wurde </span>. </p> </td> 
+   <td colname="2"> <span class="codeph"> ClosedCaptionsTrack get SelectedClosedCaptionsTrack();  </span> </td> 
+   <td colname="3"> <p>Ruft die aktuelle Untertitelspur ab, die mit <span class="codeph"> SelectClosedCaptionsTrack </span> ausgewählt wurde. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectClosedCaptionsTrack ( ClosedCaptionsTrack closeCaptionsTrack) </span> </td> 
+   <td colname="2"> <span class="codeph"> selectClosedCaptionsTrack ( ClosedCaptionsTrack closeCaptionsTrack)  </span> </td> 
    <td colname="3"> <p>Legt eine Untertitelspur als aktuelle Untertitelspur fest. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -74,23 +77,23 @@ Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über d
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean hasAlternateAudio(); </span> </td> 
-   <td colname="3"> <p>True, wenn der Stream über alternative Audiospuren verfügt. </p> <p>Tipp:  Die Haupt- (Standard-)Audiospur ist ebenfalls Teil der alternativen Liste der Audiospur. </p> <p>TVSDK für Android betrachtet die Hauptaudiospur als eines der Elemente in der alternativen Audiospur-Liste. Aus diesem Grund gibt <span class="codeph"> MediaPlayerItem.hasAlternateAudio nur dann den Wert "false" </span> zurück, wenn der Stream überhaupt keinen Ton enthält. Wenn der Inhalt nur eine Audiospur enthält, gibt diese Methode true zurück und <span class="codeph"> MediaPlayerItem.getAudioTracks </span> gibt eine Liste mit einem einzelnen Element (die Standard-Audiospur) zurück. </p> </td> 
+   <td colname="2"> <span class="codeph"> boolean hasAlternateAudio();  </span> </td> 
+   <td colname="3"> <p>True, wenn der Stream über alternative Audiospuren verfügt. </p> <p>Tipp:  Die Haupt- (Standard-)Audiospur ist ebenfalls Teil der alternativen Liste der Audiospur. </p> <p>TVSDK für Android betrachtet die Hauptaudiospur als eines der Elemente in der alternativen Audiospur-Liste. Aus diesem Grund gibt <span class="codeph"> MediaPlayerItem.hasAlternateAudio </span> nur dann false zurück, wenn der Stream überhaupt kein Audio hat. Wenn der Inhalt nur eine Audiospur enthält, gibt diese Methode true zurück und <span class="codeph"> MediaPlayerItem.getAudioTracks </span> gibt eine Liste mit einem einzelnen Element (die Standard-Audiospur) zurück. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> Liste&lt;AudioTrack&gt; getAudioTracks(); </span> </td> 
+   <td colname="2"> <span class="codeph"> &lt;audiotrack&gt; ListgetAudioTracks();  </span> </td> 
    <td colname="3"> Bietet eine Liste der verfügbaren alternativen Audiospuren. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> Liste&lt;AudioTrack&gt; getAudioTracks(); </span> </td> 
+   <td colname="2"> <span class="codeph"> &lt;audiotrack&gt; ListgetAudioTracks();  </span> </td> 
    <td colname="3"> <p>Bietet eine Liste der verfügbaren alternativen Audiospuren. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> AudioTrack getSelectedAudioTrack(); </span> </td> 
-   <td colname="3"> <p>Ruft die mit <span class="codeph"> selectAudioTrack ausgewählte Audiospur ab </span>. </p> </td> 
+   <td colname="2"> <span class="codeph"> AudioTrack getSelectedAudioTrack();  </span> </td> 
+   <td colname="3"> <p>Ruft die mit <span class="codeph"> selectAudioTrack </span> ausgewählte Audiospur ab. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectAudioTrack ( AudioTrack audioTrack ) </span> </td> 
+   <td colname="2"> <span class="codeph"> selectAudioTrack ( AudioTrack audioTrack )  </span> </td> 
    <td colname="3"> <p>Wählt eine Audiospur als aktuelle Audiospur aus. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -98,19 +101,19 @@ Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über d
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean hasTimedMetadata(); </span> </td> 
+   <td colname="2"> <span class="codeph"> boolean hasTimedMetadata();  </span> </td> 
    <td colname="3"> <p>True, wenn dem Stream Zeitmetadaten zugeordnet sind. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> Liste&lt;TimedMetadata&gt; getTimedMetadata(); </span> </td> 
+   <td colname="2"> <span class="codeph"> &lt;timedmetadata&gt; ListgetTimedMetadata();  </span> </td> 
    <td colname="3"> <p>Bietet eine Liste der zeitgesteuerten Metadatenobjekte, die mit dem Stream verknüpft sind. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean isDynamic(); </span> </td> 
+   <td colname="2"> <span class="codeph"> boolean isDynamic();  </span> </td> 
    <td colname="3"> <p>True, wenn der Stream ein MBR-Stream (multiple bit rate) ist. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> Liste&lt;Profil&gt; getProfiles(); </span> </td> 
+   <td colname="2"> <span class="codeph"> &lt;profile&gt; ListgetProfiles();  </span> </td> 
    <td colname="3"> <p>Bietet eine Liste der zugehörigen Profile zur Bitrate. Für jedes Profil können Sie die Bitrate sowie die Höhe und Breite des Profils abrufen. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -118,11 +121,11 @@ Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über d
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean isTrickPlaySupported(); </span> </td> 
+   <td colname="2"> <span class="codeph"> boolean isTrickPlaySupported();  </span> </td> 
    <td colname="3"> <p>"True", wenn der Player schnelle Vorwärts-, Zurückspulen- und Wiederaufnahme unterstützt. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> Liste&lt; Float&gt; getAvailablePlaybackRates </span> </td> 
+   <td colname="2"> <span class="codeph"> &lt; Float=""&gt; ListgetAvailablePlaybackRates  </span> </td> 
    <td colname="3"> <p>Bietet die Liste der verfügbaren Wiedergaberaten im Kontext der Funktion "Trick-play". </p> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -130,7 +133,7 @@ Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über d
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> MediaResource getResource(); </span> </td> 
+   <td colname="2"> <span class="codeph"> MediaResource getResource();  </span> </td> 
    <td colname="3"> <p>Gibt die mit diesem Element verknüpfte Medienressource zurück. </p> </td> 
   </tr> 
  </tbody> 
