@@ -6,17 +6,20 @@ title: Spezialanwendungsfälle
 uuid: 066bc256-4fdf-4083-b23e-0a916b3b532f
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 0%
 
 ---
 
 
-# Spezialanwendungsfälle{#special-use-cases}
+# Sonderverwendungsfälle{#special-use-cases}
 
-TVSDK bevorzugt benutzerdefinierte Bereichseinstellungen im Vergleich zu standardmäßigen Anzeigeneinstellungen. Wenn beispielsweise MARK-Bereiche definiert sind, werden die Einfügeeinstellungen der Anzeige ignoriert. Wenn REPLACE-Bereiche definiert sind, verwendet TVSDK automatisch den `CustomRanges` Signalmodus.
+TVSDK bevorzugt benutzerdefinierte Bereichseinstellungen im Vergleich zu standardmäßigen Anzeigeneinstellungen. Wenn beispielsweise MARK-Bereiche definiert sind, werden die Einfügeeinstellungen der Anzeige ignoriert. Wenn REPLACE-Bereiche definiert sind, verwendet TVSDK automatisch den Signalisierungsmodus `CustomRanges`.
 
 1. `ReplaceRange` ohne Ersatzdauer
 
-   Wenn die Ersatzdauer fehlt, wird die tatsächliche Austauschdauer vom Server bestimmt. Die Anzahl der darin platzierten Anzeigen `AdBreak` wird auch vom Server bestimmt.
+   Wenn die Ersatzdauer fehlt, wird die tatsächliche Austauschdauer vom Server bestimmt. Die Anzahl der in diesem `AdBreak` platzierten Anzeigen wird auch vom Server bestimmt.
 
    ```
    {
