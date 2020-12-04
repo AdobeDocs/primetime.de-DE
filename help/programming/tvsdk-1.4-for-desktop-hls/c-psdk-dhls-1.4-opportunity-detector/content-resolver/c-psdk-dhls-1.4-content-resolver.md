@@ -6,6 +6,9 @@ title: Anpassen von Opportunitätsdetektoren und Inhaltsauflösungen
 uuid: 7bd04c8f-6f04-4321-88e8-9bb93251d940
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
@@ -22,11 +25,11 @@ TVSDK enthält standardmäßige Opportunitätsdetektoren:
 
 TVSDK enthält auch einen Standard-Content-Resolver, der Inhalte bereitstellt, die basierend auf dem Metadatenschlüssel im Player-Element eingefügt werden:
 
-* `AuditudeResolver`, die mit Adobe Primetime-Werbeanzeigen-Entscheidungsservern kommunizieren können (früher Auditude genannt) und die Platzierung von Werbeunterbrechungen zurückgeben.
+* `AuditudeResolver`, die mit Adobe Primetime-Ad-Decision-Servern kommunizieren können (früher als Auditude bezeichnet) und die Platzierung von Werbeunterbrechungen zurückgeben.
 
 Sie können die standardmäßigen Opportunitätsdetektoren und Inhaltsauflöser überschreiben, um den Werbe-Workflow wie folgt anzupassen:
 
-* Hinzufügen Unterstützung der benutzerdefinierten Tag-Erkennung
+* hinzufügen Unterstützung der benutzerdefinierten Tag-Erkennung
 * Erkennen benutzerdefinierter Tags für die Anzeigeneinfügung
 * Erstellen eines benutzerdefinierten Anzeigenanbieters
 * Schwarzer Inhalt
