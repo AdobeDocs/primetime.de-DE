@@ -6,11 +6,14 @@ title: Mit Cookies arbeiten
 uuid: a3b966fd-1263-458d-8303-b4e898372ee1
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 0%
 
 ---
 
 
-# Mit Cookies arbeiten {#work-with-cookies}
+# Arbeiten mit Cookies {#work-with-cookies}
 
 Sie können TVSDK verwenden, um beliebige Daten in Cookie-Headern für Sitzungsverwaltung, Gate-Zugriff usw. zu senden.
 
@@ -27,7 +30,7 @@ Hier finden Sie eine Beispielanforderung an den Schlüsselserver mit einer Authe
 
 So arbeiten Sie mit Cookies:
 
-Erstellen Sie eine `cookieManager` und fügen Sie Ihre Cookies für die URIs zu Ihrem cookieStore hinzu.
+Erstellen Sie ein `cookieManager` und fügen Sie Ihre Cookies für die URIs zu Ihrem cookieStore hinzu.
 
 Beispiel:
 
@@ -45,7 +48,7 @@ cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
 >
 >Wenn 302-Umleitungen aktiviert sind, kann die Anzeigenanforderung an eine Domäne weitergeleitet werden, die sich von der Domäne unterscheidet, zu der das Cookie gehört.
 
-TVSDK Abfragen dies zur `cookieManager` Laufzeit, prüft, ob mit der URL verbundene Cookies vorhanden sind, und verwendet automatisch diese Cookies.
+TVSDK Abfragen dieses `cookieManager` zur Laufzeit, prüft, ob mit der URL verbundene Cookies vorhanden sind, und verwendet automatisch diese Cookies.
 
 Das Ereignis MediaPlayerEvent.COOKIES_UPDATED wird aufgerufen, wenn C++-Cookies aktualisiert werden. Dieses cookiesUpdatedEvent verfügt über eine Methode getCookieString(), die einen Zeichenfolgenwert für das Cookie zurückgibt.
 
