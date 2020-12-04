@@ -11,13 +11,13 @@ ht-degree: 0%
 ---
 
 
-# Vorhandene Richtlinie aktualisieren {#update-an-existing-policy}
+# Vorhandene Richtlinie {#update-an-existing-policy} aktualisieren
 
-Um eine vorhandene Richtlinie zu aktualisieren, wählen Sie den Dateinamen in der Dropdown-Liste aus und klicken Sie auf **[!UICONTROL Open]**. Ändern Sie alle gewünschten Richtlinienattribute. Alle Attribute können mit Ausnahme der Attribute für Authentifizierung und Lizenzketten geändert werden.
+Um eine vorhandene Richtlinie zu aktualisieren, wählen Sie den Dateinamen aus der Dropdown-Liste und klicken Sie auf **[!UICONTROL Open]**. Ändern Sie alle gewünschten Richtlinienattribute. Alle Attribute können mit Ausnahme der Attribute für Authentifizierung und Lizenzketten geändert werden.
 
-Klicken Sie abschließend auf **[!UICONTROL Save]**. Die Richtliniendatei im [!DNL Resource] Verzeichnis wird durch die aktualisierte Version ersetzt.
+Klicken Sie abschließend auf **[!UICONTROL Save]**. Die Richtliniendatei im Ordner [!DNL Resource] wird durch die aktualisierte Version ersetzt.
 
 >[!NOTE]
 >
->Auch wenn der Richtlinienname geändert wird, wird der Name der Datei im [!DNL Resource] Verzeichnis nicht geändert.
+>Auch wenn der Richtlinienname geändert wird, wird der Name der Datei im Ordner [!DNL Resource] nicht geändert.
 
