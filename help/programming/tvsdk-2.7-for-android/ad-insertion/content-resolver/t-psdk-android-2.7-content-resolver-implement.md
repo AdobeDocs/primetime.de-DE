@@ -6,6 +6,9 @@ title: Implementieren eines benutzerdefinierten Inhaltsauflösers
 uuid: bc0eda17-9b5d-4733-8e93-790758e68df5
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 2%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Sie können Ihre eigenen Inhaltsauflöser auf Basis der Standardauflöser implementieren.
 
-Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-Auflöser, die nach einer suchen, die in der Lage ist, diese Gelegenheit zu lösen. Das erste zurückgegebene Element `true` wird ausgewählt, um die Gelegenheit zu lösen. Wenn kein Inhaltsauflöser geeignet ist, wird diese Gelegenheit übersprungen. Da die Inhaltsauflösung normalerweise asynchron abläuft, ist der Content-Auflöser dafür verantwortlich, TVSDK zu benachrichtigen, wenn der Prozess abgeschlossen ist.
+Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-Auflöser, die nach einer suchen, die in der Lage ist, diese Gelegenheit zu lösen. Das erste, das `true` zurückgibt, wird ausgewählt, um die Gelegenheit zu lösen. Wenn kein Inhaltsauflöser geeignet ist, wird diese Gelegenheit übersprungen. Da die Inhaltsauflösung normalerweise asynchron abläuft, ist der Content-Auflöser dafür verantwortlich, TVSDK zu benachrichtigen, wenn der Prozess abgeschlossen ist.
 
-1. Implementieren Sie Ihre eigenen benutzerdefinierten `ContentFactory`Funktionen, indem Sie die `ContentFactory` Benutzeroberfläche erweitern und überschreiben `retrieveResolvers`.
+1. Implementieren Sie Ihre eigene benutzerdefinierte `ContentFactory`, indem Sie die `ContentFactory`-Schnittstelle erweitern und `retrieveResolvers` überschreiben.
 
    Beispiel:
 
@@ -51,7 +54,7 @@ Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-
    } 
    ```
 
-1. Registrieren Sie die `ContentFactory` bei der `MediaPlayer`.
+1. Registrieren Sie `ContentFactory` auf `MediaPlayer`.
 
    Beispiel:
 
@@ -68,9 +71,9 @@ Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-
    itemLoader.load(resource, id, config);
    ```
 
-1. Übergeben Sie ein `AdvertisingMetadata` Objekt wie folgt an TVSDK:
-   1. Erstellen Sie ein `AdvertisingMetadata` Objekt.
-   1. Speichern Sie das `AdvertisingMetadata` Objekt in `MediaPlayerItemConfig`.
+1. Übergeben Sie ein `AdvertisingMetadata`-Objekt wie folgt an TVSDK:
+   1. Erstellen Sie ein `AdvertisingMetadata`-Objekt.
+   1. Speichern Sie das `AdvertisingMetadata`-Objekt in `MediaPlayerItemConfig`.
 
       ```java
       AdvertisingMetadata advertisingMetadata = new AdvertisingMetadata(); 
@@ -81,7 +84,7 @@ Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-
       mediaPlayerItemConfig.setAdvertisingMetadata(advertisingMetadata); 
       ```
 
-1. Erstellen Sie eine benutzerdefinierte Anzeigenauflösungsklasse, die die `ContentResolver` Klasse erweitert.
+1. Erstellen Sie eine benutzerdefinierte Anzeigenauflösungsklasse, die die `ContentResolver`-Klasse erweitert.
    1. Überschreiben Sie im benutzerdefinierten Anzeigenauflöser `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup`:
 
       ```java
@@ -91,7 +94,7 @@ Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-
       void doCleanup();
       ```
 
-      Sie erhalten Ihre Daten `advertisingMetadata` aus dem weitergeleiteten Element `doConfigure`:
+      Sie erhalten Ihr `advertisingMetadata`-Element aus dem Element, das in `doConfigure` übergeben wird:
 
       ```java
       MediaPlayerItemConfig itemConfig = item.getConfig(); 
@@ -100,9 +103,9 @@ Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-
         mediaPlayerItemConfig.getAdvertisingMetadata(); 
       ```
 
-   1. Erstellen Sie für jede Platzierungsmöglichkeit eine `List<TimelineOperation>`.
+   1. Erstellen Sie für jede Platzierungsmöglichkeit ein `List<TimelineOperation>`.
 
-      Dieses Beispiel `TimelineOperation` bietet eine Struktur für `AdBreakPlacement`:
+      Dieses Beispiel `TimelineOperation` stellt eine Struktur für `AdBreakPlacement` bereit:
 
       ```java
       AdBreakPlacement( 
@@ -115,14 +118,14 @@ Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-
 
    1. Rufen Sie nach Auflösung der Anzeigen eine der folgenden Funktionen auf:
 
-      * Wenn die Anzeigenauflösung erfolgreich ist, rufen Sie `process(List<TimelineOperation> proposals)` und `notifyCompleted(Opportunity opportunity)` auf der `ContentResolverClient`
+      * Wenn die Anzeigenauflösung erfolgreich ist, rufen Sie `process(List<TimelineOperation> proposals)` und `notifyCompleted(Opportunity opportunity)` auf die `ContentResolverClient`
 
          ```java
          _client.process(timelineOperations); 
          _client.notifyCompleted(opportunity); 
          ```
 
-      * Wenn die Anzeigenauflösung fehlschlägt, rufen Sie `notifyResolveError` die `ContentResolverClient`
+      * Wenn die Anzeigenauflösung fehlschlägt, rufen Sie `notifyResolveError` auf dem `ContentResolverClient` auf
 
          ```java
          _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
