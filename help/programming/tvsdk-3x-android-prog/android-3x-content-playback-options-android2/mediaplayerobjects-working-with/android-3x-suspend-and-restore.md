@@ -7,19 +7,22 @@ title: MediaPlayer aussetzen und wiederherstellen
 uuid: 624a87df-df65-4358-915b-c09a3a4fa224
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
 
-# MediaPlayer aussetzen und wiederherstellen {#suspend-and-restore-mediaplayer}
+# MediaPlayer {#suspend-and-restore-mediaplayer} aussetzen und wiederherstellen
 
 Setzen und Wiederherstellen des TVSDK MediaPlayer aus, wenn ein Gerätebildschirm deaktiviert ist und von Ihrer Anwendung verarbeitet werden muss.
 
-Sie können Vorgänge zum Aussetzen und Wiederherstellen auf `MediaPlayer` dem Android-Broadcast-Receiver bearbeiten, um den Bildschirm zu aktivieren bzw. zu deaktivieren.
+Sie können Vorgänge zum Aussetzen und Wiederherstellen auf `MediaPlayer` innerhalb des Android-Broadcast-Empfängers für ein-/ausschalten.
 
-TVSDK kann nicht bestimmen, wann sich ein Fragment (oder eine Aktivität) im Hintergrund oder Vordergrund befindet. Außerdem wird das Android `SurfaceView` nicht zerstört, wenn der Gerätebildschirm deaktiviert ist (die Aktivität wird jedoch angehalten). Wenn das Gerät Ihre Anwendung in den Hintergrund stellt, `SurfaceView` wird ** sie jedoch zerstört. TVSDK kann diese Änderungen nicht erkennen, daher müssen sie von Ihrer Anwendung verarbeitet werden.
+TVSDK kann nicht bestimmen, wann sich ein Fragment (oder eine Aktivität) im Hintergrund oder Vordergrund befindet. Außerdem wird das Android `SurfaceView` nicht zerstört, wenn der Gerätebildschirm deaktiviert ist (die Aktivität wird jedoch angehalten). `SurfaceView` *wird jedoch* zerstört, wenn das Gerät Ihre Anwendung in den Hintergrund stellt. TVSDK kann diese Änderungen nicht erkennen, daher müssen sie von Ihrer Anwendung verarbeitet werden.
 
-Der folgende Beispielcode, wie Ihre Anwendung das Aussetzen und Wiederherstellen des `MediaPlayer` Geräts beim Ein- und Ausschalten des Gerätebildschirms auf Anwendungsebene handhaben kann:
+Der folgende Beispielcode, wie Ihre Anwendung das Aussetzen und Wiederherstellen des `MediaPlayer` behandeln kann, wenn der Gerätebildschirm auf Anwendungsebene ein- und ausgeschaltet ist:
 
 ```java
 // Track the state of a fragment to determine if it is PAUSED or RESUMED 
