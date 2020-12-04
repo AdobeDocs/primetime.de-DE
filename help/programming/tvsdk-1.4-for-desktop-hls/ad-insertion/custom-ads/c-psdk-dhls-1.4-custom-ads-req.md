@@ -6,11 +6,14 @@ title: Benutzerdefinierte Anzeigenanforderungen
 uuid: 6d4ba87b-ffe5-467d-8ab5-9795928c2f69
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 0%
 
 ---
 
 
-# Benutzerdefinierte Anzeigenanforderungen {#custom-ad-requirements}
+# Benutzerspezifische Anzeigenanforderungen {#custom-ad-requirements}
 
 Der TVSDK-Player kann Anzeigen mit digitaler Video Player Ad-Interface Definition (VPAID) abspielen und den Anzeigenladestatus anzeigen. Wenn die Anzeige Fehler enthält oder die Anzeige zu lange lädt, ignoriert TVSDK diese Anzeigen.
 
@@ -22,9 +25,9 @@ TVSDK unterstützt die folgenden Funktionen:
 
 * Version 1.0 und 2.0 der VPAID-Spezifikation
 * Lineare VPAID-Anzeigen auf Video-on-Demand (VOD)-Inhalten
-* Flash VPAID-Anzeigen
+* Flash-VPAID-Anzeigen
 
-   VPAID-Anzeigen müssen Flash-basiert sein, und die Anzeigenantwort muss den Medientyp der VPAID-Anzeige als `application/x-shockwave-flash`.
+   VPAID-Anzeigen müssen auf Flashs basieren, und die Anzeigenantwort muss den Medientyp der VPAID-Anzeige als `application/x-shockwave-flash` identifizieren.
 
 Die folgenden Funktionen werden nicht unterstützt:
 
@@ -43,14 +46,14 @@ Das TVSDK sendet die folgenden Ereignis:
 * `AdPlaying`
 * `AdStopped`
 
-Nach dem `AdStopped` Ereignis setzt das TVSDK den Videoinhalt fort.
+Nach dem Ereignis `AdStopped` setzt das TVSDK den Videoinhalt fort.
 
 >[!TIP]
 >
 >Wenn Sie den Wert Null angeben, versucht TVSDK, die Anzeige zu laden, bis sie geladen wird, oder es ist ein Fehler aufgetreten.
 
-## Ignorierende Anzeigen {#section_3EA452F420884335AE90DF23C17E416A}
+## Ignorieren von Anzeigen {#section_3EA452F420884335AE90DF23C17E416A}
 
 Wenn das Laden der Anzeige zu lange dauert oder Fehler in der Anzeige auftreten, kann die TVSDK die Anzeige ignorieren und die nächste Anzeige im Werbeunterbrechung wird automatisch wiedergegeben.
 
-Wenn die `AuditudeSettings.customAdLoadTimeout` Einstellung eine Anzahl von Sekunden größer als null angibt, versucht TVSDK, die Anzeige auf die angegebene Dauer zu laden. Wenn die Anzeige nicht geladen werden kann, wird sie übersprungen. Wenn Sie beispielsweise konfigurieren, `AuditudeSettings.customAdLoadTimeout:5`versucht TVSDK, die Anzeige für maximal 5 Sekunden zu laden. Wenn die Anzeige trotzdem nicht geladen wird, wird sie ignoriert.
+Wenn die Einstellung `AuditudeSettings.customAdLoadTimeout` eine Anzahl von Sekunden größer als null angibt, versucht TVSDK, die Anzeige auf die angegebene Dauer zu laden. Wenn die Anzeige nicht geladen werden kann, wird sie übersprungen. Wenn Sie beispielsweise `AuditudeSettings.customAdLoadTimeout:5` konfigurieren, versucht TVSDK, die Anzeige für maximal 5 Sekunden zu laden. Wenn die Anzeige trotzdem nicht geladen wird, wird sie ignoriert.
