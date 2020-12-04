@@ -15,9 +15,9 @@ ht-degree: 0%
 
 # Blockierungsliste der Anwendungslaufzeiten {#blocklist-of-application-runtimes}
 
-Blockierungsliste der Anwendungs-Laufzeitumgebungen gibt die Version des Primetime-Clients oder der Flash-Laufzeitumgebung an, auf die kein Zugriff auf Inhalte möglich ist. Geben Sie die eingeschränkte Laufzeit (Flash Player, AIR oder iOS), Plattform und Version an.
+Die Blockierungsliste der Anwendungs-Laufzeitumgebungen gibt die Version des Primetime-Clients oder der Flash-Laufzeit an, die keinen Zugriff auf Inhalte hat. Geben Sie die eingeschränkte Laufzeit (Flash Player, AIR oder iOS), Plattform und Version an.
 
-Verwendungsbeispiel: Ähnlich wie bei der Primetime DRM Client-Blockierungsliste kann auch die neueste Version der Flash Player-, AIR- oder iOS-Laufzeitumgebungen als Mindestversion für die Lizenzerfassung und Inhaltswiedergabe angegeben werden.
+Verwendungsbeispiel: Ähnlich wie bei der Primetime DRM Client-Blockierungsliste kann auch die neueste Version des Flash Players, der AIR- oder iOS-Laufzeitumgebungen als die Mindestversion angegeben werden, die für die Lizenzerfassung und Inhaltswiedergabe erforderlich ist.
 
 Sie können die Anwendungslaufzeit anhand eines der Attribute identifizieren, die für Primetime DRM-Clientversionen unterstützt werden, zusätzlich zu den folgenden Attributen:
 
