@@ -6,6 +6,9 @@ title: Detaillierte Workflows für JIT-Neuverpackungen
 uuid: 11b6eb3c-f6aa-4018-9b20-ab6f5910508b
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '553'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 
 Entweder ein Client-Videoplayer oder der Manifestserver können mit CRS interagieren, um eine JIT-Neuverpackung zu erzielen. Beide verwenden dieselbe Anzeigenauswahllogik.
 
-## JIT-Neuverpackung vom Manifestserver initiiert {#section_1F1C1B7DD146403890C2B43E24FEF0EB}
+## JIT-Neuverpackung initiiert vom Manifestserver {#section_1F1C1B7DD146403890C2B43E24FEF0EB}
 
 ![](assets/ssai_JIT-workflow_web.png)
 
@@ -26,7 +29,7 @@ Der Arbeitsablauf für die JIT-Neuverpackung auf der Manifestserverseite lautet 
 
    >[!NOTE]
    >
-   >Bei einem Multi-CDN-Setup verwendet der Manifestserver den `ptcdn` Parameter in der Bootstrap-URL, um den CDN-Server zu identifizieren.
+   >Bei einem Multi-CDN-Setup verwendet der Manifestserver den Parameter `ptcdn` in der Bootstrap-URL, um den CDN-Server zu identifizieren.
 
 1. Der Manifestserver überprüft die Antwort:
 
@@ -37,7 +40,7 @@ Der Arbeitsablauf für die JIT-Neuverpackung auf der Manifestserverseite lautet 
 
 Bei allen nachfolgenden Anforderungen für dieses kreative Element ruft der Manifestserver die HLS-Version aus dem CDN ab und fügt sie in den Inhaltsstream ein.
 
-## JIT-Umverpackung vom Client initiiert {#section_FBC97D40043F4FDD98247A08BB6195B0}
+## JIT-Umverpackung initiiert vom Client {#section_FBC97D40043F4FDD98247A08BB6195B0}
 
 <!--<a id="fig_hkn_ndt_3z"></a>-->
 
@@ -50,11 +53,11 @@ Ein Client, der auf TVSDK oder ähnlichen Funktionen basiert, kann wie folgt mit
 1. Der Client überprüft das Format der Anzeige vom Anzeigen-Server:
 
    1. Wenn das Werbekreativ im HLS-Format vorliegt, fügt der Client es in den Inhalt ein (Stiche) und wird ausgeführt.
-   1. Wenn das Werbekreativ nicht im HLS-Format vorliegt, fordert der Client eine vom CDN-Server an.
+   1. Wenn das Werbekreativ nicht im HLS-Format vorliegt, fordert der Client einen vom CDN-Server an.
 
       >[!NOTE]
       >
-      >Bei einem Multi-CDN-Setup verwendet der Manifestserver den `ptcdn` Parameter in der Bootstrap-URL, um den CDN-Server zu identifizieren.
+      >Bei einem Multi-CDN-Setup verwendet der Manifestserver den Parameter `ptcdn` in der Bootstrap-URL, um den CDN-Server zu identifizieren.
 
 1. Der Client überprüft die Antwort vom CDN-Server.
 
