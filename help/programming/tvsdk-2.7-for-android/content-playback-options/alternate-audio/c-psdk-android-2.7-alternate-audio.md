@@ -6,6 +6,9 @@ title: Alternativaudio
 uuid: 86aa5393-6a9e-49db-807b-7299e6b4ab2b
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
@@ -16,19 +19,19 @@ Mit alternativem Audio können Sie zwischen verfügbaren Audiospuren für eine V
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-Wenn TVSDK die `MediaPlayerItem` Instanz für das aktuelle Video erstellt, wird für jede verfügbare Audiospur ein `AudioTrack` Element erstellt. Das Element enthält eine `name` Eigenschaft, bei der es sich um eine Zeichenfolge handelt, die in der Regel eine vom Benutzer erkennbare Beschreibung der Sprache dieser Spur enthält. Das Element enthält auch Informationen darüber, ob diese Verfolgung standardmäßig verwendet werden soll. Wenn es Zeit ist, das Video abzuspielen, können Sie nach einer Liste der verfügbaren Audiospuren fragen, optional zulassen, dass der Benutzer eine Spur auswählt und das Video mit der ausgewählten Spur abspielt.
+Wenn TVSDK die `MediaPlayerItem`-Instanz für das aktuelle Video erstellt, wird für jede verfügbare Audiospur ein `AudioTrack`-Element erstellt. Das Element enthält eine `name`-Eigenschaft, bei der es sich um eine Zeichenfolge handelt, die in der Regel eine benutzererkennbare Beschreibung der Sprache dieser Spur enthält. Das Element enthält auch Informationen darüber, ob diese Verfolgung standardmäßig verwendet werden soll. Wenn es Zeit ist, das Video abzuspielen, können Sie nach einer Liste der verfügbaren Audiospuren fragen, optional zulassen, dass der Benutzer eine Spur auswählt und das Video mit der ausgewählten Spur abspielt.
 
 >[!TIP]
 >
->Obwohl selten, wenn eine zusätzliche Audiospur verfügbar wird, nachdem TVSDK die `MediaPlayerItem`, TVSDK löst ein `MediaPlayerItem.AUDIO_TRACK_UPDATED` Ereignis aus.
+>Obwohl dies selten der Fall ist, löst TVSDK ein `MediaPlayerItem.AUDIO_TRACK_UPDATED`-Ereignis aus, wenn eine zusätzliche Audiospur verfügbar ist, nachdem TVSDK das `MediaPlayerItem` erstellt hat.
 
-## APIs hinzugefügt {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
+## APIs {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE} hinzugefügt
 
 Die folgenden APIs wurden hinzugefügt, um alternative Audio zu unterstützen:
 
 `hasAlternateAudio`
 
-Wenn das angegebene Medium über eine andere Audiospur als die Standardspur verfügt, gibt diese boolesche Funktion zurück `true`. Wenn keine alternative Audiospur vorhanden ist, gibt die Funktion zurück `false`.
+Wenn das angegebene Medium über eine andere Audiospur als die Standardspur verfügt, gibt diese boolesche Funktion `true` zurück. Wenn keine alternative Audiospur vorhanden ist, gibt die Funktion `false` zurück.
 
 ```java
 boolean hasAlternateAudio();
