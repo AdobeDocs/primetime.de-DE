@@ -6,6 +6,9 @@ title: Änderungen an VOD
 uuid: e734aacd-b42e-4c8e-a16a-c7a0739a0492
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
@@ -21,4 +24,4 @@ Zu den Situationen, in denen Sie eine VOD-Zeitschiene ersetzen möchten, gehöre
 * Ersetzen Sie alte C3-Anzeigen dynamisch durch neuere Anzeigen mit höherer Dauer.
 * Fügen Sie weniger oder gar keine Anzeigen ein.
 
-Sie können die Anzeigenzeitschiene ersetzen, indem Sie eine neue Anzeigeneinfügeanforderung mit der ursprünglichen M3U8-Datei und einem anderen Wert des Parameters `pttimeline` &quot;Abfrage&quot;senden.
+Sie können die Anzeigenzeitschiene ersetzen, indem Sie eine neue Anzeigeneinfügeanforderung mit der ursprünglichen M3U8-Datei und einem anderen Wert des Parameters `pttimeline` Abfrage senden.
