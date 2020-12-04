@@ -4,6 +4,9 @@ title: Festlegen einer benutzerdefinierten Beginn-Zeit in der Referenzimplementi
 uuid: ec404e61-9dce-4bd3-ac48-c2dbd834b6f8
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
@@ -19,5 +22,5 @@ Sie können das DVR-Bedienfeld in der Einstellungsoberfläche verwenden, um die 
 
    ![](assets/dvr-configuration.jpg)
 
-1. **Die Zeitsteuerung** des benutzerdefinierten Beginns muss festgelegt werden, **[!UICONTROL ON]** wenn Sie beim Eingeben des Streams eine benutzerdefinierte Position im DVR-Fenster wählen möchten.
-1. Legen Sie die Zeit des benutzerdefinierten Beginns unter **Benutzerdefinierte Beginn** auswählen fest.
+1. **Die Zeitsteuerung für benutzerdefinierte Beginn** muss festgelegt werden,  **[!UICONTROL ON]** wenn Sie beim Eingeben des Streams eine benutzerdefinierte Position im DVR-Fenster wählen möchten.
+1. Legen Sie die Uhrzeit des benutzerdefinierten Beginns in **Wählen Sie die Uhrzeit des benutzerdefinierten Beginns**.
