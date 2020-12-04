@@ -13,16 +13,17 @@ ht-degree: 1%
 ---
 
 
-# Benutzerdefinierte Wiedergabe einrichten {#cset-up-customized-playback}
+# Einrichten der benutzerdefinierten Wiedergabe {#cset-up-customized-playback}
 
 Sie können das Anzeigenverhalten anpassen oder überschreiben, indem Sie die Anzeigenrichtlinieninstanz mit TVSDK registrieren.
 
 Führen Sie zum Anpassen des Anzeigenverhaltens einen der folgenden Schritte aus:
 
-* Implementieren Sie die `AdPolicySelector` Schnittstelle und alle zugehörigen Methoden.
+* Implementieren Sie die `AdPolicySelector`-Schnittstelle und alle zugehörigen Methoden.
 Diese Option wird empfohlen, wenn Sie alle standardmäßigen Anzeigenverhalten außer Kraft setzen müssen.
 
-* Erweitern Sie die `DefaultAdPolicySelector` Klasse und stellen Sie Implementierungen nur für die Verhaltensweisen bereit, die eine Anpassung erfordern.
+* Erweitern Sie die `DefaultAdPolicySelector`-Klasse und stellen Sie Implementierungen nur für die Verhaltensweisen bereit, die
+Anpassung.
 Diese Option wird empfohlen, wenn Sie nur einige der Standardverhalten außer Kraft setzen müssen.
 
 Führen Sie für beide Optionen die folgenden Aufgaben aus:
