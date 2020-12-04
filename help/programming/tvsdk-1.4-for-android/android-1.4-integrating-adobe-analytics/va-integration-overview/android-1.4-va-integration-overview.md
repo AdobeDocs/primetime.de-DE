@@ -6,15 +6,18 @@ title: Videoanalyse
 uuid: 4cb589fd-7b29-4f43-870d-17430ff309f7
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
 
-# Videoanalyse{#video-analytics}
+# Videoanalysen{#video-analytics}
 
 Sie können die Videonutzung verfolgen, indem Sie TVSDK mit Adobe Analytics integrieren.
 
-Die Videoverfolgung in TVSDK verwendet den **Adobe Analytics Video Essentials** -Dienst, der Videointeraktionsmetriken wie Video-Ansichten, Videobeendigungen, Anzeigenimpressionen, Besuchszeit für Videos usw. bereitstellt. Weitere Informationen zu diesem Dienst erhalten Sie von Ihrem Adobe-Kundenbetreuer.
+Die Videoverfolgung in TVSDK verwendet den Dienst **Adobe Analytics Video Essentials**, der Videonutzungsmetriken bereitstellt, z. B. Ansichten, Videobeendigungen, Anzeigenimpressionen, Besuchszeit für Videos usw. Weitere Informationen zu diesem Dienst erhalten Sie von Ihrem Kundenbetreuer.
 
 Im folgenden Verfahren werden die Schritte zur Aktivierung der Videoverfolgung im Player zusammengefasst:
 
