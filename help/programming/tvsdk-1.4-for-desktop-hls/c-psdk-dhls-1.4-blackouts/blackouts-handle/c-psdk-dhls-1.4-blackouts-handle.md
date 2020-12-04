@@ -6,17 +6,20 @@ title: Umgang mit Stromausfällen in Live-Streams
 uuid: df933087-c8a8-49eb-a016-6dfd971c219c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '539'
+ht-degree: 0%
 
 ---
 
 
-# Umgang mit Stromausfällen in Live-Streams{#handle-blackouts-in-live-streams}
+# Umgang mit Blackouts in Live-Streams{#handle-blackouts-in-live-streams}
 
 Sie können Blackouts in Live-Videostreams bearbeiten und alternative Inhalte während einer Blackout-Phase bereitstellen.
 
 Wenn eine Blackout-Meldung in einem Live-Stream auftritt, verwendet Ihr Player Ereignis-Handler, um die Blackout-Meldung zu erkennen und Benutzern, die nicht berechtigt sind, den Hauptstrom anzuschauen, alternative Inhalte bereitzustellen. Ihr Player erkennt den Beginn und das Ende der Blackout-Phase, wechselt die Wiedergabe vom Hauptstrom in einen alternativen Stream und wechselt zum Hauptstrom zurück, wenn die Blackout-Phase endet.
 
-In Ihrer Client-App abonnieren Sie Blackout-Tags in TVSDK. Nachdem Sie über neue *zeitgesteuerte Metadatenobjekte* benachrichtigt wurden, analysieren Sie die Daten des zeitgesteuerten Metadatenobjekts, um festzustellen, ob das Objekt einen Blackout-Eintrag oder -Ausstieg anzeigt. Bei identifizierten Blackouts rufen Sie die relevanten TVSDK-Elemente auf, um zu Beginn der Blackout-Meldung zu alternativen Inhalten zu wechseln und wieder zum Hauptinhalt zurückzukehren, wenn die Blackout-Meldung beendet ist.
+In Ihrer Client-App abonnieren Sie Blackout-Tags in TVSDK. Nachdem Sie über neue *zeitgesteuerte Metadaten*-Objekte benachrichtigt wurden, analysieren Sie die Daten des zeitgesteuerten Metadatenobjekts, um festzustellen, ob das Objekt einen Sperreintrag oder -ausstieg anzeigt. Bei identifizierten Blackouts rufen Sie die relevanten TVSDK-Elemente auf, um zu Beginn der Blackout-Meldung zu alternativen Inhalten zu wechseln und wieder zum Hauptinhalt zurückzukehren, wenn die Blackout-Meldung beendet ist.
 
 >[!TIP]
 >
@@ -35,15 +38,15 @@ So behandeln Sie Blackouts in Live-Streams:
    TVSDK erkennt keine Blackout-Tags allein. Sie müssen Blackout-Tags abonnieren, um eine Benachrichtigung zu erhalten, wenn die Tags während der Analyse der Manifestdatei gefunden werden.
 1. Erstellen Sie Ereignis-Listener für Tags, für die Ihr Player abonniert ist.
 
-   Wenn ein Tag auftritt, das Ihr Player abonniert hat (z. B. ein Blackout-Tag), entweder im Vordergrund (Hauptinhalt) oder im Hintergrund (alternativer Inhalt) Stream-Manifests, sendet TVSDK eine `TimedMetadataEvent` und erstellt eine `TimedMetadataObject` für die `TimedMetadataEvent`.
+   Wenn ein Tag auftritt, das Ihr Player abonniert hat (z. B. ein Blackout-Tag), entweder im Vordergrund (Hauptinhalt) oder im Hintergrund (alternativer Inhalt), löst TVSDK ein `TimedMetadataEvent` aus und erstellt ein `TimedMetadataObject` für das `TimedMetadataEvent`.
 1. Implementieren Sie Handler für die zeitgesteuerten Metadaten-Ereignis für den Vordergrund- und den Hintergrund-Stream.
 
    Rufen Sie in diesen Handlern die Beginns- und Endzeiten für die Sperrfrist von den zeitgesteuerten Metadaten-Ereignis-Objekten ab.
-1. Bereiten Sie die `MediaPlayer` für Blackouts vor.
+1. Bereiten Sie das `MediaPlayer` für Blackouts vor.
 
-   Wenn der `MediaPlayer` Status &quot;VORBEREITET&quot;auftritt, berechnen und bereiten Sie die Sperrbereiche vor und legen Sie sie auf das Objekt `MediaPlayer` fest.
+   Wenn das `MediaPlayer` in den Status &quot;VORBEREITT&quot;wechselt, berechnen und bereiten Sie die Sperrbereiche vor und legen Sie sie auf das `MediaPlayer`-Objekt fest.
 
-1. Überprüfen Sie für jede Aktualisierung auf die Abspielposition die Liste von `TimedMetadataObjects`.
+1. Überprüfen Sie für jedes Update auf die Abspielposition die Liste von `TimedMetadataObjects`.
 
    Hier erkennt Ihr Spieler den Blackout-Beginn und das Ende und zeichnet die Zeitdauer des Blackout auf, während er eintritt.
 
