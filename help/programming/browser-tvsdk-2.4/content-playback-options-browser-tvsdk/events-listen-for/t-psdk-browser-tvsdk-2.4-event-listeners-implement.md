@@ -6,6 +6,9 @@ title: Implementieren von Ereignis-Listenern und -Rückrufen
 uuid: 63f62c60-505e-4f83-bc0d-58895d85a75a
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 1%
 
 ---
 
@@ -28,7 +31,7 @@ Ihre Anwendung muss Ereignis-Listener für Browser TVSDK-Ereignis implementieren
 
    * **Andere Ereignisse**: Optional, je nach Anwendung.
 
-      Wenn Sie z. B. Werbung in Ihre Wiedergabe einbinden, sollten Sie auf alle `AdBreakPlaybackEvent` und `AdPlaybackEvent` Ereignis achten.
+      Wenn Sie z. B. Werbung in Ihre Wiedergabe integrieren, sollten Sie alle `AdBreakPlaybackEvent`- und `AdPlaybackEvent`-Ereignis abhören.
 
 1. Implementieren Sie Ereignis-Listener für jedes Ereignis.
 
@@ -37,7 +40,7 @@ Ihre Anwendung muss Ereignis-Listener für Browser TVSDK-Ereignis implementieren
    Beispiel:
 
    * Ereignistyp: `AdobePSDK.PSDKEventType.STATUS_CHANGED`
-   * Ereignis-Eigenschaft: wird wie folgt `MediaPlayerStatus.<event>` verwendet:
+   * Ereignis-Eigenschaft: `MediaPlayerStatus.<event>` wird wie folgt verwendet:
 
 ```js
 player.addEventListener( 
@@ -52,7 +55,7 @@ onStatusChange = function (event) {
             break;
 ```
 
-1. Registrieren Sie Ihre Callback-Listener mit dem `MediaPlayer` Objekt, indem Sie `MediaPlayer.addEventListener`.
+1. Registrieren Sie Ihre Callback-Listener mit dem `MediaPlayer`-Objekt, indem Sie `MediaPlayer.addEventListener` verwenden.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  
