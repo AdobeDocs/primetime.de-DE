@@ -31,7 +31,8 @@ Die folgenden API-Elemente eignen sich zum Anpassen der Wiedergabe:
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
    <td colname="col2">Legen Sie fest, ob eine Werbeunterbrechung als von einem Viewer gesehen gekennzeichnet werden soll, und wann, wenn ja, wann sie markiert werden soll. Überwachte Richtlinie festlegen und abrufen mit 
     <pre>
-     die <span class="codeph"> Eigenschaft adBreakAsWatched</span> .
+     die 
+     <span class="codeph"> adBreakAsWatched</span>-Eigenschaft.
     </pre> </td> 
   </tr> 
   <tr> 
