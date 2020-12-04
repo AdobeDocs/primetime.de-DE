@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Details zur NATIVE_ERROR-Benachrichtigung {#details-for-the-native-error-notification}
+# Details für die NATIVE_ERROR-Benachrichtigung {#details-for-the-native-error-notification}
 
 Wenn TVSDK einen nativen Fehler verarbeitet, werden einige oder alle der folgenden Metadatenschlüsselwerte festgelegt.
 
@@ -24,7 +24,7 @@ Wenn TVSDK einen nativen Fehler verarbeitet, werden einige oder alle der folgend
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RUNTIME_CODE </span> </td> 
+   <td colname="col1"> <span class="codeph"> RUNTIME_CODE  </span> </td> 
    <td colname="col2"> 
     <pre>
       Nativer Fehlercode von Flash Player. 
@@ -36,31 +36,31 @@ Wenn TVSDK einen nativen Fehler verarbeitet, werden einige oder alle der folgend
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RUNTIME_CODE_MESSAGE </span> </td> 
-   <td colname="col2"> Eine Zeichenfolge mit dem Namen des Fehlers; zum Beispiel <span class="codeph"> AAXS_InvalidVoucher </span> oder <span class="codeph"> DECODER_FAILED </span>. </td> 
+   <td colname="col1"> <span class="codeph"> RUNTIME_CODE_MESSAGE  </span> </td> 
+   <td colname="col2"> Eine Zeichenfolge mit dem Namen des Fehlers; Beispiel: <span class="codeph"> AAXS_InvalidVoucher </span> oder <span class="codeph"> DECODER_FAILED </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RUNTIME_SUBERROR_CODE </span> </td> 
-   <td colname="col2"> Bei DRM-Fehlern werden auch Suberror-Codes zurückgegeben. Diese Codes entsprechen dem <span class="codeph"> DRMErrorEvents- </span> Fehlercode, der vom Flash Player zurückgegeben wird. Wenn Berichte-Fehler bei der Adobe auftreten, geben Sie für die Fehlerbehebung diesen numerischen Wert ein. </td> 
+   <td colname="col1"> <span class="codeph"> RUNTIME_SUBERROR_CODE  </span> </td> 
+   <td colname="col2"> Bei DRM-Fehlern werden auch Suberror-Codes zurückgegeben. Diese Codes entsprechen dem <span class="codeph"> DRMErrorEvents </span>-Unterfehlercode, der vom Flash Player zurückgegeben wird. Wenn Berichte-Fehler bei der Adobe auftreten, geben Sie für die Fehlerbehebung diesen numerischen Wert ein. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING </span> </td> 
+   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING  </span> </td> 
    <td colname="col2"> Bei DRM ist dies Ihre benutzerdefinierte Fehlerzeichenfolge aus Ihrer DRM-Serverbereitstellung, sofern Sie eine definiert haben. Schließen Sie dies auch ein, wenn Berichte zu Adoben fehlern. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> BESCHREIBUNG </span> </td> 
+   <td colname="col1"> <span class="codeph"> BESCHREIBUNG  </span> </td> 
    <td colname="col2"> Zeichenfolgenbeschreibung des Fehlers. Normalerweise die URL des Mediums. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RESOURCE_URL </span> </td> 
+   <td colname="col1"> <span class="codeph"> RESOURCE_URL  </span> </td> 
    <td colname="col2"> Medien-URL. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RESOURCE_TYPE </span> </td> 
+   <td colname="col1"> <span class="codeph"> RESOURCE_TYPE  </span> </td> 
    <td colname="col2"> Medientyp (HLS). </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> RESOURCE_ID </span> </td> 
+   <td colname="col1"> <span class="codeph"> RESOURCE_ID  </span> </td> 
    <td colname="col2"> Medienkennung. </td> 
   </tr> 
  </tbody> 
@@ -70,4 +70,4 @@ TVSDK empfängt diese Fehlercodes und Zeichenfolgen von der Video-Engine.
 
 >[!IMPORTANT]
 >
->Eine vollständige Liste der Adobe Primetime DRM-Client-Fehlercodes finden Sie unter [DRM-Client-Fehlermeldungsreferenz](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf).
+>Eine vollständige Liste der Adobe Primetime DRM-Clientfehlercodes finden Sie unter [DRM-Client-Fehlermeldungsreferenz](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf).
