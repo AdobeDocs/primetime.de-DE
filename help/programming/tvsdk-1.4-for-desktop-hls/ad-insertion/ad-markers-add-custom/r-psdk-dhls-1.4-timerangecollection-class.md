@@ -6,6 +6,9 @@ title: TimeRangeCollection-Klasse
 uuid: da781df4-6b19-47e1-8dc5-ea83c139f061
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '96'
+ht-degree: 0%
 
 ---
 
@@ -26,4 +29,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-Der definierte Wert für den Sammlungstyp lautet `MARK_RANGES`, `DELETE_RANGES`und `REPLACE_RANGES`. Sie können `TimeRangeCollection`mit diesen drei Typen erstellen.
+Der definierte Wert für den Sammlungstyp sind `MARK_RANGES`, `DELETE_RANGES` und `REPLACE_RANGES`. Sie können `TimeRangeCollection`s mit diesen drei Typen erstellen.
