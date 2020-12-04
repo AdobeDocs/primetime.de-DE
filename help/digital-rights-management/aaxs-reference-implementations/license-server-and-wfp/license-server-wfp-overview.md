@@ -4,6 +4,9 @@ title: Überblick über den Lizenzserver und den überwachten Ordner-Packager
 uuid: 3dd6f699-a5c0-44c4-897a-34e06abe3d71
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Der Referenz-Implementierungsserver kann Ihnen beim Erstellen eines Lizenzserver
 
 Der Referenz-Implementierungsserver enthält auch eine Implementierung des Pakets für überwachte Ordner. Diese Komponente kann zusammen mit dem Lizenzserver oder auf einem separaten Computer bereitgestellt werden. Mit dieser Paketimplementierung können mehrere überwachte Ordner erstellt werden. Wenn Inhalte in den überwachten Ordner abgelegt werden, verpackt der Packager den Inhalt automatisch.
 
-Der Lizenzserver und der Packager werden als separate WAR-Dateien bereitgestellt, sodass Sie auswählen können, ob diese auf separaten Servern oder in einer einzigen Apache Tomcat®-Instanz ausgeführt werden sollen. Der Lizenzserver befindet sich im Ordner [!DNL flashaccess.war] und der Packager befindet sich in [!DNL flashaccess-packager.war]. Die Option [!DNL edcws.war] enthält Unterstützung für Lizenzanfragen von FMRMS 1.x-Clients.
+Der Lizenzserver und der Packager werden als separate WAR-Dateien bereitgestellt, sodass Sie auswählen können, ob diese auf separaten Servern oder in einer einzigen Apache Tomcat®-Instanz ausgeführt werden sollen. Der Lizenzserver befindet sich im Ordner [!DNL flashaccess.war] und der Packager befindet sich im Ordner [!DNL flashaccess-packager.war]. Das optionale [!DNL edcws.war] enthält Unterstützung für Lizenzanforderungen von FMRMS 1.x-Clients.
 
 Der Beispielcode für die Referenzimplementierung zeigt die folgenden Funktionen:
 
@@ -34,8 +37,8 @@ Der Beispielcode für die Referenzimplementierung zeigt die folgenden Funktionen
    * Einschränkung von DRM-/Laufzeitversionen, die Anforderungen an den Lizenzserver stellen dürfen
    * Voreinstellungen für die Zeitrücklaufzeit des Clients festlegen
    * Einschränkung der zulässigen Zeitdifferenz zwischen Anforderungszeit und Serverzeit (um Wiederholungsangriffe zu vermeiden)
-   * Bearbeitung von Anfragen von FMRMS 1.x-Clients (löst FMRMS 1.x-Client zur Aktualisierung auf Adobe Access 2.0 oder höher aus)
-   * FMRMS 1.x-Metadaten mithilfe von in einer Datenbank gespeicherten FMRMS 1.x-Lizenzinformationen spontan in Adobe Access-Metadaten konvertieren
+   * Bearbeitung von Anfragen von FMRMS 1.x-Clients (löst die Aktualisierung auf Adobe Access 2.0 oder höher durch den FMRMS 1.x-Client aus)
+   * Konvertieren von FMRMS 1.x-Metadaten in Adobe Access-Metadaten mithilfe von in einer Datenbank gespeicherten FMRMS 1.x-Lizenzinformationen
    * Beispielcode für die Konvertierung von FMRMS 1.x-Richtlinien in Adobe Access-Richtlinien
    * Beispielskripte zum Importieren von FMRMS 1.x-Lizenzinformationen aus einer vorhandenen Datenbank
    * Serverversion abrufen
