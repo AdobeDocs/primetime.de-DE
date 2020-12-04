@@ -4,13 +4,16 @@ title: DRM-Metadaten für "On Premises"erstellen
 uuid: 89d53924-1a8d-42d4-a716-ce4f4566b6bf
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 1%
 
 ---
 
 
 # DRM-Metadaten für &quot;On Premises&quot;erstellen{#generate-the-on-premises-drm-metadata}
 
-Ein [!DNL CreateMetadata.jar] Dienstprogramm ist im [!DNL create_metadata] Ordner enthalten. Der Zweck dieses Dienstprogramms besteht darin, DRM-Metadaten zu &quot;On Premises&quot;zu erstellen, die den Client veranlassen, den Individualisierungsprozess mit dem angegebenen On Premises-Individualisierungsserver durchzuführen.
+Ein [!DNL CreateMetadata.jar]-Dienstprogramm ist im Ordner [!DNL create_metadata] enthalten. Der Zweck dieses Dienstprogramms besteht darin, DRM-Metadaten zu &quot;On Premises&quot;zu erstellen, die den Client veranlassen, den Individualisierungsprozess mit dem angegebenen On Premises-Individualisierungsserver durchzuführen.
 
 1. Aktualisieren Sie die Primetime-DRM-Referenzimplementierung - Befehlszeilenwerkzeuge mit den folgenden Dateien:
 
@@ -18,11 +21,11 @@ Ein [!DNL CreateMetadata.jar] Dienstprogramm ist im [!DNL create_metadata] Ordne
    * [!DNL commons-cli-1.2.jar]
    * [!DNL createMetadata.properties]
 
-      Die beiden JAR-Dateien können sich im [!DNL Command Line Tools/libs] Ordner befinden. Die [!DNL createMetadata.properties] Datei kann sich neben der [!DNL flashaccesstools.properties] Datei befinden.
+      Die beiden JAR-Dateien können sich im Ordner [!DNL Command Line Tools/libs] befinden. Die Datei [!DNL createMetadata.properties] kann sich neben der Datei [!DNL flashaccesstools.properties] befinden.
 
 <!--<a id="example_2116349CA33642CD9293EAD94A532ED8"></a>-->
 
-Es ist ein [!DNL examplecreate.sh] Skript enthalten, das eine Beispielerstellung von Metadaten demonstriert. Konfigurieren Sie vor dem Generieren von Metadaten unbedingt die Lizenzserver-URL und die Individualisierungsserver-URL in den Skript- und Eigenschaftendateien.
+Es ist ein Skript von [!DNL examplecreate.sh] enthalten, das eine Beispielerstellung von Metadaten demonstriert. Konfigurieren Sie vor dem Generieren von Metadaten unbedingt die Lizenzserver-URL und die Individualisierungsserver-URL in den Skript- und Eigenschaftendateien.
 
 Die Eingaben für das Dienstprogramm lauten wie folgt:
 
