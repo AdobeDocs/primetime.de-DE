@@ -6,6 +6,9 @@ title: Anpassen von Opportunitätsdetektoren und Inhaltsauflösungen
 uuid: d4926933-5966-4cd8-8050-c81c5e3c8545
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +22,11 @@ Browser TVSDK enthält die folgenden standardmäßigen Opportunitätsdetektoren:
 * `AdSignalingModeOpportunityGenerator`, was anfängliche Anzeigenplatzierungsmöglichkeiten auf Grundlage des Anzeigensignalisierungsmodus schafft.
 * `ManifestCuesOpportunityGenerator`, wodurch sich aus jedem Splice-out-Tag Anzeigenplatzierungsmöglichkeiten ergeben.
 
-Browser TVSDK enthält auch standardmäßige Inhaltsauflöser, wie `AuditudeResolver`zum Beispiel, die Inhalte bereitstellen, die basierend auf dem Metadatenschlüssel im Player-Element eingefügt werden. `AuditudeResolver` kann mit Adobe Primetime-Werbeanzeigen-Entscheidungsservern kommunizieren und Werbeunterbrechungen zurückgeben, die platziert werden sollen.
+Browser TVSDK enthält auch Standard-Inhaltsauflöser, wie `AuditudeResolver`, die Inhalte bereitstellen, die basierend auf dem Metadatenschlüssel im Player-Element eingefügt werden. `AuditudeResolver` ist in der Lage, mit den Adobe Primetime-Werbeanzeigen-Entscheidungsservern zu kommunizieren und Werbeunterbrechungen zurückzugeben, die platziert werden sollen.
 
 Sie können die standardmäßigen Opportunitätsdetektoren und Inhaltsauflöser überschreiben, um den Werbe-Workflow wie folgt anzupassen:
 
-* Hinzufügen Unterstützung der benutzerdefinierten Tag-Erkennung
+* hinzufügen Unterstützung der benutzerdefinierten Tag-Erkennung
 * Erkennen benutzerdefinierter Tags für die Anzeigeneinfügung
 * Erstellen eines benutzerdefinierten Anzeigenanbieters
 
