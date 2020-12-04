@@ -1,11 +1,14 @@
 ---
 description: Mithilfe von benutzerdefinierten Anzeigenmarken können Sie bestimmte Abschnitte des Hauptinhalts als anzeigenbezogene Inhaltszeiträume markieren.
 seo-description: Mithilfe von benutzerdefinierten Anzeigenmarken können Sie bestimmte Abschnitte des Hauptinhalts als anzeigenbezogene Inhaltszeiträume markieren.
-seo-title: Hinzufügen von benutzerdefinierten Anzeigenmarken
-title: Hinzufügen von benutzerdefinierten Anzeigenmarken
+seo-title: hinzufügen von benutzerdefinierten Anzeigenmarken
+title: hinzufügen von benutzerdefinierten Anzeigenmarken
 uuid: 712da406-094a-49b2-b21d-4d5d73fff8cf
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '318'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Diese Funktion ist besonders hilfreich, wenn Inhalte beispielsweise aus einem Li
 
 Möglicherweise können Sie die Informationen zum Positionieren der Zeiträume für Werbeanzeigen aus anderen Out-of-Band-Quellen abrufen, wie z. B. externen CMS-Systemen. Sie können benutzerspezifische Markierungen definieren, mit denen diese Out-of-Band-Informationen an das Timeline Manager-Subsystem weitergeleitet werden können. Die Inhaltsabschnitte, die mit dem angegebenen Werbeinhalt übereinstimmen, sollen so markiert werden, dass alle Ad-spezifischen Wiedergabe-Ereignis auf dieselbe Weise ausgelöst werden, als ob diese benutzerspezifischen Anzeigenzeiträume explizit auf der Zeitleiste des Players platziert würden.
 
-Die Anzeigenverfolgung wird nicht intern von TVSDK verarbeitet, z. B. wenn Anzeigen durch die Adobe Primetime-Anzeigenentscheidung aufgelöst werden. TVSDK bietet jedoch die folgenden Abstraktionen, die definieren, wie werbebezogene Inhalte auf der Zeitschiene dargestellt werden:
+Die Anzeigenverfolgung wird nicht intern von TVSDK verarbeitet, z. B. wenn Anzeigen durch Adobe Primetime-Anzeigenentscheidung aufgelöst werden. TVSDK bietet jedoch die folgenden Abstraktionen, die definieren, wie werbebezogene Inhalte auf der Zeitschiene dargestellt werden:
 
 * Die Werbeunterbrechung
 
@@ -27,4 +30,4 @@ Die Anzeigenverfolgung wird nicht intern von TVSDK verarbeitet, z. B. wenn Anzei
 
 Wiedergabe-Ereignis werden für Werbeunterbrechungen und Anzeigen am Beginn und Endpunkt jeder Anzeige separat ausgelöst.
 
-TVSDK sendet Ereignis zur Anzeigenverfolgung an Ihre Anwendung, sodass Sie Ihre eigene Verfolgungslogik implementieren können. Wenn Sie benutzerdefinierte Anzeigenmarken festlegen, erhalten Sie die `onAdBreakStart`, `onAdStart`, `onAdProgress`, `onAdComplete`und `onAdBreakComplete` Ereignis.
+TVSDK sendet Ereignis zur Anzeigenverfolgung an Ihre Anwendung, sodass Sie Ihre eigene Verfolgungslogik implementieren können. Wenn Sie benutzerdefinierte Anzeigenmarken festlegen, erhalten Sie die Ereignis `onAdBreakStart`, `onAdStart`, `onAdProgress`, `onAdComplete` und `onAdBreakComplete`.
