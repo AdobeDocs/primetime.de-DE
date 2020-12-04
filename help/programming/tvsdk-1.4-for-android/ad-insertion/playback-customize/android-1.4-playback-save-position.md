@@ -6,15 +6,18 @@ title: Speichern Sie die Videoposition und nehmen Sie den Vorgang später wieder
 uuid: 322f780d-09ba-44b0-b2e5-46288bf58fda
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '419'
+ht-degree: 0%
 
 ---
 
 
-# Speichern Sie die Videoposition und nehmen Sie den Vorgang später wieder auf {#save-the-video-position-and-resume-later}
+# Speichern Sie die Videoposition und setzen Sie die Wiedergabe später fort.{#save-the-video-position-and-resume-later}
 
 Sie können die aktuelle Wiedergabeposition in einem Video speichern und die Wiedergabe an derselben Position in einer zukünftigen Sitzung fortsetzen.
 
-Dynamisch eingefügte Anzeigen unterscheiden sich zwischen Benutzersitzungen. Daher bezieht sich das Speichern der Position **mit** geteilten Anzeigen auf eine andere Position in einer zukünftigen Sitzung. TVSDK stellt Methoden zum Abrufen der Wiedergabeposition bereit, während geteilte Anzeigen ignoriert werden.
+Dynamisch eingefügte Anzeigen unterscheiden sich von Benutzersitzung zu Benutzersitzung. Daher bezieht sich das Speichern der Position **mit** geteilten Anzeigen auf eine andere Position in einer zukünftigen Sitzung. TVSDK stellt Methoden zum Abrufen der Wiedergabeposition bereit, während geteilte Anzeigen ignoriert werden.
 
 1. Wenn der Benutzer ein Video beendet, ruft Ihre Anwendung die Position im Video ab und speichert sie.
 
@@ -24,11 +27,11 @@ Dynamisch eingefügte Anzeigen unterscheiden sich zwischen Benutzersitzungen. Da
 
    Werbeunterbrechungen können je nach Sitzung unterschiedlich ausfallen, da Anzeigenmuster, Frequenzbegrenzungen usw. gelten. Die aktuelle Zeit des Videos in einer Sitzung kann in einer zukünftigen Sitzung anders sein. Beim Speichern einer Position im Video ruft die Anwendung die lokale Zeit ab, die Sie auf dem Gerät oder in einer Datenbank auf dem Server speichern können.
 
-   Wenn sich der Benutzer z. B. in der 20. Minute des Videos befindet und diese Position fünf Minuten Anzeigen umfasst, `getCurrentTime` werden 1200 Sekunden zurückgegeben, während `getLocalTime` an dieser Position 900 Sekunden zurückgegeben werden.
+   Wenn sich der Benutzer beispielsweise in der 20. Minute des Videos befindet und diese Position fünf Minuten der Anzeigen umfasst, gibt `getCurrentTime` 1200 Sekunden zurück, während `getLocalTime` an dieser Position 900 Sekunden zurückgibt.
 
    >[!IMPORTANT]
    >
-   >Die lokale Zeit und die aktuelle Zeit sind für Live-/lineare Streams identisch. In diesem Fall hat `convertToLocalTime` keine Wirkung. Bei VOD bleibt die Ortszeit unverändert, während Anzeigen abgespielt werden.
+   >Die lokale Zeit und die aktuelle Zeit sind für Live-/lineare Streams identisch. In diesem Fall hat `convertToLocalTime` keine Auswirkung. Bei VOD bleibt die Ortszeit unverändert, während Anzeigen abgespielt werden.
 
    ```java
    // Save the user session when player activity stops 
@@ -77,9 +80,9 @@ Dynamisch eingefügte Anzeigen unterscheiden sich zwischen Benutzersitzungen. Da
       >
       >Diese Methode wird nur mit lokalen Zeitwerten aufgerufen. Wenn die Methode mit den aktuellen Zeitergebnissen aufgerufen wird, tritt ein falsches Verhalten auf.
 
-   * Verwenden Sie zum Suchen nach der aktuellen Zeit `seek`.
+   * Um zur aktuellen Zeit zu suchen, verwenden Sie `seek`.
 
-1. Wenn Ihre Anwendung das Ereignis zur Änderung des `onStatusChanged` Status erhält, suchen Sie nach der gespeicherten Ortszeit.
+1. Wenn Ihre Anwendung das Ereignis `onStatusChanged` zur Statusänderung erhält, suchen Sie nach der gespeicherten Ortszeit.
 
    ```java
    private final MediaPlayer.PlaybackEventListener _playbackEventListener =  
@@ -100,6 +103,6 @@ Dynamisch eingefügte Anzeigen unterscheiden sich zwischen Benutzersitzungen. Da
 
 1. Stellen Sie die Werbeunterbrechungen gemäß den Angaben in der Benutzeroberfläche der Anzeigenrichtlinie bereit.
 1. Implementieren Sie eine benutzerdefinierte Anzeigenrichtlinienauswahl, indem Sie die standardmäßige Anzeigenrichtlinien-Auswahl erweitern.
-1. Geben Sie die Werbeunterbrechungen an, die dem Benutzer durch Implementierung angezeigt werden müssen `selectAdBreaksToPlay`.
+1. Geben Sie die Werbeunterbrechungen an, die dem Benutzer durch Implementierung von `selectAdBreaksToPlay` angezeigt werden müssen.
 
    Diese Methode umfasst eine Pre-Roll-Werbeunterbrechung und die Mid-Roll-Werbeunterbrechungen vor der lokalen Zeitposition. Ihre Anwendung kann beschließen, eine Pre-Roll-Werbeunterbrechung auszuführen und zur angegebenen Ortszeit wiederaufzunehmen, eine Mid-Roll-Werbeunterbrechung abzuspielen und zur angegebenen Ortszeit fortzufahren oder keine Werbeunterbrechungen wiederzugeben.
