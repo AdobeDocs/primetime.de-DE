@@ -6,6 +6,9 @@ title: Arbeiten mit Untertiteln
 uuid: d7860de4-2881-4817-a4cc-5e7ab557a1db
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ TVSDK unterstützt das Rendering folgender Formate:
 Sie haben folgende Möglichkeiten:
 
 * Wählen Sie eine verfügbare Untertitelspur als aktuelle Spur aus und suchen Sie nach Ereignissen, die zusätzliche verfügbare Spuren anzeigen.
-* Schalten Sie die Untertitel über die `MediaPlayer` Benutzeroberfläche ein (sichtbar) oder aus (nicht sichtbar).
+* Schalten Sie die Untertitel über die `MediaPlayer`-Schnittstelle ein (sichtbar) oder aus (nicht sichtbar).
 * Wählen Sie Stiloptionen, die bestimmen, wie Untertitel von der zugrunde liegenden Video-Engine gerendert werden.
 
-   Verwenden Sie die `MediaPlayerItem` Oberfläche, um Formate wie Schriftart oder Schriftfarbe auszuwählen.
+   Verwenden Sie die `MediaPlayerItem`-Schnittstelle, um Formate wie Schriftart oder Schriftfarbe auszuwählen.
