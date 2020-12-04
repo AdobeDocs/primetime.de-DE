@@ -6,18 +6,21 @@ title: Wählen Sie eine aktuelle Beschriftungsspur aus den verfügbaren Spuren
 uuid: ee2bda5e-e398-4d09-bc5c-5a6adbf5f603
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 1%
 
 ---
 
 
 # Wählen Sie eine aktuelle Beschriftungsspur aus den verfügbaren Spuren {#select-a-current-caption-track-from-among-available-tracks}
 
-Sie können eine Spur aus einer Liste von derzeit verfügbaren Untertitelspuren auswählen. Dies wird zur aktuellen Spur, die angezeigt wird, wenn die Sichtbarkeit aktiviert ist. Manche Tracks sind möglicherweise nicht verfügbar. Suchen Sie daher nach dem Ereignis, das darauf hinweist, dass mehr verfügbar sind.
+Sie können eine Spur aus einer Liste von derzeit verfügbaren Untertitelspuren auswählen. Dies wird zur aktuellen Spur, die angezeigt wird, wenn die Sichtbarkeit aktiviert ist. Einige Tracks sind möglicherweise nicht verfügbar, also suchen Sie nach dem Ereignis, das anzeigt, dass mehr verfügbar sind.
 
-1. Warten Sie, bis sich der Medienplayer mindestens im `PREPARED` Status befindet.
+1. Warten Sie, bis sich der Medienplayer mindestens im Status `PREPARED` befindet.
 1. Suchen Sie nach diesen Ereignissen:
 
-   * `MediaPlayerEvent.STATUS_CHANGED` mit Status `MediaPlayerStatus.INITIALIZED`: Die anfängliche Liste von Untertitelspuren ist verfügbar.
+   * `MediaPlayerEvent.STATUS_CHANGED` mit Status  `MediaPlayerStatus.INITIALIZED`: Die anfängliche Liste von Untertitelspuren ist verfügbar.
 
 1. Hier erhalten Sie eine Liste aller derzeit verfügbaren Untertitel-Tracks.
 
