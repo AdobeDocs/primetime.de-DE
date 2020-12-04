@@ -6,6 +6,9 @@ title: Definieren des Fallback-Anzeigenverhaltens für VMAP-Inline-Anzeigen
 uuid: a7b5c9a6-f546-4d3a-9d49-7e5484acff7a
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '130'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Sie können die Ausweichmöglichkeit aktivieren, wenn eine VMAP-Inline-Anzeige einen ungültigen Medientyp enthält.
 
-1. Wird `setFallbackOnInvalidCreativeEnabled` `true` so eingestellt, dass VMAP zurückfällt, wenn der Medientyp für eine lineare/Inline-Anzeige für HLS ungültig ist.
+1. Setzen Sie `setFallbackOnInvalidCreativeEnabled` auf `true`, damit VMAP zurückfällt, wenn der Medientyp für eine lineare/inline-Anzeige für HLS ungültig ist.
 
    Der Standardwert ist `false`. Wenn eine lineare Anzeige fehlschlägt, weil sie einen ungültigen Medientyp hat oder weil die Anzeige nicht neu verpackt werden kann, erlaubt dieses Flag Primetime und die Entscheidungsfindung dasselbe Ausweichverhalten wie eine leere VAST-Anzeige.
 
