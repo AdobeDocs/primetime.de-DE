@@ -6,6 +6,9 @@ title: Wiedergabe mit Anzeigen anpassen
 uuid: 20b5bfb2-83d8-4517-b821-8c542afa387d
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Wenn die Wiedergabe eine Werbeunterbrechung erreicht, eine Werbeunterbrechung du
 
 >[!TIP]
 >
->Sie können das Standardverhalten mithilfe der `AdBreakPolicySelector` Klasse außer Kraft setzen.
+>Sie können das Standardverhalten mithilfe der `AdBreakPolicySelector`-Klasse außer Kraft setzen.
 
 Das Standardverhalten variiert, je nachdem, ob der Benutzer die Werbeunterbrechung während der normalen Wiedergabe oder durch Suchen in einem Video oder durch Neupositionieren bei schnellem Vorwärts- oder Rückspulen (Trick Play) übergibt.
 
