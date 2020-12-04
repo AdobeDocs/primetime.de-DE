@@ -4,6 +4,9 @@ title: Aktualisieren einer DRM-Richtlinie mit der Java-API
 uuid: ec21351c-900e-48f5-845a-c0b430c210d7
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
@@ -12,14 +15,14 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 So aktualisieren Sie eine DRM-Richtlinie mit der Java-API:
 
-1. Richten Sie Ihre Development-Umgebung ein und fügen Sie alle JAR-Dateien in Ihr Projekt ein, die unter [Einrichten der Development-Umgebung](../../protecting-content/setting-up-the-sdk/setup-dev-env.md)aufgeführt sind.
-1. Erstellen Sie eine DRM- `Policy` Instanz und lesen Sie die DRM-Richtlinie aus einer Datei oder Datenbank.
+1. Richten Sie Ihre Development-Umgebung ein und fügen Sie alle JAR-Dateien in ein, die unter [Einrichten der Development-Umgebung](../../protecting-content/setting-up-the-sdk/setup-dev-env.md) aufgeführt sind.
+1. Erstellen Sie eine DRM `Policy`-Instanz und lesen Sie die DRM-Richtlinie aus einer Datei oder Datenbank.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Aktualisieren Sie das DRM- `Policy` Objekt, indem Sie dessen Eigenschaften festlegen, z. B. den Namen und die Verwendungsregeln.
+1. Aktualisieren Sie das DRM `Policy`-Objekt, indem Sie seine Eigenschaften festlegen, z. B. seinen Namen und seine Verwendungsregeln.
 
    ```java
    // Change the DRM policy name.  
@@ -44,7 +47,7 @@ So aktualisieren Sie eine DRM-Richtlinie mit der Java-API:
    }
    ```
 
-1. Serialisieren Sie das aktualisierte DRM- `Policy` Objekt und speichern Sie es in einer Datei oder Datenbank.
+1. Serialisieren Sie das aktualisierte DRM `Policy`-Objekt und speichern Sie es in einer Datei oder Datenbank.
 
    ```java
    // Serialize the DRM policy.  
@@ -58,4 +61,4 @@ So aktualisieren Sie eine DRM-Richtlinie mit der Java-API:
    out.close();
    ```
 
-Die Quelle dieses Beispielcodes finden Sie `com.adobe.flashaccess.samples.policy.UpdatePolicy` im [!DNL samples] Verzeichnis der Referenzimplementierungs-Befehlszeilenwerkzeuge.
+Siehe `com.adobe.flashaccess.samples.policy.UpdatePolicy` im Ordner &quot;Reference Implementation Command Line Tools [!DNL samples]&quot;für die Quelle dieses Beispielcodes.
