@@ -6,6 +6,9 @@ title: Fehlendes Segmentfailover
 uuid: 17ee1221-e1eb-4f64-a406-4d7eff1d7555
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 0%
 
 ---
 
@@ -21,9 +24,9 @@ Wenn ein Segment auf dem Server fehlt, weil beispielsweise die Manifestdatei nic
 1. Durchlaufen Sie jede verfügbare Bitrate in jeder verfügbaren Variante.
 1. Überspringen Sie das Segment und geben Sie eine Warnung aus.
 
-Wenn TVSDK kein alternatives Segment abrufen kann, wird eine `CONTENT_ERROR` Fehlerbenachrichtigung ausgelöst. Diese Benachrichtigung enthält eine innere Benachrichtigung mit dem Code- `DOWNLOAD_ERROR` Code. Wenn der Stream mit dem Problem eine alternative Audiospur ist, wird die `AUDIO_TRACK_ERROR` Fehlerbenachrichtigung generiert.
+Wenn TVSDK kein alternatives Segment abrufen kann, löst es eine `CONTENT_ERROR`-Fehlerbenachrichtigung aus. Diese Benachrichtigung enthält eine innere Benachrichtigung mit dem Code `DOWNLOAD_ERROR`. Wenn der Stream mit dem Problem eine alternative Audiospur ist, wird die Fehlermeldung `AUDIO_TRACK_ERROR` generiert.
 
-Wenn die Video-Engine kontinuierlich keine Segmente abrufen kann, werden fortlaufende Segmente auf 5 übersprungen, danach wird die Wiedergabe gestoppt und ein `NATIVE_ERROR` mit Code 5 ausgegeben.
+Wenn die Video-Engine kontinuierlich keine Segmente abrufen kann, werden fortlaufende Segmente auf 5 übersprungen. Danach wird die Wiedergabe gestoppt und ein `NATIVE_ERROR` mit dem Code 5 ausgegeben.
 
 >[!NOTE]
 >
