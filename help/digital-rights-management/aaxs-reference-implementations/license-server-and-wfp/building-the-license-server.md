@@ -13,10 +13,10 @@ ht-degree: 0%
 
 # Erstellen des Lizenzservers {#building-the-license-server}
 
-Der Referenz-Implementierungslizenzserver enthält WAR-Dateien zum Bereitstellen des Lizenzservers. It also includes all the license server source code and an Ant build script (Reference Implementation\Server\refimpl\build-refimpl.xml) so you can easily make changes to the code.
+Der Referenz-Implementierungslizenzserver enthält WAR-Dateien zum Bereitstellen des Lizenzservers. Es enthält auch den gesamten Quellcode des Lizenzservers und ein Ant Build-Skript (Referenz Implementation\Server\refimpl\build-refimpl.xml), damit Sie problemlos Änderungen am Code vornehmen können.
 
 >[!NOTE]
 >
->This step is only needed if you want to modify the source code. Zu Testzwecken können Sie diesen Schritt überspringen und die WAR-Dateien wie ausgeliefert verwenden.
+>Dieser Schritt ist nur erforderlich, wenn Sie den Quellcode ändern möchten. Zu Testzwecken können Sie diesen Schritt überspringen und die WAR-Dateien wie ausgeliefert verwenden.
 
-Before running the Ant script, modify the script to specify the locations of the Adobe Access SDK, Tomcat, MySQL, and Log4J. Öffnen Sie die Datei &quot;build-refimpl.xml&quot;in einem Texteditor und bearbeiten Sie die Werte der Eigenschaften `sdkdir, tomcatdir, mysqldir, and log4jdir`. Um den Quellcode zu kompilieren und die WAR-Dateien für die Referenzimplementierung zu erstellen, führen Sie das Skript mit `ant -f build-refimpl.xml all` dem Ordner aus, der das Ant-Skript enthält. Nach Abschluss des Skripts wird ein [!DNL refimpl-build/wars] Ordner mit den WAR-Dateien des Servers erstellt.
+Bevor Sie das Ant-Skript ausführen, ändern Sie das Skript, um die Speicherorte von Adobe Access SDK, Tomcat, MySQL und Log4J anzugeben. Öffnen Sie die Datei &quot;build-refimpl.xml&quot;in einem Texteditor und bearbeiten Sie die Werte der Eigenschaften `sdkdir, tomcatdir, mysqldir, and log4jdir`. Um den Quellcode zu kompilieren und die WAR-Dateien für die Referenzimplementierung zu erstellen, führen Sie das Skript mit `ant -f build-refimpl.xml all` in dem Ordner aus, der das Ant-Skript enthält. Nach Abschluss des Skripts wird ein Ordner [!DNL refimpl-build/wars] erstellt, der die WAR-Dateien des Servers enthält.
