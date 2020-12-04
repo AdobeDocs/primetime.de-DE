@@ -6,18 +6,21 @@ title: Volumensteuerung bereitstellen
 uuid: c51e99b6-efd1-414e-9ef7-77bd53e0d6c0
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
 
-# Volumensteuerung bereitstellen{#provide-volume-control}
+# Volumensteuerung{#provide-volume-control}
 
 Sie können ein Steuerelement der Benutzeroberfläche für die Lautstärke einrichten.
 
 1. Warten Sie, bis sich die MediaPlayer-Instanz in einem gültigen Status für diesen Befehl befindet.
 
    Jeder Status außer RELEASED ist gültig.
-1. Rufen Sie die Lautstärkesatzmethode auf der `MediaPlayer` Instanz auf, um die Lautstärke festzulegen.
+1. Rufen Sie die Volume Set-Methode für die `MediaPlayer`-Instanz auf, um die Audiolautstärke festzulegen.
 
    ```
    public function set volume(value:Number):void
@@ -47,7 +50,8 @@ Sie können ein Steuerelement der Benutzeroberfläche für die Lautstärke einri
       <ul id="ul_8C2282F0EDC44A408820F5768709214F"> 
       <li id="li_B00BC6F4812D4000891358F762C8E492">Das Ergebnis, wenn es zwischen 0 und 1 liegt </li> 
       <li id="li_03B7F30662554F299320040CAC2DEB7A">1, wenn das Ergebnis größer als 1 ist </li> 
-      </ul> <p>Tipp:  Diese Logik verarbeitet Werte, die von Clients basierend auf früheren Versionen der <span class="codeph">Wortgruppen/primetime-sdk-name</span>bereitgestellt werden, wobei die Volumenwerte zwischen 0 und 100 liegen. </p> </td> 
+      </ul> <p>Tipp:  Diese Logik verarbeitet Werte, die von Clients basierend auf früheren Versionen der Variablen 
+      <span class="codeph">Wortgruppen/primetime-sdk-name</span>, wobei die Volumenwerte zwischen 0 und 100 liegen. </p> </td> 
    </tr> 
    </tbody> 
    </table>
