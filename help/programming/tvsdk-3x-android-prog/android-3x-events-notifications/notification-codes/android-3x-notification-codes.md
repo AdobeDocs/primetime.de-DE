@@ -6,6 +6,9 @@ title: Benachrichtigungscodes
 uuid: 6babb203-b6d4-4b11-9fae-41e7db7fd570
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 0%
 
 ---
 
@@ -43,11 +46,11 @@ Benachrichtigungsobjekte liefern Informationen zum Status des Players. TVSDK bie
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> metadata</span> </td> 
-   <td colname="2"> <p>Schlüssel/Wert-Paare, die zusätzliche relevante Informationen zur Benachrichtigung enthalten. </p> <p>Ein Schlüssel mit dem Namen <span class="codeph"> URL</span> würde beispielsweise einen Wert angeben, der eine URL im Zusammenhang mit der Benachrichtigung ist, z. B. eine ungültige URL, die einen Fehler verursacht hat. </p> </td> 
+   <td colname="2"> <p>Schlüssel/Wert-Paare, die zusätzliche relevante Informationen zur Benachrichtigung enthalten. </p> <p>Beispielsweise würde ein Schlüssel mit dem Namen <span class="codeph"> URL</span> einen Wert bereitstellen, der eine URL im Zusammenhang mit der Benachrichtigung ist, z. B. eine ungültige URL, die einen Fehler verursacht hat. </p> </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span> </td> 
-   <td colname="2"> <p>Ein Verweis auf ein anderes <span class="codeph"> MediaPlayerNotification</span> -Objekt, das diese Benachrichtigung direkt beeinflusste. </p> <p>Ein Beispiel könnte eine Benachrichtigung über einen Fehler beim Einfügen von Anzeigen sein, der direkt einem Einfügekonflikt in der Zeitleiste entspricht. Nicht alle Benachrichtigungen bieten eine interne Benachrichtigung. </p> </td> 
+   <td colname="2"> <p>Ein Verweis auf ein anderes <span class="codeph">-MediaPlayerNotification</span>-Objekt, das diese Benachrichtigung direkt beeinflusste. </p> <p>Ein Beispiel könnte eine Benachrichtigung über einen Fehler beim Einfügen von Anzeigen sein, der direkt einem Einfügekonflikt in der Zeitleiste entspricht. Nicht alle Benachrichtigungen bieten eine interne Benachrichtigung. </p> </td> 
   </tr> 
  </tbody> 
 </table>
