@@ -6,11 +6,14 @@ title: Ausdruckstoken
 uuid: 6103e1b2-127d-4758-a589-15f0f3c73db1
 translation-type: tm+mt
 source-git-commit: d0ba1f98b16f6350ae842ca2ce1261bf49dd8a66
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 0%
 
 ---
 
 
-# Ausdruckstoken {#expressplay-tokens}
+# Ausdrucks-Token {#expressplay-tokens}
 
 Sie können Ausdrucks-Token für ihren verschlüsselten Inhalt generieren, indem Sie Token-Anforderungen an den entsprechenden Ausdrucks-Token-Server senden.
 
@@ -25,7 +28,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-Die Datenspeicherung-ID oder die CEKSID für die Inhaltsverschlüsselung, die dem `kid` Parameter übergeben wird, und der Inhaltsverschlüsselungsschlüssel oder der CEK für den `contentKey` Parameter müssen mit der Datenspeicherung-ID des Inhaltsschlüssels und dem für die Verpackung verwendeten Verschlüsselungsschlüssel übereinstimmen. Der folgende Text ist ein Beispiel für die Token-Serverantwort:
+Die Content-Verschlüsselungsschlüssel-Datenspeicherung-ID oder die CEKSID, die dem `kid`-Parameter übergeben werden, und der Inhaltsverschlüsselungsschlüssel oder der CEK, der dem `contentKey`-Parameter übergeben wird, müssen mit der Datenspeicherung-ID des Inhaltsverschlüsselungsschlüssels und dem Inhaltsverschlüsselungsschlüssel für die Verpackung übereinstimmen. Der folgende Text ist ein Beispiel für die Token-Serverantwort:
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -37,4 +40,4 @@ https://wv.service.expressplay.com/hms/wv/rights/
 Anschließend können Sie
 
 * die zurückgegebene URL und Abfrage als Lizenzserver-URL verwenden oder
-* Entfernen Sie die Abfrage aus der URL und geben Sie das ExpressPlayToken separat als HTTP POST-Header ein.
+* Entfernen Sie die Abfrage aus der URL und geben Sie das ExpressPlayToken separat als HTTP-POST-Header ein.
