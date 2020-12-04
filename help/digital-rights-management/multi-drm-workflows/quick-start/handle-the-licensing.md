@@ -1,7 +1,7 @@
 ---
-description: Licensing is the primary mechanism by which users are allowed or denied the ability to play a piece of protected video content. A legitimate (entitled) user can be issued a license (a key) to decrypt and play a specific piece of their content provider's encrypted content.
-seo-description: Licensing is the primary mechanism by which users are allowed or denied the ability to play a piece of protected video content. A legitimate (entitled) user can be issued a license (a key) to decrypt and play a specific piece of their content provider's encrypted content.
-seo-title: Licensing
+description: Die Lizenzierung ist der wichtigste Mechanismus, mit dem Benutzern die Wiedergabe geschützter Videoinhalte gestattet oder verweigert wird. Ein legitimer (berechtigter) Benutzer kann eine Lizenz (einen Schlüssel) zum Entschlüsseln und Abspielen eines bestimmten Teils des verschlüsselten Inhalts seines Inhalts-Providers erhalten.
+seo-description: Die Lizenzierung ist der wichtigste Mechanismus, mit dem Benutzern die Wiedergabe geschützter Videoinhalte gestattet oder verweigert wird. Ein legitimer (berechtigter) Benutzer kann eine Lizenz (einen Schlüssel) zum Entschlüsseln und Abspielen eines bestimmten Teils des verschlüsselten Inhalts seines Inhalts-Providers erhalten.
+seo-title: Lizenzierung
 title: Lizenzierung
 uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
 translation-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Licensing{#licensing}
+# Lizenzierung{#licensing}
 
-Licensing is the primary mechanism by which users are allowed or denied the ability to play a piece of protected video content. A legitimate (entitled) user can be issued a license (a key) to decrypt and play a specific piece of their content provider&#39;s encrypted content.
+Die Lizenzierung ist der wichtigste Mechanismus, mit dem Benutzern die Wiedergabe geschützter Videoinhalte gestattet oder verweigert wird. Ein legitimer (berechtigter) Benutzer kann eine Lizenz (einen Schlüssel) zum Entschlüsseln und Abspielen eines bestimmten Teils des verschlüsselten Inhalts seines Inhalts-Providers erhalten.
 
-Before your app or web page on an end-user&#39;s device can play DRM-protected content, it must acquire a token from an entitlement or storefront server that you, the customer, operate. Adobe provides a sample reference server for this purpose: [Reference Server: Sample ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Bevor Ihre App oder Webseite auf dem Gerät eines Endbenutzers DRM-geschützte Inhalte wiedergeben kann, muss sie ein Token von einem Berechtigungs- oder Store-Server erwerben, den Sie, der Kunde, betreiben. Adobe bietet hierfür einen Beispielverweisserver: [Referenz-Server: Beispiel für einen ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
 Ihr Berechtigungs- oder Schaufensterserver fordert vom jeweiligen ExpressPlay-Server ein Lizenz-Token erst dann an, wenn Sie mit Ihren eigenen Back-End-Systemen prüfen, ob der betreffende Benutzer berechtigt ist, den angeforderten Inhalt zu überwachen. Die von der Lizenztoken-Anforderung zurückgegebene Antwort ist entweder eine einsatzbereite URL für den Lizenzserver oder die Antwort enthält die URL in einer JSON-Struktur, je nachdem, mit welcher DRM-Lösung Sie arbeiten.
 
@@ -30,7 +30,7 @@ Ihr Berechtigungs- oder Schaufensterserver fordert vom jeweiligen ExpressPlay-Se
 
 1. Nehmen Sie eine Lizenztoken-Anforderung vor.
 
-   Bei einem Schnellanwendungsszenario, bei dem Sie lediglich sicherstellen möchten, dass die verschiedenen beteiligten Beginn zusammenarbeiten, sollten Sie z. B. Ihre LizenzToken-Anforderung erstellen (anstatt eine App zu starten und zu testen). [!DNL curl] Beispiel:
+   Bei einem Schnellanwendungsszenario, bei dem Sie lediglich sicherstellen möchten, dass die verschiedenen beteiligten Komponenten zusammenarbeiten, sollten Sie z. B. [!DNL curl] verwenden, um Ihre Lizenztoken-Anforderung zu stellen (im Gegensatz zu anfänglichen Aufrufen und Testaufrufen von dort). Beispiel:
 
    * Wendevine:
 
