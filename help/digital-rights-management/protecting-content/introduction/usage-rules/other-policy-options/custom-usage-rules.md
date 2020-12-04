@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Sie können benutzerdefinierte Daten in alle Lizenzen einbeziehen, die der Lizenzserver ausgibt. Die Interpretation oder Verarbeitung dieser Daten wird durch die Implementierung der Client-Anwendung und des Lizenzservers bestimmt.
 
-Verwendungsbeispiel: Ermöglicht die Erweiterbarkeit von Nutzungsregeln, indem andere Geschäftsregeln im Rahmen der Primetime DRM-Richtlinie und/oder Inhaltslizenz sicher übertragen werden können. Aus Sicherheitsgründen sollten Sie diese Option zusammen mit der zulassungsliste-Option für AIR-Anwendungen oder Flash Player-SWFs anwenden, da diese Nutzungsregeln im benutzerdefinierten Clientanwendungscode erzwungen werden.
+Verwendungsbeispiel: Ermöglicht die Erweiterbarkeit von Nutzungsregeln, indem andere Geschäftsregeln im Rahmen der Primetime DRM-Richtlinie und/oder Inhaltslizenz sicher übertragen werden können. Aus Sicherheitsgründen sollten Sie diese Option zusammen mit der Option &quot;Zulassungsliste&quot;für AIR-Anwendungen oder Flash Player-SWFs anwenden, da diese Nutzungsregeln im benutzerdefinierten Clientanwendungscode erzwungen werden.
