@@ -1,6 +1,6 @@
 ---
-seo-title: Enhanced license chaining
-title: Enhanced license chaining
+seo-title: Verbesserte Lizenzverkettung
+title: Verbesserte Lizenzverkettung
 uuid: 5e4e825a-de84-4ab2-a652-02cc03153957
 translation-type: tm+mt
 source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Enhanced license chaining {#enhanced-license-chaining}
+# Verbesserte Lizenzverkettung {#enhanced-license-chaining}
 
 Sie können erweiterte Lizenzketten verwenden, um eine Lizenz zu aktualisieren, indem Sie eine übergeordnete Stammlizenz für die Batch-Aktualisierung von Lizenzen verwenden.
 
