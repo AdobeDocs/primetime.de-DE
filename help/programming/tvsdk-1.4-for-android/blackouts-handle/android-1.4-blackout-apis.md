@@ -6,6 +6,9 @@ title: Blackout-API-Elemente
 uuid: 263a8987-0c85-493a-9352-9605c877ba65
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '596'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ So behandeln Sie Blackouts in Live-Streams:
    TVSDK erkennt keine Blackout-Tags allein. Sie müssen Blackout-Tags abonnieren, um eine Benachrichtigung zu erhalten, wenn die Tags während der Analyse der Manifestdatei gefunden werden.
 1. Erstellen Sie Ereignis-Listener für Tags, für die Ihr Player abonniert wird (in diesem Fall PLAYBACK- und BLACKOUTS-Tags).
 
-   Wenn ein Tag auftritt, das Ihr Player abonniert hat (z. B. ein Blackout-Tag), entweder im Vordergrund (Hauptinhalt) oder im Hintergrund (alternativer Inhalt) Stream-Manifests, sendet TVSDK eine `TimedMetadataEvent` und erstellt eine `TimedMetadataObject` für die `TimedMetadataEvent`.
+   Wenn ein Tag auftritt, das Ihr Player abonniert hat (z. B. ein Blackout-Tag), entweder im Vordergrund (Hauptinhalt) oder im Hintergrund (alternativer Inhalt), löst TVSDK ein `TimedMetadataEvent` aus und erstellt ein `TimedMetadataObject` für das `TimedMetadataEvent`.
 
 1. Implementieren Sie Handler für die zeitgesteuerten Metadaten-Ereignis für den Vordergrund- und den Hintergrund-Stream.
 
@@ -33,7 +36,7 @@ So behandeln Sie Blackouts in Live-Streams:
    Wenn die Sperrfrist Beginn ist, wechseln Sie den Hauptinhalt in den Hintergrund und wechseln Sie zum alternativen Inhalt, um der Hauptstrom zu werden. Rufen Sie weiterhin das ursprüngliche Manifest im Hintergrund ab und analysieren Sie es und suchen Sie nach dem Tag &quot;Blackout End&quot;, damit der Player wieder am ursprünglichen Stream teilnehmen kann, wenn das Blackout beendet wird.
 1. Aktualisieren Sie nicht suchbare Bereiche, wenn sich der Blackout-Bereich im DVR-Bereich im Wiedergabestream befindet.
 
-   Verfolgen und verarbeiten Sie den `TimedMetadata` Hintergrund-Stream, indem Sie nicht suchbare Bereiche vorbereiten und aktualisieren.
+   Verfolgen und behandeln Sie die `TimedMetadata` im Hintergrundstream, indem Sie nicht suchbare Bereiche vorbereiten und aktualisieren.
 
 TVSDK stellt API-Elemente bereit, die bei der Implementierung von Blackouts nützlich sind, einschließlich Methoden, Metadaten und Benachrichtigungen.
 
@@ -41,7 +44,7 @@ Sie können Folgendes verwenden, wenn Sie eine Blackout-Lösung in Ihrem Player 
 
 * **MediaPlayer**
 
-   * `registerCurrentItemAsBackgroundItem` Speichert die aktuell geladene Ressource als Hintergrundressource. Wenn nach dieser Methode aufgerufen `replaceCurrentResource` wird, lädt TVSDK das Manifest des Hintergrundelements weiter herunter, bis Sie `unregisterCurrentBackgroundItem`, `release`oder `reset`.
+   * `registerCurrentItemAsBackgroundItem` Speichert die aktuell geladene Ressource als Hintergrundressource. Wenn nach dieser Methode `replaceCurrentResource` aufgerufen wird, lädt TVSDK das Manifest des Hintergrundelements weiter herunter, bis Sie `unregisterCurrentBackgroundItem`, `release` oder `reset` aufrufen.
 
    * `unregisterCurrentBackgroundItem` Setzt das Hintergrundelement auf null und beendet das Abrufen und Parsen des Hintergrundmanifests.
 
@@ -51,11 +54,11 @@ Sie können Folgendes verwenden, wenn Sie eine Blackout-Lösung in Ihrem Player 
 
    Dadurch können Sie nicht suchbare Bereiche (ein Array von `TimeRanges`) für TVSDK festlegen. TVSDK prüft jedes Mal, wenn der Benutzer eine Suche nach diesen Bereichen durchführt. Wenn es festgelegt ist und der Benutzer in einen nicht suchbaren Bereich sucht, zwingt TVSDK den Viewer bis zum Ende des nicht suchbaren Bereichs.
 
-* **BEGINN HIER NEXT AdvertisingMetadata** Aktivieren oder deaktivieren Sie die Vorabversion eines Live-Streams, indem Sie `enableLivePreroll` die Einstellung true (wahr) oder false (falsch) festlegen. Bei &quot;false&quot;führt TVSDK keinen expliziten Ad-Server-Aufruf für Pre-Roll-Anzeigen vor der Inhaltswiedergabe durch und gibt somit keine Pre-Roll-Wiedergabe ab. Dies hat keine Auswirkungen auf die mittleren Rollen. Die Standardeinstellung ist &quot;true&quot;.
+* **BEGINN HIER NEXT** AdvertisingMetadataAktivieren oder deaktivieren Sie die Vorgabe für einen Live-Stream, indem Sie  `enableLivePreroll` auf true oder false einstellen. Bei &quot;false&quot;führt TVSDK keinen expliziten Ad-Server-Aufruf für Pre-Roll-Anzeigen vor der Inhaltswiedergabe durch und gibt somit keine Pre-Roll-Wiedergabe ab. Dies hat keine Auswirkungen auf die mittleren Rollen. Die Standardeinstellung ist &quot;true&quot;.
 
 * **MediaPlayer.BlackoutsEventListener**
 
-   * `onTimedMetadataInBackgroundItem` - Wird ausgelöst, wenn ein abonniertes Tag im Hintergrundmanifest erkannt und eine neue `TimedMetadata` Instanz davon vorbereitet wird. Die `TimedMetadata` Instanz wird als Parameter gesendet.
+   * `onTimedMetadataInBackgroundItem` - Wird ausgelöst, wenn ein abonniertes Tag im Hintergrundmanifest erkannt und eine neue  `TimedMetadata` Instanz davon vorbereitet wird. Die `TimedMetadata`-Instanz wird als Parameter gesendet.
 
    * `onBackgroundManifestFailed` - Wird ausgelöst, wenn der Medienplayer das Hintergrundmanifest nicht vollständig lädt, d. h. alle Stream-URLs eine Fehlermeldung oder eine ungültige Antwort zurückgeben.
 
