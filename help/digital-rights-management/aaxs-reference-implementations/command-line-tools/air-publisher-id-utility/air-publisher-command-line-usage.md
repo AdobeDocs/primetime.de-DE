@@ -1,6 +1,6 @@
 ---
-seo-title: Command line usage
-title: Command line usage
+seo-title: Befehlszeilenverwendung
+title: Befehlszeilenverwendung
 uuid: 54b1e867-c6cc-4355-b8e6-a7ec910bd33d
 translation-type: tm+mt
 source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Command line usage {#command-line-usage}
+# Befehlszeilenverwendung {#command-line-usage}
 
-To run the tool, use the following syntax:
+Verwenden Sie zum Ausführen des Tools die folgende Syntax:
 
 ```
 java -jar AdobePublisherIDUtility.jar 
@@ -29,11 +29,11 @@ java -jar AdobePublisherIDUtility.jar
 ```
 
 * 
-   * `signaturefile`* specifies the path to the AIR application&#39;s signatures.xml file, located in the applications [!DNL META-INF] directory
+   * `signaturefile`* gibt den Pfad zur Datei &quot;signatures.xml&quot;der AIR-Anwendung im  [!DNL META-INF] Anwendungsverzeichnis an
 
-* `signingcert` specifies the certificate used to sign the AIR application
+* `signingcert` gibt das Zertifikat an, das zum Signieren der AIR-Anwendung verwendet wird
 
 >[!NOTE]
 >
->To determine the publisher ID for an iOS application, use the `-s` option and specify the certificate used to sign the iOS application. ***Adobe Primetime is required to build iOS applications that can play Access-protected content***.
+>Um die Herausgeber-ID für eine iOS-Anwendung zu ermitteln, verwenden Sie die Option `-s` und geben Sie das Zertifikat an, das zum Signieren der iOS-Anwendung verwendet wird. ***Adobe Primetime ist erforderlich, um iOS-Anwendungen zu erstellen, die zugriffsgeschützte Inhalte*** abspielen können.
 
