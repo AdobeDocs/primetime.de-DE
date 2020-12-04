@@ -6,18 +6,21 @@ title: Volumensteuerung bereitstellen
 uuid: 5f2f69cc-3969-4ca2-8ab9-5713fdf5cdb8
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '101'
+ht-degree: 0%
 
 ---
 
 
-# Volumensteuerung bereitstellen{#provide-volume-control}
+# Volumensteuerung{#provide-volume-control}
 
 Sie können ein Steuerelement der Benutzeroberfläche für die Lautstärke einrichten.
 
-1. Warten Sie, bis die `MediaPlayer` Instanz für diesen Befehl gültig ist.
+1. Warten Sie, bis sich die `MediaPlayer`-Instanz in einem gültigen Status für diesen Befehl befindet.
 
    Jeder Status außer RELEASED oder FEHLER ist gültig.
-1. Legen Sie das Lautstärkeattribut für die `MediaPlayer` Instanz fest, um die Lautstärke festzulegen.
+1. Legen Sie das Volumenattribut auf der `MediaPlayer`-Instanz fest, um die Lautstärke festzulegen.
 
    ```js
    player.volume = ...
