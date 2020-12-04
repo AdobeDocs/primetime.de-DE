@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Bei eingeschlossenen Eigenschaftsnamen stellt `.n`die `n` eine Ganzzahl dar, die für jede Instanz der Eigenschaft mit 1 und erhöht wird. Beispiel: `policy.license.customProp.n`.
+>Bei Eigenschaftennamen, die `.n` enthalten, stellt `n` eine Ganzzahl dar, die für jede Instanz der Eigenschaft mit 1 und erhöht wird. Beispiel: `policy.license.customProp.n`.
 
 <table class="+ topic/table " id="table_p3x_54y_n4"> 
  <thead class="- topic/thead "> 
@@ -31,11 +31,11 @@ ht-degree: 0%
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.name</span> <p class="- topic/p "><span class="codeph"> -n</span> <i class="+ topic/ph hi-d/i ">policyName</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.name</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">npoliciesName</i> </p> </td> 
    <td colname="2" class="- topic/entry "> Der für Menschen lesbare DRM-Richtlinienname. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.requireKeyServer</span> <p class="- topic/p "><span class="codeph"> -keyServer</span> <i class="+ topic/ph hi-d/i ">boolean</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.requireKeyServer</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">keyServerboolean</i> </p> </td> 
    <td colname="2" class="- topic/entry ">Es gelten folgende Bedingungen: 
     <ul id="ul_AF4EBD6C19DC4DFAAB4756EF24BAC57D"> 
      <li id="li_6CC48ABF78EC426E9FC51458BD946BC9">Wenn "true", ist ein HTTPS-Schlüsselserver für wichtigen Versand unter iOS erforderlich. </li> 
@@ -43,11 +43,11 @@ ht-degree: 0%
     </ul> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.forceJailbreak</span> <p class="- topic/p "><span class="codeph"> -forceJailbreak</span> <i class="+ topic/ph hi-d/i ">boolean</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.forceJailbreak</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">forceJailbreakBoolean</i> </p> </td> 
    <td colname="2" class="- topic/entry "> Bei Geräten, die die Jailbreak-Erkennung unterstützen (wenn "true"), ist die Wiedergabe nicht zulässig, wenn ein Jailbreak erkannt wird. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.critical</span> <p class="- topic/p "><span class="codeph"> -kritisch</span> <i class="+ topic/ph hi-d/i ">boolesch</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.critical</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">kritisch-boolesch</i> </p> </td> 
    <td colname="2" class="- topic/entry ">Legt die Kritikalität der DRM-Politik fest: 
     <ul id="ul_63F1994798894233A67AC4F8220AB642"> 
      <li id="li_D05DD9AD70464D6B9DB9DFF95846E589">Wenn "true", muss der Server alle Teile der DRM-Richtlinie verstehen, die das Standardverhalten darstellt. </li> 
@@ -56,26 +56,26 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.chwinning.asymmetric.certfile</span> </td> 
-   <td colname="2" class="- topic/entry ">Lizenzserverzertifikat, dessen öffentlicher Schlüssel zum Verschlüsseln des Stamm-Verschlüsselungsschlüssels für die <a href="https://help.adobe.com/en_US/primetime/drm/5.3/protecting_content/index.html#DRM-concept-Enhanced_License_Chaining" class="- topic/xref " format="http" scope="external"> erweiterte Lizenzketten</a>verwendet wird. Diese Eigenschaft gibt eine Datei an, die nur das Zertifikat enthält. <p>Hinweis:  Sowohl PEM- als auch DER-Formate werden unterstützt. </p> </td> 
+   <td colname="2" class="- topic/entry ">Lizenzserverzertifikat, dessen öffentlicher Schlüssel zum Verschlüsseln des Stammverschlüsselungsschlüssels für die <a href="https://help.adobe.com/en_US/primetime/drm/5.3/protecting_content/index.html#DRM-concept-Enhanced_License_Chaining" class="- topic/xref " format="http" scope="external"> Erweiterte Lizenzketten</a> verwendet wird. Diese Eigenschaft gibt eine Datei an, die nur das Zertifikat enthält. <p>Hinweis:  Sowohl PEM- als auch DER-Formate werden unterstützt. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.charing.rootKey</span> <p class="- topic/p "><span class="codeph"> -rootKey</span> <i class="+ topic/ph hi-d/i ">root-key</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>Gibt den Stamm-Verschlüsselungsschlüssel für die <a href="https://help.adobe.com/en_US/primetime/drm/5.3/protecting_content/index.html#DRM-concept-Enhanced_License_Chaining" class="- topic/xref " format="http" scope="external"> erweiterte Lizenzketten</a>an. Wenn kein Schlüssel angegeben ist und die erweiterte Lizenzketten aktiviert sind, wird automatisch ein zufälliger Schlüssel generiert. </p> <p>Der Schlüssel muss 16 Byte lang sein und als Hexadezimalwerte angegeben werden. Leerzeichen zwischen den Hexadezimalwerten sind optional. Bei Updates ist die Befehlszeilenoption nicht verfügbar und die Eigenschaft wird ignoriert. </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.charing.rootKey</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">rootKeyroot-key</i> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Gibt den Stamm-Verschlüsselungsschlüssel für die <a href="https://help.adobe.com/en_US/primetime/drm/5.3/protecting_content/index.html#DRM-concept-Enhanced_License_Chaining" class="- topic/xref " format="http" scope="external"> Erweiterte Lizenzketten</a> an. Wenn kein Schlüssel angegeben ist und die erweiterte Lizenzketten aktiviert sind, wird automatisch ein zufälliger Schlüssel generiert. </p> <p>Der Schlüssel muss 16 Byte lang sein und als Hexadezimalwerte angegeben werden. Leerzeichen zwischen den Hexadezimalwerten sind optional. Bei Updates ist die Befehlszeilenoption nicht verfügbar und die Eigenschaft wird ignoriert. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.url</span> <p class="- topic/p "><span class="codeph"> -domainURL</span> <i class="+ topic/ph hi-d/i ">url</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.url</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">domainURLurl</i> </p> </td> 
    <td colname="2" class="- topic/entry ">Wenn die Domänenregistrierung erforderlich ist, gibt <i>url</i> die URL eines Domänenservers an. Bei Updates ist die Befehlszeilenoption nicht verfügbar und die Eigenschaft wird ignoriert. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.anonymous</span> <p class="- topic/p "><span class="codeph"> -domainAnon</span> </p> </td> 
-   <td colname="2" class="- topic/entry ">Gibt an, ob eine anonyme Domänenregistrierung zulässig ist. Setzt die Eigenschaft auf "true"oder schließt diese Befehlszeilenoption ein, um den anonymen Zugriff zuzulassen. <p>Hinweis: Diese Option kann nicht mit <span class="codeph"> -domainAuthNS</span>verwendet werden. </p> </td> 
+   <td colname="2" class="- topic/entry ">Gibt an, ob eine anonyme Domänenregistrierung zulässig ist. Setzt die Eigenschaft auf "true"oder schließt diese Befehlszeilenoption ein, um den anonymen Zugriff zuzulassen. <p>Hinweis: Diese Option kann nicht mit <span class="codeph"> -domainAuthNS</span> verwendet werden. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.authNamespace</span> <p class="- topic/p "><span class="codeph"> -domainAuthNS</span> - <i class="+ topic/ph hi-d/i ">Namensraum</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>Der Authentifizierungs-Namensraum für die Domänenregistrierung. Falls angegeben, muss sich der Client mit einem Benutzernamen und einem Kennwort authentifizieren, die von der angegebenen Behörde ausgegeben wurden. </p> <p>Bei Updates ist die Befehlszeilenoption nicht verfügbar und die Eigenschaft wird ignoriert. </p> <p>Hinweis: Diese Option kann nicht mit <span class="codeph"> -domainAnon</span>verwendet werden. </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.authNamespace</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">domainAuthNSnamespace</i> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Der Authentifizierungs-Namensraum für die Domänenregistrierung. Falls angegeben, muss sich der Client mit einem Benutzernamen und einem Kennwort authentifizieren, die von der angegebenen Behörde ausgegeben wurden. </p> <p>Bei Updates ist die Befehlszeilenoption nicht verfügbar und die Eigenschaft wird ignoriert. </p> <p>Hinweis: Diese Option kann nicht mit <span class="codeph"> -domainAnon</span> verwendet werden. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.outputProtection.analog</span> <p class="- topic/p "><span class="codeph"> -opAnalog</span> <i class="+ topic/ph hi-d/i ">AnalogOption</i> </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.outputProtection.analog</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">opAnalogAnalogOption</i> </p> </td> 
    <td colname="2" class="- topic/entry ">Analoge Ausgabeschränkungen und die folgenden Werte werden unterstützt: 
     <ul class="- topic/ul " id="ul_h4x_54y_n4"> 
      <li class="- topic/li " id="li_F920EC01159C4231AFBE579D487C8770"><span class="+ topic/ph pr-d/codeph codeph"> NO_PROTECTION</span> </li> 
@@ -89,23 +89,23 @@ ht-degree: 0%
     </ul> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> - <i class="+ topic/ph hi-d/i ">Name/Wert-Paare</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>DRM-Clients, die den Zugriff auf geschützte Inhalte untersagen. Diese Option gibt eine Liste von nicht verwendeten DRM-Modulversionen an (Blockierungsliste). </p> <p>Der Wert besteht aus durch Kommas getrennten <span class="codeph"> Paaren namens=Wert</span> im folgenden Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Weitere Name/Wert-Paare müssen durch Kommas getrennt werden. Beispiel: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">drmBlacklistName/value-pair</i> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>DRM-Clients, die den Zugriff auf geschützte Inhalte untersagen. Diese Option gibt eine Liste von nicht verwendeten DRM-Modulversionen an (Blockierungsliste). </p> <p>Der Wert besteht aus durch Kommas getrennten Paaren <span class="codeph"> name=value</span> im folgenden Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Weitere Name/Wert-Paare müssen durch Kommas getrennt werden. Beispiel: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -runtimeBlacklsit</span> - <i class="+ topic/ph hi-d/i ">Name/Wert-Paare</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>Anwendungslaufzeiten sind vom Zugriff auf geschützte Inhalte eingeschränkt. Diese Option gibt eine Liste von nicht verwendeten Laufzeitmodulversionen an (Blockierungsliste). </p> <p>Der Wert besteht aus durch Kommas getrennten <span class="codeph"> Paaren name=value</span> im folgenden Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Weitere Name/Wert-Paare müssen durch Kommas getrennt werden. Beispiel: <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.runtimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">runtimeBlacklsitname/value-pair</i> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Anwendungslaufzeiten sind vom Zugriff auf geschützte Inhalte eingeschränkt. Diese Option gibt eine Liste von nicht verwendeten Laufzeitmodulversionen an (Blockierungsliste). </p> <p>Der Wert besteht aus durch Kommas getrennten Paaren <span class="codeph"> name=value</span> im folgenden Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Weitere Name/Wert-Paare müssen durch Kommas getrennt werden. Beispiel: <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapacityV1</span> <i class="+ topic/ph hi-d/i ">name/value-pair</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt die Gerätefunktionen an, die für den Zugriff auf geschützten Inhalt erforderlich sind. Der Wert besteht aus durch Kommas getrennten <span class="codeph"> Paaren namens=Wert</span> im folgenden Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> nonUserAccessibleBus|hardwareRootOfTrust=true|false</span> </p> <p class="- topic/p ">Beispiel: <span class="codeph"> nonUserAccessibleBus=false,hardwareRootOfTrust=true</span>. </p> <p>Während einer Aktualisierung müssen Sie <span class="codeph"> -devCapabilityV1</span> ohne die verbleibenden Argumente anwenden, die die Einschränkung der Gerätefunktionen entfernen. </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapability</span> <p class="- topic/p "><span class="codeph"> -devCapacityV1</span> <i class="+ topic/ph hi-d/i ">name/value-pair</i> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt die Gerätefunktionen an, die für den Zugriff auf geschützten Inhalt erforderlich sind. Der Wert besteht aus durch Kommas getrennten Paaren <span class="codeph"> name=value</span> im folgenden Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> nonUserAccessibleBus|hardwareRootOfTrust=true|false</span> </p> <p class="- topic/p ">Beispiel: <span class="codeph"> nonUserAccessibleBus=false,hardwareRootOfTrust=true</span>. </p> <p>Während einer Aktualisierung müssen Sie <span class="codeph"> -devCapabilityV1</span> ohne die verbleibenden Argumente anwenden, die die Einschränkung der Gerätefunktionen entfernen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.syncFrequency</span> <p class="- topic/p "><span class="codeph"> -sync</span> <i class="+ topic/ph hi-d/i ">name/value-pair</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt an, wie oft Clients Synchronisierungsmeldungen an den Server senden müssen. </p> <p>Wenn die Eigenschaft nicht eingestellt ist, senden Clients keine Synchronisierungsmeldungen, wenn sie Inhalte wiedergeben, die mit einer DRM-Richtlinie geschützt sind. Der Wert besteht aus durch Kommas getrennten <span class="codeph"> Paaren name=value</span> im folgenden Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> Beginn|force=numberValue</span> </p> <p class="- topic/p ">Die folgende Liste enthält weitere Informationen zu den Optionen: 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.syncFrequency</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">syncname/value-pair</i> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt an, wie oft Clients Synchronisierungsmeldungen an den Server senden müssen. </p> <p>Wenn die Eigenschaft nicht eingestellt ist, senden Clients keine Synchronisierungsmeldungen, wenn sie Inhalte wiedergeben, die mit einer DRM-Richtlinie geschützt sind. Der Wert besteht aus durch Kommas getrennten Paaren <span class="codeph"> name=value</span> im folgenden Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> beginn|force=numberValue</span> </p> <p class="- topic/p ">Die folgende Liste enthält weitere Informationen zu den Optionen: 
      <ul id="ul_a5j_q4t_44"> 
-      <li id="li_FD2C0C6DA19E455AA1917A56E09A7F84">(erforderlich) <span class="codeph"> Beginn</span> gibt an, dass die Synchronisierung mit dem Server in den angegebenen Minuten seit der letzten Synchronisierung vom Client Beginn werden muss. </li> 
-      <li id="li_9DEBC57385A442C3929AE3D0E3FA8992">(optional) <span class="codeph"> force</span> ist die Wahrscheinlichkeit (0-100), mit der der Client während der Wiedergabe eine Synchronisierungsmeldung erzwingen muss. </li> 
+      <li id="li_FD2C0C6DA19E455AA1917A56E09A7F84">(erforderlich) <span class="codeph"> Beginn</span> gibt an, dass die Synchronisierung mit dem Server in den angegebenen Minuten seit der letzten Synchronisierung Beginn werden muss. </li> 
+      <li id="li_9DEBC57385A442C3929AE3D0E3FA8992">(Optional) <span class="codeph"> force</span> ist die Wahrscheinlichkeit (0-100), mit der der Client während der Wiedergabe eine Synchronisierungsmeldung erzwingen muss. </li> 
      </ul>Verwenden Sie während der Aktualisierung <span class="codeph"> -sync</span> ohne die restlichen Argumente, um die Synchronisierungsanforderungen zu entfernen. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -116,7 +116,7 @@ ht-degree: 0%
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.startDate</span> </td> 
    <td colname="2" class="- topic/entry ">Das Datum, nach dem der Inhalt gültig wird. Sie können eines der folgenden Formate anwenden: 
     <ul id="ul_6610B44D0C16485098F6F45DE3F151D7"> 
-     <li id="li_986707D4C6164C44B3CCBE2EEB4C09B6"><span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> <p>Beispielsweise bedeutet <span class="codeph"> 2009-01-31</span> den 31. Januar um 12:00 Uhr. </p> </li> 
+     <li id="li_986707D4C6164C44B3CCBE2EEB4C09B6"><span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> <p>Beispiel: <span class="codeph"> 2009-01-31</span> bedeutet 31. Januar um 12:00 Uhr. </p> </li> 
      <li id="li_E15B782716124F6EAEFB04D16E5280DB"><span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span> <p>Beispiel: <span class="codeph"> 2009-01-31-14:30:00</span> bedeutet 31. Januar um 14:30 Uhr. </p> </li> 
     </ul> </td> 
   </tr> 
@@ -138,7 +138,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.anonymous</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt an, ob anonymer Lizenzerwerb zulässig ist. Die Standardeinstellung ist " <span class="codeph"> false</span>", d. h. ein Benutzername und ein Kennwort sind erforderlich. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt an, ob anonymer Lizenzerwerb zulässig ist. Die Standardeinstellung ist <span class="codeph"> false</span>, d. h. ein Benutzername und ein Kennwort sind erforderlich. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.authNamespace</span> </td> 
@@ -149,7 +149,7 @@ ht-degree: 0%
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Benutzerdefinierte Name/Wert-Paare, die vom Server während der Lizenzerfassung verwendet werden. Sie können das folgende Format anwenden, um Eigenschaften anzugeben: <span class="+ topic/ph pr-d/codeph codeph">policy.customProp.n</span>=<span class="+ topic/ph pr-d/codeph codeph">name</span>=<span class="+ topic/ph pr-d/codeph codeph">value</span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.playWindow </span> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.playWindow  </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt das Wiedergabefenster in Minuten an. Dieser Wert gibt an, wie lange die Lizenz gültig ist, nachdem der geschützte Inhalt zum ersten Mal wiedergegeben wurde. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -195,7 +195,7 @@ ht-degree: 0%
       <li id="li_3E4A47D925C24834A2C25BC5943279D4"><span class="+ topic/ph pr-d/codeph codeph">URL</span> </li> 
       <li id="li_9A7CAF081C5F488FB5CDA6D38C5552F6"><span class="+ topic/ph pr-d/codeph codeph">file=swf_file</span> </li> 
       <li id="li_E10EA4223137489CBE4015DE999F7154"><span class="codeph">time=max_time_to_verify</span> </li> 
-     </ul> <i class="+ topic/ph hi-d/i ">swf_file</i> ist die SWF-Datei, die zum Berechnen des Hashs verwendet wird, und <i class="+ topic/ph hi-d/i ">max_time_to_verify</i> ist die maximale Zeit in Sekunden, die für das Herunterladen und Überprüfen der SWF-Datei zum Abschluss zulässig ist. </p> </td> 
+     </ul> <i class="+ topic/ph hi-d/i ">swf_</i> fileis die SWF-Datei, die zum Berechnen des Hashs verwendet wird, und  <i class="+ topic/ph hi-d/i ">max_time_to_</i> verifyis die maximale Zeit in Sekunden, die für das Herunterladen und Überprüfen der SWF-Datei zum Abschluss zulässig ist. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.license.customProp.n</span> </td> 
