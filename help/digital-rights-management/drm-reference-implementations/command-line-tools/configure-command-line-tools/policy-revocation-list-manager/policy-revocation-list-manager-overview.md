@@ -4,6 +4,9 @@ title: DRM Revocation Liste Manager
 uuid: 30ab5f54-4aac-4535-b30c-b4e5dbfbc475
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
 
 Verwenden Sie das Befehlszeilenwerkzeug Primetime DRM Revocation Liste Manager ( [!DNL AdobeRevocationListManager.jar]), um Listen für den Widerruf zu erstellen und zu verwalten und zu überprüfen, ob Richtlinien widerrufen wurden.
 
-Vor der Ausführung müssen Sie [!DNL AdobeRevocationListManager.jar]die Eigenschaften im Abschnitt *Policy Update Liste Manager und Revocation Liste Manager-Eigenschaften* Ihrer Konfigurationsdatei festlegen.
+Bevor Sie [!DNL AdobeRevocationListManager.jar] ausführen, müssen Sie die Eigenschaften im Abschnitt *Liste-Manager für Richtlinienaktualisierungen und Listen-Manager-Eigenschaften für Sperrung* in Ihrer Konfigurationsdatei festlegen.
 
 >[!NOTE]
 >
@@ -52,7 +55,7 @@ java -jar AdobeRevocationListManager.jar
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c configfile</span> </td> 
-   <td colname="2" class="- topic/entry "><p class="- topic/p ">Gibt den Namen und den Speicherort der Konfigurationsdatei an. </p><p class="- topic/p ">Wenn Sie keinen Namen oder Speicherort angeben, sucht der DRM Revocation Liste Manager im aktuellen Arbeitsverzeichnis nach " <span class="filepath"> flashaccessStols.properties</span> ". </p><p>Hinweis:  Die Optionen, die Sie in der Befehlszeile angeben, haben Vorrang vor den Optionen, die Sie in der Konfigurationsdatei angeben. </p>Gibt den Speicherort der Konfigurationsdatei an. Wenn Sie diese Option nicht aktivieren, sucht der Revocation Liste Manager im Arbeitsverzeichnis nach <span class="filepath"> flashaccessStols.properties</span> . </td> 
+   <td colname="2" class="- topic/entry "><p class="- topic/p ">Gibt den Namen und den Speicherort der Konfigurationsdatei an. </p><p class="- topic/p ">Wenn Sie keinen Namen oder einen Speicherort angeben, sucht der DRM Revocation Liste Manager im aktuellen Arbeitsverzeichnis nach <span class="filepath"> flashaccessStols.properties</span>. </p><p>Hinweis:  Die Optionen, die Sie in der Befehlszeile angeben, haben Vorrang vor den Optionen, die Sie in der Konfigurationsdatei angeben. </p>Gibt den Speicherort der Konfigurationsdatei an. Wenn Sie diese Option nicht aktivieren, sucht der Revocation Liste Manager im Arbeitsverzeichnis nach <span class="filepath"> flashaccessStols.properties</span>. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-d Dateiname</span> </td> 
@@ -80,7 +83,7 @@ java -jar AdobeRevocationListManager.jar
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r producerName serialNumber revocationDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sperrt das Zertifikat, das am angegebenen Datum von <span class="codeph"> Ausstellername</span> und <span class="codeph"> Seriennummer</span> identifiziert wurde. Der <span class="codeph"> Name des Ausstellers</span> muss das Namensformat 509 verwenden. Beispiel: <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>Sie müssen die Seriennummern im Hexadezimalformat angeben. Sie müssen das Sperrdatum auch in einem der folgenden Formate angeben: 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Ruft das Zertifikat auf, das am angegebenen Datum von <span class="codeph"> emittentName</span> und <span class="codeph"> serialNumber</span> identifiziert wurde. Das Format <span class="codeph"> issuname</span> muss das Format 509 verwenden. Beispiel: <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>Sie müssen die Seriennummern im Hexadezimalformat angeben. Sie müssen das Sperrdatum auch in einem der folgenden Formate angeben: 
      <ul id="ul_1524FBC6818248F3A2B271243E649400"> 
       <li id="li_BC618EA2332D42A59B1B5434CAFFD2AF"><span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> </li> 
       <li id="li_97F77810D20C4CF2944EFCFF5DFAE467"><span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span> </li> 
