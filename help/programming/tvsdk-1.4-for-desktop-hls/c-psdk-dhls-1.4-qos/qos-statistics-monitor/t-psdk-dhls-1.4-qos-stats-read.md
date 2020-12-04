@@ -6,20 +6,23 @@ title: Lesen der QOS-Wiedergabe, -Pufferung und Gerätestatistik
 uuid: 5ee631fc-cd6f-4f35-8621-2ffdc51a57c7
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 1%
 
 ---
 
 
-# Lesen der QOS-Wiedergabe, -Pufferung und Gerätestatistik{#read-qos-playback-buffering-and-device-statistics}
+# Lesen Sie die QOS-Wiedergabe-, Puffer- und Gerätestatistiken{#read-qos-playback-buffering-and-device-statistics}
 
 Sie können die Statistiken zu Wiedergabe, Pufferung und Gerät aus der QOSProvider-Klasse lesen.
 
-Die `QOSProvider` Klasse stellt verschiedene Statistiken bereit, darunter Informationen über Pufferung, Bitraten, Bildraten, Zeitdaten usw.
+Die `QOSProvider`-Klasse stellt verschiedene Statistiken bereit, einschließlich Informationen über Pufferung, Bitraten, Bildraten, Zeitdaten usw.
 
 Es enthält außerdem Informationen zum Gerät, wie Hersteller, Modell, Betriebssystem, SDK-Version und Bildschirmgröße/-dichte.
 
 1. Instanziieren eines Medienplayers.
-1. Erstellen Sie ein `QOSProvider` Objekt und fügen Sie es an den Medienplayer an.
+1. Erstellen Sie ein `QOSProvider`-Objekt und fügen Sie es an den Medienplayer an.
 
    ```
    // Create Media Player. 
@@ -29,7 +32,7 @@ Es enthält außerdem Informationen zum Gerät, wie Hersteller, Modell, Betriebs
 
 1. (Optional) Lesen Sie die Wiedergabestatistik.
 
-   Eine Lösung zum Lesen der Wiedergabestatistik besteht darin, einen Timer zu haben, der die neuen QoS-Werte in regelmäßigen Abständen von der `QOSProvider`abruft. Beispiel:
+   Eine Lösung zum Lesen der Wiedergabestatistik besteht darin, einen Timer zu haben, der die neuen QoS-Werte aus dem `QOSProvider` in regelmäßigen Abständen abruft. Beispiel:
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  
