@@ -4,13 +4,16 @@ title: Konfigurationsdateieigenschaften
 uuid: 13e158a6-c447-4e5e-884d-03fb4835c120
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '314'
+ht-degree: 0%
 
 ---
 
 
 # Konfigurationsdateieigenschaften {#configuration-file-properties}
 
-Geben Sie vor dem Ausführen von License Generator Werte für die Eigenschaften von License Generator an. Die Konfigurationsdatei gibt die folgenden Eigenschaften an. Bei Eigenschaftsnamen, die *n* enthalten, stellt *n* eine Ganzzahl dar, die mit 1 beginnt und für jede Instanz der Eigenschaft erhöht wird.
+Geben Sie vor dem Ausführen von License Generator Werte für die Eigenschaften von License Generator an. Die Konfigurationsdatei gibt die folgenden Eigenschaften an. Bei Eigenschaftsnamen, die *n* enthalten, steht *n* für eine Ganzzahl, die mit 1 beginnt und für jede Instanz der Eigenschaft erhöht wird.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_qk1_rry_n4"> 
  <thead class="- topic/thead "> 
@@ -22,11 +25,11 @@ Geben Sie vor dem Ausführen von License Generator Werte für die Eigenschaften 
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.minClientVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> Legen Sie die mindestens unterstützte Clientversion fest. Ist dies nicht der Fall, werden standardmäßig alle Versionen unterstützt. Legen Sie diesen Wert fest, um zu steuern, wie ältere Clients auf Lizenzanforderungen reagieren, die sie nicht unterstützen. Geben Sie x (für Adobe Access x.0) an, wobei x die Nummer der Hauptversion ist. </td> 
+   <td colname="2" class="- topic/entry "> Legen Sie die mindestens unterstützte Clientversion fest. Ist dies nicht der Fall, werden standardmäßig alle Versionen unterstützt. Legen Sie diesen Wert fest, um zu steuern, wie ältere Clients auf Lizenzanforderungen reagieren, die sie nicht unterstützen. Geben Sie x (für Adobe Access x.0) an, wobei x die Hauptveröffentlichungsnummer ist. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.keyServerCert</span> </td> 
-   <td colname="2" class="- topic/entry "> Key Server-Zertifikat (ein von Adobe ausgestelltes Lizenzserver-Zertifikat, das vom Key Server verwendet wird). Dieses Zertifikat wird nur verwendet, wenn die Metadaten/Richtlinien darauf hinweisen, dass ein Schlüsselserver für wichtigen Versand zu iOS-Geräten erforderlich ist. </td> 
+   <td colname="2" class="- topic/entry "> Key Server Certificate (ein von der Adobe ausgestelltes Lizenzserverzertifikat, das vom Key Server verwendet wird). Dieses Zertifikat wird nur verwendet, wenn die Metadaten/Richtlinien darauf hinweisen, dass ein Schlüsselserver für wichtigen Versand zu iOS-Geräten erforderlich ist. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.sign.certfile</span> </td> 
@@ -42,7 +45,7 @@ Geben Sie vor dem Ausführen von License Generator Werte für die Eigenschaften 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.asymmetric.licenseServerCredential.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Optionale PKCS12-Datei mit zusätzlichen Lizenzserver-Anmeldeinformationen zum Entschlüsseln des CEK in den Metadaten und Richtlinien. Zusätzliche Berechtigungen können konfiguriert werden, wenn der Inhalt zuvor mit einem Lizenzserver-Zertifikat gepackt wurde, das nicht von <span class="codeph"> licensegen.sign.certfile</span>angegeben wurde. Diese Eigenschaft sollte auf eine <span class="filepath"> .pfx</span> -Datei mit einem Zertifikat und einem privaten Schlüssel verweisen. n muss monotonisch erhöht werden, beginnend mit 1. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Optionale PKCS12-Datei mit zusätzlichen Lizenzserver-Anmeldeinformationen zum Entschlüsseln des CEK in den Metadaten und Richtlinien. Zusätzliche Berechtigungen können konfiguriert werden, wenn der Inhalt zuvor mit einem Lizenzserver-Zertifikat gepackt wurde, das nicht von <span class="codeph"> licensegen.sign.certfile</span> angegeben wurde. Diese Eigenschaft sollte auf eine <span class="filepath"> .pfx</span>-Datei verweisen, die ein Zertifikat und einen privaten Schlüssel enthält. n muss monotonisch erhöht werden, beginnend mit 1. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licensegen.keys.asymmetric.licenseServerCredential.n.password</span> </td> 
