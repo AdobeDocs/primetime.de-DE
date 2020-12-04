@@ -6,11 +6,14 @@ title: Auswirkungen auf Kombinationen aus Anzeigeneinfügung und -löschung im A
 uuid: c2ae8148-889d-46ae-848a-5f45d993a0e2
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '472'
+ht-degree: 0%
 
 ---
 
 
-# Auswirkungen auf Kombinationen aus Anzeigeneinfügung und -löschung im Anzeigensignalisierungsmodus und Anzeigenmetadaten{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# Auswirkungen auf das Einfügen und Löschen von Werbeanzeigen im Anzeigensignalisierungsmodus und auf Kombinationen von Anzeigenmetadaten{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
 Sie können Zeitbereiche in VOD-Streams mit unterschiedlichen Kombinationen aus Anzeigensignalisierungsmodus und Anzeigenmetadaten markieren, löschen und ersetzen. Verschiedene Kombinationen aus Signalmodus und Metadaten führen zu unterschiedlichem Verhalten.
 
@@ -18,7 +21,7 @@ Sie können Zeitbereiche in VOD-Streams mit unterschiedlichen Kombinationen aus 
 >
 >Bei einem Konflikt zwischen Zeitbereichen und Anzeigensignalisierungsmodi gibt TVSDK den Zeitbereichen Priorität.
 
-**Tabelle 4: Verhalten bei der Kombination von Signalisierungsmodus und Metadaten**
+**Tabelle 3: Verhalten bei der Kombination von Signalisierungsmodus und Metadaten**
 
 <table>  
  <thead> 
@@ -26,7 +29,7 @@ Sie können Zeitbereiche in VOD-Streams mit unterschiedlichen Kombinationen aus 
    <th class="entry"> Anzeigensignalisierungsmodus </th> 
    <th class="entry"> Anzeigenmetadaten </th> 
    <th class="entry"> Erstellte Auflösungen </th> 
-   <th class="entry"><span class="codeph"> Platzierungsinformationen</span> erstellt </th> 
+   <th class="entry"><span class="codeph"> </span> PlatzierungInformationsbildung erstellt </th> 
    <th class="entry"> Ergebnis </th> 
   </tr> 
  </thead>
@@ -51,7 +54,7 @@ Sie können Zeitbereiche in VOD-Streams mit unterschiedlichen Kombinationen aus 
    <td> Löschen, Auditude </td> 
    <td> 
     <ul> 
-     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
+     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
      <li><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> Bereiche gelöscht, Anzeigen eingefügt </td> 
