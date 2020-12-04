@@ -6,6 +6,9 @@ title: Format AC-3 5.1
 uuid: 11dab0ac-5aed-4909-b9fb-807781f88480
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '442'
+ht-degree: 0%
 
 ---
 
@@ -36,7 +39,7 @@ Die folgenden AC-3 5.1-Funktionen werden nicht unterstützt:
 * Multichannel AAC-Audio
 * ABR für verschiedene Codecs (AAC - AC3)
 
-## Unterstützte Medien auswählen {#section_0D7E717BE18B418D817EE017EF2375D1}
+## Unterstützte Medien {#section_0D7E717BE18B418D817EE017EF2375D1} auswählen
 
 Hier ist der typische Arbeitsablauf, der auftritt, wenn TVSDK ein Manifest mit AC-3- und AAC-Medien findet:
 
