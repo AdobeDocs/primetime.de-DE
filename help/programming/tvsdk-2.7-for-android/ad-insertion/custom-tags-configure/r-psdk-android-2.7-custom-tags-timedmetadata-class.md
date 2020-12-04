@@ -29,27 +29,27 @@ Die Klasse stellt die folgenden Elemente bereit:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> id </span> </td> 
+   <td colname="col1"> <span class="codeph"> id  </span> </td> 
    <td colname="col02"> long </td> 
    <td colname="col2"> <p>Eindeutige ID der zeitgesteuerten Metadaten. </p> <p>Dieser Wert wird normalerweise aus dem Attribut cue/Tag-ID extrahiert. Andernfalls wird ein eindeutiger zufälliger Wert angegeben. Verwenden Sie <span class="codeph"> getId </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> metadata </span> </td> 
+   <td colname="col1"> <span class="codeph"> metadata  </span> </td> 
    <td colname="col02"> Metadaten </td> 
    <td colname="col2"> <p>Die verarbeiteten/extrahierten Informationen aus dem benutzerdefinierten Tag "playlist/manifest". Verwenden Sie <span class="codeph"> getMetadata </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> name </span> </td> 
    <td colname="col02"> Zeichenfolge </td> 
-   <td colname="col2"> <p>Der Name der zeitgesteuerten Metadaten. Wenn der Typ <span class="codeph"> TAG ist </span>, stellt der Wert den Cue/Tag-Namen dar. Lautet der Typ <span class="codeph"> ID3 </span>, ist er null. Verwenden Sie <span class="codeph"> getName </span>. </p> </td> 
+   <td colname="col2"> <p>Der Name der zeitgesteuerten Metadaten. Wenn der Typ <span class="codeph"> TAG </span> ist, stellt der Wert den Cue/Tag-Namen dar. Wenn der Typ <span class="codeph"> ID3 </span> ist, ist er null. Verwenden Sie <span class="codeph"> getName </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> time </span> </td> 
+   <td colname="col1"> <span class="codeph"> time  </span> </td> 
    <td colname="col02"> long </td> 
    <td colname="col2"> <p>Die Zeitposition in Millisekunden relativ zum Beginn des Hauptinhalts, an der diese zeitgesteuerte Metadaten im Stream vorhanden sind. Verwenden Sie <span class="codeph"> getTime </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> type </span> </td> 
+   <td colname="col1"> <span class="codeph"> type  </span> </td> 
    <td colname="col02"> Typ </td> 
    <td colname="col2"> <p>Der Typ der zeitgesteuerten Metadaten. Verwenden Sie <span class="codeph"> getType </span>. 
      <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
@@ -87,31 +87,31 @@ Beachten Sie Folgendes:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public enum type {TAG, ID3} </span> </td> 
+   <td colname="col1"> <span class="codeph"> public enum type {TAG, ID3}  </span> </td> 
    <td colname="col2"> <p>Mögliche Typen für zeitgesteuerte Metadaten. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public TimedMetadata(Type type, long time, long id, String name, Metadata metadata); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public TimedMetadata(Type type, long time, long id, String name, Metadata metadata);  </span> </td> 
    <td colname="col2"> <p>Standardkonstruktor (time ist die lokale Stream-Zeit). </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public long getTime(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public long getTime();  </span> </td> 
    <td colname="col2"> <p>Die Zeitposition relativ zum Beginn des Hauptinhalts, an der diese Metadaten in den Stream eingefügt wurden. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public Metadata getMetadata(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public Metadata getMetadata();  </span> </td> 
    <td colname="col2"> <p>Die im Stream eingefügten Metadaten. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public Type getType(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public Type getType();  </span> </td> 
    <td colname="col2"> <p>Gibt den Typ der zeitgesteuerten Metadaten zurück. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public long getId(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public long getId();  </span> </td> 
    <td colname="col2"> <p>Gibt die ID zurück, die aus den Attributen cue/Tag extrahiert wurde. Andernfalls wird ein eindeutiger zufälliger Wert angegeben. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> public String getName(); </span> </td> 
+   <td colname="col1"> <span class="codeph"> public String getName();  </span> </td> 
    <td colname="col2"> <p>Gibt den Namen des Cue zurück, bei dem es sich normalerweise um den HLS-Tag-Namen handelt. </p> </td> 
   </tr> 
  </tbody> 
