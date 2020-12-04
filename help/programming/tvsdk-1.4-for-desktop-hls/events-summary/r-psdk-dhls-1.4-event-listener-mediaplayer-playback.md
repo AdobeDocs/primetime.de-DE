@@ -6,15 +6,18 @@ title: Wiedergabe-Ereignisse
 uuid: 6d6491d7-cf25-4130-8388-68b8c028bb71
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '541'
+ht-degree: 0%
 
 ---
 
 
-# Wiedergabe-Ereignisse {#playback-events}
+# Wiedergabe-Ereignis {#playback-events}
 
 Ihre Anwendung kann die Aktivität im Player und den sich ändernden Status des Players überwachen, indem sie auf von TVSDK ausgelöste Ereignis überwacht.
 
-TVSDK löst Ereignisse zur Wiedergabe aus, wenn Vorgänge zur Medienwiedergabe ausgeführt werden, z. B. wenn die Videowiedergabe beginnt. Um über alle abspielrelevanten Ereignis benachrichtigt zu werden, registrieren Sie Listener für die folgenden Ereignis beim `MediaPlayer` Objekt.
+TVSDK löst Ereignisse zur Wiedergabe aus, wenn Vorgänge zur Medienwiedergabe ausgeführt werden, z. B. wenn die Videowiedergabe beginnt. Um über alle abspielrelevanten Ereignis benachrichtigt zu werden, registrieren Sie Listener für die folgenden Ereignis beim `MediaPlayer`-Objekt.
 
 <table frame="all" colsep="1" rowsep="1" id="table_922EEA3DE0BD47BA982E11F890CA0A6B"> 
  <thead> 
@@ -50,7 +53,7 @@ TVSDK löst Ereignisse zur Wiedergabe aus, wenn Vorgänge zur Medienwiedergabe a
   </tr> 
   <tr rowsep="1"> 
    <td colname="1">ProfileEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html#PROFILE_CHANGED" format="html" scope="external"> PROFIL_CHANGED</a> </td> 
-   <td colname="2">Das aktuelle Profil des Medienplayers hat sich geändert. Verwenden Sie die Eigenschaft <span class="codeph"> ProfileEvent.Profil</span> , um das neue Profil abzurufen, das abgespielt wird. Verwenden Sie die <span class="codeph"> time</span> -Eigenschaft, um den Zeitpunkt abzurufen, zu dem dieses Ereignis aufgetreten ist. </td> 
+   <td colname="2">Das aktuelle Profil des Medienplayers hat sich geändert. Verwenden Sie die Eigenschaft <span class="codeph"> ProfileEvent.Profil</span>, um das neue Profil abzurufen, das abgespielt wird. Verwenden Sie die Eigenschaft <span class="codeph"> time</span>, um den Zeitpunkt abzurufen, zu dem dieses Ereignis aufgetreten ist. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>MediaPlayerItem</b> </td> 
@@ -74,7 +77,7 @@ TVSDK löst Ereignisse zur Wiedergabe aus, wenn Vorgänge zur Medienwiedergabe a
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> MediaPlayerItem-Ereignis.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html#CAPTION_UPDATED" format="html" scope="external"> CAPTION_UPDATED</a> </td> 
-   <td colname="2">Im Medienstream wurde eine neue Untertitelspur entdeckt, und die Sammlung <span class="codeph"> closeCaptionsTracks</span> wurde aktualisiert. </td> 
+   <td colname="2">Im Medienstream wurde eine neue Untertitelspur erkannt und die Sammlung <span class="codeph"> closeCaptionsTracks</span> wurde aktualisiert. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><b>Manifest und Zeitschiene</b> </td> 
@@ -82,7 +85,7 @@ TVSDK löst Ereignisse zur Wiedergabe aus, wenn Vorgänge zur Medienwiedergabe a
   </tr> 
   <tr rowsep="0"> 
    <td colname="1">TimelineEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/TimelineEvent.html#TIMELINE_UPDATED" format="html" scope="external"> TIMELINE_UPDATED</a> </td> 
-   <td colname="2">Der Medienplayer hat Anzeigen hinzugefügt oder entfernt, sodass er über eine aktualisierte Zeitschiene verfügt. <p>Das für ein Live-Asset aktualisierte Manifest und alte Werbeunterbrechungen wurden aus der Zeitleiste entfernt oder neue Werbemöglichkeiten (Cue-Points) wurden entdeckt. Der Medienplayer versucht, alle neuen Anzeigen aufzulösen und auf der Zeitleiste zu platzieren. </p> <p> Verwenden Sie dieses Ereignis, um zu überprüfen, ob die Zeitleiste Updates enthält (VOD ändert sich während der Wiedergabe nicht). Sie können die Zeitleiste dann mit <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayer.html#timeline" format="html" scope="external"> MediaPlayer.timeline</a>abrufen. </p> </td> 
+   <td colname="2">Der Medienplayer hat Anzeigen hinzugefügt oder entfernt, sodass er über eine aktualisierte Zeitschiene verfügt. <p>Das für ein Live-Asset aktualisierte Manifest und alte Werbeunterbrechungen wurden aus der Zeitleiste entfernt oder neue Werbemöglichkeiten (Cue-Points) wurden entdeckt. Der Medienplayer versucht, alle neuen Anzeigen aufzulösen und auf der Zeitleiste zu platzieren. </p> <p> Verwenden Sie dieses Ereignis, um zu überprüfen, ob die Zeitleiste Updates enthält (VOD ändert sich während der Wiedergabe nicht). Anschließend können Sie die Zeitleiste mit <a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayer.html#timeline" format="html" scope="external"> MediaPlayer.timeline</a> abrufen. </p> </td> 
   </tr> 
  </tbody> 
 </table>
