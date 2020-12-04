@@ -6,6 +6,9 @@ title: Stile für Untertitel festlegen
 uuid: 906ed22c-e673-4211-a14b-d95d176aad21
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 0%
 
 ---
 
@@ -14,10 +17,10 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 Sie können das Format festlegen, z. B. Schriftart, Größe, Farbe, Kante und Deckkraft für Text mit geschlossener Beschriftung.
 
-1. Warten Sie, bis der Status &quot;VORBEREITET&quot;mindestens `MediaPlayer` vorliegt.
+1. Warten Sie, bis `MediaPlayer` mindestens im Status &quot;VORBEREITT&quot;ist.
 
    Weitere Informationen zu den Status finden Sie unter [Warten auf einen gültigen Status](../../../content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-state-prepared-wait-for.md).
-1. Erstellen Sie eine `TextFormat` Instanz.
+1. Erstellen Sie eine `TextFormat`-Instanz.
 
    Sie können jetzt alle Formatierungsparameter für Bildunterschriften bereitstellen oder sie später festlegen.
 
@@ -37,9 +40,9 @@ Sie können das Format festlegen, z. B. Schriftart, Größe, Farbe, Kante und De
        safeArea) → {AdobePSDK.TextFormat}
    ```
 
-1. (Optional) Rufen Sie die aktuellen Stileinstellungen für die Bildunterschrift ab `MediaPlayer.ccStyle`.
+1. (Optional) Rufen Sie die aktuellen Stileinstellungen für geschlossene Beschriftungen mit `MediaPlayer.ccStyle` ab.
 
-   Der Rückgabewert ist eine Instanz der `TextFormat` Schnittstelle.
+   Der Rückgabewert ist eine Instanz der `TextFormat`-Schnittstelle.
 
    Wenn zuvor kein Stil festgelegt wurde, wird ein TextFormat-Objekt mit Standardwerten für jedes Attribut zurückgegeben:
 
@@ -47,7 +50,7 @@ Sie können das Format festlegen, z. B. Schriftart, Größe, Farbe, Kante und De
    ccStyle :AdobePSDK.TextFormat
    ```
 
-1. Um die Stileinstellungen zu ändern, verwenden Sie `MediaPlayer.ccStyle`die Übergabe einer Instanz der `TextFormat` Benutzeroberfläche.
+1. Um die Stileinstellungen zu ändern, verwenden Sie `MediaPlayer.ccStyle` und übergeben Sie eine Instanz der `TextFormat`-Schnittstelle.
 
    Sie können diese Methode auch dann verwenden, wenn der aktuelle Medienstream keine Untertitel enthält.
 
