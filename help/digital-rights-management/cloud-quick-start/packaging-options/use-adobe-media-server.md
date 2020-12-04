@@ -4,11 +4,14 @@ title: Adobe Media Server verwenden
 uuid: 272b9919-6ae4-4adb-aab5-28b1f92aa9fe
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 3%
 
 ---
 
 
-# Adobe Media Server verwenden {#use-adobe-media-server}
+# Adobe Media Server {#use-adobe-media-server} verwenden
 
 Einige Kunden verwenden möglicherweise bereits Adobe Media Server und möchten dieses Content Versand-Modell beibehalten. In diesem Fall können die erforderlichen DRM-spezifischen Primetime Cloud-Daten aus einer der Konfigurationsdateien, die in diesem Kit enthalten sind, abgerufen werden, um die JIT-XML-Konfiguration (Just-In-Time) für AMS zu füllen.
 
