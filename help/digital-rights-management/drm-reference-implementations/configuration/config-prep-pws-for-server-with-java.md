@@ -1,7 +1,7 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: Prepare passwords using Java
+seo-title: Passwörter mithilfe von Java vorbereiten
 title: Passwörter mithilfe von Java vorbereiten
 uuid: 8a708d22-764f-4229-95ca-109482563432
 translation-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Prepare passwords using Java{#prepare-passwords-using-java}
+# Kennwörter mithilfe von Java{#prepare-passwords-using-java} vorbereiten
 
-Run the `ScrambleUtil.class` with Java:
+Führen Sie das `ScrambleUtil.class` mit Java aus:
 
-1. Navigate to `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`
+1. Navigieren Sie zu `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`
 1. Geben Sie in der Befehlszeile Folgendes ein:
 
    ```
