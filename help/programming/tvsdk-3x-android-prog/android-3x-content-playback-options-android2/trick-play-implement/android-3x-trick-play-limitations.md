@@ -6,17 +6,20 @@ title: Einschränkungen und Verhalten bei der Trick-Wiedergabe
 uuid: c28cc8db-3f45-488e-ab72-b102b3a1fab2
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
 
-# Einschränkungen und Verhalten bei der Trick-Wiedergabe {#limitations-and-behavior-for-trick-play}
+# Einschränkungen und Verhalten bei Trick Play {#limitations-and-behavior-for-trick-play}
 
 <!--<a id="section_2BC43539C5C142E085D06A7E35C76726"></a>-->
 
 Einschränkungen für den Trick Play-Modus:
 
-* Die Master-Playlist muss nur iFrame-Segmente enthalten.
+* Die Übergeordnet-Wiedergabeliste muss nur Iframe-Segmente enthalten.
 
    Auf dem Bildschirm werden nur die Schlüsselbilder aus der Iframe-Spur angezeigt.
 * Die Audiospur und die Untertitel sind deaktiviert.
@@ -30,7 +33,7 @@ Einschränkungen für den Trick Play-Modus:
    * Der aktuelle Zeitwert springt mit der Dauer der übersprungenen Werbeunterbrechung vorwärts (bei schnellem Vorwärts) oder rückwärts (bei schnellem Zurückspulen).
 
       Durch dieses Sprungverhalten für die aktuelle Zeit bleibt die Stream-Dauer während der Trick-Wiedergabe unverändert. Ihr Player kann die Zeit relativ zum Hauptinhalt verfolgen. Für die Werte, die für die lokale Zeit zurückgegeben werden, wenn eine Anzeige übersprungen wird, werden keine Zeitsprünge ausgeführt.
-   * Das `MediaPlayerEvent.AD_BREAK_SKIPPED` Ereignis wird unmittelbar vor dem Überspringen einer Werbeunterbrechung ausgelöst.
+   * Das `MediaPlayerEvent.AD_BREAK_SKIPPED`-Ereignis wird unmittelbar vor dem Überspringen einer Werbeunterbrechung ausgelöst.
 
       Ihr Player kann dieses Ereignis verwenden, um benutzerdefinierte Logik in Bezug auf die übersprungenen Werbeunterbrechungen zu implementieren.
 
