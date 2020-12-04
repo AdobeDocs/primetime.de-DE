@@ -1,6 +1,6 @@
 ---
-description: Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabezeit mit der Beginn-Zeit übereinstimmt.
-seo-description: Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabezeit mit der Beginn-Zeit übereinstimmt.
+description: Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabedauer mit der Beginn-Zeit übereinstimmt.
+seo-description: Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabedauer mit der Beginn-Zeit übereinstimmt.
 seo-title: Verwenden von Zeitmetadaten
 title: Verwenden von Zeitmetadaten
 uuid: 98bb8c08-2794-42d6-b5c3-b1047ac804fe
@@ -13,22 +13,22 @@ ht-degree: 1%
 ---
 
 
-# Verwenden von Zeitmetadaten {#use-timed-metadata}
+# Verwenden Sie zeitgesteuerte Metadaten {#use-timed-metadata}
 
-Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabezeit mit der Beginn-Zeit übereinstimmt.
+Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabedauer mit der Beginn-Zeit übereinstimmt.
 
-Um diese gespeicherten `TimedMetadata` Objekte während der Wiedergabe zu verwenden, verwenden Sie die gespeicherten Objekte `ArrayList` aus den Zeitmetadatenobjekten im [Store, während sie gesendet](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md)werden.
+Um diese gespeicherten `TimedMetadata`-Objekte während der Wiedergabe zu verwenden, verwenden Sie die gespeicherten `ArrayList` von [Zeitmetadatenobjekte speichern, während sie gesendet werden.](../../ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md)
 
 1. Führen Sie einen Timer aus und führen Sie wiederholt eine Abfrage der aktuellen Wiedergabedauer durch.
-1. Finden Sie alle `TimedMetadata` Objekte mit Beginn, die der aktuellen Wiedergabedauer entsprechen.
+1. Suchen Sie alle `TimedMetadata`-Objekte mit Beginn, die der aktuellen Wiedergabedauer entsprechen.
 
    Mit diesen Objekten können Sie verschiedene Aktionen ausführen.
 
    >[!IMPORTANT]
    >
-   >Wenn Sie überprüfen, ob die aktuelle Wiedergabezeit mit `TimedMetadata` Objekten übereinstimmt, schließen Sie `shouldTriggerSubscribedTagEvent` diese als Bedingung ein.
+   >Bei der Prüfung, ob die aktuelle Wiedergabezeit mit einem `TimedMetadata`-Objekt übereinstimmt, müssen Sie `shouldTriggerSubscribedTagEvent` als Bedingung einschließen.
 
-   Die Zeitschiene kann sich aufgrund verschiedener Anzeigenverhaltensweisen ändern. So können z. B. ein oder mehrere Werbeunterbrechungen von ihrer ursprünglichen Position in der Zeitleiste verschoben werden, es wird jedoch `shouldTriggerSubscribedTagEvent` sichergestellt, dass die Beginn des `TimeMetadata` Objekts mit der aktuellen Wiedergabedauer übereinstimmt.
+   Die Zeitschiene kann sich aufgrund verschiedener Anzeigenverhaltensweisen ändern. So können z. B. ein oder mehrere Werbeunterbrechungen von ihrer ursprünglichen Position in der Zeitleiste verschoben werden, aber `shouldTriggerSubscribedTagEvent` stellt sicher, dass die Beginn-Zeit des Objekts mit der aktuellen Wiedergabedauer übereinstimmt.`TimeMetadata`
 
    Beispiel:
 
@@ -62,4 +62,4 @@ Um diese gespeicherten `TimedMetadata` Objekte während der Wiedergabe zu verwen
    _playbackClock.addClockEventListener(_playbackClockEventListener);
    ```
 
-1. Passen Sie regelmäßig statische `TimedMetadata` Instanzen von der Liste ab, um zu verhindern, dass der Speicher ständig wächst.
+1. Regelmäßig die statische `TimedMetadata`-Instanzen aus der Liste entfernen, um zu verhindern, dass der Speicher ständig wächst.
