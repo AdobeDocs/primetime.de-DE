@@ -6,38 +6,41 @@ title: Laden einer Medienressource in den MediaPlayer
 uuid: 6ee8032f-0728-423f-a1d2-5030aa7db14f
 translation-type: tm+mt
 source-git-commit: 4ef05be045334a2e723da4c7c6a7ee22fb0f776c
+workflow-type: tm+mt
+source-wordcount: '252'
+ht-degree: 0%
 
 ---
 
 
-# Laden einer Medienressource in den MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
+# Medienressource im MediaPlayer {#load-a-media-resource-in-the-mediaplayer} laden
 
 Laden Sie eine Ressource, indem Sie MediaResource direkt instanziieren und den wiederzugebenden Videoinhalt laden. Dies ist eine Möglichkeit, eine Medienressource zu laden.
 
 1. Legen Sie das abspielbare Element Ihres MediaPlayer mit der neuen Ressource fest, die wiedergegeben werden soll.
 
-   Ersetzen Sie das derzeit abspielbare Element Ihres MediaPlayer durch Aufruf `MediaPlayer.replaceCurrentItem` und Übergabe einer vorhandenen `MediaResource` Instanz.
+   Ersetzen Sie das derzeit abspielbare Element Ihres MediaPlayer durch den Aufruf von `MediaPlayer.replaceCurrentItem` und die Übergabe einer vorhandenen `MediaResource`-Instanz.
 
-1. Registrieren Sie eine Implementierung der `MediaPlayer.PlaybackEventListener` Schnittstelle mit der `MediaPlayer` Instanz.
+1. Registrieren Sie eine Implementierung der `MediaPlayer.PlaybackEventListener`-Schnittstelle mit der `MediaPlayer`-Instanz.
 
    * `onPrepared`
    * `onStateChanged`und suchen Sie nach INITIALIZED und FEHLER.
 
-1. Wenn der Status des Medienplayers auf INITIALIZED geändert wird, können Sie `MediaPlayer.prepareToPlay`
+1. Wenn sich der Status des Medienplayers in INITIALIZED ändert, können Sie `MediaPlayer.prepareToPlay`
 
-   Der Status INITIALIZED gibt an, dass das Medium erfolgreich geladen wurde. Das Aufrufen von `prepareToPlay` Beginn zur Auflösung und Platzierung der Werbung, falls vorhanden.
+   Der Status INITIALIZED gibt an, dass das Medium erfolgreich geladen wurde. Durch Aufruf von `prepareToPlay` werden die Auflösung und Platzierung der Werbung (sofern vorhanden) Beginn.
 
-1. Wenn TVSDK den `onPrepared` Rückruf aufruft, wurde der Medienstream erfolgreich geladen und für die Wiedergabe vorbereitet.
+1. Wenn TVSDK den Rückruf `onPrepared` aufruft, wurde der Medienstream erfolgreich geladen und für die Wiedergabe vorbereitet.
 
-   Wenn der Medienstream geladen wird, wird eine `MediaPlayerItem` erstellt.
+   Beim Laden des Medienstreams wird ein `MediaPlayerItem` erstellt.
 
->Tritt ein Fehler auf, wechselt der `MediaPlayer` Status &quot;ERROR&quot;. Sie benachrichtigt Ihre Anwendung auch durch Aufruf Ihres `PlaybackEventListener.onStateChanged`Rückrufs.
+>Tritt ein Fehler auf, wechselt `MediaPlayer` zum ERROR-Status. Sie benachrichtigt Ihre Anwendung auch über Ihren `PlaybackEventListener.onStateChanged`Rückruf.
 >
 >Dadurch werden mehrere Parameter übergeben:
->* Ein `state` Parameter vom Typ `MediaPlayer.PlayerState` mit dem Wert `MediaPlayer.PlayerState.ERROR`.
+>* Ein `state`-Parameter des Typs `MediaPlayer.PlayerState` mit dem Wert `MediaPlayer.PlayerState.ERROR`.
    >
    >
-* Ein `notification` Typparameter, `MediaPlayerNotification` der diagnostische Informationen zum Ereignis &quot;error&quot;enthält.
+* Ein `notification`-Parameter des Typs `MediaPlayerNotification`, der diagnostische Informationen zum Ereignis &quot;error&quot;enthält.
 
 
 Der folgende vereinfachte Beispielcode veranschaulicht den Vorgang zum Laden einer Medienressource:
