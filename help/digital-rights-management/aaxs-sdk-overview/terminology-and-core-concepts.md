@@ -4,6 +4,9 @@ title: Terminologie und Kernkonzepte
 uuid: 89a9e4b0-f5e1-4dc2-9cf8-0c8d7e9b7d62
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '672'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +17,11 @@ In diesem Dokument werden die folgenden Begriffe und Konzepte verwendet:
 
 **Verbraucher**
 
-Der *Verbraucher* ist der Endbenutzer, der Inhalte herunterlädt oder streamt.
+Der *Consumer* ist der Endbenutzer, der Inhalte herunterlädt oder streamt.
 
 **Inhalt**
 
-*Der Inhalt* besteht aus digitalen Audio- oder Videodateien.
+*Inhalt* besteht aus digitalen Audio- oder Videodateien.
 
 **Content Encryption Key**
 
@@ -26,35 +29,35 @@ Der *Content Encryption Key* (CEK) ist ein kryptografischer Schlüssel zum Versc
 
 **Inhalteinhaber**
 
-*Eigentümer* von Inhalten sind die Unternehmen, die Eigentümer des Urheberrechts an den Inhalten sind. Dabei kann es sich um große Filmstudios oder kleinere, unabhängige Produzenten von Filmen oder anderen audiovisuellen Inhalten handeln.
+*Die* Eigentümer von Inhalten sind die Unternehmen, die Eigentümer des Urheberrechts an den Inhalten sind. Dabei kann es sich um große Filmstudios oder kleinere, unabhängige Produzenten von Filmen oder anderen audiovisuellen Inhalten handeln.
 
 **Inhaltspakete**
 
-*Content Packager* sind Organisationen, die Inhalte für die Verwendung mit Adobe Access verpacken. Eigentümer oder Distributoren von Inhalten können sich entscheiden, ihre eigenen Inhalte zu verpacken, oder sie können die Dienste eines Drittanbieters zur Verpackung ihrer Inhalte einladen und diese elektronisch über das Internet verteilen.
+*Content* Packager sind Organisationen, die Inhalte für die Verwendung mit Adobe Access verpacken. Eigentümer oder Distributoren von Inhalten können sich entscheiden, ihre eigenen Inhalte zu verpacken, oder sie können die Dienste eines Drittanbieters zur Verpackung ihrer Inhalte einladen und diese elektronisch über das Internet verteilen.
 
 **Digitales Zertifikat**
 
-*Digitale Zertifikate* (auch als *Zertifikate* bezeichnet) binden eine Entität wie eine Einzelperson, Organisation oder ein System an ein bestimmtes öffentliches und privates Schlüsselpaar. Digitale Zertifikate können als elektronische Anmeldeinformationen betrachtet werden, die die Identität einer Person, eines Systems oder einer Organisation überprüfen.
+*Digitale Zertifikate*  (auch als  *Zertifikate* bezeichnet) binden eine Entität wie eine Einzelperson, Organisation oder ein System an ein bestimmtes öffentliches und privates Schlüsselpaar. Digitale Zertifikate können als elektronische Anmeldeinformationen betrachtet werden, die die Identität einer Person, eines Systems oder einer Organisation überprüfen.
 
 **Digitale Signatur**
 
-Eine *digitale Unterschrift* bindet die Identität des Herausgebers an den veröffentlichten Inhalt und bietet einen Mechanismus zum Erkennen von Manipulationen. Algorithmen für digitale Signaturen verwenden kryptografische Hash-Funktionen und asymmetrische - oder öffentliche/private Schlüsselpaare - Verschlüsselungsalgorithmen. Einige digitale Signaturen nutzen auch digitale Zertifikate und PKI (Public Key Infrastructure), um öffentliche Schlüssel an die Identitäten von Inhabern oder Distributoren von Inhalten zu binden.
+Eine *digitale Signatur* bindet die Identität des Herausgebers an den veröffentlichten Inhalt und stellt einen Mechanismus zur Erkennung von Manipulationen bereit. Algorithmen für digitale Signaturen verwenden kryptografische Hash-Funktionen und asymmetrische - oder öffentliche/private Schlüsselpaare - Verschlüsselungsalgorithmen. Einige digitale Signaturen nutzen auch digitale Zertifikate und PKI (Public Key Infrastructure), um öffentliche Schlüssel an die Identitäten von Inhabern oder Distributoren von Inhalten zu binden.
 
 **Distributor**
 
-*Distributoren* (auch als *Content-Distributoren* oder* Einzelhändler* bezeichnet) sind Geschäftseinheiten, die das Distributionsrecht von den Inhabern von Inhalten für die Veröffentlichung und Verteilung von Inhalten an Verbraucher sicherstellen. In einigen Fällen handelt es sich bei derselben Entität sowohl um den Inhaltseigentümer als auch um den Inhaltsverteiler.
+*Distributoren*  (auch als  *Content* Distributor* Einzelhändler* bezeichnet) sind Unternehmen, die die Vertriebsrechte von Inhaltseigentümern für die Veröffentlichung und Verbreitung von Inhalten an Verbraucher sichern. In einigen Fällen handelt es sich bei derselben Entität sowohl um den Inhaltseigentümer als auch um den Inhaltsverteiler.
 
 **DRM-Metadaten**
 
-Informationen, die der Client (d. h. Adobe® Flash® Player, Adobe® AIR® Runtime und Primetime-Client) sendet, um den angeforderten Inhalt zu identifizieren.
+Informationen, die der Client (d. h. Adobe® Flash® Player, Adobe® AIR® Runtime und Primetime-Client) sendet, um die angeforderten Inhalte zu identifizieren.
 
 **Lizenz**
 
-Eine *Lizenz *ist eine Datenstruktur, die einen verschlüsselten Schlüssel enthält, der zum Entschlüsseln von Inhalten verwendet wird, die mit einer Richtlinie verknüpft sind. Die Lizenz wird von Adobe Access generiert, wenn der Kunde Inhalte anfordert, und ist an den Computer des Verbrauchers gebunden. Mithilfe einer Richtlinie als Referenz definiert die Lizenz die Rechte, die dem Verbraucher, der Inhalte herunterlädt, zur Verfügung stehen. Zur Ansicht von Inhalten muss der Verbraucher eine Lizenz erwerben.
+Eine *Lizenz *ist eine Datenstruktur, die einen verschlüsselten Schlüssel enthält, der zum Entschlüsseln von Inhalten verwendet wird, die mit einer Richtlinie verknüpft sind. Die Lizenz wird durch Adobe Access generiert, wenn der Verbraucher Inhalte anfordert, und ist an den Computer des Verbrauchers gebunden. Mithilfe einer Richtlinie als Referenz definiert die Lizenz die Rechte, die dem Verbraucher, der Inhalte herunterlädt, zur Verfügung stehen. Zur Ansicht von Inhalten muss der Verbraucher eine Lizenz erwerben.
 
 **Lizenzerwerb**
 
-*Lizenzerwerb* ist der Erwerb einer Lizenz, die es dem Verbraucher ermöglicht, geschützte Inhalte gemäß einer Reihe von Nutzungsregeln zu entschlüsseln und zu Ansichten. Die Lizenzerfassung erfolgt, wenn ein Kunde Informationen zur Identifizierung des angeforderten Inhalts (die *DRM-Metadaten*) und das Computerzertifikat (zur Identifizierung des Computers des Verbrauchers) an den Lizenzserver sendet (siehe unten).
+*Der* Erwerb von Lizenzen ist der Erwerb einer Lizenz, die es dem Verbraucher ermöglicht, geschützte Inhalte gemäß einer Reihe von Nutzungsregeln zu entschlüsseln und zu Ansichten. Der Lizenzerwerb erfolgt, wenn ein Client Informationen zur Identifizierung des angeforderten Inhalts (die *DRM-Metadaten*) und des Computerzertifikats (zur Identifizierung des Computers des Verbrauchers) an den Lizenzserver sendet (siehe unten).
 
 **Lizenzserver**
 
@@ -64,13 +67,13 @@ Sie müssen einen Lizenzserver mit dem Adobe Access SDK erstellen und bereitstel
 
 **Politik**
 
-Eine *Richtlinie* ist ein Container für die Nutzungsregeln, die bestimmen, wie Benutzer geschützte Inhalte verwenden können. Richtlinien werden unabhängig von den geschützten Inhalten definiert. Eine Richtlinie erzwingt erst dann Rechte, wenn sie durch die Lizenz an den Inhalt gebunden ist. Eine Richtlinie Liste den Satz von Nutzungsregeln, d. h. die Berechtigungen oder &quot;Rechte&quot;, die Verbraucher für die von ihnen erworbenen Inhalte haben. Beispielsweise können Inhalteinhaber eine Richtlinie erstellen, die sicherstellt, dass geschützte Inhalte nur für einen bestimmten Zeitraum für Verbraucher zugänglich sind. Diese Richtlinie wird dann auf alle Inhalte angewendet, für die der Inhaltseigentümer diese Beschränkung erzwingen möchte.
+Eine *Richtlinie* ist ein Container für die Nutzungsregeln, die bestimmen, wie Benutzer geschützte Inhalte verwenden können. Richtlinien werden unabhängig von den geschützten Inhalten definiert. Eine Richtlinie erzwingt erst dann Rechte, wenn sie durch die Lizenz an den Inhalt gebunden ist. Eine Richtlinie Liste den Satz von Nutzungsregeln, d. h. die Berechtigungen oder &quot;Rechte&quot;, die Verbraucher für die von ihnen erworbenen Inhalte haben. Beispielsweise können Inhaltsinhaber eine Richtlinie erstellen, die sicherstellt, dass geschützte Inhalte nur für einen bestimmten Zeitraum für Verbraucher zugänglich sind. Diese Richtlinie wird dann auf alle Inhalte angewendet, für die der Inhaltseigentümer diese Beschränkung erzwingen möchte.
 
 Richtlinien werden mit dem Adobe Access SDK erstellt.
 
 **Geschützte Inhalte**
 
-*Geschützte Inhalte* (auch als *verpackte Inhalte* bezeichnet) beziehen sich auf FLV- und F4V-Videoinhalte, die mit dem Adobe Access SDK oder anderen unterstützten Werkzeugen verschlüsselt wurden.
+*Geschützte Inhalte*  (auch als  *verpackte Inhalte* bezeichnet) beziehen sich auf FLV- und F4V-Videoinhalte, die mit dem Adobe Access SDK oder anderen unterstützten Werkzeugen verschlüsselt wurden.
 
 **Einzelhändler**
 
