@@ -6,17 +6,20 @@ title: Trennen des klickbaren Anzeigenprozesses
 uuid: 00537191-8997-418d-add2-8e86d818c76e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '175'
+ht-degree: 0%
 
 ---
 
 
-# Trennen des klickbaren Anzeigenprozesses{#separate-the-clickable-ad-process}
+# Trennen Sie den klickbaren Anzeigenprozess{#separate-the-clickable-ad-process}
 
 Sie sollten die Logik der Benutzeroberfläche Ihres Players von dem Prozess trennen, der die Verwaltung von Anzeigenklicks ausführt. Eine Möglichkeit dazu besteht darin, mehrere Fragmente für eine Aktivität zu implementieren.
 
-1. Implementieren Sie ein Fragment, das die Variable enthält `MediaPlayer` und für die Videowiedergabe verantwortlich ist.
+1. Implementieren Sie ein Fragment, das das `MediaPlayer` enthält und für die Videowiedergabe verantwortlich ist.
 
-   Dieses Fragment sollte aufgerufen werden `notifyClick`.
+   Dieses Fragment sollte `notifyClick` aufrufen.
 
    ```java
    public class PlayerFragment extends SherlockFragment { 
@@ -28,7 +31,7 @@ Sie sollten die Logik der Benutzeroberfläche Ihres Players von dem Prozess tren
    } 
    ```
 
-1. Implementieren Sie ein anderes Fragment, um ein UI-Element anzuzeigen, das anzeigt, dass eine Anzeige anklickbar ist, überwachen Sie dieses UI-Element und teilen Sie dem Fragment, das das Fragment enthält, die Benutzerklicks mit `MediaPlayer`.
+1. Implementieren Sie ein anderes Fragment, um ein UI-Element anzuzeigen, das anzeigt, dass eine Anzeige anklickbar ist, überwachen Sie dieses UI-Element und teilen Sie dem Fragment mit, das das `MediaPlayer` enthält.
 
    Dieses Fragment sollte eine Schnittstelle für die Fragmentkommunikation deklarieren. Das Fragment erfasst die Implementierung der Schnittstelle während der onAttach-Lebenszyklusmethode und kann die Schnittstellenmethoden aufrufen, um mit der Aktivität zu kommunizieren.
 
