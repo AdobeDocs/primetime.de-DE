@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # DRM-Lizenzgenerator {#license-generator}
 
-Verwenden Sie [!DNL AdobeLicenseGenerator.jar] zum Generieren von Lizenzen, ohne dass der Client eine Lizenzanforderung an einen Server senden muss. Anschließend können Sie eine vorab generierte Lizenz in den Inhalt einbetten oder die Lizenz über andere Mechanismen, wie einen einfachen HTTP-Webserver, an den Client senden.
+Verwenden Sie [!DNL AdobeLicenseGenerator.jar], um Lizenzen zu generieren, ohne dass der Client eine Lizenzanforderung an einen Server senden muss. Anschließend können Sie eine vorab generierte Lizenz in den Inhalt einbetten oder die Lizenz über andere Mechanismen, wie einen einfachen HTTP-Webserver, an den Client senden.
 
 ## Befehlszeilenverwendung von License Generator {#license-generator-command-line-usage}
 
@@ -31,7 +31,7 @@ java -jar AdobeLicenseGenerator.jar -m
 
 * `metadata` - Enthält die Adobe Primetime DRM-Metadaten.
 
-   Sie können diese Datei mit den `-d -m` Optionen im Media Packager aus geschützten Inhalten abrufen.
+   Sie können diese Datei mit den Optionen `-d -m` im Media Packager aus geschützten Inhalten abrufen.
 
 **Anzeigen einer zuvor erstellten Lizenz:**
 
@@ -56,7 +56,7 @@ java -jar AdobeLicenseGenerator.jar -d
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c configfile</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt den Namen und den Speicherort der Konfigurationsdatei an. </p> <p class="- topic/p ">Wenn Sie keinen Namen oder Speicherort angeben, sucht der DRM-Lizenzgenerator im aktuellen Arbeitsverzeichnis nach <span class="filepath"> flashaccessStols.properties</span> . </p> <p>Hinweis:  Die Optionen, die Sie in der Befehlszeile angeben, haben Vorrang vor den Optionen, die Sie in der Konfigurationsdatei angeben. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt den Namen und den Speicherort der Konfigurationsdatei an. </p> <p class="- topic/p ">Wenn Sie keinen Namen oder Speicherort angeben, sucht der DRM-Lizenzgenerator im aktuellen Arbeitsverzeichnis nach <span class="filepath"> flashaccessStols.properties</span>. </p> <p>Hinweis:  Die Optionen, die Sie in der Befehlszeile angeben, haben Vorrang vor den Optionen, die Sie in der Konfigurationsdatei angeben. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <i class="+ topic/ph hi-d/i "><span class="+ topic/ph pr-d/codeph codeph"> licensefile</span></i> </p> </td> 
@@ -72,7 +72,7 @@ java -jar AdobeLicenseGenerator.jar -d
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
-   <td colname="2" class="- topic/entry ">Fragen Sie nicht, ob die Zieldatei überschrieben werden soll. Wenn die Zieldatei bereits vorhanden ist und der Wert <span class="codeph"> -o</span> nicht eingestellt wurde, tritt ein Fehler auf. </td> 
+   <td colname="2" class="- topic/entry ">Fragen Sie nicht, ob die Zieldatei überschrieben werden soll. Wenn die Zieldatei bereits vorhanden ist und <span class="codeph"> -o</span> nicht eingestellt wurde, tritt ein Fehler auf. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -o</span> </td> 
@@ -84,7 +84,7 @@ java -jar AdobeLicenseGenerator.jar -d
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-r Empfänger-cert</span> </td> 
-   <td colname="2" class="- topic/entry ">Erstellt eine Lizenz für einen bestimmten Empfänger. Sie können ein Geräte- oder Domänenzertifikat verwenden und mehrere <span class="+ topic/ph pr-d/codeph codeph"> -r- </span>Optionen angeben, um eine Lizenz für mehrere Empfänger zu erstellen. </td> 
+   <td colname="2" class="- topic/entry ">Erstellt eine Lizenz für einen bestimmten Empfänger. Sie können ein Geräte- oder Domänenzertifikat verwenden und mehrere <span class="+ topic/ph pr-d/codeph codeph"> -r </span>Optionen angeben, um eine Lizenz für mehrere Empfänger zu erstellen. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-root root root-filename</span> </td> 
@@ -111,7 +111,7 @@ Bevor Sie License Generator ausführen, müssen Sie Werte für die Eigenschaften
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.minClientVersion</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Legt die derzeit unterstützte Mindestversion des Clients fest. Wenn Sie diese Eigenschaft nicht festlegen, werden alle Versionen standardmäßig automatisch unterstützt. </p> <p>Sie können diesen Wert festlegen, um zu steuern, wie ältere Clients auf die Lizenzanforderungen reagieren, die sie nicht unterstützen. Geben Sie <span class="codeph"> x</span> (für Adobe Primetime DRM x.0) an, wobei <span class="codeph"> x</span> eine größere Versionsnummer darstellt. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Legt die derzeit unterstützte Mindestversion des Clients fest. Wenn Sie diese Eigenschaft nicht festlegen, werden alle Versionen standardmäßig automatisch unterstützt. </p> <p>Sie können diesen Wert festlegen, um zu steuern, wie ältere Clients auf die Lizenzanforderungen reagieren, die sie nicht unterstützen. Geben Sie <span class="codeph"> x</span> (für Adobe Primetime DRM x.0) an, wobei <span class="codeph"> x</span> eine Hauptveröffentlichungsnummer darstellt. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licensegen.keyServerCert</span> </td> 
@@ -127,19 +127,19 @@ Bevor Sie License Generator ausführen, müssen Sie Werte für die Eigenschaften
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licensegen.domainca.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Wenn Sie domänengebundene Lizenzen generieren, müssen Sie ein oder mehrere CA-Domänenzertifikate angeben, um die Domänenbehörden anzugeben, denen der Lizenzaussteller vertrauen kann. </p> <p>Wenn der Empfänger ein Domänenzertifikat ist, das nicht von einem der angegebenen Domänenzertifikate ausgestellt wurde, kann keine Lizenz generiert werden. Diese Eigenschaft gibt eine <span class="filepath"> .cer</span> -Datei an, die das Zertifikat im PEM- oder DER DER-Format enthält. <span class="codeph">n</span> muss monotonisch erhöht werden, beginnend mit 1. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Wenn Sie domänengebundene Lizenzen generieren, müssen Sie ein oder mehrere CA-Domänenzertifikate angeben, um die Domänenbehörden anzugeben, denen der Lizenzaussteller vertrauen kann. </p> <p>Wenn der Empfänger ein Domänenzertifikat ist, das nicht von einem der angegebenen Domänenzertifikate ausgestellt wurde, kann keine Lizenz generiert werden. Diese Eigenschaft gibt eine <span class="filepath"> .cer</span>-Datei an, die das Zertifikat im PEM- oder DER DER-Format enthält. <span class="codeph">Es </span> muss monotonisch erhöht werden, beginnend mit 1. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
     <code>licensegen.keys.asymmetric. licenseServerCredential.n</code>
    </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Optionale PKCS12-Datei, die zusätzliche Lizenzserver-Anmeldeinformationen zum Entschlüsseln des CEK in den Metadaten- und DRM-Richtlinien enthält. Sie können zusätzliche Berechtigungen konfigurieren, wenn Inhalte zuvor mit einem Lizenzserver-Zertifikat gepackt wurden, das nicht mit den mit <span class="codeph"> licensegen.sign.certfile</span>angegebenen Anmeldeinformationen identisch ist. Diese Eigenschaft muss auf eine <span class="filepath"> .pfx</span> -Datei verweisen, die ein Zertifikat und einen privaten Schlüssel enthält. <span class="codeph">n</span> muss monotonisch erhöht werden, beginnend mit 1. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Optionale PKCS12-Datei, die zusätzliche Lizenzserver-Anmeldeinformationen zum Entschlüsseln des CEK in den Metadaten- und DRM-Richtlinien enthält. Sie können zusätzliche Berechtigungen konfigurieren, wenn Inhalte zuvor mit einem Lizenzserver-Zertifikat gepackt wurden, das nicht mit <span class="codeph"> licensegen.sign.certfile</span> angegeben wurde. Diese Eigenschaft muss auf eine <span class="filepath"> .pfx</span>-Datei verweisen, die ein Zertifikat und einen privaten Schlüssel enthält. <span class="codeph">Es </span> muss monotonisch erhöht werden, beginnend mit 1. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
     <code>licensegen.keys.asymmetric. licenseServerCredential.n.password</code>
    </td> 
-   <td colname="2" class="- topic/entry "> <p>Das Kennwort wird angewendet, um die Datei zu schützen, die Sie mit der<span class="+ topic/ph pr-d/codeph codeph"> Eigenschaft licensegen.keys.asymmetric.licenseServerCredential.n</span> angegeben haben. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Das Kennwort wird angewendet, um die Datei zu schützen, die Sie mit der Eigenschaft<span class="+ topic/ph pr-d/codeph codeph"> licensegen.keys.asymmetric.licenseServerCredential.n</span> angegeben haben. </p> </td> 
   </tr> 
  </tbody> 
 </table>
