@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Anzeigen einfügen {#insert-ads}
+# Anzeigen {#insert-ads} einfügen
 
 Mit der Anzeigeneinfügung werden Anzeigen für Video-on-Demand (VOD), für Live-Streaming und für lineares Streaming mit Anzeigenverfolgung und Anzeigenwiedergabe aufgelöst. TVSDK stellt die erforderlichen Anforderungen an den Anzeigen-Server, empfängt Informationen über Anzeigen für den angegebenen Inhalt und platziert die Anzeigen in den Inhalten in Phasen.
 
-Eine *`ad break`* enthält eine oder mehrere Anzeigen, die nacheinander abgespielt werden. TVSDK fügt Anzeigen in den Hauptinhalt als Mitglieder einer oder mehrerer Werbeunterbrechungen ein.
+Ein *`ad break`* enthält eine oder mehrere Anzeigen, die nacheinander abgespielt werden. TVSDK fügt Anzeigen in den Hauptinhalt als Mitglieder einer oder mehrerer Werbeunterbrechungen ein.
 
 >[!TIP]
 >
@@ -47,21 +47,21 @@ TVSDK löst die Anzeigen und fügt sie ein, wenn ein Cue-Point im Live- oder lin
 * # EXT-X-CUE
 * # EXT-X-CUE-OUT
 
-Diese Markierungen erfordern die eindeutige ID des Metadatenfelds `DURATION` in Sekunden. Beispiel:
+Diese Markierungen erfordern die Angabe `DURATION` des Metadatenfelds in Sekunden und die eindeutige ID des Cue-Points. Beispiel:
 
 ```
 #EXT-X-CUE DURATION=27 ID=identiferForThisCue ... 
 ```
 
-Weitere Informationen zu zusätzlichen Hinweisen finden Sie unter [Abonnieren von benutzerdefinierten Tags](../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-subscribe.md).
+Weitere Informationen zu zusätzlichen Hinweisen finden Sie unter [Benutzerdefinierte Tags abonnieren](../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-subscribe.md).
 
-## Client-Anzeige verfolgen {#section_12355C7A35F14C15A2A18AAC90FEC2F5}
+## Tracking-Client-Anzeige {#section_12355C7A35F14C15A2A18AAC90FEC2F5}
 
 TVSDK verfolgt automatisch Anzeigen für VOD und live/linear Streaming.
 
 Benachrichtigungen werden verwendet, um Ihre Anwendung über den Fortschritt einer Anzeige zu informieren, einschließlich Informationen darüber, wann eine Anzeige beginnt und wann sie endet.
 
-## Implementieren einer Rückgabe einer frühen Werbeunterbrechung {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
+## Implementieren eines Zeilenumbruchs für eine frühe Werbeunterbrechung {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
 
 Beim Einfügen von Livestream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
 
@@ -74,7 +74,7 @@ Im Folgenden finden Sie einige Beispiele für eine Rückkehr zu einer frühen We
 
 Die Möglichkeit, eine Werbeunterbrechung frühzeitig zu beenden, wird durch ein benutzerdefiniertes Tag im Manifest, das als SLICE-In- oder Cue-In-Tag bezeichnet wird, identifiziert. TVSDK ermöglicht es der Anwendung, diese SLICE-in-Tags zu abonnieren, um eine SLICE-Gelegenheit zu bieten.
 
-* So verwenden Sie das `#EXT-X-CUE-IN` -Tag als Gelegenheit zum Einspalten und implementieren eine Zeilenumbruchrückgabe für eine frühe Werbeunterbrechung:
+* So verwenden Sie das `#EXT-X-CUE-IN`-Tag als Gelegenheit zum Einteilen und implementieren eine frühe Werbeunterbrechung:
 
    1. Abonnieren Sie das Tag.
 
@@ -94,11 +94,11 @@ Die Möglichkeit, eine Werbeunterbrechung frühzeitig zu beenden, wird durch ein
 
 * So geben Sie das gleiche Tag für das Splice-out und das Splice-In frei:
 
-1. Wenn die Anwendung denselben Cue-Point verwendet, um Cue-out/SLICout und Cue-In/SLICE-In anzugeben, erweitern `PTDefaultAdOpportunityResolver` und implementieren Sie die `preparePlacementOpportunity` Methode.
+1. Wenn die Anwendung denselben Cue-Point verwendet, um Cue-out/Splice-out und Cue-In/SLICE-In anzugeben, erweitern Sie `PTDefaultAdOpportunityResolver` und implementieren Sie die `preparePlacementOpportunity`-Methode.
 
    >[!TIP]
    >
-   >Im folgenden Code wird davon ausgegangen, dass die App über eine Implementierung für die `isCueInOpportunity` Methode verfügt.
+   >Im folgenden Code wird davon ausgegangen, dass die App über eine Implementierung für die `isCueInOpportunity`-Methode verfügt.
 
    ```
    - (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
@@ -114,7 +114,7 @@ Die Möglichkeit, eine Werbeunterbrechung frühzeitig zu beenden, wird durch ein
    }
    ```
 
-1. Registrieren Sie den Resolver für erweiterte Möglichkeiten auf der `PTDefaultMediaPlayerClientFactory` Instanz.
+1. Registrieren Sie den erweiterten Opportunitätsauflöser für die `PTDefaultMediaPlayerClientFactory`-Instanz.
 
 ```
    // self.player is the PTMediaPlayer instance created for content and ad playback 
