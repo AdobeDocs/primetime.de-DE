@@ -6,27 +6,30 @@ title: Antworten auf Klicks auf Anzeigen
 uuid: abc5de2f-3ab0-4e00-908c-ea8b31387d4f
 translation-type: tm+mt
 source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
 
-# Antworten auf Klicks auf Anzeigen {#respond-to-clicks-on-ads}
+# Antworten Sie auf Klicks auf Anzeigen {#respond-to-clicks-on-ads}
 
 TVSDK stellt Informationen bereit, damit Sie Clickthrough-Anzeigen bearbeiten können. Beim Erstellen der Player-Benutzeroberfläche müssen Sie entscheiden, wie Sie reagieren, wenn ein Benutzer auf eine anklickbare Anzeige klickt.
 
 Für TVSDK für Android können nur lineare Anzeigen angeklickt werden.
 Wenn ein Benutzer auf eine Anzeige oder eine zugehörige Schaltfläche klickt, muss Ihre Anwendung reagieren. TVSDK liefert Informationen zur Ziel-URL für den Klick.
 
-1. Um einen Ereignis-Listener für TVSDK einzurichten und die Clickthrough-Informationen bereitzustellen, registrieren Sie sich `AdClickedEventListener.onAdClicked`.
+1. Um einen Ereignis-Listener für TVSDK einzurichten und die Clickthrough-Informationen bereitzustellen, registrieren Sie `AdClickedEventListener.onAdClicked`.
 
    Wenn ein Benutzer auf eine Anzeige oder eine zugehörige Schaltfläche klickt, sendet TVSDK diese Benachrichtigung, einschließlich Informationen zum Ziel des Klicks.
 1. Überwachen Sie Benutzerinteraktionen auf klickbaren Anzeigen.
-1. Wenn der Benutzer die Anzeige oder Schaltfläche berührt oder anklickt, um TVSDK zu benachrichtigen, rufen Sie `notifyClick` die `MediaPlayerView`.
-1. Hören Sie auf das `onAdClick(AdClickEvent event)` Ereignis von TVSDK.
-1. Verwenden Sie zum Abrufen der Clickthrough-URL und der zugehörigen Informationen die Getter-Methoden für die `AdClickEvent` Instanz.
+1. Wenn der Benutzer die Anzeige oder Schaltfläche berührt oder klickt, um TVSDK zu benachrichtigen, rufen Sie `notifyClick` auf dem `MediaPlayerView` auf.
+1. Suchen Sie nach dem Ereignis `onAdClick(AdClickEvent event)` von TVSDK.
+1. Verwenden Sie zum Abrufen der Clickthrough-URL und der zugehörigen Informationen die Getter-Methoden für die `AdClickEvent`-Instanz.
 1. Halten Sie das Video an.
 
-   Weitere Informationen zum Anhalten des Videos finden Sie unter [Anhalten und Wiederaufnehmen der Wiedergabe](../../ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md).
+   Weitere Informationen zum Anhalten des Videos finden Sie unter [Wiedergabe anhalten und fortsetzen](../../ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md).
 1. Verwenden Sie die Clickthrough-Informationen, um die Anzeigen-Clickthrough-URL und die zugehörigen Informationen anzuzeigen. Sie können die Informationen beispielsweise auf eine der folgenden Arten anzeigen:
 
    * Öffnen Sie in Ihrer Anwendung die Clickthrough-URL in einem Browser.
