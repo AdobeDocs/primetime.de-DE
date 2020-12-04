@@ -6,11 +6,14 @@ title: Werbeunterbrechungen für einen Zeitraum überspringen
 uuid: f07d838b-3c1d-4cea-a3aa-dba33964ac81
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '223'
+ht-degree: 0%
 
 ---
 
 
-# Werbeunterbrechungen für einen Zeitraum überspringen {#skip-ad-breaks-for-a-period-of-time}
+# Werbeunterbrechungen für einen Zeitraum {#skip-ad-breaks-for-a-period-of-time} überspringen
 
 Standardmäßig erzwingt TVSDK die Wiedergabe einer Werbeunterbrechung, wenn der Benutzer über eine Werbeunterbrechung sucht. Sie können das Verhalten anpassen, um einen Werbeunterbrechung zu überspringen, wenn der Zeitraum, der nach dem Abschluss eines vorherigen Umbruchs abgelaufen ist, innerhalb einer bestimmten Anzahl von Minuten liegt.
 
