@@ -4,32 +4,35 @@ title: Zertifikatregistrierungsrollen
 uuid: 100776c2-6622-4b94-bc9b-5d4a04fd3260
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
 
 ---
 
 
-# Zertifikatregistrierungsrollen {#about-certificate-enrollment-roles}
+# Grundlagen zu Zertifikatregistrierungsrollen {#about-certificate-enrollment-roles}
 
-Für die Zertifikatsanmeldung sind mindestens zwei Mitarbeiter erforderlich: Administrator und Requester. Der Primetime DRM SDK-Lizenznehmer ernennt einen Kontoadministrator. Es kann nur einen Kontoadministrator geben. Der Kontoadministrator kann einen sekundären Administrator bestimmen.
+Für die Zertifikatsanmeldung sind mindestens zwei Mitarbeiter erforderlich: Administrator und Requester. Der Primetime DRM SDK-Lizenznehmer ernennt einen Kontoadministrator. Es kann nur einen Kontoadministrator geben. Der Kontoadministrator kann einen Sekundär Administrator bestimmen.
 
-Administratoren können bis zu fünf Antragsteller benennen. Anforderer sind Mitarbeiter Ihrer Firma, die Zertifikate anfordern und bereitstellen. Administratoren genehmigen die Zertifikatanforderungen. Jedes Adobe-ID-Konto kann nur eine Rolle haben.
+Administratoren können bis zu fünf Antragsteller benennen. Anforderer sind Mitarbeiter Ihrer Firma, die Zertifikate anfordern und bereitstellen. Administratoren genehmigen die Zertifikatanforderungen. Jedes Adobe ID-Konto kann nur eine Rolle haben.
 
 Die folgenden Fähigkeiten stehen für jede Rolle zur Verfügung:
 
 * Kontoadministrator
 
    * Ein Kontoadministrator pro Lizenz
-   * Hinzufügen
-   * Hinzufügen eines Sekundäradministrators
+   * hinzufügen
+   * Sekundär Administrator Hinzufügen
    * Bearbeiten Sie die Telefoninformationen und den Challenge-Satz der anfordernden Firma.
-   * Anforderer und sekundäre Administratoren entfernen
+   * Anforderer und Sekundär Administratoren entfernen
    * Zertifikatanfragen genehmigen oder ablehnen
    * Ausgestellte Bescheinigungen widerrufen
 
-* Sekundärer Administrator
+* Sekundär Administrator
 
-   * Ein sekundärer Administrator pro Lizenz
-   * Hinzufügen
+   * Ein Sekundär Administrator pro Lizenz
+   * hinzufügen
    * Bearbeiten Sie die Telefoninformationen und den Challenge-Satz der anfordernden Firma.
    * Anfordern entfernen
    * Zertifikatanfragen genehmigen oder ablehnen
