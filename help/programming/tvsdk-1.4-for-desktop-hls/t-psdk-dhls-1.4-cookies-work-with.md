@@ -6,6 +6,9 @@ title: Mit Cookies arbeiten
 uuid: 7586a5a7-9914-403b-86a9-fbdd28664b07
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '256'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Hier ein Beispiel mit einer Art Authentifizierung bei Anforderungen an den Schl�
 
 So arbeiten Sie mit Cookies:
 
-1. Setzen Sie mithilfe der `cookieHeaders` Eigenschaft in ein Cookie `NetworkConfiguration` . Die `cookieHeaders` Eigenschaft ist ein Metadatenobjekt. Sie können diesem Objekt Schlüsselwertpaare hinzufügen, die in die Cookie-Kopfzeile eingefügt werden sollen.
+1. Verwenden Sie die Eigenschaft `cookieHeaders` in `NetworkConfiguration`, um ein Cookie zu setzen. Die `cookieHeaders`-Eigenschaft ist ein Metadatenobjekt. Sie können diesem Objekt Schlüsselwertpaare hinzufügen, die in die Cookie-Kopfzeile eingefügt werden sollen.
 
    Beispiel:
 
@@ -35,9 +38,9 @@ So arbeiten Sie mit Cookies:
    networkConfiguration.cookieHeaders = metadata;
    ```
 
-   Standardmäßig werden Cookie-Kopfzeilen nur mit Schlüsselanforderungen gesendet. Um Cookie-Kopfzeilen mit allen Anforderungen zu senden, setzen Sie die `NetworkConfiguration` Eigenschaft `useCookieHeadersForAllRequests` auf true.
+   Standardmäßig werden Cookie-Kopfzeilen nur mit Schlüsselanforderungen gesendet. Um Cookie-Kopfzeilen mit allen Anforderungen zu senden, setzen Sie die `NetworkConfiguration`-Eigenschaft `useCookieHeadersForAllRequests` auf true.
 
-1. Um sicherzustellen, dass das `NetworkConfiguration` funktioniert, legen Sie es als Metadaten fest:
+1. Um sicherzustellen, dass `NetworkConfiguration` funktioniert, legen Sie es als Metadaten fest:
 
    ```
    var networkConfiguration:NetworkConfiguration = new NetworkConfiguration(); 
@@ -47,9 +50,9 @@ So arbeiten Sie mit Cookies:
                                 networkConfiguration);
    ```
 
-1. Geben Sie die Metadaten aus dem vorherigen Schritt an, wenn Sie eine `MediaResource`erstellen.
+1. Geben Sie die Metadaten aus dem vorherigen Schritt an, wenn Sie ein `MediaResource` erstellen.
 
-   Wenn Sie beispielsweise die `createFromURL` Methode verwenden, geben Sie die folgenden Informationen ein:
+   Wenn Sie beispielsweise die `createFromURL`-Methode verwenden, geben Sie die folgenden Informationen ein:
 
    ```
    var resource:MediaResource = MediaResource.createFromURL(url, resourceMetadata);
