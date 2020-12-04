@@ -4,16 +4,19 @@ title: Richtlinien mit der Java-API erstellen
 uuid: c653548d-4abf-46b9-8669-d68b966da359
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
 
-# Richtlinien mit der Java-API erstellen {#creating-a-policy-using-the-java-api}
+# Richtlinien mit der Java-API {#creating-a-policy-using-the-java-api} erstellen
 
 So erstellen Sie eine Richtlinie mithilfe der Java-API:
 
-1. Richten Sie Ihre Development-Umgebung ein und fügen Sie alle JAR-Dateien ein, die unter Einrichten der Development-Umgebung [](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) in Ihrem Projekt erwähnt werden.
-1. Erstellen Sie ein `com.adobe.flashaccess.sdk.policy.Policy` Objekt und geben Sie dessen Eigenschaften an, z. B. die Rechte, die Cachedauer für Lizenzen und das Enddatum der Richtlinie.
+1. Richten Sie Ihre Development-Umgebung ein und fügen Sie alle JAR-Dateien ein, die unter [Einrichten der Development-Umgebung](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) in Ihrem Projekt erwähnt werden.
+1. Erstellen Sie ein `com.adobe.flashaccess.sdk.policy.Policy`-Objekt und geben Sie dessen Eigenschaften an, z. B. die Rechte, die Dauer der Lizenzzwischenspeicherung und das Enddatum der Richtlinie.
 
    ```java
      // Create a new Policy object.  
@@ -49,7 +52,7 @@ So erstellen Sie eine Richtlinie mithilfe der Java-API:
      }
    ```
 
-1. Serialisieren Sie das `Policy` Objekt und speichern Sie es in einer Datei oder Datenbank.
+1. Serialisieren Sie das `Policy`-Objekt und speichern Sie es in einer Datei oder Datenbank.
 
    ```java
      // Serialize the policy  
@@ -63,4 +66,4 @@ So erstellen Sie eine Richtlinie mithilfe der Java-API:
      out.close();
    ```
 
-Die vollständige Quelle für diesen Beispielcode finden Sie unter *com.adobe.flashaccess.samples.policy.CreatePolicy* im Ordner &quot;Tools für Implementierungsbefehlslinien- [!DNL samples]&quot;der Referenz.
+Die vollständige Quelle dieses Beispielcodes finden Sie unter *com.adobe.flashaccess.samples.policy.CreatePolicy* im Ordner &quot;Referenz-Implementierungsbefehls-Linientools &quot;[!DNL samples]&quot;.
