@@ -6,11 +6,14 @@ title: Client-Anzeige verfolgen
 uuid: 1c239ddf-3414-49b9-83ae-dcfcb0c4e283
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '61'
+ht-degree: 0%
 
 ---
 
 
-# Client-Anzeige verfolgen {#track-client-ad}
+# Tracking-Client-Anzeige {#track-client-ad}
 
 TVSDK verfolgt automatisch Anzeigen für VOD und live/linear Streaming.
 
