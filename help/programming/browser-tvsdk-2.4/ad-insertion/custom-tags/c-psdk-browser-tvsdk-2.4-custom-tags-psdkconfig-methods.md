@@ -6,6 +6,9 @@ title: Methoden der Config-Klasse für Tags
 uuid: 222a0349-58d5-4bf3-9d03-e5920610faf5
 translation-type: tm+mt
 source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +17,13 @@ source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
 
 Mit der MediaPlayerItemConfig-Klasse können Sie benutzerdefinierte Tag-Namen in einem Stream konfigurieren.
 
-To create a new `MediaPlayerItemConfig`:
+So erstellen Sie ein neues `MediaPlayerItemConfig`:
 
 ```js
 var mediaPlayerItemConfig = new AdobePSDK.MediPlayerItemConfig();
 ```
 
-Im Folgenden finden Sie einige Informationen darüber, wie die `MediaPlayerItemConfig` Methoden zum Verwalten benutzerdefinierter Tags verwendet werden:
+Im Folgenden finden Sie einige Informationen darüber, wie die `MediaPlayerItemConfig`-Methoden zum Verwalten benutzerdefinierter Tags verwendet werden:
 
 <table id="table_0AC0973497144DDAB05726E3F031ACD1"> 
  <tbody> 
@@ -40,10 +43,10 @@ Im Folgenden finden Sie einige Informationen darüber, wie die `MediaPlayerItemC
     <code class="syntax javascript">
       var&nbsp;subscribeTags&nbsp;=&nbsp;["#EXT-X-PROGRAM-DATE-TIME"];mediaPlayerItemConfig.subscribeTags&nbsp;=&nbsp;subscribeTags;
     </code> </td> 
-   <td colname="col2"> <p>Legt die Liste der abonnierten Tags fest, die der Anwendung angezeigt werden. </p> <p>Ihre Anwendung wird auch automatisch für alle Tags abonniert, die über <span class="codeph"> AdTags übertragen werden </span>. </p> </td> 
+   <td colname="col2"> <p>Legt die Liste der abonnierten Tags fest, die der Anwendung angezeigt werden. </p> <p>Ihre Anwendung wird auch automatisch für alle Tags abonniert, die über <span class="codeph"> adTags </span> übertragen werden. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <b>Anpassen der vom Standard-Opportunitätsdetektor verwendeten Anzeigen-Tags </b> </td> 
+   <td colname="col1"> <b>Anpassen der vom Standard-Opportunitätsdetektor verwendeten Anzeigen-Tags  </b> </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
@@ -65,9 +68,9 @@ Im Folgenden finden Sie einige Informationen darüber, wie die `MediaPlayerItemC
 
 Beachten Sie Folgendes:
 
-* Der benutzerdefinierte Tag-Name muss das `#` Präfix enthalten.
+* Der benutzerdefinierte Tag-Name muss das Präfix `#` enthalten.
 
-   Beispielsweise `#EXT-X-ASSET` ist ein korrekter benutzerdefinierter Tag-Name, aber `EXT-X-ASSET` falsch.
+   `#EXT-X-ASSET` ist beispielsweise ein korrekter benutzerdefinierter Tag-Name, `EXT-X-ASSET` ist jedoch nicht korrekt.
 
 * Sie können die Konfiguration nach dem Laden des Medienstreams nicht mehr ändern.
 
