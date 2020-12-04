@@ -6,6 +6,9 @@ title: Auflösen und Einfügen einer Live-/linearen Anzeige
 uuid: c9d54fc9-1d54-41c3-a872-d27afdd16314
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '291'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ TVSDK fügt Anzeigen wie folgt ein:
 * **Pre-Roll**, der vor dem Inhalt platziert wird.
 * **Mid-Roll**, der in der Mitte des Inhalts platziert wird.
 
-TVSDK akzeptiert die Werbeunterbrechung, selbst wenn die Dauer länger oder kürzer als die Cue-Point-Ersetzungsdauer ist. TVSDK unterstützt den `#EXT-X-CUE` Cue-Point standardmäßig als gültige Anzeigenmarke beim Auflösen und Platzieren von Anzeigen. Für diese Markierung müssen der Metadatenfeldwert in Sekunden und die eindeutige ID des Cue- `DURATION` Cue-Points angegeben werden. Beispiel:
+TVSDK akzeptiert die Werbeunterbrechung, selbst wenn die Dauer länger oder kürzer als die Cue-Point-Ersetzungsdauer ist. TVSDK unterstützt standardmäßig das `#EXT-X-CUE`-Cue als gültige Anzeigenmarke beim Auflösen und Platzieren von Anzeigen. Für diese Markierung müssen das Metadatenfeld `DURATION` in Sekunden und die eindeutige ID des Cue-Points angegeben werden. Beispiel:
 
 ```
 #EXT-X-CUE:DURATION=27,ID="..."
@@ -29,4 +32,4 @@ TVSDK akzeptiert die Werbeunterbrechung, selbst wenn die Dauer länger oder kür
 
 Sie können zusätzliche Hinweise (Tags) definieren und abonnieren.
 
-Nach Beginn der Wiedergabe aktualisiert die Video-Engine die Manifestdatei in regelmäßigen Abständen. TVSDK löst alle neuen Anzeigen und fügt die Anzeigen ein, wenn ein Cue-Point im Live- oder linearen Stream gefunden wird, der im Manifest definiert wurde. Nachdem Anzeigen aufgelöst und eingefügt wurden, berechnet TVSDK die virtuelle Zeitleiste erneut und löst ein `TimelineItemsUpdatedEventListener.onTimelineUpdated` Ereignis aus.
+Nach Beginn der Wiedergabe aktualisiert die Video-Engine die Manifestdatei in regelmäßigen Abständen. TVSDK löst alle neuen Anzeigen und fügt die Anzeigen ein, wenn ein Cue-Point im Live- oder linearen Stream gefunden wird, der im Manifest definiert wurde. Nachdem Anzeigen aufgelöst und eingefügt wurden, berechnet TVSDK die virtuelle Zeitleiste erneut und löst ein `TimelineItemsUpdatedEventListener.onTimelineUpdated`-Ereignis aus.
