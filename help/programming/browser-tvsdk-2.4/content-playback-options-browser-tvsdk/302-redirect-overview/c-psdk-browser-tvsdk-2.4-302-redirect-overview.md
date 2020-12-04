@@ -6,6 +6,9 @@ title: HTTP 302 Umleitungsoptimierung
 uuid: d3009c6c-320a-4c0f-b6ba-bf6473049823
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '169'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +21,7 @@ Wenn eine Hauptmanifestanforderung umgeleitet wird und die 302-Optimierung im Pl
 
 >[!IMPORTANT]
 >
->Diese Funktion wird nur in zertifizierten Browsern unterstützt, die die `responseURL` Eigenschaft im `XMLHttpRequest` Objekt unterstützen.
+>Diese Funktion wird nur in zertifizierten Browsern unterstützt, die die `responseURL`-Eigenschaft im `XMLHttpRequest`-Objekt unterstützen.
 
 Beachten Sie für Flash-Fallback die folgenden Informationen:
 
