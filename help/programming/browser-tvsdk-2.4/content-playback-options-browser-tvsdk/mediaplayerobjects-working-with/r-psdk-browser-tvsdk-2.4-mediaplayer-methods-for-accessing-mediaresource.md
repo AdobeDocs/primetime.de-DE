@@ -28,50 +28,51 @@ Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über d
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Live-Stream </td> 
-   <td colname="2"> <span class="codeph"> live </span> </td> 
+   <td colname="2"> <span class="codeph"> live  </span> </td> 
    <td colname="3"> True, wenn der Stream live ist; false, wenn es VOD ist. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Untertitel </td> 
-   <td colname="2"> <span class="codeph"> hasClosedCaptions </span> </td> 
+   <td colname="2"> <span class="codeph"> hasClosedCaptions  </span> </td> 
    <td colname="3"> True, wenn Untertitel-Tracks verfügbar sind. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> closeCaptionsTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> closeCaptionsTracks  </span> </td> 
    <td colname="3"> Bietet eine Liste der verfügbaren Untertitelspuren. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack </span> </td> 
-   <td colname="3"> Ruft die mit <span class="codeph"> selectClosedCaptionsTrack ausgewählte Untertitelspur ab </span>. </td> 
+   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack  </span> </td> 
+   <td colname="3"> Ruft die mit <span class="codeph"> selectClosedCaptionsTrack </span> ausgewählte Untertitelspur ab. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Alternativaudio </td> 
-   <td colname="2"> <span class="codeph"> hasAlternateAudio </span> </td> 
+   <td colname="2"> <span class="codeph"> hasAlternateAudio  </span> </td> 
    <td colname="3"> <p>True, wenn der Stream über alternative Audiospuren verfügt. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> audioTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> audioTracks  </span> </td> 
    <td colname="3"> Bietet eine Liste der verfügbaren alternativen Audiospuren. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedAudioTrack </span> </td> 
+   <td colname="2"> <span class="codeph"> selectedAudioTrack  </span> </td> 
    <td colname="3"> 
     <pre>
-      Ruft die aktuell ausgewählte Audiospur ab, die mit <span class="codeph"> selectAudioTrack ausgewählt wurde </span>. 
+      Ruft die aktuell ausgewählte Audiospur ab, die mit 
+     <span class="codeph"> selectAudioTrack </span>. 
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Zeitgesteuerte Metadaten </td> 
-   <td colname="2"> <span class="codeph"> hasTimedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> hasTimedMetadata  </span> </td> 
    <td colname="3"> True, wenn dem Stream Zeitmetadaten zugeordnet sind. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> timedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> timedMetadata  </span> </td> 
    <td colname="3"> Bietet eine Liste der zeitgesteuerten Metadatenobjekte, die mit dem Stream verknüpft sind. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Mehrere Profil (Bitraten) </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> profile </span> </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> profile  </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -79,7 +80,7 @@ Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über d
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Medienressource </td> 
-   <td colname="2"> <span class="codeph"> resource </span> </td> 
+   <td colname="2"> <span class="codeph"> resource  </span> </td> 
    <td colname="3"> Gibt die mit diesem Element verknüpfte Medienressource zurück. </td> 
   </tr> 
  </tbody> 
