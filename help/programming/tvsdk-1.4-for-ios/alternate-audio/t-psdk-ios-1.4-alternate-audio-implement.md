@@ -6,6 +6,9 @@ title: Zugriff auf alternative Audiospuren
 uuid: 77e39633-bf17-4a06-a2a1-93fdaadedd17
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
@@ -14,10 +17,10 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Spätbindende Audiodaten verwenden PTMediaPlayer, um ein Video abzuspielen, das in einer M3U8-HLS-Wiedergabeliste angegeben ist und mehrere alternative Audio-Streams enthalten kann.
 
-1. Warten Sie, bis der MediaPlayer mindestens den `PTMediaPlayerStatusReady` Status erreicht hat.
+1. Warten Sie, bis der MediaPlayer mindestens den Status `PTMediaPlayerStatusReady` hat.
 1. Suchen Sie nach diesem Ereignis:
 
-   Benachrichtigung `PTMediaPlayerItemMediaSelectionOptionsAvailable`: Die anfängliche Liste der Audiospuren ist verfügbar.
+   notification `PTMediaPlayerItemMediaSelectionOptionsAvailable`: Die anfängliche Liste der Audiospuren ist verfügbar.
 
    ```
    [[NSNotificationCenter defaultCenter] addObserver:self 
@@ -26,7 +29,7 @@ Spätbindende Audiodaten verwenden PTMediaPlayer, um ein Video abzuspielen, das 
         object:self.player];
    ```
 
-1. Rufen Sie die verfügbaren Audiospuren aus der `PTMediaPlayerItem` Instanz ab.
+1. Rufen Sie die verfügbaren Audiospuren von der `PTMediaPlayerItem`-Instanz ab.
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -36,4 +39,4 @@ Spätbindende Audiodaten verwenden PTMediaPlayer, um ein Video abzuspielen, das 
    ```
 
 1. (Optional) Präsentieren Sie dem Benutzer die verfügbaren Tracks.
-1. Legen Sie die ausgewählte Audiospur auf der `PTMediaPlayerItem` Instanz fest.
+1. Legen Sie die ausgewählte Audiospur auf der `PTMediaPlayerItem`-Instanz fest.
