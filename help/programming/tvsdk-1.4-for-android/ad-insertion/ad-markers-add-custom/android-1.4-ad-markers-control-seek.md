@@ -6,6 +6,9 @@ title: Steuern des Wiedergabeverhaltens für die Suche nach benutzerdefinierten 
 uuid: cf973caf-be29-46ce-bfa4-651e7653f8d4
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 0%
 
 ---
 
@@ -18,14 +21,14 @@ Standardmäßig überspringt TVSDK die Anzeigen, wenn ein Benutzer in Abschnitte
 
 Sie können TVSDK anweisen, die Abspielleiste an den Anfang der zuletzt übersprungenen benutzerdefinierten Anzeige zu verschieben, wenn der Benutzer nach einer oder mehreren benutzerdefinierten Anzeigen sucht.
 
-1. Konfigurieren Sie eine Metadateninstanz mit der `DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED` Auflistung, die auf den Zeichenfolgenwert &quot;true&quot;gesetzt ist (nicht als boolescher Wert `true`).
+1. Konfigurieren Sie eine Metadateninstanz mit der Auflistung `DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED`, die auf den Zeichenfolgenwert &quot;true&quot;gesetzt ist (nicht als boolescher Wert `true`).
 
    ```java
    Metadata metadata = new MetadataNode(); 
    metadata.setValue(DefaultMetadataKeys.METADATA_KEY_ADJUST_SEEK_ENABLED.getValue(),"true");
    ```
 
-1. Erstellen und konfigurieren Sie eine `MediaResource` Instanz und übergeben Sie die zusätzlichen Konfigurationsoptionen an `TimeRangeCollection.toMetadata`. Diese Methode erhält zusätzliche Konfigurationsoptionen über eine andere generische Metadatenstruktur.
+1. Erstellen und konfigurieren Sie eine `MediaResource`-Instanz und übergeben Sie die zusätzlichen Konfigurationsoptionen an `TimeRangeCollection.toMetadata`. Diese Methode erhält zusätzliche Konfigurationsoptionen über eine andere generische Metadatenstruktur.
 
    ```java
    MediaResource mediaResource =  
