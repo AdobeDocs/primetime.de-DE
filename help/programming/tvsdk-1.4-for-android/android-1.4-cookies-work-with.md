@@ -26,7 +26,7 @@ Hier ein Beispiel mit einer Art Authentifizierung bei Anforderungen an den Schl�
 
 So arbeiten Sie mit Cookies:
 
-1. Erstellen Sie eine `cookieManager` und fügen Sie Ihre Cookies für die URIs zu Ihrem `cookieStore`.
+1. Erstellen Sie ein `cookieManager` und fügen Sie Ihre Cookies für die URIs zu Ihrem `cookieStore` hinzu.
 
    Beispiel:
 
@@ -44,9 +44,9 @@ So arbeiten Sie mit Cookies:
    cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
    ```
 
-   TVSDK Abfragen diesen cookieManager zur Laufzeit, prüft, ob mit der URL verknüpfte Cookies vorhanden sind, und verwendet diese automatisch.
+   TVSDK Abfrage diesen cookieManager zur Laufzeit, prüft, ob mit der URL verknüpfte Cookies vorhanden sind, und verwendet diese automatisch.
 
-   Eine andere Option ist die Verwendung `cookieHeaders` in, `NetworkConfiguration` um eine beliebige Cookie-Header-Zeichenfolge für Anforderungen festzulegen. Standardmäßig wird dieser Cookie-Header nur mit Schlüsselanforderungen gesendet. Um den Cookie-Header mit allen Anforderungen zu senden, verwenden Sie die `NetworkConfiguration` Methode `setUseCookieHeadersForAllRequests`:
+   Eine andere Möglichkeit besteht darin, `cookieHeaders` in `NetworkConfiguration` zu verwenden, um eine beliebige Cookie-Header-Zeichenfolge für Anforderungen festzulegen. Standardmäßig wird dieser Cookie-Header nur mit Schlüsselanforderungen gesendet. Um den Cookie-Header mit allen Anforderungen zu senden, verwenden Sie die `NetworkConfiguration`-Methode `setUseCookieHeadersForAllRequests`:
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 
