@@ -6,22 +6,25 @@ title: Lesen der QOS-Wiedergabe, -Pufferung und Gerätestatistik
 uuid: 19228a50-3721-4dc1-89b6-97458518e272
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '157'
+ht-degree: 1%
 
 ---
 
 
-# Lesen der QOS-Wiedergabe, -Pufferung und Gerätestatistik{#read-qos-playback-buffering-and-device-statistics}
+# Lesen Sie die QOS-Wiedergabe-, Puffer- und Gerätestatistiken{#read-qos-playback-buffering-and-device-statistics}
 
 Sie können die Statistiken zu Wiedergabe, Pufferung und Gerät aus der QOSProvider-Klasse lesen.
 
-Die `QOSProvider` Klasse stellt verschiedene Statistiken bereit, darunter Informationen über Pufferung, Bitraten, Bildraten, Zeitdaten usw.
+Die `QOSProvider`-Klasse stellt verschiedene Statistiken bereit, einschließlich Informationen über Pufferung, Bitraten, Bildraten, Zeitdaten usw.
 
 Es enthält außerdem Informationen zum Gerät, wie Hersteller, Modell, Betriebssystem, SDK-Version, Geräte-ID des Herstellers und Bildschirmgröße/Dichte.
 
 1. Instanziieren eines Medienplayers.
-1. Erstellen Sie ein `QOSProvider` Objekt und fügen Sie es an den Medienplayer an.
+1. Erstellen Sie ein `QOSProvider`-Objekt und fügen Sie es an den Medienplayer an.
 
-   Der `QOSProvider` Konstruktor verwendet einen Player-Kontext, um gerätespezifische Informationen abrufen zu können.
+   Der Konstruktor `QOSProvider` nimmt einen Player-Kontext, damit er gerätespezifische Informationen abrufen kann.
 
    ```java
    // Create Media Player. 
@@ -31,7 +34,7 @@ Es enthält außerdem Informationen zum Gerät, wie Hersteller, Modell, Betriebs
 
 1. (Optional) Lesen Sie die Wiedergabestatistik.
 
-   Eine Lösung zum Lesen der Wiedergabestatistik besteht darin, einen Timer zu haben, der die neuen QoS-Werte in regelmäßigen Abständen von der `QOSProvider`abruft. Beispiel:
+   Eine Lösung zum Lesen der Wiedergabestatistik besteht darin, einen Timer zu haben, der die neuen QoS-Werte aus dem `QOSProvider` in regelmäßigen Abständen abruft. Beispiel:
 
    ```java
    _playbackClock = new Clock(PLAYBACK_CLOCK, 1000); // every 1 second 
