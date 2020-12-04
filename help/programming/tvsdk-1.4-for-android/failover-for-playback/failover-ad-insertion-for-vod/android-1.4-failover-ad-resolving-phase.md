@@ -6,6 +6,9 @@ title: Phase der Anzeigenauflösung
 uuid: b3e62a57-7e62-4e4e-8fa6-0d416785db67
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '341'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ TVSDK unterstützt die folgenden Arten von Anzeigenanbietern:
    TVSDK sendet eine Anforderung, einschließlich einer Reihe von Targeting-Parametern und einer Asset-Identifikationsnummer, an den Primetime-Back-End-Server für die Anzeigenentscheidung. Die Primetime-Anzeigenentscheidung reagiert mit einem SMIL-Dokument (synchronisierte Multimedia-Integrationssprache), das die erforderlichen Anzeigeninformationen enthält.
 * Anbieter von benutzerdefinierten Anzeigenmarken
 
-   Behandelt die Situation, in der Anzeigen vom Server in den Stream verbrannt werden. TVSDK führt keine tatsächliche Anzeigeneinfügung durch, muss jedoch die auf dem Server eingefügten Anzeigen verfolgen. Dieser Anbieter legt die Anzeigenmarken fest, die TVSDK zur Durchführung der Anzeigenverfolgung verwendet.
+   Behandelt die Situation, in der Anzeigen vom Server in den Stream verbrannt werden. TVSDK führt nicht die tatsächliche Anzeigeneinfügung durch, sondern muss die auf dem Server eingefügten Anzeigen nachverfolgen. Dieser Anbieter legt die Anzeigenmarken fest, die TVSDK zur Durchführung der Anzeigenverfolgung verwendet.
 
 Während dieser Phase kann eine der folgenden Ausfallsicherungs-Situationen auftreten:
 
