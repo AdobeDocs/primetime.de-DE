@@ -6,6 +6,9 @@ title: Videoanalyse konfigurieren
 uuid: ce2ebab3-b3c8-472a-9c54-16ddb1c3cc4e
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '330'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ Sie können die Videonutzung in der Primetime-Android-Referenzimplementierung ve
 
 In der Referenzimplementierung müssen Sie zwei Stellen konfigurieren, um die Adobe Analytics-Integration zu aktivieren. Die Laufzeitkonfigurationen von Video Analytics wirken sich darauf aus, sobald ein neues Video zur Wiedergabe ausgewählt wurde (d. h. nachdem eine neue PlayerAction erstellt wurde).
 
-1. Konfigurieren Sie die Optionen für die Ladezeit in der `ADBMobileConfig.json` Asset-Datei.
+1. Konfigurieren Sie die Optionen für die Ladezeit in der Asset-Datei `ADBMobileConfig.json`.
 
-   Diese Datei wird von Ihrem Adobe-Kundenbetreuer bereitgestellt. Sie ist nicht standardmäßig im Primetime SDK-Bundle enthalten. Weitere Informationen zu den Einstellungen in dieser Konfigurationsdatei finden Sie im Android-Programmierhandbuch hier: Initialisieren und Konfigurieren der Videoanalyse.
+   Diese Datei wird von Ihrem Kundenbetreuer zur Adobe bereitgestellt. Sie ist nicht standardmäßig im Primetime SDK-Bundle enthalten. Weitere Informationen zu den Einstellungen in dieser Konfigurationsdatei finden Sie im Android-Programmierhandbuch hier: Initialisieren und Konfigurieren der Videoanalyse.
 1. Konfigurieren von Laufzeitoptionen im Menü &quot;Einstellungen für die Referenzimplementierung&quot;
 
    ![](assets/img_psdk_ref_impl_va-settings-menu.png)
