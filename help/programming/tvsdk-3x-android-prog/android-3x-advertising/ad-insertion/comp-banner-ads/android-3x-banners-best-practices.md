@@ -6,11 +6,14 @@ title: Best Practices für begleitende Banneranzeigen
 uuid: 0e4c98cd-5e16-4c84-848f-02bc6f1b0d6e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '160'
+ht-degree: 0%
 
 ---
 
 
-# Best Practices für begleitende Banneranzeigen {#best-practices-for-companion-banner-ads}
+# Bewährte Verfahren für begleitende Banneranzeigen {#best-practices-for-companion-banner-ads}
 
 TVSDK unterstützt begleitende Banneranzeigen, bei denen es sich um Anzeigen handelt, die eine lineare Anzeige begleiten und nach dem Ende der linearen Anzeige oft auf der Seite bleiben. Ihre Anwendung ist für die Anzeige der begleitenden Banner verantwortlich, die mit einer linearen Anzeige bereitgestellt werden.
 
