@@ -6,17 +6,20 @@ title: Medienressource mit MediaPlayerItemLoader laden
 uuid: b2311ddc-f059-4775-8553-fc354ec2636b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '255'
+ht-degree: 0%
 
 ---
 
 
-# Medienressource mit MediaPlayerItemLoader laden {#load-a-media-resource-using-mediaplayeritemloader}
+# Medienressource mit MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader} laden
 
 Eine andere Möglichkeit zum Auflösen einer Medienressource ist MediaPlayerItemLoader. Dies ist nützlich, wenn Sie Informationen zu einem bestimmten Medienstream abrufen möchten, ohne eine MediaPlayer-Instanz zu instanziieren.
 
-Über die `MediaPlayerItemLoader` Klasse können Sie eine Medienressource gegen die entsprechende austauschen, `MediaPlayerItem` ohne eine Ansicht an eine `MediaPlayer` Instanz anzuhängen, was zur Zuordnung der Videodekodierungshardware-Ressourcen führen würde. Der Prozess zum Abrufen der `MediaPlayerItem` Instanz ist asynchron.
+Mithilfe der `MediaPlayerItemLoader`-Klasse können Sie eine Medienressource für die entsprechende `MediaPlayerItem`-Instanz austauschen, ohne eine Ansicht an eine `MediaPlayer`-Instanz anzuhängen, was zur Zuordnung der Videodekodierungs-Hardware-Ressourcen führen würde. Der Prozess zum Abrufen der `MediaPlayerItem`-Instanz ist asynchron.
 
-1. Implementieren Sie die `MediaPlayerItemLoader.LoaderListener` Callback-Schnittstelle.
+1. Implementieren Sie die Callback-Schnittstelle `MediaPlayerItemLoader.LoaderListener`.
 
        Diese Schnittstelle definiert zwei Methoden:
    
@@ -26,12 +29,12 @@ Eine andere Möglichkeit zum Auflösen einer Medienressource ist MediaPlayerItem
 
    * `LoaderListener.onError` callback-Funktion
 
-      TVSDK verwendet dies, um Ihre Anwendung darüber zu informieren, dass die angeforderten Informationen in Form einer `MediaPlayerItem` Instanz verfügbar sind, die als Parameter an den Rückruf weitergeleitet wird.
+      TVSDK verwendet dies, um Ihre Anwendung darüber zu informieren, dass die angeforderten Informationen in Form einer `MediaPlayerItem`-Instanz verfügbar sind, die als Parameter an den Rückruf weitergeleitet wird.
 
-1. Registrieren Sie diese Instanz bei TVSDK, indem Sie sie als Parameter an den Konstruktor des `MediaPlayerItemLoader`Programms übergeben.
-1. Aufruf `MediaPlayerItemLoader.load`und Übergabe einer Instanz eines `MediaResource` Objekts.
+1. Registrieren Sie diese Instanz bei TVSDK, indem Sie sie als Parameter an den Konstruktor von `MediaPlayerItemLoader` übergeben.
+1. Rufen Sie `MediaPlayerItemLoader.load` auf und übergeben Sie eine Instanz eines `MediaResource`-Objekts.
 
-   Die URL des `MediaResource` Objekts muss auf den Stream verweisen, für den Sie Informationen abrufen möchten. Beispiel:
+   Die URL des Objekts `MediaResource` muss auf den Stream verweisen, für den Sie Informationen abrufen möchten. Beispiel:
 
    ```java
    // instantiate the listener interface 
