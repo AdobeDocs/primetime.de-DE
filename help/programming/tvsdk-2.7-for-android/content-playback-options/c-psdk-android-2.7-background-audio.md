@@ -4,19 +4,22 @@ title: Hintergrundaudio aktivieren
 uuid: 1e7319f5-ee16-47bd-bfd5-d3dcfe69bf4b
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '63'
+ht-degree: 0%
 
 ---
 
 
-# Hintergrundaudio aktivieren {#enable-background-audio}
+# Hintergrundaudio {#enable-background-audio} aktivieren
 
-Um die Audiowiedergabe zu aktivieren, wenn sich die App im Hintergrund befindet, sollte die App die MediaPlayer- `enableAudioPlaybackInBackground` API mit true als Argument aufrufen, wenn sich der Player im VORBEREITTEN Status befindet.
+Um die Audiowiedergabe zu aktivieren, wenn sich die App im Hintergrund befindet, sollte die App die API von MediaPlayer mit dem Argument &quot;true&quot;aufrufen, wenn sich der Player im VORBEREITTEN Status befindet.`enableAudioPlaybackInBackground`
 
 ```
 _mediaPlayer.enableAudioPlaybackInBackground(true);
 ```
 
-Die App sollte die Wiedergabe anhalten, wenn sie den Fokus auf Audio während Ereignissen wie dem Anruf usw. verliert. Das folgende Codefragment zeigt, wie die `OnAudioFocusChangeListener`:
+Die App sollte die Wiedergabe anhalten, wenn sie den Fokus auf Audio während Ereignissen wie dem Anruf usw. verliert. Das folgende Codefragment zeigt, wie `OnAudioFocusChangeListener` implementiert wird:
 
 ```
 /** 
