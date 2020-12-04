@@ -6,6 +6,9 @@ title: Implementieren eines benutzerdefinierten Angebots-/Inhaltsauflösers
 uuid: bfc14318-ca4b-46cc-8128-e3743af06d9a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '344'
+ht-degree: 0%
 
 ---
 
@@ -18,13 +21,13 @@ Sie können die Auflösungen auf Basis der Standardauflöser implementieren.
 
 ![](assets/ios_psdk_content_resolver.png)
 
-1. Entwickeln Sie einen benutzerdefinierten Anzeigenauflöser, indem Sie die `PTContentResolver` abstrakte Klasse erweitern.
+1. Entwickeln Sie einen benutzerdefinierten Anzeigenauflöser, indem Sie die abstrakte Klasse `PTContentResolver` erweitern.
 
    `PTContentResolver` ist eine Schnittstelle, die von einer Content-Auflöser-Klasse implementiert werden muss. Eine abstrakte Klasse mit demselben Namen ist ebenfalls verfügbar und verarbeitet die Konfiguration automatisch (Abrufen des Delegaten).
 
    >[!TIP]
    >
-   >`PTContentResolver` durch die `PTDefaultMediaPlayerClientFactory` Klasse offen gelegt wird. Kunden können einen neuen Content-Auflöser registrieren, indem sie die `PTContentResolver` abstrakte Klasse erweitern. Standardmäßig `PTDefaultAdContentResolver` wird ein Element in der Datei registriert, sofern es nicht ausdrücklich entfernt wurde `PTDefaultMediaPlayerClientFactory`.
+   >`PTContentResolver` durch die  `PTDefaultMediaPlayerClientFactory` Klasse verfügbar gemacht wird. Kunden können einen neuen Content-Auflöser registrieren, indem sie die abstrakte Klasse `PTContentResolver` erweitern. Standardmäßig wird ein `PTDefaultAdContentResolver` in `PTDefaultMediaPlayerClientFactory` registriert, sofern es nicht ausdrücklich entfernt wurde.
 
    ```
    @protocol PTContentResolver <NSObject> 
@@ -52,27 +55,28 @@ Sie können die Auflösungen auf Basis der Standardauflöser implementieren.
    @end
    ```
 
-1. Implementieren `shouldResolveOpportunity` und zurückgeben, `YES` wenn der Empfänger bearbeitet werden soll `PTPlacementOpportunity`.
-1. Implementieren Sie, `resolvePlacementOpportunity`welche Beginn die alternativen Inhalte oder Anzeigen laden.
-1. Nachdem die Anzeigen geladen wurden, bereiten Sie eine `PTTimeline` mit den Informationen über den einzufügenden Inhalt vor.
+1. Implementieren Sie `shouldResolveOpportunity` und geben Sie `YES` zurück, wenn das empfangene `PTPlacementOpportunity` verarbeitet werden soll.
+1. Implementieren Sie `resolvePlacementOpportunity`, welche Beginn die alternativen Inhalte oder Anzeigen laden.
+1. Nachdem die Anzeigen geladen wurden, bereiten Sie ein `PTTimeline` mit den Informationen über den einzufügenden Inhalt vor.
 
        Im Folgenden finden Sie einige nützliche Informationen zu Zeitschienen:
    
-   * Es können mehrere `PTAdBreak`Typen von Pre-Roll-, Mid-Roll- und Post-Roll-Typen vorhanden sein.
+   * Es kann mehrere `PTAdBreak`s von Pre-Roll-, Mid-Roll- und Post-Roll-Typen geben.
 
-      * A `PTAdBreak` hat Folgendes:
+      * Ein `PTAdBreak` hat Folgendes:
 
-         * Eine `CMTimeRange` mit der Beginn- und Pausenzeit.
+         * Ein `CMTimeRange` mit der Beginn- und Pausenzeit.
 
-            Dies wird als range-Eigenschaft von festgelegt `PTAdBreak`.
+            Dies wird als range-Eigenschaft von `PTAdBreak` festgelegt.
 
-         * `NSArray` von `PTAd`s.
+         * `NSArray` von  `PTAd`s.
 
-            Dies wird als Ads-Eigenschaft festgelegt `PTAdBreak`.
-   * Eine `PTAd` repräsentiert die Anzeige und jede `PTAd` hat folgende Eigenschaften:
+            Dies wird als Ads-Eigenschaft von `PTAdBreak` festgelegt.
+   * Eine `PTAd` stellt die Anzeige dar und jede `PTAd` hat folgende Eigenschaften:
 
-      * Ein `PTAdHLSAsset` Satz als primäre Asset-Eigenschaft der Anzeige.
-      * Möglicherweise mehrere `PTAdAsset` Instanzen als anklickbare Anzeigen oder Banneranzeigen.
+      * Ein `PTAdHLSAsset` wird als primäre Asset-Eigenschaft der Anzeige festgelegt.
+      * Möglicherweise mehrere `PTAdAsset`-Instanzen als anklickbare Anzeigen oder Banneranzeigen.
+
    Beispiel:
 
    ```
@@ -102,8 +106,8 @@ Sie können die Auflösungen auf Basis der Standardauflöser implementieren.
    _timeline.adBreaks = ptBreaks;
    ```
 
-1. Aufruf `didFinishResolvingPlacementOpportunity`, der die `PTTimeline`.
-1. Registrieren Sie den benutzerdefinierten Inhalts-/Anzeigenauflöser durch Aufruf bei der standardmäßigen Medienplayer-Factory `registerContentResolver`.
+1. Rufen Sie `didFinishResolvingPlacementOpportunity` auf, wodurch `PTTimeline` bereitgestellt wird.
+1. Registrieren Sie den benutzerdefinierten Inhalts-/Anzeigenauflöser bei der standardmäßigen Medienplayer-Factory, indem Sie `registerContentResolver` aufrufen.
 
    ```
    //Remove default content/ad resolver 
