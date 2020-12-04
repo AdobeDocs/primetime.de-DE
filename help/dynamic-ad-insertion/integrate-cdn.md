@@ -10,11 +10,11 @@ ht-degree: 0%
 ---
 
 
-# CDN integrieren {#integrating-cdn}
+# CDN {#integrating-cdn} integrieren
 
 Primetime Ad Insertion dient als Proxy zwischen Ihrer Client-Anwendung und Ihren Manifesten, nicht als Videoteil selbst. Stellen Sie Ihre Inhalte für das gewünschte CDN bereit und übergeben Sie die URL mithilfe der Bootstrap-API an Primetime Ad Insertion.<!-- For integration details, see [Supported CDNs](supported-cdns.md).-->
 
-## Unterstützte CDN-Tokenisierungsprogramme {#cdn-tokenization-schemes}
+## Unterstützte CDN-Tokenisierungssysteme {#cdn-tokenization-schemes}
 
 CDNs verfügen oft über unterschiedliche Tokenisierungssysteme für die Fragmentautorisierung. Primetime-Ad Insertion unterstützt nativ wichtige CDN-Netze, darunter:
 
@@ -23,9 +23,9 @@ CDNs verfügen oft über unterschiedliche Tokenisierungssysteme für die Fragmen
 * Centurylink / Level3
 * Wenden Sie sich an Ihren Primetime-Supportmitarbeiter, um eine vollständige Liste der unterstützten CDNs zu erhalten.
 
-Weitere Informationen zum `pttoken` Parameter finden Sie unter Parameterbeschreibung für die [Bootstrap-API](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
+Weitere Informationen zum Parameter `pttoken` finden Sie unter [Bootstrap-API-Parameterbeschreibung](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md).
 
-## Konfigurieren von Anzeigen, die vom Content CDN bereitgestellt werden {#configure-ad-deliver-from-cdn}
+## Konfigurieren Sie Anzeigen, die aus dem Content CDN {#configure-ad-deliver-from-cdn} bereitgestellt werden sollen.
 
 Möglicherweise möchten Sie Anzeigen und Inhalte desselben CDN bereitstellen, um die Affinität von Inhalten zu erhalten, Anzeigenblocker zu umgehen und/oder die Anzahl der erforderlichen Verbindungen aus der Clientanwendung zu optimieren. Primetime Ad Insertion unterstützt Fragment-Neuschreibungsregeln, um Fragmente Ihrem Content-CDN zuzuordnen.
 
