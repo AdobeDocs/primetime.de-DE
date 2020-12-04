@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Sobald der Inhalt verschlüsselt wurde und eine Lizenz vorgeneriert wurde, kann die Lizenz in den verschlüsselten Inhalt eingebettet werden.
 
-Wenn Sie eine Lizenz einbetten möchten, benötigen Sie eine Instanz von `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`. Wenn Sie den Typ des verschlüsselten Inhalts kennen, verwenden Sie den Konstruktor für `FLVKeyMetaDataUpdater` oder `F4VKeyMetaDataUpdater`; Andernfalls können Sie eine Instanz `MediaProcessorFactory.getMediaProcessor()` basierend auf dem erkannten Dateityp zurückgeben. Anschließend müssen Sie eine `KeyMetaDataCallback` und einen Aufruf erstellen `modifyKeyMetaData()`. Ihre Callback-Implementierung wird dann aufgerufen, wenn sich die DRM-Metadaten im verschlüsselten Inhalt befinden. Anhand der gefundenen Metadaten können Sie eine Lizenz zum Einbetten auswählen und die Lizenz mit `EmbedLicenseKeyMetaData.setEmbeddedLicenses()`festlegen.
+Wenn Sie eine Lizenz einbetten möchten, benötigen Sie eine Instanz von `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`. Wenn Sie den Typ des verschlüsselten Inhalts kennen, verwenden Sie den Konstruktor für `FLVKeyMetaDataUpdater` oder `F4VKeyMetaDataUpdater`; Verwenden Sie andernfalls `MediaProcessorFactory.getMediaProcessor()`, um eine Instanz basierend auf dem erkannten Dateityp zurückzugeben. Anschließend müssen Sie ein `KeyMetaDataCallback` erstellen und `modifyKeyMetaData()` aufrufen. Ihre Callback-Implementierung wird dann aufgerufen, wenn sich die DRM-Metadaten im verschlüsselten Inhalt befinden. Basierend auf den gefundenen Metadaten können Sie eine einzubettende Lizenz auswählen und die Lizenz mit `EmbedLicenseKeyMetaData.setEmbeddedLicenses()` festlegen.
 
-Beispielcode `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` für eingebettete Lizenzen finden Sie im [!DNL Samples] Ordner für Referenzimplementierungs-Befehlszeilenwerkzeuge.
+Siehe `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` im Ordner &quot;Reference Implementation Command Line Tools [!DNL Samples]&quot;für Beispielcode, der eingebettete Lizenzen demonstriert.
 
 >[!NOTE]
 >
