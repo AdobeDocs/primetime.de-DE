@@ -4,11 +4,14 @@ title: Zertifikatsignaturanforderung erstellen (Anforderer)
 uuid: 04abd5d2-77ac-4f89-8bea-31d389159aee
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '203'
+ht-degree: 0%
 
 ---
 
 
-# Zertifikatsignaturanforderung erstellen (Anforderer) {#generate-a-certificate-signing-request-requester}
+# Generieren einer Zertifikatssignaturanforderung (Requester) {#generate-a-certificate-signing-request-requester}
 
 1. Generieren Sie ein Schlüsselpaar. Um ein Dienstprogramm wie OpenSSL zu verwenden, öffnen Sie ein Befehlsfenster und geben Sie Folgendes ein:
 
@@ -18,7 +21,7 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 
    >[!NOTE]
    >
-   >Adobe empfiehlt, den Zertifikattyp (lic, pkgr, trans, testing oder eval) in den Schlüsselnamen einzufügen. Diese Benennungsregel erleichtert Ihnen die Bereitstellung auf Ihrem Lizenzserver. In diesem Beispiel wird &quot;mycompany-license.key&quot;verwendet. Verwenden Sie für die Test- und Testversionen &quot;mycompany-eval.key&quot;und &quot;mycompany-process.key&quot;.
+   >Adobe empfiehlt, den Zertifikattyp (lic, pkgr, trans, test oder eval) in den Schlüsselnamen einzufügen. Diese Benennungsregel erleichtert Ihnen die Bereitstellung auf Ihrem Lizenzserver. In diesem Beispiel wird &quot;mycompany-license.key&quot;verwendet. Verwenden Sie für die Test- und Testversionen &quot;mycompany-eval.key&quot;und &quot;mycompany-process.key&quot;.
 
 1. Geben Sie ein Kennwort zum Schutz des privaten Schlüssels ein.
 
@@ -39,9 +42,9 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 1. Sie werden aufgefordert, das Kennwort für den privaten Schlüssel einzugeben.
 1. Erstellen Sie eine Sicherungskopie Ihres privaten Schlüssels und Ihres Kennworts.
 
-   Wenn Sie den privaten Schlüssel verlieren oder er beschädigt ist, wenden Sie sich an den Adobe-Zertifikatadministrator, um das Zertifikat zu sperren und ein neues anzufordern.
+   Wenn Sie den privaten Schlüssel verlieren oder er beschädigt ist, wenden Sie sich an den Zertifikatadministrator der Adobe, um das Zertifikat zu sperren und ein neues anzufordern.
 
    >[!NOTE]
    >
-   >Adobe empfiehlt, zum Schutz Ihres privaten Schlüssels und Passworts ein HSM zu verwenden.
+   >Adobe empfiehlt die Verwendung eines HSM zum Schutz Ihres privaten Schlüssels und Passworts.
 
