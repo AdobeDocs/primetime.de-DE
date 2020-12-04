@@ -6,6 +6,9 @@ title: VPAID 2.0-Anzeigenunterstützung
 uuid: 6485e387-2a13-476f-a0fd-91c6e19fd385
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '340'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Die folgenden Funktionen werden unterstützt:
 * Lineare VPAID-Anzeigen mit VOD-Inhalten (Video-on-Demand)
 * JavaScript VPAID-Anzeigen
 
-   VPAID-Anzeigen müssen JavaScript-basiert sein, und die Anzeigenantwort muss den Medientyp der VPAID-Anzeige als `application/javascript`.
+   VPAID-Anzeigen müssen JavaScript-basiert sein, und die Anzeigenantwort muss den Medientyp der VPAID-Anzeige als `application/javascript` identifizieren.
 
 Die folgenden Funktionen werden nicht unterstützt:
 
@@ -31,20 +34,20 @@ Die folgenden Funktionen werden nicht unterstützt:
 * Nicht-lineare Anzeigen wie Überlagerungsanzeigen, dynamische Begleithandanzeigen, minimierbare Anzeigen, reduzierbare Anzeigen und erweiterbare Anzeigen
 * Vorabladen von VPAID-Anzeigen
 * VPAID-Anzeigen in Live-Inhalten
-* Flash VPAID-Anzeigen
+* Flash-VPAID-Anzeigen
 
 ## API
 
 Die folgenden API-Elemente unterstützen VPAID 2.0-Anzeigen:
 
-* Die `getCustomAdView` Methode `MediaPlayer` gibt ein `CustomAdView` Objekt zurück, das die Web-Ansicht darstellt, die die VPAID-Anzeige rendert (siehe [API-Referenzen](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/index.html)).
+* Die `getCustomAdView`-Methode von `MediaPlayer` gibt ein `CustomAdView`-Objekt zurück, das die Web-Ansicht darstellt, die die VPAID-Anzeige rendert (siehe [API-Referenzen](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/index.html)).
 
 * `MediaPlayer.setCustomAdTimeout(int milliseconds)` legt den Timeout beim VPAID-Ladevorgang fest. Der Standardwert für das Timeout beträgt 10 Sekunden.
 
 Während die VPAID-Anzeige abgespielt wird:
 
 * Die VPAID-Anzeige wird in einem Ansicht-Container über der Player-Ansicht angezeigt, sodass Code, der auf Tippen von Benutzern auf der Player-Ansicht basiert, nicht funktioniert.
-* Aufrufe an `pause` und `play` an der Player-Instanz halten die VPAID-Anzeige an und nehmen sie wieder auf.
+* Aufrufe von `pause` und `play` in der Player-Instanz halten die VPAID-Anzeige an und setzen sie fort.
 
 * VPAID-Anzeigen haben keine vordefinierte Dauer, da die Anzeige interaktiv sein kann.
 
