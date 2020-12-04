@@ -11,13 +11,13 @@ ht-degree: 0%
 ---
 
 
-# Securely packaging content {#securely-packaging-content}
+# Sicheres Verpacken von Inhalt {#securely-packaging-content}
 
 Die Konfigurationsdatei für das Befehlszeilenwerkzeug &quot;Adobe Access Media Packager&quot;erfordert eine PKCS12-Berechtigung, die beim Verpacken verwendet wird.
 
-In the Reference Implementation Command Line tools, the password for the PKCS12 credentials file is stored in the flashaccess.properties file in clear text. Achten Sie daher beim Schützen des Hosts auf besondere Vorsicht und stellen Sie sicher, dass er sich in einer sicheren Umgebung befindet. (See [Physical security and access](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md)).
+In den Befehlszeilenwerkzeugen für die Referenzimplementierung wird das Kennwort für die PKCS12-Berechtigungsdatei in der Datei &quot;flashaccess.properties&quot;in unverschlüsseltem Text gespeichert. Achten Sie daher beim Schützen des Hosts auf besondere Vorsicht und stellen Sie sicher, dass er sich in einer sicheren Umgebung befindet. (Siehe [Physikalische Sicherheit und Zugriff](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md)).
 
-The packager also uses the License Server and License Server Transport certificates. Sowohl die Integrität als auch die Vertraulichkeit dieser Informationen müssen geschützt werden. Nur autorisierte Stellen sollten den Packager verwenden dürfen. Wenn einer Ihrer privaten Schlüssel beschädigt ist, informieren Sie Adobe Systems Incorporated umgehend, damit das Zertifikat widerrufen werden kann.
+Der Packager verwendet auch die Transportzertifikate License Server und License Server. Sowohl die Integrität als auch die Vertraulichkeit dieser Informationen müssen geschützt werden. Nur autorisierte Stellen sollten den Packager verwenden dürfen. Wenn einer Ihrer privaten Schlüssel beschädigt ist, informieren Sie Adobe Systems Incorporated umgehend, damit das Zertifikat widerrufen werden kann.
 
 >[!NOTE]
 >
@@ -27,4 +27,4 @@ Die Adobe Access Packaging API gibt unter bestimmten Umständen Warnungen aus. S
 
 Wenn Inhalte mit einer Richtlinie mit falschen Attributen gepackt werden, sollte die Richtlinie aktualisiert und die aktualisierte Richtlinie dem Lizenzserver über eine Liste zur Richtlinienaktualisierung oder einen anderen Mechanismus zur Bereitstellung der aktualisierten Richtlinie an den Server zur Verfügung gestellt werden. Einige Richtlinienattribute können nach der Erstellung der Richtlinie nicht mehr geändert werden. Wenn diese Attribute nicht korrekt sind, ziehen Sie den Inhalt von den Distribution-Sites zurück, widerrufen Sie die Richtlinie, sodass keine zukünftigen Lizenzen erteilt werden können, und verschlüsseln Sie den Inhalt erneut.
 
-Nach Abschluss der Verpackung wird der Verpackungsschlüssel nicht explizit zerstört; Es wird jedoch mit Müll gesammelt. Daher bleibt der Verpackungsschlüssel für einen bestimmten Zeitraum im Speicher; Sie müssen sich vor unbefugtem Zugriff auf den Computer schützen und Schritte unternehmen, um sicherzustellen, dass keine Dateien, wie z.B. Kernauslagerungen, die diese Informationen offen legen könnten, offen gelegt werden.
+Nach Abschluss der Verpackung wird der Verpackungsschlüssel nicht explizit zerstört; Es wird jedoch mit Müll gesammelt. Daher bleibt der Verpackungsschlüssel für einen bestimmten Zeitraum im Speicher; Sie müssen sich vor unbefugtem Zugriff auf die Maschine schützen und Schritte unternehmen, um sicherzustellen, dass keine Dateien, wie z.B. Kernauslagerungen, die diese Informationen offen legen könnten, offen gelegt werden.
