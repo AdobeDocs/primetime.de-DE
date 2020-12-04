@@ -6,6 +6,9 @@ title: Implementierung der VPAID 2.0-Integration
 uuid: d512fb5b-001c-4a7a-a553-d5962002bb30
 translation-type: tm+mt
 source-git-commit: 83df68905f74931355264661aed6cff43b802d3f
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 83df68905f74931355264661aed6cff43b802d3f
 
 Um VPAID 2.0-Unterstützung hinzuzufügen, fügen Sie eine benutzerdefinierte Anzeigenbenutzerspezifische Ansicht und entsprechende Listener hinzu.
 
-1. Hinzufügen Sie die benutzerdefinierte Anzeigenschnittstelle auf die Player-Oberfläche, wenn der Player den Status &quot;VORBEREITT&quot;aufweist.
+1. hinzufügen Sie die benutzerdefinierte Anzeigenschnittstelle auf die Player-Oberfläche, wenn der Player den Status &quot;VORBEREITT&quot;aufweist.
 
    ```java
    ... 
@@ -31,11 +34,11 @@ Um VPAID 2.0-Unterstützung hinzuzufügen, fügen Sie eine benutzerdefinierte An
        _playerFrame.addView(view);
    ```
 
-1. Erstellen Sie Listener und verarbeiten Sie die in den [Ereignissen](../../../../tvsdk-3x-android-prog/android-3x-events-notifications/events-summary/android-3x-events-summary.md)beschriebenen Ereignis.
+1. Erstellen Sie Listener und verarbeiten Sie die unter [Ereignis](../../../../tvsdk-3x-android-prog/android-3x-events-notifications/events-summary/android-3x-events-summary.md) beschriebenen Ereignis.
 
    >[!IMPORTANT]
    >
-   >In einem VPAID 2.0-Arbeitsablauf ist es bei Ansichten mit benutzerdefinierten Anzeigen sehr wichtig, Ihre `CustomAdView` Instanz über `AdBreak` Beginn (Ereignis `AD_BREAK_START`) und `AdBreak` Abschlüsse (Ereignis `AD_BREAK_COMPLETE`) hinweg zu verwalten, vom Zeitpunkt der Erstellung der Ansicht der benutzerdefinierten Anzeige bis zum Zeitpunkt der Entsorgung. Erstellen Sie also nicht bei jedem Werbeunterbrechungs-Beginn eine benutzerdefinierte Ansicht und löschen Sie sie bei jedem Werbeunterbrechungsvorgang.
+   >In einem VPAID 2.0-Arbeitsablauf ist es bei Ansichten mit benutzerdefinierten Anzeigen sehr wichtig, die `CustomAdView`-Instanz über `AdBreak`-Beginn (Ereignis `AD_BREAK_START`) und `AdBreak`-Abschlüsse (Ereignis `AD_BREAK_COMPLETE`) zu verwalten, vom Zeitpunkt der Erstellung der Ansicht der benutzerdefinierten Anzeige bis zum Zeitpunkt der Entsorgung. Erstellen Sie also nicht bei jedem Werbeunterbrechungs-Beginn eine benutzerdefinierte Ansicht und löschen Sie sie bei jedem Werbeunterbrechungsvorgang.
    >
    >
    >Darüber hinaus sollten Sie Ihre benutzerdefinierte AnzeigenAnsicht nur erstellen, wenn Ihr Player den Status &quot;VORBEREITT&quot;aufweist.
@@ -53,7 +56,7 @@ Um VPAID 2.0-Unterstützung hinzuzufügen, fügen Sie eine benutzerdefinierte An
    >
    >```
    >
-   >Bevor Sie Ihre benutzerspezifische Anzeigendatei freigeben, müssen Sie sie schließlich aus der Ansicht `FrameLayout`entfernen. Beispiel:
+   >Bevor Sie Ihre benutzerspezifische Anzeigendatei löschen, müssen Sie sie schließlich aus der Ansicht `FrameLayout` entfernen. Beispiel:
    >
    >
    ```
