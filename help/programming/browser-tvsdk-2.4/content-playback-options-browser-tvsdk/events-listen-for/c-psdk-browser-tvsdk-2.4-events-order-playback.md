@@ -6,11 +6,14 @@ title: Reihenfolge der Ereignis
 uuid: 259a9a2d-3d28-4240-b392-cc81f5c3f0cf
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '121'
+ht-degree: 0%
 
 ---
 
 
-# Reihenfolge der Ereignis{#order-of-playback-events}
+# Reihenfolge der Ereignis für die Wiedergabe{#order-of-playback-events}
 
 Browser TVSDK sendet Ereignis/Benachrichtigungen in allgemein erwarteten Sequenzen. Ihr Player kann Aktionen auf der Grundlage von Ereignissen in der erwarteten Sequenz implementieren.
 
@@ -18,16 +21,16 @@ Browser TVSDK sendet Ereignis/Benachrichtigungen in allgemein erwarteten Sequenz
 
 Die folgenden Beispiele zeigen die Reihenfolge einiger Ereignis, die Ereignis für die Wiedergabe enthalten.
 
-* Beim erfolgreichen Laden einer Medienressource `replaceCurrentResource`lautet die Reihenfolge der Ereignis:
+* Beim erfolgreichen Laden einer Medienressource über `replaceCurrentResource` lautet die Reihenfolge der Ereignis:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* Beim Vorbereiten der Wiedergabe durch `MediaPlayer.prepareToPlay`lautet die Reihenfolge der Ereignis:
+* Beim Vorbereiten der Wiedergabe über `MediaPlayer.prepareToPlay` lautet die Reihenfolge der Ereignis:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
