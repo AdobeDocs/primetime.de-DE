@@ -44,7 +44,7 @@ Encrypted password:
 </i class="+ topic>
 ```
 
-Alle Kennwörter, die Sie in den [!DNL flashaccess-global.xml] und [!DNL flashaccess-tenant.xml] Dateien angegeben haben, müssen verschlüsselt sein.
+Alle Kennwörter, die Sie in den Dateien [!DNL flashaccess-global.xml] und [!DNL flashaccess-tenant.xml] angegeben haben, müssen verschlüsselt sein.
 
 >[!NOTE]
 >
