@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Ad Insertion für VOD verwenden {#ad-insertion-vod}
+# Ad Insertion für VOD {#ad-insertion-vod} verwenden
 
 Primetime Ad Insertion unterstützt das Einfügen von Anzeigen in mehrere VOD-Assets, wobei die Standardformate VAST 3.0+ oder VMAP 1.0+ verwendet werden.
 
@@ -18,12 +18,12 @@ Primetime Ad Insertion unterstützt das Einfügen von Anzeigen in mehrere VOD-As
 
 * [IAB VAST](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf)
 
-## VOD (serverzugeordnete Anzeigen) {#server-mapped-ads}
+## VOD (Server-zugeordnete Anzeigen) {#server-mapped-ads}
 
-Primetime-Ad Insertion unterstützt das Einfügen von VOD-Anzeigen, die vor dem Beginn der Wiedergabe eingefügt wurden, unter Verwendung der in einem VMAP-Format definierten Anzeigenzeitschienen.  VMAP-spezifische Anzeigenverfolgung wie breakStart-/breakEnd-Beacons werden mit der [Anzeigenverfolgung](set-up-ad-tracking.md)bereitgestellt.
+Primetime-Ad Insertion unterstützt das Einfügen von VOD-Anzeigen, die vor dem Beginn der Wiedergabe eingefügt wurden, unter Verwendung der in einem VMAP-Format definierten Anzeigenzeitschienen.  VMAP-spezifische Anzeigenverfolgung wie breakStart-/breakEnd-Beacons werden mit [Anzeigenverfolgung](set-up-ad-tracking.md) bereitgestellt.
 
-## Vollständige Wiedergabe von Ereignisse (VOD mit Ad Decisioning-Cues) {#full-event-replay}
+## Vollständige Ereignis-Wiedergabe (VOD mit Ad Decisioning-Cues) {#full-event-replay}
 
-Primetime Ad Insertion unterstützt auch spezialisierte VOD-Assets, die Hinweise im Inhaltsstream selbst enthalten, z. B. bei der Wiedergabe bereits aufgezeichneter Live-Ereignis. Weitere Informationen zu den von uns unterstützten Anzeigenentscheidungsformaten (oder Cue-Formaten) finden Sie unter [Verwenden von Ad Insertion in Live/Linear](ad-insertion-live-linear-stream.md).
+Primetime Ad Insertion unterstützt auch spezialisierte VOD-Assets, die Hinweise im Inhaltsstream selbst enthalten, z. B. bei der Wiedergabe bereits aufgezeichneter Live-Ereignis. Weitere Informationen zu den von uns unterstützten Anzeigenentscheidungsformaten finden Sie unter [Verwenden von Ad Insertion in Live/Linear](ad-insertion-live-linear-stream.md).
 
-Wir unterstützen sowohl einzelne Ad-Request- als auch parallele Szenarien mit mehreren Ad-Request-Szenarien für VOD-Assets, die mehr als eine Werbeunterbrechung enthalten. Weitere Informationen finden Sie unter `ptmulticall` Parameter in der [Parameterbeschreibung](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md). Sowohl VAST- als auch VMAP-Formate werden für In-Stream-Hinweise unterstützt.
+Wir unterstützen sowohl einzelne Ad-Request- als auch parallele Szenarien mit mehreren Ad-Request-Szenarien für VOD-Assets, die mehr als eine Werbeunterbrechung enthalten. Weitere Informationen finden Sie unter Parameter `ptmulticall` in [Parameterbeschreibung](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md). Sowohl VAST- als auch VMAP-Formate werden für In-Stream-Hinweise unterstützt.
