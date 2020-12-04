@@ -6,6 +6,9 @@ title: Schnelles Vorwärts- und Zurückspulen implementieren
 uuid: d54c8c61-887f-4362-9085-e443859854b9
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ Wenn Benutzer die Medien schnell vorwärts oder schnell zurückspulen, befinden 
 
 Um die Geschwindigkeit zu wechseln, müssen Sie einen Wert einstellen.
 
-1. Wechseln Sie vom normalen Wiedergabemodus (1x) zum Trick-play-Modus, indem Sie die Rate auf einen erlaubten `MediaPlayer` Wert einstellen.
+1. Wechseln Sie vom normalen Wiedergabemodus (1x) zum Trick-play-Modus, indem Sie die Rate für das `MediaPlayer` auf einen erlaubten Wert einstellen.
 
        Beachten Sie die folgenden Informationen:
    
-   * Die `MediaPlayerItem` Klasse definiert die zulässigen Wiedergaberaten.
+   * Die `MediaPlayerItem`-Klasse definiert die zulässigen Wiedergaberaten.
    * TVSDK wählt die nächstzulässige Rate aus, wenn die angegebene Rate nicht zulässig ist.
 
       Im folgenden Beispiel wird die interne Wiedergaberate des Players auf die angeforderte Rate eingestellt:
@@ -53,7 +56,7 @@ Um die Geschwindigkeit zu wechseln, müssen Sie einen Wert einstellen.
 
 TVSDK sendet die folgenden Ereignis, die sich auf die Trickwiedergabe beziehen:
 
-* `MediaPlayerEvent.RATE_SELECTED`, wenn sich der `rate` Wert in einen anderen Wert ändert.
+* `MediaPlayerEvent.RATE_SELECTED`, wenn sich der  `rate` Wert in einen anderen Wert ändert.
 
 * `MediaPlayerEvent.RATE_PLAYING`, wenn die Wiedergabe mit der ausgewählten Rate fortgesetzt wird.
 
