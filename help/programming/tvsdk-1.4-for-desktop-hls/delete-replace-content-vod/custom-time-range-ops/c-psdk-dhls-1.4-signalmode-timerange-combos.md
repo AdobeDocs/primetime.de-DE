@@ -6,6 +6,9 @@ title: Signaturmodus und Zeitbereich
 uuid: a4d2b0f3-49ce-4a07-a460-9e63bb91b5d3
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '91'
+ht-degree: 0%
 
 ---
 
@@ -17,13 +20,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
   <tr> 
    <th class="entry"> </th> 
    <th class="entry"> MARK </th> 
-   <th class="entry"> LÖSCHEN </th> 
+   <th class="entry"> DELETE </th> 
    <th class="entry"> ERSETZEN </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> CustomRange OpportunityGenerator </span> </td> 
+   <td> <span class="codeph"> CustomRange OpportunityGenerator  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -89,7 +92,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
    <td> N/A (automatischer CustomRange-Signalmodus) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Benutzerdefinierter </span> Signalisierungsmodus </td> 
+   <td> <span class="codeph"> Benutzerdefinierter  </span> Signalisierungsmodus </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -136,13 +139,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
   <tr> 
    <th class="entry"> </th> 
    <th class="entry"> MARK </th> 
-   <th class="entry"> LÖSCHEN </th> 
+   <th class="entry"> DELETE </th> 
    <th class="entry"> ERSETZEN </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator </span> </td> 
+   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -172,7 +175,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> N/A (automatischer <span class="codeph"> benutzerdefinierterBereich- </span> Signalmodus) </td> 
+   <td> N/A (automatischer <span class="codeph"> CustomRange </span> Signalmodus) </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> ManifestCue- </span> Signalisierungsmodus </td> 
@@ -186,13 +189,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> N/A (automatischer <span class="codeph"> benutzerdefinierterBereich- </span> Signalmodus) </td> 
+   <td> N/A (automatischer <span class="codeph"> CustomRange </span> Signalmodus) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Benutzerdefinierter </span> Signalisierungsmodus </td> 
+   <td> <span class="codeph"> Benutzerdefinierter  </span> Signalisierungsmodus </td> 
    <td> Nicht vorhanden (Anzeige ist deaktiviert). </td> 
    <td> Keines </td> 
-   <td> Keine (in <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
+   <td> Keine (wird in <span class="codeph"> CustomRangeOpportunityGenerator </span> aufgearbeitet) </td> 
   </tr> 
  </tbody> 
 </table>
