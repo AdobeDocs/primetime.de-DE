@@ -6,6 +6,9 @@ title: VPAID 2.0-Anzeigenunterstützung
 uuid: 7168a6e4-9c5e-4d3a-8710-867cf98e4445
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '423'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Die folgenden Funktionen werden unterstützt:
 * Lineare VPAID-Anzeigen auf Video-on-Demand (VOD)-Inhalten
 * JavaScript VPAID-Anzeigen
 
-   VPAID-Anzeigen müssen JavaScript-basiert sein, und die Anzeigenantwort muss den Medientyp der VPAID-Anzeige als `application/javascript`.
+   VPAID-Anzeigen müssen JavaScript-basiert sein, und die Anzeigenantwort muss den Medientyp der VPAID-Anzeige als `application/javascript` identifizieren.
 
 Die folgenden Funktionen werden nicht unterstützt:
 
@@ -31,19 +34,19 @@ Die folgenden Funktionen werden nicht unterstützt:
 * Nicht-lineare Anzeigen wie Überlagerungsanzeigen, dynamische begleitende Anzeigen, minimierbare Anzeigen, reduzierbare Anzeigen und erweiterbare Anzeigen
 * Vorabladen von VPAID-Anzeigen
 * VPAID-Anzeigen in Live-Inhalten
-* Flash VPAID-Anzeigen
+* Flash-VPAID-Anzeigen
 
 ## API-Änderungen {#section_D62F3E059C6C493592D34534B0BFC150}
 
 Die folgenden Änderungen wurden an der API vorgenommen:
 
-* Eine `getCustomAdView` Funktion wurde hinzugefügt `MediaPlayer` und gibt die Web-Ansicht zurück, die die VPAID-Anzeige rendert.
+* Eine `getCustomAdView`-Funktion wurde in `MediaPlayer` hinzugefügt und gibt die Web-Ansicht zurück, die die VPAID-Anzeige rendert.
 
-   Weitere Informationen zum `CustomAdView` Objekt, das von dieser Funktion zurückgegeben wird, finden Sie unter [API-Referenzen](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/index.html).
+   Weitere Informationen zum `CustomAdView`-Objekt, das von dieser Funktion zurückgegeben wird, finden Sie unter [API-Referenzen](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/index.html).
 
-* Ein `CUSTOM_AD` Ereignis wird von der Medienplayer-Instanz gesendet.
+* Ein `CUSTOM_AD`-Ereignis wird von der Medienplayer-Instanz gesendet.
 
-   Die Anwendung kann einen Ereignis-Rückruf durch Implementierung registrieren `CustomAdEventListener`.
+   Die Anwendung kann einen Ereignis-Rückruf registrieren, indem sie `CustomAdEventListener` implementiert.
 
 * `MediaPlayer.setCustomAdTimeout(int milliseconds)` ermöglicht es Ihnen, den Standard-Timeout beim Laden von VPAID zu ändern.
 
@@ -54,7 +57,7 @@ Die folgenden Änderungen wurden an der API vorgenommen:
 Während die VPAID-Anzeige abgespielt wird:
 
 * Die VPAID-Anzeige wird in einem Ansicht-Container über der Player-Ansicht angezeigt, sodass der Code, der auf dem Tippen von Benutzern auf der Player-Ansicht basiert, nicht funktioniert.
-* Der Hauptinhalt-Player wird angehalten, und es werden Aufrufe an `pause` und `play` an die Player-Instanz verwendet, um die VPAID-Anzeige anzuhalten und fortzusetzen.
+* Der Hauptinhalt-Player wird angehalten, und Aufrufe von `pause` und `play` auf der Player-Instanz werden verwendet, um die VPAID-Anzeige anzuhalten und fortzusetzen.
 
 * VPAID-Anzeigen haben keine vordefinierte Dauer, da die Anzeige interaktiv sein kann.
 
@@ -66,13 +69,13 @@ Um VPAID 2.0-Unterstützung hinzuzufügen, fügen Sie eine benutzerdefinierte An
 
 So fügen Sie VPAID 2.0-Unterstützung hinzu:
 
-1. Hinzufügen der benutzerdefinierten Anzeigen-Ansicht auf die Player-Oberfläche.
+1. hinzufügen der benutzerdefinierten Anzeigen-Ansicht auf die Player-Oberfläche.
 
    ```java
    _playerFrame.addView(mediaPlayer.createCustomAdView());
    ```
 
-1. Hinzufügen eines Listeners für benutzerdefinierte Anzeigen-Ereignis.
+1. hinzufügen eines Listeners für benutzerdefinierte Anzeigen-Ereignis.
 
    ```java
    mediaplayer.addEventListener(MediaPlayer.Event.CUSTOM_AD,  
