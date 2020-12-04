@@ -6,11 +6,14 @@ title: Reihenfolge der Ereignis
 uuid: 9787e6ac-5e52-4d7d-8fc7-f7609633707c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 0%
 
 ---
 
 
-# Reihenfolge der Ereignis{#order-of-advertising-events}
+# Reihenfolge der Ereignis für Werbung{#order-of-advertising-events}
 
 Wenn Ihre Wiedergabe Werbung enthält, sendet Browser TVSDK Ereignis/Benachrichtigungen in allgemein erwarteten Sequenzen. Ihr Player kann Aktionen auf der Grundlage von Ereignissen in der erwarteten Sequenz implementieren.
 
