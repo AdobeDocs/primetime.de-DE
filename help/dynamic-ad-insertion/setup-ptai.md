@@ -22,8 +22,8 @@ Die Einrichtung von Primetime Ad Insertion erfolgt wie folgt:
 
 1. Stellen Sie fest, ob für Ihren Anzeigenarbeitsablauf eine Just-in-time-Anzeigenumverpackung erforderlich ist. Wenden Sie sich an Ihren Primetime-Support-Mitarbeiter, um den Dienst zu aktivieren.
 
-1. Aktualisieren Sie Ihre Anwendung, um mithilfe der [Bootstrap-API](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) Anforderungen für Primetime-Ad Insertion zu erstellen und zu empfangen, und konfigurieren Sie Ihre Anwendung für die Unterstützung. Weitere Informationen finden Sie unter [Anzeigenverfolgung](set-up-ad-tracking.md).
+1. Aktualisieren Sie Ihre Anwendung, um die [Bootstrap-API](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) zum Erstellen und Empfangen von Anforderungen für Primetime-Ad Insertion zu verwenden, und konfigurieren Sie Ihre Anwendung für die Unterstützung. Weitere Informationen finden Sie unter [Anzeigenverfolgung](set-up-ad-tracking.md).
 
 1. Testen Sie Ihre Anwendung, um eine korrekte Anzeige sicherzustellen. <!-- using the [Debugging tools](troubleshoot-and-debug.md).-->
 
-1. Testen Sie Ihre Anwendungen, um sicherzustellen, dass die Anzeigenverfolgung und Impressionsbeacons ordnungsgemäß ausgelöst werden.<!-- using the [Reporting](reporting-and-billing.md).-->
+1. Testen Sie Ihre Anwendungen, um sicherzustellen, dass die Anzeigenverfolgung und Impressions-Beacons ordnungsgemäß ausgelöst werden.<!-- using the [Reporting](reporting-and-billing.md).-->
