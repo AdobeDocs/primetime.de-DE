@@ -6,34 +6,37 @@ title: Videoanalyse initialisieren und konfigurieren
 uuid: 4a582b35-ae92-4557-806d-e174fc878cc5
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '703'
+ht-degree: 0%
 
 ---
 
 
-# Videoanalyse initialisieren und konfigurieren {#initialize-and-configure-video-analytics}
+# Videoanalyse initialisieren und konfigurieren{#initialize-and-configure-video-analytics}
 
 Sie können Ihren Player so konfigurieren, dass die Videonutzung verfolgt und analysiert wird.
 
 Bevor Sie die Videoverfolgung aktivieren (Video Heartbeats), stellen Sie sicher, dass Sie über Folgendes verfügen:
 
-* Configuration/Browser TVSDK Initialisierungsinformationen - Wenden Sie sich an Ihren Adobe-Kundenbetreuer, um spezifische Informationen zu Ihrem Videoverfolgungskonto zu erhalten:
+* Configuration/Browser TVSDK Initialisierungsinformationen - Wenden Sie sich an Ihren Kundenbetreuer für Ihre Adobe, um Informationen zu Ihrem spezifischen Videoverfolgungskonto zu erhalten:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84">
  <tbody>
   <tr>
    <td colname="col1"> Endpunkt des AppMeasurement-Tracking-Servers </td>
-   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts von Adobe Analytics (ehemals SiteCatalyst). </td>
+   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts Adobe Analytics (früher SiteCatalyst). </td>
   </tr>
   <tr>
    <td colname="col1"> Endpunkt des Video Analytics-Trackingservers </td>
-   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts für die Videoanalyse. Hier werden alle Video Heartbeat-Verfolgungsaufrufe gesendet. <p>Tipp:  Die URL des Besucher-Trackingservers ist identisch mit der URL des Analytics-Trackingservers. Informationen zur Implementierung des Besucher-ID-Diensts finden Sie unter <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementieren des ID-Diensts </a>. </p> </td>
+   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts für die Videoanalyse. Hier werden alle Video Heartbeat-Verfolgungsaufrufe gesendet. <p>Tipp:  Die URL des Besucher-Trackingservers ist identisch mit der URL des Analytics-Trackingservers. Informationen zur Implementierung des Besucher-ID-Diensts finden Sie unter <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementierungs-ID-Dienst </a>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> Kontoname </td>
    <td colname="col2"> Auch als Report Suite-ID (RSID) bezeichnet. </td>
   </tr>
   <tr>
-   <td colname="col1"> Marketing Cloud-Organisations-ID </td>
+   <td colname="col1"> Organisations-ID des Marketing Cloud </td>
    <td colname="col2"> Ein Zeichenfolgenwert, der zum Instanziieren der Besucher-Komponente erforderlich ist. </td>
   </tr>
   <tr>
@@ -42,7 +45,7 @@ Bevor Sie die Videoverfolgung aktivieren (Video Heartbeats), stellen Sie sicher,
   </tr>
   <tr>
    <td colname="col1"> Herausgeber </td>
-   <td colname="col2"> Dies ist die Herausgeber-ID, die Kunden von ihrem Adobe-Kundenbetreuer bereitgestellt wird. <p>Tipp:  Diese ID ist nicht nur eine Zeichenfolge mit dem Namen Marke/TV. </p> </td>
+   <td colname="col2"> Dies ist die Herausgeber-ID, die Kunden von ihrem Kundenbetreuer zur Adobe bereitgestellt wird. <p>Tipp:  Diese ID ist nicht nur eine Zeichenfolge mit dem Namen Marke/TV. </p> </td>
   </tr>
  </tbody>
 </table>
@@ -53,13 +56,13 @@ So konfigurieren Sie die Videoverfolgung im Player:
 
        Beachten Sie die folgenden Informationen:
    
-   * Für die Instanziierung ist ein Eingabeparameter für die Marketing Cloud-Organisations-ID erforderlich, der von Adobe bereitgestellt wird.
+   * Die Instanziierung erfordert einen Eingabeparameter für die Organisations-ID des Marketing Cloud, der von der Adobe bereitgestellt wird.
 
       Dies ist ein Zeichenfolgenwert.
    * Die einzige Konfigurationsoption für die VisitorAPI-Bibliothek ist die URL des Back-End-Endpunkts, der den eindeutigen Bezeichner für den aktuellen Benutzer bereitstellt.
    * Die URL des Besucher-Trackingservers ist identisch mit der URL des Analytics-Trackingservers.
 
-      Informationen zur Implementierung des Besucher-ID-Diensts finden Sie unter Implementierung des [Besucher-ID-Diensts](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html).
+      Informationen zur Implementierung des Besucher-ID-Diensts finden Sie unter [Implementierung des Besucher-ID-Diensts](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html).
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
@@ -68,7 +71,7 @@ So konfigurieren Sie die Videoverfolgung im Player:
 
 2. Die AppMeasurement-Komponente instanziieren und konfigurieren.
 
-   Die AppMeasurement-Instanz verfügt über viele Konfigurationsoptionen. Weitere Informationen finden Sie in der [Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) -Dokumentation. Die Optionen im folgenden Beispielcode ( `account`, `visitorNamespace`und `trackingServer`) sind erforderlich und die Werte werden von Adobe bereitgestellt.
+   Die AppMeasurement-Instanz verfügt über viele Konfigurationsoptionen. Weitere Informationen finden Sie in der Dokumentation [Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer). Die Optionen im folgenden Beispielcode ( `account`, `visitorNamespace` und `trackingServer`) sind erforderlich, und die Werte werden von der Adobe bereitgestellt.
 
    >[!IMPORTANT]
    >
@@ -86,7 +89,7 @@ So konfigurieren Sie die Videoverfolgung im Player:
 
    >[!IMPORTANT]
    >
-   >Vergewissern Sie sich, dass die Daten in Ihrer Anwendung ausgefüllt `appMeasurementObject.visitor` werden, bevor Sie den Videoanalysefluss starten, oder Sie erhalten keine Verfolgungsergebnisse. Diese Ergebnisse werden durch die Meldungen in Ihrem Protokoll angezeigt. Sie können einen leeren Verfolgungsaufruf ( `appMeasurementObject.track`) hinzufügen, die Eigenschaft abfragen, bis sie gefüllt ist, und die `visitor` Videoanalyse starten.
+   >Stellen Sie in Ihrer Anwendung sicher, dass `appMeasurementObject.visitor` ausgefüllt wird, bevor Sie den Videoanalysefluss starten, oder dass keine Verfolgungsergebnisse vorliegen. Diese Ergebnisse werden durch die Meldungen in Ihrem Protokoll angezeigt. Sie können einen leeren Verfolgungsaufruf ( `appMeasurementObject.track`) hinzufügen, die `visitor`-Eigenschaft abfragen, bis sie gefüllt ist, und Videoanalysen starten.
 
 3. Initialisieren und Konfigurieren von Video Heartbeat-Verfolgungsmetadaten.
 
