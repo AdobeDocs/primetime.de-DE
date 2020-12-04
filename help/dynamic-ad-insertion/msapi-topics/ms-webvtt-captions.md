@@ -6,6 +6,9 @@ title: Unterstützung für WebVTT-Beschriftungen
 uuid: 1dc728b0-5aeb-4c48-8f3b-54ff4b135742
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
@@ -29,4 +32,4 @@ Der Arbeitsablauf für VOD-Inhaltsströme lautet wie folgt:
 
 >[!NOTE]
 >
->Wenn ein Client anfordert, dass ein Video in einer bestimmten Sprache wie Englisch abgespielt wird, und dann die Wiedergabe des Videos auf Französisch anfordert, kann der Manifestserver nicht erkennen, dass der Client die Sprache in Französisch ändern muss. Da der Client nicht mit dem Manifestserver kommuniziert, fügt der Manifestserver die Anzeigenbeschriftung in den Videostream ein, wobei die erste in der M3U8-Masterdatei der Anzeige angegebene Sprache verwendet wird.
+>Wenn ein Client anfordert, dass ein Video in einer bestimmten Sprache wie Englisch abgespielt wird, und dann die Wiedergabe des Videos auf Französisch anfordert, kann der Manifestserver nicht erkennen, dass der Client die Sprache in Französisch ändern muss. Da der Client nicht mit dem Manifestserver kommuniziert, fügt der Manifestserver die Anzeigenbeschriftung in den Videostream ein, wobei die erste in der Anzeigendatei &quot;M3U8 Übergeordnet&quot;angegebene Sprache verwendet wird.
