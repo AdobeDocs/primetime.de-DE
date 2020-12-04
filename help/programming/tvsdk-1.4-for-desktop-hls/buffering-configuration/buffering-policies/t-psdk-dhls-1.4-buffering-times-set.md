@@ -6,11 +6,14 @@ title: Pufferzeiten einstellen
 uuid: 25142b01-5381-49c9-b89a-24c858faaf13
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
 
-# Pufferzeiten einstellen{#set-buffering-times}
+# Festlegen der Pufferzeiten{#set-buffering-times}
 
 Der MediaPlayer bietet Methoden zum Festlegen und Abrufen der anfänglichen Pufferzeit und der Wiedergabepufferzeit.
 
@@ -18,7 +21,7 @@ Der MediaPlayer bietet Methoden zum Festlegen und Abrufen der anfänglichen Puff
 >
 >Wenn Sie die Parameter für die Puffersteuerung nicht vor Beginn der Wiedergabe festlegen, wird der Medienplayer standardmäßig auf 2 Sekunden für den anfänglichen Puffer und auf 30 Sekunden für die laufende Wiedergabepufferzeit eingestellt.
 
-1. Richten Sie das `BufferControlParameters` Objekt ein, das die Steuerungsparameter für die anfängliche Pufferzeit und die Wiedergabepufferzeit enthält:
+1. Richten Sie das `BufferControlParameters`-Objekt ein, das die Steuerungsparameter für die anfängliche Pufferzeit und die Wiedergabepufferzeit enthält:
 
        Diese Klasse stellt die folgenden Factory-Methoden bereit:
    
@@ -34,18 +37,18 @@ Der MediaPlayer bietet Methoden zum Festlegen und Abrufen der anfänglichen Puff
       createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
       ```
 
-      Diese Methoden lösen einen Fehler aus, `IllegalArgumentException` wenn die Parameter nicht gültig sind, z. B. wenn:
+      Diese Methoden geben ein `IllegalArgumentException` aus, wenn die Parameter nicht gültig sind, z. B. wenn:
 
    * Die anfängliche Pufferzeit ist kleiner als null.
    * Die anfängliche Pufferzeit ist größer als die Pufferzeit.
 
-1. Verwenden Sie zum Festlegen der Pufferparameterwerte die folgende `MediaPlayer` Methode:
+1. Verwenden Sie zum Festlegen der Pufferparameterwerte die folgende `MediaPlayer`-Methode:
 
    ```
    public function set bufferControlParameters(value:BufferControlParameters):void
    ```
 
-1. Um die aktuellen Pufferparameterwerte abzurufen, verwenden Sie folgende `MediaPlayer` Methode:
+1. Um die aktuellen Pufferparameterwerte abzurufen, verwenden Sie die folgende `MediaPlayer`-Methode:
 
    ```
    public function get bufferControlParameters():BufferControlParameters
@@ -59,4 +62,4 @@ So legen Sie beispielsweise den anfänglichen Puffer auf 2 Sekunden und die Wied
 mediaPlayer.bufferControlParameters = BufferControlParameters.createDual(2000, 30000); 
 ```
 
-Die `psdkdemo` zeigt diese Funktion. Verwenden Sie die Einstellungen der Anwendung, um die Pufferwerte festzulegen.
+Diese Funktion wird mit dem `psdkdemo`-Zeichen veranschaulicht. Verwenden Sie die Einstellungen der Anwendung, um die Pufferwerte festzulegen.
