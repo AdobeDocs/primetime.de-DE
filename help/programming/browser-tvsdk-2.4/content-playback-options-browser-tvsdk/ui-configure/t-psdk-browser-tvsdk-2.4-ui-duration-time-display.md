@@ -6,16 +6,19 @@ title: Dauer, aktuelle Zeit und verbleibende Zeit des Videos anzeigen
 uuid: 58341c5f-1d53-4f65-92c8-5bde22f61519
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
 
-# Dauer, aktuelle Zeit und verbleibende Zeit des Videos anzeigen{#display-the-duration-current-time-and-remaining-time-of-the-video}
+# Dauer, aktuelle Zeit und verbleibende Zeit des Videos{#display-the-duration-current-time-and-remaining-time-of-the-video} anzeigen
 
 Sie können Browser TVSDK verwenden, um Informationen über die Medien abzurufen, die Sie in der Suchleiste anzeigen können.
 
 1. Warten Sie, bis Ihr Spieler mindestens den Status VORBEREITT hat.
-1. Rufen Sie die aktuelle Abspielposition mit dem `MediaPlayer.currentTime` Attribut ab.
+1. Rufen Sie die aktuelle Abspielposition mit dem Attribut `MediaPlayer.currentTime` ab.
 
    Dieses Attribut gibt die aktuelle Abspielposition auf der virtuellen Zeitleiste in Millisekunden zurück. Die Zeit wird relativ zum aufgelösten Stream berechnet, der mehrere Instanzen alternativen Inhalts enthalten kann, z. B. mehrere Anzeigen oder Werbeunterbrechungen, die in den Hauptstrom kopiert werden. Bei Live-/linearen Streams liegt die zurückgegebene Zeit immer im Bereich des Wiedergabefensters.
 
@@ -24,7 +27,7 @@ Sie können Browser TVSDK verwenden, um Informationen über die Medien abzurufen
    ```
 
 1. Rufen Sie den Wiedergabebereich des Streams ab und bestimmen Sie die Dauer.
-   1. Verwenden Sie die `mediaPlayer.playbackRange` Eigenschaft, um den virtuellen Zeitleistenzeitbereich abzurufen.
+   1. Verwenden Sie die Eigenschaft `mediaPlayer.playbackRange`, um den virtuellen Zeitleistenzeitbereich abzurufen.
 
    1. Um die Dauer zu bestimmen, ziehen Sie den Beginn vom Ende des Bereichs ab.
 
@@ -148,7 +151,7 @@ Sie können Browser TVSDK verwenden, um Informationen über die Medien abzurufen
    } 
    ```
 
-1. Suchen `AdobePSDK.TimeChangeEvent` und aktualisieren Sie die Suchleiste entsprechend.
+1. Suchen Sie nach `AdobePSDK.TimeChangeEvent` und aktualisieren Sie die Suchleiste entsprechend.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIME_CHANGED, onTimeChange); 
