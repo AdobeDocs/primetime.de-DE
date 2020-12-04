@@ -6,33 +6,36 @@ title: Position und Größe der Video-Ansicht steuern
 uuid: d09dbc18-1ec0-4336-bf3f-7ff6c265c443
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '317'
+ht-degree: 0%
 
 ---
 
 
-# Position und Größe der Video-Ansicht steuern{#control-the-position-and-size-of-the-video-view}
+# Position und Größe der Video-Ansicht kontrollieren{#control-the-position-and-size-of-the-video-view}
 
 Mit dem MediaPlayerView-Objekt können Sie die Position und Größe der Video-Ansicht steuern.
 
 Browser TVSDK versucht standardmäßig, das Seitenverhältnis der Video-Ansicht beizubehalten, sobald sich die Größe oder Position des Videos ändert, da die Anwendung geändert wurde, ein Profil-Switch, ein Inhaltsschalter usw.
 
-Sie können das standardmäßige Seitenverhältnis außer Kraft setzen, indem Sie eine andere *Skalierungsrichtlinie* festlegen. Geben Sie die Skalierungsrichtlinie mithilfe der `MediaPlayerView` Objekteigenschaft `scalePolicy` an. Die standardmäßige Skalierungsrichtlinie von `MediaPlayerView` wird mit einer Instanz der `MaintainAspectRatioScalePolicy` Klasse festgelegt. Um die Skalierungsrichtlinie zurückzusetzen, ersetzen Sie die Standardinstanz von `MaintainAspectRatioScalePolicy` on `MediaPlayerView.scalePolicy` durch Ihre eigene Richtlinie.
+Sie können das standardmäßige Seitenverhältnis außer Kraft setzen, indem Sie eine andere *Skalierungsrichtlinie* angeben. Geben Sie die Skalierungsrichtlinie mit der Eigenschaft `MediaPlayerView` des Objekts `scalePolicy` an. Die standardmäßige Skalierungsrichtlinie von `MediaPlayerView` wird mit einer Instanz der Klasse `MaintainAspectRatioScalePolicy` festgelegt. Um die Skalierungsrichtlinie zurückzusetzen, ersetzen Sie die Standardinstanz von `MaintainAspectRatioScalePolicy` auf `MediaPlayerView.scalePolicy` durch Ihre eigene Richtlinie.
 
 >[!IMPORTANT]
 >
->Sie können die `scalePolicy` Eigenschaft nicht auf einen Nullwert setzen.
+>Sie können die `scalePolicy`-Eigenschaft nicht auf einen Nullwert setzen.
 
-## Nicht-Flash-Fallback-Szenarien {#non-flash-fallback-scenarios}
+## Fallback-Szenarien ohne Flash {#non-flash-fallback-scenarios}
 
-Wenn die Skalierungs-Richtlinie in Szenarien ohne Flash-Ausweichmöglichkeit ordnungsgemäß funktioniert, sollte das im `View` Konstruktor angegebene Video-div-Element Werte von ungleich null für `offsetWidth` und `offsetHeight`zurückgeben. Um ein Beispiel für eine fehlerhafte Funktion zu geben, gibt der `View` Konstruktor manchmal null für `offsetWidth` oder `offsetHeight`zurück, wenn die Breite und Höhe der Video-div-Elemente nicht explizit in css festgelegt sind.
+Wenn die Skalierungs-Richtlinie in Szenarien ohne Flash ordnungsgemäß funktioniert, muss das Videodiv-Element, das im Konstruktor `View` angegeben wird, für `offsetWidth` und `offsetHeight` Werte ungleich null zurückgeben. Um ein Beispiel für eine fehlerhafte Funktion zu geben, gibt der Konstruktor `View` manchmal null für `offsetWidth` oder `offsetHeight` zurück, wenn die Breite und Höhe der Video-div-Elemente nicht explizit in css festgelegt sind.
 
 >[!NOTE]
 >
 >Die CustomScalePolicy unterstützt nur wenige Browser, insbesondere IE, Edge und Safari 9. Bei diesen Browsern kann das native Seitenverhältnis des Videos nicht geändert werden. Die Position und die Abmessungen des Videos werden jedoch gemäß der Skalierungsrichtlinie erzwungen.
 
-1. Implementieren Sie die `MediaPlayerViewScalePolicy` Oberfläche, um eine eigene Skalierungsrichtlinie zu erstellen.
+1. Implementieren Sie die `MediaPlayerViewScalePolicy`-Schnittstelle, um eine eigene Skalierungsrichtlinie zu erstellen.
 
-   Die `MediaPlayerViewScalePolicy` Methode hat eine:
+   Das `MediaPlayerViewScalePolicy` verfügt über eine Methode:
 
    ```js
    /** 
@@ -64,14 +67,14 @@ Wenn die Skalierungs-Richtlinie in Szenarien ohne Flash-Ausweichmöglichkeit ord
    };
    ```
 
-1. Weisen Sie Ihre Implementierung der `MediaPlayerView` Eigenschaft zu.
+1. Weisen Sie Ihre Implementierung der `MediaPlayerView`-Eigenschaft zu.
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(videoDiv); 
    view.scalePolicy= new MediaPlayerViewCustomScalePolicy();
    ```
 
-1. Hinzufügen Sie Ihre Ansicht auf die `view` Eigenschaft des Medienplayers.
+1. hinzufügen Sie Ihre Ansicht auf die `view`-Eigenschaft des Medienplayers.
 
    ```
    mediaplayer.view = view;
