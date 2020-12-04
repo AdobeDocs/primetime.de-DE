@@ -6,6 +6,9 @@ title: Übersicht zu Primetime-Player-Ereignissen
 uuid: ed3be4c2-8df3-4d96-a30b-74c196262798
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '632'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +17,13 @@ source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
 
 Ihre Anwendung kann die Aktivität im Player und den sich ändernden Status des Players überwachen, indem sie auf die Ereignis überwacht, die von TVSDK gesendet werden.
 
-## Ereignisse {#events}
+## Ereignis {#events}
 
 TVSDK benachrichtigt Sie, wenn Ereignis auftreten, auf die Ihre Anwendung reagieren muss. Jedes Ereignis entspricht einer Listener-Klasse mit einer Rückrufmethode, die Sie implementieren müssen.
 
 >[!TIP]
 >
->Die Ereignis-Codes sind die Konstanten der `MediaPlayerEvent` Enum.
+>Die Ereignis-Codes sind die Konstanten der Enum `MediaPlayerEvent`.
 
 ## AdBreakCompletedEventListener {#section_D7A74A4EACA44E54806D040491B7D879}
 
