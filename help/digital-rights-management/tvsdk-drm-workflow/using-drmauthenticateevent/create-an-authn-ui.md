@@ -4,15 +4,18 @@ title: Erstellen einer Authentifizierungsbenutzeroberfläche
 uuid: 4744bac0-c36e-4b0a-b3fb-d81c7f2e7617
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 0%
 
 ---
 
 
-# Erstellen einer Authentifizierungsbenutzeroberfläche {#create-an-authentication-ui}
+# Erstellen einer Authentifizierungs-UI {#create-an-authentication-ui}
 
 1. Erstellen Sie eine Benutzeroberfläche, um die Authentifizierungsdaten des Benutzers abzurufen.
 
-   Im Folgenden finden Sie ein Flex-Beispiel für eine einfache Benutzeroberfläche zum Abrufen von Benutzeranmeldeinformationen. Es besteht aus einem Bedienfeldobjekt, das zwei `TextInput` Objekte enthält, eines für jeden Benutzernamen und eines Kennworts. Der Bereich enthält auch eine Schaltfläche, mit der die `credentials()` Methode gestartet wird.
+   Im Folgenden finden Sie ein Flex-Beispiel für eine einfache Benutzeroberfläche zum Abrufen von Benutzeranmeldeinformationen. Es besteht aus einem Bedienfeldobjekt, das zwei `TextInput`-Objekte enthält, eines für jeden Benutzernamen und jedes Kennwort. Das Bedienfeld enthält auch eine Schaltfläche, mit der die `credentials()`-Methode gestartet wird.
 
    ```xml
    <mx:Panel x="236.5"  
@@ -41,9 +44,9 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
    </mx:Panel>  
    ```
 
-1. Schreiben Sie die `credentials()` Methode zur Verarbeitung der vom Benutzer bereitgestellten Authentifizierungswerte.
+1. Schreiben Sie die `credentials()`-Methode, um die vom Benutzer bereitgestellten Authentifizierungswerte zu verarbeiten.
 
-   Bei der `credentials()` Methode handelt es sich um eine benutzerdefinierte Methode, bei der die Werte für Benutzername und Kennwort an die `setDRMAuthenticationCredentials()` Methode übergeben werden. Sobald die Werte übergeben wurden, setzt die `credentials()` Methode die Werte der `TextInput` Objekte zurück.
+   Die `credentials()`-Methode ist eine benutzerdefinierte Methode, mit der die Werte für Benutzername und Kennwort an die `setDRMAuthenticationCredentials()`-Methode übergeben werden. Sobald die Werte übergeben wurden, setzt die `credentials()`-Methode die Werte der `TextInput`-Objekte zurück.
 
    ```
    <mx:Script> 
@@ -56,7 +59,7 @@ source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
    </mx:Script> 
    ```
 
-   Eine Möglichkeit, diese Art von einfacher Schnittstelle zu implementieren, besteht darin, das Bedienfeld als Teil eines neuen Status einzubinden. Der neue Status stammt aus dem Basisstatus, wenn das `DRMAuthenticateEvent` Objekt ausgelöst wird. Das folgende Beispiel enthält ein `VideoDisplay` Objekt mit einem Quellattribut, das auf eine geschützte Videodatei verweist. In diesem Fall wird die `credentials()` Methode so geändert, dass sie auch die Anwendung in den Basisstatus zurückgibt. Diese Methode erfolgt, nachdem die Benutzeranmeldeinformationen übergeben und die TextInput-Objektwerte zurückgesetzt wurden.
+   Eine Möglichkeit, diese Art von einfacher Schnittstelle zu implementieren, besteht darin, das Bedienfeld als Teil eines neuen Status einzubinden. Der neue Status stammt aus dem Basisstatus, wenn das `DRMAuthenticateEvent`-Objekt ausgelöst wird. Das folgende Beispiel enthält ein `VideoDisplay`-Objekt mit einem Quellattribut, das auf eine geschützte Videodatei verweist. In diesem Fall wird die `credentials()`-Methode so geändert, dass sie auch die Anwendung in den Basisstatus zurückgibt. Diese Methode erfolgt, nachdem die Benutzeranmeldeinformationen übergeben und die TextInput-Objektwerte zurückgesetzt wurden.
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?> 
