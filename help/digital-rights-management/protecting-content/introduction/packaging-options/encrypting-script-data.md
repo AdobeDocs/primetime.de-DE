@@ -1,5 +1,5 @@
 ---
-seo-title: Encrypting script data
+seo-title: Skriptdaten verschlüsseln
 title: Skriptdaten verschlüsseln
 uuid: c91e5568-194e-4f20-858b-65310049901b
 translation-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Skriptdaten verschlüsseln {#encrypting-script-data}
+# Verschlüsseln von Skriptdaten {#encrypting-script-data}
 
 Diese Verpackungsoption gibt an, ob im Inhalt eingebettete Skriptdaten verschlüsselt sind.
 
@@ -19,4 +19,4 @@ Diese Verpackungsoption gibt an, ob im Inhalt eingebettete Skriptdaten verschlü
 >
 >Diese Regel gilt nur für das FLV-Dateiformat. Skriptdaten werden bei Dateien in anderen Formaten immer im Klartext gelassen.
 
-Example use case: Use this option to leave script data unencrypted, which allows for metadata aggregation tools to read the metadata of protected content.
+Verwendungsbeispiel: Verwenden Sie diese Option, um die Skriptdaten unverschlüsselt zu belassen, sodass Metadaten von geschützten Inhalten mit den Metadaten-Aggregationstools gelesen werden können.
