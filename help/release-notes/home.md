@@ -1,5 +1,5 @@
 ---
-title: Versionshinweise zu Primetime
+title: Primetime-Versionshinweise
 seo-title: Adobe Primetime Versionshinweise
 description: 'null'
 seo-description: 'null'
@@ -7,12 +7,12 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 33%
+ht-degree: 35%
 
 ---
 
 
-# Versionshinweise zu Primetime
+# Primetime-Versionshinweise
 
 Willkommen bei den Adobe Primetime Versionshinweisen. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
 
@@ -24,13 +24,13 @@ Die Version konzentrierte sich auf Wartungs-Updates.
 
 Die Veröffentlichung konzentrierte sich auf die Aktualisierung der Grundierungsversion der Primetime Reference-Anwendung auf Version 5.6.4.
 
-Weitere Informationen zur aktuellen Version für [Android](../release-notes/tvsdk-3x-android.md)finden Sie unter .
+Weitere Informationen zur aktuellen Version für [Android](../release-notes/tvsdk-3x-android.md) finden Sie unter .
 
 ## Erweiterungen und Fehlerbehebungen in den iOS-Versionshinweisen zu TVSDK 3.12
 
 Die Veröffentlichung konzentrierte sich auf die Lösung der wichtigsten Kundenprobleme.
 
-Weitere Informationen zur aktuellen Version für [iOS](../release-notes/tvsdk-3x-ios.md)finden Sie unter .
+Weitere Informationen zur aktuellen Version von [iOS](../release-notes/tvsdk-3x-ios.md) finden Sie unter .
 
 ## Siehe auch
 
@@ -41,7 +41,7 @@ Weitere Informationen zur aktuellen Version für [iOS](../release-notes/tvsdk-3x
 | [Referenzimplementierung](/help/android-reference-implementation/home.md) | Das Tutorial hilft, das TVSDK zu verstehen und die Funktions-Manager zu modifizieren, um Ihren persönlichen Player anzupassen. |
 | [Primetime-API-Verweise](/help/reference/api-references.md) | Enthält detaillierte Informationen über TVSDK-Funktionen, Datenstrukturen und andere Programmkonstrukte. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Hilft Ihnen, mehr über verschiedene Benutzerszenarien in Digital Rights Management (DRM) zu erfahren |
-| [Primetime-Ad Insertion-Hilfe](/help/dynamic-ad-insertion/home.md) | Erklärt, wie man Inhalte durch Einfügen nutzergerechter dynamischer Anzeigen auf dem Server monetarisieren und die Zielgruppe mit personalisierten Anzeigen ansprechen kann. |
+| [Hilfe zu Primetime Ad Insertion](/help/dynamic-ad-insertion/home.md) | Erklärt, wie man Inhalte durch Einfügen nutzergerechter dynamischer Anzeigen auf dem Server monetarisieren und die Zielgruppe mit personalisierten Anzeigen ansprechen kann. |
 | [Archive](https://helpx.adobe.com/primetime/archives.html) | Laden Sie PDFs der archivierten Dokumentation herunter. |
 
 ## Hilfreiche Ressourcen
