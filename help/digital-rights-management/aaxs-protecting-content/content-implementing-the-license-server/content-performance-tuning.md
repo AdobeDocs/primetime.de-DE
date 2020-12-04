@@ -20,7 +20,7 @@ Verwenden Sie die folgenden Tipps, um die Leistung zu steigern:
 
    >[!NOTE]
    >
-   >Wenn Sie mehrere Webanwendungen in derselben Tomcat-Instanz ausführen und sich `jsafe.dll` auf dem Pfad befinden, kann nur die erste Webanwendung, die geladen wird, die `jsafe.dll` Bibliothek laden. Daher erhält nur die erste Webanwendung die Vorteile der nativen Unterstützung. In such cases, to improve the performance of all web applications, place `cryptoj.jar`outside of the WAR file. Beispiel: im `<tomcat_installation_folder>/lib` Verzeichnis.
+   >Wenn Sie mehrere Webanwendungen in derselben Tomcat-Instanz ausführen und sich auf dem Pfad `jsafe.dll` befinden, kann nur die erste Webanwendung, die geladen wird, die Bibliothek `jsafe.dll` laden. Daher erhält nur die erste Webanwendung die Vorteile der nativen Unterstützung. Um in solchen Fällen die Leistung aller Webanwendungen zu verbessern, platzieren Sie `cryptoj.jar`außerhalb der WAR-Datei. Beispiel: im Ordner `<tomcat_installation_folder>/lib`.
 
 * Ein 64-Bit-Betriebssystem, wie die 64-Bit-Version von Red Hat® oder Windows, bietet eine wesentlich bessere Leistung als ein 32-Bit-Betriebssystem.
 
