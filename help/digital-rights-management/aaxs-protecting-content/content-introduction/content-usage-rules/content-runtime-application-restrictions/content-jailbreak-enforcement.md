@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# Vollstreckung von Gerichtsverfahren (Adobe Primetime erforderlich) {#jailbreak-enforcement-requires-adobe-primetime}
+# Jailbreak Enforcement (erfordert Adobe Primetime) {#jailbreak-enforcement-requires-adobe-primetime}
 
-On platforms that supports jailbreak detection (such as Android and iOS mobile devices), enabling jailbreak enforcement disallows playback of content if [!DNL jailbreak/root] has been detected on the device.
+Auf Plattformen, die die Jailbreak-Erkennung unterstützen (z. B. Android- und iOS-Mobilgeräte), wird durch Aktivierung der Jailbreak-Funktion die Wiedergabe von Inhalten deaktiviert, wenn auf dem Gerät [!DNL jailbreak/root] erkannt wurde.
 
 >[!NOTE]
 >
->Diese Nutzungsregel wird von Adobe Access-Clients ab Version 4.0 unterstützt, hat jedoch keine Auswirkungen auf Plattformen, die die Erkennung von Jailbreak nicht unterstützen. The behavior on older clients depends on the minimum client version supported by the license server.
+>Diese Nutzungsregel wird von Adobe Access-Clients ab Version 4.0 unterstützt, hat jedoch keine Auswirkungen auf Plattformen, die die Erkennung von Jailbreak nicht unterstützen. Das Verhalten älterer Clients hängt von der vom Lizenzserver unterstützten Clientversion ab.
 
