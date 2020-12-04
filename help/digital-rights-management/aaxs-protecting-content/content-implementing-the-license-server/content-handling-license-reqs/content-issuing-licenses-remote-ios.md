@@ -4,10 +4,13 @@ title: Erteilung von Lizenzen für Remote-Key-Versand an iOS-Clients (Adobe Prim
 uuid: 43d88426-209f-4d31-a810-ea8d75f31da9
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '61'
+ht-degree: 0%
 
 ---
 
 
 # Erteilung von Lizenzen für Remote-Key-Versand an iOS-Clients (Adobe Primetime erforderlich){#issuing-licenses-for-remote-key-delivery-to-ios-clients-requires-adobe-primetime}
 
-Um Lizenzen für Inhalte auszustellen, für die Remote Key Versand für iOS-Geräte erforderlich ist, muss das Lizenzserverzertifikat des Schlüsselservers in `HandlerConfiguration.setKeyServerCertificate()`angegeben werden.
+Um Lizenzen für Inhalte auszustellen, für die Remote Key Versand für iOS-Geräte erforderlich ist, muss das Lizenzserverzertifikat des Schlüsselservers unter `HandlerConfiguration.setKeyServerCertificate()` angegeben werden.
