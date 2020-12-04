@@ -6,27 +6,30 @@ title: MediaPlayer einrichten
 uuid: 2279e388-6fbc-49a2-8560-218d3d31e1d6
 translation-type: tm+mt
 source-git-commit: af9b865bc1627a97bf8957b5460ff9b46052a7dc
+workflow-type: tm+mt
+source-wordcount: '107'
+ht-degree: 0%
 
 ---
 
 
-# MediaPlayer einrichten{#set-up-the-mediaplayer}
+# MediaPlayer{#set-up-the-mediaplayer} einrichten
 
 Ein MediaPlayer-Objekt kapselt das Verhalten und die Funktionalität eines Medienplayers.
 
-1. Instanziieren einer `MediaPlayer` Datei mit den folgenden Methoden:
+1. Instanziieren Sie ein `MediaPlayer` mit folgendem Code:
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. Erstellen Sie eine `MediaPlayerView` Instanz:
+1. Erstellen Sie eine `MediaPlayerView`-Instanz:
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(container);
    ```
 
-   wobei `container` das Element Zielgruppe `div` ist, das Ihre `HTMLMediaElement`.
+   wobei `container` das Element der Zielgruppe `div` ist, das Ihr `HTMLMediaElement` enthält.
 
    Beispiel:
 
@@ -50,13 +53,13 @@ Ein MediaPlayer-Objekt kapselt das Verhalten und die Funktionalität eines Medie
          document.getElementById("videoDiv"));  
    ```
 
-1. Fügen Sie Ihre `MediaPlayerView` Instanz an Ihre `MediaPlayer` Instanz an:
+1. Hängen Sie die `MediaPlayerView`-Instanz an Ihre `MediaPlayer`-Instanz an:
 
    ```js
    player.view = view;
    ```
 
-1. Schließen Sie das Element für benutzerdefinierte Steuerelemente `div` an Ihre MediaPlayer-Instanz an.
+1. Fügen Sie die benutzerdefinierten Steuerelemente `div` an Ihre MediaPlayer-Instanz an.
 
    In HTML:
 
@@ -77,4 +80,4 @@ Ein MediaPlayer-Objekt kapselt das Verhalten und die Funktionalität eines Medie
    }
    ```
 
-Die `MediaPlayer` Instanz ist jetzt verfügbar und ordnungsgemäß konfiguriert, um Videoinhalte auf dem Gerätebildschirm anzuzeigen.
+Die `MediaPlayer`-Instanz ist jetzt verfügbar und ordnungsgemäß konfiguriert, um Videoinhalte auf dem Gerätebildschirm anzuzeigen.
