@@ -40,7 +40,8 @@ Benachrichtigungsobjekte liefern Informationen zum Status des Players. TVSDK ste
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Ereignis für die Information von 300000 bis 399999 </li> 
     </ul> <p>Jeder Bereich auf der obersten Ebene, z. B. Fehler, wird in Unterbereiche unterteilt, wie z. B. 101000 bis 101999, die Wiedergabefehler darstellen. </p>
     <pre>
-     Die Auflistung <span class="codeph"> mediacore.PSDKErrorCode</span> Liste die möglichen Werte.
+     Die Auflistung 
+     <span class="codeph"> mediacore.PSDKErrorCode</span> Listen der möglichen Werte.
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -49,11 +50,11 @@ Benachrichtigungsobjekte liefern Informationen zum Status des Players. TVSDK ste
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> metadata </td> 
-   <td colname="2">Schlüssel/Wert-Paare, die zusätzliche relevante Informationen zur Benachrichtigung enthalten. Beispielsweise würde ein Schlüssel mit dem Namen <span class="codeph"> URL</span> mit einem Wert verknüpft, der eine URL im Zusammenhang mit der Benachrichtigung ist, z. B. eine ungültige URL, die einen Fehler verursacht hat. </td> 
+   <td colname="2">Schlüssel/Wert-Paare, die zusätzliche relevante Informationen zur Benachrichtigung enthalten. Beispielsweise würde ein Schlüssel mit dem Namen <span class="codeph"> URL</span> mit einem Wert verknüpft, der eine URL im Zusammenhang mit der Benachrichtigung ist, z. B. eine ungültige URL, die einen Fehler verursachte. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> innerNotification </td> 
-   <td colname="2">Ein Verweis auf ein anderes <span class="codeph"> MediaPlayerNotification</span> -Objekt, das diese Benachrichtigung direkt beeinflusste. Ein Beispiel könnte eine Benachrichtigung über einen Fehler beim Einfügen von Anzeigen sein, der direkt einem Einfügekonflikt in der Zeitleiste entspricht. Nicht alle Benachrichtigungen bieten eine interne Benachrichtigung. </td> 
+   <td colname="2">Ein Verweis auf ein anderes <span class="codeph">-MediaPlayerNotification</span>-Objekt, das diese Benachrichtigung direkt beeinflusste. Ein Beispiel könnte eine Benachrichtigung über einen Fehler beim Einfügen von Anzeigen sein, der direkt einem Einfügekonflikt in der Zeitleiste entspricht. Nicht alle Benachrichtigungen bieten eine interne Benachrichtigung. </td> 
   </tr> 
  </tbody> 
 </table>
