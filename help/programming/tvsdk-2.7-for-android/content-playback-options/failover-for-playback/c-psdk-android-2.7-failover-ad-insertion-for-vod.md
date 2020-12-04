@@ -1,20 +1,23 @@
 ---
-description: Der Video-on-Demand-Anzeigeneinfügeprozess (VOD) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift TVSDK geeignete Maßnahmen.
-seo-description: Der Video-on-Demand-Anzeigeneinfügeprozess (VOD) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift TVSDK geeignete Maßnahmen.
+description: Der VOD-Anzeigeneinfügeprozess (video-on-demand) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift TVSDK geeignete Maßnahmen.
+seo-description: Der VOD-Anzeigeneinfügeprozess (video-on-demand) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift TVSDK geeignete Maßnahmen.
 seo-title: Insertion und Failover von Anzeigen für VOD
 title: Insertion und Failover von Anzeigen für VOD
 uuid: 1f813065-9310-4495-9fbb-d90eda8ac8bd
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '736'
+ht-degree: 0%
 
 ---
 
 
 # Insertion und Failover von Anzeigen für VOD {#advertising-insertion-and-failover-for-vod}
 
-Der Video-on-Demand-Anzeigeneinfügeprozess (VOD) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift TVSDK geeignete Maßnahmen.
+Der VOD-Anzeigeneinfügeprozess (video-on-demand) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift TVSDK geeignete Maßnahmen.
 
-## Phase der Anzeigenauflösung {#section_5DD3A7DA79E946298BFF829A60202E1C}
+## Phase zur Anzeigenauflösung {#section_5DD3A7DA79E946298BFF829A60202E1C}
 
 TVSDK kontaktiert einen Anzeigen-Versand-Dienst, z. B. Adobe Primetime-Anzeigenentscheidung, und versucht, die primäre Wiedergabelistendatei abzurufen, die dem Videostream für die Anzeige entspricht. Während der Phase der Anzeigenauflösung führt TVSDK einen HTTP-Aufruf an den Remote-Ad-Versand-Server durch und analysiert die Antwort des Servers.
 
@@ -28,7 +31,7 @@ TVSDK unterstützt die folgenden Arten von Anzeigenanbietern:
    TVSDK sendet eine Anforderung, einschließlich einer Reihe von Targeting-Parametern und einer Asset-Identifikationsnummer, an den Primetime-Ad-Decision-Back-End-Server. Die Primetime-Anzeigenentscheidung reagiert mit einem synchronisierten SMIL-Dokument (Multimedia Integration Language), das die erforderlichen Anzeigeninformationen enthält.
 * Anbieter von benutzerdefinierten Anzeigenmarken
 
-   Behandelt die Situation, in der Anzeigen vom Server in den Stream verbrannt werden. TVSDK führt keine tatsächliche Anzeigeneinfügung durch, muss jedoch die auf dem Server eingefügten Anzeigen verfolgen. Dieser Anbieter legt die Anzeigenmarken fest, die TVSDK zur Durchführung der Anzeigenverfolgung verwendet.
+   Behandelt die Situation, in der Anzeigen vom Server in den Stream verbrannt werden. TVSDK führt nicht die tatsächliche Anzeigeneinfügung durch, sondern muss die auf dem Server eingefügten Anzeigen nachverfolgen. Dieser Anbieter legt die Anzeigenmarken fest, die TVSDK zur Durchführung der Anzeigenverfolgung verwendet.
 
 Während dieser Phase kann eine der folgenden Ausfallsicherungs-Situationen auftreten:
 
@@ -53,7 +56,7 @@ TVSDK gibt eine Warnmeldung zum Fehler aus und fährt mit der Verarbeitung fort.
 
 TVSDK lädt die Anzeigensegmente herunter und rendert sie auf dem Gerätebildschirm.
 
-TVSDK hat jetzt Anzeigen aufgelöst, die Anzeigen auf der Zeitleiste positioniert und versucht, den Inhalt auf dem Bildschirm wiederzugeben.
+TVSDK hat jetzt Anzeigen aufgelöst, die Anzeigen auf der Zeitleiste positioniert und versucht, den Inhalt auf dem Bildschirm zu rendern.
 
 Die folgenden Hauptklassen von Fehlern können in den folgenden Phasen auftreten:
 
@@ -69,4 +72,4 @@ TVSDK leitet die ausgelösten Ereignis an Ihre Anwendung weiter, einschließlich
 
    Ihre Anwendung muss die entsprechenden Maßnahmen ergreifen.
 
-Ganz gleich, ob Fehler auftreten, TVSDK ruft `onAdBreakComplete` für jeden `onAdBreakStart` und `onAdComplete` für jeden auf `onAdStart`. Wenn Segmente jedoch nicht heruntergeladen werden konnten, kann es Lücken in der Zeitschiene geben. Wenn die Lücken groß genug sind, können die Werte in der Abspielposition und der gemeldete Anzeigenfortschritt möglicherweise Diskontinuitäten aufweisen.
+Unabhängig davon, ob Fehler auftreten, ruft TVSDK `onAdBreakComplete` für jedes `onAdBreakStart` und `onAdComplete` für jedes `onAdStart` auf. Wenn Segmente jedoch nicht heruntergeladen werden konnten, kann es Lücken in der Zeitschiene geben. Wenn die Lücken groß genug sind, können die Werte in der Abspielposition und der gemeldete Anzeigenfortschritt möglicherweise Diskontinuitäten aufweisen.
