@@ -6,11 +6,14 @@ title: Beispiel Benutzer dürfen die Untertitelspur ändern
 uuid: 4b69d569-0d6e-4388-9fe3-488e2a4d762d
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 0%
 
 ---
 
 
-# Beispiel: Benutzer können die Beschriftungsspur ändern{#example-allow-users-to-change-the-caption-track}
+# Beispiel: Benutzer dürfen die Beschriftungsspur{#example-allow-users-to-change-the-caption-track} ändern
 
 Dies ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mit der ein Benutzer eine Untertitelspur auswählen kann.
 
