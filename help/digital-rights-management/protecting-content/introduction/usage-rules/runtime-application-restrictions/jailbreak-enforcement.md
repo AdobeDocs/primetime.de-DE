@@ -1,7 +1,7 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: Jailbreak enforcement (requires Adobe Primetime DRM)
+seo-title: Strafverfolgung (Adobe Primetime DRM erforderlich)
 title: Strafverfolgung (Adobe Primetime DRM erforderlich)
 uuid: 5cf8ebbc-17de-44cc-90d2-0857ea62c4a4
 translation-type: tm+mt
@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Strafverfolgung (Adobe Primetime DRM erforderlich){#jailbreak-enforcement-requires-adobe-primetime-drm}
+# Rechtsdurchsetzung (Adobe Primetime DRM erforderlich){#jailbreak-enforcement-requires-adobe-primetime-drm}
 
-Auf Plattformen, die die Jailbreak-Erkennung unterstützen, wie Android- und iOS-Mobilgeräte, können Sie die Jailbreak-Funktion aktivieren, um die Wiedergabe von Inhalten zu deaktivieren, wenn auf dem Gerät erkannt [!DNL jailbreak/root] wurde.
+Auf Plattformen, die die Jailbreak-Erkennung unterstützen, wie Android- und iOS-Mobilgeräte, können Sie die Jailbreak-Durchsetzung aktivieren, um die Wiedergabe von Inhalten zu deaktivieren, wenn auf dem Gerät [!DNL jailbreak/root] erkannt wurde.
 
 >[!NOTE]
 >
->Diese Nutzungsregel wird von Adobe Primetime DRM-Client Version 4.0 oder höher unterstützt. However, it has no effect on platforms that do not support jailbreak detection. The behavior on older clients depends on the minimum client version supported by the license server.
+>Diese Nutzungsregel wird von Adobe Primetime DRM-Client Version 4.0 oder höher unterstützt. Es hat jedoch keine Auswirkungen auf Plattformen, die die Erkennung von Inhaftierungen nicht unterstützen. Das Verhalten älterer Clients hängt von der vom Lizenzserver unterstützten Clientversion ab.
 
