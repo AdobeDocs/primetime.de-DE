@@ -6,6 +6,9 @@ title: Anzeigensignalisierungsmodus
 uuid: 111b7e43-e97c-4069-a273-4f9f6280453e
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
 
 Der Anzeigensignalisierungsmodus gibt an, wo der Videostream Werbeinformationen erhalten soll.
 
-Die gültigen Werte sind `DEFAULT`, `SERVER_MAP`und `MANIFEST_CUES`.
+Die gültigen Werte sind `DEFAULT`, `SERVER_MAP` und `MANIFEST_CUES`.
 
-Die folgende Tabelle beschreibt die Auswirkungen von `AdSignalingMode` Werten für die verschiedenen Arten von HLS-Streams:
+In der folgenden Tabelle werden die Auswirkungen von `AdSignalingMode`-Werten für die verschiedenen HLS-Streams beschrieben:
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
