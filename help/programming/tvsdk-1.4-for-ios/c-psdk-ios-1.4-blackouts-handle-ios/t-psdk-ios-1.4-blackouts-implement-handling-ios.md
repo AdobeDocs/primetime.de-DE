@@ -6,6 +6,9 @@ title: Implementierung der Blackout-Behandlung
 uuid: 38a78a57-b641-439a-a7d8-da571a0902e4
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +30,7 @@ So implementieren Sie die Blackout-Behandlung und stellen alternative Inhalte w�
  }
 ```
 
-1. Hinzufügen einen Benachrichtigungs-Listener für `PTTimedMetadataChangedNotification`.
+1. hinzufügen einen Benachrichtigungs-Listener für `PTTimedMetadataChangedNotification`.
 
    ```
    - (void)addobservers 
@@ -37,7 +40,7 @@ So implementieren Sie die Blackout-Behandlung und stellen alternative Inhalte w�
    }
    ```
 
-1. Implementieren einer Listener-Methode für `PTTimedMetadata` Objekte im Vordergrund
+1. Implementieren Sie eine Listener-Methode für `PTTimedMetadata`-Objekte im Vordergrund.
 
    Beispiel:
 
@@ -61,7 +64,7 @@ So implementieren Sie die Blackout-Behandlung und stellen alternative Inhalte w�
    }
    ```
 
-1. Behandeln Sie `TimedMetadata` Objekte mit konstanten Aktualisierungen während der Wiedergabe.
+1. Behandeln Sie `TimedMetadata`-Objekte mit konstanten Aktualisierungen während der Wiedergabe.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +85,7 @@ So implementieren Sie die Blackout-Behandlung und stellen alternative Inhalte w�
    }
    ```
 
-1. Hinzufügen Sie den `PTTimedMetadata` Handler, um zu alternativen Inhalten zu wechseln und zum Hauptinhalt zurückzukehren, wie durch das Objekt und seine Wiedergabezeit angegeben `PTTimedMetadata` wird.
+1. hinzufügen Sie den `PTTimedMetadata`-Handler, um zu alternativen Inhalten zu wechseln und zum Hauptinhalt zurückzukehren, wie durch das `PTTimedMetadata`-Objekt und dessen Wiedergabezeit angegeben.
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +200,7 @@ So implementieren Sie die Blackout-Behandlung und stellen alternative Inhalte w�
    }
    ```
 
-1. Implementieren Sie eine Listener-Methode für `PTTimedMetadata` Objekte im Hintergrund.
+1. Implementieren Sie eine Listener-Methode für `PTTimedMetadata`-Objekte im Hintergrund.
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
