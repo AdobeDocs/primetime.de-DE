@@ -6,6 +6,9 @@ title: Übersicht
 uuid: 9c320389-e327-4e5f-888c-e2e5728365ca
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ Dieses Handbuch enthält Informationen, mit denen Sie TVSDK-Funktionen mithilfe 
 
 >[!TIP]
 >
->Das Präfix TVSDK API-Namensraum `com.adobe.mediacore` wird aus Gründen der Kürze weggelassen.
+>Das TVSDK API-Namensraum-Präfix `com.adobe.mediacore` wird aus Gründen der Kürze weggelassen.
 >
 >Viele API-Elemente werden ohne ihren übergeordneten Klassenbezeichner referenziert, wenn der Kontext klar ist.
 
