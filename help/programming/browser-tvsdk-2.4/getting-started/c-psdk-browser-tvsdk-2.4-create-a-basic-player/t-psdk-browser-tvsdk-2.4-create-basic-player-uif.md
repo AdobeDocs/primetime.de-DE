@@ -6,6 +6,9 @@ title: Erstellen eines einfachen Players mit dem UI-Framework
 uuid: d1a82dbb-1c05-4d0c-b6bc-e07cbede93cb
 translation-type: tm+mt
 source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
 
 So erstellen Sie einen einfachen Player mit dem UI-Framework:
 
-1. Erstellen Sie eine `<div>` für Ihre Player-Instanz.
+1. Erstellen Sie ein `<div>` für Ihre Player-Instanz.
 
    Beispiel:
 
@@ -33,7 +36,7 @@ So erstellen Sie einen einfachen Player mit dem UI-Framework:
    </script>
    ```
 
-   Wenn der Player erstellt wird, erhält das angegebene `<div>` Element die CSS-Klasse `ptp-main-video-div-style`. Das resultierende DOM wird in etwa wie folgt angezeigt:
+   Wenn der Player erstellt wird, erhält das angegebene `<div>`-Element die CSS-Klasse `ptp-main-video-div-style`. Das resultierende DOM wird in etwa wie folgt angezeigt:
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -41,7 +44,7 @@ So erstellen Sie einen einfachen Player mit dem UI-Framework:
    </div>
    ```
 
-1. Hinzufügen eines UI-Steuerelements.
+1. hinzufügen eines UI-Steuerelements.
 
    Fügen Sie beispielsweise eine Steuerleiste hinzu, die angezeigt wird, wenn der Mauszeiger über den Player bewegt wird:
 
@@ -70,7 +73,7 @@ So erstellen Sie einen einfachen Player mit dem UI-Framework:
    </div>
    ```
 
-Das vom Aufruf zurückgegebene Objekt `ptp.videoPlayer()` bietet ein Verhalten, das die TVSDK-Medienplayer-API umschließt und eine programmgesteuerte Wiedergabe ermöglicht. Wenn Sie die Media Player-Instanz aufrufen, wird die Benutzeroberfläche auf der Grundlage der vom Medienplayer ausgelösten Ereignis aktualisiert:
+Das Objekt, das vom Aufruf von `ptp.videoPlayer()` zurückgegeben wird, stellt ein Verhalten bereit, das die TVSDK-Medienplayer-API umschließt und eine programmgesteuerte Steuerung der Wiedergabe ermöglicht. Wenn Sie die Media Player-Instanz aufrufen, wird die Benutzeroberfläche auf der Grundlage der vom Medienplayer ausgelösten Ereignis aktualisiert:
 
 ```js
 <script> 
