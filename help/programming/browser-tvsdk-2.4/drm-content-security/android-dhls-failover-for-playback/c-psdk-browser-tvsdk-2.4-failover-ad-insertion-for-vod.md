@@ -6,15 +6,18 @@ title: Insertion und Failover von Anzeigen für VOD
 uuid: 33f7aad5-fc4f-459d-8c29-01ba1353dfcc
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '719'
+ht-degree: 0%
 
 ---
 
 
-# Insertion und Failover von Anzeigen für VOD{#advertising-insertion-and-failover-for-vod}
+# Inserieren und Failover für VOD{#advertising-insertion-and-failover-for-vod}
 
 Der Video-on-Demand-Anzeigeneinfügeprozess (VOD) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss Browser TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift sie geeignete Maßnahmen.
 
-## Phase der Anzeigenauflösung {#section_F562CD6D0EF04AA9A0A3C0176A4EC340}
+## Phase zur Anzeigenauflösung {#section_F562CD6D0EF04AA9A0A3C0176A4EC340}
 
 Browser TVSDK kontaktiert einen Anzeigen-Versand-Dienst, z. B. Adobe Primetime-Anzeigenentscheidung, und versucht, die primäre Wiedergabelistendatei abzurufen, die dem Videostream für die Anzeige entspricht. Während der Phase der Anzeigenauflösung führt Browser TVSDK einen HTTP-Aufruf an den Remote-Ad-Versand-Server aus und analysiert die Antwort des Servers.
 
@@ -23,9 +26,9 @@ Browser TVSDK unterstützt die folgenden Arten von Anzeigenanbietern:
 * Metadaten-Anzeigenanbieter
 
    Die Anzeigendaten werden in einfachen JSON-Dateien kodiert.
-* Adobe Primetime-Anbieter für Anzeigenentscheidungen
+* Adobe Primetime Ad Decision Ad Provider
 
-   Browser TVSDK sendet eine Anforderung, einschließlich einer Reihe von Targeting-Parametern und einer Asset-ID, an den Adobe Primetime-Back-End-Server für die Entscheidungsfindung. Adobe Primetime-Anzeigenentscheidungen reagieren mit einem SMIL-Dokument (synchronisierte Multimedia-Integrationssprache), das die erforderlichen Anzeigeninformationen enthält.
+   Browser TVSDK sendet eine Anforderung, einschließlich einer Reihe von Targeting-Parametern und einer Asset-Identifikationsnummer, an den Adobe Primetime-Back-End-Server für die Entscheidungsfindung. Adobe Primetime-Anzeigenentscheidungen reagieren mit einem SMIL-Dokument (synchronisierte Multimedia-Integrationssprache), das die erforderlichen Anzeigeninformationen enthält.
 
    Während dieser Phase kann eine der folgenden Ausfallsicherungs-Situationen auftreten:
 
@@ -49,7 +52,7 @@ Browser TVSDK gibt eine Warnmeldung zum Fehler aus und fährt mit der Verarbeitu
 
 Browser TVSDK lädt die Anzeigensegmente herunter und rendert sie auf dem Gerätebildschirm.
 
-An dieser Stelle hat Browser TVSDK aufgelöste Anzeigen, positionierte sie auf der Zeitleiste und versucht, den Inhalt auf dem Bildschirm zu rendern.
+Zu diesem Zeitpunkt hat Browser TVSDK aufgelöste Anzeigen, positionierte sie auf der Zeitleiste und versucht, den Inhalt auf dem Bildschirm wiederzugeben.
 
 Die folgenden Hauptklassen von Fehlern können in dieser Phase auftreten:
 
