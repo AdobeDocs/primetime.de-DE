@@ -4,19 +4,22 @@ title: Vorbereiten von Kennwörtern für die Dateien mit den Servereigenschaften
 uuid: 2d876eb0-b1a5-4c30-ae96-0a22f6a03910
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
 
-# Vorbereiten von Kennwörtern für die Dateien mit den Servereigenschaften {#preparing-passwords-for-the-server-properties-files}
+# Vorbereiten von Kennwörtern für die Server-Eigenschaftendateien {#preparing-passwords-for-the-server-properties-files}
 
-Um die Sicherheit des Passworts Ihrer Berechtigung sicherzustellen, wird ein Tool zum Verschlüsseln des Passworts bereitgestellt, bevor es in die [!DNL flashaccess-refimpl.properties] Datei oder [!DNL flashaccess-refimpl-packager.properties] -Datei eingegeben wird.
+Um die Sicherheit des Passworts Ihrer Berechtigung sicherzustellen, wird ein Tool zum Verschlüsseln des Kennworts bereitgestellt, bevor es in die Datei [!DNL flashaccess-refimpl.properties] oder [!DNL flashaccess-refimpl-packager.properties] eingegeben wird.
 
 So führen Sie das Tool mit dem bereitgestellten ANT-Skript aus:
 
-* Zu *`<Reference Implementation Server Path>`*[!DNL \refimpl]
+* Gehen Sie zu *`<Reference Implementation Server Path>`* [!DNL \refimpl]
 
-* Stellen Sie sicher, dass die `sdkdir` Eigenschaft in [!DNL build-refimpl.xml] verweist auf den Ordner, der das Adobe Access SDK enthält.
+* Stellen Sie sicher, dass die `sdkdir`-Eigenschaft in [!DNL build-refimpl.xml] auf den Ordner verweist, der das Adobe Access SDK enthält.
 * Führen Sie den folgenden Befehl mit ANT aus:
 
    ```
@@ -27,7 +30,7 @@ So führen Sie das Tool mit dem bereitgestellten ANT-Skript aus:
 
 So führen Sie das Tool mit Java aus:
 
-* Zu *`<Reference Implementation Server Path>`*\ [!DNL scrambler]
+* Gehen Sie zu *`<Reference Implementation Server Path>`*\ [!DNL scrambler]
 
 * Geben Sie an der Eingabeaufforderung den Befehl ein:
 
@@ -49,4 +52,4 @@ Das Dienstprogramm gibt das verschlüsselte Kennwort aus, das Sie in die .proper
 
 >[!NOTE]
 >
->Kennwörter, die mit dem mit der Referenz-Implementierung bereitgestellten Dienstprogramm zum Abwracken von Kennwörtern kodiert wurden, funktionieren nicht mit dem Adobe Access Server für geschütztes Streaming.
+>Kennwörter, die mit dem mit der Referenzimplementierung bereitgestellten Dienstprogramm zum Abwracken von Kennwörtern kodiert wurden, funktionieren nicht mit dem Adobe Access Server für geschütztes Streaming.
