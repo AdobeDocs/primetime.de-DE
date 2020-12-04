@@ -6,6 +6,9 @@ title: Klickbare Anzeigen
 uuid: 8b257483-8b90-47cf-be2a-095b6d5b8883
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ TVSDK stellt Informationen bereit, damit Sie Clickthrough-Anzeigen bearbeiten k�
 
 In TVSDK für iOS können nur lineare Anzeigen angeklickt werden.
 
-## Antworten auf Klicks auf Anzeigen {#section_537AF2593FDB4257B81AAE2103B0C719}
+## Antworten Sie auf Klicks auf Anzeigen {#section_537AF2593FDB4257B81AAE2103B0C719}
 
 Wenn ein Benutzer auf eine Anzeige, eine begleitende Banneranzeige oder eine zugehörige Schaltfläche klickt, muss Ihre Anwendung reagieren. TVSDK liefert Informationen zur Ziel-URL für den Klick.
 
-1. Um einen Ereignis-Listener für TVSDK einzurichten und die Clickthrough-Informationen bereitzustellen, fügen Sie einen Beobachter für `PTMediaPlayerAdClickNotification`hinzu.
+1. Um einen Ereignis-Listener für TVSDK einzurichten und die Clickthrough-Informationen bereitzustellen, fügen Sie einen Beobachter für `PTMediaPlayerAdClickNotification` hinzu.
 
    >[!NOTE]
    >
@@ -28,8 +31,8 @@ Wenn ein Benutzer auf eine Anzeige, eine begleitende Banneranzeige oder eine zug
 
 1. Überwachen Sie Benutzerinteraktionen auf klickbaren Anzeigen.
 1. Wenn der Benutzer die Anzeige oder Schaltfläche berührt oder klickt, um TVSDK zu benachrichtigen, verwenden Sie `[_player notifyClick:_currentAd.primaryAsset];`.
-1. Hören Sie auf das `PTMediaPlayerAdClickNotification` Ereignis von TVSDK.
-1. Verwenden Sie das `PTMediaPlayerAdClickURLKey` Objekt, um die Clickthrough-URL und zugehörige Informationen abzurufen.
+1. Suchen Sie nach dem Ereignis `PTMediaPlayerAdClickNotification` von TVSDK.
+1. Verwenden Sie das `PTMediaPlayerAdClickURLKey`-Objekt, um die Clickthrough-URL und zugehörige Informationen abzurufen.
 1. Halten Sie das Video an.
 1. Verwenden Sie die Clickthrough-Informationen, um die Anzeigen-Clickthrough-URL und die zugehörigen Informationen anzuzeigen.
 
