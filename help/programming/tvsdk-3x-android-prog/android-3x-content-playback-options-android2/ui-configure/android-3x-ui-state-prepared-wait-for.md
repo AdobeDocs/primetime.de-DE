@@ -6,18 +6,21 @@ title: Warten auf gültigen Status
 uuid: 7a86b4cf-f7a0-4d90-9ff2-401640a395c5
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '158'
+ht-degree: 0%
 
 ---
 
 
-# Warten auf gültigen Status {#wait-for-a-valid-status}
+# Warten Sie auf einen gültigen Status {#wait-for-a-valid-status}
 
 Mit TVSDK können Sie die grundlegende Wiedergabe von Live- und Video On Demand (VOD) steuern. TVSDK stellt Methoden und Eigenschaften für die Player-Instanz bereit, die Sie zum Konfigurieren der Player-Benutzeroberfläche verwenden können.
 
 Bevor Sie die meisten TVSDK-Player-Methoden verwenden können, muss sich der Player in einem gültigen Status befinden.
 
-Wenn Sie darauf warten, dass der Player den richtigen Status hat, wird sichergestellt, dass die Medienressource erfolgreich geladen wurde. Wenn sich der Player nicht in mindestens dem erforderlichen Status befindet, werden viele Player-Methoden ausgelöst `MediaPlayerException`.
+Wenn Sie darauf warten, dass der Player den richtigen Status hat, wird sichergestellt, dass die Medienressource erfolgreich geladen wurde. Wenn sich der Player nicht in mindestens dem erforderlichen Status befindet, geben viele Player-Methoden `MediaPlayerException` aus.
 
-Der erforderliche Status wird in der Regel VORBEREITT. In diesem Fall wird die Callback-Routine für die `StatusChangeEventListener.onStatusChanged()` Ausführung ausgeführt.
+Der erforderliche Status wird in der Regel VORBEREITT. In diesem Fall wird die Callback-Routine für `StatusChangeEventListener.onStatusChanged()` ausgeführt.
 
-Um zu bestätigen, dass der Status vorliegt, `PREPARED`überprüfen Sie `MediaPlayer.MediaPlayerStatus`.
+Um zu bestätigen, dass der Status `PREPARED` lautet, markieren Sie `MediaPlayer.MediaPlayerStatus`.
