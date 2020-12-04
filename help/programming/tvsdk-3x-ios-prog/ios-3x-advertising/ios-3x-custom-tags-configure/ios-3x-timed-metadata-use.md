@@ -1,22 +1,25 @@
 ---
-description: Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabezeit mit der Beginn-Zeit übereinstimmt.
-seo-description: Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabezeit mit der Beginn-Zeit übereinstimmt.
+description: Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabedauer mit der Beginn-Zeit übereinstimmt.
+seo-description: Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabedauer mit der Beginn-Zeit übereinstimmt.
 seo-title: Verwenden von Zeitmetadaten
 title: Verwenden von Zeitmetadaten
 uuid: 1531780f-2502-4235-818c-6c0a6bf3d348
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 1%
 
 ---
 
 
-# Verwenden von Zeitmetadaten {#use-timed-metadata}
+# Verwenden Sie zeitgesteuerte Metadaten {#use-timed-metadata}
 
-Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabezeit mit der Beginn-Zeit übereinstimmt.
+Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabedauer mit der Beginn-Zeit übereinstimmt.
 
-Um diese gespeicherten `PTTimedMetadata` Objekte während der Wiedergabe zu verwenden, verwenden Sie das gespeicherte Wörterbuch aus Zeitmetadatenobjekten im [Store, während sie ausgelöst](../../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md)werden.
+Um diese gespeicherten `PTTimedMetadata`-Objekte während der Wiedergabe zu verwenden, verwenden Sie das gespeicherte Wörterbuch von [Zeitmetadatenobjekte speichern, während sie gesendet werden.](../../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md)
 
-1. Extrahieren und aktualisieren Sie die aktuelle Wiedergabezeit aus dieser Benachrichtigung und suchen Sie alle `PTTimedMetadata` Objekte mit Beginn, die der aktuellen Wiedergabezeit entsprechen.
+1. Extrahieren und aktualisieren Sie die aktuelle Wiedergabezeit aus dieser Benachrichtigung und suchen Sie alle `PTTimedMetadata`-Objekte mit Beginn-Zeiten, die der aktuellen Wiedergabezeit entsprechen.
 
    Mit diesen Objekten können Sie verschiedene Aktionen ausführen.
 
@@ -57,4 +60,4 @@ Um diese gespeicherten `PTTimedMetadata` Objekte während der Wiedergabe zu verw
    }
    ```
 
-1. Passen Sie regelmäßig statische `PTTimedMetadata` Instanzen von der Liste ab, um zu verhindern, dass der Speicher ständig wächst.
+1. Regelmäßig die statische `PTTimedMetadata`-Instanzen aus der Liste entfernen, um zu verhindern, dass der Speicher ständig wächst.
