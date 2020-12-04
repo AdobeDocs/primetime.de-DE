@@ -1,6 +1,6 @@
 ---
-seo-title: Deploying the Adobe Primetime DRM Server for Protected Streaming
-title: Deploying the Adobe Primetime DRM Server for Protected Streaming
+seo-title: Bereitstellen des Adobe Primetime DRM-Servers für geschütztes Streaming
+title: Bereitstellen des Adobe Primetime DRM-Servers für geschütztes Streaming
 uuid: 83ef8237-0026-4677-b42b-ea4b6de19630
 translation-type: tm+mt
 source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
@@ -11,22 +11,22 @@ ht-degree: 0%
 ---
 
 
-# Deploying the Adobe Primetime DRM Server for Protected Streaming{#deploying-the-adobe-primetime-drm-server-for-protected-streaming}
+# Bereitstellen des Adobe Primetime DRM-Servers für geschütztes Streaming{#deploying-the-adobe-primetime-drm-server-for-protected-streaming}
 
-Before you can deploy the Adobe Primetime DRM Server for Protected Streaming, you must have installed the versions of Java and Tomcat as listed in the Requirements topic.
+Bevor Sie den Adobe Primetime DRM-Server für geschütztes Streaming bereitstellen können, müssen Sie die Java- und Tomcat-Versionen wie im Abschnitt &quot;Anforderungen&quot;aufgeführt installiert haben.
 
-The Primetime DRM Server for Protected Streaming package includes [!DNL flashaccesserver.war]. If you:
+Das Primetime-DRM-Server für das geschützte Streaming-Paket enthält [!DNL flashaccesserver.war]. Wenn Sie:
 
-* Want to deploy this WAR file, you need to copy it to Tomcat&#39;s [!DNL webapps] directory.
-* Have previously deployed the WAR file, you may need to delete the unpacked WAR directory ( [!DNL flashaccessserver] in Tomcat&#39;s [!DNL webapps] directory).
+* Möchten Sie diese WAR-Datei bereitstellen, müssen Sie sie in den Ordner [!DNL webapps] von Tomcat kopieren.
+* Haben Sie zuvor die WAR-Datei bereitgestellt, müssen Sie möglicherweise den entpackten WAR-Ordner ( [!DNL flashaccessserver] im [!DNL webapps]-Verzeichnis von Tomcat) löschen.
 
-* Soll verhindern, dass Tomcat WAR-Dateien entpackt, bearbeiten Sie die [!DNL server.xml] Datei im [!DNL conf] Verzeichnis von Tomcat und konfigurieren Sie das `unpackWARs` Attribut, indem Sie es auf `false`.
+* Soll verhindern, dass Tomcat WAR-Dateien entpackt, bearbeiten Sie die Datei [!DNL server.xml] im Ordner [!DNL conf] von Tomcat und konfigurieren Sie das `unpackWARs`-Attribut, indem Sie es auf `false` setzen.
 
 >[!NOTE]
 >
->If you have configured Tomcat to include [!DNL commons-logging.jar] on the System classpath (not required for the Primetime DRM Server for Protected Streaming) then you must configure commons-logging to use Log4J.
+>Wenn Sie Tomcat so konfiguriert haben, dass er [!DNL commons-logging.jar] in den Systemklasspath einbezieht (nicht erforderlich für den Primetime DRM-Server für geschütztes Streaming), müssen Sie die Befehlsprotokollierung für die Verwendung von Log4J konfigurieren.
 
-The server optionally uses a platform-specific library ( [!DNL jsafe.dll] on Microsoft Windows or [!DNL libjsafe.so] on Linux for optimal performance. You can copy the appropriate library for your platform from [!DNL thirdparty/cryptoj/]*platform *to a location that is specified by the`PATH`environment variable or`LD_LIBRARY_PATH`on Linux.
+Der Server verwendet optional eine plattformspezifische Bibliothek ( [!DNL jsafe.dll] unter Microsoft Windows oder [!DNL libjsafe.so] unter Linux für optimale Leistung. Sie können die entsprechende Plattformbibliothek von [!DNL thirdparty/cryptoj/]*platform* in einen Speicherort kopieren, der durch die Variable `PATH` Umgebung oder `LD_LIBRARY_PATH` unter Linux angegeben wird.
 
 >[!NOTE]
 >
