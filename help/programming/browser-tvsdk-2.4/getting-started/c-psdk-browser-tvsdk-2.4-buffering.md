@@ -6,6 +6,9 @@ title: Pufferung
 uuid: da9498ee-c736-4093-97a2-250d3ad56d49
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '69'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Sie können Visualisierungen konfigurieren, um den Benutzer darüber zu informieren, dass Inhalte gepuffert werden.
 
-Hör auf `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` und `AdobePSDK.PSDKEventType.BUFFERING_END` Ereignisse. Beispiel:
+Suchen Sie nach den Ereignissen `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` und `AdobePSDK.PSDKEventType.BUFFERING_END`. Beispiel:
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_BEGIN,  
