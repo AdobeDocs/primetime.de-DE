@@ -6,6 +6,9 @@ title: Gerätebindung
 uuid: 351fa33c-4226-4ed5-829c-56b563166fec
 translation-type: tm+mt
 source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+workflow-type: tm+mt
+source-wordcount: '364'
+ht-degree: 0%
 
 ---
 
@@ -22,8 +25,8 @@ Sie können die APIs wie folgt verwenden.
 
    Bei erfolgreicher Überprüfung dieser Platzhalterlizenzanforderung wird die vom Benutzer angegebene device_id (von der DRM-Implementierung auf dem Gerät des Benutzers berechnet oder generiert) mit dem Cookie im Expressplay-Back-End verknüpft. Dieses Cookie wird dann wie folgt verwendet:
 
-   * Beim Kauf/der Miete von Inhalten wird das Ausdrucksende Back-End für die device_id des Benutzers durch Senden des zugehörigen Cookies ( [https://www.expressplay.com/developer/restapi/#record-retrieval](https://www.expressplay.com/developer/restapi/#record-retrieval)) Abfrage.
-   * Senden Sie eine Token-Generierungsanfrage mit dem Schlüssel (CEK), der keyID (CEKSID), Richtlinien und anderen Informationen, wobei Sie den obigen Parameter cookie und device_id als `cookie` Korrelationsparameter bzw. `deviceid` Token-Beschränkungsparameter anhängen.
+   * Beim Kauf/der Miete von Inhalten wird das Expressplay-Back-End für die device_id des Benutzers durch Senden des zugehörigen Cookies ( [https://www.expressplay.com/developer/restapi/#record-retrieval](https://www.expressplay.com/developer/restapi/#record-retrieval)) Abfrage.
+   * Senden Sie eine Token-Generierungsanfrage mit dem Schlüssel (CEK), der keyID (CEKSID), Richtlinien und anderen Informationen, wobei Sie den obigen Parameter cookie und device_id als den Parameter `cookie` für Korrelationseinschränkungen bzw. `deviceid` für Token anhängen.
 
    * Geben Sie dieses Token für den Benutzer ein.
 
