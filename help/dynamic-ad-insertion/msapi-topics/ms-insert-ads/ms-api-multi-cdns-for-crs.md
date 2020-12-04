@@ -6,6 +6,9 @@ title: Mehrere CDN-Unterstützung für CRS und Versand
 uuid: c5557a38-aa49-4161-bb58-3e8dff9a4d64
 translation-type: tm+mt
 source-git-commit: f327b45de7e482dcb25407659846b2098f1fd49d
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 0%
 
 ---
 
@@ -22,6 +25,6 @@ Sie können aus den folgenden Gründen mehrere CDNs verwenden:
 * Eine Anforderung, die CDN-Quelle des CRS-Assets mit der CDN-Quelle des Hauptinhalts abzugleichen.
 * Eine Anforderung, ein anderes CDN als das CRS-Standard-CDN (Akamai) zu verwenden.
 
-Wenn der Manifestserver nach transkodierten Anforderungen sucht, verwendet er eine Bootstrap-URL, die eine Reihe von Abfragen-Parametern enthält. Wenn Sie eine Multi-CDN-Umgebung eingerichtet haben, muss die Bootstrap-URL auch den `ptcdn` Parameter enthalten. Der Manifestserver verwendet diesen Parameter, um den CDN-Server zu identifizieren, von dem die transkodierte Version der Anzeige abgerufen wird.
+Wenn der Manifestserver nach transkodierten Anforderungen sucht, verwendet er eine Bootstrap-URL, die eine Reihe von Abfragen-Parametern enthält. Wenn Sie eine Multi-CDN-Umgebung eingerichtet haben, muss die Bootstrap-URL auch den Parameter `ptcdn` enthalten. Der Manifestserver verwendet diesen Parameter, um den CDN-Server zu identifizieren, von dem die transkodierte Version der Anzeige abgerufen wird.
 
-Weitere Informationen finden Sie unter [Multi-CDN-Unterstützung](../../creative-repackaging-service/multi-cdn-supportt.md) in der CRS-Dokumentation.
+Weitere Informationen finden Sie unter [Multi CDN Support](../../creative-repackaging-service/multi-cdn-supportt.md) in der CRS-Dokumentation.
