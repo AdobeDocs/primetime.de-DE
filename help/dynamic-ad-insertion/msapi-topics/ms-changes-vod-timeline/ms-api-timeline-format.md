@@ -6,6 +6,9 @@ title: VOD-Timeline-Format
 uuid: 6daaf605-e5ee-48dc-a222-a5973b3d915a
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '189'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +28,12 @@ B,duration,maximum_number_of_ads,position
 ```
 
 Die Dauer beträgt in Sekunden, mit einer Genauigkeit von 0,001 (Millisekunden); Die Anzahl der Anzeigen ist eine Ganzzahl. Position ist eine der folgenden:
-* **n** Keine — no ad* **p** Pre-Roll — vor dem content* **m** Mid-Roll — innerhalb des Inhalts* **t** Post-Roll — nach dem Inhalt
+* **n** Keine — keine Anzeige
+* **p** Pre-Roll — vor dem Inhalt
+* **m** Mid-Roll — innerhalb des Inhalts
+* **t** Post-Roll — nach dem Inhalt
 
-Beispiel: `B,60,2,p` Stellt einen einminütigen Umbruch für bis zu 2 Anzeigen vor dem Inhalt dar.
+`B,60,2,p` stellt beispielsweise eine einminütige Unterbrechung für bis zu 2 Anzeigen vor dem Inhalt dar.
 
 ### Inhaltssegment - Kapitel
 
@@ -35,4 +41,4 @@ Beispiel: `B,60,2,p` Stellt einen einminütigen Umbruch für bis zu 2 Anzeigen v
 C,duration,number_of_lots
 ```
 
-Die Dauer beträgt in Sekunden, mit einer Genauigkeit von 0,001 (Millisekunden); Die Anzahl der Lose (Inhaltsabschnitte) ist eine Ganzzahl. Zum Beispiel `C,300,1` stellt einen einzelnen Inhaltsabschnitt von fünf Minuten dar.
+Die Dauer beträgt in Sekunden, mit einer Genauigkeit von 0,001 (Millisekunden); Die Anzahl der Lose (Inhaltsabschnitte) ist eine Ganzzahl. `C,300,1` stellt beispielsweise einen einzelnen 5-minütigen Abschnitt des Inhalts dar.
