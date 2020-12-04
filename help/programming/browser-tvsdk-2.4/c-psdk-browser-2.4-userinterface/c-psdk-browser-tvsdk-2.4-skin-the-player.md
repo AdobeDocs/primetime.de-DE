@@ -6,11 +6,14 @@ title: Entwerfen des Players
 uuid: 516ff846-d76d-4062-b64b-3032f7a70470
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '1449'
+ht-degree: 0%
 
 ---
 
 
-# Entwerfen des Players {#skinning-the-player}
+# Skinning des Players {#skinning-the-player}
 
 Mithilfe der folgenden Informationen können Sie Ihren Player per Skin gestalten. Für jedes visuelle Konstrukt werden die entsprechenden Verhaltensweisen im Standardverhalten erwähnt.
 
@@ -18,13 +21,13 @@ Mithilfe der folgenden Informationen können Sie Ihren Player per Skin gestalten
 >
 >Die Skin-Details in diesem Dokument beziehen sich auf die Standardelemente der Benutzeroberfläche, die vom UI-Framework erstellt werden. Wenn Ihr Player diese Elemente geändert hat, müssen auch die Skin-Elemente geändert werden.
 
-## Container-Divs {#section_99B0D598219D4150B57E97D5381B118F}
+## Container divs {#section_99B0D598219D4150B57E97D5381B118F}
 
 Hier finden Sie die Stile für die Container-Divs:
 
 >[!TIP]
 >
->Diese divs werden in der `common-styles.css` Datei aufgeführt.
+>Diese Divs werden in der Datei `common-styles.css` aufgeführt.
 
 Im Folgenden finden Sie die Stile für das div-Hauptformat:
 
@@ -89,7 +92,7 @@ Im Folgenden finden Sie die Stile für allgemeine Player-Steuerelemente:
 
 >[!TIP]
 >
->Diese Stile werden in der `default-controls.css` Datei aufgeführt.
+>Diese Stile sind in der Datei `default-controls.css` aufgeführt.
 
 <table id="table_0ACB6BAB5DAD42DBBD18CA7C0385A261"> 
  <thead> 
@@ -155,7 +158,7 @@ Die folgenden Stile gelten für die Steuerungsleiste:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-control-bar</span> (Standardverhalten)</td>
+   <td colname="col1"><span class="codeph"> ptp-control-bar</span>  (Standardverhalten)</td>
    <td colname="col2"> <p>Gilt für die Steuerleiste </p> </td> 
   </tr> 
  </tbody> 
@@ -216,7 +219,7 @@ Das Standardverhalten lautet:
 * `playProgressBarBehavior`
 * `seekToBarBehavior`
 
-## Schaltfläche &quot;Abspielen/Anhalten&quot; {#section_F1F40A948D0049C5A4D8EA5F2A475CAA}
+## Abspielen/Anhalten-Schaltfläche {#section_F1F40A948D0049C5A4D8EA5F2A475CAA}
 
 Hier finden Sie die Stile für die Schaltfläche &quot;Abspielen/Anhalten&quot;:
 
@@ -234,18 +237,18 @@ Hier finden Sie die Stile für die Schaltfläche &quot;Abspielen/Anhalten&quot;:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-playpause.pause-state</span> </td>
-   <td colname="col2"> <p><span class="codeph"> ptp-btn-playpause</span> im Pausenzustand </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpausin the pause state </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-playpause.pause-state</span> </td> 
-   <td colname="col2"> <p><span class="codeph"> ptp-btn-playpause</span> im Abspielstatus </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpausin the play state </p> </td>
   </tr>
  </tbody>
 </table>
 
 Das Standardverhalten ist `playPauseButtonBehavior`.
 
-## Volumen {#section_23E17BD2343948F8A2CEE1C8BEE2F874}
+## Volume {#section_23E17BD2343948F8A2CEE1C8BEE2F874}
 
 Im Folgenden finden Sie die Stile zum Konfigurieren der Schaltfläche &quot;Lautstärke&quot;:
 
@@ -284,7 +287,7 @@ Im Folgenden finden Sie die Stile zum Konfigurieren der Schaltfläche &quot;Laut
  </tbody>
 </table>
 
-Das Standardverhalten lautet `volumeBehavior` und `muteButtonBehavior`.
+Die Standardverhalten sind `volumeBehavior` und `muteButtonBehavior`.
 
 Hier finden Sie die Stile für den Lautstärkeregler:
 
@@ -351,7 +354,7 @@ Hier ist der Stil zum Anzeigen der verbleibenden Zeit in der Steuerungsleiste:
 
 Das Standardverhalten ist `timeRemainingBehavior`.
 
-## Schnelles Zurückspulen {#section_F6E6C65BD3BD493A89915DF9B92933BA}
+## Schneller Rücklauf {#section_F6E6C65BD3BD493A89915DF9B92933BA}
 
 Hier ist der Stil für die Taste zum schnellen Zurückspulen:
 
@@ -372,7 +375,7 @@ Hier ist der Stil für die Taste zum schnellen Zurückspulen:
 
 Das Standardverhalten ist `fastRewindButtonBehavior`.
 
-## Langsamer Rücklauf {#section_38A22BB8681B430F8C6808C3BD21FB4E}
+## Langsames Zurückspulen {#section_38A22BB8681B430F8C6808C3BD21FB4E}
 
 Hier ist der Stil für die Schaltfläche &quot;Langsames Zurückspulen&quot;:
 
@@ -414,7 +417,7 @@ Hier ist der Stil für die Schaltfläche &quot;Langsam vorwärts&quot;:
 
 Das Standardverhalten ist `slowForwardButtonBehavior`.
 
-## Schnelle Weiterleitung {#section_F90ED8B3739B49ACAB1F12DF18F0E4D6}
+## Fast Forward {#section_F90ED8B3739B49ACAB1F12DF18F0E4D6}
 
 Hier ist der Stil für die Schaltfläche &quot;Vorwärts schnell&quot;:
 
@@ -428,7 +431,7 @@ Hier ist der Stil für die Schaltfläche &quot;Vorwärts schnell&quot;:
  <tbody>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-fastforward</span> </td>
-   <td colname="col2"> <p>Die Schaltfläche "Vorwärts schnell"auf der Steuerleiste. </p> </td>
+   <td colname="col2"> <p>Die Taste "Vorwärts schnell"auf der Steuerleiste. </p> </td>
   </tr>
  </tbody>
 </table>
@@ -477,7 +480,7 @@ Im Folgenden finden Sie die Stile zum Konfigurieren der Audiospur:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-header</span> </td>
-   <td colname="col2"> <p>Die Kopfzeile für das <span class="codeph"> Bedienfeld</span>"ptp-audio-track-selection-panel". </p> </td>
+   <td colname="col2"> <p>Die Kopfzeile für das <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> <p><b>Menü "Audiospur auswählen"(N)</b> </p> </td>
@@ -485,12 +488,12 @@ Im Folgenden finden Sie die Stile zum Konfigurieren der Audiospur:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-menu</span> </td>
-   <td colname="col2"> <p>Die Menüelemente im <span class="codeph"> Bedienfeld</span>"ptp-audio-track-selection". </p> </td>
+   <td colname="col2"> <p>Die Menüelemente im <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
  </tbody>
 </table>
 
-## Freigeben {#section_B2ADC76E76304A68AD648A00A12B676E}
+## Freigeben von {#section_B2ADC76E76304A68AD648A00A12B676E}
 
 Hier finden Sie die Stile zum Konfigurieren der Freigabe:
 
@@ -508,10 +511,10 @@ Hier finden Sie die Stile zum Konfigurieren der Freigabe:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video</span> </td> 
-   <td colname="col2"> <p>Über die Schaltfläche "Freigeben in sozialen Medien"in der Steuerungsleiste wird das <span class="codeph"> Bedienfeld</span>"ptp-share-video"geöffnet. </p> </td>
+   <td colname="col2"> <p>Die Schaltfläche zum Freigeben von sozialen Medien in der Steuerungsleiste, die <span class="codeph"> ptp-share-video-panel</span> öffnet. </p> </td>
   </tr>
   <tr>
-   <td colname="col1">Das Standardverhalten ist <span class="codeph"> "shareVideoButtonBehavior"</span>. </td>
+   <td colname="col1">Das Standardverhalten ist <span class="codeph"> shareVideoButtonBehavior</span>. </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
@@ -522,7 +525,7 @@ Hier finden Sie die Stile zum Konfigurieren der Freigabe:
    <td colname="col2"> <p>Der Bereich, in dem die Optionen für Social Sharing angezeigt werden. </p> </td>
   </tr>
   <tr>
-   <td colname="col1">Das Standardverhalten ist <span class="codeph"> "shareVideoPanelBehavior"</span>. </td>
+   <td colname="col1">Das Standardverhalten ist <span class="codeph"> shareVideoPanelBehavior</span>. </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
@@ -531,15 +534,15 @@ Hier finden Sie die Stile zum Konfigurieren der Freigabe:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-header</span> </td>
-   <td colname="col2"> <p>Die Kopfzeile für das <span class="codeph"> Bedienfeld</span>"ptp-audio-track-selection-panel". </p> </td>
+   <td colname="col2"> <p>Die Kopfzeile für das <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .share-video-panel-menu</span> </td>
-   <td colname="col2"> <p>Das Menü im <span class="codeph"> Bedienfeld</span> "ptp-share-video", das alle Optionen zum Freigeben von Inhalten in sozialen Medien anzeigt. </p> </td>
+   <td colname="col2"> <p>Das Menü in <span class="codeph"> ptp-share-video-panel</span>, das alle Optionen zum Freigeben von Inhalten in sozialen Medien anzeigt. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-share-video-panel-menu-item</span> </td>
-   <td colname="col2"> <p>Das Menüelement im Menü des <span class="codeph"> Freigabe-Video-Bedienfelds</span>. </p> </td>
+   <td colname="col2"> <p>Das Menüelement im Menü <span class="codeph"> share-video-panel-menu</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video-facebook</span> </td>
@@ -578,7 +581,7 @@ Im Folgenden finden Sie die Stile zum Konfigurieren von Untertiteln:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-close-caption</span> </td>
-   <td colname="col2"> <p>Die Schaltfläche " <span class="uicontrol"> Untertitel</span> "in der Steuerungsleiste. </p> </td>
+   <td colname="col2"> <p>Die Schaltfläche <span class="uicontrol"> Untertitel</span> in der Steuerungsleiste. </p> </td>
   </tr>
   <tr>
    <td colname="col1">Das Standardverhalten ist <span class="codeph"> closeCaptionButtonBehavior</span>. </td>
@@ -606,10 +609,10 @@ Im Folgenden finden Sie die Stile zum Konfigurieren von Untertiteln:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-close-caption-language-panel:</span> </td>
-   <td colname="col2"> <p>Die Kopfzeile für das <span class="codeph"> Bedienfeld</span>"ptp-audio-track-selection-panel". </p> </td>
+   <td colname="col2"> <p>Die Kopfzeile für das <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
-   <td colname="col1"><span class="codeph"> .ptp-close-caption-language-menu: </span> </td>
+   <td colname="col1"><span class="codeph"> .ptp-close-caption-language-menu:  </span> </td>
    <td colname="col2"> <p>Das Menü im Untertitel-Bedienfeld. </p> </td>
   </tr>
   <tr>
@@ -618,7 +621,7 @@ Im Folgenden finden Sie die Stile zum Konfigurieren von Untertiteln:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-close-caption-options-btn</span> </td>
-   <td colname="col2"> <p>Die Schaltfläche " <span class="uicontrol"> Optionen</span> "im Optionsfeld "Untertitel". </p> </td>
+   <td colname="col2"> <p>Die Schaltfläche <span class="uicontrol"> Options</span> im Optionsfeld "Untertitel". </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-close-caption-options-panel</span> </td>
@@ -634,7 +637,7 @@ Im Folgenden finden Sie die Stile zum Konfigurieren von Untertiteln:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-close-caption-done-btn</span> </td> 
-   <td colname="col2"> <p>Die Schaltfläche " <span class="uicontrol"> Fertig</span> "in der Kopfzeile des Optionsfelds "Untertitel". </p> </td> 
+   <td colname="col2"> <p>Die Schaltfläche <span class="uicontrol"> Fertig</span> in der Kopfzeile des Optionsfelds "Untertitel". </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-close-caption-options-menu</span> </td> 
@@ -658,7 +661,7 @@ Im Folgenden finden Sie die Stile zum Konfigurieren von Untertiteln:
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-close-caption-options-menu-item</span> </td> 
-   <td colname="col2"> <p>Das Menüelement <span class="uicontrol"> "Untertiteloptionen</span> ". </p> </td> 
+   <td colname="col2"> <p>Die Untertitel <span class="uicontrol"> Optionen</span>-Menüelement. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-close-caption-Vorschau-panel</span> </td> 
@@ -670,11 +673,11 @@ Im Folgenden finden Sie die Stile zum Konfigurieren von Untertiteln:
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-close-caption-options-reset-button</span> </td> 
-   <td colname="col2"> <p>Die Schaltfläche " <span class="uicontrol"> Zurücksetzen</span> "in der Fußzeile des Bereichs mit den Untertiteloptionen. </p> </td> 
+   <td colname="col2"> <p>Die Schaltfläche <span class="uicontrol"> Zurücksetzen</span> in der Fußzeile des Bereichs mit den Untertiteloptionen. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-close-caption-options-apply-button</span> </td> 
-   <td colname="col2"> <p>Die Schaltfläche " <span class="uicontrol"> Anwenden</span> "in der Fußzeile des Bereichs mit den Untertiteloptionen. </p> </td> 
+   <td colname="col2"> <p>Die Schaltfläche <span class="uicontrol"></span> in der Fußzeile des Bereichs mit den Untertiteloptionen. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">Das Standardverhalten ist <span class="codeph"> closeCaptionOptionsPanelBehavior</span>. </td> 
@@ -696,11 +699,11 @@ Hier sind die Stile zum Konfigurieren weiterer Optionen:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-more-options</span> </td> 
-   <td colname="col2"> <p>Die Schaltfläche <span class="uicontrol"> Mehr Optionen</span> . </p> </td> 
+   <td colname="col2"> <p>Die Schaltfläche <span class="uicontrol"> Weitere Optionen</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-more-options.ptp-control-bar-btn</span> </td> 
-   <td colname="col2"> <p>Die <span class="codeph"> ptp-btn-more-Optionen</span> , die in der Steuerleiste verwendet werden. </p> </td> 
+   <td colname="col2"> <p>Die <span class="codeph"> ptp-btn-more-options</span>, die in der Steuerleiste verwendet werden. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-more-options-control-panel</span> </td> 
@@ -719,9 +722,9 @@ Hier sind die Stile zum Konfigurieren weiterer Optionen:
 
 Das Standardverhalten ist `moreOptionsButtonBehavior`.
 
-## PIP-Taste (W) {#section_1EE039DEA99541D391B30BD1DF72A83E}
+## PIP-Schaltfläche (W) {#section_1EE039DEA99541D391B30BD1DF72A83E}
 
-Der Stil für die [!UICONTROL PIP<] Schaltfläche:
+Der Stil für die Schaltfläche [!UICONTROL PIP<] lautet:
 
 <table id="table_EE2E882C87E24D39B8D5347686F29E55"> 
  <thead> 
@@ -736,7 +739,7 @@ Der Stil für die [!UICONTROL PIP<] Schaltfläche:
    <td colname="col2"> <p>Die PIP-Schaltfläche in der Steuerungsleiste. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1">Das Standardverhalten ist <span class="codeph"> "pipButtonBehavior"</span>. </td> 
+   <td colname="col1">Das Standardverhalten ist <span class="codeph"> pipButtonBehavior</span>. </td> 
    <td colname="col2"> </td>
   </tr> 
  </tbody> 
@@ -756,7 +759,7 @@ Im Folgenden finden Sie den Stil zum Konfigurieren des Vollbildschirms:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-fullscreen</span> </td> 
-   <td colname="col2"> <p>Die Schaltfläche " <span class="uicontrol"> Vollbild</span> "in der Steuerungsleiste. </p> </td> 
+   <td colname="col2"> <p>Die Schaltfläche <span class="uicontrol"> Vollbild</span> in der Steuerungsleiste. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -798,7 +801,7 @@ Im Folgenden finden Sie den Stil zum Konfigurieren der Mehrfachansicht:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-multiview</span> </td> 
-   <td colname="col2"> <p>Die <span class="uicontrol"> Schaltfläche "MultiView</span> "in der Steuerleiste und der Anfangsstatus der Schaltfläche " <span class="uicontrol"> Multiview</span> ". </p> </td> 
+   <td colname="col2"> <p>Die Schaltfläche <span class="uicontrol"> MultiView</span> in der Steuerleiste und der Anfangsstatus der Schaltfläche <span class="uicontrol"> Multiview</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">Das Standardverhalten ist <span class="codeph"> multiViewButtonBehavior</span>. </td> 
@@ -826,7 +829,7 @@ Im Folgenden finden Sie den Stil zum Konfigurieren von Miniaturansichten:
  </tbody> 
 </table>
 
-Die Standardeinstellung ist `thumbnailPreviewBehavior`das Standardverhalten.
+Das Standardverhalten ist `thumbnailPreviewBehavior`.
 
 ## Fehlermeldungen {#section_AC9858EE1B5A4FF4947E383C663B6AB5}
 
@@ -900,11 +903,11 @@ Hier ist der Stil für die Schaltfläche &quot;Vorwärts schnell&quot;:
       <li id="li_FDF2CEDB0A854098907FF9CBCF1A61C1"><span class="codeph"> .ptp-btn-slow-forward</span> </li> 
       <li id="li_CD2E14DB3DD64C10A253DA23FBE04A04"><span class="codeph"> .ptp-btn-slow-forward</span> </li> 
       <li id="li_A230359E8F7F4571A9EBFF0E4C2462D7"><span class="codeph"> .ptp-btn-slowRewind</span> </li> 
-      <li id="li_5711A315872F4FA59FDDF0EF0AFD03C6"><span class="codeph"> .ptp-btn-more-options </span> </li> 
+      <li id="li_5711A315872F4FA59FDDF0EF0AFD03C6"><span class="codeph"> .ptp-btn-more-options  </span> </li> 
       <li id="li_71C8E76077A84ED590160AB5ABFCC0D7"><span class="codeph"> .ptp-btn-share-video</span> </li> 
-      <li id="li_4A3113C0360F4F708AAA96AB316FA057"><span class="codeph"> .ptp-btn-close-caption </span> </li> 
+      <li id="li_4A3113C0360F4F708AAA96AB316FA057"><span class="codeph"> .ptp-btn-close-caption  </span> </li> 
       <li id="li_901A0186D65A48A1B774DC555CEC5367"><span class="codeph"> .ptp-btn-audio-track</span> </li> 
-      <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip </span> </li> 
+      <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip  </span> </li> 
       <li id="li_7BB39BDF5E294AEB8FA3DCD9F9A29468"><span class="codeph"> .ptp-btn-rewind</span> </li> 
       <li id="li_E4FEF5A7486A40F6A5FE1119BD63AFEF"><span class="codeph"> .ptp-crubbing-bar</span> </li> 
       <li id="li_12153547558A4871842EE0416BCCA8B2"><span class="codeph"> .ptp-search-to-bar</span> </li> 
@@ -924,7 +927,7 @@ Hier ist der Stil für die Schaltfläche &quot;Vorwärts schnell&quot;:
    <td colname="col1"><span class="codeph"> .fullscreen-Status</span> </td> 
    <td colname="col2"> <p>Der Player befindet sich im Vollbildmodus. </p> <p>Gilt für Folgendes: 
      <ul id="ul_B235C1D339F64B2FAC6BC72F03807616"> 
-      <li id="li_6E050EE74C604FDAB4C9C0447F547A9D"><span class="codeph"> .ptp-control-bar </span> </li> 
+      <li id="li_6E050EE74C604FDAB4C9C0447F547A9D"><span class="codeph"> .ptp-control-bar  </span> </li> 
       <li id="li_67D54B1A41764B2DA544479CDA1C901C"><span class="codeph"> .ptp-btn-fullscreen</span> </li> 
      </ul> </p> </td> 
   </tr> 
