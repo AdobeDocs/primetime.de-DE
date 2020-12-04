@@ -1,6 +1,6 @@
 ---
-seo-title: 'Command line tools for packaging content and creating revocations lists '
-title: 'Command line tools for packaging content and creating revocations lists '
+seo-title: 'Befehlszeilenwerkzeuge zum Verpacken von Inhalten und Erstellen von Listen für Sperrungen '
+title: 'Befehlszeilenwerkzeuge zum Verpacken von Inhalten und Erstellen von Listen für Sperrungen '
 uuid: 2c740521-2004-4320-88e1-118b84e80e31
 translation-type: tm+mt
 source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
@@ -11,21 +11,21 @@ ht-degree: 0%
 ---
 
 
-# Command line tools for packaging content and creating revocations lists {#command-line-tools-for-packaging-content-revocation-lists}
+# Befehlszeilenwerkzeuge zum Verpacken von Inhalten und Erstellen von Listen für Sperren {#command-line-tools-for-packaging-content-revocation-lists}
 
 Die Referenzimplementierung umfasst die folgenden Befehlszeilenwerkzeuge:
 
-* Policy Manager: A tool for creating and managing policies
-* Policy Update List Manager: A tool for creating and viewing policy update lists
-* Revocation List Manager: A tool for creating and viewing revocation lists
-* Media Packager: A tool for creating encrypted FLV and F4V files
-* AIR Publisher ID
+* Policy Manager: Ein Tool zum Erstellen und Verwalten von Richtlinien
+* Policy Update Liste Manager: Ein Tool zum Erstellen und Anzeigen von Listen zur Richtlinienaktualisierung
+* Revocation Liste Manager: Ein Tool zum Erstellen und Anzeigen von Listen für die Sperrung
+* Media Packager: Ein Tool zum Erstellen verschlüsselter FLV- und F4V-Dateien
+* AIR-Herausgeber-ID
 * UtilityLicense Generator
 * Lizenzeinbettung
 
-## Anforderungen {#requirements}
+## Voraussetzungen {#requirements}
 
-The requirements for using the command line tools available in the reference implementations are as follows:
+Die in den Referenzimplementierungen verfügbaren Befehlszeilenwerkzeuge müssen wie folgt verwendet werden:
 
 * Alle Befehlszeilenwerkzeuge erfordern Java 1.5 oder höher.
 * Packager- und License Server-Anmeldeinformationen (Zertifikat und Kennwort), die von der Adobe ausgegeben werden. Sie benötigen Anmeldeinformationen, um Videodateien zu verschlüsseln und zu signieren, Listen zur Richtlinienaktualisierung und -sperrung zu unterzeichnen und Lizenzen vorab zu generieren.
@@ -38,17 +38,17 @@ The requirements for using the command line tools available in the reference imp
 
 Einige der Befehlszeilenwerkzeuge erfordern eine Konfigurationsdatei, die Informationen zu den Werkzeugen enthält, die zum Anwenden von Richtlinien und zum Verschlüsseln von Dateien verwendet werden.
 
-Die Standardkonfigurationsdatei lautet [!DNL flashaccesstools.properties]. Sie befindet sich im Arbeitsverzeichnis. das heißt, der Ordner, aus dem Sie die Werkzeuge ausführen (siehe Installieren der Befehlszeilenwerkzeuge). Jedes Tool enthält auch eine Option ( `-c`), mit der Sie auf die Konfigurationsdatei verweisen können, die Sie verwenden möchten, wenn Sie die Standardeinstellung nicht verwenden möchten.
+Die Standardkonfigurationsdatei ist [!DNL flashaccesstools.properties]. Sie befindet sich im Arbeitsverzeichnis. das heißt, der Ordner, aus dem Sie die Werkzeuge ausführen (siehe Installieren der Befehlszeilenwerkzeuge). Jedes Tool enthält auch eine Option ( `-c`), mit der Sie auf die Konfigurationsdatei verweisen können, die Sie verwenden möchten, wenn Sie die Standardeinstellung nicht verwenden möchten.
 
 Die Konfigurationsdatei verwendet das Dateiformat der Java-Eigenschaft. Wenn Werte für eine der Eigenschaften Sonderzeichen enthalten, beachten Sie die folgenden Einschränkungen:
 
-* Escape Backslashes mit einem zusätzlichen umgekehrten Schrägstrich. Wenn Sie die [!DNL C:\credentials.pfx] Datei beispielsweise angeben möchten, geben Sie sie als [!DNL C:\\credentials.pfx] oder `C:/credentials.pfx`an. Um eine Datei auf einem Netzwerkserver anzugeben, geben Sie `\\\\server\\folder\\filename.pfx`an.
-* Die Konfigurationsdatei darf nur lateinische Zeichen enthalten. Wenn Sie Nicht-Lateinisch-1-Zeichen verwenden müssen, verwenden Sie die entsprechende Unicode-Escape-Sequenz (optional mit dem [!DNL native2ascii] Tool, das mit Java geliefert wird).
+* Escape Backslashes mit einem zusätzlichen umgekehrten Schrägstrich. Um beispielsweise die Datei [!DNL C:\credentials.pfx] anzugeben, geben Sie sie als [!DNL C:\\credentials.pfx] oder `C:/credentials.pfx` an. Um eine Datei auf einem Netzwerkserver anzugeben, geben Sie `\\\\server\\folder\\filename.pfx` an.
+* Die Konfigurationsdatei darf nur lateinische Zeichen enthalten. Wenn Sie Nicht-Lateinisch-1-Zeichen verwenden müssen, verwenden Sie die entsprechende Unicode-Escape-Sequenz (optional mit dem Tool [!DNL native2ascii], das mit Java geliefert wird).
 
 Legen Sie Werte für Eigenschaften in der Konfigurationsdatei fest, bevor Sie die Werkzeuge ausführen. Bei einigen Befehlszeilenwerkzeugen können Sie die Werte für einige Optionen entweder über die Befehlszeile oder die Konfigurationsdatei festlegen. In diesen Fällen haben Werte, die über die Befehlszeile festgelegt werden, Vorrang vor allen Werten in der Konfigurationsdatei.
 
-## Befehlszeilenwerkzeuge installieren  {#installing-the-command-line-tools}
+## Installieren der Befehlszeilenwerkzeuge {#installing-the-command-line-tools}
 
-Sie können die erforderlichen Dateien aus dem [!DNL \Reference Implementation\Command Line Tools] Ordner auf der DVD kopieren, der die standardmäßige [!DNL flashaccesstools.properties] Konfigurationsdatei und einen [!DNL libs] Ordner enthält, der die JAR-Dateien für die Werkzeuge enthält.
+Sie können die erforderlichen Dateien aus dem Ordner [!DNL \Reference Implementation\Command Line Tools] auf der DVD kopieren, der die standardmäßige Konfigurationsdatei [!DNL flashaccesstools.properties] und einen Ordner [!DNL libs] enthält, der die JAR-Dateien für die Werkzeuge enthält.
 
-Der [!DNL samples] Ordner enthält mehrere Java-Beispieldateien, die die Verwendung der Adobe Access SDK-APIs demonstrieren. Verwenden Sie zum Erstellen und Ausführen der Beispiele das [!DNL build-samples.xml] Ant-Skript.
+Der Ordner [!DNL samples] enthält mehrere Java-Beispielquelldateien, die die Verwendung der Adobe Access SDK-APIs demonstrieren. Um die Beispiele zu erstellen und auszuführen, verwenden Sie das Skript [!DNL build-samples.xml] Ant.
