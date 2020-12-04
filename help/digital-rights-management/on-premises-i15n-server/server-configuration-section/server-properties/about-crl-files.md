@@ -4,6 +4,9 @@ title: Informationen zu CRL-Dateien
 uuid: 672c3ca0-5c5d-4ec7-83b1-f0f8e34c8d09
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 0%
 
 ---
 
@@ -44,10 +47,10 @@ Bei den folgenden CRLs handelt es sich um extern gehostete Zertifikatsperrlisten
 * Datei: [!DNL http___individualization-crl.primetime.adobe.com_FlashAccessIndividualizationCA.crl]
 * Gültigkeit: Gut für ca. 3 Monate nach der Erstellung
 
-* URL: [!DNL <ht<span></span>tps://individualization-crl.s3-website-us-east-1.amazonaws.com/FlashAccessIndividualizationCA.crl]>
+* URL: [!DNL <ht<span></span>tps://individualization-crl.s3-website-us-east-1.amazonaws.com/FlashAccessIndividualizationCA.crl]
 * Datei: [!DNL http___individualization-crl.s3-website-us-east-1.amazonaws.com_FlashAccessIndividualizationCA.crl]
 * Gültigkeit: Gut für ca. 3 Monate nach der Erstellung
 
-Zusätzlich zu den oben genannten Zertifikatsperrlisten müssen Sie eine zusätzliche Zertifikatsperrliste erstellen und verwalten. Dies ist die CRL für die Zertifizierungsstelle für Individualisierungen, wie im Abschnitt [Zertifikatsperrliste](../../../on-premises-i15n-server/server-configuration-section/server-properties/create-i15n-ca-crl.md) für individuelle Erstellung dieses Dokuments angegeben.
+Zusätzlich zu den oben genannten Zertifikatsperrlisten müssen Sie eine zusätzliche Zertifikatsperrliste erstellen und verwalten. Dies ist die CRL für die Zertifizierungsstelle für Individualisierungen, wie im Abschnitt [Zertifizierungsstelle für Individualisierung erstellen ](../../../on-premises-i15n-server/server-configuration-section/server-properties/create-i15n-ca-crl.md) dieses Dokuments angegeben.
 
 Zertifikatsperrlisten werden 45 Tage vor Ablauf aktualisiert. Auf diese Weise sollten Sie ausreichend Zeit haben, neu generierte Zertifikatsperrlisten aus dem Internet zu erwerben und zu installieren. Sie müssen darauf achten, dass die Zertifikatsperrlisten aktualisiert werden, bevor sie abgelaufen sind.
