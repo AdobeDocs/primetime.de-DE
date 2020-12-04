@@ -4,6 +4,9 @@ title: Herstellerspezifische Sicherheitsinformationen
 uuid: 23186770-c73a-4802-bc30-fa9e4b47d9ba
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
@@ -64,7 +67,7 @@ In der folgenden Tabelle werden einige mögliche Ansätze zur Minimierung von Si
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Network Time Protocol (NTP) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Für den ordnungsgemäßen Betrieb und die forensische Analyse sollten Sie die Zeit auf Adobe Access-Servern und Adobe Access-Paketen genau halten. Verwenden Sie eine sichere Version von NTP, um die Zeit auf allen Systemen zu synchronisieren, die mit dem Internet verbunden sind. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Für einen ordnungsgemäßen Betrieb und eine forensische Analyse sollten Sie die Zeit auf Adobe Access-Servern und Adobe Access-Paketen genau halten. Verwenden Sie eine sichere Version von NTP, um die Zeit auf allen Systemen zu synchronisieren, die mit dem Internet verbunden sind. </p> </td> 
   </tr> 
  </tbody> 
 </table>
