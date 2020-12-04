@@ -1,6 +1,6 @@
 ---
-seo-title: Package media
-title: Package media
+seo-title: Paketmedien
+title: Paketmedien
 uuid: f6e877be-d916-4766-bc44-99891a3df3a8
 translation-type: tm+mt
 source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
@@ -11,28 +11,28 @@ ht-degree: 0%
 ---
 
 
-# Package media {#package-media}
+# Paketmedien {#package-media}
 
-Use the Package Media tab to package content. The Packager Properties section displays the Packager settings that were entered in the Preferences tab. To modify these settings, go to the Preferences tab, change the settings, and Save.
+Verwenden Sie die Registerkarte &quot;Paketmedien&quot;, um Inhalte zu verpacken. Im Abschnitt &quot;Eigenschaften von Packager&quot;werden die Packager-Einstellungen angezeigt, die auf der Registerkarte &quot;Voreinstellungen&quot;eingegeben wurden. Um diese Einstellungen zu ändern, wechseln Sie zur Registerkarte &quot;Voreinstellungen&quot;, ändern Sie die Einstellungen und speichern Sie.
 
-If you want to package a single FLV or F4V file, choose the **[!UICONTROL Select Single File]** option and enter the full path to the source file and full path where the encrypted file should be saved.
+Wenn Sie eine einzelne FLV- oder F4V-Datei verpacken möchten, wählen Sie die Option **[!UICONTROL Select Single File]** und geben Sie den vollständigen Pfad zur Quelldatei und den vollständigen Pfad ein, in dem die verschlüsselte Datei gespeichert werden soll.
 
-Wenn Sie alle Dateien in einem Ordner verpacken möchten, wählen Sie die **[!UICONTROL Select Single Folder]** Option. Specify the folder containing the source files. Only files in the Input Folder matching the **[!UICONTROL Input Media File Selection]** criteria will be packaged (files in subfolders are not packaged). Choose to encrypt [!DNL .flv] files, [!DNL .f4v] files, or enter a custom regular expression (for example &quot;.*&quot; encrypts all files in the folder). The encrypted files will be saved in the specified output folder, using the same filename as the original file.
+Wenn Sie alle Dateien in einem Ordner verpacken möchten, wählen Sie die Option **[!UICONTROL Select Single Folder]**. Geben Sie den Ordner mit den Quelldateien an. Es werden nur Dateien im Eingabeordner gepackt, die den Kriterien **[!UICONTROL Input Media File Selection]** entsprechen (Dateien in Unterordnern werden nicht gepackt). Sie können [!DNL .flv]-Dateien, [!DNL .f4v]-Dateien verschlüsseln oder einen benutzerdefinierten regulären Ausdruck eingeben (z. B. &quot;.*&quot; verschlüsselt alle Dateien im Ordner). Die verschlüsselten Dateien werden im angegebenen Ausgabeordner unter demselben Dateinamen wie die Originaldatei gespeichert.
 
 >[!NOTE]
 >
->File paths must refer to files available to the packaging server. If you are running the Flash Access Manager on a different machine than the packaging server, you must specify a path that is accessible by the server (either located on a network drive or on the server itself).
+>Dateipfade müssen auf Dateien verweisen, die dem Verpackungsserver zur Verfügung stehen. Wenn Sie den Flash Access Manager auf einem anderen Rechner als dem Verpackungsserver ausführen, müssen Sie einen Pfad angeben, auf den der Server zugreifen kann (entweder auf einem Netzlaufwerk oder auf dem Server selbst).
 
-The following table describes the Package Media preferences:
+Die folgende Tabelle beschreibt die Voreinstellungen für Paketmedien:
 
-| Preference | Description |
+| Voreinstellung | Beschreibung |
 |---|---|
-| Policy File Name(s) | Select one or more policies from the drop-down list to apply to the content. To select multiple policies, hold down the CTRL key while selecting policies. |
-| Seconds Unencrypted | Specifies the number of seconds of content to leave unencrypted at the beginning of the file. To encrypt starting from the beginning, enter &quot;0&quot;. |
-| Encrypt Video | Aktivieren Sie dieses Kontrollkästchen, um Videodaten zu verschlüsseln |
-| Encryption Level | If video encryption is enabled, select the encryption level for video data. High encrypts all video data. Medium and Low selectively encrypt portions of the video. (Only for F4V with H.264 video) |
-| Encrypt Audio | Select this checkbox to encrypt audio data |
-| Encrypt Script | Select this checkbox to encrypt script data (FLV only) |
-| Custom Properties | Specify custom properties to include in the packaged content. These properties will be available to the license server when issuing a license. (Optional) |
+| Richtliniendateinamen | Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus, die auf den Inhalt angewendet werden sollen. Um mehrere Richtlinien auszuwählen, halten Sie die STRG-Taste gedrückt, während Sie Richtlinien auswählen. |
+| Sekunden unverschlüsselt | Gibt an, wie viele Sekunden Inhalt am Anfang der Datei unverschlüsselt bleiben soll. Geben Sie &quot;0&quot;ein, um die Verschlüsselung von Anfang an durchzuführen. |
+| Video verschlüsseln | Aktivieren Sie dieses Kontrollkästchen, um Videodaten zu verschlüsseln |
+| Verschlüsselungsstufe | Wenn die Videoverschlüsselung aktiviert ist, wählen Sie die Verschlüsselungsstufe für Videodaten aus. Hoch verschlüsselt alle Videodaten. Mittel- und Niedrig-Bereiche werden selektiv verschlüsselt. (Nur für F4V mit H.264-Video) |
+| Audio verschlüsseln | Aktivieren Sie dieses Kontrollkästchen, um Audiodaten zu verschlüsseln |
+| Verschlüsselungsskript | Aktivieren Sie dieses Kontrollkästchen, um Skriptdaten zu verschlüsseln (nur FLV) |
+| Benutzerdefinierte Eigenschaften | Geben Sie benutzerdefinierte Eigenschaften an, die in den gepackten Inhalt aufgenommen werden sollen. Diese Eigenschaften stehen dem Lizenzserver bei der Lizenzerteilung zur Verfügung. (Optional) |
 
-After the packaging options are selected, click the **[!UICONTROL Package Media]** button to begin packaging the files.
+Klicken Sie nach Auswahl der Verpackungsoptionen auf die Schaltfläche **[!UICONTROL Package Media]**, um mit dem Verpacken der Dateien zu beginnen.
