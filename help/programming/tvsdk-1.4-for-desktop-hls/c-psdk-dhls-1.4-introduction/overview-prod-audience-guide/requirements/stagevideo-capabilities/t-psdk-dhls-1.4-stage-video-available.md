@@ -6,6 +6,9 @@ title: Überprüfen, ob StageVideo verfügbar ist
 uuid: 09c39442-cb9a-4892-af99-3d3d9bf1d4a7
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '160'
+ht-degree: 1%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Wenn StageVideo nicht verfügbar ist und Ihre Anwendung versucht, StageVideo zu verwenden, gibt das TVSDK keinen Fehler aus. Ihre Anwendung kann ermitteln, ob StageVideo verfügbar ist, indem Sie auf das StageVideoAvailabilityEvent warten.
 
-Ab Flash 15 wird, wenn keine Hardware verfügbar `StageVideo` ist, wieder Software verwendet `StageVideo`. Für Flash 14 und früher können Sie festlegen, ob verfügbar `StageVideo` ist. Wenn `StageVideo` diese nicht verfügbar ist, können Sie `StageVideoAvailabilityEvent` verstehen, warum sie nicht verfügbar ist.
+Ab Flash 15 und höher, wenn die Hardware `StageVideo` nicht verfügbar ist, wird sie auf Software `StageVideo` zurückgesetzt. Für Flash 14 und früher können Sie festlegen, ob `StageVideo` verfügbar ist. Wenn `StageVideo` nicht verfügbar ist, können Sie `StageVideoAvailabilityEvent` verwenden, um zu verstehen, warum es nicht verfügbar ist.
 
-1. Achten Sie darauf, `StageVideoAvailabilityEvent` zu prüfen, ob verfügbar `StageVideo` ist.
+1. Suchen Sie nach `StageVideoAvailabilityEvent`, um festzustellen, ob `StageVideo` verfügbar ist.
 
    Beispiel:
 
@@ -28,4 +31,4 @@ Ab Flash 15 wird, wenn keine Hardware verfügbar `StageVideo` ist, wieder Softwa
    }
    ```
 
-1. Wenn `StageVideo` nicht verfügbar ist, prüfen Sie `flash.media.StageVideoAvailabilityReason`.
+1. Wenn `StageVideo` nicht verfügbar ist, überprüfen Sie `flash.media.StageVideoAvailabilityReason`.
