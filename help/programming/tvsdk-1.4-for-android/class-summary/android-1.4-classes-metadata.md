@@ -6,11 +6,14 @@ title: Metadaten-Klassen
 uuid: 6d5099c8-d562-4635-9ef0-068cc6fb9f82
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '237'
+ht-degree: 0%
 
 ---
 
 
-# Metadaten-Klassen{#metadata-classes}
+# Metadatenklassen{#metadata-classes}
 
 Diese Klassen bieten Metadaten für Werbung, Namensraum und Verfolgung.
 
