@@ -11,17 +11,17 @@ ht-degree: 0%
 ---
 
 
-# Überblick über das Bereitstellen des Adobe Access Server für geschütztes Streaming {#deploying-the-adobe-access-server-for-protected-streaming-overview}
+# Adobe Access Server für geschütztes Streaming bereitstellen - Überblick {#deploying-the-adobe-access-server-for-protected-streaming-overview}
 
-Before deploying the Adobe Access Server for Protected Streaming, make sure you have installed the versions of Java and Tomcat listed in the Requirements section.
+Bevor Sie das Adobe Access Server für geschütztes Streaming bereitstellen, stellen Sie sicher, dass Sie die im Abschnitt &quot;Anforderungen&quot;aufgelisteten Versionen von Java und Tomcat installiert haben.
 
-The Adobe Access Server for Protected Streaming package includes [!DNL flashaccesserver.war]. To deploy this WAR file, copy it to Tomcat&#39;s [!DNL webapps] directory. If you have previously deployed the WAR file, you may need to manually delete the unpacked WAR directory ( [!DNL flashaccessserver] in Tomcat&#39;s [!DNL webapps] directory). To prevent Tomcat from unpacking WAR files, edit the [!DNL server.xml] file in Tomcat&#39;s [!DNL conf] directory and set the `unpackWARs` attribute to `false`.
+Das Adobe Access Server for Protected Streaming-Paket enthält [!DNL flashaccesserver.war]. Um diese WAR-Datei bereitzustellen, kopieren Sie sie in den Ordner [!DNL webapps] von Tomcat. Wenn Sie die WAR-Datei bereits bereitgestellt haben, müssen Sie möglicherweise den entpackten WAR-Ordner ( [!DNL flashaccessserver] im Ordner [!DNL webapps] von Tomcat) manuell löschen. Um zu verhindern, dass Tomcat WAR-Dateien entpackt, bearbeiten Sie die Datei [!DNL server.xml] im Ordner [!DNL conf] von Tomcat und setzen Sie das `unpackWARs`-Attribut auf `false`.
 
 >[!NOTE]
 >
->If you have configured Tomcat to include [!DNL commons-logging.jar] on the System classpath (not required for the Adobe Access Server for Protected Streaming), commons-logging must be configured to use Log4J.
+>Wenn Sie Tomcat so konfiguriert haben, dass er [!DNL commons-logging.jar] in den Systemclasspath einbezieht (für das Adobe Access Server für das geschützte Streaming nicht erforderlich), muss die Verwendung von Log4J für die Verwendung von Commons-Logging konfiguriert werden.
 
-The server optionally uses a platform-specific library ( [!DNL jsafe.dll] on Microsoft Windows or [!DNL libjsafe.so] on Linux) for optimal performance. Kopieren Sie die entsprechende Bibliothek für Ihre Plattform von der [!DNL thirdparty/cryptoj/]*Plattform *an einen Speicherort, der durch die Variable &quot;`PATH`Umgebung&quot;(oder`LD_LIBRARY_PATH`unter Linux) angegeben wird.
+Der Server verwendet optional eine plattformspezifische Bibliothek ( [!DNL jsafe.dll] unter Microsoft Windows oder [!DNL libjsafe.so] unter Linux), um eine optimale Leistung zu erzielen. Kopieren Sie die entsprechende Plattformbibliothek von [!DNL thirdparty/cryptoj/]*platform* in einen Speicherort, der durch die Variable `PATH` Umgebung (oder `LD_LIBRARY_PATH` unter Linux) angegeben wird.
 
 >[!NOTE]
 >
