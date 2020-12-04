@@ -1,6 +1,6 @@
 ---
-seo-title: Embedding licenses
-title: Embedding licenses
+seo-title: Einbetten von Lizenzen
+title: Einbetten von Lizenzen
 uuid: b8d8ee9b-7430-4899-9caf-47d6b64021b8
 translation-type: tm+mt
 source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
@@ -11,13 +11,13 @@ ht-degree: 0%
 ---
 
 
-# Embedding licenses {#embedding-licenses}
+# Einbetten von Lizenzen {#embedding-licenses}
 
-Once content has been encrypted and a license has been pre-generated, the license may be embedded into the encrypted content.
+Sobald der Inhalt verschlüsselt wurde und eine Lizenz vorgeneriert wurde, kann die Lizenz in den verschlüsselten Inhalt eingebettet werden.
 
-To embed a license, obtain an instance of `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater`. Wenn Sie den Typ des verschlüsselten Inhalts kennen, verwenden Sie den Konstruktor für `FLVKeyMetaDataUpdater` oder `F4VKeyMetaDataUpdater`; Andernfalls können Sie eine Instanz `MediaProcessorFactory.getMediaProcessor()` basierend auf dem erkannten Dateityp zurückgeben. Erstellen Sie eine `KeyMetaDataCallback` und rufen Sie auf `modifyKeyMetaData()`. Ihre Callback-Implementierung wird aufgerufen, wenn sich die DRM-Metadaten im verschlüsselten Inhalt befinden. Based on the metadata found, you can choose a license to embed and set the license using `EmbedLicenseKeyMetaData.setEmbeddedLicenses()`.
+Um eine Lizenz einzubetten, rufen Sie eine Instanz von `com.adobe.flashaccess.sdk.media.drm.contentupdate.MediaKeyMetaDataUpdater` ab. Wenn Sie den Typ des verschlüsselten Inhalts kennen, verwenden Sie den Konstruktor für `FLVKeyMetaDataUpdater` oder `F4VKeyMetaDataUpdater`; Verwenden Sie andernfalls `MediaProcessorFactory.getMediaProcessor()`, um eine Instanz basierend auf dem erkannten Dateityp zurückzugeben. Erstellen Sie ein `KeyMetaDataCallback` und rufen Sie `modifyKeyMetaData()` auf. Ihre Callback-Implementierung wird aufgerufen, wenn sich die DRM-Metadaten im verschlüsselten Inhalt befinden. Basierend auf den gefundenen Metadaten können Sie eine einzubettende Lizenz auswählen und die Lizenz mit `EmbedLicenseKeyMetaData.setEmbeddedLicenses()` festlegen.
 
-For sample code demonstrating embedded licenses, see `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` in the Reference Implementation Command Line Tools “Samples” directory.
+Beispiel-Code, der eingebettete Lizenzen demonstriert, finden Sie unter `com.adobe.flashaccess.samples.licenseembedder.EmbedLicense` im Verzeichnis der Implementierungs-Befehlszeilenwerkzeuge &quot;Beispiele&quot;.
 
 >[!NOTE]
 >
