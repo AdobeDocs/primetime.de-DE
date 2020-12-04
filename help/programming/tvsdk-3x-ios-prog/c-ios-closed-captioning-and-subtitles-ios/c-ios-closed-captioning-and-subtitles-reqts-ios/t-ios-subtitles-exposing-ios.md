@@ -6,19 +6,22 @@ title: Untertitel verfügbar machen
 uuid: 1cd8761f-6e6f-4017-9852-fa61f36197c5
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
 
-# Untertitel verfügbar machen {#expose-subtitles}
+# Untertitel {#expose-subtitles} verfügbar machen
 
 Das TVSDK benachrichtigt Ihren Player-Client über die Verfügbarkeit der availableMediaCharacteristicsWithMediaSelectionOptions interner AVAsset-Benachrichtigungen, indem die PTMediaPlayerMediaSelectionOptionsAvailableNotification-Benachrichtigung verwendet wird.
 
-Sie können auf die verfügbaren Untertitel über die der `PTMediaPlayerItem` Eigenschaft zugreifen `subtitlesOptions`.
+Sie können auf die verfügbaren Untertitel über die Eigenschaft `PTMediaPlayerItem` `subtitlesOptions` zugreifen.
 
 So zeigen Sie Untertitel an:
 
-1. Registrieren Sie den Client als Listener für die `PTMediaPlayerMediaSelectionOptionsAvailableNotification` Benachrichtigung.
+1. Registrieren Sie den Client als Listener für die `PTMediaPlayerMediaSelectionOptionsAvailableNotification`-Benachrichtigung.
 
    ```
    [[NSNotificationCenter defaultCenter]  
@@ -26,8 +29,8 @@ So zeigen Sie Untertitel an:
      name:PTMediaPlayerMediaSelectionOptionsAvailableNotification object:self.player];
    ```
 
-   Wenn Ihr Client diese Benachrichtigung erhält, sind die Untertitel im `PTMediaPlayerItem`Abschnitt bereit.
-1. Implementieren Sie die `onMediaPlayerItemMediaSelectionOptionsAvailable` Methode ähnlich dem folgenden Beispiel:
+   Wenn Ihr Client diese Benachrichtigung erhält, sind die Untertitel in `PTMediaPlayerItem` bereit.
+1. Implementieren Sie die `onMediaPlayerItemMediaSelectionOptionsAvailable`-Methode ähnlich dem folgenden Beispiel:
 
    ```
    - (void) onMediaPlayerItemMediaSelectionOptionsAvailable:(NSNotification *) notification { 
@@ -36,4 +39,4 @@ So zeigen Sie Untertitel an:
    }
    ```
 
-   Weitere Informationen zu alternativen Audiospuren finden Sie unter [Alternative Audiospuren](../../alternate-audio/ios-3x-alternate-audio.md).
+   Weitere Informationen zu alternativen Audiospuren finden Sie unter [Alternatives Audio](../../alternate-audio/ios-3x-alternate-audio.md).
