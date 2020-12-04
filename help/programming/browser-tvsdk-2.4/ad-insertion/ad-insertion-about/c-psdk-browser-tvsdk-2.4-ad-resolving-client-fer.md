@@ -6,15 +6,18 @@ title: FER-Anzeigenauflösung und -einfügung
 uuid: 85da0e92-17fe-4001-a53c-085dadd09756
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 0%
 
 ---
 
 
-# FER-Anzeigenauflösung und -einfügung{#fer-ad-resolving-and-insertion}
+# FER-Anzeigen lösen und einfügen{#fer-ad-resolving-and-insertion}
 
 Vollständiger Ereignis-Replay-Inhalt (FER) ist ein Live-Stream, der in VOD konvertiert wird, indem das Tag #EXT-X-ENDLIST am Ende der Manifestdatei hinzugefügt wird. Der Stream behält seine Anzeigen-Cue-Marker bei.
 
-Browser TVSDK behandelt einen FER-Stream als VOD, daher ist der Anzeigensignalisierungsmodus standardmäßig `SERVER_MAP`aktiviert. Da der Stream jedoch seine Anzeigen-Cue-Marker beibehält, können Sie den Anzeigensignalisierungsmodus auf einstellen `MANIFEST_CUES`, sodass Sie die Anzeigen-Cue-Marker für das Einfügen von Anzeigen verwenden können.
+Browser TVSDK behandelt einen FER-Stream als VOD, daher ist der Anzeigensignalisierungsmodus standardmäßig `SERVER_MAP`. Da der Stream jedoch seine Anzeigen-Cue-Marker beibehält, können Sie den Anzeigensignalisierungsmodus auf `MANIFEST_CUES` einstellen, sodass Sie die Anzeigen-Cue-Marker für das Einfügen von Anzeigen verwenden können.
 
 So aktivieren Sie die Anzeigeneinfügung mithilfe von Cue-Markierungen für einen FER-Stream:
 
