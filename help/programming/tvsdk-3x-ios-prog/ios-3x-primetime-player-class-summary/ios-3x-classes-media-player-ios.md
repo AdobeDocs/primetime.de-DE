@@ -6,6 +6,9 @@ title: Media Player-Klassen
 uuid: 705c71b6-4e5e-46b5-a59d-13df977b04f2
 translation-type: tm+mt
 source-git-commit: b13f2d3f083a6ca333a4edba1c8d7261f7d448ad
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Diese Klassen beschreiben Ihren Medienplayer und seine Ressourcen.
 | PTMediaPlayerView | Verwaltet die Ansicht-Komponente des Primetime Player-Frameworks. |
 | PTMediaProfile | Stellt das Profil eines einzelnen Streams in der Wiedergabeliste der Variante dar. |
 | PTMediaSelectionOption | Stellt eine audiovisuelle Medienressource dar, die verschiedene Spracheinstellungen, Barrierefreiheitsanforderungen oder benutzerdefinierte Anwendungskonfigurationen unterstützt. Gültige Optionsarten:<ul><li>Untertitel (PTMediaSelectionOptionTypeSubtitle)</li><li>Alternativaudio (PTMediaSelectionOptionTypeAudio)</li><li>Untertitel (PTMediaSelectionOptionTypeCC)</li><li>Undefined (PTMediaSelectionOptionTypeUndefined)</li></ul> |
-| PTOpportunityResolver-Klasse,PTOpportunityResolver-Protokoll | Klasse, die zur Verarbeitung von In-Manifest-Hinweisen verwendet wird, die als Platzierungen für den Adobe Primetime-Prozess der Anzeigenentscheidung verwendet werden. |
+| PTOpportunityResolver-Klasse,PTOpportunityResolver-Protokoll | Klasse, die zur Verarbeitung von In-Manifest-Hinweisen verwendet wird, die als Platzierungen für den Adobe Primetime-Anzeigenentscheidungsprozess verwendet werden. |
 | PTOpportunityResolverDelegate | Protokoll, das die Methoden beschreibt, die der benutzerdefinierte Opportunity-Resolver ( PTOpportunityResolver ) verwenden sollte, um dem Delegaten den Status der Auflösung der Gelegenheit zu kommunizieren. |
 | PTSDK | Beschreibt die Version des TVSDK und seine Funktionen. |
 | PTSDKConfig | Stellt globale TVSDK-Einstellungen bereit und erlaubt einer Anwendung, benutzerdefinierte HLS-Tags zu abonnieren. |
