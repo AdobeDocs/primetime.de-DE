@@ -6,11 +6,14 @@ title: Anzeigen für ein DVR-Fenster laden
 uuid: 3ae1fbf6-deae-4f39-a17d-43d1fe3cb975
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
 
-# Anzeigen für ein DVR-Fenster laden {#load-ad-for-a-dvr-window}
+# Anzeige für ein DVR-Fenster {#load-ad-for-a-dvr-window} laden
 
 Sie können entscheiden, ob Sie nur die Anzeigen auflösen möchten, die nach dem aktuellen Live-Point des Benutzers auftreten, oder ob Sie Anzeigen auflösen möchten, die vor dem aktuellen Live-Point erscheinen.
 
@@ -28,7 +31,7 @@ So steuern Sie die Anzeigenladung für ein DVR-Fenster:
 
 >[!NOTE]
 >
->Der Standardwert ist `NO`und diese Option lädt Anzeigen nur vom aktuellen Live-Point.
+>Der Standardwert ist `NO`, und diese Option lädt Anzeigen nur vom aktuellen Live-Point.
 
 Beispiel:
 
