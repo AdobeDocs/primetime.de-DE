@@ -6,6 +6,9 @@ title: DRM-Authentifizierung vor der Wiedergabe
 uuid: 326ef93d-53b0-4e3a-b16d-f3b886837cc0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 1%
 
 ---
 
@@ -16,12 +19,12 @@ Wenn die DRM-Metadaten für ein Video vom Medienstream getrennt sind, führen Si
 
 Ein Video-Asset kann über eine zugeordnete DRM-Metadatendatei verfügen. Beispiel:
 
-* &quot;url&quot;: &quot;<span></span>https://www.domain.com/asset.m3u8&quot;
-* &quot;drmMetadata&quot;: &quot;<span></span>https://www.domain.com/asset.metadata&quot;
+* &quot;url&quot;: &quot;ht<span></span>tps://www.domain.com/asset.m3u8&quot;
+* &quot;drmMetadata&quot;: &quot;ht<span></span>tps://www.domain.com/asset.metadata&quot;
 
-Verwenden Sie in diesem Fall `DRMHelper` Methoden, um den Inhalt der DRM-Metadatendatei herunterzuladen, zu analysieren und zu überprüfen, ob die DRM-Authentifizierung erforderlich ist.
+Verwenden Sie in diesem Fall die Methoden `DRMHelper`, um den Inhalt der DRM-Metadatendatei herunterzuladen, zu analysieren und zu überprüfen, ob die DRM-Authentifizierung erforderlich ist.
 
-1. Verwenden Sie `loadDRMMetadata` zum Laden des Metadaten-URL-Inhalts und zum Analysieren der heruntergeladenen Bytes in eine `DRMMetadata`.
+1. Verwenden Sie `loadDRMMetadata`, um den Metadaten-URL-Inhalt zu laden und die heruntergeladenen Bytes in ein `DRMMetadata` zu analysieren.
 
    Wie jeder andere Netzwerkvorgang ist diese Methode asynchron und erstellt einen eigenen Thread.
 
@@ -39,7 +42,7 @@ Verwenden Sie in diesem Fall `DRMHelper` Methoden, um den Inhalt der DRM-Metadat
    ```
 
 1. Da der Vorgang asynchron ist, sollten Sie den Benutzer darauf aufmerksam machen. Andernfalls wird er sich fragen, warum seine Wiedergabe nicht beginnt. Zeigen Sie beispielsweise ein Kreisel an, während die DRM-Metadaten heruntergeladen und analysiert werden.
-1. Implementieren Sie die Rückrufe im `DRMLoadMetadataListener`. Die `loadDRMMetadata` ruft diese Ereignis-Handler auf (löst diese Ereignis aus).
+1. Implementieren Sie die Rückrufe in `DRMLoadMetadataListener`. Das `loadDRMMetadata` ruft diese Ereignis-Handler auf (löst diese Ereignis aus).
 
    ```java
    public interface  
@@ -62,7 +65,7 @@ Verwenden Sie in diesem Fall `DRMHelper` Methoden, um den Inhalt der DRM-Metadat
    * `onLoadMetadataUrlComplete` erkennt, wann das Laden der Metadaten-URL abgeschlossen ist.
    * `onLoadMetadataUrlError` gibt an, dass das Laden der Metadaten fehlgeschlagen ist.
 
-1. Überprüfen Sie nach Abschluss des Ladevorgangs das `DRMMetadata` Objekt, um festzustellen, ob die DRM-Authentifizierung erforderlich ist.
+1. Überprüfen Sie nach Abschluss des Ladevorgangs das `DRMMetadata`-Objekt, um festzustellen, ob die DRM-Authentifizierung erforderlich ist.
 
    ```java
    public static boolean <b>isAuthNeeded</b>(DRMMetadata drmMetadata);
