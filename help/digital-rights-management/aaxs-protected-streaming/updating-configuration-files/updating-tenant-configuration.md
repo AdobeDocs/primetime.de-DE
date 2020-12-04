@@ -11,6 +11,6 @@ ht-degree: 0%
 ---
 
 
-# Aktualisieren der Mandant-Konfigurationsdatei{#updating-the-tenant-configuration-file}
+# Aktualisieren der Tenant-Konfigurationsdatei{#updating-the-tenant-configuration-file}
 
-Alle in angegebenen Werte [!DNL flashaccess-tenant.xml] können jederzeit geändert werden. Die Änderungen werden beim nächsten Laden der Konfigurationsdatei durch den Server wirksam. Der Server sucht außerdem nach Änderungen in allen Berechtigungsdateien (.pfx) und in den Packager-Zulassungslisten-Zertifikatdateien, auf die in der Mietkonfigurationsdatei verwiesen wird.
+Alle in [!DNL flashaccess-tenant.xml] angegebenen Werte können jederzeit geändert werden. Die Änderungen werden beim nächsten Laden der Konfigurationsdatei durch den Server wirksam. Der Server sucht außerdem nach Änderungen in allen Berechtigungsdateien (.pfx) und in den Packager-Zulassungslisten-Zertifikatdateien, auf die in der Mietkonfigurationsdatei verwiesen wird.
