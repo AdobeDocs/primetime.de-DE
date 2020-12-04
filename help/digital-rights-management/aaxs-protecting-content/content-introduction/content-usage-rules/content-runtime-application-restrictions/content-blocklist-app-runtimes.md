@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# Blockierungsliste von Anwendungslaufzeiten, die den Zugriff auf geschützten Inhalt einschränken {#blocklist-of-application-runtimes-restricted-from-accessing-protected-content}
+# Blockierungsliste von Anwendungs-Laufzeitumgebungen, die vom Zugriff auf geschützten Inhalt eingeschränkt sind{#blocklist-of-application-runtimes-restricted-from-accessing-protected-content}
 
-Gibt die Version der Primetime- oder Flash-Laufzeitumgebung an, auf die kein Zugriff auf Inhalte möglich ist. Geben Sie die eingeschränkte Laufzeit (Flash Player, AIR oder iOS), Plattform und Version an.
+Gibt die Primetime- oder Flash-Laufzeitversion an, die keinen Zugriff auf Inhalte hat. Geben Sie die eingeschränkte Laufzeit (Flash Player, AIR oder iOS), Plattform und Version an.
 
-Verwendungsbeispiel: Ähnlich wie bei der DRM-Client-Blockierungsliste kann auch die neueste Version der Flash Player-, AIR- oder iOS-Laufzeitumgebungen als Mindestversion für die Lizenzerfassung und Inhaltswiedergabe angegeben werden.
+Verwendungsbeispiel: Ähnlich wie bei der DRM-Client-Blockierungsliste kann auch die neueste Version des Flash Players, der AIR- oder iOS-Laufzeitumgebungen als Mindestversion für die Lizenzerfassung und Inhaltswiedergabe angegeben werden.
 
 Die Anwendungslaufzeit kann durch eines der Attribute identifiziert werden, die für DRM-Clientversionen unterstützt werden, zusätzlich zu den folgenden Attributen:
 
