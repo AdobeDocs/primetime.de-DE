@@ -21,10 +21,10 @@ Adobe Access Server for Protected Streaming unterstützt die folgenden Nutzungsr
 * Einschränkungen für Adobe® AIR®-, SWF-, iOS- und Android-Anwendungen
 * Einschränkungen für DRM- und Laufzeitmodule
 * Durchsetzung der Jailbreak-Erkennung (auf Adobe Access-Plattformen, die die Erkennung von Jailbreak unterstützen)
-* Die Lizenzzwischenspeicherung ist standardmäßig deaktiviert. License caching can be enabled by specifying the caching end date or an amount of time caching is allowed (starting when the license is issued).
-* Multiple Play Rights, which lets you specify different combinations of Output Protection, Application Restrictions, and DRM/Runtime Restrictions. For example, it is possible to specify different Output Protection requirements for each client platform by using the DRM Module Restriction with Output Protection.
+* Die Lizenzzwischenspeicherung ist standardmäßig deaktiviert. Die Lizenzzwischenspeicherung kann durch Angabe des Enddatums für die Zwischenspeicherung aktiviert werden, oder es ist eine zeitliche Zwischenspeicherung zulässig (beginnend mit der Lizenzerteilung).
+* Rechte für mehrere Wiedergabe, mit denen Sie verschiedene Kombinationen aus Output Protection, Anwendungseinschränkungen und DRM-/Laufzeiteinschränkungen angeben können. Beispielsweise ist es möglich, mithilfe der DRM Module Restriction mit Output Protection unterschiedliche Ausgabeschutzanforderungen für jede Client-Plattform festzulegen.
 
 >[!NOTE]
 >
->To support remote key delivery to iOS devices, the policy used at packaging time must have remote key delivery enabled. Diese Einstellung kann nicht durch die Mandantenkonfiguration auf dem Server geändert werden. ***Adobe Primetime ist erforderlich, um iOS-Anwendungen zu erstellen, die Adobe Access-geschützte Inhalte wiedergeben können.***
+>Zur Unterstützung von Remote-Key-Versänden für iOS-Geräte muss der Remote-Key-Versand für die Richtlinie, die während der Paketerstellung verwendet wird, aktiviert sein. Diese Einstellung kann nicht durch die Mandantenkonfiguration auf dem Server geändert werden. ***Adobe Primetime ist erforderlich, um iOS-Anwendungen zu erstellen, die Adobe Access-geschützte Inhalte wiedergeben können.***
 
