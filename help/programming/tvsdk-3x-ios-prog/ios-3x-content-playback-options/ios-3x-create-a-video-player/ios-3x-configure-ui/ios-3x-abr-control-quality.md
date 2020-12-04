@@ -6,6 +6,9 @@ title: Adaptive Bitraten (ABR) für Videoqualität
 uuid: a9b9a6a8-4098-4952-90e7-684e64800b3f
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 0%
 
 ---
 
@@ -50,11 +53,11 @@ Wenn ein Stream beispielsweise die folgenden Profile hat:
 
 Wenn Sie einen Bereich von 300000 bis 2000000 angeben, berücksichtigt TVSDK nur die Profil 1, 2 und 3. Dadurch können Anwendungen an verschiedene Netzwerkbedingungen angepasst werden, z. B. an den Wechsel von WiFi zu 3G oder zu verschiedenen Geräten wie einem Telefon, einem Tablet oder einem Desktop-Computer.
 
-## Adaptive Bitraten konfigurieren {#section_572FCE4CC28D4DF8BD9C461F00B3CA17}
+## Adaptive Bitraten {#section_572FCE4CC28D4DF8BD9C461F00B3CA17} konfigurieren
 
 Adaptive Bitratenparameter für TVSDK konfigurieren:
 
-1. Konfigurieren Sie eine Instanz von , `PTABRControlParameters` um die anfänglichen, minimalen und maximalen Bitrateneinstellungen festzulegen.
+1. Konfigurieren Sie eine Instanz von `PTABRControlParameters`, um die Einstellungen für die anfängliche, minimale und maximale Bitrate festzulegen.
 
    Die Standardwerte werden im folgenden Codefragment angezeigt, Ihre Anwendung kann jedoch für jeden dieser Parameter einen beliebigen Ganzzahlwert festlegen.
 
@@ -72,7 +75,7 @@ Adaptive Bitratenparameter für TVSDK konfigurieren:
    abrMetaData.maxBitRate = INT_MAX;
    ```
 
-1. Aktualisieren Sie Ihre `PTMediaPlayer` Instanz mit der konfigurierten `PTABRControlParameters` Instanz.
+1. Aktualisieren Sie die `PTMediaPlayer`-Instanz mit der konfigurierten `PTABRControlParameters`-Instanz.
 
    ```
    // assuming self.player is the PTMediaPlayer instance 
@@ -81,9 +84,9 @@ Adaptive Bitratenparameter für TVSDK konfigurieren:
 
 Beachten Sie Folgendes:
 
-* Die Anwendung muss die `abrControlParameters` Eigenschaft auf einstellen, `PTMediaPlayer` bevor eine `PTMediaPlayerItem` Instanz konfiguriert wird, damit die anfänglichen und minimalen Bitrateneinstellungen wirksam werden.
+* Die Anwendung muss die `abrControlParameters`-Eigenschaft auf `PTMediaPlayer` festlegen, bevor eine `PTMediaPlayerItem`-Instanz konfiguriert wird, damit die anfänglichen und minimalen Bitrateneinstellungen wirksam werden.
 
    Nach Beginn der Inhaltswiedergabe wirkt sich das Festlegen einer neuen Instanz nur auf die maximale Bitrateneinstellung aus.
 
-* Um die maximale Bitrateneinstellung während der Wiedergabe zu aktualisieren, erstellen Sie eine neue `PTABRControlParameters` Instanz und legen Sie sie auf der Player-Instanz fest.
-* Sie können die Einstellung für die maximale Bitrate während der Wiedergabe nur unter iOS 8.0 und höher aktualisieren. Bei älteren Versionen wird der `maxBitrate` Wert verwendet, der vor dem Start der Inhaltswiedergabe festgelegt wurde.
+* Um die maximale Bitrateneinstellung während der Wiedergabe zu aktualisieren, erstellen Sie eine neue `PTABRControlParameters`-Instanz und legen Sie sie auf der Player-Instanz fest.
+* Sie können die Einstellung für die maximale Bitrate während der Wiedergabe nur unter iOS 8.0 und höher aktualisieren. Bei älteren Versionen wird der Wert `maxBitrate` verwendet, der vor dem Start der Inhaltswiedergabe festgelegt wurde.
