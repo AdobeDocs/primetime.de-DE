@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Sichtbarkeit von Bildunterschriften steuern{#control-closed-caption-visibility}
+# Sichtbarkeit bei geschlossener Beschriftung kontrollieren{#control-closed-caption-visibility}
 
 Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarkeit aktiviert ist, wird die aktuell ausgewählte Spur angezeigt. Wenn Sie ändern, welche Spur aktuell ist, bleibt die Sichtbarkeitseinstellung gleich.
 
@@ -23,7 +23,7 @@ Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarke
 
 >[!NOTE]
 >
->Die Sichtbarkeitswerte für Untertitel werden in `ClosedCaptionsVisibility`definiert.
+>Die Sichtbarkeitswerte für Untertitel werden in `ClosedCaptionsVisibility` definiert.
 >
 >
 ```
@@ -31,14 +31,14 @@ Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarke
 >public static const VISIBLE:String = visible;
 >```
 
-1. Warten Sie, bis der Status &quot;VORBEREITET&quot; `MediaPlayer` mindestens vorliegt (siehe [Warten auf einen gültigen Status](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
+1. Warten Sie, bis `MediaPlayer` mindestens den Status &quot;VORBEREITET&quot;aufweist (siehe [Warten Sie auf einen gültigen Status](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
 1. Um die aktuelle Sichtbarkeitseinstellung für Untertitel abzurufen, verwenden Sie die get-Methode in `MediaPlayer`, die einen Sichtbarkeitswert zurückgibt.
 
    ```
    public function get ccVisibility():String
    ```
 
-1. Um die Sichtbarkeit für Untertitel zu ändern, verwenden Sie die Setter-Methode und übergeben Sie einen Sichtbarkeitswert von `ClosedCaptionsVisibility`.
+1. Um die Sichtbarkeit von Untertiteln zu ändern, verwenden Sie die Setter-Methode und übergeben Sie einen Sichtbarkeitswert von `ClosedCaptionsVisibility`.
 
    Beispiel:
 
