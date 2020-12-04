@@ -6,6 +6,9 @@ title: Umgang mit Blackouts
 uuid: 00b6f204-6ba4-4245-9028-6f7c392e9275
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
@@ -21,19 +24,19 @@ So implementieren Sie die Lösung für diesen Anwendungsfall:
 1. Richten Sie Ihre App so ein, dass sie Blackout-Tags in einem Live-Stream-Manifest abonniert.
 
    TVSDK kennt keine Blackout-Tags, aber es ermöglicht Ihrer App das Abonnieren von Benachrichtigungen, wenn beim Analysieren von Manifestdateien bestimmte Tags gefunden werden.
-1. Hinzufügen einen Benachrichtigungs-Listener für `PTTimedMetadataChangedNotification`.
+1. hinzufügen einen Benachrichtigungs-Listener für `PTTimedMetadataChangedNotification`.
 
-   Diese Benachrichtigung wird jedes Mal ausgelöst, wenn ein abonniertes Tag im Manifest analysiert wird und ein neuer aus dem Tag vorbereitet `PTTimedMetadata` wird.
+   Diese Benachrichtigung wird jedes Mal ausgelöst, wenn ein abonniertes Tag im Manifest analysiert wird und ein neuer `PTTimedMetadata` darauf vorbereitet wird.
 
-1. Implementieren Sie eine Listener-Methode, z. B. `onMediaPlayerSubscribedTagIdentified`für `PTTimedMetadata` Objekte im Vordergrund.
+1. Implementieren Sie eine Listener-Methode wie `onMediaPlayerSubscribedTagIdentified` für `PTTimedMetadata`-Objekte im Vordergrund.
 
-1. Verwenden Sie bei jeder Aktualisierung während der Wiedergabe den `PTMediaPlayerTimeChangeNotification` Listener, um `PTTimedMetadata` Objekte zu verarbeiten.
+1. Verwenden Sie bei jedem Update während der Wiedergabe den `PTMediaPlayerTimeChangeNotification`-Listener, um `PTTimedMetadata`-Objekte zu verarbeiten.
 
-1. Hinzufügen den `PTTimedMetadata` Handler.
+1. hinzufügen Sie den `PTTimedMetadata`-Handler.
 
-   Mit diesem Handler können Sie zu alternativen Inhalten wechseln und zum Hauptinhalt zurückkehren, wie vom `PTTimedMetadata` Objekt und seiner Wiedergabezeit angegeben.
+   Mit diesem Handler können Sie zu alternativen Inhalten wechseln und zum Hauptinhalt zurückkehren, wie durch das `PTTimedMetadata`-Objekt und seine Wiedergabezeit angegeben.
 
-1. Verwenden Sie `onSubscribedTagInBackground` zum Implementieren der Listener-Methode für `PTTimedMetadata` Objekte im Hintergrund.
+1. Verwenden Sie `onSubscribedTagInBackground`, um die Listener-Methode für `PTTimedMetadata`-Objekte im Hintergrund zu implementieren.
 
    Diese Methode überwacht das Timing im Hintergrundstream, was Ihnen hilft, festzustellen, wann Sie von alternativen Inhalten zurück zum Hauptinhalt wechseln können.
 
