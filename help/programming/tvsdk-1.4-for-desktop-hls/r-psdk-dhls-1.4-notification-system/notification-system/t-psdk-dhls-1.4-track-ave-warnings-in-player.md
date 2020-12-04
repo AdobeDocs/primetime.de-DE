@@ -13,11 +13,11 @@ ht-degree: 1%
 ---
 
 
-# AVE-Warnungen in Ihrem Player verfolgen{#track-ave-warnings-in-your-player}
+# Verfolgen von AVE-Warnungen im Player{#track-ave-warnings-in-your-player}
 
 Mit dem NotificationEvent können Sie Warnungen verfolgen, die von der Adobe Video Engine (AVE) weitergegeben werden.
 
-Ihre Player-App kann Warnungen und Fehler bei der Wiedergabe verfolgen, die von der AVE generiert wurden, z. B. Failover- oder Netzwerk-Down-Ereignis, die die Wiedergabe nicht stoppen und keine Aktion der App erfordern. Während einige AVE-Fehler vom TVSDK behandelt werden, dient `NotificationEvent` dies als allgemeiner Pass-Through-Mechanismus für AVE-Warnungen an Ihre Anwendungsebene. Nach dem Erhalt von AVE-Warnungen können Sie bestimmte Aktionen durchführen, z. B. proaktiv die Wiedergabe stoppen, einen Notfallplan aktivieren, Meldungen protokollieren usw.
+Ihre Player-App kann Warnungen und Fehler bei der Wiedergabe verfolgen, die von der AVE generiert wurden, z. B. Failover- oder Netzwerk-Down-Ereignis, die die Wiedergabe nicht stoppen und keine Aktion der App erfordern. Während einige AVE-Fehler vom TVSDK behandelt werden, dient `NotificationEvent` als allgemeiner Pass-Through-Mechanismus für AVE-Warnungen auf Ihre Anwendungsebene. Nach dem Erhalt von AVE-Warnungen können Sie bestimmte Aktionen durchführen, z. B. proaktiv die Wiedergabe stoppen, einen Notfallplan aktivieren, Meldungen protokollieren usw.
 
 Verwenden Sie die folgenden API-Elemente, um AVE-Warnungen in Ihrem Player zu verfolgen:
 
@@ -102,7 +102,7 @@ private function onWarningAvailable(event:NotificationEvent):void {
 
 <!--<a id="example_C35262605D394718B40C084B569A5052"></a>-->
 
-Im Folgenden finden Sie ein Beispiel für AVE-Warnungen, die mit `NotificationEvent`folgenden Methoden verfolgt wurden:
+Im Folgenden finden Sie ein Beispiel für AVE-Warnungen, die mit `NotificationEvent` verfolgt wurden:
 
 ```
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [resourceType:HLS] 
