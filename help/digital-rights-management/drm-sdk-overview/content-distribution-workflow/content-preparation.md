@@ -1,24 +1,27 @@
 ---
-description: Jede Verwendung von Adobe Primetime DRM besteht aus zwei wichtigen Schritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
-seo-description: Jede Verwendung von Adobe Primetime DRM besteht aus zwei wichtigen Schritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
+description: Jeder Einsatz von Adobe Primetime DRM besteht aus zwei wichtigen Schritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
+seo-description: Jeder Einsatz von Adobe Primetime DRM besteht aus zwei wichtigen Schritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
 seo-title: Inhaltsvorbereitung
 title: Inhaltsvorbereitung
 uuid: edb633f0-b623-41ea-a52a-19017d45fb18
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '440'
+ht-degree: 0%
 
 ---
 
 
 # Inhaltsvorbereitung{#content-preparation}
 
-Jede Verwendung von Adobe Primetime DRM besteht aus zwei wichtigen Schritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
+Jeder Einsatz von Adobe Primetime DRM besteht aus zwei wichtigen Schritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
 
-Bevor Sie Inhalte für die Distribution bereitstellen, müssen Sie zunächst den Inhalt in Ihrem Videoformat kodieren, eine oder mehrere Richtlinien erstellen, die Nutzungsregeln für den Inhalt festlegen, und den Inhalt mit dem Adobe Primetime DRM SDK verpacken.
+Bevor Sie Inhalte für die Distribution bereitstellen, müssen Sie zunächst die Inhalte in Ihrem Videoformat kodieren, eine oder mehrere Richtlinien erstellen, die Nutzungsregeln für die Inhalte festlegen, und die Inhalte mit dem Adobe Primetime DRM SDK verpacken.
 
 Die Schritte zum Kodieren, Verpacken und Verteilen von Inhalten sind wie folgt:
 
-1. Kodieren Sie den Inhalt mit Kodierungstools, die von Adobe oder von Drittanbietern zur Verfügung stehen, in das gewünschte Videoformat.
+1. Kodieren Sie den Inhalt in Ihrem gewünschten Videoformat mit Kodierungstools, die in der Adobe oder von Dritten verfügbar sind.
 1. Erstellen Sie Richtlinien, die die Nutzungsregeln festlegen, unter denen die Ansicht der Inhalte für die Benutzer möglich ist.
 
    Eine Richtlinie ist der Container für die Regeln und Einschränkungen, die bestimmen, wie, wann und wo geschützte Inhalte von Verbrauchern angezeigt werden können.
@@ -33,5 +36,5 @@ Die Schritte zum Kodieren, Verpacken und Verteilen von Inhalten sind wie folgt:
 
 1. Bereitstellung geschützter Inhalte für die Verteilung an Verbraucher.
 
-   Der geschützte Inhalt wird in der Regel über ein CDN (Content Distribution Network) verteilt. Das CDN kann einen beliebigen Mechanismus verwenden, der von der Client-Laufzeit unterstützt wird, z. B. Flash Media Server, Adobe HTTP Dynamic Streaming für mehrere Bitrate-Streaming oder einen HTTP Web Server für den progressiven Download.
+   Der geschützte Inhalt wird in der Regel über ein CDN (Content Distribution Network) verteilt. Das CDN kann jeden von der Client-Laufzeit unterstützten Mechanismus verwenden, z. B. Flash Media Server, Adobe-HTTP Dynamic Streaming für das Streaming mit mehreren Bitraten oder einen HTTP-Webserver für das progressive Herunterladen.
 
