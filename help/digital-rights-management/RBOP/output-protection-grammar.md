@@ -6,11 +6,14 @@ title: RBOP-Grammatik
 uuid: d9064e39-593a-4767-b835-287640b4c94a
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 0%
 
 ---
 
 
-# RBOP-Grammatik {#rbop-grammar}
+# RBOP Grammar {#rbop-grammar}
 
 Dieser Abschnitt behandelt die Grammatik der Konfigurationseingabe, hebt gültige und ungültige Eingabeoptionen hervor und erklärt, wie ausgelassene optionale Felder interpretiert werden.
 
@@ -26,7 +29,7 @@ AnotherRule ::=
     DifferentForm 
 ```
 
-## Grammatikregeln anwenden {#section_A7216BD585FF4EB88737B643B36C2781}
+## Anwenden der Grammatikregeln {#section_A7216BD585FF4EB88737B643B36C2781}
 
 >[!NOTE]
 >
@@ -66,7 +69,7 @@ AnotherRule ::=
    }
    ```
 
-   ist die folgende Instanz ungültig, da sich innerhalb desselben Objekts zwei `foo` Paare befinden:
+   ist die folgende Instanz ungültig, da sich innerhalb desselben Objekts zwei `foo`-Paare befinden:
 
    ```
    { 
@@ -98,13 +101,13 @@ AnotherRule ::=
 
    ist gültig, da es sich um unabhängige Instanzen desselben Objekts handelt.
 
-1. Für Definitionen, bei denen eine oder mehrere Zeichenfolgen ausgewählt werden können, sollten Sie die Zeichenfolgen wie einen Satz behandeln, bei dem Duplikat-Einträge als ein einzelner Eintrag behandelt werden. Beispiel: `["foo", "bar", "foo", "baz"]` entspricht `["foo", "bar", "baz"]`
+1. Für Definitionen, bei denen eine oder mehrere Zeichenfolgen ausgewählt werden können, sollten Sie die Zeichenfolgen wie einen Satz behandeln, bei dem Duplikat-Einträge als ein einzelner Eintrag behandelt werden. `["foo", "bar", "foo", "baz"]` entspricht beispielsweise `["foo", "bar", "baz"]`
 
-1. Bei der Definition von Zahlen wird zwischen den Regeln ein Leerzeichen verwendet (z. B. `Digit Digits`). Bei der Anwendung der Regel sollte jedoch kein solcher Leerzeichen verwendet werden.
+1. Beim Definieren von Zahlen wird zwischen den Regeln ein Leerzeichen verwendet (z. B. `Digit Digits`). Bei der Anwendung der Regel sollte jedoch kein solcher Leerzeichen verwendet werden.
 
-   Wenn wir z. B. die Zahl *einhundertdreiundzwanzig* pro NonZeroInteger-Regel angeben, sollte sie als `123` anstatt als `1 2 3`angegeben werden, auch wenn die Regel einen Abstand zwischen NonZeroDigit und Digits enthält.
+   Wenn wir z. B. die Zahl *einhundertdreiundzwanzig* pro NonZeroInteger-Regel angeben, sollte sie als `123` anstatt als `1 2 3` ausgedrückt werden, obwohl die Regel ein Leerzeichen zwischen NonZeroDigit und Digits enthält.
 
-1. Einige Regeln lassen mehrere Formulare zu. In diesen Fällen werden die verschiedenen Formulare durch das `'|'` Zeichen getrennt.
+1. Einige Regeln lassen mehrere Formulare zu. In diesen Fällen werden die verschiedenen Formulare durch das Zeichen `'|'` getrennt.
 
    Beispiel:
 
@@ -112,7 +115,7 @@ AnotherRule ::=
    Foo ::= "A" | "B" | "C"
    ```
 
-   bedeutet, dass eine Instanz von durch &quot;A&quot;, &quot;B&quot;oder &quot;C&quot;ersetzt werden `Foo` kann. Dies sollte nicht mit einem Formular verwechselt werden, das mehrere Zeilen umfasst. Dies ist eine Funktion, die die Lesbarkeit längerer Formulare erleichtert.
+   bedeutet, dass eine Instanz von `Foo` durch &quot;A&quot;, &quot;B&quot;oder &quot;C&quot;ersetzt werden kann. Dies sollte nicht mit einem Formular verwechselt werden, das mehrere Zeilen umfasst. Dies ist eine Funktion, die die Lesbarkeit längerer Formulare erleichtert.
 
 ## Grammatik {#section_52189FD66B1A46BA9F8FDDE1D7C8E8E8}
 
@@ -235,7 +238,7 @@ NonZeroDigit ::=
 
 ## Semantik: Rechtliche, aber ungültige Konfigurationen {#section_709BE240FF0041D4A1B0A0A7544E4966}
 
-Das Thema *Beispielausgabe-Schutzkonfiguration* präsentierte eine gültige Konfiguration mit ihrer semantischen Bedeutung. Im vorherigen Abschnitt in *diesem* Thema wurden die Grammatikregeln für Konfigurationen vorgestellt. Obwohl die Grammatik die syntaktische Korrektheit gewährleistet, gibt es syntaktisch nicht semantisch korrekte juristische Konfigurationen (d.h. sie sind nicht logisch). Dieser Abschnitt enthält Konfigurationen, die *syntaktisch* legal, aber *semantisch* falsch sind. Denken Sie daran, dass die Beispiele in diesem Abschnitt auf die Mindeststruktur reduziert wurden, die zur Veranschaulichung des diskutierten Szenarios erforderlich ist.
+Das Thema *Beispielausgabeschutzkonfiguration* stellte eine gültige Konfiguration zusammen mit ihrer semantischen Bedeutung vor. Im vorherigen Abschnitt in *diesem* Thema wurden die Grammatikregeln für Konfigurationen vorgestellt. Obwohl die Grammatik die syntaktische Korrektheit gewährleistet, gibt es syntaktisch nicht semantisch korrekte juristische Konfigurationen (d.h. sie sind nicht logisch). Dieser Abschnitt enthält Konfigurationen, die *syntaktisch* legal, aber *semantisch* nicht korrekt sind. Denken Sie daran, dass die Beispiele in diesem Abschnitt auf die Mindeststruktur reduziert wurden, die zur Veranschaulichung des diskutierten Szenarios erforderlich ist.
 
 * Es ist ungültig, mehrere Pixelbeschränkungen mit derselben Pixelanzahl zu definieren.
 
