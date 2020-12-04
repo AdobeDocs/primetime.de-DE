@@ -6,11 +6,14 @@ title: Zeitschienenwerbungskurse
 uuid: 4e6ca9fb-9e68-4625-a24b-386a50333862
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '584'
+ht-degree: 0%
 
 ---
 
 
-# Zeitschienenwerbungskurse{#timeline-advertising-classes}
+# Zeitschienenwerbungsklassen{#timeline-advertising-classes}
 
 Diese Klassen bieten Informationen zu Anzeigen, die innerhalb einer Zeitleiste auftreten.
 
@@ -20,7 +23,7 @@ Paket: [com.adobe.mediacore.timeline.advertising.auditude](https://help.adobe.co
 
 | Name | Beschreibung |
 |--- |--- |
-| [Anzeige](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | Klasse, die die Abstraktion der Anzeige definiert und alle Anzeigeninformationen enthält. Er wird durch eine eindeutige ID, eine Dauer und eine `MediaResource`Variable definiert. Die `MediaResource` enthält die URL, in der sich der tatsächliche Anzeigeninhalt befindet. |
+| [Anzeige](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | Klasse, die die Abstraktion der Anzeige definiert und alle Anzeigeninformationen enthält. Er wird durch eine eindeutige ID, eine Dauer und ein `MediaResource` definiert. Das `MediaResource` enthält die URL, in der sich der tatsächliche Anzeigeninhalt befindet. |
 | [AdAsset](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdAsset.html) | Klasse, die ein anzuzeigendes Asset darstellt. Klasse, die ein Anzeigenasset darstellt. |
 | [AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | Klasse, die eine einheitliche Ansicht für mehrere Anzeigen bietet, die zu einem bestimmten Zeitpunkt während der Wiedergabe wiedergegeben werden. |
 | [AdBreakPlacement](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreakPlacement.html) | Platzierungsklasse für Werbeunterbrechungen. |
@@ -33,4 +36,4 @@ Paket: [com.adobe.mediacore.timeline.advertising.auditude](https://help.adobe.co
 | [AuditudeTracker](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/AuditudeTracker.html) | Klasse, die die ContentTracker-Schnittstelle implementiert und Primetime-Ereignis zur Anzeigenverfolgung definiert. |
 | [ContentResolver](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentResolver.html) | Klasse, die den Teil mit der Anzeigenauflösung im Phrase-Prozess verarbeitet. |
 | [ContentTracker](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentTracker.html) | Schnittstelle, die das Protokoll definiert, das Sie implementieren müssen, wenn Sie ein Anzeigenverfolgungsmodul erstellen möchten, das in die Bibliothek oder einen benutzerdefinierten Anzeigentracker integriert werden soll. Für diese Oberfläche müssen Sie festlegen, wie Ereignis mit Anzeigenfortschritten dem Remote-Anzeigenverfolgungssystem gemeldet werden. |
-| [Platzierungsinformationen](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/PlacementInformation.html) | Klasse, die eine Platzierungsinformationen-Anforderung abstrahiert. Jeder gelösten Anzeige muss eine Platzierungsinformationen beigefügt sein. Die Platzierungsinformationen beschreiben, wo die Anzeige auf der Zeitschiene platziert werden soll. Er enthält Informationen wie: <ul><li>Platzierungsposition (in ms) </li><li>Platzierungstyp (Pre-Roll, Mid-Roll oder Post-Roll) </li><li>Dauer des Hauptinhaltsblocks, der ersetzt werden soll</li></ul> |
+| [Platzierungsinformationen](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/PlacementInformation.html) | Klasse, die eine Platzierungsinformationen-Anforderung abstrahiert. Jeder aufgelösten Anzeige muss eine Platzierungsinformationen beigefügt sein. Die Platzierungsinformationen beschreiben, wo die Anzeige auf der Zeitschiene platziert werden soll. Er enthält Informationen wie: <ul><li>Platzierungsposition (in ms) </li><li>Platzierungstyp (Pre-Roll, Mid-Roll oder Post-Roll) </li><li>Dauer des Hauptinhaltsblocks, der ersetzt werden soll</li></ul> |
