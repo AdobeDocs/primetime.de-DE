@@ -6,6 +6,9 @@ title: Benachrichtigungen für Manifesttags
 uuid: 50727455-b37b-4e39-8efb-a97de3164074
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '118'
+ht-degree: 0%
 
 ---
 
@@ -16,4 +19,4 @@ Die MediaPlayerItem.timedMetadata-Eigenschaft bietet Zugriff auf alle TimedMetad
 
 <!--<a id="section_9A22F6F1EA1F4F0C9E0C7687D12AA4AA"></a>-->
 
-Die `MediaPlayerItem.hasTimedMetadata` Eigenschaft gibt an, ob ein abonniertes benutzerdefiniertes Tag im aktuellen Medium vorhanden ist. Sie können zeitgesteuerte Metadaten überwachen, indem Sie auf die Daten warten, `Events.TimedMetadataEvent`die die MediaPlayer-Instanz jedes Mal auslöst, wenn ein neues `TimedMetadata` Objekt erstellt wird.
+Die `MediaPlayerItem.hasTimedMetadata`-Eigenschaft gibt an, ob ein abonniertes benutzerdefiniertes Tag im aktuellen Medium vorhanden ist. Sie können zeitgesteuerte Metadaten überwachen, indem Sie auf das `Events.TimedMetadataEvent` achten, das die MediaPlayer-Instanz jedes Mal auslöst, wenn ein neues `TimedMetadata`-Objekt erstellt wird.
