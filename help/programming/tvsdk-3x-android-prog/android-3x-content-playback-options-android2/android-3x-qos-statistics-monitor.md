@@ -6,11 +6,14 @@ title: Qualität der Dienstleistungsstatistiken
 uuid: 3d66ed44-9d4a-4162-962f-e238575ff2dd
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
 
 
-# Qualität der Dienstleistungsstatistiken {#quality-of-service-statistics}
+# Qualität der Dienststatistiken {#quality-of-service-statistics}
 
 Die Servicequalität (Quality of Service, QoS) bietet eine detaillierte Ansicht der Leistung der Video-Engine. TVSDK bietet detaillierte Statistiken über Wiedergabe, Pufferung und Geräte.
 
@@ -22,25 +25,25 @@ TVSDK bietet außerdem Informationen zu den folgenden heruntergeladenen Ressourc
 
 ## Verfolgen auf Fragmentebene mithilfe der Ladeinformationen {#section_4439D91E8EDC45588EF1D7BE25697350}
 
-Sie können Servicequalitätsinformationen (QoS) zu heruntergeladenen Ressourcen wie Fragmenten und Tracks aus der `LoadInformation` Klasse lesen.
+Sie können Servicequalitätsinformationen (QoS) zu heruntergeladenen Ressourcen wie Fragmenten und Spuren von der `LoadInformation`-Klasse lesen.
 
-1. Implementieren und registrieren Sie den `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE` Ereignis-Listener.
-1. Aufruf `event.getLoadInformation()` zum Lesen der relevanten Daten aus dem `event` Parameter, der an den Rückruf übergeben wird.
+1. Implementieren und registrieren Sie den `MediaPlayerEvent.LOAD_INFORMATION_AVAILABLE`-Ereignis-Listener.
+1. Rufen Sie `event.getLoadInformation()` auf, um die relevanten Daten aus dem Parameter `event` zu lesen, der an den Rückruf weitergeleitet wird.
 
    >[!NOTE]
    >
-   >Weitere Informationen `LoadInformation`finden Sie unter [3.0 für Android-(Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.0/index.html) API-Dokumente.
+   >Weitere Informationen zu `LoadInformation` finden Sie unter [3.0 für Android (Java)](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.0/index.html)-API-Dokumente.
 
-## Lesen der QOS-Wiedergabe, -Pufferung und Gerätestatistik {#section_D21722600F324E67A9F06234D338B243}
+## Lesen Sie die QOS-Wiedergabe-, Puffer- und Gerätestatistik {#section_D21722600F324E67A9F06234D338B243}
 
-Sie können die Statistiken zur Wiedergabe, Pufferung und zum Gerät aus der `QOSProvider` Klasse lesen.
+Sie können die Statistiken zu Wiedergabe, Pufferung und Gerät aus der `QOSProvider`-Klasse lesen.
 
-Die `QOSProvider` Klasse stellt verschiedene Statistiken bereit, darunter Informationen über Pufferung, Bitraten, Bildraten, Zeitdaten usw. Es enthält außerdem Informationen zum Gerät, wie Hersteller, Modell, Betriebssystem, SDK-Version, Geräte-ID des Herstellers und Bildschirmgröße/Dichte.
+Die `QOSProvider`-Klasse stellt verschiedene Statistiken bereit, einschließlich Informationen über Pufferung, Bitraten, Bildraten, Zeitdaten usw. Es enthält außerdem Informationen zum Gerät, wie Hersteller, Modell, Betriebssystem, SDK-Version, Geräte-ID des Herstellers und Bildschirmgröße/Dichte.
 
 1. Instanziieren eines Medienplayers.
-1. Erstellen Sie ein `QOSProvider` Objekt und fügen Sie es an den Medienplayer an.
+1. Erstellen Sie ein `QOSProvider`-Objekt und fügen Sie es an den Medienplayer an.
 
-   Der `QOSProvider` Konstruktor verwendet einen Player-Kontext, um gerätespezifische Informationen abrufen zu können.
+   Der Konstruktor `QOSProvider` nimmt einen Player-Kontext, damit er gerätespezifische Informationen abrufen kann.
 
    ```java
    // Create Media Player. 
@@ -50,7 +53,7 @@ Die `QOSProvider` Klasse stellt verschiedene Statistiken bereit, darunter Inform
 
 1. (Optional) Lesen Sie die Wiedergabestatistik.
 
-   Eine Lösung zum Lesen der Wiedergabestatistik besteht darin, einen Timer zu haben, der die neuen QoS-Werte in regelmäßigen Abständen von der `QOSProvider`abruft.
+   Eine Lösung zum Lesen der Wiedergabestatistik besteht darin, einen Timer zu haben, der die neuen QoS-Werte aus dem `QOSProvider` in regelmäßigen Abständen abruft.
 
    Beispiel:
 
