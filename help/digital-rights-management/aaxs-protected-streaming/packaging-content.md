@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Verpacken von Inhalten{#packaging-content}
+# Verpacken von Inhalt{#packaging-content}
 
 Beim Verpacken von Inhalten muss die URL des Lizenzservers angegeben werden. Die Adobe Access Server-URL hat das folgende Format:
 
