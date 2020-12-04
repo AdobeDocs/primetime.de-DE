@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Wenn eine identitätsbasierte Lizenzierung verwendet wird, sucht der Server vor der Lizenzerteilung nach einem gültigen Authentifizierungstoken.
 
-Weitere Informationen zum Umgang mit Authentifizierungstoken finden Sie unter [Benutzerauthentifizierung](../../../protecting-content/implementing-the-license-server/processing-drm-requests.md#user-authentication) .
+Weitere Informationen zum Umgang mit Authentifizierungstoken finden Sie unter [Benutzerauthentifizierung](../../../protecting-content/implementing-the-license-server/processing-drm-requests.md#user-authentication).
 
 >[!NOTE]
 >
