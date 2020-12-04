@@ -6,6 +6,9 @@ title: DRM-Inhaltsschutz
 uuid: 95c446f6-8304-4d70-9bef-7368b9364025
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '395'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Um dies zu aktivieren, stellt TVSDK Ihnen den DRM-Manager zur Authentifizierung 
 
 Alle DRM-geschützten Inhalte werden automatisch von den DRM-Bibliotheken verarbeitet, die in das TVSDK integriert sind. Sie können jedoch die Fehlerverarbeitung, die Optimierung der Geräteindividualisierung und die Lizenzerfassung mithilfe von TVSDK API-Rückrufen bereitstellen.
 
-## Hinzufügen Inhaltsschutz für den Player {#section_F1FC4322C35C4FE8A3B47FDC0A74221B}
+## hinzufügen Inhaltsschutz für den Player {#section_F1FC4322C35C4FE8A3B47FDC0A74221B}
 
 Sie können dem Player Inhaltsschutz hinzufügen, indem Sie einen Play-back-Manager erstellen oder die Manager-Factory verwenden.
 
@@ -30,7 +33,7 @@ So erstellen Sie einen Content Protection Manager:
 
 * Initialisieren Sie das DRM-System.
 
-   Das folgende Codebeispiel zeigt den Aufruf `loadDRMServices` in der `onCreate()` Anwendungsfunktion, um sicherzustellen, dass eine für das DRM-System erforderliche Initialisierung vor dem Starten der Wiedergabe ausgelöst wird.
+   Im folgenden Codebeispiel wird gezeigt, wie `loadDRMServices` in der Funktion `onCreate()` aufgerufen wird, um sicherzustellen, dass eine für das DRM-System erforderliche Initialisierung vor dem Starten der Wiedergabe gestartet wird.
 
    ```java
    @Override 
@@ -42,7 +45,7 @@ So erstellen Sie einen Content Protection Manager:
 
 * Laden Sie die DRM-Lizenzen im Voraus.
 
-   Das folgende Codebeispiel zeigt das Laden der Liste, `VideoItems` wenn das Laden der Inhaltsdatei abgeschlossen ist. Dies führt dazu, dass die DRM-Lizenzen vom Lizenzserver erworben und lokal zwischengespeichert werden, sodass die Inhalte bei Wiedergabe-Beginn mit minimaler Verzögerung geladen werden.
+   Das folgende Codebeispiel zeigt, wie Sie das `VideoItems` laden, wenn die Liste für den Inhalt fertig geladen wurde. Dies führt dazu, dass die DRM-Lizenzen vom Lizenzserver erworben und lokal zwischengespeichert werden, sodass die Inhalte bei Wiedergabe-Beginn mit minimaler Verzögerung geladen werden.
 
    ```java
    DrmManager.preLoadDrmLicenses(item.getUrl(),  
@@ -66,7 +69,7 @@ So erstellen Sie einen Content Protection Manager:
    >
    >![](assets/precache-drm-licenses.jpg)
 
-* Um die DRM-Fehlerverarbeitung `ManagerFactory` zu implementieren, muss die folgende Codezeile in der [!DNL PlayerFragment.java] Datei enthalten sein:
+* Um `ManagerFactory` zur Implementierung der DRM-Fehlerbearbeitung zu verwenden, stellen Sie sicher, dass die folgende Codezeile in der Datei [!DNL PlayerFragment.java] enthalten ist:
 
    ```java
    drmManager = ManagerFactory.getDrmManager(config, mediaPlayer);
