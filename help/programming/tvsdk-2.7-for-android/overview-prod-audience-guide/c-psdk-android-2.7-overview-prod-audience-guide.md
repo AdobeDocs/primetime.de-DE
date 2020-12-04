@@ -6,6 +6,9 @@ title: Produktübersicht, Audience und dieses Handbuch
 uuid: 638bafbe-e518-4891-b792-29f765c3c0d7
 translation-type: tm+mt
 source-git-commit: fd686391df0fa711bba99bc1bc312c9ef619f184
+workflow-type: tm+mt
+source-wordcount: '286'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Dieses Handbuch enthält Informationen zur Entwicklung von Videoplayer-Anwendung
 
 <!--<a id="section_FC24E86A2E6442B8A3769160769BBDFA"></a>-->
 
-* Eine Liste der von TVSDK unterstützten Funktionen finden Sie unter [Primetime TVSDK-Funktionen](../../tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md).
+* Eine Liste der von TVSDK unterstützten Funktionen finden Sie unter [Primetime TVSDK features](../../tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md).
 * Spezifische Hardware- und Softwareanforderungen für die Verwendung von TVSDK finden Sie unter [Anforderungen](../../tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md).
 * Eine Liste der verfügbaren APIs finden Sie unter [TVSDK Android-APIs](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/).
 
@@ -36,6 +39,6 @@ Dieses Handbuch enthält Informationen, mit denen Sie TVSDK-Funktionen mit Java 
 
 >[!TIP]
 >
->Das Präfix TVSDK API-Namensraum [!DNL com.adobe.mediacore] wird oft aus Gründen der Kürze ausgelassen.
+>Das TVSDK-API-Namensraum-Präfix [!DNL com.adobe.mediacore] wird oft aus Gründen der Kürze ausgelassen.
 >
 >Viele API-Elemente werden ohne ihren übergeordneten Klassenbezeichner referenziert, wenn der Kontext klar ist.
