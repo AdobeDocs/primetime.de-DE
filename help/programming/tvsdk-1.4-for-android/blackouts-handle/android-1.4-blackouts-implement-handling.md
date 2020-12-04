@@ -6,6 +6,9 @@ title: Implementierung der Blackout-Behandlung
 uuid: db7f831c-5069-4426-bfe3-5fc51fec7930
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '171'
+ht-degree: 0%
 
 ---
 
@@ -75,7 +78,7 @@ So implementieren Sie die Blackout-Behandlung, einschließlich der Bereitstellun
    }; 
    ```
 
-1. Behandeln Sie `TimedMetadata` Objekte, wenn die `MediaPlayer` Zeit ausgeführt wird.
+1. Verarbeiten Sie `TimedMetadata`-Objekte, wenn die `MediaPlayer`-Zeit ausgeführt wird.
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -183,7 +186,7 @@ So implementieren Sie die Blackout-Behandlung, einschließlich der Bereitstellun
 
    >[!NOTE]
    >
-   >Gegenwärtig können die anpassbaren ABR-Profil (Bitrate) bei mehreren Livestreams mit Bitrate nicht mehr synchron sein. Dadurch werden Duplikat- `timedMetadata` Objekte für dasselbe abonnierte Tag generiert. Um inkorrekte, nicht suchbare Berechnungen zu vermeiden, wird dringend empfohlen, nach Ihren Berechnungen nach überlappenden nicht suchbaren Bereichen zu suchen, wie im folgenden Beispiel:
+   >Gegenwärtig können die anpassbaren ABR-Profil (Bitrate) bei mehreren Livestreams mit Bitrate nicht mehr synchron sein. Dies verursacht Duplikat `timedMetadata`-Objekte für dasselbe abonnierte Tag. Um inkorrekte, nicht suchbare Berechnungen zu vermeiden, wird dringend empfohlen, nach Ihren Berechnungen nach überlappenden nicht suchbaren Bereichen zu suchen, wie im folgenden Beispiel:
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
