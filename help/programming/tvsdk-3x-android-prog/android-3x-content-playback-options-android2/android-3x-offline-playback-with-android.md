@@ -5,6 +5,9 @@ seo-title: Offline-Wiedergabe mit Android
 title: Offline-Wiedergabe mit Android
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '110'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ boolean NetworkConfiguration::getOfflinePlayback()
 
 Sie können diese Einstellung aktivieren und die Netzwerkverbindung ignorieren.
 
-Auf `com.adobe.mediacore.system.NetworkConfiguration::setOfflinePlayback` &quot;true&quot;setzen. Der Standardwert für einen booleschen Wert ist false.
+Setzen Sie `com.adobe.mediacore.system.NetworkConfiguration::setOfflinePlayback` auf true. Der Standardwert für einen booleschen Wert ist false.
 
 ```
 // example of NetworkConfiguration
