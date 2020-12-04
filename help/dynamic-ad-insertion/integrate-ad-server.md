@@ -10,7 +10,7 @@ ht-degree: 0%
 ---
 
 
-# Anzeigen-Server integrieren {#integrate-ad-server}
+# Anzeigen-Server {#integrate-ad-server} integrieren
 
 Für den Beginn erhalten Sie eine Anmeldung für den Zugriff auf die Primetime Ad Insertion Console, in der Sie Regeln einrichten, die Primetime Ad Insertion verwendet, um Anzeigenanforderungen an den von Ihnen gewählten Anzeigen-Server zu senden. Primetime Ad Insertion unterstützt die meisten VAST- oder VMAP-kompatiblen Anzeigen-Server.
 
