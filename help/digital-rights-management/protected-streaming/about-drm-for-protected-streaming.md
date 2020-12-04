@@ -1,18 +1,21 @@
 ---
-description: Der Adobe Primetime DRM Server for Protected Streaming ist eine Lizenzserverimplementierung, die auf dem Primetime DRM SDK basiert. Dieser Server stellt Lizenzen für geschützte Inhalte an Primetime DRM-Clients aus.
-seo-description: Der Adobe Primetime DRM Server for Protected Streaming ist eine Lizenzserverimplementierung, die auf dem Primetime DRM SDK basiert. Dieser Server stellt Lizenzen für geschützte Inhalte an Primetime DRM-Clients aus.
-seo-title: Info zu Adobe Primetime DRM Server für geschütztes Streaming
-title: Info zu Adobe Primetime DRM Server für geschütztes Streaming
+description: Der Adobe Primetime DRM Server für Protected Streaming ist eine Lizenzserverimplementierung, die auf dem Primetime DRM SDK basiert. Dieser Server stellt Lizenzen für geschützte Inhalte an Primetime DRM-Clients aus.
+seo-description: Der Adobe Primetime DRM Server für Protected Streaming ist eine Lizenzserverimplementierung, die auf dem Primetime DRM SDK basiert. Dieser Server stellt Lizenzen für geschützte Inhalte an Primetime DRM-Clients aus.
+seo-title: Informationen zum Adobe Primetime DRM-Server für geschütztes Streaming
+title: Informationen zum Adobe Primetime DRM-Server für geschütztes Streaming
 uuid: 775bef19-6071-428f-80f5-57cae472753c
 translation-type: tm+mt
 source-git-commit: 68f1318db89cf9422f5969f669c11f3784560db6
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
 
-# Info zu Adobe Primetime DRM Server für geschütztes Streaming{#about-adobe-primetime-drm-server-for-protected-streaming}
+# Info zum Adobe Primetime DRM-Server für geschütztes Streaming{#about-adobe-primetime-drm-server-for-protected-streaming}
 
-Der Adobe Primetime DRM Server for Protected Streaming ist eine Lizenzserverimplementierung, die auf dem Primetime DRM SDK basiert. Dieser Server stellt Lizenzen für geschützte Inhalte an Primetime DRM-Clients aus.
+Der Adobe Primetime DRM Server für Protected Streaming ist eine Lizenzserverimplementierung, die auf dem Primetime DRM SDK basiert. Dieser Server stellt Lizenzen für geschützte Inhalte an Primetime DRM-Clients aus.
 
 Der Primetime-DRM-Server für geschütztes Streaming unterstützt mehrere Mieter. Sie können einen einzelnen Server für mehrere Herausgeber von Inhalten hosten, von denen jeder über eigene Konfigurationseinstellungen verfügt. Darüber hinaus unterstützt der Server benutzerdefinierte Autorisierungskomponenten, sodass Sie benutzerdefinierte Logik ausführen können, bevor eine Lizenz erteilt wird.
 
