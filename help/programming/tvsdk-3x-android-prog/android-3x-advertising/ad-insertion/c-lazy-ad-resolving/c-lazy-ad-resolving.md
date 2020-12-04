@@ -20,7 +20,7 @@ Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiede
 
 * Grundlegender Prozess zum Auflösen und Laden von Anzeigen:
 
-   1. TVSDK lädt ein Manifest (Playlist) herunter und löst *alle Anzeigen* auf.
+   1. TVSDK lädt ein Manifest (Wiedergabeliste) und *löst* alle Anzeigen auf.
    1. TVSDK *lädt* alle Anzeigen und platziert sie auf der Zeitschiene.
    1. TVSDK verschiebt den Player in den Status &quot;VORBEREITT&quot;, und die Wiedergabe des Inhalts beginnt.
 
@@ -28,9 +28,9 @@ Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiede
 
 * *Verzögertes Laden* von Anzeigen:
 
-   1. TVSDK lädt eine Playlist herunter und *löst* alle Anzeigen.
-   1. TVSDK *lädt* Pre-Roll-Anzeigen, verschiebt den Player in den Status &quot;VORBEREITT&quot;und die Inhaltswiedergabe beginnt.
-   1. TVSDK *lädt* die verbleibenden Anzeigen und setzt sie während der Wiedergabe auf die Zeitleiste.
+   1. TVSDK lädt eine Wiedergabeliste herunter und *löst* alle Anzeigen auf.
+   1. TVSDK *lädt* Pre-Roll-Anzeigen, verschiebt den Player in den Status &quot;VORBEREITT&quot;und die Wiedergabe des Inhalts beginnt.
+   1. TVSDK *lädt* die verbleibenden Anzeigen und setzt sie bei der Wiedergabe auf die Zeitleiste.
 
    Diese Funktion verbessert den grundlegenden Prozess, indem der Player in den Status &quot;VORBEREITT&quot;versetzt wird, bevor alle Anzeigen geladen werden.
 
@@ -57,7 +57,7 @@ Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiede
 >* Wenn bei verzögerter Anzeigenauflösung mehrere Werbeunterbrechungen gleichzeitig vorhanden sind (VMAP), werden sie gleichzeitig aufgelöst.
 >* Es wird nicht empfohlen, den Wert *setDelayAdLoadingTolerance() *unter den Standardwert (5 Sekunden) zu verringern. Dies könnte dazu führen, dass der Player unnötig &quot;puffert&quot;.
 >* Die verzögerte Anzeigenauflösung wirkt sich nicht auf Pre-Roll-Anzeigen aus.
->* Lazy Ad Resolving wird derzeit mit dem Auditude-Plugin unterstützt. Es wird empfohlen, ** setDelayAdLoadingnicht auf true festzulegen, wenn Sie einen benutzerdefinierten Auflöser verwenden.
+>* Lazy Ad Resolving wird derzeit mit dem Auditude-Plugin unterstützt. Es wird empfohlen, *setDelayAdLoading* nicht auf true festzulegen, wenn Sie einen benutzerdefinierten Auflöser verwenden.
 
 >
 
