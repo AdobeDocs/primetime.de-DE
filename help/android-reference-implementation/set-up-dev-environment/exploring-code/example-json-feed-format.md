@@ -6,6 +6,9 @@ title: Beispiel für ein JSON-Feed-Format
 uuid: a7419aab-36c0-45d1-9bb7-ac2bd64b0bbc
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '63'
+ht-degree: 0%
 
 ---
 
@@ -14,4 +17,4 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 Die Referenzimplementierung verwendet eine JSON-basierte Eingabedatei.
 
-[Dieses Beispiel](https://help.adobe.com/en_US/primetime/api/reference_implementation/json-example.json) zeigt, wie die Anzeigenmetadaten für Primetime-Anzeigen, Direktwerbung und benutzerdefinierte Anzeigenmarken formatiert werden.
+[In diesem ](https://help.adobe.com/en_US/primetime/api/reference_implementation/json-example.json) Beispiel wird die Formatierung der Anzeigenmetadaten für Primetime-Anzeigen, Direktwerbung und benutzerdefinierte Anzeigenmarken erläutert.
