@@ -6,6 +6,9 @@ title: Zurücksetzen oder Wiederverwenden einer MediaPlayer-Instanz
 uuid: b376096b-0aed-4ac2-96e5-e30a4eaf742e
 translation-type: tm+mt
 source-git-commit: c547002eb8946f8ccc5a79d0836f3f814e823b97
+workflow-type: tm+mt
+source-wordcount: '201'
+ht-degree: 0%
 
 ---
 
@@ -18,26 +21,26 @@ Wenn Sie eine MediaPlayer-Instanz zurücksetzen, wird sie an ihren nicht initial
 
 Dieser Vorgang ist in den folgenden Fällen nützlich:
 
-* Sie möchten eine `MediaPlayer` Instanz wiederverwenden, müssen jedoch eine neue Instanz laden `MediaResource` (Videoinhalt) und die vorherige Instanz ersetzen.
+* Sie möchten eine `MediaPlayer`-Instanz wiederverwenden, müssen jedoch eine neue `MediaResource` (Videoinhalt) laden und die vorherige Instanz ersetzen.
 
-   Durch Zurücksetzen können Sie die `MediaPlayer` Instanz wiederverwenden, ohne dass die Freigabe von Ressourcen, die Wiederherstellung der Ressourcen `MediaPlayer`und die Neuzuweisung von Ressourcen mit Aufwand verbunden ist. Die `replaceCurrentItem` und `replaceCurrentResource` -Methoden führen diese Schritte automatisch für Sie aus, ohne die Methode reset aufrufen zu müssen.
+   Durch Zurücksetzen können Sie die `MediaPlayer`-Instanz wiederverwenden, ohne den Aufwand für die Freigabe von Ressourcen, das Neuerstellen der `MediaPlayer`-Instanz und das Neuzuordnen von Ressourcen zu verursachen. Die Methoden `replaceCurrentItem` und `replaceCurrentResource` führen diese Schritte automatisch für Sie aus, ohne die Methode reset aufrufen zu müssen.
 
-* Wenn der `MediaPlayer` Status FEHLER aufweist und gelöscht werden muss.
+* Wenn das `MediaPlayer` einen ERROR-Status hat und gelöscht werden muss.
 
    >[!IMPORTANT]
    >
    >Dies ist die einzige Möglichkeit, um sich vom ERROR-Status zu erholen.
 
-1. Aufruf `reset` zur Wiederherstellung des `MediaPlayer` nicht initialisierten Status:
+1. Rufen Sie `reset` auf, um die `MediaPlayer`-Instanz in ihren nicht initialisierten Status zurückzugeben:
 
    ```
    function reset():void; 
    ```
 
-1. Verwenden Sie `MediaPlayer.replaceCurrentItem` oder `MediaPlayer.replaceCurrentResource` , um eine andere zu laden `MediaResource`.
+1. Verwenden Sie `MediaPlayer.replaceCurrentItem` oder `MediaPlayer.replaceCurrentResource`, um ein anderes `MediaResource` zu laden.
 
    >[!TIP]
    >
-   >Um einen Fehler zu löschen, müssen Sie dasselbe laden `MediaResource`.
+   >Um einen Fehler zu löschen, laden Sie dasselbe `MediaResource`.
 
-1. Wenn Sie den `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` Status &quot; `PREPARED` status&quot;erhalten, wird die Wiedergabe Beginn.
+1. Wenn Sie das `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` mit dem Status `PREPARED` erhalten, wird die Wiedergabe Beginn.
