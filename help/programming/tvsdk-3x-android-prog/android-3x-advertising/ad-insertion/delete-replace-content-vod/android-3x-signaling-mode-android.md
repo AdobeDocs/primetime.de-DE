@@ -6,11 +6,14 @@ title: Auswirkungen auf Kombinationen aus Anzeigeneinfügung und -löschung im A
 uuid: 49abab49-4e52-477d-b7ed-688ee63e7473
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 0%
 
 ---
 
 
-# Auswirkungen auf Kombinationen aus Anzeigeneinfügung und -löschung im Anzeigensignalisierungsmodus und Anzeigenmetadaten {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# Auswirkungen auf das Einfügen und Löschen von Anzeigen im Anzeigensignalisierungsmodus und auf Kombinationen von Anzeigenmetadaten {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
 Sie können Zeitbereiche in VOD-Streams mit unterschiedlichen Kombinationen aus Anzeigensignalisierungsmodus und Anzeigenmetadaten markieren, löschen und ersetzen. Verschiedene Kombinationen aus Signalmodus und Metadaten führen zu unterschiedlichem Verhalten.
 
@@ -22,7 +25,7 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
 
 **Serverzuordnung**
 
-| **Anzeigenmetadaten** | **Erstellte Auflösungen** | **`PlacementInformations`erstellt ** | **Ergebnis** |
+| **Anzeigenmetadaten** | **Erstellte Auflösungen** | **`PlacementInformations`erstellt** | **Ergebnis** |
 |--- |--- |--- |--- |
 |  | Löschen | Löschen | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)` | Bereiche gelöscht |
 | Löschen, Auditude | Löschen, Auditude | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),` <br>`PlacementInfo (Type.SERVER_MAP, Mode.INSERT)` | Bereiche gelöscht, Anzeigen eingefügt |
