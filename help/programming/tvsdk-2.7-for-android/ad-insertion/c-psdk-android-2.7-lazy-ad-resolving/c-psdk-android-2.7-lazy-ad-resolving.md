@@ -20,7 +20,7 @@ Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiede
 
 * Grundlegender Prozess zum Auflösen und Laden von Anzeigen:
 
-   1. TVSDK lädt ein Manifest (Playlist) herunter und löst *alle Anzeigen* auf.
+   1. TVSDK lädt ein Manifest (Wiedergabeliste) und *löst* alle Anzeigen auf.
    1. TVSDK *lädt* alle Anzeigen und platziert sie auf der Zeitschiene.
    1. TVSDK verschiebt den Player in den Status &quot;VORBEREITT&quot;, und die Wiedergabe des Inhalts beginnt.
 
@@ -28,9 +28,9 @@ Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiede
 
 * *Verzögertes Laden* von Anzeigen:
 
-   1. TVSDK lädt eine Playlist herunter und *löst* alle Anzeigen.
-   1. TVSDK *lädt* Pre-Roll-Anzeigen, verschiebt den Player in den Status &quot;VORBEREITT&quot;und die Inhaltswiedergabe beginnt.
-   1. TVSDK *lädt* die verbleibenden Anzeigen und setzt sie während der Wiedergabe auf die Zeitleiste.
+   1. TVSDK lädt eine Wiedergabeliste herunter und *löst* alle Anzeigen auf.
+   1. TVSDK *lädt* Pre-Roll-Anzeigen, verschiebt den Player in den Status &quot;VORBEREITT&quot;und die Wiedergabe des Inhalts beginnt.
+   1. TVSDK *lädt* die verbleibenden Anzeigen und setzt sie bei der Wiedergabe auf die Zeitleiste.
 
    Diese Funktion verbessert den grundlegenden Prozess, indem der Player in den Status &quot;VORBEREITT&quot;versetzt wird, bevor alle Anzeigen geladen werden.
 
@@ -51,12 +51,12 @@ Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiede
 
    >
    >    
-   * Der Spieler muss auf das `kEventAdResolutionComplete` Ereignis warten, bevor er die Suche oder das Trick-Spiel erlaubt.
-   >    * Wenn der Benutzer versucht, Vorgänge zum Suchen oder Tricken von Wiedergabe auszuführen, während Anzeigen weiterhin aufgelöst werden, gibt TVSDK den `kECLazyAdResolutionInProgress` Fehler aus.
-   >    * Bei Bedarf sollte der Player die Scrubbing-Leiste aktualisieren, *nachdem* das `kEventAdResolutionComplete` Ereignis empfangen wurde.
+   * Der Player muss auf das `kEventAdResolutionComplete`-Ereignis warten, bevor die Suche oder das Trick-Abspielen zugelassen wird.
+   >    * Wenn der Benutzer versucht, Vorgänge zum Suchen oder Tricken von Wiedergabe auszuführen, während Anzeigen noch aufgelöst werden, gibt TVSDK den Fehler `kECLazyAdResolutionInProgress` aus.
+   >    * Falls erforderlich, sollte der Player die Scrubbing-Leiste aktualisieren, *nachdem* das `kEventAdResolutionComplete`-Ereignis empfangen wurde.
 >
 >* Lazy Ad Resolving ist nur für VOD gedacht. Es funktioniert nicht mit LIVE-Streams.
->* Die verzögerte Anzeigenauflösung ist nicht mit der Funktion *Sofortiges* kompatibel.
+>* Lazy Ad Resolving ist nicht mit der Funktion *Instant On* kompatibel.
 
 >
 >  
