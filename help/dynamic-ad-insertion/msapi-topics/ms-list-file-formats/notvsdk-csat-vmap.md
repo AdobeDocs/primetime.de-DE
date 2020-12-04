@@ -6,17 +6,20 @@ title: VMAP-Format zur Verfolgung von URLs
 uuid: e3173fad-caa2-49cb-9a65-631573812e52
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
 
 # VMAP-Format zur Verfolgung von URLs {#vmap-format-for-tracking-urls}
 
-Wenn der Client Verfolgungsinformationen anfordert, sendet der Manifestserver eine formatierte Datei zurück. Format und Inhalt hängen vom Wert des Parameters Abfrage ab `pttrackingversion`
+Wenn der Client Verfolgungsinformationen anfordert, sendet der Manifestserver eine formatierte Datei zurück. Format und Inhalt hängen vom Wert des Parameters Abfrage ab.`pttrackingversion`
 
 ## Einzelnes VMAP-Format {#vmap}
 
-Die VMAP-Datei, die der Manifestserver sendet, wenn das Format des folgenden Beispiels `pttrackingversion=vmap` vorliegt, das von einem typischen VMAP-Block stammt. Es wurde gekürzt, um unnötige Wiederholungen zu vermeiden, sodass die Struktur klarer ist. Ein Auslassungszeichen (drei Punkte, durch Leerzeichen getrennt) zeigt an, dass in einigen URLs und zwischen einigen Codeblöcken keine Informationen vorhanden sind. Nicht gekürzte URLs werden in mehreren Zeilen angezeigt, auch wenn sie in der VMAP-Datei in einer Zeile stehen.
+Die VMAP-Datei, die der Manifestserver sendet, wenn `pttrackingversion=vmap` das Format des folgenden Beispiels hat, das von einem typischen VMAP-Block stammt. Es wurde gekürzt, um unnötige Wiederholungen zu vermeiden, sodass die Struktur klarer ist. Ein Auslassungszeichen (drei Punkte, durch Leerzeichen getrennt) zeigt an, dass in einigen URLs und zwischen einigen Codeblöcken keine Informationen vorhanden sind. Nicht gekürzte URLs werden in mehreren Zeilen angezeigt, auch wenn sie in der VMAP-Datei in einer Zeile stehen.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
