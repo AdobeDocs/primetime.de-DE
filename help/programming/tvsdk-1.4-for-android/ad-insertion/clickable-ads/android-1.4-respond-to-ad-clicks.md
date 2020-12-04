@@ -6,6 +6,9 @@ title: Antworten auf Klicks auf Anzeigen
 uuid: 31852f01-c900-48e3-ae23-7fb131c22594
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
@@ -18,12 +21,12 @@ Wenn ein Benutzer auf eine Anzeige oder eine zugehörige Schaltfläche klickt, m
 
    Wenn ein Benutzer auf eine Anzeige oder eine zugehörige Schaltfläche klickt, sendet TVSDK diese Benachrichtigung, einschließlich Informationen zum Ziel des Klicks.
 1. Überwachen Sie Benutzerinteraktionen auf klickbaren Anzeigen.
-1. Wenn der Benutzer die Anzeige oder Schaltfläche berührt oder anklickt, um TVSDK zu benachrichtigen, rufen Sie `notifyClick` die `MediaPlayerView`.
-1. Hören Sie auf das `onAdClick(AdClickEvent event)` Ereignis von TVSDK.
-1. Verwenden Sie zum Abrufen der Clickthrough-URL und der zugehörigen Informationen die Getter-Methoden für die `AdClickEvent` Instanz.
+1. Wenn der Benutzer die Anzeige oder Schaltfläche berührt oder klickt, um TVSDK zu benachrichtigen, rufen Sie `notifyClick` auf dem `MediaPlayerView` auf.
+1. Suchen Sie nach dem Ereignis `onAdClick(AdClickEvent event)` von TVSDK.
+1. Verwenden Sie zum Abrufen der Clickthrough-URL und der zugehörigen Informationen die Getter-Methoden für die `AdClickEvent`-Instanz.
 1. Halten Sie das Video an.
 
-   Weitere Informationen zum Anhalten des Videos finden Sie unter [Anhalten und Wiederaufnehmen der Wiedergabe.](../../ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md).
+   Weitere Informationen zum Anhalten des Videos finden Sie unter [Wiedergabe anhalten und fortsetzen.](../../ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md).
 1. Verwenden Sie die Clickthrough-Informationen, um die Anzeigen-Clickthrough-URL und die zugehörigen Informationen anzuzeigen.
 
        Sie können die Informationen beispielsweise auf eine der folgenden Arten anzeigen:
