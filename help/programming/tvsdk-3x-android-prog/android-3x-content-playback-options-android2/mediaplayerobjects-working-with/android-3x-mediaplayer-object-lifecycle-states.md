@@ -6,6 +6,9 @@ title: Lebenszyklus und Status des MediaPlayer-Objekts
 uuid: a2866f84-a722-46ed-b4cb-36664db5be82
 translation-type: tm+mt
 source-git-commit: 56dc79e5b4df11ff730d7d8f23dea8d0f4712077
+workflow-type: tm+mt
+source-wordcount: '471'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ Der Status des Medienplayers bestimmt, welche Aktionen zulässig sind.
 
 Zum Arbeiten mit Medienplayer-Status:
 
-* Sie können den aktuellen Status des `MediaPlayer` Objekts abrufen mit `MediaPlayer.getStatus()`.
+* Sie können den aktuellen Status des `MediaPlayer`-Objekts mit `MediaPlayer.getStatus()` abrufen.
 
-* Die Liste der Status wird im [MediaPlayerStatus](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.5/com/adobe/mediacore/MediaPlayerStatus.html) -Enum definiert.
+* Die Liste der Status wird in der Enum [MediaPlayerStatus](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.5/com/adobe/mediacore/MediaPlayerStatus.html) definiert.
 
 Status-Transition-Diagramm für den Lebenszyklus einer `MediaPlayer` Instanz:
 
@@ -42,7 +45,7 @@ Die folgende Tabelle enthält Details zum Lebenszyklus und den Status des Medien
   </tr> 
   <tr> 
    <td colname="col1"> INITIALISIERUNG </td> 
-   <td colname="col2"> <p>Ihre Anwendung ruft <span class="codeph"> MediaPlayer.replaceCurrentItem() auf </span>. </p> <p>Das Medienplayer-Element wird geladen. </p> </td> 
+   <td colname="col2"> <p>Ihre Anwendung ruft <span class="codeph"> MediaPlayer.replaceCurrentItem() </span> auf. </p> <p>Das Medienplayer-Element wird geladen. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> INITIALISIERT </td> 
@@ -50,7 +53,7 @@ Die folgende Tabelle enthält Details zum Lebenszyklus und den Status des Medien
   </tr> 
   <tr> 
    <td colname="col1"> VORBEREITUNG </td> 
-   <td colname="col2"> <p>Ihre Anwendung ruft <span class="codeph"> MediaPlayer.prepareToPlay() auf </span>. Der Medienplayer lädt das Medienplayer-Element und alle zugehörigen Ressourcen. </p> </td> 
+   <td colname="col2"> <p>Ihre Anwendung ruft <span class="codeph"> MediaPlayer.prepareToPlay() </span> auf. Der Medienplayer lädt das Medienplayer-Element und alle zugehörigen Ressourcen. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> VORBEREITT </td> 
@@ -58,15 +61,15 @@ Die folgende Tabelle enthält Details zum Lebenszyklus und den Status des Medien
   </tr> 
   <tr> 
    <td colname="col1"> PLAYING/PAUSED </td> 
-   <td colname="col2"> <p>Während die Anwendung das Medium abspielt und anhält, wechselt der Medienplayer zwischen diesen Status. </p> </td> 
+   <td colname="col2"> <p>Während die Anwendung das Medium wiedergibt und anhält, wechselt der Medienplayer zwischen diesen Status. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> AUSGESETZT </td> 
-   <td colname="col2"> <p>Wenn die Anwendung weg von der Wiedergabe navigiert, das Gerät herunterfährt oder Anwendungen wechselt, während der Player abgespielt oder angehalten wird, wird der Medienplayer ausgesetzt und Ressourcen werden freigegeben. </p> <p>Beim Aufrufen von <span class="codeph"> MediaPlayer.restore() </span> wird der Player auf den Status zurückgesetzt, in dem sich der Player vor dem AUSSETZEN befand. Die Ausnahme ist, wenn der Spieler SUCHT, wenn suspendiert aufgerufen wird, der Spieler PAUSED und dann AUSGESETZT wird. </p> <p>Wichtig:  <p>Beachten Sie die folgenden Informationen: 
+   <td colname="col2"> <p>Wenn die Anwendung weg von der Wiedergabe navigiert, das Gerät herunterfährt oder Anwendungen wechselt, während der Player abgespielt oder angehalten wird, wird der Medienplayer ausgesetzt und Ressourcen werden freigegeben. </p> <p>Durch Aufruf von <span class="codeph"> MediaPlayer.restore() </span> wird der Player auf den Status zurückgesetzt, in dem sich der Player vor dem AUSSETZEN befand. Die Ausnahme ist, wenn der Spieler SUCHT, wenn suspendiert aufgerufen wird, der Spieler PAUSED und dann AUSGESETZT wird. </p> <p>Wichtig:  <p>Beachten Sie die folgenden Informationen: 
       <ul id="ul_1B21668994D1474AAA0BE839E0D69B00"> 
-       <li id="li_08459A3AB03C45588D73FA162C27A56C">Der <span class="codeph"> MediaPlayer </span> ruft <span class="codeph"> Suspendierung </span> nur dann automatisch auf, wenn das von MediaPlayerView verwendete Oberflächenobjekt zerstört <span class="codeph"> </span> wird. </li> 
-       <li id="li_B9926AA2E7B9441490F37D24AE2678A1">Der <span class="codeph"> MediaPlayer </span> ruft <span class="codeph"> restore() </span> nur dann automatisch auf, wenn ein neues Oberflächenobjekt erstellt wird, das von MediaPlayerView verwendet wird <span class="codeph"> </span> . </li> 
-      </ul> </p> </p> <p>Wenn die Wiedergabe bei der Wiederherstellung des MediaPlayer immer angehalten werden soll, lassen Sie den Anwendungsaufruf <span class="codeph"> MediaPlayer.pause() </span> in der <span class="codeph"> onPause()- </span> Methode der Android-Aktivität stehen. </p> </td> 
+       <li id="li_08459A3AB03C45588D73FA162C27A56C">Der <span class="codeph"> MediaPlayer </span> ruft <span class="codeph"> die Aussetzung </span> nur dann automatisch auf, wenn das Oberflächenobjekt, das von <span class="codeph"> MediaPlayerView </span> verwendet wird, zerstört wird. </li> 
+       <li id="li_B9926AA2E7B9441490F37D24AE2678A1">Der <span class="codeph"> MediaPlayer </span> ruft <span class="codeph"> restore() </span> nur dann automatisch auf, wenn ein neues Oberflächenobjekt erstellt wird, das von <span class="codeph"> MediaPlayerView </span> verwendet wird. </li> 
+      </ul> </p> </p> <p>Wenn die Wiedergabe bei der Wiederherstellung des MediaPlayer immer angehalten werden soll, verwenden Sie den Anwendungsaufruf <span class="codeph"> MediaPlayer.pause() </span> in der Methode <span class="codeph"> der Android-Aktivität </span>. onPause() &lt;a3/&gt;. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> VOLLSTÄNDIG </td> 
@@ -85,7 +88,7 @@ Die folgende Tabelle enthält Details zum Lebenszyklus und den Status des Medien
 
 >[!TIP]
 >
->Sie können den Status verwenden, um Feedback zum Prozess bereitzustellen, z. B. einen Spinner, während Sie auf die nächste Statusänderung warten, oder die nächsten Schritte beim Abspielen des Mediums ausführen, z. B. auf den entsprechenden Status warten, bevor Sie die nächste Methode aufrufen.
+>Sie können den Status verwenden, um Feedback zum Prozess bereitzustellen, z. B. einen Spinner, während Sie auf die nächste Statusänderung warten, oder die nächsten Schritte beim Abspielen der Medien ausführen, z. B. auf den entsprechenden Status warten, bevor Sie die nächste Methode aufrufen.
 
 Beispiel:
 
