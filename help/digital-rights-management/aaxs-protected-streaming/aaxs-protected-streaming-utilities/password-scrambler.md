@@ -4,6 +4,9 @@ title: Password Scrambler
 uuid: e488babc-cd50-41b9-acb8-490e8e42e8bc
 translation-type: tm+mt
 source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+workflow-type: tm+mt
+source-wordcount: '80'
+ht-degree: 0%
 
 ---
 
@@ -32,5 +35,5 @@ Alle in &quot;flashaccess-global.xml&quot;und &quot;flashaccess-tenant.xml&quot;
 
 >[!NOTE]
 >
->Das Dienstprogramm Password Scrambler im Adobe Access Server for Protected Streaming ist nicht mit dem im Lieferumfang des Referenz-Implementierungslizenzservers enthaltenen Programm austauschbar.
+>Das Dienstprogramm Password Scrambler in der Adobe Access Server für Protected Streaming ist nicht mit dem im Lieferumfang des Referenz-Implementierungslizenzservers enthaltenen Programm austauschbar.
 
