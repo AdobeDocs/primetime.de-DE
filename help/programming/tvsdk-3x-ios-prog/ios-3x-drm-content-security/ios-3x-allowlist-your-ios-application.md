@@ -33,11 +33,11 @@ Bevor Sie eine iOS-App senden, müssen Sie sie signieren und bei Apple veröffen
 
 Aufgrund der erneuten Unterzeichnung sind die Listen zulassen-Informationen, die Sie vor der Übermittlung an den Apple App Store erstellt haben, nicht verwendbar.
 
-Um mit dieser Übermittlungsrichtlinie zu arbeiten, hat Adobe ein `machotools` Tool erstellt, das Ihre iOS-Anwendung per Fingerabdruck abdruckt, um einen Digest-Wert zu erstellen, diesen Wert zu signieren und diesen Wert in Ihre iOS-Anwendung einzufügen. Nach dem Fingerabdruck Ihrer iOS-App können Sie die App an den Apple App Store übermitteln. Wenn ein Benutzer Ihre App aus dem App Store ausführt, berechnet Primetime DRM zur Laufzeit den Fingerabdruck der Anwendung und bestätigt ihn mit dem Digest-Wert, der zuvor in die Anwendung injiziert wurde. Wenn der Fingerabdruck übereinstimmt, wird bestätigt, dass die App als aufgelistet zulässig gilt und geschützte Inhalte wiedergegeben werden dürfen.
+Um mit dieser Übermittlungsrichtlinie zu arbeiten, hat Adobe ein `machotools`-Tool erstellt, das Ihre iOS-Anwendung per Fingerabdruck abdruckt, um einen Digest-Wert zu erstellen, diesen Wert zu signieren und diesen Wert in Ihre iOS-Anwendung einzufügen. Nach dem Fingerabdruck Ihrer iOS-App können Sie die App an den Apple App Store übermitteln. Wenn ein Benutzer Ihre App aus dem App Store ausführt, berechnet Primetime DRM zur Laufzeit den Fingerabdruck der Anwendung und bestätigt ihn mit dem Digest-Wert, der zuvor in die Anwendung injiziert wurde. Wenn der Fingerabdruck übereinstimmt, wird bestätigt, dass die App als aufgelistet zulässig gilt und geschützte Inhalte wiedergegeben werden dürfen.
 
-Das Adobe `machotools` Tool ist im iOS TVSDK SDK enthalten, in der [!DNL [...]Ordner &quot;/tools/DRM&quot;.
+Die Adobe `machotools` ist im iOS TVSDK SDK enthalten, in der [!DNL [...]/tools/DRM]-Ordner.
 
-Zur Verwendung `machotools`:
+So verwenden Sie `machotools`:
 
 1. Generieren Sie ein Schlüsselpaar.
 
@@ -93,14 +93,14 @@ Zur Verwendung `machotools`:
      -pass PASSWORD
    ```
 
-1. Führen Sie diese Schritte aus, [!DNL machotools] um den Hash-Wert Ihrer App-Herausgeber-ID zu generieren.
+1. Führen Sie [!DNL machotools] aus, um den Hashwert für die App-Herausgeber-ID zu generieren.
 
    ```shell
    ./machotools dumpMachoSignature -in ${PROJECT_DIR}/generatedRes/AAXSAppDigest.digest
    ```
 
 1. Erstellen Sie eine neue DRM-Richtlinie oder aktualisieren Sie Ihre vorhandene Richtlinie, um den zurückgegebenen Hashwert für die Herausgeber-ID einzuschließen.
-1. Erstellen Sie mit dem [!DNL AdobePolicyManager.jar]Code eine neue DRM-Richtlinie (aktualisieren Sie Ihre vorhandene Richtlinie), um den zurückgegebenen Hash-Wert für die Herausgeber-ID, eine optionale App-ID sowie die Attribute für die Mindest- und Höchstversion in die enthaltene [!DNL flashaccess-tools.properties] Datei einzuschließen.
+1. Erstellen Sie mithilfe von [!DNL AdobePolicyManager.jar] eine neue DRM-Richtlinie (aktualisieren Sie Ihre vorhandene Richtlinie), um den zurückgegebenen Hash-Wert für die Herausgeber-ID, eine optionale App-ID sowie die Attribute für die min- und max. Version in die enthaltene Datei einzuschließen.[!DNL flashaccess-tools.properties]
 
    ```shell
    java -jar libs/AdobePolicyManager.jar new app_allowlist.pol
