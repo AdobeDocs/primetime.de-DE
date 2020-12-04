@@ -6,17 +6,20 @@ title: Beispiele für kreative Auswahlregeln
 uuid: 1d63e26c-6fe0-4643-a568-f1c34cf46c53
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
 
-# Beispiele für kreative Auswahlregeln{#sample-creative-selection-rules}
+# Beispiel für kreative Auswahlregeln{#sample-creative-selection-rules}
 
 In der Datei AdobeTVSDKConfig.json können Sie sowohl Standardregeln als auch Regeln für bestimmte Zonen angeben.
 
 ## Beispielstandardregeln {#section_xy4_3fx_hz}
 
-Im Folgenden finden Sie ein Beispiel für eine [!DNL AdobeTVSDKConfig.json] Datei, die nur Standardregeln definiert:
+Das folgende Beispiel zeigt eine [!DNL AdobeTVSDKConfig.json]-Datei, die nur Standardregeln definiert:
 
 ```
 {
@@ -66,7 +69,7 @@ Im Folgenden finden Sie ein Beispiel für eine [!DNL AdobeTVSDKConfig.json] Date
 
 ## Beispielstandardregeln mit zusätzlichen Zonenregeln {#section_ocv_3fx_hz}
 
-Im Folgenden finden Sie ein Beispiel für eine [!DNL AdobeTVSDKConfig.json] Datei, die Standardregeln sowie zusätzliche Regeln für eine bestimmte Zonen-ID definiert (in diesem Fall Zone **&quot;1234&quot;**):
+Im Folgenden finden Sie ein Beispiel für eine [!DNL AdobeTVSDKConfig.json]-Datei, die Standardregeln sowie zusätzliche Regeln für eine bestimmte Zonen-ID definiert (in diesem Fall Zone **&quot;1234&quot;**):
 
 ```
 {
