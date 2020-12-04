@@ -6,11 +6,14 @@ title: DRM-Ereignisse
 uuid: 729fe524-1047-4188-b4e6-96bfc5af4ae0
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 
-# DRM-Ereignisse{#drm-events}
+# DRM-Ereignis{#drm-events}
 
 TVSDK sendet DRM-Ereignis (Digital Rights Management) als Reaktion auf DRM-bezogene Vorgänge, z. B. wenn neue DRM-Metadaten verfügbar werden. Ihr Player kann entsprechend diesen Ereignissen Aktionen implementieren.
 
