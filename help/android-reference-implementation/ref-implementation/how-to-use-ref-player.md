@@ -4,6 +4,9 @@ title: Verwendung der Primetime-Referenzimplementierung
 uuid: 9eb262c4-d987-493a-92a4-311118c5f01e
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '204'
+ht-degree: 0%
 
 ---
 
@@ -19,6 +22,6 @@ Sie können die Referenz-Implementierung wie folgt verwenden:
 * Wählen Sie die für Ihre Anwendung geltenden Funktionen aus, indem Sie die nicht verwendeten Funktionen deaktivieren.
 * Passen Sie die Komponenten der Benutzeroberfläche an, ohne Änderungen an den Funktionen vorzunehmen.
 
-Wir bieten die Primetime-Referenzimplementierung, um Ihnen zu helfen, das TVSDK zu verstehen und leicht ändern Sie die Funktion Manager, um Ihren Player anzupassen. Detaillierte Informationen zur TVSDK-Bibliothek finden Sie jedoch im [TVSDK 1.4 für Android-Programmierhandbuch](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android.pdf) .
+Wir bieten die Primetime-Referenzimplementierung, um Ihnen zu helfen, das TVSDK zu verstehen und leicht ändern Sie die Funktion Manager, um Ihren Player anzupassen. Detaillierte Informationen zur TVSDK-Bibliothek finden Sie jedoch im Handbuch [TVSDK 1.4 für Android-Programmierer](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_android.pdf).
 
-Für einfachen Zugriff auf die Dokumentation zur Referenz-Implementierungs-API im Javadoc-Format klicken Sie [hier](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/index.html).
+Klicken Sie für einfachen Zugriff auf die Dokumentation zur Referenz-Implementierungs-API im JavaScript-Format [hier](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/index.html).
