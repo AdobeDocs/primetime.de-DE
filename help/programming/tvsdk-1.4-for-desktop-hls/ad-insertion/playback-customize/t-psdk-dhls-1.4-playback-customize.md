@@ -6,6 +6,9 @@ title: Einrichten der benutzerdefinierten Wiedergabe
 uuid: 479ca1b0-6b3f-42fa-85e1-31d707da8730
 translation-type: tm+mt
 source-git-commit: a21a5fcc819a7bec58ad36e118d04f462ec3fd92
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
@@ -17,13 +20,13 @@ Sie können Anzeigenverhalten anpassen oder außer Kraft setzen.
 Bevor Sie Anzeigenrichtlinien anpassen oder außer Kraft setzen können, registrieren Sie die Anzeigenrichtlinieninstanz mit .
 Führen Sie zum Anpassen des Anzeigenverhaltens einen der folgenden Schritte aus:
 
-* Implementieren Sie die `AdPolicySelector` Schnittstelle und alle zugehörigen Methoden.
+* Implementieren Sie die `AdPolicySelector`-Schnittstelle und alle zugehörigen Methoden.
 
-   Diese Option wird empfohlen, wenn Sie **alle** standardmäßigen Werbeverhaltensweisen außer Kraft setzen müssen.
+   Diese Option wird empfohlen, wenn Sie **alle**-Standardanzeigeverhalten außer Kraft setzen müssen.
 
-* Erweitern Sie die `DefaultAdPolicySelector` Klasse und stellen Sie Implementierungen nur für die Verhaltensweisen bereit, die angepasst werden müssen.
+* Erweitern Sie die `DefaultAdPolicySelector`-Klasse und stellen Sie Implementierungen nur für die Verhaltensweisen bereit, die angepasst werden müssen.
 
-   Diese Option wird empfohlen, wenn Sie nur **einige** der Standardverhaltensweisen außer Kraft setzen müssen.
+   Diese Option wird empfohlen, wenn Sie nur **einige** der Standardverhaltensregeln außer Kraft setzen müssen.
 
 Führen Sie für beide Optionen die folgenden Aufgaben aus:
 
@@ -63,4 +66,4 @@ Führen Sie für beide Optionen die folgenden Aufgaben aus:
 
    >[!TIP]
    >
-   >Wenn die benutzerdefinierte Inhaltsfabrik für einen bestimmten Stream über die `MediaPlayerItemConfig` Klasse registriert wurde, wird sie gelöscht, wenn die `MediaPlayer` Instanz dezugeordnet wird. Ihre Anwendung muss sie jedes Mal registrieren, wenn eine neue Wiedergabesitzung erstellt wird.
+   >Wenn die Factory für benutzerdefinierten Inhalt für einen bestimmten Stream über die Klasse `MediaPlayerItemConfig` registriert wurde, wird sie gelöscht, wenn die `MediaPlayer`-Instanz dezuordnet wird. Ihre Anwendung muss sie jedes Mal registrieren, wenn eine neue Wiedergabesitzung erstellt wird.
