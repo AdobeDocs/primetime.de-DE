@@ -19,8 +19,8 @@ Der Inhalt eines AdBannerAsset beschreibt ein begleitendes Banner.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Das `AdobePSDK.PSDKEventType.AD_STARTED` Ereignis gibt eine `Ad` Instanz zurück, die eine `companionAssets` Eigenschaft ( `Array<AdBannerAsset>`) enthält.
-Jeder `AdBannerAsset` enthält Informationen zur Anzeige des Assets.
+Das `AdobePSDK.PSDKEventType.AD_STARTED`-Ereignis gibt eine `Ad`-Instanz zurück, die eine `companionAssets`-Eigenschaft ( `Array<AdBannerAsset>`) enthält.
+Jedes `AdBannerAsset` stellt Informationen zum Anzeigen des Assets bereit.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
