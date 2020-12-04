@@ -1,20 +1,23 @@
 ---
-description: Jede Verwendung von Adobe Access besteht aus zwei wichtigen Schritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
-seo-description: Jede Verwendung von Adobe Access besteht aus zwei wichtigen Schritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
+description: Jeder Einsatz von Adobe Access besteht aus zwei Hauptschritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
+seo-description: Jeder Einsatz von Adobe Access besteht aus zwei Hauptschritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
 seo-title: Inhaltsvorbereitung
 title: Inhaltsvorbereitung
 uuid: 7a3562c6-6033-4e28-8f0a-18e3cb8987b9
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '440'
+ht-degree: 0%
 
 ---
 
 
 # Inhaltsvorbereitung {#content-preparation}
 
-Jede Verwendung von Adobe Access besteht aus zwei wichtigen Schritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
+Jeder Einsatz von Adobe Access besteht aus zwei Hauptschritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
 
-Bevor Sie Inhalte für die Distribution bereitstellen, müssen Sie zunächst den Inhalt im FLV- oder F4V-Videoformat kodieren, eine oder mehrere Richtlinien erstellen, die Nutzungsregeln für den Inhalt festlegen, und den Inhalt mit dem Adobe Access SDK verpacken.
+Bevor Sie Inhalte für die Distribution bereitstellen, müssen Sie zunächst die Inhalte im FLV- oder F4V-Videoformat kodieren, eine oder mehrere Richtlinien erstellen, die Nutzungsregeln für die Inhalte festlegen, und die Inhalte mit dem Adobe Access SDK verpacken.
 
 Die Schritte zum Kodieren, Verpacken und Verteilen von Inhalten sind wie folgt:
 
@@ -33,5 +36,5 @@ Die Schritte zum Kodieren, Verpacken und Verteilen von Inhalten sind wie folgt:
 
 1. Bereitstellung geschützter Inhalte für die Verteilung an Verbraucher.
 
-   Der geschützte Inhalt wird in der Regel über ein CDN (Content Distribution Network) verteilt. Das CDN kann einen beliebigen Mechanismus verwenden, der von der Client-Laufzeit unterstützt wird, z. B. Flash Media Server, Adobe HTTP Dynamic Streaming für mehrere Bitrate-Streaming oder einen HTTP Web Server für den progressiven Download.
+   Der geschützte Inhalt wird in der Regel über ein CDN (Content Distribution Network) verteilt. Das CDN kann jeden von der Client-Laufzeit unterstützten Mechanismus verwenden, z. B. Flash Media Server, Adobe-HTTP Dynamic Streaming für das Streaming mit mehreren Bitraten oder einen HTTP-Webserver für das progressive Herunterladen.
 
