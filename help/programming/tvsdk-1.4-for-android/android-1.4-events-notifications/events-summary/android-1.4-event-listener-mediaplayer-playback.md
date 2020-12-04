@@ -6,11 +6,14 @@ title: Wiedergabe-Ereignisse
 uuid: 809a8e0e-f4d8-4013-b04a-49fb93d7ca8a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '548'
+ht-degree: 0%
 
 ---
 
 
-# Wiedergabe-Ereignisse{#playback-events}
+# Wiedergabe-Ereignis{#playback-events}
 
 TVSDK löst Ereignisse zur Wiedergabe aus, wenn Vorgänge zur Medienwiedergabe ausgeführt werden, z. B. wenn die Videowiedergabe beginnt.
 
@@ -37,11 +40,11 @@ Um über alle abspielrelevanten Ereignis benachrichtigt zu werden, registrieren 
    <td colname="2"> Die Wiedergabe einer Medienquelle wurde gestartet. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRateSelected%28float%29" format="html" scope="external"> onRateSelected</a> (Fließgeschwindigkeit) </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRateSelected%28float%29" format="html" scope="external"> onRateSelected</a> (float rate) </td> 
    <td colname="2"> Der Benutzer oder TVSDK hat eine neue Wiedergabegeschwindigkeit gewählt, z. B. "Schnell vorwärts", "Zurückspulen"oder "Wiederaufnehmen mit normaler Geschwindigkeit". </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRatePlaying%28float%29" format="html" scope="external"> onRatePlaying</a> (Fließgeschwindigkeit) </td> 
+   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onRatePlaying%28float%29" format="html" scope="external"> onRatePlaying</a> (float rate) </td> 
    <td colname="2"> Eine neue Wiedergabegeschwindigkeit ist auf dem Bildschirm sichtbar. </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -61,12 +64,12 @@ Um über alle abspielrelevanten Ereignis benachrichtigt zu werden, registrieren 
    <td colname="col2"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onStateChanged%28com.adobe.mediacore.MediaPlayer.PlayerState,com.adobe.mediacore.MediaPlayerNotification%29" format="html" scope="external"> onStateChanged</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlayerState.html" format="html" scope="external"> MediaPlayer.PlayerState</a> -Status, <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerNotification.html" format="html" scope="external"> MediaPlayerNotification</a> -Benachrichtigung) </td> 
+   <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onStateChanged%28com.adobe.mediacore.MediaPlayer.PlayerState,com.adobe.mediacore.MediaPlayerNotification%29" format="html" scope="external"> onStateChanged</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlayerState.html" format="html" scope="external"> MediaPlayer.</a> PlayerStatproperty,  <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerNotification.html" format="html" scope="external"> </a> MediaPlayerNotificationNotification) </td> 
    <td colname="2"> Der Status des Medienplayers hat sich geändert. Ihre Anwendung sollte Fehler in diesem Rückruf verarbeiten. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onProfileChanged%28long,%20long%29" format="html" scope="external"> onProfileChanged</a> (langes Profil, lange Zeit) </td> 
-   <td colname="2"> Das aktuelle Profil des Medienplayers hat sich geändert. Verwenden Sie die <span class="codeph"> Profil</span> -Eigenschaft, um das neue Profil abzurufen, das wiedergegeben wird. Verwenden Sie die <span class="codeph"> time</span> -Eigenschaft, um den Zeitpunkt abzurufen, zu dem dieses Ereignis aufgetreten ist. </td> 
+   <td colname="2"> Das aktuelle Profil des Medienplayers hat sich geändert. Verwenden Sie die Eigenschaft <span class="codeph"> Profil</span>, um das neue Profil abzurufen, das abgespielt wird. Verwenden Sie die Eigenschaft <span class="codeph"> time</span>, um den Zeitpunkt abzurufen, zu dem dieses Ereignis aufgetreten ist. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="col1"><b>MediaPlayerItem</b> </td> 
@@ -85,12 +88,12 @@ Um über alle abspielrelevanten Ereignis benachrichtigt zu werden, registrieren 
    <td colname="col2"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimedMetadata%28com.adobe.mediacore.metadata.TimedMetadata%29" format="html" scope="external"> onTimedMetadata</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/TimedMetadata.html" format="html" scope="external"> TimedMetadata</a> timedMetadata) </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimedMetadata%28com.adobe.mediacore.metadata.TimedMetadata%29" format="html" scope="external"> onTimedMetadata</a> (<a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/TimedMetadata.html" format="html" scope="external"> </a> TimedMetadatimedMetadata) </td> 
    <td colname="2"> Im Manifest werden neue zeitgesteuerte Metadaten gefunden. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.PlaybackEventListener.html#onTimelineUpdated%28%29" format="html" scope="external"> onTimelineUpdated</a> </td> 
-   <td colname="2">Der Medienplayer hat Anzeigen hinzugefügt oder entfernt, sodass er über eine aktualisierte Zeitschiene verfügt. <p>Das für ein Live-Asset aktualisierte Manifest und alte Werbeunterbrechungen wurden aus der Zeitleiste entfernt oder neue Werbemöglichkeiten (Cue-Points) wurden entdeckt. Der Medienplayer versucht, alle neuen Anzeigen aufzulösen und auf der Zeitleiste zu platzieren. </p><p> Verwenden Sie dieses Ereignis, um zu überprüfen, ob die Zeitleiste Updates enthält (VOD ändert sich während der Wiedergabe nicht). Sie können die Zeitleiste dann mit <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.html#getTimeline%28%29" format="html" scope="external"> MediaPlayer.getTimeline</a>abrufen. </p> </td> 
+   <td colname="2">Der Medienplayer hat Anzeigen hinzugefügt oder entfernt, sodass er über eine aktualisierte Zeitschiene verfügt. <p>Das für ein Live-Asset aktualisierte Manifest und alte Werbeunterbrechungen wurden aus der Zeitleiste entfernt oder neue Werbemöglichkeiten (Cue-Points) wurden entdeckt. Der Medienplayer versucht, alle neuen Anzeigen aufzulösen und auf der Zeitleiste zu platzieren. </p><p> Verwenden Sie dieses Ereignis, um zu überprüfen, ob die Zeitleiste Updates enthält (VOD ändert sich während der Wiedergabe nicht). Sie können die Zeitschiene dann mit <a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayer.html#getTimeline%28%29" format="html" scope="external"> MediaPlayer.getTimeline</a> abrufen. </p> </td> 
   </tr> 
  </tbody> 
 </table>
