@@ -6,6 +6,9 @@ title: Alternative Audiospuren in der Wiedergabeliste
 uuid: 6241d3e4-6e07-44fb-bc0e-5d49d1a76824
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '306'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ Die folgenden Anforderungen gelten, wenn Sie alternative Audiospuren verwenden u
 * Wenn der Hauptinhalt über alternative Audiospuren verfügt, muss die Anzeige über mindestens einen reinen Audiostream verfügen.
 * Die Segmentdauer des reinen Audio-Streams einer Anzeige muss der Segmentdauer des Videostreams einer Anzeige entsprechen.
 
-Die Hauptaudiospur ist in der Audiospur mit der `default` Beschriftung enthalten. Metadaten für die alternativen Audio-Streams sind in der Wiedergabeliste in den `#EXT-X-MEDIA` Tags mit `TYPE=AUDIO`.
+Die Hauptaudiospur ist in der Audiospur mit der Beschriftung `default` enthalten. Metadaten für die alternativen Audio-Streams sind in der Wiedergabeliste der `#EXT-X-MEDIA`-Tags mit `TYPE=AUDIO` enthalten.
 
 Beispielsweise könnte ein M3U8-Manifest, das mehrere alternative Audiostreams angibt, wie folgt aussehen:
 
