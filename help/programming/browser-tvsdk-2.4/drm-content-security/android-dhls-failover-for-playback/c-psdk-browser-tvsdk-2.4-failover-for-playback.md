@@ -6,6 +6,9 @@ title: Wiedergabe und Failover
 uuid: 5d75e55d-9c01-4a36-9bdf-891289821c6b
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '496'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Bei Live- und VOD-Beginn wird die Wiedergabe von Browser TVSDK durch Herunterlad
 
 Browser TVSDK wählt schnell die Wiedergabeliste mit hoher Bitrate und die zugehörigen Medien aus und setzt den Download fort.
 
-## Fehlendes Wiedergabelisten-Failover {#section_81A5822C108449E1A0E94A6E25DE9E8E}
+## Fehlendes Playlist-Failover {#section_81A5822C108449E1A0E94A6E25DE9E8E}
 
 Wenn eine vollständige Wiedergabeliste fehlt, z. B. wenn die in einer Manifestdatei der obersten Ebene angegebene M3U8-Datei nicht heruntergeladen wird, versucht Browser TVSDK eine Wiederherstellung. Wenn der Vorgang nicht wiederhergestellt werden kann, bestimmt Ihre Anwendung den nächsten Schritt.
 
