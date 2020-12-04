@@ -8,12 +8,12 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '111'
-ht-degree: 9%
+ht-degree: 15%
 
 ---
 
 
-# Primetime-Versionshinweise {#release-notes}
+# Primetime-Versionshinweise  {#release-notes}
 
 + [Versionshinweise - Übersicht](home.md)
 + Primetime-Ad Insertion {#ptai}
@@ -33,7 +33,7 @@ ht-degree: 9%
    + [TVSDK 1.4 für HLS-Versionshinweise für Desktop](tvsdk-1-4-desktop-hls.md)
 + Primetime Offline Packager {#offline-packager}
    + [Primetime Offline Packager, Version 2](offline-packager-2x-release-note.md)
-+ Primetime Streaming Server {#streaming-server}
++ Primetime-Streaming-Server {#streaming-server}
    + [Primetime Streaming Server Version 1](primetime-streaming-server-1x.md)
 + TVSDK für Playstation 4 {#tvsdk-playstation}
    + [TVSDK 2.1 PlayStation 4 - Versionshinweise](tvsdk-21-ps4.md)
