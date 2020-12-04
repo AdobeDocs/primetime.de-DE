@@ -1,16 +1,19 @@
 ---
-seo-title: Verarbeiten von Zertifikataktualisierungen, wenn von Adobe ausgestellte Zertifikate ablaufen
-title: Verarbeiten von Zertifikataktualisierungen, wenn von Adobe ausgestellte Zertifikate ablaufen
+seo-title: Verarbeiten von Zertifikatsaktualisierungen bei Ablauf von Adobe-Zertifikaten
+title: Verarbeiten von Zertifikatsaktualisierungen bei Ablauf von Adobe-Zertifikaten
 uuid: abc0ca3e-a78f-4078-9480-7116843cce05
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '534'
+ht-degree: 0%
 
 ---
 
 
-# Verarbeiten von Zertifikataktualisierungen, wenn von Adobe ausgestellte Zertifikate ablaufen{#handling-certificate-updates-when-adobe-issued-certificates-expire}
+# Verarbeiten von Zertifikataktualisierungen, wenn von Adoben ausgestellte Zertifikate ablaufen{#handling-certificate-updates-when-adobe-issued-certificates-expire}
 
-Möglicherweise benötigen Sie ein neues Zertifikat von Adobe. Ein Produktionszertifikat läuft beispielsweise ab, wenn ein Bewertungszertifikat abläuft oder wenn Sie von einer Auswertung zu einem Produktionszertifikat wechseln. Wenn ein Zertifikat abläuft und Sie den Inhalt, der das alte Zertifikat verwendet, nicht erneut verpacken möchten, können Sie den Lizenzserver auf die alten und neuen Zertifikate aufmerksam machen.
+Möglicherweise müssen Sie ein neues Zertifikat von der Adobe erhalten. Ein Produktionszertifikat läuft beispielsweise ab, wenn ein Bewertungszertifikat abläuft oder wenn Sie von einer Auswertung zu einem Produktionszertifikat wechseln. Wenn ein Zertifikat abläuft und Sie den Inhalt, der das alte Zertifikat verwendet, nicht erneut verpacken möchten, können Sie den Lizenzserver auf die alten und neuen Zertifikate aufmerksam machen.
 
 So aktualisieren Sie einen Server mit neuen Zertifikaten:
 
@@ -34,7 +37,7 @@ So aktualisieren Sie einen Server mit neuen Zertifikaten:
    HandlerConfiguration.setPolicyUpdateList()
    ```
 
-   In der Referenzimplementierung werden die von Ihnen verwendeten Eigenschaften `HandlerConfiguration.RevocationList` und `HandlerConfiguration.PolicyUpdateList`. Sie müssen auch das Zertifikat aktualisieren, mit dem die Unterschriften überprüft werden: `RevocationList.verifySignature.X509Certificate`.
+   In der Referenzimplementierung werden die Eigenschaften `HandlerConfiguration.RevocationList` und `HandlerConfiguration.PolicyUpdateList` verwendet. Sie müssen auch das Zertifikat aktualisieren, mit dem die Unterschriften überprüft werden: `RevocationList.verifySignature.X509Certificate`.
 
 1. Aktualisieren Sie den Lizenzserver mit den neuen und alten Zertifikaten.
 
@@ -42,25 +45,26 @@ So aktualisieren Sie einen Server mit neuen Zertifikaten:
 
    Anmeldeinformationen des Lizenzservers:
 
-   * Stellen Sie sicher, dass die aktuelle Berechtigung an den `LicenseHandler` Konstruktor übergeben wird:
+   * Stellen Sie sicher, dass die aktuelle Berechtigung an den Konstruktor `LicenseHandler` übergeben wird:
 
-      * Legen Sie die Referenz-Implementierung mit der `LicenseHandler.ServerCredential` Eigenschaft fest.
-      * Im Adobe Primetime DRM-Server für geschütztes Streaming muss die aktuelle Berechtigung die erste sein, die im Element in der Datei &quot;flashaccess-tenant.xml&quot; `LicenseServerCredential` angegeben ist.
-   * Stellen Sie sicher, dass die aktuellen und alten Anmeldeinformationen für `AsymmetricKeyRetrieval`
+      * Legen Sie sie in der Referenzimplementierung mit der Eigenschaft `LicenseHandler.ServerCredential` fest.
+      * Im Adobe Primetime DRM-Server für geschütztes Streaming muss die aktuelle Berechtigung die erste Berechtigung sein, die im Element `LicenseServerCredential` in der Datei &quot;flashaccess-tenant.xml&quot;angegeben ist.
+   * Stellen Sie sicher, dass die aktuellen und alten Anmeldeinformationen für `AsymmetricKeyRetrieval` bereitgestellt werden.
 
-      * Legen Sie in der Referenzimplementierung die Eigenschaften `LicenseHandler.ServerCredential` und `AsymmetricKeyRetrieval.ServerCredential. n` fest.
+      * Legen Sie sie in der Referenzimplementierung mit den Eigenschaften `LicenseHandler.ServerCredential` und `AsymmetricKeyRetrieval.ServerCredential. n` fest.
 
-      * Im Primetime-DRM-Server für geschütztes Streaming werden die alten Anmeldeinformationen nach der ersten Berechtigung im Element in der Datei &quot;flashaccess-tenant.xml&quot; `LicenseServerCredential` angegeben.
+      * Im Primetime-DRM-Server für geschütztes Streaming werden die alten Anmeldeinformationen nach der ersten Berechtigung im `LicenseServerCredential`-Element in der Datei &quot;flashaccess-tenant.xml&quot;angegeben.
+
    Für Beförderungsangaben:
 
-   * Stellen Sie sicher, dass die aktuelle Berechtigung an die `HandlerConfiguration.setServerTransportCredential()` Methode übergeben wird:
+   * Stellen Sie sicher, dass die aktuelle Berechtigung an die `HandlerConfiguration.setServerTransportCredential()`-Methode übergeben wird:
 
-      * Legen Sie die Referenz-Implementierung mit der `HandlerConfiguration.ServerTransportCredential` Eigenschaft fest.
-      * Im Primetime-DRM-Server für geschütztes Streaming muss die aktuelle Berechtigung die erste sein, die im `TransportCredential` Element in der [!DNL flashaccess-tenant.xml] Datei angegeben ist.
+      * Legen Sie sie in der Referenzimplementierung mit der Eigenschaft `HandlerConfiguration.ServerTransportCredential` fest.
+      * Im Primetime-DRM-Server für geschütztes Streaming muss die aktuelle Berechtigung die erste sein, die im `TransportCredential`-Element in der Datei [!DNL flashaccess-tenant.xml] angegeben ist.
    * Stellen Sie sicher, dass die alten Anmeldeinformationen für `HandlerConfiguration.setAdditionalServerTransportCredentials`() bereitgestellt werden:
 
-      * Legen Sie in der Referenzimplementierung die `HandlerConfiguration.AdditionalServerTransportCredential. n` Eigenschaften fest.
-      * Im Primetime-DRM-Server für geschütztes Streaming wird dies nach der ersten Berechtigung im Element in der Datei &quot;flashaccess-tenant.xml&quot; `TransportCredential` angegeben.
+      * Legen Sie in der Referenzimplementierung die `HandlerConfiguration.AdditionalServerTransportCredential. n`-Eigenschaften fest.
+      * Im Primetime-DRM-Server für geschütztes Streaming wird dies nach der ersten Berechtigung im `TransportCredential`-Element in der Datei &quot;flashaccess-tenant.xml&quot;angegeben.
 
 
 
@@ -68,9 +72,9 @@ So aktualisieren Sie einen Server mit neuen Zertifikaten:
 1. Aktualisieren Sie die Verpackungstools, um sicherzustellen, dass sie Inhalte mit den aktuellen Anmeldeinformationen verpacken. Stellen Sie sicher, dass das aktuelle Lizenzserverzertifikat, das Transportzertifikat und die Paketberechtigung für das Verpacken verwendet werden.
 1. Aktualisieren Sie das Lizenzserverzertifikat des Schlüsselservers wie folgt:
 
-   * Aktualisieren Sie die Anmeldeinformationen in der Mietkonfigurationsdatei für den Adobe Primetime-DRM-Key-Server, indem Sie sowohl die alten als auch die neuen Schlüsselserver-Anmeldeinformationen in &quot;flashaccess-keyserver-tenant.xml&quot;eingeben.
-   * Stellen Sie sicher, dass das aktuelle Zertifikat an die `HandlerConfiguration.setKeyServerCertificate()` Methode übergeben wird.
+   * Aktualisieren Sie die Anmeldeinformationen in der Adobe Primetime DRM Key Server-Mietkonfigurationsdatei, indem Sie die alten und neuen Schlüsselserver-Anmeldeinformationen in &quot;flashaccess-keyserver-tenant.xml&quot;eingeben.
+   * Stellen Sie sicher, dass das aktuelle Zertifikat an die `HandlerConfiguration.setKeyServerCertificate()`-Methode übergeben wird.
 
-      * Legen Sie die Referenz-Implementierung mit der `HandlerConfiguration.KeyServerCertificate` Eigenschaft fest.
+      * Legen Sie sie in der Referenzimplementierung mit der Eigenschaft `HandlerConfiguration.KeyServerCertificate` fest.
       * Geben Sie im Feld Primetime DRM Server for Protected Streaming das Zertifikat des Schlüsselservers über das Element Configuration/Tenant/Certificates/KeyServer an.
 
