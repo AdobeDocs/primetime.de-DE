@@ -6,28 +6,31 @@ title: Speichern Sie zeitgesteuerte Metadatenobjekte, während sie gesendet werd
 uuid: d26ed49e-fb29-4765-86e9-9ebbe5fa0a2b
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
 
-# Speichern Sie zeitgesteuerte Metadatenobjekte, während sie gesendet werden {#store-timed-metadata-objects-as-they-are-dispatched}
+# Speichern Sie zeitgesteuerte Metadatenobjekte, während sie gesendet werden. {#store-timed-metadata-objects-as-they-are-dispatched}
 
 Ihre Anwendung muss die entsprechenden PTTimedMetadata-Objekte zu den richtigen Zeiten verwenden.
 
-Beim Analysieren von Inhalten, das vor der Wiedergabe erfolgt, identifiziert TVSDK abonnierte Tags und benachrichtigt Ihre Anwendung über diese Tags. Die mit jeder Wiedergabe verbundene Zeit `PTTimedMetadata` ist die absolute Zeit auf der Wiedergabeschlüssel.
+Beim Analysieren von Inhalten, das vor der Wiedergabe erfolgt, identifiziert TVSDK abonnierte Tags und benachrichtigt Ihre Anwendung über diese Tags. Die mit jedem `PTTimedMetadata` verbundene Zeit ist die absolute Zeit auf der Wiedergabeschlüssel.
 
 Ihr Antrag muss die folgenden Aufgaben abschließen:
 
 1. Behalten Sie die aktuelle Wiedergabezeit im Auge.
-1. Ordnen Sie die aktuelle Wiedergabezeit den ausgelösten `PTTimedMetadata` Objekten zu.
+1. Ordnen Sie die aktuelle Wiedergabezeit den ausgelösten Objekten `PTTimedMetadata` zu.
 
-1. Verwenden Sie die `PTTimedMetadata` Zeitangabe des Beginns mit der aktuellen Wiedergabezeit.
+1. Verwenden Sie das `PTTimedMetadata`, wobei die Beginn-Zeit der aktuellen Wiedergabezeit entspricht.
 
    >[!NOTE]
    >
-   >Der unten stehende Code geht davon aus, dass es immer nur eine `PTTimedMetadata` Instanz gibt. Wenn mehrere Instanzen vorhanden sind, muss die Anwendung sie entsprechend in einem Wörterbuch speichern. Eine Methode besteht darin, ein Array zu einem bestimmten Zeitpunkt zu erstellen und alle Instanzen in diesem Array zu speichern.
+   >Der unten stehende Code setzt voraus, dass immer nur eine `PTTimedMetadata`-Instanz vorhanden ist. Wenn mehrere Instanzen vorhanden sind, muss die Anwendung sie entsprechend in einem Wörterbuch speichern. Eine Methode besteht darin, ein Array zu einem bestimmten Zeitpunkt zu erstellen und alle Instanzen in diesem Array zu speichern.
 
-   Das folgende Beispiel zeigt, wie `PTTimedMetadata` Objekte in einem `NSMutableDictionary (timedMetadataCollection)` Schlüssel gespeichert werden, der nach der Beginn jedes einzelnen Objekts `timedMetadata`bestimmt wird.
+   Im folgenden Beispiel wird gezeigt, wie `PTTimedMetadata`-Objekte in einem `NSMutableDictionary (timedMetadataCollection)`-Schlüsselwort gespeichert werden, das nach der Beginn jedes `timedMetadata`-Parameters geordnet ist.
 
    ```
    NSMutableDictionary *timedMetadataCollection; 
@@ -54,7 +57,7 @@ Ihr Antrag muss die folgenden Aufgaben abschließen:
 
 ## Parsen von Nielsen-ID3-Tags {#example_3B51E9D4AF2449FAA8E804206F873ECF}
 
-Um das ID3-Tag für die Analyse zu extrahieren, verwenden Sie die folgende `onMediaPlayerSubscribedTagIdentified` Methode:
+Um das ID3-Tag für die Analyse zu extrahieren, verwenden Sie Folgendes für die `onMediaPlayerSubscribedTagIdentified`-Methode:
 
 ```
 (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 
