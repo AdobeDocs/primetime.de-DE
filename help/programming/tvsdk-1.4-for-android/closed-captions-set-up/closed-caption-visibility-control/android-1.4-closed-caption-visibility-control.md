@@ -23,7 +23,7 @@ Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarke
 
 >[!NOTE]
 >
->Die Sichtbarkeitswerte für Untertitel werden in `MediaPlayer.Visibility`definiert.
+>Die Sichtbarkeitswerte für Untertitel werden in `MediaPlayer.Visibility` definiert.
 >
 >
 ```java
@@ -33,14 +33,14 @@ Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarke
 >}
 >```
 
-1. Warten Sie, bis der MediaPlayer mindestens den Status &quot;VORBEREITET&quot;aufweist (siehe [Warten auf einen gültigen Status](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)).
+1. Warten Sie, bis der MediaPlayer mindestens den Status &quot;VORBEREITET&quot;aufweist (siehe [Warten Sie auf einen gültigen Status](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)).
 1. Um die aktuelle Sichtbarkeitseinstellung für Untertitel abzurufen, verwenden Sie die get-Methode in MediaPlayer, die einen Sichtbarkeitswert zurückgibt.
 
    ```java
    Visibility getCCVisibility() throws IllegalStateException;
    ```
 
-1. Um die Sichtbarkeit für Untertitel zu ändern, verwenden Sie die Setter-Methode und übergeben Sie einen Sichtbarkeitswert von `MediaPlayer.Visibility`.
+1. Um die Sichtbarkeit von Untertiteln zu ändern, verwenden Sie die Setter-Methode und übergeben Sie einen Sichtbarkeitswert von `MediaPlayer.Visibility`.
 
    Beispiel:
 
