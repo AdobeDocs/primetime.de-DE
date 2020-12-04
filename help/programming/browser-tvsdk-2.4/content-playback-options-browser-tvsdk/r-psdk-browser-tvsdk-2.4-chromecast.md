@@ -6,6 +6,9 @@ title: Google Cast app for Browser TVSDK
 uuid: 018143e2-143a-4f88-97c6-4b10a2083f9e
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '439'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +34,7 @@ Absender und Empfänger kommunizieren mit den Cast SDKs, um Nachrichten zu über
 
 ## Grundlegender Workflow {#section_FAF680FF29DA4D24A50AC0A2B6402B58}
 
-Im Folgenden finden Sie eine Übersicht zum Prozess:
+Im Folgenden finden Sie eine Übersicht über den Prozess:
 
 1. Die Sender-App stellt eine Verbindung mit der Empfänger-App her.
 1. Die Sender-App sendet eine Nachricht, um das Medium in die Empfänger-App zu laden.
@@ -57,7 +60,7 @@ Custom Message Namespace
 var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime"; 
 ```
 
-## Herstellen einer Verbindung {#section_B4D40CABDD3E46FDBE7B5651DFF91653}
+## Einrichten einer Verbindung {#section_B4D40CABDD3E46FDBE7B5651DFF91653}
 
 >[!IMPORTANT]
 >
@@ -65,7 +68,7 @@ var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime";
 
 Um eine Verbindung herzustellen, müssen Sender und Empfänger die folgenden Aufgaben ausführen:
 
-* Der Absender muss die Dokumentation für die Plattform unter [Sender App Development](https://developers.google.com/cast/docs/sender_apps)lesen.
+* Der Absender muss die Dokumentation für die Plattform unter [Sender App Development](https://developers.google.com/cast/docs/sender_apps) lesen.
 * Der Empfänger verwendet die Cast-Empfänger-APIs, um eine Verbindung zur Sender-App herzustellen. Beispiel:
 
    ```js
