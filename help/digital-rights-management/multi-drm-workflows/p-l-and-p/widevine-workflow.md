@@ -6,6 +6,9 @@ title: Multi-DRM-Workflow für Widevine und PlayReady
 uuid: 295a7024-353c-4ff5-a46a-927020834322
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ Primetime TVSDK unterstützt die Wiedergabe von Widevine-verschlüsselten oder P
 >
 >Es wurden keine Pläne für eine Rückportierung auf Android TVSDK 1.X für die Wiedergabe von Widevine-verschlüsselten DASH-Inhalten erstellt.
 
-## DASH-Inhalt und gängige Verschlüsselung auf einen Blick {#section_33A881158F724835B4B89AAE97302B17}
+## DASH-Inhalt und allgemeine Verschlüsselung auf einen Blick {#section_33A881158F724835B4B89AAE97302B17}
 
 Dashboard-Inhalt besteht aus einem in XML geschriebenen Hauptmanifest, das auf Video- und Audiodateien zur Wiedergabe verweist. Im Beispiel unten verweist das DASH-Manifest auf eine Video-URL, video/1080_30.mp4, und eine Audio-URL, audio/1080_30.mp4, relativ zur URL des Manifests.
 
@@ -44,7 +47,7 @@ Dashboard-Inhalt besteht aus einem in XML geschriebenen Hauptmanifest, das auf V
 </MPD>
 ```
 
-Nachstehend finden Sie ein Beispielmanifest mit Anwendung der allgemeinen Verschlüsselung. Die XML-Elemente zum Schutz von umfangreichen Inhalten (die `<ContentProtection>` Blöcke) im Manifest enthalten ein Base64-kodiertes pssh-Feld (Protection System specific Header). Das Feld &quot;pssh&quot;enthält die Daten, die zum Initialisieren der Inhaltsentschlüsselung erforderlich sind. Diese Daten werden auch in den Video-/Audioinhalt eingebettet, auf den sich das Manifest bezieht. DASH-Inhalte können über mehrere Inhaltsschutzelemente verfügen, z. B. 1 für PlayReady und 1 für Widevine.
+Nachstehend finden Sie ein Beispielmanifest mit Anwendung der allgemeinen Verschlüsselung. Die XML-Elemente für den Schutz von umfangreichen Inhalten (die `<ContentProtection>`-Blöcke) im Manifest enthalten ein Base64-kodiertes pssh-Feld (Protection System specific Header). Das Feld &quot;pssh&quot;enthält die Daten, die zum Initialisieren der Inhaltsentschlüsselung erforderlich sind. Diese Daten werden auch in den Video-/Audioinhalt eingebettet, auf den sich das Manifest bezieht. DASH-Inhalte können über mehrere Inhaltsschutzelemente verfügen, z. B. 1 für PlayReady und 1 für Widevine.
 
 ```
 <?xml version="1.0" ?>
