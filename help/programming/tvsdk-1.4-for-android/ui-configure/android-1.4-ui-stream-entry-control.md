@@ -6,11 +6,14 @@ title: Geben Sie einen Stream zu einem bestimmten Zeitpunkt ein
 uuid: ac3479e2-46a1-4ac8-a9e8-68a23f5dd74d
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '110'
+ht-degree: 1%
 
 ---
 
 
-# Geben Sie einen Stream zu einem bestimmten Zeitpunkt ein {#enter-a-stream-at-a-specific-time}
+# Geben Sie einen Stream zu einem bestimmten Zeitpunkt ein.{#enter-a-stream-at-a-specific-time}
 
 Standardmäßig werden VOD-Medien-Beginn beim Starten der Wiedergabe bei 0 (MediaPlayer.LIVE_POINT) gestartet. Sie können das Standardverhalten überschreiben.
 
