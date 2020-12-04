@@ -6,6 +6,9 @@ title: Übersicht über die Primetime-DRM-Oberfläche
 uuid: d77a98c8-c1f5-4fe3-8d0b-3d21e288f228
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '301'
+ht-degree: 0%
 
 ---
 
@@ -30,10 +33,10 @@ Im Folgenden finden Sie die wichtigsten API-Elemente für die Arbeit mit DRM:
 
    >[!TIP]
    >
-   >Diese API gibt ein gültiges `DRMManager` Objekt erst zurück, nachdem der `MediaPlayerEvent.DRM_METADATA` ausgelöst wurde. Wenn Sie `getDRMManager()` vor dem Auslösen dieses Ereignisses anrufen, wird möglicherweise NULL zurückgegeben.
+   >Diese API gibt ein gültiges `DRMManager`-Objekt erst zurück, nachdem das `MediaPlayerEvent.DRM_METADATA` ausgelöst wurde. Wenn Sie `getDRMManager()` aufrufen, bevor dieses Ereignis ausgelöst wird, wird möglicherweise NULL zurückgegeben.
 
 * Die `DRMHelper` Helper-Klasse, die bei der Implementierung von DRM-Workflows nützlich ist.
-* Eine `DRMHelper` Metadaten-Lader-Methode, die DRM-Metadaten lädt, wenn sie sich in einer separaten URL vom Medium befinden.
+* Eine `DRMHelper`-Metadaten-Lademethode, die DRM-Metadaten lädt, wenn sie sich in einer separaten URL vom Medium befinden.
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -41,7 +44,7 @@ Im Folgenden finden Sie die wichtigsten API-Elemente für die Arbeit mit DRM:
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* Eine `DRMHelper` Methode zum Überprüfen der DRM-Metadaten und zum Bestimmen, ob eine Authentifizierung erforderlich ist.
+* Eine `DRMHelper`-Methode, um die DRM-Metadaten zu überprüfen und zu bestimmen, ob eine Authentifizierung erforderlich ist.
 
    ```java
    /** 
