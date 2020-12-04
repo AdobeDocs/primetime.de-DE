@@ -6,6 +6,9 @@ title: DRM-Authentifizierung vor der Wiedergabe
 uuid: be319b04-a506-4278-8275-db32cd3f18aa
 translation-type: tm+mt
 source-git-commit: e300238be5a2bddc7c6b9bd26682dcb4401959b1
+workflow-type: tm+mt
+source-wordcount: '364'
+ht-degree: 1%
 
 ---
 
@@ -19,9 +22,9 @@ Ein Video-Asset kann über eine zugeordnete DRM-Metadatendatei verfügen, z. B.:
 * `"url": "https://www.domain.com/asset.m3u8"`
 * `"drmMetadata": "https://www.domain.com/asset.metadata"`
 
-In diesem Beispiel können Sie `DRMHelper` Methoden verwenden, um den Inhalt der DRM-Metadatendatei herunterzuladen, sie zu analysieren und zu überprüfen, ob die DRM-Authentifizierung erforderlich ist.
+In diesem Beispiel können Sie mit den Methoden `DRMHelper` den Inhalt der DRM-Metadatendatei herunterladen, analysieren und prüfen, ob DRM-Authentifizierung erforderlich ist.
 
-1. Verwenden Sie `loadDRMMetadata` zum Laden des Metadaten-URL-Inhalts und zum Analysieren der heruntergeladenen Bytes in eine `DRMMetadata`.
+1. Verwenden Sie `loadDRMMetadata`, um den Metadaten-URL-Inhalt zu laden und die heruntergeladenen Bytes in ein `DRMMetadata` zu analysieren.
 
    >[!TIP]
    >
@@ -46,9 +49,9 @@ In diesem Beispiel können Sie `DRMHelper` Methoden verwenden, um den Inhalt der
 
    Wenn Benutzer nicht wissen, dass der Vorgang asynchron ist, fragen sie sich möglicherweise, warum die Wiedergabe noch nicht gestartet wurde. Sie können beispielsweise ein Kreisel anzeigen, während die DRM-Metadaten heruntergeladen und analysiert werden.
 
-1. Implementieren Sie die Rückrufe im `DRMLoadMetadataListener`.
+1. Implementieren Sie die Rückrufe in `DRMLoadMetadataListener`.
 
-   Die `loadDRMMetadata` ruft diese Ereignis-Handler auf.
+   Das `loadDRMMetadata` ruft diese Ereignis-Handler auf.
 
    ```java
    public interface DRMLoadMetadataListener { 
@@ -71,7 +74,7 @@ In diesem Beispiel können Sie `DRMHelper` Methoden verwenden, um den Inhalt der
    * `onLoadMetadataUrlComplete` erkennt, wann das Laden der Metadaten-URL abgeschlossen ist.
    * `onLoadMetadataUrlError` gibt an, dass das Laden der Metadaten fehlgeschlagen ist.
 
-1. Überprüfen Sie nach Abschluss des Ladevorgangs das `DRMMetadata` Objekt, um festzustellen, ob die DRM-Authentifizierung erforderlich ist.
+1. Überprüfen Sie nach Abschluss des Ladevorgangs das `DRMMetadata`-Objekt, um festzustellen, ob DRM-Authentifizierung erforderlich ist.
 
    ```java
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
