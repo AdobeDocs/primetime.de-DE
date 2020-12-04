@@ -6,26 +6,29 @@ title: Referenzimplementierungen
 uuid: f08fdb4b-aaa8-4871-bb62-1a21d5abdd8d
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '565'
+ht-degree: 0%
 
 ---
 
 
-# Referenzimplementierungen{#about-the-reference-implementations}
+# Informationen zu den Referenzimplementierungen{#about-the-reference-implementations}
 
-In diesem Handbuch werden die Installation, Konfiguration und Funktionsweise der Adobe Primetime DRM-Referenzimplementierungen beschrieben.
+In diesem Handbuch werden Installation, Konfiguration und Betrieb der Adobe Primetime DRM-Referenzimplementierungen beschrieben.
 
 >[!NOTE]
 >
->Primetime DRM hieß zuvor Adobe Access und davor Flash Access.
+>Primetime DRM wurde früher als Adobe Access und davor als Flash Access bezeichnet.
 
 Die Primetime-DRM-Referenzimplementierungen umfassen die folgenden Komponenten:
 
-* **Befehlszeilenwerkzeuge** - Diese Tools basieren auf demselben Primetime DRM SDK-Code, der im Primetime DRM-Lizenzserver verwendet wird. Sie können über die Befehlszeile Verpackungen, Lizenzen und andere DRM-Aufgaben durchführen und zwischen den Befehlszeilenwerkzeugen und dem Lizenzserver wechseln.
-* **Lizenzserver** - Ein voll funktionsfähiger, anpassbarer Lizenzserver (nachfolgend als eine Ihrer Lizenzserveroptionen beschrieben).
+* **Befehlszeilenwerkzeuge** : Diese Tools basieren auf demselben Primetime DRM SDK-Code, der im Primetime DRM-Lizenzserver verwendet wird. Sie können über die Befehlszeile Verpackungen, Lizenzen und andere DRM-Aufgaben durchführen und zwischen den Befehlszeilenwerkzeugen und dem Lizenzserver wechseln.
+* **Lizenzserver**  - Ein voll funktionsfähiger, anpassbarer Lizenzserver (nachfolgend als eine Ihrer Lizenzserveroptionen beschrieben).
 
 **Lizenzserver-Optionen:**
 
-* **Die Primetime DRM-Referenzimplementierungen** - Gegenstand dieses Handbuchs ist die Referenzimplementierung mit einem robusten DRM-Lizenzserver, der alle Funktionen des Primetime DRM SDK zeigt. Diese Implementierung wird mit Quellcode und Anweisungen zum Erstellen des Codes bereitgestellt. Diese Implementierung sollte nicht wie vorgesehen verwendet werden (obwohl eine [!DNL .war] Datei enthalten ist, die Sie schnell bereitstellen können). Es ist in erster Linie als Referenz gedacht, mit dem Sie einen eigenen benutzerdefinierten Lizenzserver erstellen können.
+* **Die Primetime-DRM-Referenzimplementierungen**  - Gegenstand dieses Handbuchs ist die Referenzimplementierung mit einem robusten DRM-Lizenzserver, der alle vom Primetime DRM SDK bereitgestellten Funktionen zeigt. Diese Implementierung wird mit Quellcode und Anweisungen zum Erstellen des Codes bereitgestellt. Diese Implementierung sollte nicht wie vorgesehen verwendet werden (obwohl eine [!DNL .war]-Datei enthalten ist, die Sie schnell bereitstellen können). Es ist in erster Linie als Referenz gedacht, mit dem Sie einen eigenen benutzerdefinierten Lizenzserver erstellen können.
 
    Funktionen des Lizenzservers:
 
@@ -57,7 +60,7 @@ Die Primetime-DRM-Referenzimplementierungen umfassen die folgenden Komponenten:
    * Synchronisierungsanfragen
    * Lizenzrückgabe
 
-* **Primetime DRM Server for Protected Streaming** - Dies ist eine einsatzbereite Binärdatei, die Sie mit minimalem Aufwand schnell implementieren können. Es ist eine gute Option für Kunden, die schnell Testversand von Concept zeigen möchten, oder es *könnte* eine Produktionsoption sein, wenn Ihre benutzerdefinierten DRM-Anforderungen minimal sind. Weitere Informationen finden Sie unter &quot;Verwandte Informationen&quot;unten.
+* **Primetime DRM Server for Protected Streaming**  - Dies ist eine einsatzbereite Binärdatei, die Sie mit minimalem Aufwand schnell implementieren können. Es ist eine gute Option für Kunden, die schnell Testversand von Concept anzeigen möchten, oder *könnte eine Produktionsoption sein, wenn Ihre benutzerdefinierten DRM-Anforderungen minimal sind.* Weitere Informationen finden Sie unter &quot;Verwandte Informationen&quot;unten.
 
-* **Der Primetime Cloud DRM-Dienst** - Dieser von Adobe gehostete Lizenzserver kann für die Bereitstellung von Lizenzen verwendet werden. (Sie müssen ein Primetime-Lizenznehmer sein, um diesen Dienst verwenden zu können.) Mit diesem Adobe Cloud-Dienst sparen Sie Kosten, Wartung und Engineering für den Aufbau Ihres eigenen Dienstes. Weitere Informationen finden Sie unter &quot;Verwandte Informationen&quot;unten.
+* **Der Primetime Cloud DRM-Dienst**  - Dieser von der Adobe gehostete Lizenzserver kann für die Lizenzbereitstellung verwendet werden. (Sie müssen ein Primetime-Lizenznehmer sein, um diesen Dienst verwenden zu können.) Mit diesem Adobe Cloud-Service sparen Sie Kosten, Wartung und Engineering für den Aufbau Ihres eigenen Dienstes. Weitere Informationen finden Sie unter &quot;Verwandte Informationen&quot;unten.
 
