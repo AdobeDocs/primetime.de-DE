@@ -6,6 +6,9 @@ title: Anpassen von Opportunitätserzeugern und Inhaltsauflösungen
 uuid: 97738b80-5cf8-494f-8811-449bceded220
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '249'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Ein Opportunitätsgenerator identifiziert Platzierungsmöglichkeiten durch benut
 
 TVSDK umfasst die folgenden standardmäßigen Opportunitätsgeneratoren:
 
-* `ManifestCuesOpportunityGenerator` generiert Chancen aus den Standard-Anzeigenbezeichnungen ( `#EXT-X-CUE`).
+* `ManifestCuesOpportunityGenerator` generiert Chancen aus den Standard-Anzeigenbezeichnungen (  `#EXT-X-CUE`).
 
 * `AdSignalingModeOpportunityGenerator` generiert eine erste Möglichkeit für den angegebenen Anzeigensignalisierungsmodus. Dabei werden Hinweise oder zeitgesteuerte Metadaten ignoriert.
 * `CustomMarkerOpportunityGenerator` bietet Möglichkeiten zum Ersetzen von Back-In-C3-Anzeigen.
