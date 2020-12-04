@@ -21,7 +21,7 @@ Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarke
 >
 >Wenn Untertiteltext angezeigt wird, wenn der Player in den Suchmodus wechselt, wird der Text nach Abschluss der Suche nicht mehr angezeigt. Stattdessen zeigt TVSDK nach einigen Sekunden den nächsten Untertiteltext im Video nach der Endsuchposition an.
 >
->Die Sichtbarkeitswerte für Untertitel werden in `MediaPlayer.Visibility`definiert.
+>Die Sichtbarkeitswerte für Untertitel werden in `MediaPlayer.Visibility` definiert.
 >
 >
 ```java
@@ -31,7 +31,7 @@ Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarke
 >}
 >```
 
-1. Warten Sie, bis der Status &quot;VORBEREITET&quot; `MediaPlayer` mindestens vorliegt.
+1. Warten Sie, bis das `MediaPlayer` mindestens den Status &quot;VORBEREITET&quot;aufweist.
 
    Weitere Informationen finden Sie unter ui-state-prepare-wait-for .
 1. Um die aktuelle Sichtbarkeitseinstellung für Untertitel abzurufen, verwenden Sie die get-Methode in `MediaPlayer`, die einen Sichtbarkeitswert zurückgibt.
@@ -40,7 +40,7 @@ Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarke
    MediaPlayer.Visibility getCCVisibility() throws MediaPlayerException;
    ```
 
-1. Um die Sichtbarkeit für Untertitel zu ändern, verwenden Sie die Setter-Methode und übergeben Sie einen Sichtbarkeitswert von `MediaPlayer.Visibility`.
+1. Um die Sichtbarkeit von Untertiteln zu ändern, verwenden Sie die Setter-Methode und übergeben Sie einen Sichtbarkeitswert von `MediaPlayer.Visibility`.
 
    Beispiel:
 
