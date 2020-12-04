@@ -6,6 +6,9 @@ title: Methoden der Config-Klasse für Tags
 uuid: b75aebac-4b94-4c42-bed4-3c17ad989cd1
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '202'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ TVSDK wendet die globale Konfiguration automatisch auf jeden Medienstream an, de
 | <b>Methode</b> | <b>Beschreibung</b> |
 |--- |--- |
 | `public final String[] getSubscribedTags` | Ruft die aktuelle Liste der abonnierten Tags ab. |
-| `public final void setSubscribedTags(String[] tags);` | Legt die Liste der abonnierten Tags fest, die der Anwendung angezeigt werden.  Ihre Anwendung wird auch automatisch für alle Tags abonniert, die über `setAdTags`übertragen werden. |
+| `public final void setSubscribedTags(String[] tags);` | Legt die Liste der abonnierten Tags fest, die der Anwendung angezeigt werden.  Ihre Anwendung wird auch automatisch für alle Tags abonniert, die über `setAdTags` übertragen werden. |
 
 **Anpassen der vom Standard-Opportunitätsdetektor verwendeten Anzeigen-Tags**
 
@@ -36,9 +39,9 @@ Beachten Sie Folgendes:
 
 * Die set-Methoden lassen nicht zu, dass der Parameter tags Null-Werte enthält.
 
-   Wenn ein TVSDK gefunden wird, wird ein `IllegalArgumentException`geworfen.
-* Der benutzerdefinierte Tag-Name muss das `#` Präfix enthalten.
+   Wenn TVSDK gefunden, wird ein `IllegalArgumentException` ausgegeben.
+* Der benutzerdefinierte Tag-Name muss das Präfix `#` enthalten.
 
-   Beispielsweise `#EXT-X-ASSET` ist ein korrekter benutzerdefinierter Tag-Name, aber `EXT-X-ASSET` falsch.
+   `#EXT-X-ASSET` ist beispielsweise ein korrekter benutzerdefinierter Tag-Name, `EXT-X-ASSET` ist jedoch nicht korrekt.
 
 * Sie können die Konfiguration nach dem Laden des Medienstreams nicht mehr ändern.
