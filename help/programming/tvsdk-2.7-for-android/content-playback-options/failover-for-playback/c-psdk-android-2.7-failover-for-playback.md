@@ -6,6 +6,9 @@ title: Wiedergabe und Failover
 uuid: 7bbca3fe-88a3-4384-9a63-eb164c956a75
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
@@ -18,4 +21,4 @@ Streaming über das Internet erfordert eine konstante und stabile Verbindung, um
 >
 >Primetime kann nicht vor Fehlern wie einem ISP-Ausfall oder einer Kabeltrennung schützen.
 
-Primetime-Streaming bietet Failover-Schutz, um die Wiedergabe vor bestimmten Remote-Serverausfällen oder Betriebsausfällen zu schützen, was eine bessere Anzeige ermöglicht. Trotz Übertragungsproblemen implementiert TVSDK einen Failover-Schutz, um die Wiedergabe-Unterbrechungen zu minimieren und eine nahtlose Wiedergabe zu erzielen. Der Videoplayer wechselt automatisch zu einem Backup-Mediensatz, wenn vollständige Darstellungen oder Fragmente nicht verfügbar sind.
+Das Primetime-Streaming bietet Failover-Schutz, um die Wiedergabe vor bestimmten Remote-Serverausfällen oder Betriebsausfällen zu schützen, was eine bessere Anzeige ermöglicht. Trotz Übertragungsproblemen implementiert TVSDK einen Failover-Schutz, um die Wiedergabe-Unterbrechungen zu minimieren und eine nahtlose Wiedergabe zu erzielen. Der Videoplayer wechselt automatisch zu einem Backup-Mediensatz, wenn vollständige Darstellungen oder Fragmente nicht verfügbar sind.
