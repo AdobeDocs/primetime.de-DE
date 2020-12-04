@@ -6,6 +6,9 @@ title: ID3-Tags
 uuid: 5c016260-5ced-480e-897a-11ffe7f34441
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '283'
+ht-degree: 0%
 
 ---
 
@@ -25,13 +28,13 @@ Wenn TVSDK ID3-Metadaten erkennt, wird eine Benachrichtigung mit den folgenden D
 * NAME = nicht vorhanden
 * ID = 0
 
-1. Implementieren Sie einen Ereignis-Listener für `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED` und registrieren Sie ihn beim `MediaPlayer` -Objekt.
+1. Implementieren Sie einen Ereignis-Listener für `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED` und registrieren Sie ihn beim `MediaPlayer`-Objekt.
 
    TVSDK ruft diesen Listener auf, wenn er ID3-Metadaten erkennt.
 
    >[!NOTE]
    >
-   >Benutzerdefinierte Anzeigenbezeichnungen verwenden dasselbe `onTimedMetadata` Ereignis, um die Erkennung eines neuen Tags anzuzeigen. Dies sollte keine Verwirrung stiften, da auf Manifestebene benutzerdefinierte Anzeigenbezeichnungen erkannt werden und ID3-Tags im Stream eingebettet werden. Weitere Informationen finden Sie unter custom-tags-configure .
+   >Benutzerdefinierte Anzeigenbezeichnungen verwenden dasselbe `onTimedMetadata`-Ereignis, um die Erkennung eines neuen Tags anzuzeigen. Dies sollte keine Verwirrung stiften, da auf Manifestebene benutzerdefinierte Anzeigenbezeichnungen erkannt werden und ID3-Tags im Stream eingebettet werden. Weitere Informationen finden Sie unter custom-tags-configure .
 
 1. Abrufen der Metadaten.
 
