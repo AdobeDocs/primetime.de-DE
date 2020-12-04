@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Befehlszeilenverwendung {#command-line-usage}
 
-Bevor Sie Media Packager verwenden, stellen Sie sicher, dass Sie die unter Anforderungen aufgelisteten Anforderungen erfüllen und dass die Konfigurationsdatei die erforderlichen Informationen enthält (siehe Konfigurationsdatei im Abschnitt *Verwenden der Referenzimplementierungen für den Zugriff auf Adoben*).
+Bevor Sie Media Packager verwenden, stellen Sie sicher, dass Sie die unter &quot;Anforderungen&quot;aufgelisteten Anforderungen erfüllen und dass die Konfigurationsdatei die erforderlichen Informationen enthält (siehe Konfigurationsdatei unter *Verwenden der Adobe Access Reference Implementierungen*.
 
-Media Packager befindet sich im [!DNL \Reference Implementation\Command Line tools] Ordner auf der DVD. Verwenden Sie zum Verschlüsseln einer einzelnen Datei die folgende Syntax:
+Media Packager befindet sich im Ordner [!DNL \Reference Implementation\Command Line tools] auf der DVD. Verwenden Sie zum Verschlüsseln einer einzelnen Datei die folgende Syntax:
 
 ```
 java -jar AdobePackager.jar  
@@ -51,7 +51,7 @@ java -jar AdobePackager.jar
 * `sourcefiles` ist eine Reihe von durch Leerzeichen getrennten Quelleinträgen, die die zu verschlüsselnden Dateien darstellen.
 * `dest-directory` gibt an, wo der verschlüsselte Inhalt geschrieben werden soll. Die verschlüsselten Dateien werden in diesem Ordner unter denselben Dateinamen wie die Quelldateien gespeichert, der Ordner darf jedoch nicht der Ordner sein, der die Quelldateien enthält.
 
-To view information about an encrypted file, use the following syntax:
+Verwenden Sie zur Ansicht von Informationen zu einer verschlüsselten Datei die folgende Syntax:
 
 ```
 java -jar AdobePackager.jar -d  
@@ -68,41 +68,41 @@ Um Informationen zu einer Metadatendatei Ansicht, verwenden Sie die folgende Syn
 java -jar AdobePackager.jar -dm <metadatafile> [-e]
 ```
 
-* `metadatafile` is a [!DNL .metadata] file containing the DRM metadata.
+* `metadatafile` ist eine  [!DNL .metadata] Datei, die die DRM-Metadaten enthält.
 
 >[!NOTE]
 >
->During packaging, the Media Packager will no longer generate a .header file by default. To generate this file, use the `-h` option during packaging.
+>Beim Verpacken generiert der Media Packager standardmäßig keine .header-Datei mehr. Um diese Datei zu erstellen, verwenden Sie beim Verpacken die Option `-h`.
 
-The following table contains descriptions of the command line options shown in the syntax above:
+Die folgende Tabelle enthält Beschreibungen der Befehlszeilenoptionen, die in der obigen Syntax aufgeführt sind:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_wgz_spy_n4"> 
  <thead class="- topic/thead "> 
   <tr rowsep="1" class="- topic/row "> 
-   <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">Command line option </p> </th> 
-   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Description </p> </th> 
+   <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">Befehlszeilenoption </p> </th> 
+   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Beschreibung </p> </th> 
   </tr> 
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-c <span class="+ topic/ph pr-d/codeph codeph"> configfile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Specifies the location of the configuration file. If this option is not used the Media Packager will look for <span class="filepath"> flashaccesstools.properties </span> in the working directory. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt den Speicherort der Konfigurationsdatei an. Wenn diese Option nicht verwendet wird, sucht der Media Packager im Arbeitsverzeichnis nach <span class="filepath"> flashaccessStols.properties </span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <span class="+ topic/ph pr-d/codeph codeph"> encryptedfile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Zeigt Informationen zu einer Datei an, die bereits verpackt wurde. The source and destination files are not required. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Zeigt Informationen zu einer Datei an, die bereits verpackt wurde. Die Quell- und Zieldateien sind nicht erforderlich. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> metadatafile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Shows information about existing metadata. The source and destination files are not required. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> metadata </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Zeigt Informationen zu vorhandenen Metadaten an. Die Quell- und Zieldateien sind nicht erforderlich. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-e </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Verwenden Sie diese Option mit <span class="codeph"> -d, </span> um Richtlinien aus einer gepackten Datei zu extrahieren. Eine Datei wird unter Verwendung des Dateinamens und der Richtlinien-ID im selben Verzeichnis wie die verschlüsselte Datei erstellt. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Verwenden Sie diese Option mit <span class="codeph"> -d </span>, um Richtlinien aus einer gepackten Datei zu extrahieren. Eine Datei wird unter Verwendung des Dateinamens und der Richtlinien-ID im selben Verzeichnis wie die verschlüsselte Datei erstellt. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-h </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Verwenden Sie <span class="codeph"> -d, </span> um den DRM-Header aus einer Paketdatei zu extrahieren. Eine Datei wird unter Verwendung des Dateinamens und der Erweiterung <span class="filepath"> .header im selben Verzeichnis wie die verschlüsselte Datei erstellt. </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Verwenden Sie <span class="codeph"> -d </span>, um den DRM-Header aus einer gepackten Datei zu extrahieren. Eine Datei wird unter Verwendung des Dateinamens und der Erweiterung <span class="filepath"> .header </span> im selben Verzeichnis wie die verschlüsselte Datei erstellt. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-i <span class="+ topic/ph pr-d/codeph codeph"> contentID </span> </p> </td> 
@@ -110,15 +110,15 @@ The following table contains descriptions of the command line options shown in t
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> key </span>= <span class="+ topic/ph pr-d/codeph codeph"> value </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt einen benutzerdefinierten Schlüssel/Wert an, der den Inhaltsmetadaten hinzugefügt werden soll. Es können mehrere <span class="codeph"> -k- </span> Optionen angegeben werden. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt einen benutzerdefinierten Schlüssel/Wert an, der den Inhaltsmetadaten hinzugefügt werden soll. Es können mehrere <span class="codeph"> -k </span>-Optionen angegeben werden. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-m </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Verwenden Sie diese Option mit <span class="codeph"> -d, </span> um Metadaten aus einer gepackten Datei zu extrahieren. Eine Datei wird im selben Verzeichnis wie die verschlüsselte Datei mit dem Dateinamen und der Erweiterung <span class="codeph"> .metadata erstellt </span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Verwenden Sie diese Option mit <span class="codeph"> -d </span>, um Metadaten aus einer gepackten Datei zu extrahieren. Eine Datei wird im selben Verzeichnis wie die verschlüsselte Datei mit dem Dateinamen und der Erweiterung <span class="codeph"> .metadata </span> erstellt. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-noprompt </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fragen Sie nicht, ob die Zieldatei überschrieben werden soll. Wenn die Zieldatei bereits vorhanden ist und <span class="codeph"> -o nicht festgelegt </span> ist, wird ein Fehler zurückgegeben. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Fragen Sie nicht, ob die Zieldatei überschrieben werden soll. Wenn die Zieldatei bereits vorhanden ist und <span class="codeph"> -o </span> nicht eingestellt ist, wird ein Fehler zurückgegeben. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-o </p> </td> 
@@ -126,7 +126,7 @@ The following table contains descriptions of the command line options shown in t
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-p <span class="+ topic/ph pr-d/codeph codeph"> filename [domain-transport-cert] </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt den Namen der Datei an, die die Richtlinie enthält. Wenn die Richtlinie die Domänenregistrierung bei einem Server erfordert, der ein anderes als das in der Eigenschaftendatei angegebene Transportzertifikat verwendet, muss auch das Domänentransportzertifikat bereitgestellt werden. </p> <p class="- topic/p ">Es können mehrere <span class="codeph"> -p- </span> Optionen angegeben werden, und der Client verwendet standardmäßig die erste. Die in der Befehlszeile angegebenen Werte haben Vorrang vor den in der Konfigurationsdatei angegebenen Werten. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt den Namen der Datei an, die die Richtlinie enthält. Wenn die Richtlinie die Domänenregistrierung bei einem Server erfordert, der ein anderes als das in der Eigenschaftendatei angegebene Transportzertifikat verwendet, muss auch das Domänentransportzertifikat bereitgestellt werden. </p> <p class="- topic/p ">Es können mehrere <span class="codeph"> -p </span>-Optionen angegeben werden, und der Client verwendet standardmäßig die erste. Die in der Befehlszeile angegebenen Werte haben Vorrang vor den in der Konfigurationsdatei angegebenen Werten. </p> </td> 
   </tr> 
  </tbody> 
 </table>
