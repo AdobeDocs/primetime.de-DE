@@ -6,6 +6,9 @@ title: VOD-Anzeige auflösen und einfügen
 uuid: c1017483-5b4f-4d71-9589-fb2327b4572b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +27,7 @@ TVSDK fügt Anzeigen wie folgt ein:
 
 >[!IMPORTANT]
 >
->Bei der Implementierung eines benutzerdefinierten `AdPolicySelector`Formulars kann für jeden Typ von `AdBreakTimelineItem` (Pre-Roll, Mid-Roll oder Post-Roll) in eine andere Richtlinie festgelegt werden, `AdPolicyInfo`basierend auf dem Typ des `AdBreakTimelineItem`. Sie können beispielsweise Inhalte mit mittlerem Roll nach der Wiedergabe beibehalten, Inhalte mit Pre-Roll-Charakter jedoch nach der Wiedergabe entfernen.
+>Bei der Implementierung eines benutzerdefinierten `AdPolicySelector` kann jeder Typ von `AdBreakTimelineItem` (Pre-Roll, Mid-Roll oder Post-Roll) in `AdPolicyInfo` je nach Typ des `AdBreakTimelineItem` eine andere Richtlinie zugewiesen werden. Sie können beispielsweise Inhalte mit mittlerem Roll nach der Wiedergabe beibehalten, Inhalte mit Pre-Roll-Charakter jedoch nach der Wiedergabe entfernen.
 
 Nach der Wiedergabe können keine weiteren Beginn am Inhalt auftreten. Anzeigen können nicht sein:
 
