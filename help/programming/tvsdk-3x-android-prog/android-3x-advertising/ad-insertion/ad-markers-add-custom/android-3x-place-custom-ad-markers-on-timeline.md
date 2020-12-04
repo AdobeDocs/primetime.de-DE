@@ -6,33 +6,36 @@ title: Platzieren benutzerdefinierter Anzeigenmarken auf der Zeitleiste
 uuid: 47e31a97-e5da-46f3-bdcc-327c159c4355
 translation-type: tm+mt
 source-git-commit: 2a6ea34968ee7085931f99a24dfb23d097721b89
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
 
-# Platzieren benutzerdefinierter Anzeigenmarken auf der Zeitleiste {#place-custom-ad-markers-on-the-timeline}
+# Platzieren Sie benutzerdefinierte Anzeigenmarken auf der Zeitleiste {#place-custom-ad-markers-on-the-timeline}
 
 In diesem Beispiel wird die empfohlene Möglichkeit veranschaulicht, benutzerdefinierte Anzeigenmarken in die Zeitleiste der Wiedergabe einzubeziehen.
 
-1. Übersetzen Sie die Out-of-Band-Positionierungsinformationen in eine Liste/ein Array von `RepaceTimeRange` Klassen.
-1. Erstellen Sie eine Instanz der `CustomRangeMetadata` Klasse und verwenden Sie ihre `setTimeRangeList` Methode mit der Liste/dem Array als Argument, um die Liste des Zeitraums festzulegen.
-1. Verwenden Sie seine `setType` Methode, um den Typ auf `MARK_RANGE`festzulegen.
-1. Verwenden Sie die `MediaPlayerItemConfig.setCustomRangeMetadata` Methode mit der `CustomRangeMetadata` Instanz als Argument, um die Metadaten für den benutzerdefinierten Bereich festzulegen.
-1. Verwenden Sie die `MediaPlayer.replaceCurrentResource` Methode mit der `MediaPlayerItemConfig` Instanz als Argument, um die neue Ressource zur aktuellen zu machen.
-1. Warten Sie auf ein `STATE_CHANGED` Ereignis, das meldet, dass sich der Player im `PREPARED` Status befindet.
-1. Videowiedergabe im Beginn durch Aufruf `MediaPlayer.play`.
+1. Übersetzen Sie die Out-of-Band-Positionierungsinformationen in eine Liste/ein Array der `RepaceTimeRange`-Klasse.
+1. Erstellen Sie eine Instanz der Klasse `CustomRangeMetadata` und verwenden Sie die `setTimeRangeList`-Methode mit der Liste/dem Array als Argument, um die Liste des Zeitraums festzulegen.
+1. Verwenden Sie die `setType`-Methode, um den Typ auf `MARK_RANGE` einzustellen.
+1. Verwenden Sie die `MediaPlayerItemConfig.setCustomRangeMetadata`-Methode mit der `CustomRangeMetadata`-Instanz als Argument, um die Metadaten für den benutzerdefinierten Bereich festzulegen.
+1. Verwenden Sie die `MediaPlayer.replaceCurrentResource`-Methode mit der `MediaPlayerItemConfig`-Instanz als Argument, um die neue Ressource als aktuelle Ressource festzulegen.
+1. Warten Sie auf ein `STATE_CHANGED`-Ereignis, das meldet, dass sich der Player im Status `PREPARED` befindet.
+1. Beginn-Videowiedergabe durch Aufruf von `MediaPlayer.play`.
 
 Im Folgenden finden Sie das Ergebnis des Abschlusses der Aufgaben in diesem Beispiel:
 
-* Wenn beispielsweise ein Beginn eine andere Position auf der Wiedergabescheitleiste `ReplaceTimeRange` überschneidet, `ReplaceTimeRange` ist die Position eines Endpunkts früher als eine bereits platzierte Endposition, passt TVSDK den Beginn des Verstoßes im Hintergrund an, `ReplaceTimeRange` um den Konflikt zu vermeiden.
+* Wenn ein `ReplaceTimeRange` einen anderen Bereich in der Wiedergabeschlüssel überschneidet, z. B. wenn die Position des Beginns eines `ReplaceTimeRange` vor einer bereits platzierten Endposition liegt, passt TVSDK den Beginn des beleidigenden `ReplaceTimeRange`-Werts im Hintergrund an, um den Konflikt zu vermeiden.
 
-   Dadurch wird der angepasste Wert `ReplaceTimeRange` kürzer als ursprünglich angegeben. Führt die Anpassung zu einer Dauer von null, senkt TVSDK die Beleidigung im Hintergrund `ReplaceTimeRange`.
+   Dadurch wird das angepasste `ReplaceTimeRange` kürzer als ursprünglich angegeben. Führt die Anpassung zu einer Dauer von null, senkt TVSDK die verletzenden &lt; a0/> im Hintergrund.`ReplaceTimeRange`
 
 * TVSDK sucht nach angrenzenden Zeitbereichen für benutzerdefinierte Werbeunterbrechungen und gruppiert diese in separate Werbeunterbrechungen.
 
 Zeiträume, die nicht an einen anderen Zeitraum angrenzen, werden in Werbeunterbrechungen mit einer einzigen Anzeige umgewandelt.
 
-* Wenn die Anwendung versucht, eine Medienressource zu laden, deren Konfiguration enthält, `CustomRangeMetadata` die nur im Kontext von benutzerdefinierten Anzeigenmarken verwendet werden kann, löst TVSDK eine Ausnahme aus, wenn das zugrunde liegende Asset nicht VOD ist.
+* Wenn die Anwendung versucht, eine Medienressource zu laden, deren Konfiguration `CustomRangeMetadata` enthält, die nur im Kontext von benutzerdefinierten Anzeigenmarken verwendet werden kann, löst TVSDK eine Ausnahme aus, wenn das zugrunde liegende Asset nicht VOD ist.
 
 * Beim Umgang mit benutzerdefinierten Anzeigenmarken deaktiviert TVSDK andere Mechanismen zur Anzeigenauflösung (z. B. Adobe Primetime-Anzeigenentscheidung).
 
