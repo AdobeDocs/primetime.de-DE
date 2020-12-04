@@ -6,6 +6,9 @@ title: Phase der Anzeigenwiedergabe
 uuid: 1bbcea08-3475-4a64-9f89-c455d5dd828e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 0%
 
 ---
 
@@ -30,4 +33,4 @@ Für alle drei Fehlerklassen löste TVSDK weitergeleitete Ereignis in Ihrer Anwe
 
    Ihre Anwendung muss die entsprechenden Maßnahmen ergreifen.
 
-Unabhängig davon, ob Fehler auftreten, ruft TVSDK onAdBreakComplete für jede `onAdBreakStart` und `onAdComplete` für jede `onAdStart`auf. Wenn Segmente jedoch nicht heruntergeladen werden konnten, kann es Lücken in der Zeitschiene geben. Wenn die Lücken groß genug sind, können die Werte in der Abspielposition und der gemeldete Anzeigenfortschritt möglicherweise Diskontinuitäten aufweisen.
+Unabhängig davon, ob Fehler auftreten, ruft TVSDK onAdBreakComplete für jedes `onAdBreakStart` und `onAdComplete` für jedes `onAdStart` auf. Wenn Segmente jedoch nicht heruntergeladen werden konnten, kann es Lücken in der Zeitschiene geben. Wenn die Lücken groß genug sind, können die Werte in der Abspielposition und der gemeldete Anzeigenfortschritt möglicherweise Diskontinuitäten aufweisen.
