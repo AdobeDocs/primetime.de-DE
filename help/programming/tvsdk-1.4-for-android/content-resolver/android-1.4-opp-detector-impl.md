@@ -6,6 +6,9 @@ title: Implementieren eines benutzerdefinierten Opportunitätsdetektors
 uuid: 012527c5-4ef0-4cd6-a9df-2fb861078a7e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Sie können eigene Opportunity-Detektoren implementieren, indem Sie die Schnittstelle PlacementOpportunityDetector implementieren.
 
-1. Erstellen Sie eine benutzerdefinierte `AdvertisingFactory` Instanz und überschreiben Sie sie `createOpportunityDetector`. Beispiel:
+1. Erstellen Sie eine benutzerdefinierte `AdvertisingFactory`-Instanz und überschreiben Sie `createOpportunityDetector`. Beispiel:
 
    ```java
    new AdvertisingFactory() { 
@@ -27,7 +30,7 @@ Sie können eigene Opportunity-Detektoren implementieren, indem Sie die Schnitts
    }
    ```
 
-1. Registrieren Sie die Client-Factory für Anzeigen beim `MediaPlayer`. Beispiel:
+1. Registrieren Sie die Client-Factory der Anzeige bei `MediaPlayer`. Beispiel:
 
    ```java
    // register the custom advertising factory with media player 
@@ -35,7 +38,7 @@ Sie können eigene Opportunity-Detektoren implementieren, indem Sie die Schnitts
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Erstellen Sie eine benutzerdefinierte Opportunitätsdetektorklasse, die die `PlacementOpportunityDetector` Klasse erweitert.
+1. Erstellen Sie eine benutzerdefinierte Opportunitätsdetektorklasse, die die `PlacementOpportunityDetector`-Klasse erweitert.
    1. Überschreiben Sie im benutzerdefinierten Opportunitätsdetektor diese Funktion:
 
       ```java
@@ -44,7 +47,7 @@ Sie können eigene Opportunity-Detektoren implementieren, indem Sie die Schnitts
 
       Die `timedMetadataList` enthält die Liste der verfügbaren `TimedMetadata`, die sortiert wird. Metadaten enthalten die Targeting-Parameter und die benutzerdefinierten Parameter, die an den Anzeigenanbieter gesendet werden.
 
-   1. Erstellen Sie für jeden `TimedMetadata`eine `List<PlacementOpportunity>`. Die Liste kann leer, jedoch nicht null sein. `PlacementOpportunity` sollte die folgenden Attribute aufweisen:
+   1. Erstellen Sie für jedes `TimedMetadata` ein `List<PlacementOpportunity>`. Die Liste kann leer, jedoch nicht null sein. `PlacementOpportunity` sollte die folgenden Attribute aufweisen:
 
       ```java
       PlacementOpportunity( 
@@ -54,7 +57,7 @@ Sie können eigene Opportunity-Detektoren implementieren, indem Sie die Schnitts
       )
       ```
 
-   1. Nachdem Platzierungsmöglichkeiten für alle erkannten Metadatenobjekte erstellt wurden, geben Sie einfach die `PlacementOpportunity` Liste zurück.
+   1. Nachdem Platzierungsmöglichkeiten für alle erkannten Metadatenobjekte erstellt wurden, geben Sie einfach die `PlacementOpportunity`-Liste zurück.
 
 Dies ist ein Beispiel für eine benutzerdefinierte Platzierungsmöglichkeit:
 
