@@ -6,6 +6,9 @@ title: Zeitleistenklassen
 uuid: dd4af4b4-215e-45cb-8bac-574a461ac1ce
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '244'
+ht-degree: 0%
 
 ---
 
@@ -33,11 +36,11 @@ Paket: [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime/api
    <td colname="2"> Schnittstelle, die einen Iterator für die Verarbeitung von Zeitschienenmarken bereitstellt. Stellt die Zeitleiste des Inhalts einschließlich Werbeunterbrechungen dar. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> TimelineItem</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> TimelineItem</a> </span> </td> 
    <td colname="2"> Klasse. Generisch unveränderliche Darstellung eines Zeitschienenelements. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> TimelineMarker</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> TimelineMarker</a> </span> </td> 
    <td colname="2"> Schnittstelle, die eine Markierung auf der Zeitleiste darstellt. Dies kennzeichnet eine Interessensregion auf der tatsächlichen Zeitschiene. Derzeit sind die Interessensgebiete die Anzeigen, die Sie z. B. mit einer anderen Farbe auf der Benutzeroberfläche der Scrubbing-Leiste markieren möchten. Jeder Marker wird durch eine Position und eine Dauer definiert (jeweils in Millisekunden). </td> 
   </tr> 
   <tr rowsep="0"> 
