@@ -6,17 +6,20 @@ title: Untertitel verfügbar machen
 uuid: 209b34ca-f14e-499e-af5f-2d8c7b359ef8
 translation-type: tm+mt
 source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
 
-# Untertitel verfügbar machen {#expose-closed-captions}
+# Freigeben von Untertiteln {#expose-closed-captions}
 
 Um Untertitel für Ihren Client-Player verfügbar zu machen, müssen Sie diese aktivieren. Der Benutzer kann Untertitel aktivieren oder deaktivieren und die Formatierung auswählen.
 
 So stellen Sie Bildunterschriften bereit:
 
-1. Legen Sie im `PTMediaPlayer` Objekt die `closedCaptionDisplayEnabled` Eigenschaft fest.
+1. Legen Sie im `PTMediaPlayer`-Objekt die Eigenschaft `closedCaptionDisplayEnabled` fest.
 
    Wenn der Benutzer Untertitel aktiviert hat, wird in diesem Schritt der Text angezeigt.
 
@@ -26,4 +29,4 @@ So stellen Sie Bildunterschriften bereit:
 
    >[!NOTE]
    >
-   >`closedCaptionDisplayEnabled` -Eigenschaft nicht mehr unterstützt. Verwenden Sie `subtitlesOptions` die Eigenschaft von `PTMediaPlayerItem`. Siehe Untertitel [für](../../tvsdk-1.4-for-ios/c-psdk-ios-1.4-closed-captioning-and-subtitles-ios/t-psdk-ios-1.4-subtitles-exposing-ios.md) die Verwendung von Untertiteln verfügbar machen.
+   >`closedCaptionDisplayEnabled` -Eigenschaft nicht mehr unterstützt. Verwenden Sie die Eigenschaft `subtitlesOptions` von `PTMediaPlayerItem`. Siehe [Untertitel offen legen](../../tvsdk-1.4-for-ios/c-psdk-ios-1.4-closed-captioning-and-subtitles-ios/t-psdk-ios-1.4-subtitles-exposing-ios.md), um Untertitel zu verwenden.
