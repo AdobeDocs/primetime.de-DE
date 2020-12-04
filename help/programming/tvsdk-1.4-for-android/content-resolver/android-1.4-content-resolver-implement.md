@@ -6,6 +6,9 @@ title: Implementieren eines benutzerdefinierten Inhaltsauflösers
 uuid: 88627fdc-3b68-4a9f-847e-a490ea8e3034
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +19,7 @@ Sie können Ihre eigenen Inhaltsauflöser auf Basis der Standardauflöser implem
 
 Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Content-Auflöser, die nach einer suchen, die diese Gelegenheit lösen kann. Das erste, das &quot;true&quot;zurückgibt, wird ausgewählt, um die Gelegenheit zu lösen. Wenn kein Inhaltsauflöser geeignet ist, wird diese Gelegenheit übersprungen. Da die Inhaltsauflösung in der Regel asynchron abläuft, ist der Inhaltsauflöser dafür verantwortlich, benachrichtigt zu werden, wenn der Prozess abgeschlossen ist.
 
-1. Erstellen Sie eine benutzerdefinierte `AdvertisingFactory` Instanz und überschreiben Sie sie `createContentResolver`.
+1. Erstellen Sie eine benutzerdefinierte `AdvertisingFactory`-Instanz und überschreiben Sie `createContentResolver`.
 
    Beispiel:
 
@@ -43,7 +46,7 @@ Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Conte
    }
    ```
 
-1. Registrieren Sie die Client-Factory für Anzeigen beim `MediaPlayer`.
+1. Registrieren Sie die Client-Factory der Anzeige bei `MediaPlayer`.
 
    Beispiel:
 
@@ -53,9 +56,9 @@ Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Conte
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Übergeben Sie ein `AdvertisingMetadata` Objekt wie folgt an TVSDK:
-   1. Erstellen Sie ein `AdvertisingMetadata` Objekt und ein `MetadataNode` Objekt.
-   1. Speichern Sie das `AdvertisingMetadata` Objekt in `MetadataNode`.
+1. Übergeben Sie ein `AdvertisingMetadata`-Objekt wie folgt an TVSDK:
+   1. Erstellen Sie ein `AdvertisingMetadata`-Objekt und ein `MetadataNode`-Objekt.
+   1. Speichern Sie das `AdvertisingMetadata`-Objekt in `MetadataNode`.
 
    ```java
    MetadataNode result = new MetadataNode(); 
@@ -63,7 +66,7 @@ Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Conte
                   advertisingMetadata);
    ```
 
-1. Erstellen Sie eine benutzerdefinierte Anzeigenauflösungsklasse, die die `ContentResolver` Klasse erweitert.
+1. Erstellen Sie eine benutzerdefinierte Anzeigenauflösungsklasse, die die `ContentResolver`-Klasse erweitert.
    1. Überschreiben Sie im benutzerdefinierten Anzeigenauflöser diese geschützte Funktion:
 
       ```java
@@ -71,13 +74,13 @@ Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Conte
                         PlacementOpportunity placementOpportunity)
       ```
 
-      Metadaten enthalten Ihre `AdvertisingMetada`. Verwenden Sie ihn für die folgende `TimelineOperation` Vektorgenerierung.
+      Metadaten enthalten Ihr `AdvertisingMetada`. Verwenden Sie sie für die folgende Vektorgenerierung `TimelineOperation`.
 
-   1. Erstellen Sie für jede Platzierungsmöglichkeit eine `Vector<TimelineOperation>`.
+   1. Erstellen Sie für jede Platzierungsmöglichkeit ein `Vector<TimelineOperation>`.
 
       Der Vektor kann leer, jedoch nicht null sein.
 
-      Dieses Beispiel `TimelineOperation` bietet eine Struktur für `AdBreakPlacement`:
+      Dieses Beispiel `TimelineOperation` stellt eine Struktur für `AdBreakPlacement` bereit:
 
       ```java
       AdBreakPlacement(AdBreak.createAdBreak( 
@@ -94,6 +97,7 @@ Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Conte
 
       * Bei erfolgreicher Anzeigenauflösung: `notifyResolveComplete(Vector<TimelineOperation> proposals)`
       * Wenn die Anzeigenauflösung fehlschlägt: `notifyResolveError(Error error)`
+
       Wenn dies z. B. fehlschlägt:
 
       ```java
