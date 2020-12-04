@@ -7,11 +7,14 @@ title: Regeln normalisieren
 uuid: ae0364d2-23e2-48d6-b9b6-869cd163080d
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 0%
 
 ---
 
 
-# Regeln normalisieren {#normalize-rules}
+# Normalisieren von Regeln {#normalize-rules}
 
 Die Regel &quot;Normalisieren&quot;definiert eine URL-Transformation, die auf eine Quell-URL angewendet wird, die aus einer VAST-/VMAP-Antwort stammt.
 
@@ -31,13 +34,13 @@ Die Regel &quot;Normalisieren&quot;definiert eine URL-Transformation, die auf ei
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> Zeichenfolge</span></td> 
    <td><span class="codeph"> normalisieren</span></td> 
-   <td>Der Wert muss immer <span class="codeph"> normalisiert</span>sein.</td> 
+   <td>Der Wert muss immer <span class="codeph"> normalize</span> sein.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> Zeichenfolge</span></td> 
    <td><span class="codeph"> host</span></td> 
-   <td>Derzeit wird nur der <span class="codeph"> Host</span> unterstützt. Dieses Attribut muss vorhanden sein, wenn <span class="codeph"> Übereinstimmungen</span> und <span class="codeph"> Wertattribute</span> definiert sind.</td> 
+   <td>Derzeit wird nur der Eintrag <span class="codeph"> host</span> unterstützt. Dieses Attribut muss vorhanden sein, wenn <span class="codeph"> Übereinstimmungen</span> und <span class="codeph"> Werte</span>-Attribute definiert sind.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> match</span></td> 
@@ -47,17 +50,17 @@ Die Regel &quot;Normalisieren&quot;definiert eine URL-Transformation, die auf ei
     <ul id="ul_tnf_2hx_hz"> 
      <li><span class="codeph"> eq</span> - gleich</li> 
      <li><span class="codeph"> ne</span> - nicht gleich</li> 
-     <li><span class="codeph"> co</span> - contains</li> 
-     <li><span class="codeph"> nc</span> - nicht enthält</li> 
-     <li><span class="codeph"> sw</span> - Beginn mit</li> 
-     <li><span class="codeph"> new</span> - endet mit</li> 
+     <li><span class="codeph"> co</span> - enthält</li> 
+     <li><span class="codeph"> nc</span> - enthält nicht</li> 
+     <li><span class="codeph"> sw</span>  - Beginn mit</li> 
+     <li><span class="codeph"> new</span>  - endet mit</li> 
     </ul></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> Werte</span></td> 
    <td><span class="codeph"> Array</span></td> 
    <td></td> 
-   <td>TVSDK verwendet das Attribut <span class="codeph"> match</span> für das <span class="codeph"> Element</span> des Quell-kreativen Elements und stimmt mit den in diesem Array definierten Werten überein.</td> 
+   <td>TVSDK verwendet das Attribut <span class="codeph"> stimmt mit</span> im <span class="codeph">-Element</span> des Quellkreativs überein und stimmt mit den in diesem Array definierten Werten überein.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> finden</span></td> 
