@@ -6,6 +6,9 @@ title: Benutzerdefinierte Protokollierung
 uuid: f056d7d7-ec3a-4cf1-997f-72a89bbc9447
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 0%
 
 ---
 
@@ -16,19 +19,19 @@ Sie können Ihr eigenes Protokollierungssystem implementieren.
 
 Zusätzlich zur Protokollierung mithilfe vordefinierter Benachrichtigungen können Sie ein Protokollierungssystem implementieren, das Ihre Protokollmeldungen und Nachrichten verwendet, die von TVSDK generiert werden. Weitere Informationen zu vordefinierten Benachrichtigungen finden Sie unter [Das Benachrichtigungssystem](https://help.adobe.com/en_US/primetime/psdk/ios/index.html#PSDKs-concept-The_Notification_System). Sie können diese Protokolle verwenden, um Fehler in Ihren Player-Anwendungen zu beheben und einen besseren Einblick in den Wiedergabe- und Werbeablauf zu erhalten.
 
-Die benutzerdefinierte Protokollierung verwendet eine freigegebene Singleton-Instanz der `PSDKPTLogFactory`, die eine Möglichkeit zum Protokollieren von Nachrichten an mehrere Protokollfunktionen bietet. Sie definieren und fügen (registrieren) einen oder mehrere Protokollen zum `PTLogFactory`. Auf diese Weise können Sie mehrere Protokollfunktionen mit benutzerdefinierten Implementierungen definieren, z. B. eine Konsolenprotokollierung, eine Webprotokollierung oder eine Protokollfunktion für den Konsolenverlauf.
+Die benutzerdefinierte Protokollierung verwendet eine freigegebene Singleton-Instanz von `PSDKPTLogFactory`, die einen Mechanismus zum Protokollieren von Nachrichten an mehrere Protokollfunktionen bereitstellt. Sie definieren und fügen (registrieren) einen oder mehrere Protokollen zu `PTLogFactory` hinzu. Auf diese Weise können Sie mehrere Protokollfunktionen mit benutzerdefinierten Implementierungen definieren, z. B. eine Konsolenprotokollierung, eine Webprotokollierung oder eine Protokollfunktion für den Konsolenverlauf.
 
-TVSDK erzeugt Logmeldungen für viele seiner Aktivitäten, die an alle registrierten Logger `PTLogFactory` weitergeleitet werden. Ihre Anwendung kann auch benutzerdefinierte Protokollmeldungen generieren, die an alle registrierten Anmelder weitergeleitet werden. Jede Protokollfunktion kann die Nachrichten filtern und entsprechende Maßnahmen ergreifen.
+TVSDK generiert Protokollmeldungen für viele seiner Aktivitäten, die das `PTLogFactory` an alle registrierten Protokollfunktionen weiterleitet. Ihre Anwendung kann auch benutzerdefinierte Protokollmeldungen generieren, die an alle registrierten Anmelder weitergeleitet werden. Jede Protokollfunktion kann die Nachrichten filtern und entsprechende Maßnahmen ergreifen.
 
 Es gibt zwei Implementierungen für `PTLogFactory`:
 
 * Zum Listening von Protokollen.
-* Zum Hinzufügen von Protokollen zu einer `PTLogFactory`.
+* Zum Hinzufügen von Protokollen zu einem `PTLogFactory`.
 
-## Protokolle abrufen {#listen-to-logs}
+## Protokolle {#listen-to-logs}
 
 So registrieren Sie sich zum Listening von Protokollen:
-1. Implementieren Sie eine benutzerdefinierte Klasse, die dem Protokoll folgt `PTLogger`:
+1. Implementieren Sie eine benutzerdefinierte Klasse, die dem Protokoll `PTLogger` folgt:
 
    ```
    @implementation PTConsoleLogger 
@@ -45,7 +48,7 @@ So registrieren Sie sich zum Listening von Protokollen:
    @end
    ```
 
-1. Um die Instanz für den Empfang von Protokolleinträgen zu registrieren, fügen Sie eine Instanz der `PTLogger` der hinzu `PTLoggerFactory`:
+1. Um die Instanz zum Empfangen von Protokolleinträgen zu registrieren, fügen Sie der `PTLoggerFactory` eine Instanz von `PTLogger` hinzu:
 
    ```
    PTConsoleLogger *logger = [PTConsoleLogger consoleLogger]; 
@@ -58,7 +61,7 @@ So registrieren Sie sich zum Listening von Protokollen:
 
 <!--<a id="example_3738B5A8B4C048D28695E62297CF39E3"></a>-->
 
-Hier ein Beispiel für das Filtern von Protokollen anhand des `PTLogEntry` Typs:
+Hier ein Beispiel für das Filtern von Protokollen mit dem Typ `PTLogEntry`:
 
 ```
 @implementation PTConsoleLogger 
@@ -89,15 +92,15 @@ Hier ein Beispiel für das Filtern von Protokollen anhand des `PTLogEntry` Typs:
 @end
 ```
 
-## Hinzufügen neue Protokollmeldungen {#add-new-log-messages}
+## hinzufügen neue Protokollmeldungen {#add-new-log-messages}
 
 So registrieren Sie sich zum Abhören von Protokollen:
 
-Erstellen Sie eine neue `PTLogEntry` und fügen Sie sie hinzu `thePTLogFactory`:
+Erstellen Sie ein neues `PTLogEntry` und fügen Sie es zu `thePTLogFactory` hinzu:
 
-Sie können eine Instanz manuell instanziieren `PTLogEntry` und der `PTLogFactory` freigegebenen Instanz hinzufügen oder eine der Makros verwenden, um dieselbe Aufgabe auszuführen.
+Sie können ein `PTLogEntry` manuell instanziieren und es der freigegebenen `PTLogFactory` Instanz hinzufügen oder eines der Makros verwenden, um dieselbe Aufgabe auszuführen.
 
-Hier ein Beispiel für die Protokollierung mit dem `PTLogDebug` Makro:
+Hier ein Beispiel für die Protokollierung mit dem Makro `PTLogDebug`:
 
 <!--<a id="example_F014436E1686468F941F4EBD1A21B18E"></a>-->
 
