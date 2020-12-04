@@ -6,11 +6,14 @@ title: Fehlerbeispiele im Zeitbereich
 uuid: 25ac5985-a844-452e-ac95-5006fdf413e6
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
 
-# Fehlerbeispiele im Zeitbereich {#time-range-error-examples}
+# Beispiele für Zeitraumfehler {#time-range-error-examples}
 
 TVSDK reagiert auf fehlerhafte Zeitbereichsspezifikationen, indem die Zeiträume entsprechend zusammengeführt oder ersetzt werden.
 
