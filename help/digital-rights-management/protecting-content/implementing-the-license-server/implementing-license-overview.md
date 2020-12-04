@@ -4,6 +4,9 @@ title: Überblick über den Lizenzserver
 uuid: 8c62376b-b159-4297-9322-75d62947e84e
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '133'
+ht-degree: 0%
 
 ---
 
@@ -23,4 +26,4 @@ So implementieren Sie einen Lizenzserver:
 
 Darüber hinaus muss der Server eine Geschäftslogik für die Authentifizierung von Benutzern bereitstellen, feststellen, ob Benutzer zur Ansicht von Inhalten berechtigt sind, und optional die Lizenznutzung verfolgen.
 
-Weitere Informationen zur Java-API finden Sie unter *Adobe Primetime DRM API-Referenz* .
+Weitere Informationen zur Java-API finden Sie unter *Adobe Primetime DRM-API-Referenz*.
