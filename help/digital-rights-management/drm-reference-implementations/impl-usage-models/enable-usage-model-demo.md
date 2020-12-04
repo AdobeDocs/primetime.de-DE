@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Demo zum Verwendungsmodell aktivieren{#enable-the-usage-model-demo}
+# Demo zum Gebrauchsmodell aktivieren{#enable-the-usage-model-demo}
 
 1. Geben Sie die benutzerdefinierte Eigenschaft `RI_UsageModelDemo=true` zur Verpackungszeit an.
 
