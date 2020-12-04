@@ -6,11 +6,14 @@ title: Anforderungen an Inhalt und Manifest
 uuid: 22ee7d02-b06d-4162-a8a4-a2391658fdb3
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
 
 
-# Anforderungen an Inhalt und Manifest{#content-and-manifest-requirements}
+# Anforderungen für Inhalt und Manifest{#content-and-manifest-requirements}
 
 Überprüfen Sie die Einschränkungen und Anforderungen für Streams und Playlists (Manifeste).
 
