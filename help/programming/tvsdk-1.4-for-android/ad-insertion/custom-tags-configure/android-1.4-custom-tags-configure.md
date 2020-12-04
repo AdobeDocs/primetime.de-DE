@@ -33,11 +33,11 @@ TVSDK bietet vordefinierte Unterstützung für bestimmte #EXT-Werbetags. Ihre An
 >
 >**Einschränkung**
 >
->Wenn HLS unter Verwendung des `Video` Tags in Safari wiedergegeben wird und nicht unter Verwendung von Flash Fallback, ist diese Funktion in Safari nicht verfügbar.
+>Wenn HLS in Safari mit dem Tag `Video` wiedergegeben wird und nicht mit Flash Fallback, ist diese Funktion in Safari nicht verfügbar.
 
-## Verwenden benutzerdefinierter HLS-Tags {#section_AD032318AEF5418393D2B1DF36B0BABB}
+## Verwenden von benutzerdefinierten HLS-Tags {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
-Here is an example of a customized VOD asset:
+Hier ein Beispiel für ein benutzerdefiniertes VOD-Asset:
 
 ```
 #EXTM3U
@@ -65,11 +65,11 @@ seg5.ts
 #EXT-X-ENDLIST
 ```
 
-Your application can set up the following scenarios:
+Ihre Anwendung kann die folgenden Szenarien einrichten:
 
-* A notification when `#EXT-X-ASSET` tags, or any other set of custom tag names to which you have subscribed, exist in the file.
-* Insert ads when an `#EXT-X-AD` tag, or any other custom tag name, is found in the stream.
+* Eine Benachrichtigung, wenn `#EXT-X-ASSET`-Tags oder andere Gruppen von benutzerdefinierten Tag-Namen, für die Sie ein Abonnement abgeschlossen haben, in der Datei vorhanden sind.
+* Fügen Sie Anzeigen ein, wenn ein `#EXT-X-AD`-Tag oder ein anderer benutzerdefinierter Tag-Name im Stream gefunden wird.
 
-You can subscribe to any of the following tags as custom tags: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. You are notified with a `TimedMetadata` event during parsing of manifest files.
+Sie können die folgenden Tags als benutzerdefinierte Tags abonnieren: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Beim Parsen von Manifestdateien wird Ihnen ein `TimedMetadata`-Ereignis gemeldet.
 
-Es gibt einige Werbetags, wie `EXT-X-CUE`zum Beispiel, für die Sie bereits abonniert sind. These ad tags are also used by the default opportunity generator. Sie können festlegen, welche Anzeigen-Tags vom standardmäßigen Opportunitätsgenerator verwendet werden, indem Sie die `adTags` Eigenschaft festlegen.
+Es gibt einige Werbetags, wie `EXT-X-CUE`, für die Sie bereits abonniert sind. Diese Anzeigen-Tags werden auch vom standardmäßigen Opportunitätsgenerator verwendet. Sie können festlegen, welche Anzeigen-Tags vom standardmäßigen Opportunitätsgenerator verwendet werden, indem Sie die Eigenschaft `adTags` festlegen.
