@@ -6,6 +6,9 @@ title: Übersicht über die Primetime-DRM-Oberfläche
 uuid: 01714ee6-a937-4ca3-b535-6a6ef681ee6d
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +21,7 @@ Das wichtigste clientseitige Element des DRM-Systems (Primetime Digital Rights M
 
 Primetime DRM bietet einen skalierbaren, effizienten Arbeitsablauf zur Implementierung des Inhaltsschutzes in TVSDK-Anwendungen. Sie schützen und verwalten die Rechte an Ihren Videoinhalten, indem Sie eine Lizenz für jede digitale Mediendatei erstellen.
 
-TVSDK unterstützt die Primetime DRM-Integration als benutzerdefinierte DRM-Workflows. Das bedeutet, dass Ihre Anwendung die DRM-Workflows implementieren muss, bevor der Stream mit Flash wiedergegeben wird `DRMManager`. Um dies zu aktivieren, `MediaPlayer` erhalten Sie den DRM-Manager zur Authentifizierung.
+TVSDK unterstützt die Primetime DRM-Integration als benutzerdefinierte DRM-Workflows. Das bedeutet, dass Ihre Anwendung die DRM-Workflows implementieren muss, bevor der Stream mit dem Flash `DRMManager` wiedergegeben wird. Um dies zu aktivieren, stellt `MediaPlayer` Ihnen den DRM-Manager zur Authentifizierung zur Verfügung.
 
 Dies sind die wichtigsten API-Elemente für die Arbeit mit DRM:
 
@@ -41,4 +44,4 @@ Zusätzliche relevante API-Elemente:
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-Weitere Informationen zu DRM finden Sie in der Dokumentation zu Adobe Primetime DRM.
+Weitere Informationen zu DRM finden Sie in der Adobe Primetime DRM-Dokumentation.
