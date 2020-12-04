@@ -6,6 +6,9 @@ title: Herstellerspezifische Sicherheitsinformationen
 uuid: 331baa42-5e19-40a5-bc74-0b1a2cb9370e
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '387'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Betriebssysteme und Anwendungsserver sind in Ihrer Adobe Primetime DRM-Lösung enthalten.
 
-Informationen zur herstellerspezifischen Sicherheit für Ihr Betriebssystem und Ihren Anwendungsserver finden Sie unter Verwenden des Adobe Primetime DRM Key Servers.
+Informationen zur herstellerspezifischen Sicherheit für Ihr Betriebssystem und Ihren Anwendungsserver finden Sie unter Verwenden des Adobe Primetime DRM-Schlüsselservers.
 
 ## Informationen zur Betriebssystemsicherheit {#section_53CAD802FCA54C4D8CE0C4E1B3045E52}
 
@@ -27,7 +30,7 @@ Hier einige der Maßnahmen:
 * Entfernen unnötiger Dienste und Anwendungen
 * Sichern von Dateien
 
-Im Folgenden finden Sie einige Informationen zu den Betriebssystemen, die von Adobe Primetime DRM unterstützt werden:
+Im Folgenden finden Sie einige Informationen zu den von Adobe Primetime DRM unterstützten Betriebssystemen:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_ugl_kjz_n4"> 
  <thead class="- topic/thead "> 
@@ -68,7 +71,7 @@ Im Folgenden finden Sie einige Informationen zu Ansätzen zur Minimierung von Si
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Network Time Protocol (NTP) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Für den ordnungsgemäßen Betrieb und die forensische Analyse sollten Sie auf den Primetime DRM-Servern und -Packagern die richtige Zeit behalten. Verwenden Sie eine sichere Version von NTP, um die Primetime DRM-Zeit auf allen Systemen zu synchronisieren, die mit dem Internet verbunden sind. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Für einen ordnungsgemäßen Betrieb und eine forensische Analyse sollten Sie auf den Primetime DRM-Servern und -Packagern die richtige Zeit behalten. Verwenden Sie eine sichere Version von NTP, um die Primetime DRM-Zeit auf allen Systemen zu synchronisieren, die mit dem Internet verbunden sind. </p> </td> 
   </tr> 
  </tbody> 
 </table>
