@@ -6,6 +6,9 @@ title: Implementieren eines benutzerdefinierten Opportunitätsgenerators
 uuid: 6a6a6aa4-51f8-4e3c-9255-d87b488b820d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '117'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Sie können Ihre eigenen Opportunity-Generatoren implementieren, indem Sie die OpportunityGenerator-Klasse implementieren.
 
-1. Implementieren Sie Ihre benutzerdefinierte `ContentFactory` Anwendung, indem Sie die `ContentFactory` Benutzeroberfläche implementieren und überschreiben `retrieveGenerators`.
+1. Implementieren Sie Ihre benutzerdefinierte `ContentFactory`, indem Sie die `ContentFactory`-Schnittstelle implementieren und `retrieveGenerators` überschreiben.
 
    Beispiel:
 
@@ -30,7 +33,7 @@ Sie können Ihre eigenen Opportunity-Generatoren implementieren, indem Sie die O
    }
    ```
 
-1. Registrieren Sie die `ContentFactory` bei der `MediaPlayer`.
+1. Registrieren Sie `ContentFactory` auf `MediaPlayer`.
 
    Beispiel:
 
@@ -47,14 +50,14 @@ Sie können Ihre eigenen Opportunity-Generatoren implementieren, indem Sie die O
    itemLoader.load(resource, id, config);
    ```
 
-1. Erstellen Sie eine benutzerdefinierte Opportunitätsgenerator-Klasse, die die `OpportunityGenerator` Klasse implementiert.
+1. Erstellen Sie eine benutzerdefinierte Opportunitätsgenerator-Klasse, die die `OpportunityGenerator`-Klasse implementiert.
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. Überschreiben `doConfigure`und `doUpdate` `doCleanup`:
+   1. Überschreiben Sie im benutzerdefinierten Opportunitätsgenerator `doConfigure`, `doUpdate` und `doCleanup`:
 
       ```java
       @Override 
@@ -75,7 +78,7 @@ Sie können Ihre eigenen Opportunity-Generatoren implementieren, indem Sie die O
       List<TimedMetadata> tList = getItem().getTimedMetadata(); 
       ```
 
-   1. Erstellen Sie für jede `TimedMetadata` oder Gruppe von `TimedMetadata`Benutzern eine Gelegenheit mit den folgenden Attributen:
+   1. Erstellen Sie für jede `TimedMetadata`- oder Gruppe von `TimedMetadata` eine Gelegenheit mit den folgenden Attributen:
 
       ```java
       Opportunity( 
@@ -86,7 +89,7 @@ Sie können Ihre eigenen Opportunity-Generatoren implementieren, indem Sie die O
       ); 
       ```
 
-   1. Rufen Sie für jede geschaffene Gelegenheit `resolve` die `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
+   1. Rufen Sie für jede erstellte Gelegenheit `resolve` auf dem `OpportunityGeneratorClient:getClient().resolve(opportunity);` auf.
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
