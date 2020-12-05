@@ -4,6 +4,9 @@ title: BEES-Übersicht
 uuid: c6ee7528-fdfa-4a56-bea2-a5e2dab6d428
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '239'
+ht-degree: 0%
 
 ---
 
@@ -24,6 +27,6 @@ Ihr lokalen Berechtigungsdienst muss eine Antwort auf Primetime Cloud DRM bereit
 * `isAllowed`
 * `drmPolicyToUse`
 
-Diese bestimmen, ob ein Gerät den Inhalt abspielen darf und welche DRM-Richtlinie verwendet werden soll, um die DRM-Lizenz zu generieren (wenn `isAllowed` true ist).
+Diese bestimmen, ob ein Gerät den Inhalt abspielen darf und welche DRM-Richtlinie zum Generieren der DRM-Lizenz verwendet werden soll (wenn `isAllowed` true ist).
 
 In diesem Dokument wird beschrieben, was Sie tun müssen, um die oben genannte Option 2 zu erreichen: Implementieren Sie Ihren eigenen lokalen externen Berechtigungsdienst und stellen Sie ihn Primetime Cloud DRM für Inhalte bereit, die Sie verpackt haben.
