@@ -25,7 +25,7 @@ Viele Methodensignaturen und API-Elementnamen wurden für 2.0 geändert. Überpr
 
 Kommentare in der Methodendokumentation weisen auf die Signatur für Rückrufe hin, die Sie implementieren müssen.
 
-Für JavaScript basiert die API-Syntax auf der Web-ID. Bei einer TVSDK-Schnittstelle werden die Methodennamen als *methodName*() bezeichnet. Damit Methoden von Ihrer Anwendung implementiert werden, wird der Schnittstelle ein Lese-/Schreibattribut mit dem Namen ** methodNameCallbackFunc hinzugefügt, und Ihre Anwendung sollte festlegen, dass es auf eine Funktion verweist, die die Methode implementiert. Beispiel:
+Für JavaScript basiert die API-Syntax auf der Web-ID. Bei einer TVSDK-Schnittstelle werden die Methodennamen *methodName*() genannt. Damit Methoden von Ihrer Anwendung implementiert werden, wird der Schnittstelle ein Lese-/Schreibattribut mit dem Namen *methodName* CallbackFunc hinzugefügt, und Ihre Anwendung sollte festlegen, dass sie auf eine Funktion verweist, die die Methode implementiert. Beispiel:
 
 ```shell
 // An app implementable interface
@@ -60,7 +60,7 @@ playerConfig.adFactory = factory;
 // Use this config to load new MediaResource
 ```
 
-## Änderungen am Element der Advertising Workflow-API für 2.0 {#advertising-workflow-api-element-changes-for}
+## Änderungen am API-Element für Werbe-Workflows für 2.0 {#advertising-workflow-api-element-changes-for}
 
 Diese Tabellen vergleichen die API-Elemente des Werbe-Workflows für das JavaScript TVSDK zwischen den Versionen 1.3 und 2.0.
 
@@ -92,8 +92,8 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p> <strong>TimedMetadata</strong>: interface TimedMetadata {<br /> const unsigned short METADATA_TYPE_TAG = 0 ; <br /> const unsigned short METADATA_TYPE_ID3 = 1; <br /> readonly-Attribut unsigned short type <br /> readonly-Attribut mit langer Zeit;<br /> readonly-Attribut DomString id;<br /> readonly attribute DomString name;<br /> readonly attribute DomString content; <br /> readonly-Attribut-Objektmetadaten;<br /> }; </p> </td> 
-   <td><p>interface TimedMetadata {<br /> const unsigned short METADATA_TYPE_TAG = 0 ;<br /> const unsigned short METADATA_TYPE_ID3 = 1;<br /> readonly-Attribut unsigned short metadataType;<br /> readonly-Attribut mit langer Zeit;<br /> readonly attribute long id;<br /> readonly attribute DomString name;<br /> <br /> readonly-Attribut-Objektmetadaten;<br /> };</p> </td> 
+   <td><p> <strong>TimedMetadata</strong>: interface TimedMetadata {<br /> const unsigned short METADATA_TYPE_TAG = 0 ;  <br /> const unsigned short METADATA_TYPE_ID3 = 1;  <br /> readonly-Attribut unsigned short type  <br /> readonly attribute long time;<br /> readonly attribute DomString id;<br /> readonly attribute DomString name;<br /> readonly attribute DomString content;  <br /> readonly-Attribut-Objektmetadaten;<br /> } </p> </td> 
+   <td><p>interface TimedMetadata {<br /> const unsigned short METADATA_TYPE_TAG = 0;<br /> const unsigned short METADATA_TYPE_ID3 = 1;<br /> readonly attribute unsigned short metadataType;<br /> readonly attribute long time;<br /> readonly attribute long id;<br /> readonly attribute Dom name;<br /> <br /> schreibgeschützte Attribut-Objektmetadaten;<br /> }</p> </td> 
   </tr> 
   <tr> 
    <td><strong>TimedMetadataList</strong>: (Keine Änderung für 2.0)</td> 
@@ -111,7 +111,7 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>Interface AdSignalingMode { <br /> const unsigned short MODE_DEFAULT, <br /> const unsigned short MODE_MANIFEST_CUES , <br /> const unsigned short MODE_SERVER_MAP , <br /> const unsigned short MODE_CUSTOM_RANGES <br /> };</p> </td> 
+   <td><p>Schnittstelle AdSignalingMode { <br /> const unsigned short MODE_DEFAULT, <br /> const unsigned short MODE_MANIFEST_CUES , <br /> const unsigned short MODE_SERVER_MAP , <br /> const unsigned short MODE_CUSTOM_RANGES <br /> };</p> </td> 
    <td>Dadurch wird der Schlüssel MetadataKeys::MANIFEST_CUES ersetzt.</td> 
   </tr> 
  </tbody> 
@@ -126,7 +126,7 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>Interface AdvertisingMetadata { <br /> attribute AdSignalingMode mode; <br /> attribute AdBreakWatchedPolicy adBreakAsWatched; <br /> attribute boolean livePreroll; <br /> attribute boolean delayAdLoading; <br /> };</p> </td> 
+   <td><p>Interface AdvertisingMetadata { <br /> Attribut AdSignalingMode; <br />-Attribut AdBreakWatchedPolicy adBreakAsWatched; <br /> attribute boolean livePreroll; <br />-Attribut boolean delayAdLoading ; <br /> };</p> </td> 
    <td>Diese Funktion wurde bereitgestellt von<p>MetadataKeys::ADVERTISING_METADATA</p> Schlüssel.</td> 
   </tr> 
  </tbody> 
@@ -141,7 +141,7 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>Interface CustomRangeMetadata { <br /> const unsigned short TYPE_MARK_RANGE; <br /> const unsigned short TYPE_DELETE_RANGE; <br /> const unsigned short TYPE_REPLACE_RANGE; <br /> Attribut unsigned short type; <br /> attribute boolean adaptSeekPosition; <br /> attribute TimeRangeList timeRangeList; <br /> };</p> </td> 
+   <td><p>Interface CustomRangeMetadata { <br /> const unsigned short TYPE_MARK_RANGE; <br /> const unsigned short TYPE_DELETE_RANGE; <br /> const unsigned short TYPE_REPLACE_RANGE; <br /> Attribut unsigned short type; <br />-Attribut boolean adaptSeekPosition; <br />-Attribut TimeRangeList timeRangeList; <br /> };</p> </td> 
    <td>(Neu für 2.0)</td> 
   </tr> 
  </tbody> 
@@ -156,7 +156,7 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface ReplaceTimeRange { <br /> attribute unsigned long begin; <br /> readonly-Attribut unsigned long end; <br /> Attribut unsignierte lange Dauer; <br /> attribute unsigned long replaceDuration; <br /> };</p> </td> 
+   <td><p>interface ReplaceTimeRange { <br /> attribute unsigned long begin; <br /> readonly-Attribut unsigned long end; <br /> Attribut unsigned long duration; <br />-Attribut unsigned long replaceDuration; <br /> };</p> </td> 
    <td>(Neu für 2.0)</td> 
   </tr> 
  </tbody> 
@@ -171,7 +171,7 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>Interface Placement { <br /> const unsigned short TYPE_MID_ROLL; <br /> const unsigned short TYPE_PRE_ROLL; <br /> const unsigned short TYPE_POST_ROLL; <br /> const unsigned short TYPE_SERVER_MAP; <br /> const unsigned short TYPE_CUSTOM_RANGE;<br /> readonly-Attribut unsigned short type <br /> readonly-Attribut mit langer Zeit; <br /> Readonly-Attribut mit langer Dauer; <br /> const unsigned short MODE_DEFAULT; <br /> const unsigned short MODE_INSERT; <br /> const unsigned short MODE_REPLACE; <br /> const unsigned short MODE_DELETE; <br /> const unsigned short MODE_MARK; <br /> const unsigned short MODE_FREE_REPLACE; <br /> readonly-Attribut unsigned short mode <br /> schreibgeschütztes Attribut TimeRange; <br /> };</p> </td> 
+   <td><p>Interface Placement { <br /> const unsigned short TYPE_MID_ROLL; <br /> const unsigned short TYPE_PRE_ROLL; <br /> const unsigned short TYPE_POST_ROLL; <br /> const unsigned short TYPE_SERVER_MAP; <br /> const unsigned short TYPE_CUSTOM_RANGE;<br /> readonly attribute unsigned short type; <br /> schreibgeschützte Attribut-lange Zeit; <br /> schreibgeschützte Attribut mit langer Dauer; <br /> const unsigned short MODE_DEFAULT; <br /> const unsigned short MODE_INSERT; <br /> const unsigned short MODE_REPLACE; <br /> const unsigned short MODE_DELETE; <br /> const unsigned short MODE_MARK; <br /> const unsigned short MODE_FREE_REPLACE; <br /> readonly-Attribut unsigned short mode; <br /> schreibgeschütztes Attribut TimeRange; <br /> };</p> </td> 
    <td>(Neu für 2.0)</td> 
   </tr> 
  </tbody> 
@@ -186,7 +186,7 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface Opportunity { <br /> readonly attribute DomString id; <br /> Platzierung der schreibgeschützten Attribute <br /> readonly-Attributobjekteinstellungen; <br /> readonly attribute Object customParameters; <br /> }; </p> </td> 
+   <td><p>interface Opportunity { <br /> readonly attribute DomString id; <br /> Platzierung des schreibgeschützten Attributs <br /> readonly-Attributobjekteinstellungen; <br /> readonly attribute Object customParameters; <br /> }; </p> </td> 
    <td>(Neu für 2.0)</td> 
   </tr> 
  </tbody> 
@@ -201,13 +201,13 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface Reservation { <br /> readonly attribute TimeRange range; <br /> readonly attribute long hold; <br /> }; </p> </td> 
+   <td><p>interface Reservation { <br /> readonly attribute TimeRange range range; <br /> readonly attribute long hold; <br /> }; </p> </td> 
    <td> (Neu für 2.0)</td> 
   </tr> 
  </tbody> 
 </table>
 
-### Timeline/TimelineItem/TimelineMarker {#timeline-timelineitem-timelinemarker}
+### Timeline / TimelineItem / TimelineMarker {#timeline-timelineitem-timelinemarker}
 
 <table> 
  <tbody> 
@@ -216,16 +216,16 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p><strong>Zeitschiene</strong>: interface Timeline <br /> { readonly attribute TimelineMarkerList timelineMarkers; <br /> readonly-Attribut TimelineItemList timelineItems; <br /> dublette convertToLocalTime( Dublette time); <br /> dublette convertToVirtualTime( Dublette); <br /> };</p> </td> 
+   <td><p><strong>Zeitschiene</strong>: interface Timeline  <br /> { readonly attribute TimelineMarkerList timelineMarkers;  <br /> readonly-Attribut TimelineItemList timelineItems;  <br /> dublette convertToLocalTime( Dublette time);  <br /> dublette convertToVirtualTime( Dublette);  <br /> };</p> </td> 
    <td><p>interface Timeline {<br /> readonly attribute TimelineMarkerList timelineMarkers;<br /> <br /> <br /> <br /> };</p> </td> 
   </tr> 
   <tr> 
-   <td><p> <strong>TimelineItem</strong>: interface TimelineItem:<br /> TimelineMarker {<br /> readonly attribute long id; <br /> readonly-Attribut TimeRange virtualRange; <br /> readonly-Attribut TimeRange localRange; <br /> schreibgeschützte Attribute boolean watched; <br /> Boolesches Attribut für schreibgeschützte temporäre Attribute; <br /> }; </p> </td> 
+   <td><p> <strong>TimelineItem</strong>: interface TimelineItem:<br /> TimelineMarker {<br /> readonly attribute long id;  <br /> readonly-Attribut TimeRange virtualRange;  <br /> readonly-Attribut TimeRange localRange;  <br /> schreibgeschützte Attribute boolean watched;  <br /> schreibgeschützte Attribut boolean temporär;  <br /> }; </p> </td> 
    <td>(Neu für 2.0)</td> 
   </tr> 
   <tr> 
    <td><strong>TimelineMarker</strong>: (Keine Änderung für 2.0)</td> 
-   <td><p>interface TimelineMarker {<br /> readonly attribute Dublette time;<br /> Dauer der Dublette von schreibgeschützten Attributen;<br /> };</p> </td> 
+   <td><p>interface TimelineMarker {<br /> readonly attribute Dublette time;<br /> readonly attribute Dublette duration;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -239,8 +239,8 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>Oberfläche AdBreak {<br /><br /> <br /> <br /> readonly Attribut-Dublette-Dauer;<br /> readonly-Attribut AdList-Anzeigen;<br /> <br /> <br /> readonly-Attribut AdInsertionType InsertionType;<br /> }; </p> </td> 
-   <td><p>interface AdBreak {<br /> readonly attribute Dublette time;<br /> readonly attribute Dublette replaceDuration;<br /> <br /> Dauer der Dublette von schreibgeschützten Attributen;<br /> readonly-Attribut AdList adList;<br /> <br /> readonly attribute DomString data;<br /> <br /> }; </p> </td> 
+   <td><p>interface AdBreak {<br /> <br /> <br /> <br /> Dublette des schreibgeschützten Attributs;<br /> schreibgeschützte AdList-Anzeigen;<br /> <br /> <br /> readonly-Attribut AdInsertionType InsertionType;<br /> }; </p> </td> 
+   <td><p>interface AdBreak {<br /> readonly attribute Dublette time;<br /> readonly attribute Dublette replaceDuration;<br /> <br /> readonly attribute Dublette duration;<br /> readonly attribute AdList adList;<br /> <br /> readonly attribute DomString data;<br /> <br /> }; </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -254,16 +254,16 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p> <strong>Anzeige</strong>: interface Ad {<br /> readonly attribute AdAsset primaryAsset;<br /> readonly-Attribut AdAssetList companionAssets;<br /> <br /> Dauer der Dublette von schreibgeschützten Attributen;<br /> readonly-Attribut DomString id;<br /> const unsigned short ADTYPE_LINEAR = 0;<br /> const unsigned short ADTYPE_NONLINEAR = 1;<br /> <br /> readonly-Attribut unsigned short adType;<br /> readonly-Attribut AdInsertionType adInsertionType; <br /> <br /> schreibgeschützte Attribute boolean clickable; <br /> readonly attribute boolean isCustomAdMarker;<br /> }; </p> </td> 
-   <td><p>interface Ad {<br /> readonly attribute AdAsset primaryAsset;<br /> readonly-Attribut AdAssetList companionAssets;<br /> <br /> Dauer der Dublette von schreibgeschützten Attributen;<br /> readonly-Attribut DomString id;<br /> const unsigned short ADTYPE_LINEAR = 0;<br /> const unsigned short ADTYPE_NONLINEAR = 1;<br /> <br /> readonly-Attribut unsigned short type<br /> readonly-Attribut AdInsertionType InsertionType; <br /> readonly-Attribut Object tracker;<br /> <br /> <br /> }; </p> </td> 
+   <td><p> <strong>Anzeige</strong>: interface Ad {<br /> readonly attribute AdAsset primaryAsset;<br /> readonly attribute AdAssetList companionAssets;<br /> <br /> readonly attribute Dublette duration;<br /> readonly attribute DomString id;<br /> const unsigned short ADTYPE_LINEAR = 0;<br /> const unsigned short ADTYPE_NONLINEAR = 1 ;<br /> <br /> readonly short attribute AdInsertionType;<br /> readonly-Attribut adInsertionType;  <br /> <br /> schreibgeschützte Attribute boolean clickable;  <br /> readonly attribute boolean isCustomAdMarker;<br /> }; </p> </td> 
+   <td><p>interface Ad {<br /> readonly attribute AdAsset primaryAsset;<br /> readonly attribute AdAssetList companionAssets;<br /> <br /> readonly attribute Dublette duration;<br /> readonly attribute DomString id;<br /> const unsigned short ADTYPE_LINEAR = 0;<br /> unst signed short ADTYPE_NONLINEAR = 1;<br /> <br /> readonly attribute unsigned short type;<br /> readonly attribute AdInsertionType insertType; <br /> readonly attribute Object tracker;<br /> <br /> <br /> }; </p> </td> 
   </tr> 
   <tr> 
    <td><strong>AdAsset</strong>: (Keine Änderung für 2.0)</td> 
-   <td><p>interface AdAsset {<br /> readonly attribute DomString id;<br /> Dauer der Dublette von schreibgeschützten Attributen;<br /> readonly-Attribut MediaResource-Ressource;<br /> readonly-Attribut AdClick adClick;<br /> readonly-Attribut-Objektmetadaten;<br /> };</p> </td> 
+   <td><p>interface AdAsset {<br /> readonly attribute DomString id;<br /> readonly attribute Dublette duration;<br /> readonly attribute MediaResource resource;<br /> readonly attribute AdClick;<br /> readonly attribute Object metadata;<br /> };</p> </td> 
   </tr> 
   <tr> 
    <td><strong>AdClick</strong>: (Keine Änderung für 2.0)</td> 
-   <td><p>interface AdClick {<br /> readonly attribute DomString id;<br /> readonly attribute DomString title;<br /> readonly-Attribut DomString url;<br /> };</p> </td> 
+   <td><p>interface AdClick {<br /> readonly attribute DomString id;<br /> readonly attribute DomString title;<br /> readonly attribute DomString url;<br /> };</p> </td> 
   </tr> 
   <tr> 
    <td><strong>AdList</strong>: (Keine Änderung für 2.0)</td> 
@@ -274,13 +274,13 @@ Tabellen in diesem Thema:
    <td><p>interface AdAssetList {<br /> readonly attribute unsigned long length;<br /> getter AdAsset(unsigned long index);<br /> };</p> </td> 
   </tr> 
   <tr> 
-   <td><p><strong>AdBannerAsset</strong>: interface AdBannerAsset: AdAsset<br /> {<br /> readonly attribute int width;<br /> readonly-Attribut int height;<br /> readonly-Attribut DomString staticUrl;<br /> readonly-Attribut DomString height;<br /> readonly-Attribut DomString width;<br /> };</p> </td> 
+   <td><p><strong>AdBannerAsset</strong>: interface AdBannerAsset: AdAsset<br /> {<br /> readonly attribute int width;<br /> readonly attribute int height;<br /> readonly attribute DomString staticUrl;<br /> readonly attribute DomString height;<br /> readonly attribute DomString width;<br /> };</p> </td> 
    <td> Neu in 2.0</td> 
   </tr> 
  </tbody> 
 </table>
 
-### AdBreakTimelineItem/AdTimelineItem {#adbreaktimelineitem-adtimelineitem}
+### AdBreakTimelineItem / AdTimelineItem {#adbreaktimelineitem-adtimelineitem}
 
 <table> 
  <tbody> 
@@ -289,15 +289,15 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p> <strong>AdBreakTimelineItem</strong>: interface AdBreakTimelineItem: TimelineItem { <br /> readonly attribute AdBreak adBreak; <br /> readonly-Attribut AdTimelineItemList-Elemente; <br /> }; </p> </td> 
+   <td><p> <strong>AdBreakTimelineItem</strong>: interface AdBreakTimelineItem: TimelineItem {  <br /> readonly attribute AdBreak adBreak;  <br /> readonly-Attribut AdTimelineItemList-Elemente;  <br /> }; </p> </td> 
    <td> (Neu für 2.0)</td> 
   </tr> 
   <tr> 
-   <td><p><strong>AdTimelineItem</strong>: interface AdTimelineItem: TimelineItem { <br /> readonly attribute AdBreak adBreak; <br /> schreibgeschützte Attribut-Anzeige; <br /> }; </p> </td> 
+   <td><p><strong>AdTimelineItem</strong>: interface AdTimelineItem: TimelineItem {  <br /> readonly attribute AdBreak adBreak;  <br /> schreibgeschützte Attribut-Anzeige;  <br /> }; </p> </td> 
    <td> (Neu für 2.0)</td> 
   </tr> 
   <tr> 
-   <td><p><strong>AdBreakTimelineItemList</strong>: interface AdBreakTimelineItemList { <br /> readonly attribute unsigned long length; <br /> getter AdBreakTimelineItem (unsigned lo ng index); <br /> };</p> </td> 
+   <td><p><strong>AdBreakTimelineItemList</strong>: interface AdBreakTimelineItemList {  <br /> readonly attribute unsigned long length;  <br /> getter AdBreakTimelineItem (unsigned lo ng index);  <br /> };</p> </td> 
    <td> (Neu für 2.0)</td> 
   </tr> 
  </tbody> 
@@ -312,28 +312,28 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface AdBreakPolicy {<br /> readonly attribute short AD_BREAK_POLICY_SKIP;<br /> readonly-Attribut short AD_BREAK_POLICY_PLAY;<br /> readonly-Attribut short AD_BREAK_POLICY_REMOVE;<br /> readonly-Attribut short AD_BREAK_POLICY_REMOVE_AFTER_PLAY;<br /> };</p> </td> 
-   <td><p> interface AdPolicyConstants {<br /> readonly attribute short AD_BREAK_POLICY_SKIP;<br /> readonly-Attribut short AD_BREAK_POLICY_PLAY;<br /> readonly-Attribut short AD_BREAK_POLICY_REMOVE;<br /> readonly Attribut short AD_BREAK_POLICY_REMOVE_AFTER_PLAY;}<br /> ...</p> </td> 
+   <td><p>interface AdBreakPolicy {<br /> readonly attribute short AD_BREAK_POLICY_SKIP;<br /> readonly attribute short AD_BREAK_POLICY_PLAY;<br /> readonly attribute short AD_BREAK_POLICY_REMOVE;<br /> readonly attribute short AD_BREAK_POLICY_REMOVE_REMOVE TER_PLAY;<br /> };</p> </td> 
+   <td><p> interface AdPolicyConstants {<br /> readonly attribute short AD_BREAK_POLICY_SKIP;<br /> readonly attribute short AD_BREAK_POLICY_PLAY;<br /> readonly attribute short AD_BREAK_POLICY_REMOVE;<br /> readonly attribute short AD_BREAK_POLICY_REMOVE NACH_PLAY;}<br /> ...</p> </td> 
   </tr> 
   <tr> 
-   <td><p> interface AdBreakWatchedPolicy {<br /> readonly attribute short AD_BREAK_AS_WATCHED_ON_BEGIN;<br /> readonly-Attribut short AD_BREAK_AS_WATCHED_ON_END;<br /> readonly-Attribut short AD_BREAK_AS_WATCHED_NEVER;<br /> }; </p> </td> 
-   <td><p> ...<br /> readonly-Attribut short AD_BREAK_AS_WATCHED_ON_BEGIN;<br /> readonly-Attribut short AD_BREAK_AS_WATCHED_ON_END;<br /> readonly-Attribut short AD_BREAK_AS_WATCHED_NEVER;<br /> ...</p> </td> 
+   <td><p> interface AdBreakWatchedPolicy {<br /> readonly attribute short AD_BREAK_AS_WATCHED_ON_BEGIN;<br /> readonly attribute short AD_BREAK_AS_WATCHED_ON_END;<br /> readonly attribute short AD_BREAK_AS_WATCHED_NEVER;&lt;a3/ };<br /> </p> </td> 
+   <td><p> ...<br /> readonly attribute short AD_BREAK_AS_WATCHED_ON_BEGIN;<br /> readonly attribute short AD_BREAK_AS_WATCHED_ON_END;<br /> readonly attribute short AD_BREAK_AS_WATCHED_NEVER;<br />...</p> </td> 
   </tr> 
   <tr> 
-   <td><p>interface AdPolicy {<br /> readonly attribute short AD_POLICY_PLAY;<br /> readonly-Attribut short AD_POLICY_PLAY_FROM_AD_BEGIN;<br /> readonly-Attribut short AD_POLICY_PLAY_FROM_AD_BREAK_BEGIN; readonly-Attribut short AD_POLICY_SKIP_TO_NEXT_AD_IN_BREAK;<br /> <br /> readonly-Attribut short AD_POLICY_SKIP_AD_BREAK;<br /> };</p> </td> 
-   <td><p> ... <br /> readonly-Attribut short AD_POLICY_PLAY;<br /> readonly-Attribut short AD_POLICY_PLAY_FROM_AD_BEGIN;<br /> readonly-Attribut short AD_POLICY_PLAY_FROM_AD_BREAK_BEGIN;<br /> readonly-Attribut short AD_POLICY_SKIP_TO_NEXT_AD_IN_BREAK;<br /> readonly-Attribut short AD_POLICY_SKIP_AD_BREAK;<br /> ...</p> </td> 
+   <td><p>interface AdPolicy {<br /> readonly attribute short AD_POLICY_PLAY;<br /> readonly attribute short AD_POLICY_PLAY_OF_AD_BEGIN;<br /> readonly attribute short AD_POLICY_PLAY_OF_AD_BREAK_BEGIN; readonly-Attribut short AD_POLICY_SKIP_TO_NEXT_AD_IN_BREAK;<br /> <br /> readonly-Attribut short AD_POLICY_SKIP_AD_BREAK;<br /> };</p> </td> 
+   <td><p> ... <br /> readonly attribute short AD_POLICY_PLAY;<br /> readonly attribute short AD_POLICY_PLAY_FROM_AD_BEGIN;<br /> readonly attribute short AD_POLICY_PLAY_OF_AD_BREAK_BEGIN;<br /> readonly attribute short AD_POLICY_SKIP_TO_NEXT_AD_IN_BRET AK;<br /> readonly attribute short AD_POLICY_SKIP_AD_BREAK;<br /> ...</p> </td> 
   </tr> 
   <tr> 
-   <td><p>interface AdPolicyMode {<br /> readonly attribute short AD_POLICY_MODE_PLAY;<br /> readonly-Attribut short AD_POLICY_MODE_SEEK;<br /> readonly-Attribut short AD_POLICY_MODE_TRICKPLAY;<br /> };</p> </td> 
-   <td><p> ...<br /> {readonly attribute short AD_POLICY_MODE_PLAY;<br /> readonly-Attribut short AD_POLICY_MODE_SEEK;<br /> readonly-Attribut short AD_POLICY_MODE_TRICKPLAY;<br /> };</p> </td> 
+   <td><p>interface AdPolicyMode {<br /> readonly attribute short AD_POLICY_MODE_PLAY;<br /> readonly attribute short AD_POLICY_MODE_SEEK;<br /> readonly attribute short AD_POLICY_MODE_TRICKPLAY;<br /> };</p> </td> 
+   <td><p> ...<br /> {readonly attribute short AD_POLICY_MODE_PLAY;<br /> readonly attribute short AD_POLICY_MODE_SEEK;<br /> readonly attribute short AD_POLICY_MODE_TRICKPLAY;<br /> }</p> </td> 
   </tr> 
   <tr> 
-   <td><p>interface AdPolicyInfo {<br /> readonly attribute AdBreakTimelineItemList <br /> adBreakTimelineItems;<br /> readonly-Attribut AdTimelineItem adTimelineItem;<br /> readonly attribute Dublette currentTime;<br /> readonly attribute Dublette searchToTime;<br /> dublette der Attribute readonly;<br /> readonly attribute short mode //AdPolicyMode<br /> };</p> </td> 
-   <td><p>interface AdPolicyInfo {<br /> readonly attribute AdBreakPlacementList <br /> adBreakPlacements;<br /> schreibgeschützte Attribut-Anzeige;<br /> readonly attribute Dublette currentTime;<br /> readonly attribute Dublette searchToTime;<br /> dublette der Attribute readonly;<br /> readonly attribute short mode //AdPolicyMode<br /> };</p> </td> 
+   <td><p>interface AdPolicyInfo {<br /> readonly attribute AdBreakTimelineItemList <br /> adBreakTimelineItems;<br /> readonly attribute AdTimelineItem adTimelineItem;<br /> readonly attribute Dublette currentTime;<br /> readOnly attribute Dublette readonly attribute Dublette rate;<br /> readonly attribute short mode //AdPolicyMode<br /> };<br /></p> </td> 
+   <td><p>interface AdPolicyInfo {<br /> readonly attribute AdBreakPlacementList <br /> adBreakPlacements;<br /> readonly attribute Ad Anzeige;<br /> readonly attribute Dublette currentTime;<br /> readonly attribute Dublette searchToTime;<br /> readonly attribute Dublette rate;<br /> schreibgeschützt Attribut-Kurzmodus; //AdPolicyMode<br /> };</p> </td> 
   </tr> 
   <tr> 
-   <td><p>interface AdPolicySelector {<br /> /**<br /> * AdbreakPolicy selectForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectPolicyForAdBreakCallbackFunc;<br /> /**<br /> * AdBreakTimelineItemList selectAdBreaksToPlay(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectAdBreaksToPlayCallbackFunc;<br /> /**<br /> * AdPolicy selectPolicyForSeekIntoAd(AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectPolicyForSeekIntoAdCallbackFunc; <br /> /**<br /> * AdBreakWatchedPolicy selectWatchedPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectWatchedPolicyForAdBreakCallbackFunc;<br /> };</p> </td> 
-   <td><p>interface AdPolicySelector {<br /> /**<br /> * AdbreakPolicy selectForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectPolicyForAdBreakFuncCallback;<br /> /**<br /> * AdBreakPlacementList selectAdBreaksToPlay(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectAdBreaksToPlayCallback;<br /> /**<br /> * AdPolicy selectPolicyForSeekIntoAd(AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectPolicyForSeekIntoAdCallback; <br /> /**<br /> * AdBreakAsWatched selectWatchedPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectWatchedPolicyForAdBreakCallback;<br /> };</p> </td> 
+   <td><p>interface AdPolicySelector {<br /> /**<br /> * AdbreakPolicy selectPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectPolicyForAdBreakCallbackFunc;<br /> /* a6/&gt; * AdBreakTimelineItemList selectAdBreaksToPlay(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectAdBreaksToPlayCallbackFunc;<br /> /**<br /> * AdPolicy selectPolicyForSeekIntoAd(AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectPolicyForSeekIntoAdCallbackFunc; <br /> /**<br /> * AdBreakWatchedPolicy selectWatchedPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectWatchedPolicyForAdBreak akCallbackFunc;<br /> };<br /></p> </td> 
+   <td><p>interface AdPolicySelector {<br /> /**<br /> * AdbreakPolicy selectPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectPolicyForAdBreakFuncCallback;<br /> /* a6/&gt; * AdBreakPlacementList selectAdBreaksToPlay(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectAdBreaksToPlayCallback;<br /> /*<br /> * AdPolicy select PolicyForSeekIntoAd(AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectPolicyForSeekIntoAdCallback; <br /> /**<br /> * AdBreakAsWatched selectWatchedPolicyForAdBreak(<br /> * AdPolicyInfo adPolicyInfo);<br /> */<br /> attribute Object selectWatchedPolicyForAdBreak akCallback;<br /> };<br /></p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -362,8 +362,8 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface AdBreakPlacement : TimelineOperation {<br /> readonly-Attribut AdBreak adBreak;<br /> Platzierung der schreibgeschützten Attribute // From TimelineOperation<br /> readonly attribute Dublette time;<br /> Dauer der Dublette von schreibgeschützten Attributen;<br /> };</p> </td> 
-   <td><p>interface AdBreakPlacement {<br /> readonly attribute AdBreak adBreak;<br /> Platzierung der schreibgeschützten Attribute<br /> dublette der Attribute readonly;<br /> Dauer der Dublette von schreibgeschützten Attributen;<br /> };</p> </td> 
+   <td><p>interface AdBreakPlacement : TimelineOperation {<br /> readonly attribute AdBreak adBreak;<br /> readonly attribute Placement placement; // From TimelineOperation<br /> readonly attribute Dublette time;<br /> readonly attribute Dublette duration;<br /> };</p> </td> 
+   <td><p>interface AdBreakPlacement {<br /> readonly attribute AdBreak adBreak;<br /> readonly attribute Placement placement;<br /> readonly attribute Dublette time;<br /> readonly attribute Dublette duration;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -377,7 +377,7 @@ Tabellen in diesem Thema:
    <th>1.3 API</th> 
   </tr> 
   <tr> 
-   <td><p>interface AuditudeSettings: AdvertisingMetadata { <br /> attribute DomString zoneId; <br /> attribute DomString mediaId; <br /> attribute DomString defaultMediaId ; <br /> attribute DomString domain; <br /> attribute Object targettingInfo; <br /> attribute Object customParameters; <br /> attribute Boolean creativePackingEnabled;<br /> attribute Boolean showStaticBanners;<br /> };</p> </td> 
+   <td><p>interface AuditudeSettings: AdvertisingMetadata { <br /> attribute DomString zoneId; <br />-Attribut DomString mediaId; <br />-Attribut DomString defaultMediaId ; <br />-Attribut DomString-Domäne; <br /> attribute Object targettingInfo; <br /> attribute Object customParameters; <br /> attribute Boolean creativePackaingEnabled ;<br /> attribute Boolean showStaticBanners ;<br /> };</p> </td> 
    <td>Die Funktion wurde durch den Schlüssel MetadataKeys::AUDITUDE_METADATA_KEY bereitgestellt.</td> 
   </tr> 
  </tbody> 
@@ -402,8 +402,8 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface MediaPlayerItemConfig {<br /> attribute ContentFactory adFactory;<br /> attribute StringList subscribeTags;<br /> <br /> attribute StringList adTags;<br /> <br /> <br /> attribute AdSignalingMode adSignalingMode;<br /> attribute CustomRangeMetadata customRangeMetadata;<br /> attribute NetworkConfiguration networkConfiguration;<br /> attribute AdvertisingMetadata advertisingMetadata;<br /> attribute Boolean useHardwareDecoder;<br /> };</p> </td> 
-   <td><p>interface MediaPlayerConfig {<br /><br /> <br /> <br /> attribute StringList adTags;<br /> attribute StringList subscribedTags;<br /> attribute MediaPlayerClientFactory clientFactory;<br /> <br /> <br /> <br /> <br /> <br /> };</p> </td> 
+   <td><p>interface MediaPlayerItemConfig {<br /> attribute ContentFactory adFactory;<br /> attribute StringList subscribeTags;<br /> <br /> attribute StringList adTags;<br /> <br /> <br /> attribute AdSignalingMode adSignalingMode;<br /> attribute CustomRange ata customRangeMetadata;<br /> attribute NetworkConfiguration networkConfiguration;<br /> attribute AdvertisingMetadata advertisingMetadata;<br /> attribute Boolean useHardwareDecoder;<br /> };</p> </td> 
+   <td><p>interface MediaPlayerConfig {<br /> <br /> <br /> <br /> attribute StringList adTags;<br /> attribute StringList subscribedTags;<br /> attribute MediaPlayerClientFactory clientFactory;<br /> <br /> <br /> <br /> &lt;a9/&gt; a11/&gt; };<br /><br /></p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -418,7 +418,7 @@ Tabellen in diesem Thema:
   </tr> 
   <tr> 
    <td><p>interface ContentFactory {<br /> /*<br /> * AdPolicySelector retrieveAdPolicySelector(<br /> * MediaPlayerItem item);<br /> */<br /> attribute Object retrieveAdPolicySelectorCallbackFunc;<br /> };</p> </td> 
-   <td><p>interface MediaPlayerClientFactory {<br /> /*<br /> * AdPolicySelector retrieveAdPolicySelector(<br /> * MediaPlayerItem-Element);<br /> */<br /> attribute Object retrieveAdPolicySelectorFunc;<br /> };</p> </td> 
+   <td><p>interface MediaPlayerClientFactory {<br /> /*<br /> * AdPolicySelector retrieveAdPolicySelector(<br /> * MediaPlayerItem);<br /> */<br /> attribute Object retrieveAdPolicySelectorFunc;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -487,7 +487,7 @@ Tabellen in diesem Thema:
   </tr> 
   <tr> 
    <td>Keine Änderung für 2.0.</td> 
-   <td><p>interface DRMMetadata<br /> {<br /> readonly attribute DomString serverUrl;<br /> readonly-Attribut DomString licenseId;<br /> readonly-Attribut DRMPopolicyArray-Richtlinien; <br /> };</p> </td> 
+   <td><p>interface DRMMetadata<br /> {<br /> readonly attribute DomString serverUrl;<br /> readonly attribute DomString licenseId;<br /> readonly attribute DRMPopolicyArray policies; <br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -502,7 +502,7 @@ Tabellen in diesem Thema:
   </tr> 
   <tr> 
    <td><p>interface DRMPlaybackTimeWindow {<br /> readonly attribute int playPeriodInSeconds;<br /> readonly attribute long playStartDate;<br /> readonly attribute long playEndDate;<br /> };</p> </td> 
-   <td><p>interface DRMPlaybackTimeWindow {<br /> readonly attribute int periodInSeconds;<br /> readonly-Attribut int startDate;<br /> readonly-Attribut int endDate;<br /> };</p> </td> 
+   <td><p>interface DRMPlaybackTimeWindow {<br /> readonly attribute int periodInSeconds;<br /> readonly attribute int startDate;<br /> readonly attribute int endDate;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -517,7 +517,7 @@ Tabellen in diesem Thema:
   </tr> 
   <tr> 
    <td>Keine Änderung für 2.0.</td> 
-   <td><p>interface DRMLicense {<br /> readonly attribute Uint8Array bytes;<br /> readonly-Attribut Date licenseStartDate;<br /> readonly-Attribut Date licenseEndDate;<br /> readonly-Attribut Date offlineStorageStartDate;<br /> readonly-Attribut Date offlineStorageEndDate; <br /> readonly-Attribut DomString serverUrl;<br /> readonly-Attribut DomString licenseID;<br /> readonly-Attribut DomString policyID;<br /> readonly-Attribut DRMPlaybackTimeWindow playTimeWindow;<br /> readonly attribute Object customProperties;<br /> }; </p> </td> 
+   <td><p>interface DRMLicense {<br /> readonly attribute Uint8Array bytes;<br /> readonly attribute Date licenseStartDate;<br /> readonly attribute Date licenseEndDate;<br /> readonly attribute Date offlineStorageStartDate;<br /> readonly attribute Date offlineStorageEndDate; <br /> readonly attribute DomString serverUrl;<br /> readonly attribute DomString licenseID;<br /> readonly attribute DomString policyID;<br /> readonly attribute DRMPlaybackTimeWindow playTimeWindow;<br /> readonly attribute Object customProperties;<br /> }; </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -531,8 +531,8 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface DRMLicenseDomain {<br /> readonly attribute DomString authenticationDomain;<br /> readonly-Attribut DRMAuthenticationMethod authenticationMethod; <br /> readonly-Attribut DomString serverUrl;<br /> };</p> </td> 
-   <td><p>interface DRMLicenseDomain {<br /> readonly attribute DomString authDomain;<br /> readonly-Attribut DRMAuthenticationMethod authMethod; <br /> readonly-Attribut DomString serverURL;<br /> };</p> </td> 
+   <td><p>interface DRMLicenseDomain {<br /> readonly attribute DomString authenticationDomain;<br /> readonly attribute DRMAuthenticationMethod authenticationMethod; <br /> readonly attribute DomString serverUrl;<br /> };</p> </td> 
+   <td><p>interface DRMLicenseDomain {<br /> readonly attribute DomString authDomain;<br /> readonly attribute DRMAuthenticationMethod authMethod; <br /> readonly attribute DomString serverURL;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -546,8 +546,8 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface DRMPopolicy<br /> {<br /> readonly attribute DomString authenticationDomain;<br /> readonly-Attribut DRMAuthenticationMethod authenticationMethod;<br /> <br /> readonly-Attribut DomString displayName;<br /> readonly-Attribut DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
-   <td><p>interface DRMPopolicy<br /> {<br /> readonly attribute DomString authDomain;<br /> readonly-Attribut DRMAuthenticationMethod authMethod;<br /> readonly attribute DomString dispName;<br /> readonly-Attribut DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
+   <td><p>interface DRMPopolicy<br /> {<br /> readonly attribute DomString authenticationDomain;<br /> readonly attribute DRMAuthenticationMethod authenticationMethod;<br /> <br /> readonly attribute DomString displayName;<br /> readonly attribute DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
+   <td><p>interface DRMPopolicy<br /> {<br /> readonly attribute DomString authDomain;<br /> readonly attribute DRMAuthenticationMethod authMethod;<br /> readonly attribute DomString dispName;<br /> readonly attribute DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -561,11 +561,11 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface DRMManager: EventTarget {<br /> void acquisitionLicense(DRMMetadata metadata, <br /> DRMAcquireLicenseSettings setting, <br /> DRMAquireLicenseListener listener);<br /> void acquisitionPreviewLicense(DRMMetadata metadata, <br /> DRMAquireLicenseListener listener);<br /> void authentication(DRMMetadata metadata, <br /> DomString url,<br /> DomString&amp;authenticationDomain, <br /> DomString user, <br /> DomString password, <br /> DRMAuthenticateListener listener);<br /> <br /> DRMMetadata createMetadataFromBytes(<br /> Uint8Array array, DRMErrorListener listener);<br /> void initialize(DRMOperationCompleteListener-Listener);<br /> attribute long maxOperationTime;<br /> <br /> void joinLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> boolean forceRefresh, <br /> DRMOperationCompleteListener listener);<br /> void leaveLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> DRMOperationCompleteListener listener);<br /> <br /> void resetDRM(DRMOperationCompleteListener-Listener);<br /> void returnLicense(DomString serverURL, <br /> DomString licenseID, <br /> DomString policyID, <br /> boolean commitSofort,<br /> DRMReturnLicenseListener);<br /> void setAuthenticationToken(<br /> DRMMetadata-Metadaten, <br /> DomString authenticationDomain, <br /> Uint8Array-Token, <br /> DRMOperationCompleteListener);<br /> void storeLicenseBytes(Uint8Array licenseBytes, <br /> DRMOperationCompleteListener listener);<br /> };</p> </td> 
-   <td><p>interface DRMManager: EventTarget {<br /> void acquisitionLicense(DRMMetadata metadata, <br /> DRMAcquireLicenseSettings setting, <br /> EventContext eventContext);<br /> void acquisitionPreviewLicense(DRMMetadata metadata, <br /> EventContext eventContext);<br /> void authentication(DRMMetadata metadata, <br /> DomString url,<br /> DomString&amp;authenticationDomain, <br /> DomString user, <br /> DomString password, <br /> EventContext eventContext);<br /> <br /> DRMMetadata createMetadataFromBytes(<br /> Uint8Array array, EventContext eventContext);<br /> void initialize(EventContext eventContext);<br /> attribute long maxOperationTime;<br /> <br /> void joinLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> boolean forceRefresh, <br /> EventContext eventContext);<br /> void leaveLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> EventContext eventContext);<br /> <br /> void resetDRM(EventContext eventContext);<br /> void returnLicense(DomString serverURL, <br /> DomString licenseID,<br /> DomString policyID, <br /> boolean commitSofort,<br /> EventContext eventContext);<br /> void setAuthenticationToken(<br /> DRMMetadata metadata, <br /> DomString authenticationDomain, <br /> Uint8Array token, <br /> EventContext eventContext);<br /> void storeLicenseBytes(Uint8Array licenseBytes, <br /> EventContext eventContext);<br /> };</p> </td> 
+   <td><p>interface DRMManager: EventTarget {<br /> void acquisitionLicense(DRMMetadata metadata, <br /> DRMAcquireLicenseSettings setting, <br /> DRMAquireLicenseListener listener);<br /> void acquisitionPreviewLicense(DRMMetadata metadata, <br /> DRMAquireLicenseListener); <br /> void authentication(DRMMetadata metadata, <br /> DomString url,<br /> DomString&amp;authenticationDomain, <br /> DomString user, <br /> DomString password, <br /> DRMAuthenticateListener);<br /> &lt;a1/&gt; DRMMetadata createMetadataFromBytes(<br /> Uint8Array array, DRMErrorListener listener);<br /> void initialize(DRMOperationCompleteListener);<br /> attribute long maxOperationTime;<br /> &lt;a 17/&gt; void joinLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> boolean forceRefresh, <br /> <br /><br /> DRMOperationCompleteListener);<br /> void leaveLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> DRMOperationCompleteListener listener);<br /> <br /> void resetDRM(DRMOperationCompleteListener);&gt; void returnLicense(DomString serverURL, <br /> DomString licenseID, <br /> DomString policyID, <br /> boolean commitSofort,<br /> DRMReturnLicenseListener);<br /> void setAuthenticationToken(<br /> Metadaten von Metadaten, <br /> DomString authenticationDomain, <br /> Uint8Array token, <br /> DRMOperationCompleteListener);<br /> void storeLicenseBytes(Uint8Array licenseBytes, <br /> DRMOpertes ationCompleteListener (Listener);<br /> };<br /></p> </td> 
+   <td><p>interface DRMManager: EventTarget {<br /> void acquisitionLicense(DRMMetadata metadata, <br /> DRMAcquireLicenseSettings setting, <br /> EventContext eventContext);<br /> void acquisitionPreviewLicense(DRMMetadata metadata, <br /> EventContext eventContext);<br /> authentication ate(DRMMetadata metadata, <br /> DomString url,<br /> DomString&amp;authenticationDomain, <br /> DomString user, <br /> DomString password, <br /> EventContext eventContext);<br /> <br /> DRMMetadata create MetadataFromBytes(<br /> Uint8Array array, EventContext eventContext);<br /> void initialize(EventContext eventContext);<br /> attribute long maxOperationTime;<br /> <br /> void joinLicenseDomain( 8/&gt; DRMLicenseDomain licenseDomain, <br /> boolean forceRefresh, <br /> EventContext eventContext);<br /> <br /> void leaveLicenseDomain(<br /> DRMLicenseDomain licenseDomain, <br /> EventContext eventContext);<br /> <br /> void resetDRM(EventContext eventContext);<br /> void returnLicense(DomString serverURL, <br /> DomString licenseID, 6/&gt; DomString policyID, <br /> boolean commitSofort,<br /> EventContext eventContext);<br /> void setAuthenticationToken(<br /> DRMMetadata metadata, <br /> DomString authenticationDomain, <br /> Uint8Array token <br /> EventContext eventContext);<br /> void storeLicenseBytes(Uint8Array licenseBytes, <br /> EventContext eventContext);<br /> };<br /></p> </td> 
   </tr> 
   <tr> 
-   <td><p>class DRMErrorListener : <br /> public psdkutils::PSDKInterfaceWithUserData {<br /> public:<br /> virtual void onDRMError(uint32_t major, <br /> uint32_t minderer, <br /> const psdkutils: PSDKString&amp; errorString, <br /> const psdkutils::PSDKString&amp; errorServerUrl) = 0;<br /> <br /> protected:<br /> virtual ~DRMErrorListener() {}<br /> }</p> </td> 
+   <td><p>class DRMErrorListener : <br /> public psdkutils::PSDKInterfaceWithUserData {<br /> public:<br /> virtual void onDRMError(uint32_t major, <br /> uint32_t minor, <br /> const psdkutils: PSDKString&amp; errorString, <br /> const psdkutils::PSDKString&amp; errorServerUrl) = 0;<br /> <br /> protected:<br /> virtual ~DRMErrorListener() {}<br /> }</p> </td> 
    <td>Ereignis/Schnittstelle/Beschreibung 
     <ul> 
      <li>kEventDRMOperationError<p>/ DRMOperationErrorEvent</p> <p>Wenn während einer der asynchronen Methoden von DRMManger ein Fehler auftritt.</p> </li> 
@@ -584,14 +584,14 @@ Tabellen in diesem Thema:
     </ul> </td> 
   </tr> 
   <tr> 
-   <td><p>Klasse DRMAuthenticateListener : <br /> public DRMErrorListener {<br /> public:<br /> virtual void onAuthenticationComplete(<br /> psdkutils::PSDKImmutableByteArray* <br /> authenticationToken) = 0;<br /> <br /> protected:<br /> virtual ~DRMAuthenticateListener() {}<br /> }</p> </td> 
+   <td><p>Klasse DRMAuthenticateListener : <br /> public DRMErrorListener {<br /> public:<br /> virtual void onAuthenticationComplete(<br /> psdkutils::PSDKImmutableByteArray* <br /> authenticationToken) = 0;<br /> <br /> protected:<br /> virtual DRMAuthenticate Listener() {}<br /> }</p> </td> 
    <td>Ereignis/Schnittstelle/Beschreibung 
     <ul> 
      <li>kEventDRMAuthenticationComplete<p>/ DRMAuthenticationCompleteEvent</p> <p>Wenn DRMManager::authentication-Methodenaufruf erfolgreich ist.</p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td><p>Klasse DRMAquireLicenseListener: <br /> public DRMErrorListener {<br /> public:<br /> virtual void onLicenseAcquired(const DRMLicense*) = 0;<br /> <br /> protected:<br /> virtual ~DRMAquireLicenseListener() {}<br /> };</p> </td> 
+   <td><p>Klasse DRMAquireLicenseListener: <br /> public DRMErrorListener {<br /> public:<br /> virtual void onLicenseAcquired(const DRMLicense*) = 0;<br /><br /> protected:<br /> virtual ~DRMAquireLicenseListener() {}<br /> };</p> </td> 
    <td>Ereignis/Schnittstelle/Beschreibung 
     <ul> 
      <li>kEventDRMPreviewLicenseAcquired<p>/ DRMLicenseAcquiredEvent</p> <p>Wenn der Methodenaufruf DRMManager::acquisitionPreviewLicense erfolgreich ist.</p> </li> 
@@ -608,7 +608,7 @@ Tabellen in diesem Thema:
  </tbody> 
 </table>
 
-## Änderungen am allgemeinen Wiedergabe-API-Element für 2.0 {#generic-playback-api-element-changes-for}
+## Änderungen am generischen Wiedergabe-API-Element für 2.0 {#generic-playback-api-element-changes-for}
 
 Diese Tabellen vergleichen die generischen Wiedergabe-API-Elemente zwischen JavaScript TVSDK 1.3 und 2.0.
 
@@ -630,8 +630,8 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface MediaResource {<br /> attribute DomString url; <br /> Attribut unsigned short type;<br /> Attribut-Objektmetadaten;<br /> const unsigned short TYPE_HLS;<br /> const unsigned short TYPE_HDS;<br /> const unsigned short TYPE_DASH;<br /> const unsigned short TYPE_CUSTOM;<br /> const unsigned short TYPE_UNKNOWN;<br /> };</p> </td> 
-   <td><p>interface MediaResource {<br /> attribute DomString url;<br /> attribute DomString type;<br /> Attribut-Objektmetadaten;<br /> <br /> <br /> <br /> <br /> <br /> };</p> </td> 
+   <td><p>interface MediaResource {<br /> attribute DomString url; <br /> Attribut unsigned short type;<br /> Attribut Object metadata;<br /> const unsigned short TYPE_HLS;<br /> const unsigned short TYPE_HDS;<br /> const unsigned short TYPE_DASH;<br /> const unsigned short TYPE_CUSTOM;<br /> const unsigned short TYPE UNBEKANNT;<br /> }</p> </td> 
+   <td><p>interface MediaResource {<br /> attribute DomString url;<br /> attribute DomString type;<br /> attribute Object metadata;<br /> <br /> <br /> <br /> <br /> <br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -645,17 +645,17 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface MediaPlayer : EventTarget<br /> {<br /> void prepareToPlay( Dublette position);<br /> void play();<br /> void pause();<br /> void search( Dublette position);<br /> void searchToLocal( Dublette position);<br /> void reset();<br /> void release();<br /> void replaceCurrentItem(MediaPlayerItem item);<br /> void replaceCurrentResource(MediaResourceSource, <br /> MediaPlayerItemConfig config); <br /> void reset();<br /> void restore();<br /> void notificationClick();<br /> <br /> readonly-Attribut TimeRange playRange;<br /> readonly-Attribut TimeRange seekableRange;<br /> readonly attribute Dublette currentTime;<br /> readonly attribute Dublette localTime;<br /> readonly-Attribut TimeRange bufferedRange;<br /> readonly-Attribut DRMManager drmManager;<br /> readonly-Attribut MediaPlayerItem currentItem;<br /> <br /> // PlayerStatus<br /><br /> <br /> const unsigned short PLAYER_STATUS_INITIALIZED;<br /> const unsigned short PLAYER_STATUS_PREPARING;<br /> const unsigned short PLAYER_STATUS_PREPARED;<br /> const unsigned short PLAYER_STATUS_PLAYING;<br /> const unsigned short PLAYER_STATUS_PAUSED;<br /> const unsigned short PLAYER_STATUS_SEEKING;<br /> const unsigned short PLAYER_STATUS_COMPLETE;<br /> const unsigned short PLAYER_STATUS_ERROR;<br /> const unsigned short PLAYER_STATUS_RELEASED;<br /> <br /> readonly-Attribut unsigned short status;<br /> <br /> Attribut für unsigniertes Leervolumen;<br /> attribute ABRControlParameters abrControlParameters;<br /> attribute BufferControlParameters bufferControlParameters;<br /> <br /> enthält unsignierte KurzvisIBLE; //Für CC-Sichtbarkeit<br /> bedeutet nicht signierte Leerzeichen INVISIBLE. //Für CC Sichtbarkeitsattribut<br /> unsigned short ccVisibility;<br /> attribute TextFormat ccStyle;<br /> readonly-Attribut Play-backMetrics playMetrics;<br /> <br /> dublette des Attributs;<br /> attribute MediaPlayerView-Ansicht;<br /> readonly-Attribut Timeline-Zeitleiste;<br /> attribute Dublette currentTimeUpdateInterval; <br /> // Festlegen dieser Einstellung wird für 2.0<br /> } nicht unterstützt;</p> </td> 
-   <td><p>interface MediaPlayer : EventTarget<br /> {<br /> void prepareToPlay( int position);<br /> void play();<br /> void pause();<br /> void search( int position);<br /> void searchToLocalTime( int position);<br /> void reset();<br /> void release();<br /> void replaceCurrentItem(MediaResource source);<br /> <br /> <br /> <br /> <br /> <br /> <br /> readonly-Attribut TimeRange playRange;<br /> readonly-Attribut TimeRange seekableRange;<br /> readonly attribute Dublette currentTime;<br /> readonly attribute Dublette localTime;<br /> readonly-Attribut TimeRange bufferedRange;<br /> readonly-Attribut DRMManager drmManager;<br /> readonly-Attribut MediaPlayerItem currentItem;<br /> <br /> // PlayerState<br /> const unsigned short PLAYER_STATE_IDLE;<br /> const unsigned short PLAYER_STATE_INITIALIZING;<br /> const unsigned short PLAYER_STATE_INITIALIZED;<br /> const unsigned short PLAYER_STATE_PREPARING;<br /> const unsigned short PLAYER_STATE_PREPARED;<br /> const unsigned short PLAYER_STATE_PLAYING;<br /> const unsigned short PLAYER_STATE_PAUSED;<br /> const unsigned short PLAYER_STATE_SEEKING;<br /> const unsigned short PLAYER_STATE_COMPLETE;<br /> const unsigned short PLAYER_STATE_ERROR;<br /> const unsigned short PLAYER_STATE_RELEASED;<br /> const unsigned short PLAYER_STATUS_SUSPENDED;<br /> readonly-Attribut unsigned short state<br /> <br /> Attribut für unsigniertes Leervolumen;<br /> attribute ABRControlParameters abrControlParameters;<br /> attribute BufferControlParameters bufferControlParameters;<br /> <br /> schreibgeschütztes kurzes VISIBLE; //Für Sichtbarkeit<br /> mit Vorzeichen versehen, kurz INVISIBLE; //Für CC Sichtbarkeitsattribut<br /> unsigned short ccVisibility;<br /> attribute TextFormat ccStyle;<br /> readonly-Attribut Play-backMetrics playMetrics;<br /> attribute MediaPlayerConfig mediaPlayerConfig;<br /> dublette des Attributs;<br /> attribute MediaPlayerView-Ansicht;<br /> readonly-Attribut Timeline-Zeitleiste;<br /> <br /> <br /> };</p> </td> 
+   <td><p>interface MediaPlayer : EventTarget<br /> {<br /> void prepareToPlay( Dublette position);<br /> void play();<br /> void pause();<br /> void search( Dublette position);<br /> void searchToLocal( Dublette position);<br /> void reset();<br /> void release();<br /> void replaceCurrentItem(MediaPlayerItem item);<br /> void replaceCurrentResource(MediaResourceSource, <br /> MediaPlayerItemConfig config); <br /> void reset();<br /> void restore();<br /> void notificationClick();<br /> <br /> readonly attribute TimeRange playRange playRange;<br /> readonly attribute TimeRange seekableRange;<br /> readonly attribute Dublette currentTime;<br /> readonly attribute Dublette localTime;<br /> readonly attribute TimeRange bufferedRange;<br /> readonly attribute DRMManager;<br /> readonly attribute MediaPlayerItem currentItem;<br /> <br /> // PlayerStatus<br /> <br /> <br /> const unsigned short PLAYER_STATUS_INITIALIZED;<br /> const unsigned short PLAYER_STATUS_PREPARING;<br /> const unsigned short PLAYER_STATUS_PREPARED;<br /> const unsigned short PLAYER_STATUS_PLAYING;<br />&gt; const unsigned short PLAYER_STATUS_PAUSED;<br /> const unsigned short PLAYER_STATUS_SEEKING;<br /> const unsigned short PLAYER_STATUS_COMPLETE;<br /> const unsigned short PLAYER_STATUS_ERROR;<br /> const signed short PLAYER_STATUS_RELEASED;<br /> <br /> readonly-Attribut unsigned short status;<br /> <br /> attribute unsigned short volume;<br /> attribute ABRControlParameters abrControlParameters;<br /> attribute BufferControlParameters bufferControlParameters;<br /> <br /> const unsigned short VISIBLE; //Für <br /> SichtbarkeitConst unsigned short INVISIBLE; //Für CC <br /> visibilityAttribute unsigned short ccVisibility;<br /> attribute TextFormat ccStyle;<br /> readonly attribute PlaybackMetrics playMetrics playMetrics;<br /> <br /> attribute Dublette rate;<br /> attribute MediaPlayerView Ansicht;<br /> readonly attribute Timeline Timeline Timeline timeline;<br /> attribute Dublette currentTimeUpdateInterval;  <br /> // Festlegen dieser Einstellung wird für 2.0<br />  nicht unterstützt.</p> </td> 
+   <td><p>interface MediaPlayer : EventTarget<br /> {<br /> void prepareToPlay( int position);<br /> void play();<br /> void pause();<br /> void search( int position);<br /> void searchToLocalTime( int position);<br /> void reset();<br /> void ();<br /> void replaceCurrentItem(MediaResource source);<br /> <br /> <br /> <br /> <br /> <br /> <br /> readonly attribute TimeRange playRange playRange;<br /> readonly attribute TimeRange ableRange;<br /> readonly attribute Dublette currentTime;<br /> readonly attribute Dublette localTime;<br /> readonly attribute TimeRange bufferedRange;<br /> readonly attribute DRMManager;<br /> readonly attribute MediaPlayerItem currentItem;<br /> <br /> // PlayerState<br /> const unsigned PLAYER_STATE_IDLE;<br /> const unsigned short PLAYER_STATE_INITIALIZING;<br /> const unsigned short PLAYER_STATE_INITIALIZED;<br /> const unsigned short PLAYER_STATE_PREPARING;<br /> const unsigned short PLAYER_STATE_PREPARATE_PREPARING; PARED;<br /> const unsigned short PLAYER_STATE_PLAYING;<br /> const unsigned short PLAYER_STATE_PAUSED;<br /> const unsigned short PLAYER_STATE_SEEKING;<br /> const unsigned short PLAYER_STATE_COMPLETE; a15/&gt; const unsigned short PLAYER_STATE_ERROR;<br /> const unsigned short PLAYER_STATE_RELEASED;<br /><br /> const unsigned short PLAYER_STATUS_SUSPENDED;<br /> readonly attribute unsigned short state;<br /> <br /> attribute unsigned short volume;<br /> attribute ABRControlParameters abrControlParameters;<br /> attribute BufferControlParameters bufferControlControlParameters;<br /> readonly kurz VISIBLE; //Für CC Sichtbarkeit<br /> schreibgeschützte Kurzbezeichnung INVISIBLE; //Für CC Sichtbarkeitsrate<br /> Attribut unsigned short ccVisibility;<br /> Attribut TextFormat ccStyle;<br /> schreibgeschütztes Attribut PlaybackMetrics playMetrics;<br /> Attribut MediaPlayerConfig mediaPlayerConfig;<br /> Attribut-Dublette;<br /> Medienattribut PlayerView-Ansicht;<br /> schreibgeschütztes Attribut Zeitleiste;<br /> <br /> <br /> };<br /></p> </td> 
   </tr> 
   <tr> 
-   <td><p>interface MediaPlayerStatus<br /> {<br /> // PlayerStatus<br /> const unsigned short PLAYER_STATUS_IDLE;<br /> const unsigned short PLAYER_STATUS_INITIALIZING;<br /> const unsigned short PLAYER_STATUS_INITIALIZED;<br /> const unsigned short PLAYER_STATUS_PREPARING;<br /> const unsigned short PLAYER_STATUS_PREPARED;<br /> const unsigned short PLAYER_STATUS_PLAYING;<br /> const unsigned short PLAYER_STATUS_PAUSED;<br /> const unsigned short PLAYER_STATUS_SEEKING;<br /> const unsigned short PLAYER_STATUS_COMPLETE;<br /> const unsigned short PLAYER_STATUS_ERROR;<br /> const unsigned short PLAYER_STATUS_RELEASED;<br /> const unsigned short PLAYER_STATUS_SUSPENDED;<br /> };</p> </td> 
+   <td><p>interface MediaPlayerStatus<br /> {<br /> // PlayerStatus<br /> const unsigned short PLAYER_STATUS_IDLE;<br /> const unsigned short PLAYER_STATUS_INITIALIZING;<br /> const unsigned short PLAYER_STATUS_INITIALIZED;<br /> const unsigned short PLAYER_STATUS_PREPARING;<br /> const unsigned short PLAYER_STATUS_PREPARED;<br /> const unsigned short PLAYER_STATUS_PLAYING;<br /> const unsigned short PLAYER_STATUS_PAUSED;<br /> const unsigned short PLAYER_STATUS_SEEKING;&lt;a1 0/&gt; const unsigned short PLAYER_STATUS_COMPLETE;<br /> const unsigned short PLAYER_STATUS_ERROR;<br /> const unsigned short PLAYER_STATUS_RELEASED;<br /> const unsigned short PLAYER_STATUS_SUSPENDED;<br /> };<br /></p> </td> 
    <td>(Neu für 2.0)</td> 
   </tr> 
  </tbody> 
 </table>
 
-#### Von MediaPlayer unterstützte Ereignis {#events-supported-by-mediaplayer}
+#### Von MediaPlayer unterstützte Ereignis{#events-supported-by-mediaplayer}
 
 <table> 
  <tbody> 
@@ -849,7 +849,7 @@ Tabellen in diesem Thema:
    <td>AdBreakEvent</td> 
   </tr> 
   <tr> 
-   <td>adClick<br /> , wenn der Benutzer auf eine Anzeige klickt.</td> 
+   <td>adClick<br /> Wenn der Benutzer auf eine Anzeige klickt.</td> 
    <td>AdClickedEvent</td> 
    <td> </td> 
    <td><p>Neu in 2.0</p> </td> 
@@ -870,21 +870,21 @@ Tabellen in diesem Thema:
    <td> </td> 
   </tr> 
   <tr> 
-   <td>audioAktualisiert<br /> Wenn ein Medienplayer-Element aktualisiert wird. Bei bestimmten Streams, die Audiospuren enthalten, die nur zur Wiedergabe erkannt werden können, wird dieses Ereignis ausgelöst, wenn neue Audiospuren verfügbar sind.</td> 
+   <td>audioUpdated<br /> Wenn ein Medienplayer-Element aktualisiert wird. Bei bestimmten Streams, die Audiospuren enthalten, die nur zur Wiedergabe erkannt werden können, wird dieses Ereignis ausgelöst, wenn neue Audiospuren verfügbar sind.</td> 
    <td>MediaPlayerItemEvent</td> 
    <td> </td> 
    <td><p>Neu in 2.0</p> </td> 
    <td> </td> 
   </tr> 
   <tr> 
-   <td>captionsAktualisiert <br /> Wenn ein Medienplayer-Element aktualisiert wird. Bei Live-/linearen Streams muss der Client die Medienressource regelmäßig aktualisieren, um die neuen verfügbaren Inhalte zu erkennen. In diesem Fall können sich bestimmte Medieneigenschaften ändern.</td> 
+   <td>captionsAktualisierte <br /> Wenn ein Medienplayer-Element aktualisiert wird. Bei Live-/linearen Streams muss der Client die Medienressource regelmäßig aktualisieren, um die neuen verfügbaren Inhalte zu erkennen. In diesem Fall können sich bestimmte Medieneigenschaften ändern.</td> 
    <td>MediaPlayerItemEvent</td> 
    <td> </td> 
    <td><p>Neu in 2.0</p> </td> 
    <td> </td> 
   </tr> 
   <tr> 
-   <td>masterAktualisiert <br /> Wenn ein Medienplayer-Element aktualisiert wird. Bei Live-/linearen Streams muss der Client die Medienressource regelmäßig aktualisieren, um die neuen verfügbaren Inhalte zu erkennen. In diesem Fall können sich bestimmte Medieneigenschaften ändern.</td> 
+   <td>masterUpdated <br /> Wenn ein Medienplayer-Element aktualisiert wird. Bei Live-/linearen Streams muss der Client die Medienressource regelmäßig aktualisieren, um die neuen verfügbaren Inhalte zu erkennen. In diesem Fall können sich bestimmte Medieneigenschaften ändern.</td> 
    <td>MediaPlayerItemEvent</td> 
    <td> </td> 
    <td><p>Neu in 2.0</p> </td> 
@@ -898,7 +898,7 @@ Tabellen in diesem Thema:
    <td> </td> 
   </tr> 
   <tr> 
-   <td>timedEvent<br /> gesendet, wenn zeitgesteuerte Ereignis generiert werden.</td> 
+   <td>timedEvent<br /> Wird gesendet, wenn zeitgesteuerte Ereignis generiert werden.</td> 
    <td>TimedEvent</td> 
    <td> </td> 
    <td><p>Neu in 2.0</p> </td> 
@@ -915,8 +915,8 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface ABRControlParameters<br /> {<br /> const unsigned short ABR_POLICY_CONSERVATIVE = 0 ;<br /> const unsigned short ABR_POLICY_MODERATE = 1;<br /> const unsigned short ABR_POLICY_AGGRESIVE = 2;<br /> <br /> attribute unsigned short abrPolicy;<br /> attribute unsigned int initialBitRate;<br /> attribute unsigned int minBitRate;<br /> attribute unsigned int maxBitRate;<br /> const unsigned short DEFAULT_ABR_INITIAL_BITRATE;<br /> const unsigned short DEFAULT_ABR_MIN_BITRATE;<br /> const unsigned short DEFAULT_ABR_MAX_BITRATE;<br /> const ABRPopolicy DEFAULT_ABR_POLICY;<br /> };</p> </td> 
-   <td><p>interface ABRControlParameters<br /> {<br /> const unsigned short ABR_POLICY_CONSERVATIVE = 0 ;<br /> const unsigned short ABR_POLICY_MODERATE = 1;<br /> const unsigned short ABR_POLICY_AGGRESIVE = 2;<br /> <br /> attribute unsigned short abrPolicy;<br /> attribute unsigned int initialBitRate;<br /> attribute unsigned int minBitRate;<br /> attribute unsigned int maxBitRate;<br /> <br /> <br /> <br /> <br /> };</p> </td> 
+   <td><p>interface ABRControlParameters<br /> {<br /> const unsigned short ABR_POLICY_CONSERVATIVE = 0;<br /> const unsigned short ABR_POLICY_MODERATE = 1;<br /> const unsigned short ABR_POLICY_AGGRESIVE = 2;<br /> <br /> attribute unsigned short rPolicy;<br /> attribute unsigned int initialBitRate;<br /> attribute unsigned int minBitRate;<br /> attribute unsigned int maxBitRate;<br /> const unsigned short DEFAULT_ABR_INITIAL_BITRATE;<br /> const unsigned short DEFAULT_ABR_MIN_MIN_BITRATE;<br /> const unsigned short DEFAULT_ABR_MAX_BITRATE;<br /> const ABRPopolicy DEFAULT_ABR_POLICY;<br /> };</p> </td> 
+   <td><p>interface ABRControlParameters<br /> {<br /> const unsigned short ABR_POLICY_CONSERVATIVE = 0;<br /> const unsigned short ABR_POLICY_MODERATE = 1;<br /> const unsigned short ABR_POLICY_AGGRESIVE = 2;<br /> <br /> attribute unsigned short rPolicy;<br /> attribute unsigned int initialBitRate;<br /> attribute unsigned int minBitRate;<br /> attribute unsigned int maxBitRate;<br /> <br /> <br /> <br /> <br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -930,7 +930,7 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface BufferControlParameters<br /> {<br /> attribute Dublette initialBufferTime;<br /> attribute Dublette playBufferTime;<br /> const Dublette DEFAULT_INITIAL_BUFFER_TIME;<br /> const Dublette DEFAULT_PLAY_BUFFER_TIME;<br /> };</p> </td> 
+   <td><p>interface BufferControlParameters<br /> {<br /> attribute Dublette initialBufferTime;<br /> attribute Dublette playBufferTime;<br /> const Dublette DEFAULT_INITIAL_BUFFER_TIME;<br /> const Dublette DEFAULT_PLAY_BUFFER_TIME;<br /></p> </td> 
    <td><p>interface BufferControlParameters<br /> {<br /> attribute Dublette initialBufferTime;<br /> attribute Dublette playBufferTime;<br /> <br /> <br /> };</p> </td> 
   </tr> 
  </tbody> 
@@ -946,7 +946,7 @@ Tabellen in diesem Thema:
   </tr> 
   <tr> 
    <td>Keine Änderung für 2.0</td> 
-   <td><p>interface TextFormat<br /> {<br /> // Color<br /> const unsigned short COLOR_DEFAULT = 0 ;<br /> const unsigned short COLOR_BLACK = 1;<br /> const unsigned short COLOR_GRAY = 2;<br /> const unsigned short COLOR_WHITE = 3;<br /> const unsigned short COLOR_BRIGHT_WHITE = 4;<br /> const unsigned short COLOR_DARK_RED = 5;<br /> const unsigned short COLOR_RED = 6;<br /> const unsigned short COLOR_BRIGHT_RED = 7;<br /> const unsigned short COLOR_DARK_GREEN = 8;<br /> const unsigned short COLOR_GREEN = 9;<br /> const unsigned short COLOR_BRIGHT_GREEN = 10 ;<br /> const unsigned short COLOR_DARK_BLUE = 11 ;<br /> const unsigned short COLOR_BLUE = 12;<br /> const unsigned short COLOR_BRIGHT_BLUE = 13 ;<br /> const unsigned short COLOR_DARK_YELLOW = 14 ;<br /> const unsigned short COLOR_YELLOW = 15;<br /> const unsigned short COLOR_BRIGHT_YELLOW = 16 ;<br /> const unsigned short COLOR_DARK_MAGENTA = 17 ;<br /> const unsigned short COLOR_MAGENTA = 18;<br /> const unsigned short COLOR_BRIGHT_MAGENTA = 19 ;<br /> const unsigned short COLOR_DARK_CYAN = 20 ;<br /> const unsigned short COLOR_CYAN = 21;<br /> const unsigned short COLOR_BRIGHT_CYAN = 22 ;<br /> <br /> readonly-Attribut unsigned short fontColor;<br /> readonly-Attribut unsigned short backgroundColor;<br /> readonly-Attribut unsigned short fillColor;<br /> readonly-Attribut unsigned short edgeColor;<br /> <br /> // Size<br /> const unsigned short SIZE_DEFAULT = 0;<br /> const unsigned short SIZE_SMALL = 1;<br /> const unsigned short SIZE_MEDIUM = 2;<br /> const unsigned short SIZE_LARGE = 3;<br /> <br /> schreibgeschützte Attribut unsigned short size;<br /> <br /> // FontEdge<br /> const unsigned short FONT_EDGE_DEFAULT = 0 ;<br /> const unsigned short FONT_EDGE_NONE = 1;<br /> const unsigned short FONT_EDGE_RAISED = 2;<br /> const unsigned short FONT_EDGE_DEPRESSED = 3;<br /> const unsigned short FONT_EDGE_UNIFORM = 4 ;<br /> const unsigned short FONT_EDGE_DROP_SHADOW_LEFT = 5 ;<br /> const unsigned short FONT_EDGE_DROP_SHADOW_RIGHT = 6;<br /> readonly-Attribut unsigned short fontEdge;<br /> <br /> // Font<br /> const unsigned short FONT_DEFAULT = 0;<br /> const unsigned short FONT_MONOSPACED_WITH_SERIFS = 1 ;<br /> const unsigned short FONT_PROPORTIONAL_WITH_SERIFS = 2 ;<br /> const unsigned short FONT_MONSPACED_OTHOUT_SERIFS = 3;<br /> const unsigned short FONT_CASUAL = 4;<br /> const unsigned short FONT_CURSIVE = 5;<br /> const unsigned short FONT_SMALL_CAPITALS = 6;<br /> readonly-Attribut unsigned short font;<br /> readonly-Attribut unsigned short fontOpacity;<br /> readonly-Attribut unsigned short backgroundOpacity;<br /> readonly-Attribut unsigned short fillOpacity;<br /> readonly-Attribut unsigned short DEFAULT_OPACITY;<br /> };</p> </td> 
+   <td><p>interface TextFormat<br /> {<br /> // Color<br /> const unsigned short COLOR_DEFAULT = 0;<br /> const unsigned short COLOR_BLACK = 1;<br /> const unsigned short COLOR_GRAY = 2;<br /> const unsigned short COLOR_WHITE = 3 ;<br /> const unsigned short COLOR_BRIGHT_WHITE = 4;<br /> const unsigned short COLOR_DARK_RED = 5;<br /> const unsigned short COLOR_RED = 6;<br /> const unsigned short COLOR_BRIGHT_RED = 7;<br /> const unsigned short COLOR_DARGING_RED_7 REEN = 8;<br /> const unsigned short COLOR_GREEN = 9;<br /> const unsigned short COLOR_BRIGHT_GREEN = 10;<br /> const unsigned short COLOR_DARK_BLUE = 11;<br /> const unsigned short COLOR_BLUE = 12;<br /> const unsigned short COLOR_BRIGHT_BLUE = 13;<br /> const unsigned short COLOR_DARK_YELLOW = 14;<br /> const unsigned short COLOR_YELLOW = 15;<br /> const unsigned short COLOR_BRIGHT_YELLOW = 16;<br /> const unsigned short COLOR_DARK_MAGENTA = 17;<br /> const unsigned short COLOR_MAGENTA = 18;<br /> const unsigned short COLOR_BRIGHT_MAGENTA = 19;<br /> const unsigned short COLOR_DARK_CYAN = 20;<br /> const unsigned short COLOR_CYAN = 21;<br /> const unsigned short COLOR_BRIGHT_CYAN = 22;<br /> <br /> readonly attribute short fontColor;<br /> readonly attribute unsigned short backgroundColor;<br /> readonly attribute unsigned short fillColor;<br /> readonly attribute unsigned short edgeColor;<br /> <br /> // Size<br /> const unsigned short SIZE_DEFAULT = 0; 15/&gt; const unsigned short SIZE_SMALL = 1;<br /><br /> const unsigned short SIZE_MEDIUM = 2;<br /> const unsigned short SIZE_LARGE = 3;<br /> <br /> readonly attribute unsigned short size;<br /> <br /> // FontEdge<br /> const unsigned short FONT_EDGE_DEFAULT = 0;<br /> const unsigned short ONT_EDGE_NONE = 1;<br /> const unsigned short FONT_EDGE_RAISED = 2;<br /> const unsigned short FONT_EDGE_DEPRESSED = 3;<br /> const unsigned short FONT_EDGE_UNIFORM = 4 ;<br /> const unsigned short FONT_EDT_EDT = 4; GE_DROP_SHADOW_LEFT = 5;<br /> const unsigned short FONT_EDGE_DROP_SHADOW_RIGHT = 6;<br /> readonly attribute unsigned short fontEdge;<br /> <br /> // Font<br /> const unsigned short T_DEFAULT = 0;<br /> const unsigned short FONT_MONOSPACED_WITH_SERIFS = 1;<br /> const unsigned short FONT_PROPORTIONAL_WITH_SERIFS = 2;<br /> const unsigned short FONT_MONSPACED_OTHOUT_SERIFS = 3;<br /> const unsigned short FONT_CASUAL = 4;<br /> const unsigned short FONT_CURSIVE = 5;<br /> const unsigned signed short FONT_SMALL_CAPITALS = 6;<br /> readonly attribute unsigned short font;<br /> readonly attribute unsigned short fontOpacity;<br /> readonly attribute unsigned short backgroundOpacity;<br /> readonly attribute unsigned short fillOpacity;<br /> readonly attribute unsigned short DEFAULT_OPACITY;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -960,17 +960,17 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface MediaPlayerItemLoader:<br /> {<br /> void load(MediaResource resource, long resourceId,<br /> ItemLoaderListener, <br /> MediaPlayerItemConfig config) ;<br /> void cancel();<br /> readonly-Attribut MediaPlayerItem currentItem;<br /> };</p> </td> 
+   <td><p>interface MediaPlayerItemLoader:<br /> {<br /> void load(MediaResource, long resourceId,<br /> ItemLoaderListener, <br /> MediaPlayerItemConfig config);<br /> void cancel();<br /> readonly attribute MediaPlayerItem currentItem;<br />;</p> </td> 
    <td>Neu für 2.0</td> 
   </tr> 
   <tr> 
-   <td><p>interface ItemLoaderListener<br /> {<br /> //onLoadCompleteCallbackFunc(MediaPlayerItem)<br /> var onLoadCompleteCallbackFunc;<br /> //onErrorCallbackFunc(PSDKErrorCode)<br /> var onErrorCallbackFunc;<br /> }</p> </td> 
+   <td><p>interface ItemLoaderListener<br /> {<br /> //onLoadCompleteCallbackFunc(MediaPlayerItem)<br /> var onLoadCompleteCallbackFunc;<br /> //onErrorCallbackFunc(PSDKErrorCode)<br /> var onError Func;<br /> }</p> </td> 
    <td>Neu für 2.0</td> 
   </tr> 
  </tbody> 
 </table>
 
-## Änderungen am Medienmerkmal-API-Element für 2.0 {#media-characteristics-api-element-changes-for}
+## Änderungen am API-Element für Medienmerkmale für 2.0 {#media-characteristics-api-element-changes-for}
 
 Diese Tabellen vergleichen die mediencharakteristischen API-Elemente für das C++ TVSDK zwischen den Versionen 1.3 und 2.0.
 
@@ -990,13 +990,13 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface MediaPlayerItem {<br /> readonly attribute MediaResource resource;<br /> readonly-Attribut long resourceId;<br /> schreibgeschützte Attribut boolean live;<br /> <br /> readonly attribute boolean hasAlternateAudio;<br /> readonly-Attribut AudioTrackList audioTracks;<br /> readonly-Attribut AudioTrack selectedAudioTrack;<br /> void selectAudioTrack(AudioTrack track); <br /> <br /> readonly-Attribut boolean hasClosedCaptions;<br /> readonly-Attribut ClosedCaptionsTrackList closeCaptionsTracks;<br /> readonly-Attribut ClosedCaptionsTrack selectedClosedCaptionsTrack;<br /> void selectClosedCaptionsTrack(<br /> ClosedCaptionsTrack); <br /> <br /> readonly attribute boolean hasTimedMetadata;<br /> readonly-Attribut TimedMetadataList timedMetadata;<br /> schreibgeschützte Attribut boolean dynamic;<br /> <br /> readonly-Attribut boolean isProtected;<br /> readonly-Attribut DRMMetadataInfoList drmMetadataInfos;<br /> readonly attribute ProfileList-Profil;<br /> readonly attribute Profil selectedProfile;<br /> <br /> readonly-Attribut boolean trickPlaySupported;<br /> readonly-Attribut FloatArray availablePlaybackRates;<br /> readonly attribute float selectedPlaybackRate;<br /> <br /> <br /> readonly-Attribut MediaPlayer mediaPlayer;<br /> readonly attribute MediaPlayerItemConfig config;<br /> };</p> </td> 
-   <td><p>interface MediaPlayerItem {<br /> readonly attribute MediaResource resource;<br /> readonly-Attribut long resourceId;<br /> schreibgeschützte Attribut boolean live;<br /> <br /> readonly attribute boolean hasAlternateAudio;<br /> readonly-Attribut AudioTrackList audioTracks;<br /> attribute AudioTrack selectedAudioTrack;<br /> <br /> <br /> readonly-Attribut boolean hasClosedCaptions;<br /> readonly-Attribut ClosedCaptionsTrackList ccTracks;<br /> attribute ClosedCaptionsTrack selectedCCTrack;<br /> <br /> <br /> <br /> readonly attribute boolean hasTimedMetadata;<br /> readonly-Attribut TimedMetadataList timedMetadata;<br /> schreibgeschützte Attribut boolean dynamic;<br /> <br /> readonly-Attribut boolean isProtected;<br /> readonly-Attribut DRMMetadataInfoList drmMetadataInfos;<br /> readonly attribute ProfileList-Profil;<br /> <br /> <br /> readonly-Attribut boolean trickPlaySupported;<br /> readonly-Attribut Int32Array availablePlaybackRates;<br /> <br /> readonly attribute StringList adTags;<br /> <br /> readonly-Attribut MediaPlayer mediaPlayer;<br /> <br /> };</p> </td> 
+   <td><p>interface MediaPlayerItem {<br /> readonly attribute MediaResource resource;<br /> readonly attribute long resourceId;<br /> readonly attribute boolean live;<br /> <br /> readonly attribute boolean hasAlternateAudio;<br /> readonly attribute AudioTrackList audioTracks;<br /> readonly attribute AudioTrack;<br /> void selectAudioTrack(AudioTrack track); <br /> <br /> schreibgeschützte Attribute boolean hasClosedCaptions;<br /> readonly attribute ClosedCaptionsTrackList closeCaptionsTracks;<br /> readonly attribute ClosedCaptionsTrack selectedClosedCaptionsTrack;<br /> void selectClosedCaptions(<br /> ClosedCaptionsTrack-Verfolgung); <br /> <br /> readonly attribute boolean hasTimedMetadata;<br /> readonly attribute TimedMetadataList timedMetadata;<br /> readonly attribute boolean dynamic;<br /> <br /> readonly attribute boolean isProtected;<br /> readonly attribute DRMMetadataInfoList drmMetadataInfos;<br /> readonly attribute ProfileList Profils;<br /> readonly attribute Profil selected;<br /> <br /> schreibgeschütztes Attribut boolean trickPlaySupported;<br /> readonly attribute FloatArray availablePlaybackRates;<br /> readonly attribute float selectedPlaybackRate;<br /> <br /> <br />  <br />  <br /> readonly attribute MediaPlayer mediaPlayer;attribute MediaPlayerItemConfig config;};</p> </td> 
+   <td><p>interface MediaPlayerItem {<br /> readonly attribute MediaResource resource;<br /> readonly attribute long resourceId;<br /> readonly attribute boolean live;<br /> <br /> readonly attribute boolean hasAlternateAudio;<br /> readonly attribute AudioTrackList audioTracks;<br /> attribute Track;<br /> <br /> <br /> readonly attribute boolean hasClosedCaptions;<br /> readonly attribute ClosedCaptionsTrackList ccTracks;<br /> attribute ClosedCaptionsTrack selectedCCTrack;<br /> <br /> &lt;a1 <br /> schreibgeschützte Attribute boolean hasTimedMetadata;<br /> readonly attribute TimedMetadataList timedMetadata;<br /> readonly attribute boolean dynamic;<br /> <br /> readonly attribute boolean isProtected;<br /> &gt; readonly attribute DRMMetadataInfoList drmMetadataInfos;<br /> readonly attribute ProfileList-Profil;<br /> <br /> <br /> readonly attribute boolean trickPlaySupported;<br /> readonly attribute Int32Array availablePlayback Rates;<br /> <br /> readonly attribute StringList adTags;<br /> <br /> readonly attribute MediaPlayer mediaPlayer mediaPlayer;<br /> <br /> };<br /></p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-### Track/AudioTrack/ClosedCaptionsTrack {#track-audiotrack-closedcaptionstrack}
+### Track / AudioTrack / ClosedCaptionsTrack {#track-audiotrack-closedcaptionstrack}
 
 <table> 
  <tbody> 
@@ -1005,20 +1005,20 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface Track<br /> {<br /> readonly attribute DomString name;<br /> readonly attribute DomString language;<br /> Boolescher Standard für schreibgeschützte Attribute;<br /> schreibgeschütztes Attribut boolean autoSelect;<br /> }; </p> </td> 
+   <td><p>interface Track<br /> {<br /> readonly attribute DomString name;<br /> readonly attribute DomString language;<br /> readonly attribute boolean default;<br /> readonly attribute boolean autoSelect;<br /> }; </p> </td> 
    <td>Neu für 2.0</td> 
   </tr> 
   <tr> 
    <td><p>interface AudioTrack: Track<br /> {<br /> readonly attribute DomString name; //FromTrack<br /> readonly attribute DomString language;//FromTrack<br /> readonly attribute boolean default; // Von Track<br /> readonly attribute boolean autoSelect;//FromTrack<br /> <br /> readonly attribute unsigned int pid;<br /> };</p> </td> 
-   <td><p>interface AudioTrack<br /> {<br /> readonly attribute DomString name;<br /> readonly attribute DomString language; <br /> Boolescher Standard für schreibgeschützte Attribute;<br /> schreibgeschütztes Attribut boolean autoSelect;<br /> Boolesches Attribut für schreibgeschützte Attribute forciert;<br /> <br /> };</p> </td> 
+   <td><p>interface AudioTrack<br /> {<br /> readonly attribute DomString name;<br /> readonly attribute DomString language; <br /> schreibgeschützte Attribute boolean default;<br /> readonly attribute boolean autoSelect;<br /> readonly attribute boolean forced;<br /> <br /> };</p> </td> 
   </tr> 
   <tr> 
    <td>Keine Änderung für 2.0</td> 
    <td><p>interface AudioTrackList<br /> {<br /> readonly attribute unsigned long length;<br /> getter AudioTrack (unsigned long index);<br /> };</p> </td> 
   </tr> 
   <tr> 
-   <td><p>interface ClosedCaptionsTrack: Track<br /> {<br /> readonly attribute DomString name; //FromTrack<br /> readonly attribute DomString language;//FromTrack<br /> readonly attribute boolean default; // FromTrack<br /> readonly attribute boolean autoSelect;//FromTrack<br /> <br /> <br /> const unsigned short SERVICE_608_CAPTIONS = 0;<br /> const unsigned short SERVICE_708_CAPTIONS = 1;<br /> const unsigned short SERVICE_WEB_VTT_CAPTIONS = 2;<br /> readonly-Attribut unsigned short serviceType;<br /> Boolesches Attribut für schreibgeschützte Attribute forciert;<br /> };</p> </td> 
-   <td><p>interface ClosedCaptionsTrack<br /> {<br /> readonly attribute DomString name;<br /> readonly attribute DomString language;<br /> Boolescher Standard für schreibgeschützte Attribute;<br /> <br /> <br /> schreibgeschützte Attribut boolean active;<br /> <br /> <br /> <br /> <br /> <br /> };</p> </td> 
+   <td><p>interface ClosedCaptionsTrack: Track<br /> {<br /> readonly attribute DomString name; //FromTrack<br /> readonly attribute DomString language;//FromTrack<br /> readonly attribute boolean default; // FromTrack<br /> readonly attribute boolean autoSelect;//FromTrack<br /> <br /> <br /> const unsigned short SERVICE_608_CAPTIONS = 0;<br /> const unsigned short SERVICE_708_CAPTIONS = 1;<br /> const unsigned short SERVICE_WEB_VTT_CAPTIONS = 2;<br /> readonly attribute unsigned short serviceType;<br /> readonly attribute boolean forced;<br /> };</p> </td> 
+   <td><p>interface ClosedCaptionsTrack<br /> {<br /> readonly attribute DomString name;<br /> readonly attribute DomString language;<br /> readonly attribute boolean default;<br /> <br /> <br /> readonly attribute boolean active;<br /> <br /> <br /> &lt;a9/&gt; &gt; <br /> <br /> };<br /></p> </td> 
   </tr> 
   <tr> 
    <td>Keine Änderung für 2.0</td> 
@@ -1037,7 +1037,7 @@ Tabellen in diesem Thema:
   </tr> 
   <tr> 
    <td>Profil: Keine Änderung für 2.0</td> 
-   <td><p>interface Profil<br /> {<br /> readonly attribute unsigned int width;<br /> readonly-Attribut unsigned int height;<br /> readonly-Attribut unsigned int bitRate;<br /> }; </p> </td> 
+   <td><p>interface Profil<br /> {<br /> readonly attribute unsigned int width;<br /> readonly attribute unsigned int height;<br /> readonly attribute unsigned int bitRate;<br /> }; </p> </td> 
   </tr> 
   <tr> 
    <td>ProfileList: Keine Änderung für 2.0</td> 
@@ -1056,7 +1056,7 @@ Tabellen in diesem Thema:
   </tr> 
   <tr> 
    <td><strong>DRMMetadataInfo</strong>: Keine Änderung für 2.0</td> 
-   <td><p>interface DRMMetadataInfo<br /> { <br /> readonly attribute DRMMetadata metadata;<br /> readonly-Attribut long prefetchTimestamp;<br /> readonly-Attribut TimeRange timeRange;<br /> };</p> </td> 
+   <td><p>interface DRMMetadataInfo<br /> { <br /> readonly attribute DRMMetadata metadata;<br /> readonly attribute long prefetchTimestamp;<br /> readonly attribute TimeRange timeRange;<br /> };</p> </td> 
   </tr> 
   <tr> 
    <td><strong>DRMMetadataInfoList</strong>: Keine Änderung für 2.0</td> 
@@ -1252,7 +1252,7 @@ Fehler- oder Warncodes, die asynchron von der Adobe Video Engine (AVE) empfangen
 
 ## Änderungen am Utility- und Helper-API-Element für 2.0 {#utility-and-helper-api-element-changes-for}
 
-Diese Tabellen vergleichen die Utility- und Helper API-Elemente für das JavaScript TVSDK zwischen den Versionen 1.3 und 2.0.
+Diese Tabellen vergleichen die Hilfsprogramm- und Helper-API-Elemente für das JavaScript TVSDK zwischen den Versionen 1.3 und 2.0.
 
 Tabellen in diesem Thema:
 
@@ -1273,8 +1273,8 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface Version<br /> {<br /> readonly attribute DomString version;<br /> readonly attribute DomString description;<br /> readonly-Attribut long major;<br /> Attribut "schreibgeschützt", lang;<br /> Revisionsdauer des Attributs "readonly";<br /> readonly attribute long apiVersion;<br /> };</p> </td> 
-   <td><p>interface Version<br /> {<br /> readonly attribute DomString version;<br /> readonly attribute DomString description;<br /> readonly-Attribut DomString major;<br /> readonly-Attribut DomString-Moll;<br /> readonly attribute DomString revision;<br /> readonly-Attribut DomString apiVersion;<br /> };</p> </td> 
+   <td><p>interface Version<br /> {<br /> readonly attribute DomString version;<br /> readonly attribute DomString description;<br /> readonly attribute long major;<br /> readonly attribute long-Moll;<br /> readonly attribute long revision;<br /> readonly attribute long apiVersion;<br /> };</p> </td> 
+   <td><p>interface Version<br /> {<br /> readonly attribute DomString version;<br /> readonly attribute DomString description;<br /> readonly attribute DomString major;<br /> readonly attribute DomString Moll;<br /> readonly attribute DomString revision;<br /> readonly attribute DomString apiVersion;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1289,7 +1289,7 @@ Tabellen in diesem Thema:
   </tr> 
   <tr> 
    <td>Keine Änderung für 2.0</td> 
-   <td><p>interface TimeRange<br /> {<br /> readonly attribute unsigned long begin;<br /> readonly-Attribut unsigned long end;<br /> schreibgeschütztes Attribut mit unsignierter langer Dauer;<br /> };</p> </td> 
+   <td><p>interface TimeRange<br /> {<br /> readonly attribute unsigned long begin;<br /> readonly attribute unsigned long end;<br /> readonly attribute unsigned long duration;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1304,7 +1304,7 @@ Tabellen in diesem Thema:
   </tr> 
   <tr> 
    <td>Keine Änderung für 2.0</td> 
-   <td><p>interface QOSProvider<br /> {<br /> void attachMediaPlayer(MediaPlayer player player player);<br /> void detachMediaPlayer();<br /> <br /> readonly attribute DeviceInformation deviceInformation;<br /> readonly-Attribut PlaybackInformation playInformation;<br /> };</p> </td> 
+   <td><p>interface QOSProvider<br /> {<br /> void attachMediaPlayer(MediaPlayer player player);<br /> void detachMediaPlayer();<br /> <br /> readonly attribute DeviceInformation deviceInformation;<br /> readonly attribute PlaybackInformation playInformation;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1318,8 +1318,8 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface DeviceInformation<br /> {<br /> readonly attribute DomString os;<br /> <br /> <br /> <br /> readonly-Attribut DomString id;<br /> readonly-Attribut int DensityDPI;<br /> readonly-Attribut int heightPixels;<br /> readonly-Attribut int widthPixels;<br /> readonly-Attribut boolean ListenToKeyFrame;<br /> };</p> </td> 
-   <td><p>interface DeviceInformation<br /> {<br /> readonly attribute DomString os;<br /> readonly attribute int sdk;<br /> readonly-Attribut DomString-Modell;<br /> readonly attribute DomString-Hersteller;<br /> readonly-Attribut DomString id;<br /> readonly-Attribut int DensityDPI;<br /> readonly-Attribut int heightPixels;<br /> readonly-Attribut int widthPixels;<br /> <br /> };</p> </td> 
+   <td><p>interface DeviceInformation<br /> {<br /> readonly attribute DomString os;<br /> <br /> <br /> <br /> readonly attribute DomString id;<br /> readonly attribute int DensityDPI;<br /> readonly attribute int heightPixels;<br /> readonly attribute int widthPixels;<br /> readonly attribute boolean ListenToKeyFrame;<br /> };</p> </td> 
+   <td><p>interface DeviceInformation<br /> {<br /> readonly attribute DomString os;<br /> readonly attribute int sdk;<br /> readonly attribute DomString model;<br /> readonly attribute DomString producer;<br /> readonly attribute DomString id;<br /> readonly attribute intDPI;<br /> attribute int heightPixels;<br /> readonly attribute int widthPixels;<br /> <br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1334,7 +1334,7 @@ Tabellen in diesem Thema:
   </tr> 
   <tr> 
    <td>Keine Änderung für 2.0</td> 
-   <td><p>interface LoadInfo<br /> {<br /> readonly attribute DomString url;<br /> readonly attribute int size;<br /> readonly attribute Dublette downloadDuration;<br /> readonly attribute int periodIndex;<br /> readonly attribute Dublette mediaDuration;<br /> readonly-Attribut short TRACK_TYPE_FRAGMENT;<br /> readonly-Attribut short TRACK_TYPE_TRACK;<br /> readonly-Attribut short TRACK_TYPE_MANIFEST;<br /> readonly attribute short type<br /> readonly-Attribut DomString trackName;<br /> readonly-Attribut DomString trackType;<br /> readonly-Attribut int trackIndex;<br /> };</p> </td> 
+   <td><p>interface LoadInfo<br /> {<br /> readonly attribute DomString url;<br /> readonly attribute int size;<br /> readonly attribute Dublette downloadDuration;<br /> readonly attribute int periodIndex;<br /> readonly attribute Dublette mediaDuration;<br /> readonly attribute short TRACK_TYPE_FRAGMENT; 7/&gt; readonly attribute short TRACK_TYPE_TRACK;<br /> readonly attribute short TRACK_TYPE_MANIFEST;<br /> readonly attribute short type;<br /> readonly attribute DomString trackName;<br /> readonly attribute DomString trackType;<br /> readonly attribute intIndex;<br /> };<br /></p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1349,7 +1349,7 @@ Tabellen in diesem Thema:
   </tr> 
   <tr> 
    <td>Keine Änderung für 2.0</td> 
-   <td><p>interface Ansicht<br /> {<br /> readonly attribute unsigned short x;<br /> readonly-Attribut unsigned short y;<br /> readonly-Attribut unsigned short width;<br /> readonly-Attribut unsigned short height;<br /> <br /> void setSize(unsigned short width, unsigned short height);<br /> void setPos(unsigned short x, unsigned short y);<br /> }</p> </td> 
+   <td><p>interface Ansicht<br /> {<br /> readonly attribute unsigned short x;<br /> readonly attribute unsigned short y;<br /> readonly attribute unsigned short width;<br /> readonly attribute unsigned short height;<br /> <br /> void setSize(unsigned short width, unsigned short height);<br /> void setPos unsigned short x, unsigned short y);<br /> }</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -1363,12 +1363,12 @@ Tabellen in diesem Thema:
    <th>1.3 APIs</th> 
   </tr> 
   <tr> 
-   <td><p>interface PlaybackInformation<br /> {<br /> readonly attribute Dublette timeToFirstByte;<br /> readonly attribute Dublette timeToLoad;<br /> readonly attribute Dublette timeToStart;<br /> readonly attribute Dublette timeToFail;<br /> readonly-Attribut int totalSecondsPlayed;<br /> readonly-Attribut int totalSecondsSpent;<br /> readonly attribute Dublette frameRate;<br /> readonly-Attribut int droppedFrameCount;<br /> readonly-Attribut int foundBandwidth;<br /> readonly-Attribut int bitrate;<br /> readonly attribute Dublette bufferTime;<br /> readonly-Attribut int bufferLength;<br /> readonly-Attribut int emptyBufferCount;<br /> readonly attribute Dublette bufferingTime;<br /> };</p> </td> 
-   <td><p>interface PlaybackInformation<br /> {<br /> readonly attribute Dublette timeToFirstByte;<br /> readonly attribute Dublette timeToLoad;<br /> readonly attribute Dublette timeToStart;<br /> readonly attribute Dublette timeToFail;<br /> readonly-Attribut int totalSecondsPlayed;<br /> readonly-Attribut int totalSecondsSpent;<br /> readonly attribute Dublette frameRate;<br /> readonly-Attribut int droppedFrameCount;<br /> <br /> readonly-Attribut int bitrate;<br /> readonly attribute Dublette bufferTime;<br /> readonly-Attribut int bufferLength;<br /> readonly-Attribut int emptyBufferCount;<br /> readonly attribute Dublette bufferingTime;<br /> };</p> </td> 
+   <td><p>interface PlaybackInformation<br /> {<br /> readonly attribute Dublette timeToFirstByte;<br /> readonly attribute Dublette timeToLoad;<br /> readonly attribute Dublette timeToStart;<br /> readonly attribute Dublette timeToFail;<br /> readonly attribute int totalSecondsPlayed;&lt;a6/ &gt; readonly attribute int totalSecondsSpent;<br /> readonly attribute Dublette frameRate;<br /> readonly attribute int droppedFrameCount;<br /> readonly attribute int foundBandwidth;<br /> readonly attribute int bitrate;<br /> readonly attribute Dublette bufferTime;<br /> readonly attribute int bufferLength;<br /> readonly attribute int emptyBufferCount;<br /> readonly attribute Dublette bufferingTime;<br /> };<br /></p> </td> 
+   <td><p>interface PlaybackInformation<br /> {<br /> readonly attribute Dublette timeToFirstByte;<br /> readonly attribute Dublette timeToLoad;<br /> readonly attribute Dublette timeToStart;<br /> readonly attribute Dublette timeToFail;<br /> readonly attribute int totalSecondsPlayed;&lt;a6/ &gt; readonly attribute int totalSecondsSpent;<br /> readonly attribute Dublette frameRate;<br /> readonly attribute int bit droppedFrameCount;<br /> <br /> readonly attribute int bitrate;<br /> readonly attribute Dublette bufferTime;<br /> readonly attribute int bufferLength; 3/&gt; readonly attribute int emptyBufferCount;<br /> readonly attribute Dublette bufferingTime;<br /> };<br /><br /></p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Hilfreiche Ressourcen {#helpful-resources}
 
-* Weitere Informationen finden Sie in der vollständigen Hilfedokumentation auf der [Adobe Primetime-Seite &quot;Training und Support](https://helpx.adobe.com/support/primetime.html) &quot;.
+* Siehe vollständige Hilfedokumentation auf der Seite [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html).
