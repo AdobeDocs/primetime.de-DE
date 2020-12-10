@@ -13,9 +13,9 @@ pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 3efbd1113e82c4d5f84798997b6f744daf6f508e
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2437'
 ht-degree: 0%
 
 ---
@@ -41,17 +41,17 @@ Wenn Sie eine Manifestserversitzung starten, können Sie einen Parameter in der 
 
 ## Debugging-Tool-Optionen {#debugging-tool-options}
 
-Beim Aufrufen des Debuggingwerkzeugs stehen Ihnen verschiedene Optionen zur Verfügung, um zu ermitteln, welche Informationen der Manifestserver in HTTP-Headern zurückgibt. Die Optionen wirken sich nicht darauf aus, was der Manifestserver in Protokolldateien ablegt.
+Beim Aufrufen des Debuggingwerkzeugs stehen Ihnen verschiedene Optionen zur Verfügung, um zu ermitteln, welche Informationen der Manifestserver in HTTP-Headern zurückgibt. Die Optionen wirken sich nicht darauf aus, was der Manifest-Server in Protokolldateien ablegt.
 
 ### Festlegen von ptdebug {#specifying-ptdebug}
 
-Beim Starten der Debug-Protokollierung für eine Manifestserversitzung können Sie den Parameter ptdebug zur Anforderungs-URL hinzufügen, um die folgenden Optionen für die Informationen festzulegen, die der Manifestserver in HTTP-Headern zurückgibt:
+Wenn Sie die Debug-Protokollierung für eine Manifest-Serversitzung initiieren, können Sie der Anforderungs-URL den Parameter ptdebug hinzufügen, um die folgenden Optionen für die Informationen anzugeben, die der Manifest-Server in HTTP-Headern zurückgibt:
 
 * ptdebug=true Alle Datensätze außer `TRACE_HTTP_HEADER` und die meisten `call/response data` von `TRACE_AD_CALL`-Datensätzen.
 * ptdebug=Nur AdCall-TRACE_AD_*type* (z. B. TRACE_AD_CALL)-Datensätze.
-* ptdebug=Nur TRACE_HTTP_HEADER-Datensätze.
+* ptdebug=Nur TRACE_HTTP_HEADER-Datensätze für Header.
 
-Die Optionen wirken sich nicht darauf aus, was der Manifestserver in den Protokolldateien ablegt. Sie haben keine Kontrolle darüber, aber die Protokolldateien sind Textdateien, sodass Sie eine Vielzahl von Tools anwenden können, um die Informationen, die Sie interessieren, zu extrahieren und neu zu formatieren.
+Die Optionen wirken sich nicht darauf aus, was der Manifest-Server in den Protokolldateien ablegt. Sie haben keine Kontrolle darüber, aber die Protokolldateien sind Textdateien, sodass Sie eine Vielzahl von Tools anwenden können, um die Informationen zu extrahieren und neu zu formatieren, die Sie interessieren.
 
 Hier ist ein Beispiel für den HTTP-Header, der zurückgegeben wird, wenn `ptdebug=Header`. Einige lange Zeichenfolgen mit hexadezimalen Ziffern werden aus Gründen der Klarheit durch `. . .` ersetzt.
 
@@ -84,7 +84,7 @@ X-ADBE-AI-DBG-17 TRACE_MISC   Done
 
 ## Formate der Protokolldatensätze {#formats-of-log-records}
 
-Jeder Protokolldatensatz verfügt über einen Typ und eine Reihe von Feldern, von denen einige optional sein können. Die Felder aller Datensätze bis zum Datensatztyp sind gleich. Sie stellen einen Zeitstempel und Informationen zur Sitzung bereit. Der Datensatztyp identifiziert die Art des protokollierten Ereignisses, und nachfolgende Felder enthalten Informationen zum protokollierten Ereignis.
+Jeder Protokolldatensatz verfügt über einen Typ und eine Reihe von Feldern, von denen einige optional sein können. Die Felder aller Datensätze bis zum Datensatztyp sind identisch. Sie stellen einen Zeitstempel und Informationen über die Sitzung bereit. Der Datensatztyp identifiziert die Art des Ereignisses, das protokolliert wird, und nachfolgende Felder enthalten Informationen über das protokollierte Ereignis.
 
 Die Struktur eines Protokolldatensatzes lautet wie folgt:
 
@@ -93,24 +93,24 @@ Die Struktur eines Protokolldatensatzes lautet wie folgt:
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
 | datetime | string | Zeitstempel |
-| request_id | string | Vom Manifestserver verwendete Antrags-ID (Unix-Zeitstempel) |
+| request_id | string | Vom Manifestserver verwendete Anforderungs-ID (Unix-Zeitstempel) |
 | session_id | string | Vom Manifestserver verwendete Sitzungs-ID |
 | zone_id | integer | Zone-ID |
-| record_type | string | Typ des protokollierten Ereignisses |
-| andere Felder | *** | Abhängig vom Typ des Ereignisses |
+| record_type | string | Art des protokollierten Ereignisses |
+| andere Felder | *** | Abhängig vom Ereignistyp |
 
 ### TRACE_REQUEST_INFO records {#trace-request-info-records}
 
-Aufzeichnungen dieses Typs protokollieren die Ergebnisse von HTTP-Anfragen. Felder, die über &quot;TRACE_REQUEST_INFO&quot;hinausgehen, werden in der Tabellenreihenfolge durch Registerkarten getrennt angezeigt.
+Datensätze dieses Typs protokollieren die Ergebnisse von HTTP-Anfragen. Felder, die über TRACE_REQUEST_INFO hinausgehen, werden in der Tabellenreihenfolge angezeigt, getrennt durch Registerkarten.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
-| status | string | Rückgegebener HTTP-Statuscode |
+| Status | string | Rückgegebener HTTP-Statuscode |
 | request_method | string | HTTP-Methode (GET oder POST) |
 | request_uri | string | HTTP-Anforderungs-URI (ohne Host) |
 | request_length | integer | Länge der Anforderung (Byte) |
 | response_length | integer | Länge der Antwort (Byte) |
-| delta | integer | Verarbeitungszeit (Millisekunden) |
+| delta | integer | Zeit (Millisekunden) für die Verarbeitung der Anforderung |
 | module_type | string | Variante, Stream oder VOD |
 | remote_address_aud_client_ip | string | (siehe Hinweis) |
 | remote_address_x_fwd_for_hdr_key | string | (siehe Hinweis) |
@@ -120,7 +120,7 @@ Aufzeichnungen dieses Typs protokollieren die Ergebnisse von HTTP-Anfragen. Feld
 >
 >Die letzten drei Felder sind optional.
 
-Ein Beispiel:
+Beispiel:
 
 ```
 1427263800524 6495aafc-3f34-4047-ad36-350d4f056eb4 189938
@@ -130,20 +130,20 @@ TRACE_REQUEST_INFO 301 GET /auditude/variant/pubAsset/aHR0cDov. . ..m3u8
 
 ### TRACE_HTTP_HEADER records {#trace-http-header-records}
 
-Aufzeichnungen dieses Typs protokollieren HTTP-Header, die während HTTP-Aufrufen zwischen dem Manifestserver und dem Client, dem Anzeigenserver oder dem Inhaltsserver ausgetauscht wurden. Felder, die über &quot;TRACE_HTTP_HEADER&quot;hinausgehen, werden in der Tabellenreihenfolge durch Registerkarten getrennt angezeigt.
+Datensätze dieses Typs protokollieren HTTP-Header, die während HTTP-Aufrufen zwischen dem Manifestserver und dem Client, dem Ad-Server oder dem Inhaltsserver ausgetauscht werden. Felder, die über TRACE_HTTP_HEADER hinausgehen, werden in der Tabellenreihenfolge angezeigt, getrennt durch Tabulatoren.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
-| request_type | string | Art der Anforderung (MAIN oder UNKNOWN) |
-| request_response | string | Antwortheader (Anforderung oder Antwort) |
-| header_name | string | HTTP-Header-Name |
+| request_type | string | Art des Antrags (MAIN oder UNBEKANNT) |
+| request_response | string | Antwort-Header (Anfrage oder Antwort) |
+| header_name | string | HTTP-Headername |
 | header_value | string | Base64-kodierter HTTP-Header-Wert |
 
 >[!NOTE]
 >
 >Die Felder request_type und header_value sind optional.
 
-Ein Beispiel:
+Beispiel:
 
 ```
 2015-03-25T06:10:00.927Z  1427263800573  6495aa. . .  189938 TRACE_MISC
@@ -176,19 +176,19 @@ Ein Beispiel:
 
 ### TRACE_AD_CALL records {#trace-ad-call-records}
 
-Aufzeichnungen dieses Typs protokollieren die Ergebnisse von Manifestserver-Anzeigenanforderungen. Felder, die über TRACE_AD_CALL hinausgehen, werden in der Tabellenreihenfolge angezeigt, durch Registerkarten getrennt.
+Datensätze dieses Typs protokollieren die Ergebnisse von Manifest-Server- und -Anforderungen. Felder, die über TRACE_AD_CALL hinausgehen, werden in der Tabellenreihenfolge angezeigt, getrennt durch Tabulatoren.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
-| status | string | Rückgegebener HTTP-Statuscode |
-| request_duration | integer | Zeit (Millisekunden) von Anforderung zu Antwort |
-| ad_server_Abfrage_url | string | URL für den Anzeigenaufruf, einschließlich Abfrage-Parameter |
-| ad_system_id | string | Anzeigensystem aus der Antwort des Anzeigenservers (Auditude, falls nicht angegeben) |
-| avail_id | string | ID des Werts aus dem Anzeigen-Cue in der Inhaltsmanifestdatei (K/A für VOD) |
-| avail_duration | number | Dauer (Sekunden) des Werts, ausgehend vom Anzeigen-Cue in der Inhaltsmanifestdatei (K/A für VOD) |
-| ad_server_response | string | Base64-kodierte Antwort vom Anzeigenserver |
+| Status | string | Rückgegebener HTTP-Statuscode |
+| request_duration | integer | Zeit (Millisekunden) von Anforderung bis Antwort |
+| ad_server_Abfrage_url | string | URL für den Anzeigenaufruf, einschließlich Abfrageparameter |
+| ad_system_id | string | Anzeigesystem von der Anzeigenserver-Antwort (Auditude, falls nicht angegeben) |
+| avail_id | string | ID des avail, from the ad cue in the content manifest file (N/A for VOD) |
+| avail_duration | number | Dauer (Sekunden) des Nutzens, ausgehend von der Anzeige in der Inhaltsmanifestdatei (N/A für VOD) |
+| ad_server_response | string | Base64-codierte Antwort vom Ad-Server |
 
-Ein Beispiel:
+Beispiel:
 
 ```
 2015-03-25T06:13:31.271Z 14272. . . 189938 TRACE_AD_CALL
@@ -197,30 +197,30 @@ Ein Beispiel:
 
 ### TRACE_AD_INSERT, TRACE_AD_RESOLVE und TRACE_AD_REDIRECT records {#trace-ad-insert-trace-ad-resolve-and-trace-ad-redirect-records}
 
-Aufzeichnungen dieser Art protokollieren die Ergebnisse der Anzeigenanforderungen, die vom Datensatztyp angegeben werden. Felder, die über den Datensatztyp hinausgehen, werden in der Reihenfolge angezeigt, die in der Tabelle angezeigt wird, getrennt durch Registerkarten.
+Datensätze dieses Typs protokollieren die Ergebnisse der Anzeigenanforderungen, die durch den Datensatztyp angegeben sind. Felder, die über den Datensatztyp hinausgehen, werden in der in der Tabelle angezeigten Reihenfolge angezeigt, getrennt durch Tabulatoren.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
-| status | string | Rückgegebener HTTP-Statuscode |
-| avail_id | string | ID des Werts, aus dem Anzeigen-Cue in der Inhaltsmanifestdatei (live) oder vom Manifestserver (VOD) |
-| ad_type | string | Art der Anzeige (DIRECT oder REDIRECT) |
-| ad_duration | integer | Dauer (Sekunden) der Anzeige, ab Ad-Server-Antwort |
-| ad_content_url | string | URL der Manifestdatei der Anzeige aus der Antwort des Anzeigenservers |
+| Status | string | Rückgegebener HTTP-Statuscode |
+| avail_id | string | ID des avail, aus dem ad cue in der content manifest file (live) oder vom manifest server (VOD) |
+| ad_type | string | Art der Anzeige (DIREKT oder UMLEITUNG) |
+| ad_duration | integer | Dauer (Sekunden) der Anzeige von der Ad-Server-Antwort |
+| ad_content_url | string | URL der Manifestdatei der Anzeige, von der Antwort des Anzeigenservers |
 | ad_content_url_IST | string | URL der Manifestdatei der eingefügten Anzeige. Leer für TRACE_AD_REDIRECT. |
-| ad_system_id | string | Anzeigensystem aus der Antwort des Anzeigenservers (Auditude, falls nicht angegeben) |
-| ad_id | string | ID der Anzeige aus der Antwort des Anzeigenservers |
-| creative_id | string | ID des kreativen Elements vom Anzeigenknoten aus der Antwort des Anzeigenservers |
-| ad_call_id | string | Nicht verwendet. Für zukünftige Verwendung reserviert. |
-| delta | integer | Dauer (Millisekunden) dieses Ereignisses |
-| misc | string | Die Anzeige aus Gründen wurde übersprungen |
+| ad_system_id | string | Anzeigesystem von der Anzeigenserver-Antwort (Auditude, falls nicht angegeben) |
+| ad_id | string | ID der Anzeige von der Antwort des Anzeigenservers |
+| creative_id | string | ID des Kreativen, vom Knoten ad, von der Antwort des Anzeigenservers |
+| ad_call_id | string | Nicht verwendet. Reserviert für zukünftige Verwendung. |
+| delta | integer | Von diesem Ereignis eingenommene Zeit (Millisekunden) |
+| misc | string | Grund-Anzeige wurde übersprungen |
 
 >[!NOTE]
 >
->Die Felder ad_content_url_IST, ad_call_id und misc sind optional.
+>Die Felder ad_content_url_actual, ad_call_id und misc sind optional.
 
-Bei TRACE_AD_RESOLVE und TRACE_AD_INSERT wird die URL im Feld ad_content_url_IST für die transkodierte Anzeige verwendet, sofern eine verfügbar ist. Andernfalls ist das Feld leer für TRACE_AD_RESOLVE oder dasselbe wie ad_content_url für TRACE_AD_INSERT.
+Für TRACE_AD_RESOLVE und TRACE_AD_INSERT gilt die URL im Feld ad_content_url_actual für die transcodierte Anzeige, sofern eine verfügbar ist. Andernfalls ist das Feld für TRACE_AD_RESOLVE leer oder für TRACE_AD_INSERT identisch mit ad_content_url.
 
-Ein Beispiel:
+Beispiel:
 
 ```
 2015-03-18T22:25:36.229-07:00 1426742736208 1120feb. . . 147465 TRACE_AD_RESOLVE
@@ -239,16 +239,16 @@ Auditude 308008 0 cecebae72a919de350b9ac52602623f3 0 NA
 
 ### TRACE_TRACKING_URL records {#trace-tracking-url-records}
 
-Aufzeichnungen dieses Typs protokollieren die Ergebnisse von Manifestserver-Anzeigenanforderungen. Felder, die über TRACE_TRACKING_URL hinausgehen, werden in der Tabellenreihenfolge angezeigt, durch Registerkarten getrennt.
+Datensätze dieses Typs protokollieren die Ergebnisse von Manifest-Server- und -Anforderungen. Felder, die über TRACE_TRACKING_URL hinausgehen, werden in der in der Tabelle angezeigten Reihenfolge angezeigt, getrennt durch Registerkarten.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
-| pts | number | Programm-Zeitstempel. Zeit innerhalb des Videos, um die URL aufzurufen. |
-| ad_system | string | Anzeigesystem (Auditude oder Freirad) |
+| pts | number | Programmzeitstempel. Zeit innerhalb des Videos, um die URL aufzurufen. |
+| ad_system | string | Anzeigesystem (Auditude oder Freiräder) |
 | url | string | URL pinged |
-| status | string | HTTP-Status, der vom Ping zurückgegeben wird |
+| Status | string | Vom Ping zurückgegebener HTTP-Status |
 
-Ein Beispiel:
+Beispiel:
 
 ```
 2015-06-04T23:24:42.000-0700    1426742736208     3086f5cd . . .    12345    TRACE_TRACKING_URL
@@ -258,173 +258,173 @@ Ein Beispiel:
 
 ### TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE records {#trace-transcoding-no-media-to-transcode-records}
 
-Aufzeichnungen dieses Typs protokollieren ein fehlendes Werbekreativelement. Das einzige Feld, das über TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE hinausgeht, wird in der Tabelle angezeigt.
+Datensätze dieser Art protokollieren eine fehlende und kreative Anzeige. Das einzige Feld, das über TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE hinausgeht, wird in der Tabelle angezeigt.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
-| ad_id | string | Voll qualifizierte Anzeigen-ID `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]]` Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]]` PROTOKOLL: AUDITUDE,VAST`)` |
+| ad_id | string | Vollqualifizierte Ad-ID `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]]` Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]]` PROTOKOLL: AUDITUDE, VAST`)` |
 
 ### TRACE_TRANSCODING_REQUESTED records {#trace-transcoding-requested-records}
 
-Aufzeichnungen dieses Typs protokollieren die Ergebnisse von Transkodierungsanforderungen, die der Manifestserver an das CRS sendet. Felder, die über &quot;TRACE_TRANSCODING_REQUESTED&quot;hinausgehen, werden in der Tabellenreihenfolge durch Registerkarten getrennt angezeigt.
+Datensätze dieses Typs protokollieren die Ergebnisse von Transkodierungsanforderungen, die der Manifestserver an das CRS sendet. Felder, die über TRACE_TRANSCODING_REQUESTED hinausgehen, werden in der in der Tabelle angegebenen Reihenfolge angezeigt, getrennt durch Registerkarten.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
-| ad_id | string | Voll qualifizierte Anzeigen-ID |
-| ad_manifest_url | string | URL der Manifestdatei der Anzeige aus der Antwort des Anzeigenservers |
+| ad_id | string | Vollständig qualifizierte Ad-ID |
+| ad_manifest_url | string | URL der Manifestdatei der Anzeige, von der Antwort des Anzeigenservers |
 | creative_type | string | Medientyp |
-| Flags | string | ID3 gibt an, ob die Transkodierungsanforderung eine Anforderung zum Hinzufügen eines ID3-Tags enthält |
-| zielgruppe_duration | string | Dauer der Zielgruppe (Sekunden) des transkodierten kreativen Elements |
+| Markierungen | string | ID3 gibt an, ob die Transkodierungsanforderung eine Anforderung zum Hinzufügen eines ID3-Tags enthält |
+| zielgruppe_duration | string | Zieldauer (Sekunden) der transcodierten Kreativelösung |
 
 ### TRACE_TRACKING_REQUEST records {#trace-tracking-request-records}
 
-Aufzeichnungen dieses Typs geben eine Anforderung zur serverseitigen Verfolgung an. Felder, die über &quot;TRACE_TRACKING_REQUEST&quot;hinausgehen, werden in der Tabellenreihenfolge durch Registerkarten getrennt angezeigt.
+Datensätze dieses Typs weisen auf eine Anforderung zur serverseitigen Verfolgung hin. Felder, die über TRACE_TRACKING_REQUEST hinausgehen, werden in der Tabellenreihenfolge angezeigt, getrennt durch Registerkarten.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
 | tracking_url_count | integer | Anzahl der Tracking-URLs |
-| beginn | float | PTS Fragment-Beginn (Sekunden mit Millisekunde-Genauigkeit) |
-| end | float | PTS-Fragmentendzeit (Sekunden mit Millisekunde-Genauigkeit) |
+| beginn | float | Startzeit des PTS-Fragments (Sekunden mit Millisekunde-Genauigkeit) |
+| end | float | Endzeit des PTS-Fragments (Sekunden mit Millisekunde-Genauigkeit) |
 
 ### TRACE_TRACKING_REQUEST_URL records {#trace-tracking-request-url-records}
 
-Datensätze dieses Typs bieten eine Tracking-URL für die serverseitige Verfolgung. Felder, die über TRACE_TRACKING_REQUEST_URL hinausgehen, werden in der Tabellenreihenfolge angezeigt, durch Registerkarten getrennt.
+Datensätze dieses Typs enthalten eine Tracking-URL für die serverseitige Verfolgung. Felder, die über TRACE_TRACKING_REQUEST_URL hinausgehen, werden in der in der Tabelle angegebenen Reihenfolge angezeigt, getrennt durch Registerkarten.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
-| timestamp | float | Zeit (Sekunden mit Genauigkeit 0,001) innerhalb der Wiedergabesitzung zum Pingen der Tracking-URL |
-| ad_system | string | Anzeigesystem (z. B. auditude) |
-| url | string | URL zum Ping |
+| Zeitstempel | float | Dauer (Sekunden mit Präzision 0,001) innerhalb der Wiedergabesitzung zum Pingen der Tracking-URL |
+| ad_system | string | Anzeigesystem (z. B. Auditude) |
+| url | string | URL zu ping |
 
 ### TRACE_WEBVTT_REQUEST records {#trace-webvtt-request-records}
 
-Datensätze dieses Typs protokollieren Anforderungen, die der Manifestserver für WEBVTT-Beschriftungen ausführt. Felder, die über TRACE_WEBVTT_REQUEST hinausgehen, werden in der Tabellenreihenfolge angezeigt, durch Registerkarten getrennt.
+Datensätze dieses Typs werden vom Manifest-Server für WEBVTT-Untertitel angefordert. Felder, die über TRACE_WEBVTT_REQUEST hinausgehen, werden in der Tabellenreihenfolge angezeigt, getrennt durch Registerkarten.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
-| status | string | Rückgegebener HTTP-Statuscode |
+| Status | string | Rückgegebener HTTP-Statuscode |
 | vtt_uri | string | URL für Anforderung |
-| beginn | float | Beginn teilen (Sekunden mit Millisekunde-Genauigkeit) |
-| end | float | Teilungsendzeit (Sekunden mit Millisekunde-Genauigkeit) |
+| beginn | float | Startzeit teilen (Sekunden mit Millisekunde-Genauigkeit) |
+| end | float | Endzeit teilen (Sekunden mit Millisekunde-Genauigkeit) |
 
 ### TRACE_WEBVTT_RESPONSE records {#trace-webvtt-response-records}
 
-Zeichnet ``of ``diese ``type ``log ``responses ``die ``manifest ``Server ``sends ``bis ``clients ``in `` `answer` ``bis ``requests `` `for` ``WEBVTT ``Beschriftungen auf. Felder, die über TRACE_WEBVTT_RESPONSE hinausgehen, werden in der Tabellenreihenfolge angezeigt, mit den Tabs `by`getrennt.
+Datensätze dieses Typs Log-Antworten, die der Manifest-Server an Clients sendet, um Anfragen für `WEBVTT`-Beschriftungen zu beantworten. Felder, die über `TRACE_WEBVTT_RESPONSE` hinausgehen, werden in der in der Tabelle angezeigten Reihenfolge angezeigt, getrennt durch Tabulatoren.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
-| status | string | Rückgegebener HTTP-Statuscode |
-| response | string | Base64-kodierte Antwort an Client gesendet |
+| Status | string | Rückgegebener HTTP-Statuscode |
+| Ansprechen | string | Base64-codierte Antwort an Client gesendet |
 
 ### TRACE_WEBVTT_SOURCE records {#trace-webvtt-source-records}
 
-Datensätze dieses Typs protokollieren Antworten auf Anfragen, die der Manifestserver für WEBVTT-Beschriftungen ausführt. Felder, die über TRACE_WEBVTT_SOURCE hinausgehen, werden in der Tabellenreihenfolge angezeigt, durch Registerkarten getrennt.
+Datensätze dieser Art Log-Antworten auf Anfragen, die der Manifest-Server für WEBVTT-Untertitel erstellt. Felder, die über TRACE_WEBVTT_SOURCE hinausgehen, werden in der Tabellenreihenfolge angezeigt, getrennt durch Tabulatoren.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
-| status | string | Rückgegebener HTTP-Statuscode |
-| source | string | Base64-kodierter Original-VTT-Inhalt |
+| Status | string | Rückgegebener HTTP-Statuscode |
+| Quelle | string | Base64-kodierter Original-VTT-Inhalt |
 
 
 ### TRACE_MISC records {#trace-misc-records}
 
-Datensätze dieses Typs ermöglichen es dem Manifestserver, Ereignis und Informationen zu protokollieren, die andernfalls nicht vorgesehen sind, wenn Anzeigen aufgenommen werden. Das Feld nach &quot;TRACE_MISC&quot;besteht aus einer Meldungszeichenfolge. Folgende Meldungen können angezeigt werden:
+Über diese Art von Datensätzen kann der Manifest-Server Ereignisse und Informationen protokollieren, die andernfalls nicht vorgesehen sind, wenn er Anzeigen aufnimmt. Das Feld hinter TRACE_MISC besteht aus einer Meldungszeichenfolge. Folgende Meldungen können angezeigt werden:
 
 * Anzeige ignoriert :AdPlacement `[adManifestURL=https://cdn2.auditude.com/assets/3p/v2/8c/2b/8c2bb. . . .m3u8, durationSeconds=15.0, ignore=false, redirectAd=false, priority=1]`
-* AdPlacement adManifestURL=*adManifestURL*, durationSeconds=*seconds*, ignore=*ignore*, redirectAd=*redirectAd*, priority=*priority*
-* Anzeigenplatzierung gab null zurück.
-* Anzeige erfolgreich geheftet.
-* Anzeigenaufruf fehlgeschlagen: *Fehlermeldung*.
-* Hinzufügen von User-Agent zum Abrufen des unverarbeiteten Manifests: *user-agent*.
-* Hinzufügen eines Cookies zum Abrufen des unverarbeiteten Manifests: [cookie]
+* AdPlacement adManifestURL=*adManifestURL*, durationSeconds=*seconds*, ignore=*ignore*, redirectAd=*redirectAd*, priorität=*priorität*
+* Werbeplatzierung gab null zurück.
+* und erfolgreich geheftet.
+* Anruf fehlgeschlagen: *Fehlermeldung*.
+* Hinzufügen von User-Agent zum Abrufen des Raw-Manifests: *user-agent*.
+* Hinzufügen eines Cookies zum Abrufen des Raw-Manifests: [cookie]
 * Falsche URL *angeforderte URL-Fehlermeldung*. (Varianten-URL konnte nicht analysiert werden)
-* URL aufgerufen: URL *Rückgabe erhalten: Antwortcode*. (Live-URL)
-* URL aufgerufen: URL *Rückgabecode: Antwortcode*. (VOD-URL)
-* Konflikt beim Auflösen von Anzeigen: entweder eines der - Mid - Roll - oder Mid - Roll - Beginn innerhalb des Vorrollens oder Vorrollens in Mid - Roll (VOD).
-* Vom Handler für URI ausgelöste nicht verarbeitete Ausnahme erkannt: *Anforderungs-URL*.
-* Generiert das Variantenmanifest. (Variante)
-* Generiert das Variantenmanifest.
-* Ausnahme bei der Behandlung der VAST-Umleitung *Umleitungs-URL *Fehler: *Fehlermeldung*.
-* Die Wiedergabeliste der Anzeige für *Anzeigenmanifest-URL* konnte nicht abgerufen werden.
-* Targeting-Manifest konnte nicht erstellt werden. (HLSManifestResolver)
-* Die Antwort auf den ersten Anzeigenaufruf konnte nicht analysiert werden: *Fehlermeldung*.
-* *GET|POST *Anfrage für Pfad konnte nicht verarbeitet werden: *Anforderungs-URL*. (Live/VOD)
-* Live-Manifestanforderung konnte nicht verarbeitet werden: *Anforderungs-URL*. (Live)
-* Fehler beim Zurückgeben eines Variantenmanifests: *Fehlermeldung*.
+* URL aufgerufen: URL *Rückgabe erhalten: Antwortcode*. ( Live-URL)
+* URL aufgerufen: URL *Rückgabecode: Antwortcode*. ( VOD-URL)
+* Konflikt beim Auflösen von Anzeigen: entweder eines der - mittleren oder mittleren Rollen-Endpunkte fällt in die Vorrollen- oder Vorrollen, die im mittleren Rollen (VOD) enthalten sind.
+* Vom Handler für URI ausgelöste unbehandelte Ausnahme erkannt: *Anfrage-URL*.
+* Generieren des Variantenmanifests abgeschlossen. (Variante)
+* Generieren des Variantenmanifests abgeschlossen.
+* Ausnahme bei der Verarbeitung von VAST-Umleitung *Umleitungs-URL *Fehler: *Fehlermeldung*.
+* Die Playlist der Anzeige für *ad manifest URL* konnte nicht abgerufen werden.
+* Zielmanifest konnte nicht generiert werden. (HLSManifestResolver)
+* Fehler beim Analysieren der ersten Ad-Call-Antwort: *Fehlermeldung*.
+* *GET|POST *Anforderung für Pfad konnte nicht verarbeitet werden: *Anfrage-URL*. (Live/VOD)
+* Live-Manifest-Anforderung konnte nicht verarbeitet werden: *Anfrage-URL*. (Live)
+* Variantenmanifest konnte nicht zurückgegeben werden: *Fehlermeldung*.
 * Gruppen-ID konnte nicht validiert werden: *Gruppen-ID*.
-* Rohes Manifest abrufen: *Inhalts-URL*. (Live)
-* Nach VAST-Umleitung: *Umleitungs-URL*.
-* Leer gefunden. (VOD)
-* *number *Anzeigen gefunden. (VOD)
+* Raw-Manifest wird abgerufen: *Content URL*. (Live)
+* Folgende VAST-Umleitung: *Umleitungs-URL*.
+* Leere verfügbare Dateien gefunden. (VOD)
+* *number *ads gefunden. (VOD)
 * HTTP-Anforderung empfangen. (Sehr erste Meldung)
-* Die Anzeige wird ignoriert, weil die Differenz zwischen der Anzeigenantwortdauer (*Anzeigenreaktionsdauer *Sek.) und der tatsächlichen Anzeigendauer (*tatsächliche Dauer *Sek.) größer als die Beschränkung ist. (HLSManifestResolver)
-* Ignoring avail that provided no ID value. (GroupAdResolver.java)
-* Ignorieren von Werten, die einen ungültigen Zeitwert lieferten: *time *for availId = *avail ID*.
-* Ignorieren von Werten, die einen ungültigen Wert für die Dauer boten: *duration *for availId = *avail ID*.
-* Neue Sitzung initialisieren (Variante)
+* Ignorieren der Anzeige, weil die Differenz zwischen der Anzeigenreaktionsdauer (*Ad-Response-Dauer *Sek.) und der tatsächlichen Anzeigendauer (*tatsächliche Dauer *Sek.) größer als das Limit ist. (HLSManifestResolver)
+* Ignorierender Avail, der keinen ID-Wert angegeben hat. (GroupAdResolver.java)
+* Ignorieren des Avatars, der einen ungültigen Zeitwert angegeben hat: *time *for availId = *avail ID*.
+* Ignorieren des Avatars, der einen ungültigen Zeitwert angegeben hat: *duration *for availId = *avail ID*.
+* Neue Sitzung initialisieren. (Variante)
 * Ungültige HTTP-Methode. Es muss eine GET sein. (VOD)
-* Ungültige HTTP-Methode. Die Verfolgungsanfrage muss eine GET sein. (Live)
+* Ungültige HTTP-Methode. Nachverfolgungsanforderung muss eine GET sein. (Live)
 * Ungültige URL *angeforderte URL-Fehlermeldung*. (Variante)
 * Ungültige Gruppe. (HLSManifestResolver)
-* Ungültige Anforderung. Beschriftung ist keine gültige Verfolgungsanforderung. (VOD)
-* Ungültige Anforderung. Der Untertitelantrag muss nach der Einrichtung der Sitzung gestellt werden. (VOD)
-* Ungültige Anforderung. Verfolgungsanfragen müssen nach der Einrichtung der Sitzung gestellt werden. (VOD)
+* Ungültige Anforderung. Beschriftung ist keine gültige Tracking-Anforderung. (VOD)
+* Ungültige Anforderung. Untertitelanfragen müssen nach der Einrichtung der Sitzung erfolgen. (VOD)
+* Ungültige Anforderung. Nachverfolgungsanforderung muss nach der Sitzungserstellung erfolgen. (VOD)
 * Ungültige Serverinstanz für Überlastungs-Gruppen-ID: *Gruppen-ID*. (Live)
-* Grenze der VAST-Umleitungen erreicht - *Zahl*.
-* Durchführen eines Anzeigenaufrufs: *Anzeigen-Aufruf-URL*.
-* Kein Manifest gefunden für: *Inhalts-URL*. (Live)
-* Für die avail-ID wurde kein passender Wert gefunden: *avail ID*. (HLSManifestResolver)
+* Grenze der erreichten VAST-Umleitungen - *Zahl*.
+* Anruf: *ad call URL*.
+* Kein Manifest gefunden für: *Content URL*. (Live)
+* Für die avail ID wurde kein passender Wert gefunden: *avail ID*. (HLSManifestResolver)
 * Keine Wiedergabesitzung gefunden. (HLSManifestResolver)
-* Verarbeitung der VOD-Anforderung für das Manifest *Inhalts-URL*.
+* Verarbeitung der VOD-Anforderung für Manifest *Inhalt-URL*.
 * Verarbeitungsvariante.
-* Beschriftungsanforderung für Manifest *Inhalts-URL* wird verarbeitet.
-* Verfolgungsanforderung wird verarbeitet. (VOD)
-* Umleitungsanzeigeantwort leer. (VASTStAX)
-* Anfordern: *URL*.
-* Gibt die Fehlerantwort für die GET zurück, da keine Wiedergabesitzung gefunden wurde. (VOD)
-* Gibt eine Fehlerantwort für eine GET aufgrund eines internen Serverfehlers zurück.
-* Rückgabe der Fehlerantwort für eine GET-Anforderung zur Angabe eines ungültigen Assets: *Anzeigen-Anforderungs-ID*. (VOD)
-* Gibt eine Fehlerantwort für eine GET-Anforderung zurück, die eine ungültige oder leere Gruppen-ID angibt: *Gruppen-ID*. (VOD)
-* Gibt eine Fehlerantwort für eine GET zurück, die einen Wert für eine ungültige Verfolgungsposition angibt. (VOD)
-* Gibt die Fehlerantwort für eine GET mit ungültiger Syntax zurück - *Anforderungs-URL*. (Live/VOD)
-* Gibt eine Fehlerantwort für eine Anforderung mit nicht unterstützter HTTP-Methode zurück: *GET|POST*. (Live/VOD)
-* Gibt das Manifest aus dem Cache zurück. (VOD)
-* Server wird überlastet. Fahren Sie ohne Anzeigenstitch-Anforderung fort. (Variante)
-* Beginn, der ein zielgerichtetes Manifest generiert. (HLSManifestResolver)
-* Beginn, der das Variantenmanifest generiert aus: *Inhalts-URL*. (Variante)
-* Beginn, die Anzeigen in Manifest einbinden. (VODHLSResolver)
-* Versuchen Sie, Anzeige bei *HH:MM:SS* zuzuordnen: AdPlacement adManifestURL=*Anzeigen-Manifest-URL*, durationSeconds=*seconds*, ignore=*ignore*, redirectAd=*redirect ad*, priority=*priority* (HLSManifestResolver)
+* Beschriftungsanforderung für Manifest *Inhalt-URL* wird verarbeitet.
+* Verarbeiten der Tracking-Anforderung. (VOD)
+* Umleitung und Antwort leer. (VASTStAX)
+* Anforderung: *URL*.
+* Die Fehlerantwort für die GET-Anforderung wird zurückgegeben, da keine Wiedergabesession gefunden wurde. (VOD)
+* Die Fehlerantwort für die GET-Anforderung wird aufgrund eines internen Serverfehlers zurückgegeben.
+* Fehlerantwort für eine GET-Anforderung zur Angabe eines ungültigen Elements wird zurückgegeben: *ad request ID*. (VOD)
+* Fehlerantwort für eine GET-Anforderung, die eine ungültige oder leere Gruppen-ID angibt: *Gruppen-ID*. (VOD)
+* Gibt die Fehlerantwort für eine GET-Anforderung zurück, die einen ungültigen Wert für die Tracking-Position angibt. (VOD)
+* Fehlerantwort für eine GET-Anforderung mit ungültiger Syntax wird zurückgegeben - *Anfrage-URL*. (Live/VOD)
+* Fehlerantwort für eine Anforderung mit nicht unterstützter HTTP-Methode wird zurückgegeben: *GET|POST*. (Live/VOD)
+* Manifest wird aus dem Cache zurückgegeben. (VOD)
+* Server ist überladen. Ohne Stich anfordern. (Variante)
+* Beginnen Sie mit der Generierung des Zielmanifests. (HLSManifestResolver)
+* Generieren des Variantenmanifests aus: *Content URL*. (Variante)
+* Beginnen Sie mit dem Heften von Anzeigen in Manifest. (VODHLSResolver)
+* Versucht, die Anzeige bei *HH:MM:SS* anzuheften: AdPlacement adManifestURL=*ad Manifest URL*, durationSeconds=*seconds*, ignore=*ignore*, redirectAd=*redirect ad*, priorität=*priorität&lt;a1/>.* (HLSManifestResolver)
 * Wegen ungültiger pttimeline konnten keine Anzeigen abgerufen werden. Der Inhalt wurde ohne Anzeigen zurückgegeben. (VOD)
-* Keine Anzeigen möglich - Inhalt ohne Anzeigen zurückgegeben. (VOD)
-* Die Abfrage der Anzeige konnte nicht abgerufen werden, und es wurde keine Inhalts-URL angegeben. (VOD)
-* Gültige URL empfangen. (VOD/Variante)
-* Variante M3U8 nicht gefunden. (Variante)
+* Keine Anzeige möglich - zurückgegeben den Inhalt ohne Anzeigen. (VOD)
+* Es kann keine Ad-Query abgerufen werden, und es wurde keine Inhalts-URL angegeben. (VOD)
+* Gültige URL erhalten. (VOD/Variante)
+* Variante M3U8 wurde nicht gefunden. (Variante)
 
 ### TRACE_TRACKING_URL records {#trace-tracking-url-records-1}
 
-Der Manifestserver generiert solche Datensätze, nachdem während des Workflows zur serverseitigen Verfolgung eine Tracking-URL aufgerufen wurde. Felder, die über TRACE_TRACKING_URL hinausgehen, werden in der Tabellenreihenfolge angezeigt, durch Registerkarten getrennt.
+Der Manifestserver generiert solche Datensätze, nachdem er während des Workflows zur serverseitigen Verfolgung eine Tracking-URL aufruft. Felder, die über TRACE_TRACKING_URL hinausgehen, werden in der in der Tabelle angezeigten Reihenfolge angezeigt, getrennt durch Registerkarten.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
 | pts | number | PTS-Zeit im Stream |
-| ad_system | string | Anzeigensystem (Auditude oder Freiraum) |
+| ad_system | string | Anzeigesystem (Hörgeräusch oder Freilaufrad) |
 | url | string | URL pinged |
 | state | string | HTTP-Statuscode |
 
 ### TRACE_PLAYBACK_PROGRESS records {#trace-playback-progress-records}
 
-Der Manifestserver erzeugt solche Datensätze, wenn er während des Workflows zur serverseitigen Verfolgung ein Signal über den Fortschritt der Wiedergabe erhält. Felder, die über TRACE_PLAYBACK_PROGRESS hinausgehen, werden in der Tabellenreihenfolge angezeigt, durch Registerkarten getrennt.
+Der Manifest-Server generiert solche Datensätze, wenn er während des Workflows zur serverseitigen Verfolgung ein Signal über den Fortschritt bei der Wiedergabe erhält. Felder, die über TRACE_PLAYBACK_PROGRESS hinausgehen, werden in der Tabellenreihenfolge angezeigt, getrennt durch Registerkarten.
 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
-| status | string | HTTP-Statuscode |
+| Status | string | HTTP-Statuscode |
 | Bandbreite | integer | Bandbreite des Streams |
 | pts | integer | PTS-Zeit im Stream |
-| ms_time | integer | Zeitpunkt, zu dem der Manifestserver die Tracking-URL generiert hat |
+| ms_time | integer | Zeitpunkt, zu dem vom Manifest-Server generierte Tracking-URL |
 | url | string | Umleitungs-URL |
-| header_user_agent | string | HTTP User-Agent-Header |
-| header_dnt | integer | HTTP do-not-track-Header |
-| effective_remote_address | string | IPv4 effektive Remote-Adresse |
+| header_user_agent | string | HTTP-User-Agent-Header |
+| header_dnt | integer | HTTP-do-not-track-Header |
+| effective_remote_address | string | IPv4-Remote-Adresse |
 | remote_address | string | IPv4-Remote-Adresse |
 
 >[!NOTE]
@@ -433,4 +433,4 @@ Der Manifestserver erzeugt solche Datensätze, wenn er während des Workflows zu
 
 ## Hilfreiche Ressourcen {#helpful-resources}
 
-* Siehe vollständige Hilfedokumentation auf der Seite [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html).
+* Weitere Informationen finden Sie in der vollständigen Hilfedokumentation auf der Seite [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html).
