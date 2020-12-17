@@ -4,10 +4,10 @@ seo-title: Adobe Primetime Versionshinweise
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: fac84687085f289e984c189665bfe775337592b3
+source-git-commit: 6e4d29f3fb85410943b960b179147b2fc2f1e7c4
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 35%
+source-wordcount: '280'
+ht-degree: 34%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 35%
 
 Willkommen bei den Adobe Primetime Versionshinweisen. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
 
-## Erweiterungen und Fehlerbehebungen in PTAI 20.10.1
+## Erweiterungen und Fehlerbehebungen in PTAI 20.12.1
 
-Die Version konzentrierte sich auf Wartungs-Updates.
+Die Version enthält einen Hotfix, um zeitweilig auftretende Probleme mit der Clientverbindung zu beheben.
 
 ## Fehlerbehebungen in TVSDK 3.12 Android
 
