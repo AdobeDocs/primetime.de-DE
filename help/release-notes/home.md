@@ -4,7 +4,7 @@ seo-title: Adobe Primetime Versionshinweise
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 4790c8ab25ca6ecf118adf3037fc2e4e4f451cb3
+source-git-commit: c17145da29d148f3dbfe1bcd1011acfa7177bc25
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 34%
@@ -16,9 +16,9 @@ ht-degree: 34%
 
 Willkommen bei den Adobe Primetime Versionshinweisen. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
 
-## Erweiterungen und Fehlerbehebungen in PTAI 20.12.1
+## Erweiterungen und Fehlerbehebungen in PTAI 21.1.1
 
-Die Version enthält einen Hotfix, um zeitweilig auftretende Verbindungsprobleme des Clients zu beheben.
+Die Version enthält Unterstützung für Affiliate-Verfügbarkeiten für SCTE35-basierte Cue-Formate.
 
 ## Fehlerbehebungen in TVSDK 3.12 Android
 
