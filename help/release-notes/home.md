@@ -4,7 +4,7 @@ seo-title: Adobe Primetime Versionshinweise
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: d1b79fb39c0f51b6e06653caaaaa491aef7129d7
+source-git-commit: 22ed68a2aa5a85a37763186bd6802f980acfc9d8
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 34%
@@ -16,9 +16,9 @@ ht-degree: 34%
 
 Willkommen bei den Adobe Primetime Versionshinweisen. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
 
-## Erweiterungen und Fehlerbehebungen in PTAI 21.1.2
+## Erweiterungen und Fehlerbehebungen in PTAI 21.2.1
 
-Die Version umfasst die Aktualisierung von Primetime Ad Insertion Back-End-Memcache-Clustern.
+Die Version unterstützt die Optimierung der DASH-Ausgabe: zeitbasierte Node-Konsolidierung.
 
 ## Fehlerbehebungen in TVSDK 3.12 Android
 
