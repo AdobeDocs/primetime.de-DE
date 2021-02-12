@@ -5,9 +5,9 @@ seo-title: Verpacken Sie inkompatible Anzeigen mit dem Adobe Creative Repackage 
 title: Verpacken Sie inkompatible Anzeigen mit dem Adobe Creative Repackage Service neu.
 uuid: 56a2405d-b395-4fea-820d-343590be7c19
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,6 @@ Anzeigen, die von verschiedenen Drittanbietern bereitgestellt werden, z. B. von 
 Wenn TVSDK zum ersten Mal auf eine inkompatible Anzeige stößt, ignoriert der Player die Anzeige und sendet eine Anforderung an den Kreativ-Umverpackungsdienst (CRS), der Teil des Primetime-Anzeigenende ist, um die Anzeige in ein kompatibles Format zu verpacken. CRS versucht, M3U8-Darstellungen der Anzeige mit mehreren Bitraten zu generieren, und speichert diese Darstellungen im Primetime Content Versand Network (CDN). Wenn TVSDK das nächste Mal eine Anzeigenantwort erhält, die auf diese Anzeige verweist, verwendet der Player die HLS-kompatible M3U8-Version vom CDN.
 
 Wenden Sie sich an Ihren Kundenbetreuer, um diese optionale Funktion zu aktivieren.
-
-Weitere Informationen zu CRS finden Sie unter [Creative Packaging Service (CRS)](../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
 ## Mehrere CDN-Unterstützung für CRS und Versand {#section_900FDDA5454143718F1EB4C9732C8E1C}
 
