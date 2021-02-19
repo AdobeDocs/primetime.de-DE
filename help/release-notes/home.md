@@ -4,10 +4,10 @@ seo-title: Adobe Primetime Versionshinweise
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: ff723dd66ff4c576bf5c70f5fb061962d021e330
+source-git-commit: 0c0ef7249688137a67482eab902e9d188b4c661c
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 34%
+source-wordcount: '297'
+ht-degree: 32%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 34%
 
 Willkommen bei den Adobe Primetime Versionshinweisen. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
 
-## Erweiterungen und Fehlerbehebungen in PTAI 21.2.1
+## Erweiterungen und Fehlerbehebungen in PTAI 21.2.2
 
-Die Version unterstützt die Optimierung der DASH-Ausgabe: zeitbasierte Node-Konsolidierung.
+Die Version unterstützt die Stream-Einfügung/Synchronisierung von EXT-X-IMAGE-STREAM-INF in HLS-Streams. Die Funktion wird durch eine serverseitige Konfiguration aktiviert. Wenden Sie sich an Ihren Kundenbetreuer, um die Funktion zu aktivieren.
 
 ## Fehlerbehebungen in TVSDK 3.12 Android
 
