@@ -1,28 +1,36 @@
 ---
-title: PTAI 21.2.1 - Versionshinweise
+title: PTAI 21.2.2 - Versionshinweise
 description: Die PTAI Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Ad Insertion im Jahr 2021.
 translation-type: tm+mt
-source-git-commit: 22ed68a2aa5a85a37763186bd6802f980acfc9d8
+source-git-commit: 61a6c039685c3c6a937e2c98ffa3baf51455507b
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
 
 
-# Primetime Ad Insertion 21.2.1 - Versionshinweise
+# Primetime Ad Insertion 21.2.2 - Versionshinweise
 
 Die Versionshinweise zu Primetime Ad Insertion 21.x.x beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme in Primetime Ad Insertion im Jahr 2021.
 
-## Neue Funktionen in PTAI 21.2.1
+## Neue Funktionen in PTAI 21.2.2
+
+**Wann:** Dienstag, 23. Februar 2021 von 1:00 Uhr bis 04:00 Uhr östliche Zeit
+
+**Änderungen**
+
+* Unterstützung für das Einfügen/Synchronisieren von Streams mit EXT-X-IMAGE-STREAM-INF in HLS-Streams hinzugefügt. Die Funktion wird durch eine serverseitige Konfiguration aktiviert. Wenden Sie sich an Ihren Kundenbetreuer, um die Funktion zu aktivieren.
+
+### Verbesserungen und Fehlerbehebungen in früheren Versionen
+
+#### Version 21.2.1
 
 **Wann:** Mittwoch, 3. Februar 2021 von 1:00 Uhr bis 04:00 Uhr östliche Zeit
 
 **Änderungen**
 
 * Unterstützung für die DASH-Ausgabenoptimierung hinzugefügt: zeitbasierte Node-Konsolidierung.
-
-### Verbesserungen und Fehlerbehebungen in früheren Versionen
 
 #### Version 21.1.2
 
