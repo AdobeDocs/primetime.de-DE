@@ -107,7 +107,7 @@ ht-degree: 0%
       + Anzeigeneinfügemetadaten {#ad-insertion-metadata}
          + [Übersicht](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md)
          + [Einrichten von Anzeigeneinfügemetadaten](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata-set-up.md)
-         + [Anzeigen bei vollständiger Wiedergabe im Ereignis aktivieren](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-full-event-replay.md)
+         + [Aktivieren von Anzeigen bei vollständiger Wiedergabe im Ereignis](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-full-event-replay.md)
          + [Anzeigensignalisierungsmodus](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-signaling-mode.md)
       + Begleitbanneranzeigen {#companion-banner-ads}
          + [Best Practices für begleitende Banneranzeigen](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/comp-banner-ads/android-3x-banners-best-practices.md)
@@ -216,7 +216,7 @@ ht-degree: 0%
       + [Just-in-time-Anzeigenauflösung](tvsdk-3x-ios-prog/ios-3x-advertising/c-ios-lazy-ad-resolving.md)
    + Primetime- und Server-Metriken {#ad-server-metadata}
       + [Einrichten von Primetime-Anzeigenservermetadaten](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)
-      + [Anzeigen bei vollständiger Wiedergabe im Ereignis aktivieren](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-full-event-replay.md)
+      + [Aktivieren von Anzeigen bei vollständiger Wiedergabe im Ereignis](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-full-event-replay.md)
       + [Anzeigensignalisierungsmodus](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-ad-signaling-mode.md)
    + [Banneranzeigen](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-companion-banner-ads/ios-3x-companion-banner-ads.md)
    + [Klickbare Anzeigen](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-clickable-ads.md)
@@ -380,7 +380,7 @@ ht-degree: 0%
       + Anzeigeneinfügemetadaten {#ad-insertion-metadata}
          + [Übersicht](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/c-psdk-android-2.7-ad-insertion-metadata.md)
          + [Einrichten von Anzeigeneinfügemetadaten](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/t-psdk-android-2.7-ad-insertion-metadata-set-up.md)
-         + [Anzeigen bei vollständiger Wiedergabe im Ereignis aktivieren](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/t-psdk-android-2.7-ad-full-event-replay.md)
+         + [Aktivieren von Anzeigen bei vollständiger Wiedergabe im Ereignis](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/t-psdk-android-2.7-ad-full-event-replay.md)
          + [Anzeigensignalisierungsmodus](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/r-psdk-android-2.7-ad-signaling-mode.md)
       + Begleitbanneranzeigen {#companion-banner-ads}
          + [Best Practices für begleitende Banneranzeigen](tvsdk-2.7-for-android/ad-insertion/comp-banner-ads/c-psdk-android-2.7-companion-banners-best-practices.md)
@@ -531,7 +531,7 @@ ht-degree: 0%
       + Anzeigeneinfügemetadaten {#ad-insertion-metadata}
          + [Übersicht](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata.md)
          + [Einrichten von Anzeigeneinfügemetadaten](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md)
-         + [Anzeigen bei vollständiger Wiedergabe im Ereignis aktivieren](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-full-event-replay.md)
+         + [Aktivieren von Anzeigen bei vollständiger Wiedergabe im Ereignis](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-full-event-replay.md)
          + [Anzeigensignalisierungsmodus](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-signaling-mode.md)
       + Klickbare Anzeigen {#clickable-ads}
          + [Übersicht](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-clickable-ads.md)
