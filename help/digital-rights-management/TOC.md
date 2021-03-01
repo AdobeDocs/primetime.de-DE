@@ -68,7 +68,7 @@ ht-degree: 0%
    + Verpackungsoptionen {#packaging-options}
       + [Verwenden Sie den im Lieferumfang enthaltenen Primetime Offline Packager](cloud-quick-start/packaging-options/use-offline-packager.md)
       + [Verwenden eines Drittanbieter-Encoder](cloud-quick-start/packaging-options/use-third-party-encoder.md)
-      + [Adobe Media Server verwenden](cloud-quick-start/packaging-options/use-adobe-media-server.md)
+      + [Adobe Medien-Server verwenden](cloud-quick-start/packaging-options/use-adobe-media-server.md)
    + [Testen des gepackten Inhalts](cloud-quick-start/test-packaged-content.md)
    + [Testfehler](cloud-quick-start/triaging-errors/client-error-triaging.md)
    + Benutzerdefinierte Authentifizierung/Berechtigung {#custom-auth-ent}
