@@ -4,10 +4,10 @@ seo-title: Adobe Primetime Versionshinweise
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 0c0ef7249688137a67482eab902e9d188b4c661c
+source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 32%
+source-wordcount: '345'
+ht-degree: 27%
 
 ---
 
@@ -20,11 +20,13 @@ Willkommen bei den Adobe Primetime Versionshinweisen. Die im linken Navigationsb
 
 Die Version unterstützt die Stream-Einfügung/Synchronisierung von EXT-X-IMAGE-STREAM-INF in HLS-Streams. Die Funktion wird durch eine serverseitige Konfiguration aktiviert. Wenden Sie sich an Ihren Kundenbetreuer, um die Funktion zu aktivieren.
 
-## Fehlerbehebungen in TVSDK 3.12 Android
+## Fehlerbehebungen in TVSDK 3.13 Android
 
-Die Veröffentlichung konzentrierte sich auf die Aktualisierung der Grundierungsversion der Primetime Reference-Anwendung auf Version 5.6.4.
+Diese Version bietet eine Problemumgehung zum Problem des Einfrierens des Widevine DRM-Streams oder der Anzeige von schwarzen Rahmen auf ABR-Switches auf FireTV-Geräten, zu denen Fire TV der 3. Generation von Pendant und Fire TV-Cuben der 1. und 2. Generation gehören.
 
-Weitere Informationen zur aktuellen Version für [Android](../release-notes/tvsdk-3x-android.md) finden Sie unter .
+Um das Problem zu beheben, stellen Sie die API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` für die angegebenen Fire TV-Geräte ein, bevor Sie die Wiedergabe starten. Der Standardwert ist false.
+
+Weitere Informationen finden Sie unter [TVSDK für Android-Versionshinweise](../release-notes/tvsdk-3x-android.md).
 
 ## Erweiterungen und Fehlerbehebungen in den iOS-Versionshinweisen zu TVSDK 3.12
 
