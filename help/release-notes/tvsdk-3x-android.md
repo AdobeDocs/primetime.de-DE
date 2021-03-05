@@ -1,24 +1,24 @@
 ---
-title: TVSDK 3.12 für Android-Versionshinweise
-seo-title: TVSDK 3.12 für Android-Versionshinweise
-description: TVSDK 3.12 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.12
-seo-description: TVSDK 3.12 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.12
+title: TVSDK 3.13 für Android-Versionshinweise
+seo-title: TVSDK 3.13 für Android-Versionshinweise
+description: TVSDK 3.13 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.13
+seo-description: TVSDK 3.13 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.13
 uuid: 685d46f5-5a02-4741-af5c-91e91babd6f7
 products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 33509042e32c2167fab21788042bfb2bb877c0f4
+source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
 workflow-type: tm+mt
-source-wordcount: '5418'
+source-wordcount: '5471'
 ht-degree: 0%
 
 ---
 
 
-# TVSDK 3.12 für Android-Versionshinweise {#tvsdk-for-android-release-notes}
+# TVSDK 3.13 für Android-Versionshinweise {#tvsdk-for-android-release-notes}
 
-TVSDK 3.12 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.12.
+TVSDK 3.13 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 3.13.
 
 Der Android-Referenzplayer ist im Verzeichnis samples/ Ihrer Distribution im Lieferumfang von Android TVSDK enthalten. In der zugehörigen Datei README.md wird beschrieben, wie Sie den Referenz-Player erstellen.
 
@@ -34,6 +34,14 @@ TVSDK für Android bietet viele Leistungsverbesserungen im Vergleich zu frühere
 
 Die umfassenden Funktionen, die unterstützt und nicht unterstützt werden, werden im Abschnitt [Funktionsmatrix](#feature-matrix) der Versionshinweise beschrieben.
 
+## Android TVSDK 3.13
+
+Der Wind-DRM-Stream friert bzw. zeigt schwarze Frames auf ABR-Geräten auf FireTV-Geräten an, zu denen Fire TV der 3. Generation von Pendant- und Fire TV-Cuben der 1. und 2. Generation gehören.
+
+Um das Problem zu beheben, stellen Sie die API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` für die angegebenen Fire TV-Geräte ein, bevor Sie die Wiedergabe starten. Der Standardwert ist false.
+
+### Neue Funktionen und Verbesserungen in früheren Versionen
+
 ## Android TVSDK 3.12
 
 Die Gradle Version der Primetime Reference-Anwendung wird jetzt auf Version 5.6.4 aktualisiert.
@@ -41,8 +49,6 @@ Die Gradle Version der Primetime Reference-Anwendung wird jetzt auf Version 5.6.
 Um die Referenz-App mit Android Studio einzurichten und auszuführen, befolgen Sie die Anweisungen in der ReadMe-Datei, die mit TVSDK zip unter `TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md` verfügbar ist.
 
 Die wichtigsten in der aktuellen Version behobenen Kundenprobleme werden im Abschnitt [gelöste Probleme](#resolved-issues) aufgeführt.
-
-### Neue Funktionen und Verbesserungen in früheren Versionen
 
 **Android TVSDK 3.11**
 
