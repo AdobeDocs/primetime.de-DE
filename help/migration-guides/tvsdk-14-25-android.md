@@ -1,17 +1,13 @@
 ---
 title: TVSDK 1.4 bis 2.5 für Android (Java)
-seo-title: TVSDK 1.4 bis 2.5 für Android (Java)
 description: TVSDK 2.5 bietet im Vergleich zu Version 1.4 mehrere Vorteile in Bezug auf Leistung, Sicherheit, bessere Integrationen und mehr.
-seo-description: TVSDK 2.5 bietet im Vergleich zu Version 1.4 mehrere Vorteile in Bezug auf Leistung, Sicherheit, bessere Integrationen und mehr.
-uuid: aaab7aec-cb5b-4840-82e8-7112a8d98a8a
 contentOwner: vishgupt
 products: SG_PRIMETIME
 topic-tags: migration
-discoiquuid: 8d9136bf-b3ae-450c-bd8a-0bb246527886
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '2343'
+source-wordcount: '2323'
 ht-degree: 0%
 
 ---
@@ -33,7 +29,7 @@ Laut einer Benchmarking-Studie eines Drittanbieters bietet Version 2.5 eine 5fac
 |--- |--- |
 | Sofort-On für VOD und Live | Zunächst müssen die Segmente für die sofortige Wiedergabe für VOD- und Live-lineare Streams beim Wechseln des Kanals für ein TV-ähnliches Erlebnis geladen werden. |
 | Verzögertes Laden von Werbeanzeigen | Beginn werden abgespielt, sobald Pre-Roll- oder Content-Funktion verfügbar ist, während Mid-Roll-Anzeigen in einem parallelen Thread aufgelöst werden. |
-| Persistente Netzwerkverbindungen | Erhöhen Sie die Effizienz und verringern Sie die Latenz des Netzwerkcodes, um die Wiedergabeleistung zu beschleunigen. |
+| Persistente Netzwerkverbindungen | Verbessern Sie die Effizienz und verringern Sie die Latenz des Netzwerkcodes, um die Wiedergabeleistung zu beschleunigen. |
 | Verbesserte ABR-Logik | Die neue ABR-Logik basiert auf der Pufferlänge, der Änderungsrate der Pufferlänge und der gemessenen Bandbreite. Dadurch wird sichergestellt, dass die ABR die richtige Bitrate wählt, wenn die Bandbreite schwankt, und auch die Anzahl der auftretenden Bitratenwechsel optimiert wird, indem die Rate überwacht wird, mit der sich die Pufferlänge ändert. |
 | Teilweiser Segmentdownload | Beginn werden abgespielt, sobald genügend Frames aus einem Segment verfügbar sind, um Videos auf Clientseite zuverlässig wiederzugeben. |
 | Parallele Downloads | TVSDK lädt parallel Audio- und Videosegmente herunter, um entmufferten Inhalt zur Optimierung der Wiedergabeleistung zu erhalten. |
