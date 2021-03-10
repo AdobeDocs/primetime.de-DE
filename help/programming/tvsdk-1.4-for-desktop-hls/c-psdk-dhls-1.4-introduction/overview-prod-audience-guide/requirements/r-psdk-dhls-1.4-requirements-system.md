@@ -1,13 +1,10 @@
 ---
 description: Um TVSDK zu verwenden, stellen Sie sicher, dass Ihre Hardware-, Betriebssystem- und Anwendungsversionen alle die unten aufgeführten Mindestanforderungen erfüllen.
-seo-description: Um TVSDK zu verwenden, stellen Sie sicher, dass Ihre Hardware-, Betriebssystem- und Anwendungsversionen alle die unten aufgeführten Mindestanforderungen erfüllen.
-seo-title: System- und Softwareanforderungen
 title: System- und Softwareanforderungen
-uuid: e0f58dac-96b6-41d1-bc4c-543bb3b4823b
 translation-type: tm+mt
-source-git-commit: 51302d6eaeccdd51b227171cfbd72fca3aeec115
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
