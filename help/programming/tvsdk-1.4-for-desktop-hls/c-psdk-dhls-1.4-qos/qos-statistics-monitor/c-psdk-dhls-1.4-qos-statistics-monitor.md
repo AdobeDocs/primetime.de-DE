@@ -1,13 +1,10 @@
 ---
 description: Die Servicequalität (QoS) Angebot eine detaillierte Ansicht der Leistung der Video-Engine. TVSDK bietet detaillierte Statistiken über Wiedergabe, Pufferung und Geräte.
-seo-description: Die Servicequalität (QoS) Angebot eine detaillierte Ansicht der Leistung der Video-Engine. TVSDK bietet detaillierte Statistiken über Wiedergabe, Pufferung und Geräte.
-seo-title: Qualität der Dienstleistungsstatistiken
 title: Qualität der Dienstleistungsstatistiken
-uuid: 5c9d09a9-0e0b-44f2-98ca-2eeb8a830ec6
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -57,7 +54,7 @@ Sie können Servicequalitätsinformationen (QoS) zu heruntergeladenen Ressourcen
    <tr> 
       <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
       <td colname="col1"> <p>Nummer </p> </td> 
-      <td colname="col2"> <p>Die Dauer des Downloads in Millisekunden. </p> <p>TVSDK unterscheidet nicht zwischen der Zeit, die der Client für die Verbindung mit dem Server benötigt hat, und der Zeit, die es zum Herunterladen des vollständigen Fragments dauerte. Wenn das Herunterladen eines Segments mit 10 MB z. B. 8 Sekunden in Anspruch nimmt, gibt TVSDK diese Informationen an, teilt Ihnen jedoch nicht mit, dass es bis zum ersten Byte 4 Sekunden und bis zum Herunterladen des gesamten Fragments weitere 4 Sekunden dauerte. </p> </td> 
+      <td colname="col2"> <p>Die Dauer des Downloads in Millisekunden. </p> <p>TVSDK unterscheidet nicht zwischen der Zeit, die der Client für die Verbindung mit dem Server benötigt hat, und der Zeit, die es zum Herunterladen des vollständigen Fragments dauerte. Wenn das Herunterladen eines Segments mit 10 MB z. B. 8 Sekunden in Anspruch nimmt, gibt TVSDK diese Informationen an, teilt Ihnen jedoch nicht mit, dass es 4 Sekunden dauerte, bis das erste Byte und weitere 4 Sekunden, bis das gesamte Fragment heruntergeladen wurde. </p> </td> 
    </tr> 
    <tr> 
       <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
