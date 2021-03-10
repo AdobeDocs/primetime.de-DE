@@ -1,13 +1,10 @@
 ---
 description: Mit MediaPlayerItemLoader können Sie Informationen zu einem Medienstream abrufen, ohne eine MediaPlayer-Instanz zu instanziieren. Dies ist besonders nützlich, wenn Sie Streams vor dem Puffern zwischenspeichern möchten, damit die Wiedergabe ohne Verzögerung beginnen kann.
-seo-description: Mit MediaPlayerItemLoader können Sie Informationen zu einem Medienstream abrufen, ohne eine MediaPlayer-Instanz zu instanziieren. Dies ist besonders nützlich, wenn Sie Streams vor dem Puffern zwischenspeichern möchten, damit die Wiedergabe ohne Verzögerung beginnen kann.
-seo-title: Medienressource mit MediaPlayerItemLoader laden
 title: Medienressource mit MediaPlayerItemLoader laden
-uuid: 43ca2470-1fd2-4f66-94fe-a12ed17b52d7
 translation-type: tm+mt
-source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
