@@ -1,13 +1,10 @@
 ---
 description: Beim Abspielen von Inhalten kann Browser TVSDK Anzeigen anzeigen und Informationen über Anzeigen weitergeben, wenn das MediaResource-Objekt erstellt wird.
-seo-description: Beim Abspielen von Inhalten kann Browser TVSDK Anzeigen anzeigen und Informationen über Anzeigen weitergeben, wenn das MediaResource-Objekt erstellt wird.
-seo-title: Anzeigen
 title: Anzeigen
-uuid: 9a5e8c83-18ce-41e8-9cb1-fdc9da903faf
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '100'
 ht-degree: 0%
 
 ---
