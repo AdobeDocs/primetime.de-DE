@@ -1,9 +1,9 @@
 ---
-seo-title: Konfigurationsdateieigenschaften
 title: Konfigurationsdateieigenschaften
-uuid: aec5fee7-4d77-4299-8d85-3e9042b2bbd1
+description: Konfigurationsdateieigenschaften
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1121'
 ht-degree: 0%
@@ -88,9 +88,9 @@ Die Konfigurationsdatei gibt die folgenden Eigenschaften an. Bei Eigenschaftenna
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.syncFrequency</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">syncname/value-pair</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Geben Sie an, wie oft Clients zum Senden von Synchronisierungsmeldungen an den Server erforderlich sind. Ist dies nicht der Fall, senden Clients keine Synchronisierungsmeldungen, wenn mit dieser Richtlinie geschützter Inhalt wiedergegeben wird. Der Wert besteht aus durch Kommas getrennten Paaren <span class="codeph"> name=value</span> mit folgendem Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> beginn|force|hardStop=numberValue</span> </p> <p class="- topic/p "> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Geben Sie an, wie oft Clients zum Senden von Synchronisierungsmeldungen an den Server erforderlich sind. Ist dies nicht der Fall, senden Clients keine Synchronisierungsmeldungen, wenn mit dieser Richtlinie geschützter Inhalt wiedergegeben wird. Der Wert besteht aus durch Kommas getrennten Paaren <span class="codeph"> name=value</span> mit folgendem Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> Beginn|force|hardStop=numberValue</span> </p> <p class="- topic/p "> 
      <ul id="ul_a5j_q4t_44"> 
-      <li id="li_25CAF96C27F34848A95B2E3693847C71"><span class="codeph"> beginn</span>  (erforderlich) - Beginn-Intervall gibt an, dass der Client die Synchronisierung mit dem Server einige Minuten seit der letzten Synchronisierung durchführen soll. </li> 
+      <li id="li_25CAF96C27F34848A95B2E3693847C71"><span class="codeph"> Beginn</span>  (erforderlich) - Beginn-Intervall gibt an, dass der Client die Synchronisierung mit dem Server einige Minuten seit der letzten Synchronisierung durchführen soll. </li> 
       <li id="li_CC9068CFE75645029C947C9E1B53351F"><span class="codeph"> force</span>  (optional) - Die Wahrscheinlichkeit der erzwungenen Synchronisierung ist die Wahrscheinlichkeit (0-100), mit der der Client während der Wiedergabe eine Synchronisierungsmeldung erzwingen soll. </li> 
       <li id="li_C31A6250F19348FBB8B7569D00C6314E"><span class="codeph"> hardStop</span>  (optional) - Das Intervall für die feste Beendigung ist der Zeitraum in Minuten, nach dem der Client die Wiedergabe fehlschlägt, wenn eine Synchronisierung nicht möglich ist. Wenn festgelegt, muss das Intervall größer als der Beginn sein. </li> 
      </ul>Verwenden Sie während der Aktualisierung <span class="codeph"> -sync</span> ohne die restlichen Argumente, um die Synchronisierungsanforderungen zu entfernen. </p> </td> 
