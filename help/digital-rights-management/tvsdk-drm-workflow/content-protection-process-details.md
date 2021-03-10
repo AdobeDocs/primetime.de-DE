@@ -1,9 +1,9 @@
 ---
-seo-title: Details zum Lizenzerwerb
 title: Details zum Lizenzerwerb
-uuid: 4825c49e-fa6f-4c98-9d21-a2743930ca2e
+description: Details zum Lizenzerwerb
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 3fdef12b717bb6f70ca27d9278de61d709f8349c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Dieser Vorgang stellt eine detaillierte Ansicht des Primetime DRM-Arbeitsablaufs
    DRMManager.addEventListener(DRMErrorEvent.DRM_ERROR, onDRMError);
    ```
 
-   Überprüfen Sie im Listener `DRMStatusEvent`, ob die Lizenz gültig (nicht null) ist. Verarbeiten Sie im Listener `DRMErrorEvent` `DRMErrorEvents`. Siehe *Verwenden der DRMStatusEvent-Klasse* und *Verwenden der DRMErrorEvent-Klasse* in diesem Handbuch.
+   Überprüfen Sie im Listener `DRMStatusEvent`, ob die Lizenz gültig ist (nicht null). Verarbeiten Sie im Listener `DRMErrorEvent` `DRMErrorEvents`. Siehe *Verwenden der DRMStatusEvent-Klasse* und *Verwenden der DRMErrorEvent-Klasse* in diesem Handbuch.
 
 1. Laden Sie die Lizenz, die zum Abspielen des Inhalts erforderlich ist.
 Laden Sie zunächst eine lokal gespeicherte Lizenz, um den Inhalt wiederzugeben:
