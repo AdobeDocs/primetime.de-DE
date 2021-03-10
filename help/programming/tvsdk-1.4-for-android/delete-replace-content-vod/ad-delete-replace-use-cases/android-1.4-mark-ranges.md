@@ -1,13 +1,10 @@
 ---
 description: Sie können Zeitintervalle im VOD-Inhalt als Werbeunterbrechungen festlegen.
-seo-description: Sie können Zeitintervalle im VOD-Inhalt als Werbeunterbrechungen festlegen.
-seo-title: Markierbereiche
 title: Markierbereiche
-uuid: eb99a1c2-6c0c-40a4-bac2-98dce45acfad
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '95'
+source-wordcount: '82'
 ht-degree: 0%
 
 ---
