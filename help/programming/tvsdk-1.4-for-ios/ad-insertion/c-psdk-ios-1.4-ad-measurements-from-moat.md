@@ -1,13 +1,10 @@
 ---
 description: TVSDK nimmt Informationen von FreeWheel und anderen Adservern entgegen, die VAST-Antworten bereitstellen. FreeWheel bietet innerhalb der VAST-Antworten Informationen vom Moat-Dienst. Der Moat-Dienst zählt Anzeigenimpressionen mit einer Genauigkeit, die besser zeigt, dass Kreative die Interessen einer Audience erfassen oder vernachlässigen.
-seo-description: TVSDK nimmt Informationen von FreeWheel und anderen Adservern entgegen, die VAST-Antworten bereitstellen. FreeWheel bietet innerhalb der VAST-Antworten Informationen vom Moat-Dienst. Der Moat-Dienst zählt Anzeigenimpressionen mit einer Genauigkeit, die besser zeigt, dass Kreative die Interessen einer Audience erfassen oder vernachlässigen.
-seo-title: Anzeigenmessungen von Moat
 title: Anzeigenmessungen von Moat
-uuid: 76fa9ca0-58bd-44fe-82ce-72fdf6fcc28c
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
