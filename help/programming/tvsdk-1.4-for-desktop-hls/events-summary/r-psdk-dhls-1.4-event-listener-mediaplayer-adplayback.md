@@ -1,13 +1,10 @@
 ---
 description: TVSDK löst Ereignis zur Anzeigenwiedergabe aus, die auf anzeigenbezogene Vorgänge reagieren, z. B. wenn eine Anzeige Beginn wird.
-seo-description: TVSDK löst Ereignis zur Anzeigenwiedergabe aus, die auf anzeigenbezogene Vorgänge reagieren, z. B. wenn eine Anzeige Beginn wird.
-seo-title: Ereignisse zur Anzeigenwiedergabe
 title: Ereignisse zur Anzeigenwiedergabe
-uuid: 63138237-2315-45ff-914d-369da18fdff7
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
