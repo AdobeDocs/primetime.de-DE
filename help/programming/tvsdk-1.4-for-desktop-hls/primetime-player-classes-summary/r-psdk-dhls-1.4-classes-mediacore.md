@@ -1,13 +1,10 @@
 ---
 description: Sie können die Primetime Player-API verwenden, um das Verhalten des Players anzupassen. Diese Klassen beschreiben Ihren Medienplayer und seine Ressource.
-seo-description: Sie können die Primetime Player-API verwenden, um das Verhalten des Players anzupassen. Diese Klassen beschreiben Ihren Medienplayer und seine Ressource.
-seo-title: Mediacore-Klassen
 title: Mediacore-Klassen
-uuid: f43d6968-cb08-4a8e-aebd-7934763df680
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
