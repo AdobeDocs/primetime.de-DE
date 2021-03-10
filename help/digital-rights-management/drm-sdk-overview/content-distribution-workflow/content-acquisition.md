@@ -1,13 +1,10 @@
 ---
 description: 'Wenn ein Verbraucher eine geschützte Inhaltsdatei von einer Website oder einem CDN erwirbt, muss er auch eine Lizenz erwerben, die einen Schlüssel zum Entschlüsseln des Videos enthält, bevor es wiedergegeben werden kann. Die folgenden Schritte illustrieren einen gemeinsamen Arbeitsablauf für den Zugriff auf geschützte Inhalte durch einen Computer, auf dem Flash Player oder Adobe AIR ausgeführt wird '
-seo-description: 'Wenn ein Verbraucher eine geschützte Inhaltsdatei von einer Website oder einem CDN erwirbt, muss er auch eine Lizenz erwerben, die einen Schlüssel zum Entschlüsseln des Videos enthält, bevor es wiedergegeben werden kann. Die folgenden Schritte illustrieren einen gemeinsamen Arbeitsablauf für den Zugriff auf geschützte Inhalte durch einen Computer, auf dem Flash Player oder Adobe AIR ausgeführt wird '
-seo-title: Inhaltsakquise
 title: Inhaltsakquise
-uuid: 80253746-bc31-43f0-b28b-7a1aa7fe34a7
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
