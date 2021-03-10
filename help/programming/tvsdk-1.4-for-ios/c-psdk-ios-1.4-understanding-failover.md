@@ -1,13 +1,10 @@
 ---
 description: Die Handhabung von Failover erfolgt, wenn eine variante Wiedergabeliste über mehrere Darstellungen für dieselbe Bitrate verfügt und eine der Darstellungen nicht mehr funktioniert. Das TVSDK wechselt zwischen Darstellungen.
-seo-description: Die Handhabung von Failover erfolgt, wenn eine variante Wiedergabeliste über mehrere Darstellungen für dieselbe Bitrate verfügt und eine der Darstellungen nicht mehr funktioniert. Das TVSDK wechselt zwischen Darstellungen.
-seo-title: Failover
 title: Failover
-uuid: 53cf611f-59e6-4728-a287-b98907d7f7bb
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 Die Handhabung von Failover erfolgt, wenn eine variante Wiedergabeliste über mehrere Darstellungen für dieselbe Bitrate verfügt und eine der Darstellungen nicht mehr funktioniert. Das TVSDK wechselt zwischen Darstellungen.
 
-Das folgende Beispiel zeigt eine Variantenplaylist mit Failover-URLs mit derselben Bitrate:
+Das folgende Beispiel zeigt eine variante Wiedergabeliste mit Failover-URLs mit derselben Bitrate:
 
 ```
 #EXTM3U
@@ -28,7 +25,7 @@ https://sj2slu225.corp.adobe.com:8090/_default_/_default_/livestream.m3u8
 https://sj2slu225.corp.adobe.com:8091/_default_/_default_/livestream.m3u8
 ```
 
-Wenn TVSDK die Wiedergabeliste lädt, wird eine Warteschlange erstellt, in der die URLs für alle Darstellungen des Inhalts für die gleiche Bitrate gespeichert werden. Wenn eine URL-Anforderung fehlschlägt, verwendet TVSDK die nächste URL mit derselben Bitrate aus der Failover-Warteschlange. Zu jeder bestimmten Ausfallzeit durchläuft TVSDK einmal alle verfügbaren URLs, bis eine korrekt funktioniert oder bis alle verfügbaren URLs versucht wurden. Wenn TVSDK versucht hat, alle verfügbaren URLs abzuspielen und keine der URLs funktioniert, beendet TVSDK die Wiedergabe des Inhalts.
+Wenn TVSDK die Wiedergabeliste lädt, wird eine Warteschlange erstellt, in der die URLs für alle Darstellungen des Inhalts für die gleiche Bitrate gespeichert werden. Wenn eine URL-Anforderung fehlschlägt, verwendet TVSDK die nächste URL mit derselben Bitrate aus der Failover-Warteschlange. Zu jeder bestimmten Ausfallzeit durchläuft TVSDK einmal alle verfügbaren URLs, bis eine korrekt funktioniert oder bis alle verfügbaren URLs versucht wurden. Wenn TVSDK versucht hat, alle verfügbaren URLs zu verwenden und keine der URLs funktioniert, beendet TVSDK die Wiedergabe des Inhalts.
 
 Failover tritt nur auf M3U8-Ebene auf, d. h.:
 
