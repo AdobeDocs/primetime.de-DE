@@ -1,13 +1,10 @@
 ---
 description: Wenn die Geschäftsregeln erfordern, dass die Anzahl der Computer für einen Benutzer verfolgt wird, müssen der Lizenzserver oder der Domänenserver die mit dem Benutzer verknüpften Computer-IDs speichern.
-seo-description: Wenn die Geschäftsregeln erfordern, dass die Anzahl der Computer für einen Benutzer verfolgt wird, müssen der Lizenzserver oder der Domänenserver die mit dem Benutzer verknüpften Computer-IDs speichern.
-seo-title: Maschinenzahl bei Erteilung der Lizenzen
 title: Maschinenzahl bei Erteilung der Lizenzen
-uuid: 7ba8a8d4-a31f-4f37-82a7-755cfa443544
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
