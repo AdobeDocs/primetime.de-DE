@@ -1,14 +1,11 @@
 ---
 description: Sie können die Funktionen des Primetime-Digital Rights Managements (DRM) verwenden, um einen sicheren Zugriff auf Ihre Videoinhalte zu ermöglichen. Alternativ dazu können Sie auch DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung der Adobe verwenden.
 keywords: DRM;DASH;HLS
-seo-description: Sie können die Funktionen des Primetime-Digital Rights Managements (DRM) verwenden, um einen sicheren Zugriff auf Ihre Videoinhalte zu ermöglichen. Alternativ dazu können Sie auch DRM-Lösungen von Drittanbietern als Alternative zur integrierten Primetime-DRM-Lösung der Adobe verwenden.
-seo-title: Übersicht über die Primetime-DRM-Oberfläche
 title: Übersicht über die Primetime-DRM-Oberfläche
-uuid: 5e794147-cc58-448c-b8ec-065e80ef01fd
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '426'
 ht-degree: 0%
 
 ---
@@ -54,7 +51,7 @@ Wenn der DRM-geschützte Stream mit mehreren Bitraten (MBR) kodiert ist, sollten
 https://your.domain.com/hls/[...]/index.m3u8?faxs=1
 ```
 
-Der Zeichenfolgenparameter `faxs=1` gibt an, dass der Abfrage DRM-geschützt ist, und löst den DRM-Entschlüsselungs-Workflow im iOS TVSDK entsprechend aus. Sie können das `faxs=1`-Tag auch an DRM-geschützte HLS-Asset-URLs anhängen, die für andere Plattformen bestimmt sind. es wird unter iOS wie erforderlich beobachtet oder bei Playern auf anderen Plattformen als Nicht-Op behandelt.
+Der Zeichenfolgenparameter `faxs=1` gibt an, dass der Inhalt DRM-geschützt ist, und Trigger den DRM-Entschlüsselungs-Workflow entsprechend im iOS TVSDK. Sie können das `faxs=1`-Tag auch an DRM-geschützte HLS-Asset-URLs anhängen, die für andere Plattformen bestimmt sind. es wird unter iOS wie erforderlich beobachtet oder bei Playern auf anderen Plattformen als Nicht-Op behandelt.
 
 ## Primetime-DRM in eine TSVDK-Anwendung {#implement-primetime-drm-in-a-tsvdk-application} implementieren
 
