@@ -1,13 +1,10 @@
 ---
 description: Sie können mehrere Optionen für die Formatierung von Beschriftungen festlegen. Diese Optionen setzen die Stiloptionen in den Originalbeschriftungen außer Kraft.
-seo-description: Sie können mehrere Optionen für die Formatierung von Beschriftungen festlegen. Diese Optionen setzen die Stiloptionen in den Originalbeschriftungen außer Kraft.
-seo-title: Gestaltungsoptionen für Bildunterschriften
 title: Gestaltungsoptionen für Bildunterschriften
-uuid: 0e2fd9f3-e569-4b5d-9b78-86f8ee6230ee
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
