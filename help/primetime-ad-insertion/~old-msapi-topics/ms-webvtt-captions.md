@@ -1,13 +1,10 @@
 ---
 description: Der Manifestserver unterstützt für alle HLS-Videoformate WebVTT-Untertitel, die vom Herausgeber aktiviert wurden. Wenn sie Anforderungen zum Einfügen von Anzeigen in mit WebVTT unterschriebene Inhalte erhält, erfolgt dies korrekt.
-seo-description: Der Manifestserver unterstützt für alle HLS/DASH-Videoformate WebVTT-Untertitel, die vom Herausgeber aktiviert wurden. Wenn sie Anforderungen zum Einfügen von Anzeigen in mit WebVTT unterschriebene Inhalte erhält, erfolgt dies korrekt.
-seo-title: Unterstützung für WebVTT-Beschriftungen
 title: Unterstützung für WebVTT-Beschriftungen
-uuid: 1dc728b0-5aeb-4c48-8f3b-54ff4b135742
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
