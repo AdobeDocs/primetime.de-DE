@@ -1,13 +1,10 @@
 ---
 description: Sie können die TVSDK-Konfigurationsdatei (AdobeTVSDKConfig.json) verwenden, um die Prioritäten für die Auswahl von Werbeanzeigen in VAST/VMAP-Antworten zu aktualisieren. Sie können diese Konfigurationsdatei auch verwenden, um die Quell-URL-Konvertierungsregeln für Anzeigenkreative zu definieren.
-seo-description: Sie können die TVSDK-Konfigurationsdatei (AdobeTVSDKConfig.json) verwenden, um die Prioritäten für die Auswahl von Werbeanzeigen in VAST/VMAP-Antworten zu aktualisieren. Sie können diese Konfigurationsdatei auch verwenden, um die Quell-URL-Konvertierungsregeln für Anzeigenkreative zu definieren.
-seo-title: Aktualisieren von Regeln für die kreative Auswahl von Werbeanzeigen
 title: Aktualisieren von Regeln für die kreative Auswahl von Werbeanzeigen
-uuid: 9eb4ccc2-425f-4c01-a095-f2043df4e25c
 translation-type: tm+mt
-source-git-commit: 6837c753b2f031b024ff510cda670340f346c4e1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
