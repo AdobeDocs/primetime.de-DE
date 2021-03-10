@@ -1,13 +1,10 @@
 ---
 description: Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigungen im Metadatenobjekt NATIVE_ERROR zurück.
-seo-description: Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigungen im Metadatenobjekt NATIVE_ERROR zurück.
-seo-title: NATIVE_ERROR-Werte für die Videowiedergabe
 title: NATIVE_ERROR-Werte für die Videowiedergabe
-uuid: 4916f96c-857a-4e15-8d91-9c2f949ce783
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1339'
 ht-degree: 6%
 
 ---
@@ -37,7 +34,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
    <td colname="col3"> Vorgang erfolgreich. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 3 </td> 
+   <td colname="col1"> 1 </td> 
    <td colname="col2"> <span class="codeph"> ASYNC_OPERATION_IN_PROGRESS</span> </td> 
    <td colname="col3"> Asynchroner Vorgang. Der Antrag wurde gestellt. Erfolgs-/Fehlerinformationen stehen später zur Verfügung. </td> 
   </tr> 
@@ -178,7 +175,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr> 
   <tr> 
    <td colname="col1"> 29 </td> 
-   <td colname="col2"><span class="codeph"> CONTAINER_NOT_SUPPORTED  </span> </td> 
+   <td colname="col2"><span class="codeph"> Container_NOT_SUPPORTED  </span> </td> 
    <td colname="col3"> Container-Typ wird nicht unterstützt. </td> 
   </tr> 
   <tr> 
@@ -327,7 +324,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
    <td colname="col3"> Die HLS-Wiedergabe wurde im Flash Player nicht aktiviert. Siehe <span class="codeph"> AuthorizedFeatures.enableHLSPlayback</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 78 </td> 
+   <td colname="col1"> 58 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_SAMPLE_FOUND</span> </td> 
    <td colname="col3"> Der Decoder hat ein schlechtes Beispiel erhalten, das nicht dekodiert werden kann. Dies ist in der Regel kein fataler Fehler, deutet aber darauf hin, dass es möglicherweise Fehler im Audio/Video gibt. Zu viele Instanzen dieses Fehlers deuten auf eine fehlerhafte Kodierung oder fehlerhafte Datei hin. </td> 
   </tr> 
@@ -427,7 +424,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
    <td colname="col3"> In einer internen Datenstruktur ist kein Audiobecken vorhanden. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 58 </td> 
+   <td colname="col1"> 78 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> Datei kann nicht geöffnet werden. </td> 
   </tr> 
@@ -442,7 +439,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
    <td colname="col3"> Aus einer Datei kann nicht gelesen werden. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 61 </td> 
+   <td colname="col1"> 81 </td> 
    <td colname="col2"><span class="codeph"> ID3PARSE_ERROR</span> </td> 
    <td colname="col3"> Bei der Analyse der ID3-Daten ist ein Fehler aufgetreten. </td> 
   </tr> 
