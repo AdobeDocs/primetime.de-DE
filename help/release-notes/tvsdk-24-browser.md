@@ -1,17 +1,13 @@
 ---
 title: Browser TVSDK 2.4 - Versionshinweise
-seo-title: Browser TVSDK 2.4 - Versionshinweise
 description: Browser TVSDK 2.4 Versionshinweise beschreiben die neuen, unterstützten und nicht unterstützten Funktionen und die bekannten Probleme in Browser TVSDK 2.4.
-seo-description: Browser TVSDK 2.4 Versionshinweise beschreiben die neuen, unterstützten und nicht unterstützten Funktionen und die bekannten Probleme in Browser TVSDK 2.4.
-uuid: 3a1eb1a5-0e72-4658-beeb-bca8816570e7
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-discoiquuid: d71886cb-f34b-47b2-9df7-168686478106
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '6834'
+source-wordcount: '6812'
 ht-degree: 0%
 
 ---
@@ -1391,7 +1387,7 @@ Die folgenden Probleme wurden in Browser TVSDK 2.4.8 behoben:
 
 Die folgenden Probleme wurden in Version 2.4.7 behoben:
 
-・ **8397**: Über Adobe Media Server generierte HLS Live-Streams werden möglicherweise nicht wiedergegeben, wenn die Segmente nicht mit einem Schlüsselbild Beginn werden.
+・ **8397**: Über Adobe Mediums Server generierte HLS Live-Streams werden möglicherweise nicht wiedergegeben, wenn die Segmente nicht mit einem Schlüsselbild Beginn werden.
 
 ・ **13606**: Probleme mit mehreren Suchvorgängen wurden für den HLS-Stream im Chrome-Browser behoben.
 
