@@ -1,16 +1,12 @@
 ---
 title: Primetime Streaming Server-Versionen
-seo-title: Primetime Streaming Server 1.x-Versionen
 description: Neue Funktionen in den Versionen Primetime Streaming Server 1.3 und 1.4.
-seo-description: Neue Funktionen in den Versionen Primetime Streaming Server 1.3 und 1.4.
-uuid: be05db6b-713f-4406-940d-9f3a805f967b
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: baec714e-9d41-4e8b-b134-13a736885cbd
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '1929'
+source-wordcount: '1916'
 ht-degree: 0%
 
 ---
@@ -69,7 +65,7 @@ Version 1.3.1 bezieht sich auf den Hotfix. Die folgenden Verbesserungen machen e
 
 ### Bekannte Probleme in Version 1.3.1 {#known-issues-in-release}
 
-* 3717039 - Wenn der Packager so konfiguriert ist, dass DPI-Sätze im einfachen Modus erzeugt werden, sollte er wirklich nach bestimmten Signaltypen suchen, z. B. Spleice-Einfüge oder Platzierungsmöglichkeiten, und nur diese in einfache Modus-Hinweise konvertieren. Sie sollte andere Signaltypen wie Programm-Beginn, Netzwerk-Beginn usw. ignorieren.
+* 3717039 - Wenn der Packager so konfiguriert ist, dass DPI-Sätze im einfachen Modus erzeugt werden, sollte er wirklich nach bestimmten Signaltypen suchen, z. B. nach Spllice-Einfüge- oder Platzierungsmöglichkeiten, und nur diese in einfache Modus-Hinweise konvertieren. Sie sollte andere Signaltypen wie Programm-Beginn, Netzwerk-Beginn usw. ignorieren.
 
 * 3718598 - Wenn Herkunft Server für die Bereitstellung geschützter Inhalte mit aktiviertem HSM-Zugriff konfiguriert ist, führt der Backend-LunaSA-Client eine häufige Kommunikation mit dem HSM-Modul durch
 
@@ -146,7 +142,7 @@ In die JIT-Verpackungsfunktionen von Primetime Herkunft wurden mehrere Leistungs
 
 **Softwareanforderungen**
 
-* Oracle Java JRE 1.7 (Empfehlung: Sun/Oracle Hotspot JVM). Das JDK ist für den Zugriff von JConsole auf die JMX-APIs erforderlich.
+* Oracle Java JRE 1.7 (Empfehlung: Sun/Oracle Hotspot-JVM). Das JDK ist für den Zugriff von JConsole auf die JMX-APIs erforderlich.
 
 ### Primetime Streaming Server {#install-and-configure-primetime-streaming-server} installieren und konfigurieren
 
@@ -223,7 +219,7 @@ Dieser Abschnitt gilt, wenn Primetime Streaming Server nicht verwendet wird und 
 
 **Softwareanforderungen**
 
-* Oracle Java JRE 1.7 (Empfehlung: Sun/Oracle Hotspot JVM). Das JDK ist für den Zugriff von JConsole auf die JMX-APIs erforderlich.
+* Oracle Java JRE 1.7 (Empfehlung: Sun/Oracle Hotspot-JVM). Das JDK ist für den Zugriff von JConsole auf die JMX-APIs erforderlich.
 
 Die oben genannten Mindestsystemanforderungen gelten für Herkunft Server und Live Packager.
 
