@@ -1,13 +1,10 @@
 ---
 description: Mithilfe von benutzerdefinierten Anzeigenmarken können Sie bestimmte Abschnitte des Hauptinhalts als anzeigenbezogene Inhaltszeiträume markieren.
-seo-description: Mithilfe von benutzerdefinierten Anzeigenmarken können Sie bestimmte Abschnitte des Hauptinhalts als anzeigenbezogene Inhaltszeiträume markieren.
-seo-title: hinzufügen von benutzerdefinierten Anzeigenmarken
 title: hinzufügen von benutzerdefinierten Anzeigenmarken
-uuid: 5d8c8aaa-a4e7-499d-b70e-5c72007ec269
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
