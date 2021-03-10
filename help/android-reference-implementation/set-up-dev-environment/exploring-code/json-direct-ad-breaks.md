@@ -1,13 +1,10 @@
 ---
-seo-title: JSON-Objekt für direkte Werbeunterbrechungen
 title: JSON-Objekt für direkte Werbeunterbrechungen
-uuid: ffb901f4-0a8b-40fe-b6ba-5ffebc324cf2
 description: Details zum JSON-Objekt, wenn der Typwert "Direktwerbung"lautet
-seo-description: Details zum JSON-Objekt, wenn der Typwert "Direktwerbung"lautet
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
