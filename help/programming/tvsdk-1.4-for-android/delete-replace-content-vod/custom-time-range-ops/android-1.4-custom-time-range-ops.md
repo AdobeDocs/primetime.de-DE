@@ -1,13 +1,10 @@
 ---
 description: TVSDK unterstützt das programmatische Löschen und Ersetzen von Anzeigeninhalten in VOD-Streams.
-seo-description: TVSDK unterstützt das programmatische Löschen und Ersetzen von Anzeigeninhalten in VOD-Streams.
-seo-title: Benutzerdefinierte Zeitraumoperationen
 title: Benutzerdefinierte Zeitraumoperationen
-uuid: e04af786-8dac-41a6-8406-f2ca04f612a4
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
