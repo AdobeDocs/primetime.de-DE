@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Festlegen des XSTS-Tokens im Player
 title: Festlegen des XSTS-Tokens im Player
-uuid: 8995e029-deee-4e23-9cda-a50de8c4f2c0
+description: Festlegen des XSTS-Tokens im Player
+copied-description: true
 translation-type: tm+mt
-source-git-commit: c37061c116b8a6bc8ce085dc89dc8aadd0a2e490
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
@@ -65,7 +63,7 @@ private void Player_RequestKeyAttribute(object sender, RequestKeyAttributeEventA
 
 Bei XSTS-Anforderungen enthält das Feld `customerSpecificAuthToken` das Base64-kodierte XSTS-Token. Der Code `XSTSValidator` untersucht das dekodierte Base64-Token auf das Vorhandensein des Elements `EncryptedAssertion`; Sie können jedoch andere Methoden verwenden, um zwischen diesen Anforderungen und Nicht-Xbox-Anforderungen zu unterscheiden. Sie können beispielsweise eine andere URL verwenden.
 
-Die in der Antwortmeldung zurückgegebene Richtlinie setzt die ursprüngliche Richtlinie in den DRM-Metadaten außer Kraft, die mit der Xbox-Schlüsselanforderung bereitgestellt werden. Nur eine Teilmenge der Richtlinienfunktionen wird vom Xbox-Client unterstützt. Diese Felder sind die einzigen Felder, die die ursprüngliche Richtlinie außer Kraft setzen.
+Die in der Antwortmeldung zurückgegebene Richtlinie setzt die ursprüngliche Richtlinie in den DRM-Metadaten außer Kraft, die mit der Xbox-Schlüsselanforderung bereitgestellt werden. Nur eine Untergruppe von Richtlinienfunktionen wird vom Xbox-Client unterstützt. Diese Felder sind die einzigen Felder, die die ursprüngliche Richtlinie außer Kraft setzen.
 
 Es sind weitere Setup-Schritte erforderlich, um die Entschlüsselung und Überprüfung von Token zu unterstützen. Sie müssen die Berechtigungen [!DNL xsts_partner_cert.pfx] und [!DNL x_secure_token_service.part.xboxlive.com.cer] in einen JKS-Format-Keystore laden, den Sie dann als Systemeigenschaft `xsts-keystore` für Ihren Back-End-Berechtigungsserver angeben. Standardmäßig hat der Partner [!DNL .pfx] den Alias `xsts` und das Token-Überprüfungszertifikat hat den Alias `xsts-verify-cert`. Sie können diese auch mithilfe der Systemeigenschaften überschreiben. Schließlich gibt es eine Systemeigenschaft `xsts-keystore-password`, die keine Standardeinstellung hat und das Keystore-Kennwort enthält. Die vom `XSTSValidator`-Code gelesenen Systemeigenschaften sind nachfolgend zusammengefasst:
 
