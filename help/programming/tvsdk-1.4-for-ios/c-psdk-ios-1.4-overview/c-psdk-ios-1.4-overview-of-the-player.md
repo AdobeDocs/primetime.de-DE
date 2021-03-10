@@ -1,13 +1,10 @@
 ---
 description: TVSDK für iOS enthält eine Reihe von Funktionen.
-seo-description: TVSDK für iOS enthält eine Reihe von Funktionen.
-seo-title: Primetime TVSDK-Funktionen
 title: Primetime TVSDK-Funktionen
-uuid: 838d407c-84e1-4818-bec2-4abd7cbf5308
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
