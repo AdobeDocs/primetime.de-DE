@@ -1,13 +1,10 @@
 ---
 description: Um VPAID 2.0-Unterstützung hinzuzufügen, fügen Sie eine benutzerdefinierte Anzeigenbenutzerspezifische Ansicht und entsprechende Listener hinzu.
-seo-description: Um VPAID 2.0-Unterstützung hinzuzufügen, fügen Sie eine benutzerdefinierte Anzeigenbenutzerspezifische Ansicht und entsprechende Listener hinzu.
-seo-title: Implementierung der VPAID 2.0-Integration
 title: Implementierung der VPAID 2.0-Integration
-uuid: 7d11ffd8-240c-4a95-94e6-ff4417c8942e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '65'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---
