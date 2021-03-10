@@ -1,13 +1,10 @@
 ---
 description: Mit dem Audiocodec 3 (AC-3, auch Dolby Digital® genannt) 5.1 Format können Content Provider die Größe von Mehrkanal-Audiodateien komprimieren, ohne die Klangqualität zu beeinträchtigen. AC-3 ist ein 5.1-Format, d. h. es bietet fünf Kanal mit voller Bandbreite für eine verbesserte Benutzerfreundlichkeit.
-seo-description: Mit dem Audiocodec 3 (AC-3, auch Dolby Digital® genannt) 5.1 Format können Content Provider die Größe von Mehrkanal-Audiodateien komprimieren, ohne die Klangqualität zu beeinträchtigen. AC-3 ist ein 5.1-Format, d. h. es bietet fünf Kanal mit voller Bandbreite für eine verbesserte Benutzerfreundlichkeit.
-seo-title: Format AC-3 5.1
 title: Format AC-3 5.1
-uuid: 9d1adf33-4c9b-4d31-8212-ac301f3e44c5
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '397'
 ht-degree: 0%
 
 ---
