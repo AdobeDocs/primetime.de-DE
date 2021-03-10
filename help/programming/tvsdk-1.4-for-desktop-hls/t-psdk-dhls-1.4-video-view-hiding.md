@@ -1,13 +1,10 @@
 ---
 description: Nachdem eine MediaPlayer-Ansicht zum Abspielen von Videos verwendet wurde, können Sie sie ausblenden und erneut anzeigen, indem Sie eine TVSDK-Methode oder manuell verwenden.
-seo-description: Nachdem eine MediaPlayer-Ansicht zum Abspielen von Videos verwendet wurde, können Sie sie ausblenden und erneut anzeigen, indem Sie eine TVSDK-Methode oder manuell verwenden.
-seo-title: Ansichten ausblenden
 title: Ansichten ausblenden
-uuid: 7cc02bf4-41ee-4af0-98ba-df070b50b88d
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '156'
 ht-degree: 1%
 
 ---
