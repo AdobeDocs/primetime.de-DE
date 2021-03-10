@@ -1,13 +1,10 @@
 ---
 description: Der Anzeigensignalisierungsmodus gibt an, wo der Videostream Werbeinformationen erhalten soll.
-seo-description: Der Anzeigensignalisierungsmodus gibt an, wo der Videostream Werbeinformationen erhalten soll.
-seo-title: Anzeigensignalisierungsmodus
 title: Anzeigensignalisierungsmodus
-uuid: 111b7e43-e97c-4069-a273-4f9f6280453e
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '123'
 ht-degree: 0%
 
 ---
