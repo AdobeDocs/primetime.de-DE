@@ -1,13 +1,10 @@
 ---
 description: Mithilfe von Ereignissen und Benachrichtigungen können Sie die asynchronen Aspekte der Videoanwendung verwalten.
-seo-description: Mithilfe von Ereignissen und Benachrichtigungen können Sie die asynchronen Aspekte der Videoanwendung verwalten.
-seo-title: Benachrichtigungen und Ereignis für Player-Status, Aktivität, Fehler und Protokollierung
 title: Benachrichtigungen und Ereignis für Player-Status, Aktivität, Fehler und Protokollierung
-uuid: c4a108e7-72aa-4c96-9538-b1385343d6af
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
