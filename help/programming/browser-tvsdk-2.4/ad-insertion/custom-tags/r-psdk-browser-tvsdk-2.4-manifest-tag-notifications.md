@@ -1,13 +1,10 @@
 ---
 description: Die MediaPlayerItem.timedMetadata-Eigenschaft bietet Zugriff auf alle TimedMetadata-Objekte, die aus den Tags "playlist/manifest"oder aus ID3-Tags im Medienstream erstellt werden.
-seo-description: Die MediaPlayerItem.timedMetadata-Eigenschaft bietet Zugriff auf alle TimedMetadata-Objekte, die aus den Tags "playlist/manifest"oder aus ID3-Tags im Medienstream erstellt werden.
-seo-title: Benachrichtigungen für Manifesttags
 title: Benachrichtigungen für Manifesttags
-uuid: 50727455-b37b-4e39-8efb-a97de3164074
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---
