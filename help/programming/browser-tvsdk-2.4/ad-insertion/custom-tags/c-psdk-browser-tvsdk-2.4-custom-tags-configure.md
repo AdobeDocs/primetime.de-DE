@@ -1,13 +1,10 @@
 ---
 description: Medienstreams können zusätzliche Metadaten in Form von Tags in der MPD-Datei (Media Presentation Description) enthalten. Diese Datei zeigt die Platzierung der Werbung an. Sie können benutzerdefinierte Tag-Namen angeben und benachrichtigt werden, wenn bestimmte Tags in der Manifestdatei angezeigt werden.
-seo-description: Medienstreams können zusätzliche Metadaten in Form von Tags in der MPD-Datei (Media Presentation Description) enthalten. Diese Datei zeigt die Platzierung der Werbung an. Sie können benutzerdefinierte Tag-Namen angeben und benachrichtigt werden, wenn bestimmte Tags in der Manifestdatei angezeigt werden.
-seo-title: Benutzerdefinierte Tags
 title: Benutzerdefinierte Tags
-uuid: d1e34288-545b-440f-a262-2fb853f0e3c4
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -78,7 +75,7 @@ DASH bietet zwei Möglichkeiten zur Signalgebung von Ereignissen:
 
 * In der MPD-Datei.
 
-   Diese Datei ähnelt der M3U8-Datei im HLS-Inhalt, und MPD-Ereignisse sind in der .mpd-Datei vorhanden.
+   Diese Datei ähnelt der Datei M3U8 im HLS-Inhalt, und MPD-Ereignisse sind in der .mpd-Datei vorhanden.
 * In der Darstellung einschließen
 
    Inband-Ereignis werden mit Darstellungen multipliziert, indem die Ereignis-Meldungen als Teil der Segmente hinzugefügt werden. Eine Darstellung ist eine Liste von Video- und Audiosegmenten, die nacheinander wiedergegeben werden. Die Inband-Ereignis-Daten werden in diese Segmente eingebettet.
