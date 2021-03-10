@@ -1,13 +1,10 @@
 ---
 description: TVSDK unterstützt das programmatische Löschen und Ersetzen von Anzeigeninhalten in VOD-Streams.
-seo-description: TVSDK unterstützt das programmatische Löschen und Ersetzen von Anzeigeninhalten in VOD-Streams.
-seo-title: Löschen und Ersetzen von Anzeigen in VOD-Streams
 title: Löschen und Ersetzen von Anzeigen in VOD-Streams
-uuid: 8f51c413-a8c9-46c1-aec6-0d536feaaeb7
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '372'
 ht-degree: 0%
 
 ---
