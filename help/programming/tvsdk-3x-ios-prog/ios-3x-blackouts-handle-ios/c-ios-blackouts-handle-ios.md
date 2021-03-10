@@ -1,13 +1,10 @@
 ---
 description: TVSDK verarbeitet Blackouts in Live-Video-Streams und bietet alternativen Inhalt während einer Blackout-Phase.
-seo-description: TVSDK verarbeitet Blackouts in Live-Video-Streams und bietet alternativen Inhalt während einer Blackout-Phase.
-seo-title: Umgang mit Blackouts
 title: Umgang mit Blackouts
-uuid: 00b6f204-6ba4-4245-9028-6f7c392e9275
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
