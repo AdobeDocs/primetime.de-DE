@@ -1,13 +1,10 @@
 ---
 description: Sie können Schaltflächen zum Anhalten und Abspielen hinzufügen, um das Video anzuhalten oder abzuspielen.
-seo-description: Sie können Schaltflächen zum Anhalten und Abspielen hinzufügen, um das Video anzuhalten oder abzuspielen.
-seo-title: Video abspielen und anhalten
 title: Video abspielen und anhalten
-uuid: 66fefead-7f1d-46ed-a23e-381f25697978
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
