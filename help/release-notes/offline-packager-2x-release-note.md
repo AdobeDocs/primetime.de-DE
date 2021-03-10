@@ -1,17 +1,13 @@
 ---
 title: Primetime Offline Packager 2.x-Versionen
-seo-title: Primetime Offline Packager 2.x-Versionen
 description: Neue Funktionen in Primetime Offline Packager 2.1 und 2.3.1
-seo-description: Neue Funktionen in Primetime Offline Packager 2.1 und 2.3.1
-uuid: 01926a10-890d-477d-b832-e22847d957e0
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: 933a0711-846a-4bb7-bf51-b300822a93d4
 translation-type: tm+mt
-source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
