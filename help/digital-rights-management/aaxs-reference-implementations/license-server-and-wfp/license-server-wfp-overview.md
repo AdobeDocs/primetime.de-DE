@@ -1,9 +1,9 @@
 ---
-seo-title: Überblick über den Lizenzserver und den überwachten Ordner-Packager
 title: Überblick über den Lizenzserver und den überwachten Ordner-Packager
-uuid: 3dd6f699-a5c0-44c4-897a-34e06abe3d71
+description: Überblick über den Lizenzserver und den überwachten Ordner-Packager
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Der Beispielcode für die Referenzimplementierung zeigt die folgenden Funktionen
    * Einschränkung von DRM-/Laufzeitversionen, die Anforderungen an den Lizenzserver stellen dürfen
    * Voreinstellungen für die Zeitrücklaufzeit des Clients festlegen
    * Einschränkung der zulässigen Zeitdifferenz zwischen Anforderungszeit und Serverzeit (um Wiederholungsangriffe zu vermeiden)
-   * Bearbeitung von Anfragen von FMRMS 1.x-Clients (löst die Aktualisierung auf Adobe Access 2.0 oder höher durch den FMRMS 1.x-Client aus)
+   * Bearbeitung von Anfragen von FMRMS 1.x-Clients (Trigger FMRMS 1.x-Client für Aktualisierung auf Adobe Access 2.0 oder höher)
    * Konvertieren von FMRMS 1.x-Metadaten in Adobe Access-Metadaten mithilfe von in einer Datenbank gespeicherten FMRMS 1.x-Lizenzinformationen
    * Beispielcode für die Konvertierung von FMRMS 1.x-Richtlinien in Adobe Access-Richtlinien
    * Beispielskripte zum Importieren von FMRMS 1.x-Lizenzinformationen aus einer vorhandenen Datenbank
