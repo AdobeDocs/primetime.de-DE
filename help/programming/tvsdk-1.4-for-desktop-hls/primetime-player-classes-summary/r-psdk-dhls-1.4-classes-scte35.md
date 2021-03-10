@@ -1,13 +1,10 @@
 ---
 description: Diese Klassen ermöglichen es dem TVSDK, SCTE 35-Slices einzuschließen.
-seo-description: Diese Klassen ermöglichen es dem TVSDK, SCTE 35-Slices einzuschließen.
-seo-title: SCTE 35-Klassen
 title: SCTE 35-Klassen
-uuid: 7f3754fd-90f1-4457-9e31-d40740435489
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
