@@ -1,14 +1,11 @@
 ---
 description: TVSDK umfasst Methoden, Eigenschaften und Ereignis zur Bestimmung gültiger Raten, aktueller Raten, zur Unterstützung von Trick Play und andere Funktionen, die sich auf schnelle Vorwärts- und Rückspulen beziehen.
-seo-description: TVSDK umfasst Methoden, Eigenschaften und Ereignis zur Bestimmung gültiger Raten, aktueller Raten, zur Unterstützung von Trick Play und andere Funktionen, die sich auf schnelle Vorwärts- und Rückspulen beziehen.
-seo-title: API-Elemente für Ratenänderungen
 title: API-Elemente für Ratenänderungen
-uuid: c2bcd20c-0641-4d75-802c-08098786d572
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 2%
+source-wordcount: '132'
+ht-degree: 3%
 
 ---
 
