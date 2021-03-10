@@ -1,13 +1,10 @@
 ---
 description: In einigen Analytics-Implementierungen sollte die Clientanwendung möglicherweise eine andere Abspielposition als die vom TVSDK localTime-Wert gemeldete Position angeben. Beispielsweise kann bei einer linearen Stream-Wiedergabe der Abspielkopf jedes Programms relativ zur Beginn-Zeit angegeben werden.
-seo-description: In einigen Analytics-Implementierungen sollte die Clientanwendung möglicherweise eine andere Abspielposition als die vom TVSDK localTime-Wert gemeldete Position angeben. Beispielsweise kann bei einer linearen Stream-Wiedergabe der Abspielkopf jedes Programms relativ zur Beginn-Zeit angegeben werden.
-seo-title: Implementieren benutzerdefinierter Zeitaktualisierungen
 title: Implementieren benutzerdefinierter Zeitaktualisierungen
-uuid: 7f5d46e5-eab6-4bdc-b015-ae27ddb609ce
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
