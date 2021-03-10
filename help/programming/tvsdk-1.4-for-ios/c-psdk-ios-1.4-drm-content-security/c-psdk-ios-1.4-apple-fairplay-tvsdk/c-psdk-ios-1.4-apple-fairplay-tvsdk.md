@@ -1,13 +1,10 @@
 ---
 description: Um FairPlay-Streaming in Ihre TVSDK-App zu implementieren, müssen Sie einen Resource Loader schreiben, der eine Lizenzanfrage an Ihren FairPlay Streaming-Server sendet.
-seo-description: Um FairPlay-Streaming in Ihre TVSDK-App zu implementieren, müssen Sie einen Resource Loader schreiben, der eine Lizenzanfrage an Ihren FairPlay Streaming-Server sendet.
-seo-title: Apple FairPlay in TVSDK-Anwendungen
 title: Apple FairPlay in TVSDK-Anwendungen
-uuid: 4384d379-37cd-46c5-8c25-0cda16bdebb8
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
