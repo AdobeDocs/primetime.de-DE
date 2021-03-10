@@ -1,13 +1,10 @@
 ---
 description: Wenn die DRM-Metadaten für ein Video vom Medienstream getrennt sind, sollten Sie sich vor Beginn der Wiedergabe authentifizieren.
-seo-description: Wenn die DRM-Metadaten für ein Video vom Medienstream getrennt sind, sollten Sie sich vor Beginn der Wiedergabe authentifizieren.
-seo-title: DRM-Authentifizierung vor der Wiedergabe
 title: DRM-Authentifizierung vor der Wiedergabe
-uuid: be319b04-a506-4278-8275-db32cd3f18aa
 translation-type: tm+mt
-source-git-commit: e300238be5a2bddc7c6b9bd26682dcb4401959b1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '339'
 ht-degree: 1%
 
 ---
