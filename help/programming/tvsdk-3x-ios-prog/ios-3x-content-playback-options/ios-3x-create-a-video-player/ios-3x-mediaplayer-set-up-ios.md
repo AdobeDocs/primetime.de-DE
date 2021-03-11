@@ -1,13 +1,10 @@
 ---
 description: Die PTMediaPlayer-Schnittstelle kapselt die Funktionalität und das Verhalten eines Medienplayer-Objekts.
-seo-description: Die PTMediaPlayer-Schnittstelle kapselt die Funktionalität und das Verhalten eines Medienplayer-Objekts.
-seo-title: Einrichten des PTMediaPlayer
 title: Einrichten des PTMediaPlayer
-uuid: 698034d3-1260-416f-83b0-6b7d058750a0
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
