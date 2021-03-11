@@ -1,13 +1,10 @@
 ---
 title: Vortranskodierungs-API
 description: Sie können die Just-in-time-Umpackungs-API verwenden, um Werbeinhalte bereits im Voraus zu transkodieren. Bei Bedarf stehen inhaltliche Versionen zur Verfügung, sodass eine Verzögerung von 2-4 Minuten bei der Just-in-time-Umverpackung (JIT) vermieden wird.
-seo-description: Sie können die Just-in-time-Umpackungs-API verwenden, um Werbeinhalte bereits im Voraus zu transkodieren. Bei Bedarf stehen inhaltliche Versionen zur Verfügung, sodass eine Verzögerung von 2-4 Minuten bei der Just-in-time-Umverpackung (JIT) vermieden wird.
-seo-title: Vortranskodierungs-API
-uuid: 03cd2428-510a-4b99-8496-059a48d5abba
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
