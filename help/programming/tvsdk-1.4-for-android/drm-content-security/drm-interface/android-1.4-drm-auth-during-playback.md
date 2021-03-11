@@ -1,13 +1,10 @@
 ---
 description: Wenn die DRM-Metadaten für ein Video im Medienstream enthalten sind, führen Sie bei der Wiedergabe eine Authentifizierung durch.
-seo-description: Wenn die DRM-Metadaten für ein Video im Medienstream enthalten sind, führen Sie bei der Wiedergabe eine Authentifizierung durch.
-seo-title: DRM-Authentifizierung während der Wiedergabe
 title: DRM-Authentifizierung während der Wiedergabe
-uuid: a1a63e3e-be34-49e1-96c4-ae266003b3d1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
