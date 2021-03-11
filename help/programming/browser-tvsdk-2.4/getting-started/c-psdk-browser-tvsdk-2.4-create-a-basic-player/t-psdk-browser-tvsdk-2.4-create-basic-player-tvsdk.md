@@ -1,13 +1,10 @@
 ---
 description: Führen Sie die folgenden Schritte aus, um einen einfachen Player mit dem Browser TVSDK zu erstellen.
-seo-description: Führen Sie die folgenden Schritte aus, um einen einfachen Player mit dem Browser TVSDK zu erstellen.
-seo-title: Erstellen eines einfachen Players mit TVSDK
 title: Erstellen eines einfachen Players mit TVSDK
-uuid: ec15cf53-197f-4190-a6b2-600a57815390
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
