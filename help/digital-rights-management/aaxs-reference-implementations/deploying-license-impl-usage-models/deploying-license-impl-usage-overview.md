@@ -1,9 +1,9 @@
 ---
-seo-title: Implementieren der Übersicht über die Nutzungsmodelle
 title: Implementieren der Übersicht über die Nutzungsmodelle
-uuid: 1041bb84-9996-4284-b2a0-d6fc6d4b73d9
+description: Implementieren der Übersicht über die Nutzungsmodelle
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
