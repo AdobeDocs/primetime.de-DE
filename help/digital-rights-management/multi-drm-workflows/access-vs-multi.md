@@ -1,13 +1,10 @@
 ---
 description: Für diejenigen, die mit der Primetime Access DRM-Lösung von Adobe vertraut sind, gibt es einige grundlegende architektonische Unterschiede zwischen Access und der Primetime Cloud DRM, powered by ExpressPlay.
-seo-description: Für diejenigen, die mit der Primetime Access DRM-Lösung von Adobe vertraut sind, gibt es einige grundlegende architektonische Unterschiede zwischen Access und der Primetime Cloud DRM, powered by ExpressPlay.
-seo-title: Migration vom Zugriff auf mehrere DRM
 title: Migration vom Zugriff auf mehrere DRM
-uuid: 3e33ca9a-867e-46b8-bf88-8dbfe14ff786
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
