@@ -1,9 +1,9 @@
 ---
-seo-title: Terminologie und Kernkonzepte
 title: Terminologie und Kernkonzepte
-uuid: 89a9e4b0-f5e1-4dc2-9cf8-0c8d7e9b7d62
+description: Terminologie und Kernkonzepte
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '672'
 ht-degree: 0%
@@ -67,7 +67,7 @@ Sie müssen einen Lizenzserver mit dem Adobe Access SDK erstellen und bereitstel
 
 **Politik**
 
-Eine *Richtlinie* ist ein Container für die Nutzungsregeln, die bestimmen, wie Benutzer geschützte Inhalte verwenden können. Richtlinien werden unabhängig von den geschützten Inhalten definiert. Eine Richtlinie erzwingt erst dann Rechte, wenn sie durch die Lizenz an den Inhalt gebunden ist. Eine Richtlinie Liste den Satz von Nutzungsregeln, d. h. die Berechtigungen oder &quot;Rechte&quot;, die Verbraucher für die von ihnen erworbenen Inhalte haben. Beispielsweise können Inhaltsinhaber eine Richtlinie erstellen, die sicherstellt, dass geschützte Inhalte nur für einen bestimmten Zeitraum für Verbraucher zugänglich sind. Diese Richtlinie wird dann auf alle Inhalte angewendet, für die der Inhaltseigentümer diese Beschränkung erzwingen möchte.
+Eine *Richtlinie* ist ein Container für die Nutzungsregeln, die bestimmen, wie Benutzer geschützte Inhalte verwenden können. Richtlinien werden unabhängig von den geschützten Inhalten definiert. Eine Richtlinie erzwingt erst dann Rechte, wenn sie durch die Lizenz an den Inhalt gebunden ist. Eine Richtlinie Liste den Satz von Nutzungsregeln, d. h. die Berechtigungen oder &quot;Rechte&quot;, die Verbraucher für die von ihnen erworbenen Inhalte haben. Beispielsweise können Inhalteinhaber eine Richtlinie erstellen, die sicherstellt, dass geschützte Inhalte nur für einen bestimmten Zeitraum für Verbraucher zugänglich sind. Diese Richtlinie wird dann auf alle Inhalte angewendet, für die der Inhaltseigentümer diese Beschränkung erzwingen möchte.
 
 Richtlinien werden mit dem Adobe Access SDK erstellt.
 
