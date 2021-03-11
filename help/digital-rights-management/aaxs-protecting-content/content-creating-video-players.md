@@ -1,9 +1,9 @@
 ---
-seo-title: Erstellen von Videoplayern
 title: Erstellen von Videoplayern
-uuid: 86dfff87-1dbd-40b7-936b-61e77c40270c
+description: Erstellen von Videoplayern
+copied-description: true
 translation-type: tm+mt
-source-git-commit: da8736769f7b47318dbd955aa854f83ae64d6d7b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
