@@ -1,13 +1,10 @@
 ---
 description: CRS kann zeitgesteuerte ID3-Metadaten in das HLS-Format und kreative Elemente einfügen, um die clientseitige Anzeigenverfolgung zu erleichtern.
-seo-description: CRS kann zeitgesteuerte ID3-Metadaten in das HLS-Format und kreative Elemente einfügen, um die clientseitige Anzeigenverfolgung zu erleichtern.
-seo-title: Verwenden von CRS zum Einfügen von ID3-Timed-Metadaten-Tags
 title: Verwenden von CRS zum Einfügen von ID3-Timed-Metadaten-Tags
-uuid: 491bbb9e-15de-4871-baa1-f7bb0ea0dde2
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
