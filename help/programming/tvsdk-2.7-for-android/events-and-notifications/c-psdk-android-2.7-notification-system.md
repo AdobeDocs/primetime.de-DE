@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerStatus-Objekte enthalten Informationen zu Änderungen im Player-Status. Benachrichtigungsobjekte bieten Informationen zu Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Status des Players. Sie implementieren Ereignis-Listener, um Ereignis (MediaPlayerEvent-Objekte) zu erfassen und darauf zu reagieren.
-seo-description: MediaPlayerStatus-Objekte enthalten Informationen zu Änderungen im Player-Status. Benachrichtigungsobjekte bieten Informationen zu Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Status des Players. Sie implementieren Ereignis-Listener, um Ereignis (MediaPlayerEvent-Objekte) zu erfassen und darauf zu reagieren.
-seo-title: Benachrichtigungen und Ereignis für Player-Status, Aktivität, Fehler und Protokollierung
 title: Benachrichtigungen und Ereignis für Player-Status, Aktivität, Fehler und Protokollierung
-uuid: ec840f14-38d1-4f43-b119-e1326515fc63
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '517'
 ht-degree: 0%
 
 ---
