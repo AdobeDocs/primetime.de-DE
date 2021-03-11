@@ -1,13 +1,10 @@
 ---
 description: Mit dem MediaPlayerView-Objekt können Sie die Position und Größe der Video-Ansicht steuern.
-seo-description: Mit dem MediaPlayerView-Objekt können Sie die Position und Größe der Video-Ansicht steuern.
-seo-title: Position und Größe der Video-Ansicht steuern
 title: Position und Größe der Video-Ansicht steuern
-uuid: d09dbc18-1ec0-4336-bf3f-7ff6c265c443
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
