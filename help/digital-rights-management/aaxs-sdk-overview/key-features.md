@@ -1,9 +1,9 @@
 ---
-seo-title: Wichtigste Funktionen
 title: Wichtigste Funktionen
-uuid: b1bded0f-4e45-4ff8-a7ce-dac3d3ec0ab0
+description: Wichtigste Funktionen
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1146'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Adobe Access bietet folgende wichtige Funktionen:
 
    Adobe Access 2.0 hat eine Lizenzketten eingeführt, in denen sowohl die Blatt- als auch die Root-Lizenzen an einen bestimmten Rechner gebunden sind. Adobe Access 3.0 bietet eine erweiterte Form der Lizenzverkettung, bei der ein Blatt an eine Root-Lizenz gebunden ist und nur die Root-Lizenz an einen bestimmten Computer oder eine bestimmte Domäne gebunden ist. Lesen Sie *Erweiterte Lizenzketten* in *Verwenden des Adobe Access SDK zum Schützen von Inhalten*.
 
-* **Schlüsselrotation:** Bei typischen Verpackungen wird der Inhalt mit dem Content Encryption Key (CEK) verschlüsselt und der Client erhält eine Lizenz mit dem CEK, um den Inhalt zu konsumieren. Wenn die Schlüsselrotation aktiviert ist, kann der Schlüssel zum Verschlüsseln des Inhalts geändert werden, sodass der Schlüssel nur zum Verschlüsseln eines Teils des Inhalts verwendet wird. Lesen Sie *Schlüsselrotation* in *Verwenden des Adobe Access SDK zum Schützen von Inhalten*.
+* **Schlüsselrotation:** Bei typischen Verpackungen wird der Inhalt mit dem Content Encryption Key (CEK) verschlüsselt und der Client erhält eine Lizenz, die das CEK enthält, um den Inhalt zu konsumieren. Wenn die Schlüsselrotation aktiviert ist, kann der Schlüssel zum Verschlüsseln des Inhalts geändert werden, sodass der Schlüssel nur zum Verschlüsseln eines Teils des Inhalts verwendet wird. Lesen Sie *Schlüsselrotation* in *Verwenden des Adobe Access SDK zum Schützen von Inhalten*.
 
 * **Out-of-Band-Lizenzen:** Mit Adobe Access ist es möglich, einen Arbeitsablauf zu implementieren, in dem Kunden vorab generierte Lizenzen erwerben, ohne dass ein Lizenzserver bereitgestellt werden muss.
 * **Domänenunterstützung:** Alternativ zur Bindung einer Lizenz an ein bestimmtes Gerät unterstützt Adobe Access die Bindung von Lizenzen an eine Domäne. Mehrere Geräte können einer Domäne beitreten und ein Domänentoken erhalten, sodass Lizenzen zwischen Geräten in der Domäne verschoben werden können. Lesen Sie *Domänenregistrierung* in *Verwenden des Adobe Access SDK zum Schützen von Inhalten*.
