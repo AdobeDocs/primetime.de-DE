@@ -1,13 +1,10 @@
 ---
 description: Sie können die Statistiken zu Wiedergabe, Pufferung und Gerät aus der QOSProvider-Klasse lesen.
-seo-description: Sie können die Statistiken zu Wiedergabe, Pufferung und Gerät aus der QOSProvider-Klasse lesen.
-seo-title: Lesen der QOS-Wiedergabe, -Pufferung und Gerätestatistik
 title: Lesen der QOS-Wiedergabe, -Pufferung und Gerätestatistik
-uuid: 5ee631fc-cd6f-4f35-8621-2ffdc51a57c7
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '122'
 ht-degree: 1%
 
 ---
