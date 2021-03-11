@@ -1,13 +1,10 @@
 ---
 description: Der Manifestserver koordiniert die Systeme, die Inhalte bereitstellen, Anzeigen bereitstellen, Videos abspielen und Anzeigen verfolgen. Es empfängt M3U8-kodierte Playlisten (Manifeste), die Client-Videoplayer von Inhaltsanbietern erhalten, fügt Anzeigen von Anzeigenanbietern in die Manifeste ein und gibt die zugewiesenen Manifeste an Videoplayer weiter. Es unterstützt sowohl clientseitige als auch serverseitige Anzeigenverfolgung. Es führt seine Interaktionen über eine HTTP-basierte Webdienst-Schnittstelle durch.
-seo-description: Der Manifestserver koordiniert die Systeme, die Inhalte bereitstellen, Anzeigen bereitstellen, Videos abspielen und Anzeigen verfolgen. Es empfängt M3U8-kodierte Playlisten (Manifeste), die Client-Videoplayer von Inhaltsanbietern erhalten, fügt Anzeigen von Anzeigenanbietern in die Manifeste ein und gibt die zugewiesenen Manifeste an Videoplayer weiter. Es unterstützt sowohl clientseitige als auch serverseitige Anzeigenverfolgung. Es führt seine Interaktionen über eine HTTP-basierte Webdienst-Schnittstelle durch.
-seo-title: Übersicht über Manifest Server-Interaktionen
 title: Übersicht über Manifest Server-Interaktionen
-uuid: 3e314a45-a4dd-492f-8915-19224a8fbbc7
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
