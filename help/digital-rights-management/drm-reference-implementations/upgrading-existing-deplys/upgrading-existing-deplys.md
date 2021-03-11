@@ -1,13 +1,10 @@
 ---
 description: Um einen Server zu aktualisieren, der Version 3.0 Reference Implementation License Server oder Watched Folder Packager unterstützt, müssen Sie die .war-Dateien, die auf einem Anwendungsserver bereitgestellt wurden, durch die Dateien ersetzen, die in Adobe Primetime DRM Reference Implementation Server enthalten sind.
-seo-description: Um einen Server zu aktualisieren, der Version 3.0 Reference Implementation License Server oder Watched Folder Packager unterstützt, müssen Sie die .war-Dateien, die auf einem Anwendungsserver bereitgestellt wurden, durch die Dateien ersetzen, die in Adobe Primetime DRM Reference Implementation Server enthalten sind.
-seo-title: Vorhandene Bereitstellungen aktualisieren
 title: Vorhandene Bereitstellungen aktualisieren
-uuid: 1a40aae9-f639-41fa-b42d-cf8cdfcde694
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '165'
 ht-degree: 0%
 
 ---
