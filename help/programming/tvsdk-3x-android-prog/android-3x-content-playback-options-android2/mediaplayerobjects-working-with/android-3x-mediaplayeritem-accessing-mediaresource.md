@@ -1,13 +1,10 @@
 ---
 description: Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über den Inhaltsstream abrufen, der von einer geladenen MediaResource dargestellt wird.
-seo-description: Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über den Inhaltsstream abrufen, der von einer geladenen MediaResource dargestellt wird.
-seo-title: MediaPlayerItem-Methoden für den Zugriff auf MediaResource-Informationen
 title: MediaPlayerItem-Methoden für den Zugriff auf MediaResource-Informationen
-uuid: 46845583-0a76-4411-a8bc-0a16ebfe8e6e
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
