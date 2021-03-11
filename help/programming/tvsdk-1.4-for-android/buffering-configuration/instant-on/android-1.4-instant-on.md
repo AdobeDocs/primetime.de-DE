@@ -1,13 +1,10 @@
 ---
 description: Der Begriff "Sofort-Ein"bezieht sich auf das Vorausladen eines oder mehrerer Kanal, sodass ein Benutzer, der einen Kanal auswählt oder Kanal wechselt, sofort die Inhaltswiedergabe sieht. Die Pufferung erfolgt bereits, wenn der Beginn sie ansieht.
-seo-description: Der Begriff "Sofort-Ein"bezieht sich auf das Vorausladen eines oder mehrerer Kanal, sodass ein Benutzer, der einen Kanal auswählt oder Kanal wechselt, sofort die Inhaltswiedergabe sieht. Die Pufferung erfolgt bereits, wenn der Beginn sie ansieht.
-seo-title: Sofort ein
 title: Sofort ein
-uuid: 4cb4d221-170f-46e8-af26-32f259377617
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
