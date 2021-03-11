@@ -1,13 +1,10 @@
 ---
 description: Wenn der Medienplayer sein aktuelles Profil auf ein neues Profil umstellt, können Sie Informationen über den Switch abrufen, einschließlich Informationen über den Umschalter, die Breite und Höhe oder warum eine andere Bitrate verwendet wurde.
-seo-description: Wenn der Medienplayer sein aktuelles Profil auf ein neues Profil umstellt, können Sie Informationen über den Switch abrufen, einschließlich Informationen über den Umschalter, die Breite und Höhe oder warum eine andere Bitrate verwendet wurde.
-seo-title: Informationen zum Profil-Switch
 title: Informationen zum Profil-Switch
-uuid: e26ad9fb-6c54-450e-ab62-784d9033d214
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
@@ -55,12 +52,12 @@ Wenn der Medienplayer sein aktuelles Profil auf ein neues Profil umstellt, könn
     </tbody>
 </table>
 
-    Im Folgenden finden Sie einige Beispiele für zurückgegebene &quot;Beschreibung&quot;-Zeichenfolgen:
+    Hier einige Beispiele für zurückgegebene &quot;description&quot;-Zeichenfolgen:
     
     &quot;
     &quot;Bitrate:=up;Grund::=Netzwerkadaption;&quot;
     
-    &quot;Bitrate:=down;Grund::=Failover;&quot;
+    &quot;Bitrate::=down;Grund::=Failover;&quot;
     &quot;
     
     * `width`: Ganzzahl, die die Breite in Pixel angibt.
