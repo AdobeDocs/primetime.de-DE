@@ -1,9 +1,9 @@
 ---
-seo-title: Adobe Primetime DRM-Server für geschütztes Streaming aktualisieren
 title: Adobe Primetime DRM-Server für geschütztes Streaming aktualisieren
-uuid: 5c507ae3-d1d9-40ad-ba97-501ec92b45dc
+description: Adobe Primetime DRM-Server für geschütztes Streaming aktualisieren
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
