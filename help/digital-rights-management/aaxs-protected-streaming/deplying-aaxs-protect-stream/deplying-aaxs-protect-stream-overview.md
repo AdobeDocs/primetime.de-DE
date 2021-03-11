@@ -1,9 +1,9 @@
 ---
-seo-title: Überblick über das Bereitstellen des Adobe Access Server für geschütztes Streaming
 title: Überblick über das Bereitstellen des Adobe Access Server für geschütztes Streaming
-uuid: 48a7e452-520a-4ff8-97e9-11210221256d
+description: Überblick über das Bereitstellen des Adobe Access Server für geschütztes Streaming
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
