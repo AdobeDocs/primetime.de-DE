@@ -1,13 +1,10 @@
 ---
 description: Sie können die aktuelle und die restliche Zeit des Inhalts anzeigen, der wiedergegeben wird.
-seo-description: Sie können die aktuelle und die restliche Zeit des Inhalts anzeigen, der wiedergegeben wird.
-seo-title: Aktuelle Zeit und Restzeit anzeigen
 title: Aktuelle Zeit und Restzeit anzeigen
-uuid: 800996ff-afc0-4e17-9d70-5ec1e1fcfdc7
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '84'
 ht-degree: 0%
 
 ---
