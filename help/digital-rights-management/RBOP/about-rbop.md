@@ -1,13 +1,10 @@
 ---
 description: Auflösungsbasierter Ausgabeschutz (RBOP) ist ein Mechanismus, der Ausgabeschutz auf Basis der vertikalen Pixelanzahl des Inhalts bietet.
-seo-description: Auflösungsbasierter Ausgabeschutz (RBOP) ist ein Mechanismus, der Ausgabeschutz auf Basis der vertikalen Pixelanzahl des Inhalts bietet.
-seo-title: RBOP-Übersicht
 title: RBOP-Übersicht
-uuid: 57219331-d949-443c-88b3-6f714ab6c82e
 translation-type: tm+mt
-source-git-commit: 9bbcb228d3367fbf53de811bf2941ca653ce3b0e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '174'
 ht-degree: 0%
 
 ---
