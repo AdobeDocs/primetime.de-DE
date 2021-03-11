@@ -1,13 +1,10 @@
 ---
 description: Um Benachrichtigungen zu Aktualisierungen der Zeitschiene zu erhalten, registrieren Sie die entsprechenden Ereignis-Listener.
-seo-description: Um Benachrichtigungen zu Aktualisierungen der Zeitschiene zu erhalten, registrieren Sie die entsprechenden Ereignis-Listener.
-seo-title: hinzufügen Listener für TimelineUpdatedEvent
 title: hinzufügen Listener für TimelineUpdatedEvent
-uuid: 7d742e15-5a55-4155-93a7-7b79f21c1472
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---
