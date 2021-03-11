@@ -1,13 +1,10 @@
 ---
 description: Sie können Zeitbereiche in VOD-Streams mit unterschiedlichen Kombinationen aus Anzeigensignalisierungsmodus und Anzeigenmetadaten markieren, löschen und ersetzen. Verschiedene Kombinationen aus Signalmodus und Metadaten führen zu unterschiedlichem Verhalten.
-seo-description: Sie können Zeitbereiche in VOD-Streams mit unterschiedlichen Kombinationen aus Anzeigensignalisierungsmodus und Anzeigenmetadaten markieren, löschen und ersetzen. Verschiedene Kombinationen aus Signalmodus und Metadaten führen zu unterschiedlichem Verhalten.
-seo-title: Auswirkungen auf Kombinationen aus Anzeigeneinfügung und -löschung im Anzeigensignalisierungsmodus und Anzeigenmetadaten
 title: Auswirkungen auf Kombinationen aus Anzeigeneinfügung und -löschung im Anzeigensignalisierungsmodus und Anzeigenmetadaten
-uuid: c2ae8148-889d-46ae-848a-5f45d993a0e2
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '426'
 ht-degree: 0%
 
 ---
@@ -85,7 +82,7 @@ Sie können Zeitbereiche in VOD-Streams mit unterschiedlichen Kombinationen aus 
    <td> Mark, Auditude </td> 
    <td> CustomAd, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
-   <td> Markierte Bereiche, keine Anzeigen eingefügt </td> 
+   <td> Markierte Bereiche, keine eingefügten Anzeigen </td> 
   </tr> 
   <tr> 
    <td> <b>Manifestfarben</b> </td> 
