@@ -1,13 +1,10 @@
 ---
 description: TVSDK bietet Klassen und Methoden, mit denen Sie das Wiedergabeverhalten von Inhalten, die Werbung enthalten, anpassen können.
-seo-description: TVSDK bietet Klassen und Methoden, mit denen Sie das Wiedergabeverhalten von Inhalten, die Werbung enthalten, anpassen können.
-seo-title: API-Elemente für die Anzeigenwiedergabe
 title: API-Elemente für die Anzeigenwiedergabe
-uuid: 6d0ab181-9c50-431f-97bf-32e6684a7df1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
