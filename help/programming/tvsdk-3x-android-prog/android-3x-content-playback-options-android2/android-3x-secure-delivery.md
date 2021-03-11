@@ -1,12 +1,10 @@
 ---
 description: TVSDK führt sicheren Versand über HTTPS ein.
-seo-description: TVSDK führt sicheren Versand über HTTPS ein.
-seo-title: Sicherer Versand über HTTPS
 title: Sicherer Versand über HTTPS
 translation-type: tm+mt
-source-git-commit: 4a2271fc481b37bb0a437091de6efe98fcb348d9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '81'
 ht-degree: 0%
 
 ---
