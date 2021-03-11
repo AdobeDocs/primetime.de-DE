@@ -1,13 +1,10 @@
 ---
 description: Dieses Beispiel zeigt die empfohlene Methode, um TimeRange-Spezifikationen in die Zeitleiste der Wiedergabe einzubeziehen.
-seo-description: Dieses Beispiel zeigt die empfohlene Methode, um TimeRange-Spezifikationen in die Zeitleiste der Wiedergabe einzubeziehen.
-seo-title: Platzieren Sie TimeRange-Anzeigenmarken auf der Zeitleiste
 title: Platzieren Sie TimeRange-Anzeigenmarken auf der Zeitleiste
-uuid: cbcc4c84-0d56-4331-b555-b8e59f7d52d4
 translation-type: tm+mt
-source-git-commit: fd21a29bb186238142d43e0277bbf92f8406f6f7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '409'
 ht-degree: 0%
 
 ---
