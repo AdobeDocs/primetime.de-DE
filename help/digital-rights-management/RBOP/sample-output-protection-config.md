@@ -1,13 +1,10 @@
 ---
 description: Dieser Abschnitt enthält eine Beispielkonfiguration, die die Konzepte und die Form der Konfiguration veranschaulicht.
-seo-description: Dieser Abschnitt enthält eine Beispielkonfiguration, die die Konzepte und die Form der Konfiguration veranschaulicht.
-seo-title: Beispiel-RBOP-Konfiguration
 title: Beispiel-RBOP-Konfiguration
-uuid: fa5ead93-36c5-4ad1-947b-c4f1f2632d9b
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
