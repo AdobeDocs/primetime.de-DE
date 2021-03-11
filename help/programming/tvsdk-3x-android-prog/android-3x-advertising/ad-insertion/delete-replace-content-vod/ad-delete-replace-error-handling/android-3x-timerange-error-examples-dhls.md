@@ -1,13 +1,10 @@
 ---
 description: TVSDK reagiert auf fehlerhafte Zeitbereichsspezifikationen, indem die Zeiträume entsprechend zusammengeführt oder ersetzt werden.
-seo-description: TVSDK reagiert auf fehlerhafte Zeitbereichsspezifikationen, indem die Zeiträume entsprechend zusammengeführt oder ersetzt werden.
-seo-title: Fehlerbeispiele im Zeitbereich
 title: Fehlerbeispiele im Zeitbereich
-uuid: 25ac5985-a844-452e-ac95-5006fdf413e6
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
