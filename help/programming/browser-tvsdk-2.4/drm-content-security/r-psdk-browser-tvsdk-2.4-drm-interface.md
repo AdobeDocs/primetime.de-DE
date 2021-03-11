@@ -1,13 +1,10 @@
 ---
 description: Browser TVSDK bietet eine DRM-Schnittstelle, mit der Sie Inhalte abspielen können, die durch verschiedene DRM-Lösungen geschützt sind, einschließlich FairPlay, PlayReady und Widevine.
-seo-description: Browser TVSDK bietet eine DRM-Schnittstelle, mit der Sie Inhalte abspielen können, die durch verschiedene DRM-Lösungen geschützt sind, einschließlich FairPlay, PlayReady und Widevine.
-seo-title: Übersicht über die DRM-Oberfläche
 title: Übersicht über die DRM-Oberfläche
-uuid: b553ebad-8310-4517-8d97-ef8a1c5f4340
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
