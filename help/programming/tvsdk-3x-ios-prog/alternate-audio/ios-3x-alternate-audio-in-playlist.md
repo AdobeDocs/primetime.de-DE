@@ -1,13 +1,10 @@
 ---
 description: Mit alternativem oder spätgebundenem Audio können Sie zwischen den verfügbaren Audiospuren für eine Videospur wechseln. Auf diese Weise können Benutzer beim Abspielen des Videos eine Sprachspur auswählen.
-seo-description: Mit alternativem oder spätgebundenem Audio können Sie zwischen den verfügbaren Audiospuren für eine Videospur wechseln. Auf diese Weise können Benutzer beim Abspielen des Videos eine Sprachspur auswählen.
-seo-title: Alternative Audiospuren in der Wiedergabeliste
 title: Alternative Audiospuren in der Wiedergabeliste
-uuid: 6241d3e4-6e07-44fb-bc0e-5d49d1a76824
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
