@@ -1,13 +1,10 @@
 ---
 description: Zum Testen Ihrer DRM-Lösung benötigen Sie eine Videoanwendung, mit der die jeweilige DRM-Lösung verarbeitet werden kann, mit der Sie arbeiten. Dieser Player kann ein Beispielplayer sein, der von der Adobe zur Verfügung gestellt wird, oder eine eigene TVSDK-basierte Videoanwendung.
-seo-description: Zum Testen Ihrer DRM-Lösung benötigen Sie eine Videoanwendung, mit der die jeweilige DRM-Lösung verarbeitet werden kann, mit der Sie arbeiten. Dieser Player kann ein Beispielplayer sein, der von der Adobe zur Verfügung gestellt wird, oder eine eigene TVSDK-basierte Videoanwendung.
-seo-title: Wiedergabe des geschützten Inhalts
 title: Wiedergabe des geschützten Inhalts
-uuid: 84f73ee7-43d0-481c-a5e7-14f92169323c
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
