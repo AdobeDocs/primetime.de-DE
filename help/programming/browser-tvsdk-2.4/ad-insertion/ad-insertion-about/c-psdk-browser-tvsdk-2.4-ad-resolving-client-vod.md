@@ -1,13 +1,10 @@
 ---
 description: Bei VOD-Inhalten (Video-on-Demand) fügt Browser TVSDK Werbeunterbrechungen ein, indem die Anzeigen im Hauptinhalt geteilt werden, sodass die Zeitschiene länger ist.
-seo-description: Bei VOD-Inhalten (Video-on-Demand) fügt Browser TVSDK Werbeunterbrechungen ein, indem die Anzeigen im Hauptinhalt geteilt werden, sodass die Zeitschiene länger ist.
-seo-title: VOD-Anzeige auflösen und einfügen
 title: VOD-Anzeige auflösen und einfügen
-uuid: 34a30ae5-d553-4c5d-9829-8e5eaa41c104
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
