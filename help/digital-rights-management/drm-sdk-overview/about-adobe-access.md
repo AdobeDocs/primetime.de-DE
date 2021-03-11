@@ -1,13 +1,10 @@
 ---
 description: Mit Primetime DRM können Content-Eigentümer und -Distributoren steuern, wie und wo ihre Inhalte verteilt und erfahrbar sein können, und so während des gesamten Lebenszyklus von Inhalten endlosen Schutz bieten. Es verschlüsselt Videodateien, die dann auf die Plattformen Microsoft® Windows®, Apple® Mac OS®, Linux® und Android® gestreamt oder heruntergeladen werden können, und erzwingt Geschäftsmodelle wie die Online-Videovermietung. Die Verbraucher können hochwertige Inhalte jederzeit online oder offline nutzen. Primetime DRM-Angebot bieten wichtige Vorteile, die Content-Eigentümer und -Distributoren nutzen können, um schnell neue Dienste bereitzustellen, die sie vom Wettbewerb abheben.
-seo-description: Mit Primetime DRM können Content-Eigentümer und -Distributoren steuern, wie und wo ihre Inhalte verteilt und erfahrbar sein können, und so während des gesamten Lebenszyklus von Inhalten endlosen Schutz bieten. Es verschlüsselt Videodateien, die dann auf die Plattformen Microsoft® Windows®, Apple® Mac OS®, Linux® und Android® gestreamt oder heruntergeladen werden können, und erzwingt Geschäftsmodelle wie die Online-Videovermietung. Die Verbraucher können hochwertige Inhalte jederzeit online oder offline nutzen. Primetime DRM-Angebot bieten wichtige Vorteile, die Content-Eigentümer und -Distributoren nutzen können, um schnell neue Dienste bereitzustellen, die sie vom Wettbewerb abheben.
-seo-title: Info zu Adobe Primetime DRM
 title: Info zu Adobe Primetime DRM
-uuid: 4c445ccb-0a8e-490f-b840-8654fcaa106c
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
