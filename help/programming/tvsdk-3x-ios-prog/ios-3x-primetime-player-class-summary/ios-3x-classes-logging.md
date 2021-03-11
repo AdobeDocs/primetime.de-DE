@@ -1,13 +1,10 @@
 ---
 description: Mit diesen Klassen können Sie die Protokollierung anpassen.
-seo-description: Mit diesen Klassen können Sie die Protokollierung anpassen.
-seo-title: Protokollierungsklassen
 title: Protokollierungsklassen
-uuid: b40dc619-0a52-477f-9879-56f75ab0c31f
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '83'
 ht-degree: 0%
 
 ---
