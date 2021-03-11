@@ -1,13 +1,10 @@
 ---
 description: Ab dem Zeitpunkt, zu dem Sie die MediaPlayer-Instanz erstellen, bis zu dem Zeitpunkt, zu dem Sie sie beenden (wiederverwenden oder entfernen), schließt diese Instanz eine Reihe von Transitionen zwischen Status ab.
-seo-description: Ab dem Zeitpunkt, zu dem Sie die MediaPlayer-Instanz erstellen, bis zu dem Zeitpunkt, zu dem Sie sie beenden (wiederverwenden oder entfernen), schließt diese Instanz eine Reihe von Transitionen zwischen Status ab.
-seo-title: MediaPlayer-Objektlebenszyklus
 title: MediaPlayer-Objektlebenszyklus
-uuid: 1452ae3a-7ce9-439e-951c-9d3db63b1d20
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
