@@ -1,13 +1,10 @@
 ---
 description: Streaming über das Internet erfordert eine konstante und stabile Verbindung, um einen Stream von einem Remote-Server abspielen zu können. Die Variabilität der Internetverbindung oder der Streaming-Wiedergabe eines Viewers bedeutet jedoch, dass die Remote-Wiedergabe möglicherweise nicht die Qualität des lokal wiedergegebenen Mediums aufweist.
-seo-description: Streaming über das Internet erfordert eine konstante und stabile Verbindung, um einen Stream von einem Remote-Server abspielen zu können. Die Variabilität der Internetverbindung oder der Streaming-Wiedergabe eines Viewers bedeutet jedoch, dass die Remote-Wiedergabe möglicherweise nicht die Qualität des lokal wiedergegebenen Mediums aufweist.
-seo-title: Wiedergabe und Failover
 title: Wiedergabe und Failover
-uuid: 511f16b9-2b86-42c1-8d89-09b26534200b
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
