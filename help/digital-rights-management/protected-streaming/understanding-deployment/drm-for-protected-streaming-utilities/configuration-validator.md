@@ -1,13 +1,10 @@
 ---
 description: Adobe empfiehlt, dass Sie bei Änderungen in der Konfigurationsdatei das Dienstprogramm Configuration Validator ausführen, bevor Sie den Beginn des Servers ausführen. Dieses Dienstprogramm kann die meisten Konfigurationsfehler frühzeitig erkennen, bevor sie Fehler während der Anforderungsverarbeitung verursachen.
-seo-description: Adobe empfiehlt, dass Sie bei Änderungen in der Konfigurationsdatei das Dienstprogramm Configuration Validator ausführen, bevor Sie den Beginn des Servers ausführen. Dieses Dienstprogramm kann die meisten Konfigurationsfehler frühzeitig erkennen, bevor sie Fehler während der Anforderungsverarbeitung verursachen.
-seo-title: Configuration Validator
 title: Configuration Validator
-uuid: 7b44919a-0319-4675-95e2-ad1ad72ec0cb
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
