@@ -1,13 +1,10 @@
 ---
 description: Diese Klassen unterstützen Sie bei der Durchführung von Vorgängen, die sich auf die Zeitschiene auswirken.
-seo-description: Diese Klassen unterstützen Sie bei der Durchführung von Vorgängen, die sich auf die Zeitschiene auswirken.
-seo-title: Zeitleistenoperationsklassen
 title: Zeitleistenoperationsklassen
-uuid: ecf0f27c-b2f2-46a9-b57c-1401f6ce934e
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
