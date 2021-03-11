@@ -1,13 +1,10 @@
 ---
 description: Wenn pttrackingmode=simple oder ptplayer=ios-mobileweb, sendet der Manifestserver eine JSON-formatierte Datei zurück, die Übergeordnet-M3U8 enthält, eine URL, über die der Client die M3U8-Datei mit einer Beschreibung des Inhalts anfordern kann.
-seo-description: Wenn pttrackingmode=simple oder ptplayer=ios-mobileweb, sendet der Manifestserver eine JSON-formatierte Datei zurück, die Übergeordnet-M3U8 enthält, eine URL, über die der Client die M3U8-Datei mit einer Beschreibung des Inhalts anfordern kann.
-seo-title: JSON-Format für URL zum Anfordern der varianten Manifestwiedergabeliste
 title: JSON-Format für URL zum Anfordern der varianten Manifestwiedergabeliste
-uuid: 9f9693d0-3c93-4555-b20c-7f4576742f41
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '91'
 ht-degree: 0%
 
 ---
