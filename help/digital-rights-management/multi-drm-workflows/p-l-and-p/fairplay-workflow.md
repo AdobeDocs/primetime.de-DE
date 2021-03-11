@@ -1,13 +1,10 @@
 ---
 description: Das DRM-Workflows umfasst das Verpacken Ihrer Inhalte, die Bereitstellung von Lizenzen für die Inhalte und die Wiedergabe der geschützten Inhalte aus Ihrer eigenen Videoanwendung. Der Arbeitsablauf ist im Allgemeinen für jede DRM-Lösung ähnlich, jedoch mit einigen Unterschieden in den Details.
-seo-description: Das DRM-Workflows umfasst das Verpacken Ihrer Inhalte, die Bereitstellung von Lizenzen für die Inhalte und die Wiedergabe der geschützten Inhalte aus Ihrer eigenen Videoanwendung. Der Arbeitsablauf ist im Allgemeinen für jede DRM-Lösung ähnlich, jedoch mit einigen Unterschieden in den Details.
-seo-title: Multi-DRM Workflow für FairPlay
 title: Multi-DRM Workflow für FairPlay
-uuid: cd940a70-400c-435e-8322-55bd624164e1
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1470'
 ht-degree: 0%
 
 ---
@@ -53,7 +50,7 @@ Führen Sie die folgenden Schritte aus, um den ExpressPlay-Dienst für den Schut
 
       >[!NOTE]
       >
-      >Die Anweisungen für diesen Schritt finden Sie im *FairPlay Streaming Deployment Package*, aber Sie finden diese Informationen hier, um sie Ihnen zu erleichtern. Wenn Sie Probleme mit diesem Teil des Prozesses haben, überprüfen Sie die Anweisungen unter *FairPlayCertificateCreation.pdf* (in Ihrem Bereitstellungspaket).
+      >Die Anweisungen für diesen Schritt finden Sie im *FairPlay Streaming Deployment Package*, aber Sie finden diese Informationen hier, um sie Ihnen zu erleichtern. Wenn Sie Probleme mit diesem Teil des Prozesses haben, lesen Sie die Anweisungen unter *FairPlayCertificateCreation.pdf* (in Ihrem Bereitstellungspaket).
 
 1. Laden Sie Ihr CSR über das Apple Developer Portal hoch.
    1. Der Team Agent für Ihr Entwicklungsteam muss sich bei [!DNL developer.apple.com/account] anmelden.
