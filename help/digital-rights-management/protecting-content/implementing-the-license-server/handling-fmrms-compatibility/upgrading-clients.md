@@ -1,13 +1,10 @@
 ---
 description: Es gibt zwei Arten von Anforderungen im Zusammenhang mit der Flash Media Rights Management Server 1.x-Kompatibilität. Eine Art Anforderung wird verwendet, um 1.x-Clients zur Aktualisierung auf eine Laufzeitumgebung aufzufordern, die Adobe Primetime DRM 2.0 oder höher unterstützt. Eine weitere Funktion wird verwendet, um 1.x-Metadaten auf das Primetime-DRM-Format zu aktualisieren, bevor eine Lizenz angefordert werden kann. Die Unterstützung für diese Anforderungen ist nur erforderlich, wenn Sie zuvor Inhalte bereitgestellt haben, die FMRMS 1.0 oder 1.5 verwenden.
-seo-description: Es gibt zwei Arten von Anforderungen im Zusammenhang mit der Flash Media Rights Management Server 1.x-Kompatibilität. Eine Art Anforderung wird verwendet, um 1.x-Clients zur Aktualisierung auf eine Laufzeitumgebung aufzufordern, die Adobe Primetime DRM 2.0 oder höher unterstützt. Eine weitere Funktion wird verwendet, um 1.x-Metadaten auf das Primetime-DRM-Format zu aktualisieren, bevor eine Lizenz angefordert werden kann. Die Unterstützung für diese Anforderungen ist nur erforderlich, wenn Sie zuvor Inhalte bereitgestellt haben, die FMRMS 1.0 oder 1.5 verwenden.
-seo-title: Umgang mit FMRMS-Kompatibilität
 title: Umgang mit FMRMS-Kompatibilität
-uuid: c32ee087-2edf-4d11-be36-e2b31f3769de
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
