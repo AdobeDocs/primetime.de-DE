@@ -1,13 +1,10 @@
 ---
 description: Wenn Benutzer die Medien schnell vorwärts oder schnell zurückspulen, befinden sie sich im Trick Play-Modus. Um in den Trick Play-Modus zu wechseln, legen Sie die MediaPlayer-Wiedergaberate auf einen anderen Wert als 1 fest.
-seo-description: Wenn Benutzer die Medien schnell vorwärts oder schnell zurückspulen, befinden sie sich im Trick Play-Modus. Um in den Trick Play-Modus zu wechseln, legen Sie die MediaPlayer-Wiedergaberate auf einen anderen Wert als 1 fest.
-seo-title: Schnelles Vorwärts- und Zurückspulen implementieren
 title: Schnelles Vorwärts- und Zurückspulen implementieren
-uuid: 070a3331-43a3-4517-9cd9-06d817ffcfbd
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
