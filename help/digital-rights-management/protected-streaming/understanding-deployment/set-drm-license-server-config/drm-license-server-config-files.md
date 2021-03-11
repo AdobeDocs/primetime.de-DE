@@ -1,9 +1,9 @@
 ---
-seo-title: Konfigurationsdateien des Lizenzservers
 title: Konfigurationsdateien des Lizenzservers
-uuid: 7c7e0f76-2ced-45af-9542-99e06ec31cda
+description: Konfigurationsdateien des Lizenzservers
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
@@ -22,6 +22,6 @@ Nachdem Sie die Konfigurationsdateien bearbeitet haben, empfiehlt Adobe, die mit
 
 Siehe *Configuration Validator*.
 
-Wenn Sie vermeiden möchten, dass Passwörter in unverschlüsselten Textteilen in den Konfigurationsdateien verfügbar gemacht werden, müssen Sie alle Passwörter, die Sie in den Konfigurationsdateien für Global und Pächter angegeben haben, mit dem von der Adobe bereitgestellten Scrambler-Tool verschlüsseln.
+Wenn Sie vermeiden möchten, dass Passwörter in unverschlüsselten Textteilen in den Konfigurationsdateien verfügbar gemacht werden, müssen Sie alle Passwörter, die Sie in den Konfigurationsdateien für Global und Pachting angegeben haben, mit dem von der Adobe bereitgestellten Scrambler-Tool verschlüsseln.
 
 Weitere Informationen zum Verschlüsseln von Kennwörtern finden Sie unter *Password Scrambler*.
