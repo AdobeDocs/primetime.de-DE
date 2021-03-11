@@ -1,13 +1,10 @@
 ---
 description: Multi-CDN ermöglicht die Einstellung einer oder mehrerer CDN-Standorte, um transkodierte Anzeigen bereitzustellen.
-seo-description: Multi-CDN ermöglicht die Einstellung einer oder mehrerer CDN-Standorte, um transkodierte Anzeigen bereitzustellen.
-seo-title: Multi-CDN-Unterstützung
 title: Multi-CDN-Unterstützung
-uuid: 2b6d71f0-61c8-486b-a35a-f7ef3a9519d2
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
@@ -31,7 +28,7 @@ Multi-CDN-Unterstützung ist auch für die folgenden Primetime-Lösungen verfüg
 
 CRS ist standardmäßig für alle Kunden deaktiviert
 
-Wenden Sie sich an Ihren Kundenbetreuer, um Ihr CRS-Konto zu konfigurieren und andere CDNs zum Hosten der transkodierten Anzeigenelemente zu verwenden.Sie müssen die folgenden Informationen angeben, die CRS zum Hochladen der transkodierten Anzeigenelemente in das CDN benötigt
+Wenden Sie sich an Ihren Kundenbetreuer, um Ihr CRS-Konto zu konfigurieren und andere CDNs zum Hosten der transkodierten Anzeigenelemente zu verwenden. Sie müssen die folgenden Informationen angeben, die CRS zum Hochladen der transkodierten Anzeigenelemente in das CDN benötigt
 
 1. CDN-URL
 1. Authentifizierungsdetails
