@@ -1,9 +1,9 @@
 ---
-seo-title: Überblick über Out-of-Band-Lizenzen
 title: Überblick über Out-of-Band-Lizenzen
-uuid: 82e4529a-ee1b-4c0c-8885-e0e68319d1a0
+description: Überblick über Out-of-Band-Lizenzen
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Lizenzen können auch außerhalb des Bands erworben werden (ohne einen Primetime
 
 Um verschlüsselte Videos in Primetime wiedergeben zu können, muss die jeweilige Laufzeitumgebung die Lizenz für dieses Video abrufen. Die Lizenz enthält den Entschlüsselungsschlüssel des Videos und wird vom Primetime DRM-Lizenzserver generiert, den der Kunde bereitgestellt hat.
 
-Die Laufzeitumgebung erhält diese Lizenz im Allgemeinen durch Senden einer Lizenzanforderung an den Primetime DRM-Lizenzserver, der in den DRM-Metadaten des Videos ( `DRMContentData`-Klasse) angegeben ist. Die Anwendung kann diese Lizenzanforderung auslösen, indem sie die `DRMManager.loadVoucher()`-Methode aufruft.
+Die Laufzeitumgebung erhält diese Lizenz im Allgemeinen durch Senden einer Lizenzanforderung an den Primetime DRM-Lizenzserver, der in den DRM-Metadaten des Videos ( `DRMContentData`-Klasse) angegeben ist. Die Anwendung kann diese Lizenzanforderung durch Aufruf der `DRMManager.loadVoucher()`-Methode Trigger werden.
 
 `DRMManager.storeVoucher()` ermöglicht dem Antrag, Lizenzen zu senden, die er außerhalb des Band erworben hat. Die Laufzeit kann dann den Lizenzanforderungsprozess überspringen und die weitergeleiteten Lizenzen für die Wiedergabe verschlüsselter Videos verwenden. Die Lizenz muss noch vom Primetime DRM-Lizenzserver generiert werden, bevor sie außerhalb des Bands erworben werden kann. Sie haben jedoch die Möglichkeit, die Lizenzen auf einem beliebigen HTTP-Server statt auf einem Primetime DRM-Lizenzserver zu hosten.
 
@@ -41,7 +41,7 @@ Nehmen wir an, Sie haben die folgenden Aufgaben durchgeführt:
 1. Die Anwendung ruft die `DRMManager.authenticate()`-Methode auf. Die Anwendung muss die zufällig generierte ID in die Authentifizierungsanforderung aufnehmen. Fügen Sie beispielsweise die ID in das Feld &quot;Benutzername&quot;ein.
 1. Die in Schritt 2 erwähnte Aktion führt dazu, dass Primetime DRM eine Authentifizierungsanfrage an den Server des Kunden sendet. Diese Anforderung umfasst das Gerätezertifikat:
    1. Der Server extrahiert das Gerätezertifikat und die generierte ID aus der Anforderung und speichert sie.
-   1. Das Teilsystem &quot;Kunde&quot;erstellt Lizenzen für dieses Gerätezertifikat vorab, speichert sie und gewährt Zugriff darauf in einer Weise, die sie mit der generierten ID verknüpft. .
+   1. Das Teilsystem &quot;Kunde&quot;erstellt Lizenzen für dieses Gerätezertifikat vorab, speichert diese und gewährt Zugriff darauf in einer Weise, die sie mit der generierten ID verknüpft. .
 1. Der Server antwortet auf die Anforderung mit einer Erfolgsmeldung.
 1. Die Anwendung speichert die generierte ID.
 
