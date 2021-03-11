@@ -1,9 +1,9 @@
 ---
-seo-title: Verschlüsseln von Inhalten
 title: Verschlüsseln von Inhalten
-uuid: ea71154e-557b-447e-bc14-208232f00be1
+description: Verschlüsseln von Inhalten
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
