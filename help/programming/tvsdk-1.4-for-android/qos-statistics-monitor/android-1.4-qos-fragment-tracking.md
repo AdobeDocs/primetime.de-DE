@@ -1,13 +1,10 @@
 ---
 description: Die Servicequalität (QoS) Angebot eine detaillierte Ansicht der Leistung der Video-Engine. TVSDK bietet detaillierte Statistiken über Wiedergabe, Pufferung und Geräte.
-seo-description: Die Servicequalität (QoS) Angebot eine detaillierte Ansicht der Leistung der Video-Engine. TVSDK bietet detaillierte Statistiken über Wiedergabe, Pufferung und Geräte.
-seo-title: Verfolgen auf Fragmentebene mithilfe der Ladeinformationen
 title: Verfolgen auf Fragmentebene mithilfe der Ladeinformationen
-uuid: a6572823-d525-4ce0-806a-3feb20678cb0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '358'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -41,7 +38,7 @@ TVSDK bietet außerdem Informationen zu den folgenden heruntergeladenen Ressourc
       <tr> 
       <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
       <td colname="col1"> <span class="codeph"> long  </span> </td> 
-      <td colname="col2"> <p>Die Dauer des Downloads in Millisekunden. </p> <p>TVSDK unterscheidet nicht zwischen der Zeit, die der Client für die Verbindung mit dem Server benötigt hat, und der Zeit, die es zum Herunterladen des vollständigen Fragments dauerte. Wenn das Herunterladen eines Segments mit 10 MB z. B. 8 Sekunden in Anspruch nimmt, gibt TVSDK diese Informationen an, teilt Ihnen jedoch nicht mit, dass es bis zum ersten Byte 4 Sekunden und bis zum Herunterladen des gesamten Fragments weitere 4 Sekunden dauerte. </p> </td> 
+      <td colname="col2"> <p>Die Dauer des Downloads in Millisekunden. </p> <p>TVSDK unterscheidet nicht zwischen der Zeit, die der Client für die Verbindung mit dem Server benötigt hat, und der Zeit, die es zum Herunterladen des vollständigen Fragments dauerte. Wenn das Herunterladen eines Segments mit 10 MB z. B. 8 Sekunden in Anspruch nimmt, gibt TVSDK diese Informationen an, teilt Ihnen jedoch nicht mit, dass es 4 Sekunden dauerte, bis das erste Byte und weitere 4 Sekunden, bis das gesamte Fragment heruntergeladen wurde. </p> </td> 
       </tr> 
       <tr> 
       <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
