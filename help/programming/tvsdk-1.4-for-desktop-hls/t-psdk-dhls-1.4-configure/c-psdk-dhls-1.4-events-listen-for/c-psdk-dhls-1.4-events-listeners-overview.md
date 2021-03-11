@@ -1,13 +1,10 @@
 ---
 description: Ereignisse von TVSDK geben den Player-Status, auftretende Fehler, den Abschluss von angeforderten Aktionen an, z. B. die Videowiedergabe oder implizit auftretende Aktionen, z. B. das Ausfüllen einer Anzeige.
-seo-description: Ereignisse von TVSDK geben den Player-Status, auftretende Fehler, den Abschluss von angeforderten Aktionen an, z. B. die Videowiedergabe oder implizit auftretende Aktionen, z. B. das Ausfüllen einer Anzeige.
-seo-title: Primetime Player-Ereignis suchen
 title: Primetime Player-Ereignis suchen
-uuid: e72782bf-9d26-4285-85e4-fd4d803c1bbe
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
