@@ -1,13 +1,10 @@
 ---
 description: Die physische Sicherung Ihrer Adobe Primetime DRM-Umgebung ist entscheidend, um einen unbefugten Zugriff zu verhindern.
-seo-description: Die physische Sicherung Ihrer Adobe Primetime DRM-Umgebung ist entscheidend, um einen unbefugten Zugriff zu verhindern.
-seo-title: Physische Sicherheit und Zugang
 title: Physische Sicherheit und Zugang
-uuid: a5b00012-f2e5-4afa-8c59-46910fa325da
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
