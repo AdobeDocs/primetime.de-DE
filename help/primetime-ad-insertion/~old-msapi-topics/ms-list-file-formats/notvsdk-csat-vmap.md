@@ -1,13 +1,10 @@
 ---
 description: Wenn der Client Verfolgungsinformationen anfordert, sendet der Manifestserver eine formatierte Datei zurück. Format und Inhalt hängen vom Wert des Parameters pttrackingversion der Abfrage ab
-seo-description: Wenn der Client Verfolgungsinformationen anfordert, sendet der Manifestserver eine formatierte Datei zurück. Format und Inhalt hängen vom Wert des Parameters pttrackingversion der Abfrage ab
-seo-title: VMAP-Format zur Verfolgung von URLs
 title: VMAP-Format zur Verfolgung von URLs
-uuid: e3173fad-caa2-49cb-9a65-631573812e52
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
