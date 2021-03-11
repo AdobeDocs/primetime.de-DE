@@ -1,13 +1,10 @@
 ---
 description: Ereignis-Handler ermöglichen es Browser TVSDK, auf Ereignis zu reagieren.
-seo-description: Ereignis-Handler ermöglichen es Browser TVSDK, auf Ereignis zu reagieren.
-seo-title: Implementieren von Ereignis-Listenern und -Rückrufen
 title: Implementieren von Ereignis-Listenern und -Rückrufen
-uuid: 63f62c60-505e-4f83-bc0d-58895d85a75a
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '170'
 ht-degree: 1%
 
 ---
