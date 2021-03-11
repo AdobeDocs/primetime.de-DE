@@ -1,13 +1,10 @@
 ---
 description: Sie können Browser TVSDK verwenden, um Informationen über die Medien abzurufen, die Sie in der Suchleiste anzeigen können.
-seo-description: Sie können Browser TVSDK verwenden, um Informationen über die Medien abzurufen, die Sie in der Suchleiste anzeigen können.
-seo-title: Dauer, aktuelle Zeit und verbleibende Zeit des Videos anzeigen
 title: Dauer, aktuelle Zeit und verbleibende Zeit des Videos anzeigen
-uuid: 58341c5f-1d53-4f65-92c8-5bde22f61519
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
