@@ -1,13 +1,10 @@
 ---
 description: Sie können TVSDK-Verhalten hinzufügen, um Schaltflächen zum Anhalten und Abspielen hinzuzufügen.
-seo-description: Sie können TVSDK-Verhalten hinzufügen, um Schaltflächen zum Anhalten und Abspielen hinzuzufügen.
-seo-title: Video abspielen und anhalten
 title: Video abspielen und anhalten
-uuid: 24b26364-5cb8-4a95-9574-cc52ddfa876b
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
@@ -19,7 +16,7 @@ Sie können TVSDK-Verhalten hinzufügen, um Schaltflächen zum Anhalten und Absp
 
 1. Erstellen Sie eine Pause-/Wiedergabeschaltfläche, die Folgendes ausführt:
    1. Warten Sie, bis Ihr Spieler mindestens den Status VORBEREITT hat.
-   1. Rufen Sie zur Wiedergabe des Beginns die TVSDK-play-Methode auf:
+   1. Rufen Sie zur Wiedergabe des Beginns die TVSDK-Wiedergabemethode auf:
 
       ```java
       void play() throws IllegalStateException;
