@@ -1,13 +1,10 @@
 ---
 description: Einige Anzeigen (oder kreative Elemente) von Drittanbietern können nicht in den Inhaltsstream HTTP Live Streaming (HLS)/Dynamic Adaptive Streaming über HTTP (DASH) eingefügt werden, da ihr Videoformat mit HLS/DASH inkompatibel ist. Adobe Primetime-Anzeigeneinfügung und Browser TVSDK können optional versuchen, inkompatible Videos in kompatible m3u8/mpd-Videos zu verpacken (transkodieren).
-seo-description: Einige Anzeigen (oder kreative Elemente) von Drittanbietern können nicht in den Inhaltsstream HTTP Live Streaming (HLS)/Dynamic Adaptive Streaming über HTTP (DASH) eingefügt werden, da ihr Videoformat mit HLS/DASH inkompatibel ist. Adobe Primetime-Anzeigeneinfügung und Browser TVSDK können optional versuchen, inkompatible Videos in kompatible m3u8/mpd-Videos zu verpacken (transkodieren).
-seo-title: Inkompatible Anzeigen umverpacken (transkodieren)
 title: Inkompatible Anzeigen umverpacken (transkodieren)
-uuid: f414d133-2d04-462c-ae2c-75158a577fc5
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
