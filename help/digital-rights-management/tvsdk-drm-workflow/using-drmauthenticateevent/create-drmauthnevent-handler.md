@@ -1,13 +1,10 @@
 ---
 description: Das DRMAuthenticateEvent-Objekt wird ausgelöst, wenn ein Primetime-Objekt versucht, geschützten Inhalt wiederzugeben, für den eine Benutzerberechtigung erforderlich ist, bevor die Wiedergabe erfolgen kann (und die Authentifizierung noch nicht durchgeführt wurde). Der DRMAuthenticateEvent-Handler ist für das Erfassen der erforderlichen Anmeldeinformationen (Benutzername, Kennwort und Typ) und das Übergeben der Werte zur Validierung an die .setDRMAuthenticationCredentials()-Methode verantwortlich.
-seo-description: Das DRMAuthenticateEvent-Objekt wird ausgelöst, wenn ein Primetime-Objekt versucht, geschützten Inhalt wiederzugeben, für den eine Benutzerberechtigung erforderlich ist, bevor die Wiedergabe erfolgen kann (und die Authentifizierung noch nicht durchgeführt wurde). Der DRMAuthenticateEvent-Handler ist für das Erfassen der erforderlichen Anmeldeinformationen (Benutzername, Kennwort und Typ) und das Übergeben der Werte zur Validierung an die .setDRMAuthenticationCredentials()-Methode verantwortlich.
-seo-title: DRMAuthenticateEvent-Handler erstellen
 title: DRMAuthenticateEvent-Handler erstellen
-uuid: 58330691-d0b5-46bd-9b1d-8dc597580d31
 translation-type: tm+mt
-source-git-commit: 5749142d42f7d7b36c96592955d1f71f6a7956fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
