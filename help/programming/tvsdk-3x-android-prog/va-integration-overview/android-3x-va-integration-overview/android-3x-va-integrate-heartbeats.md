@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Videoanalyse initialisieren und konfigurieren
 title: Videoanalyse initialisieren und konfigurieren
-uuid: c49c77d9-66b9-4586-9d70-b139b4a97a7a
+description: Videoanalyse initialisieren und konfigurieren
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -160,7 +158,7 @@ So konfigurieren Sie die Videoverfolgung im Player:
 
    1. Markieren Sie den Live/Linear-Stream manuell als abgeschlossen.
 
-      Wenn Sie verschiedene Folgen für einen Live-Stream haben, können Sie eine Folge manuell mit der vollständigen API als abgeschlossen kennzeichnen. Dadurch wird die Videoverfolgungssitzung für die aktuelle Videoepisode beendet, und Sie können für die nächste Folge eine neue Verfolgungssitzung Beginn geben.
+      Wenn Sie verschiedene Folgen für einen Live-Stream haben, können Sie eine Folge manuell mit der vollständigen API als abgeschlossen kennzeichnen. Dadurch wird die Videoverfolgungssitzung für die aktuelle Videoepisode beendet, und Sie können eine neue Verfolgungssitzung für die nächste Folge Beginn haben.
 
       >[!TIP]
       >
