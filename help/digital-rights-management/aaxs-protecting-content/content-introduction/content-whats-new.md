@@ -1,13 +1,10 @@
 ---
 description: 'Adobe® Access™ ist eine fortschrittliche Lösung für die Verwaltung digitaler Rechte und den Inhaltsschutz von hochwertigen audiovisuellen Inhalten. Mit Werkzeugen, die Sie mit Java-APIs erstellen, können Sie Richtlinien erstellen, Richtlinien auf Dateien anwenden, die Audio- und Videoinhalte enthalten, und diese Dateien verschlüsseln. Die Schritte auf hoher Ebene zur Durchführung dieser Aufgaben sind wie folgt: '
-seo-description: 'Adobe® Access™ ist eine fortschrittliche Lösung für die Verwaltung digitaler Rechte und den Inhaltsschutz von hochwertigen audiovisuellen Inhalten. Mit Werkzeugen, die Sie mit Java-APIs erstellen, können Sie Richtlinien erstellen, Richtlinien auf Dateien anwenden, die Audio- und Videoinhalte enthalten, und diese Dateien verschlüsseln. Die Schritte auf hoher Ebene zur Durchführung dieser Aufgaben sind wie folgt: '
-seo-title: Übersicht
 title: Übersicht
-uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
