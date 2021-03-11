@@ -1,13 +1,10 @@
 ---
 description: Der TVSDK-Player sendet Ereignis, um den Status zum Laden benutzerdefinierter Anzeigen anzuzeigen oder eine Anzeige zu ignorieren, die zu lange dauert oder Fehler aufweist. Diese Ereignis werden in Ereignisses.CustomAdEvents definiert.
-seo-description: Der TVSDK-Player sendet Ereignis, um den Status zum Laden benutzerdefinierter Anzeigen anzuzeigen oder eine Anzeige zu ignorieren, die zu lange dauert oder Fehler aufweist. Diese Ereignis werden in Ereignisses.CustomAdEvents definiert.
-seo-title: Benutzerdefinierte Ereignisse für Werbeanzeigen
 title: Benutzerdefinierte Ereignisse für Werbeanzeigen
-uuid: 78e2ccf4-5943-4c60-84be-623182d9a300
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
