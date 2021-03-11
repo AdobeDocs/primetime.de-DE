@@ -1,13 +1,10 @@
 ---
 description: Client-Anforderungen zum Einfügen von Anzeigen geben in der Wiedergabeliste im M3U8-Format normalerweise mehr als eine Bitrate an. Der Manifestserver erzeugt und gibt eine neue Variante der M3U8-Datei zurück, die einen separaten M3U8-Link für jede Bitrate enthält. Es wird auch eine eindeutige Gruppen-ID generiert, um diese M3U8s miteinander zu verbinden.
-seo-description: Client-Anforderungen zum Einfügen von Anzeigen geben in der Wiedergabeliste im M3U8-Format normalerweise mehr als eine Bitrate an. Der Manifestserver erzeugt und gibt eine neue Variante der M3U8-Datei zurück, die einen separaten M3U8-Link für jede Bitrate enthält. Es wird auch eine eindeutige Gruppen-ID generiert, um diese M3U8s miteinander zu verbinden.
-seo-title: Mehrere Bitratenströme
 title: Mehrere Bitratenströme
-uuid: f59cb765-e000-43e0-8d3a-8149a3c5b96e
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
