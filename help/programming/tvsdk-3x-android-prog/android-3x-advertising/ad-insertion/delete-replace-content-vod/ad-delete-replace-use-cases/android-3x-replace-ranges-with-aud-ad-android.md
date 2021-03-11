@@ -1,13 +1,10 @@
 ---
 description: Sie können Anzeigen in VOD-Inhalte einfügen.
-seo-description: Sie können Anzeigen in VOD-Inhalte einfügen.
-seo-title: Ersetzen von Zeitbereichen durch eine Anzeige
 title: Ersetzen von Zeitbereichen durch eine Anzeige
-uuid: c1d93389-cba4-4db0-877d-dbdc5183683c
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
