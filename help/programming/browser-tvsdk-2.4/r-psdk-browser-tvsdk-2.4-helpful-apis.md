@@ -1,13 +1,10 @@
 ---
 description: Es gibt einige APIs, die Ihnen bei der Verwendung des Adobe-Flash Players helfen können.
-seo-description: Es gibt einige APIs, die Ihnen bei der Verwendung des Adobe-Flash Players helfen können.
-seo-title: Hilfreiche APIs für den Adobe Flash Player
 title: Hilfreiche APIs für den Adobe Flash Player
-uuid: eae314c0-fd9e-480f-ae1c-9b5f3eb4db4b
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '84'
+source-wordcount: '64'
 ht-degree: 0%
 
 ---
