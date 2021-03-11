@@ -1,13 +1,10 @@
 ---
 description: Der MediaPlayer bietet Methoden zum Festlegen und Abrufen der anfänglichen Pufferzeit und der Wiedergabepufferzeit.
-seo-description: Der MediaPlayer bietet Methoden zum Festlegen und Abrufen der anfänglichen Pufferzeit und der Wiedergabepufferzeit.
-seo-title: Pufferzeiten einstellen
 title: Pufferzeiten einstellen
-uuid: 25142b01-5381-49c9-b89a-24c858faaf13
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
