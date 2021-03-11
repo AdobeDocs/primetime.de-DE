@@ -1,13 +1,10 @@
 ---
 description: Sie können Servicequalitätsinformationen (QoS) zu heruntergeladenen Ressourcen wie Fragmenten und Spuren aus der LoadInformation-Klasse lesen.
-seo-description: Sie können Servicequalitätsinformationen (QoS) zu heruntergeladenen Ressourcen wie Fragmenten und Spuren aus der LoadInformation-Klasse lesen.
-seo-title: Verfolgen auf Fragmentebene mithilfe der Ladeinformationen
 title: Verfolgen auf Fragmentebene mithilfe der Ladeinformationen
-uuid: 41fb2b90-3531-4cc5-bf9b-01ccae04d2fd
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
@@ -47,7 +44,7 @@ Sie können Servicequalitätsinformationen (QoS) zu heruntergeladenen Ressourcen
    <tr> 
       <td colname="col01"> <span class="codeph"> downloadDuration  </span> </td> 
       <td colname="col1"> <p>Nummer </p> </td> 
-      <td colname="col2"> <p>Die Dauer des Downloads in Millisekunden. </p> <p>TVSDK unterscheidet nicht zwischen der Zeit, die der Client für die Verbindung mit dem Server benötigt hat, und der Zeit, die es zum Herunterladen des vollständigen Fragments dauerte. Wenn das Herunterladen eines Segments mit 10 MB z. B. 8 Sekunden in Anspruch nimmt, gibt TVSDK diese Informationen an, teilt Ihnen jedoch nicht mit, dass es bis zum ersten Byte 4 Sekunden und bis zum Herunterladen des gesamten Fragments weitere 4 Sekunden dauerte. </p> </td> 
+      <td colname="col2"> <p>Die Dauer des Downloads in Millisekunden. </p> <p>TVSDK unterscheidet nicht zwischen der Zeit, die der Client für die Verbindung mit dem Server benötigt hat, und der Zeit, die es zum Herunterladen des vollständigen Fragments dauerte. Wenn das Herunterladen eines Segments mit 10 MB z. B. 8 Sekunden in Anspruch nimmt, gibt TVSDK diese Informationen an, teilt Ihnen jedoch nicht mit, dass es 4 Sekunden dauerte, bis das erste Byte und weitere 4 Sekunden, bis das gesamte Fragment heruntergeladen wurde. </p> </td> 
    </tr> 
    <tr> 
       <td colname="col01"> <span class="codeph"> mediaDuration  </span> </td> 
