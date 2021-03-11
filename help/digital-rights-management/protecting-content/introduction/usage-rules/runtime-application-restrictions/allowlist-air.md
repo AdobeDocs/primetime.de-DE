@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Zulassungsliste für Primetime-DRM-Anwendungen zur Wiedergabe geschützter Inhalte
 title: Zulassungsliste für Primetime-DRM-Anwendungen zur Wiedergabe geschützter Inhalte
-uuid: 23dd4faf-7992-4ee9-97ce-c6004ee995c2
+description: Zulassungsliste für Primetime-DRM-Anwendungen zur Wiedergabe geschützter Inhalte
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
