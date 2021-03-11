@@ -1,13 +1,10 @@
 ---
 description: Wenn Sie gültige Lizenzen ausstellen möchten, die ein Primetime-DRM-Client akzeptieren kann, müssen Sie den Primetime-DRM-Server für das geschützte Streaming mit einem Satz von Anmeldeinformationen konfigurieren, die von der Adobe ausgestellt wurden. Sie können diese Berechtigungen in PKCS#12-Dateien (.pfx) oder auf einem HSM speichern.
-seo-description: Wenn Sie gültige Lizenzen ausstellen möchten, die ein Primetime-DRM-Client akzeptieren kann, müssen Sie den Primetime-DRM-Server für das geschützte Streaming mit einem Satz von Anmeldeinformationen konfigurieren, die von der Adobe ausgestellt wurden. Sie können diese Berechtigungen in PKCS#12-Dateien (.pfx) oder auf einem HSM speichern.
-seo-title: Informationen zu Adobe Primetime DRM-Anmeldeinformationen
 title: Informationen zu Adobe Primetime DRM-Anmeldeinformationen
-uuid: 0a85c68c-3279-40bf-92d9-e1f4fce994c0
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
