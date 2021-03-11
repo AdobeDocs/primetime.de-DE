@@ -1,13 +1,10 @@
 ---
 title: Manifestserver-Abfrage
 description: Die Parameter für die Abfrage geben dem Manifestserver an, welche Art von Client die Anforderung gesendet hat und was dieser Client vom Manifestserver tun möchte. Einige sind erforderlich, andere weisen bestimmte akzeptable Formate oder Werte auf.
-seo-title: Manifestserver-Abfrage
-seo-description: Die Parameter für die Abfrage geben dem Manifestserver an, welche Art von Client die Anforderung gesendet hat und was dieser Client vom Manifestserver tun möchte. Einige sind erforderlich, andere weisen bestimmte akzeptable Formate oder Werte auf.
-uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
@@ -32,7 +29,7 @@ Der Manifestserver erkennt die folgenden Parameter. Er verarbeitet sie oder übe
 | z | Primetime-Einfügezone-ID für das Asset. | Ja | Integer |
 | enableC3 | Der Client befindet sich in einem C3-Fenster. Wenn &quot;true&quot;, ersetzen Sie nur lokale Verfügbarkeiten. Ersetzen Sie andernfalls alle verfügbaren Elemente. | Nein | Boolesch |
 | live | Gibt an, ob der Inhalt ein Live- oder VOD-Stream (Video On-Demand) ist. | Akamai Ad Scaler- oder iOS Safari-Client. | Boolesch |
-| `pabimode` | [Aktivieren Sie die ](/help/primetime-ad-insertion/~old-msapi-topics/ms-insert-ads/partial-ad-break-insetion.md) Einfügeunterstützung für Teilanzeigen. <br> Aktivieren, wenn &quot;true&quot;oder &quot;Beginn&quot;.<br> Deaktivieren Sie, wenn false. | Nein (Standard ist deaktiviert) | beginn, true oder false |
+| `pabimode` | [Aktivieren Sie die ](/help/primetime-ad-insertion/~old-msapi-topics/ms-insert-ads/partial-ad-break-insetion.md) Einfügeunterstützung für Teilanzeigen. <br> Aktivieren, wenn &quot;true&quot;oder &quot;Beginn&quot;.<br> Deaktivieren Sie, wenn false. | Nein (Standard ist deaktiviert) | Beginn, true oder false |
 | `ptadwindow` | Dauer (Sekunden) des Anzeigenverbindungsfensters: Rückblick auf die Suche nach Anzeigen, wenn ein DVR-Benutzer dem Stream beitritt. | Nein (Standard = 1800) | 0 bis 1800 |
 | `ptassetid` | Eindeutige ID des Inhalts, der vom Herausgeber zugewiesen und gepflegt wird. | Akamai Ad Scaler | URL-sichere Zeichenfolge |
 | `ptcdn` | Liste eines oder mehrerer CDNs zum Hosten transkodierter Assets. Siehe [Multi-CDN-Unterstützung](/help/primetime-ad-insertion/~old-creative-repackaging-service/multi-cdn-supportt.md). | Nein (Standard=Akamai) | Beispiel: Akamai, Level3, Limelight, Comcast |
