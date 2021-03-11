@@ -1,13 +1,10 @@
 ---
 description: Eine Anzeige kann mehrere kreative Elemente enthalten, von denen eines für die Wiedergabe ausgewählt ist.
-seo-description: Eine Anzeige kann mehrere kreative Elemente enthalten, von denen eines für die Wiedergabe ausgewählt ist.
-seo-title: Gültige Mime-Typen
 title: Gültige Mime-Typen
-uuid: ab2baac9-a9ef-44f1-83a1-2e6e471e3231
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
