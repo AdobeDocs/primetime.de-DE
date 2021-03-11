@@ -1,14 +1,11 @@
 ---
 description: Die Oberfläche des PlayReady-LizenzTokens bietet Produktions- und Testdienste.
-seo-description: Die Oberfläche des PlayReady-LizenzTokens bietet Produktions- und Testdienste.
-seo-title: PlayReady-Lizenz-Token-Anforderung/Antwort
 title: PlayReady-Lizenz-Token-Anforderung/Antwort
-uuid: 20ebd582-ebb9-4716-8c1e-df3e58d6ec14
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 3%
+source-wordcount: '898'
+ht-degree: 4%
 
 ---
 
@@ -120,7 +117,7 @@ Diese HTTP-Anforderung gibt ein Token zurück, das für eine PlayReady-Lizenz ei
   </tr> 
   <tr> 
    <td><span class="codeph"> miet.periodEndTime</span> </td> 
-   <td>Mietende. Dieser Wert MUSS im Format "RFC 3339" _ Datum/Uhrzeit im Format "Z"-Zone-Bezeichner ("Zulu-Zeit") oder eine Ganzzahl mit vorangestelltem "+"-Zeichen sein. <p>Wenn der Wert im Datums-/Uhrzeitformat <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339</a> angegeben ist, stellt er ein absolutes Ablaufdatum/eine absolute Ablaufzeit für die Lizenz dar. Ein Beispiel für ein RFC 3339 Datum/Uhrzeit ist 2006-04-14T12:01:10Z. </p> <p> Wenn der Wert eine Ganzzahl ist, der ein "+"-Zeichen vorangestellt ist, wird er als relative Anzahl von Sekunden ab dem Zeitpunkt der Ausgabe des Tokens verwendet. Der Inhalt kann nach dieser Zeit nicht mehr wiedergegeben werden. Nur gültig, wenn <span class="codeph"> rightsType</span> <span class="codeph"> Rental</span> ist. </p> </td> 
+   <td>Mietende. Dieser Wert MUSS im Format "RFC 3339" _ Datum/Uhrzeit im Format "Z"-Zone-Bezeichner ("Zulu-Zeit") oder eine Ganzzahl mit vorangestelltem "+"-Zeichen sein. <p>Wenn der Wert ein Datum-/Uhrzeitformat <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339</a> ist, stellt er ein absolutes Ablaufdatum/eine absolute Ablaufzeit für die Lizenz dar. Ein Beispiel für ein RFC 3339 Datum/Uhrzeit ist 2006-04-14T12:01:10Z. </p> <p> Wenn der Wert eine Ganzzahl ist, der ein "+"-Zeichen vorangestellt ist, wird er als relative Anzahl von Sekunden ab dem Zeitpunkt der Ausgabe des Tokens verwendet. Der Inhalt kann nach dieser Zeit nicht mehr wiedergegeben werden. Nur gültig, wenn <span class="codeph"> rightsType</span> <span class="codeph"> Rental</span> ist. </p> </td> 
    <td>Ja, wenn <span class="codeph"> rightsType</span> <span class="codeph"> Rental</span> ist. </td> 
   </tr> 
   <tr> 
