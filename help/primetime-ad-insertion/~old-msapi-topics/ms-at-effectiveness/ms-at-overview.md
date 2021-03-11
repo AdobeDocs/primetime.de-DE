@@ -1,13 +1,10 @@
 ---
 description: Die meisten Anzeigenkunden benötigen detaillierte Informationen darüber, wann, wie lange und wie erfolgreich ihre Anzeigen angesehen wurden. Der effizienteste Ansatz besteht darin, dass der Client-Player während der Wiedergabe der Anzeigen Berichte sendet, der Manifestserver unterstützt jedoch auch die serverseitige und hybride Anzeigenverfolgung.
-seo-description: Die meisten Anzeigenkunden benötigen detaillierte Informationen darüber, wann, wie lange und wie erfolgreich ihre Anzeigen angesehen wurden. Der effizienteste Ansatz besteht darin, dass der Client-Player während der Wiedergabe der Anzeigen Berichte sendet, der Manifestserver unterstützt jedoch auch die serverseitige und hybride Anzeigenverfolgung.
-seo-title: Anzeigenverfolgung
 title: Anzeigenverfolgung
-uuid: 184b8c36-5e51-42a7-b905-53f2b7b15e49
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
