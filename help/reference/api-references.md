@@ -1,13 +1,11 @@
 ---
 title: Adobe Primetime API-Verweise
-seo-title: Adobe Primetime API-Verweise
 description: Die APIs helfen Ihnen, eine funktionelle Anwendung oder Integration schnell und einfach zu erstellen.
-seo-description: Die APIs helfen Ihnen, eine funktionelle Anwendung oder Integration schnell und einfach zu erstellen.
 topic-tags: API-references
 translation-type: tm+mt
-source-git-commit: 1841f64e6f7a839f997b0710661898fda0d69bd6
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
