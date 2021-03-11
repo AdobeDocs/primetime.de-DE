@@ -1,13 +1,10 @@
 ---
 description: Der Manifestserver gibt Übergeordnet Playlists im M3U8-Format zurück, die dem vorgeschlagenen HTTP Live Streaming-Standard entsprechen. Es besteht aus einer Reihe variabler Transport-Streams (TSs), die jeweils Darstellungen desselben Inhalts für verschiedene Bitraten und Formate enthalten. Adobe Primetime-Anzeigeneinfügung fügt das EXT-X-MARKER-Direktive-Tag hinzu, das von Client-Videoplayern interpretiert werden soll.
-seo-description: Der Manifestserver gibt Übergeordnet Playlists im M3U8-Format zurück, die dem vorgeschlagenen HTTP Live Streaming-Standard entsprechen. Es besteht aus einer Reihe variabler Transport-Streams (TSs), die jeweils Darstellungen desselben Inhalts für verschiedene Bitraten und Formate enthalten. Adobe Primetime-Anzeigeneinfügung fügt das EXT-X-MARKER-Direktive-Tag hinzu, das von Client-Videoplayern interpretiert werden soll.
-seo-title: EXT-X-MARKER-Richtlinie
 title: EXT-X-MARKER-Richtlinie
-uuid: e349bf89-b196-47b4-a362-9913fa28b2c6
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
@@ -43,7 +40,7 @@ Der Standardentwurf unter [HTTP Live Streaming](https://tools.ietf.org/html/draf
 
    * `PodEnd` und  `PrerollPodEnd` enthalten Beacon-Informationen im DATA-Attribut, werden jedoch am Ende des aktuellen Segments ausgelöst, da diese Tags voraussichtlich am Ende des letzten Segments der letzten Anzeige im Pod ausgelöst werden. In diesem Fall ist `OFFSET` auf `<duration of segment>` eingestellt, um anzugeben, dass der Beacon am Ende des aktuellen Segments ausgelöst wird.
 
-* **In** Dubletten-Anführungszeichen eingeschlossene Zeichenfolge mit den Daten, die beim Aufrufen des Rückrufs an die Anwendung übergeben werden sollen, ist in der Variablen &quot;DATABase64-kodierte Zeichenfolge&quot;enthalten. Es enthält Informationen zur Anzeigenverfolgung, die den Spezifikationen VMAP1.0 und VAST3.0 entsprechen.
+* **In** Dubletten-Anführungszeichen eingeschlossene Zeichenfolge mit den Daten, die beim Aufrufen des Rückrufs an die Anwendung übergeben werden sollen, ist in der Variablen &quot;DATABase64-kodierte Zeichenfolge&quot;enthalten. Es enthält Anzeigenverfolgungsinformationen, die den Spezifikationen VMAP1.0 und VAST3.0 entsprechen.
 
 * **Anzahl** der Anzeigen, die in der Werbeunterbrechung eingefügt werden.
 
