@@ -1,13 +1,10 @@
 ---
 description: Dieser Multi-DRM-Arbeitsablauf führt Sie durch Einrichtung, Verpackung, Lizenzierung und Wiedergabe von DASH-Inhalten, die mit Widevine und PlayReady verschlüsselt wurden.
-seo-description: Dieser Multi-DRM-Arbeitsablauf führt Sie durch Einrichtung, Verpackung, Lizenzierung und Wiedergabe von DASH-Inhalten, die mit Widevine und PlayReady verschlüsselt wurden.
-seo-title: Multi-DRM-Workflow für Widevine und PlayReady
 title: Multi-DRM-Workflow für Widevine und PlayReady
-uuid: 295a7024-353c-4ff5-a46a-927020834322
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
