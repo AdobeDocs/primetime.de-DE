@@ -1,13 +1,10 @@
 ---
 description: Adobe Offline Packager verwendet als Eingabe unverschlüsselten MP4-Inhalts.
-seo-description: Adobe Offline Packager verwendet als Eingabe unverschlüsselten MP4-Inhalts.
-seo-title: Verpacken Sie Ihre Inhalte mit Adobe Offline Packager
 title: Verpacken Sie Ihre Inhalte mit Adobe Offline Packager
-uuid: d0676147-c20f-49ea-93a6-9c8dbbbba992
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
