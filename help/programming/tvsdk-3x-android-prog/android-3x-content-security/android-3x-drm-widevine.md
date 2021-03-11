@@ -1,13 +1,10 @@
 ---
 description: Sie können die Funktionen des Primetime-Digital Rights Managements (DRM) verwenden, um einen sicheren Zugriff auf Ihre Videoinhalte zu ermöglichen. Alternativ können Sie DRM-Lösungen von Drittanbietern als Alternative zur integrierten Lösung der Adobe verwenden.
-seo-description: Sie können die Funktionen des Primetime-Digital Rights Managements (DRM) verwenden, um einen sicheren Zugriff auf Ihre Videoinhalte zu ermöglichen. Alternativ können Sie DRM-Lösungen von Drittanbietern als Alternative zur integrierten Lösung der Adobe verwenden.
-seo-title: Widevine DRM
 title: Widevine DRM
-uuid: 3a5fd786-4319-4e92-83b6-0f5328df6a44
 translation-type: tm+mt
-source-git-commit: 0271af21b74e80455ddb2c53571cd75f3a0f56ba
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
