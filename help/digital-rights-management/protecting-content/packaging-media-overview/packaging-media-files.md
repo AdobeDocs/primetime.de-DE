@@ -1,9 +1,9 @@
 ---
-seo-title: Überblick über das Packen von Mediendateien
 title: Überblick über das Packen von Mediendateien
-uuid: 9509bcdc-ee4d-4025-9bb6-9b8ac439b926
+description: Überblick über das Packen von Mediendateien
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
