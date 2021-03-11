@@ -1,9 +1,9 @@
 ---
-seo-title: Details zur NATIVE_ERROR-Benachrichtigung
 title: Details zur NATIVE_ERROR-Benachrichtigung
-uuid: 750ee0e2-15d4-4602-9574-94015a6e1b57
+description: Details zur NATIVE_ERROR-Benachrichtigung
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '6888'
 ht-degree: 2%
@@ -206,7 +206,7 @@ Wenn DRM-Fehler des Berichte zur Adobe auftreten, stellen Sie sicher, dass Sie d
    <td colname="col2"><span class="codeph"> AAXS_ContentExpired</span> </td> 
    <td colname="col3"> <p>Der Inhalt, den Sie anzeigen, ist gemäß den vom Inhaltsanbieter festgelegten Regeln abgelaufen. subErrorId enthält einen clientspezifischen Fehler oder Zeilenfehler. </p> <p> 
      <ul id="ul_1E4B3B8AE87A4E79997553BB2A0E52B9"> 
-      <li id="li_EE3F2EEBF73743B9A38E4FCB7531E275">Die Software des Distributors sollte versuchen, eine Lizenz vom Server einmal zu erwerben, um festzustellen, ob eine neue Lizenz ohne Ablaufdatum verfügbar ist. <p>Wenn keine Lizenz verfügbar ist oder die Lizenz abgelaufen ist, erlauben Sie dem Benutzer, eine neue Lizenz zu erwerben oder teilen Sie dem Benutzer mit, dass der Inhalt nicht überwacht werden kann. Wenn der Inhalt mit einer Richtlinie verpackt wurde, die ein Ablaufdatum/Enddatum aufweist, protokolliert der Lizenzserver den Bericht <span class="codeph"> PolicyEvaluationException</span> und gibt an, dass das Enddatum abgelaufen ist (Server-Fehlercode 303). Überprüfen Sie die Protokolldateien des Servers. </p> <p>Wenn möglich, sollten Kunden die Richtlinien überprüfen, die sie während der Verpackung verwendet haben, um zu sehen, ob sie abgelaufen sind. Das Java-Befehlszeilenwerkzeug ist: 
+      <li id="li_EE3F2EEBF73743B9A38E4FCB7531E275">Die Software des Distributors sollte versuchen, die Lizenz einmal vom Server zu erwerben, um festzustellen, ob eine neue Lizenz ohne Ablaufdatum verfügbar ist. <p>Wenn keine Lizenz verfügbar ist oder die Lizenz abgelaufen ist, erlauben Sie dem Benutzer, eine neue Lizenz zu erwerben oder teilen Sie dem Benutzer mit, dass der Inhalt nicht überwacht werden kann. Wenn der Inhalt mit einer Richtlinie verpackt wurde, die ein Ablaufdatum/Enddatum aufweist, protokolliert der Lizenzserver den Bericht <span class="codeph"> PolicyEvaluationException</span> und gibt an, dass das Enddatum abgelaufen ist (Server-Fehlercode 303). Überprüfen Sie die Protokolldateien des Servers. </p> <p>Wenn möglich, sollten Kunden die Richtlinien überprüfen, die sie während der Verpackung verwendet haben, um zu sehen, ob sie abgelaufen sind. Das Java-Befehlszeilenwerkzeug ist: 
         <code>
          java&nbsp;-jar&nbsp;libs/AdobePolicyManager.jar&nbsp;&nbsp;&nbsp;detail&nbsp;demo.pol
         </code> </p> </li> 
@@ -317,7 +317,7 @@ Wenn DRM-Fehler des Berichte zur Adobe auftreten, stellen Sie sicher, dass Sie d
   <tr> 
    <td colname="col1"> 3315 </td> 
    <td colname="col2"><span class="codeph"> AAXS_PermissionDenfied  </span> </td> 
-   <td colname="col3"> <p>Es gibt bekannte Fehler, bei denen dieser Fehlercode ausgegeben wird, wenn ein 3305 vorgesehen ist. Weitere Informationen finden Sie unter Ursachen und Auflösung<a href="https://forums.adobe.com/thread/1284947" format="https" scope="external"> von DRM 3305 [ServerConnectionFailure].</a> </p> <p>Von AIR geladene Remote SWF-Dateien dürfen nicht auf die Funktionen des Flash Accesses zugreifen. Dieser Fehlercode kann auch ausgegeben werden, wenn während des Netzwerkzugriffs ein Sicherheitsfehler auftritt. Beispiele sind der Zielserver, der keine Verbindung mit dem Client über crossdomain.xml herstellt, oder die crossdomain.xml-Datei ist nicht erreichbar. </p> <p>Weitere Informationen finden Sie unter <a href="https://forums.adobe.com/thread/1266592" format="https" scope="external"> DRM-Fehler 3315 mögliche Ursache und Auflösung</a>. </p> </td> 
+   <td colname="col3"> <p>Es gibt bekannte Fehler, bei denen dieser Fehlercode ausgegeben wird, wenn ein 3305 vorgesehen ist. Weitere Informationen finden Sie unter Ursachen und Auflösung</a> von DRM 3305 [ServerConnectionFailure].<a href="https://forums.adobe.com/thread/1284947" format="https" scope="external"> </a></p> <p>Von AIR geladene Remote SWF-Dateien dürfen nicht auf die Funktionen des Flash Accesses zugreifen. Dieser Fehlercode kann auch ausgegeben werden, wenn während des Netzwerkzugriffs ein Sicherheitsfehler auftritt. Beispiele sind der Zielserver, der keine Verbindung mit dem Client über crossdomain.xml herstellt, oder die crossdomain.xml-Datei ist nicht erreichbar. </p> <p>Weitere Informationen finden Sie unter <a href="https://forums.adobe.com/thread/1266592" format="https" scope="external"> DRM-Fehler 3315 mögliche Ursache und Auflösung</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3316 </td> 
@@ -371,7 +371,7 @@ Wenn DRM-Fehler des Berichte zur Adobe auftreten, stellen Sie sicher, dass Sie d
    <td colname="col2"><span class="codeph"> AAXS_DeviceBindingFailure  </span> </td> 
    <td colname="col3"> <p>Das Gerät scheint nicht mit der bei der Initialisierung vorhandenen Konfiguration zu übereinstimmen. subErrorId enthält einen clientspezifischen Fehler oder Zeilenfehler. </p> <p>Die Software des Distributors muss eine der folgenden Aufgaben erfüllen: 
      <ul id="ul_444401051A2E407B95BC44491E9BB71C"> 
-      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>Wenn das Gerät keinen Flash Player verwendet und AIR, iOS usw. verwendet, rufen Sie <span class="codeph"> DRMManager.resetDRMVouchers()</span> auf. </p> <p>Wenn das Problem unter iOS in einer Entwicklungsphase auftritt, bitten Sie den Entwickler, zu bestätigen, ob das Problem beim Wechsel zwischen Builds, die von Drittanbieter-Distributionssystemen (z. B. HockeyApp) heruntergeladen wurden, und einem lokalen Build aus Xcode behoben wurde. Attribute einer vorherigen Installation werden nicht vollständig überschrieben, wenn zwischen einem von HockeyApp verteilten Build und einem Build aus Xcode gewechselt wird. Diese Situation kann den 3322-Fehler auslösen. </p> <p>Um dieses Problem zu beheben, sollte der Entwickler den älteren Build vom Gerät entfernen, bevor er den neuen Build installiert. </p> </li> 
+      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>Wenn das Gerät keinen Flash Player verwendet und AIR, iOS usw. verwendet, rufen Sie <span class="codeph"> DRMManager.resetDRMVouchers()</span> auf. </p> <p>Wenn das Problem unter iOS in einer Entwicklungsphase auftritt, bitten Sie den Entwickler, zu bestätigen, ob das Problem beim Wechsel zwischen Builds, die von Drittanbieter-Distributionssystemen (z. B. HockeyApp) heruntergeladen wurden, und einem lokalen Build aus Xcode behoben wurde. Attribute einer vorherigen Installation werden nicht vollständig überschrieben, wenn zwischen einem von HockeyApp verteilten Build und einem Build aus Xcode gewechselt wird. Dies könnte zu einem Trigger des Fehlers 3322 führen. </p> <p>Um dieses Problem zu beheben, sollte der Entwickler den älteren Build vom Gerät entfernen, bevor er den neuen Build installiert. </p> </li> 
       <li id="li_A5C9633F11584C788A2D9A23CC18FA6D">Wenn das Gerät Flash Player verwendet und von 3322- oder 3346-Fehlercodes unbrauchbar ist, lesen Sie die Anweisungen in der Adobe zum programmgesteuerten Zurücksetzen des DRM-Lizenzspeichers bei <a href="https://forums.adobe.com/message/5535907#5535907" format="https" scope="external"> DRM-Fehler 3322/3346/3368 in Chrome (Info-Bar-Probleme)</a>. </li> 
      </ul> </p> <p>Dieser Fehler wird voraussichtlich nicht häufig auftreten. Bei Umgebung im Unternehmen, die Roaming-Profil verwenden, erhöht sich die Wahrscheinlichkeit, dass der Benutzer Inhalte anzeigt, die durch DRM geschützt sind, bei der Anmeldung auf verschiedenen Computern der Fehler 3322. Wenn möglich, sollte der Händler versuchen, diese Informationen vom Benutzer zu erhalten. </p> <p>Wenn der Fehler häufig auftritt, eskalieren Sie zur Adobe. Sie müssen der Adobe mitteilen, ob das Zurücksetzen des Lizenzspeichers das Problem gelöst hat (oder nicht), und die Adobe angeben, in welchen Browsern der Fehler auftritt. </p> <p>Weitere Informationen finden Sie in den folgenden Artikeln: 
      <ul id="ul_C468409D1EA046178CA7F54DCDCB84EA"> 
@@ -498,7 +498,7 @@ Wenn DRM-Fehler des Berichte zur Adobe auftreten, stellen Sie sicher, dass Sie d
    <td colname="col3"> Aktualisieren Sie auf die neueste Version von TVSDK für Android. <p>Dies tritt auf, wenn der Inhalt oder der Server so konfiguriert ist, dass die Wiedergabe auf einer bestimmten Version des Flashs oder der AIR-Laufzeitumgebung verweigert wird. </p> 
     <ul id="ul_B0732D941256483CABBDD30C9BF43249"> 
      <li id="li_72782B1D638F48C0B87084689FB9C798">Befindet sich der Benutzer auf einem Betriebssystem, auf dem Flash aktualisiert werden kann, sollte die Software des Distributors den Benutzer auffordern, den Flash zu aktualisieren, und es erneut versuchen. Weisen Sie den Benutzer andernfalls an, einen anderen Computer zu verwenden. </li> 
-     <li id="li_1E3FD93CE39E43F2B7D961299B1211DA">Wenn der Fehler 3337 bei Verdacht steht, stellen Sie fest, ob er für bestimmte Inhalte auftritt, und verpacken Sie diese Inhalte erneut. Wenn Inhalte korrekt verpackt sind, finden Sie unter Diskrepanzen zwischen den DiagnoRichtlinien/Lizenzen </li> 
+     <li id="li_1E3FD93CE39E43F2B7D961299B1211DA">Wenn der Fehler 3337 bei Verdacht steht, stellen Sie fest, ob er für bestimmte Inhalte auftritt, und verpacken Sie diese Inhalte erneut. Wenn Inhalte richtig verpackt sind, finden Sie unter Diskrepanzen zwischen den DiagnoRichtlinien/Lizenzen </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -691,7 +691,7 @@ Wenn DRM-Fehler des Berichte zur Adobe auftreten, stellen Sie sicher, dass Sie d
   <tr> 
    <td colname="col1"> 3369 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InterfaceNotAvailable</span> </td> 
-   <td colname="col3"> <p>Eine erforderliche Browserschnittstelle ist nicht verfügbar. Dieses Problem tritt nur bei Pepper auf. Es kann zu Abweichungen zwischen dem Flash-Plugin und der Browserversion kommen. </p> <p>Die Software des Distributors sollte den Benutzer anleiten, um sicherzustellen, dass die neueste Version des Browsers installiert ist. </p> <p> Wenn die Häufigkeit dieses Fehlers zunimmt und mit einer veröffentlichten Browseraktualisierung übereinstimmt, eskalieren Sie die Adobe. </p> </td> 
+   <td colname="col3"> <p>Eine erforderliche Browserschnittstelle ist nicht verfügbar. Dieses Problem tritt nur bei Pepper auf. Es kann zu Abweichungen zwischen dem Flash-Plugin und der Browserversion kommen. </p> <p>Die Software des Distributors sollte den Benutzer anleiten, um sicherzustellen, dass die neueste Version des Browsers installiert ist. </p> <p> Wenn die Häufigkeit dieses Fehlers zunimmt und mit einem veröffentlichten Browser-Update übereinstimmt, eskalieren Sie zu Adobe. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3370 </td> 
@@ -745,7 +745,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
    <td colname="col3"> Vorgang erfolgreich. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 1 </td> 
+   <td colname="col1"> 3 </td> 
    <td colname="col2"> <span class="codeph"> ASYNC_OPERATION_IN_PROGRESS</span> </td> 
    <td colname="col3"> Asynchroner Vorgang. Der Antrag wurde gestellt. Erfolgs-/Fehlerinformationen stehen später zur Verfügung. </td> 
   </tr> 
@@ -886,7 +886,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr> 
   <tr> 
    <td colname="col1"> 29 </td> 
-   <td colname="col2"><span class="codeph"> CONTAINER_NOT_SUPPORTED  </span> </td> 
+   <td colname="col2"><span class="codeph"> Container_NOT_SUPPORTED  </span> </td> 
    <td colname="col3"> Container-Typ wird nicht unterstützt. </td> 
   </tr> 
   <tr> 
@@ -1035,7 +1035,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
    <td colname="col3"> Die HLS-Wiedergabe wurde im Flash Player nicht aktiviert. Siehe AuthorizedFeatures.enableHLSPlayback. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 78 </td> 
+   <td colname="col1"> 58 </td> 
    <td colname="col2"><span class="codeph"> BAD_MEDIA_SAMPLE_FOUND</span> </td> 
    <td colname="col3"> Der Decoder hat ein schlechtes Beispiel erhalten, das nicht dekodiert werden kann. Dies ist in der Regel kein fataler Fehler, deutet aber darauf hin, dass es möglicherweise Fehler im Audio/Video gibt. Zu viele Instanzen dieses Fehlers deuten auf eine fehlerhafte Kodierung oder fehlerhafte Datei hin. </td> 
   </tr> 
@@ -1150,7 +1150,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
    <td colname="col3"> Aus einer Datei kann nicht gelesen werden. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 81 </td> 
+   <td colname="col1"> 61 </td> 
    <td colname="col2"><span class="codeph"> ID3PARSE_ERROR</span> </td> 
    <td colname="col3"> Bei der Analyse der ID3-Daten ist ein Fehler aufgetreten. </td> 
   </tr> 
