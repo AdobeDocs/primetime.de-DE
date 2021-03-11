@@ -1,13 +1,10 @@
 ---
 description: Ein Opportunitätsgenerator identifiziert Platzierungsmöglichkeiten durch benutzerdefinierte Tags in einem Stream, benutzerdefinierte Anzeigensignalisierungsmodi usw. Der Opportunitätsgenerator sendet diese Platzierungsmöglichkeiten an den Content-Auflöser, der den Arbeitsablauf zum Einfügen von Inhalten/Anzeigen basierend auf den Eigenschaften und Metadaten der Platzierungsmöglichkeit anpasst.
-seo-description: Ein Opportunitätsgenerator identifiziert Platzierungsmöglichkeiten durch benutzerdefinierte Tags in einem Stream, benutzerdefinierte Anzeigensignalisierungsmodi usw. Der Opportunitätsgenerator sendet diese Platzierungsmöglichkeiten an den Content-Auflöser, der den Arbeitsablauf zum Einfügen von Inhalten/Anzeigen basierend auf den Eigenschaften und Metadaten der Platzierungsmöglichkeit anpasst.
-seo-title: Anpassen von Opportunitätserzeugern und Inhaltsauflösungen
 title: Anpassen von Opportunitätserzeugern und Inhaltsauflösungen
-uuid: 0d4fb0b2-98f3-4245-9bf1-4e968c5d0f36
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
