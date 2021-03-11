@@ -1,13 +1,10 @@
 ---
 description: Spätbindende Audiodaten verwenden MediaPlayer, um ein Video abzuspielen, das in einer M3U8-HLS-Wiedergabeliste angegeben ist und mehrere alternative Audiostreams enthalten kann.
-seo-description: Spätbindende Audiodaten verwenden MediaPlayer, um ein Video abzuspielen, das in einer M3U8-HLS-Wiedergabeliste angegeben ist und mehrere alternative Audiostreams enthalten kann.
-seo-title: Zugriff auf alternative Audiospuren
 title: Zugriff auf alternative Audiospuren
-uuid: 136b4f1b-e56f-4a8a-a961-05193434558c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '139'
+source-wordcount: '110'
 ht-degree: 0%
 
 ---
