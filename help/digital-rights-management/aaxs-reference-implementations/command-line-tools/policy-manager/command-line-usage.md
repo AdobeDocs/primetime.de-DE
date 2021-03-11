@@ -1,9 +1,9 @@
 ---
-seo-title: Befehlszeilenverwendung
 title: Befehlszeilenverwendung
-uuid: e549a98e-b027-4472-8860-6aa1d56d4a8b
+description: Befehlszeilenverwendung
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1026'
 ht-degree: 0%
@@ -80,7 +80,7 @@ In der folgenden Tabelle werden die Befehlszeilenoptionen beschrieben, die zusam
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -ldate  </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Das Enddatum der Lizenzzwischenspeicherung (das Datum, nach dem Lizenzen nicht im Lizenzspeicher des Kunden zwischengespeichert werden können, nachdem die Lizenz vom Server erteilt wurde). Geben Sie als <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd </span><i class="+ topic/ph hi-d/i "> </i>oder <i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph"> &lt;a6/&gt; yyyyy-mm-dd-h24:min:sec </span> an. Beispiel: 2008-12-1 oder 2008-12-1-00:00:00 Uhr für Mitternacht am 1. Dezember 2008. Verwenden Sie <span class="codeph"> -l </span>, ohne eine Anzahl von Minuten für die unbegrenzte Lizenzzwischenspeicherung anzugeben. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Das Enddatum der Lizenzzwischenspeicherung (das Datum, nach dem Lizenzen nicht im Lizenzspeicher des Kunden zwischengespeichert werden können, nachdem die Lizenz vom Server erteilt wurde). Geben Sie als <span class="+ topic/ph pr-d/codeph codeph"> yyyy-mm-dd </span><i class="+ topic/ph hi-d/i "> </i>oder <i class="+ topic/ph hi-d/i "> </i> <span class="+ topic/ph pr-d/codeph codeph">  yyyyy-mm-dd-h24:min:sec </span> an. Beispiel: 2008-12-1 oder 2008-12-1-00:00:00 Uhr für Mitternacht am 1. Dezember 2008. Verwenden Sie <span class="codeph"> -l </span>, ohne eine Anzahl von Minuten für die unbegrenzte Lizenzzwischenspeicherung anzugeben. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -authNS  </span> </td> 
