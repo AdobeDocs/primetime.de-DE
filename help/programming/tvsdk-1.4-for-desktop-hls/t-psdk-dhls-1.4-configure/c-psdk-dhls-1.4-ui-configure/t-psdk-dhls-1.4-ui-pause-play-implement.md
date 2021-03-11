@@ -1,13 +1,10 @@
 ---
 description: Sie können TVSDK-Verhalten hinzufügen, um Schaltflächen zum Anhalten und Abspielen hinzuzufügen.
-seo-description: Sie können TVSDK-Verhalten hinzufügen, um Schaltflächen zum Anhalten und Abspielen hinzuzufügen.
-seo-title: Video abspielen und anhalten
 title: Video abspielen und anhalten
-uuid: 04b3b23f-5ef1-4cc4-a22f-f6ffa9cefce5
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '114'
 ht-degree: 0%
 
 ---
@@ -19,7 +16,7 @@ Sie können TVSDK-Verhalten hinzufügen, um Schaltflächen zum Anhalten und Absp
 
 1. Erstellen Sie eine Pause-/Wiedergabeschaltfläche, die Folgendes ausführt:
    1. Warten Sie, bis Ihr Spieler mindestens den Status VORBEREITT hat.
-   1. Rufen Sie zur Wiedergabe des Beginns die TVSDK-play-Methode auf:
+   1. Rufen Sie zur Wiedergabe des Beginns die TVSDK-Wiedergabemethode auf:
 
       ```
       function play():void;
