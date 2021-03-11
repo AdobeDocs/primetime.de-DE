@@ -1,13 +1,10 @@
 ---
 description: Streaming über das Internet erfordert eine konstante und stabile Verbindung, um einen Stream von einem Remote-Server abspielen zu können. Die Variabilität der Internetverbindung oder der Streaming-Wiedergabe eines Viewers bedeutet jedoch, dass bei der Remote-Wiedergabe möglicherweise nicht die Qualität des Mediums lokal wiedergegeben wird.
-seo-description: Streaming über das Internet erfordert eine konstante und stabile Verbindung, um einen Stream von einem Remote-Server abspielen zu können. Die Variabilität der Internetverbindung oder der Streaming-Wiedergabe eines Viewers bedeutet jedoch, dass bei der Remote-Wiedergabe möglicherweise nicht die Qualität des Mediums lokal wiedergegeben wird.
-seo-title: Format AC-3 5.1
 title: Format AC-3 5.1
-uuid: d5e77bb5-ed51-4f9f-b34f-e9082f5ee4de
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '514'
 ht-degree: 0%
 
 ---
