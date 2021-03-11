@@ -1,13 +1,10 @@
 ---
 description: Um einen Server zu aktualisieren, auf dem Adobe Access Server für Protected Streaming ausgeführt wird, ersetzen Sie die auf Ihrem Anwendungsserver bereitgestellte Datei "flashAccessserver.war"durch die Datei, die in der neuesten Adobe Access enthalten ist. Wenn Sie die oben beschriebenen neuen Konfigurationsoptionen verwenden möchten, aktualisieren Sie die Datei "flashaccess-tenant.xml"Ihres Servers. Außerdem müssen Sie die Datei "jsafe.dll"oder "libjsafe.so"auf die Adobe aktualisieren, die in der neuesten Version von Access enthalten ist.
-seo-description: Um einen Server zu aktualisieren, auf dem Adobe Access Server für Protected Streaming ausgeführt wird, ersetzen Sie die auf Ihrem Anwendungsserver bereitgestellte Datei "flashAccessserver.war"durch die Datei, die in der neuesten Adobe Access enthalten ist. Wenn Sie die oben beschriebenen neuen Konfigurationsoptionen verwenden möchten, aktualisieren Sie die Datei "flashaccess-tenant.xml"Ihres Servers. Außerdem müssen Sie die Datei "jsafe.dll"oder "libjsafe.so"auf die Adobe aktualisieren, die in der neuesten Version von Access enthalten ist.
-seo-title: Ausführen des Adobe Access Server für geschütztes Streaming
 title: Ausführen des Adobe Access Server für geschütztes Streaming
-uuid: 3819500d-ad2f-49eb-8aa4-e50a55461608
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
