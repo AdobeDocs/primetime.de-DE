@@ -1,13 +1,10 @@
 ---
 description: Sie können ABR-Steuerelementwerte nur mit ABRControlParameters festlegen, aber Sie können jederzeit eine neue erstellen.
-seo-description: Sie können ABR-Steuerelementwerte nur mit ABRControlParameters festlegen, aber Sie können jederzeit eine neue erstellen.
-seo-title: Adaptive Bitraten mit ABRControlParameters konfigurieren
 title: Adaptive Bitraten mit ABRControlParameters konfigurieren
-uuid: 283ccd3d-535b-43ca-8ca5-82d12df31798
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
