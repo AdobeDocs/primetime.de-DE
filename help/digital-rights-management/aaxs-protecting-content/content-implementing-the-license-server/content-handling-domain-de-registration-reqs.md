@@ -1,9 +1,9 @@
 ---
-seo-title: Bearbeitung von Domänenderegistrierungsanfragen
 title: Bearbeitung von Domänenderegistrierungsanfragen
-uuid: 6f056b2b-374d-4e4d-926a-68605b2c923b
+description: Bearbeitung von Domänenderegistrierungsanfragen
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%
