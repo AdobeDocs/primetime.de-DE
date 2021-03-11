@@ -1,9 +1,9 @@
 ---
-seo-title: Verwenden der DRMContentData-Klasse
 title: Verwenden der DRMContentData-Klasse
-uuid: e79eb5b8-4e88-43b5-a80f-5fd141dc729d
+description: Verwenden der DRMContentData-Klasse
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
