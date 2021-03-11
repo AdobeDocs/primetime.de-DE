@@ -1,13 +1,10 @@
 ---
 description: Beim Einfügen von Livestream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
-seo-description: Beim Einfügen von Livestream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
-seo-title: Implementieren der Rückgabe einer frühen Werbeunterbrechung
 title: Implementieren der Rückgabe einer frühen Werbeunterbrechung
-uuid: 984b6ed0-c929-49a3-9553-e30d1a7758ed
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -72,7 +69,7 @@ Wenn die Dauer des Typs `SpliceOut` bei einer Marke mit verschiedenen Typen null
 
 **Zwei separate Markierungen**
 
-Das typischere Szenario ist ein `SpliceOut`-Marker mit einer Dauer von ungleich null, der keine Paarung `SpliceIn`-Markierungen benötigt. Hier markiert eine Paarung mit der Markierung `SpliceIn` das Ende der Werbeunterbrechung während der Wiedergabe der Werbeunterbrechung, aber der Werbeunterbrechung wird an der `SpliceIn`-Markenposition abgeschnitten und die Beginn mit dem Hauptinhalt an dieser Position.
+Das typischere Szenario ist ein `SpliceOut`-Marker mit einer Dauer von ungleich null und das keine Paarung `SpliceIn`-Markierungen benötigt. Hier markiert eine Paarung mit der Markierung `SpliceIn` das Ende der Werbeunterbrechung während der Wiedergabe der Werbeunterbrechung, aber der Werbeunterbrechung wird an der `SpliceIn`-Markenposition abgeschnitten und die Beginn mit dem Hauptinhalt an dieser Position.
 
 Hier sind beispielsweise zwei verschiedene Marker:
 
