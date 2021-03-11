@@ -1,13 +1,10 @@
 ---
 description: TVSDK sendet zeitgesteuerte Metadaten-Ereignis und generiert zeitgesteuerte Metadaten, wenn Standard- oder benutzerdefinierte Tags gefunden werden oder sich eine Wiedergabeliste in einem Manifest ändert. Ereignis werden in der Reihenfolge ausgelöst, in der sie im Manifest angezeigt werden.
-seo-description: TVSDK sendet zeitgesteuerte Metadaten-Ereignis und generiert zeitgesteuerte Metadaten, wenn Standard- oder benutzerdefinierte Tags gefunden werden oder sich eine Wiedergabeliste in einem Manifest ändert. Ereignis werden in der Reihenfolge ausgelöst, in der sie im Manifest angezeigt werden.
-seo-title: Zeitgesteuerte Metadaten-Ereignis
 title: Zeitgesteuerte Metadaten-Ereignis
-uuid: 69c43701-6ffa-45fe-a104-fe81391222e7
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
