@@ -1,13 +1,10 @@
 ---
 description: Sie können eigene Opportunity-Detektoren implementieren, indem Sie die Schnittstelle PlacementOpportunityDetector implementieren.
-seo-description: Sie können eigene Opportunity-Detektoren implementieren, indem Sie die Schnittstelle PlacementOpportunityDetector implementieren.
-seo-title: Implementieren eines benutzerdefinierten Opportunitätsdetektors
 title: Implementieren eines benutzerdefinierten Opportunitätsdetektors
-uuid: 012527c5-4ef0-4cd6-a9df-2fb861078a7e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '135'
 ht-degree: 2%
 
 ---
