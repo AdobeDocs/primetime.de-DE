@@ -1,12 +1,10 @@
 ---
 description: 'Diese Tabelle enthält detaillierte Informationen zu Umsatzoptimierungsbenachrichtigungen. '
-seo-description: 'Diese Tabelle enthält detaillierte Informationen zu Umsatzoptimierungsbenachrichtigungen. '
-seo-title: EINNAHMEN-Optimierungscode
 title: EINNAHMEN-Optimierungscode
 translation-type: tm+mt
-source-git-commit: df3d60874701383325be1afdd1ec5fe036f855f8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -30,8 +28,8 @@ Verwenden Sie zum Aktivieren dieses Berichte PTMediaPlayer api: `[mediaPlayerset
 
 | Ereignis-Details | ContextMetadata |
 |---|---|
-| **CONTENT_RESOURCE_** STARTDispatched in TVSDK, wenn MediaPlayer::replaceCurrentResource aufgerufen wird. | clientTimestamp, fallbackOnInvalidCreative, showStaticBanners, hasPreroll, Ereignis, adSignalingMode, resourceUrl, creativeRepackageFormat, delayAdLoadingTolerance, zoneID, hasLivePreroll, adRequestTimeout, delayAdLoading, resourceType, creativeRepackageEncryption abled, mediaId, clientId |
-| **CONTENT_PLAYBACK_** STARTDispatched in TVSDK, wenn Inhalt den vorbereiteten Status erreicht hat und zur Wiedergabe bereit ist. Dieses Ereignis wird nicht bei jedem Manifest-Upload ausgelöst - es wird nur beim ersten Laden ausgelöst. | clientTimestamp, contentURL, contentType, Ereignis, isLive, clientID |
+| **CONTENT_RESOURCE_** STARTDispatched in TVSDK, wenn MediaPlayer::replaceCurrentResource aufgerufen wird. | clientTimestamp, fallbackOnInvalidCreative, showStaticBanners, hasPreroll, Ereignis, adSignalingMode, resourceUrl, creativeRepackagesFormat, delayAdLoadingTolerance, zoneID, hasLivePreroll, adRequestTimeout, delayAdLoading, resourceType, creativeRepackageEncryption abled, mediaId, clientId |
+| **CONTENT_PLAYBACK_** STARTDispatched in TVSDK, wenn Inhalt in den vorbereiteten Status gelangt ist und zur Wiedergabe bereit ist. Dieses Ereignis wird nicht bei jedem Manifest-Upload ausgelöst - es wird nur beim ersten Laden ausgelöst. | clientTimestamp, contentURL, contentType, Ereignis, isLive, clientID |
 | **AD_OPPORTUNITY_** GENERATEDDispatched in TVSDK, wenn eine Gelegenheit generiert wird. | clientTimestamp, Ereignis, Id, placementDuration, clientId |
 | **AD_OPPORTUNITY_RESOLVE_** STARTDispatched in TVSDK, wenn eine Gelegenheit zu lösen beginnt. | clientTimestamp, Ereignis, Id, placementDuration, clientId |
 | **AD_OPPORTUNITY_RESOLVE_** FAILEDDispatched in TVSDK, wenn ein Anzeigenauflöser MediaPlayerClient::notificationFailed() aufruft. Daten ausfüllen | possibleId, notificationAD |
@@ -43,4 +41,4 @@ Verwenden Sie zum Aktivieren dieses Berichte PTMediaPlayer api: `[mediaPlayerset
 | **ADBREAK_PLAYBACK_** STARTDispatched in TVSDK, wenn ein Adbreak-Beginn die Wiedergabe durchführt. | clientTimestamp, Ereignis, Id, duration, time, clientId |
 | **ADBREAK_PLAYBACK_** COMPLETEDispatched in TVSDK, wenn eine Werbeunterbrechung die Wiedergabe abgeschlossen hat. | clientTimestamp, Ereignis, Id, clientId |
 | **CONTENT_PLAYBACK_** COMPLETEDispatched in TVSDK, wenn ein Inhalt abgeschlossen ist. Dies kann vorkommen, wenn der Stream ersetzt wird, der Player einen Fehlerstatus eingibt, der Player zurückgesetzt wird oder der Inhalt tatsächlich abgeschlossen wird. Dieses Ereignis ist zur Verfolgung einer sessionId erforderlich. | clientTimestamp, Ereignis, clientId, url, status, errorMessage |
-| **AD_PLAYBACK_** ERRORDispatched in TVSDK, wenn eine Anzeige einen Fehler bei der Wiedergabe aufweist (Variantenstream-Fehler). | ereignis, error, Timestamp, manifestUrl, time, Id, url |
+| **AD_PLAYBACK_** ERRORDispatched in TVSDK, wenn eine Anzeige einen Fehler bei der Wiedergabe aufweist (Variantenstream-Fehler). | Ereignis, error, Timestamp, manifestUrl, time, Id, url |
