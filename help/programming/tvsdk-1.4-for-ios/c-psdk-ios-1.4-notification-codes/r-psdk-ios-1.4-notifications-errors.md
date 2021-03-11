@@ -1,13 +1,10 @@
 ---
 description: Diese Tabelle enthält detaillierte Informationen zu FEHLERTypbenachrichtigungen.
-seo-description: Diese Tabelle enthält detaillierte Informationen zu FEHLERTypbenachrichtigungen.
-seo-title: FEHLER-Benachrichtigungscodes
 title: FEHLER-Benachrichtigungscodes
-uuid: cea75277-7747-4f9b-ad59-98f9f1a5ac2f
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '434'
 ht-degree: 5%
 
 ---
@@ -245,7 +242,7 @@ Die meisten Fehler enthalten relevante Metadaten, z. B. die URL der Ressource, d
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170010  </span> </td> 
-   <td colname="2"><span class="codeph"> SITECATALYST_ERROR  </span> </td> 
+   <td colname="2"><span class="codeph"> SiteCatalyst_ERROR  </span> </td> 
    <td colname="3"> Keines </td> 
    <td colname="4"><span class="codeph"> BESCHREIBUNG  </span> </td> 
    <td colname="5"> <p>Site-Katalysator-Fehler. Siehe Beschreibung. </p> </td> 
