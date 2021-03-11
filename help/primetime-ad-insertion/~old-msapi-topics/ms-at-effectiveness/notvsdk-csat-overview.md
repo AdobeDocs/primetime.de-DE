@@ -1,13 +1,10 @@
 ---
 description: Herausgeber können HLS-konforme Videoplayer erstellen, die mit der clientseitigen Workflows der Primetime-Manifestserver-Anzeigenverfolgung funktionieren. Die Schnittstellen zum Manifestserver für die Live-Stream- und Video-On-Demand-Fälle (VOD) unterscheiden sich geringfügig.
-seo-description: Herausgeber können HLS-konforme Videoplayer erstellen, die mit der clientseitigen Workflows der Primetime-Manifestserver-Anzeigenverfolgung funktionieren. Die Schnittstellen zum Manifestserver für die Live-Stream- und Video-On-Demand-Fälle (VOD) unterscheiden sich geringfügig.
-seo-title: Übersicht über die clientseitige Verfolgung ohne TVSDK
 title: Übersicht über die clientseitige Verfolgung ohne TVSDK
-uuid: fb23be01-3327-443d-82c4-fb0993e7fec1
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '727'
 ht-degree: 1%
 
 ---
