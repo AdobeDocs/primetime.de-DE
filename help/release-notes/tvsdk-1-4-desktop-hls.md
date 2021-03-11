@@ -1,17 +1,13 @@
 ---
 title: TVSDK 1.4 für HLS-Versionshinweise für Desktop
-seo-title: TVSDK 1.4 für HLS-Versionshinweise für Desktop
 description: TVSDK for Desktop HLS Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in TVSDK DHLS.
-seo-description: TVSDK for Desktop HLS Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in TVSDK DHLS.
-uuid: 84da27b7-299b-478d-88f5-ef943f0a8321
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: e4437a26-9454-4da1-ae87-0fce664aac3d
 translation-type: tm+mt
-source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '5222'
+source-wordcount: '5196'
 ht-degree: 0%
 
 ---
@@ -284,7 +280,7 @@ Das Problem, bei dem der DRM-Adapter nach dem Herunterladen eines kleinen Teils 
 
 * Zendesk #20784 - Analytics: Auslösen von Inhaltsbeendigungen für Live-Video-Transitionen
 
-Dieses Problem wurde behoben, indem eine API (trackVideoComplete) hinzugefügt wurde, mit der der Abschluss von Inhalten während einer LINEAR/LIVE-Videoverfolgungssitzung manuell ausgelöst wird.
+Dieses Problem wurde behoben, indem eine API (trackVideoComplete) hinzugefügt wurde, mit der der Inhaltsabschluss während einer LINEAR/LIVE-Videoverfolgungssitzung manuell Trigger werden kann.
 
 Die folgenden Bibliotheken wurden aktualisiert:
 
@@ -364,7 +360,7 @@ In dieser Version wurde der Zeitlimit für globale Anzeigenanforderungen hinzuge
 
 Dieses Problem wurde im Desktop Reference Player behoben, indem es die Möglichkeit bereitstellte, Anzeigen-Tags festzulegen und einen benutzerdefinierten Opportunitätsgenerator hinzuzufügen, der anzeigt, wie benutzerspezifische Hinweise abonniert werden und wie diese Hinweise in einer VOD-Datei verarbeitet werden.
 
-* Zendesk #20806 Zukünftige Mid-Roll-Anzeigen im DVR-Fenster werden nach dem Austauschen von Cams nicht ausgelöst
+* Zendesk #20806 Zukünftige Mid-Roll-Anzeigen im DVR-Fenster werden nach dem Austauschen von Cams nicht mehr Trigger
 
 **Hinweis**: Für dieses Problem ist Flash Player 21.0.0.182 oder höher erforderlich.
 
@@ -393,7 +389,7 @@ Dieses Verhalten wurde geändert, um benutzerdefinierte Parameter aus dem Opport
 
 **Hinweis**: Für dieses Problem ist Flash Player 21.0.0.211 oder höher erforderlich.
 
-Dieses Problem wurde behoben, indem TVSDK das Manifest (HLS-Profile) ignorieren konnte, das den AC3-Codec enthält, den TVSDK nicht unterstützt (Surround).
+Dieses Problem wurde behoben, indem TVSDK das Manifest (HLS-Profil) ignorieren konnte, das den AC3-Codec enthält, den TVSDK nicht unterstützt (Surround).
 
 **Version 1.4.20** (762)
 
