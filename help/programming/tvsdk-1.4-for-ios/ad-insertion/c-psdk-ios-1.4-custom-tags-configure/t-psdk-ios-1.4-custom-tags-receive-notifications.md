@@ -1,13 +1,10 @@
 ---
 description: Um Benachrichtigungen über Tags im Manifest zu erhalten, implementieren Sie die entsprechenden Benachrichtigungs-Listener.
-seo-description: Um Benachrichtigungen über Tags im Manifest zu erhalten, implementieren Sie die entsprechenden Benachrichtigungs-Listener.
-seo-title: hinzufügen Listener für zeitgesteuerte Metadaten-Benachrichtigungen
 title: hinzufügen Listener für zeitgesteuerte Metadaten-Benachrichtigungen
-uuid: dcd1bd92-0617-4eab-8b06-7301aaff42f3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
