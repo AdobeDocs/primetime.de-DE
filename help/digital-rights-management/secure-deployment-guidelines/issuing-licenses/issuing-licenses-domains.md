@@ -1,13 +1,10 @@
 ---
 description: Damit Benutzer keine Dateien sichern und wiederherstellen können, um die Domänenderegistrierung zu umgehen, müssen Sie einige Domänenverwaltungsansätze implementieren.
-seo-description: Damit Benutzer keine Dateien sichern und wiederherstellen können, um die Domänenderegistrierung zu umgehen, müssen Sie einige Domänenverwaltungsansätze implementieren.
-seo-title: Verwalten von Domänen
 title: Verwalten von Domänen
-uuid: 30b73e38-d6ed-43c6-89ba-ae8616383779
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
