@@ -1,9 +1,9 @@
 ---
-seo-title: Verarbeiten von Zertifikatsaktualisierungen bei Ablauf von Adobe-Zertifikaten
 title: Verarbeiten von Zertifikatsaktualisierungen bei Ablauf von Adobe-Zertifikaten
-uuid: abc0ca3e-a78f-4078-9480-7116843cce05
+description: Verarbeiten von Zertifikatsaktualisierungen bei Ablauf von Adobe-Zertifikaten
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
