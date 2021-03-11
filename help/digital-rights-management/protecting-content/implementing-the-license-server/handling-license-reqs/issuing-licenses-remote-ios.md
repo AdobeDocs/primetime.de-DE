@@ -1,9 +1,9 @@
 ---
-seo-title: Erteilung von Lizenzen für Remote-Key-Versand an iOS-Clients (Adobe Primetime erforderlich)
 title: Erteilung von Lizenzen für Remote-Key-Versand an iOS-Clients (Adobe Primetime erforderlich)
-uuid: 739dd93d-0645-4cb1-a3e8-aa78f7ef015e
+description: Erteilung von Lizenzen für Remote-Key-Versand an iOS-Clients (Adobe Primetime erforderlich)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
