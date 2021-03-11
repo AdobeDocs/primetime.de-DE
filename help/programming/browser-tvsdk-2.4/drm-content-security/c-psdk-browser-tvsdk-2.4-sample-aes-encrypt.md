@@ -1,13 +1,10 @@
 ---
-description: Während die AES-128-Verschlüsselungsmethode den gesamten Transport Stream (TS)-Container einschließlich Header verschlüsselt, verschlüsselt die SAMPLE-AES-Verschlüsselung nur die Audio- und Videodaten.
-seo-description: Während die AES-128-Verschlüsselungsmethode den gesamten Transport Stream (TS)-Container einschließlich Header verschlüsselt, verschlüsselt die SAMPLE-AES-Verschlüsselung nur die Audio- und Videodaten.
-seo-title: Beispiel-AES-verschlüsselte HLS-Streams
+description: Während die AES-128-Verschlüsselungsmethode den gesamten Transport-Stream-Container (TS) einschließlich Header verschlüsselt, verschlüsselt die SAMPLE-AES-Verschlüsselung nur die Audio- und Videodaten.
 title: Beispiel-AES-verschlüsselte HLS-Streams
-uuid: 32c1f87b-eb81-4e1c-92ea-ec37260a7ecb
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '200'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Beispiel-AES-verschlüsselte HLS-Streams{#sample-aes-encrypted-hls-streams}
 
-Während die AES-128-Verschlüsselungsmethode den gesamten Transport Stream (TS)-Container einschließlich Header verschlüsselt, verschlüsselt die SAMPLE-AES-Verschlüsselung nur die Audio- und Videodaten.
+Während die AES-128-Verschlüsselungsmethode den gesamten Transport-Stream-Container (TS) einschließlich Header verschlüsselt, verschlüsselt die SAMPLE-AES-Verschlüsselung nur die Audio- und Videodaten.
 
 In verschlüsselten Streams wird ein geschützter Block identifiziert, über den der Schutz abgeschlossen ist. H.264-Videogeschützte Blöcke sind der Körper der Typen 1 und 5 der Netzwerkanpassungs-Layer (NAL)-Einheiten. Ein geschützter Audioblock ist ein Audiorahmen und Audio muss im AAC-Format vorliegen.
 
