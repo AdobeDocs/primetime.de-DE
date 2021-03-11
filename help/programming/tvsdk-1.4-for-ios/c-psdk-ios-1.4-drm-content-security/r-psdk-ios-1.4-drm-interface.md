@@ -1,13 +1,10 @@
 ---
 description: Das wichtigste clientseitige Element des DRM-Systems (Primetime Digital Rights Management) ist der DRM Manager.
-seo-description: Das wichtigste clientseitige Element des DRM-Systems (Primetime Digital Rights Management) ist der DRM Manager.
-seo-title: Übersicht über die Primetime-DRM-Oberfläche
 title: Übersicht über die Primetime-DRM-Oberfläche
-uuid: 3aae7c7a-fd0c-430e-9018-fd72801ab778
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -54,7 +51,7 @@ Wenn der DRM-geschützte Stream mit mehreren Bitraten (MBR) kodiert ist, sollten
 >https://your.domain.com/hls/[...]/index.m3u8?faxs=1
 >```
 >
->Der Zeichenfolgenparameter `faxs=1` gibt an, dass der Abfrage DRM-geschützt ist, und löst den DRM-Entschlüsselungs-Workflow im iOS TVSDK entsprechend aus. Sie können das `faxs=1`-Tag auch an DRM-geschützte HLS-Asset-URLs anhängen, die für andere Plattformen bestimmt sind. es wird unter iOS wie erforderlich beobachtet oder bei Playern auf anderen Plattformen als Nicht-Op behandelt.
+>Der Zeichenfolgenparameter `faxs=1` gibt an, dass der Inhalt DRM-geschützt ist, und Trigger den DRM-Entschlüsselungs-Workflow entsprechend im iOS TVSDK. Sie können das `faxs=1`-Tag auch an DRM-geschützte HLS-Asset-URLs anhängen, die für andere Plattformen bestimmt sind. es wird auf iOS wie erforderlich beobachtet oder als Nicht-Op-Player auf anderen Plattformen behandelt.
 
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
