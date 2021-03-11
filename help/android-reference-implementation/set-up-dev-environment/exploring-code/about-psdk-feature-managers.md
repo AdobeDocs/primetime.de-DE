@@ -1,13 +1,10 @@
 ---
-seo-title: Funktionmanager
 title: Funktionmanager
-uuid: 3d78544e-4819-4122-bfd3-01522a067aa9
 description: Funktionsmanager bieten Ihnen die Möglichkeit, einzelne Funktionen zu steuern, ohne das gesamte TVSDK zu durchlaufen, indem Sie nach Code für eine Funktion suchen, die an mehreren Stellen verstreut werden kann.
-seo-description: Funktionsmanager bieten Ihnen die Möglichkeit, einzelne Funktionen zu steuern, ohne das gesamte TVSDK zu durchlaufen, indem Sie nach Code für eine Funktion suchen, die an mehreren Stellen verstreut werden kann.
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '390'
 ht-degree: 2%
 
 ---
@@ -15,12 +12,12 @@ ht-degree: 2%
 
 # Funktionsmanager {#feature-managers}
 
-Funktionsmanager bieten Ihnen die Möglichkeit, einzelne Funktionen zu steuern, ohne das gesamte TVSDK zu durchlaufen, indem Sie nach Code für eine Funktion suchen, die an mehreren Stellen verstreut werden kann. Funktionsmanager verkleinern den Code zu einer Klasse pro Funktion. Die Funktionenmanager warten auf Auslöser von TVSDK-Ereignissen und informieren dann die Klasse, die den Feature Manager verwendet, um das Ergebnis zu verarbeiten. Der Feature Manager stellt die erforderlichen Informationen für die Klasse bereit.
+Funktionsmanager bieten Ihnen die Möglichkeit, einzelne Funktionen zu steuern, ohne das gesamte TVSDK zu durchlaufen, indem Sie nach Code für eine Funktion suchen, die an mehreren Stellen verstreut werden kann. Funktionsmanager verkleinern den Code zu einer Klasse pro Funktion. Die Funktionenmanager warten auf Trigger von TVSDK-Ereignissen und informieren dann die Klasse, die den Feature Manager verwendet, um das Ergebnis zu verarbeiten. Der Feature Manager stellt die erforderlichen Informationen für die Klasse bereit.
 
 Die Funktionsmanager führen die folgenden Aufgaben durch:
 
-* **Löst TVSDK-Funktionen aus.**
-Dies sind Funktionsaufrufe, um eine TVSDK-Funktion auszulösen. Beispiel: 
+* **Trigger TVSDK-Funktionen.**
+Dies sind Funktionsaufrufe zum Trigger einer TVSDK-Funktion. Beispiel: 
 `PlaybackManager.play()` wird aufgerufen, wenn die Player-Anwendung die Videowiedergabe Beginn hat.
 
 * **Listet TVSDK-Ereignis auf.**
@@ -43,7 +40,7 @@ Die Primetime-Referenzimplementierung umfasst die folgenden Funktionsmanager:
 | QoS | QosManager | Servicestatistik. | optional |
 | Berechtigung | EntitlementManager | Berechtigungsintegration für die Primetime-Authentifizierung. | optional |
 
-Die Referenz-Implementierung enthält die oben aufgeführten grundlegenden Standardklassen und die entsprechenden Klassen mit dem Suffix On. Die Standardklassen bieten das standardmäßige TVSDK-Verhalten, während die Klassen mit dem On-Suffix den gesamten Code enthalten, der zum Auslösen der TVSDK-Funktion erforderlich ist, und TVSDK-Ereignis für diese Funktion abhören.
+Die Referenz-Implementierung enthält die oben aufgeführten grundlegenden Standardklassen und die entsprechenden Klassen mit dem Suffix On. Die Standardklassen bieten das standardmäßige TVSDK-Verhalten, während die Klassen mit dem On-Suffix den gesamten Code enthalten, der zum Trigger der TVSDK-Funktion und zum Abhören der TVSDK-Ereignis für diese Funktion erforderlich ist.
 
 * Bei optionalen Funktionen funktioniert der Standardcode so, als wäre die Funktion deaktiviert.
 * Klassen mit dem Suffix &quot;Ein&quot;funktionieren, als ob die Funktion aktiviert ist.
