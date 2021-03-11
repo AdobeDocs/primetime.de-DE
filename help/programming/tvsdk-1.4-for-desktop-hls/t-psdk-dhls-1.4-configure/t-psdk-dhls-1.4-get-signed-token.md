@@ -1,13 +1,10 @@
 ---
 description: Der Flash Runtime TVSDK benötigt ein signiertes Token, um zu überprüfen, ob Sie berechtigt sind, die TVSDK-API in der Domäne aufzurufen, in der sich Ihre Anwendung befindet.
-seo-description: Der Flash Runtime TVSDK benötigt ein signiertes Token, um zu überprüfen, ob Sie berechtigt sind, die TVSDK-API in der Domäne aufzurufen, in der sich Ihre Anwendung befindet.
-seo-title: Signiertes Token laden
 title: Signiertes Token laden
-uuid: 8760eab3-3d6d-47c6-9aa7-f64f6aa5ddcf
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '515'
 ht-degree: 0%
 
 ---
@@ -29,7 +26,7 @@ Der Flash Runtime TVSDK benötigt ein signiertes Token, um zu überprüfen, ob S
 
    * Eine [!DNL .swf]-Datei mit Token-Informationen für mehrere Domänen (ohne Platzhalter) (Einzel- oder Platzhalterdaten), die Ihre Anwendung dynamisch laden kann.
 
-1. Speichern Sie die Token-Datei am selben Speicherort oder in der gleichen Domäne wie Ihre Anwendung.
+1. Speichern Sie die Tokendatei im selben Speicherort oder in der gleichen Domäne wie Ihre Anwendung.
 
    Standardmäßig sucht TVSDK nach dem Token an diesem Speicherort. Alternativ können Sie den Namen und Speicherort des Tokens in `flash_vars` in Ihrer HTML-Datei angeben.
 1. Wenn Ihre Tokendatei eine einzelne XML-Datei ist:
