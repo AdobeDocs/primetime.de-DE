@@ -1,13 +1,10 @@
 ---
 description: Standardmäßig erzwingt TVSDK die Wiedergabe einer Werbeunterbrechung, wenn der Benutzer über eine Werbeunterbrechung sucht. Sie können das Verhalten anpassen, um einen Werbeunterbrechung zu überspringen, wenn der Zeitraum, der nach dem Abschluss eines vorherigen Umbruchs abgelaufen ist, innerhalb einer bestimmten Anzahl von Minuten liegt.
-seo-description: Standardmäßig erzwingt TVSDK die Wiedergabe einer Werbeunterbrechung, wenn der Benutzer über eine Werbeunterbrechung sucht. Sie können das Verhalten anpassen, um einen Werbeunterbrechung zu überspringen, wenn der Zeitraum, der nach dem Abschluss eines vorherigen Umbruchs abgelaufen ist, innerhalb einer bestimmten Anzahl von Minuten liegt.
-seo-title: Werbeunterbrechungen für einen Zeitraum überspringen
 title: Werbeunterbrechungen für einen Zeitraum überspringen
-uuid: 1a18d5fd-c957-481b-83ae-2129590c1678
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
