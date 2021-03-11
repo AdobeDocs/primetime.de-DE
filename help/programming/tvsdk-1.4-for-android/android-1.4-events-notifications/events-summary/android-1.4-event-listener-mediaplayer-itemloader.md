@@ -1,13 +1,10 @@
 ---
 description: TVSDK sendet Medienplayer-Element-Ereignis als Reaktion auf das Laden eines Medienelements.
-seo-description: TVSDK sendet Medienplayer-Element-Ereignis als Reaktion auf das Laden eines Medienelements.
-seo-title: Loader-Ereignis
 title: Loader-Ereignis
-uuid: 1b401ff5-4313-4c64-8be9-99bdeb58ba2a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
