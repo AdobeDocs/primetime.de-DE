@@ -1,13 +1,10 @@
 ---
 description: Die CustomRangeMetadata-Klasse identifiziert verschiedene Arten von Zeitbereichen in einem VOD-Stream-Markierungszeichen, Löschen und Ersetzen. Für jeden dieser benutzerdefinierten Zeitraumtypen können Sie entsprechende Vorgänge durchführen, einschließlich Löschen und Ersetzen von Anzeigeninhalten.
-seo-description: Die CustomRangeMetadata-Klasse identifiziert verschiedene Arten von Zeitbereichen in einem VOD-Stream-Markierungszeichen, Löschen und Ersetzen. Für jeden dieser benutzerdefinierten Zeitraumtypen können Sie entsprechende Vorgänge durchführen, einschließlich Löschen und Ersetzen von Anzeigeninhalten.
-seo-title: Benutzerdefinierte Zeitraumoperationen
 title: Benutzerdefinierte Zeitraumoperationen
-uuid: eadd4d8d-0e03-40ca-ae3b-eede82bf2df8
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '322'
 ht-degree: 0%
 
 ---
