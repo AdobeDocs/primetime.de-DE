@@ -1,13 +1,10 @@
 ---
 description: Sicherheitslücken im Netzwerk gehören zu den ersten Bedrohungen für alle Internet- oder Intranet-orientierten Anwendungsserver und Sie müssen Hosts im Netzwerk gegen diese Schwachstellen schützen.
-seo-description: Sicherheitslücken im Netzwerk gehören zu den ersten Bedrohungen für alle Internet- oder Intranet-orientierten Anwendungsserver und Sie müssen Hosts im Netzwerk gegen diese Schwachstellen schützen.
-seo-title: Sicherheit der Netzwerkschicht
 title: Sicherheit der Netzwerkschicht
-uuid: c750c595-a784-47ce-be0b-17b8d60c5753
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
