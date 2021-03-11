@@ -1,13 +1,10 @@
 ---
 description: Just-in-time-Transkodierung kann zeitgesteuerte ID3-Metadaten in Werbeinhalte injizieren, um die clientseitige Anzeigenverfolgung zu erleichtern.
-seo-description: Just-in-time-Transkodierung kann ID3-zeitgesteuerte Metadaten in das HLS-Format und kreative Elemente injizieren, um die clientseitige Anzeigenverfolgung zu erleichtern.
-seo-title: Verwenden der Just-in-time-Transkodierung zum Einfügen von ID3-Timed-Metadaten-Tags
 title: Verwenden der Just-in-time-Transkodierung zum Einfügen von ID3-Timed-Metadaten-Tags
-uuid: 491bbb9e-15de-4871-baa1-f7bb0ea0dde2
 translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
