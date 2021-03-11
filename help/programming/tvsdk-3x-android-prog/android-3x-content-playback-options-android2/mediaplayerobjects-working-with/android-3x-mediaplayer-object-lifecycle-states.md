@@ -1,13 +1,10 @@
 ---
 description: Der Status des Medienplayers bestimmt, welche Aktionen zulässig sind.
-seo-description: Der Status des Medienplayers bestimmt, welche Aktionen zulässig sind.
-seo-title: Lebenszyklus und Status des MediaPlayer-Objekts
 title: Lebenszyklus und Status des MediaPlayer-Objekts
-uuid: a2866f84-a722-46ed-b4cb-36664db5be82
 translation-type: tm+mt
-source-git-commit: 56dc79e5b4df11ff730d7d8f23dea8d0f4712077
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -61,7 +58,7 @@ Die folgende Tabelle enthält Details zum Lebenszyklus und den Status des Medien
   </tr> 
   <tr> 
    <td colname="col1"> PLAYING/PAUSED </td> 
-   <td colname="col2"> <p>Während die Anwendung das Medium wiedergibt und anhält, wechselt der Medienplayer zwischen diesen Status. </p> </td> 
+   <td colname="col2"> <p>Während die Anwendung das Medium abspielt und anhält, wechselt der Medienplayer zwischen diesen Status. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> AUSGESETZT </td> 
@@ -69,7 +66,7 @@ Die folgende Tabelle enthält Details zum Lebenszyklus und den Status des Medien
       <ul id="ul_1B21668994D1474AAA0BE839E0D69B00"> 
        <li id="li_08459A3AB03C45588D73FA162C27A56C">Der <span class="codeph"> MediaPlayer </span> ruft <span class="codeph"> die Aussetzung </span> nur dann automatisch auf, wenn das Oberflächenobjekt, das von <span class="codeph"> MediaPlayerView </span> verwendet wird, zerstört wird. </li> 
        <li id="li_B9926AA2E7B9441490F37D24AE2678A1">Der <span class="codeph"> MediaPlayer </span> ruft <span class="codeph"> restore() </span> nur dann automatisch auf, wenn ein neues Oberflächenobjekt erstellt wird, das von <span class="codeph"> MediaPlayerView </span> verwendet wird. </li> 
-      </ul> </p> </p> <p>Wenn die Wiedergabe bei der Wiederherstellung des MediaPlayer immer angehalten werden soll, verwenden Sie den Anwendungsaufruf <span class="codeph"> MediaPlayer.pause() </span> in der Methode <span class="codeph"> der Android-Aktivität </span>. onPause() &lt;a3/&gt;. </p> </td> 
+      </ul> </p> </p> <p>Wenn die Wiedergabe bei der Wiederherstellung des MediaPlayer immer angehalten werden soll, verwenden Sie den Anwendungsaufruf <span class="codeph"> MediaPlayer.pause() </span> in der Methode <span class="codeph"> der Android-Aktivität </span>. onPause() . </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> VOLLSTÄNDIG </td> 
