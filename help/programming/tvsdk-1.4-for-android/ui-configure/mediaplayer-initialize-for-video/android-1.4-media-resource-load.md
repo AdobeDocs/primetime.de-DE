@@ -1,13 +1,10 @@
 ---
 description: Laden Sie eine Ressource, indem Sie MediaResource direkt instanziieren und den wiederzugebenden Videoinhalt laden. Dies ist eine Möglichkeit, eine Medienressource zu laden.
-seo-description: Laden Sie eine Ressource, indem Sie MediaResource direkt instanziieren und den wiederzugebenden Videoinhalt laden. Dies ist eine Möglichkeit, eine Medienressource zu laden.
-seo-title: Laden einer Medienressource in den MediaPlayer
 title: Laden einer Medienressource in den MediaPlayer
-uuid: 6ee8032f-0728-423f-a1d2-5030aa7db14f
 translation-type: tm+mt
-source-git-commit: 4ef05be045334a2e723da4c7c6a7ee22fb0f776c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
