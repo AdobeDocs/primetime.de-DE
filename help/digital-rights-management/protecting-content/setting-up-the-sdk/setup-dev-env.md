@@ -1,13 +1,10 @@
 ---
 description: Wenn Sie Primetime DRM einrichten möchten, kopieren Sie die Dateien von der DVD. Zu diesen Dateien gehören JAR-Dateien mit Code, Zertifikaten und Drittanbieterklassen. Darüber hinaus müssen Sie ein Zertifikat von Adobe Systems, Incorporated, anfordern. Adobe erteilt Ihnen dann mehrere Berechtigungen, die Sie zum Schutz der Integrität Ihrer gepackten Inhalte, Lizenzen und der Kommunikation zwischen Client und Server verwenden.
-seo-description: Wenn Sie Primetime DRM einrichten möchten, kopieren Sie die Dateien von der DVD. Zu diesen Dateien gehören JAR-Dateien mit Code, Zertifikaten und Drittanbieterklassen. Darüber hinaus müssen Sie ein Zertifikat von Adobe Systems, Incorporated, anfordern. Adobe erteilt Ihnen dann mehrere Berechtigungen, die Sie zum Schutz der Integrität Ihrer gepackten Inhalte, Lizenzen und der Kommunikation zwischen Client und Server verwenden.
-seo-title: Einrichten der Entwicklungs-Umgebung
 title: Einrichten der Entwicklungs-Umgebung
-uuid: 68afefe8-7ec6-466e-89a8-bc0da8afb4c8
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
