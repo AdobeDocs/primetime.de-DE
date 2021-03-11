@@ -1,9 +1,9 @@
 ---
-seo-title: Sicheres Verpacken von Inhalten
 title: Sicheres Verpacken von Inhalten
-uuid: a5e7cc17-353b-47d1-b89c-a2ba3c9faca1
+description: Sicheres Verpacken von Inhalten
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -27,4 +27,4 @@ Die Adobe Access Packaging API gibt unter bestimmten Umständen Warnungen aus. S
 
 Wenn Inhalte mit einer Richtlinie mit falschen Attributen gepackt werden, sollte die Richtlinie aktualisiert und die aktualisierte Richtlinie dem Lizenzserver über eine Liste zur Richtlinienaktualisierung oder einen anderen Mechanismus zur Bereitstellung der aktualisierten Richtlinie an den Server zur Verfügung gestellt werden. Einige Richtlinienattribute können nach der Erstellung der Richtlinie nicht mehr geändert werden. Wenn diese Attribute nicht korrekt sind, ziehen Sie den Inhalt von den Distribution-Sites zurück, widerrufen Sie die Richtlinie, sodass keine zukünftigen Lizenzen erteilt werden können, und verschlüsseln Sie den Inhalt erneut.
 
-Nach Abschluss der Verpackung wird der Verpackungsschlüssel nicht explizit zerstört; Es wird jedoch mit Müll gesammelt. Daher bleibt der Verpackungsschlüssel für einen bestimmten Zeitraum im Speicher; Sie müssen sich vor unbefugtem Zugriff auf die Maschine schützen und Schritte unternehmen, um sicherzustellen, dass keine Dateien, wie z.B. Kernauslagerungen, die diese Informationen offen legen könnten, offen gelegt werden.
+Nach Abschluss der Verpackung wird der Verpackungsschlüssel nicht explizit zerstört; Es wird jedoch mit Müll gesammelt. Daher bleibt der Verpackungsschlüssel für einen bestimmten Zeitraum im Speicher; Sie müssen sich vor unbefugtem Zugriff auf den Computer schützen und Schritte unternehmen, um sicherzustellen, dass keine Dateien, wie z.B. Kernauslagerungen, die diese Informationen offen legen könnten, offen gelegt werden.
