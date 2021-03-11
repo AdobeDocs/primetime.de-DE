@@ -1,13 +1,10 @@
 ---
 description: Bei Live- und Video-on-Demand-Medien (VOD) werden TVSDK-Beginn wiedergegeben, indem die Wiedergabeliste heruntergeladen wird, die mit der Bitrate der mittleren Auflösung verknüpft ist, und die von dieser Wiedergabeliste definierten Mediensegmente heruntergeladen werden. Sie wählt schnell die Wiedergabeliste mit hoher Bitrate und die zugehörigen Medien aus und fährt mit dem Herunterladen fort.
-seo-description: Bei Live- und Video-on-Demand-Medien (VOD) werden TVSDK-Beginn wiedergegeben, indem die Wiedergabeliste heruntergeladen wird, die mit der Bitrate der mittleren Auflösung verknüpft ist, und die von dieser Wiedergabeliste definierten Mediensegmente heruntergeladen werden. Sie wählt schnell die Wiedergabeliste mit hoher Bitrate und die zugehörigen Medien aus und fährt mit dem Herunterladen fort.
-seo-title: Medienwiedergabe und Failover
 title: Medienwiedergabe und Failover
-uuid: 5189cef4-ee09-43b3-ae3d-1052fc535480
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -21,7 +18,7 @@ Bei Live- und Video-on-Demand-Medien (VOD) werden TVSDK-Beginn wiedergegeben, in
 
 Wenn beispielsweise die in einer Manifestdatei der obersten Ebene angegebene M3U8-Datei nicht heruntergeladen wird, versucht TVSDK, eine Wiederherstellung vorzunehmen. Wenn der Vorgang nicht wiederhergestellt werden kann, bestimmt Ihre Anwendung den nächsten Schritt.
 
-Wenn die Wiedergabeliste, die mit der Bitrate mit mittlerer Auflösung verknüpft ist, fehlt, sucht TVSDK nach einer Varianten-Playlist mit derselben Auflösung. Wenn dieselbe Auflösung gefunden wird, laden TVSDK-Beginn die Wiedergabeliste und die Segmente von der entsprechenden Position herunter. Wenn der Player nicht dieselbe Auflösungs-Playlist findet, versucht er, durch andere Bitrate-Playlisten und deren Varianten zu blättern. Eine unmittelbar niedrigere Bitrate ist die erste Wahl, dann die Variante usw. Wenn alle Playlisten mit niedriger Bitrate und ihre Varianten erschöpft sind, um eine gültige Playlist zu finden, wird TVSDK zur obersten Bitrate gehen und von dort unten zählen. Wenn keine gültige Wiedergabeliste gefunden werden kann, schlägt der Prozess fehl und der Player wechselt zum FEHLER-Status.
+Wenn die Wiedergabeliste, die mit der Bitrate mit mittlerer Auflösung verknüpft ist, fehlt, sucht TVSDK nach einer Varianten-Playlist mit derselben Auflösung. Wenn dieselbe Auflösung gefunden wird, laden TVSDK-Beginn die Wiedergabeliste und die Segmente von der entsprechenden Position herunter. Wenn der Player nicht dieselbe Auflösungs-Playlist findet, versucht er, durch andere Bitrate-Playlisten und deren Varianten zu blättern. Eine unmittelbar niedrigere Bitrate ist die erste Wahl, dann die Variante usw. Wenn alle Playlisten mit niedrigeren Bitraten und ihre Varianten erschöpft sind, um eine gültige Playlist zu finden, wird TVSDK zur obersten Bitrate gehen und von dort unten zählen. Wenn keine gültige Wiedergabeliste gefunden werden kann, schlägt der Prozess fehl und der Player wechselt zum FEHLER-Status.
 
 Ihre Anwendung kann bestimmen, wie diese Situation zu handhaben ist. Sie können beispielsweise die Player-Aktivität schließen und den Benutzer zur Katalog-Aktivität weiterleiten. Das gewünschte Ereignis ist das Ereignis `STATUS_CHANGED` und der entsprechende Rückruf ist die `onStatusChanged`-Methode. Der folgende Code überwacht, ob der Player seinen internen Status in `ERROR` ändert:
 
@@ -44,7 +41,7 @@ Wenn ein Segment auf dem Server fehlt, weil beispielsweise die Manifestdatei nic
 1. Durchlaufen Sie jede verfügbare Bitrate in jeder verfügbaren Variante.
 1. Überspringen Sie das Segment und geben Sie eine Warnung aus.
 
-Wenn TVSDK kein alternatives Segment abrufen kann, löst es eine `CONTENT_ERROR`-Fehlerbenachrichtigung aus. Diese Benachrichtigung enthält eine innere Benachrichtigung mit dem Code `DOWNLOAD_ERROR`. Wenn der Stream mit dem Problem eine alternative Audiospur ist, generiert TVSDK die Fehlermeldung `AUDIO_TRACK_ERROR`.
+Wenn TVSDK kein alternatives Segment abrufen kann, wird eine `CONTENT_ERROR`-Fehlermeldung Trigger. Diese Benachrichtigung enthält eine innere Benachrichtigung mit dem Code `DOWNLOAD_ERROR`. Wenn der Stream mit dem Problem eine alternative Audiospur ist, generiert TVSDK die Fehlermeldung `AUDIO_TRACK_ERROR`.
 
 Wenn die Video-Engine kontinuierlich keine Segmente abrufen kann, werden fortlaufende Segmentübergänge auf 5 begrenzt. Danach wird die Wiedergabe gestoppt und TVSDK gibt eine `NATIVE_ERROR` mit dem Code 5 aus.
 
