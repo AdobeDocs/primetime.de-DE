@@ -1,13 +1,10 @@
 ---
 description: Ereignis aus Browser TVSDK geben den Player-Status, Fehler, die auftreten, den Abschluss von angeforderten Aktionen an, wie z. B. die Videowiedergabe oder implizit auftretende Aktionen, wie z. B. das Abschließen einer Anzeige.
-seo-description: Ereignis aus Browser TVSDK geben den Player-Status, Fehler, die auftreten, den Abschluss von angeforderten Aktionen an, wie z. B. die Videowiedergabe oder implizit auftretende Aktionen, wie z. B. das Abschließen einer Anzeige.
-seo-title: Primetime Player-Ereignis suchen
 title: Primetime Player-Ereignis suchen
-uuid: 7b7c28ac-22ae-46a3-bbeb-bef1b04baeb3
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '304'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
