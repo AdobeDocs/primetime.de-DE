@@ -1,9 +1,9 @@
 ---
-seo-title: Eigenschaftendatei des Lizenzservers
 title: Eigenschaftendatei des Lizenzservers
-uuid: bede307a-2060-451f-baf5-d058702c0a7e
+description: Eigenschaftendatei des Lizenzservers
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
