@@ -1,13 +1,10 @@
 ---
 description: Bevor Sie die meisten TVSDK-Player-Methoden verwenden können, muss sich der Player in einem gültigen Status befinden.
-seo-description: Bevor Sie die meisten TVSDK-Player-Methoden verwenden können, muss sich der Player in einem gültigen Status befinden.
-seo-title: Warten auf gültigen Status
 title: Warten auf gültigen Status
-uuid: 918ab021-3685-424a-b84e-683da0357724
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
