@@ -1,9 +1,9 @@
 ---
-seo-title: Aktualisieren der Mandant-Konfigurationsdatei
 title: Aktualisieren der Mandant-Konfigurationsdatei
-uuid: b6cb43e2-b9a5-40bf-879a-010fcc3d5935
+description: Aktualisieren der Mandant-Konfigurationsdatei
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
