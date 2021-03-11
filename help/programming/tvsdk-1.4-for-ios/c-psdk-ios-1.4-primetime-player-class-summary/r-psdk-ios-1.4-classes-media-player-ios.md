@@ -1,13 +1,10 @@
 ---
 description: Diese Klassen beschreiben Ihren Medienplayer und seine Ressourcen.
-seo-description: Diese Klassen beschreiben Ihren Medienplayer und seine Ressourcen.
-seo-title: Media Player-Klassen
 title: Media Player-Klassen
-uuid: 6b59dcff-9722-4a84-9049-f6f10f7b3e82
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
