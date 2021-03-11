@@ -1,13 +1,10 @@
 ---
 description: Sie können Zeitschienen für Werbeunterbrechungen in VOD-Inhalten mit einer formatierten Liste von Anzeigen- und Inhaltssegmenten, so genannten Pods, angeben oder überschreiben.
-seo-description: Sie können Zeitschienen für Werbeunterbrechungen in VOD-Inhalten mit einer formatierten Liste von Anzeigen- und Inhaltssegmenten, so genannten Pods, angeben oder überschreiben.
-seo-title: VOD-Timeline-Format
 title: VOD-Timeline-Format
-uuid: 6daaf605-e5ee-48dc-a222-a5973b3d915a
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
