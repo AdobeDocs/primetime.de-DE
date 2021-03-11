@@ -1,13 +1,10 @@
 ---
 description: Die Konfigurationsdatei "flashaccess-tenant.xml"enthält Einstellungen, die für einen bestimmten Mandanten des Lizenzservers gelten.
-seo-description: Die Konfigurationsdatei "flashaccess-tenant.xml"enthält Einstellungen, die für einen bestimmten Mandanten des Lizenzservers gelten.
-seo-title: Mandantenkonfigurationsdatei
 title: Mandantenkonfigurationsdatei
-uuid: bc9ee4a1-63b6-4362-9929-3e9fe8251075
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '773'
 ht-degree: 0%
 
 ---
