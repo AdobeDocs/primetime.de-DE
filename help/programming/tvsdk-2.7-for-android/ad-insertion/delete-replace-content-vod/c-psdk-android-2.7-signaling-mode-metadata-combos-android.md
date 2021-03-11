@@ -1,13 +1,10 @@
 ---
 description: Sie können Zeitbereiche in VOD-Streams mit unterschiedlichen Kombinationen aus Anzeigensignalisierungsmodus und Anzeigenmetadaten markieren, löschen und ersetzen. Verschiedene Kombinationen aus Signalmodus und Metadaten führen zu unterschiedlichem Verhalten.
-seo-description: Sie können Zeitbereiche in VOD-Streams mit unterschiedlichen Kombinationen aus Anzeigensignalisierungsmodus und Anzeigenmetadaten markieren, löschen und ersetzen. Verschiedene Kombinationen aus Signalmodus und Metadaten führen zu unterschiedlichem Verhalten.
-seo-title: Auswirkungen auf Kombinationen aus Anzeigeneinfügung und -löschung im Anzeigensignalisierungsmodus und Anzeigenmetadaten
 title: Auswirkungen auf Kombinationen aus Anzeigeneinfügung und -löschung im Anzeigensignalisierungsmodus und Anzeigenmetadaten
-uuid: 7b2a5588-110d-4ce5-aa9c-706d357f211d
 translation-type: tm+mt
-source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
@@ -117,7 +114,7 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
    <td> Mark, Auditude </td> 
    <td> Mark, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
-   <td> Markierte Bereiche, keine Anzeigen eingefügt </td> 
+   <td> Markierte Bereiche, keine eingefügten Anzeigen </td> 
   </tr> 
   <tr> 
    <td></td> 
@@ -187,7 +184,7 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
    <td> Mark, Auditude </td> 
    <td> Benutzerspezifische Anzeige, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
-   <td> Markierte Bereiche, keine Anzeigen eingefügt </td> 
+   <td> Markierte Bereiche, keine eingefügten Anzeigen </td> 
   </tr> 
   <tr> 
    <td colname="1"> <p><b>Nicht festgelegt (Standard)</b> </p> </td> 
