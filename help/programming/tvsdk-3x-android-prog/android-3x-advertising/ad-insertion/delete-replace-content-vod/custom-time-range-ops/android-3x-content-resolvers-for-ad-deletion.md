@@ -1,13 +1,10 @@
 ---
 description: Sie können mehrere Inhaltsauflöser verwenden, um verschiedene Zeitschienen-Vorgänge zu bearbeiten.
-seo-description: Sie können mehrere Inhaltsauflöser verwenden, um verschiedene Zeitschienen-Vorgänge zu bearbeiten.
-seo-title: Inhaltsauflöser für das Löschen und Ersetzen von Werbeanzeigen
 title: Inhaltsauflöser für das Löschen und Ersetzen von Werbeanzeigen
-uuid: d43d54be-e04a-49dd-a695-e4e8f981ccb4
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '34'
 ht-degree: 0%
 
 ---
