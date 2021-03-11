@@ -1,14 +1,11 @@
 ---
 description: Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiedergabe auf dem Beginn wartet, zu einer inakzeptablen Verzögerung führen. Die Funktionen "Verzögertes Laden von Werbeanzeigen"und "Verzögertes Auflösen von Werbeanzeigen"können diese Startverzögerung verringern. Lazy Ad Resolving hat sich in der Version 3.0 erheblich geändert. Beim Laden von Lazy Ad vor 3.0 wurde die Anzeigenauflösung in zwei Schritte unterteilt, wobei nur Pre-Roll-Anzeigen vor dem Status "VORBEREITET"und Mid-Roll- und Post-Roll nach dem Status "VORBEREITT"aufgelöst wurden. Dies wurde geändert, und die Werbeunterbrechungen werden nun in einem bestimmten Intervall vor der Position der Werbeunterbrechung aufgelöst.
-keywords: Lazy;Ad resolving;Ad loading
-seo-description: Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiedergabe auf dem Beginn wartet, zu einer inakzeptablen Verzögerung führen. Die Funktionen "Verzögertes Laden von Werbeanzeigen"und "Verzögertes Auflösen von Werbeanzeigen"können diese Startverzögerung verringern. Lazy Ad Resolving hat sich in der Version 3.0 erheblich geändert. Beim Laden von Lazy Ad vor 3.0 wurde die Anzeigenauflösung in zwei Schritte unterteilt, wobei nur Pre-Roll-Anzeigen vor dem Status "VORBEREITET"und Mid-Roll- und Post-Roll nach dem Status "VORBEREITT"aufgelöst wurden. Dies wurde geändert, und die Werbeunterbrechungen werden nun in einem bestimmten Intervall vor der Position der Werbeunterbrechung aufgelöst.
-seo-title: Just-in-time-Anzeigenauflösung
+keywords: Verzögert;Auflösen der Anzeige;Laden der Anzeige
 title: Just-in-time-Anzeigenauflösung
-uuid: 77028f6e-7e53-45d1-bcc0-54f8224d6d18
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '606'
 ht-degree: 0%
 
 ---
