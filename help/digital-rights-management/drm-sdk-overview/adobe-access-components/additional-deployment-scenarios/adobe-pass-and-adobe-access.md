@@ -1,9 +1,9 @@
 ---
-seo-title: Adobe Primetime-Authentifizierung und Adobe Primetime DRM
 title: Adobe Primetime-Authentifizierung und Adobe Primetime DRM
-uuid: 44fe3956-efb5-4fc5-97e2-37abb6554322
+description: Adobe Primetime-Authentifizierung und Adobe Primetime DRM
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Der *Access Enabler* kann dann Backend-Autorisierungen zwischen dem Adobe Primet
 
 Die Authentifizierungs- und Autorisierungstoken werden mit der eindeutigen ID und dem privaten Schlüssel des Primetime DRM-Clients signiert, um Manipulationen oder Spoofing zu vermeiden. Auf dieses Token kann nur über *Access Enabler* zugegriffen werden.
 
-Der Videoplayer kann den Prozess auslösen, indem `getAuthorization` auf *Access Enabler* aufgerufen wird. Wenn gültige AuthN/AuthZ-Token vorhanden sind, gibt der *AccessEnabler* einen Rückruf an den Videoplayer aus, der ein Token für die Wiedergabe des Videoinhalts mit kurzer Lebensdauer enthält.
+Der Videoplayer kann den Vorgang durch Aufruf von `getAuthorization` unter *Access Enabler* Trigger werden. Wenn gültige AuthN/AuthZ-Token vorhanden sind, gibt der *AccessEnabler* einen Rückruf an den Videoplayer aus, der ein Token für die Wiedergabe des Videoinhalts mit kurzer Lebensdauer enthält.
 
 Die Adobe Primetime-Authentifizierung bietet eine MedienToken-Validator-Java-Bibliothek, die auf einem Server bereitgestellt werden kann. Wenn Sie den Primetime DRM-Server zum Schutz von Inhalten verwenden, können Sie den Validator für MedienToken mit einem Primetime DRM-serverseitigen Plug-In integrieren, um nach erfolgreicher Validierung des MedienTokens automatisch eine generische Lizenz auszustellen. Der Inhalt wird dann vom CDN-Server an den Client gestreamt. Um eine Inhaltslizenz zu erhalten, kann das Token für kurzlebige Medien an den Primetime DRM-Server gesendet werden, auf dem die Gültigkeit des Tokens überprüft wird und eine Lizenz erteilt werden kann.
 
