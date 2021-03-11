@@ -1,13 +1,10 @@
 ---
 description: Dieses Handbuch enthält Informationen zur Entwicklung von Videoplayer-Anwendungen mit TVSDK für Android, das in Java implementiert ist.
-seo-description: Dieses Handbuch enthält Informationen zur Entwicklung von Videoplayer-Anwendungen mit TVSDK für Android, das in Java implementiert ist.
-seo-title: Produktübersicht, Audience und dieses Handbuch
 title: Produktübersicht, Audience und dieses Handbuch
-uuid: dd281a3e-a85f-4470-a730-2c5e87d0e490
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '255'
 ht-degree: 0%
 
 ---
