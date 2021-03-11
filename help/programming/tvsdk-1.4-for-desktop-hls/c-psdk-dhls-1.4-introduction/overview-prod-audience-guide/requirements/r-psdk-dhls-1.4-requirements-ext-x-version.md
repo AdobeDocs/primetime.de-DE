@@ -1,13 +1,10 @@
 ---
 description: 'Die Version von #EXT-X-VERSION in der .m3u8-Datei beeinflusst, welche Funktionen Ihrer Anwendung zur Verfügung stehen und welche EXT-Tags in Ihrer Wiedergabeliste/Ihrem Manifest gültig sind.'
-seo-description: 'Die Version von #EXT-X-VERSION in der .m3u8-Datei beeinflusst, welche Funktionen Ihrer Anwendung zur Verfügung stehen und welche EXT-Tags in Ihrer Wiedergabeliste/Ihrem Manifest gültig sind.'
-seo-title: '#EXT-X-VERSION requirements'
 title: '#EXT-X-VERSION requirements'
-uuid: c862df4a-88ba-4497-8b7c-b83fcb34b8bb
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
