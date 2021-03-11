@@ -1,21 +1,17 @@
 ---
 title: Manifestserver-Debugging-Tool
-seo-title: Manifestserver-Debugging-Tool
 description: Manifestserver-Debugging-Tool
-seo-description: Manifestserver-Debugging-Tool
-uuid: 0b4f06f5-4b1f-4f88-980a-5b4df28e0094
 products: SG_PRIMETIME
 topic-tags: ad-insertion
-discoiquuid: 00b49659-ce56-4b5c-87cd-c357a0936641
-donotlocalize: false
+discoiqdonotlocalize: false
 moreHelpPaths: /content/help/en/primetime/morehelp/ad-insertion;/content/help/en/primetime/morehelp/ad-insertion
 pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '2422'
+source-wordcount: '2414'
 ht-degree: 0%
 
 ---
@@ -272,7 +268,7 @@ Aufzeichnungen dieses Typs protokollieren die Ergebnisse von Transkodierungsanfo
 | ad_manifest_url | string | URL der Manifestdatei der Anzeige aus der Antwort des Anzeigenservers |
 | creative_type | string | Medientyp |
 | Flags | string | ID3 gibt an, ob die Transkodierungsanforderung eine Anforderung zum Hinzufügen eines ID3-Tags enthält |
-| zielgruppe_duration | string | Dauer der Zielgruppe (Sekunden) des transkodierten kreativen Elements |
+| Zielgruppe_duration | string | Dauer der Zielgruppe (Sekunden) des transkodierten kreativen Elements |
 
 ### TRACE_TRACKING_REQUEST records {#trace-tracking-request-records}
 
@@ -281,7 +277,7 @@ Aufzeichnungen dieses Typs geben eine Anforderung zur serverseitigen Verfolgung 
 | Feld | Typ | Beschreibung |
 |--- |--- |--- |
 | tracking_url_count | integer | Anzahl der Tracking-URLs |
-| beginn | float | PTS Fragment-Beginn (Sekunden mit Millisekunde-Genauigkeit) |
+| Beginn | float | PTS Fragment-Beginn (Sekunden mit Millisekunde-Genauigkeit) |
 | end | float | PTS-Fragmentendzeit (Sekunden mit Millisekunde-Genauigkeit) |
 
 ### TRACE_TRACKING_REQUEST_URL records {#trace-tracking-request-url-records}
@@ -302,7 +298,7 @@ Datensätze dieses Typs protokollieren Anforderungen, die der Manifestserver fü
 |--- |--- |--- |
 | status | string | Rückgegebener HTTP-Statuscode |
 | vtt_uri | string | URL für Anforderung |
-| beginn | float | Beginn teilen (Sekunden mit Millisekunde-Genauigkeit) |
+| Beginn | float | Beginn teilen (Sekunden mit Millisekunde-Genauigkeit) |
 | end | float | Teilungsendzeit (Sekunden mit Millisekunde-Genauigkeit) |
 
 ### TRACE_WEBVTT_RESPONSE records {#trace-webvtt-response-records}
