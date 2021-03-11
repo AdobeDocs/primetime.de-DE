@@ -1,9 +1,9 @@
 ---
-seo-title: Servereigenschaften-Referenz
 title: Servereigenschaften-Referenz
-uuid: 24a187fe-9b7d-411f-a358-d10c70a5dd0e
+description: Servereigenschaften-Referenz
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '870'
 ht-degree: 0%
@@ -46,7 +46,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td> Berechtigung zur Verschlüsselung von Individualisierungen </td> 
-   <td> Der Individualisierungsserver verwendet die Encryption-Berechtigung zum Verschlüsseln vertraulicher Dateien, die an die Individualisierungsserver übertragen werden müssen. Dieses Zertifikat unterstützt z. B. die Lizenzmigration und wird auch zum Verschlüsseln der privaten DRM-Schlüssel für die Individualisierungsserver verwendet. </td> 
+   <td> Der Individualisierungsserver verwendet die Encryption-Berechtigung zum Verschlüsseln vertraulicher Dateien, die an die Individualisierungsserver übertragen werden müssen. Dieses Zertifikat unterstützt beispielsweise die Lizenzmigration und wird auch zum Verschlüsseln der privaten DRM-Schlüssel für die Individualisierungsserver verwendet. </td> 
    <td> 
     <ul id="ul_nbr_kpd_w5"> 
      <li id="li_4226AD6CC85740669DAF467EFD00BBBE"><span class="codeph"> cert.i15n.decryption.file=i15n_transport.pfx</span> </li> 
@@ -96,7 +96,7 @@ ht-degree: 0%
    <td></td> 
    <td> 
     <ul id="ul_b3b_g1f_jr"> 
-     <li id="li_FACF07CB332D416E91FD34DE48152FAA"><span class="codeph"> deviceinfo.key = </span> [Encrypted Base64 encoded key used to HMAC device info before include it in the machine token. Der Schlüssel kann für die Dev/Staging/Production-Umgebung unterschiedlich sein, muss jedoch für alle Server in einer bestimmten Umgebung gleich sein. _ </li> 
+     <li id="li_FACF07CB332D416E91FD34DE48152FAA"><span class="codeph"> deviceinfo.key = </span> [Encrypted Base64 encoded key used to HMAC device info before include it in the machine token. Der Schlüssel kann für die Dev/Staging/Production-Umgebung unterschiedlich sein, muss jedoch für alle Server in einer bestimmten Umgebung gleich sein. ] </li> 
      <li id="li_B19C77FD6F91496294DBF836A1922EE1"><span class="codeph"> keys.kgs.server =</span> [Speicherort des Key Gen-Servers (ein einzelner Host/Port, der einen Pool von Schlüsselservern darstellt)] </li> 
      <li id="li_5DA3C89770804B148EF6FAF01A5AD958"><span class="codeph"> keys.MinQueueSize = </span> [Abrufen eines weiteren Schlüssels aus dem KGS, wenn noch viele Schlüssel in der Warteschlange verbleiben] </li> 
      <li id="li_0C2E5F2FDB824182A6BE418B041D2F28"><span class="codeph"> status.Timeout = </span> [Statusseite pinkelt die KGS, um zu ermitteln, ob sie den Server erreichen kann. Es wird ein Timeout ausgegeben, wenn eine Antwort nicht in der angegebenen Zeit zurückgegeben wird.] </li> 
