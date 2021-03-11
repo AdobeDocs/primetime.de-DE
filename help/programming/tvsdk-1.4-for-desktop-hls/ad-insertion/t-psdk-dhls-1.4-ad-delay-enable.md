@@ -1,13 +1,10 @@
 ---
 description: Sie können angeben, ob die Wiedergabe zulässig ist, bevor alle Anzeigen geladen und in die Zeitleiste platziert werden. Die Wiedergabe auf diese Weise zu starten, ermöglicht einem Viewer einen schnelleren Zugriff auf den Hauptinhalt. Diese Funktion ist nur für Live-DVR verfügbar und funktioniert nicht, z. B. bei VOD-Assets.
-seo-description: Sie können angeben, ob die Wiedergabe zulässig ist, bevor alle Anzeigen geladen und in die Zeitleiste platziert werden. Die Wiedergabe auf diese Weise zu starten, ermöglicht einem Viewer einen schnelleren Zugriff auf den Hauptinhalt. Diese Funktion ist nur für Live-DVR verfügbar und funktioniert nicht, z. B. bei VOD-Assets.
-seo-title: Verzögertes Laden von Anzeigen aktivieren
 title: Verzögertes Laden von Anzeigen aktivieren
-uuid: ac7c8801-7fa2-4f17-b79c-c603b3236948
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
@@ -33,9 +30,9 @@ Sie können angeben, ob die Wiedergabe zulässig ist, bevor alle Anzeigen gelade
    auditudeSettings.delayAdLoading = true;
    ```
 
-1. Um Anzeigen als Hinweise auf einer Scrubbing-Leiste genau wiederzugeben, sollten Sie auf `TimelineEvent` achten. `TIMELINE_UPDATED` ereignis und zeichnen Sie die Scrubbing-Leiste jedes Mal, wenn Sie dieses Ereignis erhalten.
+1. Um Anzeigen als Hinweise auf einer Scrubbing-Leiste genau wiederzugeben, sollten Sie auf `TimelineEvent` achten. `TIMELINE_UPDATED` Ereignis und zeichnen Sie die Scrubbing-Leiste jedes Mal, wenn Sie dieses Ereignis erhalten.
 
-   Wenn VoD-Streams verzögertes Laden von Anzeigen verwenden, werden nicht alle Anzeigen auf der Zeitleiste platziert, wenn Ihr Player den Status &quot;VORBEREITT&quot;aufruft. Daher müssen Sie die Scrubbing-Leiste explizit neu zeichnen.
+   Wenn VoD-Streams verzögertes Laden von Anzeigen verwenden, werden nicht alle Anzeigen auf der Zeitleiste platziert, wenn Ihr Player den Status &quot;VORBEREITT&quot;erreicht. Daher müssen Sie die Scrubbing-Leiste explizit neu zeichnen.
 
    TVSDK optimiert den Versand dieses Ereignisses, um die Anzahl der Male zu minimieren, die Sie die Scrubbing-Leiste neu zeichnen müssen. Daher steht die Anzahl der Zeitschienen-Ereignis nicht in Zusammenhang mit der Anzahl der Werbeunterbrechungen, die auf der Zeitschiene platziert werden sollen. Wenn Sie beispielsweise fünf Werbeunterbrechungen haben, erhalten Sie möglicherweise nicht genau fünf Ereignis.
 
