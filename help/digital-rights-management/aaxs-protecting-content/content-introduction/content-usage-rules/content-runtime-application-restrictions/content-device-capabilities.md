@@ -1,9 +1,9 @@
 ---
-seo-title: Gerätefunktionen, die zum Abspielen geschützter Inhalte erforderlich sind
 title: Gerätefunktionen, die zum Abspielen geschützter Inhalte erforderlich sind
-uuid: 16ed73d9-e02f-4c86-bf15-2d3e7122bf5a
+description: Gerätefunktionen, die zum Abspielen geschützter Inhalte erforderlich sind
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
