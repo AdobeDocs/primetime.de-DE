@@ -1,13 +1,10 @@
 ---
 description: Die Hauptkomponenten von Adobe Access bestehen aus einem Java SDK und den Flash Player- und Adobe AIR Client-Laufzeitumgebungen.
-seo-description: Die Hauptkomponenten von Adobe Access bestehen aus einem Java SDK und den Flash Player- und Adobe AIR Client-Laufzeitumgebungen.
-seo-title: Java SDK-, Flash Player- und Adobe AIR-Client
 title: Java SDK-, Flash Player- und Adobe AIR-Client
-uuid: 6b6c5aa2-56ee-4476-a05b-dcbbe3b9001e
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
