@@ -1,13 +1,12 @@
 ---
 title: Hilfe zum Primetime Digital Rights Management
-seo-title: Hilfe zu Adobe Digital Rights Management
-description: 'null'
-seo-description: 'null'
+description: Hilfe zum Primetime Digital Rights Management
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 242b5a2875ebc0e0020296ce9489dd54438b5ad0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 51%
+source-wordcount: '211'
+ht-degree: 54%
 
 ---
 
