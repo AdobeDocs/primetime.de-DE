@@ -1,13 +1,10 @@
 ---
 description: TVSDK löst Ereignisse zur Wiedergabe aus, wenn Vorgänge zur Medienwiedergabe ausgeführt werden, z. B. wenn die Videowiedergabe beginnt.
-seo-description: TVSDK löst Ereignisse zur Wiedergabe aus, wenn Vorgänge zur Medienwiedergabe ausgeführt werden, z. B. wenn die Videowiedergabe beginnt.
-seo-title: Wiedergabe-Ereignisse
 title: Wiedergabe-Ereignisse
-uuid: 809a8e0e-f4d8-4013-b04a-49fb93d7ca8a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
