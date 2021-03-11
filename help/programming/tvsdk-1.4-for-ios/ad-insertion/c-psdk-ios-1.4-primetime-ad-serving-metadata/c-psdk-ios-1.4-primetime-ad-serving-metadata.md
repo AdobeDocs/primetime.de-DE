@@ -1,13 +1,10 @@
 ---
 description: TVSDK unterstützt das Auflösen und Einfügen von Anzeigen für VOD- und Live/Lineare Streams.
-seo-description: TVSDK unterstützt das Auflösen und Einfügen von Anzeigen für VOD- und Live/Lineare Streams.
-seo-title: Primetime-Anzeigenservermetadaten
 title: Primetime-Anzeigenservermetadaten
-uuid: 314f14c0-4da4-4da6-96f9-5a5ffea22a99
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
