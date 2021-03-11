@@ -1,13 +1,10 @@
 ---
 description: Sie können das Format festlegen, z. B. Schriftart, Größe, Farbe, Kante und Deckkraft für Text mit geschlossener Beschriftung.
-seo-description: Sie können das Format festlegen, z. B. Schriftart, Größe, Farbe, Kante und Deckkraft für Text mit geschlossener Beschriftung.
-seo-title: Stile für Untertitel festlegen
 title: Stile für Untertitel festlegen
-uuid: 906ed22c-e673-4211-a14b-d95d176aad21
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '178'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
