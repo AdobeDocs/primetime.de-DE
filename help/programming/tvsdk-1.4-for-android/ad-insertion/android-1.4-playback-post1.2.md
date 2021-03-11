@@ -1,13 +1,10 @@
 ---
 description: Das Verhalten der Medienwiedergabe wird durch Suchen, Anhalten, Vorspulen oder Zurückspulen (Trick Play-Modus) und die Einbeziehung der Werbung beeinflusst.
-seo-description: Das Verhalten der Medienwiedergabe wird durch Suchen, Anhalten, Vorspulen oder Zurückspulen (Trick Play-Modus) und die Einbeziehung der Werbung beeinflusst.
-seo-title: Standard- und benutzerdefiniertes Wiedergabeverhalten mit Anzeigen
 title: Standard- und benutzerdefiniertes Wiedergabeverhalten mit Anzeigen
-uuid: b977d7b5-bbae-4af4-92a7-0fdbffb08785
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
