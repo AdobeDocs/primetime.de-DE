@@ -1,13 +1,10 @@
 ---
 description: 'Vollständiger Ereignis-Replay-Inhalt (FER) ist ein Live-Stream, der in VOD konvertiert wird, indem das Tag #EXT-X-ENDLIST am Ende der Manifestdatei hinzugefügt wird. Der Stream behält seine Anzeigen-Cue-Marker bei.'
-seo-description: 'Vollständiger Ereignis-Replay-Inhalt (FER) ist ein Live-Stream, der in VOD konvertiert wird, indem das Tag #EXT-X-ENDLIST am Ende der Manifestdatei hinzugefügt wird. Der Stream behält seine Anzeigen-Cue-Marker bei.'
-seo-title: FER-Anzeigenauflösung und -einfügung
 title: FER-Anzeigenauflösung und -einfügung
-uuid: 85da0e92-17fe-4001-a53c-085dadd09756
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
