@@ -1,9 +1,9 @@
 ---
-seo-title: Arbeiten mit Listen zur Aktualisierung der DRM-Richtlinie
 title: Arbeiten mit Listen zur Aktualisierung der DRM-Richtlinie
-uuid: 41f89671-81c6-4d3d-ac31-9c2a1980517a
+description: Arbeiten mit Listen zur Aktualisierung der DRM-Richtlinie
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 0%
