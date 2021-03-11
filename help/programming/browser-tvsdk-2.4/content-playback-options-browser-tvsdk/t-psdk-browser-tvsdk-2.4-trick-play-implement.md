@@ -1,13 +1,10 @@
 ---
 description: Wenn Benutzer die Medien schnell vorwärts oder schnell zurückspulen, befinden sie sich im Trick Play-Modus. Um in den Trick Play-Modus zu wechseln, müssen Sie die MediaPlayer-Wiedergaberate auf einen anderen Wert als 1 einstellen.
-seo-description: Wenn Benutzer die Medien schnell vorwärts oder schnell zurückspulen, befinden sie sich im Trick Play-Modus. Um in den Trick Play-Modus zu wechseln, müssen Sie die MediaPlayer-Wiedergaberate auf einen anderen Wert als 1 einstellen.
-seo-title: Schnelles Vorwärts- und Zurückspulen implementieren
 title: Schnelles Vorwärts- und Zurückspulen implementieren
-uuid: c1992757-d067-4c11-8d08-fec09099476f
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '488'
 ht-degree: 0%
 
 ---
@@ -52,7 +49,7 @@ Um die Geschwindigkeit zu wechseln, müssen Sie einen Wert einstellen.
       } 
       ```
 
-1. Sie können optional auf Ratenänderungen-Ereignis hören, die Sie darüber informieren, wann Sie eine Ratenänderung angefordert haben und wann tatsächlich eine Ratenänderung eintritt.
+1. Sie können optional auf Ratenänderungen-Ereignis hören, die Sie darüber informieren, wann Sie eine Ratenänderung angefordert haben und wann eine Ratenänderung tatsächlich stattfindet.
 
        Browser TVSDK sendet die folgenden Ereignisse im Zusammenhang mit der Trickwiedergabe:
    
