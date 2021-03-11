@@ -1,9 +1,9 @@
 ---
-seo-title: Vorhandene Richtlinie aktualisieren
 title: Vorhandene Richtlinie aktualisieren
-uuid: 081e5dab-e735-4ae9-bcfd-15dd9819bef3
+description: Vorhandene Richtlinie aktualisieren
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%
