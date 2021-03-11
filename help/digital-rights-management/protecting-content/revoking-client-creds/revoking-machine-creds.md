@@ -1,9 +1,9 @@
 ---
-seo-title: Sperren von Computeranmeldeinformationen
 title: Sperren von Computeranmeldeinformationen
-uuid: 3647c843-5f1a-457e-949d-10a6278b1c29
+description: Sperren von Computeranmeldeinformationen
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 0%
@@ -30,4 +30,4 @@ Beim Sperren von Anmeldeinformationen für den Computer wird ein `RevocationList
 
 Um einer vorhandenen `RevocationList` weitere Einträge hinzuzufügen, laden Sie eine vorhandene Liste zum Sperren. Erstellen Sie eine neue Instanz `RevocationListFactory` und stellen Sie sicher, dass Sie die Zertifikatsperrlisten-Nummer erhöhen. Rufen Sie `RevocationListFactioryEntries.addRevocationEntries` auf, um der neuen Liste alle Einträge aus der alten Liste hinzuzufügen. Rufen Sie `RevocationListFactory.addRevocationEntry` auf, um der RevocationList alle neuen Sperreinträge hinzuzufügen.
 
-Beispielcode zum Erstellen einer Liste zum Sperren, Laden einer vorhandenen Liste zum Sperren und Überprüfen, ob ein Computertoken gesperrt wurde, finden Sie unter `com.adobe.flashaccess.samples.revocation.CreateRevocationList` im Ordner [!DNL samples] der Befehlszeilenwerkzeuge für die Referenzimplementierung &lt;a1/>.
+Beispielcode zum Erstellen einer Liste zum Sperren, Laden einer vorhandenen Liste zum Sperren und Überprüfen, ob ein Computertoken gesperrt wurde, finden Sie unter `com.adobe.flashaccess.samples.revocation.CreateRevocationList` im Ordner [!DNL samples] der Befehlszeilenwerkzeuge für die Referenzimplementierung .
