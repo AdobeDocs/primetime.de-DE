@@ -1,13 +1,10 @@
 ---
 description: Mit alternativem Audio können Sie zwischen verfügbaren Audiospuren für eine Videospur wechseln. Benutzer können bei der Wiedergabe des Videos die gewünschte Sprachspur auswählen.
-seo-description: Mit alternativem Audio können Sie zwischen verfügbaren Audiospuren für eine Videospur wechseln. Benutzer können bei der Wiedergabe des Videos die gewünschte Sprachspur auswählen.
-seo-title: Alternativaudio
 title: Alternativaudio
-uuid: d1af1ea9-2516-4835-baff-3577ad5b705e
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
