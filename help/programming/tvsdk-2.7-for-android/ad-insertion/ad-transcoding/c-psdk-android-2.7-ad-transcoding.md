@@ -1,13 +1,10 @@
 ---
 description: Einige Anzeigen (oder kreative Elemente) von Drittanbietern können nicht in den HTTP Live Streaming (HLS)-Inhaltsstream eingefügt werden, da ihr Videoformat mit HLS nicht kompatibel ist. Primetime-Anzeigen und TVSDK können optional versuchen, inkompatible Anzeigen in kompatible M3U8-Videos zu verpacken.
-seo-description: Einige Anzeigen (oder kreative Elemente) von Drittanbietern können nicht in den HTTP Live Streaming (HLS)-Inhaltsstream eingefügt werden, da ihr Videoformat mit HLS nicht kompatibel ist. Primetime-Anzeigen und TVSDK können optional versuchen, inkompatible Anzeigen in kompatible M3U8-Videos zu verpacken.
-seo-title: Verpacken Sie inkompatible Anzeigen mit dem Adobe Creative Repackage Service (CRS) neu.
 title: Verpacken Sie inkompatible Anzeigen mit dem Adobe Creative Repackage Service (CRS) neu.
-uuid: c3961628-39aa-444c-9c93-9f1e267d9cd4
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
