@@ -1,9 +1,9 @@
 ---
-seo-title: DRM-Client- und Laufzeitberechtigungen sperren
 title: DRM-Client- und Laufzeitberechtigungen sperren
-uuid: 774b8ac7-51bb-42fc-a05d-cfa718e24a81
+description: DRM-Client- und Laufzeitberechtigungen sperren
+copied-description: true
 translation-type: tm+mt
-source-git-commit: fbc175f383c850a7286b1e6e89daa027e00b29ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
