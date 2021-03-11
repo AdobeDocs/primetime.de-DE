@@ -1,13 +1,10 @@
 ---
 description: Sie können die aktuelle Wiedergabeposition in einem Video speichern und die Wiedergabe an derselben Position in einer zukünftigen Sitzung fortsetzen.
-seo-description: Sie können die aktuelle Wiedergabeposition in einem Video speichern und die Wiedergabe an derselben Position in einer zukünftigen Sitzung fortsetzen.
-seo-title: Speichern Sie die Videoposition und nehmen Sie den Vorgang später wieder auf
 title: Speichern Sie die Videoposition und nehmen Sie den Vorgang später wieder auf
-uuid: 322f780d-09ba-44b0-b2e5-46288bf58fda
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
