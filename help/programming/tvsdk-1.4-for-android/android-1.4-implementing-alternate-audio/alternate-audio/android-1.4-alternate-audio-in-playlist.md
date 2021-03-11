@@ -1,13 +1,10 @@
 ---
 description: Die Wiedergabeliste für ein Video kann eine unbegrenzte Anzahl alternativer Audiospuren für den Hauptvideoinhalt angeben. Beispielsweise können Sie Ihren Videoinhalten verschiedene Sprachen hinzufügen oder dem Benutzer gestatten, während der Wiedergabe des Inhalts zwischen verschiedenen Spuren auf dem Gerät zu wechseln.
-seo-description: Die Wiedergabeliste für ein Video kann eine unbegrenzte Anzahl alternativer Audiospuren für den Hauptvideoinhalt angeben. Beispielsweise können Sie Ihren Videoinhalten verschiedene Sprachen hinzufügen oder dem Benutzer gestatten, während der Wiedergabe des Inhalts zwischen verschiedenen Spuren auf dem Gerät zu wechseln.
-seo-title: Alternative Audiospuren in der Wiedergabeliste
 title: Alternative Audiospuren in der Wiedergabeliste
-uuid: 56720bc8-795d-4a12-ae40-2095d6392666
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
