@@ -1,13 +1,10 @@
 ---
 description: Das UI-Framework ist eine UI-Ebene über Browser TVSDK, die verschiedene Video-Player-bezogene UI-Konstrukte bereitstellt. Sie können einen hochgradig anpassbaren Player erstellen, indem Sie die für Ihre Umgebung geeigneten Punktänderungen vornehmen.
-seo-description: Das UI-Framework ist eine UI-Ebene über Browser TVSDK, die verschiedene Video-Player-bezogene UI-Konstrukte bereitstellt. Sie können einen hochgradig anpassbaren Player erstellen, indem Sie die für Ihre Umgebung geeigneten Punktänderungen vornehmen.
-seo-title: UI-Framework
 title: UI-Framework
-uuid: 8460d65c-b9aa-40d0-9e68-771b9f73a7b4
 translation-type: tm+mt
-source-git-commit: 2399515edaad49341cfa406a13887bcc8a3562be
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
