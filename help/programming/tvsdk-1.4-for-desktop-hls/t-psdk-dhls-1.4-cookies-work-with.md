@@ -1,13 +1,10 @@
 ---
 description: Sie können TVSDK verwenden, um beliebige Daten in Cookie-Headern für Sitzungsverwaltung, Gate-Zugriff usw. zu senden.
-seo-description: Sie können TVSDK verwenden, um beliebige Daten in Cookie-Headern für Sitzungsverwaltung, Gate-Zugriff usw. zu senden.
-seo-title: Mit Cookies arbeiten
 title: Mit Cookies arbeiten
-uuid: 7586a5a7-9914-403b-86a9-fbdd28664b07
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
