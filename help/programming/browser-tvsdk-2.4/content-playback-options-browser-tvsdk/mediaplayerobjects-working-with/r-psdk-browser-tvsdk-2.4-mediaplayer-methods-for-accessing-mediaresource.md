@@ -1,13 +1,10 @@
 ---
 description: Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über den Inhaltsstream abrufen, der von einer geladenen MediaResource dargestellt wird.
-seo-description: Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über den Inhaltsstream abrufen, der von einer geladenen MediaResource dargestellt wird.
-seo-title: MediaPlayer-Attribute für den Zugriff auf MediaResource-Informationen
 title: MediaPlayer-Attribute für den Zugriff auf MediaResource-Informationen
-uuid: d26f39d6-0a6b-4072-b99a-8767a511a846
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -72,7 +69,7 @@ Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über d
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Mehrere Profil (Bitraten) </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> profile  </span> </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> Profile  </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
