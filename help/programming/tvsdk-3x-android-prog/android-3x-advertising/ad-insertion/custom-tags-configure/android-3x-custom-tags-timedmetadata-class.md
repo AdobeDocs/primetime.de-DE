@@ -1,13 +1,10 @@
 ---
 description: Wenn TVSDK ein abonniertes Tag in der Wiedergabeliste/dem Manifest erkennt, versucht der Player automatisch, das Tag in Form eines TimedMetadata-Objekts zu verarbeiten und verfügbar zu machen.
-seo-description: Wenn TVSDK ein abonniertes Tag in der Wiedergabeliste/dem Manifest erkennt, versucht der Player automatisch, das Tag in Form eines TimedMetadata-Objekts zu verarbeiten und verfügbar zu machen.
-seo-title: Zeitgesteuerte Metadatenklasse
 title: Zeitgesteuerte Metadatenklasse
-uuid: c7b1c1d7-48b3-43c7-aa21-f800d894976d
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '388'
 ht-degree: 0%
 
 ---
