@@ -1,13 +1,10 @@
 ---
 description: Diese Tabelle enthält detaillierte Informationen zu FEHLERTypbenachrichtigungen.
-seo-description: Diese Tabelle enthält detaillierte Informationen zu FEHLERTypbenachrichtigungen.
-seo-title: FEHLER-Benachrichtigungscodes
 title: FEHLER-Benachrichtigungscodes
-uuid: cc21473d-924e-475d-96ea-352233f664ef
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '615'
 ht-degree: 4%
 
 ---
