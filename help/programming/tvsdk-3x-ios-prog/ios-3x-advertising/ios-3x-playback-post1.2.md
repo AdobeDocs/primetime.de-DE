@@ -1,13 +1,10 @@
 ---
 description: Das Verhalten der Medienwiedergabe wird durch Suchen, Anhalten und die Einbeziehung von Werbung beeinflusst.
-seo-description: Das Verhalten der Medienwiedergabe wird durch Suchen, Anhalten und die Einbeziehung von Werbung beeinflusst.
-seo-title: Standard- und benutzerdefiniertes Wiedergabeverhalten mit Anzeigen
 title: Standard- und benutzerdefiniertes Wiedergabeverhalten mit Anzeigen
-uuid: 570f6d77-cbb9-4aa7-a935-058003f4ce87
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '471'
 ht-degree: 0%
 
 ---
