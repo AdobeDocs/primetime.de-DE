@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Strafverfolgung (Adobe Primetime DRM erforderlich)
 title: Strafverfolgung (Adobe Primetime DRM erforderlich)
-uuid: 5cf8ebbc-17de-44cc-90d2-0857ea62c4a4
+description: Strafverfolgung (Adobe Primetime DRM erforderlich)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---
