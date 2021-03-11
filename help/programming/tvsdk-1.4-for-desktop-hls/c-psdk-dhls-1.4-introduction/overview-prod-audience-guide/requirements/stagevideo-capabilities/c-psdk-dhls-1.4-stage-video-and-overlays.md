@@ -1,13 +1,10 @@
 ---
 description: Sie können HTML-Überlagerungen mit StageVideo verwenden, um UI-Elemente in der Videoebene "Liste"des Flashs anzuzeigen. Diese Ebene befindet sich über der StageVideo-Ebene, sodass StageVideo immer hinter den Elementen der Display-Liste eines Flashs angezeigt wird.
-seo-description: Sie können HTML-Überlagerungen mit StageVideo verwenden, um UI-Elemente in der Videoebene "Liste"des Flashs anzuzeigen. Diese Ebene befindet sich über der StageVideo-Ebene, sodass StageVideo immer hinter den Elementen der Display-Liste eines Flashs angezeigt wird.
-seo-title: StageVideo- und HTML-Überlagerungen
 title: StageVideo- und HTML-Überlagerungen
-uuid: 84e862ab-4c35-47a2-9c4e-f792d3ef5363
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
