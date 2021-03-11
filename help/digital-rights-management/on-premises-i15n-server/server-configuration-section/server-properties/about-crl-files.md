@@ -1,9 +1,9 @@
 ---
-seo-title: Informationen zu CRL-Dateien
 title: Informationen zu CRL-Dateien
-uuid: 672c3ca0-5c5d-4ec7-83b1-f0f8e34c8d09
+description: Informationen zu CRL-Dateien
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
