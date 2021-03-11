@@ -1,14 +1,11 @@
 ---
 description: Sie können die Funktion "Lazy Ad Resolving"über den vorhandenen Lazy Ad Loading Mechanismus aktivieren oder deaktivieren (Lazy Ad Resolving ist standardmäßig deaktiviert).
-keywords: Lazy;Ad resolving;Ad loading;delayLoading
-seo-description: Sie können die Funktion "Lazy Ad Resolving"über den vorhandenen Lazy Ad Loading Mechanismus aktivieren oder deaktivieren (Lazy Ad Resolving ist standardmäßig deaktiviert).
-seo-title: Verzögerte Anzeigenauflösung aktivieren
+keywords: Verzögert;Anzeigen auflösen;Laden der Anzeige;VerzögerungLaden
 title: Verzögerte Anzeigenauflösung aktivieren
-uuid: 91884eea-a622-4f5d-b6a8-36bb0050ba1d
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
