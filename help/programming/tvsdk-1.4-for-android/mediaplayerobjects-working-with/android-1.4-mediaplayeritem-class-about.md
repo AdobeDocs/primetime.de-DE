@@ -1,13 +1,10 @@
 ---
 description: Das MediaPlayer-Objekt stellt Ihren Medienplayer dar. Ein MediaPlayerItem-Element stellt Audio- oder Videodateien auf Ihrem Player dar.
-seo-description: Das MediaPlayer-Objekt stellt Ihren Medienplayer dar. Ein MediaPlayerItem-Element stellt Audio- oder Videodateien auf Ihrem Player dar.
-seo-title: Info zur MediaPlayerItem-Klasse
 title: Info zur MediaPlayerItem-Klasse
-uuid: d7f65edf-4693-4b1e-bae0-46fadce98751
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '145'
 ht-degree: 0%
 
 ---
