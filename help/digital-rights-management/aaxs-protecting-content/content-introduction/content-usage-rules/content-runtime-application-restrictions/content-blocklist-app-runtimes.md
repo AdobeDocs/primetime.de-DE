@@ -1,9 +1,9 @@
 ---
-seo-title: Blockierungsliste von Anwendungslaufzeiten, die den Zugriff auf geschützten Inhalt einschränken
 title: Blockierungsliste von Anwendungslaufzeiten, die den Zugriff auf geschützten Inhalt einschränken
-uuid: 462a2c09-b335-4768-bd0e-1359db169d69
+description: Blockierungsliste von Anwendungslaufzeiten, die den Zugriff auf geschützten Inhalt einschränken
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
