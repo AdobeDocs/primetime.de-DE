@@ -1,13 +1,10 @@
 ---
 description: Der Apple HLS-Stapel unterstützt das Wechseln zu Failover-/Backup-Streams, wenn keine Streams des primären Satzes abgerufen werden können. Für Apple HLS-Geräte können Sie zur Erleichterung des Failover den Manifestserver signalisieren, um in der Übergeordnet-Wiedergabeliste identifizierte Primär- und Failover-Streams als getrennte Sätze zu behandeln (mit eigenen UUIDs).
-seo-description: Der Apple HLS-Stapel unterstützt das Wechseln zu Failover-/Backup-Streams, wenn keine Streams des primären Satzes abgerufen werden können. Für Apple HLS-Geräte können Sie zur Erleichterung des Failover den Manifestserver signalisieren, um in der Übergeordnet-Wiedergabeliste identifizierte Primär- und Failover-Streams als getrennte Sätze zu behandeln (mit eigenen UUIDs).
-seo-title: Erleichterung des Umstiegs des HLS-Players auf Failover-/Backup-Streams
 title: Erleichterung des Umstiegs des HLS-Players auf Failover-/Backup-Streams
-uuid: 2fea8a51-e4cb-4fc9-82d5-6305a1d96603
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
