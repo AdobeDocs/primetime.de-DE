@@ -1,13 +1,10 @@
 ---
 description: Die MediaResource-Klasse stellt den Inhalt dar, der von der MediaPlayer-Instanz geladen werden soll.
-seo-description: Die MediaResource-Klasse stellt den Inhalt dar, der von der MediaPlayer-Instanz geladen werden soll.
-seo-title: Medienressource erstellen
 title: Medienressource erstellen
-uuid: c25c037e-e9a0-430c-a150-b75a9ac051b1
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
