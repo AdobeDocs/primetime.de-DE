@@ -1,9 +1,9 @@
 ---
-seo-title: Vorhandene DRM-Inhalte für die Verwendung von Cloud DRM aktualisieren (Optional)
 title: Vorhandene DRM-Inhalte für die Verwendung von Cloud DRM aktualisieren (Optional)
-uuid: cfabeb06-210f-45af-b8a6-8e0b03a76103
+description: Vorhandene DRM-Inhalte für die Verwendung von Cloud DRM aktualisieren (Optional)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
@@ -36,4 +36,4 @@ Geben Sie `-drm_refresh option` an die Befehlszeile an. Eine neue Manifestdatei 
 
 ## Verwenden des Primetime DRM Java SDK to Re-Header {#section_7EDBAC4C78DF4CD5BE8410EEAD8437A2}
 
-Die Aktualisierung vorhandener DRM-Metadaten kann mithilfe des Primetime DRM (früher Adobe Access DRM) Java SDK für einen programmatischen Ansatz durchgeführt werden. Weitere Informationen finden Sie im Codebeispiel [!DNL RegenerateMetadata.java] im [!DNL /Reference Implmentation/Command Line Tools/samples/]-Paket des SDK. Das Java-SDK &quot;Adobe Access&quot;ist nicht Bestandteil dieses CloudDRM-Schutzkits und muss direkt von der Adobe erworben werden. Für weitere Informationen wenden Sie sich bitte an Ihren Ansprechpartner bei der Adobe.
+Die Aktualisierung vorhandener DRM-Metadaten kann mithilfe des Primetime DRM (früher Adobe Access DRM) Java SDK für einen programmatischen Ansatz durchgeführt werden. Weitere Informationen finden Sie im Codebeispiel [!DNL RegenerateMetadata.java] im [!DNL /Reference Implmentation/Command Line Tools/samples/]-Paket des SDK. Das Java-SDK für Adobe Access ist nicht Bestandteil dieses CloudDRM-Schutzkits und muss direkt von der Adobe erworben werden. Für weitere Informationen wenden Sie sich bitte an Ihren Ansprechpartner bei der Adobe.
