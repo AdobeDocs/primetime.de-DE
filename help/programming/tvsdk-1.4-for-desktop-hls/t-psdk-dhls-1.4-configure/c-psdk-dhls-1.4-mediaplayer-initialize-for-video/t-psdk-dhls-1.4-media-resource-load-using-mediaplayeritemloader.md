@@ -1,14 +1,11 @@
 ---
 description: Eine andere Möglichkeit zum Auflösen einer Medienressource ist MediaPlayerItemLoader. Dies ist nützlich, wenn Sie Informationen zu einem bestimmten Medienstream abrufen möchten, ohne eine MediaPlayer-Instanz zu instanziieren.
-seo-description: Eine andere Möglichkeit zum Auflösen einer Medienressource ist MediaPlayerItemLoader. Dies ist nützlich, wenn Sie Informationen zu einem bestimmten Medienstream abrufen möchten, ohne eine MediaPlayer-Instanz zu instanziieren.
-seo-title: Medienressource mit MediaPlayerItemLoader laden
 title: Medienressource mit MediaPlayerItemLoader laden
-uuid: a7ec8f58-7357-4757-a402-e879dd6caec8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 0%
+source-wordcount: '168'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +18,7 @@ Mithilfe der `MediaPlayerItemLoader`-Klasse können Sie eine Medienressource fü
 
 1. Implementieren Sie Ereignis-Listener für diese `MediaPlayerItemLoader`-Ereignis:
 
-   * `MediaPlayerItemLoaderEvent.ERROR` ereignis
+   * `MediaPlayerItemLoaderEvent.ERROR` Ereignis
 
       TVSDK verwendet dies, um Ihre Anwendung darüber zu informieren, dass ein Fehler aufgetreten ist. TVSDK stellt eine Fehlereigenschaft bereit, die diagnostische Informationen enthält.
 
