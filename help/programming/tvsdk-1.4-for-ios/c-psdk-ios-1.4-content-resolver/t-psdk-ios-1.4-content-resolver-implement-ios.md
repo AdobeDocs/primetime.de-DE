@@ -1,13 +1,10 @@
 ---
 description: Sie können die Auflösungen auf Basis der Standardauflöser implementieren.
-seo-description: Sie können die Auflösungen auf Basis der Standardauflöser implementieren.
-seo-title: Implementieren eines benutzerdefinierten Angebots-/Inhaltsauflösers
 title: Implementieren eines benutzerdefinierten Angebots-/Inhaltsauflösers
-uuid: bfc14318-ca4b-46cc-8128-e3743af06d9a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
