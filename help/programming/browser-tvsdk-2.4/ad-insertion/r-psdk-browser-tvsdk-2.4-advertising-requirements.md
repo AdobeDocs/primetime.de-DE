@@ -1,13 +1,10 @@
 ---
 description: Sie können Anzeigen in Ihre VOD- und Live-/Linearinhalte einfügen, indem Sie die Adobe Primetime-Benutzeroberfläche für die Anzeigenentscheidung verwenden. Die Primetime-Anzeigenentscheidung funktioniert mit Browser TVSDK, um Anzeigenchancen zu identifizieren, Anzeigen zu lösen und gelöste Anzeigen in Ihre Videostreams einzufügen.
-seo-description: Sie können Anzeigen in Ihre VOD- und Live-/Linearinhalte einfügen, indem Sie die Adobe Primetime-Benutzeroberfläche für die Anzeigenentscheidung verwenden. Die Primetime-Anzeigenentscheidung funktioniert mit Browser TVSDK, um Anzeigenchancen zu identifizieren, Anzeigen zu lösen und gelöste Anzeigen in Ihre Videostreams einzufügen.
-seo-title: Werbeanforderungen
 title: Werbeanforderungen
-uuid: 8c94f05e-16ad-4366-9c1f-bc45896d9dd0
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '177'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
