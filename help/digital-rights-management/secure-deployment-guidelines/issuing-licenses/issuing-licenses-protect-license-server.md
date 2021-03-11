@@ -1,13 +1,10 @@
 ---
 description: 'Sie müssen sicherstellen, dass Sie Lizenzen sicher ausstellen. Beachten Sie die folgenden bewährten Verfahren zum Schutz des Lizenzservers. '
-seo-description: 'Sie müssen sicherstellen, dass Sie Lizenzen sicher ausstellen. Beachten Sie die folgenden bewährten Verfahren zum Schutz des Lizenzservers. '
-seo-title: Lizenzserver schützen
 title: Lizenzserver schützen
-uuid: 7b5de17d-d0a7-41df-9651-4ff51c9965c6
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1178'
 ht-degree: 0%
 
 ---
@@ -55,7 +52,7 @@ Weitere Informationen zum Inkrementieren und Verfolgen des Rollback-Zählers fin
 
 ## Maschinenanzahl bei der Erteilung von Lizenzen {#machine-count-when-issuing-licenses}
 
-Wenn die Geschäftsregeln erfordern, dass die Anzahl der Computer für einen Benutzer verfolgt wird, müssen der Lizenzserver oder der Domänenserver die mit dem Benutzer verknüpften Computer-IDs speichern.
+Wenn die Geschäftsregeln erfordern, dass die Anzahl der Computer eines Benutzers verfolgt wird, müssen der Lizenzserver oder der Domänenserver die mit dem Benutzer verknüpften Computer-IDs speichern.
 
 Die zuverlässigste Methode zur Verfolgung von Computer-IDs besteht darin, den von der [MachineId.getBytes()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getBytes())-Methode zurückgegebenen Wert in einer Datenbank zu speichern. Wenn eine neue Anforderung empfangen wird, vergleichen Sie die Computer-ID in der Anforderung mit den bekannten Computer-IDs, indem Sie [MachineId.match()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#matches(com.adobe.flashaccess.sdk.cert.MachineId)) verwenden.
 
