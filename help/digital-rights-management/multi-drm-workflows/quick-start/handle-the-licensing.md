@@ -1,13 +1,10 @@
 ---
 description: Die Lizenzierung ist der wichtigste Mechanismus, mit dem Benutzern die Wiedergabe geschützter Videoinhalte gestattet oder verweigert wird. Ein legitimer (berechtigter) Benutzer kann eine Lizenz (einen Schlüssel) zum Entschlüsseln und Abspielen eines bestimmten Teils des verschlüsselten Inhalts seines Inhalts-Providers erhalten.
-seo-description: Die Lizenzierung ist der wichtigste Mechanismus, mit dem Benutzern die Wiedergabe geschützter Videoinhalte gestattet oder verweigert wird. Ein legitimer (berechtigter) Benutzer kann eine Lizenz (einen Schlüssel) zum Entschlüsseln und Abspielen eines bestimmten Teils des verschlüsselten Inhalts seines Inhalts-Providers erhalten.
-seo-title: Lizenzierung
 title: Lizenzierung
-uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '346'
 ht-degree: 0%
 
 ---
