@@ -1,13 +1,10 @@
 ---
 description: Mit der MediaPlayerItem.timedMetadata-Eigenschaft haben Sie Zugriff auf alle TimedMetadata-Objekte, die aus den Tags "playlist/manifest"oder aus ID3-Tags im Medienstream erstellt wurden. Die MediaPlayerItem.hasTimedMetadata-Eigenschaft gibt an, ob ein abonniertes benutzerdefiniertes Tag im aktuellen Medium vorhanden ist.
-seo-description: Mit der MediaPlayerItem.timedMetadata-Eigenschaft haben Sie Zugriff auf alle TimedMetadata-Objekte, die aus den Tags "playlist/manifest"oder aus ID3-Tags im Medienstream erstellt wurden. Die MediaPlayerItem.hasTimedMetadata-Eigenschaft gibt an, ob ein abonniertes benutzerdefiniertes Tag im aktuellen Medium vorhanden ist.
-seo-title: Benachrichtigungen für Manifesttags
 title: Benachrichtigungen für Manifesttags
-uuid: 87bee41b-b44e-4d12-afd2-7a63023f992c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '188'
 ht-degree: 0%
 
 ---
