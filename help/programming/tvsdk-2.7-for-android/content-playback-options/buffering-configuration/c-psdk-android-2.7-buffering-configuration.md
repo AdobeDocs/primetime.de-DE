@@ -1,13 +1,10 @@
 ---
 description: Um eine reibungslosere Anzeige zu ermöglichen, puffert TVSDK manchmal den Videostream. Sie können konfigurieren, wie der Player zwischenspeichert.
-seo-description: Um eine reibungslosere Anzeige zu ermöglichen, puffert TVSDK manchmal den Videostream. Sie können konfigurieren, wie der Player zwischenspeichert.
-seo-title: Pufferung
 title: Pufferung
-uuid: 7f9f0deb-5f18-441d-b7a4-67c631a798f4
 translation-type: tm+mt
-source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '500'
 ht-degree: 0%
 
 ---
@@ -33,7 +30,7 @@ Während das Video wiedergegeben wird, puffert TVSDK weiterhin neue Fragmente, b
 >
 >Wenn der anfängliche Pufferwert hoch ist, kann dies dem Benutzer eine lange anfängliche Pufferzeit geben, bevor er beginnt. Dies kann eine reibungslose Wiedergabe über einen längeren Zeitraum ermöglichen. Bei schlechten Netzwerkbedingungen kann die anfängliche Wiedergabe jedoch verzögert sein.
 
-Wenn Sie den InstantOn-Modus durch Aufruf von `prepareBuffer` aktivieren, beginnt die anfängliche Pufferung zu diesem Zeitpunkt, anstatt auf `play` zu warten.
+Wenn Sie den Instant on-Modus durch Aufruf von `prepareBuffer` aktivieren, beginnt die anfängliche Pufferung zu diesem Zeitpunkt, anstatt auf `play` zu warten.
 
 ## Pufferzeiten {#section_05CDD927869D47EBA1D2069B1416B2E4} festlegen
 
