@@ -1,13 +1,10 @@
 ---
 description: Die Funktion für das Einfügen von Werbeunterbrechungen (Partial Ad Break Insertion, PABI) imitiert ein TV-ähnliches Erlebnis, bei dem der Benutzer, wenn er einem Live-Stream in einer Mid-Roll-Unterbrechung beitritt, Mid-Roll-Anzeigen anstelle einer Pre-Roll-Anzeige oder einer Tonschiefer angezeigt wird.
-seo-description: Die Funktion für das Einfügen von Werbeunterbrechungen (Partial Ad Break Insertion, PABI) imitiert ein TV-ähnliches Erlebnis, bei dem der Benutzer, wenn er einem Live-Stream in einer Mid-Roll-Unterbrechung beitritt, Mid-Roll-Anzeigen anstelle einer Pre-Roll-Anzeige oder einer Tonschiefer angezeigt wird.
-seo-title: Einfügen eines Teilformulars mit Werbeunterbrechung
 title: Einfügen eines Teilformulars mit Werbeunterbrechung
-uuid: a0c1ae34-0f8d-4401-97fe-45a2ea40d08d
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
