@@ -1,13 +1,10 @@
 ---
 description: Das TVSDK benachrichtigt Ihren Player-Client über die Verfügbarkeit der availableMediaCharacteristicsWithMediaSelectionOptions interner AVAsset-Benachrichtigungen, indem die PTMediaPlayerMediaSelectionOptionsAvailableNotification-Benachrichtigung verwendet wird.
-seo-description: Das TVSDK benachrichtigt Ihren Player-Client über die Verfügbarkeit der availableMediaCharacteristicsWithMediaSelectionOptions interner AVAsset-Benachrichtigungen, indem die PTMediaPlayerMediaSelectionOptionsAvailableNotification-Benachrichtigung verwendet wird.
-seo-title: Untertitel verfügbar machen
 title: Untertitel verfügbar machen
-uuid: 1cd8761f-6e6f-4017-9852-fa61f36197c5
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---
