@@ -1,13 +1,10 @@
 ---
 description: Ihre Anwendung kann die Aktivität im Player und den sich ändernden Status des Players überwachen, indem sie auf die Ereignis überwacht, die von TVSDK gesendet werden.
-seo-description: Ihre Anwendung kann die Aktivität im Player und den sich ändernden Status des Players überwachen, indem sie auf die Ereignis überwacht, die von TVSDK gesendet werden.
-seo-title: Übersicht zu Primetime-Player-Ereignissen
 title: Übersicht zu Primetime-Player-Ereignissen
-uuid: b2ff74f2-c373-42da-a717-2f0550cbcb7f
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
