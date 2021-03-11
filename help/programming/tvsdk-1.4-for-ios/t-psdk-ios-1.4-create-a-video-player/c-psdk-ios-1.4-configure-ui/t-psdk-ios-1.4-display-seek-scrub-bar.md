@@ -1,13 +1,10 @@
 ---
 description: Sie können die aktuelle und die restliche Zeit des Inhalts anzeigen, der wiedergegeben wird.
-seo-description: Sie können die aktuelle und die restliche Zeit des Inhalts anzeigen, der wiedergegeben wird.
-seo-title: Anzeigen einer Suchleiste mit der aktuellen Wiedergabezeitposition
 title: Anzeigen einer Suchleiste mit der aktuellen Wiedergabezeitposition
-uuid: db57eb6f-3c67-4a64-a0f4-7e39027eb3e0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '62'
 ht-degree: 0%
 
 ---
