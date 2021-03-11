@@ -1,13 +1,10 @@
 ---
 description: Das SDK lädt regelmäßig Zertifikatsperrlisten herunter, die von der Adobe veröffentlicht werden. Sie müssen sicherstellen, dass der Zugriff auf diese Dateien nicht blockiert oder die Durchsetzung dieser Zertifikatsperrlisten nicht verhindert wird.
-seo-description: Das SDK lädt regelmäßig Zertifikatsperrlisten herunter, die von der Adobe veröffentlicht werden. Sie müssen sicherstellen, dass der Zugriff auf diese Dateien nicht blockiert oder die Durchsetzung dieser Zertifikatsperrlisten nicht verhindert wird.
-seo-title: Von der Adobe veröffentlichte Zertifikatsperrlisten verwenden
 title: Von der Adobe veröffentlichte Zertifikatsperrlisten verwenden
-uuid: 7a9088bd-dde6-4445-958c-3e7272215b3c
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
