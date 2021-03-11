@@ -1,13 +1,10 @@
 ---
 description: Beim Verpacken von Inhalten werden Videoinhalte für die Wiedergabe im Web vorbereitet. Das Verpacken umfasst die Umwandlung von Rohvideo in Manifestdateien und optional die Verschlüsselung von Inhalten mit unterschiedlichen DRM-Lösungen für verschiedene Geräte und Browser.
-seo-description: Beim Verpacken von Inhalten werden Videoinhalte für die Wiedergabe im Web vorbereitet. Das Verpacken umfasst die Umwandlung von Rohvideo in Manifestdateien und optional die Verschlüsselung von Inhalten mit unterschiedlichen DRM-Lösungen für verschiedene Geräte und Browser.
-seo-title: Inhalt verpacken
 title: Inhalt verpacken
-uuid: b9bc6104-a1ea-4ea0-a0a4-af8a606e5d47
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
