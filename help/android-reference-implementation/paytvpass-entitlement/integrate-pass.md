@@ -1,13 +1,10 @@
 ---
 description: Passen Sie Ihre Referenzimplementierung an, um die Adobe Primetime-Authentifizierung für Ihre Produktionsversion zu integrieren.
-seo-description: Passen Sie Ihre Referenzimplementierung an, um die Adobe Primetime-Authentifizierung für Ihre Produktionsversion zu integrieren.
-seo-title: Primetime-Authentifizierung integrieren
 title: Primetime-Authentifizierung integrieren
-uuid: 34cdf1da-261e-462c-a194-4fcb439e5dfb
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
@@ -58,7 +55,7 @@ Die Integration der Referenzimplementierung des Primetime-Authentifizierungsdien
 
    Darüber hinaus müssen Sie möglicherweise die URLs ändern, die Ihre Anwendung zum Herstellen einer Verbindung mit den Primetime-Authentifizierungsdiensten verwendet. Dazu gehören die Primetime-Authentifizierungs-Staging- und Produktions-Server-URLs sowie eine URL zu einem Token-Verifizierungsdienst. Weitere Informationen erhalten Sie von Ihrem Adobe Primetime-Kundenbetreuer. 1. Unterschreiben Sie die Anforderungs-ID.
 
-   Um die Identität des Programmierers im Primetime-Authentifizierungssystem festzustellen, wird die Anforderungs-ID des Programmierers an das Primetime-Authentifizierungssystem gesendet. Als zusätzliche Sicherheitsebene muss die Anforderungs-ID vom Programmierer signiert werden, bevor sie an die Adobe gesendet wird. Adobe empfiehlt, dass der Programmierer einen Dienst zum Signieren der Anforderungs-ID in einem vertrauenswürdigen Netzwerk einrichten sollte.
+   Um die Identität des Programmierers im Primetime-Authentifizierungssystem festzustellen, wird die Anforderungs-ID des Programmierers an das Primetime-Authentifizierungssystem gesendet. Als zusätzliche Sicherheitsebene muss die Anforderungs-ID vom Programmierer signiert werden, bevor sie an die Adobe gesendet wird. Adobe empfiehlt, dass der Programmierer einen Dienst zum Signieren der Anforderungs-ID in einem vertrauenswürdigen Netzwerk eingerichtet hat.
 
    Die Primetime-Referenzimplementierung zeigt, wie die Anforderungs-ID signiert wird, jedoch nur zu Demonstrationszwecken. Adobe empfiehlt dringend, dass das Unterschriftszertifikat und der Unterschriftsgenerator-Code unter `com.adobe.primetime.reference.crypto` nicht in eine Produktionsanwendung aufgenommen werden sollten. Stattdessen sollten Sie ihn in einen vertrauenswürdigen vernetzten Dienst verschieben.
 
