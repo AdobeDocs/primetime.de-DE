@@ -1,13 +1,10 @@
 ---
 description: Bei Live-/linearen Inhalten ersetzt TVSDK einen Abschnitt des Hauptstream-Inhalts durch eine Werbeunterbrechung mit der gleichen Dauer, sodass die Zeitschienendauer unverändert bleibt.
-seo-description: Bei Live-/linearen Inhalten ersetzt TVSDK einen Abschnitt des Hauptstream-Inhalts durch eine Werbeunterbrechung mit der gleichen Dauer, sodass die Zeitschienendauer unverändert bleibt.
-seo-title: Auflösen und Einfügen einer Live-/linearen Anzeige
 title: Auflösen und Einfügen einer Live-/linearen Anzeige
-uuid: c9d54fc9-1d54-41c3-a872-d27afdd16314
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
