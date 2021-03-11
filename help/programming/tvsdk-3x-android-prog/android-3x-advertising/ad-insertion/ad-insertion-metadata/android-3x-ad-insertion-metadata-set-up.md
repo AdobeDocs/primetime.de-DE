@@ -1,13 +1,10 @@
 ---
 description: Verwenden Sie die Hilfsklasse AuditudeSettings, die die MetadataNode-Klasse erweitert, um Adobe Primetime-Anzeigenentscheidungsmetadaten einzurichten.
-seo-description: Verwenden Sie die Hilfsklasse AuditudeSettings, die die MetadataNode-Klasse erweitert, um Adobe Primetime-Anzeigenentscheidungsmetadaten einzurichten.
-seo-title: Einrichten von Anzeigeneinfügemetadaten
 title: Einrichten von Anzeigeneinfügemetadaten
-uuid: 7400813c-6af0-4c96-a6c7-d9ea1ba6a7b9
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
