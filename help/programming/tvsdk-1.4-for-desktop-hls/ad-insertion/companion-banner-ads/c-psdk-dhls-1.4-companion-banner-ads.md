@@ -1,13 +1,10 @@
 ---
 description: TVSDK unterstützt begleitende Banneranzeigen, bei denen es sich um Anzeigen handelt, die eine lineare Anzeige begleiten und nach dem Ende der linearen Anzeige oft auf der Seite bleiben. Ihre Anwendung ist für die Anzeige der begleitenden Banner verantwortlich, die mit einer linearen Anzeige bereitgestellt werden.
-seo-description: TVSDK unterstützt begleitende Banneranzeigen, bei denen es sich um Anzeigen handelt, die eine lineare Anzeige begleiten und nach dem Ende der linearen Anzeige oft auf der Seite bleiben. Ihre Anwendung ist für die Anzeige der begleitenden Banner verantwortlich, die mit einer linearen Anzeige bereitgestellt werden.
-seo-title: Banneranzeigen
 title: Banneranzeigen
-uuid: 388a1683-342c-4f3b-97c8-cfcb6c5cfee1
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '607'
 ht-degree: 0%
 
 ---
