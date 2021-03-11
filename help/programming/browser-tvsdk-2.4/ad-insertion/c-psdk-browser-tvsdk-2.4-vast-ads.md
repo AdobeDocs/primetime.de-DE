@@ -1,13 +1,10 @@
 ---
 description: Wenn Browser TVSDK eine Anzeige anfordert, die sich nicht auf Ihrem primären Anzeigenserver befindet, muss der Player die Anzeige vom sekundären Server anfordern. Video Ad Serving Template (VAST) legt den Standard für die Kommunikation zwischen Anzeigen-Servern und Video-Playern fest und ist die Antwort, die vom sekundären Anzeigen-Server gesendet wird, wenn die Anzeige angefordert wird.
-seo-description: Wenn Browser TVSDK eine Anzeige anfordert, die sich nicht auf Ihrem primären Anzeigenserver befindet, muss der Player die Anzeige vom sekundären Server anfordern. Video Ad Serving Template (VAST) legt den Standard für die Kommunikation zwischen Anzeigen-Servern und Video-Playern fest und ist die Antwort, die vom sekundären Anzeigen-Server gesendet wird, wenn die Anzeige angefordert wird.
-seo-title: VAST-Anzeigen
 title: VAST-Anzeigen
-uuid: 052dae0c-2425-456c-aebe-531f68bb5aa8
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
