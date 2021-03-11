@@ -1,13 +1,10 @@
 ---
 description: Zur Implementierung von DRM benötigen Sie bestimmte Zertifikate und Schlüssel, einschließlich eines Inhaltsverschlüsselungsschlüssels oder eines CEK zur Verschlüsselung Ihrer Inhalte, einen Kundenauthentifizierer zum Schutz der Kommunikation mit den ExpressPlay-Servern und CEKSIDs zum Identifizieren der Verschlüsselungsschlüssel für Inhalte, die in einem wichtigen Management-System gespeichert sind.
-seo-description: Zur Implementierung von DRM benötigen Sie bestimmte Zertifikate und Schlüssel, einschließlich eines Inhaltsverschlüsselungsschlüssels oder eines CEK zur Verschlüsselung Ihrer Inhalte, einen Kundenauthentifizierer zum Schutz der Kommunikation mit den ExpressPlay-Servern und CEKSIDs zum Identifizieren der Verschlüsselungsschlüssel für Inhalte, die in einem wichtigen Management-System gespeichert sind.
-seo-title: Schlüssel, IDs und Authentifizierer
 title: Schlüssel, IDs und Authentifizierer
-uuid: 9e5b1a64-b4e9-442f-ac15-26831aaf585d
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
