@@ -1,13 +1,10 @@
 ---
 description: Nachdem Sie das MediaResource-Objekt erfolgreich geladen haben, erstellt TVSDK eine Instanz der MediaPlayerItem-Klasse, um Zugriff auf diese Ressource zu gewähren.
-seo-description: Nachdem Sie das MediaResource-Objekt erfolgreich geladen haben, erstellt TVSDK eine Instanz der MediaPlayerItem-Klasse, um Zugriff auf diese Ressource zu gewähren.
-seo-title: Info zur MediaPlayerItem-Klasse
 title: Info zur MediaPlayerItem-Klasse
-uuid: fc79c442-2e38-48c4-8ef9-6dce9ad6790a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '151'
 ht-degree: 0%
 
 ---
