@@ -1,13 +1,10 @@
 ---
 description: Wenn Sie eine sichere Netzwerkarchitektur konfigurieren, sind Netzwerkprotokolle für die Interaktion zwischen Adobe Primetime DRM und anderen Systemen in Ihrem Unternehmensnetzwerk erforderlich.
-seo-description: Wenn Sie eine sichere Netzwerkarchitektur konfigurieren, sind Netzwerkprotokolle für die Interaktion zwischen Adobe Primetime DRM und anderen Systemen in Ihrem Unternehmensnetzwerk erforderlich.
-seo-title: Adobe Primetime DRM-Netzwerkprotokolle
 title: Adobe Primetime DRM-Netzwerkprotokolle
-uuid: 8954e33c-83ac-4b40-9e45-005d4954b44e
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
