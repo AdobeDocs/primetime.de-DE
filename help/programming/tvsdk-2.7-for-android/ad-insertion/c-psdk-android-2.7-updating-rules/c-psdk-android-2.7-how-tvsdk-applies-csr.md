@@ -1,14 +1,12 @@
 ---
-description: 'null'
-keywords: creative selection rules;AdobeTVSDKConfig
-seo-description: 'null'
-seo-title: Kreative Auswahlregeln anwenden
+keywords: kreative Auswahlregeln;AdobeTVSDKConfig
 title: Kreative Auswahlregeln anwenden
-uuid: 75109483-ea60-43a8-92e7-4bcba48986bc
+description: Kreative Auswahlregeln anwenden
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '166'
 ht-degree: 0%
 
 ---
