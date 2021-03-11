@@ -1,13 +1,10 @@
 ---
 description: Entweder ein Client-Videoplayer oder der Manifestserver können mit CRS interagieren, um eine JIT-Neuverpackung zu erzielen. Beide verwenden dieselbe Anzeigenauswahllogik.
-seo-description: Entweder ein Client-Videoplayer oder der Manifestserver können mit CRS interagieren, um eine JIT-Neuverpackung zu erzielen. Beide verwenden dieselbe Anzeigenauswahllogik.
-seo-title: Detaillierte Workflows für JIT-Neuverpackungen
 title: Detaillierte Workflows für JIT-Neuverpackungen
-uuid: 11b6eb3c-f6aa-4018-9b20-ab6f5910508b
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -53,7 +50,7 @@ Ein Client, der auf TVSDK oder ähnlichen Funktionen basiert, kann wie folgt mit
 1. Der Client überprüft das Format der Anzeige vom Anzeigen-Server:
 
    1. Wenn das Werbekreativ im HLS-Format vorliegt, fügt der Client es in den Inhalt ein (Stiche) und wird ausgeführt.
-   1. Wenn das Werbekreativ nicht im HLS-Format vorliegt, fordert der Client einen vom CDN-Server an.
+   1. Wenn das Werbekreativ nicht im HLS-Format vorliegt, fordert der Client eine vom CDN-Server an.
 
       >[!NOTE]
       >
