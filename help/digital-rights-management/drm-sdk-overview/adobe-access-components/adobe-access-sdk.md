@@ -1,13 +1,10 @@
 ---
 description: Die Hauptkomponenten von Primetime DRM bestehen aus einem Java SDK und den Flash Player- und Adobe AIR Client-Laufzeitumgebung-Umgebung.
-seo-description: Die Hauptkomponenten von Primetime DRM bestehen aus einem Java SDK und den Flash Player- und Adobe AIR Client-Laufzeitumgebung-Umgebung.
-seo-title: Java SDK-, Flash Player- und Adobe AIR-Client
 title: Java SDK-, Flash Player- und Adobe AIR-Client
-uuid: e6daed27-3803-4ef7-ba25-4a180af7502f
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
