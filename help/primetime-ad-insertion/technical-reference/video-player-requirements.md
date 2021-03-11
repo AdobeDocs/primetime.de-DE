@@ -1,12 +1,10 @@
 ---
 description: Alle Videoplayer müssen Funktionen bereitstellen, auf die der Manifestserver zum Einfügen von Anzeigen und zur Aktivierung der Anzeigenverfolgung angewiesen ist.
-seo-description: Alle Videoplayer müssen Funktionen bereitstellen, auf die der Manifestserver zum Einfügen von Anzeigen und zur Aktivierung der Anzeigenverfolgung angewiesen ist.
-seo-title: Anforderungen an Videoplayer
 title: Anforderungen an Videoplayer
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '115'
 ht-degree: 0%
 
 ---
