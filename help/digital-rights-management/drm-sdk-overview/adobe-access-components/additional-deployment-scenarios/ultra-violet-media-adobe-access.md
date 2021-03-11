@@ -1,9 +1,9 @@
 ---
-seo-title: UltraViolet-Medien und Adobe Primetime DRM
 title: UltraViolet-Medien und Adobe Primetime DRM
-uuid: 7076c0f9-e092-48e4-9118-8a414bd03c7a
+description: UltraViolet-Medien und Adobe Primetime DRM
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 0%
@@ -27,10 +27,10 @@ Es ist einfach, ein UltraViolet-System zusammen mit Adobe Primetime DRM einzuric
 1. Der Einzelhändler lädt die Inhalte auf einen digitalen Dienstleister wie CDN hoch. Der Inhalt kann jetzt heruntergeladen werden. Beachten Sie, dass einige dieser Rollen von einer oder mehreren Firmen wiedergegeben werden können.
 
    Der Endbenutzer verfügt über ein Gerät, das Adobe AIR unterstützt. Darüber hinaus muss der Benutzer eine UltraViolet-kompatible Anwendung installieren. Die Anwendung enthält den erforderlichen Code, um den CFF zu analysieren und ihn für den Verbrauch durch die Laufzeit darzustellen. Alle sensiblen kryptographischen Vorgänge werden in der sicheren Laufzeit verarbeitet.
-1. Die Anwendung kann eine Domänenverbindung für das Gerät auslösen, die mit dem Koordinator interagiert. Der Koordinator unterhält einen Zugriffsschutz, eine Benutzerdatenbank und Domänen. Der Domänenmanager des Koordinators wird mithilfe des Primetime DRM SDK erstellt, um Primetime DRM-spezifische Vorgänge zum Verbinden/Verlassen von Domänen zu implementieren.
+1. Die Anwendung kann eine Domäne für das Gerät, das mit dem Koordinator interagiert, als Trigger verwenden. Der Koordinator unterhält einen Zugriffsschutz, eine Benutzerdatenbank und Domänen. Der Domänenmanager des Koordinators wird mithilfe des Primetime DRM SDK erstellt, um Primetime DRM-spezifische Vorgänge zum Verbinden/Verlassen von Domänen zu implementieren.
 1. Der Benutzer kann dann mit der Anwendung ein Video auswählen, das er vom Händler erwerben möchte. Der Einzelhändler stellt in der Regel ein Webportal bereit und verarbeitet die gesamte Geschäftslogik.
 1. Der Händler interagiert dann mit dem Koordinator, um ein Berechtigungstoken hinzuzufügen. Der Einzelhändler leitet die Anforderung für den eigentlichen Inhaltsdownload an den Dienstleister weiter.
-1. Wenn das Gerät noch keine Lizenz für den Inhalt besitzt, löst es eine Lizenzanforderung mit dem CFF aus. Die Anforderung umfasst in der Regel ein Domänenzertifikat, Benutzeranmeldeinformationen und Informationen zur Anwendung. Der Dienstleister betreibt einen Primetime DRM License Server (entwickelt mit dem Primetime DRM SDK), der den UltraViolet Spezifikationen entspricht.
+1. Wenn das Gerät noch keine Inhaltslizenz besitzt, wird eine Lizenzanforderung mit dem CFF Trigger. Die Anforderung umfasst in der Regel ein Domänenzertifikat, Benutzeranmeldeinformationen und Informationen zur Anwendung. Der Dienstleister betreibt einen Primetime DRM License Server (entwickelt mit dem Primetime DRM SDK), der den UltraViolet Spezifikationen entspricht.
 1. Die UltraViolet Geschäftslogik des Dienstleisters interagiert bei Bedarf mit dem Koordinator, um das entsprechende Berechtigungstoken abzurufen, um zu bestimmen, ob eine Inhaltslizenz erteilt werden soll.
 
    Die Inhaltslizenz ist an die Domäne gebunden. Die Clientanwendung kann die Lizenz in die CFF-Datei einfügen. Inhalte können jetzt in der Anwendung wiedergegeben werden, wobei alle Schutz- und Nutzungsregeln von der Primetime DRM-Komponente in der Laufzeit verarbeitet werden.
