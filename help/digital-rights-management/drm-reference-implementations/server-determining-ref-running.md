@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Bestimmen, ob der Referenz-Implementierungslizenzserver ordnungsgemäß ausgeführt wird
 title: Bestimmen, ob der Referenz-Implementierungslizenzserver ordnungsgemäß ausgeführt wird
-uuid: afd82d6d-a11c-48ff-b48c-8f81d4b406a0
+description: Bestimmen, ob der Referenz-Implementierungslizenzserver ordnungsgemäß ausgeführt wird
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
