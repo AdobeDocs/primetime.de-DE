@@ -1,14 +1,11 @@
 ---
 description: Sie können eine Stelle in Ihrer Anwendung einrichten, an der die Fehlerverarbeitung als Reaktion auf den FEHLER-Status durchgeführt wird.
-seo-description: Sie können eine Stelle in Ihrer Anwendung einrichten, an der die Fehlerverarbeitung als Reaktion auf den FEHLER-Status durchgeführt wird.
-seo-title: Fehlerverarbeitung einrichten
 title: Fehlerverarbeitung einrichten
-uuid: 9e650ea7-86cb-4489-a3fd-80cd2ccef41f
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 2%
+source-wordcount: '122'
+ht-degree: 3%
 
 ---
 
@@ -26,7 +23,7 @@ Sie können eine Stelle in Ihrer Anwendung einrichten, an der die Fehlerverarbei
                            onStatusChange);
    ```
 
-1. Wenn `event.status` in Ihrem Ereignis-Listener `AdobePSDK.MediaPlayerStatus.ERROR` &lt;a1/> ist, geben Sie die Logik an, um alle Fehler zu verarbeiten.
+1. Wenn `event.status` in Ihrem Ereignis-Listener `AdobePSDK.MediaPlayerStatus.ERROR`  ist, geben Sie die Logik an, um alle Fehler zu verarbeiten.
 1. Nachdem der Fehler behandelt wurde, setzen Sie das `MediaPlayer`-Objekt zurück oder laden Sie eine neue Medienressource.
 
        Wenn sich das MediaPlayer-Objekt im ERROR-Status befindet, kann es diesen Status erst beenden, nachdem Sie eine der folgenden Aufgaben abgeschlossen haben:
