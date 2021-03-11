@@ -1,13 +1,10 @@
 ---
 description: Normalerweise sind alle Primetime-DRM-Lizenzen zur Erstellungszeit an ein eindeutiges Gerät gebunden. Diese Bindung verhindert, dass Benutzer Lizenzen ohne Autorisierung auf verschiedenen Geräten freigeben können. Neben der Gerätebindung bietet Primetime DRM die Möglichkeit, Lizenzen an eine Gerätedomäne oder Gerätegruppe zu binden.
-seo-description: Normalerweise sind alle Primetime-DRM-Lizenzen zur Erstellungszeit an ein eindeutiges Gerät gebunden. Diese Bindung verhindert, dass Benutzer Lizenzen ohne Autorisierung auf verschiedenen Geräten freigeben können. Neben der Gerätebindung bietet Primetime DRM die Möglichkeit, Lizenzen an eine Gerätedomäne oder Gerätegruppe zu binden.
-seo-title: Verschlüsselte Inhalte mithilfe der Domänenunterstützung wiedergeben
 title: Verschlüsselte Inhalte mithilfe der Domänenunterstützung wiedergeben
-uuid: 8854cc0f-9bfc-4833-82d7-a3f46ac88e06
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 Normalerweise sind alle Primetime-DRM-Lizenzen zur Erstellungszeit an ein eindeutiges Gerät gebunden. Diese Bindung verhindert, dass Benutzer Lizenzen ohne Autorisierung auf verschiedenen Geräten freigeben können. Neben der Gerätebindung bietet Primetime DRM die Möglichkeit, Lizenzen an eine Gerätedomäne oder Gerätegruppe zu binden.
 
-Wenn die Inhaltsmetadaten angeben, dass die Registrierung der Gerätedomäne erforderlich ist, kann die Anwendung eine API aufrufen, um einer Gerätegruppe beizutreten. Durch diese Aktion wird eine Domänenregistrierungsanfrage an den Domänenserver gesendet. Nachdem eine Lizenz für eine Gerätegruppe erteilt wurde, kann die Lizenz exportiert und für andere Geräte freigegeben werden, die der Gerätegruppe beigetreten sind.
+Wenn die Inhaltsmetadaten angeben, dass die Registrierung der Gerätedomäne erforderlich ist, kann die Anwendung eine API aufrufen, um einer Gerätegruppe beizutreten. Bei dieser Aktion wird eine Domänenregistrierungsanfrage an den Domänenserver Trigger. Nachdem eine Lizenz für eine Gerätegruppe erteilt wurde, kann die Lizenz exportiert und für andere Geräte freigegeben werden, die der Gerätegruppe beigetreten sind.
 
 Die Gerätegruppeninformationen werden dann im `DRMContentData` `VoucherAccessInfo`-Objekt verwendet, das dann verwendet wird, um die Informationen darzustellen, die zum erfolgreichen Abrufen und Konsumieren einer Lizenz erforderlich sind.
 
