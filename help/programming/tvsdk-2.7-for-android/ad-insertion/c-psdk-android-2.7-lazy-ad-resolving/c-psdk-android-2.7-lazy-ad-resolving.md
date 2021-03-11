@@ -1,14 +1,11 @@
 ---
 description: Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiedergabe auf dem Beginn wartet, zu einer inakzeptablen Verzögerung führen. Die Funktionen "Verzögertes Laden von Werbeanzeigen"und "Verzögertes Auflösen von Werbeanzeigen"können diese Startverzögerung verringern.
-keywords: Lazy;Ad resolving;Ad loading
-seo-description: Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiedergabe auf dem Beginn wartet, zu einer inakzeptablen Verzögerung führen. Die Funktionen "Verzögertes Laden von Werbeanzeigen"und "Verzögertes Auflösen von Werbeanzeigen"können diese Startverzögerung verringern.
-seo-title: Verzögerte und gelöste Anzeige
+keywords: Verzögert;Auflösen der Anzeige;Laden der Anzeige
 title: Verzögerte und gelöste Anzeige
-uuid: cf9ba788-b83f-43aa-94c4-db391d92a77b
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
