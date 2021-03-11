@@ -1,13 +1,10 @@
 ---
 description: Verwenden Sie den HTTP-GET-Befehl, um mit dem Manifestserver zu interagieren.
-seo-description: Verwenden Sie den HTTP-GET-Befehl, um mit dem Manifestserver zu interagieren.
-seo-title: Befehl an den Manifestserver senden
 title: Befehl an den Manifestserver senden
-uuid: e9680563-d268-406d-87ce-1521a677e9ec
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
