@@ -1,13 +1,10 @@
 ---
 description: Ihre Anwendung kann die Aktivität im Player und den sich ändernden Status des Players überwachen, indem sie auf von TVSDK ausgelöste Ereignis überwacht.
-seo-description: Ihre Anwendung kann die Aktivität im Player und den sich ändernden Status des Players überwachen, indem sie auf von TVSDK ausgelöste Ereignis überwacht.
-seo-title: Wiedergabe-Ereignisse
 title: Wiedergabe-Ereignisse
-uuid: 6d6491d7-cf25-4130-8388-68b8c028bb71
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '516'
 ht-degree: 0%
 
 ---
@@ -52,7 +49,7 @@ TVSDK löst Ereignisse zur Wiedergabe aus, wenn Vorgänge zur Medienwiedergabe a
    <td colname="2"> Der Status des Medienplayers hat sich geändert. Ihre Anwendung sollte Fehler im Rückruf dieses Ereignisses behandeln. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1">ProfileEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html#PROFILE_CHANGED" format="html" scope="external"> PROFIL_CHANGED</a> </td> 
+   <td colname="1">ProfileEvent.<a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html#PROFILE_CHANGED" format="html" scope="external"> Profil_CHANGED</a> </td> 
    <td colname="2">Das aktuelle Profil des Medienplayers hat sich geändert. Verwenden Sie die Eigenschaft <span class="codeph"> ProfileEvent.Profil</span>, um das neue Profil abzurufen, das abgespielt wird. Verwenden Sie die Eigenschaft <span class="codeph"> time</span>, um den Zeitpunkt abzurufen, zu dem dieses Ereignis aufgetreten ist. </td> 
   </tr> 
   <tr rowsep="1"> 
