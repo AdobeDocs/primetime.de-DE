@@ -1,13 +1,10 @@
 ---
 description: Sie können Ihren Player so konfigurieren, dass die Videonutzung verfolgt und analysiert wird.
-seo-description: Sie können Ihren Player so konfigurieren, dass die Videonutzung verfolgt und analysiert wird.
-seo-title: Videoanalyse initialisieren und konfigurieren
 title: Videoanalyse initialisieren und konfigurieren
-uuid: 4a582b35-ae92-4557-806d-e174fc878cc5
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '687'
 ht-degree: 0%
 
 ---
@@ -137,7 +134,7 @@ Bevor Sie eine neue Sitzung zur Inhaltswiedergabe starten, müssen Sie die vorhe
           videoAnalyticsProvider = null;
       ```
    4. Markieren Sie den Live/Linear-Stream manuell als abgeschlossen.
-Wenn Sie verschiedene Folgen für einen Live-Stream haben, können Sie eine Folge manuell mit der vollständigen API als abgeschlossen kennzeichnen. Dadurch wird die Videoverfolgungssitzung für die aktuelle Videoepisode beendet, und Sie können für die nächste Folge eine neue Verfolgungssitzung Beginn geben.
+Wenn Sie verschiedene Folgen für einen Live-Stream haben, können Sie eine Folge manuell mit der vollständigen API als abgeschlossen kennzeichnen. Dadurch wird die Videoverfolgungssitzung für die aktuelle Videoepisode beendet, und Sie können eine neue Verfolgungssitzung für die nächste Folge Beginn haben.
       >[!TIP]
       >
       >Diese API ist optional und wird für die VOD-Videoverfolgung nicht benötigt.
