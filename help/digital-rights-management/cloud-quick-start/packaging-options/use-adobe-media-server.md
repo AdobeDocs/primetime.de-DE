@@ -1,9 +1,9 @@
 ---
-seo-title: Adobe Media Server verwenden
-title: Adobe Media Server verwenden
-uuid: 272b9919-6ae4-4adb-aab5-28b1f92aa9fe
+title: Adobe Medien-Server verwenden
+description: Adobe Medien-Server verwenden
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 3%
@@ -11,9 +11,9 @@ ht-degree: 3%
 ---
 
 
-# Adobe Media Server {#use-adobe-media-server} verwenden
+# Adobe Mediums-Server {#use-adobe-media-server} verwenden
 
-Einige Kunden verwenden möglicherweise bereits Adobe Media Server und möchten dieses Content Versand-Modell beibehalten. In diesem Fall können die erforderlichen DRM-spezifischen Primetime Cloud-Daten aus einer der Konfigurationsdateien, die in diesem Kit enthalten sind, abgerufen werden, um die JIT-XML-Konfiguration (Just-In-Time) für AMS zu füllen.
+Einige Kunden verwenden möglicherweise bereits Adobe Mediums Server und möchten dieses Content Versand-Modell beibehalten. In diesem Fall können die erforderlichen DRM-spezifischen Primetime Cloud-Daten aus einer der Konfigurationsdateien, die in diesem Kit enthalten sind, abgerufen werden, um die JIT-XML-Konfiguration (Just-In-Time) für AMS zu füllen.
 
 Beispiel:
 
