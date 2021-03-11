@@ -1,13 +1,10 @@
 ---
 description: Wenn Sie ein HSM auswählen, um Ihre Serverberechtigungen zu speichern, müssen Sie die privaten Schlüssel und Zertifikate auf das HSM laden und eine Konfigurationsdatei "pkcs11.cfg"erstellen.
-seo-description: Wenn Sie ein HSM auswählen, um Ihre Serverberechtigungen zu speichern, müssen Sie die privaten Schlüssel und Zertifikate auf das HSM laden und eine Konfigurationsdatei "pkcs11.cfg"erstellen.
-seo-title: HSM-Konfiguration
 title: HSM-Konfiguration
-uuid: 3610840b-082e-4a73-8aa5-5065f9232e0b
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '156'
 ht-degree: 0%
 
 ---
