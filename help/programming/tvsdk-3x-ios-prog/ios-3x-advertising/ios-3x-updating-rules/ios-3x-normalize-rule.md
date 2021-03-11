@@ -1,14 +1,11 @@
 ---
 description: Die Regel "Normalisieren"definiert eine URL-Transformation, die auf eine Quell-URL angewendet wird, die aus einer VAST-/VMAP-Antwort stammt.
-keywords: normalize rule;creative selection rules
-seo-description: Die Regel "Normalisieren"definiert eine URL-Transformation, die auf eine Quell-URL angewendet wird, die aus einer VAST-/VMAP-Antwort stammt.
-seo-title: Regeln normalisieren
+keywords: Normalisierungsregel;kreative Auswahlregeln
 title: Regeln normalisieren
-uuid: c5cdc40c-7f8c-4b4a-8044-217494e2f466
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
