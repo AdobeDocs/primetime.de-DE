@@ -1,13 +1,10 @@
 ---
 description: In Browser TVSDK können Sie eine bestimmte Position (Zeit) in einem Stream suchen. Ein Stream kann ein Sliding-Window-Playlist oder Video-on-Demand (VOD)-Inhalt sein.
-seo-description: In Browser TVSDK können Sie eine bestimmte Position (Zeit) in einem Stream suchen. Ein Stream kann ein Sliding-Window-Playlist oder Video-on-Demand (VOD)-Inhalt sein.
-seo-title: Verarbeiten der Suche bei Verwendung der Suchleiste
 title: Verarbeiten der Suche bei Verwendung der Suchleiste
-uuid: a7c74141-581f-40a3-9d28-ce56ba56773c
 translation-type: tm+mt
-source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
@@ -25,7 +22,7 @@ In Browser TVSDK können Sie eine bestimmte Position (Zeit) in einem Stream such
 
    Gültige Status sind &quot;VORBEREITEN&quot;, &quot;ABGESCHLOSSEN&quot;, &quot;ANGEHALTEN&quot;und &quot;WIEDERGABE&quot;. Wenn Sie sich in einem gültigen Status befinden, wird sichergestellt, dass die Medienressource erfolgreich geladen wurde. Wenn sich der Player nicht in einem gültigen, suchbaren Zustand befindet, wird beim Versuch, die folgenden Methoden aufzurufen, ein `IllegalStateException` zurückgegeben.
 
-   Sie können beispielsweise warten, bis Browser TVSDK `AdobePSDK.MediaPlayerStatusChangeEvent` mit einem `event.status` von `AdobePSDK.MediaPlayerStatus.PREPARED` auslöst.
+   Sie können beispielsweise auf Browser TVSDK auf Trigger `AdobePSDK.MediaPlayerStatusChangeEvent` mit einem `event.status` von `AdobePSDK.MediaPlayerStatus.PREPARED` warten.
 
 1. Übergeben Sie die angeforderte Suchposition als Parameter an die `MediaPlayer.seek`-Methode in Millisekunden.
 
@@ -39,7 +36,7 @@ In Browser TVSDK können Sie eine bestimmte Position (Zeit) in einem Stream such
    void seek(long position) throws IllegalStateException;
    ```
 
-1. Warten Sie, bis Browser TVSDK das `AdobePSDK.PSDKEventType.SEEK_END`-Ereignis auslöst, das die angepasste Position im `actualPosition`-Attribut des Ereignisses zurückgibt:
+1. Warten Sie, bis Browser TVSDK das Ereignis `AdobePSDK.PSDKEventType.SEEK_END` Trigger, das die angepasste Position im Attribut `actualPosition` des Ereignisses zurückgibt:
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
