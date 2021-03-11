@@ -1,13 +1,10 @@
 ---
 description: Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiedergabe auf dem Beginn wartet, zu einer inakzeptablen Verzögerung führen. Die Funktion "Auflösen von verzögerten Anzeigen"kann diese Startverzögerung verringern. Anzeigen können nun in einem bestimmten Intervall vor der Position der Werbeunterbrechung aufgelöst werden. Dies wird durch den Einsatz eines dualen Player-Ansatzes erreicht.
-seo-description: Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiedergabe auf dem Beginn wartet, zu einer inakzeptablen Verzögerung führen. Die Funktion "Auflösen von verzögerten Anzeigen"kann diese Startverzögerung verringern. Anzeigen können nun in einem bestimmten Intervall vor der Position der Werbeunterbrechung aufgelöst werden. Dies wird durch den Einsatz eines dualen Player-Ansatzes erreicht.
-seo-title: Just-in-time-Anzeigenauflösung
 title: Just-in-time-Anzeigenauflösung
-uuid: f7b20439-3604-4d69-bdfe-2e0ad26f495b
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
