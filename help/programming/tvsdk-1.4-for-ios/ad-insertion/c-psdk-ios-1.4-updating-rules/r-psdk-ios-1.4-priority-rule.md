@@ -1,14 +1,11 @@
 ---
 description: Die Prioritätsregel definiert die Prioritätsreihenfolge der Werbeinhalte, die für die Wiedergabe aus einer VAST-/VMAP-Antwort ausgewählt werden.
-keywords: priority rule;creative selection rules
-seo-description: Die Prioritätsregel definiert die Prioritätsreihenfolge der Werbeinhalte, die für die Wiedergabe aus einer VAST-/VMAP-Antwort ausgewählt werden.
-seo-title: Prioritätsregeln
+keywords: Prioritätsregel:kreative Auswahlregeln
 title: Prioritätsregeln
-uuid: a0924b3e-45cb-45ca-8a98-ed7d42aaed14
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
