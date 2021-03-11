@@ -1,13 +1,10 @@
 ---
 description: Browser TVSDK stellt Ihre Video-App mit Informationen zur Verfügung, die erforderlich sind, um auf den Klick eines Benutzers auf eine anklickbare Anzeige zu reagieren.
-seo-description: Browser TVSDK stellt Ihre Video-App mit Informationen zur Verfügung, die erforderlich sind, um auf den Klick eines Benutzers auf eine anklickbare Anzeige zu reagieren.
-seo-title: Klickbare Anzeigen
 title: Klickbare Anzeigen
-uuid: 493c3199-b5ba-4809-86eb-e80f10eb957b
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
