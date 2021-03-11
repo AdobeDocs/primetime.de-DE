@@ -1,13 +1,10 @@
 ---
 description: MediaPlayerNotification-Objekte enthalten Informationen zu Änderungen im Player-Status, zu Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Player-Status.
-seo-description: MediaPlayerNotification-Objekte enthalten Informationen zu Änderungen im Player-Status, zu Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Player-Status.
-seo-title: Benachrichtigungsinhalt
 title: Benachrichtigungsinhalt
-uuid: 89fb8f63-b0d5-45cd-bdad-348529fd07d0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '739'
+source-wordcount: '707'
 ht-degree: 0%
 
 ---
