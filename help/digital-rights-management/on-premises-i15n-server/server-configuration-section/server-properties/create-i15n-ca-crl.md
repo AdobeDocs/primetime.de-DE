@@ -1,9 +1,9 @@
 ---
-seo-title: Zertifikatsperrliste für Individualisierungskonten erstellen
 title: Zertifikatsperrliste für Individualisierungskonten erstellen
-uuid: f722f3d1-517f-43e3-b892-f9287527fbe6
+description: Zertifikatsperrliste für Individualisierungskonten erstellen
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Nachstehend finden Sie vereinfachte Beispielanweisungen für die Verwendung von 
 1. Ändern Sie den Arbeitsordner in den Ordner [!DNL create_crl], der in dieser Distribution enthalten ist.
 1. Kopieren Sie Ihre Personalization CA [!DNL pfx] in denselben Ordner [!DNL create_crl].
 
-   Bei den nachfolgenden Schritten wird davon ausgegangen, dass die CA-Datei für die Individualisierung [!DNL i15n.pfx] heißt. Passen Sie die Einstellungen entsprechend an.
+   Bei den nachfolgenden Schritten wird davon ausgegangen, dass die CA-Datei für Individualisierung [!DNL i15n.pfx] heißt. Passen Sie die Einstellungen entsprechend an.
 1. Extrahieren Sie den privaten Schlüssel der Datei &quot;Individualization CA [!DNL pfx]&quot;.
 
    ```
