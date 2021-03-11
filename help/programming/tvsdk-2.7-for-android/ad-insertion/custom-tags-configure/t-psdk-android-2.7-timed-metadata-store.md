@@ -1,13 +1,10 @@
 ---
 description: Ihre Anwendung muss die entsprechenden TimedMetadata-Objekte zu den richtigen Zeiten verwenden.
-seo-description: Ihre Anwendung muss die entsprechenden TimedMetadata-Objekte zu den richtigen Zeiten verwenden.
-seo-title: Speichern Sie zeitgesteuerte Metadatenobjekte, während sie gesendet werden
 title: Speichern Sie zeitgesteuerte Metadatenobjekte, während sie gesendet werden
-uuid: 0d0ddfea-6f32-467d-91bc-f18ceadcd842
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
