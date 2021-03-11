@@ -1,13 +1,10 @@
 ---
 description: Der MediaPlayer stellt eine notificationClick()-Funktion bereit, mit der bei der Wiedergabe einer klickbaren Anzeige anzeigenbezogene Ereignis ausgelöst werden. Diese Ereignis enthalten Anzeigen- und Werbeunterbrechungsinformationen, die Ihre App zur Bereitstellung von Clickthrough-Funktionen verwenden kann.
-seo-description: Der MediaPlayer stellt eine notificationClick()-Funktion bereit, mit der bei der Wiedergabe einer klickbaren Anzeige anzeigenbezogene Ereignis ausgelöst werden. Diese Ereignis enthalten Anzeigen- und Werbeunterbrechungsinformationen, die Ihre App zur Bereitstellung von Clickthrough-Funktionen verwenden kann.
-seo-title: Handhabung anklickbarer Anzeigen
 title: Handhabung anklickbarer Anzeigen
-uuid: 5d3c9d36-60d7-4272-a523-7d1fe0e1615f
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
