@@ -1,14 +1,11 @@
 ---
 description: Beim Einfügen von Livestream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
-seo-description: Beim Einfügen von Livestream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
-seo-title: Implementieren einer Rückgabe einer frühen Werbeunterbrechung
 title: Implementieren einer Rückgabe einer frühen Werbeunterbrechung
-uuid: 41b70ee1-290b-4732-899e-32b234ec1d9a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 1%
+source-wordcount: '176'
+ht-degree: 2%
 
 ---
 
