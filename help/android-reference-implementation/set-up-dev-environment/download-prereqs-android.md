@@ -1,13 +1,10 @@
 ---
-seo-title: Herunterladen und Konfigurieren der erforderlichen Software
 title: Herunterladen und Konfigurieren der erforderlichen Software
 description: Der Installationsprozess ist unkompliziert. Wenn Sie das JDK bereits auf Ihrem System installiert haben, können Sie diesen Schritt überspringen. Beachten Sie jedoch, dass JDK, Eclipse IDE und OS kompatibel sein müssen.
-seo-description: Der Installationsprozess ist unkompliziert. Wenn Sie das JDK bereits auf Ihrem System installiert haben, können Sie diesen Schritt überspringen. Beachten Sie jedoch, dass JDK, Eclipse IDE und OS kompatibel sein müssen.
-uuid: ca29144f-8088-4c8d-93cf-aa59007da034
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '393'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
