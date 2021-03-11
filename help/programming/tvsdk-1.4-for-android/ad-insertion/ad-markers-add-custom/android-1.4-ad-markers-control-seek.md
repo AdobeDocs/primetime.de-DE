@@ -1,13 +1,10 @@
 ---
 description: Sie können das Standardverhalten für die Suche von TVSDK nach Anzeigen überschreiben, wenn Sie benutzerdefinierte Anzeigenmarken verwenden.
-seo-description: Sie können das Standardverhalten für die Suche von TVSDK nach Anzeigen überschreiben, wenn Sie benutzerdefinierte Anzeigenmarken verwenden.
-seo-title: Steuern des Wiedergabeverhaltens für die Suche nach benutzerdefinierten Anzeigenmarken
 title: Steuern des Wiedergabeverhaltens für die Suche nach benutzerdefinierten Anzeigenmarken
-uuid: cf973caf-be29-46ce-bfa4-651e7653f8d4
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---
