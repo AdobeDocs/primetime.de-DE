@@ -1,13 +1,10 @@
 ---
 description: Sie können die Referenz-Implementierung so einrichten, dass Adobe Analytics Berichte verwendet wird.
-seo-description: Sie können die Referenz-Implementierung so einrichten, dass Adobe Analytics Berichte verwendet wird.
-seo-title: Adobe Analytics Berichte konfigurieren
 title: Adobe Analytics Berichte konfigurieren
-uuid: bdf8bb7f-a0c8-48a2-a632-0b872687f3fe
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
