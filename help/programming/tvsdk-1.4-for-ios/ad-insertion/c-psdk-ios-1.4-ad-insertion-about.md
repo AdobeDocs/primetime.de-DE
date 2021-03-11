@@ -1,13 +1,10 @@
 ---
 description: Mit der Anzeigeneinfügung werden Anzeigen für Video-on-Demand (VOD), für Live-Streaming und für lineares Streaming mit Anzeigenverfolgung und Anzeigenwiedergabe aufgelöst. TVSDK stellt die erforderlichen Anforderungen an den Anzeigen-Server, empfängt Informationen über Anzeigen für den angegebenen Inhalt und platziert die Anzeigen in den Inhalten in Phasen.
-seo-description: Mit der Anzeigeneinfügung werden Anzeigen für Video-on-Demand (VOD), für Live-Streaming und für lineares Streaming mit Anzeigenverfolgung und Anzeigenwiedergabe aufgelöst. TVSDK stellt die erforderlichen Anforderungen an den Anzeigen-Server, empfängt Informationen über Anzeigen für den angegebenen Inhalt und platziert die Anzeigen in den Inhalten in Phasen.
-seo-title: Anzeigen einfügen
 title: Anzeigen einfügen
-uuid: 6fffb340-65ea-4c47-a55b-c0ec4917d37c
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
