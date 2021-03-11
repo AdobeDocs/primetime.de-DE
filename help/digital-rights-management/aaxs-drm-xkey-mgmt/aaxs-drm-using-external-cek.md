@@ -1,13 +1,10 @@
 ---
 description: Verwenden Sie die externe CEK-Funktion, um Lizenzen mit Ihrem vorhandenen CKMS anzuzeigen und zu verpacken.
-seo-description: Verwenden Sie die externe CEK-Funktion, um Lizenzen mit Ihrem vorhandenen CKMS anzuzeigen und zu verpacken.
-seo-title: Verwenden von externen CEK-Lizenzen für Vend- und Paketlizenzen
 title: Verwenden von externen CEK-Lizenzen für Vend- und Paketlizenzen
-uuid: 1bfd8c6c-4ae9-47de-8247-085b5360127d
 translation-type: tm+mt
-source-git-commit: fe9493d610bc6fb97d30351c707b73cda92c67a0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
