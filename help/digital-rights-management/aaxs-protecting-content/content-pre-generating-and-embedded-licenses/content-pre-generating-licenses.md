@@ -1,9 +1,9 @@
 ---
-seo-title: Vorgenerieren von Lizenzen
 title: Vorgenerieren von Lizenzen
-uuid: 31430753-11f1-4ce5-b402-cf4279119a05
+description: Vorgenerieren von Lizenzen
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%
@@ -29,6 +29,6 @@ Wenn für die Richtlinie eine domänengebundene Lizenz erforderlich ist, geben S
 
 Wenn die Richtlinie einen Remote-Key-Versand für iOS-Geräte erfordert, muss das Key-Server-Zertifikat mit `setKeyServerCertificate()` bereitgestellt werden, es sei denn, ein verkettetes Leaf wird generiert.
 
-Um eine Lizenz zu generieren, rufen Sie `generateLicense()` auf und geben Sie den Lizenztyp (Leaf oder Root) und ein oder mehrere Empfänger-Zertifikate an. Je nach den in der Richtlinie angegebenen Anforderungen handelt es sich bei dem Empfänger-Zertifikat entweder um ein Computerzertifikat oder ein Domänenzertifikat. Wenn Sie ein verkettetes Leaf generieren, ist kein Empfänger erforderlich. Nachdem die Lizenz generiert wurde, können die in der Richtlinie angegebenen Nutzungsregeln überschrieben werden. Rufen Sie schließlich `signLicense()` auf, um die Lizenz zu signieren und eine Instanz von `PreGeneratedLicense` abzurufen. Die Lizenz kann jetzt in einer Datei gespeichert werden (mit `getBytes()` zum Abrufen der serialisierten Lizenz) oder in verschlüsselten Inhalt eingebettet werden. Siehe [Einbetten von Lizenzen](../../aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-embedding-licenses.md).
+Um eine Lizenz zu generieren, rufen Sie `generateLicense()` auf und geben Sie den Lizenztyp (Leaf oder Root) und ein oder mehrere Empfänger-Zertifikate an. Je nach den in der Richtlinie angegebenen Anforderungen handelt es sich bei dem Empfänger-Zertifikat entweder um ein Computerzertifikat oder ein Domänenzertifikat. Wenn Sie ein verkettetes Leaf generieren, ist kein Empfänger erforderlich. Nachdem die Lizenz generiert wurde, können die in der Richtlinie angegebenen Nutzungsregeln überschrieben werden. Rufen Sie schließlich `signLicense()` auf, um die Lizenz zu signieren und eine Instanz von `PreGeneratedLicense` abzurufen. Die Lizenz kann jetzt in einer Datei gespeichert werden (verwenden Sie `getBytes()`, um die serialisierte Lizenz abzurufen) oder in verschlüsselten Inhalt eingebettet werden. Siehe [Einbetten von Lizenzen](../../aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-embedding-licenses.md).
 
 Beispiel-Code, der vorab generierte Lizenzen demonstriert, finden Sie unter `com.adobe.flashaccess.samples.licensegen.GenerateLicense` im Verzeichnis der Referenzimplementierungs-Befehlszeilenwerkzeuge &quot;samples&quot;.
