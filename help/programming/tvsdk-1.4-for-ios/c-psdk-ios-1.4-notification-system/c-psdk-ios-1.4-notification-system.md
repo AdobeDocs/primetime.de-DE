@@ -1,13 +1,10 @@
 ---
 description: PTNotification-Objekte bieten Informationen zu Änderungen im Player-Status, Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Status des Players.
-seo-description: PTNotification-Objekte bieten Informationen zu Änderungen im Player-Status, Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Status des Players.
-seo-title: Benachrichtigungen zu Player-Status, Aktivität, Fehlern und Protokollen
 title: Benachrichtigungen zu Player-Status, Aktivität, Fehlern und Protokollen
-uuid: 59716a66-3736-4076-8011-8104bfe3a83a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
