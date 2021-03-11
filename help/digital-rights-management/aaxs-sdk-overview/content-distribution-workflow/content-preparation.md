@@ -1,13 +1,10 @@
 ---
 description: Jeder Einsatz von Adobe Access besteht aus zwei Hauptschritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
-seo-description: Jeder Einsatz von Adobe Access besteht aus zwei Hauptschritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
-seo-title: Inhaltsvorbereitung
 title: Inhaltsvorbereitung
-uuid: 7a3562c6-6033-4e28-8f0a-18e3cb8987b9
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
