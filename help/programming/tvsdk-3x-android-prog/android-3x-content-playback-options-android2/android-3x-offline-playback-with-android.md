@@ -1,12 +1,10 @@
 ---
 description: 'Es wurden neue APIs eingeführt, die TVSDK anweisen, den Netzwerkkonnektivitätsstatus beim Herunterladen von Manifesten zu ignorieren. '
-seo-description: 'Es wurden neue APIs eingeführt, die TVSDK anweisen, den Netzwerkkonnektivitätsstatus beim Herunterladen von Manifesten zu ignorieren. '
-seo-title: Offline-Wiedergabe mit Android
 title: Offline-Wiedergabe mit Android
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
