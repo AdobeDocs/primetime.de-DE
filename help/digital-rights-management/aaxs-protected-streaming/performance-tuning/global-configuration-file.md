@@ -1,9 +1,9 @@
 ---
-seo-title: Globale Konfigurationsdatei
 title: Globale Konfigurationsdatei
-uuid: 48c45f56-55c2-4526-b854-5552caf21541
+description: Globale Konfigurationsdatei
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Die größte Auswirkung auf die Leistung können Sie durch die Verwendung der Einstellungen in der globalen Konfigurationsdatei &quot;flashaccess-global.xml&quot;erzielen. Zu diesen Einstellungen gehören die Elemente `<Caching>` und `<Logging>`.
 
-* `<Caching>` Das  `<Caching>` Element steuert die Zwischenspeicherung von Konfigurationsdateien im Speicher. Das `<Caching>`-Element hat die folgende Syntax:
+* `<Caching>` Das  `<Caching>` Element steuert die Zwischenspeicherung von Konfigurationsdateien im Speicher. Das `<Caching>`-Element hat folgende Syntax:
 
    ```
    <Caching refreshDelaySeconds="..." numTenants="..."/>
