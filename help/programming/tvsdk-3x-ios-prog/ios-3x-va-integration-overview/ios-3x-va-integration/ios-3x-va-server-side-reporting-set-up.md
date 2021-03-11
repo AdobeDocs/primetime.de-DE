@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Einrichten von Video Analytics Berichte auf Serverseite
 title: Einrichten von Video Analytics Berichte auf Serverseite
-uuid: 46af6094-3607-4c37-968e-2633e3895315
+description: Einrichten von Video Analytics Berichte auf Serverseite
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
