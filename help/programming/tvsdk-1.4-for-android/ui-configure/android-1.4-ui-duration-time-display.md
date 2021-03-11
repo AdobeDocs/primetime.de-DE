@@ -1,13 +1,10 @@
 ---
 description: Sie können TVSDK verwenden, um Informationen über die Medien abzurufen, die Sie in der Suchleiste anzeigen können.
-seo-description: Sie können TVSDK verwenden, um Informationen über die Medien abzurufen, die Sie in der Suchleiste anzeigen können.
-seo-title: Dauer, aktuelle Zeit und verbleibende Zeit des Videos anzeigen
 title: Dauer, aktuelle Zeit und verbleibende Zeit des Videos anzeigen
-uuid: afb43169-2d82-4137-ba38-27caef3d8c21
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -80,7 +77,7 @@ Sie können TVSDK verwenden, um Informationen über die Medien abzurufen, die Si
 
 1. Verwenden Sie einen Timer, um die aktuelle Zeit regelmäßig abzurufen und die SeekBar zu aktualisieren.
 
-   Im folgenden Beispiel wird die Helper-Klasse `Clock.java` als Timer verwendet, die im Referenz-Player PrimetimeReference verfügbar ist. Diese Klasse legt einen Ereignis-Listener fest und löst jede Sekunde ein `onTick`-Ereignis oder einen anderen Timeout-Wert aus, den Sie angeben können.
+   Im folgenden Beispiel wird die Helper-Klasse `Clock.java` als Timer verwendet, die im Referenz-Player PrimetimeReference verfügbar ist. Diese Klasse setzt jeden Ereignis-Listener und Trigger ein `onTick`-Ereignis oder einen anderen Timeout-Wert, den Sie angeben können.
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
