@@ -1,13 +1,10 @@
 ---
 description: Wenn Sie eine MediaPlayer-Instanz zurücksetzen, wird sie an ihren nicht initialisierten IDLE-Status zurückgegeben, wie in MediaPlayerStatus definiert.
-seo-description: Wenn Sie eine MediaPlayer-Instanz zurücksetzen, wird sie an ihren nicht initialisierten IDLE-Status zurückgegeben, wie in MediaPlayerStatus definiert.
-seo-title: Zurücksetzen oder Wiederverwenden einer MediaPlayer-Instanz
 title: Zurücksetzen oder Wiederverwenden einer MediaPlayer-Instanz
-uuid: b376096b-0aed-4ac2-96e5-e30a4eaf742e
 translation-type: tm+mt
-source-git-commit: c547002eb8946f8ccc5a79d0836f3f814e823b97
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
