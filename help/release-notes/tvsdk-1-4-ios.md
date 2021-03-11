@@ -1,16 +1,12 @@
 ---
 title: TVSDK 1.4 für iOS-Versionshinweise
-seo-title: TVSDK 1.4 für iOS-Versionshinweise
 description: TVSDK 1.4 für iOS-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme und Geräteprobleme in TVSDK iOS 1.4
-seo-description: TVSDK 1.4 für Android - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme und Geräteprobleme in TVSDK iOS 1.4
-uuid: c1df12bd-aa21-47e8-ade4-1e497882ce9b
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: 452f8699-7857-49ab-9caa-22204b19fe4a
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '6578'
+source-wordcount: '6550'
 ht-degree: 0%
 
 ---
@@ -303,7 +299,7 @@ Comment Type: draft
 * (ZD #29242) - Airplay Video Play-back schlägt fehl, wenn Anzeigen aktiviert sind
 
    Wenn Anzeigen aktiviert sind und AirPlay aktiviert ist, um mit der Wiedergabe eines Videos zu beginnen, wird die Videowiedergabe nie zu Beginn und es wird kein Fehler angezeigt
-* (ZD#33341) - DRMInterface.h löst Buildwarnungen in Xcode 9 aus
+* (ZD#33341) - DRMInterface.h Trigger bauen Warnungen in Xcode 9
 
    Es wurden zwei Blockprototypen in DRMInterface.h behoben, bei denen das Wort &quot;void&quot;in den Listen der Parameter fehlte
 * (ZD#31979) - Wird nicht kompiliert/ausgeführt, wenn iOS 10 oder höher für iPhone 7/iPhone 7+ ist
@@ -322,7 +318,7 @@ Comment Type: draft
 
 * (ZD #32465) - Player kann keine zusammengeführten Playlisten verarbeiten.
 
-   Aufruf von &quot;completeLoadingWithError&quot;(mit: Fehler) für AV-Stiftung, um alternative Streams/Auslöserfailover auszuprobieren.
+   Aufruf von &quot;completeLoadingWithError&quot;(mit: Fehler) für AV-Stiftung, um alternative Streams/Trigger-Failover auszuprobieren.
 
 * (ZD #31951) - TVSDK-Fehler bei Lizenzrotationen.
 
@@ -636,7 +632,7 @@ Dieses Problem wurde behoben, indem VideoAnalyticsTracker aktualisiert wurde, um
 
 * (ZD #20784) - Analytics: Auslösen von Inhaltsbeendigungen für Live-Video-Transitionen
 
-Dieses Problem wurde behoben, indem eine Logik hinzugefügt wurde, die den Abschluss von Inhalten während einer Videoverfolgungssitzung manuell auslöst.
+Dieses Problem wurde behoben, indem eine Logik hinzugefügt wurde, die den Abschluss von Inhalten während einer Videoverfolgungssitzung manuell Trigger.
 
 Die folgenden Bibliotheken wurden aktualisiert:
 
