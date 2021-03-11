@@ -1,13 +1,10 @@
 ---
 description: Wenn Sie Adobe Primetime DRM Professional verwenden, können Sie Lizenzen vorab generieren und Lizenzen in Inhalte einbetten. Diese Funktion kann mit der erweiterten Lizenzketten kombiniert werden, sodass eine Leaf-Lizenz vorab generiert und in den Inhalt eingebettet wird und der Client eine Root-Lizenz (an einen Computer oder eine Domäne gebunden) von einem Lizenzserver anfordern kann. Alternativ können Clientanwendungen einen Arbeitsablauf implementieren, bei dem sich das Gerät bei einem Server vorab registriert, der Server Lizenzen vorab generiert, die an dieses Gerät gebunden sind, und der Client seine Lizenzen von einem einfachen HTTP-Webserver abruft.
-seo-description: Wenn Sie Adobe Primetime DRM Professional verwenden, können Sie Lizenzen vorab generieren und Lizenzen in Inhalte einbetten. Diese Funktion kann mit der erweiterten Lizenzketten kombiniert werden, sodass eine Leaf-Lizenz vorab generiert und in den Inhalt eingebettet wird und der Client eine Root-Lizenz (an einen Computer oder eine Domäne gebunden) von einem Lizenzserver anfordern kann. Alternativ können Clientanwendungen einen Arbeitsablauf implementieren, bei dem sich das Gerät bei einem Server vorab registriert, der Server Lizenzen vorab generiert, die an dieses Gerät gebunden sind, und der Client seine Lizenzen von einem einfachen HTTP-Webserver abruft.
-seo-title: Vorgenerieren von Lizenzen
 title: Vorgenerieren von Lizenzen
-uuid: aa7d5038-5a9b-40a2-a240-266622158b43
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '611'
 ht-degree: 0%
 
 ---
