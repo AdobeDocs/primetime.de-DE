@@ -1,12 +1,10 @@
 ---
-description: 'null'
 keywords: hard stop
-seo-description: 'null'
-seo-title: Konfigurationseigenschaften
 title: Konfigurationseigenschaften
-uuid: 216921d1-a9c1-4650-9dce-c025836986e5
+description: Konfigurationseigenschaften
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 0%
@@ -102,7 +100,7 @@ ht-degree: 0%
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.syncFrequency</span> <p class="- topic/p "><span class="codeph"> -</span> <i class="+ topic/ph hi-d/i ">syncname/value-pair</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt an, wie oft Clients Synchronisierungsmeldungen an den Server senden müssen. </p> <p>Wenn die Eigenschaft nicht eingestellt ist, senden Clients keine Synchronisierungsmeldungen, wenn sie Inhalte wiedergeben, die mit einer DRM-Richtlinie geschützt sind. Der Wert besteht aus durch Kommas getrennten Paaren <span class="codeph"> name=value</span> im folgenden Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> beginn|force=numberValue</span> </p> <p class="- topic/p ">Die folgende Liste enthält weitere Informationen zu den Optionen: 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Gibt an, wie oft Clients Synchronisierungsmeldungen an den Server senden müssen. </p> <p>Wenn die Eigenschaft nicht eingestellt ist, senden Clients keine Synchronisierungsmeldungen, wenn sie Inhalte wiedergeben, die mit einer DRM-Richtlinie geschützt sind. Der Wert besteht aus durch Kommas getrennten Paaren <span class="codeph"> name=value</span> im folgenden Format: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> Beginn|force=numberValue</span> </p> <p class="- topic/p ">Die folgende Liste enthält weitere Informationen zu den Optionen: 
      <ul id="ul_a5j_q4t_44"> 
       <li id="li_FD2C0C6DA19E455AA1917A56E09A7F84">(erforderlich) <span class="codeph"> Beginn</span> gibt an, dass die Synchronisierung mit dem Server in den angegebenen Minuten seit der letzten Synchronisierung Beginn werden muss. </li> 
       <li id="li_9DEBC57385A442C3929AE3D0E3FA8992">(Optional) <span class="codeph"> force</span> ist die Wahrscheinlichkeit (0-100), mit der der Client während der Wiedergabe eine Synchronisierungsmeldung erzwingen muss. </li> 
