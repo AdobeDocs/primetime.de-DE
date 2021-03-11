@@ -1,14 +1,11 @@
 ---
 description: Sie können Ihre eigenen Opportunity-Generatoren implementieren, indem Sie die OpportunityGenerator-Klasse implementieren.
-seo-description: Sie können Ihre eigenen Opportunity-Generatoren implementieren, indem Sie die OpportunityGenerator-Klasse implementieren.
-seo-title: Implementieren eines benutzerdefinierten Opportunitätsgenerators
 title: Implementieren eines benutzerdefinierten Opportunitätsgenerators
-uuid: 93d8253f-10f9-4950-a273-28975cb69caa
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 3%
+source-wordcount: '100'
+ht-degree: 4%
 
 ---
 
