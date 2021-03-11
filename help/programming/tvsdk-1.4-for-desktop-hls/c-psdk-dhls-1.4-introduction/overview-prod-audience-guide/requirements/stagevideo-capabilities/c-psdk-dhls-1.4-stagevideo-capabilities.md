@@ -1,13 +1,10 @@
 ---
 description: Auf Geräten, die die GPU-Beschleunigung (Hardware) unterstützen, können Sie ein flash.media.StageVideo-Objekt verwenden, um Videos auf der Gerätehardware zu verarbeiten. Die Verfügbarkeit von StageVideo hängt von den Versionen und Funktionen verschiedener Systemteile ab, einschließlich Flash Player, Videohardware, Betriebssystem, Treiber, Browser, Netzwerkverbindung und Anzeigekontext.
-seo-description: Auf Geräten, die die GPU-Beschleunigung (Hardware) unterstützen, können Sie ein flash.media.StageVideo-Objekt verwenden, um Videos auf der Gerätehardware zu verarbeiten. Die Verfügbarkeit von StageVideo hängt von den Versionen und Funktionen verschiedener Systemteile ab, einschließlich Flash Player, Videohardware, Betriebssystem, Treiber, Browser, Netzwerkverbindung und Anzeigekontext.
-seo-title: StageVideo-Funktionen und -Einschränkungen
 title: StageVideo-Funktionen und -Einschränkungen
-uuid: 7556f30b-4b9f-4258-beb6-2a4ce8f05d1a
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
