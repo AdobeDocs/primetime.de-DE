@@ -1,13 +1,10 @@
 ---
 description: Sie können TVSDK verwenden, um Informationen über die Position des Players in den Medien abzurufen und sie in der Suchleiste anzuzeigen.
-seo-description: Sie können TVSDK verwenden, um Informationen über die Position des Players in den Medien abzurufen und sie in der Suchleiste anzuzeigen.
-seo-title: Dauer, aktuelle Zeit und verbleibende Zeit des Videos anzeigen
 title: Dauer, aktuelle Zeit und verbleibende Zeit des Videos anzeigen
-uuid: 29bb6bc2-dab1-4f35-abcf-d3213605ee70
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
@@ -80,7 +77,7 @@ Sie können TVSDK verwenden, um Informationen über die Position des Players in 
 
    ![](assets/seek-bar.jpg){width=&quot;477.000pt&quot;}
 
-   Im folgenden Beispiel wird die Helper-Klasse `Clock.java` verwendet, die in `ReferencePlayer` verfügbar ist, als Timer. Diese Klasse legt einen Ereignis-Listener fest und löst jede Sekunde ein `onTick`-Ereignis oder einen anderen Timeout-Wert aus, den Sie angeben können.
+   Im folgenden Beispiel wird die Helper-Klasse `Clock.java` verwendet, die in `ReferencePlayer` verfügbar ist, als Timer. Diese Klasse setzt jeden Ereignis-Listener und Trigger ein `onTick`-Ereignis oder einen anderen Timeout-Wert, den Sie angeben können.
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
