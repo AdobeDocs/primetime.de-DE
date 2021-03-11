@@ -1,13 +1,10 @@
 ---
 description: Standardmäßig werden bei Wiedergabe-Beginn VOD-Media-Beginn bei 0 und Live-Media-Beginn am Live-Point des Clients (MediaPlayer.LIVE_POINT) gesendet. Sie können das Standardverhalten überschreiben.
-seo-description: Standardmäßig werden bei Wiedergabe-Beginn VOD-Media-Beginn bei 0 und Live-Media-Beginn am Live-Point des Clients (MediaPlayer.LIVE_POINT) gesendet. Sie können das Standardverhalten überschreiben.
-seo-title: Geben Sie einen Stream zu einem bestimmten Zeitpunkt ein
 title: Geben Sie einen Stream zu einem bestimmten Zeitpunkt ein
-uuid: 5db73b50-0629-4fb1-8f12-6c88e4cd7109
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '103'
 ht-degree: 1%
 
 ---
