@@ -1,13 +1,10 @@
 ---
 description: Sie können Ihre eigenen Inhaltsauflöser auf Basis der Standardauflöser implementieren.
-seo-description: Sie können Ihre eigenen Inhaltsauflöser auf Basis der Standardauflöser implementieren.
-seo-title: Implementieren eines benutzerdefinierten Inhaltsauflösers
 title: Implementieren eines benutzerdefinierten Inhaltsauflösers
-uuid: 88627fdc-3b68-4a9f-847e-a490ea8e3034
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '241'
 ht-degree: 1%
 
 ---
