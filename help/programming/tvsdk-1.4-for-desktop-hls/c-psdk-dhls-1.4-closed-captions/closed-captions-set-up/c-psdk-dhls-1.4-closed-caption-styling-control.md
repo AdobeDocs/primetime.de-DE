@@ -1,13 +1,10 @@
 ---
 description: Mit der ClosedCaptionStyles-Klasse können Sie Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle Untertitel festgelegt, die vom Player angezeigt werden.
-seo-description: Mit der ClosedCaptionStyles-Klasse können Sie Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle Untertitel festgelegt, die vom Player angezeigt werden.
-seo-title: Steuern des Stils für Untertitel
 title: Steuern des Stils für Untertitel
-uuid: 506c06d3-8fe0-46c9-9ed6-5b35d21c021c
 translation-type: tm+mt
-source-git-commit: b67a9dcb0abb07f4fdff4e03d9d6c0b07ff45127
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
