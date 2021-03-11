@@ -1,13 +1,10 @@
 ---
 description: Überprüfen Sie die Einschränkungen und Anforderungen für Streams und Playlists (Manifeste), einschließlich DRM-Verschlüsselungsschlüssel.
-seo-description: Überprüfen Sie die Einschränkungen und Anforderungen für Streams und Playlists (Manifeste), einschließlich DRM-Verschlüsselungsschlüssel.
-seo-title: Anforderungen an Inhalt und Manifest
 title: Anforderungen an Inhalt und Manifest
-uuid: 53cc570a-be33-4488-95e8-43f91b559b13
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '117'
+source-wordcount: '99'
 ht-degree: 0%
 
 ---
