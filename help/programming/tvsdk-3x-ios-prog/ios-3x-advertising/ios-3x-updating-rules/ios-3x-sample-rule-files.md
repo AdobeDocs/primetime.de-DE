@@ -1,13 +1,10 @@
 ---
 description: In der Datei AdobeTVSDKConfig.json können Sie sowohl Standardregeln als auch Regeln für bestimmte Zonen angeben.
-seo-description: In der Datei AdobeTVSDKConfig.json können Sie sowohl Standardregeln als auch Regeln für bestimmte Zonen angeben.
-seo-title: Beispiele für kreative Auswahlregeln
 title: Beispiele für kreative Auswahlregeln
-uuid: 0342de7e-b9cd-48e3-8bd1-e463bd6d0495
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---
