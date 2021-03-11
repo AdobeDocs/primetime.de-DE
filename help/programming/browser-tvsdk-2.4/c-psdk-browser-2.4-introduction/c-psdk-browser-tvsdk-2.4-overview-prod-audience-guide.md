@@ -1,13 +1,10 @@
 ---
 description: Dieses Handbuch enthält Informationen zur Entwicklung von Videoplayer-Anwendungen mit Browser TVSDK.
-seo-description: Dieses Handbuch enthält Informationen zur Entwicklung von Videoplayer-Anwendungen mit Browser TVSDK.
-seo-title: Produktübersicht und Audience
 title: Produktübersicht und Audience
-uuid: 902baabf-5e85-4d9c-8b5a-70ec0842e1bc
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
