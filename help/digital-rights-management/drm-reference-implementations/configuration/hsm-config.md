@@ -1,13 +1,10 @@
 ---
 description: Sie können die Referenz-Implementierung mit dem Sun PKCS#11-Anbieter konfigurieren, der HSM unterstützt. Die Verwendung eines HSM ist zwar nicht erforderlich, wird jedoch empfohlen.
-seo-description: Sie können die Referenz-Implementierung mit dem Sun PKCS#11-Anbieter konfigurieren, der HSM unterstützt. Die Verwendung eines HSM ist zwar nicht erforderlich, wird jedoch empfohlen.
-seo-title: HSM-Konfiguration
 title: HSM-Konfiguration
-uuid: 2741ac40-aa42-4aa7-9864-037f3ed3dee2
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
