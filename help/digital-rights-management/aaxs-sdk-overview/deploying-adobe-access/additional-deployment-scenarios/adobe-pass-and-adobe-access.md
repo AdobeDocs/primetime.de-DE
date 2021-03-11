@@ -1,9 +1,9 @@
 ---
-seo-title: Zugriff auf Adobe Pass und Adobe
 title: Zugriff auf Adobe Pass und Adobe
-uuid: 09e75cd7-00b3-4f0f-869e-43dc4d5c3bf7
+description: Zugriff auf Adobe Pass und Adobe
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Der *Access Enabler* kann dann Backend-Autorisierungen zwischen dem Adobe Pass-D
 
 Die Authentifizierungs- und Autorisierungstoken werden mit der eindeutigen ID und dem privaten Schlüssel des Adobe Access-Clients signiert, um Manipulationen oder Spoofing zu vermeiden. Auf dieses Token kann nur über *Access Enabler* zugegriffen werden.
 
-Der Videoplayer kann den Prozess auslösen, indem `getAuthorization` auf *Access Enabler* aufgerufen wird. Wenn gültige AuthN/AuthZ-Token vorhanden sind, gibt der *AccessEnabler* einen Rückruf an den Videoplayer aus, der ein Token für die Wiedergabe des Videoinhalts mit kurzer Lebensdauer enthält.
+Der Videoplayer kann den Vorgang durch Aufruf von `getAuthorization` unter *Access Enabler* Trigger werden. Wenn gültige AuthN/AuthZ-Token vorhanden sind, gibt der *AccessEnabler* einen Rückruf an den Videoplayer aus, der ein Token für die Wiedergabe des Videoinhalts mit kurzer Lebensdauer enthält.
 
 Adobe Pass stellt eine Java-Bibliothek für die Medienvalidierung zur Verfügung, die auf einem Server bereitgestellt werden kann. Wenn Sie den Flash Access-Server zum Schutz von Inhalten verwenden, können Sie den MedienToken-Validator mit einem serverseitigen Plug-In für den Zugriff auf die Adobe integrieren, um nach erfolgreicher Überprüfung des Medientokens automatisch eine generische Lizenz auszustellen. Der Inhalt wird dann vom CDN-Server an den Client gestreamt. Um eine Inhaltslizenz zu erwerben, kann das Token mit kurzer Lebensdauer an den Adobe Access-Server gesendet werden, auf dem die Gültigkeit des Tokens überprüft und eine Lizenz erteilt werden kann.
 
