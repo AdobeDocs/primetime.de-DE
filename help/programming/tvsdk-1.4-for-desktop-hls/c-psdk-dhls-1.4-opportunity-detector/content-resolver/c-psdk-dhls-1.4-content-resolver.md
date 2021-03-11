@@ -1,13 +1,10 @@
 ---
 description: Ein Opportunitätsdetektor ist eine TVADK-Komponente, die benutzerdefinierte Tags in einem Stream erkennt und Platzierungsmöglichkeiten identifiziert. Diese Möglichkeiten werden an den Inhaltsauflöser gesendet, der den Arbeitsablauf zum Einfügen von Inhalten/Anzeigen basierend auf den Eigenschaften und Metadaten der Platzierungsgelegenheit anpassen kann.
-seo-description: Ein Opportunitätsdetektor ist eine TVADK-Komponente, die benutzerdefinierte Tags in einem Stream erkennt und Platzierungsmöglichkeiten identifiziert. Diese Möglichkeiten werden an den Inhaltsauflöser gesendet, der den Arbeitsablauf zum Einfügen von Inhalten/Anzeigen basierend auf den Eigenschaften und Metadaten der Platzierungsgelegenheit anpassen kann.
-seo-title: Anpassen von Opportunitätsdetektoren und Inhaltsauflösungen
 title: Anpassen von Opportunitätsdetektoren und Inhaltsauflösungen
-uuid: 7bd04c8f-6f04-4321-88e8-9bb93251d940
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
