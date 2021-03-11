@@ -1,13 +1,10 @@
 ---
 description: Sie können die Videonutzung in der Primetime-Android-Referenzimplementierung verfolgen, indem Sie sie für die Verwendung mit Ihrem Adobe Analytics-Konto konfigurieren.
-seo-description: Sie können die Videonutzung in der Primetime-Android-Referenzimplementierung verfolgen, indem Sie sie für die Verwendung mit Ihrem Adobe Analytics-Konto konfigurieren.
-seo-title: Videoanalyse konfigurieren
 title: Videoanalyse konfigurieren
-uuid: ce2ebab3-b3c8-472a-9c54-16ddb1c3cc4e
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
