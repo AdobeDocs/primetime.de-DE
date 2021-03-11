@@ -1,13 +1,10 @@
 ---
 description: Browser TVSDK kann geänderte Wiedergabeinformationen in Übergeordnet m3u8-Manifesten für Live-Streaming erkennen und die Wiedergabeinformationen aktualisieren, während der Stream wiedergegeben wird. Browser TVSDK unterstützt einen dynamischen Satz von Bitrate-Profilen, wenn die Profile aus dem Übergeordnet-Manifest erscheinen oder verschwinden, einschließlich nicht überlappender Profil-Bitraten zwischen Updates.
-seo-description: Browser TVSDK kann geänderte Wiedergabeinformationen in Übergeordnet m3u8-Manifesten für Live-Streaming erkennen und die Wiedergabeinformationen aktualisieren, während der Stream wiedergegeben wird. Browser TVSDK unterstützt einen dynamischen Satz von Bitrate-Profilen, wenn die Profile aus dem Übergeordnet-Manifest erscheinen oder verschwinden, einschließlich nicht überlappender Profil-Bitraten zwischen Updates.
-seo-title: Live-Übergeordnet-Manifest-Update
 title: Live-Übergeordnet-Manifest-Update
-uuid: 4b918a73-dacf-465a-82d6-404c6bdb01f2
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
