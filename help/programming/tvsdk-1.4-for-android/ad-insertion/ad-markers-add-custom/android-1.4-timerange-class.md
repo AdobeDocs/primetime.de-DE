@@ -1,13 +1,10 @@
 ---
 description: Mit benutzerdefinierten Anzeigenmarken können Sie eine Reihe von TimeRange-Spezifikationen, die Zeitleistensegmente darstellen, an TVSDK weiterleiten.
-seo-description: Mit benutzerdefinierten Anzeigenmarken können Sie eine Reihe von TimeRange-Spezifikationen, die Zeitleistensegmente darstellen, an TVSDK weiterleiten.
-seo-title: TimeRange-Klasse
 title: TimeRange-Klasse
-uuid: adf4f1ad-6b3b-48ac-a388-ee1fd54f770b
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
@@ -19,7 +16,7 @@ Mit benutzerdefinierten Anzeigenmarken können Sie eine Reihe von TimeRange-Spez
 
 <!--<a id="section_42EB6D62627A424ABA250E3246EFEFC3"></a>-->
 
-Jede TimeRange-Spezifikation im Satz stellt ein Segment in der Wiedergabeschlüssel dar, das intern von TVSDK verwaltet wird und entsprechend als anzeigenbezogene Zeitspanne gekennzeichnet werden muss.
+Jede TimeRange-Spezifikation im Satz stellt ein Segment in der Wiedergabeschlüssel dar, das intern von TVSDK gepflegt wird und entsprechend als anzeigenbezogene Zeitspanne gekennzeichnet werden muss.
 
 Die `TimeRange`-Klasse ist eine einfache Datenstruktur, die die Position des Beginns und die Endposition auf der Zeitleiste offen legt. Diese beiden schreibgeschützten Eigenschaften widerspiegeln die Vorstellung eines Zeitraums in der Wiedergabeschlüssel.
 
