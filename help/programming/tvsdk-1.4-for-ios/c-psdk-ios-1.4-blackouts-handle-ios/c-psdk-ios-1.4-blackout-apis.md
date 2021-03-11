@@ -1,13 +1,10 @@
 ---
 description: TVSDK stellt API-Elemente bereit, die bei der Implementierung von Blackouts nützlich sind, einschließlich Methoden, Metadaten und Benachrichtigungen.
-seo-description: TVSDK stellt API-Elemente bereit, die bei der Implementierung von Blackouts nützlich sind, einschließlich Methoden, Metadaten und Benachrichtigungen.
-seo-title: Blackout-API-Elemente
 title: Blackout-API-Elemente
-uuid: ddc81558-4218-44d2-92df-15926c7c96b3
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '299'
 ht-degree: 0%
 
 ---
@@ -29,7 +26,7 @@ Sie können Folgendes verwenden, wenn Sie eine Blackout-Lösung in Ihrem Player 
 
    Dadurch können Sie nicht suchbare Bereiche (ein Array von `CMTimeRanges`) für TVSDK festlegen. TVSDK prüft jedes Mal, wenn der Benutzer eine Suche nach diesen Bereichen durchführt. Wenn es festgelegt ist und der Benutzer in einen nicht suchbaren Bereich sucht, zwingt TVSDK den Viewer bis zum Ende des nicht suchbaren Bereichs.
 
-* **BEGINN HIER** **** NEXTPTAdMetadataAktivieren oder deaktivieren Sie die Vorspulen-Funktion für einen Live-Stream, indem Sie  `enableLivePreroll` auf YES oder NO festlegen. Wenn NO, gibt TVSDK vor der Inhaltswiedergabe keinen expliziten Ad-Server-Aufruf für Pre-Roll-Anzeigen aus und spielt daher nicht die Pre-Roll-Wiedergabe ab. Dies hat keine Auswirkungen auf die mittleren Rollen. Die Standardeinstellung ist JA.
+* **Beginn HIER** **** NEXTPTAdMetadataAktivieren oder deaktivieren Sie die Vorspulen-Funktion für einen Live-Stream, indem Sie  `enableLivePreroll` auf YES oder NO festlegen. Wenn NO, gibt TVSDK vor der Inhaltswiedergabe keinen expliziten Ad-Server-Aufruf für Pre-Roll-Anzeigen aus und spielt daher nicht die Pre-Roll-Wiedergabe ab. Dies hat keine Auswirkungen auf die mittleren Rollen. Die Standardeinstellung ist JA.
 
 * **NSNotifications**
 
