@@ -1,9 +1,9 @@
 ---
-seo-title: Leistungsoptimierung
 title: Leistungsoptimierung
-uuid: db8889c7-ecf5-4551-a6fc-1d3ab992b9ff
+description: Leistungsoptimierung
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Unter bestimmten Bedingungen können Linux-Umgebung anhalten, wenn Primetime DRM
 
 * Starten des Adobe Primetime DRM License Servers
 * Richtlinienerstellung mit dem Dienstprogramm [!DNL AdobePolicyManager]
-* Verpacken von DRM-geschützten Inhalten mit Adobe Media Server oder Primetime OfflinePackager
+* Verpacken von DRM-geschützten Inhalten mit Adobe Mediums Server oder Primetime OfflinePackager
 
 Verzögerungen während dieser Vorgänge sind häufig das Ergebnis eines niedrigen Entropie-Pools auf Ihrem Linux-Server.
 
