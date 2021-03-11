@@ -1,13 +1,10 @@
 ---
 description: TVSDK-Funktionen werden durch die Konfiguration gesteuert und über den MediaPlayer implementiert.
-seo-description: TVSDK-Funktionen werden durch die Konfiguration gesteuert und über den MediaPlayer implementiert.
-seo-title: Erstellen von Funktionsmanagern durch Weiterleiten von Konfigurationsinformationen an den MediaPlayer
 title: Erstellen von Funktionsmanagern durch Weiterleiten von Konfigurationsinformationen an den MediaPlayer
-uuid: 106ececd-a670-4360-b000-a31fec65233c
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
@@ -25,7 +22,7 @@ TVSDK-Funktionen werden durch die Konfiguration gesteuert und über den MediaPla
 
 * `MediaPlayer` ist das TVSDK-Medienplayer-Objekt, das die Videoressource enthält.
 
-   Funktionsmanager registrieren TVSDK-Ereignis-Listener für dieses Player-Objekt, rufen Daten aus der Wiedergabesitzung ab und lösen TVSDK-Funktionen für die Wiedergabesitzung aus.
+   Funktionsmanager registrieren TVSDK-Ereignis-Listener für dieses Player-Objekt, rufen Daten aus der Wiedergabesitzung ab und Trigger TVSDK-Funktionen zur Wiedergabesitzung.
 
 Jede Funktion verfügt über eine entsprechende Konfigurationsoberfläche. `CCManager` verwendet beispielsweise `ICCConfig`, um die Konfiguration abzurufen. `ICCConfig` enthält Methoden zum Abrufen der Konfigurationsinformationen, die sich ausschließlich auf die Untertitelung beziehen.
 
