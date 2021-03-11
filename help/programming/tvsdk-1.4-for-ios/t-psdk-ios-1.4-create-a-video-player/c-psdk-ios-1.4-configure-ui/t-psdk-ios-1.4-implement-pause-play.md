@@ -1,13 +1,10 @@
 ---
 description: Sie können Schaltflächen einrichten, mit denen TVSDK-Methoden aufgerufen werden, um die Medien anzuhalten und abzuspielen.
-seo-description: Sie können Schaltflächen einrichten, mit denen TVSDK-Methoden aufgerufen werden, um die Medien anzuhalten und abzuspielen.
-seo-title: Schaltfläche "Abspielen/Anhalten"implementieren
 title: Schaltfläche "Abspielen/Anhalten"implementieren
-uuid: eccdce4b-0114-4389-b5ee-74fe62d38ed8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: '52'
 ht-degree: 0%
 
 ---
