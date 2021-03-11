@@ -1,13 +1,10 @@
 ---
 description: Die Servicequalität (Quality of Service, QoS) bietet eine detaillierte Ansicht der Leistung der Video-Engine. TVSDK bietet detaillierte Statistiken über Wiedergabe, Pufferung und Geräte.
-seo-description: Die Servicequalität (Quality of Service, QoS) bietet eine detaillierte Ansicht der Leistung der Video-Engine. TVSDK bietet detaillierte Statistiken über Wiedergabe, Pufferung und Geräte.
-seo-title: Qualität der Dienstleistungsstatistiken
 title: Qualität der Dienstleistungsstatistiken
-uuid: 8e990461-065b-4efa-b77c-b2b832f86f7d
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---
