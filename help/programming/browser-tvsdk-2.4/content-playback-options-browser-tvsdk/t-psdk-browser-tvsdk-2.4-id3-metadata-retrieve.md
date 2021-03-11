@@ -1,13 +1,10 @@
 ---
 description: ID3-Tags enthalten Informationen zu einer Audio- oder Videodatei, wie z. B. den Titel der Datei oder den Namen des Künstlers. Browser TVSDK erkennt ID3-Tags auf der Segmentebene Transport Stream (TS) in HLS-Streams und sendet ein Ereignis. Die Anwendung kann Daten aus dem Tag extrahieren.
-seo-description: ID3-Tags enthalten Informationen zu einer Audio- oder Videodatei, wie z. B. den Titel der Datei oder den Namen des Künstlers. Browser TVSDK erkennt ID3-Tags auf der Segmentebene Transport Stream (TS) in HLS-Streams und sendet ein Ereignis. Die Anwendung kann Daten aus dem Tag extrahieren.
-seo-title: ID3-Tags
 title: ID3-Tags
-uuid: a47cd0cc-b11d-47df-b1fb-56918896ef4c
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 ID3-Tags enthalten Informationen zu einer Audio- oder Videodatei, wie z. B. den Titel der Datei oder den Namen des Künstlers. Browser TVSDK erkennt ID3-Tags auf der Segmentebene Transport Stream (TS) in HLS-Streams und sendet ein Ereignis. Die Anwendung kann Daten aus dem Tag extrahieren.
 
-Wenn neue ID3-Metadaten im zugrunde liegenden HLS-Stream gefunden werden, löst Browser TVSDK ein `AdobePSDK.TimedMetadataEvent`-Ereignis aus.
+Wenn im zugrunde liegenden HLS-Stream neue ID3-Metadaten gefunden werden, werden Browser TVSDK-Trigger und ein `AdobePSDK.TimedMetadataEvent`-Ereignis angezeigt.
 
 Das `TimedMetadata`-Objekt für ID3 verfügt über die folgenden Eigenschaften:
 
