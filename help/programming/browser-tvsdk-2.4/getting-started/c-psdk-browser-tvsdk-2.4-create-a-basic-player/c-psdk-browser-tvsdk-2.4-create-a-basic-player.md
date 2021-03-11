@@ -1,13 +1,10 @@
 ---
 description: Um Browser TVSDK verwenden zu können, müssen Sie einen einfachen Player erstellen und konfigurieren. Zum Abspielen von Videoinhalten können Sie einen einfachen Player auf zwei Arten mit dem Browser TVSDK oder mithilfe des UI-Frameworks erstellen.
-seo-description: Um Browser TVSDK verwenden zu können, müssen Sie einen einfachen Player erstellen und konfigurieren. Zum Abspielen von Videoinhalten können Sie einen einfachen Player auf zwei Arten mit dem Browser TVSDK oder mithilfe des UI-Frameworks erstellen.
-seo-title: Grundlegender Player
 title: Grundlegender Player
-uuid: 44a27458-be12-452f-92b9-3cef79439257
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
