@@ -1,13 +1,10 @@
 ---
 description: Um lokal generierte Zertifikatsperrlisten (CRLs) und Listen zur Richtlinienaktualisierung zu verwenden, verwenden Sie die Adobe Primetime DRM-APIs, um die Signatur zu überprüfen.
-seo-description: Um lokal generierte Zertifikatsperrlisten (CRLs) und Listen zur Richtlinienaktualisierung zu verwenden, verwenden Sie die Adobe Primetime DRM-APIs, um die Signatur zu überprüfen.
-seo-title: Lokal generierte Zertifikatsperrlisten verwenden
 title: Lokal generierte Zertifikatsperrlisten verwenden
-uuid: 2e20b8ca-8606-4c27-b585-2f020b93be32
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
