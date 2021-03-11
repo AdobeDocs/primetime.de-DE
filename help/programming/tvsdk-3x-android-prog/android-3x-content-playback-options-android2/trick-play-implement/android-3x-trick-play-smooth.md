@@ -1,13 +1,10 @@
 ---
 description: Wenn Ihr System Zugriff auf die hardwareunterstützte Dekodierung hat, können Sie mit dem iFrame-Format eine gleichmäßigere Trick-Wiedergabe als mit der reinen Software TVSDK-Implementierung erzielen.
-seo-description: Wenn Ihr System Zugriff auf die hardwareunterstützte Dekodierung hat, können Sie mit dem iFrame-Format eine gleichmäßigere Trick-Wiedergabe als mit der reinen Software TVSDK-Implementierung erzielen.
-seo-title: Glättere Trick-Play-Vorgänge
 title: Glättere Trick-Play-Vorgänge
-uuid: 959d6c67-b64f-4666-8de7-54d247459fd1
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
