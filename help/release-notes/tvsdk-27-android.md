@@ -1,16 +1,12 @@
 ---
 title: TVSDK 2.7 für Android-Versionshinweise
-seo-title: TVSDK 2.7 für Android-Versionshinweise
 description: TVSDK 2.7 für Android - Versionshinweise beschreiben, was neu ist oder geändert wurde, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 2.7
-seo-description: TVSDK 2.7 für Android - Versionshinweise beschreiben, was neu ist oder geändert wurde, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 2.7
-uuid: 4013b97d-29f9-435b-8772-b19df7054282
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: bab78e9f-f9ba-4e1c-b778-0936ae704037
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '4123'
+source-wordcount: '4095'
 ht-degree: 0%
 
 ---
