@@ -1,13 +1,10 @@
 ---
 description: In einigen Fällen sollten Sie Endbenutzer daran hindern, Inhalte auf mehreren Geräten abzuspielen, wenn der Inhalt gekauft oder gemietet wird. Wenn der Kunde Expressplay verwendet, kann dies mithilfe der Ausdrücken-APIs erfolgen, um das Ausdrücken-Token des Benutzers an den Computer des Benutzers zu binden.
-seo-description: In einigen Fällen sollten Sie Endbenutzer daran hindern, Inhalte auf mehreren Geräten abzuspielen, wenn der Inhalt gekauft oder gemietet wird. Wenn der Kunde Expressplay verwendet, kann dies mithilfe der Ausdrücken-APIs erfolgen, um das Ausdrücken-Token des Benutzers an den Computer des Benutzers zu binden.
-seo-title: Gerätebindung
 title: Gerätebindung
-uuid: 351fa33c-4226-4ed5-829c-56b563166fec
 translation-type: tm+mt
-source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
