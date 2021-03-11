@@ -1,13 +1,10 @@
 ---
 description: HLS- und DASH-Streams bieten unterschiedliche Bitratenkodierungen (Profile) für den gleichen kurzen Videoaufruf. TVSDK kann die Qualitätsstufe für jeden Burst auf Basis der verfügbaren Bandbreite auswählen.
-seo-description: HLS- und DASH-Streams bieten unterschiedliche Bitratenkodierungen (Profile) für den gleichen kurzen Videoaufruf. TVSDK kann die Qualitätsstufe für jeden Burst auf Basis der verfügbaren Bandbreite auswählen.
-seo-title: Adaptive Bitraten (ABR) für Videoqualität
 title: Adaptive Bitraten (ABR) für Videoqualität
-uuid: e5752d7e-fa7d-407c-96df-c3830a35c66e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
