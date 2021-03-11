@@ -1,13 +1,10 @@
 ---
 description: TVSDK kontaktiert einen Anzeigen-Versand-Dienst, z. B. Adobe Primetime-Anzeigenentscheidung, und versucht, die primäre Wiedergabelistendatei abzurufen, die dem Videostream für die Anzeige entspricht. Während der Phase der Anzeigenauflösung führt TVSDK einen HTTP-Aufruf an den Remote-Ad-Versand-Server durch und analysiert die Antwort des Servers.
-seo-description: TVSDK kontaktiert einen Anzeigen-Versand-Dienst, z. B. Adobe Primetime-Anzeigenentscheidung, und versucht, die primäre Wiedergabelistendatei abzurufen, die dem Videostream für die Anzeige entspricht. Während der Phase der Anzeigenauflösung führt TVSDK einen HTTP-Aufruf an den Remote-Ad-Versand-Server durch und analysiert die Antwort des Servers.
-seo-title: Phase der Anzeigenauflösung
 title: Phase der Anzeigenauflösung
-uuid: b3e62a57-7e62-4e4e-8fa6-0d416785db67
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '291'
 ht-degree: 0%
 
 ---
