@@ -1,17 +1,13 @@
 ---
 title: TVSDK 1.4 für Android-Versionshinweise
-seo-title: TVSDK 1.4 für Android-Versionshinweise
 description: TVSDK 1.4 für Android-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 1.4.
-seo-description: TVSDK 1.4 für Android-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK Android 1.4.
-uuid: 8bd8ee42-7a1b-4c14-aad9-22804743e505
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-discoiquuid: f1ebc1a8-185a-493a-9c00-a6102dffb128
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
 workflow-type: tm+mt
-source-wordcount: '7830'
+source-wordcount: '7802'
 ht-degree: 0%
 
 ---
@@ -394,7 +390,7 @@ Dieses Problem ist mit Zendesk #22900 identisch.
 **Version 1.4.24 (1612)**
 
 * Zendesk #20784 - Analytics: Auslösen von Inhaltsbeendigungen für Live-Video-Transitionen
-Dieses Problem wurde behoben, indem eine API (trackVideoComplete) hinzugefügt wurde, mit der der Abschluss von Inhalten während einer Live-/linearen Videoverfolgungssitzung manuell ausgelöst wird.
+Dieses Problem wurde behoben, indem eine API (trackVideoComplete) hinzugefügt wurde, mit der der Abschluss von Inhalten während einer Live-/linearen Videoverfolgungssitzung manuell Trigger werden kann.
 
 * Zendesk #21977 VideoEngineZeitleiste Absturz während des AdBreak/acceptAd-Vorgangs
    * In diesem Problem wurden die folgenden Bibliotheken aktualisiert:
@@ -867,7 +863,7 @@ Der Media Player sendet MediaPlayerState.Complete fälschlicherweise während de
 | Nook-TabletAndroid-Betriebssystem: 2.3 | TI OMAP 4 | Video wird nicht abgespielt und App hängt. | Stagefright tritt nach einiger Ausführung der App in einen instabilen Zustand ein. Aufrufe an mediaPlayer::QueryCodecs hängen. | Starten Sie das Gerät neu, um den Status zurückzusetzen. |
 | Samsung Galaxy ACE | Qualcomm MSM7227 | Die SampleMediaPlayer-App kann nicht installiert werden. | Verwendet ARM v6 anstelle des gebräuchlicheren ARM v7-Chipsatzes. FP/AIR unterstützt dieses Gerät nicht. |  |
 | Samsung Galaxy ACE2Android OS: 2.3.6 | NovaThor U8500 | Video kann nicht wiedergegeben werden. | Dieser Chipsatz ist ein unbekannter Decoder für Android pre-ICS in AVE. |  |
-| Samsung Galaxy S2 (GT-I9100) | Exynos | Die Videoleistung ist für dieses Gerät nicht annähernd gleich. | Der HW-Decoder gibt dekodierte Frames mit dem falschen PTS zurück. Sieht so aus, als nutzt der Decoder die Dekodierungszeit anstelle der Präsentationszeit. |  |
+| Samsung Galaxy S2 (GT-I9100) | Exynos | Die Videoleistung ist für dieses Gerät nicht annähernd gleich. | Der HW-Decoder gibt dekodierte Frames mit dem falschen PTS zurück. Sieht so aus, als ob der Decoder die Dekodierungszeit anstelle der Präsentationszeit verwendet. |  |
 | Samsung Galaxy S2 GAndroid OS: 2.3.6 | TI OMAP4 | Abstürze beim Starten des Videos. |  | Aktualisieren Sie auf Android 2.3.7 oder 4.x. |
 | Samsung Galaxy S3 (I747) | Qualcomm MSM8960 | Gelegentlich friert das Video ein, und es wird nur die Audiowiedergabe durchgeführt, sodass es nicht mehr reagiert. |  |  |
 | Samsung Galaxy S3 I747M | SAMSUNG_M2ATT | Video friert ein. | Untersuchung. |  |
