@@ -1,13 +1,10 @@
 ---
 description: Zur Wiedergabe des DASH-Inhalts, der aus der Inhaltsverpackung stammt, muss der TVSDK-Client den Inhaltsentschlüsselungsschlüssel abrufen, der während des Verpackungsprozesses im wichtigen Akquise-Arbeitsablauf übergeben wurde. Der Entschlüsselungsschlüssel für den Clientinhalt wird dem Client normalerweise von einem Widevine/PlayReady-Lizenzserver als Antwort auf einen oder mehrere HTTP/HTTPS-Beiträge vom Client bereitgestellt.
-seo-description: Zur Wiedergabe des DASH-Inhalts, der aus der Inhaltsverpackung stammt, muss der TVSDK-Client den Inhaltsentschlüsselungsschlüssel abrufen, der während des Verpackungsprozesses im wichtigen Akquise-Arbeitsablauf übergeben wurde. Der Entschlüsselungsschlüssel für den Clientinhalt wird dem Client normalerweise von einem Widevine/PlayReady-Lizenzserver als Antwort auf einen oder mehrere HTTP/HTTPS-Beiträge vom Client bereitgestellt.
-seo-title: Übersicht über den Arbeitsablauf für Client-wichtige Anforderungen
 title: Übersicht über den Arbeitsablauf für Client-wichtige Anforderungen
-uuid: 2f01f0ae-adbf-42fa-a908-4b5b9410a26d
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
