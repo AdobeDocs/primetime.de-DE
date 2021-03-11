@@ -1,13 +1,10 @@
 ---
 description: Ereignis-Handler ermöglichen es TVSDK, auf Ereignis zu reagieren.
-seo-description: Ereignis-Handler ermöglichen es TVSDK, auf Ereignis zu reagieren.
-seo-title: Implementieren von Ereignis-Listenern und -Rückrufen
 title: Implementieren von Ereignis-Listenern und -Rückrufen
-uuid: 6b7859a4-55f9-48b1-b1f1-7b79bc92610a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '572'
 ht-degree: 0%
 
 ---
@@ -41,7 +38,7 @@ Eine vollständige Liste der Ereignis für Videoanalysen finden Sie unter Core-V
 
    TVSDK gibt Parameterwerte an Ihre Ereignis-Listener-Rückrufe zurück. Diese Werte liefern relevante Informationen über das Ereignis, das Sie in Ihren Listenern verwenden können, um entsprechende Aktionen durchzuführen.
 
-   `MediaPlayer.EventListener` liste aller Callback-Schnittstellen. Jede Schnittstelle zeigt den Rückruffamen und die Parameter an, die für jedes Ereignis zurückgegeben werden.
+   `MediaPlayer.EventListener` Liste aller Callback-Schnittstellen. Jede Schnittstelle zeigt den Rückruffamen und die Parameter an, die für jedes Ereignis zurückgegeben werden.
 
    Beispiel:
 
