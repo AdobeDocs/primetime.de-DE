@@ -1,9 +1,9 @@
 ---
-seo-title: Remote- und lokaler iOS-Key-Versand
 title: Remote- und lokaler iOS-Key-Versand
-uuid: 90f672e7-9301-4e14-adca-db2a8f951a83
+description: Remote- und lokaler iOS-Key-Versand
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
