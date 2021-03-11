@@ -1,13 +1,10 @@
 ---
 description: Full-Ereignis Replay (FER) ist ein VOD-Asset, das als Live-/DVR-Asset fungiert. Daher muss Ihre Anwendung Schritte unternehmen, um sicherzustellen, dass Anzeigen korrekt platziert werden.
-seo-description: Full-Ereignis Replay (FER) ist ein VOD-Asset, das als Live-/DVR-Asset fungiert. Daher muss Ihre Anwendung Schritte unternehmen, um sicherzustellen, dass Anzeigen korrekt platziert werden.
-seo-title: Anzeigen bei vollständiger Wiedergabe im Ereignis aktivieren
-title: Anzeigen bei vollständiger Wiedergabe im Ereignis aktivieren
-uuid: 70e463bd-332c-4f91-ac05-03e79c0939a4
+title: Aktivieren von Anzeigen bei vollständiger Wiedergabe im Ereignis
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
