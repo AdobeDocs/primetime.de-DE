@@ -1,13 +1,10 @@
 ---
 description: Alle Anforderungen zum Einfügen von Anzeigen verwenden dieselbe URL-Struktur und dieselben grundlegenden Parameter für die Abfrage. Zusätzliche Parameter für die Abfrage ermöglichen es dem Manifestserver, mit einer Vielzahl von Clients und Situationen zu arbeiten.
-seo-description: Alle Anforderungen zum Einfügen von Anzeigen verwenden dieselbe URL-Struktur und dieselben grundlegenden Parameter für die Abfrage. Zusätzliche Parameter für die Abfrage ermöglichen es dem Manifestserver, mit einer Vielzahl von Clients und Situationen zu arbeiten.
-seo-title: Anfragen zum Einfügen von Werbeanzeigen
 title: Anfragen zum Einfügen von Werbeanzeigen
-uuid: e42b3228-bff7-4202-86ed-7f631f3016ae
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
