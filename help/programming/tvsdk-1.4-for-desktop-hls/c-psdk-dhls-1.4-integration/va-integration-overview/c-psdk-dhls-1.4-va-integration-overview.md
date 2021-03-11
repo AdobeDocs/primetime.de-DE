@@ -1,13 +1,10 @@
 ---
 description: Sie können die Videonutzung verfolgen, indem Sie TVSDK mit Adobe Analytics integrieren.
-seo-description: Sie können die Videonutzung verfolgen, indem Sie TVSDK mit Adobe Analytics integrieren.
-seo-title: Videoanalyse
 title: Videoanalyse
-uuid: c3cb0574-1117-409c-8aa7-641363d8d85f
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '235'
 ht-degree: 0%
 
 ---
