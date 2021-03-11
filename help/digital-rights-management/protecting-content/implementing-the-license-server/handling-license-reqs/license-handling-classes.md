@@ -1,9 +1,9 @@
 ---
-seo-title: Übersicht
 title: Übersicht
-uuid: 2bbf0aa1-df35-429d-84df-db357fa53e47
+description: Übersicht
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
@@ -21,9 +21,9 @@ Ein Gerät kann über mehrere Lizenzen für denselben Inhalt verfügen (gleiche 
 
 ## Lizenzanforderungsbearbeitungsklassen {#section_190E3BEF316C4B09ACC21E4C2BAC5C75}
 
-* `com.adobe.flashaccess.sdk.protocol.license.LicenseHandler` - Dies ist die Klasse für den Lizenzanforderungshandler. Er liest und analysiert Lizenzanforderungen. Die `getRequests()`-Methode gibt eine Liste von `LicenseRequestMessage`-Objekten zurück.
+* `com.adobe.flashaccess.sdk.protocol.license.LicenseHandler` - Dies ist die Klasse des Lizenzanforderungshandlers. Er liest und analysiert Lizenzanforderungen. Die `getRequests()`-Methode gibt eine Liste von `LicenseRequestMessage`-Objekten zurück.
 * `com.adobe.flashaccess.sdk.protocol.license.LicenseRequestMessage` - Dies ist die Anforderungsmeldungsklasse. Der Aufrufer sollte die `LicenseRequestMessage`-Liste durchlaufen, die von `getRequests()` zurückgegeben wird, und für jede Anforderung entweder eine Lizenz generieren oder einen Fehlercode festlegen. Rufen Sie `LicenseRequestMessage.getContentInfo()` auf, um Informationen aus den Inhaltsmetadaten abzurufen, einschließlich der Inhalts-ID-, Lizenz-ID- und DRM-Richtlinien.
 
 Lizenzen und Fehler werden gleichzeitig gesendet, wenn die `LicenseHandler.close()`-Methode aufgerufen wird.
 
-Weitere Informationen finden Sie in der Referenzdokumentation zur DRM-Server-API[.](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/overview-summary.html)
+Weitere Informationen finden Sie in der Referenzdokumentation zur DRM-Server-API](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/overview-summary.html).[
