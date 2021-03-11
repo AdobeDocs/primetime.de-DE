@@ -1,13 +1,10 @@
 ---
 description: Sie können Blackouts in Live-Videostreams bearbeiten und alternative Inhalte während einer Blackout-Phase bereitstellen.
-seo-description: Sie können Blackouts in Live-Videostreams bearbeiten und alternative Inhalte während einer Blackout-Phase bereitstellen.
-seo-title: Blackout-API-Elemente
 title: Blackout-API-Elemente
-uuid: 263a8987-0c85-493a-9352-9605c877ba65
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
@@ -24,7 +21,7 @@ So behandeln Sie Blackouts in Live-Streams:
 1. Richten Sie Ihre App so ein, dass Blackout-Tags erkannt werden, indem Sie Blackout-Tags in einem Live-Stream-Manifest abonnieren.
 
    TVSDK erkennt keine Blackout-Tags allein. Sie müssen Blackout-Tags abonnieren, um eine Benachrichtigung zu erhalten, wenn die Tags während der Analyse der Manifestdatei gefunden werden.
-1. Erstellen Sie Ereignis-Listener für Tags, für die Ihr Player abonniert wird (in diesem Fall PLAYBACK- und BLACKOUTS-Tags).
+1. Erstellen Sie Ereignis-Listener für Tags, für die Ihr Player abonniert ist (in diesem Fall PLAYBACK- und BLACKOUTS-Tags).
 
    Wenn ein Tag auftritt, das Ihr Player abonniert hat (z. B. ein Blackout-Tag), entweder im Vordergrund (Hauptinhalt) oder im Hintergrund (alternativer Inhalt), löst TVSDK ein `TimedMetadataEvent` aus und erstellt ein `TimedMetadataObject` für das `TimedMetadataEvent`.
 
@@ -54,7 +51,7 @@ Sie können Folgendes verwenden, wenn Sie eine Blackout-Lösung in Ihrem Player 
 
    Dadurch können Sie nicht suchbare Bereiche (ein Array von `TimeRanges`) für TVSDK festlegen. TVSDK prüft jedes Mal, wenn der Benutzer eine Suche nach diesen Bereichen durchführt. Wenn es festgelegt ist und der Benutzer in einen nicht suchbaren Bereich sucht, zwingt TVSDK den Viewer bis zum Ende des nicht suchbaren Bereichs.
 
-* **BEGINN HIER NEXT** AdvertisingMetadataAktivieren oder deaktivieren Sie die Vorgabe für einen Live-Stream, indem Sie  `enableLivePreroll` auf true oder false einstellen. Bei &quot;false&quot;führt TVSDK keinen expliziten Ad-Server-Aufruf für Pre-Roll-Anzeigen vor der Inhaltswiedergabe durch und gibt somit keine Pre-Roll-Wiedergabe ab. Dies hat keine Auswirkungen auf die mittleren Rollen. Die Standardeinstellung ist &quot;true&quot;.
+* **Beginn HIER NEXT** AdvertisingMetadataAktivieren oder deaktivieren Sie die Vorgabe für einen Live-Stream, indem Sie  `enableLivePreroll` auf true oder false einstellen. Bei &quot;false&quot;führt TVSDK keinen expliziten Ad-Server-Aufruf für Pre-Roll-Anzeigen vor der Inhaltswiedergabe durch und gibt somit keine Pre-Roll-Wiedergabe ab. Dies hat keine Auswirkungen auf die mittleren Rollen. Die Standardeinstellung ist &quot;true&quot;.
 
 * **MediaPlayer.BlackoutsEventListener**
 
