@@ -1,13 +1,10 @@
 ---
 description: Sie können die CRS-Umpackungs-API verwenden, um Nicht-HLS- und Kreativelemente vorzeitig zu transkodieren. Daher ist eine HLS-Version verfügbar, wenn Sie sie ausführen müssen. Dadurch wird die Verzögerung von 2-4 Minuten, die mit der Just-in-time-Umverpackung (JIT) verbunden ist, vermieden.
-seo-description: Sie können die CRS-Umpackungs-API verwenden, um Nicht-HLS- und Kreativelemente vorzeitig zu transkodieren. Daher ist eine HLS-Version verfügbar, wenn Sie sie ausführen müssen. Dadurch wird die Verzögerung von 2-4 Minuten, die mit der Just-in-time-Umverpackung (JIT) verbunden ist, vermieden.
-seo-title: API neu packen
 title: API neu packen
-uuid: 03cd2428-510a-4b99-8496-059a48d5abba
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
