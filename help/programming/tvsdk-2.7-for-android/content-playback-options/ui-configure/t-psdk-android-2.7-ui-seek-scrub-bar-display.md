@@ -1,13 +1,10 @@
 ---
 description: TVSDK unterstützt die Suche nach einer bestimmten Position (Zeit), an der der Stream eine Sliding-Window Playlist ist, in Video on Demand (VOD) und Live Streams.
-seo-description: TVSDK unterstützt die Suche nach einer bestimmten Position (Zeit), an der der Stream eine Sliding-Window Playlist ist, in Video on Demand (VOD) und Live Streams.
-seo-title: Anzeigen einer Suchleiste mit der aktuellen Wiedergabeposition
 title: Anzeigen einer Suchleiste mit der aktuellen Wiedergabeposition
-uuid: df045a10-8d74-4874-8fa5-7e9571c8678d
 translation-type: tm+mt
-source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
