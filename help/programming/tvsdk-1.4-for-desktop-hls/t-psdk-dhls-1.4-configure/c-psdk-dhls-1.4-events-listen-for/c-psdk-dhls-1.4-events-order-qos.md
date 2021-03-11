@@ -1,13 +1,10 @@
 ---
 description: TVSDK sendet Servicequalitäts-(QoS-)Ereignis, um Ihre Anwendung über Ereignis zu informieren, die die Berechnung der QoS-Statistiken beeinflussen könnten, wie z.B. Pufferung und Suche von Ereignissen.
-seo-description: TVSDK sendet Servicequalitäts-(QoS-)Ereignis, um Ihre Anwendung über Ereignis zu informieren, die die Berechnung der QoS-Statistiken beeinflussen könnten, wie z.B. Pufferung und Suche von Ereignissen.
-seo-title: QoS-Ereignis
 title: QoS-Ereignis
-uuid: e6ba1e9b-435b-480d-bea9-bff41b4e0b21
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '68'
 ht-degree: 0%
 
 ---
