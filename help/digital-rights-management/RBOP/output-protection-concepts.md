@@ -1,13 +1,10 @@
 ---
 description: Dieser Abschnitt bietet einen konzeptionellen Überblick über die Konfiguration, Optionen und Bedeutungen im Zusammenhang mit dem Ausgabeschutz.
-seo-description: Dieser Abschnitt bietet einen konzeptionellen Überblick über die Konfiguration, Optionen und Bedeutungen im Zusammenhang mit dem Ausgabeschutz.
-seo-title: RBOP-Konzepte
 title: RBOP-Konzepte
-uuid: fc19c3c9-39a1-4b62-b763-101e5454a01f
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
