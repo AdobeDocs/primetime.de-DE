@@ -1,13 +1,10 @@
 ---
 description: Sie können Stilinformationen für Untertitelspuren mithilfe der TextFormat-Klasse bereitstellen, die den Stil für Untertitel festlegt, die vom Player angezeigt werden.
-seo-description: Sie können Stilinformationen für Untertitelspuren mithilfe der TextFormat-Klasse bereitstellen, die den Stil für Untertitel festlegt, die vom Player angezeigt werden.
-seo-title: Steuern des Stils für Untertitel
 title: Steuern des Stils für Untertitel
-uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: b02dfafdc78ca209da5ba0ed855342952be4288f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '853'
 ht-degree: 0%
 
 ---
