@@ -3,10 +3,10 @@ title: Primetime-Versionshinweise
 description: Primetime-Versionshinweise
 copied-description: true
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 28%
+source-wordcount: '378'
+ht-degree: 26%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 28%
 # Primetime-Versionshinweise
 
 Willkommen bei den Adobe Primetime Versionshinweisen. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
+
+## Verbesserungen und Fehlerbehebungen in TVSDK 3.13 iOS
+
+Die Version bietet Unterstützung für DEMUXED &#39;HLS/CMAF&#39; (Preroll, Midroll und Postroll)-Anzeigen für LIVE-, VOD- und FER-Streams.
+
+Weitere Fehlerbehebungen und Details finden Sie unter [TVSDK for iOS - Versionshinweise](../release-notes/tvsdk-3x-ios.md)
 
 ## Erweiterungen und Fehlerbehebungen in PTAI 21.2.2
 
