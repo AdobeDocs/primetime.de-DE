@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Primetime-Versionshinweise
 user-guide-description: Enthält versionsspezifische Informationen, Systemanforderungen, Einschränkungen sowie behobene und bekannte Probleme.
 translation-type: tm+mt
-source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
+source-git-commit: d1cf8a05172c04655c8a7c76ce116c8f7be61ec9
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 14%
@@ -21,7 +21,7 @@ ht-degree: 14%
    + [PTAI 20.12.1 - Versionshinweise](ptai-20x-release-notes.md)
    + [PTAI 19.11.1 - Versionshinweise](ptai-19x-release-notes.md)
 + TVSDK für iOS {#tvsdk-ios}
-   + [TVSDK 3.12 für iOS-Versionshinweise](tvsdk-3x-ios.md)
+   + [TVSDK 3.13 für iOS-Versionshinweise](tvsdk-3x-ios.md)
    + [TVSDK 1.4 für iOS-Versionshinweise](tvsdk-1-4-ios.md)
 + TVSDK für Android {#tvsdk-android}
    + [TVSDK 3.13 für Android-Versionshinweise](tvsdk-3x-android.md)
