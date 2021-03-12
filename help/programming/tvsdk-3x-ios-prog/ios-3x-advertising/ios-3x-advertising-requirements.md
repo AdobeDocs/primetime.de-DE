@@ -2,9 +2,9 @@
 description: Sie können Anzeigen in Ihre VOD- und Live-/Linearinhalte einfügen, indem Sie die Adobe Primetime-Benutzeroberfläche für die Anzeigenentscheidung verwenden.
 title: Werbeanforderungen
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,4 @@ Um Anzeigen in Ihren Videoinhalt zu integrieren, stellen Sie sicher, dass die An
 * Wenn der Hauptinhalt einen reinen Audiostream enthält, muss der Werbeinhalt auch einen reinen Audiostream enthalten.
 * Wenn der Hauptinhalt Untertitel-Streams enthält, muss der Werbeinhalt unverschlüsselt sein.
 * Ist der Hauptinhalt mit einer Bitrate (MBR) versehen, muss der Werbeinhalt auch MBR sein.
-* Wenn der Hauptinhalt über alternative Audiospuren verfügt, muss jede Anzeige über mindestens einen reinen Audiostream verfügen.
-
-Wenn die Anzeige nicht über mindestens einen rein audiovisuellen Stream verfügt, wird die Anzeige übersprungen.
+* Wenn der Hauptinhalt über alternative Audiospuren verfügt, muss jede Anzeige über mindestens einen reinen Audiostream verfügen oder die Anzeigen sollten demuliert werden. Wenn die Anzeige weder über mindestens einen reinen Audiostream verfügt noch demuliert wird, wird die Anzeige übersprungen.
