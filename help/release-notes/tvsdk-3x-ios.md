@@ -1,16 +1,16 @@
 ---
-title: TVSDK 3.12 für iOS-Versionshinweise
-description: TVSDK 3.12 für iOS-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK iOS 3.12.
+title: TVSDK 3.13 für iOS-Versionshinweise
+description: TVSDK 3.13 für iOS-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK iOS 3.13.
 translation-type: tm+mt
-source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
+source-git-commit: d1cf8a05172c04655c8a7c76ce116c8f7be61ec9
 workflow-type: tm+mt
-source-wordcount: '7665'
+source-wordcount: '7713'
 ht-degree: 0%
 
 ---
 
 
-# TVSDK 3.12 für iOS-Versionshinweise {#tvsdk-for-ios-release-notes}
+# TVSDK 3.13 für iOS-Versionshinweise {#tvsdk-for-ios-release-notes}
 
 TVSDK 3.12 für iOS-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK iOS 3.12.
 
@@ -20,13 +20,17 @@ Bevor Sie iOS 3.12 herunterladen, stellen Sie sicher, dass Ihre Hardware, Ihr Be
 
 Betriebssystem: iOS 8.0 oder höher.
 
-## iOS TVSDK 3.12
+## iOS TVSDK 3.13
 
-Es wurde ein Problem behoben, bei dem der Live-Stream nach 15 Minuten Wiedergabe fehlschlug.
+Die Version bietet Unterstützung für DEMUXED &#39;HLS/CMAF&#39; (Preroll, Midroll und Postroll)-Anzeigen für LIVE-, VOD- und FER-Streams.
 
-Fehlerbehebungen in der aktuellen Version finden Sie unter [Kundenprobleme behoben](#resolved-issues) und Einschränkungen finden Sie im Abschnitt [Bekannte Probleme und Einschränkungen](#known-issues-and-limitations).
+Fehlerbehebungen bei vom Kunden gemeldeten Problemen finden Sie unter [Behobene Probleme](#resolved-issues). Einschränkungen finden Sie unter [Bekannte Probleme und Einschränkungen](#known-issues-and-limitations).
 
 ### Neue Funktionen und Fehlerbehebungen in früheren Versionen {#whats-new-previous}
+
+**iOS TVSDK 3.12**
+
+Es wurde ein Problem behoben, bei dem der Live-Stream nach 15 Minuten Wiedergabe fehlschlug.
 
 **iOS TVSDK 3.11**
 
@@ -52,7 +56,7 @@ iOS 13-Kompatibilität und Verarbeitung der iOS 13 UIWebView-API-Deaktivierung.
 
 **iOS TVSDK 3.7**
 
-Hotfix für ein Szenario, in dem die Wiedergabe gestoppt wurde, wenn gleichzeitig eine große Anzahl von Anforderungen zur Anzeigenauflösung gestellt wurde.
+Hotfix für ein Szenario, bei dem die Wiedergabe gestoppt wurde, wenn gleichzeitig eine große Anzahl von Anforderungen zur Anzeigenauflösung gestellt wurde.
 
 **iOS TVSDK 3.6**
 
@@ -301,6 +305,14 @@ Comment Type: draft
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
 -->
 
+**iOS TVSDK 3.13**
+
+* (ZD 42085) - Probleme mit der Wiedergabe in CMAF-Streams.
+
+* (ZD-43215) - Absturz, wenn der Player während der Anzeige geschlossen wird.
+
+* (ZD 43210) - Die iOS-HLS-Wiedergabe friert ein, wenn der WebVTT-Untertitel aktiviert ist.
+
 **iOS TVSDK 3.12**
 
 * Der Live-Stream schlägt nach 15 Minuten der Wiedergabe fehl, wenn TVSDK für iOS 3.10 verwendet wird.
@@ -448,7 +460,7 @@ Verbesserte Korrektur für das geschlossene Problem 34385 in Version 1.4.42. Es 
 
    Wenn Anzeigen aktiviert sind und AirPlay aktiviert ist, um mit der Wiedergabe eines Videos zu beginnen, wird die Videowiedergabe nie zu Beginn und es wird kein Fehler angezeigt.
 
-* (ZD#33341) - `DRMInterface.h` löst Buildwarnungen in Xcode 9 aus.
+* (ZD#33341) - `DRMInterface.h` Trigger Buildwarnungen in Xcode 9.
 
    Es wurden zwei Blockprototypen in `DRMInterface.h` behoben, bei denen das Wort &#39;void&#39; in den Parametereinstellungen fehlte.
 
@@ -470,7 +482,7 @@ Verbesserte Korrektur für das geschlossene Problem 34385 in Version 1.4.42. Es 
 
 * (ZD #32465) - Player kann keine zusammengeführten Playlisten verarbeiten.
 
-   Aufruf `finishLoadingWithError`(mit: Fehler) für AV-Stiftung, um alternative Streams/Auslöserfailover auszuprobieren.
+   Aufruf `finishLoadingWithError`(mit: Fehler) für AV-Stiftung, um alternative Streams/Trigger-Failover auszuprobieren.
 
 * (ZD #31951) - TVSDK-Fehler bei Lizenzrotationen.
 
@@ -782,7 +794,7 @@ Dieses Problem wurde behoben, indem VideoAnalyticsTracker aktualisiert wurde, um
 
 * (ZD #20784) - Analytics: Auslösen von Inhaltsbeendigungen für Live-Video-Transitionen
 
-Dieses Problem wurde behoben, indem eine Logik hinzugefügt wurde, die den Abschluss von Inhalten während einer Videoverfolgungssitzung manuell auslöst.
+Dieses Problem wurde behoben, indem eine Logik hinzugefügt wurde, die den Abschluss von Inhalten während einer Videoverfolgungssitzung manuell Trigger.
 
 Die folgenden Bibliotheken wurden aktualisiert:
 
