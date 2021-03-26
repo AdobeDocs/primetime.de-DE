@@ -2,7 +2,7 @@
 title: Adobe Primetime Ad Insertion-Mitteilungen
 description: Ankündigungen zu den neuesten Funktionshinweisen und anderen dazugehörigen Nachrichten über Primetime Ad Insertion
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d8fde0d03bea85b3fefcfa5dcbfddee76b17de03
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Reduzierung programmatischer Anzeigenfehler über Zeitlimits für die Anzeigenauflösung
 
-Veröffentlicht am 1. Dezember 2000
+Veröffentlicht am 1. Dezember 2020
 
 Die Adobe ist darauf ausgerichtet, unseren Primetime-Ad Insertion-Kunden dabei zu helfen, die Monetarisierung ihres Anzeigenbestands zu maximieren. Besonderes Augenmerk legen wir auf die Reduzierung der Komplexität der Befriedigung der programmatischen Nachfrage, die laut eMarketer über drei Viertel der Ausgaben für digitale Videoanzeigen in den USA ausmacht. Programmgesteuerter Verkauf ermöglicht es Herausgebern, die Nachfrage nach ihrem Anzeigenbestand zu maximieren, was zu höheren Füllraten und Erträgen führt. Es erhöht jedoch auch die Exposition gegenüber Anzeigenfehlern wie fehlerhaften VAST-Antworten, HTTP-Fehlern und anderen, die zu Umsatzeinbußen und/oder schlechten Viewer-Erlebnissen führen können.
 
