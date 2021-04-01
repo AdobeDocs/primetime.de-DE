@@ -1,16 +1,15 @@
 ---
-cloud: experience-cloud
-solution-title: Training und Support
-solution-hub-url: https://helpx.adobe.com/support/primetime.html
-solution-image: https://www.adobe.com
-getting-started-title: Erste Schritte
-getting-started-url: https://www.adobe.com/devnet/primetime.html
-tutorials-title: Übungen
-tutorials-url: https://www.adobe.com/devnet/primetime.html
-git-repo: https://github.com/AdobeDocs/primetime.en
+cloud: Experience Cloud
+type: Dokumentation
+product: adobe primetime
+solution: Primetime
+git-repo: https://git.corp.adobe.com/AdobeDocs/primetime.de-DE
 index: y
 translation-type: tm+mt
-source-git-commit: a648b6c9dd606304328dc6b5bed4c847e54813eb
+source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -27,4 +26,4 @@ Die Datei &quot;metadata.md&quot;enthält Metadaten auf Repo-Ebene, die an die D
 | getting-started-url | Link zur Hilfeseite für den Einstieg |
 | tutorials-url | Link zu Videolehrgängen - entweder Helpx-Tutorials oder KT-Tutorials |
 | mini-toc-levels | Legt die Anzahl der Überschriftenebenen fest, die in der rechten Leiste angezeigt werden. default ist 2 |
-| git-repo | Gibt den Speicherort des Master-Repo für die interne Verwendung an |
+| git-repo | Gibt den Speicherort des Übergeordnet-Repo für die interne Verwendung an |
