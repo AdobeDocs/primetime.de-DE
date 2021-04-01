@@ -1,14 +1,13 @@
 ---
-cloud: experience-cloud
 product: primetime
 audience: end-user
 user-guide-title: Hilfe zur Implementierung der Primetime-Referenz
 user-guide-description: Das Tutorial hilft, das TVSDK zu verstehen und die Funktions-Manager zu modifizieren, um Ihren persönlichen Player anzupassen.
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
