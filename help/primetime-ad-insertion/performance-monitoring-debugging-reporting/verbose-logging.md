@@ -1,14 +1,15 @@
 ---
 title: Ausführliche Protokollierung
-description: null
+description: Ausführliche Protokollierung
+copied-description: true
+exl-id: f2d1b0c2-ba28-4fba-9a4e-71d1421f37fe
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '2155'
+source-wordcount: '2157'
 ht-degree: 0%
 
 ---
-
 
 # Ausführliche Protokollierung {#verbose-logging}
 
@@ -185,14 +186,14 @@ Aufzeichnungen dieses Typs protokollieren die Ergebnisse von Transkodierungsanfo
 | ad_manifest_url | string | URL der Manifestdatei der Anzeige aus der Antwort des Anzeigenservers |
 | creative_type | string | Medientyp |
 | Flags | string | ID3 gibt an, ob die Transkodierungsanforderung eine Anforderung zum Hinzufügen eines ID3-Tags enthält |
-| zielgruppe_duration | string | Dauer der Zielgruppe (Sekunden) des transkodierten kreativen Elements |
+| Zielgruppe_duration | string | Dauer der Zielgruppe (Sekunden) des transkodierten kreativen Elements |
 
 Aufzeichnungen dieses Typs geben eine Anforderung zur serverseitigen Verfolgung an. Felder, die über `TRACE_TRACKING_REQUEST` hinausgehen, werden in der Reihenfolge angezeigt, die in der Tabelle angezeigt wird, durch Registerkarten getrennt.
 
 | Feld | Typ | Beschreibung |
 |---|---|---|
 | tracking_url_count | integer | Anzahl der Tracking-URLs |
-| beginn | float | PTS Fragment-Beginn (Sekunden mit Millisekunde-Genauigkeit) |
+| Beginn | float | PTS Fragment-Beginn (Sekunden mit Millisekunde-Genauigkeit) |
 | end | float | PTS-Fragmentendzeit (Sekunden mit Millisekunde-Genauigkeit) |
 
 Datensätze dieses Typs bieten eine Tracking-URL für die serverseitige Verfolgung. Felder, die über `TRACE_TRACKING_REQUEST_URL` hinausgehen, werden in der Reihenfolge angezeigt, die in der Tabelle angezeigt wird, durch Registerkarten getrennt.
@@ -209,7 +210,7 @@ Datensätze dieses Typs protokollieren, die der Manifestserver für `WEBVTT`-Bes
 |---|---|---|
 | status | string | Rückgegebener HTTP-Statuscode |
 | vtt_uri | string | URL für Anforderung |
-| beginn | float | Beginn teilen (Sekunden mit Millisekunde-Genauigkeit) |
+| Beginn | float | Beginn teilen (Sekunden mit Millisekunde-Genauigkeit) |
 | end | float | Teilungsendzeit (Sekunden mit Millisekunde-Genauigkeit) |
 
 Datensätze dieses Typs protokollieren Antworten, die der Manifestserver an Clients in `answer` an Anforderungen für `WEBVTT`-Beschriftungen sendet. Felder, die über `TRACE_WEBVTT_RESPONSE` hinausgehen, werden in der Reihenfolge angezeigt, die in der Tabelle angezeigt wird, durch Registerkarten getrennt.
