@@ -1,14 +1,14 @@
 ---
 description: Sie können Ihren Player so konfigurieren, dass die Videonutzung verfolgt und analysiert wird.
 title: Videoanalyse initialisieren und konfigurieren
+exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d884836a2a585bd3540b085de1098cf6ae3de46b
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
 
 ---
-
 
 # Videoanalyse initialisieren und konfigurieren{#initialize-and-configure-video-analytics}
 
@@ -133,6 +133,7 @@ Bevor Sie eine neue Sitzung zur Inhaltswiedergabe starten, müssen Sie die vorhe
           videoAnalyticsProvider.detachMediaPlayer();
           videoAnalyticsProvider = null;
       ```
+
    4. Markieren Sie den Live/Linear-Stream manuell als abgeschlossen.
 Wenn Sie verschiedene Folgen für einen Live-Stream haben, können Sie eine Folge manuell mit der vollständigen API als abgeschlossen kennzeichnen. Dadurch wird die Videoverfolgungssitzung für die aktuelle Videoepisode beendet, und Sie können eine neue Verfolgungssitzung für die nächste Folge Beginn haben.
       >[!TIP]
@@ -146,5 +147,5 @@ Wenn Sie verschiedene Folgen für einen Live-Stream haben, können Sie eine Folg
       videoAnalyticsProvider.detachMediaPlayer();
       videoAnalyticsProvider = null;
       // Create a new instance of VideoAnalyticsProvider to continue tracking.
-      } 
+      }
       ```
