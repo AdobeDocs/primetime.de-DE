@@ -1,302 +1,301 @@
 ---
-description: Ihre Anwendung kann die Aktivität im Player und den sich ändernden Status des Players überwachen, indem sie auf die Ereignis überwacht, die von TVSDK gesendet werden.
-title: Übersicht zu Primetime-Player-Ereignissen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Ihre Anwendung kann die Aktivität in Ihrem Player und den sich ändernden Status des Players überwachen, indem sie auf die Ereignisse wartet, die von TVSDK gesendet werden.
+title: Übersicht über die Primetime-Player-Ereignisse
+exl-id: 3912f140-1600-41fb-9dc4-306646b7cd85
+source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
 
+# Übersicht über die Primetime-Player-Ereignisse {#primetime-player-events-summary}
 
-# Übersicht zu Primetime-Player-Ereignissen {#primetime-player-events-summary}
+Ihre Anwendung kann die Aktivität in Ihrem Player und den sich ändernden Status des Players überwachen, indem sie auf die Ereignisse wartet, die von TVSDK gesendet werden.
 
-Ihre Anwendung kann die Aktivität im Player und den sich ändernden Status des Players überwachen, indem sie auf die Ereignis überwacht, die von TVSDK gesendet werden.
+## Veranstaltungen {#events}
 
-## Ereignis {#events}
-
-TVSDK benachrichtigt Sie, wenn Ereignis auftreten, auf die Ihre Anwendung reagieren muss. Jedes Ereignis entspricht einer Listener-Klasse mit einer Rückrufmethode, die Sie implementieren müssen.
+TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung reagieren muss. Jedes Ereignis entspricht einer Listener-Klasse mit einer Callback-Methode, die Sie implementieren müssen.
 
 >[!TIP]
 >
->Die Ereignis-Codes sind die Konstanten der Enum `MediaPlayerEvent`.
+>Die Ereigniscodes sind die Konstanten der `MediaPlayerEvent`-Enumeration.
 
 `AdBreakCompletedEventListener`
 
 * **** Das bedeutet, dass die Wiedergabe der Werbeunterbrechung abgeschlossen ist.
 
-* **Rückruf zur Implementierung** `onAdBreakCompleted(AdBreakPlaybackEvent event)`
+* **Zu implementierende Rückrufe** `onAdBreakCompleted(AdBreakPlaybackEvent event)`
 
-* **Ereignis-Code** `AD_BREAK_COMPLETE`
+* **Ereigniscode** `AD_BREAK_COMPLETE`
 
 `AdBreakSkippedEventListener`
 
-* **** Das bedeutet, dass eine Werbeunterbrechung während der Wiedergabe übersprungen wurde.
+* **** Das bedeutet, dass während der Wiedergabe eine Werbeunterbrechung übersprungen wurde.
 
-* **Rückruf zur Implementierung** `onAdBreakSkipped(AdBreakPlaybackEvent event)`
+* **Zu implementierende Rückrufe** `onAdBreakSkipped(AdBreakPlaybackEvent event)`
 
-* **Ereignis-Code** `AD_BREAK_SKIPPED`
+* **Ereigniscode** `AD_BREAK_SKIPPED`
 
 `AdBreakStartedEventListener`
 
 * **** Das bedeutet, dass die Wiedergabe der Werbeunterbrechung gestartet wurde.
 
-* **Rückruf zur Implementierung** `onAdBreakStarted(AdBreakPlaybackEvent event)`
+* **Zu implementierende Rückrufe** `onAdBreakStarted(AdBreakPlaybackEvent event)`
 
-* **Ereignis-Code** `AD_BREAK_START`
+* **Ereigniscode** `AD_BREAK_START`
 
 `AdClickedEventListener`
 
 * **** Das bedeutet, dass während der Wiedergabe auf eine Anzeige geklickt wurde.
 
-* **Rückruf zur Implementierung** `onAdClicked(AdClickEvent event)`
-* **Ereignis-Code** `AD_CLICK`
+* **Zu implementierende Rückrufe** `onAdClicked(AdClickEvent event)`
+* **Ereigniscode** `AD_CLICK`
 
 `AdCompletedEventListener`
 
 * **** Das bedeutet, dass die Wiedergabe der Anzeige abgeschlossen ist.
 
-* **Rückruf zur Implementierung** `onAdCompleted(AdPlaybackEvent event)`
+* **Zu implementierende Rückrufe** `onAdCompleted(AdPlaybackEvent event)`
 
-* **Ereignis-Code** `AD_COMPLETE`
+* **Ereigniscode** `AD_COMPLETE`
 
 `AdProgressEventListener`
 
-* **** bedeutet, dass der Fortschritt der Berichterstellung während der Wiedergabe erfolgt.
+* **** bedeutet, den Fortschritt der Berichterstellung während der Wiedergabe zu melden.
 
-* **Rückruf zur Implementierung** `onAdProgress(AdPlaybackEvent event)`
+* **Zu implementierende Rückrufe** `onAdProgress(AdPlaybackEvent event)`
 
-* **Ereignis-Code** `AD_PROGRESS`
+* **Ereigniscode** `AD_PROGRESS`
 
 `AdResolutionCompleteEventListener`
 
-* **** Das bedeutet, dass Primetime und Entscheidungsfindung und Auflösung abgeschlossen sind. Dieses Ereignis gilt nur für VOD-Inhalte.
+* **** Die Auflösung von Primetime und Entscheidungsfindung und Auflösung ist abgeschlossen. Dieses Ereignis gilt nur für VOD-Inhalte.
 
-* **Rückruf zur Implementierung** `onAdResolutionComplete()`
+* **Zu implementierende Rückrufe** `onAdResolutionComplete()`
 
-* **Ereignis-Code** `AD_RESOLUTION_COMPLETE`
+* **Ereigniscode** `AD_RESOLUTION_COMPLETE`
 
 `AdStartedEventListener`{#section_A4339C48F82640A8AF4AF09CB3B33188}
 
-* **Das** bedeutet, dass die Wiedergabe der Anzeige gestartet wurde.
+* **** Das bedeutet, dass die Wiedergabe der Anzeige gestartet wurde.
 
-* **Rückruf zur Implementierung** `onAdStarted(AdPlaybackEvent event)`
+* **Zu implementierende Rückrufe** `onAdStarted(AdPlaybackEvent event)`
 
-* **Ereignis-Code** `AD_START`
+* **Ereigniscode** `AD_START`
 
 `AudioUpdatedEventListener`
 
-* **** Das bedeutet, dass eine neue Audiospur erkannt wurde.
+* **** Das bedeutet, dass ein neuer Audio-Track erkannt wurde.
 
-* **Rückruf zur Implementierung** `onAudioUpdated(MediaPlayerItemEvent event)`
+* **Zu implementierende Rückrufe** `onAudioUpdated(MediaPlayerItemEvent event)`
 
-* **Ereignis-Code** `AUDIO_TRACK_UPDATED`
+* **Ereigniscode** `AUDIO_TRACK_UPDATED`
 
 `BufferingBeginEventListener`
 
-* **** Das heißt, der Player hat mit der Pufferung begonnen.
+* **** Das bedeutet, dass der Player mit der Pufferung begonnen hat.
 
-* **Rückruf zur Implementierung** `onBufferingBegin(BufferEvent event)`
+* **Zu implementierende Rückrufe** `onBufferingBegin(BufferEvent event)`
 
-* **Ereignis-Code** `BUFFERING_BEGIN`
+* **Ereigniscode** `BUFFERING_BEGIN`
 
 `BufferingEndEventListener`
 
-* **** Das heißt, der Spieler hat die Pufferung beendet.
+* **** Das bedeutet, dass der Player die Pufferung beendet hat.
 
-* **Rückruf zur Implementierung** `onBufferingEnd(BufferEvent event)`
+* **Zu implementierende Rückrufe** `onBufferingEnd(BufferEvent event)`
 
-* **Ereignis-Code** `BUFFERING_END`
+* **Ereigniscode** `BUFFERING_END`
 
-`BufferPreparedEventListener&#39;
+`BufferPreparedEventListener`
 
-* **** Das bedeutet, der Puffer wird vorbereitet.
+* **** Das bedeutet, dass der Puffer vorbereitet wird.
 
-* **Rückruf zur Implementierung** `onBufferPrepared()`
+* **Zu implementierende Rückrufe** `onBufferPrepared()`
 
-* **Ereignis-Code** `BUFFER_PREPARED`
+* **Ereigniscode** `BUFFER_PREPARED`
 
 `CaptionsUpdatedEventListener`
 
-* **** Das bedeutet, dass eine neue Beschriftungsspur erkannt wurde.
+* **** Das bedeutet, dass eine neue Untertitelspur erkannt wurde.
 
-* **Rückruf zur Implementierung** `onCaptionsUpdated(MediaPlayerItemEvent event)`
+* **Zu implementierende Rückrufe** `onCaptionsUpdated(MediaPlayerItemEvent event)`
 
-* **Ereignis-Code** `CAPTIONS_UPDATED`
+* **Ereigniscode** `CAPTIONS_UPDATED`
 
 `DRMMetadataInfoEventListener`
 
-* **Das** bedeutet, dass im Medienstream neue DRM-Metadaten erkannt wurden.
+* **** Das bedeutet, dass im Medien-Stream neue DRM-Metadaten erkannt wurden.
 
-* **Rückruf zur Implementierung** `onDRMMetadataInfo(DRMMetadataInfoEvent event)`
+* **Zu implementierende Rückrufe** `onDRMMetadataInfo(DRMMetadataInfoEvent event)`
 
-* **Ereignis-Code** `DRM_METADATA`
+* **Ereigniscode** `DRM_METADATA`
 
 `ItemCreatedEventListener`
 
-* **Das** bedeutet, dass ein neuer Medienplayer-Artikel erstellt wurde.
+* **** Das bedeutet, dass ein neues Medienplayer-Element erstellt wurde.
 
-* **Rückruf zur Implementierung** `onItemCreated(MediaPlayerItemEvent event)`
+* **Zu implementierende Rückrufe** `onItemCreated(MediaPlayerItemEvent event)`
 
-* **Ereignis-Code** `ITEM_CREATED`
+* **Ereigniscode** `ITEM_CREATED`
 
 `ItemLoadCompleteEventListener`
 
-* **Das** bedeutet, dass für das aktuelle Element neue Ladeinformationen erstellt wurden.
+* **** Das bedeutet, dass für das aktuelle Element neue Ladeinformationen erstellt wurden.
 
-* **Rückruf zur Implementierung** `onLoadComplete(MediaPlayerItemEvent event)`
+* **Zu implementierende Rückrufe** `onLoadComplete(MediaPlayerItemEvent event)`
 
-* **Ereignis-Code** `ITEM_UPDATED`
+* **Ereigniscode** `ITEM_UPDATED`
 
 `LoadInformationEventListener`
 
 * **** Das bedeutet, dass ein neues Segment geladen wurde.
 
-* **Rückruf zur Implementierung** `onLoadInformation(LoadInformationEvent event)`
+* **Zu implementierende Rückrufe** `onLoadInformation(LoadInformationEvent event)`
 
-* **Ereignis-Code** `LOAD_INFORMATION_AVAILABLE`
+* **Ereigniscode** `LOAD_INFORMATION_AVAILABLE`
 
 `MainManifestUpdatedEventListener`
 
-* **Das** Hauptmanifest oder die Wiedergabeliste wurde aktualisiert.
+* **** Das Hauptmanifest oder die Wiedergabeliste wurde aktualisiert.
 
-* **Rückruf zur Implementierung** `onMainManifestUpdated(MediaPlayerItemEvent event)`
+* **Zu implementierende Rückrufe** `onMainManifestUpdated(MediaPlayerItemEvent event)`
 
-* **Ereignis-Code** `MANIFEST_UPDATED`
+* **Ereigniscode** `MANIFEST_UPDATED`
 
 `NotificationEventListener`
 
-* **** Das heißt, der Vorgang ist fehlgeschlagen.
+* **** Das bedeutet, dass der Vorgang fehlgeschlagen ist.
 
-* **Rückruf zur Implementierung** `onNotification(NotificationEvent event)`
+* **Zu implementierende Rückrufe** `onNotification(NotificationEvent event)`
 
-* **Ereignis-Code** `OPERATION_FAILED`
+* **Ereigniscode** `OPERATION_FAILED`
 
 `PlaybackRangeUpdatedEventListener`
 
-* **** Das bedeutet, dass der Wiedergabebereich aktualisiert wurde.
+* **** Das bedeutet, dass der Wiedergabefeld aktualisiert wurde.
 
-* **Rückruf zur Implementierung** `onPlaybackRangeUpdated(MediaPlayerItemEvent event)`
+* **Zu implementierende Rückrufe** `onPlaybackRangeUpdated(MediaPlayerItemEvent event)`
 
-* **Ereignis-Code** `PLAYBACK_RANGE_UPDATED`
+* **Ereigniscode** `PLAYBACK_RANGE_UPDATED`
 
 `PlaybackRatePlayingEventListener`
 
-* **Das** bedeutet, dass eine neue Wiedergabegeschwindigkeit auf dem Bildschirm sichtbar ist.
+* **** Das bedeutet, dass eine neue Wiedergaberate auf dem Bildschirm angezeigt wird.
 
-* **Rückruf zur Implementierung** `onRatePlaying(PlaybackRateEvent event)`
+* **Zu implementierende Rückrufe** `onRatePlaying(PlaybackRateEvent event)`
 
-* **Ereignis-Code** `RATE_PLAYING`
+* **Ereigniscode** `RATE_PLAYING`
 
 `PlaybackRateSelectedEventListener`
 
 * **** Das bedeutet, dass das Ratenattribut von MediaPlayer festgelegt wurde.
 
-* **Rückruf zur Implementierung** `onRateSelected(PlaybackRateEvent event)`
+* **Zu implementierende Rückrufe** `onRateSelected(PlaybackRateEvent event)`
 
-* **Ereignis-Code** `RATE_SELECTED`
+* **Ereigniscode** `RATE_SELECTED`
 
 `PlayStartEventListener`
 
-* **** Das heißt, die Wiedergabe wurde gestartet.
+* **** Das bedeutet, dass die Wiedergabe gestartet wurde.
 
-* **Rückruf zur Implementierung** `onPlayStart()`
+* **Zu implementierende Rückrufe** `onPlayStart()`
 
-* **Ereignis-Code** `PLAY_START`
+* **Ereigniscode** `PLAY_START`
 
 `ProfileChangeEventListener`
 
-* **Das** aktuelle Profil des MediaPlayer hat sich geändert.
+* **** Das bedeutet, dass sich das aktuelle Profil des MediaPlayer geändert hat.
 
-* **Rückruf zur Implementierung** `onProfileChanged(ProfileEvent event)`
+* **Zu implementierende Rückrufe** `onProfileChanged(ProfileEvent event)`
 
-* **Ereignis-Code** `PROFILE_CHANGED`
+* **Ereigniscode** `PROFILE_CHANGED`
 
 `ReservationReachedEventListener`
 
-* **** Das bedeutet, dass die Wiedergabe eine Zeitschiene erreicht hat.
+* **** Das bedeutet, dass die Wiedergabe eine Zeitleistenreservierung erreicht hat.
 
-* **Rückruf zur Implementierung** `onReservationReached(ReservationEvent event)`
+* **Zu implementierende Rückrufe** `onReservationReached(ReservationEvent event)`
 
-* **Ereignis-Code** `RESERVATION_REACHED`
+* **Ereigniscode** `RESERVATION_REACHED`
 
 `SeekBeginEventListener`
 
-* **Der** Vorgang &quot;BedeutungSeek&quot;wurde gestartet.
+* **** Der Vorgang &quot;Bedeutende Suche&quot;wurde gestartet.
 
-* **Rückruf zur Implementierung** `onSeekBegin(SeekEvent event)`
+* **Zu implementierende Rückrufe** `onSeekBegin(SeekEvent event)`
 
-* **Ereignis-Code** `SEEK_BEGIN`
+* **Ereigniscode** `SEEK_BEGIN`
 
 `SeekEndEventListener`
 
-* **** Das bedeutet, der Suchvorgang ist abgeschlossen.
+* **** Das bedeutet, dass der Suchvorgang abgeschlossen ist.
 
-* **Rückruf zur Implementierung** `onSeekEnd(SeekEvent event)`
+* **Zu implementierende Rückrufe** `onSeekEnd(SeekEvent event)`
 
-* **Ereignis-Code** `SEEK_END`
+* **Ereigniscode** `SEEK_END`
 
 `SeekPositionAdjustedEventListener`
 
 * **** Das bedeutet, die Suchposition wurde aufgrund interner Wiedergaberegeln oder externer Geschäftsregeln angepasst.
 
-* **Rückruf zur Implementierung** `onPositionAdjusted(SeekEvent event)`
+* **Zu implementierende Rückrufe** `onPositionAdjusted(SeekEvent event)`
 
-* **Ereignis-Code** `SEEK_POSITION_ADJUSTED`
+* **Ereigniscode** `SEEK_POSITION_ADJUSTED`
 
 `SizeAvailableEventListener`
 
-* **Das** bedeutet, dass die Größe des Mediums verfügbar ist.
+* **** Das bedeutet, dass die Größe des Mediums verfügbar ist.
 
-* **Rückruf zur Implementierung** `onSizeAvailable(SizeAvailableEvent event)`
+* **Zu implementierende Rückrufe** `onSizeAvailable(SizeAvailableEvent event)`
 
-* **Ereignis-Code** `SIZE_AVAILABLE`
+* **Ereigniscode** `SIZE_AVAILABLE`
 
 `StatusChangeEventListener`
 
-* **Das** bedeutet, dass sich der MediaPlayer-Status geändert hat.
+* **** Das bedeutet, dass sich der MediaPlayer-Status geändert hat.
 
-* **Rückruf zur Implementierung** `onStatusChanged(MediaPlayerStatusChangeEvent event)`
+* **Zu implementierende Rückrufe** `onStatusChanged(MediaPlayerStatusChangeEvent event)`
 
-* **Ereignis-Code** `STATUS_CHANGED`
+* **Ereigniscode** `STATUS_CHANGED`
 
 `TimeChangeEventListener`
 
-* **** Das heißt, der Abspielkopf hat sich verändert.
+* **** Das bedeutet, dass sich die Abspielleiste geändert hat.
 
-* **Rückruf zur Implementierung** `onTimeChanged(TimeChangeEvent event)`
+* **Zu implementierende Rückrufe** `onTimeChanged(TimeChangeEvent event)`
 
-* **Ereignis-Code** `TIME_CHANGED`
+* **Ereigniscode** `TIME_CHANGED`
 
 `TimedEventEventListener`
 
 * **** Das bedeutet, dass der Vorgang mit der für den Vorgang benötigten Zeit abgeschlossen ist.
 
-* **Rückruf zur Implementierung** `onTimedEvent(TimedEventEvent event)`
+* **Zu implementierende Rückrufe** `onTimedEvent(TimedEventEvent event)`
 
-* **Ereignis-Code** `TIMED_EVENT`
+* **Ereigniscode** `TIMED_EVENT`
 
 `TimelineMetadataAddedInBackgroundEventListener`
 
 * **** Das bedeutet, dass einem Element im Hintergrund neue zeitgesteuerte Metadaten hinzugefügt wurden.
 
-* **Rückruf zur Implementierung** `onTimedMetadata(TimedMetadataEvent event)`
+* **Zu implementierende Rückrufe** `onTimedMetadata(TimedMetadataEvent event)`
 
-* **Ereignis-Code** `TIMED_METADATA_ADDED_IN_BACKGROUND`
+* **Ereigniscode** `TIMED_METADATA_ADDED_IN_BACKGROUND`
 
 `TimedMetadataEventListener`
 
-* **** Das bedeutet, dass im Medienstream neue zeitgesteuerte Metadaten erkannt wurden.
+* **** Das bedeutet, dass im Medien-Stream neue zeitgesteuerte Metadaten erkannt wurden.
 
-* **Rückruf zur Implementierung** `onTimedMetadata(TimedMetadataEvent event)`
+* **Zu implementierende Rückrufe** `onTimedMetadata(TimedMetadataEvent event)`
 
-* **Ereignis-Code** `TIMED_METADATA_AVAILABLE`
+* **Ereigniscode** `TIMED_METADATA_AVAILABLE`
 
 `TimelineUpdatedEventListener`
 
-* **** Das heißt, die Zeitschiene wurde geändert. Anzeigen wurden möglicherweise der Zeitleiste hinzugefügt oder daraus entfernt.
+* **** Das bedeutet, dass die Timeline geändert wurde. Anzeigen wurden der Timeline möglicherweise hinzugefügt oder daraus entfernt.
 
-* **Rückruf zur Implementierung** `onTimelineUpdated(TimelineEvent event)`
+* **Zu implementierende Rückrufe** `onTimelineUpdated(TimelineEvent event)`
 
-* **Ereignis-Code** `TIMELINE_UPDATED`
+* **Ereigniscode** `TIMELINE_UPDATED`
