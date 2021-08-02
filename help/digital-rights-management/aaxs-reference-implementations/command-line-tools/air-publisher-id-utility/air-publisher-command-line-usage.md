@@ -28,8 +28,7 @@ java -jar AdobePublisherIDUtility.jar
 </i class="+ topic>
 ```
 
-* 
-   * `signaturefile`* gibt den Pfad zur Datei &quot;signatures.xml&quot;der AIR-Anwendung im  [!DNL META-INF] Anwendungsverzeichnis an
+* `signaturefile` gibt den Pfad zur Datei &quot;signatures.xml&quot;der AIR-Anwendung im  [!DNL META-INF] Anwendungsverzeichnis an
 
 * `signingcert` gibt das Zertifikat an, das zum Signieren der AIR-Anwendung verwendet wird
 
