@@ -1,15 +1,15 @@
 ---
-description: Die Version von `#`EXT-X-VERSION in der .m3u8-Datei wirkt sich darauf aus, welche Funktionen für Ihre Anwendung verfügbar sind und welche EXT-Tags in Ihrer Wiedergabeliste/Ihrem Manifest gültig sind.
+description: Die Version von EXT-X-VERSION in der .m3u8-Datei wirkt sich darauf aus, welche Funktionen für Ihre Anwendung verfügbar sind und welche EXT-Tags in Ihrer Wiedergabeliste/Ihrem Manifest gültig sind.
 title: EXT-X-VERSIONSANFORDERUNGEN
 exl-id: ee778fe1-d050-4c90-af8d-6600fff72e52
-source-git-commit: 8610792a7410dab59d42ab7771b534c2c1670ad2
+source-git-commit: e2a796dc5eb017929297d127cc79b65ba51a0c75
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
-# `#`EXT-X-VERSIONSANFORDERUNGEN{#ext-x-version-requirements}
+# EXT-X-VERSIONSANFORDERUNGEN{#ext-x-version-requirements}
 
 Die Version von #EXT-X-VERSION in der .m3u8-Datei wirkt sich darauf aus, welche Funktionen für Ihre Anwendung verfügbar sind und welche EXT-Tags in Ihrer Wiedergabeliste/Ihrem Manifest gültig sind.
 
