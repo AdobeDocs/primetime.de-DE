@@ -3,10 +3,10 @@ title: Versionshinweise zu Primetime
 description: Versionshinweise zu Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 28%
+source-wordcount: '340'
+ht-degree: 29%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 28%
 
 Willkommen bei den Versionshinweisen zu Adobe Primetime. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
 
-## Verbesserungen und Fehlerbehebungen in PTAI 21.5.1
+## Verbesserungen und Fehlerbehebungen in PTAI 21.8.1
 
-Die Version enthält neue Telemetriken für bevorstehende Dashboard-Änderungen sowie Unterstützung für veraltete Segmentierungsformate 0x01 (UPID) für SCTE-basierte Cue-Formate.
+Die Version enthält Unterstützung für DASH Live-/Linear-Streams.
 
 Weitere Fehlerbehebungen und Details finden Sie unter [Ad Insertion-Versionshinweise](/help/release-notes/ptai-21x-release-notes.md)
 

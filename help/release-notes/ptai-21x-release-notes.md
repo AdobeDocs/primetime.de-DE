@@ -1,27 +1,56 @@
 ---
-title: Versionshinweise zu PTAI 21.5.1
+title: Versionshinweise zu PTAI 21.8.1
 description: Die PTAI-Versionshinweise beschreiben, was neu oder geändert ist, welche gelösten und bekannten Probleme im Primetime-Ad Insertion im Jahr 2021 aufgetreten sind.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
 
-# Primetime Ad Insertion 21.5.1 - Versionshinweise
+# Primetime Ad Insertion 21.8.1 - Versionshinweise
 
-Die Primetime-Ad Insertion-Versionshinweise 21.x.x beschreiben, was neu ist oder geändert wurde, Probleme gelöst wurden und bekannte Probleme in Primetime Ad Insertion im Jahr 2021.
+Die Primetime-Ad Insertion-Versionshinweise 21.x.x beschreiben, was neu ist oder geändert wurde, Probleme gelöst wurden und bekannte Probleme bei Primetime Ad Insertion im Jahr 2021.
 
-## Neue Funktionen in PTAI 21.5.1
+<!---
+Primetime Ad Insertion 21.9.1
+When: Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM EASTERN
+
+
+
+
+
+
+
+
+
+What:  Primetime Ad Insertion 21.9.1
+
+When:  Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM Eastern Time
+
+Changes:
+
+* Updates to infrastructure components behind PTAI’s mediation and reporting components (Primetime Ads GUI)
+-->
+
+## Neue Funktionen in PTAI 21.8.1
+
+Wenn: Dienstag, 24. August 2021 von 2:00 Uhr bis 05:00 Uhr Ostzeit
+
+* Unterstützung für DASH Live-/Linear-Streams hinzugefügt (VOD wird bereits unterstützt).
+
+## Verbesserungen und Fehlerbehebungen in früheren Versionen
+
+### Version 21.5.1
 
 Wenn:  Mittwoch, 26. Mai 2021 von 3:30 Uhr bis 06:30 Uhr Ostzeit
+
+**Änderungen**
 
 * Unterstützung für veralteten Segmentierungstyp 0x01 (UPID) für SCTE-basierte Cue-Formate hinzugefügt.
 
 * Neue Telemetrie für bevorstehende Dashboard-Änderungen hinzugefügt.
-
-## Verbesserungen und Fehlerbehebungen in früheren Versionen
 
 ### Version 21.4.1
 
