@@ -3,10 +3,10 @@ title: Versionshinweise zu Primetime
 description: Versionshinweise zu Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
+source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 29%
+source-wordcount: '301'
+ht-degree: 32%
 
 ---
 
@@ -26,11 +26,9 @@ Mit der Version wird die Unterstützung für DEMUXED-&quot;HLS/CMAF&quot;-Anzeig
 
 Weitere Fehlerbehebungen und Details finden Sie unter [TVSDK für iOS - Versionshinweise](../release-notes/tvsdk-3x-ios.md)
 
-## Fehlerbehebungen in TVSDK 3.13 Android
+## Fehlerbehebungen in TVSDK 3.14 Android
 
-Diese Version bietet eine Problemumgehung zum Problem des Widevine DRM Stream-Gefrierens oder der Anzeige von schwarzen Frames auf ABR-Switches auf FireTV-Geräten, zu denen Geräte der dritten Generation von Fire TV Pendant und Fire TV Cube der 1. und 2. Generation gehören.
-
-Um das Problem zu beheben, legen Sie die API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` für die angegebenen Fire TV-Geräte fest, bevor Sie die Wiedergabe starten. Der Standardwert ist &quot;false&quot;.
+Mit dieser Version wird ein Problem behoben, bei dem die Anwendung abstürzt, wenn der Knoten [!UICONTROL CDATA] für eines der Elemente [!UICONTROL ClickTracking], [!UICONTROL CustomClick] oder [!UICONTROL CompanionClickTracking] in der Antwort [!UICONTROL VAST] leer ist.
 
 Weitere Informationen finden Sie in den [TVSDK für Android-Versionshinweisen](../release-notes/tvsdk-3x-android.md) .
 
@@ -44,7 +42,7 @@ Weitere Informationen finden Sie in den [TVSDK für Android-Versionshinweisen](.
 | [Primetime-API-Referenzen](/help/reference/api-references.md) | Enthält detaillierte Informationen über TVSDK-Funktionen, Datenstrukturen und andere Programmkonstrukte. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Hilft Ihnen, mehr über verschiedene Benutzerszenarien in Digital Rights Management (DRM) zu erfahren |
 | [Hilfe zu Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Erklärt, wie man Inhalte durch Einfügen nutzergerechter dynamischer Anzeigen auf dem Server monetarisieren und die Zielgruppe mit personalisierten Anzeigen ansprechen kann. |
-| [Archive](https://helpx.adobe.com/primetime/archives.html) | Laden Sie PDFs der archivierten Dokumentation herunter. |
+| [Archive](https://helpx.adobe.com/primetime/archives.html) | Laden Sie die PDF der archivierten Dokumentation herunter. |
 
 ## Hilfreiche Ressourcen
 

@@ -1,40 +1,37 @@
 ---
-description: Ereignisse von TVSDK geben den Player-Status, auftretende Fehler, den Abschluss von angeforderten Aktionen an, z. B. die Videowiedergabe oder implizit auftretende Aktionen, z. B. das Ausfüllen einer Anzeige.
-title: Primetime Player-Ereignis suchen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Ereignisse von TVSDK geben den Status des Players, aufgetretene Fehler, den Abschluss von angeforderten Aktionen an, z. B. einen Videostart oder implizit auftretende Aktionen, z. B. das Abschließen einer Anzeige.
+title: Suchen nach Primetime-Player-Ereignissen
+exl-id: 3a740245-a9e1-4e36-8761-f9f4b4e85b93
+source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#implement-event-listeners-and-callbacks-overview}
 
-Ereignis-Handler ermöglichen es TVSDK, auf Ereignis zu reagieren. Wenn ein Ereignis auftritt, ruft der Ereignis-Mechanismus von TVSDK Ihren registrierten Ereignis-Handler auf und übergibt die Ereignis-Informationen an den Handler.
+Ereignis-Handler ermöglichen es TVSDK, auf Ereignisse zu reagieren. Wenn ein Ereignis eintritt, ruft der Ereignismechanismus von TVSDK Ihren registrierten Ereignishandler auf und übergibt die Ereignisinformationen an den Handler.
 
-Die Flash Runtime bietet einen allgemeinen Ereignis-Mechanismus, den das TVSDK auch verwendet und eine Reihe von benutzerdefinierten Ereignissen definiert. Ihre Anwendung muss Ereignis-Listener für TVSDK-Ereignis implementieren, die Ihre Anwendung betreffen.
+Flash Runtime bietet einen allgemeinen Ereignismechanismus, den das TVSDK ebenfalls verwendet und eine Reihe benutzerspezifischer Ereignisse definiert. Ihre Anwendung muss Ereignis-Listener für TVSDK-Ereignisse implementieren, die sich auf Ihre Anwendung auswirken.
 
-Eine vollständige Liste der Ereignis für Videoanalysen finden Sie unter [Core-Videowiedergabe verfolgen](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/c_vhl_track-core-vid-playback.html).
+1. Bestimmen Sie, auf welche Ereignisse die Anwendung überwachen muss.
 
-1. Bestimmen Sie, auf welche Ereignis Ihre Anwendung hören muss.
-
-   * **Erforderliche Ereignis**: Suchen Sie nach allen Ereignissen für die Wiedergabe.
+   * **Erforderliche Ereignisse**: Suchen Sie nach allen Wiedergabeereignissen.
 
       >[!IMPORTANT]
       >
-      >Das play-Ereignis `MediaPlayerStatusChangeEvent.STATUS_CHANGE` stellt den Player-Status einschließlich Fehler bereit. Jeder Status kann sich auf den nächsten Schritt Ihres Spielers auswirken.
+      >Das Wiedergabeereignis `MediaPlayerStatusChangeEvent.STATUS_CHANGE` liefert den Player-Status, einschließlich Fehlern. Jeder Status kann sich auf den nächsten Schritt Ihres Players auswirken.
 
-   * **Andere Ereignisse**: Optional, je nach Anwendung.
+   * **Weitere Ereignisse**: Optional, je nach Anwendung.
 
-      Wenn Sie z. B. Werbung in Ihre Wiedergabe integrieren, sollten Sie alle `AdBreakPlaybackEvent`- und `AdPlaybackEvent`-Ereignis abhören.
+      Wenn Sie z. B. Werbung in Ihre Wiedergabe integrieren, sollten Sie alle `AdBreakPlaybackEvent`- und `AdPlaybackEvent`-Ereignisse überwachen.
 
 1. Implementieren Sie Ereignis-Listener für jedes Ereignis.
 
-   TVSDK gibt Parameterwerte an Ihre Ereignis-Listener-Rückrufe zurück. Diese Werte liefern relevante Informationen über das Ereignis, das Sie in Ihren Listenern verwenden können, um entsprechende Aktionen durchzuführen.
+   TVSDK gibt Parameterwerte an Ihre Ereignis-Listener-Rückrufe zurück. Diese Werte enthalten relevante Informationen zum Ereignis, das Sie in Ihren Listenern verwenden können, um geeignete Aktionen durchzuführen.
 
-   Die `Event`-Klasse Liste alle Callback-Schnittstellen. Jede Schnittstelle zeigt die Parameter an, die für diese Schnittstelle zurückgegeben werden.
+   Die Klasse `Event` listet alle Callback-Schnittstellen auf. Jede Schnittstelle zeigt die Parameter an, die für diese Schnittstelle zurückgegeben werden.
 
    Beispiel:
 
@@ -46,14 +43,12 @@ Eine vollständige Liste der Ereignis für Videoanalysen finden Sie unter [Core-
                    error:MediaError = null) 
    ```
 
-1. Registrieren Sie Ihre Callback-Listener mit dem `MediaPlayer`-Objekt, indem Sie `MediaPlayer.addEventListener` verwenden.
+1. Registrieren Sie Ihre Callback-Listener mit dem `MediaPlayer` -Objekt, indem Sie `MediaPlayer.addEventListener` verwenden.
 
-   `MediaPlayer` extension  `flash.events.IEventDispatcher`, das zu den Core-Dateien des Flash-Players gehört und die Funktionen  `addEventListener` und  `removeEventListener`Funktionen enthält.
+   `MediaPlayer` erweitert  `flash.events.IEventDispatcher`, ist Teil der Kerndateien des Flash-Players und umfasst die Funktionen  `addEventListener` und  `removeEventListener`.
 
    ```
    mediaPlayer.addEventListener( 
      MediaPlayerStatusChangeEvent.STATUS_CHANGED,  
      onStatusChanged);
    ```
-
-
