@@ -3,7 +3,7 @@ title: Versionshinweise zu Primetime
 description: Versionshinweise zu Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
+source-git-commit: 6621a42d859cb872569123c175764e577bb46b9a
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 32%
@@ -13,6 +13,12 @@ ht-degree: 32%
 # Versionshinweise zu Primetime
 
 Willkommen bei den Versionshinweisen zu Adobe Primetime. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
+
+## Fehlerbehebungen in TVSDK 3.14 Android
+
+Mit dieser Version wird ein Problem behoben, bei dem die Anwendung abstürzt, wenn der Knoten [!UICONTROL CDATA] für eines der Elemente [!UICONTROL ClickTracking], [!UICONTROL CustomClick] oder [!UICONTROL CompanionClickTracking] in der Antwort [!UICONTROL VAST] leer ist.
+
+Weitere Informationen finden Sie in den [TVSDK für Android-Versionshinweisen](../release-notes/tvsdk-3x-android.md) .
 
 ## Verbesserungen und Fehlerbehebungen in PTAI 21.8.1
 
@@ -25,12 +31,6 @@ Weitere Fehlerbehebungen und Details finden Sie unter [Ad Insertion-Versionshinw
 Mit der Version wird die Unterstützung für DEMUXED-&quot;HLS/CMAF&quot;-Anzeigen (Preroll, Midroll und Postroll) für LIVE-, VOD- und FER-Streams eingeführt.
 
 Weitere Fehlerbehebungen und Details finden Sie unter [TVSDK für iOS - Versionshinweise](../release-notes/tvsdk-3x-ios.md)
-
-## Fehlerbehebungen in TVSDK 3.14 Android
-
-Mit dieser Version wird ein Problem behoben, bei dem die Anwendung abstürzt, wenn der Knoten [!UICONTROL CDATA] für eines der Elemente [!UICONTROL ClickTracking], [!UICONTROL CustomClick] oder [!UICONTROL CompanionClickTracking] in der Antwort [!UICONTROL VAST] leer ist.
-
-Weitere Informationen finden Sie in den [TVSDK für Android-Versionshinweisen](../release-notes/tvsdk-3x-android.md) .
 
 ## Siehe auch
 
