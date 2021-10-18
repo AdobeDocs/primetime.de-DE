@@ -3,10 +3,10 @@ title: Versionshinweise zu Primetime
 description: Versionshinweise zu Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 6621a42d859cb872569123c175764e577bb46b9a
+source-git-commit: 21695ad15f1dcbbfa33211efd0fb3ab282fefbeb
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 32%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,17 +20,17 @@ Mit dieser Version wird ein Problem behoben, bei dem die Anwendung abstürzt, we
 
 Weitere Informationen finden Sie in den [TVSDK für Android-Versionshinweisen](../release-notes/tvsdk-3x-android.md) .
 
-## Verbesserungen und Fehlerbehebungen in PTAI 21.8.1
+## Verbesserungen und Fehlerbehebungen in PTAI 21.10.1
 
-Die Version enthält Unterstützung für DASH Live-/Linear-Streams.
+Die Version konzentriert sich auf die Konsolidierung von Servern, wodurch produktionsfremde und nicht nützliche Server entfernt werden.
 
-Weitere Fehlerbehebungen und Details finden Sie unter [Ad Insertion-Versionshinweise](/help/release-notes/ptai-21x-release-notes.md)
+Weitere Fehlerbehebungen und Details finden Sie unter [Ad Insertion-Versionshinweise](/help/release-notes/ptai-21x-release-notes.md).
 
 ## Verbesserungen und Fehlerbehebungen in TVSDK 3.13 iOS
 
 Mit der Version wird die Unterstützung für DEMUXED-&quot;HLS/CMAF&quot;-Anzeigen (Preroll, Midroll und Postroll) für LIVE-, VOD- und FER-Streams eingeführt.
 
-Weitere Fehlerbehebungen und Details finden Sie unter [TVSDK für iOS - Versionshinweise](../release-notes/tvsdk-3x-ios.md)
+Weitere Fehlerbehebungen und Details finden Sie unter [TVSDK für iOS Versionshinweise](../release-notes/tvsdk-3x-ios.md).
 
 ## Siehe auch
 
