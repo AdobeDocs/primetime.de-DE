@@ -1,20 +1,20 @@
 ---
-title: Adobe Primetime API-Verweise
-description: Die APIs helfen Ihnen, eine funktionelle Anwendung oder Integration schnell und einfach zu erstellen.
+title: Adobe Primetime API-Referenzen
+description: Mithilfe der APIs können Sie schnell und einfach eine funktionale Anwendung oder Integration erstellen.
 topic-tags: API-references
-translation-type: tm+mt
-source-git-commit: d8fde0d03bea85b3fefcfa5dcbfddee76b17de03
+exl-id: 6862764e-c1d8-413a-a0c0-66b31eac8e53
+source-git-commit: bf9adba0bace7e1327446d936c4bfe27f66fb2ac
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
+# Adobe Primetime API-Referenzen {#api-references}
 
-# Adobe Primetime API-Verweise {#api-references}
-
-+ Primetime Dynamic Ad Insertion {#server-side}
++ Dynamic Primetime-Ad Insertion {#server-side}
    + [Bootstrap-API-Referenz](../primetime-ad-insertion/technical-reference/bootstrap-api.md)
+   + [Referenz zur Berichts-API](../primetime-ad-insertion/assets/auditude-report-api.pdf)
 
 + TVSDK 3.12 {#tvsdk-312}
    + [TVSDK 3.12 für Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)
@@ -56,5 +56,5 @@ ht-degree: 0%
 + Sonstiges {#miscellaneous}
    + [Video Heartbeat Library](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/index.html)
    + [DHPK 2.0 C++](https://help.adobe.com/en_US/primetime/api/psdk/psdk_doxygen/index.html)
-   + [UI Framework for 2.4 Browser TVSDK](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
+   + [UI Framework für 2.4 Browser TVSDK](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
    + [PSDK FlashRuntime Public APIs](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls/)
