@@ -2,55 +2,68 @@
 title: Informationen zu CRL-Dateien
 description: Informationen zu CRL-Dateien
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 126a323d-9433-4a1e-a617-2d3bbf717cce
+source-git-commit: 6a00df9c061da43f6efa49d927873db629568597
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
 
-
 # Informationen zu CRL-Dateien {#about-crl-files}
 
-Um ordnungsgemäß funktionieren zu können, müssen auf den Individualisierungs- und Lizenzservern mehrere CRL-Listen (Certificate Revocation ) zwischengespeichert werden, die auf dem laufenden Anwendungsserver (z. B. Tomcat) gespeichert sind. Neue CRL-Dateien müssen regelmäßig heruntergeladen und auf der Festplatte zwischengespeichert werden. Wenn die Gültigkeitsdauer von CRL-Dateien auf der Festplatte abgelaufen ist, verweigert der Individualization Server die Individualisierung von Clients und der License Server verweigert die Erteilung von Lizenzen.
+Um ordnungsgemäß funktionieren zu können, müssen die Individualisierungs- und Lizenzserver über mehrere CRL-Dateien (Certificate Revocation List) verfügen, die auf dem laufenden Anwendungsserver (z. B. Tomcat) auf dem Datenträger zwischengespeichert werden. Neue CRL-Dateien müssen regelmäßig heruntergeladen und auf der Festplatte zwischengespeichert werden. Wenn die Gültigkeitsdauer von CRL-Dateien auf der Festplatte abgelaufen ist, verweigert der Individualization Server die Individualisierung von Clients und der License Server verweigert die Erteilung von Lizenzen.
 
-Die auf der Festplatte zwischengespeicherten Zertifikatsperrlisten müssen Dateinamen haben, die mit den entsprechenden URLs übereinstimmen. Sonderzeichen wie Doppelpunkte &#39;:&#39; und &#39;/&#39; werden in den Dateinamen in Unterstriche &#39;_&#39; umgewandelt.
+Die auf der Festplatte zwischengespeicherten Zertifikatsperrlisten müssen Dateinamen haben, die den entsprechenden URLs entsprechen. Sonderzeichen wie die Doppelpunkte &#39;:&#39; und &#39;/&#39; werden in Dateinamen in Unterstriche &#39;_&#39; umgewandelt.
 
-Im Folgenden finden Sie eine Liste extern gehosteter Zertifikatsperrlisten, die sowohl von den Individualisierungs- als auch von den Lizenzservern verwendet werden:
+Im Folgenden finden Sie eine Liste von extern gehosteten Zertifikatsperrlisten, die sowohl von den Individualisierungs- als auch von Lizenzservern verwendet werden:
 
 * **Intermediate CRL:**
 
    * URL: [!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl>]
    * Datei: [!DNL http___crl2.adobe.com_Adobe_FlashAccessIntermediateCA.crl]
-   * Gültigkeit: Gut ca. 12 Monate nach der Erstellung
+   * Gültigkeit: Gut für ca. 12 Monate ab Erstellung
 
-* **Stammzertifikat:**
+* **Root CRL:**
 
    * URL: [!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl>]
    * Datei: [!DNL http___crl2.adobe.com_Adobe_FlashAccessRootCA.crl]
-   * Gültigkeit: Gut seit etwa 5 Jahren
+   * Gültigkeit: Gut für ca. 5 Jahre nach der Erstellung
 
-* **Letzte Zertifikatsperrliste:**
+* **Neueste Zertifikatsperrliste:**
 
    * URL: [!DNL <ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl>]
    * Datei: [!DNL http___crl3.adobe.com_AdobeSystemsIncorporatedFlashAccessRuntime_LatestCRL.crl]
-   * Gültigkeit: Gut für ca. 3 Monate nach der Erstellung
+   * Gültigkeit: Gut für ca. 3 Monate ab Erstellung
 
-Bei den folgenden CRLs handelt es sich um extern gehostete Zertifikatsperrlisten, die nur von Lizenzservern verwendet werden:
+Wenden Sie sich an den Support von Adobe, um mehr über die extern gehosteten Zertifikatsperrlisten zu erfahren, die von Lizenzservern verwendet werden können.
 
-* URL: [!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl>]
-* Datei: [!DNL http___crl2.adobe.com_Adobe_FlashAccessIndividualizationCA.crl]
-* Gültigkeit: Gut für ca. 3 Monate nach der Erstellung
+<!---
 
-* URL: [!DNL <ht<span></span>tps://individualization-crl.primetime.adobe.com/FlashAccessIndividualizationCA.crl>]
-* Datei: [!DNL http___individualization-crl.primetime.adobe.com_FlashAccessIndividualizationCA.crl]
-* Gültigkeit: Gut für ca. 3 Monate nach der Erstellung
+Commenting out because of a security vulnerability reported in Jira PSIRT-20689. 
 
-* URL: [!DNL <ht<span></span>tps://individualization-crl.s3-website-us-east-1.amazonaws.com/FlashAccessIndividualizationCA.crl]
-* Datei: [!DNL http___individualization-crl.s3-website-us-east-1.amazonaws.com_FlashAccessIndividualizationCA.crl]
-* Gültigkeit: Gut für ca. 3 Monate nach der Erstellung
+The following are externally hosted CRLs that are used only by the License Servers:
 
-Zusätzlich zu den oben genannten Zertifikatsperrlisten müssen Sie eine zusätzliche Zertifikatsperrliste erstellen und verwalten. Dies ist die CRL für die Zertifizierungsstelle für Individualisierungen, wie im Abschnitt [Zertifizierungsstelle für Individualisierung erstellen ](../../../on-premises-i15n-server/server-configuration-section/server-properties/create-i15n-ca-crl.md) dieses Dokuments angegeben.
+* URL: `https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl`
 
-Zertifikatsperrlisten werden 45 Tage vor Ablauf aktualisiert. Auf diese Weise sollten Sie ausreichend Zeit haben, neu generierte Zertifikatsperrlisten aus dem Internet zu erwerben und zu installieren. Sie müssen darauf achten, dass die Zertifikatsperrlisten aktualisiert werden, bevor sie abgelaufen sind.
+* File: `http___crl2.adobe.com_Adobe_FlashAccessIndividualizationCA.crl`
+
+* Validity: Good for approximately 3 months from creation
+
+* URL: `https://individualization-crl.primetime.adobe.com/FlashAccessIndividualizationCA.crl`
+
+* File: `http___individualization-crl.primetime.adobe.com_FlashAccessIndividualizationCA.crl`
+
+* Validity: Good for approximately 3 months from creation
+
+* URL: `https://individualization-crl.s3-website-us-east-1.amazonaws.com/FlashAccessIndividualizationCA.crl`
+
+* File: `http___individualization-crl.s3-website-us-east-1.amazonaws.com_FlashAccessIndividualizationCA.crl`
+
+* Validity: Good for approximately 3 months from creation
+
+--->
+
+Zusätzlich zu den extern gehosteten Zertifikatsperrlisten können Sie eine zusätzliche Zertifikatsperrliste erstellen und verwalten. Dies ist die CRL für die Individualisierungs-Zertifizierungsstelle, wie in der [Erstellen einer CRL für individuelle Zertifizierungsstellen](../../../on-premises-i15n-server/server-configuration-section/server-properties/create-i15n-ca-crl.md) Abschnitt dieses Dokuments.
+
+Zertifikatsperrlisten werden 45 Tage vor ihrem Ablauf aktualisiert. Dadurch sollten Sie ausreichend Zeit haben, neu generierte Zertifikatsperrlisten aus dem Internet zu erwerben und zu installieren. Sie müssen darauf achten, die CRL-Dateien zu aktualisieren, bevor sie abgelaufen sind.
