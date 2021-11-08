@@ -3,10 +3,10 @@ title: Versionshinweise zu Primetime
 description: Versionshinweise zu Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 21695ad15f1dcbbfa33211efd0fb3ab282fefbeb
+source-git-commit: 3b2495960cb4f5c625069415977596b5f6632bc4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '305'
+ht-degree: 32%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 Willkommen bei den Versionshinweisen zu Adobe Primetime. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
 
-## Fehlerbehebungen in TVSDK 3.14 Android
+## Fehlerbehebungen in TVSDK 3.15 Android
 
-Mit dieser Version wird ein Problem behoben, bei dem die Anwendung abstürzt, wenn der Knoten [!UICONTROL CDATA] für eines der Elemente [!UICONTROL ClickTracking], [!UICONTROL CustomClick] oder [!UICONTROL CompanionClickTracking] in der Antwort [!UICONTROL VAST] leer ist.
+Mit dieser Version wird ein Problem behoben, bei dem die Anwendung abstürzt, wenn ein kreatives Tag fehlt oder wenn [!UICONTROL url CDATA] ist leer in [!UICONTROL VAST] Antwort.
 
-Weitere Informationen finden Sie in den [TVSDK für Android-Versionshinweisen](../release-notes/tvsdk-3x-android.md) .
+Sehen Sie sich die [TVSDK für Android - Versionshinweise](../release-notes/tvsdk-3x-android.md) für weitere Informationen.
 
 ## Verbesserungen und Fehlerbehebungen in PTAI 21.10.1
 
@@ -30,7 +30,7 @@ Weitere Fehlerbehebungen und Details finden Sie unter [Ad Insertion-Versionshinw
 
 Mit der Version wird die Unterstützung für DEMUXED-&quot;HLS/CMAF&quot;-Anzeigen (Preroll, Midroll und Postroll) für LIVE-, VOD- und FER-Streams eingeführt.
 
-Weitere Fehlerbehebungen und Details finden Sie unter [TVSDK für iOS Versionshinweise](../release-notes/tvsdk-3x-ios.md).
+Weitere Fehlerbehebungen und Details finden Sie unter [TVSDK für iOS - Versionshinweise](../release-notes/tvsdk-3x-ios.md).
 
 ## Siehe auch
 
