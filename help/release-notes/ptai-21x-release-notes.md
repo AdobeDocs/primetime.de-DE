@@ -1,25 +1,31 @@
 ---
-title: Versionshinweise zu PTAI 21.10.1
+title: Versionshinweise zu PTAI 21.11.1
 description: Die PTAI-Versionshinweise beschreiben, was neu oder geändert ist, welche gelösten und bekannten Probleme im Primetime-Ad Insertion im Jahr 2021 aufgetreten sind.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: 7d754e95d8a6c5d92382e3d20fe2c9096f2162ea
+source-git-commit: b58fea35be528c4c030eab39fde9dd642d90cb58
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '383'
 ht-degree: 0%
 
 ---
 
-# Primetime Ad Insertion 21.10.1 - Versionshinweise
+# Primetime Ad Insertion 21.11.1 - Versionshinweise
 
 Die Primetime-Ad Insertion-Versionshinweise 21.xx.x beschreiben, was neu ist oder geändert wurde, Probleme gelöst wurden und bekannte Probleme in Primetime Ad Insertion im Jahr 2021.
 
-## Neue Funktionen in PTAI 21.10.1
+## Neue Funktionen in PTAI 21.11.1
 
-Wenn:  Dienstag, 12. Oktober 2021 von 7:45 Uhr bis 13:45 Uhr Ostzeit
+Wenn: Dienstag, 9. November 2021, 1:30 Uhr bis 04:30 Uhr Ostzeit
 
-* Diese Version konzentriert sich auf die Konsolidierung von Servern, wodurch produktionsfremde und nicht nützliche Server entfernt werden.
+* [!UICONTROL EXT-X-IMAGE-STREAM-INF] ist jetzt pro Zone konfigurierbar.
 
 ## Verbesserungen und Fehlerbehebungen in früheren Versionen
+
+### Version 21.10.1
+
+Wenn: Dienstag, 12. Oktober 2021 von 7:45 Uhr bis 13:45 Uhr Ostzeit
+
+* Konsolidierte Server, produktionsfremde und nicht nützliche Server wurden entfernt.
 
 ### Primetime Ad Insertion Maintenance Release
 
@@ -41,7 +47,7 @@ Wenn: Dienstag, 24. August 2021 von 2:00 Uhr bis 05:00 Uhr Ostzeit
 
 ### Version 21.5.1
 
-Wenn:  Mittwoch, 26. Mai 2021 von 3:30 Uhr bis 06:30 Uhr Ostzeit
+Wenn: Mittwoch, 26. Mai 2021 von 3:30 Uhr bis 06:30 Uhr Ostzeit
 
 **Änderungen**
 
@@ -51,7 +57,7 @@ Wenn:  Mittwoch, 26. Mai 2021 von 3:30 Uhr bis 06:30 Uhr Ostzeit
 
 ### Version 21.4.1
 
-**Wann:** Donnerstag, 22. April 2021 von 2:00 Uhr bis 5:00 Uhr Ostzeit
+**Wenn:** Donnerstag, 22. April 2021 von 2:00 Uhr bis 5:00 Uhr Ostzeit
 
 **Änderungen**
 
@@ -61,7 +67,7 @@ Wenn:  Mittwoch, 26. Mai 2021 von 3:30 Uhr bis 06:30 Uhr Ostzeit
 
 ### Version 21.2.2
 
-**Wann:** Dienstag, 23. Februar 2021 von 1:00 Uhr bis 04:00 Uhr Ostzeit
+**Wenn:** Dienstag, 23. Februar 2021 von 1:00 Uhr bis 04:00 Uhr Ostzeit
 
 **Änderungen**
 
@@ -69,7 +75,7 @@ Wenn:  Mittwoch, 26. Mai 2021 von 3:30 Uhr bis 06:30 Uhr Ostzeit
 
 ### Version 21.2.1
 
-**Wann:** Mittwoch, 3. Februar 2021 von 1:00 Uhr bis 04:00 Uhr Ostzeit
+**Wenn:** Mittwoch, 3. Februar 2021 von 1:00 Uhr bis 04:00 Uhr Ostzeit
 
 **Änderungen**
 
@@ -77,7 +83,7 @@ Wenn:  Mittwoch, 26. Mai 2021 von 3:30 Uhr bis 06:30 Uhr Ostzeit
 
 ### Version 21.1.2
 
-**Wann:** Dienstag, 19. Januar 2021 von 12:30 Uhr bis 08:30 Uhr Ostzeit
+**Wenn:** Dienstag, 19. Januar 2021 von 12:30 Uhr bis 08:30 Uhr Ostzeit
 
 **Änderungen**
 
@@ -85,7 +91,7 @@ Wenn:  Mittwoch, 26. Mai 2021 von 3:30 Uhr bis 06:30 Uhr Ostzeit
 
 ### Version 21.1.1
 
-**Wann:** Mittwoch, 13. Januar 2021 von 01:00 Uhr bis 04:00 Uhr Ostzeit
+**Wenn:** Mittwoch, 13. Januar 2021 von 01:00 Uhr bis 04:00 Uhr Ostzeit
 
 **Änderungen**
 

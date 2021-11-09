@@ -3,7 +3,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Versionshinweise zu Primetime
 user-guide-description: Enthält versionsspezifische Informationen, Systemanforderungen, Einschränkungen sowie behobene und bekannte Probleme.
-source-git-commit: f266b93281a290a8c2f19ac6869287d6480f49e5
+source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 16%
@@ -15,7 +15,7 @@ ht-degree: 16%
 
 + [Versionshinweise Übersicht](home.md)
 + Primetime-Ad Insertion {#ptai}
-   + [PTAI 21.10.1 - Versionshinweise](ptai-21x-release-notes.md)
+   + [PTAI 21.11.1 - Versionshinweise](ptai-21x-release-notes.md)
    + [PTAI 20.12.1 - Versionshinweise](ptai-20x-release-notes.md)
    + [PTAI 19.11.1 - Versionshinweise](ptai-19x-release-notes.md)
 + TVSDK für iOS {#tvsdk-ios}
