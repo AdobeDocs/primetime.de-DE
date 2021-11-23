@@ -3,10 +3,10 @@ title: Versionshinweise zu Primetime
 description: Versionshinweise zu Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
+source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 34%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ Willkommen bei den Versionshinweisen zu Adobe Primetime. Die im linken Navigatio
 
 ## Verbesserungen und Fehlerbehebungen in PTAI 21.11.1
 
-Die [!UICONTROL EXT-X-IMAGE-STREAM-INF] ist jetzt pro Zone konfigurierbar.
+Die [!UICONTROL EXT-X-IMAGE-STREAM-INF] ist jetzt pro Zone konfigurierbar und [!UICONTROL Roku Trick] play wird vollständig unterstützt.
 
 ## Fehlerbehebungen in TVSDK 3.15 Android
 
