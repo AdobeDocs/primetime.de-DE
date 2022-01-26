@@ -4,9 +4,9 @@ description: TVSDK 2.7 für Android™ - Versionshinweise beschreiben, was neu o
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: d2c8133f126db44b9c505dc0a21ba208fd6c01c8
+source-git-commit: 3891ea44775899c1e0d43c4ac74bbc4b07d7962e
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4070'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ TVSDK bricht jetzt bei Bedarf den Download des laufenden Segments ab und wechsel
 * **Einfügen einer partiellen Werbeunterbrechung**
 
    TV-ähnliche Erlebnisse beim Beitritt mitten in einer Anzeige, ohne dass das Tracking für die teilweise überwachte Anzeige ausgelöst wird.\
-   Beispiel**: **Der Benutzer schließt sich in der Mitte (40 Sekunden) einer 90-Sekunden-Werbeunterbrechung an, die aus drei 30-Sekunden-Anzeigen besteht. Dies ist 10 Sekunden nach der zweiten Anzeige in der Pause.
+   Beispiel: Der Benutzer schließt sich in der Mitte (40 Sekunden) einer 90-Sekunden-Werbeunterbrechung an, die aus drei 30-Sekunden-Anzeigen besteht. Dies ist 10 Sekunden nach der zweiten Anzeige in der Pause.
    * Die zweite Anzeige wird für die verbleibende Dauer (20 Sek.) gefolgt von der dritten Anzeige wiedergegeben.
    * Anzeigentracker für die abgespielte partielle Anzeige (zweite Anzeige) werden nicht ausgelöst. Die Tracker für nur die dritte Anzeige werden ausgelöst.
 
@@ -71,7 +71,7 @@ TVSDK bricht jetzt bei Bedarf den Download des laufenden Segments ab und wechsel
 
 * **AdSystem und Creative ID zu CRS-Anforderungen hinzugefügt**
 
-   * Jetzt einschließlich &#39;AdSystem&#39; und &#39;CreativeId&#39; als neue Parameter in den Anfragen 1401 und 1403.
+   * Jetzt einschließlich `AdSystem` und `CreativeId` als neue Parameter in den Anforderungen 1401 und 1403.
 
 * **API setEncodeUrlForTracking in NetworkConfiguration-Klasse entfernt** als die unsicheren Zeichen in einer URL kodiert werden sollen.
 
@@ -81,7 +81,8 @@ Android™ TVSDK v2.5.4 bietet die folgenden Updates und API-Änderungen:
 
 * Änderungen am Standardwert für `WebViewDebbuging`
 
-   `WebViewDebbuging` ist standardmäßig auf False gesetzt. Rufen Sie dazu setWebCon`tentsDebuggingEnabled(true) in der Anwendung auf.
+   Die `WebViewDebbuging` Wert auf _False_ Standardmäßig. Um sie zu aktivieren, rufen Sie `setWebContentsDebuggingEnabled` nach _True_ in der Anwendung.
+
 * Aktualisierung der OpenSSL- und Curl-Version `libcurl` auf v7.57.0 und OpenSSL auf v1.0.2k.
 * Zugriff auf App-Ebene für VAST-Antwortobjekt Einführung einer neuen API NetworkAdInfo::getVastXml() , die Zugriff auf das VAST-Antwortobjekt zur Anwendung bietet.
 
