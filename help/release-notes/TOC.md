@@ -3,9 +3,9 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Versionshinweise zu Primetime
 user-guide-description: Enthält versionsspezifische Informationen, Systemanforderungen, Einschränkungen sowie behobene und bekannte Probleme.
-source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
+source-git-commit: d549c83b50683ed3f803226eaa414179896a29b0
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '116'
 ht-degree: 16%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 16%
 
 + [Versionshinweise Übersicht](home.md)
 + Primetime-Ad Insertion {#ptai}
+
+   + [PTAI 22.2.2 - Versionshinweise](ptai-22x-release-notes.md)
    + [PTAI 21.11.1 - Versionshinweise](ptai-21x-release-notes.md)
    + [PTAI 20.12.1 - Versionshinweise](ptai-20x-release-notes.md)
    + [PTAI 19.11.1 - Versionshinweise](ptai-19x-release-notes.md)
