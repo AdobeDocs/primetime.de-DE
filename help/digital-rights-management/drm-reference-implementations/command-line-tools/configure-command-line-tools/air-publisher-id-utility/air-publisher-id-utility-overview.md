@@ -2,26 +2,25 @@
 title: Übersicht
 description: Übersicht
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 07f2ef0b-c6aa-4574-a3ae-18685a090cf2
+source-git-commit: a1fc67b708f3d5821532d3827639adbadf15f6b4
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
+# AIR Publisher ID-Dienstprogramm {#air-publisher-id-utility}
 
-# AIR-Herausgeber-ID-Dienstprogramm {#air-publisher-id-utility}
+Beim Erstellen einer AIR-Datei generiert das AIR Developer Tool (ADT) automatisch eine Herausgeber-ID. Das AIR Publisher ID-Dienstprogramm ( [!DNL AdobePublisherIDUtility.jar]) berechnet die Herausgeber-ID für eine AIR-Anwendung.
 
-Beim Erstellen einer AIR-Datei generiert das AIR Developer Tool (ADT) automatisch eine Herausgeber-ID. Das AIR Publisher-ID-Dienstprogramm ( [!DNL AdobePublisherIDUtility.jar]) berechnet die Herausgeber-ID für eine AIR-Anwendung.
-
-Die Herausgeber-ID ist eindeutig für das Zertifikat, mit dem Sie eine AIR-Datei erstellen. Wenn Sie dasselbe Zertifikat für mehrere AIR-Anwendungen wiederverwenden, haben alle AIR-Anwendungen dieselbe Herausgeber-ID. In einer AIR-Version, die auf Version 1.5.2 folgt, wird die generierte Herausgeber-ID keiner Datei hinzugefügt. Wenn Sie daher eine AIR-Anwendungs-Zulassungsliste verwenden möchten, verwenden Sie dieses Tool, um die Herausgeber-ID zu ermitteln.
+Die Herausgeber-ID entspricht dem Zertifikat, das Sie zum Erstellen einer AIR-Datei verwenden. Wenn Sie dasselbe Zertifikat für mehrere AIR-Anwendungen wiederverwenden, haben alle AIR-Anwendungen dieselbe Herausgeber-ID. In einer AIR-Version mit Version 1.5.2 wird die generierte Herausgeber-ID nicht zu einer Datei hinzugefügt. Wenn Sie eine AIR-Anwendungs-Zulassungsliste verwenden möchten, ermitteln Sie daher mit diesem Tool die Herausgeber-ID.
 
 >[!NOTE]
 >
->Die Herausgeber-ID, die für die Durchsetzung der AIR-Zulassungsliste verwendet wird, ist nicht mit der Herausgeber-ID identisch, die der Anwendungsherausgeber in der Anwendungsdatei [!DNL application.xml] angegeben hat.
+>Die Herausgeber-ID, die für die Durchsetzung der AIR-Zulassungsliste verwendet wird, ist nicht die gleiche wie die Herausgeber-ID, die der Herausgeber der Anwendung im Abschnitt [!DNL application.xml] -Datei.
 
-## Befehlszeilenverwendung des AIR Publisher-ID-Dienstprogramms {#air-publisher-id-utility-command-line-usage}
+## Befehlszeilenverwendung des AIR Publisher ID-Dienstprogramms {#air-publisher-id-utility-command-line-usage}
 
 ```
 java -jar AdobePublisherIDUtility.jar 
@@ -36,11 +35,10 @@ java -jar AdobePublisherIDUtility.jar
 </i class="+ topic>
 ```
 
-* 
-   * `signaturefile`* gibt einen Pfad zur  [!DNL signatures.xml] Datei der AIR-Anwendung an, die sich im  [!DNL META-INF] Anwendungsordner befindet.
+* `signaturefile` gibt einen Pfad zum AIR-Programm an. [!DNL signatures.xml] -Datei in den Anwendungen [!DNL META-INF] directory
 
 * `signingcert` gibt das Zertifikat an, das zum Signieren einer AIR-Anwendung verwendet wird
 
 >[!NOTE]
 >
->Um die Herausgeber-ID für eine Android-Anwendung zu ermitteln, müssen Sie die Option `-s` verwenden, um das Zertifikat anzugeben, mit dem das Android-Anwendungspaket (APK) signiert wird. Primetime DRM ist erforderlich, um Android-Anwendungen zu erstellen, die Primetime-DRM-geschützte Inhalte wiedergeben können.
+>Um die Herausgeber-ID für eine Android-Anwendung zu ermitteln, müssen Sie die `-s` -Option, um das Zertifikat anzugeben, das zum Signieren des Android-Anwendungspakets (APK) verwendet wird. Primetime DRM ist erforderlich, um Android-Anwendungen zu erstellen, die Primetime-DRM-geschützte Inhalte wiedergeben können.
