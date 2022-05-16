@@ -1,34 +1,33 @@
 ---
-description: Sie können entscheiden, ob Sie nur die Anzeigen auflösen möchten, die nach dem aktuellen Live-Point des Benutzers auftreten, oder ob Sie Anzeigen auflösen möchten, die vor dem aktuellen Live-Point erscheinen.
+description: Sie können entscheiden, ob nur die Anzeigen aufgelöst werden sollen, die nach dem aktuellen Live-Point des Benutzers auftreten, oder ob Anzeigen, die vor dem aktuellen Live-Point erscheinen, aufgelöst werden sollen.
 title: Anzeigen für ein DVR-Fenster laden
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3e8542a8-0912-4023-904d-0fdb28411a9d
+source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
+# Anzeigen für ein DVR-Fenster laden {#load-ad-for-a-dvr-window}
 
-# Anzeige für ein DVR-Fenster {#load-ad-for-a-dvr-window} laden
+Sie können entscheiden, ob nur die Anzeigen aufgelöst werden sollen, die nach dem aktuellen Live-Point des Benutzers auftreten, oder ob Anzeigen, die vor dem aktuellen Live-Point erscheinen, aufgelöst werden sollen.
 
-Sie können entscheiden, ob Sie nur die Anzeigen auflösen möchten, die nach dem aktuellen Live-Point des Benutzers auftreten, oder ob Sie Anzeigen auflösen möchten, die vor dem aktuellen Live-Point erscheinen.
-
-Wenn ein Benutzer zu Beginn eines DVR-Streams auf Ansicht von Inhalten Beginn, löst TVSDK alle Anzeigen für den Stream zu diesem Zeitpunkt auf. Wenn der Benutzer jedoch zu einem Zeitpunkt nach dem Stream zur Ansicht von Inhalten Beginn, können Sie entscheiden, ob nur die Anzeigen aufgelöst werden sollen, die nach dem aktuellen Live-Point des Benutzers auftreten, oder ob auch Anzeigen aufgelöst werden sollen, die vor dem aktuellen Live-Point stattgefunden haben.
+Wenn ein Benutzer beginnt, Inhalte zu Beginn eines DVR-Streams anzuzeigen, löst TVSDK alle Anzeigen für den Stream zu diesem Zeitpunkt auf. Wenn der Benutzer jedoch beginnt, Inhalte zu einem Zeitpunkt nach dem Anfang des Streams anzuzeigen, können Sie entscheiden, ob nur die Anzeigen aufgelöst werden sollen, die nach dem aktuellen Live-Point des Benutzers auftreten, oder auch Anzeigen, die vor dem aktuellen Live-Point stattgefunden haben.
 
 >[!TIP]
 >
->Das Auflösen von Anzeigen nach dem aktuellen Live-Point ist schneller, aber wenn der Benutzer rückwärts sucht, verhindert diese Option, dass der Player Anzeigen wiedergibt, die zuvor angezeigt wurden.
+>Das Auflösen von Anzeigen nach dem aktuellen Live-Point ist schneller. Wenn der Benutzer jedoch nach hinten springt, verhindert diese Option, dass der Player Anzeigen wiedergibt, die zuvor erschienen sind.
 
 ## Steuern und Laden von Anzeigen für ein DVR-Fenster {#section_2D93E2E947644D66B6F6ED1DD6742C25}
 
 So steuern Sie die Anzeigenladung für ein DVR-Fenster:
 
-    Um alle Anzeigen für den gesamten Stream zu laden, setzen Sie die Eigenschaft &quot;PTAdMetadata.enableDVRAds&quot;auf &quot;YES&quot;.
+Um alle Anzeigen für den gesamten Stream zu laden, legen Sie die `PTAdMetadata.enableDVRAds` Eigenschaft auf `YES`.
 
 >[!NOTE]
 >
->Der Standardwert ist `NO`, und diese Option lädt Anzeigen nur vom aktuellen Live-Point.
+>Der Standardwert ist `NO`und diese Option lädt Anzeigen nur vom aktuellen Live-Punkt.
 
 Beispiel:
 

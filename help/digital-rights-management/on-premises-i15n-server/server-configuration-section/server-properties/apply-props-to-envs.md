@@ -1,69 +1,68 @@
 ---
-description: 'Sie müssen die Servereigenschaften entsprechend Ihrer Umgebung konfigurieren. Sie können dies mithilfe eines der folgenden '
-title: Eigenschaften auf Server-Umgebung anwenden
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 'Sie müssen die Servereigenschaften entsprechend Ihrer Umgebung konfigurieren. Dazu können Sie einen der folgenden Schritte ausführen '
+title: Anwenden von Eigenschaften auf Serverumgebungen
+exl-id: 0c78011a-e8c8-43a8-8c2d-a5c4ed54a8d7
+source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
+# Anwenden von Eigenschaften auf Serverumgebungen{#apply-properties-to-server-environments}
 
-# Eigenschaften auf Server-Umgebung anwenden{#apply-properties-to-server-environments}
+Sie müssen die Servereigenschaften entsprechend Ihrer Umgebung konfigurieren. Dazu können Sie einen der folgenden Schritte ausführen:
 
-Sie müssen die Servereigenschaften entsprechend Ihrer Umgebung konfigurieren. Dazu haben Sie folgende Möglichkeiten:
+* [!DNL flashaccess-i15n.properties] - In jedem der [!DNL .war] files
 
-* [!DNL flashaccess-i15n.properties] - In jeder  [!DNL .war] Datei enthaltene Beispiele
+* [!DNL AdobeInitial.properties] - Beispiel im [!DNL /shared] Ordner auf der DVD
 
-* [!DNL AdobeInitial.properties] - Beispiel im  [!DNL /shared] Ordner auf der DVD
+   Sie können diese Datei verwenden, um die in der WAR-Datei festgelegten Eigenschaften wie folgt zu überschreiben:
 
-   Mit dieser Datei können Sie die in der WAR-Datei festgelegten Eigenschaften wie folgt überschreiben:
-
-   1. Legen Sie die Werte der überschreibenden Eigenschaft in [!DNL AdobeInitial.properties] fest.
-   1. Setzen Sie [!DNL AdobeInitial.properties] auf den Klassenpfad.
+   1. Legen Sie die überschreibenden Eigenschaftswerte in fest. [!DNL AdobeInitial.properties]
+   1. Ort [!DNL AdobeInitial.properties] auf den Klassenpfad.
 
    >[!NOTE]
    >
-   >Adobe empfiehlt, die [!DNL AdobeInitial.properties]-Datei zu verwenden, da Sie auf diese Weise Ihre WAR-Anwendungsdateien aktualisieren können, ohne dass die vorherige Konfiguration der Eigenschaftskonfiguration, die Sie eventuell in der [!DNL flashaccess-i15n.properties]-Datei vorgenommen haben, verloren geht.
+   >Adobe empfiehlt, die [!DNL AdobeInitial.properties] -Datei, da Sie damit Ihre Anwendungs-WAR-Dateien aktualisieren können, ohne den Verlust der vorherigen Eigenschaftskonfigurationseinstellungen zu riskieren, die Sie möglicherweise in der [!DNL flashaccess-i15n.properties] -Datei.
 
 * Der Java-Systemeigenschaftsmechanismus.
 
-Sie können einzelne Eigenschaften auf die folgenden spezifischen Server-Umgebung anwenden:
+Sie können einzelne Eigenschaften auf diese spezifischen Serverumgebungen anwenden:
 
 * *Entwicklung*
 * *Staging*
 * *Produktion*
 
-Mit dieser Funktion können Sie dieselbe WAR-Datei für alle Server-Umgebung verwenden. Um Eigenschaften auf bestimmte Umgebung anzuwenden, fügen Sie der Eigenschaft *name* zwei Unterstrich (&#39; `__`&#39;) sowie einen der folgenden Umgebung-Codes hinzu:
+Mit dieser Funktion können Sie dieselbe WAR-Datei für alle Serverumgebungen verwenden. Um Eigenschaften auf bestimmte Umgebungen anzuwenden, fügen Sie zwei Unterstrichzeichen (&#39; `__`&#39;) plus einem der folgenden Umgebungs-Codes zur Eigenschaft *name*:
 
-    * `DEV`
-    * `STAGE` 
-    * `PUBLIK`
+* `DEV`
+* `STAGE`
+* `PROD`
 
 <!--<a id="example_A7A58E3EE8DA4114B4F7A9EEB69D50CA"></a>-->
 
-So legen Sie beispielsweise für Ihre Produktions- und Staging-Server die Protokollebene auf `INFO` und für Ihren Entwicklungsserver auf `DEBUG` fest:
+So legen Sie beispielsweise die Protokollebene auf `INFO` für Ihre Produktions- und Staging-Server und `DEBUG` für Ihren Entwicklungsserver:
 
 ```
 log.Level=INFO  
 log.Level__DEV=DEBUG 
 ```
 
-Der Server verwendet die folgende Suchreihenfolge für Eigenschaften:
+Der Server verwendet diese Suchreihenfolge für Eigenschaften:
 
-1. `propertyname_environment` in  [!DNL AdobeInitial.properties]
+1. `propertyname_environment` in [!DNL AdobeInitial.properties]
 
-1. `propertyname_environment` in  [!DNL flashaccess-15n.properties]
+1. `propertyname_environment` in [!DNL flashaccess-15n.properties]
 
 1. `propertyname_environment` in Java-Systemeigenschaften
-1. `propertyname` in  [!DNL AdobeInitial.properties]
+1. `propertyname` in [!DNL AdobeInitial.properties]
 
-1. `propertyname` in  [!DNL flashaccess-15n.properties]
+1. `propertyname` in [!DNL flashaccess-15n.properties]
 
 1. `propertyname` in Java-Systemeigenschaften
 
 >[!NOTE]
 >
->Sie müssen beim Starten des Servers den Servernamen als Java-Systemeigenschaft angeben. Wenn Sie beispielsweise Tomcat mit [!DNL catalina.bat] starten, legen Sie die Variable `CATALINA_OPTS` für die Umgebung wie folgt fest:
->-DENVIRONMENT_NAME=[ DEV | STAGE | Ū]
+>Sie müssen den Umgebungsnamen des Servers beim Starten des Servers als Java-Systemeigenschaft angeben. Wenn Sie beispielsweise Tomcat mit [!DNL catalina.bat], legen Sie die `CATALINA_OPTS` Umgebungsvariable wie folgt:
+>-DENVIRONMENT_NAME=[ DEV | STAGE | PROD ]
