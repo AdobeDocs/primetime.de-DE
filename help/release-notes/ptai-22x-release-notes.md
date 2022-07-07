@@ -1,27 +1,56 @@
 ---
-title: Versionshinweise zu PTAI 22.2.2
+title: Versionshinweise zu PTAI 22.6.2
 description: Die PTAI-Versionshinweise beschreiben, was neu oder geändert ist, welche gelösten und bekannten Probleme im Primetime-Ad Insertion im Jahr 2022 aufgetreten sind.
 exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 899b8dc98b79d531c7f13bfe26d12806e90d5685
+source-git-commit: 9f218bddddeab52480bbdcd41e8f0e6fd0fab0f8
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '276'
 ht-degree: 0%
 
 ---
 
-# Primetime Ad Insertion 2.2.2 - Versionshinweise
+# Primetime Ad Insertion 2.6.2 - Versionshinweise
 
 Die Primetime-Ad Insertion-Versionshinweise 22.xx.x beschreiben, was neu ist oder geändert wurde, Probleme gelöst wurden und bekannte Probleme in Primetime Ad Insertion im Jahr 2022.
 
-## Neue Funktionen in PTAI 22.4.4
+## Neue Funktionen in PTAI 22.6.2
 
-Wenn: Mittwoch, 20. April 2022, 3:00 Uhr bis 6:00 Uhr Ostzeit
+Wenn: Mittwoch, 29. Juni 2022, 3:00 Uhr bis 6:00 Uhr Ostzeit
+
+* Verbesserung der Protokollierung der Anzeigenleistung mit weiteren Details zum Wertverlust.
+
+* Zusätzliche Nettospeicherursprünge für CRS.
+
+## Verbesserungen und Fehlerbehebungen in früheren Versionen
+
+### Version 22.6.1
+
+**Wenn:** Dienstag, 14. Juni 2022, 3:00 Uhr bis 6:00 Uhr Ostzeit
+
+**Änderungen**
+
+* Unterstützung für DASH-VOD/FER für mehrere Zeiträume
+* DASH-MIME-Typfix für HLS
+* Integrierte alte Konsolen in der einheitlichen Benutzeroberfläche
+* Neue Impressionsdimensionswerte werden an den Dienst übergeben
+
+### Version 22.5.2
+
+**Wenn:** Mittwoch, 25. Mai 2022, 3:00 Uhr bis 6:00 Uhr Ostzeit
+
+**Änderungen**
+
+* Verbesserungen an Funktionalität, Benutzerfreundlichkeit und Zuverlässigkeit in alten SSAI- und CRS-Konsolen.
+
+### Version 22.4.4
+
+**Wenn:** Mittwoch, 20. April 2022, 3:00 Uhr bis 6:00 Uhr Ostzeit
+
+**Änderungen**
 
 * Ein Update zur Erfassung neuer Anzeigenleistungsereignisse bei Anzeigenaufrufen.
 
 * Ein Update zur Erfassung neuer Impressionsdimensionen zur Anreicherung der Berichterstellungsoberfläche, interner Abrechnungs- und Anzeigenleistungsinitiativen.
-
-## Verbesserungen und Fehlerbehebungen in früheren Versionen
 
 ### Version 22.3.2
 
