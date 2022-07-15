@@ -4,8 +4,8 @@ audience: end-user
 user-guide-title: Hilfe zu Primetime Ad Insertion
 source-git-commit: 23930068020475ef32a03e63c8a90d9c08429082
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 4%
 + Erweiterte Funktionen{#advanced-features}
    + [Routing von Anzeigen basierend auf Regeln](advanced-features/route-ads-based-on-rules.md)
    + [Werbeerlebnisse optimieren](advanced-features/optimize-ad-experiences.md)
-   + [Hinzufügen von Inhalts-Stoßstangen](advanced-features/add-content-bumpers.md)
+   + [Hinzufügen von Inhaltsbausteinen](advanced-features/add-content-bumpers.md)
    + [Kontextbezogene Berichterstellung und Zielgruppenbestimmung](advanced-features/contextual-reporting-and-targeting.md)
 + Leistung: Überwachung, Debugging und Reporting{#performance}
    + [Übersicht](performance-monitoring-debugging-reporting/performance-overview.md)

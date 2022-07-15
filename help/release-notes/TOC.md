@@ -5,8 +5,8 @@ user-guide-title: Versionshinweise zu Primetime
 user-guide-description: Enthält versionsspezifische Informationen, Systemanforderungen, Einschränkungen sowie behobene und bekannte Probleme.
 source-git-commit: e46fc03542211ec21822cf9f52eb8f0172269564
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 16%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
