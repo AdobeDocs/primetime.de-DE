@@ -4,9 +4,9 @@ description: TVSDK 2.7 für Android™ - Versionshinweise beschreiben, was neu o
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: 3891ea44775899c1e0d43c4ac74bbc4b07d7962e
+source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
 workflow-type: tm+mt
-source-wordcount: '4070'
+source-wordcount: '4037'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ TVSDK erfasst automatisch Metriken gemäß dem Kundenverkaufsvertrag, um regelm�
 * **Werbung**
 
    * **Moat-Integration -** Unterstützung für die Anzeigensichtbarkeitsmessung von Moat.
-   * **Companion Banner -** Neben einer linearen Anzeige werden auch begleitende Banner angezeigt, die häufig auch nach Ende der Anzeige in der Ansicht angezeigt werden. Diese Banner können vom Typ HTML (ein HTML-Snippet) oder vom Typ iframe (eine URL zu einer iframe-Seite) sein.
+   * **Companion Banner -** Neben einer linearen Anzeige werden begleitende Banner angezeigt, die häufig nach Ende der Anzeige in der Ansicht angezeigt werden. Diese Banner können vom Typ HTML (ein HTML-Snippet) oder vom Typ iframe (eine URL zu einer iframe-Seite) sein.
 
 * **Analytics**
 
@@ -378,7 +378,7 @@ Adobe Primetime-Versionszeichenfolge wird dem Systembenutzeragenten hinzugefügt
 * Nachdem der Player den Status ABGESCHLOSSEN erhalten hat, wechselt er für Post-Roll-Anzeigen wieder zum PLAYING-Status mit SKIP adBreakPolicy .
 * Cookies werden nicht an ausgehende Anzeigen-Callbacks angehängt.
 * Anzeigen-Cue-Punkte sind nicht sichtbar.
-* HLS mit separatem EAC3 SAP-Track wird nicht geladen.
+* HLS mit separatem EAC3 SAP Track wird nicht geladen.
 * Der Player stürzt ab, wenn TVSDK nach der Wiederherstellung des Media-Players den Intent &quot;Bildschirm ein&quot;erhält.
 
 ## Bekannte Probleme und Einschränkungen {#known-issues-and-limitations}
@@ -425,10 +425,10 @@ Diese TVSDK-Version weist die folgenden Probleme auf:
 
 ## Hilfreiche Ressourcen {#helpful-resources}
 
-* [Systemanforderungen](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2.7-requirements.html?lang=en)
-* [TVSDK 2.7 für Android™-Programmierhandbuch](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-2-7-for-android/overview/c-psdk-android-2.7-overview-prod-audience-guide.html?lang=en)
+* [Systemanforderungen](/help/programming/tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md)
+* [TVSDK 2.7 für Android™-Programmierhandbuch](/help/programming/tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-prod-audience-guide.md)
 * [TVSDK Android™ Javadoc für API-Referenz](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/index.html)
 * [TVSDK Android™ C++ API-Dokument](https://help.adobe.com/en_US/primetime/api/psdk/cpp/namespaces.html) - Jede Java™-Klasse verfügt über eine entsprechende C++-Klasse. Die C++-Dokumentation enthält mehr erklärendes Material als die Java™-Dokumente. Weitere Informationen zur Java™-API finden Sie in der C++-Dokumentation.
-* [Migrationshandbuch für TVSDK 1.4 bis 2.5 für Android™ (Java™)](https://experienceleague.adobe.com/docs/primetime/migration/tvsdk-14-25-android.html?lang=en)
+* [Migrationshandbuch für TVSDK 1.4 bis 2.5 für Android™ (Java™)](/help/migration-guides/tvsdk-14-25-android.md)
 * Informationen zur Handhabung von Ein-/Ausschaltszenarien für den Bildschirm finden Sie im Abschnitt `Application_Changes_for_Screen_On_Off.pdf` im Build enthaltene Datei.
 * Die vollständige Hilfedokumentation finden Sie unter [Adobe Primetime - Lernen und Support](https://experienceleague.adobe.com/docs/primetime.html) Seite.

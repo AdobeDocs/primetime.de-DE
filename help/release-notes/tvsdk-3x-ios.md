@@ -2,9 +2,9 @@
 title: TVSDK 3.13 für iOS - Versionshinweise
 description: TVSDK 3.13 für iOS - Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme sowie die Geräteprobleme in TVSDK iOS 3.13.
 exl-id: adf8ab23-86d6-4113-b243-2709d5f7f829
-source-git-commit: 92defeee19a430c8b0b66696c527a6abe377f4b9
+source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
 workflow-type: tm+mt
-source-wordcount: '7587'
+source-wordcount: '7575'
 ht-degree: 0%
 
 ---
@@ -1178,7 +1178,7 @@ Diese Version des TVSDK wurde mit dem FairPlay-Support für iOS und tvOS zertifi
    * VPAID-Anzeigen werden in iPad 13 nicht wie erwartet abgespielt.
    * Companion-Anzeigen werden nicht wie erwartet abgespielt.
 
-* In iOS TVSDK werden alle Anzeigen dem Inhaltsmanifest zugeordnet. Anzeigenverhalten werden durch Suche basierend auf der Dauer des Inhalts und der Anzeigensegmente implementiert. Wenn die Segmentdauer also nicht genau ist, endet die Suche möglicherweise nicht immer im exakten Rahmen am Anfang oder Ende der Werbeunterbrechung. Selbst wenn die Dauer des Frames beträgt, gibt es eine Toleranz, die die Plattform selbst der Suche auferlegt, und es können einige Frames oder Anzeigen oder Inhalte angezeigt werden. Dies ist eine Einschränkung der Plattform und der Art und Weise, wie das Anzeigen-Insertion mit TVSDK in iOS funktioniert.
+* In iOS TVSDK werden alle Anzeigen dem Inhaltsmanifest zugeordnet. Anzeigenverhalten werden durch Suche basierend auf der Dauer des Inhalts und der Anzeigensegmente implementiert. Wenn die Segmentdauer also nicht genau ist, endet die Suche möglicherweise nicht immer im exakten Rahmen am Anfang oder Ende der Werbeunterbrechung. Selbst wenn die Dauer des Frames beträgt, gibt es eine Toleranz, die die Plattform selbst der Suche auferlegt, und es können einige Frames oder Anzeigen oder Inhalte angezeigt werden. Dies ist eine Einschränkung der Plattform und der Funktionsweise von Anzeigen-Insertion mit TVSDK in iOS.
 * Die Entscheidung zum Überspringen erfolgt in diesem Fall beim Suchereignis. Da die Anzeigensegmentdauer im Manifest jedoch nicht genau die tatsächliche Dauer der Anzeige darstellt, ist die Suche nicht frame-genau. Daher sehen Sie einige Frames von Anzeigen, wenn die Anzeigenrichtlinien angewendet werden.
 * Es kann vorkommen, dass die Lizenzrotation nicht auf iOS 11 abgespielt wird und auf iOS 9.x und iOS 10.x gut wiedergegeben wird.
 * Wenn die Wiedergabe über AirPlay aktiv ist, werden VPAID-Anzeigen in VPAID 2.0-Unterstützung übersprungen.
@@ -1205,6 +1205,6 @@ Hinweis: In bestimmten iOS-Versionen lädt das Betriebssystem die Ressourcen nic
 
 ## Hilfreiche Ressourcen {#helpful-resources}
 
-* [TVSDK 3.4 für iOS-Programmierhandbuch](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-3x-ios-prog/introduction/ios-3x-overview.html?lang=en)
+* [TVSDK 3.4 für iOS-Programmierhandbuch](/help/programming/tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview.md)
 * [TVSDK iOS 3.4 API-Referenz](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v34/index.html)
 * Die vollständige Hilfedokumentation finden Sie unter [Adobe Primetime - Lernen und Support](https://experienceleague.adobe.com/docs/primetime.html) Seite.

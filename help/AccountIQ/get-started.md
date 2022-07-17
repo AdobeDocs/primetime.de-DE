@@ -1,60 +1,57 @@
 ---
-title: Erste Schritte mit Konto-IQ, Voraussetzungen und Onboarding
-description: 'Informationen zur Integration, zu Voraussetzungen und zu den ersten Schritten mit dem Konto-IQ. '
-source-git-commit: 258ce10297aa15086a3ed1c1a825af2a30d34d24
+title: Einstieg in Account IQ und Erste Schritte
+description: 'Informationen zur Integration, zu Voraussetzungen und zu den ersten Schritten mit Konto IQ. '
+source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '271'
 ht-degree: 0%
 
 ---
 
 
-# Erste Schritte mit dem Konto-IQ {#onboarding}
+# Einstieg in Account IQ und Erste Schritte {#onboard}
 
-Lesen Sie weiter, um zu erfahren, welche Voraussetzungen für die Verwendung von Konto IQ erfüllt sind und wie Ihr Unternehmen an Bord beginnen kann, sich die Bewertungen von Abonnenten zur Kontofreigabe anzusehen.
+Konto IQ ist eine gehostete Webanwendung. Um dieses Analysetool als D2C-Streaming-Anbieter, -Programmierer oder -Distributor (MVPD) zu verwenden und die Freigabe von Anmeldedaten zu verhindern, müssen Sie Ihre Organisation in Adobe Experience Cloud-Organisationen integrieren und Unternehmensbenutzer zuweisen. **Primetime-Konto IQ** Profil auf [Adobe Admin Console](https://adminconsole.adobe.com/). Lesen Sie weiter, um zu erfahren, welche Voraussetzungen und Einzelheiten an Bord zu erbringen sind.
 
-## Voraussetzungen {#prerequisites}
+## Browservoraussetzungen {#browser-prerequisites}
 
-* Die Organisation muss in [!DNL Adobe Marketing Cloud] Organisationen.
-
-* Benutzer in dieser Organisation sollten entweder TVE Dashboard Read-Write oder TVE Dashboard Read-Only zugewiesen werden.
-
-### Browservoraussetzungen {#browser-prerequisites}
-
-Die Konto-IQ ist ein gehosteter Webdienst. Sie ist mit der neuesten Version der folgenden Browser kompatibel:
+Konto-IQ ist mit den neuesten Versionen der folgenden Browser kompatibel:
 
 * Google Chrome
+* Safari
 * Mozilla Firefox
-* Safari-Version
 
-### Wie integrieren Sie Organisationen in Account IQ? {#steps-to-onboard}
+## Schritte zum Einstieg {#steps-to-onboard}
+
+1. Registrierung Ihrer Organisation in **Adobe Experience Cloud** Ansprechpartner für Organisationen **Adobe** per E-Mail an tve-support@adobe.com.
+
+1. Zuweisen von Organisationsbenutzern zu **TVE Dashboard - Lesen und Schreiben** oder **Zehn Dashboards schreibgeschützt** Profile in [Adobe Admin Console](https://adminconsole.adobe.com/).
+
+   Die Admin-Benutzer in Ihrer Organisation können Benutzer erstellen und ihnen Zugriff auf das Konto-IQ-Dashboard und die Berichte gewähren. Um Benutzern von Organisationen Zugriff auf Konto-IQ zu gewähren, müssen Administratoren von Organisationen wie folgt vorgehen:
+
+   1. Anmelden bei [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 
-Das haben wir im Moment. Der Plan ist, dma_primetime check zu entfernen und ein dediziertes Profil für AIQ zu haben. Die Benutzer, die Zugriff auf die Konsole benötigen, benötigen dieses Benutzerprofil. Dies wird jedoch derzeit nicht umgesetzt.
+      ![](assets/admin-console.png)
 
-1. Die Organisation kann in Adobe Marketing Cloud @Eric oder @Peter integriert werden.  Ich glaube, es heißt jetzt &quot;Experience Cloud&quot;, aber das ist etwas kleiner.  Gibt es dazu noch weitere Details? Wird dies von einer anderen Gruppe verwaltet? Wenn ja, stellen wir einen Link, einen Kontakt usw. bereit? Dies sollte auch Einschränkungen enthalten, die überprüfen, ob ihre Organisation bereits Teil des Experience Cloud ist.
+   1. Auswählen **Adobe Primetime** von **Produkte und Dienstleistungen**.
 
-2. deren Benutzer in http://adminconsole.adobe.com/ die Profile &quot;TVE Dashboard Read-Write&quot;oder &quot;TVE Dashboard Read-Only&quot;zugewiesen haben.
-@Eric, wissen Sie, wie man das macht?  Gibt es Unterschritte?  Können wir Kunden erklären, warum sie Lese- und Schreibzugriff oder Schreibzugriff gewählt haben?
-@Cristina, können Sie eine kurze Erklärung dafür geben, dass es sich um einen temporären Ansatz handelt und wie er vielleicht in der nächsten Version funktionieren wird?
+   1. Von **Produktprofile**, wählen Sie entweder **TVE Dashboard - Lesen und Schreiben** oder **Zehn Dashboards schreibgeschützt** Profil.
 
-3. Gibt es einen Prozess, den wir einrichten können, um dies zu verwalten, da die Organisations-ID auf der AIQ-Seite @Cristina auf die Whitelist gesetzt wird?  Senden Sie beispielsweise eine E-Mail mit der Organisations-ID der Organisation an &quot;DL-AdobePass-Eng AdobePass-Eng@adobe.com&quot;.
+      ![](assets/product-profiles.png)
 
-<!-- these user groups set dma_primetime product context for the user accounts. In AIQ code we’re checking for this product context when providing access. Internally, in the code we have an additional condition: the org id should be whitelisted in order for the users to get access to their data. -->
+      >[!NOTE]
+      >
+      >In naher Zukunft wird Primetime Account IQ vom TVE Dashboard getrennt.
 
-Beim Zugriff auf das Adobe Enterprise Dashboard werden Ihnen die beiden neu erstellten Benutzergruppen in Ihrer Adobe Marketing Cloud-Organisation angezeigt:
+   1. Hier können Sie Benutzergruppen erstellen oder vorhandene Gruppen auswählen, denen Benutzer hinzugefügt werden sollen.
 
-TVE Dashboard Lese- und Schreibzugriff - die Gruppenmitglieder haben für alle bearbeitbaren Bereiche des Dashboard TVE-Dashboards volle Rechte - die Gruppenmitglieder haben nur Anzeigerechte für das gesamte Dashboard. Fügen Sie Ihr Konto zur Benutzergruppe TVE Dashboard Lese- und Schreibzugriff hinzu, indem Sie im Adobe Enterprise Dashboard Ihre Anmeldung vornehmen und sich anschließend im Adobe Primetime TVE Dashboard anmelden.  Danach können Sie Benutzerberechtigungen im Adobe Enterprise Dashboard verwalten, indem Sie Benutzer in den beiden oben aufgeführten Benutzergruppen hinzufügen und entfernen.
+      ![](assets/add-users-2profile.png)
 
-..........
+   1. Auswählen **Benutzer hinzufügen** -Option zum Hinzufügen von Benutzern.
 
-In der von Ihnen bereitgestellten Dokumentation finden Sie diesen Abschnitt &quot;Erste Schritte mit der Primetime TVE Dashboard-Benutzerbereitstellung&quot;, der für die Adobe Pass-Konsole gilt, aber auch für AIQ ähnlich sein sollte.
-http://tve.helpdocsonline.com/primetime-tve-dashboard-user-guide Die Organisation, die an AIQ interessiert ist, sollte eine Organisation sein, die in Adobe Marketing Cloud Orgs registriert ist. Benutzer in dieser Organisation sollten entweder TVE Dashboard Read-Write oder TVE Dashboard Read-Only zugewiesen werden.
-Diese Benutzergruppen legen nur zu Ihrer Kenntnis den Produktkontext dma_primetime für die Benutzerkonten fest. Im AIQ-Code suchen wir bei der Bereitstellung des Zugriffs nach diesem Produktkontext. Intern haben wir im Code eine zusätzliche Bedingung: Die Organisations-ID sollte auf die Whitelist gesetzt werden, damit die Benutzer Zugriff auf ihre Daten erhalten.
-Das haben wir im Moment. Der Plan ist, dma_primetime check zu entfernen und ein dediziertes Profil für AIQ zu haben. Die Benutzer, die Zugriff auf die Konsole benötigen, benötigen dieses Benutzerprofil. Dies wird jedoch derzeit nicht umgesetzt.
+>[!IMPORTANT]
+>
+>Wenn Ihre Benutzer nicht auf das Konto-IQ-Dashboard zugreifen können, wenden Sie sich an den Support der Adobe, um sicherzustellen, dass die ID Ihres Unternehmens in Konto IQ auf die Whitelist gesetzt ist.
 
-.........................
 
-1. ihre Organisation in Adobe Marketing Cloud integriert haben
-2. deren Benutzer in http://adminconsole.adobe.com/ die Profile &quot;TVE Dashboard Read-Write&quot;oder &quot;TVE Dashboard Read-Only&quot;zugewiesen haben.
-3. Die Organisations-ID auf der AIQ-Seite auf die Whitelist gesetzt
