@@ -1,13 +1,13 @@
 ---
 title: Dashboard "Konto-IQ"
-description: 'Das Dashboard hilft, die Instanzen der Kennwortfreigabe zu identifizieren, indem es eine breite Palette von Abonnentendaten analysiert.  '
-source-git-commit: f6f1769d86a98d3a545bf986e41e9ba2252a36ff
+description: Das Dashboard hilft, die Instanzen der Kennwortfreigabe zu identifizieren, indem es eine breite Palette von Abonnentendaten analysiert.
+exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
+source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
-
 
 # Das Dashboard {#dashboard}
 
@@ -15,13 +15,15 @@ Das Dashboard fasst Daten in einer Sammlung von Diagrammen und Berichten zusamme
 
 ![Dashboard von Konto-IQ](assets/dashboard-capture.png)
 
-## Aggregierte Sharing-Bewertung {#aggregated-sharing}
+## Durchschnittliche Teilungsbewertung - aggregiert für das aktuelle Segment {#aggregated-sharing}
 
 Das Bedienfeld &quot;Aggregierte Sharing-Bewertung&quot;bietet eine Zusammenfassung der Menge und Auswirkung der Freigabe in Bezug auf Konten und Streaming-Volumen.
 
 Die Werte helfen Ihnen dabei, das Ausmaß der Weitergabe von Anmeldedaten durch Ihre Abonnenten zu verstehen und liefern so ein Maß für die Notwendigkeit, entsprechend zu handeln.
 
 ![](assets/aggregate-sharing-score.png)
+
+![](assets/aggregate-sharing-score.svg)
 
 Die folgenden drei Metriken sind Komponenten der aggregierten Sharing-Bewertung.
 
