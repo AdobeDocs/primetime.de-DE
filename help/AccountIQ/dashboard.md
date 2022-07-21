@@ -2,7 +2,7 @@
 title: Dashboard "Konto-IQ"
 description: Das Dashboard hilft, die Instanzen der Kennwortfreigabe zu identifizieren, indem es eine breite Palette von Abonnentendaten analysiert.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 2ae03c61344b878c9cac268ad6e7e91b08810488
+source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -28,8 +28,6 @@ Die Werte helfen Ihnen dabei, das Ausmaß der Weitergabe von Anmeldedaten durch 
 
 
 *Abbildung: Bedienfeld &quot;Durchschnittliche Teilungsbewertung&quot;- für das aktuelle Segment aggregiert*
-
-![](assets/aggregate-sharing-score.svg)
 
 Die folgenden drei Metriken sind Komponenten der durchschnittlichen Sharing-Bewertung.
 
