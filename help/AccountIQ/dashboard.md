@@ -2,9 +2,9 @@
 title: Dashboard "Konto-IQ"
 description: Das Dashboard hilft, die Instanzen der Kennwortfreigabe zu identifizieren, indem es eine breite Palette von Abonnentendaten analysiert.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
+source-git-commit: 2ae03c61344b878c9cac268ad6e7e91b08810488
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,9 @@ Das Dashboard fasst Daten in einer Sammlung von Diagrammen und Berichten zusamme
 
 ![Dashboard von Konto-IQ](assets/dashboard-capture.png)
 
+
+*Abbildung: Das Dashboard*
+
 ## Durchschnittliche Teilungsbewertung - aggregiert für das aktuelle Segment {#aggregated-sharing}
 
 Das Bedienfeld &quot;Aggregierte Sharing-Bewertung&quot;bietet eine Zusammenfassung der Menge und Auswirkung der Freigabe in Bezug auf Konten und Streaming-Volumen.
@@ -23,9 +26,12 @@ Die Werte helfen Ihnen dabei, das Ausmaß der Weitergabe von Anmeldedaten durch 
 
 ![](assets/aggregate-sharing-score.png)
 
+
+*Abbildung: Bedienfeld &quot;Durchschnittliche Teilungsbewertung&quot;- für das aktuelle Segment aggregiert*
+
 ![](assets/aggregate-sharing-score.svg)
 
-Die folgenden drei Metriken sind Komponenten der aggregierten Sharing-Bewertung.
+Die folgenden drei Metriken sind Komponenten der durchschnittlichen Sharing-Bewertung.
 
 ### Teilungsebene {#sharing-level}
 
@@ -34,6 +40,9 @@ Der Freigabewert zeigt den Prozentsatz aller Abonnentenkonten (im definierten Se
 Ein Wert, der auf der Grundlage der durchschnittlichen Freigabewahrscheinlichkeit berechnet wird, die für jedes Konto in der Gruppe ausgewählter MVPDs berechnet wurde, das während des ausgewählten Zeitraums aus einem der ausgewählten Programmierkanäle gestreamt hat.
 
 ![](assets/sharing-level.png)
+
+
+*Abbildung: Teilungsebene*
 
 Der Trend -Indikator zeigt die prozentuale Änderung des Werts der Metrik im Vergleich zum vorherigen Zeitrahmen an.
 
@@ -45,6 +54,9 @@ Sie können auch den Trend -Indikator sehen, der einen Anstieg oder Rückgang de
 
 ![](assets/usage-4mshared-accounts.png)
 
+
+*Abbildung: Nutzung durch freigegebene Konten*
+
 ### Gesamte Teilungsbewertung {#overall-sharing-score}
 
 Die Gesamtbewertung für die Freigabe besteht aus Sharing-Werten wie &quot;Sharing Level&quot;und &quot;z Usage from shared accounts&quot;.
@@ -52,6 +64,9 @@ Die Gesamtbewertung für die Freigabe besteht aus Sharing-Werten wie &quot;Shari
 Sie bietet einen Wert, der die relativen Auswirkungen der Freigabe im Vergleich zur Branche widerspiegelt. Der Zweck ist ähnlich dem eines Kreditwerts und fasst die Situation mit einer einzelnen Zahl zusammen. Aber in diesem Fall gilt: Je höher die Zahl, desto größer ist der potenzielle Schaden.
 
 ![](assets/overall-sharing-score.png)
+
+
+*Abbildung: Gesamte Teilungsbewertung*
 
 <!--### MVPDs in segment {#mvpd-in-segment}
 
@@ -69,11 +84,17 @@ Diese Tabelle bietet einen vergleichenden Überblick über die verschiedenen agg
 
 ![](assets/top-mvpds.png)
 
+
+*Abbildung: Top-MVPDs im Segment nach Gesamtwert*
+
 ### Teilungsbewertung nach Kanälen und MVPDs {#sharin-score-by-channels-and-mvpds}
 
 Diese Tabelle bietet einen vergleichenden Überblick über die Freigabe von Werten der ausgewählten Kanäle für die MVPDs im aktuellen Segment.
 
 ![](assets/sharing-scores-by-channels-mvpds.png)
+
+
+*Abbildung: Teilen von Bewertungen nach Kanälen und MVPDs*
 
 ### Wahrscheinlichkeit der Kontofreigabe {#accounts-sharing-probability}
 
@@ -86,8 +107,15 @@ Dieses Diagramm teilt in Bereiche mit Wahrscheinlichkeitsquintilien von sehr nie
 
 ![](assets/dashboard-ac-sharing-prob.png)
 
+
+*Abbildung: Anzahl und Prozentsatz der Abonnentenkonten in verschiedenen Wahrscheinlichkeitsbereichen für die Freigabe*
+
 ### Anzahl der Konten und Nutzung nach Freigabe der Wahrscheinlichkeitsstufe {#number-of-accounts-usage-sharing-probability}
 
 Dieses Bedienfeld bietet eine tabellarische Ansicht von Konten, die in Bereiche mit Wahrscheinlichkeitsquintilien von sehr geringer (0-20%) bis sehr hoher (80=100%) aufgeteilt sind, wobei die zugehörige Verwendung jedes Quintils aus freigegebenen Konten erfolgt.
 
 ![](assets/no-acc-usage-prob-level.png)
+
+
+*Abbildung: Anzahl der Konten, Trends und Verwendungen, die in verschiedene Wahrscheinlichkeitsbereiche fallen*
+
