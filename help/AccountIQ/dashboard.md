@@ -2,7 +2,7 @@
 title: Dashboard "Konto-IQ"
 description: Das Dashboard hilft, die Instanzen der Kennwortfreigabe zu identifizieren, indem es eine breite Palette von Abonnentendaten analysiert.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
+source-git-commit: 32ba300ce729eab7a6906d8fb0875e8f2bbe2d1d
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -110,7 +110,7 @@ Dieses Diagramm teilt in Bereiche mit Wahrscheinlichkeitsquintilien von sehr nie
 
 ### Anzahl der Konten und Nutzung nach Freigabe der Wahrscheinlichkeitsstufe {#number-of-accounts-usage-sharing-probability}
 
-Dieses Bedienfeld bietet eine tabellarische Ansicht von Konten, die in Bereiche mit Wahrscheinlichkeitsquintilien von sehr geringer (0-20%) bis sehr hoher (80=100%) aufgeteilt sind, wobei die zugehörige Verwendung jedes Quintils aus freigegebenen Konten erfolgt.
+Dieses Bedienfeld bietet eine tabellarische Ansicht von Konten, die in Bereiche mit Wahrscheinlichkeitsquintilien aufgeteilt sind, die von sehr niedrig (0-20 %) bis sehr hoch (80-100 %) mit der zugehörigen Nutzung der einzelnen Quintile aus freigegebenen Konten reichen.
 
 ![](assets/no-acc-usage-prob-level.png)
 
