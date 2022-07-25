@@ -3,10 +3,10 @@ title: Versionshinweise zu Primetime
 description: Versionshinweise zu Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 9f218bddddeab52480bbdcd41e8f0e6fd0fab0f8
+source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '298'
+ht-degree: 33%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 Willkommen bei den Versionshinweisen zu Adobe Primetime. Die im linken Navigationsbereich aufgelisteten Dokumente enthalten veröffentlichungsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme.
 
-## Verbesserungen und Fehlerbehebungen in PTAI 22.6.2
+## Verbesserungen und Fehlerbehebungen in PTAI 22.7.1
 
-Diese Version konzentriert sich auf Verbesserungen der Anzeigenleistungsprotokollierung mit weiteren Details zum Verlust von Datenwerten und zusätzlichen Netzspeicherursprüngen für CRS.
+Diese Version konzentriert sich auf Verbesserungen der Anzeigenleistungsprotokollierung mit der Einführung von wertbezogenen Metriken für DASH-Workflows.
 
 ## Fehlerbehebungen in TVSDK 3.15 Android
 
