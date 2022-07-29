@@ -1,19 +1,21 @@
 ---
 title: Berichts-API
 description: Auditude-Bericht-API
-source-git-commit: 7f958c83a4dd481221feb4a266440b920ac7d195
+exl-id: 50eb4869-3765-4591-8c41-794b29d50044
+source-git-commit: 628544e38616715e83e0274ba26cf93302ce0e61
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1042'
 ht-degree: 1%
 
 ---
-
 
 # Berichts-API {#report-api}
 
 Die Benutzeroberfläche verfügt über verwaltete Benutzerrollen für Kunden und für das Aktivierungs-(Adobe-)Team. Kunden können auf das Portal zugreifen und dann ihre Konfigurationen erstellen und bearbeiten. Sie können die Berichte auch nach ihren Anzeigenimpressionen auf der Benutzeroberfläche sehen.
 
 APIs helfen Kunden und Administratoren bei der Kommunikation mit der Backend-Infrastruktur.
+
+Erkunden Sie die [!DNL Primetime Ad Insertion] APIs siehe [Ad Insertion-API-Endpunkte in der aggregierten Benutzeroberfläche](https://adconfigservice-va6.cloud.adobe.io/swagger-ui/index.html#/).
 
 ## API-Endpunkt {#report-api-endpoint}
 
