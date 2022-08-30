@@ -1,13 +1,13 @@
 ---
 title: Vorgänge für Konto-IQ
 description: Der Betrieb von Account IQ umfasst die Durchführung von Aktionen zur Durchführung von Automatisierungen und Massenvorgängen auf Abonnentenkonten und zur Verfolgung ihrer Auswirkungen.
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
+source-git-commit: 40239b6715d8eab95bc2564fb19eb6832387ad3e
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
-
 
 # Aktivitäten {#operations-tab-next-steps}
 
@@ -61,13 +61,24 @@ Sie können die Auswirkungen eines Vorgangs analysieren, indem Sie dessen Berich
 
    *Abbildung: Tätigkeitsbericht mit Blick auf die Auswirkungen der Vorgänge*
 
-   Die X-Achse zeichnet den Bewertungszeitraum und die Y-Achse eine Variable auf, um die Auswirkungen des Vorgangs zu messen.
+   Die X-Achse stellt den Bewertungszeitraum dar und die Y-Achse zeigt die Auswirkungen des Vorgangs (in Bezug auf die Anzahl der Konten in einem Segment während des Bewertungszeitraums). Jeder Balken ist in drei Teile unterteilt.
 
-   Im obigen Bild beispielsweise ist die Variable auf der Y-Achse die Anzahl der Konten. Wenn Sie sich das Diagramm ansehen, können Sie die Anzahl der Konten im Vorgangssegment mit der Anzahl der Konten vergleichen, die zu einem bestimmten Zeitpunkt außerhalb des Vorgangssegments liegen (z. B. Woche 2 des Vorgangs-Evaluierungszeitraums). Daher können Sie analysieren, wie die Anzahl der Konten innerhalb des Vorgangssegments und außerhalb des Segments im Bewertungszeitraum variiert.
+   * Ein Teil stellt die Anzahl der Konten dar, die weiterhin die Kriterien des Vorgangssegments erfüllen.
 
-   Wenn Ihr Vorgang also Warn-E-Mails an verdächtige Konten senden sollte und Konten im Vorgangssegment diejenigen waren, die eine Freigabewahrscheinlichkeit von über 90 hatten und mehr als 5 Geräte zum Streamen von Inhalten verwendeten, dann liegen die Konten im Segment zu Beginn des Auswertungszeitraums bei über 7 Millionen. Diese Zahl ändert sich im Bewertungszeitraum, wie im Diagramm dargestellt, und zeigt somit die Auswirkung des Vorgangs an. Basierend auf der Auswertung können Sie Abhilfemaßnahmen für verdächtige Konten ergreifen, den Betrieb fortsetzen oder Ihre Strategie anpassen, um bessere Ergebnisse zu erzielen und die Weitergabe von Anmeldedaten zu begrenzen.
+   * Ein anderer Teil stellt die Anzahl der aktiven Konten für diesen Zeitraum dar, die sich ursprünglich im Segment befanden, aber die Kriterien des Vorgangssegments nicht mehr erfüllen.
 
-2. Um den Bericht zu schließen und zur Hauptseite &quot;Vorgänge&quot;zurückzukehren, wählen Sie **Aktivitäten** Option unter **Aktionen** in der linken Navigation.
+   * Der dritte Teil stellt die Konten dar, die in diesem Zeitraum nicht aktiv waren.
+   >[!NOTE]
+   >
+   >Die erste Leiste stellt die Anzahl der Konten dar, die zu Beginn des Bewertungszeitraums die Bedingungen des Vorgangssegments erfüllen.
+
+   Im Laufe der Zeit zeigt das Diagramm die Wirkung Ihrer Aktion (durch den Vorgang) an, indem es die Anzahl der Konten angibt, die ihr Verhalten im Vergleich zu den ursprünglichen Kriterien geändert haben (z. B. mit einer Freigabewahrscheinlichkeit von mehr als 90 und mit mehr als 5 Geräten) oder inaktiv geworden sind.
+
+<!--For example, in the above image the variable on the y-axis is number of accounts. Looking at the graph you can compare the number of accounts that are in the operations' segment versus the number of accounts that are outside the operations segment at a particular time (such as week 2nd of the operations evaluation period). Therefore, you can analyze how over the evaluation period do number of accounts vary within the operation segment and outside the segment.
+
+So, if your operation was to send out warning emails to suspecting accounts, and accounts in operations segment were those with sharing probability more than 90 and using more than 5 devices to stream content, then in the beginning of the evaluation period accounts in segment are more than 17 thousand. This number changes over the evaluation period as shown in the graph, thereby indicating the impact of operation. Based on the evaluation, you can take remedial measures on suspecting accounts, or continue with the operation, or adjust your strategy for better outcomes to curb credential sharing.-->
+
+1. Um den Bericht zu schließen und zur Hauptseite &quot;Vorgänge&quot;zurückzukehren, wählen Sie **Aktivitäten** Option unter **Aktionen** in der linken Navigation.
 
 <!--
 
