@@ -2,9 +2,9 @@
 title: Dashboard "Konto-IQ"
 description: Das Dashboard hilft, die Instanzen der Kennwortfreigabe zu identifizieren, indem es eine breite Palette von Abonnentendaten analysiert.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 7706d5fcafdcfb9c0d4cc69936681c6223b0739d
+source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # Das Dashboard {#dashboard}
 
 Das Dashboard fasst Daten in einer Sammlung von Diagrammen und Berichten zusammen und bietet so einen allgemeinen Überblick über den Umfang und die Auswirkungen der Kontofreigabe. Es bietet eine einzelne Seite, die die wichtigsten Berichte und Metriken aus Konto IQ enthält.
-
-<table><tr><th>
-
-+++Dashboard für Programmierer
 
 ![Dashboard von Konto-IQ](assets/dashboard-capture.png)
 
@@ -121,29 +117,7 @@ Dieses Bedienfeld bietet eine tabellarische Ansicht von Konten, die in Bereiche 
 
 *Abbildung: Anzahl der Konten, Trends und Verwendungen, die in verschiedene Wahrscheinlichkeitsbereiche fallen*
 
-+++
 
-</th><th>
-
-+++Dashboard für MVPDs Das Dashboard für MVPD-Benutzer unterscheidet sich geringfügig von dem der Programmierer-Benutzer.
-
-![](assets/dashboard-mvpd.png)
-
-
-*Abbildung: MVPD-Dashboard*
-
-## Top-Programmierer im Segment nach Gesamt-Teilungsergebnis {#}
-
-![](assets/top-programmers-panel.png)
-
-
-*Abbildung: Bedienfeld mit den wichtigsten Programmierern in einem Segment*
-+++
-
-</th>
-</tr>
-
-</table>
 
 <!--
 +++Dashboard for programmers

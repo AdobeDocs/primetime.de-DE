@@ -2,7 +2,7 @@
 title: Vorgänge für Konto-IQ
 description: Der Betrieb von Account IQ umfasst die Durchführung von Aktionen zur Durchführung von Automatisierungen und Massenvorgängen auf Abonnentenkonten und zur Verfolgung ihrer Auswirkungen.
 exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
-source-git-commit: 40239b6715d8eab95bc2564fb19eb6832387ad3e
+source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Sie können die Auswirkungen eines Vorgangs analysieren, indem Sie dessen Berich
 
 1. Wählen Sie auf der Hauptseite &quot;Vorgänge&quot;den Vorgangsnamen aus.
 
-   Der Bericht wird in Form eines gestapelten Balkendiagramms angezeigt.
+   Der Bericht wird in Form eines gestapelten Spaltendiagramms angezeigt.
 
    ![](assets/operation-impact-report.png)
 
