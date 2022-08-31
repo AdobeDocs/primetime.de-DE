@@ -2,9 +2,9 @@
 title: Dashboard "Konto-IQ"
 description: Das Dashboard hilft, die Instanzen der Kennwortfreigabe zu identifizieren, indem es eine breite Palette von Abonnentendaten analysiert.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
+source-git-commit: a015cf059c599c043f03b981eed640fbdbffc27b
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ![](assets/mvpds-in-segment.png)-->
 
-### Gesamtwert der branchenweiten Freigabe für MVPDs {#top-mvpds}
+## Gesamtwert der branchenweiten Freigabe für MVPDs {#top-mvpds}
 
 Diese Tabelle bietet einen vergleichenden Überblick über die verschiedenen aggregierten Sharing-Werte für die MVPDs im Segment.
 
@@ -85,7 +85,7 @@ Diese Tabelle bietet einen vergleichenden Überblick über die verschiedenen agg
 
 *Abbildung: Top-MVPDs im Segment nach Gesamtwert*
 
-### Teilungsbewertung nach Kanälen und MVPDs {#sharin-score-by-channels-and-mvpds}
+## Teilungsbewertung nach Kanälen und MVPDs {#sharin-score-by-channels-and-mvpds}
 
 Diese Tabelle bietet einen vergleichenden Überblick über die Freigabe von Werten der ausgewählten Kanäle für die MVPDs im aktuellen Segment.
 
@@ -94,7 +94,7 @@ Diese Tabelle bietet einen vergleichenden Überblick über die Freigabe von Wert
 
 *Abbildung: Teilen von Bewertungen nach Kanälen und MVPDs*
 
-### Wahrscheinlichkeit der Kontofreigabe {#accounts-sharing-probability}
+## Wahrscheinlichkeit der Kontofreigabe {#accounts-sharing-probability}
 
 Dieses Diagramm teilt in Bereiche mit Wahrscheinlichkeitsquintilien von sehr niedrig (0-20%) bis sehr hoch (80=100%) auf.
 
@@ -108,7 +108,7 @@ Dieses Diagramm teilt in Bereiche mit Wahrscheinlichkeitsquintilien von sehr nie
 
 *Abbildung: Anzahl und Prozentsatz der Abonnentenkonten in verschiedenen Wahrscheinlichkeitsbereichen für die Freigabe*
 
-### Anzahl der Konten und Nutzung nach Freigabe der Wahrscheinlichkeitsstufe {#number-of-accounts-usage-sharing-probability}
+## Anzahl der Konten und Nutzung nach Freigabe der Wahrscheinlichkeitsstufe {#number-of-accounts-usage-sharing-probability}
 
 Dieses Bedienfeld bietet eine tabellarische Ansicht von Konten, die in Bereiche mit Wahrscheinlichkeitsquintilien aufgeteilt sind, die von sehr niedrig (0-20 %) bis sehr hoch (80-100 %) mit der zugehörigen Nutzung der einzelnen Quintile aus freigegebenen Konten reichen.
 
