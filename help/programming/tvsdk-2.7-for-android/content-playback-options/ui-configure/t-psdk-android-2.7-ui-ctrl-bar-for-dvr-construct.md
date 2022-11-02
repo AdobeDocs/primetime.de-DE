@@ -1,44 +1,43 @@
 ---
-description: Sie können eine Steuerleiste mit DVR-Unterstützung für VOD und Live-Streaming implementieren. DVR-Unterstützung beinhaltet das Konzept eines durchsuchbaren Fensters und des Client Live Point.
-title: Eine für DVR erweiterte Steuerleiste erstellen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können eine Kontrollleiste mit DVR-Unterstützung für VOD und Live-Streaming implementieren. DVR-Unterstützung beinhaltet das Konzept eines durchsuchbaren Fensters und des Client-Live-Points.
+title: Erstellen Sie eine für DVR erweiterte Steuerleiste.
+exl-id: 8a764417-4425-44c0-9551-3077c8c0a323
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
 
+# Erstellen Sie eine für DVR erweiterte Steuerleiste. {#construct-a-control-bar-enhanced-for-dvr}
 
-# Eine für DVR verbesserte Steuerleiste erstellen {#construct-a-control-bar-enhanced-for-dvr}
+Sie können eine Kontrollleiste mit DVR-Unterstützung für VOD und Live-Streaming implementieren. DVR-Unterstützung beinhaltet das Konzept eines durchsuchbaren Fensters und des Client-Live-Points.
 
-Sie können eine Steuerleiste mit DVR-Unterstützung für VOD und Live-Streaming implementieren. DVR-Unterstützung beinhaltet das Konzept eines durchsuchbaren Fensters und des Client Live Point.
-
-* Bei VOD ist die Länge des durchsuchbaren Fensters die Dauer des gesamten Assets.
-* Beim Live-Streaming wird die Länge des DVR-Fensters (suchbar) als der Zeitraum definiert, der im Live-Wiedergabefenster Beginn wird und am Live-Point des Clients endet.
+* Bei VOD entspricht die Länge des durchsuchbaren Fensters der Dauer des gesamten Assets.
+* Beim Live-Streaming ist die Länge des DVR-Fensters (suchbar) als der Zeitraum definiert, der am Live-Wiedergabefenster beginnt und am Client-Live-Point endet.
 
    Beachten Sie die folgenden Informationen:
 
-   * Der Live-Point des Clients wird berechnet, indem die gepufferte Länge vom Ende des Live-Fensters abgezogen wird.
+   * Der Client-Live-Point wird berechnet, indem die gepufferte Länge vom Ende des Live-Fensters abgezogen wird.
 
-      Die Dauer der Zielgruppe ist ein Wert, der größer oder gleich der Maximaldauer eines Fragments im Manifest ist.
+      Die Zieldauer ist ein Wert, der größer oder gleich der maximalen Dauer eines Fragments im Manifest ist.
    * Der Standardwert ist 10000 ms.
-   * Die Steuerungsleiste für die Live-Wiedergabe unterstützt DVR, indem der Daumen beim Starten der Wiedergabe zunächst am Live-Point des Clients positioniert wird und ein Bereich angezeigt wird, der den Bereich kennzeichnet, in dem die Suche nicht zulässig ist.
+   * Die Steuerleiste für die Live-Wiedergabe unterstützt DVR, indem sie beim Start der Wiedergabe den Daumen beim Start des Client-Live-Punkts platziert und einen Bereich anzeigt, der den Bereich markiert, in dem die Suche nicht zulässig ist.
 
 <!--<a id="fig_37A39A28BA714BA5A2C461357ED5BD41"></a>-->
 
-![](assets/dvr-window.PNG){width=&quot;684&quot;}
+![](assets/dvr-window.PNG){width="684"}
 
-1. Um eine Steuerleiste mit DVR-Unterstützung zu implementieren, führen Sie die Schritte unter [Anzeigen einer Suchleiste mit der aktuellen Wiedergabeposition aus...](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md) mit folgenden Unterschieden:
+1. Um eine Kontrollleiste mit DVR-Unterstützung zu implementieren, führen Sie die Schritte unter [Anzeigen einer Suchleiste mit der aktuellen Wiedergabeposition ...](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md) mit den folgenden Unterschieden:
 
-   * Sie können eine Steuerungsleiste implementieren, die nur für den suchbaren Bereich und nicht für den Wiedergabefeld zugeordnet wird.
+   * Sie können eine Kontrollleiste implementieren, die nur für den suchbaren Bereich und nicht für den Wiedergabefeld zugeordnet ist.
 
-      Jede Benutzerinteraktion zur Suche kann im suchbaren Bereich als sicher betrachtet werden.
-   * Sie können eine Steuerleiste implementieren, die für den Wiedergabebereich zugeordnet ist, aber auch den suchbaren Bereich anzeigt.
+      Jede Benutzerinteraktion für die Suche kann im suchbaren Bereich als sicher betrachtet werden.
+   * Sie können eine Kontrollleiste implementieren, die dem Wiedergabefeld zugeordnet ist, aber auch den suchbaren Bereich anzeigt.
 
       Für eine Steuerleiste:
-   1. hinzufügen eine Überlagerung auf die Steuerleiste, die den Wiedergabebereich darstellt.
-   1. Wenn der Beginn die Suche durchführt, prüfen Sie, ob die gewünschte Suchposition innerhalb des suchbaren Bereichs liegt, indem Sie `MediaPlayer.getSeekableRange` verwenden.
+   1. Fügen Sie der Steuerleiste eine Überlagerung hinzu, die den Wiedergabebereich darstellt.
+   1. Wenn der Benutzer mit der Suche beginnt, überprüfen Sie, ob sich die gewünschte Suchposition innerhalb des suchbaren Bereichs befindet, indem Sie `MediaPlayer.getSeekableRange`.
 
       Beispiel:
 
@@ -49,10 +48,8 @@ Sie können eine Steuerleiste mit DVR-Unterstützung für VOD und Live-Streaming
       }
       ```
 
-      Sie können auch mit der Konstante `MediaPlayer.LIVE_POINT` nach dem Live-Point des Clients suchen.
+      Sie können auch mithilfe der `MediaPlayer.LIVE_POINT` Konstante.
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);
       ```
-
-

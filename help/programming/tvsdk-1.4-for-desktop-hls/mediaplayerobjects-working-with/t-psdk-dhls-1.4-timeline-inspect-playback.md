@@ -1,34 +1,33 @@
 ---
-description: Sie können eine Beschreibung der Zeitschiene abrufen, die mit dem derzeit ausgewählten Element, das von TVSDK wiedergegeben wird, verknüpft ist. Dies ist besonders hilfreich, wenn Ihre Anwendung ein benutzerdefiniertes Scrubbing-Bar-Steuerelement anzeigt, in dem die Inhaltsabschnitte, die mit dem Anzeigeninhalt übereinstimmen, identifiziert werden.
-title: Inspect der Wiedergabe-Timeline
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können eine Beschreibung der Timeline abrufen, die mit dem aktuell ausgewählten Element verknüpft ist, das von TVSDK wiedergegeben wird. Dies ist am nützlichsten, wenn Ihre Anwendung ein benutzerdefiniertes Scroll-Bar-Steuerelement anzeigt, in dem die Inhaltsbereiche identifiziert werden, die mit Anzeigeninhalten übereinstimmen.
+title: Inspect der Wiedergabezeitleiste
+exl-id: 38b5ce0e-5554-462e-986f-f3864f7cf879
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '203'
 ht-degree: 0%
 
 ---
 
+# Inspect der Wiedergabezeitleiste{#inspect-the-playback-timeline}
 
-# Inspect der Zeitleiste für die Wiedergabe{#inspect-the-playback-timeline}
-
-Sie können eine Beschreibung der Zeitschiene abrufen, die mit dem derzeit ausgewählten Element, das von TVSDK wiedergegeben wird, verknüpft ist. Dies ist besonders hilfreich, wenn Ihre Anwendung ein benutzerdefiniertes Scrubbing-Bar-Steuerelement anzeigt, in dem die Inhaltsabschnitte, die mit dem Anzeigeninhalt übereinstimmen, identifiziert werden.
+Sie können eine Beschreibung der Timeline abrufen, die mit dem aktuell ausgewählten Element verknüpft ist, das von TVSDK wiedergegeben wird. Dies ist am nützlichsten, wenn Ihre Anwendung ein benutzerdefiniertes Scroll-Bar-Steuerelement anzeigt, in dem die Inhaltsbereiche identifiziert werden, die mit Anzeigeninhalten übereinstimmen.
 
 Im Folgenden finden Sie eine Beispielimplementierung, wie im folgenden Screenshot gezeigt.
 <!--<a id="fig_6D9FB3764F3947A38B8E7726187BD461"></a>-->
 
-![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
+![](assets/inspect-playback.jpg){width="368.641pt"}
 
-1. Greifen Sie mithilfe der `get`-Methode auf das `Timeline`-Objekt in `MediaPlayer` zu.
+1. Zugriff auf `Timeline` -Objekt im `MediaPlayer` mithilfe der `get` -Methode.
 
-   Die `Timeline`-Klasse enthält die Informationen zum Inhalt der Zeitleiste, die mit dem Medienelement verknüpft ist, das derzeit von der `MediaPlayer`-Instanz geladen wird. Die `Timeline`-Klasse bietet Zugriff auf eine schreibgeschützte Ansicht der zugrunde liegenden Zeitleiste. Die `Timeline`-Klasse stellt eine Getter-Methode zum Abrufen aller platzierten `TimelineMarker`-Objekte bereit.
+   Die `Timeline` -Klasse kapselt die Informationen, die sich auf den Inhalt der Timeline beziehen, die mit dem Medienelement verknüpft ist, das derzeit von der `MediaPlayer` -Instanz. Die `Timeline` -Klasse bietet Zugriff auf eine schreibgeschützte Ansicht der zugrunde liegenden Timeline. Die `Timeline` -Klasse bietet eine Getter-Methode zum Abrufen aller platzierten `TimelineMarker` Objekte.
 
-1. Durchlaufen Sie die Liste von `TimelineMarkers` und verwenden Sie die zurückgegebenen Informationen, um Ihre Zeitschiene zu implementieren.
+1. Iterate through the list of `TimelineMarkers` und verwenden Sie die zurückgegebenen Informationen, um Ihre Timeline zu implementieren.
 
-       Ein &quot;TimelineMarker&quot;-Objekt enthält zwei Informationen:
+       Ein Objekt &quot;TimelineMarker&quot;enthält zwei Informationen:
    
-   * Position der Markierung auf der Zeitleiste (in Millisekunden)
-   * Dauer der Markierung auf der Zeitleiste (in Millisekunden)
+   * Position der Markierung auf der Timeline (in Millisekunden)
+   * Dauer der Markierung auf der Timeline (in Millisekunden)
 
 <!--<a id="example_BA936629E82B4082A2E2C548E3FC3357"></a>-->
 
@@ -51,4 +50,3 @@ markers.forEach(function(item:TimelineMarker,
     // draw the marker on the scrub-bar 
 }
 ```
-

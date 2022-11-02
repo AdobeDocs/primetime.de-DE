@@ -1,35 +1,34 @@
 ---
-description: Sie können eine Beschreibung der Zeitschiene abrufen, die mit dem derzeit ausgewählten Element, das von TVSDK wiedergegeben wird, verknüpft ist. Dies ist besonders hilfreich, wenn Ihre Anwendung ein benutzerdefiniertes Scrubbing-Bar-Steuerelement anzeigt, in dem die Inhaltsabschnitte, die mit dem Anzeigeninhalt übereinstimmen, identifiziert werden.
-title: Inspect der Wiedergabe-Timeline
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können eine Beschreibung der Timeline abrufen, die mit dem aktuell ausgewählten Element verknüpft ist, das von TVSDK wiedergegeben wird. Dies ist am nützlichsten, wenn Ihre Anwendung ein benutzerdefiniertes Scroll-Bar-Steuerelement anzeigt, in dem die Inhaltsbereiche identifiziert werden, die mit Anzeigeninhalten übereinstimmen.
+title: Inspect der Wiedergabezeitleiste
+exl-id: af373f1e-ed5b-40a9-a91e-9eb0e4a181de
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
+# Inspect der Wiedergabezeitleiste{#inspect-the-playback-timeline}
 
-# Inspect der Zeitleiste für die Wiedergabe{#inspect-the-playback-timeline}
+Sie können eine Beschreibung der Timeline abrufen, die mit dem aktuell ausgewählten Element verknüpft ist, das von TVSDK wiedergegeben wird. Dies ist am nützlichsten, wenn Ihre Anwendung ein benutzerdefiniertes Scroll-Bar-Steuerelement anzeigt, in dem die Inhaltsbereiche identifiziert werden, die mit Anzeigeninhalten übereinstimmen.
 
-Sie können eine Beschreibung der Zeitschiene abrufen, die mit dem derzeit ausgewählten Element, das von TVSDK wiedergegeben wird, verknüpft ist. Dies ist besonders hilfreich, wenn Ihre Anwendung ein benutzerdefiniertes Scrubbing-Bar-Steuerelement anzeigt, in dem die Inhaltsabschnitte, die mit dem Anzeigeninhalt übereinstimmen, identifiziert werden.
+Im Folgenden finden Sie eine Beispielimplementierung, wie im folgenden Screenshot gezeigt.  ![](assets/inspect-playback.jpg){width="368.641pt"}
 
-Im Folgenden finden Sie eine Beispielimplementierung, wie im folgenden Screenshot gezeigt.  ![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
+1. Zugriff auf `Timeline` -Objekt im `MediaPlayer` mithilfe der `getTimeline` -Methode.
 
-1. Greifen Sie mithilfe der `getTimeline`-Methode auf das `Timeline`-Objekt in `MediaPlayer` zu.
+   Die `Timeline` -Klasse kapselt die Informationen, die sich auf den Inhalt der Timeline beziehen, die mit dem Medienelement verknüpft ist, das derzeit von der `MediaPlayer` -Instanz. Die `Timeline` -Klasse bietet Zugriff auf eine schreibgeschützte Ansicht der zugrunde liegenden Timeline. Die `Timeline` -Klasse stellt eine Getter-Methode bereit, die einen Iterator über eine Liste von `TimelineMarker` Objekte.
 
-   Die `Timeline`-Klasse enthält die Informationen zum Inhalt der Zeitleiste, die mit dem Medienelement verknüpft ist, das derzeit von der `MediaPlayer`-Instanz geladen wird. Die `Timeline`-Klasse bietet Zugriff auf eine schreibgeschützte Ansicht der zugrunde liegenden Zeitleiste. Die `Timeline`-Klasse stellt eine Getter-Methode bereit, die einen Iterator über eine Liste von `TimelineMarker`-Objekten bereitstellt.
+1. Iterate through the list of `TimelineMarkers` und verwenden Sie die zurückgegebenen Informationen, um Ihre Timeline zu implementieren.
 
-1. Durchlaufen Sie die Liste von `TimelineMarkers` und verwenden Sie die zurückgegebenen Informationen, um Ihre Zeitschiene zu implementieren.
-
-       Ein &quot;TimelineMarker&quot;-Objekt enthält zwei Informationen:
+       Ein Objekt &quot;TimelineMarker&quot;enthält zwei Informationen:
    
-   * Position der Markierung auf der Zeitleiste (in Millisekunden)
-   * Dauer der Markierung auf der Zeitleiste (in Millisekunden)
+   * Position der Markierung auf der Timeline (in Millisekunden)
+   * Dauer der Markierung auf der Timeline (in Millisekunden)
 
-1. Implementieren Sie die Rückrufschnittstelle des Listeners `MediaPlayer.PlaybackEventListener.onTimelineUpdated` und registrieren Sie sie beim `Timeline`-Objekt.
+1. Implementieren der Callback-Oberfläche des Listeners `MediaPlayer.PlaybackEventListener.onTimelineUpdated` und registrieren Sie sie bei der `Timeline` -Objekt.
 
-   Das `Timeline`-Objekt kann Ihre Anwendung über Änderungen informieren, die in der Wiedergabedauer auftreten können, indem Sie den `OnTimelineUpdated`-Listener aufrufen.
+   Die `Timeline` -Objekt kann Ihre Anwendung über Änderungen in der Wiedergabe-Timeline informieren, indem Sie Ihre `OnTimelineUpdated` Listener.
 
 ```java
 // access the timeline object 
@@ -44,4 +43,3 @@ while (iterator.hasNext()) {
    long duration = marker.getDuration(); 
 }
 ```
-

@@ -1,45 +1,44 @@
 ---
-description: Sie können TVSDK verwenden, um Informationen über die Position des Players in den Medien abzurufen und sie in der Suchleiste anzuzeigen.
+description: Sie können TVSDK verwenden, um Informationen über die Position des Players in den Medien abzurufen und in der Suchleiste anzuzeigen.
 title: Dauer, aktuelle Zeit und verbleibende Zeit des Videos anzeigen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 68501c81-346a-4c3e-aa20-a98b8b1c6b17
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
+# Dauer, aktuelle Zeit und verbleibende Zeit des Videos anzeigen {#display-the-duration-current-time-and-remaining-time-of-the-video}
 
-# Dauer, aktuelle Zeit und verbleibende Zeit des Videos {#display-the-duration-current-time-and-remaining-time-of-the-video} anzeigen
+Sie können TVSDK verwenden, um Informationen über die Position des Players in den Medien abzurufen und in der Suchleiste anzuzeigen.
 
-Sie können TVSDK verwenden, um Informationen über die Position des Players in den Medien abzurufen und sie in der Suchleiste anzuzeigen.
+1. Warten Sie, bis der Player mindestens den Status VORBEREITET aufweist.
+1. Rufen Sie die aktuelle Abspielleistenzeit mithilfe der `MediaPlayer.getCurrentTime` -Methode.
 
-1. Warten Sie, bis der Player mindestens den Status &quot;VORBEREITT&quot;aufweist.
-1. Rufen Sie die aktuelle Abspielposition mit der `MediaPlayer.getCurrentTime`-Methode ab.
-
-   Dadurch wird die aktuelle Abspielposition auf der virtuellen Zeitleiste in Millisekunden zurückgegeben. Die Zeit wird relativ zum aufgelösten Stream berechnet, der mehrere Instanzen alternativen Inhalts enthalten kann, z. B. mehrere Anzeigen oder Werbeunterbrechungen, die in den Hauptstrom kopiert werden. Bei Live-/linearen Streams liegt die zurückgegebene Zeit immer im Bereich des Wiedergabefensters.
+   Dadurch wird die aktuelle Abspielposition auf der virtuellen Timeline in Millisekunden zurückgegeben. Die Zeit wird relativ zum aufgelösten Stream berechnet, der möglicherweise mehrere Instanzen von alternativen Inhalten enthält, z. B. mehrere Anzeigen oder Werbeunterbrechungen, die in den Haupt-Stream aufgeteilt sind. Bei Live-/linearen Streams befindet sich die zurückgegebene Zeit immer im Bereich des Wiedergabefensters.
 
    ```java
    long getCurrentTime() throws MediaPlayerException;
    ```
 
 1. Rufen Sie den Wiedergabebereich des Streams ab und bestimmen Sie die Dauer.
-   1. Verwenden Sie die `MediaPlayer.getPlaybackRange`-Methode, um den virtuellen Zeitleistenzeitbereich abzurufen.
+   1. Verwenden Sie die `MediaPlayer.getPlaybackRange` -Methode, um den virtuellen Zeitbereich der Zeitleiste abzurufen.
 
       ```java
       TimeRange getPlaybackRange() throws MediaPlayerException;
       ```
 
-   1. Verwenden Sie die `MediaPlayer.getPlaybackRange`-Methode, um den virtuellen Zeitleistenzeitbereich abzurufen.
+   1. Verwenden Sie die `MediaPlayer.getPlaybackRange` -Methode, um den virtuellen Zeitbereich der Zeitleiste abzurufen.
 
       * Bei VOD beginnt der Bereich immer mit null und der Endwert entspricht der Summe der Dauer des Hauptinhalts und der Dauer des zusätzlichen Inhalts im Stream (Anzeigen).
-      * Bei einem linearen/Live-Asset entspricht der Bereich dem Bereich des Wiedergabefensters. Dieser Bereich ändert sich während der Wiedergabe.
+      * Bei einem linearen/Live-Asset stellt der Bereich den Bereich des Wiedergabefensters dar. Dieser Bereich ändert sich während der Wiedergabe.
 
-         TVSDK ruft den Rückruf `ITEM_Updated` auf, um anzugeben, dass das Medienelement aktualisiert wurde und seine Attribute, einschließlich des Wiedergabebereichs, aktualisiert wurden.
+         TVSDK ruft die `ITEM_Updated` Callback , um anzugeben, dass das Medienelement aktualisiert wurde und seine Attribute, einschließlich des Wiedergabebereichs, aktualisiert wurden.
 
-1. Verwenden Sie die Methoden, die für `MediaPlayer` und für die `SeekBar`-Klasse im Android SDK verfügbar sind, um die Suchleistenparameter einzurichten.
+1. Verwenden Sie die Methoden, die unter `MediaPlayer` und auf `SeekBar` -Klasse im Android-SDK verwenden, um die Suchleistenparameter einzurichten.
 
-   Hier ist beispielsweise ein mögliches Layout, das die Suchleiste und zwei `TextView`-Elemente enthält.
+   Hier ist beispielsweise ein mögliches Layout, das die Suchleiste und zwei `TextView` -Elemente.
 
    ```xml
    <LinearLayout 
@@ -71,13 +70,13 @@ Sie können TVSDK verwenden, um Informationen über die Position des Players in 
    </LinearLayout>
    ```
 
-1. Verwenden Sie einen Timer, um in regelmäßigen Abständen die aktuelle Zeit abzurufen und die Suchleiste zu aktualisieren, wie in der Abbildung dargestellt:
+1. Verwenden Sie einen Timer, um die aktuelle Zeit regelmäßig abzurufen und die Suchleiste zu aktualisieren, wie in der Abbildung dargestellt:
 
    <!--<a id="fig_689CEDDD02094C0C8E91C5195F8EAD3F"></a>-->
 
-   ![](assets/seek-bar.jpg){width=&quot;477.000pt&quot;}
+   ![](assets/seek-bar.jpg){width="477.000pt"}
 
-   Im folgenden Beispiel wird die Helper-Klasse `Clock.java` verwendet, die in `ReferencePlayer` verfügbar ist, als Timer. Diese Klasse setzt jeden Ereignis-Listener und Trigger ein `onTick`-Ereignis oder einen anderen Timeout-Wert, den Sie angeben können.
+   Im folgenden Beispiel wird die `Clock.java` Helper-Klasse, verfügbar in `ReferencePlayer`, als Timer. Diese Klasse legt einen Ereignis-Listener und Trigger fest und `onTick` -Ereignis jede Sekunde oder einen anderen Timeout-Wert, den Sie angeben können.
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
@@ -90,7 +89,7 @@ Sie können TVSDK verwenden, um Informationen über die Position des Players in 
    playbackClock.addClockEventListener(playbackClockEventListener);
    ```
 
-   Bei jedem Cursor wird in diesem Beispiel die aktuelle Position des Medienplayers abgerufen und die Suchleiste aktualisiert. Es verwendet die beiden Elemente `TextView`, um die aktuelle Zeit und die Endposition des Wiedergabebereichs als numerische Werte zu kennzeichnen.
+   Bei jedem Cursor ruft dieses Beispiel die aktuelle Position des Medienplayers ab und aktualisiert die Suchleiste. Es verwendet die beiden `TextView` -Elemente, um die aktuelle Zeit und die Endposition des Wiedergabebereichs als numerische Werte zu kennzeichnen.
 
    ```java
    @Override 
