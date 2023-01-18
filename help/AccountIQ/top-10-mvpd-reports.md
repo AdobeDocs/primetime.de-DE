@@ -1,15 +1,15 @@
 ---
 title: So zeigen Sie Berichte für die 10 wichtigsten MVPDs nach Programmierer an.
 description: Anzeigen von Berichten für die 10 wichtigsten MVPDs
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+exl-id: 76fd1af8-dd96-426b-b9c8-a356b53b491d
+source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
-
-# Anzeigen von Berichten für die 10 wichtigsten MVPDs <!--and Programmers--> {#view-top-10-mvpd-reports}
+# Anzeigen von Berichten zur Kontofreigabe für die 10 wichtigsten MVPDs <!--and Programmers--> {#view-top-10-mvpd-reports}
 
 Konto IQ bietet Funktionen, mit denen Sie Statistiken zur Kontofreigabe für die 10 wichtigsten MVPDs anzeigen und analysieren können (in einer definierten [Segment](/help/AccountIQ/product-concepts.md#segmet-def)) mit:
 

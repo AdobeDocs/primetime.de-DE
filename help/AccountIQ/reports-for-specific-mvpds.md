@@ -1,28 +1,29 @@
 ---
 title: Verwenden von Konto-IQ-Metriken für ein bestimmtes MVPD
-description: 'Verwendung und Erkennen von Konto-IQ-Berichten.  '
-source-git-commit: a23de698b073d271df9b04494ff59f5d5a194c9d
+description: Verwendung und Erkennen von Konto-IQ-Berichten.
+exl-id: ada9a80a-b31b-4bdc-838c-dcd94a0a6c59
+source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '172'
 ht-degree: 0%
 
 ---
 
+# Anzeigen von Berichten zur Kontofreigabe für ein bestimmtes MVPD <!--and programmer--> {#report-sp-mvpd}
 
-# Anzeigen von Berichten zur Kontofreigabe: für einen bestimmten MVPD <!--and programmer--> {#report-sp-mvpd}
-
-Wenn Sie bei der Account IQ-Anwendung als Kanal angemeldet sind [Programmierer](/help/AccountIQ/product-concepts.md#programmer-def)können Sie dann die Freigabe von Berichten Ihrer Kanal-Viewer für die spezifischen [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) sie sich angemeldet haben.
+Wenn Sie bei der Account IQ-Anwendung als [Programmierer](/help/AccountIQ/product-concepts.md#programmer-def)können Sie dann Berichte zur Freigabe auf Ihren Kanälen für bestimmte [MVPD](/help/AccountIQ/product-concepts.md#mvpd-def) Abonnenten.
 
 So zeigen Sie Berichte in Konto IQ an, sobald Sie sich erfolgreich als Programmierer bei der Anwendung angemeldet haben:
 
-1. Definieren Sie Ihr Abonnentensegment für die Analyse und Anzeige von Berichten mithilfe der Schritte in [So definieren Sie ein Segment](/help/AccountIQ/howto-select-segment-timeframe.md).
+1. Wählen Sie die spezifische MVPD aus, während Sie Ihr Abonnentensegment für die Analyse und Anzeige von Berichten mithilfe der Schritte unter [So definieren Sie ein Segment](/help/AccountIQ/howto-select-segment-timeframe.md).
+
 
    >[!NOTE]
    >
-   >Sie können ein, zwei oder mehrere MVPDs oder sogar die Standardauswahl der 10 wichtigsten MVPDs auswählen (durch Freigabe von Bewertungen, Nutzung oder Konten).
+   >Sie können einen, zwei oder mehrere Kanäle oder sogar die Standardauswahl der zehn Top-Kanäle auswählen (durch Weitergeben von Bewertungen, Nutzung oder Konten).
    >
    >
-   >Sie können jedoch [höchstens 10 MVPDs](/help/AccountIQ/limitations.md) über den MVPD-Selektor in der [Segment- und Zeitrahmen-Bedienfeld](/help/AccountIQ/segments-timeframe.md).
+   >Sie können jedoch [höchstens 10 Kanäle](/help/AccountIQ/limitations.md) über die Kanalauswahl in der [Segment- und Zeitrahmen-Bedienfeld](/help/AccountIQ/segments-timeframe.md).
 
 1. Wählen Sie im linken Navigationsbereich eine gewünschte Berichtseite aus:
 
@@ -40,19 +41,5 @@ So zeigen Sie Berichte in Konto IQ an, sobald Sie sich erfolgreich als Programmi
 
    ![](assets/specific-mvpd-dashboard.png)
 
-Jede dieser Seiten spiegelt die Aktivität wider.
+Jede dieser Seiten spiegelt die Aktivität des ausgewählten Segments wider.
 
-<!--## If you are logged in as an MVPD {#report-sp-programmer}
-
-To view reports in Account IQ, once you have successfully logged in to the application as an MVPD:
-
-1. Select the desired programmer channel(s) from from the **Channels in segment** drop-down option.
-
-   ![select channels](assets/programmer-selection.png)
-
- 1. From the **Granularity and time frame** option, select the time interval to view reports. You can aggregate the time intervals week-wise or month-wise.
-
-1. Select a desired reports page from the left navigation-[General Usage](/help/AccountIQ/general-usage-reports.md), [Shared Accounts](/help/AccountIQ/shared-acc-reports.md), [Usage Patterns](/help/AccountIQ/usage-patterns.md), or even [Dashboard](/help/AccountIQ/dashboard.md) (dashboard gives a glimpse of the selected graphs from different reports pages).
-
-![reports for specific programmer](assets/report-forspecific-programmer.png)
--->

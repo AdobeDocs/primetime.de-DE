@@ -1,23 +1,23 @@
 ---
 title: Nutzungsmuster
 description: Zeigen Sie das Verhalten der Kontofreigabe für verschiedene Benutzertypologien an.
-source-git-commit: dd9b8edfd00bb97d01c6478ae0be6944e7e57535
+exl-id: 2faa7e75-b3a1-491b-bb7d-bd3a149cbe79
+source-git-commit: 560611f2af2605ba399e4cf5ddfd331b6e8e0231
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
-
 # Nutzungsmuster {#usage-patterns}
 
-Konto IQ klassifiziert Benutzer von Abonnentenkonten in verschiedene Kategorien hinsichtlich ihres sozialen Verhaltens, wie z. B. Reisende oder Pendler, Große Familie und Community-Freigabe. Die **Nutzungsmuster** Seite zeigt mehrere verschiedene Analyse- und Berichtstypen für diese Benutzertypologien. Beispiel: **Verteilung der Nutzungsmuster - Benutzer im Vergleich zur Branche** -Bericht vergleicht das Nutzungsverhalten für das aktuelle Segment mit dem für die gesamte Branche.
+Konto IQ klassifiziert Benutzer von Abonnentenkonten in verschiedene Kategorien hinsichtlich ihres sozialen Verhaltens, wie z. B. Reisende oder Pendler, Große Familie und Community-Freigabe. Die **Nutzungsmuster** Seite zeigt mehrere verschiedene Analyse- und Berichtstypen für diese Benutzertypologien. Beispiel: **Verteilung der Nutzungsmuster - Benutzer im Segment im Vergleich zur Gesamtsumme** -Bericht vergleicht das Nutzungsverhalten für das aktuelle Segment mit dem für die gesamte Branche.
 
 Wie die anderen Seiten in der App basieren die Analyse und Berichte hier auf dem aktuellen Segment, wie in der [Segmentbereich](/help/AccountIQ/segments-timeframe.md).
 
 ## Verteilung der Nutzungsmuster {#usage-pattern-dis}
 
-Balkendiagramm in **Verteilung der Nutzungsmuster - Benutzer im Vergleich zur Branche** Zeigt die Anzahl und den Prozentsatz der Abonnenten für jedes soziale Verhalten oder Nutzungsmuster an. Zusätzlich zum Vergleich der einzelnen Nutzungsmuster im aktuellen Segment mit der gesamten Branche werden sie auch mit einem Segment verglichen, das alle Ihre Kanäle enthält.
+Balkendiagramm in **Verteilung der Nutzungsmuster - Benutzer im Vergleich zur Gesamtsumme** Zeigt die Anzahl und den Prozentsatz der Abonnenten für jedes soziale Verhalten oder Nutzungsmuster an. Zusätzlich zum Vergleich der einzelnen Nutzungsmuster im aktuellen Segment mit der gesamten Branche werden sie auch mit einem Segment verglichen, das alle Ihre Kanäle enthält.
 
 ![](assets/segment-users-industry.png)
 
@@ -39,8 +39,20 @@ Im obigen Bild beispielsweise:
 
 * Und 15,7 % (24.073.311) der gesamten Wiedergabeanforderungen (153.076.350) werden von regulären Benutzern durchgeführt.
 
-## Nutzungsverteilung für MVPDs {#usage-pattern-dis-mvpd}
+## Verteilung der Nutzungsmuster nach Segmentpartner {#usage-pattern-dis-mvpd}
 
-Die **Nutzungsverteilung für MVPDs** -Tabelle bietet einen Vergleich der Verteilung des Nutzungsmusters für die MVPDs im aktuellen Segment.
++++Programmer- Verteilung des Nutzungsmusters für Gesamtsegmente und Segmentpartner
+
+Die **Verteilung der Nutzungsmuster** -Tabelle bietet einen Vergleich der Verteilung des Nutzungsmusters für die MVPDs im aktuellen Segment.
 
 ![](assets/usage-patterns-mvpdwise.png)
+
++++
+
++++MVPD - Gebrauchsmuster-Verteilung für Gesamtsegmente und Segmentpartner
+
+Die **Verteilung der Nutzungsmuster** -Tabelle bietet einen Vergleich der Verteilung des Nutzungsmusters für die Programmierkanäle im aktuellen Segment.
+
+![](assets/usage-patterns-programmerwise.png)
+
++++

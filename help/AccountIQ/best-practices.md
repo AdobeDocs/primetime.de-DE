@@ -1,13 +1,13 @@
 ---
 title: Best Practices
 description: Lesen Sie weiter, um zu erfahren, wie Sie das Konto-IQ-Tool besser nutzen können.
-source-git-commit: 3ee1620dad552c76545f5441ea8530a45143fc4b
+exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
+source-git-commit: dcd89849937f4893705423465be4003948739eeb
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
 
 ---
-
 
 # Best Practices {#aiq-best-practices}
 
@@ -28,6 +28,7 @@ So verstehen Sie Art und Auswirkung der Freigabe auf Ihr Unternehmen:
 ## Schrittweise gezielte Maßnahmen ergreifen {#incremental-targeted-action}
 
 Führen Sie mit einem definierten Zielsegment Aktionen durch. Wenn Sie klein mit einem klar definierten Segment beginnen, verringern Sie Ihr Risiko unbeabsichtigter Folgen und können das Ergebnis besser verstehen. Unabhängig davon, wo Sie sich auf Ihrem Pfad befinden, können Sie das Ziel Ihres Vorgangs immer verfeinern oder erweitern.
+
 Klein anfangen und aufsteigen zu lassen ist ein umsichtiger Ansatz. Verwenden Sie zuvor identifizierte Segmente und ergreifen Sie Aktionen (als Experimente) mit spezifischen Zielen.
 
 Verwenden Sie das Kampagnenwerkzeug, um das Zielsegment und einen Betriebszeitrahmen zu definieren. Auf diese Weise können Sie die Auswirkungen in der nächsten Phase verfolgen.
@@ -98,7 +99,7 @@ How many additional ads were viewed?
 
 Did the number of borrowers decrease?
 
-Account IQ’s sophisticated machine learning based models help you analyze and measure the impacts of your experiments (or actions).
+Account IQ's sophisticated machine learning based models help you analyze and measure the impacts of your experiments (or actions).
 
 Improve and repeat
 Based on the outcomes of your experiments and targeted actions on small groups of users, you can expand the reach of your strategies to rest of the user segment or reset the strategy and audience to act on.

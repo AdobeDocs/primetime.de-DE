@@ -1,13 +1,13 @@
 ---
-title: 'Berichte zu freigegebenen Konten '
+title: Berichte zu freigegebenen Konten
 description: Berichte zu freigegebenen Konten
-source-git-commit: ead505dfa3e6569b7e349fa63170e5f8d90d759b
+exl-id: 16c5ded1-2a95-4373-8b90-b445131f333a
+source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
-
 
 # Berichte zu freigegebenen Konten {#shared-accounts-reports}
 
@@ -53,7 +53,7 @@ In diesem Bedienfeld können Sie einen Bereich aus dem folgenden auswählen, um 
 
 ![](assets/threshold-selector-shared-accounts.png)
 
-Nachdem Sie den Schwellenwert ausgewählt haben, zeigt das Bedienfeld den Prozentsatz (und die Anzahl) der Konten aller Abonnentenkonten für die im Segment ausgewählten MVPDs an.
+Nachdem Sie den Schwellenwert ausgewählt haben, zeigt das Bedienfeld den Prozentsatz (und die Anzahl) der Konten von allen Abonnentenkonten im ausgewählten Segment an.
 
 ## Segment - Wiedergabe von Anforderungen insgesamt {#play-request-out-total}
 

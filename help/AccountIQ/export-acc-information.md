@@ -1,17 +1,17 @@
 ---
 title: Exportieren von Informationen zu Konten mit hoher Sharing-Punktzahl
 description: Exportieren Sie Informationen für Konten mit hoher Sharing-Punktzahl.
-source-git-commit: 17a44bde5cf320f519cc537d37df0fe823cf51a6
+exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
+source-git-commit: dcd89849937f4893705423465be4003948739eeb
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '727'
 ht-degree: 1%
 
 ---
 
-
 # Exportieren von Informationen zu Konten mit hoher Sharing-Punktzahl {#export-account-info-high-score}
 
-Konto IQ bietet Ihnen die Möglichkeit, Details zur Kontofreigabe für Top-1000-Abonnentenkonten basierend auf ihren [Freigabewahrscheinlichkeiten](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Die Daten in der exportierten CSV-Datei werden in der absteigenden Reihenfolge der Freigabewahrscheinlichkeiten der Abonnentenkonten - der ausgewählten MVPDs in der [Segment](/help/AccountIQ/product-concepts.md#segment-def)für [angegebener Zeitrahmen](/help/AccountIQ/product-concepts.md#time-frame-def).
+Konto IQ bietet Ihnen die Möglichkeit, Details zur Kontofreigabe für Top-1000-Abonnentenkonten basierend auf ihren [Freigabewahrscheinlichkeiten](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Die Daten in der exportierten CSV-Datei werden in der absteigenden Reihenfolge der Freigabewahrscheinlichkeiten der Abonnentenkonten im [Segment](/help/AccountIQ/product-concepts.md#segment-def)für [angegebener Zeitrahmen](/help/AccountIQ/product-concepts.md#time-frame-def).
 
 Die Option zum Exportieren der Kontofreigabeinformationen finden Sie unter [Allgemeine Nutzungsberichte](/help/AccountIQ/general-usage-reports.md) und [Berichte zu freigegebenen Konten](/help/AccountIQ/shared-acc-reports.md) Seiten.
 
@@ -23,13 +23,7 @@ Die Option zum Exportieren der Kontofreigabeinformationen finden Sie unter [Allg
 
 So exportieren Sie die Informationen zur Kontofreigabe:
 
-1. Geben Sie in der Segmentauswahl ein Segment an. So wählen Sie ein Segment aus:
-
-   1. Wählen Sie die gewünschten MVPDs aus **MVPDs im Segment** -Option.
-
-   1. Wählen Sie die gewünschten Kanäle aus **Kanäle im Segment** -Option.
-
-   1. Wählen Sie einen Zeitrahmen aus **Granularität und Zeitrahmen** -Option, um Berichte dazu anzuzeigen.
+1. Definieren Sie ein gewünschtes Segment entsprechend den Schritten unter [Definieren von Segmenten und Auswählen von Zeitrahmen](/help/AccountIQ/howto-select-segment-timeframe.md) zur Bewertung von [Segment und Zeitrahmen](/help/AccountIQ/segments-timeframe.md) Bereich.
 
 1. Wählen Sie die **Export der 1000 wichtigsten Konten** -Option, um die Kontoinformationen für 1000 Abonnenten mit der höchsten Freigabewahrscheinlichkeit zu exportieren.
 
@@ -105,13 +99,13 @@ Die Häufigkeit, mit der sich die Benutzer während des Zeitraums mit diesem Kon
 
 Gibt an, wie oft ein MVPD einen Stream autorisiert oder Zugriff (auf Inhalte) auf dieses Konto gewährt hat.
 
->[!NOTE]
->
->Die **# AuthZ OK** ist mit dem **# Abspielanforderungen**; kleiner als die **# Abspielanforderungen** weil Adobe die Berechtigungen, die für MVPDs kommen, in der Regel 24 Stunden lang zwischenspeichert.
-
 **# Abspielanforderungen**
 
 Die tatsächliche Anzahl der Streams während des Zeitraums.
+
+>[!NOTE]
+>
+>**# AuthZ OK** ist normalerweise kleiner als **# Abspielanforderungen** weil Adobe die von MVPDs stammenden Berechtigungen bis zu 24 Stunden lang zwischenspeichert. Diese Spalte steht MVPDs nicht zur Verfügung.
 
 **Anzahl Kanäle**
 

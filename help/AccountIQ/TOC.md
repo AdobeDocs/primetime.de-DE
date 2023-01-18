@@ -2,10 +2,10 @@
 product: adobe primetime
 audience: end-user
 user-guide-description: Die Hilfe zu Primetime Account IQ gibt Informationen zu den Komponenten von Account IQ und führt Sie durch Touren, die die Verwendung der verschiedenen Komponenten erklären.
-source-git-commit: 6ae9c8651a47e2f458d69c078ba1f314a0227c00
+source-git-commit: 24838ba51683b04894149ae55bcabfb7bf2e8095
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 20%
+source-wordcount: '141'
+ht-degree: 16%
 
 ---
 
@@ -25,14 +25,21 @@ ht-degree: 20%
       + [Aktivitäten](/help/AccountIQ/operations.md)
 + Anleitungen {#use-aiq}
    + [Definieren eines Segments und eines Zeitrahmens](/help/AccountIQ/howto-select-segment-timeframe.md)
-   + Anzeigen von Berichten zur Kontofreigabe {#view-account-sharing-reports}
-      + [Berichte für ein bestimmtes MVPD](/help/AccountIQ/reports-for-specific-mvpds.md)
-      + [Berichte für die 10 wichtigsten MVPDs](/help/AccountIQ/top-10-mvpd-reports.md)
-      + [Berichte für mehrere MVPDs](viewrep-multiple-mvpd-channel.md)
-      + [Isolationsmodus und Freigabeverhalten](/help/AccountIQ/isolation-mode.md)
-   + [MVPD- und Kanalberichte exportieren](/help/AccountIQ/export-segment-metrics.md)
+   + Berichte exportieren {#export-reports}
+      + [Programmierer - Berichte exportieren](/help/AccountIQ/export-segment-metrics-progr.md)
+      + [MVPD - Exportberichte](/help/AccountIQ/export-segment-metrics-mvpd.md)
    + [Exportieren von Konten mit hoher Freigabe](/help/AccountIQ/export-acc-information.md)
    + [Erstellen eines Vorgangs für ein Benutzersegment](/help/AccountIQ/operation-affecting-user-segment.md)
+   + Anzeigen von Berichten zur Kontofreigabe {#view-account-sharing-reports}
+      + Programmierer - Anzeigen von Berichten zur Kontofreigabe {#view-programmer-reports}
+         + [Berichte für ein bestimmtes MVPD](/help/AccountIQ/reports-for-specific-mvpds.md)
+         + [Berichte für die 10 wichtigsten MVPDs](/help/AccountIQ/top-10-mvpd-reports.md)
+         + [Berichte für mehrere MVPDs](viewrep-multiple-mvpd.md)
+         + [Isolationsmodus und Freigabeverhalten](/help/AccountIQ/isolation-mode.md)
+      + MVPD - Anzeigen von Berichten zur Kontofreigabe {#view-mvpd-reports}
+         + [Berichte für einen bestimmten Programmierer oder Kanal](/help/AccountIQ/reports-for-specific-programmers.md)
+         + [Berichte für die 10 wichtigsten Programmierer](/help/AccountIQ/top-10-programmer-reports.md)
+         + [Berichte für mehrere Programmierer und Kanäle](viewrep-multiple-programmer.md)
 + [Best Practices](/help/AccountIQ/best-practices.md)
 + [Einschränkungen](/help/AccountIQ/limitations.md)
 + [Fehlerbehebung](/help/AccountIQ/troubleshoot.md)

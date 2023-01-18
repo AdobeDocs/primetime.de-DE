@@ -2,9 +2,9 @@
 title: Definieren eines Segments und eines Zeitrahmens
 description: Definieren eines Segments und eines Zeitrahmens
 exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: c17fb003d8c8103aac36696f696c9e3c7bb83c4f
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -80,10 +80,6 @@ Zusätzlich zur Änderung Ihrer Auswahl im **MVPDs im Segment** und **Kanäle im
 * Auswählen der **Entfernen** Symbol (![Symbol entfernen](assets/remove-icon.png)) in den Namen dieser ausgewählten MVPDs und Kanäle angezeigt, die unter der Segmentauswahl angezeigt werden.
 
 * Sie können auch **Auswahl löschen** um alle zuvor ausgewählten MVPDs oder Kanäle zu entfernen.
-
-![](assets/segment-panel-selection1.png)
-
-*Abbildung: Ausgewählte MVPDs und Kanäle in Segment- und Zeitrahmen-Bedienfeld*
 
 ![](assets/segment-panel-selection.png)
 

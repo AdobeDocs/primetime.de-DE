@@ -1,17 +1,17 @@
 ---
-title: 'Erstellen eines Vorgangs für ein Benutzersegment und Verfolgen des Effekts '
+title: Erstellen eines Vorgangs für ein Benutzersegment und Verfolgen des Effekts
 description: So erstellen Sie einen Vorgang, der die Auswirkungen auf ein definiertes Segment von Benutzern auswirkt und verfolgt.
-source-git-commit: 1d6beb69470fcf6a3193b4d2f508c503d4f957f1
+exl-id: ab74f857-e178-4120-8f9c-655ec921d096
+source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
 
-
 # Erstellen eines Vorgangs für ein Benutzersegment {#operation-to-track-segment}
 
-Jede Berichtsseite in Konto-IQ verfügt über eine **Neuen Vorgang erstellen** -Option, mit der Sie Workflows erstellen können, um verschiedene (Massen-)Aktionen für Abonnentenkonten zu automatisieren (und zu vereinfachen); Definition von Regeln, um ein Beispiel anzugeben, Aktionen zu definieren und die Auswirkungen dieser Aktionen aufzuzeichnen und zu analysieren. Auf der Seite, auf der Vorgänge erstellt werden sollen, können Sie das Beispiel von Benutzergruppen definieren, für die Vorgänge ausgeführt werden sollen, und die Ausführung des Vorgangs für ein künftiges Datum planen.
+Jede Berichtsseite in Konto-IQ verfügt über eine **Neuen Vorgang erstellen** -Option, mit der Sie Workflows erstellen können, um verschiedene (Massen-)Aktionen für Abonnentenkonten zu automatisieren (und zu vereinfachen); Definieren Sie Regeln, um ein Beispiel anzugeben, Aktionen zu definieren und die Auswirkungen dieser Aktionen aufzuzeichnen und zu analysieren. Auf der Seite, auf der Vorgänge erstellt werden sollen, können Sie das Beispiel von Benutzergruppen definieren, für die Vorgänge ausgeführt werden sollen, und die Ausführung des Vorgangs für ein künftiges Datum planen.
 
 So erstellen Sie einen Vorgang:
 
@@ -34,10 +34,21 @@ So erstellen Sie einen Vorgang:
 
 ## Vorgangsdetails {#operation-details}
 
++++Programmer- Operationsdetails
+
 Benennen Sie den neuen Vorgang in **Vorgangsname** Feld unter &quot;Details der Operation&quot;. Beispiel: &quot;*Testen Sie die Wirkung der Multifaktorauthentifizierung auf die Abonnenten von MVPD X oder &quot;Begrenzen Sie die Anzahl der Streams in der Überwachung der Parallelität&quot; oder &quot;Beschränken Sie die Abonnenten von MVPD, die den Kanal &quot;N&quot;von 20+ Geräten anzeigen.*&quot;.
 
++++
+
++++MVPD- Betriebsdetails
+
+Benennen Sie den neuen Vorgang in **Vorgangsname** Feld unter &quot;Details der Operation&quot;. Beispiel: &quot;*Testen Sie die Auswirkung der Multifaktorauthentifizierung auf die Viewer des Kanals N oder &quot;Begrenzen Sie die Anzahl der Streams in der Überwachung der Parallelität&quot; oder &quot;Begrenzen Sie die Abonnenten, die den Kanal &#39;N&#39; anzeigen, von 20+ Geräten.*&quot;.
+
++++
 
 ## Zielsegment {#segment}
+
++++Programmer- Target-Segment
 
 Die **Segment** definiert hier die Benutzer, die von diesem Vorgang bedient werden; oder die Beispielgruppe für Ihren Vorgang. Das Standardsegment ist die **Segment** Sie haben mit [Segment- und Zeitrahmen-Bedienfeld](/help/AccountIQ/howto-select-segment-timeframe.md) auf der Hauptseite &quot;Berichte&quot;oder &quot;Dashboards&quot;in Schritt 1 oben beschrieben.
 
@@ -47,7 +58,22 @@ Die **Segment** definiert hier die Benutzer, die von diesem Vorgang bedient werd
 ![](assets/operations-segment-selection.png)
 *Figure: Segment and timeframe selection on the main page*-->
 
-Dieses Segment definiert die Abonnenten der MVPDs und Kanäle, die von dem erstellten Vorgang betroffen sein werden. Ihr (standardmäßiges) Segment umfasst beispielsweise *alle Abonnentenkonten von MVPD mit dem Namen &quot;C&quot;, die den Kanal &quot;N Sports&quot;anzeigen*.
+Dieses Segment definiert die Abonnenten, die von dem zu erstellenden Vorgang betroffen sein werden. Beispielsweise kann Ihr ausgewähltes Segment *alle Abonnentenkonten von MVPD mit dem Namen &quot;C&quot;, die den Kanal &quot;N Sports&quot;anzeigen*.
+
++++
+
++++MVPD- Target-Segment
+
+Die **Segment** definiert hier die Benutzer, die von diesem Vorgang bedient werden; oder die Beispielgruppe für Ihren Vorgang. Das Standardsegment ist die **Segment** Sie haben mit [Segment- und Zeitrahmen-Bedienfeld](/help/AccountIQ/howto-select-segment-timeframe.md) auf der Hauptseite &quot;Berichte&quot;oder &quot;Dashboards&quot;in Schritt 1 oben beschrieben.
+
+<!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
+
+* The **segment evaluation period** is the time period of analysis you selected in step 1 from **Granularity and Timeframe** option.
+![](assets/operations-segment-selection.png)
+*Figure: Segment and timeframe selection on the main page*-->
+
+Dieses Segment definiert Ihre Abonnenten (die Betrachter bestimmter Kanäle sind), die von dem erstellten Vorgang betroffen sein werden. Ihr (standardmäßiges) Segment umfasst beispielsweise *alle Abonnentenkonten, die den Kanal &quot;N Sport&quot;anzeigen*.
++++
 
 ### Weitere Segmentierung {#additional-segmentation}
 
