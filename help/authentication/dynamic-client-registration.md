@@ -1,0 +1,38 @@
+---
+title: Dynamische Kundenregistrierung
+description: Dynamische Kundenregistrierung
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 0%
+
+---
+
+
+# Dynamische Kundenregistrierung {#dynamic-client-registration}
+
+>[!NOTE]
+>
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+
+## Kontext {#context}
+
+Zur Anpassung an moderne Sicherheitspraktiken, verbesserte UX- und Plattformeigentümeranforderungen, das Adobe Primetime Authentication Android SDK und das iOS SDK gehen in Richtung der Übernahme [Benutzerdefinierte Registerkarten für Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari view controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}.
+
+Die aktuelle AdobePass-Implementierung verwendet plattformspezifische Webansichten, um die Webumgebung für die Anzeige der MVPD-Anmeldeseite bereitzustellen. Diese Webansichten verwenden keine gemeinsame Berechtigungsverwaltung für Plattformbrowser. Daher kann der Benutzer bei Verwendung einer Adobe Primetime-Authentifizierungsanwendung kein im Browser gespeichertes Kennwort verwenden. Aus Sicherheitsgründen werden die WebView-Controller von einigen Plattformen für Authentifizierungsaufgaben eingestellt. Sowohl Google als auch Apple bieten alternative Optionen wie &quot;Benutzerdefinierte Chrome-Registerkarten&quot;und &quot;Safari View Controller&quot;. Dabei handelt es sich im Wesentlichen um einzelne Benutzerregisterkarten ihrer jeweiligen Browser. Die Adobe Primetime-Authentifizierung wird diese neuen Komponenten 2018 übernehmen.
+
+## Details {#details}
+
+Derzeit gibt es zwei Möglichkeiten, Anwendungen durch die Adobe Pass-Authentifizierung zu identifizieren und zu registrieren:
+
+* Browser-basierte Clients werden über die Zulassungsdomänenliste registriert
+* native Anwendungsclients wie iOS und Android-Anwendungen werden über den signierten Anforderungsmechanismus registriert.
+
+Um die neuen Flüsse für den Chrome Custom Tabs &amp; Safari View Controller zu beheben, schlägt Adobe Pass einen neuen Client-Registrierungsmechanismus für die Registrierung neuer Anwendungen vor. Dieser Mechanismus ermöglicht eine sicherere und granularere Steuerung Ihrer Anwendungen und kann zur Registrierung von Anwendungen auf allen Plattformen verwendet werden.
+
+<!--
+## Related Information
+
+- [Dynamic Client Registration API](/help/authentication/dynamic-client-registration-api.md)
+- [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md)
+-->

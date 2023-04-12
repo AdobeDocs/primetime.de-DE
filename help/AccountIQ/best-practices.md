@@ -2,7 +2,7 @@
 title: Best Practices
 description: Lesen Sie weiter, um zu erfahren, wie Sie das Konto-IQ-Tool besser nutzen können.
 exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -28,7 +28,6 @@ So verstehen Sie Art und Auswirkung der Freigabe auf Ihr Unternehmen:
 ## Schrittweise gezielte Maßnahmen ergreifen {#incremental-targeted-action}
 
 Führen Sie mit einem definierten Zielsegment Aktionen durch. Wenn Sie klein mit einem klar definierten Segment beginnen, verringern Sie Ihr Risiko unbeabsichtigter Folgen und können das Ergebnis besser verstehen. Unabhängig davon, wo Sie sich auf Ihrem Pfad befinden, können Sie das Ziel Ihres Vorgangs immer verfeinern oder erweitern.
-
 Klein anfangen und aufsteigen zu lassen ist ein umsichtiger Ansatz. Verwenden Sie zuvor identifizierte Segmente und ergreifen Sie Aktionen (als Experimente) mit spezifischen Zielen.
 
 Verwenden Sie das Kampagnenwerkzeug, um das Zielsegment und einen Betriebszeitrahmen zu definieren. Auf diese Weise können Sie die Auswirkungen in der nächsten Phase verfolgen.

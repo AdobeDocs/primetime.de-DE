@@ -1,11 +1,11 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-description: Die Hilfe zu Primetime Account IQ gibt Informationen zu den Komponenten von Account IQ und führt Sie durch Touren, die die Verwendung der verschiedenen Komponenten erklären.
-source-git-commit: 24838ba51683b04894149ae55bcabfb7bf2e8095
+user-guide-description: Hilfe zu Primetime Account IQ gibt Informationen zu den Konto-IQ-Komponenten und führt Sie durch die Journey zur Verwendung der verschiedenen Komponenten.
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 16%
+ht-degree: 0%
 
 ---
 
@@ -17,14 +17,15 @@ ht-degree: 16%
    + [Segmente und Zeitrahmen](/help/AccountIQ/segments-timeframe.md)
    + [Dashboard](/help/AccountIQ/dashboard.md)
    + Berichte {#reports-account-iq}
-      + [Allgemeine Nutzungsberichte](/help/AccountIQ/general-usage-reports.md)
-      + [Berichte zu freigegebenen Konten](/help/AccountIQ/shared-acc-reports.md)
+   + [Allgemeine Nutzungsberichte](/help/AccountIQ/general-usage-reports.md)
+   + [Berichte zu freigegebenen Konten](/help/AccountIQ/shared-acc-reports.md)
    + Teilen von Komponenten {#sharing-components}
       + [Nutzungsmuster](/help/AccountIQ/usage-patterns.md)
    + Aktionen {#further-next-steps-actions}
       + [Aktivitäten](/help/AccountIQ/operations.md)
 + Anleitungen {#use-aiq}
-   + [Definieren eines Segments und eines Zeitrahmens](/help/AccountIQ/howto-select-segment-timeframe.md)
+   + [Segmente erstellen](/help/AccountIQ/build-segment.md)
+   + [Segment und Zeitrahmen auswählen](/help/AccountIQ/howto-select-segment-timeframe.md)
    + Berichte exportieren {#export-reports}
       + [Programmierer - Berichte exportieren](/help/AccountIQ/export-segment-metrics-progr.md)
       + [MVPD - Exportberichte](/help/AccountIQ/export-segment-metrics-mvpd.md)

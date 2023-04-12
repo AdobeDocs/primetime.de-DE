@@ -2,16 +2,16 @@
 title: Exportieren von Informationen zu Konten mit hoher Sharing-Punktzahl
 description: Exportieren Sie Informationen für Konten mit hoher Sharing-Punktzahl.
 exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '728'
 ht-degree: 1%
 
 ---
 
 # Exportieren von Informationen zu Konten mit hoher Sharing-Punktzahl {#export-account-info-high-score}
 
-Konto IQ bietet Ihnen die Möglichkeit, Details zur Kontofreigabe für Top-1000-Abonnentenkonten basierend auf ihren [Freigabewahrscheinlichkeiten](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Die Daten in der exportierten CSV-Datei werden in der absteigenden Reihenfolge der Freigabewahrscheinlichkeiten der Abonnentenkonten im [Segment](/help/AccountIQ/product-concepts.md#segment-def)für [angegebener Zeitrahmen](/help/AccountIQ/product-concepts.md#time-frame-def).
+Konto IQ bietet Ihnen die Möglichkeit, Details zur Kontofreigabe für Top-1000-Abonnentenkonten basierend auf ihren [Freigabewahrscheinlichkeiten](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Die Daten in der exportierten CSV-Datei werden in der absteigenden Reihenfolge der Freigabewahrscheinlichkeiten der Abonnentenkonten - der ausgewählten MVPDs in der [Segment](/help/AccountIQ/product-concepts.md#segment-def)für [angegebener Zeitrahmen](/help/AccountIQ/product-concepts.md#time-frame-def).
 
 Die Option zum Exportieren der Kontofreigabeinformationen finden Sie unter [Allgemeine Nutzungsberichte](/help/AccountIQ/general-usage-reports.md) und [Berichte zu freigegebenen Konten](/help/AccountIQ/shared-acc-reports.md) Seiten.
 
@@ -99,13 +99,13 @@ Die Häufigkeit, mit der sich die Benutzer während des Zeitraums mit diesem Kon
 
 Gibt an, wie oft ein MVPD einen Stream autorisiert oder Zugriff (auf Inhalte) auf dieses Konto gewährt hat.
 
+>[!NOTE]
+>
+>Die **# AuthZ OK** ist mit dem **# Abspielanforderungen**; kleiner als die **# Abspielanforderungen** weil Adobe die Berechtigungen, die für MVPDs kommen, in der Regel 24 Stunden lang zwischenspeichert.
+
 **# Abspielanforderungen**
 
 Die tatsächliche Anzahl der Streams während des Zeitraums.
-
->[!NOTE]
->
->**# AuthZ OK** ist normalerweise kleiner als **# Abspielanforderungen** weil Adobe die von MVPDs stammenden Berechtigungen bis zu 24 Stunden lang zwischenspeichert. Diese Spalte steht MVPDs nicht zur Verfügung.
 
 **Anzahl Kanäle**
 
@@ -127,7 +127,7 @@ Die Zahlen in dieser Spalte sind Kennungen, die einem der 14 Muster zugeordnet s
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Nutzungsmuster | Regulärer Benutzer | Reisende oder Pendler | Großfamilie | Enge Familie und Freunde | Social-Gruppenfreigabe | Große Gruppe von Freunden | Gleichzeitiges Streaming | Community-Freigabe | Unsicheres Verhalten | Kleine Familie | Zweites Heim | Ungewöhnliche Nutzung |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Freigabewahrscheinlichkeit**
 

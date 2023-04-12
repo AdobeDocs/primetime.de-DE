@@ -1,13 +1,13 @@
 ---
 title: Anzeigen von Berichten im Isolationsmodus
-description: 'Anzeigen von Berichten im Isolationsmodus für Xfinity '
-source-git-commit: afa77dd0d7ffe38d353fed21dc9591b994b11193
+description: Anzeigen von Berichten im Isolationsmodus für Xfinity
+exl-id: e7cf24c5-9bfa-48f6-b5c8-20443a976891
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
 
 ---
-
 
 # Anzeigen von Berichten im Isolationsmodus {#report-isolation-mode}
 
@@ -19,7 +19,7 @@ Wenn beispielsweise in der folgenden Abbildung ein Abonnent B eines Isolationsmo
 
 *Abbildung: Isolationsmodus MVPD identifiziert vier verschiedene Abonnenten anstelle von zwei*
 
-Um die Datenverzerrung zu verwalten (da derselbe Abonnent aufgrund des Zugriffs auf verschiedene Programmierer als unterschiedlich identifiziert wird), beschränkt der Isolationsmodus die über einen Programmierer gemeldete Aktivität auf die Aktivität nur in den Anwendungen dieses Programmierers. Beispielsweise sieht Programmierer für den Isolationsmodus im obigen Bild Daten nur basierend auf der Aktivität von Identitäten W und Y, wobei Identitäten X und Z ignoriert werden.
+Um die Datenverzerrung zu verwalten (da derselbe Abonnent aufgrund des Zugriffs auf verschiedene Programmierer als unterschiedlich identifiziert wird), beschränkt der Isolationsmodus die über einen Programmierer berichtete Aktivität auf die Aktivität nur in den Anwendungen dieses Programmierers. Beispielsweise sieht Programmierer für den Isolationsmodus im obigen Bild Daten nur basierend auf der Aktivität von Identitäten W und Y, wobei Identitäten X und Z ignoriert werden.
 
 >[!IMPORTANT]
 >

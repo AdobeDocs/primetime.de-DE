@@ -2,7 +2,7 @@
 title: Einschränkungen und bekannte Probleme
 description: Bekannte Probleme im Produkt.
 exl-id: 08d65716-8b6a-4300-acda-fec63e1e6815
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # Bekannte Probleme und Einschränkungen {#known-issues}
 
-Adobe strebt über seine Angebote eine robuste Funktionalität und nahtlose Benutzererlebnisse an. Die aktuelle Version (Version 1.1) von Account IQ bietet Streaming-Anbietern mit hoher Konfidenz Analyse zur Nutzung und zum Teilen von Abonnements. Die folgenden Einschränkungen werden jedoch in den kommenden Versionen behoben.
+Adobe strebt über seine Angebote eine robuste Funktionalität und nahtlose Benutzererlebnisse an. Die aktuelle Version (Version 1.0) von Account IQ bietet Streaming-Anbietern mit hoher Konfidenz Analysen zur Nutzung und Abonnementfreigabe. Die folgenden Einschränkungen werden jedoch in den kommenden Versionen behoben.
 
-* Bei der Definition von Kohorten auf den Dashboard- oder Berichtsseiten gibt es derzeit keine Option zum Hinzufügen von Metriken wie **Anzahl der Geräte** , um das Segment zu verfeinern. Diese Funktion wird demnächst verfügbar sein.
+* Bei der Definition von Kohorten auf den Dashboard- oder Berichtsseiten gibt es derzeit keine Option zum Hinzufügen von Metriken wie **Anzahl der Geräte** , um das Segment zu verfeinern. Diese Funktion wird in einer zukünftigen Version verfügbar sein.
 
 * Bei der Schätzung der Teilungsbewertungen für einzelne Konten verfolgt Konto IQ einen konservativen Ansatz, der es Unternehmen ermöglicht, mit großem Vertrauen auf die Freigabe zu reagieren. Dieser Ansatz tendiert jedoch dazu, den Gesamtbetrag der Freigabe zu unterschätzen, wenn er über viele Konten hinweg aggregiert wird.
 
@@ -29,7 +29,7 @@ Adobe strebt über seine Angebote eine robuste Funktionalität und nahtlose Benu
 
 * Die Abschnitte &quot;Benchmarking&quot;, &quot;Detection Models&quot;, &quot;Segmente&quot;, &quot;Snapshots&quot;und &quot;Regeln&quot;im linken Navigationsbereich sind derzeit deaktiviert und werden in einer kommenden Version verfügbar sein.
 
-* Beim Erstellen [Vorgänge](/help/AccountIQ/operation-affecting-user-segment.md), können Sie nur zwei Arten von [Aktionen](/help/AccountIQ/operation-affecting-user-segment.md) ab sofort — Regeln zur Überwachung der Parallelität und externe Maßnahmen.
+* Beim Erstellen [Aktivitäten](/help/AccountIQ/operation-affecting-user-segment.md), können Sie nur zwei Arten von [Aktionen](/help/AccountIQ/operation-affecting-user-segment.md) ab sofort — Regeln zur Überwachung der Parallelität und externe Maßnahmen.
 
 * Derzeit können Vorgänge nur erstellt und [terminiert](/help/AccountIQ/operation-affecting-user-segment.md#action). Zukünftige Versionen ermöglichen es Ihnen, sie anzuhalten, fortzusetzen und vollständig zu verwalten.
 

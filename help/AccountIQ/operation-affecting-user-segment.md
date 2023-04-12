@@ -2,9 +2,9 @@
 title: Erstellen eines Vorgangs für ein Benutzersegment und Verfolgen des Effekts
 description: So erstellen Sie einen Vorgang, der die Auswirkungen auf ein definiertes Segment von Benutzern auswirkt und verfolgt.
 exl-id: ab74f857-e178-4120-8f9c-655ec921d096
-source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '1010'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,7 @@ Die **Aktion** definiert, welchen Vorgang Sie für das definierte Segment ausfü
 
 Es gibt zwei Arten von Aktionen:
 
-* Aktionen mit Systemen, die mit Account IQ integriert sind; wie [Überwachung der Parallelität](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)<!--, or Adobe Target-->.
+* Aktionen mit Systemen, die mit Account IQ integriert sind; wie **Überwachung der Parallelität** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
 
 * Aktionen zum Erstellen und Verarbeiten von Workflows, die außerhalb von Account IQ und nicht mit Account IQ integriert sind. Beispielsweise eine Aktion für den Kanalprogrammierer &#39;N&#39;, um Massen-E-Mails an alle Abonnenten von MVPD &#39;C&#39; zu senden.
 

@@ -1,7 +1,7 @@
 ---
 title: Exportieren von Metriken für einen Programmierer und ausgewählten MVPDs in ein Segment
 description: Exportieren von Metriken für einen Programmierer und ausgewählten MVPDs in ein Segment
-source-git-commit: 1cf035c2c40c66cf4ba5052c9229bc76a903865d
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
