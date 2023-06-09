@@ -1,28 +1,27 @@
 ---
-title: Ad Insertion in Live/Linear-Stream verwenden
-description: Ad Insertion in Live/Linear-Stream verwenden
-translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+title: Ad Insertion in Live/Linearstream verwenden
+description: Verwenden von Ad Insertion im Live-/Linear-Stream
+exl-id: d56ed723-ec72-4bbd-befc-6858c7c9d800
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
 
+# Ad Insertion in Live/Linearstream verwenden {#ad-insertion-live-linear-stream}
 
-# Ad Insertion in Live/Linear-Stream {#ad-insertion-live-linear-stream} verwenden
-
-Primetime-Ad Insertion bietet Herausgebern die Möglichkeit, standardmäßige und komplexe Anzeigeneinfügesituationen zu bearbeiten, die während der Live-/linearen Streams auftreten.
+Mit Primetime-Ad Insertion können Herausgeber standardmäßige und komplexe Anzeigeneinfüge-Situationen handhaben, die in Live-/linearen Streams auftreten.
 
 ## Unterstützte Cue-Formate {#cue-formats-supported}
 
-Primetime Ad Insertion unterstützt eine breite Palette an Standard- und Nicht-Standard-Cue-Formaten, darunter:
+Primetime Ad Insertion unterstützt eine breite Palette standardmäßiger und nicht standardmäßiger Cue-Formate, darunter:
 
-* DPI SCTE-35 (erweiterte Anzeigenmarken mit SCTE-35)
+* DPI SCTE-35 (erweiterte SCTE-35-Anzeigenmarkierungen)
 
-* [Adobe Digital Programm Insertion Signaling Specification](https://www.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
+* [Adobe Digital Program Insertion Signaling Specification](assets/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
 
-* Binary SCTE-35 (sowohl HLS als auch DASH)
+* Binärer SCTE-35 (sowohl HLS als auch DASH)
 
 * Text-SCTE-35 (sowohl HLS als auch DASH)
 
@@ -30,8 +29,8 @@ Wenden Sie sich an Ihren Primetime-Support-Mitarbeiter, um weitere Informationen
 
 ## Unterstützung für teilweise Werbeunterbrechungen {#partial-ad-break-support}
 
-Teilweise Werbeunterbrechungen können in Situationen verwendet werden, in denen ein Viewer nach Beginn einer Werbeunterbrechung in einen Live-/linearen Stream wechselt.  Wenn ein Viewer beispielsweise eine 2:00-lange Werbeunterbrechung mit dem 1:00-Zeichen eingibt, wird durch das Einfügen von Werbeunterbrechungen sichergestellt, dass Anzeigen in der verbleibenden Zeit bereitgestellt werden. Ohne das Einfügen von Werbeunterbrechungen würden diesem Viewer während der Pause keine Anzeigen bereitgestellt. Primetime-Ad Insertion aktiviert standardmäßig das Einfügen von Teilen-Werbeunterbrechungen, wenn die entsprechenden Tags im/den Medienstream/s vorhanden sind.
+Teilweise Werbeunterbrechungen können in Situationen verwendet werden, in denen ein Viewer nach dem Start einer Werbeunterbrechung in einen Live-/Linearstream gelangt.  Wenn ein Viewer beispielsweise eine 2:00-lange Werbeunterbrechung bei 1:00 Uhr eingibt, wird durch das Einfügen einer partiellen Werbeunterbrechung sichergestellt, dass Anzeigen in der verbleibenden Zeit bereitgestellt werden. Ohne partielles Einfügen einer Werbeunterbrechung werden diesem Viewer während der Pause keine Anzeigen bereitgestellt. Primetime-Ad Insertion ermöglicht standardmäßig das Einfügen einer partiellen Werbeunterbrechung, wenn die entsprechenden Tags in den Medien-Streams vorhanden sind.
 
-## Frühzeitiger Rücktritt (Vorzeitiger Anzeigenausstieg) {#early-return-early-ad-exit}
+## Frühzeitige Rückkehr (Beenden der frühzeitigen Anzeige) {#early-return-early-ad-exit}
 
-Es gibt Fälle, in denen es erforderlich sein kann, frühzeitig von einer Werbeunterbrechung in einem Live-/linearen Stream zurückzukehren, z. B. wenn ein sportliches Ereignis plötzlich zu einer Aktion zurückkehrt. Jedes Entscheidungsformat der Anzeige enthält ein Tag zum &quot;Cue-out&quot;(Anzeigen) oder &quot;Cue-in&quot;(Inhalt).  Wenn vor dem Ende einer Werbeunterbrechung ein &quot;Cue-in&quot;-Tag gefunden wird, berücksichtigt Adobe Primetime Ad Insertion das Cue-In.  Wenden Sie sich an Ihren Content Packager, um eine frühe Rückkehr zu ermöglichen.
+Es gibt Fälle, in denen es erforderlich sein kann, frühzeitig von einer Werbeunterbrechung in einem Live-/linearen Stream zurückzukehren, z. B. wenn ein Sportereignis plötzlich zur Aktion zurückkehrt. Jedes Entscheidungsformat einer Anzeige enthält ein Tag zum &quot;Cue-out&quot;(Anzeigen) oder &quot;Cue-in&quot;(Inhalt)  Wenn vor dem Ende einer Werbeunterbrechung ein &quot;Cue-in&quot;-Tag auftritt, berücksichtigt Adobe Primetime Ad Insertion den Cue-in.  Wenden Sie sich an Ihren Content Packager, um eine frühe Rückkehr zu ermöglichen.

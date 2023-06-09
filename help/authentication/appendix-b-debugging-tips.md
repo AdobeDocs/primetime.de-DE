@@ -1,13 +1,13 @@
 ---
 title: Anhang B "Tipps zum Debuggen"
 description: Anhang B "Tipps zum Debuggen"
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
-
 
 # Anlage B: Tipps zum Debugging {#appendix-b-debugging-tips}
 
@@ -22,7 +22,7 @@ Die Adobe Primetime-Authentifizierung speichert temporäre Daten wie Browsercach
 
 - [Löschen des Browser-Caches und der Cookies](#clearing-the-browser-cache-and-cookies)
 - [Löschen des LSO-Cache](#clearing-lsos-cache)\
-    
+   
 
 ## Löschen des Browser-Caches und der Cookies {#clearing-the-browser-cache-and-cookies}
 
@@ -41,8 +41,7 @@ Wählen Sie die ```entitlement.\*``` (je nachdem, was getestet wird) und klicken
 Adobe Primetime-Authentifizierungstechniken verwenden die folgenden Debugging-Tools:
 
 - Firebug - <http://www.getfirebug.com/>
-- Flashbug (funktioniert mit der Debug-Version des Flash-Players) <https://addons.mozilla.org/en-US/firefox/addon/14465/>
-- Live-HTTP-Header - <https://addons.mozilla.org/en-US/firefox/addon/3829/>
+- Flashbug (funktioniert mit der Debug-Version des Flash-Players)
 - Fiddler - <http://www.fiddler2.com/fiddler2/>
 - Charles - <http://www.charlesproxy.com/>
 - Wireshark - <http://www.wireshark.org/>
