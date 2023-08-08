@@ -22,7 +22,7 @@ ht-degree: 0%
    + [Handbuch zum Schnellstart für Programmierer](programmer-kickstart-guide.md)
    + [MVPD-Schnellstartanleitung](mvpd-kickstart-guide.md)
 + Handbuch zur Programmierintegration {#programmer-integration-guide}
-   + [Handbuch zur Programmierintegration - Übersicht](programmer-integration-guide-overview.md)
+   + [Leitfaden zur Programmierintegration - Übersicht](programmer-integration-guide-overview.md)
    + [Berechtigungsfluss des Programmierers](entitlement-flow.md)
    + [Anwendungsfälle für Programmierer](programmer-use-cases.md)
    + [Weitergeben von Client-Informationen (Gerät, Verbindung und Anwendung)](passing-client-information-device-connection-and-application.md)
@@ -87,7 +87,7 @@ ht-degree: 0%
          + [Amazon FireOS-Anwendungsregistrierung](amazon-fireos-application-registration.md)
          + [FireOS-SDK mit dynamischer Client-Registrierung](fireos-sdk-with-dynamic-client-registration.md)
    + Platform SSO {#platform-sso}
-      + Apple SSO {#apple-sso}
+      + APPLE SSO {#apple-sso}
          + [Überblick über Apple SSO](apple-sso-overview.md)
          + [Apple SSO-Cookbook (REST-API)](apple-sso-cookbook-rest-api.md)
          + [Apple SSO-Cookbook (iOS/tvOS SDK)](apple-sso-cookbook-iostvos-sdk.md)
@@ -103,7 +103,7 @@ ht-degree: 0%
    + [Integrationsfunktionen](mvpd-integr-features.md)
    + [Authentifizierung](authn-usecase.md)
    + [Authentifizierung mit dem OAuth 2.0-Protokoll](authn-oauth2-protocol.md)
-   + [Genehmigung](authz-usecase.md)
+   + [Autorisierung](authz-usecase.md)
    + [Vorabgenehmigung](mvpd-preflight-authz.md)
    + [MVPD-Abmeldung](usecase-mvpd-logout.md)
    + [Austausch von Inhaltsmetadaten](mvpd-content-metadata-exchange.md)
@@ -138,7 +138,7 @@ ht-degree: 0%
    + Kundenregistrierung {#client-regn}
       + [Dynamische Kundenregistrierung](dynamic-client-registration.md)
       + [Dynamische Client-Registrierungs-API](dynamic-client-registration-api.md)
-      + [Dynamisches Client-Registrierungsmanagement](dynamic-client-registration-management.md)
+      + [Dynamisches Client-Registrierungs-Management](dynamic-client-registration-management.md)
    + Abbaudienst {#degrn-service}
       + [Übersicht über die Abbau-API](degradation-api-overview.md)
    + Datenschutzbereitschaft {#privacy-readiness}
@@ -162,7 +162,7 @@ ht-degree: 0%
    + [Primetime-Authentifizierung iOS/tvOS 3.7.0 - Versionshinweise](authn-rn-ios-tvos-370.md)
    + [Primetime-Authentifizierung iOS/tvOS 3.8.1 - Versionshinweise](authn-rn-ios-tvos-381.md)
 + Technische Hinweise {#tech-notes}
-   + Primetime-Authentifizierungs-SDKs {#primetime-authentication-sdks}
+   + Primetime Authentication SDKs {#primetime-authentication-sdks}
       + [Fragen und Antworten zu Zertifikaten](certificates-qa.md)
       + JavaScript-SDK {#javascript}
          + [JS-SDK-Einschränkungen für Safari-Browser](js-sdk-limitations-for-safari-browser.md)
@@ -185,12 +185,12 @@ ht-degree: 0%
    + Clientlose API {#clientless-api}
       + [Clientlose API-Implementierung - Fehlercodes/Meldungen mit möglichen Gründen/Ursache](clientless-api-implementation-error-codes--messages-with-probable-reason--cause.md)
       + [Clientloser API-Ablauf bei Fehlen der Geräte-ID](clientless-api-flow-in-the-absence-of-device-id.md)
-      + [Clientless: Vermeiden Sie die Verwendung von &#39;&amp;&#39;reg_code in /authenticate request](clientless-avoid-using-reg-code-in-authenticate-request.md)
+      + [Clientlos: Vermeiden Sie die Verwendung von &quot;&amp;&quot;reg_code in /authenticate request](clientless-avoid-using-reg-code-in-authenticate-request.md)
       + [Aktivieren von Primetime-Berechtigungsdiensten für ein Programm in Xbox 360 und XboxOne Clientless](enabling-primetime-entitlement-services-for-a-programmer-on-xbox-360-and-xboxone-clientless-solution.md)
       + [Clientloser Gerätetyp und Metriken](benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)
    + Anwendererlebnis {#user-exp}
       + [Migrieren der MVPD-Anmeldeseite von iFrame zum Popup](migr-mvpd-login-iframe-popup.md)
-      + [Preflight-Funktion: So aktivieren, beheben oder ermitteln Sie das Problem](preflight-feature.md)
+      + [Preflight-Funktion: Anleitung zum Aktivieren, Beheben oder Ermitteln des Problems](preflight-feature.md)
    + Tools und Hilfsprogramme {#tools-and-utilities}
       + [Charles Proxy verwenden](using-charles-proxy.md)
    + Konzepte {#concepts}
