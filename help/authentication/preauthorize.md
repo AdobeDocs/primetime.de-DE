@@ -1,27 +1,27 @@
 ---
 title: iOS/tvOS API-Vorabautorisierung
 description: iOS/tvOS API-Vorabautorisierung
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 79c596a4-0e38-4b6c-bb85-f97c6af45ed8
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
 
 ---
 
-
 # Vorautorisieren {#preauthorize}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 Die Vorabautorisierungs-API kann verwendet werden, um eine Vorabautorisierungsentscheidung für eine oder mehrere Ressourcen zu erhalten. Auf diese Weise kann die Anwendung Benutzeroberflächenhinweise und/oder Inhaltsfilterung implementieren.
 
 >[!IMPORTANT]
 >
->Die Autorisierungs-API **must** verwendet werden, bevor dem Benutzer Zugriff auf die angegebenen Ressourcen gewährt wird.
+>Die Autorisierungs-API **must** verwendet werden, bevor dem Benutzer Zugriff auf die angegebenen Ressourcen gewährt wird.
 
-Wenn das Antwortergebnis der Vorabautorisierungs-API eine oder mehrere Ressourcen mit einer verweigerten Vorautorisierungsentscheidung enthält, können zusätzliche Fehlerinformationen hinzugefügt werden **(siehe unten stehende Anmerkung)** für jede betroffene Ressource.
+Wenn das Antwortergebnis der Vorabautorisierungs-API eine oder mehrere Ressourcen mit einer verweigerten Vorautorisierungsentscheidung enthält, können zusätzliche Fehlerinformationen hinzugefügt werden **(siehe unten stehende Anmerkung)** für jede betroffene Ressource.
 
 >[!IMPORTANT]
 >
@@ -31,21 +31,21 @@ Falls die Anfrage der Vorabautorisierungs-API aufgrund eines Adobe Primetime Aut
 
 </br>
 
-## `- (void) preauthorize:(nonnull PreauthorizeRequest *)request didCompleteWith:(nonnull AccessEnablerCallback<PreauthorizeResponse *> *)callback;`
+## `- (void) preauthorize:(nonnull PreauthorizeRequest *)request didCompleteWith:(nonnull AccessEnablerCallback<PreauthorizeResponse *> *)callback;`
 
 
 **Verfügbarkeit:** v3.6.0+
 
 **Parameter:**
 
-- PreauthorizeRequest: Das Anfrageobjekt, das zum Übergeben des Inhalts der API-Anfrage verwendet wird;
+- PreauthorizeRequest: Das Anfrageobjekt, das zum Übergeben des API-Anfrageinhalts verwendet wird.
 - AccessEnablerCallback: Das Callback-Objekt, das verwendet wird, um die API-Antwort zurückzugeben;
 - PreauthorizeResponse: Das Antwortobjekt, das zum Zurückgeben des API-Antwortinhalts verwendet wird;
 
- 
+
 </br>
 
-## `class PreauthorizeRequest`{#androidpreauthorizerequest}
+## `class PreauthorizeRequest`{#androidpreauthorizerequest}
 
 ### **class PreauthorizeRequest.Builder**
 
@@ -69,7 +69,7 @@ Falls die Anfrage der Vorabautorisierungs-API aufgrund eines Adobe Primetime Aut
     ///
     public func setResources(resources: [String]) -> PreauthorizeRequest.Builder
 
- 
+ 
 
     ///
     /// Sets the features which you want to have them disabled when obtaining preauthorization decisions.
@@ -88,9 +88,9 @@ Falls die Anfrage der Vorabautorisierungs-API aufgrund eines Adobe Primetime Aut
     ///
     /// - Returns: The reference to the same `Builder` object instance which is the receiver of the function call. It does this in order to allow the creation of function chaining.
     ///
-    public func disableFeatures(features: Set<PreauthorizeRequest.Feature>) -> PreauthorizeRequest.Builder
+    public func disableFeatures(features: Set<PreauthorizeRequest.Feature>) -> PreauthorizeRequest.Builder
 
- 
+ 
 
     ///
     /// Creates and retrieves the reference of a new `PreauthorizeRequest` object instance.
@@ -107,9 +107,9 @@ Falls die Anfrage der Vorabautorisierungs-API aufgrund eines Adobe Primetime Aut
     ///
     /// - Returns: The reference to a new `PreauthorizeRequest` object instance.
     ///
-    public func build() -> PreauthorizeRequest
+    public func build() -> PreauthorizeRequest
 ```
- 
+
 
 ## **enum PreauthorizeRequest.Feature**
 
@@ -132,11 +132,11 @@ Falls die Anfrage der Vorabautorisierungs-API aufgrund eines Adobe Primetime Aut
 ## `interface AccessEnablerCallback<PreauthorizeResponse>` {#accessenablercallback}
 
 ```
-    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
+    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
     public func onResponse(result: PreauthorizeResponse)
 
 
-    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
+    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
     public func onFailure(result: PreauthorizeResponse)
 ```
 
@@ -150,13 +150,13 @@ Falls die Anfrage der Vorabautorisierungs-API aufgrund eines Adobe Primetime Aut
     /// - Returns: Additional status (state) information in case of error or failure.
     ///   Might hold a `nil` value.
     ///
-    public Status getStatus()
+    public Status getStatus()
 
     ///
     /// - Returns: The list of preauthorization decisions. One decision for each resource.
     ///            The list might be empty in case of error or failure.
     ///
-    public List<Decision> getDecisions()
+    public List<Decision> getDecisions()
 ```
 
 ### Beispiele:
@@ -193,7 +193,7 @@ Bei allen beantragten Ressourcen wird eine positive Vorabgenehmigung erteilt.
         ]
     }
 ```
- 
+
 
 Für eine oder mehrere Ressourcen wurde die Vorautorisierungsentscheidung verweigert und die erweiterte Fehlerberichterstellungsfunktion in der Adobe Primetime-Authentifizierungskonfiguration ist nicht aktiviert.
 
@@ -216,7 +216,7 @@ Für eine oder mehrere Ressourcen wurde die Vorautorisierungsentscheidung verwei
         ]
     }
 ```
- 
+
 
 Für eine oder mehrere Ressourcen ist in der Adobe Primetime-Authentifizierungskonfiguration eine verweigerte Vorabautorisierungsentscheidung und eine erweiterte Fehlerberichterstellungsfunktion aktiviert
 
@@ -247,31 +247,31 @@ Für eine oder mehrere Ressourcen ist in der Adobe Primetime-Authentifizierungsk
         ]
     }
 ```
- 
+
 
 #### Fehler
 
- 
+
 
 Adobe Primetime-Authentifizierungsdienste schlagen beim Warten der API-Anfrage zur Vorabautorisierung einen Fehler auf
 
 ```JSON
     {
-        "resources": [],
-        "status": {
-            "status": 400,
-            "code" : "bad_request",
-            "message": "Missing required parameter : deviceId",
-            "details": "",
-            "helpUrl" : "https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html",
-            "trace" : "9f115e1c-0158-4a41-8805-9f68923f3646",
-            "action" : "none"
-        }
+        "resources": [],
+        "status": {
+            "status": 400,
+            "code" : "bad_request",
+            "message": "Missing required parameter : deviceId",
+            "details": "",
+            "helpUrl" : "https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+            "trace" : "9f115e1c-0158-4a41-8805-9f68923f3646",
+            "action" : "none"
+        }
     }
 ```
- 
 
-#### Fehlgeschlagen
+
+#### Fehler
 
 Adobe Primetime Authentication SDK löst einen Fehler aus, während die API-Anfrage zur Vorabautorisierung verarbeitet wird
 
@@ -377,7 +377,7 @@ Adobe Primetime Authentication SDK löst einen Fehler aus, während die API-Anfr
 
 <br>
 
-## **Klasse** {#decision}
+## **class Decision** {#decision}
 
 ```
     ///
@@ -385,14 +385,14 @@ Adobe Primetime Authentication SDK löst einen Fehler aus, während die API-Anfr
     ///
     /// - Returns: The resource id for which the decision was obtained.
     ///
-    public Status getId()
+    public Status getId()
 
     ///
     /// This is a getter function.
     ///
     /// - Returns: The value of the flag indicating if the decision is successful or not.
     ///
-    public boolean isAuthorized()
+    public boolean isAuthorized()
 
     ///
     /// This is a getter function.
@@ -400,7 +400,7 @@ Adobe Primetime Authentication SDK löst einen Fehler aus, während die API-Anfr
     /// - Returns: Additional status (state) information in case some error has occurred.
     ///            Might hold a `nil` value.
     ///
-    public Status getError()
+    public Status getError()
 ```
 
 </br>
@@ -417,15 +417,15 @@ let disabledFeatures: Set<PreauthorizationRequest.Feature> = [PreauthorizationRe
 
 let request: PreauthorizationRequest = PreauthorizationRequest.Builder()
 
-                  .setResources(resources: resources)
+                  .setResources(resources: resources)
 
 
-                  .disableFeatures(features: disabledFeatures)  // It is **optional** to disable features. If not used all features are enabled by default.
+                  .disableFeatures(features: disabledFeatures)  // It is **optional** to disable features. If not used all features are enabled by default.
 
-                  .build();
+                  .build();
 
 // Build the AccessEnablerCallback by providing the constructor two callbacks for onResponse and onFailure handling  
-func onResponseCallback(result: PreauthorizeResponse) -> Void {  //
+func onResponseCallback(result: PreauthorizeResponse) -> Void {  //
 TODO };
 
 func onFailureCallback(result: PreauthorizeResponse) -> Void {

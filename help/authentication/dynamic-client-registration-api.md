@@ -1,19 +1,19 @@
 ---
 title: Dynamische Client-Registrierungs-API
 description: Dynamische Client-Registrierungs-API
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 06a76c71-bb19-4115-84bc-3d86ebcb60f3
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
 
 ---
 
-
 # Dynamische Client-Registrierungs-API {#dynamic-client-registration-api}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Übersicht {#overview}
 
@@ -38,7 +38,7 @@ Aufgrund dieser Einschränkungen führt Adobe einen neuen Registrierungsmechanis
 
 ### Abrufen von Softwareaussagen vom TVE-Dashboard {#softwareStatement}
 
-Für jede von Ihnen veröffentlichte Anwendung müssen Sie eine Softwareanweisung abrufen. Sobald Anwendungen erstellt wurden, werden alle Softwareanweisungen über das TVE-Dashboard bereitgestellt. Die Softwareanweisung sollte zusammen mit der Anwendung auf dem Gerät des Benutzers bereitgestellt werden.
+Für jede Anwendung, die Sie veröffentlichen, müssen Sie eine Softwareanweisung erhalten. Sobald Anwendungen erstellt wurden, werden alle Softwareanweisungen über das TVE-Dashboard bereitgestellt. Die Softwareanweisung sollte zusammen mit der Anwendung auf dem Gerät des Benutzers bereitgestellt werden.
 
 >[!IMPORTANT]
 >
@@ -48,21 +48,21 @@ Weitere Informationen zum Erstellen von Softwareanweisungen finden Sie unter [Ku
 
 ### Abrufen von Client-Anmeldeinformationen {#clientCredentials}
 
-Nachdem Sie eine Softwareanweisung vom TVE Dashboard abgerufen haben, müssen Sie Ihre Anwendung beim Adobe Primetime-Autorisierungsserver registrieren. Führen Sie dazu einen /register-Aufruf durch und rufen Sie Ihre eindeutige Client-Kennung ab.
+Nachdem Sie eine Softwareanweisung vom TVE-Dashboard abgerufen haben, müssen Sie Ihre Anwendung beim Adobe Primetime-Autorisierungsserver registrieren. Führen Sie dazu einen /register-Aufruf durch und rufen Sie Ihre eindeutige Client-Kennung ab.
 
 **Anfrage**
 
-| HTTP-Aufruf |  |
+| HTTP-Aufruf |                    |
 |-----------|--------------------|
 | path | /o/client/register |
 | method | POST |
 
-| fields |  |  |
+| fields |                                                                           |           |
 |--------------------|---------------------------------------------------------------------------|-----------|
 | software_statement | Die im TVE Dashboard erstellte Softwareanweisung. | mandatory |
 | redirect_uri | Der URI, den die Anwendung zum Abschließen des Authentifizierungsflusses verwendet. | optional |
 
-| Anfragekopfzeilen |  |  |
+| Anfragekopfzeilen |                                                                                |           |
 |-----------------|--------------------------------------------------------------------------------|-----------|
 | Content-Type | application/json | mandatory |
 | X-Device-Info | Die Geräteinformationen, wie unter Übergeben von Geräte- und Verbindungsinformationen definiert | mandatory |
@@ -70,17 +70,17 @@ Nachdem Sie eine Softwareanweisung vom TVE Dashboard abgerufen haben, müssen Si
 
 **Reaktion**
 
-| Antwortheader |  |  |
+| Antwortheader |                  |           |
 |------------------|------------------|-----------|
 | Content-Type | application/json | mandatory |
 
-| Antwortfelder |  |  |
+| Antwortfelder |                 |                            |
 |---------------------|-----------------|----------------------------|
 | client_id | Zeichenfolge | mandatory |
 | client_secret | Zeichenfolge | mandatory |
 | client_id_displayed_at | long | mandatory |
 | redirect_uris | Liste von Zeichenfolgen | mandatory |
-| grant_types | Liste von Zeichenfolgen<br/> **akzeptierter Wert**<br/> `client_credentials`: Wird von unsicheren Clients wie Android SDK verwendet. | mandatory |
+| grant_types | Liste von Zeichenfolgen<br/> **akzeptierter Wert**<br/> `client_credentials`: Wird von unsicheren Clients wie dem Android-SDK verwendet. | mandatory |
 | error | **zulässige Werte**<ul><li>invalid_request</li><li>invalid_redirect_uri</li><li>invalid_software_statement</li><li>unauthorised_software_statement</li></ul> | In einem Fehlerfluss obligatorisch |
 
 
@@ -160,12 +160,12 @@ Nachdem Sie die eindeutige Client-Kennung (Client-ID und Client-Geheimnis) für 
 **Anfrage**
 
 
-| **HTTP-Aufruf** |  |
+| **HTTP-Aufruf** | |
 | --- | --- |
 | path | `/o/client/token` |
 | method | POST |
 
-| **Anfrageparameter** |  |
+| **Anfrageparameter** | |
 | --- | --- |
 | `grant_type` | Wird im Client-Registrierungsprozess empfangen.<br/> **Akzeptierter Wert**<br/>`client_credentials`: Wird für unsichere Clients wie das Android-SDK verwendet. |
 | `client_id` | Client-Kennung, die im Client-Registrierungsprozess abgerufen wurde. |
@@ -173,13 +173,13 @@ Nachdem Sie die eindeutige Client-Kennung (Client-ID und Client-Geheimnis) für 
 
 **Reaktion**
 
-| Antwortfelder |  |  |
+| Antwortfelder | | |
 | --- | --- | --- |
 | `access_token` | Der Zugriffstoken-Wert, den Sie zum Aufrufen der Primetime-APIs verwenden sollten | mandatory |
 | `expires_in` | Die Zeit in Sekunden, bis das access_token abläuft | mandatory |
 | `token_type` | Der Typ des Tokens **bearer** | mandatory |
 | `created_at` | Die Problemzeit des Tokens | mandatory |
-| **Antwortheader** |  |  |
+| **Antwortheader** | | |
 | `Content-Type` | application/json | mandatory |
 
 **Fehlerantwort**
@@ -232,15 +232,15 @@ Pragma: no-cache
 
 ## Ausführen von Authentifizierungsanfragen {#autheticationRequests}
 
-Verwenden Sie das Zugriffstoken, um Adobe Primetime auszuführen. [API-Aufrufe für Authentifizierung](/help/authentication/initiate-authentication.md). Dazu muss das Zugriffstoken der API-Anfrage auf eine der folgenden Arten hinzugefügt werden:
+Verwenden Sie das Zugriffstoken, um Adobe Primetime auszuführen [API-Aufrufe für Authentifizierung](/help/authentication/initiate-authentication.md). Dazu muss das Zugriffstoken der API-Anfrage auf eine der folgenden Arten hinzugefügt werden:
 
 * durch Hinzufügen eines neuen Abfrageparameters zur Anforderung. Dieser neue Parameter heißt **access_token**.
 
-* durch Hinzufügen eines neuen HTTP-Headers zur Anforderung: Autorisierung: Träger. Es wird empfohlen, den HTTP-Header zu verwenden, da Abfragezeichenfolgen in der Regel in Serverprotokollen sichtbar sind.
+* durch Hinzufügen eines neuen HTTP-Headers zur Anfrage: Authorization: Bearer. Es wird empfohlen, den HTTP-Header zu verwenden, da Abfragezeichenfolgen in der Regel in Serverprotokollen sichtbar sind.
 
 Im Falle eines Fehlers können die folgenden Fehlerantworten zurückgegeben werden:
 
-| Fehlerantworten |  |  |
+| Fehlerantworten |     |                                                                                                        |
 |-----------------|-----|--------------------------------------------------------------------------------------------------------|
 | invalid_request | 400 | Die Anfrage ist fehlerhaft. |
 | invalid_client | 403 | Die Client-ID darf keine Anfragen mehr ausführen. Es sollten neue Client-Anmeldeinformationen generiert werden. |

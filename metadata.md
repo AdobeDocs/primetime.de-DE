@@ -3,9 +3,10 @@ cloud: Experience Cloud
 type: Documentation
 product: adobe primetime
 solution: Primetime
+feature-set: Primetime
 git-repo: https://github.com/AdobeDocs/primetime.de-DE
 index: y
-source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
+source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
@@ -20,9 +21,9 @@ Die Datei &quot;metadata.md&quot;enthält Metadaten auf Repo-Ebene, die an die T
 | Metadaten | Funktion |
 |--- |--- |
 | solution-title | Wird in der Artikelüberschrift als Link verwendet |
-| solution-hub-url | Öffnet die Helpx-Hub-Seite |
+| solution-hub-url | Öffnet die Helpx Hub-Seite |
 | solution-icon | Zeigt das Lösungssymbol neben dem Lösungstitel an. Noch nicht implementiert |
 | getting-started-url | Link zur Hilfeseite für die ersten Schritte |
 | tutorials-url | Link zu Video-Tutorials - entweder Helpx-Tutorials oder KT-Tutorials |
 | mini-toc-levels | Legt die Anzahl der Überschriftenebenen fest, die in der rechten Leiste angezeigt werden. Standardwert ist 2 |
-| git-repo | Gibt den Speicherort des Übergeordneten Repo für die interne Verwendung an |
+| git-repo | Gibt den Speicherort des Master-Repo für die interne Verwendung an |

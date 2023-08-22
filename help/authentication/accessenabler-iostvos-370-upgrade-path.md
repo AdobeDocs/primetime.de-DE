@@ -1,19 +1,19 @@
 ---
 title: AccessEnabler iOS/tvOS 3.7.0 Aktualisierungspfad
 description: AccessEnabler iOS/tvOS 3.7.0 Aktualisierungspfad
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: f15c7414-ec9b-4e21-b457-1ecf59f47441
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
 
 ---
 
-
 # AccessEnabler iOS/tvOS 3.7.0 Aktualisierungspfad {#accessenabler-iostvos-370-upgrade-path}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 </br>
 
@@ -30,7 +30,7 @@ Einige Einschränkungen, die unten beschrieben werden, können bei Implementiere
 
    - **Wichtig:**
       - Die SSO auf Systemebene (Apple) ist nicht betroffen!
-      - Regelmäßige (Adobe-)SSO funktioniert weiterhin, wenn beide Anwendungen vom selben Anbieter entwickelt werden und AccessEnabler-Versionen verwenden, die unter 3.7.0 liegen!
+      - Die reguläre (Adobe-) SSO funktioniert weiterhin, wenn beide Anwendungen vom selben Anbieter entwickelt werden und AccessEnabler-Versionen unter 3.7.0 verwenden!
       - Regular (Adobe) SSO funktioniert, wenn beide Anwendungen vom selben Anbieter entwickelt werden und AccessEnabler Version 3.7.0 verwenden!
 
 1. Wenn eine Anwendung mit AccessEnabler Version 3.7.0 auf eine niedrigere Version von AccessEnabler herabgestuft wird, werden neue generierte Token nicht migriert. Daher kann es bei Endbenutzern zu einem Verlust von Authentifizierungs-/Autorisierungssitzungen kommen, ohne dass dies erwartet wird.

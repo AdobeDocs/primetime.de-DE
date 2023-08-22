@@ -1,19 +1,19 @@
 ---
 title: Berechtigungsfluss des Programmierers
 description: Berechtigungsfluss des Programmierers
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: b1c8623a-55da-4b7b-9827-73a9fe90ebac
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1822'
 ht-degree: 0%
 
 ---
 
-
 # Berechtigungsfluss des Programmierers {#prog-entitlement-flow}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Übersicht {#overview}
 
@@ -56,17 +56,17 @@ Stellt die Identität des Programmierers und des Geräts her und führt Initiali
 
 * **`setRequestor()`** - Stellt Ihre Identität mit dem AccessEnalber und damit den Adobe Primetime-Authentifizierungsservern her. Dieser Aufruf ist ein Vorläufer zum Rest des Berechtigungsflusses. Beispiel: in JavaScript:
 
-   ```JavaScript
-     /* Define the requestor ID (Programmer/aggregator ID). */
-       var requestorID = "sample_requestor_Id";
-       ...
-       // Callback indicating that the AccessEnabler swf has initialized
-       function swfLoaded() {
-           // AccessEnabler is loaded so we can use the API function it provides
-           accessEnablerObject.setRequestor(requestorID); 
-       ...
-       }
-   ```
+  ```JavaScript
+    /* Define the requestor ID (Programmer/aggregator ID). */
+      var requestorID = "sample_requestor_Id";
+      ...
+      // Callback indicating that the AccessEnabler swf has initialized
+      function swfLoaded() {
+          // AccessEnabler is loaded so we can use the API function it provides
+          accessEnablerObject.setRequestor(requestorID); 
+      ...
+      }
+  ```
 
 **Clientlose API**
 
@@ -84,7 +84,7 @@ Bei erfolgreicher Authentifizierung wird ein AuthN-Token generiert, das an das G
 **Clientlose API**
 
 * `<FQDN>/.../checkauthn` - Die Webdienstversion von `checkAuthentication()` höher.
-* `<FQDN>/.../config` - Gibt die Liste der MVPDs an die 2nd-Screen-App zurück.
+* `<FQDN>/.../config` - Gibt die Liste der MVPDs an die 2. Bildschirmanwendung zurück.
 * `<FQDN>/.../authenticate` - Startet den Authentifizierungsfluss von der 2.-Bildschirm-App aus und leitet Benutzer zur Anmeldung zu ihrem ausgewählten MVPD weiter. Bei erfolgreicher Authentifizierung generiert die Adobe Primetime-Authentifizierung ein AuthN-Token, speichert es auf dem Server und kehrt zum ursprünglichen Gerät zurück, um den Berechtigungsfluss abzuschließen.
 
 Ein AuthN-Token gilt als gültig, wenn die folgenden beiden Punkte wahr sind:
@@ -100,7 +100,7 @@ Ein AuthN-Token gilt als gültig, wenn die folgenden beiden Punkte wahr sind:
 
 1. Wenn keine MVPD-ID zwischengespeichert wurde UND kein MVPD mit `setSelectedProvider()` ODER `canAuthenticate` Flag auf &quot;false&quot;festgelegt ist, wird die `displayProviderDialog()` Callback wird aufgerufen. Dieser Rückruf weist Ihre App an, die Benutzeroberfläche zu erstellen, über die dem Benutzer eine Liste der MVPDs zur Auswahl angezeigt wird. Es wird ein Array von MVPD-Objekten bereitgestellt, die die erforderlichen Informationen zum Erstellen des MVPD-Selektors enthalten. Jedes MVPD-Objekt beschreibt eine MVPD-Entität und enthält Informationen wie die Kennung des MVPD und die URL, unter der das MVPD-Logo zu finden ist.
 
-1. Nachdem ein MVPD ausgewählt wurde, muss Ihre App den AccessEnabler über die Auswahl des Benutzers informieren. Bei Nicht-Flash-Clients informieren Sie den AccessEnabler über die Benutzerauswahl, sobald der Benutzer das gewünschte MVPD auswählt. `setSelectedProvider()` -Methode. Flash-Clients senden stattdessen eine freigegebene `MVPDEvent` des Typs &quot;`mvpdSelection`&quot;, wobei der ausgewählte Provider übergeben wird.
+1. Nachdem ein MVPD ausgewählt wurde, muss Ihre App den AccessEnabler über die Auswahl des Benutzers informieren. Bei Nicht-Flash-Clients informieren Sie den AccessEnabler über die Benutzerauswahl, sobald der Benutzer den gewünschten MVPD auswählt. `setSelectedProvider()` -Methode. Flash-Clients senden stattdessen eine freigegebene `MVPDEvent` des Typs &quot;`mvpdSelection`&quot;, wobei der ausgewählte Provider übergeben wird.
 
 1. Wenn der AccessEnabler über die MVPD-Auswahl des Benutzers informiert wird, wird ein Netzwerkaufruf an den Backend-Server gesendet und der Benutzer wird zur MVPD-Anmeldeseite weitergeleitet.
 
@@ -109,7 +109,8 @@ Ein AuthN-Token gilt als gültig, wenn die folgenden beiden Punkte wahr sind:
 1. Sobald sich der Benutzer erfolgreich angemeldet hat, ruft der AccessEnabler das Authentifizierungstoken ab und informiert Ihre App darüber, dass der Authentifizierungsvorgang abgeschlossen ist. AccessEnabler ruft die `setAuthenticationStatus()` Callback mit Status-Code 1, der auf Erfolg hinweist. Wenn bei der Ausführung dieser Schritte ein Fehler auftritt, wird die `setAuthenticationStatus()` -Callback wird mit dem Status-Code 0 ausgelöst, der auf einen Authentifizierungsfehler sowie einen entsprechenden Fehlercode hinweist.
 
 >[!IMPORTANT]
->Comcast ist derzeit das einzige MVPD, das keine statische URL für das Logo bereitstellt. Programmierer sollten die aktuellsten Logos von [XFINITY-Entwicklerportal](https://developers.xfinity.com/products/tv-everywhere).
+>Comcast ist derzeit das einzige MVPD, das keine statische URL für das Logo bereitstellt. Programmierer sollten die aktuellsten Logos von [XFINITY Developer&#39;s portal](https://developers.xfinity.com/products/tv-everywhere).
+>
 
 ### Autorisierungsfluss {#authorization}
 
@@ -146,7 +147,7 @@ Sie stellen die folgenden Callback-Funktionen bereit, um die Ergebnisse des Auto
 
 ### Abmeldefluss {#logout}
 
-Löscht Token und andere Daten, die mit dem Berechtigungsfluss des aktuellen Benutzers verknüpft sind.
+Löscht Token und andere mit dem Berechtigungsfluss des aktuellen Benutzers verknüpfte Daten.
 
 **AccessEnabler**
 
@@ -158,7 +159,7 @@ Löscht Token und andere Daten, die mit dem Berechtigungsfluss des aktuellen Ben
 
 ## Verhalten von AccessEnabler {#ae-behavior}
 
-Alle AccessEnabler-API-Aufrufe sind asynchron (mit einer Ausnahme, die in den API-Referenzen angegeben ist). Sie können eine API beliebig oft aufrufen. Es gibt jedoch keine Garantie dafür, dass die durch die Aufrufe ausgelösten Aktionen in derselben Reihenfolge ausgeführt werden wie die Aufrufe. (Eine Ausnahme bildet die aktuelle Flash Player-Laufzeit. Da es nicht mehrprozessgestützte Aufrufe gibt, werden Aufrufe sichergestellt *do* in der Reihenfolge abgeschlossen, in der sie aufgerufen werden.)
+Alle AccessEnabler-API-Aufrufe sind asynchron (mit einer Ausnahme, die in den API-Referenzen angegeben ist). Sie können eine API beliebig oft aufrufen. Es gibt jedoch keine Garantie dafür, dass die durch die Aufrufe ausgelösten Aktionen in derselben Reihenfolge ausgeführt werden wie die Aufrufe. (Eine Ausnahme hiervon ist die aktuelle Flash Player-Laufzeit. Da es sich nicht um Multi-Thread-Aufrufe handelt, werden Aufrufe sichergestellt. *do* in der Reihenfolge ihres Aufrufs abgeschlossen.)
 
 Um zwischen Antworten zu unterscheiden und Antworten mit Aufrufen zu kombinieren, wiederholen alle Rückrufe ihre Eingabeparameter. Dazu gehören `setToken()` und`tokenRequestFailed()`, die letztendlich durch `checkAuthorization()`. (Für `checkAuthorization()` -Rückrufe, wird die verwendete Ressource zurückverfolgt.) Mithilfe dieser Funktion können Sie ermitteln, welche Antwort dem jeweiligen Aufruf entspricht. Um diese Funktion verwenden zu können, können Sie etwa Folgendes kodieren:
 

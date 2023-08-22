@@ -1,29 +1,29 @@
 ---
 title: Übersicht über die Überwachung des Entitätsdienstes
 description: Übersicht über die Überwachung des Entitätsdienstes
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ebd5d650-0a32-4583-9045-5156356494e2
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht über die Überwachung des Entitätsdienstes {#entitlement-service-monitoring-overview}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Einführung {#introduction}
 
 TVE-Sites und -Apps müssen rund um die Uhr verfügbar sein. Kunden benötigen daher Echtzeiteinblicke in Berechtigungsereignisse, um Probleme so schnell wie möglich erkennen und beheben zu können. Außerdem müssen monatliche Daten analysiert werden, um festzustellen, welche Plattformen den Großteil des Traffics bereitstellen und welche Plattformen möglicherweise eine schlechte Implementierung und schlechte Konversionsraten aufweisen.
 
-Entitlement Service Monitoring (ESM) stellt Programmierern und MVPDs einen Daten-Feed zur Verfügung, der Echtzeitanzeige ihrer Authentifizierungs- und Autorisierungsereignisse ermöglicht. Die Daten werden von den Adobe Primetime-Authentifizierungssystemen erfasst und über eine RESTful-API bereitgestellt.  Kunden können die Daten direkt oder aus ihren eigenen benutzerdefinierten operativen Dashboards verwenden.
+Entitlement Service Monitoring (ESM) bietet Programmierern und MVPDs einen Daten-Feed, der Echtzeit-Sichtbarkeit in ihre Authentifizierungs- und Autorisierungsereignisse bietet. Die Daten werden von den Adobe Primetime-Authentifizierungssystemen erfasst und über eine RESTful-API bereitgestellt.  Kunden können die Daten direkt oder aus ihren eigenen benutzerdefinierten operativen Dashboards verwenden.
 
-Kernelemente des ESM-Systems sind seine Metriken und Dimensionen. ESM generiert Berichte, die aggregierte Metriken entsprechend der Dimensionsauswahl enthalten. Da Adobe Pass-Ereignisse in der PST-Zeitzone protokolliert werden, sind die ESM-Berichte auch in der PST-Zeitzone verfügbar. 
+Kernelemente des ESM-Systems sind seine Metriken und Dimensionen. ESM generiert Berichte, die aggregierte Metriken entsprechend der Dimensionsauswahl enthalten. Da Adobe Pass-Ereignisse in der PST-Zeitzone protokolliert werden, sind die ESM-Berichte auch in der PST-Zeitzone verfügbar.
 
-Die ESM-API ist nicht allgemein verfügbar.  Wenden Sie sich bei Fragen zur Verfügbarkeit an Ihren Kundenbetreuer.
+Die ESM-API ist nicht allgemein verfügbar.  Wenden Sie sich bei Fragen zur Verfügbarkeit an Ihren Adobe-Support-Mitarbeiter.
 
 ## ESM für Programmierer {#esm-for-programmers}
 
@@ -36,7 +36,7 @@ Die ESM-API ist nicht allgemein verfügbar.  Wenden Sie sich bei Fragen zur Ver
 | authn-success | Anzahl der Authentifizierungstoken, die von Clients erfolgreich abgerufen wurden |
 | authn-pending | Anzahl der erfolgreich generierten Authentifizierungstoken (unabhängig davon, ob der Client sie tatsächlich erhalten hat oder nicht) |
 | author-failed | Anzahl fehlgeschlagener Authentifizierungen, die über ein externes System durchgeführt werden. |
-| clientless-tokens | Anzahl erfolgreich ausgegebener clientloser Token |
+| Clientless-Tokens | Anzahl erfolgreich ausgegebener clientloser Token |
 | clientless-failures | Anzahl fehlgeschlagener Versuche, Token von der ClientLess-API zu empfangen |
 | authz-try | Anzahl der erteilten Genehmigungen |
 | authz-success | Anzahl erfolgreicher Zulassungen |
@@ -68,15 +68,15 @@ Die ESM-API ist nicht allgemein verfügbar.  Wenden Sie sich bei Fragen zur Ver
 | channel | Die Kanalwebsite, die aus dem Ressourcenfeld extrahiert wird (aus der MRSS-Payload als Kanal/Titel extrahiert, sofern vorhanden, oder dem Ressourcenwert zugeordnet, wenn er nicht im RSS-Format vorliegt). |
 | resource-id | Der tatsächliche Ressourcentitel, der an der Autorisierungsanforderung beteiligt ist (aus der MRSS-Payload als Element/Titel extrahiert, sofern angegeben) |
 | Gerät | Die Geräteplattform (PC, Mobilgerät, Konsole usw.) |
-| eap | Der externe Authentifizierungsanbieter, wenn die Authentifizierung über ein externes System durchgeführt wird. </br> Die Werte können: </br> - Nicht zutreffend: Die Authentifizierung wurde durch Primetime-Authentifizierung bereitgestellt. </br> - Apple - das externe System, das die Authentifizierung bereitgestellt hat, ist Apple |
-| os-family | Betriebssystem, das auf dem Gerät ausgeführt wird |
+| eap | Der externe Authentifizierungsanbieter, wenn die Authentifizierung über ein externes System durchgeführt wird. </br> Die Werte können wie folgt lauten: </br> - Nicht zutreffend: Die Authentifizierung wurde durch Primetime-Authentifizierung bereitgestellt. </br> - Apple - das externe System, das die Authentifizierung bereitgestellt hat, ist Apple |
+| os-family | Betriebssystem auf dem Gerät |
 | browser-family | Benutzeragent für den Zugriff auf die Adobe Primetime-Authentifizierung |
-| cdt | Die Geräteplattform (Alternative), die derzeit für ClientLess verwendet wird. </br>  Die Werte können: </br> - Nicht zutreffend: Das Ereignis stammte nicht von einem Client-losen SDK. </br> - Unbekannt - Da der Parameter deviceType einer clientlosen API optional ist, gibt es Aufrufe, die keinen Wert enthalten. </br> - alle anderen Werte, die über die clientlose API gesendet wurden, z. B. xbox, appletv, roku usw. </br> |
+| cdt | Die Geräteplattform (Alternative), die derzeit für ClientLess verwendet wird. </br>  Die Werte können wie folgt lauten: </br> - Nicht zutreffend: Das Ereignis stammte nicht von einem Client-losen SDK. </br> - Unbekannt - Da der Parameter deviceType einer clientlosen API optional ist, gibt es Aufrufe, die keinen Wert enthalten. </br> - alle anderen Werte, die über die clientlose API gesendet wurden, z. B. xbox, appletv, roku usw. </br> |
 | platform-version | Die Version des Client-losen SDK |
 | os-type | Betriebssystem, das auf dem Gerät ausgeführt wird, Alternative (derzeit nicht verwendet) |
-| browser-version | User Agent-Version |
-| sdk-type | Das verwendete Client-SDK (Flash, HTML5, nativ Android, iOS, Clientlos usw.) |
-| sdk-version | Die Version des Adobe Primetime-Authentifizierungs-Client-SDK |
+| browser-version | Benutzeragenten-Version |
+| sdk-type | Das verwendete Client-SDK (Flash, HTML5, natives Android-SDK, iOS, Clientless usw.) |
+| sdk-version | Die Version des Adobe Primetime-Authentifizierungsclient-SDK |
 | event | Der Name des Adobe Primetime-Authentifizierungsereignisses |
 | reason | Der Grund für Fehler, wie von der Adobe Primetime-Authentifizierung gemeldet |
 | sso-type | Der zugrunde liegende SSO-Mechanismus: platform/passive/adobe. Gibt an, dass das Autorisierungstoken ausgegeben wurde, indem AuthN in einer anderen Anwendung wiederverwendet wurde |
@@ -107,20 +107,20 @@ Die ESM-API ist nicht allgemein verfügbar.  Wenden Sie sich bei Fragen zur Ver
 | hour | Die Stunde des Tages |
 | minute | Die Stunde |
 | requestor-id | Die Anfragende-ID, die zum Ausführen der Berechtigungsanforderung verwendet wird |
-| eap | Der externe Authentifizierungsanbieter, wenn die Authentifizierung über ein externes System durchgeführt wird. </br> Die Werte können: </br> - Nicht zutreffend: Die Authentifizierung wurde durch Primetime-Authentifizierung bereitgestellt. </br> - Apple - das externe System, das die Authentifizierung bereitgestellt hat, ist Apple |
-| cdt | Die Geräteplattform (Alternative), die derzeit für ClientLess verwendet wird. </br>  Die Werte können: </br> - Nicht zutreffend: Das Ereignis stammte nicht von einem Client-losen SDK. </br> - Unbekannt - Da der Parameter deviceType einer clientlosen API optional ist, gibt es Aufrufe, die keinen Wert enthalten. </br> - alle anderen Werte, die über die clientlose API gesendet wurden, z. B. xbox, appletv, roku usw. </br> |
-| sdk-type | Das verwendete Client-SDK (Flash, HTML5, nativ Android, iOS, Clientlos usw.) |
+| eap | Der externe Authentifizierungsanbieter, wenn die Authentifizierung über ein externes System durchgeführt wird. </br> Die Werte können wie folgt lauten: </br> - Nicht zutreffend: Die Authentifizierung wurde durch Primetime-Authentifizierung bereitgestellt. </br> - Apple - das externe System, das die Authentifizierung bereitgestellt hat, ist Apple |
+| cdt | Die Geräteplattform (Alternative), die derzeit für ClientLess verwendet wird. </br>  Die Werte können wie folgt lauten: </br> - Nicht zutreffend: Das Ereignis stammte nicht von einem Client-losen SDK. </br> - Unbekannt - Da der Parameter deviceType einer clientlosen API optional ist, gibt es Aufrufe, die keinen Wert enthalten. </br> - alle anderen Werte, die über die clientlose API gesendet wurden, z. B. xbox, appletv, roku usw. </br> |
+| sdk-type | Das verwendete Client-SDK (Flash, HTML5, natives Android-SDK, iOS, Clientless usw.) |
 
 
 ## Nutzungsszenarios {#use-cases}
 
 Sie können die ESM-Daten für die folgenden Anwendungsfälle verwenden:
 
-- **Überwachung** - Ops- oder Überwachungsteams können ein Dashboard oder Diagramm erstellen, das die API jede Minute aufruft. Mithilfe der angezeigten Informationen können sie ein Problem erkennen (mit der Primetime-Authentifizierung oder mit einem MVPD), sobald es erscheint.  
+- **Überwachung** - Ops- oder Überwachungsteams können ein Dashboard oder Diagramm erstellen, das die API jede Minute aufruft. Mithilfe der angezeigten Informationen können sie ein Problem erkennen (mit der Primetime-Authentifizierung oder mit einem MVPD), sobald es erscheint.
 
-- **Debugging/Qualitätstests** - Da die Daten auch nach Plattform, Gerät, Browser und Betriebssystem aufgeschlüsselt werden, können bei der Analyse von Nutzungsmustern Probleme auf bestimmten Kombinationen (z. B. Safari unter OSX) ermittelt werden.  
+- **Debugging/Qualitätstests** - Da die Daten auch nach Plattform, Gerät, Browser und Betriebssystem aufgeschlüsselt werden, können bei der Analyse von Nutzungsmustern Probleme auf bestimmten Kombinationen (z. B. Safari unter OSX) ermittelt werden.
 
-- **Analytics** - Die bereitgestellten Daten können verwendet werden, um die clientseitigen Daten zu ergänzen/zu überprüfen, die über Adobe Analytics oder ein anderes Analysetool erfasst werden.
+- **Analytics** - Die bereitgestellten Daten können verwendet werden, um die clientseitigen Daten zu ergänzen/zu überprüfen, die über Adobe Analytics oder ein anderes Analysetool erfasst werden.
 
 <!--
 ## Related Information {#related-information}

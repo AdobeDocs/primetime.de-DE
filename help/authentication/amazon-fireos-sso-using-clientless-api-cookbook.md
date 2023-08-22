@@ -1,25 +1,25 @@
 ---
 title: Amazon FireOS SSO mit clientless API-Cookbook
 description: Amazon FireOS SSO mit clientless API-Cookbook
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 4c65eae7-81c1-4926-9202-a36fd13af6ec
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 0%
 
 ---
 
-
 # Amazon FireOS SSO mit clientless API-Cookbook {#amazon-fireos-sso-using-clientless-api-cookbook}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 </br>
 
 ## Einführung {#Introduction}
 
-Dieses Dokument enthält Anweisungen zur Implementierung der SSO-Version des Adobe Primetime-Authentifizierungsflusses von Amazon mithilfe der clientlosen API. Der erste Teil dieses Dokuments konzentriert sich auf die Besonderheiten der Amazon-Version der Architektur, da viele Partner bereits mit der Implementierung vertraut sind und über Erfahrung mit ihr verfügen.
+Dieses Dokument enthält Anweisungen zur Implementierung der SSO-Version des Adobe Primetime-Authentifizierungsflusses von Amazon mithilfe der clientlosen API. Der erste Teil dieses Dokuments konzentriert sich auf die Besonderheiten der Amazon-Version der Architektur, da viele Partner bereits mit der Implementierung vertraut sind und über Erfahrung mit ihr verfügen.
 
 Der zweite Teil des Dokuments umfasst die wichtigsten Schritte zur Implementierung der clientless-API für die Adobe Primetime-Authentifizierung.
 
@@ -31,43 +31,43 @@ Einen umfassenden technischen Überblick über die Funktionsweise der Clientless
 
 Die clientlose SSO-Implementierung von Amazon ist einfach und größtenteils identisch mit den normalen Adobe Primetime Authentication Client-less-APIs.
 
-Sie müssen das Amazon SDK verwenden, um eine personalisierte Payload abzurufen und sie beim Aufruf von Adobe Client-losen APIs zu verwenden.
+Sie müssen das Amazon SDK verwenden, um eine personalisierte Payload abzurufen und sie beim Aufrufen von Adobe clientless-APIs zu verwenden.
 
 Wenn die Payload erkannt wird und einer authentifizierten Sitzung entspricht, geben die clientlosen APIs sofort mit dem Token Ihrer Sitzung zurück.
 
 ### Erstellen der Anwendung zur Verwendung des Amazon SDK {#Build-entries}
 
-* Neueste Version herunterladen und kopieren [Amazon Stub SDK](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) in einen Ordner /SSOEnabler parallel zum App-Ordner
+* Neueste Version herunterladen und kopieren [Amazon Stub SDK](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) in einen Ordner /SSOEnabler parallel zum App-Ordner
 * Aktualisieren Sie die Manifest-/Gradle-Dateien, um die Bibliothek zu verwenden:
 
-   **Fügen Sie Ihrer Manifestdatei die folgende Zeile hinzu:**
+  **Fügen Sie Ihrer Manifestdatei die folgende Zeile hinzu:**
 
-   ```Java
-   <uses-library android:name="com.amazon.ottssotokenlib" android:required="false"/\>
-   ```
+  ```Java
+  <uses-library android:name="com.amazon.ottssotokenlib" android:required="false"/\>
+  ```
 
-   **Gradle-Dateieinträge:**
+  **Gradle-Dateieinträge:**
 
-   Unter Repositorys:
+  Unter Repositorys:
 
-   ```java
-   flatDir {
-        dirs '../SSOEnabler'
-   }
-   ```
+  ```java
+  flatDir {
+       dirs '../SSOEnabler'
+  }
+  ```
 
-   Fügen Sie unter Abhängigkeiten Folgendes hinzu:
+  Fügen Sie unter Abhängigkeiten Folgendes hinzu:
 
-   ```Java
-   provided fileTree(include: \['ottSSOTokenStub.jar'\], dir: '../SSOEnabler')
-   ```
+  ```Java
+  provided fileTree(include: \['ottSSOTokenStub.jar'\], dir: '../SSOEnabler')
+  ```
 
 
 * Umgang mit dem Fehlen der Amazon-Companion-App:
 
-   Sollte der Companion nicht auf dem Amazon-Gerät vorhanden sein, auf dem Ihre Anwendung ausgeführt wird, sollten Sie während der Laufzeit in der folgenden Klasse auf eine ClassNotFoundException stoßen: `com.amazon.ottssotokenlib.SSOEnabler`.
+  Sollte der Companion nicht auf dem Amazon-Gerät vorhanden sein, auf dem Ihre Anwendung ausgeführt wird, sollten Sie während der Laufzeit in der folgenden Klasse auf eine ClassNotFoundException stoßen: `com.amazon.ottssotokenlib.SSOEnabler`.
 
-   In diesem Fall müssen Sie nur den Payload-Schritt überspringen und auf den normalen PrimeTime-Fluss zurückgreifen. SSO wird nicht aktiviert, aber der normale Autorisierungsfluss erfolgt normal.
+  In diesem Fall müssen Sie nur den Payload-Schritt überspringen und auf den normalen PrimeTime-Fluss zurückgreifen. SSO wird nicht aktiviert, aber der normale Autorisierungsfluss erfolgt normal.
 
 </br>
 
@@ -81,22 +81,22 @@ Wenn die API-Aufrufe aus irgendeinem Grund keine Payload zurückgeben, verwenden
 
 * SSO Enabler-Instanz abrufen:
 
-   ```Java
-   ssoEnabler = SSOEnabler.getInstance(context);
-   SSOEnablerCallback ssoEnablerCallback = new SSOEnablerCallbackImpl();
-   ssoEnabler.setSSOTokenCallback(ssoEnablerCallback);
-   ```
+  ```Java
+  ssoEnabler = SSOEnabler.getInstance(context);
+  SSOEnablerCallback ssoEnablerCallback = new SSOEnablerCallbackImpl();
+  ssoEnabler.setSSOTokenCallback(ssoEnablerCallback);
+  ```
 
 
-* Callback festlegen 
+* Callback festlegen
 
-   ```java
-   public static abstract class SSOEnablerCallback
-   {
-           public abstract void getSSOTokenSuccess(Bundle result);
-           public abstract void getSSOTokenFailure(Bundle result);
-   }
-   ```
+  ```java
+  public static abstract class SSOEnablerCallback
+  {
+          public abstract void getSSOTokenSuccess(Bundle result);
+          public abstract void getSSOTokenFailure(Bundle result);
+  }
+  ```
 
    * Das Erfolgsantwort-Bundle enthält:
       * SSO-Token als Zeichenfolge mit dem Schlüssel &quot;SSOToken&quot;
@@ -107,50 +107,49 @@ Wenn die API-Aufrufe aus irgendeinem Grund keine Payload zurückgeben, verwenden
 
 * SSO-Token abrufen
 
-   ```JAVA
-   Bundle getSSOTokenAsync(Void);
-   ```
+  ```JAVA
+  Bundle getSSOTokenAsync(Void);
+  ```
 
 * Diese API stellt die Antwort über den während des Init festgelegten Callback bereit.
 
-   **Ex**. Aufruf mithilfe der Singleton-Instanz, die während der init erstellt wurde:
+  **Ex**. Aufruf mithilfe der Singleton-Instanz, die während der init erstellt wurde:
 
-   ```JAVA
-   ssoEnabler.getSSOTokenAsync().
-   ```
+  ```JAVA
+  ssoEnabler.getSSOTokenAsync().
+  ```
 
 
 **Synchrone APIs**
 
 * Rufen Sie die SSO Enabler-Instanz ab und legen Sie den Callback fest.
 
-   ```JAVA
-   ssoEnabler = SSOEnabler.getInstance(context);</span>
-   ```
+  ```JAVA
+  ssoEnabler = SSOEnabler.getInstance(context);</span>
+  ```
 
 * SSO-Token abrufen
 
-   ```JAVA
-   Bundle getSSOTokenSync(Void);
-   ```
+  ```JAVA
+  Bundle getSSOTokenSync(Void);
+  ```
 
    * Diese API blockiert den aufrufenden Thread und reagiert mit dem Ergebnis-Bundle. Da es sich um einen synchronen Aufruf handelt, sollten Sie ihn nicht im Hauptthread verwenden.
 
-   ```JAVA
-   void setSSOTokenTimeout(long);
-   ```
+  ```JAVA
+  void setSSOTokenTimeout(long);
+  ```
 
    * Wert in Millisekunden. Wenn festgelegt, überschreiben Sie den Standardwert für die Zeitüberschreitung von 1 Minute für die Synchronisierungs-API.
 
 
-
 ### Adobe Primetime Clientlose API-Update zur Verwendung der dynamischen Client-Registrierung {#clientlessdcr}
 
-Wenn dies Ihre erste Implementierung ist, lesen Sie den Abschnitt **Clientlose technische Übersicht** und kontaktieren Sie die Adobe, falls Sie Support benötigen.
+Wenn dies Ihre erste Implementierung ist, lesen Sie die Informationen unter **Clientlose technische Übersicht** und kontaktieren Sie Adobe, falls Sie Support benötigen.
 
-Für die Adobe Client less-API müssen Anwendungen die Dynamic Client-Registrierung verwenden, um Adobe-Server aufzurufen.
+Für die Adobe Client-lose-API müssen Anwendungen die Dynamic Client-Registrierung verwenden, um Adobe-Server aufzurufen.
 
-* Um die Dynamic Client-Registrierung in Ihrer Anwendung zu verwenden, befolgen Sie die Anweisungen unter [ Dynamisches Client-Registrierungs-Management zur Registrierung der Anwendung](/help/authentication/dynamic-client-registration-management.md).
+* Um die Dynamic Client-Registrierung in Ihrer Anwendung zu verwenden, befolgen Sie die Anweisungen unter [Dynamisches Client-Registrierungs-Management zur Registrierung der Anwendung](/help/authentication/dynamic-client-registration-management.md).
 
 * Um die Dynamic Client Registration API zu implementieren, um Authentifizierungs- und Autorisierungsanfragen an Adobe Primetime-Server durchzuführen, folgen Sie den Anweisungen unter [Dynamische Client-Registrierungs-API](/help/authentication/dynamic-client-registration-api.md) .
 
@@ -167,7 +166,7 @@ Die vom Amazon SDK abgerufene Amazon SSO-Payload muss bei Anfragen vorhanden sei
 
 Alle Primetime-Authentifizierungsendpunkte unterstützen die folgenden Methoden zum Empfangen der ID für den Gerätebereich oder die Platform-Scoped-Kennung (in der Amazon SSO-Payload vorhanden):
 
-* Als Kopfzeile : &quot;Adobe-Subject-Token&quot;
+* Als Kopfzeile: &quot;Adobe-Subject-Token&quot;
 * Als Abfrageparameter : &quot;ast&quot;
 * Als Post-Parameter : &quot;ast&quot;
 

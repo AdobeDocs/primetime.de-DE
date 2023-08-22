@@ -1,19 +1,19 @@
 ---
 title: iOS/tvOS-Cookbook
 description: iOS/tvOS-Cookbook
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 4743521e-d323-4d1d-ad24-773127cfbe42
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '2414'
+source-wordcount: '2413'
 ht-degree: 0%
 
 ---
-
 
 # iOS/tvOS-SDK-Cookbook {#iostvos-sdk-cookbook}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Einführung {#intro}
 
@@ -25,14 +25,14 @@ Die Adobe Primetime-Authentifizierungsberechtigungslösung für iOS/tvOS ist let
 
 * In der AccessEnabler-Domäne werden die Berechtigungs-Workflows in folgender Form implementiert:
 
-   * Netzwerkaufrufe an Backend-Server der Adobe
+   * Netzwerkaufrufe an Adobe-Backend-Server
    * Geschäftslogikregeln für die Authentifizierungs- und Autorisierungs-Workflows
    * Verwaltung verschiedener Ressourcen und Verarbeitung des Workflow-Status (z. B. Token-Cache)
 
 Ziel der AccessEnabler-Domäne ist es, alle Komplexität der Berechtigungs-Workflows auszublenden und der oberen Ebene (über die AccessEnabler-Bibliothek) eine Reihe einfacher Berechtigungs-Primitive bereitzustellen, mit denen Sie die Berechtigungs-Workflows implementieren:
 
 1. Anfragenidentität festlegen
-1. Überprüfen und Abrufen der Authentifizierung für einen bestimmten Identitätsanbieter
+1. Überprüfen und Abrufen der Authentifizierung für einen bestimmten Identitäts-Provider
 1. Prüfen und Autorisieren einer bestimmten Ressource
 1. Abmelden
 1. Apple SSO-Flüsse durch Testen des Apple VSA-Frameworks
@@ -44,7 +44,7 @@ Die Netzwerkaktivität von AccessEnabler erfolgt in einem eigenen Thread, sodass
 
 ## Konfigurieren der Besucher-ID {#visitorIDSetup}
 
-Konfigurieren eines [Marketing Cloud visitorID](https://marketing.adobe.com/resources/help/en_US/mcvid/) -Wert ist aus analytischer Sicht sehr wichtig. Sobald ein visitorID -Wert festgelegt ist, sendet das SDK diese Informationen zusammen mit allen Netzwerkaufrufen und der Adobe Primetime-Authentifizierungsserver erfasst diese Informationen. Zukünftig können Sie die Analysen des Adobe Primetime-Authentifizierungsdienstes mit anderen Analyseberichten korrelieren, die Sie möglicherweise aus anderen Anwendungen oder Websites verwenden. Informationen zum Einrichten der visitorID finden Sie unter [here](#setOptions).
+Konfigurieren eines [Marketing Cloud visitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html) -Wert ist aus analytischer Sicht sehr wichtig. Sobald ein visitorID -Wert festgelegt ist, sendet das SDK diese Informationen zusammen mit allen Netzwerkaufrufen und der Adobe Primetime-Authentifizierungsserver erfasst diese Informationen. Zukünftig können Sie die Analysen des Adobe Primetime-Authentifizierungsdienstes mit anderen Analyseberichten korrelieren, die Sie möglicherweise aus anderen Anwendungen oder Websites verwenden. Informationen zum Einrichten der visitorID finden Sie unter [here](#setOptions).
 
 ## Berechtigungsflüsse {#entitlement}
 
@@ -69,78 +69,78 @@ I.  [Abmeldefluss mit Apple SSO](#logout_flow_with_AppleSSO) </br>
    * [`displayProviderDialog(mvpds)`](#$dispProvDialog) </br>
       * Ausgelöst von [`getAuthentication()`](#$getAuthN) nur dann, wenn der Benutzer keinen Anbieter (MVPD) ausgewählt hat und noch nicht authentifiziert ist. </br>
       * Die `mvpds` -Parameter ist ein Array von Anbietern, die dem Benutzer zur Verfügung stehen.
+
    * `setAuthenticationStatus(status, errorcode)` </br>
       * Ausgelöst von `checkAuthentication()` jedes Mal. </br>
       * Ausgelöst von [`getAuthentication()`](#$getAuthN) nur dann, wenn der Benutzer bereits authentifiziert ist und einen Provider ausgewählt hat. </br>
       * Status zurückgegeben ist erfolgreich oder fehlgeschlagen, der Fehlertyp wird im Fehlercode beschrieben.
+
    * [`navigateToUrl(url)`](#$nav2url) </br>
       * Ausgelöst von [`getAuthentication()`](#$getAuthN) nachdem der Benutzer einen MVPD ausgewählt hat. Die `url` liefert den Speicherort der Anmeldeseite des MVPD.
+
    * `sendTrackingData(event, data)` </br>
       * Ausgelöst von `checkAuthentication()`, [`getAuthentication()`](#$getAuthN), `checkAuthorization()`, [`getAuthorization()`](#$getAuthZ), `setSelectedProvider()`.
-      * Die `event` Parameter gibt an, welches Berechtigungsereignis aufgetreten ist; die `data` -Parameter ist eine Liste von Werten, die sich auf das Ereignis beziehen. 
+      * Die `event` -Parameter gibt an, welches Berechtigungsereignis aufgetreten ist; der `data` -Parameter ist eine Liste von Werten, die sich auf das Ereignis beziehen.
+
    * `setToken(token, resource)`
 
       * Ausgelöst von [checkAuthorization()](#checkAuthZ) und [getAuthorization()](#$getAuthZ) nach erfolgreicher Autorisierung zum Anzeigen einer Ressource.
       * Die `token` -Parameter ist das kurzlebige Medien-Token; die `resource` -Parameter ist der Inhalt, den der Benutzer anzeigen darf.
+
    * `tokenRequestFailed(resource, code, description)` </br>
       * Ausgelöst von [checkAuthorization()](#checkAuthZ) und [getAuthorization()](#$getAuthZ) nach einer nicht erfolgreichen Autorisierung.
-      * Die `resource` -Parameter ist der Inhalt, den der Benutzer anzeigen wollte; die `code` -Parameter ist der Fehlercode, der angibt, welcher Fehlertyp aufgetreten ist; die `description` -Parameter beschreibt den Fehler, der dem Fehlercode zugeordnet ist.
+      * Die `resource` -Parameter ist der Inhalt, den der Benutzer anzuzeigen versucht hat; die `code` -Parameter ist der Fehlercode, der angibt, welcher Fehlertyp aufgetreten ist; der `description` -Parameter beschreibt den Fehler, der dem Fehlercode zugeordnet ist.
+
    * `selectedProvider(mvpd)` </br>
       * Ausgelöst von [`getSelectedProvider()`](#getSelProv).
       * Die `mvpd` liefert Informationen zum vom Benutzer ausgewählten Provider.
+
    * `setMetadataStatus(metadata, key, arguments)`
       * Ausgelöst von `getMetadata().`
-      * Die `metadata` -Parameter stellt die spezifischen Daten bereit, die Sie angefordert haben; die `key` -Parameter ist der Schlüssel, der in der Variablen [getMetadata()](#getMeta) Anfrage; und `arguments` ist dasselbe Wörterbuch, das an [getMetadata()](#getMeta).
+      * Die `metadata` liefert die spezifischen Daten, die Sie angefordert haben; die `key` -Parameter ist der Schlüssel, der in der Variablen [getMetadata()](#getMeta) und die `arguments` ist dasselbe Wörterbuch, das an [getMetadata()](#getMeta).
+
    * [`preauthorizedResources(authorizedResources]`](#preauthResources)
 
       * Ausgelöst von [`checkPreauthorizedResources()`](#checkPreauth).
 
       * Die `authorizedResources` -Parameter zeigt die Ressourcen an, die der Benutzer anzeigen darf.
+
    * [`presentTvProviderDialog(viewController)`](#presentTvDialog)
 
       * Ausgelöst von [getAuthentication()](#getAuthN) wenn der aktuelle Anfragende mindestens MVPD unterstützt, das SSO-Unterstützung hat.
       * Der Parameter viewController ist das Apple SSO-Dialogfeld und muss auf dem Hauptansichtscontroller angezeigt werden.
+
    * [`dismissTvProviderDialog(viewController)`](#dismissTvDialog)
 
       * Wird durch eine Benutzeraktion ausgelöst (durch die Auswahl von &quot;Abbrechen&quot;oder &quot;Andere TV-Anbieter&quot;im Dialogfeld &quot;Apple SSO&quot;).
       * Der Parameter viewController ist das Apple SSO-Dialogfeld und muss vom Hauptansichtscontroller verworfen werden.
-
-
-
-
-
-
-
-
-
-
 
 ![](assets/iOS-flows.png)
 
 ### B. Startup Flow {#startup_flow}
 
 1. Starten Sie die Anwendung der obersten Ebene.</br>
-1. Adobe Primetime-Authentifizierung starten </br>
+1. Adobe Primetime-Authentifizierung initiieren </br>
 
    a. Aufruf [`init`](#$init) , um eine Instanz der Adobe Primetime-Authentifizierung AccessEnabler zu erstellen.
    * **Abhängigkeit:** Adobe Primetime-Authentifizierung Native iOS/tvOS-Bibliothek (AccessEnabler)
-   b. Aufruf `setRequestor()` die Identität des Programmierers festzustellen; Übergabe an den Programmierer `requestorID` und (optional) ein Array von Adobe Primetime-Authentifizierungsendpunkten. Für tvOS müssen Sie auch den öffentlichen Schlüssel und das Geheimnis angeben. Siehe [Clientlose Dokumentation](#create_dev) für Details.
+
+   b. Aufruf `setRequestor()` die Identität des Programmierers festzustellen; `requestorID` und (optional) ein Array von Adobe Primetime-Authentifizierungsendpunkten. Für tvOS müssen Sie auch den öffentlichen Schlüssel und das Geheimnis angeben. Siehe [Clientlose Dokumentation](#create_dev) für Details.
 
    * **Abhängigkeit:** Gültige Adobe Primetime-Authentifizierungsanfrage-ID (vereinbaren Sie dies mit Ihrem Adobe Primetime-Authentifizierungskontomanager).
 
    * **Trigger:**
-      [setRequestorComplete()](#$setReqComplete) Callback.
+     [setRequestorComplete()](#$setReqComplete) Callback.
+
    >[!NOTE]
    >
    >Berechtigungsanfragen können erst abgeschlossen werden, wenn die Identität des Anfragenden vollständig ermittelt wurde. Dies bedeutet effektiv, dass [`setRequestor()`](#$setReq)  weiterhin ausgeführt wird, werden alle nachfolgenden Berechtigungsanfragen ausgeführt. Beispiel: [`checkAuthentication()`](#checkAuthN) blockiert werden.
 
-   Sie haben zwei Implementierungsoptionen: Sobald die Identifizierungsinformationen des Anfragenden an den Backend-Server gesendet wurden, kann die UI-Anwendungsebene einen der beiden folgenden Ansätze wählen: </br>
+   Sie haben zwei Implementierungsoptionen: Sobald die Identifizierungsinformationen des Anfragenden an den Backend-Server gesendet wurden, kann die UI-Anwendungsschicht einen der beiden folgenden Ansätze wählen: </br>
 
    1. Warten Sie auf die Auslösung der [`setRequestorComplete()`](#setReqComplete) callback (Teil des AccessEnabler -Delegates). Diese Option bietet die größte Sicherheit, dass [`setRequestor()`](#$setReq) abgeschlossen ist, daher wird dies für die meisten Implementierungen empfohlen.
 
    1. Fahren Sie fort, ohne auf die Aktivierung der [`setRequestorComplete()`](#setReqComplete) zurücksetzen und mit der Ausgabe von Berechtigungsanfragen beginnen. Diese Aufrufe (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout) werden von der AccessEnabler-Bibliothek in die Warteschlange gestellt, die die tatsächlichen Netzwerkaufrufe nach der [`setRequestor()`](#$setReq). Diese Option kann gelegentlich unterbrochen werden, wenn beispielsweise die Netzwerkverbindung instabil ist.
-
-
 
 1. Aufruf `checkAuthentication()` um nach einer vorhandenen Authentifizierung zu suchen, ohne den vollständigen Authentifizierungsfluss zu starten.  Wenn dieser Aufruf erfolgreich ist, können Sie direkt zum Autorisierungsfluss übergehen. Ist dies nicht der Fall, fahren Sie mit dem Authentifizierungsfluss fort.
 
@@ -226,7 +226,7 @@ I.  [Abmeldefluss mit Apple SSO](#logout_flow_with_AppleSSO) </br>
 
    * Wenn die Variable [getAuthorization()](#$getAuthZ) Aufruf erfolgreich: Der Benutzer verfügt über gültige AuthN- und AuthZ-Token (der Benutzer ist authentifiziert und berechtigt, die angeforderten Medien zu sehen).
 
-   * Wenn [getAuthorization()](#$getAuthZ) schlägt fehl: Untersuchen Sie die ausgelöste Ausnahme, um ihren Typ zu ermitteln (AuthN, AuthZ oder etwas Anderes):
+   * Wenn [getAuthorization()](#$getAuthZ) schlägt fehl: Untersuchen Sie die ausgelöste Ausnahme, um ihren Typ zu bestimmen (AuthN, AuthZ oder etwas Anderes):
       * Wenn es sich um einen Authentifizierungsfehler (AuthN) handelte, starten Sie den Authentifizierungsfluss neu.
       * Wenn es sich um einen Autorisierungsfehler (AuthZ) handelt, ist der Benutzer nicht berechtigt, das angeforderte Medium zu sehen und dem Benutzer sollte eine Fehlermeldung angezeigt werden.
       * Wenn ein anderer Fehlertyp aufgetreten ist (Verbindungsfehler, Netzwerkfehler usw.) zeigen Sie dem Benutzer eine entsprechende Fehlermeldung an.
@@ -234,7 +234,7 @@ I.  [Abmeldefluss mit Apple SSO](#logout_flow_with_AppleSSO) </br>
 1. Validieren Sie das Token für kurze Medien.\
    Verwenden Sie die Adobe Primetime Authentication Media Token Verifier-Bibliothek, um das von der [getAuthorization()](#$getAuthZ) Aufruf oben:
 
-   * Wenn die Überprüfung erfolgreich ist: Abspielen des angeforderten Mediums für den Benutzer.
+   * Wenn die Validierung erfolgreich ist: Wiedergabe des angeforderten Mediums für den Benutzer.
    * Wenn die Validierung fehlschlägt: Das AuthZ-Token war ungültig, die Medienanforderung sollte abgelehnt werden und dem Benutzer sollte eine Fehlermeldung angezeigt werden.
 
 
@@ -253,9 +253,9 @@ I.  [Abmeldefluss mit Apple SSO](#logout_flow_with_AppleSSO) </br>
 
 1. Aufruf [`logout()`](#$logout) , um den Benutzer abzumelden. AccessEnabler löscht alle zwischengespeicherten Werte und Token. Nachdem der Cache gelöscht wurde, führt der AccessEnabler einen Server-Aufruf durch, um die Server-seitigen Sitzungen zu bereinigen. Da der Server-Aufruf zu einer SAML-Umleitung zum IdP führen kann (dies ermöglicht die Sitzungsbereinigung auf der IdP-Seite), muss dieser Aufruf allen Umleitungen folgen. Aus diesem Grund muss dieser Aufruf innerhalb eines UIWebView/WKWebView- oder SFSafariViewController-Controllers verarbeitet werden.
 
-   a. Entsprechend dem gleichen Muster wie der Authentifizierungs-Workflow sendet die AccessEnabler-Domäne über die `navigateToUrl:` oder `navigateToUrl:useSVC:` Callback, um einen UIWebView/WKWebView- oder SFSafariViewController-Controller zu erstellen und diesen anzuweisen, die im Callback bereitgestellte URL zu laden `url` Parameter. Dies ist die URL des Abmelde-Endpunkts auf dem Backend-Server.
+   a. Entsprechend dem gleichen Muster wie der Authentifizierungs-Workflow sendet die AccessEnabler-Domäne über die `navigateToUrl:` oder `navigateToUrl:useSVC:` Callback, um einen UIWebView/WKWebView- oder SFSafariViewController-Controller zu erstellen und diesen anzuweisen, die im Callback bereitgestellte URL zu laden `url` -Parameter. Dies ist die URL des Abmelde-Endpunkts auf dem Backend-Server.
 
-   b. Ihre Anwendung muss die Aktivität der `UIWebView/WKWebView or SFSafariViewController` steuern und den Moment erkennen, in dem eine bestimmte benutzerdefinierte URL geladen wird, da sie mehrere Umleitungen durchläuft. Beachten Sie, dass diese spezifische benutzerdefinierte URL tatsächlich ungültig ist und nicht für den Controller vorgesehen ist, sie tatsächlich zu laden. Sie darf von Ihrer Anwendung nur als Signal interpretiert werden, dass der Abmeldefluss abgeschlossen ist und dass es sicher ist, die `UIWebView/WKWebView` oder `SFSafariViewController` Controller. Wenn der Controller diese spezifische benutzerdefinierte URL lädt, muss Ihre Anwendung die `UIWebView/WKWebView or SFSafariViewController` Controller und Aufruf von AccessEnabler `handleExternalURL:url`API-Methode. Im Fall von `SFSafariViewController`Der Controller muss verwendet werden, wenn die spezifische benutzerdefinierte URL von der **`application's custom scheme`** (z. B. `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`). Andernfalls wird diese spezifische benutzerdefinierte URL durch die Variable **`ADOBEPASS_REDIRECT_URL`**  Konstante (d. h. `adobepass://ios.app`).
+   b. Ihre Anwendung muss die Aktivität der `UIWebView/WKWebView or SFSafariViewController` steuern und den Moment erkennen, in dem eine bestimmte benutzerdefinierte URL geladen wird, da sie mehrere Umleitungen durchläuft. Beachten Sie, dass diese spezifische benutzerdefinierte URL tatsächlich ungültig ist und nicht für den Controller vorgesehen ist, sie tatsächlich zu laden. Sie darf von Ihrer Anwendung nur als Signal interpretiert werden, dass der Abmeldefluss abgeschlossen ist und dass es sicher ist, die `UIWebView/WKWebView` oder `SFSafariViewController` Controller. Wenn der Controller diese spezifische benutzerdefinierte URL lädt, muss Ihre Anwendung die `UIWebView/WKWebView or SFSafariViewController` Controller und Aufruf von AccessEnabler `handleExternalURL:url`API-Methode. Im Fall von `SFSafariViewController`Der Controller muss verwendet werden, wenn die spezifische benutzerdefinierte URL von der **`application's custom scheme`** (zum Beispiel: `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`). Andernfalls wird diese spezifische benutzerdefinierte URL durch die Variable **`ADOBEPASS_REDIRECT_URL`**  Konstante (d. h. `adobepass://ios.app`).
 
    >[!NOTE]
    >

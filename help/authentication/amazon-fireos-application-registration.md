@@ -1,37 +1,37 @@
 ---
 title: Amazon FireOS-Anwendungsregistrierung
 description: Amazon FireOS-Anwendungsregistrierung
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 650fd4a2-dfc3-4c74-9b5b-6bea832a28ca
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
-
 # Amazon FireOS-Anwendungsregistrierung {#amazon-fireos-application-registration}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 </br>
 
 ## Einführung {#intro}
 
-Ab Version 3.0 des FireOS AccessEnabler SDK ändern wir den Authentifizierungsmechanismus mit den Servern der Adobe. Statt einen öffentlichen Schlüssel und ein geheimes System zum Signieren der Anforderer-ID zu verwenden, führen wir das Konzept einer Software Statement-Zeichenfolge ein, die verwendet werden kann, um ein Zugriffstoken zu erhalten, das später für alle Aufrufe verwendet wird, die das SDK an unsere Server sendet. Zusätzlich zu einer Software-Anweisung müssen Sie auch einen Deep-Link für Ihre Anwendung erstellen.
+Ab Version 3.0 des FireOS AccessEnabler SDK ändern wir den Authentifizierungsmechanismus mit Adobe-Servern. Statt einen öffentlichen Schlüssel und ein geheimes System zum Signieren der Anforderer-ID zu verwenden, führen wir das Konzept einer Software Statement-Zeichenfolge ein, die verwendet werden kann, um ein Zugriffstoken zu erhalten, das später für alle Aufrufe verwendet wird, die das SDK an unsere Server sendet. Zusätzlich zu einer Software-Anweisung müssen Sie auch einen Deep-Link für Ihre Anwendung erstellen.
 
 Weitere Informationen finden Sie unter [Dynamische Kundenregistrierung](/help/authentication/dynamic-client-registration.md)
 
 ## Was ist eine Software-Anweisung? {#what}
 
-Eine Software-Anweisung ist ein JWT-Token, das Informationen über Ihre Anwendung enthält. Jede Anwendung sollte über eine eindeutige Software-Anweisung verfügen, die von unseren Servern verwendet wird, um die Anwendung im System der Adobe zu identifizieren. Die Softwareanweisung muss übergeben werden, wenn Sie das AccessEnabler SDK initialisieren. Sie wird zur Registrierung der Anwendung bei Adobe verwendet. Nach der Registrierung erhält das SDK eine Client-ID und ein Client-Geheimnis, die zum Abrufen eines Zugriffstokens verwendet werden. Jeder Aufruf, den das SDK an unsere Server sendet, erfordert ein gültiges Zugriffstoken. Das SDK ist für die Registrierung der Anwendung, den Abruf und die Aktualisierung des Zugriffstokens zuständig.
+Eine Software-Anweisung ist ein JWT-Token, das Informationen über Ihre Anwendung enthält. Jede Applikation sollte über eine eindeutige Software-Anweisung verfügen, die von unseren Servern verwendet wird, um die Applikation im Adobe-System zu identifizieren. Die Software-Anweisung muss übergeben werden, wenn Sie das AccessEnabler SDK initialisieren. Sie wird zur Registrierung der Anwendung bei Adobe verwendet. Nach der Registrierung erhält das SDK eine Client-ID und ein Client-Geheimnis, die zum Abrufen eines Zugriffstokens verwendet werden. Jeder Aufruf, den das SDK an unsere Server sendet, erfordert ein gültiges Zugriffstoken. Das SDK ist für die Registrierung der Anwendung, den Abruf und die Aktualisierung des Zugriffstokens zuständig.
 
 **Hinweis:** Softwareanweisungen sind App-spezifisch und eine einzelne Software-Anweisung kann nicht für mehrere Anwendungen verwendet werden. Beachten Sie, dass dies auch für Anwendungen gilt, die Zugriff auf mehrere Kanäle bieten.
 
 ## Wie erhalte ich eine Software-Anweisung? {#how-to}
 
-### Wenn Sie Zugriff auf das TVE-Dashboard der Adobe haben:
+### Wenn Sie Zugriff auf das Adobe TVE-Dashboard haben:
 
 - Öffnen Sie den Browser und navigieren Sie zu <https://console.auth.adobe.com>
 - Navigieren Sie zu `Channels` und wählen Sie Ihren Kanal aus.
@@ -43,11 +43,11 @@ Eine Software-Anweisung ist ein JWT-Token, das Informationen über Ihre Anwendun
 - Es sollte eine Liste mit allen registrierten Anwendungen angezeigt werden. Klicken Sie auf `Download` auf der Anwendung, die Sie gerade erstellt haben. Hinweis: Möglicherweise müssen Sie einige Minuten warten, bevor Ihre Software-Anweisung heruntergeladen werden kann.
 - Eine Textdatei wird heruntergeladen. Verwenden Sie die Inhalte als Ihre Software-Anweisung.
 
-Weitere Informationen finden Sie unter [Dynamisches Client-Registrierungsmanagement](/help/authentication/dynamic-client-registration-management.md)
+Weitere Informationen finden Sie unter [Dynamisches Client-Registrierungs-Management](/help/authentication/dynamic-client-registration-management.md)
 
-### Wenn Sie keinen Zugriff auf das TVE-Dashboard der Adobe haben:
+### Wenn Sie keinen Zugriff auf das Adobe TVE Dashboard haben:
 
-Senden Sie ein Ticket an <tve-support@adobe.com>. Bitte fügen Sie alle erforderlichen Informationen, einschließlich Kanal, Anwendungsname, Version und Plattformen, ein und jemand aus unserem Supportteam erstellt für Sie einen Softwareausweis.
+Senden Sie ein Ticket an <tve-support@adobe.com>. Bitte fügen Sie alle erforderlichen Informationen, einschließlich Kanal, Anwendungsname, Version und Plattformen, ein und jemand aus unserem Supportteam erstellt für Sie eine Softwareanweisung.
 
 ## Wie wird die Software-Anweisung verwendet? {#use}
 
@@ -55,8 +55,8 @@ Nachdem Sie Ihre Software-Anweisung erhalten haben, müssen Sie sie als Parament
 
 ## Verwendung der Software-Anweisung {#use-both}
 
-In der Ressourcendatei Ihrer Anwendung `strings.xml` den folgenden Code hinzufügen:
+In der Ressourcendatei Ihrer Anwendung `strings.xml` den folgenden Code hinzufügen:
 
 ```XML
-<string name="software_statement">softwarestatement value</string>
+<string name="software_statement">softwarestatement value</string>
 ```

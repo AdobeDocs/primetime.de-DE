@@ -1,19 +1,19 @@
 ---
 title: Glossar
 description: Glossar
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: e64a94f6-7460-4aa8-8d6b-e0553ba1e4ec
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
 
 ---
 
-
 # Glossar {#glossary}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## AccessEnabler {#accessEnabler}
 
@@ -60,23 +60,23 @@ Siehe [Benutzer-ID](#user-id).
 
 ## IdP {#idp}
 
-Identifizierungsanbieter; Synonym mit MVPD im Kontext der Rolle eines MVPD in einer Adobe Primetime-Authentifizierungsintegration. (Die Kunden müssen ihre Identifizierung über die Anmeldeseite ihres Pay TV-Anbieters überprüfen.)
+Identifizieren Sie den Provider; synonym mit MVPD im Kontext der Rolle eines MVPD in einer Adobe Primetime-Authentifizierungsintegration. (Die Kunden müssen ihre Identifizierung über die Anmeldeseite ihres Pay TV-Anbieters überprüfen.)
 
 ## Media Token Verifier {#media-token-verifier}
 
-Eine von Adoben bereitgestellte Bibliothek, die von Programmierern verwendet wird, um das von der Adobe Primetime-Authentifizierung nach erfolgreichem Abschluss eines Berechtigungsflusses erstellte kurzlebige Medien-Token zu überprüfen.
+Eine von Adobe bereitgestellte Bibliothek, die von Programmierern verwendet wird, um das von der Adobe Primetime-Authentifizierung nach erfolgreichem Abschluss eines Berechtigungsflusses generierte kurzlebige Medien-Token zu überprüfen.
 
 ## MVPD {#mvpd}
 
-Multichannel Video Programming Distributor; Synonym mit &quot;Pay TV Provider&quot;.
+Multichannel Video Programming Distributor; Synonym für &quot;Pay TV Provider&quot;.
 
 ## MVPD ID {#mvpd-id}
 
-Siehe [Benutzer-ID](#user-id).
+Siehe [Benutzer-ID](#user-id).
 
 ## Partner-ID {#partner-id}
 
-Eine Kennung, die von der Adobe an MVPDs übergeben wird, die sie zur Identifizierung verwenden, in deren Namen die Adobe Primetime-Authentifizierung eine Authentifizierung anfordert. Manchmal wird es zum Konfigurieren ihrer Benutzeroberflächen für bestimmte Programmierer verwendet, manchmal ist es für alle Programmierer gleich, es hängt von den Anforderungen des MVPD ab.
+Eine Kennung, die von Adobe an MVPDs übergeben wird, die sie verwenden, um zu identifizieren, in welchem Namen die Adobe Primetime-Authentifizierung eine Authentifizierung anfordert. Manchmal wird es zum Konfigurieren ihrer Benutzeroberflächen für bestimmte Programmierer verwendet, manchmal ist es für alle Programmierer gleich, es hängt von den Anforderungen des MVPD ab.
 
 ## Pay TV Provider {#pay-tv-provider}
 
@@ -88,19 +88,19 @@ Synonym mit &quot;Inhaltsanbieter&quot;, &quot;Konto&quot;, &quot;Kanal&quot;, &
 
 ## Proxy-MVPD {#proxy-mvpd}
 
-Ein MVPD, der Identitätsdienste für andere MVPDs bereitstellt; direkt in die Adobe Primetime-Authentifizierung integriert ist.
+Ein MVPD, der Identitätsdienste für andere MVPDs bereitstellt, die direkt mit der Adobe Primetime-Authentifizierung integriert sind.
 
 ## Proximiertes MVPD {#proxied-mvpd}
 
-Ein MVPD, der nicht direkt mit der Adobe SP integriert, sondern über einen Proxy-MVPD integriert ist.
+Ein MVPD, das keine direkte Integration mit dem Adobe SP hat, aber über einen Proxy-MVPD integriert ist.
 
 ## Anforderer-ID {#requestor-id}
 
-Identifiziert eindeutig eine [Programmierer](#programmer) (ein Konto, eine Marke, einen Kanal oder eine Eigenschaft) innerhalb der Adobe Primetime-Authentifizierung. Diese ID wird zwischen dem Programmierer und der Adobe während der Ersteinrichtung des Kontos bestimmt. Im Web ist die Anforderer-ID mit einer Reihe von auf die Whitelist gesetzten Domänen verknüpft. Alle Aufrufe, die eine ID von einer externen Domäne verwenden, werden abgelehnt. Programmierer verwenden auch die Anforderer-ID für Analysen. Normalerweise gibt es nur eine Anforderer-ID pro Programmierer. Eine zusätzliche Funktion im Zusammenhang mit der Anforderer-ID besteht darin, dass der Programmierer der Adobe ein öffentliches Zertifikat bereitstellen muss, da der setRequestor-API-Aufruf erwartet, dass verschlüsselte Daten gesendet werden, um den Programmierer im Adobe Primetime-Authentifizierungssystem zu authentifizieren.
+Identifiziert eindeutig eine [Programmierer](#programmer) (ein Konto, eine Marke, einen Kanal oder eine Eigenschaft) innerhalb der Adobe Primetime-Authentifizierung. Diese ID wird während der Ersteinrichtung des Kontos zwischen dem Programmierer und der Adobe bestimmt. Im Internet ist die Anforderer-ID mit einer Reihe von auf der Whitelist befindlichen Domänen verknüpft. Aufrufe, die eine Kennung von einer externen Domäne verwenden, werden abgelehnt. Programmierer verwenden auch die Anforderer-ID für Analysen. Normalerweise gibt es nur eine Anforderer-ID pro Programmierer. Eine zusätzliche Funktion im Zusammenhang mit der Anforderer-ID besteht darin, dass der Programmierer Adobe ein öffentliches Zertifikat bereitstellen muss, da der setRequestor-API-Aufruf erwartet, dass verschlüsselte Daten gesendet werden, um den Programmierer im Adobe Primetime-Authentifizierungssystem zu authentifizieren.
 
 ## Ressourcen-ID {#resource-id}
 
-Eine Zeichenfolge oder mRSS-Ressource, die eine [Programmierer](#programmer) in MVPDs. Es wird zwischen dem Programmierer und den MVPDs vereinbart. Die Adobe Primetime-Authentifizierung übergibt die Ressourcen-ID über &quot;unberührt&quot;, daher muss sie für alle MVPDs gleich sein. Ein Programmierer kann mehrere Ressourcen-IDs verwenden, solange die MVPDs wissen, was jede ID darstellt.
+Eine Zeichenfolge oder mRSS-Ressource, die eine [Programmierer](#programmer) in MVPDs. Es wird zwischen dem Programmierer und den MVPDs vereinbart. Die Adobe Primetime-Authentifizierung übergibt die Ressourcen-ID über unberührt, daher muss sie für alle MVPDs gleich sein. Ein Programmierer kann mehrere Ressourcen-IDs verwenden, solange die MVPDs wissen, was jede ID darstellt.
 
 ## SessionGUID {#sessionGUID}
 
@@ -112,11 +112,11 @@ Dieses Token wird von der Adobe Primetime-Authentifizierung nach erfolgreichem A
 
 ## Smart Device {#smart-device}
 
-Ein Begriff, der in der gesamten Adobe Primetime-Authentifizierungsdokumentation verwendet wird, um auf Set-Top-Boxen, Spielekonsolen und Smart-TVs zu verweisen. Hierbei handelt es sich um Geräte mit Netzwerkfunktionen, die jedoch nicht in der Lage sind, Webseiten zu rendern.
+Ein Begriff, der in der gesamten Adobe Primetime-Authentifizierungsdokumentation verwendet wird, um auf Set-Top-Boxen, Spielekonsolen und Smart-TVs zu verweisen. Hierbei handelt es sich um Geräte mit Netzwerkfunktionen, die jedoch nicht in der Lage sind, Web-Seiten zu rendern.
 
 ## SP{#sp}
 
-Dienstleister; Dies bezieht sich normalerweise auf die Variable *Rolle* von SP, gespielt von Adobe Primetime-Authentifizierung, im Auftrag eines Programmierers in einer Integration mit einer [MVPD](#mvpd).
+Dienstleister; dies bezieht sich normalerweise auf die *Rolle* von SP, gespielt von Adobe Primetime-Authentifizierung, im Auftrag eines Programmierers in einer Integration mit einer [MVPD](#mvpd).
 
 ## Temporärer Pass {#temp-pass}
 

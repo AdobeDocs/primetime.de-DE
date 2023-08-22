@@ -1,19 +1,19 @@
 ---
 title: Ermitteln geschützter Ressourcen
 description: Ermitteln geschützter Ressourcen
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: e96aea02-54b2-491d-ba91-253c0d0e681c
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%
 
 ---
 
-
 # Ermitteln geschützter Ressourcen {#identifying-protected-resources}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Übersicht {#overview}
 
@@ -23,15 +23,14 @@ Jede Autorisierungsanfrage (oder Anforderung der Autorisierung) muss eine eindeu
    - Kanal
       - Anzeigen
          - Folge
-            - Asset\
-                
+            - Asset
 
 </br>
 
 ## Medien-RSS-Format {#media_rss}
 
-Ressourcen können durch eine einfache Zeichenfolge (eine eindeutige Kennung für einen Kanal) identifiziert oder im Media RSS-Format (MRSS) dargestellt werden, wie zwischen der Adobe (oder einem für die Adobe Primetime-Authentifizierung autorisierten Partner) und den teilnehmenden MVPDs und Programmierern vereinbart. Die als Ressourcenspezifikator verwendete RSS-Zeichenfolge kann zusätzliche Informationen wie Bewertungen und Metadaten zur elterlichen Kontrolle enthalten.\
- 
+Ressourcen können durch eine einfache Zeichenfolge (eine eindeutige Kennung für einen Kanal) identifiziert oder im Media RSS-Format (MRSS) dargestellt werden, wie zwischen der Adobe (oder einem autorisierten Adobe Primetime-Authentifizierungspartner) und den teilnehmenden MVPDs und Programmierern vereinbart. Die als Ressourcenspezifikator verwendete RSS-Zeichenfolge kann zusätzliche Informationen wie Bewertungen und Metadaten zur elterlichen Kontrolle enthalten.
+
 
 Wenn Sie eine einfache Ressourcenkennung wie &quot;TNT&quot;verwenden, wird angenommen, dass diese einen Kanal darstellt und in diesen RSS-Ressourcenbezeichner übersetzt wird:
 
@@ -42,7 +41,7 @@ Wenn Sie eine einfache Ressourcenkennung wie &quot;TNT&quot;verwenden, wird ange
         </channel>
     </rss>
 ```
- 
+
 
 Ein komplexerer Bezeichner kann beispielsweise zusätzliche Bewertungsinformationen enthalten. Sie können die gesamte RSS-Zeichenfolge an Access Enabler-Funktionen übergeben, für die eine Ressourcen-ID erforderlich ist, z. B. [`getAuthorization()`](/help/authentication/rest-api-reference.md):
 
@@ -57,7 +56,7 @@ Ein komplexerer Bezeichner kann beispielsweise zusätzliche Bewertungsinformatio
     getAuthorization(resource);
 ```
 
-Ressourcenspezifikatoren sind für die Adobe Primetime-Authentifizierung opak. sie werden einfach an den MVPD weitergeleitet. Wenn der MVPD Ihren Ressourcenbezeichner nicht erkennt oder nicht analysieren kann, wird ein Fehler an die Adobe Primetime-Authentifizierung zurückgegeben, der den Fehler an Ihre `tokenRequestFailed()` Callback.
+Ressourcenspezifikatoren sind für die Adobe Primetime-Authentifizierung opak und werden einfach an den MVPD weitergeleitet. Wenn der MVPD Ihren Ressourcenbezeichner nicht erkennt oder nicht analysieren kann, wird ein Fehler an die Adobe Primetime-Authentifizierung zurückgegeben, der den Fehler an Ihre `tokenRequestFailed()` Callback.
 
 <!--
 ## Related Information {#related}

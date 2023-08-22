@@ -1,23 +1,23 @@
 ---
 title: JavaScript-SDK-API-Referenz
 description: JavaScript-SDK-API-Referenz
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 48d48327-14e6-46f3-9e80-557f161acd8a
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '2835'
 ht-degree: 0%
 
 ---
 
-
 # JavaScript-SDK-API-Referenz {#javascript-sdk-api-reference}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## API-Referenz {#api-reference}
 
-Diese Funktionen lösen Interaktionsanfragen mit einem MVPD aus. Alle Aufrufe sind asynchron; müssen Sie [Callbacks](#callbacks) um die Antworten zu verarbeiten:
+Diese Funktionen lösen Interaktionsanfragen mit einem MVPD aus. Alle Aufrufe sind asynchron. Sie müssen [Callbacks](#callbacks) um die Antworten zu verarbeiten:
 
 - [setRequestor()](#setReq)
 - [getAuthorization()](#getAuthZ)
@@ -32,27 +32,26 @@ Diese Funktionen lösen Interaktionsanfragen mit einem MVPD aus. Alle Aufrufe si
 
 ## setRequestor (inRequestorID, endpoints, options){#setrequestor(inRequestorID,endpoints,options)}
 
-**Beschreibung:** Identifiziert die Site, von der die Anforderungen stammen.  Sie müssen diesen Aufruf vor allen anderen API-Aufrufen in einer Kommunikationssitzung durchführen. 
+**Beschreibung:** Identifiziert die Site, von der die Anforderungen stammen.  Sie müssen diesen Aufruf vor allen anderen API-Aufrufen in einer Kommunikationssitzung durchführen.
 
 **Parameter:**
 
-- *inRequestorID* - Die eindeutige Kennung, die die Adobe während der Registrierung der ursprünglichen Site zugewiesen hat.
+- *inRequestorID* - Die eindeutige Kennung, die Adobe während der Registrierung der ursprünglichen Site zugewiesen hat.
 
-- *Endpunkte* - Dieser Parameter ist optional. Es kann sich um einen der folgenden Werte handeln:
+- *Endpunkte* - Dieser Parameter ist optional. Es kann sich um einen der folgenden Werte handeln:
 
-   - Ein Array, mit dem Sie Endpunkte für von Adobe bereitgestellte Authentifizierungs- und Autorisierungsdienste angeben können (verschiedene Instanzen können zum Debugging verwendet werden). Wenn mehrere URLs bereitgestellt werden, setzt sich die MVPD-Liste aus den Endpunkten aller Service Provider zusammen. Jeder MVPD ist mit dem schnellsten Dienstleister verbunden. d. h. der Provider, der zuerst reagiert hat und dieser MVPD unterstützt. Standardmäßig (wenn kein Wert angegeben ist) wird der Adobe-Dienstleister (<http://sp.auth.adobe.com/>).
+   - Ein Array, mit dem Sie Endpunkte für von Adobe bereitgestellte Authentifizierungs- und Autorisierungsdienste angeben können (verschiedene Instanzen können zum Debugging verwendet werden). Wenn mehrere URLs bereitgestellt werden, setzt sich die MVPD-Liste aus den Endpunkten aller Service Provider zusammen. Jeder MVPD ist mit dem schnellsten Dienstleister verbunden, d. h. dem Provider, der zuerst reagiert hat und dieser MVPD unterstützt. Standardmäßig (wenn kein Wert angegeben ist) wird der Adobe-Dienstleister verwendet (<http://sp.auth.adobe.com/>).
 
-   Beispiel:
+  Beispiel:
    - `setRequestor("IFC", ["http://sp.auth-dev.adobe.com/adobe-services"])`
-
 
 - *options* - Ein JSON-Objekt, das den Wert für die Anwendungs-ID, den Wert für &quot;refresh-less&quot;(Einstellungen für die Hintergrundanmeldung bei Abmeldung) und die MVPD-Einstellungen (iFrame) enthält. Alle Werte sind optional.
    1. Wenn angegeben, wird die Experience Cloud-visitorID bei allen von der Bibliothek durchgeführten Netzwerkaufrufen gemeldet. Der Wert kann später für erweiterte Analyseberichte verwendet werden.
-   2. Wenn die eindeutige Kennung der Anwendung angegeben ist -`applicationId` - Der Wert wird zu allen nachfolgenden Aufrufen hinzugefügt, die von der Anwendung als Teil des HTTP-Headers X-Device-Info durchgeführt werden. Dieser Wert kann später aus abgerufen werden. [ESM](/help/authentication/entitlement-service-monitoring-overview.md) Berichte mithilfe der entsprechenden Abfrage.
+   2. Wenn die eindeutige Kennung der Anwendung angegeben ist -`applicationId` - Der Wert wird zu allen nachfolgenden Aufrufen hinzugefügt, die von der Anwendung als Teil des HTTP-Headers X-Device-Info durchgeführt werden. Dieser Wert kann später aus abgerufen werden. [ESM](/help/authentication/entitlement-service-monitoring-overview.md) Berichte mithilfe der entsprechenden Abfrage erstellen.
 
-   **Hinweis:** Bei allen JSON-Schlüsseln wird zwischen Groß- und Kleinschreibung unterschieden.
+  **Hinweis:** Bei allen JSON-Schlüsseln wird zwischen Groß- und Kleinschreibung unterschieden.
 
-    Beispiel:
+  Beispiel:
 
 ```JSON
    setRequestor("IFC", {
@@ -66,7 +65,7 @@ Diese Funktionen lösen Interaktionsanfragen mit einem MVPD aus. Alle Aufrufe si
 ```JSON
     {  
        "visitorID": <string>,
-       "backgroundLogin": <boolean>,
+       "backgroundLogin": <boolean>,
        "backgroundLogout": <boolean>,
        "mvpdConfig":{  
           "MVPD_ID_1":{  
@@ -83,16 +82,16 @@ Diese Funktionen lösen Interaktionsanfragen mit einem MVPD aus. Alle Aufrufe si
        }
     }
 ```
- 
 
-Alle Schlüssel der obersten Ebene in der obigen Vorlage sind optional und weisen Standardwerte auf (*backgroundLogin*, *backgroundLogut* sind standardmäßig false und mvpdConfig ist null - d. h., dass keine MVPD-Einstellungen überschrieben werden).
 
- 
-- **Hinweis**: Die Angabe ungültiger Werte/Typen für die obigen Parameter führt zu undefiniertem Verhalten.
+Alle Schlüssel der obersten Ebene in der obigen Vorlage sind optional und weisen Standardwerte auf (*backgroundLogin*, *backgroundLogut* sind standardmäßig false und mvpdConfig ist null - d. h., dass keine MVPD-Einstellungen überschrieben werden).
 
- 
 
-Hier finden Sie eine Beispielkonfiguration für das folgende Szenario: Aktivierung der Anmeldung ohne Aktualisierung und Abmeldung, Änderung der Anmeldung von MVPD1 zu einer vollständigen Seitenumleitung (Nicht-iFrame) und der Anmeldung von MVPD2 zu iFrame mit Breite=500 und Höhe=300:
+- **Hinweis**: Wenn Sie ungültige Werte/Typen für die obigen Parameter angeben, führt dies zu einem undefinierten Verhalten.
+
+
+
+Hier finden Sie eine Beispielkonfiguration für das folgende Szenario: Aktivieren der Anmeldung ohne Aktualisierung und Abmeldung, Ändern von MVPD1 zu einer vollständigen Seitenumleitungsanmeldung (Nicht-iFrame) und MVPD2 zu iFrame-Anmeldung mit Breite=500 und Höhe=300:
 
 ```JSON
     {  
@@ -112,7 +111,7 @@ Hier finden Sie eine Beispielkonfiguration für das folgende Szenario: Aktivieru
 ```
 
 
-**Ausgelöste Rückrufe:** [setConfig()](#setconfigconfigxml-setconfigconfigxml)
+**Ausgelöste Rückrufe:** [setConfig()](#setconfigconfigxml-setconfigconfigxml)
 </br>
 
 [Zurück zum Anfang](#top)
@@ -123,15 +122,15 @@ Hier finden Sie eine Beispielkonfiguration für das folgende Szenario: Aktivieru
 
 **Beschreibung:** Fordert die Autorisierung für die angegebene Ressource an. Jedes Mal, wenn ein Kunde versucht, auf eine autorisierbare Ressource zuzugreifen, rufen Sie diese Funktion auf, um ein kurzlebiges Autorisierungstoken vom Access Enabler zu erhalten. Ressourcen-IDs werden mit dem MVPD vereinbart, der die Autorisierung erteilt.
 
-Verwendet das zwischengespeicherte Authentifizierungstoken für den aktuellen Kunden. Wenn kein solches Token gefunden wird, initiiert zunächst den Authentifizierungsprozess und fährt dann mit der Autorisierung fort.\
- 
+Verwendet das zwischengespeicherte Authentifizierungstoken für den aktuellen Kunden. Wenn kein solches Token gefunden wird, initiiert zunächst den Authentifizierungsprozess und fährt dann mit der Autorisierung fort.
+
 **Parameter:**
 
-- `inResourceID` - Die Kennung der Ressource, für die der Benutzer eine Autorisierung anfordert.
-- `redirect_url` - Optional können Sie eine Umleitungs-URL angeben, sodass der Autorisierungsprozess des MVPD den Benutzer auf diese Seite und nicht auf die Seite zurückgibt, von der aus die Autorisierung initiiert wurde.
+- `inResourceID` - Die Kennung der Ressource, für die der Benutzer eine Autorisierung anfordert.
+- `redirect_url` - Optional können Sie eine Umleitungs-URL angeben, sodass der Autorisierungsprozess des MVPD den Benutzer auf diese Seite und nicht auf die Seite zurückgibt, von der aus die Autorisierung initiiert wurde.
 
 
-**Ausgelöste Rückrufe:** [setToken()](#settokeninrequestedresourceid-intoken-settokeninrequestedresourceidintoken) zum Erfolg, [tokenRequestFailed](#tokenrequestfailedinrequestedresourceid-inrequesterrorcode-inrequestdetailederrormessage-tokenrequestfailedinrequestedresourceidinrequesterrorcodeinrequestdetailederrormessage) bei Fehlern
+**Ausgelöste Rückrufe:** [setToken()](#settokeninrequestedresourceid-intoken-settokeninrequestedresourceidintoken) zum Erfolg, [tokenRequestFailed](#tokenrequestfailedinrequestedresourceid-inrequesterrorcode-inrequestdetailederrormessage-tokenrequestfailedinrequestedresourceidinrequesterrorcodeinrequestdetailederrormessage) bei Fehlern
 
 >[!CAUTION]
 >
@@ -147,13 +146,13 @@ Verwendet das zwischengespeicherte Authentifizierungstoken für den aktuellen Ku
 
 **Beschreibung:** Fordert Authentifizierung für den aktuellen Kunden an. Wird normalerweise als Reaktion auf einen Klick auf eine Anmelde-Schaltfläche aufgerufen. Sucht nach einem im Cache gespeicherten Authentifizierungstoken für den aktuellen Kunden. Wenn kein solches Token gefunden wird, initiiert den Authentifizierungsprozess. Dadurch wird das standardmäßige oder benutzerdefinierte Dialogfeld zur Anbieterauswahl aufgerufen und der ausgewählte Provider wird dann zur Anmeldungsschnittstelle des MVPD weitergeleitet.
 
-Bei Erfolg erstellt und speichert ein Authentifizierungstoken für den Benutzer. Wenn die Authentifizierung fehlschlägt, gibt der Provider eine entsprechende Fehlermeldung an Ihre [setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode) Callback.
+Bei Erfolg erstellt und speichert ein Authentifizierungstoken für den Benutzer. Wenn die Authentifizierung fehlschlägt, gibt der Provider eine entsprechende Fehlermeldung an Ihre [setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode) Callback.
 
 **Parameter:**
 
 - redirect_url - Geben Sie optional eine Umleitungs-URL an, sodass der Authentifizierungsprozess des MVPD den Benutzer auf diese Seite und nicht auf die Seite zurückgibt, von der aus die Authentifizierung initiiert wurde.
 
- **Ausgelöste Rückrufe:** [setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode), [displayProviderDialog()](#displayproviderdialogproviders-displayproviderdialogproviders), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata)
+**Ausgelöste Rückrufe:** [setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode), [displayProviderDialog()](#displayproviderdialogproviders-displayproviderdialogproviders), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata)
 
 </br>
 
@@ -165,7 +164,7 @@ Bei Erfolg erstellt und speichert ein Authentifizierungstoken für den Benutzer.
 
 **Beschreibung:** Überprüft den aktuellen Authentifizierungsstatus für den aktuellen Kunden.  Kein UI zugeordnet.
 
-**Ausgelöste Rückrufe:** [setAuthentcationStatus()](#setauthenticationstatusisauthenticated-errorcode)
+**Ausgelöste Rückrufe:** [setAuthentcationStatus()](#setauthenticationstatusisauthenticated-errorcode)
 
 </br>
 
@@ -175,19 +174,19 @@ Bei Erfolg erstellt und speichert ein Authentifizierungstoken für den Benutzer.
 
 ## checkAuthorization(inResourceID) {#checkauthorization(inresourceid)}
 
-**Beschreibung:** Diese Methode wird von der Anwendung verwendet, um den Autorisierungsstatus für den aktuellen Kunden und die angegebene Ressource zu überprüfen. Zunächst wird der Authentifizierungsstatus überprüft. Wenn sie nicht authentifiziert ist, wird der Rückruf tokenRequestFailed() ausgelöst und die Methode wird beendet. Wenn der Benutzer authentifiziert ist, wird auch der Autorisierungsfluss Trigger. Weitere Informationen finden Sie unter [getAuthorization()](#getAuthZ -Methode.
+**Beschreibung:** Diese Methode wird von der Anwendung verwendet, um den Autorisierungsstatus für den aktuellen Kunden und die angegebene Ressource zu überprüfen. Zunächst wird der Authentifizierungsstatus überprüft. Wenn sie nicht authentifiziert ist, wird der Rückruf tokenRequestFailed() ausgelöst und die Methode wird beendet. Wenn der Benutzer authentifiziert ist, wird auch der Autorisierungsfluss Trigger. Siehe Details zu den [getAuthorization()](#getAuthZ -Methode.
 
 >[!TIP]
 >
-> **Verwenden von Funktionen zum Prüfen des Status**  Sie müssen weder den Status der Authentifizierung noch der Autorisierung überprüfen, bevor Sie eine Autorisierung anfordern. Sie können diese Funktionen aufrufen, um beispielsweise Ihre eigene Statusanzeige zu aktualisieren. Verwenden Sie sie nicht, wenn Sie eine Benutzerinteraktion benötigen.
+> **Verwenden der Funktionen &quot;Check-Status&quot;**  Sie müssen weder den Status der Authentifizierung noch der Autorisierung überprüfen, bevor Sie eine Autorisierung anfordern. Sie können diese Funktionen aufrufen, um beispielsweise Ihre eigene Statusanzeige zu aktualisieren. Verwenden Sie sie nicht, wenn Sie eine Benutzerinteraktion benötigen.
 
 **Parameter:**
 
-- `inResourceID` - Die Kennung der Ressource, für die der Benutzer eine Autorisierung anfordert.
+- `inResourceID` - Die Kennung der Ressource, für die der Benutzer eine Autorisierung anfordert.
 
- 
+
 **Ausgelöste Rückrufe:**
-[setToken()](#settokeninrequestedresourceid-intoken-settokeninrequestedresourceidintoken), [tokenRequestFailed()](#tokenrequestfailedinrequestedresourceid-inrequesterrorcode-inrequestdetailederrormessage-tokenrequestfailedinrequestedresourceidinrequesterrorcodeinrequestdetailederrormessage), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata), [setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode)
+[setToken()](#settokeninrequestedresourceid-intoken-settokeninrequestedresourceidintoken), [tokenRequestFailed()](#tokenrequestfailedinrequestedresourceid-inrequesterrorcode-inrequestdetailederrormessage-tokenrequestfailedinrequestedresourceidinrequesterrorcodeinrequestdetailederrormessage), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata), [setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode)
 
 </br>
 
@@ -197,7 +196,7 @@ Bei Erfolg erstellt und speichert ein Authentifizierungstoken für den Benutzer.
 
 **Parameter:**
 
-- *resources*: Der Ressourcenparameter ist ein Array von Ressourcen, für die die Autorisierung überprüft werden sollte. Jedes Element in der Liste sollte eine Zeichenfolge sein, die die Ressourcen-ID darstellt. Die Ressourcen-ID unterliegt den gleichen Einschränkungen wie die Ressourcen-ID in der `getAuthorization()` -Aufruf, d. h. es handelt sich um einen zwischen dem Programmierer und dem MVPD oder einem Medien-RSS-Fragment vereinbarten Wert. 
+- *resources*: Der Ressourcenparameter ist ein Array von Ressourcen, für die die Autorisierung überprüft werden soll. Jedes Element in der Liste sollte eine Zeichenfolge sein, die die Ressourcen-ID darstellt. Die Ressourcen-ID unterliegt den gleichen Einschränkungen wie die Ressourcen-ID in der `getAuthorization()` -Aufruf, d. h. es handelt sich um einen zwischen dem Programmierer und dem MVPD oder einem Medien-RSS-Fragment vereinbarten Wert.
 
 </br>
 
@@ -208,12 +207,12 @@ Diese API-Variante ist ab JS SDK-Version 4.0 verfügbar.
 
 **Parameter:**
 
-- *resources*: Der Ressourcenparameter ist ein Array von Ressourcen, für die die Autorisierung überprüft werden sollte. Jedes Element in der Liste sollte eine Zeichenfolge sein, die die Ressourcen-ID darstellt. Die Ressourcen-ID unterliegt den gleichen Einschränkungen wie die Ressourcen-ID in der `getAuthorization()` -Aufruf, d. h. es handelt sich um einen zwischen dem Programmierer und dem MVPD oder einem Medien-RSS-Fragment vereinbarten Wert. 
+- *resources*: Der Ressourcenparameter ist ein Array von Ressourcen, für die die Autorisierung überprüft werden soll. Jedes Element in der Liste sollte eine Zeichenfolge sein, die die Ressourcen-ID darstellt. Die Ressourcen-ID unterliegt den gleichen Einschränkungen wie die Ressourcen-ID in der `getAuthorization()` -Aufruf, d. h. es handelt sich um einen zwischen dem Programmierer und dem MVPD oder einem Medien-RSS-Fragment vereinbarten Wert.
 
-- *cache*: Ob der interne Cache bei der Überprüfung auf vorautorisierte Ressourcen verwendet werden soll. Dies ist ein optionaler Parameter, der standardmäßig auf **true**. Wenn &quot;true&quot;, ist das Verhalten mit der oben genannten API identisch, d. h. nachfolgende Aufrufe dieser Funktion verwenden einen internen Cache, um eine vorab autorisierte Ressource aufzulösen. Übergeben **false** für diesen Parameter deaktiviert den internen Cache, was zu einem Server-Aufruf bei jedem **checkPreauthorizedResources** API wird aufgerufen.
+- *cache*: Ob der interne Cache bei der Suche nach vorautorisierten Ressourcen verwendet werden soll. Dies ist ein optionaler Parameter, standardmäßig **true**. Wenn &quot;true&quot;, ist das Verhalten mit der oben genannten API identisch, d. h. nachfolgende Aufrufe dieser Funktion verwenden einen internen Cache, um eine vorab autorisierte Ressource aufzulösen. Übergeben **false** für diesen Parameter deaktiviert den internen Cache, was zu einem Server-Aufruf bei jedem **checkPreauthorizedResources** API wird aufgerufen.
 
-**Ausgelöste Rückrufe:** [preauthorizedResources()](#preauthorizedresourcesauthorizedresources-preauthorizedresourcesauthorizedresources)
- 
+**Ausgelöste Rückrufe:** [preauthorizedResources()](#preauthorizedresourcesauthorizedresources-preauthorizedresourcesauthorizedresources)
+
 </br>
 
 [Zurück zum Anfang](#top)
@@ -221,11 +220,11 @@ Diese API-Variante ist ab JS SDK-Version 4.0 verfügbar.
 
 ## getMetadata(Key) {#getMetadata}
 
-**Beschreibung:** Ruft Informationen ab, die von der Access Enabler-Bibliothek als Metadaten bereitgestellt werden.
+**Beschreibung:** Ruft Informationen ab, die von der Access Enabler-Bibliothek als Metadaten bereitgestellt werden.
 
-Es gibt zwei Arten von Metadaten: 
+Es gibt zwei Arten von Metadaten:
 
-- **Statisch** (TTL des Authentifizierungstokens, TTL des Autorisierungstokens und Geräte-ID) 
+- **Statisch** (TTL des Authentifizierungstokens, TTL des Autorisierungstokens und Geräte-ID)
 - **Benutzermetadaten** (Dies umfasst benutzerspezifische Informationen, die vom MVPD an das Gerät des Benutzers während der Authentifizierungs- und/oder Autorisierungsflüsse weitergegeben werden.)
 
 **Weitere Informationen:** [Benutzermetadaten](#UserMetadata)
@@ -237,19 +236,19 @@ Es gibt zwei Arten von Metadaten: 
 
    - Wenn der Schlüssel `"TTL_AUTHZ"` und params ist ein Array, das die Ressourcen-ID als Zeichenfolge enthält. Anschließend wird die Abfrage durchgeführt, um die Ablaufzeit des Autorisierungstokens zu erhalten, das mit der angegebenen Ressource verknüpft ist.
 
-   - Wenn der Schlüssel `"DEVICEID"` dann erfolgt die Abfrage, um die aktuelle Geräte-ID abzurufen. Beachten Sie, dass diese Funktion standardmäßig deaktiviert ist. Programmierer sollten sich an die Adobe wenden, um Informationen über Aktivierung und Gebühren zu erhalten.
+   - Wenn der Schlüssel `"DEVICEID"` dann erfolgt die Abfrage, um die aktuelle Geräte-ID abzurufen. Beachten Sie, dass diese Funktion standardmäßig deaktiviert ist und Programmierer sich an Adobe wenden sollten, um Informationen über Aktivierung und Gebühren zu erhalten.
 
-   - Wenn der Schlüssel aus der folgenden Liste von Benutzer-Metadatentypen stammt, wird ein JSON-Objekt, das die entsprechenden Benutzermetadaten enthält, an die [`setMetadataStatus()`](#setmetadatastatuskey-encrypted-data-setmetadatastatuskeyencrypteddata) Callback-Funktion:
+   - Wenn der Schlüssel aus der folgenden Liste von Benutzer-Metadatentypen stammt, wird ein JSON-Objekt mit den entsprechenden Benutzermetadaten an die [`setMetadataStatus()`](#setmetadatastatuskey-encrypted-data-setmetadatastatuskeyencrypteddata) Callback-Funktion:
 
-   - `"zip"` - Postleitzahl
+   - `"zip"` - Postleitzahl
 
-   - `"encryptedZip"` - Verschlüsselte Postleitzahl
+   - `"encryptedZip"` - Verschlüsselte Postleitzahl
 
-   - `"householdID"` - Kennung des Haushalts. Wenn ein MVPD keine Unterkonten unterstützt, ist dies mit der userID identisch.
+   - `"householdID"` - Haushaltskennung. Wenn ein MVPD keine Unterkonten unterstützt, ist dies mit der userID identisch.
 
-   - `"maxRating"` - Maximale elterliche Bewertung für den Benutzer
+   - `"maxRating"` - Maximale elterliche Bewertung für den Benutzer
 
-   - `"userID"` - Die Benutzer-ID. Wenn ein MVPD Unterkonten unterstützt und der Benutzer nicht das Hauptkonto ist, unterscheidet sich die Benutzer-ID von der Haushalts-ID.
+   - `"userID"` - Die Benutzer-ID. Wenn ein MVPD Unterkonten unterstützt und der Benutzer nicht das Hauptkonto ist, unterscheidet sich die Benutzer-ID von der Haushalts-ID.
 
    - `"channelID"` - Die Liste der Kanäle, die der Benutzer anzeigen darf
 
@@ -266,7 +265,8 @@ Es gibt zwei Arten von Metadaten: 
    - `"acctID"` - Konto-ID
 
    - `"acctParentID"` - Übergeordnete Kontokennung
-   **Hinweis**: Die tatsächlichen Benutzermetadaten, die einem Programmierer zur Verfügung stehen, hängen davon ab, was ein MVPD zur Verfügung stellt.  Siehe [Benutzermetadaten](#UserMetadata) für die aktuelle Liste der verfügbaren Benutzermetadaten.
+
+  **Hinweis**: Die tatsächlichen Benutzermetadaten, die einem Programmierer zur Verfügung stehen, hängen davon ab, was ein MVPD zur Verfügung stellt.  Siehe [Benutzermetadaten](#UserMetadata) für die aktuelle Liste der verfügbaren Benutzermetadaten.
 
 
 Beispiel:
@@ -288,9 +288,9 @@ Beispiel:
       }
     }
 ```
- 
 
-**Ausgelöste Rückrufe:** [setMetadataStatus()](#setmetadatastatuskey-encrypted-data-setmetadatastatuskeyencrypteddata)
+
+**Ausgelöste Rückrufe:** [setMetadataStatus()](#setmetadatastatuskey-encrypted-data-setmetadatastatuskeyencrypteddata)
 
 </br>
 
@@ -301,9 +301,9 @@ Beispiel:
 
 ## setSelectedProvider(providerId) {#setSelectedProvider}
 
-**Beschreibung:** Rufen Sie diese Funktion auf, wenn der Benutzer über die Benutzeroberfläche zur Anbieterauswahl einen MVPD ausgewählt hat, um die Anbieterauswahl an den Access Enabler zu senden, oder rufen Sie diese Funktion mit einem Nullparameter auf, falls der Benutzer die Benutzeroberfläche zur Anbieterauswahl ohne Auswahl eines Anbieters verworfen hat. 
+**Beschreibung:** Rufen Sie diese Funktion auf, wenn der Benutzer über die Benutzeroberfläche zur Anbieterauswahl einen MVPD ausgewählt hat, um die Anbieterauswahl an den Access Enabler zu senden, oder rufen Sie diese Funktion mit einem Nullparameter auf, falls der Benutzer die Benutzeroberfläche zur Anbieterauswahl ohne Auswahl eines Anbieters verworfen hat.
 
-**Ausgelöste Rückrufe:**[ setAuthentcationStatus()](#setauthenticationstatusisauthenticated-errorcode), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata)
+**Ausgelöste Rückrufe:**[ setAuthentcationStatus()](#setauthenticationstatusisauthenticated-errorcode), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata)
 
 </br>
 
@@ -315,12 +315,12 @@ Beispiel:
 
 **Beschreibung:** Ruft die Ergebnisse der Auswahl des Kunden im Dialogfeld zur Anbieterauswahl ab. Dies kann jederzeit nach der anfänglichen Authentifizierungsprüfung verwendet werden.
 
-Diese Funktion ist asynchron und gibt ihr Ergebnis an Ihre `selectedProvider()` Callback-Funktion.
+Diese Funktion ist asynchron und gibt ihr Ergebnis an Ihre `selectedProvider()` Callback-Funktion.
 
-- **MVPD** Der derzeit ausgewählte MVPD oder null, wenn kein MVPD ausgewählt wurde.
-- **AE_State** Das Ergebnis der Authentifizierung für den aktuellen Kunden lautet &quot;Neuer Benutzer&quot;, &quot;Benutzer nicht authentifiziert&quot;oder &quot;Benutzer authentifiziert&quot;.
+- **MVPD** Der derzeit ausgewählte MVPD oder null, wenn kein MVPD ausgewählt wurde.
+- **AE_State** Das Ergebnis der Authentifizierung für den aktuellen Kunden lautet &quot;Neuer Benutzer&quot;, &quot;Benutzer nicht authentifiziert&quot;oder &quot;Benutzer authentifiziert&quot;.
 
- **Ausgelöste Rückrufe:** [selectedProvider()](#getselectedprovider-getselectedprovider)
+**Ausgelöste Rückrufe:** [selectedProvider()](#getselectedprovider-getselectedprovider)
 
 </br>
 
@@ -332,8 +332,8 @@ Diese Funktion ist asynchron und gibt ihr Ergebnis an Ihre `selectedProvider()`
 
 **Beschreibung:** Meldet den aktuellen Kunden ab und löscht alle Authentifizierungs- und Autorisierungsinformationen für diesen Benutzer. Löscht alle authN- und authZ-Token aus dem System des Kunden.
 
- **Ausgelöste Rückrufe:** [setAuthentcationStatus()](#setauthenticationstatusisauthenticated-errorcode)
-</br> 
+**Ausgelöste Rückrufe:** [setAuthentcationStatus()](#setauthenticationstatusisauthenticated-errorcode)
+</br>
 
 [Zurück zum Anfang](#top)
 
@@ -368,14 +368,14 @@ Sie müssen diese Rückrufe implementieren, um die Antworten auf Ihre asynchrone
 
 ## setConfig(configXML) {#setconfig(configXML)}
 
-**Beschreibung:** Implementieren Sie diesen Rückruf, um die Konfigurationsinformationen und die MVPD-Liste zu erhalten.
+**Beschreibung:** Implementieren Sie diesen Rückruf, um die Konfigurationsinformationen und die MVPD-Liste zu erhalten.
 
 **Parameter:**
 
 - *configXML*: xml -Objekt, das die Konfiguration für den aktuellen ANFORDERER einschließlich der MVPD-Liste enthält.
 
- 
-**Ausgelöst von:** [setRequestor()](#setrequestor-inrequestorid-endpoints-optionssetreq)
+
+**Ausgelöst von:** [setRequestor()](#setrequestor-inrequestorid-endpoints-optionssetreq)
 
 </br>
 
@@ -385,11 +385,11 @@ Sie müssen diese Rückrufe implementieren, um die Antworten auf Ihre asynchrone
 
 ## displayProviderDialog(providers) {#displayproviderdialog(providers)}
 
-**Beschreibung:** Implementieren Sie diesen Rückruf, um Ihre eigene benutzerdefinierte Benutzeroberfläche zur Anbieterauswahl aufzurufen. Ihr Dialogfeld sollte den Anzeigenamen (und das optionale Logo) verwenden, um die Auswahlmöglichkeiten des Kunden bereitzustellen. Wenn der Kunde eine Auswahl getroffen und das Dialogfeld abgelehnt hat, senden Sie die zugehörige ID für den ausgewählten Anbieter im Aufruf an *setSelectedProvider()*.
+**Beschreibung:** Implementieren Sie diesen Rückruf, um Ihre eigene benutzerdefinierte Benutzeroberfläche zur Anbieterauswahl aufzurufen. Ihr Dialogfeld sollte den Anzeigenamen (und das optionale Logo) verwenden, um die Auswahlmöglichkeiten des Kunden bereitzustellen. Wenn der Kunde eine Auswahl getroffen und das Dialogfeld abgelehnt hat, senden Sie die zugehörige ID für den ausgewählten Anbieter im Aufruf an *setSelectedProvider()*.
 
 **Parameter:**
 
-- *Anbieter* - Ein Array von Objekten, die die angeforderten MVPDs darstellen:
+- *Anbieter* - Ein Array von Objekten, die die angeforderten MVPDs darstellen:
 
 ```JSON
     var mvpd = {
@@ -399,7 +399,7 @@ Sie müssen diese Rückrufe implementieren, um die Antworten auf Ihre asynchrone
     }
 ```
 
-**Ausgelöst von:** [getAuthentication()](#getauthenticationredirecturl-getauthenticationredirecturl), [getAuthorization()](#getauthorizationinresourceid-redirecturl-getauthorizationinresourceidredirecturl)
+**Ausgelöst von:** [getAuthentication()](#getauthenticationredirecturl-getauthenticationredirecturl), [getAuthorization()](#getauthorizationinresourceid-redirecturl-getauthorizationinresourceidredirecturl)
 
 </br>[Zurück zum Anfang](#top)
 
@@ -411,7 +411,7 @@ Sie müssen diese Rückrufe implementieren, um die Antworten auf Ihre asynchrone
 
 **Ausgelöst von:**[ setSelectedProvider()](#setselectedproviderproviderid-setselectedprovider)
 
-</br> [Zurück zum Anfang](#top)
+</br> [Zurück zum Anfang](#top)
 
 </br>
 
@@ -426,11 +426,11 @@ Sie müssen diese Rückrufe implementieren, um die Antworten auf Ihre asynchrone
 
 **Parameter:**
 
-- *isAuthenticated* - Stellt den Authentifizierungsstatus bereit: 1 (authentifiziert) oder 0 (nicht authentifiziert).
-- *errorCode* - Fehler, der bei der Bestimmung des Authentifizierungsstatus aufgetreten ist. Eine leere Zeichenfolge, wenn keine.
+- *isAuthenticated* - Authentifizierungsstatus: 1 (authentifiziert) oder 0 (nicht authentifiziert).
+- *errorCode* - Fehler, der bei der Bestimmung des Authentifizierungsstatus aufgetreten ist. Eine leere Zeichenfolge, wenn keine.
 
- 
-**Ausgelöst von:** [checkAuthentication()](#checkauthn-checkauthn), [getAuthentication()](#getauthenticationredirecturl-getauthenticationredirecturl), [checkAuthorization()](#checkauthorizationinresourceid-checkauthorizationinresourceid)
+
+**Ausgelöst von:** [checkAuthentication()](#checkauthn-checkauthn), [getAuthentication()](#getauthenticationredirecturl-getauthenticationredirecturl), [checkAuthorization()](#checkauthorizationinresourceid-checkauthorizationinresourceid)
 
 </br>
 
@@ -442,10 +442,10 @@ Sie müssen diese Rückrufe implementieren, um die Antworten auf Ihre asynchrone
 
 >[!CAUTION]
 >
->Gerätetyp und Betriebssystem werden durch die Verwendung einer öffentlichen Java-Bibliothek (<http://java.net/projects/user-agent-utils>) und die Benutzeragenten-Zeichenfolge. Beachten Sie, dass diese Informationen nur als grobe Methode zur Unterteilung von Betriebsmetriken in Gerätekategorien bereitgestellt werden. Diese Adobe kann jedoch keine Verantwortung für fehlerhafte Ergebnisse übernehmen. Verwenden Sie die neue Funktion entsprechend.
+>Gerätetyp und Betriebssystem werden durch die Verwendung einer öffentlichen Java-Bibliothek (<http://java.net/projects/user-agent-utils>) und die Benutzeragenten-Zeichenfolge. Beachten Sie, dass diese Informationen nur als grobe Methode zur Unterteilung von Betriebsmetriken in Gerätekategorien bereitgestellt werden, dass Adobe jedoch keine Verantwortung für fehlerhafte Ergebnisse übernehmen kann. Verwenden Sie die neue Funktion entsprechend.
 
-**Beschreibung:** Implementieren Sie diesen Rückruf, um Tracking-Daten zu empfangen, wenn bestimmte Ereignisse auftreten. Sie können dies beispielsweise verwenden, um zu verfolgen, wie viele Benutzer sich mit denselben Anmeldedaten angemeldet haben. Das Tracking ist derzeit nicht konfigurierbar. Mit Adobe Primetime-Authentifizierung 1.6 `sendTrackingData()` enthält außerdem Informationen zum Gerät, zum Access Enabler-Client und zum Betriebssystemtyp. Die `sendTrackingData()` callback bleibt abwärtskompatibel.\
- 
+**Beschreibung:** Implementieren Sie diesen Rückruf, um Tracking-Daten zu empfangen, wenn bestimmte Ereignisse auftreten. Sie können dies beispielsweise verwenden, um zu verfolgen, wie viele Benutzer sich mit denselben Anmeldedaten angemeldet haben. Das Tracking ist derzeit nicht konfigurierbar. Mit Adobe Primetime-Authentifizierung 1.6 `sendTrackingData()` enthält außerdem Informationen zum Gerät, zum Access Enabler-Client und zum Betriebssystemtyp. Die `sendTrackingData()` callback bleibt abwärtskompatibel.
+
 - Mögliche Werte für den Gerätetyp:
    - Computer
    - Tablet
@@ -474,15 +474,15 @@ Daten sind für jeden Ereignistyp spezifisch:
 |:--- | :--- |
 | mvpdSelection | 0: Ausgewählter MVPD |
 |  | 1: Gerätetyp |
-|  | 2: Auf Enabler Client-Typ zugreifen |
-|  | 3: BS |
+|  | 2: Auf Enabler-Client-Typ zugreifen |
+|  | 3: Betriebssystem |
 | authenticationDetection | 0: Ob die Token-Anfrage erfolgreich war (true/false) |
 |  | 1: MVPD ID |
 |  | 2: GUID |
 |  | 3: Token bereits im Cache (true/false) |
 |  | 4: Gerätetyp |
-|  | 5: Auf Enabler Client-Typ zugreifen |
-|  | 6: BS |
+|  | 5: Auf Enabler-Client-Typ zugreifen |
+|  | 6: Betriebssystem |
 | authorizationDetection | 0: Ob die Token-Anfrage erfolgreich war (true/false) |
 |  | 1: MVPD ID |
 |  | 2: GUID |
@@ -490,11 +490,11 @@ Daten sind für jeden Ereignistyp spezifisch:
 |  | 4: Fehler |
 |  | 5: Details |
 |  | 6: Gerätetyp |
-|  | 7: Auf Enabler Client-Typ zugreifen |
-|  | 8: BS |
+|  | 7: Auf Enabler-Client-Typ zugreifen |
+|  | 8: Betriebssystem |
 
 
-**Ausgelöst von:** [checkAuthentication()](#checkauthn-checkauthn), [getAuthentication()](#getauthenticationredirecturl-getauthenticationredirecturl), [checkAuthorization()](#checkauthorizationinresourceid-checkauthorizationinresourceid), [getAuthorization()](#getauthorizationinresourceid-redirecturl-getauthorizationinresourceidredirecturl)
+**Ausgelöst von:** [checkAuthentication()](#checkauthn-checkauthn), [getAuthentication()](#getauthenticationredirecturl-getauthenticationredirecturl), [checkAuthorization()](#checkauthorizationinresourceid-checkauthorizationinresourceid), [getAuthorization()](#getauthorizationinresourceid-redirecturl-getauthorizationinresourceidredirecturl)
 
 </br>
 
@@ -506,7 +506,7 @@ Daten sind für jeden Ereignistyp spezifisch:
 
 **Beschreibung:** Implementieren Sie diesen Rückruf, um das kurzlebige Medien-Token (inToken) und die Kennung der Ressource (inRequestedResourceID) zu erhalten, für die eine Autorisierungsanfrage oder eine Anfrage zur Autorisierung durchgeführt wurde und die erfolgreich abgeschlossen wurde.
 
-**Ausgelöst von:** [checkAuthorization()](#checkAuthZ), [getAuthorization()](#getAuthZ)
+**Ausgelöst von:** [checkAuthorization()](#checkAuthZ), [getAuthorization()](#getAuthZ)
 </br>
 
 [Zurück zum Anfang](#top)
@@ -523,13 +523,13 @@ Daten sind für jeden Ereignistyp spezifisch:
 
 **Parameter:**
 
-- *inRequestedResourceID* - Eine Zeichenfolge, die die Ressourcen-ID angibt, die für die Autorisierungsanforderung verwendet wurde.
-- *inRequestErrorCode* - Eine Zeichenfolge, die den Adobe Primetime-Authentifizierungsfehlercode anzeigt und den Grund für den Fehler angibt. Mögliche Werte sind &quot;User Not Authenticated Error&quot;und &quot;User Not Authorized Error&quot;. Weitere Informationen finden Sie unten unter &quot;Callback-Fehler-Codes&quot;.
+- *inRequestedResourceID* - Eine Zeichenfolge, die die Ressourcen-ID angibt, die für die Autorisierungsanforderung verwendet wurde.
+- *inRequestErrorCode* - Eine Zeichenfolge, die den Fehlercode für die Adobe Primetime-Authentifizierung anzeigt und den Grund des Fehlers angibt. Mögliche Werte sind &quot;User Not Authenticated Error&quot;und &quot;User Not Authorized Error&quot;. Weitere Informationen finden Sie unten unter &quot;Callback-Fehlercodes&quot;.
 - *inRequestDetailedErrorMessage* - Eine zusätzliche beschreibende Zeichenfolge, die für die Anzeige geeignet ist. Wenn diese beschreibende Zeichenfolge aus keinem Grund verfügbar ist, sendet die Adobe Primetime-Authentifizierung eine leere Zeichenfolge **(&quot;&quot;)**.  Dies kann von einem MVPD verwendet werden, um benutzerdefinierte Fehlermeldungen oder umsatzbezogene Nachrichten zu übergeben. Wenn beispielsweise einem Abonnenten die Autorisierung für eine Ressource verweigert wird, kann der MVPD mit einer `*inRequestDetailedErrorMessage*` wie: **&quot;Sie haben derzeit keinen Zugriff auf diesen Kanal in Ihrem Paket. Wenn Sie Ihr Paket aktualisieren möchten, klicken Sie auf \*hier\*.&quot;** Die Nachricht wird von der Adobe Primetime-Authentifizierung über diesen Rückruf an die Website des Programmierers weitergeleitet. Der Programmierer hat dann die Möglichkeit, ihn anzuzeigen oder zu ignorieren. Die Adobe Primetime-Authentifizierung kann auch verwendet werden `*inRequestDetailedErrorMessage*` , um den Programmierer über die Bedingung zu informieren, die möglicherweise zu einem Fehler geführt hat. Beispiel: **&quot;Bei der Kommunikation mit dem Autorisierungsdienst des Providers ist ein Netzwerkfehler aufgetreten.&quot;**
 
- 
 
-**Ausgelöst von:**  [checkAuthorization()](#checkauthorizationinresourceid-checkauthorizationinresourceid), [getAuthorization()](#getauthorizationinresourceid-redirecturl-getauthorizationinresourceidredirecturl)
+
+**Ausgelöst von:**  [checkAuthorization()](#checkauthorizationinresourceid-checkauthorizationinresourceid), [getAuthorization()](#getauthorizationinresourceid-redirecturl-getauthorizationinresourceidredirecturl)
 </br>
 
 [Zurück zum Anfang](#top)
@@ -539,13 +539,13 @@ Daten sind für jeden Ereignistyp spezifisch:
 
 ## preauthorizedResources(authorizedResources) {#preauthorizedResources(authorizedResources)}
 
-**Beschreibung:** Durch den Access Enabler ausgelöster Rückruf, der die Liste der autorisierten Ressourcen bereitstellt, die nach einem Aufruf an `checkPreauthorizedResources()`.
+**Beschreibung:** Durch den Access Enabler ausgelöster Rückruf, der die Liste der autorisierten Ressourcen bereitstellt, die nach einem Aufruf an `checkPreauthorizedResources()`.
 
 **Parameter:**
 
 - *authorizedResources*: Die Liste der autorisierten Ressourcen.
 
-**Ausgelöst von:** [checkPreauthorizedResources()](#checkPreauthRes)
+**Ausgelöst von:** [checkPreauthorizedResources()](#checkPreauthRes)
 </br>
 
 [Zurück zum Anfang](#top)
@@ -554,15 +554,15 @@ Daten sind für jeden Ereignistyp spezifisch:
 
 ## setMetadataStatus(key, encrypted, data) {#setMetadataStatus(key,encrypted,data)}
 
-**Beschreibung:** Durch den Access Enabler ausgelöster Rückruf, der die über einen `getMetadata()` aufrufen.
+**Beschreibung:** Durch den Access Enabler ausgelöster Rückruf, der die über einen `getMetadata()` aufrufen.
 
-**Weitere Informationen:** [Benutzermetadaten](#userMetadata)
+**Weitere Informationen:** [Benutzermetadaten](#userMetadata)
 
 **Parameter:**
 
 - *key (String)*: Der Schlüssel der Metadaten, für die die Anfrage ausgeführt wurde.
-- *verschlüsselt (Boolesch)*: Eine Markierung, die angibt, ob der &quot;Wert&quot;verschlüsselt ist oder nicht. Wenn dies &quot;true&quot;ist, ist &quot;value&quot;tatsächlich eine JSON Web-verschlüsselte Darstellung des tatsächlichen Werts. 
-- *data (JSON-Objekt)*: Ein JSON-Objekt mit der Darstellung der Metadaten. Für einfache Anforderungen (&#39;`TTL_AUTHN`&#39;, &#39;`TTL_AUTHZ`&#39;, &#39;`DEVICEID`&#39;), ist das Ergebnis eine Zeichenfolge (die die Authentifizierungs-TTL, die Autorisierungs-TTL oder die Geräte-ID darstellt). Bei einer User Metadata-Anfrage kann das Ergebnis ein Primitive- oder JSON-Objekt sein, das die Metadaten-Payload darstellt. Die tatsächliche Struktur der JSON-Benutzermetadatenobjekte ähnelt der folgenden:
+- *verschlüsselt (Boolesch)*: Eine Markierung, die angibt, ob der &quot;Wert&quot;verschlüsselt ist oder nicht. Wenn dies &quot;true&quot;ist, ist &quot;value&quot;tatsächlich eine JSON Web-verschlüsselte Darstellung des tatsächlichen Werts.
+- *data (JSON-Objekt)*: Ein JSON-Objekt mit der Darstellung der Metadaten. Für einfache Anfragen (&#39;`TTL_AUTHN`&#39;, &#39;`TTL_AUTHZ`&#39;, &#39;`DEVICEID`&#39;), ist das Ergebnis eine Zeichenfolge (die die Authentifizierungs-TTL, die Autorisierungs-TTL oder die Geräte-ID darstellt). Bei einer User Metadata-Anfrage kann das Ergebnis ein Primitive- oder JSON-Objekt sein, das die Metadaten-Payload darstellt. Die tatsächliche Struktur der JSON-Benutzermetadatenobjekte ähnelt der folgenden:
 
 ```JSON
     {
@@ -580,7 +580,7 @@ Daten sind für jeden Ereignistyp spezifisch:
             channelID: ["channel-1", "channel-2"]
     }
 ```
- 
+
 
 Beispiel:
 
@@ -595,9 +595,9 @@ Beispiel:
         alert(key + "=" + data);
     }
 ```
- 
 
-**Ausgelöst von:** [`getMetadata()`](#getmetadatakey-getmetadata)
+
+**Ausgelöst von:** [`getMetadata()`](#getmetadatakey-getmetadata)
 </br>
 [Zurück zum Anfang](#top)
 
@@ -605,12 +605,12 @@ Beispiel:
 
 ## selectedProvider(result) {#selectedProvider(result)}
 
-**Beschreibung:** Implementieren Sie diesen Rückruf, um das derzeit ausgewählte MVPD und das Ergebnis der Authentifizierung des aktuellen Benutzers zu erhalten, der in der `result` Parameter. Die `result` -Parameter ist ein Objekt mit den folgenden Eigenschaften:
+**Beschreibung:** Implementieren Sie diesen Rückruf, um das derzeit ausgewählte MVPD und das Ergebnis der Authentifizierung des aktuellen Benutzers zu erhalten, der in der `result` -Parameter. Die `result` -Parameter ist ein Objekt mit den folgenden Eigenschaften:
 
-- **MVPD** Der derzeit ausgewählte MVPD oder null, wenn kein MVPD ausgewählt wurde.
-- **AE\_state** Das Ergebnis der Authentifizierung für den aktuellen Benutzer, einer von &quot;New User&quot;, &quot;User Not Authenticated&quot; oder &quot;User Authenticated&quot;
+- **MVPD** Der derzeit ausgewählte MVPD oder null, wenn kein MVPD ausgewählt wurde.
+- **AE\_state** Das Ergebnis der Authentifizierung für den aktuellen Benutzer, einer von &quot;New User&quot;, &quot;User Not Authenticated&quot; oder &quot;User Authenticated&quot;
 
- **Ausgelöst von:** [getSelectedProvider()](#getSelProv)
+**Ausgelöst von:** [getSelectedProvider()](#getSelProv)
 
 </br>
 
@@ -620,20 +620,20 @@ Beispiel:
 
 ### Callback-Fehlercodes {#callback-error-codes}
 
-| Allgemeine Fehler |  |
+| Allgemeine Fehler | |
 |:--- | :--- | 
 | Interner Fehler | Beim Versuch, eine Anfrage zu verarbeiten, ist ein Systemfehler aufgetreten. |
-| Fehler bei Provider nicht ausgewählt | Tritt auf, wenn der Kunde im Dialogfeld zur Anbieterauswahl abbricht |
+| Fehler bei Provider nicht ausgewählt | Tritt auf, wenn Kunden im Dialogfeld zur Anbieterauswahl abbrechen |
 | Fehler bei Provider nicht verfügbar | Tritt auf, wenn keine Anbieter verfügbar sind. |
 
-| Authentifizierungsfehler |  |
+| Authentifizierungsfehler | |
 |:--- | :--- | 
 | Generischer Authentifizierungsfehler | Wird zurückgegeben, wenn der Grund nicht bekannt ist oder nicht veröffentlicht werden kann. |
 | Interner Authentifizierungsfehler | Beim Authentifizierungsversuch ist ein Systemfehler aufgetreten. |
-| Fehler &quot;Benutzer nicht authentifiziert&quot; | Der Benutzer ist nicht authentifiziert. |
+| Benutzer nicht authentifiziert Fehler | Der Benutzer ist nicht authentifiziert. |
 | Fehler bei mehreren Authentifizierungsanforderungen | Zusätzliche Authentifizierungsanfragen wurden empfangen, bevor der erste abgeschlossen wurde. |
 
-| Autorisierungsfehler |  |
+| Autorisierungsfehler | |
 |:--- | :--- | 
 | Allgemeiner Autorisierungsfehler | Wird zurückgegeben, wenn der Grund nicht bekannt ist oder nicht veröffentlicht werden kann. |
 | Interner Autorisierungsfehler | Beim Autorisieren ist ein Systemfehler aufgetreten. |
@@ -652,4 +652,3 @@ Beispiel:
 -->
 
 [Zurück zum Anfang](#top)
-

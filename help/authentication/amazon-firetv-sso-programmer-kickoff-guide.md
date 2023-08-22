@@ -1,19 +1,19 @@
 ---
 title: Amazon fireTV SSO - Leitfaden zum Programmstart
 description: Amazon fireTV SSO - Leitfaden zum Programmstart
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: cf9ba614-57ad-46c3-b154-34204b38742d
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%
 
 ---
 
-
 # Amazon fireTV SSO - Leitfaden zum Programmstart {#amazon-firetv-sso---programmer-kick-off-guide}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 </br>
 
@@ -23,7 +23,7 @@ In diesem Dokument werden die für die Integration der neuen **Das fireTV-SDK de
 
 ## Integration auf hoher Ebene in Architektur und Betriebssysteme {#high}
 
-Um Single-Sign-On zwischen TV-Programmen überall auf der Amazon-BrandTV-Plattform zu erreichen und um das Gesamterlebnis auf dieser Plattform zu verbessern, haben wir beschlossen, unser Core-SDK auf der Ebene von fireTV OS zu integrieren. Programmierer müssen mit einer von Adobe bereitgestellten Stub-Bibliothek kompilieren. Die tatsächliche Funktionalität wird von der Bibliothek der Adobe bereitgestellt, die im BrandTV-Betriebssystem von Amazon verfügbar ist.
+Um Single-Sign-On zwischen TV-Programmen überall auf der Amazon-BrandTV-Plattform zu erreichen und um das Gesamterlebnis auf dieser Plattform zu verbessern, haben wir beschlossen, unser Core-SDK auf der Ebene von fireTV OS zu integrieren. Programmierer müssen mit einer von Adobe bereitgestellten Stub-Bibliothek kompilieren. Die tatsächliche Funktionalität wird von der Adobe-Bibliothek bereitgestellt, die im BrandTV-Betriebssystem von Amazon vorhanden ist.
 
 Solange Amazon nicht über einen &quot;fireTV&quot;-Simulator verfügt, der unsere Bibliothek auf Betriebssystemebene integriert, wäre die Entwicklung nur mit echten &quot;fireTV&quot;-Geräten möglich.
 
@@ -37,7 +37,7 @@ Solange Amazon nicht über einen &quot;fireTV&quot;-Simulator verfügt, der unse
 
 ## Migration von einer clientless API-basierten App zu einer App, die auf dem TV SDK basiert {#migra1}
 
-Für die Migration von der ClientLess-API zum fireTV-SDK müssen Sie die Codebasis für die ClientLess-API entfernen und das neue fireTV-SDK integrieren.
+Für die Migration von der ClientLess-API zum fireTV-SDK müssen Sie die Codebase entfernen, die mit der ClientLess-API verknüpft ist, und das neue fireTV-SDK integrieren.
 
 Im Vergleich zur clientless-API-basierten App ist beim neuen fireTV-SDK die Authentifizierung beim ersten Bildschirm nicht mehr erforderlich, da eine zweite Bildschirmanauthentifizierung nicht mehr erforderlich ist.
 
@@ -56,7 +56,7 @@ Im Vergleich zum vorhandenen Android SDK wird der Authentifizierungsprozess beim
 1. Wie wird die **SSO** arbeiten?
 
    * SSO funktioniert für alle Programmierer-Anwendungen mit Adobe Primetime-Authentifizierung, die das neue fireTV-SDK auf demselben Amazon-Feuerfernsehgerät verwenden
-   * SSO zwischen Programmer-Apps, die in der clientlosen REST-API implementiert sind, und Apps, die im fireTV-SDK implementiert sind **wird NICHT unterstützt**
+   * SSO zwischen Programmer-Apps, die in der clientlosen REST-API implementiert sind, und Apps, die im fireTV-SDK implementiert sind **wird NICHT unterstützt**
 
 1. Wie hoch ist die MVPD-Abdeckung der fireTV SSO?
 
@@ -71,7 +71,7 @@ Im Vergleich zum vorhandenen Android SDK wird der Authentifizierungsprozess beim
    * Es gibt keine Verhaltensänderung in Bezug auf Authentifizierungs-TTLs.
    * Das erste gültige Authentifizierungstoken wird für die Durchführung der einmaligen Anmeldung verwendet. In diesem Fall verwenden alle anderen Anwendungen, die über SSO authentifiziert werden, dieselbe TTL, bis sie abläuft. Wenn Sie also von einer Anwendung zur anderen navigieren, teilt die zweite Anwendung die TTL der ersten authentifizierten Anwendung.
 
-1. Die **AbbauAPI** arbeiten?
+1. Wie die **AbbauAPI** arbeiten?
 
    * Für die Abbau-API sind keine Änderungen erforderlich. Das Benutzererlebnis entspricht dem auf Android-Geräten.
 

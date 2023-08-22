@@ -1,25 +1,25 @@
 ---
-title: Handbuch zur Programmierintegration - Übersicht
-description: Beschreibung des Leitfadens zur Programmintegration
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Leitfaden zur Programmierintegration - Übersicht
+description: Beschreibung des Leitfadens zur Programmiererintegration
+exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
 
 ---
 
-
-
 # Handbuch zur Programmierintegration {#programmer-integration-guide}
 
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>
 
 ## Cookbooks {#cookbooks}
 
-* AccessEnabler JavaScript-SDK-Cookbook 
+* AccessEnabler JavaScript-SDK-Cookbook
 * AccessEnabler iOS/tvOS SDK-Cookbook
 * AccessEnabler Android SDK-Cookbook
 * REST API-Cookbook (Server-zu-Server)

@@ -1,20 +1,19 @@
 ---
 title: Android vorautorisieren
 description: Android vorautorisieren
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: b5337595-135f-4981-a578-2da432f125d6
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-
-
-# Vorautorisieren {#preuthorize-android}
+# Vorautorisieren {#preuthorize-android}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 </br>
 
@@ -26,24 +25,23 @@ Die API-Methode zur Vorabautorisierung muss von Anwendungen verwendet werden, um
 Im Fall eines unerwarteten Fehlers (z. B. Netzwerkproblem, nicht verfügbarer MVPD-Autorisierungsendpunkt usw.) Wenn eine Vorabautorisierungs-API-Anfrage von den Adobe Primetime-Authentifizierungsdiensten verarbeitet wird, werden eine oder mehrere separate Fehlerinformationen für die betroffenen Ressourcen als Teil des Antwortergebnisses der Vorabautorisierung-API hinzugefügt.
 
 
-## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
+## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
 
 
-**Beschreibung:** 
+**Beschreibung:**
 
 **Verfügbarkeit:** v3.6.0+
 
 **Parameter:**
 
 - *PreauthorizeRequest*: Builder-Objekt, das zum Definieren der Anforderung verwendet wird
-- AccessEnablerCallback : Callback, der zum Zurückgeben der API-Antwort verwendet wird
+- AccessEnablerCallback : Rückruf, der zum Zurückgeben der API-Antwort verwendet wird
 - PreauthorizeResponse : Objekt, das zum Zurückgeben des API-Antwortinhalts verwendet wird
 
 
 ### public class PreauthorizeRequest {#androidpreauthorizerequest}
 
-**class PreauthorizeRequest.Builder**\
- 
+**class PreauthorizeRequest.Builder**
 
 ```java
     ///
@@ -87,7 +85,7 @@ Im Fall eines unerwarteten Fehlers (z. B. Netzwerkproblem, nicht verfügbarer MV
 
 
 **public Builder disableFeatures(Set\&lt;preauthorizerequest.feature>
-Funktionen)**
+-Funktionen)**
 
 ```
     ///
@@ -130,18 +128,18 @@ Funktionen)**
 ### `abstract class AccessEnablerCallback<PreauthorizeResponse> {#accessenablercallback}`
 
 ```java
-    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
+    /// Response callback called by the SDK when the preauthorize API request was fulfilled. The result is either a successful or an error result containing a status.
 
 **public void onResponse(PreauthorizeResponse result)**
 
- 
+ 
 
-    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
+    /// Failure callback called by the SDK when the preauthorize API request could not be serviced. The result is a failure result containing a status. 
 
 **public void onFailure(PreauthorizeResponse result)**
 ```
 
- 
+
 
 ### class PreauthorizeResponse {#preauthorizeresponse}
 
@@ -151,16 +149,16 @@ Funktionen)**
     ///   Might hold a `null` value.
     ///
 
-**public [Status](#status) getStatus()**
+**public [Status](#status) getStatus()**
 
- 
+ 
 
     ///
     /// - Returns: The list of preauthorization decisions. One decision for each resource.
     ///            The list might be empty in case of failure.
     ///
 
-**public List\<[Decision](#status)\> getDecisions()**
+**public List\<[Decision](#status)\> getDecisions()**
 ```
 
 
@@ -173,7 +171,7 @@ Funktionen)**
 
 ///
 
-**public int getStatus()**
+**public int getStatus()**
 
     ///
     /// - Returns: The standard Adobe Primetime Authentication services error code.
@@ -228,7 +226,7 @@ Funktionen)**
 
 </br>
 
->**Klasse** {#decision}
+>**class Decision** {#decision}
 
 ```
     ///
@@ -237,9 +235,9 @@ Funktionen)**
     /// - Returns: The resource id for which the decision was obtained.
     ///
 
-    public Status getId()
+    public Status getId()
 
- 
+ 
 
     ///
     /// This is a getter function.
@@ -247,9 +245,9 @@ Funktionen)**
     /// - Returns: The value of the flag indicating if the decision is successful or not.
     ///
 
-**public boolean isAuthorized()**
+**public boolean isAuthorized()**
 
- 
+ 
 
     ///
     /// This is a getter function.
@@ -258,14 +256,14 @@ Funktionen)**
     ///            Might hold a `null` value.
     ///
 
-**public Status getError()**
+**public Status getError()**
 ```
 
 </br>
 
 
 
-Beispiel : 
+Beispiel :
 
 
 ```java
@@ -289,4 +287,3 @@ Beispiel : 
         }
     });
 ```
-

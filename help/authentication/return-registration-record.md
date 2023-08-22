@@ -1,48 +1,48 @@
 ---
 title: Registrierungsdatensatz
 description: Registrierungsdatensatz
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
-
 # Registrierungsdatensatz {#return-registration-record}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 
 ## REST-API-Endpunkte {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
- 
+</br>
+
 
 ## Beschreibung {#description}
 
-Gibt den Registrierungs-Code-Datensatz mit der Registrierungs-Code-UUID, dem Registrierungs-Code und der Hash-Geräte-ID zurück. 
+Gibt den Registrierungs-Code-Datensatz mit der Registrierungs-Code-UUID, dem Registrierungs-Code und der Hash-Geräte-ID zurück.
 
- 
+
 
 <div>
 
 
-| Endpunkt | aufgerufen  </br>von | Eingabe   </br>Parameter | HTTP  </br>Methode | Reaktion | HTTP  </br>Reaktion |
+| Endpunkt | aufgerufen  </br>von | Eingabe   </br>Parameter | HTTP  </br>Methode | Reaktion | HTTP  </br>Reaktion |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Beispiel:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestId/regcode/TJJCFK?format=xml | Streaming-App</br></br>oder</br></br>Programmiererdienst | 1. Anforderer  </br>    (Pfadkomponente)</br>2.  Registrierungscode  </br>    (Pfadkomponente) | GET | XML oder JSON, die einen Registrierungs-Code und Informationen enthalten. Siehe Schema und Beispiel unten. | 200 |
+| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Beispiel:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestId/regcode/TJJCFK?format=xml | Streaming-App</br></br>oder</br></br>Programmiererdienst | 1. Antragsteller  </br>    (Pfadkomponente)</br>2.  Registrierungscode  </br>    (Pfadkomponente) | GET | XML oder JSON, die einen Registrierungs-Code und Informationen enthalten. Siehe Schema und Beispiel unten. | 200 |
 
 {style="table-layout:auto"}
 
@@ -50,7 +50,7 @@ Gibt den Registrierungs-Code-Datensatz mit der Registrierungs-Code-UUID, dem Reg
 
 | Eingabeparameter | Beschreibung |
 | --- | --- |
-| Anforderer | Die Programmer-Anfrage-ID, für die dieser Vorgang gültig ist. |
+| Anfragender | Die Programmer-Anfrage-ID, für die dieser Vorgang gültig ist. |
 | Registrierungscode | Der Registrierungscode-Wert, der auf dem Streaming-Gerät angezeigt wird (in den Authentifizierungsfluss einzugeben). |
 
 </br>
@@ -95,7 +95,7 @@ Gibt den Registrierungs-Code-Datensatz mit der Registrierungs-Code-UUID, dem Reg
 | --- | --- |
 | id | Vom Registrierungs-Code-Dienst generierte UUID |
 | code | Registrierungs-Code, der vom Registrierungs-Code-Dienst generiert wird |
-| Anforderer | Anforderer-ID |
+| Anfragender | Anforderer-ID |
 | mvpd | MVPD ID |
 | generiert | Zeitstempel der Erstellung des Registrierungs-Codes (in Millisekunden seit dem 1. Januar 1970 GMT) |
 | expires | Zeitstempel, wenn der Registrierungs-Code abläuft (in Millisekunden seit dem 1. Januar 1970 GMT) |

@@ -1,19 +1,19 @@
 ---
 title: Übersicht über das JavaScript-SDK
 description: Übersicht über das JavaScript-SDK
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 8756c804-a4c1-4ee3-b2b9-be45f38bdf94
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht über das JavaScript-SDK {#javascript-sdk-overview}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Einführung
 
@@ -21,7 +21,7 @@ Adobe empfiehlt dringend, zur neuesten JS v4.x der AccessEnabler-Bibliothek zu m
 
 Die Adobe Primetime-Authentifizierungs-JavaScript-Integration bietet Programmierern eine TV-Überall-Lösung in der bekannten JS-Webanwendungs-Entwicklungsumgebung. Die Hauptkomponenten der Integration sind Ihre &quot;High-Level&quot;-Anwendung (Benutzerinteraktion, Videopräsentation) und die von der Adobe bereitgestellte &quot;Low-Level&quot;-AccessEnabler-Bibliothek, die Ihren Eintrag zu den Berechtigungsflüssen ermöglicht und die Kommunikation mit Adobe Primetime-Authentifizierungsservern verarbeitet.
 
-Der allgemeine Berechtigungsfluss der Adobe Primetime-Authentifizierung wird im Abschnitt [Berechtigungsablauf für Programmierer](/help/authentication/entitlement-flow.md)und das Cookbook für die JavaScript-Integration führt Sie durch die Implementierung. In den folgenden Abschnitten finden Sie Beschreibungen und Beispiele für die Integration von JavaScript AccessEnabler .
+Der allgemeine Berechtigungsfluss für die Adobe Primetime-Authentifizierung wird im Abschnitt [Berechtigungsablauf für Programmierer](/help/authentication/entitlement-flow.md)und das Cookbook für die JavaScript-Integration führt Sie durch die Implementierung. In den folgenden Abschnitten finden Sie Beschreibungen und Beispiele für die Integration von JavaScript AccessEnabler .
 
 >[!IMPORTANT]
 >
@@ -29,15 +29,15 @@ Der allgemeine Berechtigungsfluss der Adobe Primetime-Authentifizierung wird im 
 
 ## Erstellen des MVPD-Auswahldialogfelds {#creating-the-mvpd-selection-dialog}
 
-Damit sich ein Benutzer bei seinem MVPD anmelden und authentifiziert werden kann, muss Ihre Seite oder Ihr Player eine Möglichkeit bieten, mit der er seinen MVPD identifizieren kann. Für die Entwicklung wird eine Standardversion eines MVPD-Auswahldialogfelds bereitgestellt. Zur Verwendung in der Produktion müssen Sie Ihren eigenen MVPD-Selektor implementieren. 
+Damit sich ein Benutzer bei seinem MVPD anmelden und authentifiziert werden kann, muss Ihre Seite oder Ihr Player eine Möglichkeit bieten, mit der er seinen MVPD identifizieren kann. Für die Entwicklung wird eine Standardversion eines MVPD-Auswahldialogfelds bereitgestellt. Zur Verwendung in der Produktion müssen Sie Ihren eigenen MVPD-Selektor implementieren.
 
-Wenn Sie bereits wissen, wer der Anbieter des Kunden ist, können Sie [MVPD programmgesteuert festlegen](/help/authentication/home.md), ohne Benutzerinteraktion. Die Technik ist identisch, umgeht jedoch den Schritt, das Dialogfeld Provider Selector aufzurufen und den Kunden zur Auswahl seines MVPD aufzufordern.
+Wenn Sie bereits wissen, wer der Anbieter des Kunden ist, können Sie [MVPD programmgesteuert festlegen](/help/authentication/home.md), ohne Benutzerinteraktion. Die Technik ist identisch, umgeht jedoch den Schritt, das Dialogfeld Provider Selector aufzurufen und den Kunden zur Auswahl seines MVPD aufzufordern.
 
 ## Anzeigen des Dienstleisters {#displaying-the-service-provider}
 
 Im folgenden Codebeispiel wird gezeigt, wie der Dienstleister für den aktuellen Kunden erkannt und angezeigt wird:
 
- **HTML** - Auf dieser Seite wird ein Abschnitt zur Seite hinzugefügt, in dem der ausgewählte Anbieter des Kunden angezeigt wird, sofern er bereits angemeldet ist:
+**HTML** - Auf dieser Seite wird ein Abschnitt zur Seite hinzugefügt, in dem der ausgewählte Anbieter des Kunden angezeigt wird, sofern er bereits angemeldet ist:
 
 ```HTML
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
@@ -74,7 +74,7 @@ Im folgenden Codebeispiel wird gezeigt, wie der Dienstleister für den aktuellen
     </body>
     </html>
 ```
- 
+
 
 **JavaScript** Diese JavaScript-Datei fragt den Access Enabler für den aktuellen Provider ab, wenn der Benutzer bereits angemeldet ist, und zeigt das Ergebnis im dafür reservierten Seitenabschnitt an. Außerdem wird ein MVPD-Auswahldialogfeld implementiert:
 
@@ -197,13 +197,13 @@ Im folgenden Codebeispiel wird gezeigt, wie der Dienstleister für den aktuellen
 
 ## Abmelden {#logout}
 
-Aufruf `logout()` , um den Abmeldevorgang zu starten. Diese Methode akzeptiert keine Argumente. Er meldet den aktuellen Benutzer ab, löscht alle Authentifizierungs- und Autorisierungsinformationen für diesen Benutzer und löscht alle AuthN- und AuthZ-Token aus dem lokalen System.
+Aufruf `logout()` , um den Abmeldevorgang zu starten. Diese Methode akzeptiert keine Argumente. Er meldet den aktuellen Benutzer ab, löscht alle Authentifizierungs- und Autorisierungsinformationen für diesen Benutzer und löscht alle AuthN- und AuthZ-Token aus dem lokalen System.
 
 In einigen Fällen ist Ihr Player nicht für die Verarbeitung von Benutzerabmeldungen verantwortlich:
 
- 
 
-- **Wenn der Abmeldevorgang von einer Site initiiert wird, die nicht in die Adobe Primetime-Authentifizierung integriert ist.** In diesem Fall kann der MVPD den Adobe Primetime-Authentifizierungsdienst Single Logout über eine Browser-Umleitung aufrufen. (Der Aufruf von SLO über einen Backchannel-Aufruf wird derzeit nicht unterstützt.)
+
+- **Wenn der Abmeldevorgang von einer Site initiiert wird, die nicht in die Adobe Primetime-Authentifizierung integriert ist.** In diesem Fall kann der MVPD den Adobe Primetime-Authentifizierungsdienst Single Logout über eine Browser-Umleitung aufrufen. (Der Aufruf von SLO über einen Backchannel-Aufruf wird derzeit nicht unterstützt.)
 
 >[!NOTE]
 >

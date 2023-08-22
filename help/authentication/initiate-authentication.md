@@ -1,42 +1,42 @@
 ---
 title: Authentifizierung initiieren
-description: Authentifizierung starten
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+description: Authentifizierung initiieren
+exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
 
 ---
 
-
 # Authentifizierung initiieren {#initiate-authentication}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## REST-API-Endpunkte {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 
 ## Beschreibung {#description}
 
-Initiiert den Authentifizierungsprozess durch Information über ein MVPD-Auswahlereignis. Erstellt einen Datensatz in der Primetime-Authentifizierungsdatenbank, der abgestimmt wird, wenn eine erfolgreiche Antwort vom MVPD empfangen wird. 
+Initiiert den Authentifizierungsprozess durch Information über ein MVPD-Auswahlereignis. Erstellt einen Datensatz in der Primetime-Authentifizierungsdatenbank, der abgestimmt wird, wenn eine erfolgreiche Antwort vom MVPD empfangen wird.
 
 
 
-| Endpunkt | aufgerufen  </br>von | Eingabe   </br>Parameter | HTTP  </br>Methode | Reaktion | HTTP  </br>Reaktion |
+| Endpunkt | aufgerufen  </br>von | Eingabe   </br>Parameter | HTTP  </br>Methode | Reaktion | HTTP  </br>Reaktion |
 | --- | --- | --- | --- | --- | --- |
 | &lt;sp_fqdn>/api/v1/authenticate | AuthN-Modul | 1. requestor_id (erforderlich)</br>2.  mso_id (erforderlich)</br>3.  reg_code (erforderlich)</br>4.  domain_name (erforderlich)</br>5.  noflash=true -  </br>    (Obligatorisch, Restparameter)</br>6.  no_iframe=true (Obligatorisch, Restparameter)</br>7.  Zusätzliche Parameter (optional)</br>8.  redirect_url (erforderlich) | GET | Die Anmelde-Webanwendung wird zur MVPD-Anmeldeseite weitergeleitet. | 302 für vollständige Umleitungsimplementierungen |
 
@@ -47,7 +47,7 @@ Initiiert den Authentifizierungsprozess durch Information über ein MVPD-Auswahl
 | --- | --- |
 | requestor_id | Der Programmierer-Anforderer, für den dieser Vorgang gültig ist. |
 | mso_id | Die MVPD-ID, für die dieser Vorgang gültig ist. |
-| reg_code | Der vom Reggie-Dienst generierte Registrierungs-Code. |
+| reg_code | Der vom Reggie-Dienst generierte Registrierungscode. |
 | domain_name | Die Ursprungsdomäne. |
 | redirect_url | Die Umleitungs-URL der Webapp-Anmeldung nach Abschluss der Authentifizierung. |
 
@@ -57,13 +57,12 @@ Initiiert den Authentifizierungsprozess durch Information über ein MVPD-Auswahl
 
 >[!IMPORTANT]
 > 
->**Wichtig: Obligatorische Parameter -** Unabhängig von der clientseitigen Implementierung sind alle oben genannten Parameter obligatorisch.
+>**Wichtig: Erforderliche Parameter -** Unabhängig von der clientseitigen Implementierung sind alle oben genannten Parameter obligatorisch.
 >
 >
->Beispiel:    
+>Beispiel:
 >
->
-```
+>```
 >domain_name=loginwebapp.com
 >mso_id=sampleMvpdId
 >reg_code=RO0885W
@@ -88,12 +87,10 @@ Initiiert den Authentifizierungsprozess durch Information über ein MVPD-Auswahl
 
 ### **Hinweise** {#notes}
 
-* Der Wert der `domain_name` muss auf einen der Domänennamen festgelegt sein, die bei der Primetime-Authentifizierung registriert sind. Weitere Informationen finden Sie unter [Registrierung und Initialisierung](/help/authentication/programmer-overview.md).
+* Der Wert der `domain_name` muss auf einen der Domänennamen festgelegt sein, die bei der Primetime-Authentifizierung registriert sind. Weitere Informationen finden Sie unter [Registrierung und Initialisierung](/help/authentication/programmer-overview.md).
 
 * [Vermeiden Sie die Verwendung von &quot;&amp;&#39;reg\_code&quot;in /authenticate request (Tech Note)](/help/authentication/clientless-avoid-using-reg-code-in-authenticate-request.md)
 
-* Die `redirect_url` -Parameter muss der letzte sein in der Reihenfolge
+* Die `redirect_url` -Parameter muss der letzte sein in der Reihenfolge
 
-* Der Wert der `redirect_url` Der Parameter muss URL-kodiert sein
-
-
+* Der Wert der `redirect_url` Der Parameter muss URL-kodiert sein

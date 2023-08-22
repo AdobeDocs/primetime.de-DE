@@ -1,42 +1,42 @@
 ---
 title: Autorisierungstoken abrufen
 description: Autorisierungstoken abrufen
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 0b010958-efa8-4dd9-b11b-5d10f51f5680
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
 
 ---
 
-
 # Autorisierungstoken abrufen {#retrieve-authorization-token}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## REST-API-Endpunkte {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 ## Beschreibung {#description}
 
-Ruft Autorisierungs-Token (AuthZ) ab.  
+Ruft Autorisierungs-Token (AuthZ) ab.
 
 
-| Endpunkt | aufgerufen  </br>von | Eingabe   </br>Parameter | HTTP  </br>Methode | Reaktion | HTTP  </br>Reaktion |
+| Endpunkt | aufgerufen  </br>von | Eingabe   </br>Parameter | HTTP  </br>Methode | Reaktion | HTTP  </br>Reaktion |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/tokens/authz</br></br>Beispiel:</br></br>&lt;sp_fqdn>/api/v1/tokens/authz | Streaming-App</br></br>oder</br></br>Programmiererdienst | 1. Antragsteller (erforderlich)</br>2.  deviceId (Obligatorisch)</br>3.  resource (erforderlich)</br>4.  device_info/X-Device-Info (erforderlich)</br>5.  _deviceType_</br> 6.  _deviceUser_ (Veraltet)</br>7.  _appId_ (Veraltet) | GET | 1. Erfolg</br>2.  Authentifizierungstoken  </br>    nicht gefunden oder abgelaufen:   </br>    XML erklärt Grund  </br>    für Autoren-Token nicht gefunden</br>3.  Autorisierungstoken  </br>    nicht gefunden:  </br>    XML-Erklärung</br>4.  Autorisierungstoken  </br>    abgelaufen:  </br>    XML-Erklärung | 200 - Erfolg  </br>412 - Keine AuthN</br></br>404 - No AuthZ</br></br>410 - AuthZ abgelaufen |
+| &lt;sp_fqdn>/api/v1/tokens/authz</br></br>Beispiel:</br></br>&lt;sp_fqdn>/api/v1/tokens/authz | Streaming-App</br></br>oder</br></br>Programmiererdienst | 1. Antragsteller (erforderlich)</br>2.  deviceId (Obligatorisch)</br>3.  resource (erforderlich)</br>4.  device_info/X-Device-Info (erforderlich)</br>5.  _deviceType_</br> 6.  _deviceUser_ (Veraltet)</br>7.  _appId_ (Veraltet) | GET | 1. Erfolg</br>2.  Authentifizierungstoken  </br>    nicht gefunden oder abgelaufen:   </br>    XML erklärt Grund  </br>    für Autoren-Token nicht gefunden</br>3.  Autorisierungstoken  </br>    nicht gefunden:  </br>    XML-Erklärung</br>4.  Autorisierungstoken  </br>    abgelaufen:  </br>    XML-Erklärung | 200 - Erfolg  </br>412 - Keine AuthN</br></br>404 - No AuthZ</br></br>410 - AuthZ abgelaufen |
 
 {style="table-layout:auto"}
 
@@ -44,20 +44,20 @@ Ruft Autorisierungs-Token (AuthZ) ab.  
 
 | Eingabeparameter | Beschreibung |
 | --- | --- |
-| Anforderer | Die Programmer-Anfrage-ID, für die dieser Vorgang gültig ist. |
+| Anfragender | Die Programmer-Anfrage-ID, für die dieser Vorgang gültig ist. |
 | deviceId | Die Geräte-ID-Bytes. |
 | resource | Eine Zeichenfolge, die eine resourceId (oder ein MRSS-Fragment) enthält, den von einem Benutzer angeforderten Inhalt identifiziert und von MVPD-Autorisierungsendpunkten erkannt wird. |
-| device_info/</br></br>X-Device-Info | Informationen zum Streaming-Gerät.</br></br>**Hinweis**: Dieser Parameter kann als URL-Parameter an device_info übergeben werden. Aufgrund der potenziellen Größe dieses Parameters und der Längenbeschränkungen einer GET-URL sollte er jedoch als X-Device-Info in der HTTP-Kopfzeile übergeben werden. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
-| _deviceType_ | Der Gerätetyp (z. B. Roku, PC).</br></br>Wenn dieser Parameter korrekt festgelegt ist, bietet ESM Metriken an, die [aufgeschlüsselt nach Gerätetyp](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) bei Verwendung von ClientLess, sodass verschiedene Arten der Analyse durchgeführt werden können, z. B. Roku, AppleTV und Xbox.</br></br>Siehe [Vorteile der Verwendung von Client-losen Gerätetypparametern in Pass-Metriken ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Hinweis**: ersetzt device_info diesen Parameter. |
+| device_info/</br></br>X-Device-Info | Informationen zum Streaming-Gerät.</br></br>**Hinweis**: Dieser Parameter kann als URL-Parameter an device_info übergeben werden. Aufgrund der potenziellen Größe dieses Parameters und der Längenbeschränkungen einer GET-URL sollte er jedoch als X-Device-Info in der HTTP-Kopfzeile übergeben werden. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
+| _deviceType_ | Der Gerätetyp (z. B. Roku, PC).</br></br>Wenn dieser Parameter korrekt festgelegt ist, bietet ESM Metriken an, die [aufgeschlüsselt nach Gerätetyp](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) bei Verwendung von ClientLess, sodass verschiedene Arten der Analyse durchgeführt werden können, z. B. Roku, AppleTV und Xbox.</br></br>Siehe [Vorteile der Verwendung von Client-losen Gerätetypparametern in Pass-Metriken ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Hinweis**: Der Parameter device_info ersetzt diesen Parameter. |
 | _deviceUser_ | Die Benutzer-ID des Geräts. |
-| _appId_ | Die Anwendungs-ID/der Name. </br></br>**Hinweis**: ersetzt device_info diesen Parameter. |
+| _appId_ | Die Anwendungs-ID/der Name. </br></br>**Hinweis**: Der Parameter device_info ersetzt diesen. |
 
 {style="table-layout:auto"}
 
 
 ### Beispielantwort {#response}
 
- 
+
 
 #### Erfolg
 
@@ -74,7 +74,7 @@ Ruft Autorisierungs-Token (AuthZ) ab.  
     </authorization>
 ```
 
- 
+
 
 **JSON:**
 
@@ -88,7 +88,7 @@ Ruft Autorisierungs-Token (AuthZ) ab.  
     }
 ```
 
- </br>
+</br>
 
 
 #### Authentifizierungstoken nicht gefunden oder abgelaufen:
@@ -103,7 +103,7 @@ Ruft Autorisierungs-Token (AuthZ) ab.  
     </error>
 ```
 
- 
+
 
 **JSON:**
 
@@ -116,7 +116,7 @@ Ruft Autorisierungs-Token (AuthZ) ab.  
 ```
 
 </br>
- 
+
 
 #### Autorisierungstoken nicht gefunden:
 
@@ -130,7 +130,7 @@ Ruft Autorisierungs-Token (AuthZ) ab.  
     </error>
 ```
 
- 
+
 
 **JSON:**
 
@@ -144,7 +144,7 @@ Ruft Autorisierungs-Token (AuthZ) ab.  
 
 </br>
 
- 
+
 
 #### Autorisierungstoken abgelaufen:
 
@@ -158,7 +158,7 @@ Ruft Autorisierungs-Token (AuthZ) ab.  
     </error>
 ```
 
- 
+
 
 **JSON:**
 

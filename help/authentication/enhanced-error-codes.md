@@ -1,7 +1,8 @@
 ---
 title: Verbesserte Fehlercodes
 description: Verbesserte Fehlercodes
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '2356'
 ht-degree: 2%
@@ -12,7 +13,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Übersicht {#overview}
 
@@ -22,7 +23,7 @@ Um in der Programmeranwendung Enhanced Error Codes zu verwenden, muss eine Anfra
 
 ## Umgang mit Antwortfehlern {#response-error-handling}
 
-In den meisten Szenarien enthält die Primetime Authentication API zusätzliche Fehlerinformationen im Antworttext, um **aussagekräftiger Kontext** , um herauszufinden, warum ein bestimmter Fehler aufgetreten ist und/oder mögliche Lösungen zur automatischen Behebung des Problems.  *In bestimmten Fällen, bei denen es sich um Authentifizierungs- oder Abmeldevorgänge handelt, geben die Primetime-Authentifizierungsdienste möglicherweise eine HTML-Antwort oder einen leeren Hauptteil zurück. Weitere Informationen finden Sie in der API-Dokumentation.*
+In den meisten Szenarien enthält die Primetime-Authentifizierungs-API zusätzliche Fehlerinformationen im Antworttext, um **aussagekräftiger Kontext** , um herauszufinden, warum ein bestimmter Fehler aufgetreten ist und/oder mögliche Lösungen zur automatischen Behebung des Problems.  *In bestimmten Fällen, bei denen es sich um Authentifizierungs- oder Abmeldevorgänge handelt, geben die Primetime-Authentifizierungsdienste möglicherweise eine HTML-Antwort oder einen leeren Hauptteil zurück. Weitere Informationen finden Sie in der API-Dokumentation.*
 
 Während bestimmte Fehlertypen automatisch verarbeitet werden können (z. B. eine Autorisierungsanfrage im Fall einer Netzwerk-Zeitüberschreitung erneut auszuführen oder eine erneute Authentifizierung des Benutzers zu verlangen, wenn seine Sitzung abgelaufen ist), erfordern andere Typen möglicherweise Konfigurationsänderungen oder die Interaktion des Kundenbetreuungsteams. Es ist wichtig, dass Programmierer in solchen Fällen vollständige Fehlerinformationen erfassen und bereitstellen.
 
@@ -32,62 +33,62 @@ Die Primetime Authentication API gibt HTTP-Status-Codes im Bereich 400-500 zurü
 
 - Die 5xx-Fehlercodes implizieren, dass der Fehler vom Server erzeugt wird und dass der Server zusätzliche Arbeit zur Behebung des Problems benötigt.
 
-Die zusätzlichen Fehlerinformationen sind im Feld &quot;Fehler&quot;im Antworttext enthalten. 
+Die zusätzlichen Fehlerinformationen sind im Feld &quot;Fehler&quot;im Antworttext enthalten.
 
 
 
 
 | Name | Typ | Beispiel | Beschreibung |
 | --- | --- | --- | --- |
-| **error** | _Objekt_ | JSON <br>    {<br>        &quot;status&quot; : 403,<br>        &quot;code&quot;: &quot;network_connection_failure&quot;,<br>        &quot;message&quot;: &quot;Der Kontakt zu Ihren TV-Anbieterdiensten ist nicht möglich&quot;,<br>        &quot;helpUrl&quot;: &quot;&quot;,<br>        &quot;trace&quot;: &quot;12f6fef9-d2e0-422b-a9d7-60d799abe353&quot;,<br>        &quot;action&quot;: &quot;retry&quot;<br>    }<br><br>—<br><br>XML<br><br>`<``error``>`<br><br>`<``status``>403</``status``>`<br><br>`<``code``>network_connection_failure</``code``>`<br><br>`<``message``>Unable to contact your TV provider services</``message``>   <``helpUrl``></``helpUrl``>`<br><br>`<``trace``>12f6fef9-d2e0-422b-a9d7-60d799abe353</``trace``>`<br><br>`<``action``>retry</``action``>`<br><br>`</``error``> ` | Eine Sammlung oder Fehlerobjekte, die beim Versuch erfasst wurden, die Anfrage abzuschließen. |
+| **error** | _Objekt_ | JSON <br>    {<br>        &quot;status&quot; : 403,<br>        &quot;code&quot; : &quot;network_connection_failure&quot;,<br>        &quot;message&quot;: &quot;Verbindung zu den Diensten Ihres TV-Anbieters nicht möglich&quot;,<br>        &quot;helpUrl&quot; : &quot;&quot;,<br>        &quot;trace&quot; : &quot;12f6fef9-d2e0-422b-a9d7-60d799abe353&quot;,<br>        &quot;action&quot; : &quot;retry&quot;<br>    }<br><br>—<br><br>XML<br><br>`<``error``>`<br><br>`<``status``>403</``status``>`<br><br>`<``code``>network_connection_failure</``code``>`<br><br>`<``message``>Unable to contact your TV provider services</``message``>   <``helpUrl``></``helpUrl``>`<br><br>`<``trace``>12f6fef9-d2e0-422b-a9d7-60d799abe353</``trace``>`<br><br>`<``action``>retry</``action``>`<br><br>`</``error``> ` | Eine Sammlung oder Fehlerobjekte, die beim Versuch erfasst wurden, die Anfrage abzuschließen. |
 
 </br>
 
-Adobe Primetime-APIs, die mehrere Elemente verarbeiten (API für die Vorabautorisierung usw.), können mithilfe von Fehlerinformationen auf Elementebene anzeigen, ob die Verarbeitung für ein bestimmtes Element fehlgeschlagen ist und für andere Elemente erfolgreich war. In diesem Fall wird die ***&quot;error&quot;*** -Objekt befindet sich auf der Elementebene und der Antworttext kann mehrere ***&quot;errors&quot;*** Objekte - lesen Sie bitte die API-Dokumentation.
+Adobe Primetime-APIs, die mehrere Elemente verarbeiten (API für die Vorabautorisierung usw.), können mithilfe von Fehlerinformationen auf Elementebene anzeigen, ob die Verarbeitung für ein bestimmtes Element fehlgeschlagen ist und für andere Elemente erfolgreich war. In diesem Fall wird die ***&quot;error&quot;*** -Objekt befindet sich auf der Elementebene und der Antworttext kann mehrere ***&quot;errors&quot;*** Objekte - lesen Sie bitte die API-Dokumentation.
 
 </br>
 
 | Beispiel mit Teilerfolg und Fehler auf Artikelebene |
 | ---------------------- |
-| <pre lang="json">JSON <br>{<br>  &quot;id&quot;: &quot;TestStream1&quot;,<br>  &quot;authorized&quot;: true <br>}, </br>{ </br>  &quot;id&quot;: &quot;TestStream2&quot;, <br>   &quot;authorized&quot;: false, </br>   &quot;error&quot;: { <br> </br>      &quot;status&quot; : 403,<br>      &quot;code&quot;: &quot;network_connection_failure&quot;,<br>      &quot;message&quot;: &quot;Der Kontakt zu Ihren TV-Anbieterdiensten ist nicht möglich&quot;,<br>      &quot;details&quot;: &quot;&quot;,<br>      &quot;helpUrl&quot;: &quot;&quot;,<br>      &quot;trace&quot;: &quot;8bcb17f9-b172-47d2-86d9-3eb146eba85e&quot;,<br>      &quot;action&quot;: &quot;retry&quot;</br>    }<br> </br>   }<br> ] </br>} </pre> |
+| <pre lang="json">JSON <br>{<br>  &quot;id&quot; : &quot;TestStream1&quot;,<br>  &quot;authorized&quot;: true <br>}, </br>{ </br>  &quot;id&quot; : &quot;TestStream2&quot;, <br>   &quot;authorized&quot; : false, </br>   &quot;error&quot; : { <br> </br>      &quot;status&quot; : 403,<br>      &quot;code&quot; : &quot;network_connection_failure&quot;,<br>      &quot;message&quot;: &quot;Verbindung zu den Diensten Ihres TV-Anbieters nicht möglich&quot;,<br>      &quot;details&quot;: &quot;&quot;,<br>      &quot;helpUrl&quot; : &quot;&quot;,<br>      &quot;trace&quot; : &quot;8bcb17f9-b172-47d2-86d9-3eb146eba85e&quot;,<br>      &quot;action&quot; : &quot;retry&quot;</br>    }<br> </br>   }<br> ] </br>} </pre> |
 
 </br>
 
 Jedes Fehlerobjekt verfügt über die folgenden Parameter:
 
-| Name | Typ | Beispiel | Eingeschränkt | Beschreibung |
+| Name | Typ | Beispiel | Beschränkt | Beschreibung |
 |----|----|----|----|--------------|
 | Status | *integer* | 403 | ♦ | Der Antwort-HTTP-Statuscode wie in RFC 7231 dokumentiert (https://tools.ietf.org/html/rfc7231#section-6) <br> - 400 Ungültige Anfrage <br> - 400 Ungültige Anfrage <br> - 400 Ungültige Anfrage <br> - 401 Nicht autorisiert <br> - 403 Verboten <br> - 404 Nicht gefunden <br> - 405 Methode nicht zulässig <br> - 409 Konflikt <br> - 410 Stück <br> - 412 Vorbedingung fehlgeschlagen <br> - 429 Zu viele Anfragen <br> - 500 Interval server error <br> - 503 Dienst nicht verfügbar |
 | Code | *Zeichenfolge* | network_connection_failure | ♦ | Der standardmäßige Fehlercode für die Primetime-Authentifizierung. Die vollständige Liste der Fehler-Codes finden Sie unten. |
-| message | *Zeichenfolge* | Der TV-Provider kann nicht kontaktiert werden |  | Vom Menschen lesbare Nachricht, die dem Endbenutzer angezeigt werden kann. |
-| details | *Zeichenfolge* | Ihr Abonnement-Paket enthält nicht den Kanal &quot;Live&quot; |  | In einigen Fällen wird eine detaillierte Meldung von den MVPD-Autorisierungsendpunkten oder vom Programmierer durch Abbauregeln bereitgestellt. <br> <br> Beachten Sie, dass dieses Feld möglicherweise nicht in den Fehlerfeldern vorhanden ist, wenn von den Partnerdiensten keine benutzerdefinierte Nachricht empfangen wurde. |
-| helpUrl | *url* | &quot;&quot; |  | Eine URL, die Links zu weiteren Informationen über den Grund dieses Fehlers und mögliche Lösungen enthält. <br> <br>  Der URI stellt eine absolute URL dar und sollte nicht aus dem Fehlercode abgeleitet werden. Je nach Fehlerkontext kann eine andere URL angegeben werden. Beispielsweise liefert derselbe &quot;bad_request&quot;-Fehlercode verschiedene URLs für Authentifizierungs- und Autorisierungsdienste. |
-| trace | *Zeichenfolge* | 12f6fef9-d2e0-422b-a9d7-60d799abe353 |  | Eine eindeutige Kennung für diese Antwort, die verwendet werden kann, wenn der Support kontaktiert wird, um bestimmte Probleme in komplexeren Szenarien zu identifizieren. |
+| message | *Zeichenfolge* | Der TV-Provider kann nicht kontaktiert werden. | | Vom Menschen lesbare Nachricht, die dem Endbenutzer angezeigt werden kann. |
+| details | *Zeichenfolge* | Ihr Abonnement-Paket enthält keinen Live-Kanal | | In einigen Fällen wird eine detaillierte Meldung von den MVPD-Autorisierungsendpunkten oder vom Programmierer durch Abbauregeln bereitgestellt. <br> <br> Beachten Sie, dass dieses Feld möglicherweise nicht in den Fehlerfeldern vorhanden ist, wenn von den Partnerdiensten keine benutzerdefinierte Nachricht empfangen wurde. |
+| helpUrl | *url* | &quot;&quot; | | Eine URL, die Links zu weiteren Informationen über den Grund dieses Fehlers und mögliche Lösungen enthält. <br> <br>  Der URI stellt eine absolute URL dar und sollte nicht aus dem Fehlercode abgeleitet werden. Je nach Fehlerkontext kann eine andere URL angegeben werden. Beispielsweise liefert derselbe &quot;bad_request&quot;-Fehlercode verschiedene URLs für Authentifizierungs- und Autorisierungsdienste. |
+| trace | *Zeichenfolge* | 12f6fef9-d2e0-422b-a9d7-60d799abe353 | | Eine eindeutige Kennung für diese Antwort, die verwendet werden kann, wenn der Support kontaktiert wird, um bestimmte Probleme in komplexeren Szenarien zu identifizieren. |
 | action | *Zeichenfolge* | Wiederholen | ♦ | *Empfohlene Maßnahmen zur Behebung der Situation:* </br><br> -none - Leider gibt es keine vordefinierten Maßnahmen, um dieses Problem zu beheben. Dies könnte auf einen falschen Aufruf der öffentlichen API hindeuten </br><br>-configuration - Eine Konfigurationsänderung ist über das TVE-Dashboard oder durch Kontaktaufnahme mit dem Support erforderlich. </br><br>-application-registration - Der Antrag muss sich selbst registrieren. </br><br>-authentication - Der Benutzer muss sich authentifizieren oder erneut authentifizieren. </br><br>-authorization - Der Benutzer muss eine Autorisierung für die jeweilige Ressource erhalten. </br><br>-Abbau - Es sollte eine gewisse Form des Abbaus angewendet werden. </br><br>-retry - Ein erneuter Versuch mit der Anfrage kann das Problem lösen</br><br>-retry-after - Ein erneuter Versuch, die Anfrage nach dem angegebenen Zeitraum erneut durchzuführen, könnte das Problem lösen. |
 
 </br>
 
 **Hinweise:**
 
-- ***Eingeschränkt*** column *gibt an, ob der entsprechende Feldwert einen endlichen Satz darstellt* (z. B. vorhandene HTTP-Status-Codes für &quot;*status*&quot;). Zukünftige Aktualisierungen dieser Spezifikation könnten Werte zur eingeschränkten Liste hinzufügen, vorhandene Werte werden jedoch nicht entfernt oder geändert. Unbeschränkte Felder können in der Regel beliebige Daten enthalten, es gibt jedoch Einschränkungen, um eine angemessene Größe sicherzustellen.
+- ***Beschränkt*** column *gibt an, ob der entsprechende Feldwert einen endlichen Satz darstellt* (z. B. vorhandene HTTP-Status-Codes für &quot;*status*&quot;). Zukünftige Aktualisierungen dieser Spezifikation könnten Werte zur eingeschränkten Liste hinzufügen, vorhandene Werte werden jedoch nicht entfernt oder geändert. Unbeschränkte Felder können in der Regel beliebige Daten enthalten, es gibt jedoch Einschränkungen, um eine angemessene Größe sicherzustellen.
 
-- Jede Adobe-Antwort enthält eine &quot;Adobe-Request-Id&quot;, die die Client-Anfrage über unsere HTTP-Dienste hinweg identifiziert. Die &quot;**trace**&quot; -Feld ergänzt dies und sollte zusammen gemeldet werden. 
+- Jede Adobe-Antwort enthält eine &quot;Adobe-Request-Id&quot;, die die Client-Anfrage über unsere HTTP-Dienste hinweg identifiziert. Die &quot;**trace**&quot; -Feld ergänzt dies und sollte zusammen gemeldet werden.
 
 ## HTTP-Status-Codes und Fehlercodes {#http-status-codes-and-error-codes}
 
-Die Inkonsistenzen zwischen verschiedenen Fehlercodes und den zugehörigen HTTP-Status-Codes sind auf die Abwärtskompatibilitätsanforderungen bei älteren SDK und Anwendungen zurückzuführen (z. B. *unknown\_application* gibt 400 Bad Request zurück, während *unknown\_software\_statement* Erträge 401 Nicht autorisiert). Die Behebung dieser Inkonsistenzen wird in künftigen Ausführungen angestrebt. 
- 
+Die Inkonsistenzen zwischen verschiedenen Fehlercodes und den zugehörigen HTTP-Status-Codes sind auf die Abwärtskompatibilitätsanforderungen bei älteren SDK und Anwendungen zurückzuführen (z. B. *unknown\_application* gibt 400 Bad Request zurück, während *unknown\_software\_statement* Erträge 401 Nicht autorisiert). Die Behebung dieser Inkonsistenzen wird in künftigen Ausführungen angestrebt.
+
 ## Aktionen und Fehlercodes {#actions-and-error-codes}
 
-Für die meisten Fehler-Codes können mehrere Aktionen als Pfade zur Behebung des vorliegenden Problems geeignet sein, oder sogar mehrere Aktionen können erforderlich sein, um sie automatisch zu beheben. Wir haben uns dafür entschieden, die Person mit der höchsten Wahrscheinlichkeit anzugeben, den Fehler zu beheben. Die **Aktionen** kann in drei Kategorien unterteilt werden:
+Für die meisten Fehler-Codes können mehrere Aktionen als Pfade zur Behebung des vorliegenden Problems geeignet sein, oder sogar mehrere Aktionen können erforderlich sein, um sie automatisch zu beheben. Wir haben uns dafür entschieden, die Person mit der höchsten Wahrscheinlichkeit anzugeben, den Fehler zu beheben. Die **Aktionen** kann in drei Kategorien unterteilt werden:
 
-1. , die versuchen, den Anforderungskontext zu beheben (Wiederholen, Wiederholen) 
-1. , die versuchen, den Benutzerkontext innerhalb der Anwendung zu beheben (Anwendungsregistrierung, Authentifizierung, Autorisierung) 
+1. , die versuchen, den Anforderungskontext zu beheben (Wiederholen, Wiederholen)
+1. , die versuchen, den Benutzerkontext innerhalb der Anwendung zu beheben (Anwendungsregistrierung, Authentifizierung, Autorisierung)
 1. , die versuchen, den Integrationskontext zwischen einer Anwendung und einem Identitäts-Provider zu beheben (Konfiguration, Verschlechterung)
 
-Für die erste Kategorie (Wiederholen und Wiederholen) reicht es möglicherweise aus, dieselbe Anfrage einfach erneut auszuführen, um das Problem zu lösen. Im Fall von APIs, die mehrere Elemente verarbeiten, sollte die Anwendung die Anfrage wiederholen und nur die Elemente mit der Aktion &quot;Wiederholen&quot;oder &quot;Wiederholen nach&quot;einschließen. Für &quot;*retry-after*&quot; Aktion, ein &quot;<u>Wiederholen nach</u>&quot;-Kopfzeile gibt an, wie viele Sekunden die Anwendung warten soll, bevor die Anfrage wiederholt wird.
+Für die erste Kategorie (Wiederholen und Wiederholen) reicht es möglicherweise aus, dieselbe Anfrage einfach erneut auszuführen, um das Problem zu lösen. Im Fall von APIs, die mehrere Elemente verarbeiten, sollte die Anwendung die Anfrage wiederholen und nur die Elemente mit der Aktion &quot;Wiederholen&quot;oder &quot;Wiederholen nach&quot;einschließen. Für &quot;*Wiederholen*&quot; Aktion, ein &quot;<u>Wiederholen nach</u>&quot;-Kopfzeile gibt an, wie viele Sekunden die Anwendung warten soll, bevor die Anfrage wiederholt wird.
 
-Bei der zweiten und dritten Kategorie hängt die tatsächliche Aktionsimplementierung in hohem Maße von den Anwendungsfunktionen ab. Beispiel: &quot;*Abbau*&quot;kann entweder als &quot;Wechsel auf 15 Minuten temporäre Pässe implementiert werden, um Benutzern die Wiedergabe des Inhalts zu ermöglichen&quot; oder als &quot;automatisches Tool zur Anwendung von AUTHN-ALL oder AUTHZ-ALL-Abbau für die Integration mit dem angegebenen MVPD&quot;. Ähnlich wie &quot;*Authentifizierung*&quot;Trigger einer passiven Authentifizierung (Back-Channel-Authentifizierung) auf einem Tablet und eines Vollbildauthentifizierungsflusses auf vernetzten TVs. Deshalb haben wir uns dafür entschieden, vollständige URLs mit Schema und allen Parametern bereitzustellen. 
+Bei der zweiten und dritten Kategorie hängt die tatsächliche Aktionsimplementierung in hohem Maße von den Anwendungsfunktionen ab. Beispiel: &quot;*Abbau*&quot;kann entweder als &quot;Wechsel auf 15 Minuten temporäre Pässe implementiert werden, um Benutzern die Wiedergabe des Inhalts zu ermöglichen&quot; oder als &quot;automatisches Tool zur Anwendung von AUTHN-ALL oder AUTHZ-ALL-Abbau für die Integration mit dem angegebenen MVPD&quot;. Ähnlich wie &quot;*Authentifizierung*&quot;Trigger einer passiven Authentifizierung (Back-Channel-Authentifizierung) auf einem Tablet und eines Vollbildauthentifizierungsflusses auf vernetzten TVs. Deshalb haben wir uns dafür entschieden, vollständige URLs mit Schema und allen Parametern bereitzustellen.
 
 ## Fehlercodes {#error-codes}
 
@@ -140,6 +141,5 @@ In der folgenden Tabelle sind die möglichen Fehlercodes, die zugehörigen Nachr
 |  | *network_connection_timeout* | 403 | Es gab einen Verbindungstimeout mit dem zugehörigen Partnerdienst. Ein erneuter Versuch mit der Anfrage kann das Problem lösen. |
 |  | *network_received_error* | 403 | Beim Abrufen der Antwort vom zugehörigen Partnerdienst trat ein Lesefehler auf. Ein erneuter Versuch mit der Anfrage kann das Problem lösen. |
 |  | *maximum_execution_time_exceeded* | 403 | Die Anfrage wurde in der maximal zulässigen Zeit nicht abgeschlossen. Ein erneuter Versuch mit der Anfrage kann das Problem lösen. |
-| retry-after | *too_many_requests* | 429 | Es wurden zu viele Anfragen innerhalb eines bestimmten Intervalls gesendet. Die Anwendung kann die Anfrage nach dem vorgeschlagenen Zeitraum erneut versuchen. |
+| Wiederholen | *too_many_requests* | 429 | Es wurden zu viele Anfragen innerhalb eines bestimmten Intervalls gesendet. Die Anwendung kann die Anfrage nach dem vorgeschlagenen Zeitraum erneut versuchen. |
 |  | *user_rate_limit_exceeded* | 429 | Es wurden zu viele Anfragen von einem bestimmten Benutzer innerhalb eines bestimmten Zeitraums ausgegeben. Die Anwendung kann die Anfrage nach dem vorgeschlagenen Zeitraum erneut versuchen. |
-

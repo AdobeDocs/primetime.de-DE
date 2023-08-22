@@ -1,23 +1,23 @@
 ---
 title: JavaScript SDK-Cookbook
 description: JavaScript SDK-Cookbook
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
-
 
 # JavaScript SDK-Cookbook {#javascript-sdk-cookbook}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Einführung (#intro)
 
-In diesem Dokument werden die Berechtigungs-Workflows beschrieben, die die Anwendung eines Programmierers auf oberster Ebene für eine JavaScript-Integration mit dem Adobe Primetime-Authentifizierungsdienst implementiert. Links zur JavaScript-API-Referenz sind überall enthalten.
+In diesem Dokument werden die Berechtigungs-Workflows beschrieben, die die Anwendung eines Programmierers auf oberster Ebene für eine JavaScript-Integration mit dem Adobe Primetime-Authentifizierungsdienst implementiert. Links zur JavaScript-API-Referenz sind überall enthalten.
 
 Beachten Sie außerdem, dass [Verwandte Informationen](#related) enthält einen Link zu einer Reihe von JavaScript-Codebeispielen.
 
@@ -44,51 +44,48 @@ Beachten Sie außerdem, dass [Verwandte Informationen](#related) enthält einen 
 Erstellen Sie Ihre Callback-Funktionen:
 
 - `entitlementLoaded`
-
 </br>
 
 **Trigger:** AccessEnabler wurde geladen und fertig initialisiert.
 
 - `displayProviderDialog(mvpds)`
 
-   **Trigger:** `getAuthentication(),` nur dann, wenn der Benutzer keinen Anbieter (einen MVPD) ausgewählt hat und noch nicht authentifiziert ist Der Parameter mvpds ist ein Array von Anbietern, die für den Benutzer verfügbar sind.
+  **Trigger:** `getAuthentication(),` nur dann, wenn der Benutzer keinen Anbieter (einen MVPD) ausgewählt hat und noch nicht authentifiziert ist Der Parameter mvpds ist ein Array von Anbietern, die für den Benutzer verfügbar sind.
 
 - `setAuthenticationStatus(status, errorcode)`
 
-   **Trigger:**
+  **Trigger:**
    - `checkAuthentication()`jedes Mal.
-   - `getAuthentication()` nur dann, wenn der Benutzer bereits authentifiziert ist und einen Provider ausgewählt hat.
+   - `getAuthentication()` nur dann, wenn der Benutzer bereits authentifiziert ist und einen Provider ausgewählt hat.
 
-   Status zurückgegeben: Erfolg oder Fehler; Der Fehlertyp beschreibt den Fehlertyp.
+  Der zurückgegebene Status ist erfolgreich oder fehlgeschlagen. Der Fehler-Code beschreibt den Typ des Fehlers.
 
 - `createIFrame(width, height)`
 
-   **Trigger:** `setSelectedProvider(providerID)`, nur wenn der ausgewählte Provider für die Anzeige in einem IFrame konfiguriert ist.
+  **Trigger:** `setSelectedProvider(providerID)`, nur wenn der ausgewählte Provider für die Anzeige in einem IFrame konfiguriert ist.
 
-   >[!NOTE]
-   >
-   >Ein Provider ist so konfiguriert, dass sein Authentifizierungsbildschirm entweder als Umleitung oder in einem iFrame gerendert wird. Der Programmierer muss beides berücksichtigen.
+  >[!NOTE]
+  >
+  >Ein Provider ist so konfiguriert, dass sein Authentifizierungsbildschirm entweder als Umleitung oder in einem iFrame gerendert wird. Der Programmierer muss beides berücksichtigen.
 
 - `sendTrackingData(event, data)`
 
-   **Trigger:** `checkAuthentication(), getAuthentication(),checkAuthorization(), getAuthorization(), setSelectedProvider()`.  Die `event` Parameter gibt an, welches Berechtigungsereignis aufgetreten ist; die `data` -Parameter ist eine Liste von Werten, die sich auf das Ereignis beziehen. 
+  **Trigger:** `checkAuthentication(), getAuthentication(),checkAuthorization(), getAuthorization(), setSelectedProvider()`.  Die `event` -Parameter gibt an, welches Berechtigungsereignis aufgetreten ist; der `data` -Parameter ist eine Liste von Werten, die sich auf das Ereignis beziehen.
 - `setToken(token, resource)`
-
-   **Trigger:** `checkAuthorization()`und `getAuthorization()` nach erfolgreicher Autorisierung zum Anzeigen einer Ressource.   Die `token` -Parameter ist das kurzlebige Medien-Token; die `resource` -Parameter ist der Inhalt, den der Benutzer anzeigen darf.
+  **Trigger:** `checkAuthorization()`und `getAuthorization()` nach erfolgreicher Autorisierung zum Anzeigen einer Ressource.   Die `token` -Parameter ist das kurzlebige Medien-Token; die `resource` -Parameter ist der Inhalt, den der Benutzer anzeigen darf.
 
 - `tokenRequestFailed(resource, code, description)`
-
-   **Trigger:**`checkAuthorization()` und`getAuthorization()`  nach einer nicht erfolgreichen Autorisierung.\
-   Die `resource` -Parameter ist der Inhalt, den der Benutzer anzeigen wollte; die `code` -Parameter ist der Fehlercode, der angibt, welcher Fehlertyp aufgetreten ist; die `description` -Parameter beschreibt den Fehler, der dem Fehlercode zugeordnet ist.
+  **Trigger:**`checkAuthorization()` und`getAuthorization()`  nach einer nicht erfolgreichen Autorisierung.\
+  Die `resource` -Parameter ist der Inhalt, den der Benutzer anzuzeigen versucht hat; die `code` -Parameter ist der Fehlercode, der angibt, welcher Fehlertyp aufgetreten ist; der `description` -Parameter beschreibt den Fehler, der dem Fehlercode zugeordnet ist.
 
 - `selectedProvider(mvpd)`
 
-   **Trigger:** [`getSelectedProvider()`](#$getSelProv Die `mvpd` liefert Informationen zum vom Benutzer ausgewählten Provider.
+  **Trigger:** [`getSelectedProvider()`](#$getSelProv Die `mvpd` liefert Informationen zum vom Benutzer ausgewählten Provider.
 
 - `setMetadataStatus(metadata, key, arguments)`
 
-   **Trigger:** `getMetadata().`\
-   Die `metadata` -Parameter stellt die spezifischen Daten bereit, die Sie angefordert haben; Der Schlüsselparameter ist der Schlüssel, der in der Variablen `getMetadata()`Anfrage; und `arguments` ist dasselbe Wörterbuch, das an `getMetadata()`.
+  **Trigger:** `getMetadata().`\
+  Die `metadata` -Parameter stellt spezifische Daten bereit, die Sie angefordert haben. Der Schlüsselparameter ist der Schlüssel, der in der Variablen `getMetadata()`und die `arguments` ist dasselbe Wörterbuch, das an `getMetadata()`.
 
 
 ## 2. Startup-Fluss
@@ -98,34 +95,34 @@ Erstellen Sie Ihre Callback-Funktionen:
 **Für Staging-Profil**
 
 ```JSON
-<script type="text/javascript"         
+<script type="text/javascript"         
 src="https://entitlement.auth-staging.adobe.com/entitlement/v4/AccessEnabler.js">
 </script>"
 ```
 
-oder..
+oder ...
 
 **Für das Produktionsprofil**
 
 ```JSON
-<script type="text/javascript"         
+<script type="text/javascript"         
 src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
 </script>"
 ```
 
-**Trigger:** Nach Abschluss der Initialisierung ruft die Adobe Primetime-Authentifizierung Ihre `entitlementLoaded()` Callback-Funktion. Dies ist der Einstiegspunkt zur Kommunikation Ihrer Anwendung mit dem AccessEnabler. 
-
- 
-**II.** Aufruf `setRequestor()`die Identität des Programmierers festzustellen; Übergabe an den Programmierer `requestorID` und (optional) ein Array von Adobe Primetime-Authentifizierungsendpunkten.
-
-**Trigger:** Keine, aber aktiviert `displayProviderDialog()` bei Bedarf aufgerufen werden.
+**Trigger:** Wenn die Initialisierung abgeschlossen ist, ruft die Adobe Primetime-Authentifizierung Ihre `entitlementLoaded()` Callback-Funktion. Dies ist der Einstiegspunkt zur Kommunikation Ihrer Anwendung mit dem AccessEnabler.
 
 
-**III.** Aufruf `checkAuthentication()` um nach einer vorhandenen Authentifizierung zu suchen, ohne die vollständige [Authentifizierungsfluss].  Wenn dieser Aufruf erfolgreich ist, können Sie direkt zum `authorization flow`.  Wenn nicht, fahren Sie mit dem `authentication flow`.
+**II.** Aufruf `setRequestor()`die Identität des Programmierers festzustellen; `requestorID` und (optional) ein Array von Adobe Primetime-Authentifizierungsendpunkten.
+
+**Trigger:** Keine, aber aktiviert `displayProviderDialog()` bei Bedarf aufgerufen werden.
+
+
+**III.** Aufruf `checkAuthentication()` um nach einer vorhandenen Authentifizierung zu suchen, ohne die vollständige [Authentifizierungsfluss].  Wenn dieser Aufruf erfolgreich ist, können Sie direkt zum `authorization flow`.  Wenn nicht, fahren Sie mit dem `authentication flow`.
 
 **Abhängigkeit:** Ein erfolgreicher Aufruf an `setRequestor()`(Diese Abhängigkeit gilt auch für alle nachfolgenden Aufrufe).
 
- **Trigger:** `setAuthenticationStatus()` callback
+**Trigger:** `setAuthenticationStatus()` callback
 
 </br>
 
@@ -154,41 +151,41 @@ Der Authentifizierungsfluss wird abgeschlossen, wenn der AccessEnabler aufruft `
 Aufruf `getAuthorization()` und übergeben Sie die ResourceID für das angeforderte Medium. Bei einem erfolgreichen Aufruf wird ein Short Media Token zurückgegeben, das bestätigt, dass der Benutzer berechtigt ist, die angeforderten Medien anzuzeigen.
 
 - Wenn der Aufruf erfolgreich ist: Der Benutzer verfügt über ein gültiges AuthN-Token und der Benutzer ist berechtigt, die angeforderten Medien anzuzeigen.
-- Wenn der Aufruf fehlschlägt: Überprüfen Sie die ausgelöste Ausnahme, um ihren Typ zu ermitteln (AuthN, AuthZ oder etwas Anderes):
+- Wenn der Aufruf fehlschlägt: Überprüfen Sie die ausgelöste Ausnahme, um ihren Typ zu bestimmen (AuthN, AuthZ oder etwas Anderes):
 - Wenn der Aufruf ein AuthN-Fehler war, starten Sie den AuthN-Fluss erneut.
 - Wenn es sich bei dem Aufruf um einen AuthZ-Fehler handelt, ist der Benutzer nicht berechtigt, das angeforderte Medium zu sehen, und dem Benutzer sollte eine Fehlermeldung angezeigt werden.
 - Wenn ein anderer Fehler aufgetreten ist (Verbindungsfehler, Netzwerkfehler usw.) zeigen Sie dem Benutzer eine entsprechende Fehlermeldung an.
 
 Verwenden Sie den Media Token Verifier, um das shortMediaToken zu validieren, das von einem erfolgreichen `getAuthorization()` aufrufen.
 
- 
-**Abhängigkeit:** Der Verifikator für Kurzmedien-Token (im Lieferumfang der AccessEnabler-Bibliothek enthalten)
+
+**Abhängigkeit:** Der Verifikator für Kurzmedien-Token (in der AccessEnabler-Bibliothek enthalten)
 
 - Wenn die Validierung erfolgreich ist: Anzeigen/Wiedergeben des angeforderten Mediums für den Benutzer.
-- Wenn dies fehlschlägt: Das AuthZ-Token war ungültig, die Medienanforderung sollte abgelehnt werden und dem Benutzer sollte eine Fehlermeldung angezeigt werden.
+- Wenn es fehlschlägt: Das AuthZ-Token war ungültig, die Medienanforderung sollte abgelehnt werden und dem Benutzer sollte eine Fehlermeldung angezeigt werden.
 
 ## 5. Medienfluss anzeigen (#logout)
 
 - Der Benutzer wählt das Medium aus, das angezeigt werden soll.
-   - Sind Medien geschützt?\
-          - Ihre App prüft, ob die Medien geschützt sind:
-      - Wenn das Medium geschützt ist, startet Ihre App den obigen Autorisierungsfluss (AuthZ).
-      - Wenn das Medium nicht geschützt ist, fahren Sie mit dem Fluss Medien anzeigen fort.
-      - Wiedergabemedien
+   - Sind Medien geschützt?
+      - Ihre App prüft, ob die Medien geschützt sind:
+         - Wenn das Medium geschützt ist, startet Ihre App den obigen Autorisierungsfluss (AuthZ).
+         - Wenn das Medium nicht geschützt ist, fahren Sie mit dem Fluss Medien anzeigen fort.
+         - Wiedergabemedien
 
 ## Konfigurieren der Besucher-ID (#visitorID)
 
-Konfigurieren eines [Experience Cloud visitorID](https://marketing.adobe.com/resources/help/en_US/mcvid/) -Wert ist aus analytischer Sicht sehr wichtig. Sobald ein EC visitorID -Wert festgelegt ist, sendet das SDK diese Informationen zusammen mit jedem Netzwerkaufruf und der Adobe Primetime-Authentifizierungsdienst erfasst diese Informationen. Auf diese Weise können Sie die Analysedaten aus dem Adobe Primetime-Authentifizierungsdienst mit allen anderen Analyseberichten korrelieren, die Sie möglicherweise aus anderen Anwendungen oder Websites haben. Informationen zum Einrichten der EC-Besucher-ID finden Sie unter [here](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
+Konfigurieren eines [Experience Cloud visitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html) -Wert ist aus analytischer Sicht sehr wichtig. Sobald ein EC visitorID -Wert festgelegt ist, sendet das SDK diese Informationen zusammen mit jedem Netzwerkaufruf und der Adobe Primetime-Authentifizierungsdienst erfasst diese Informationen. Auf diese Weise können Sie die Analysedaten aus dem Adobe Primetime-Authentifizierungsdienst mit allen anderen Analyseberichten korrelieren, die Sie möglicherweise aus anderen Anwendungen oder Websites haben. Informationen zum Einrichten der EC-Besucher-ID finden Sie unter [here](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
 
- 
+
 >[!NOTE]
 >
->Beachten Sie, dass diese Funktion ab JS SDK-Version 3.1.0 unterstützt wird. 
+>Beachten Sie, dass diese Funktion ab JS SDK-Version 3.1.0 unterstützt wird.
 
 <!--
 ### Related Information (#related)
 
-* [JavaScript SDK Overview](/help/authentication/javascript-sdk-overview.md)
+* [JavaScript SDK Overview](/help/authentication/javascript-sdk-overview.md)
 * [JavaScript SDK API Reference](/help/authentication/javascript-sdk-api-reference.md)
 * **JavaScript SDK Code Samples**
 -->

@@ -1,9 +1,10 @@
 ---
 product: adobe primetime
 audience: end-user
+feature: Authentication
 user-guide-title: Primetime-Authentifizierung
 user-guide-description: Die Primetime-Authentifizierung ist eine Berechtigungslösung für TV Anywhere. Sie bietet ein modulares Framework, mit dem festgestellt werden kann, ob jemand, der Zugriff auf eine Ressource anfordert, Anspruch darauf hat.
-source-git-commit: 5e649f1c0937882c9a05809af8916229f6a95e73
+source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 0%
@@ -149,7 +150,7 @@ ht-degree: 0%
    + [Verhindern, dass MVPDs im Auswahldialogfeld angezeigt werden](prevent-mvpd-selectn-dialog.md)
 + Support {#support}
    + [Eskalationsverfahren](escalation-procedures.md)
-   + [Überwachen des Primetime Adobe PayTV-Durchgangs](monitoring-adobe-pay-tv-pass.md)
+   + [Überwachen von Primetime-Adobe PayTV-Pass](monitoring-adobe-pay-tv-pass.md)
    + [Mindestsystemanforderungen](minimum-system-requirements.md)
 + Versionshinweise {#release-notes}
    + [Versionshinweise zur Adobe Pass-Authentifizierung 2.66](auth-rn-266.md)
@@ -179,7 +180,7 @@ ht-degree: 0%
          + [Debugging des AccessEnabler iOS/tvOS-SDK mithilfe von Konsolen-App-Protokollen](debugging-the-accessenabler-iostvos-sdk-using-console-app-logs.md)
          + [AccessEnabler iOS/tvOS 3.7.0 Aktualisierungspfad](accessenabler-iostvos-370-upgrade-path.md)
    + Primetime-Authentifizierungsumgebungen {#primetime-authentication-environments}
-      + [Grundlegendes zu Adobe-Umgebungen](understanding-the-adobe-environments.md)
+      + [Grundlagen zu Adobe-Umgebungen](understanding-the-adobe-environments.md)
       + [Einrichten der Umgebung und Testen in der Pre-Qual-Phase](setting-up-your-environment-and-testing-in-prequal.md)
       + [Testen von Authentifizierungs- und Autorisierungsflüssen mithilfe der Adobe API-Test-Site](test-authn-authz-flows-using-adobes-api-test-site.md)
    + Clientlose API {#clientless-api}

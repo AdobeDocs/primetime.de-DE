@@ -1,9 +1,10 @@
 ---
 title: Grundlegendes zu serverseitigen Metriken
 description: Grundlegendes zu serverseitigen Metriken
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 516884e9-6b0b-451a-b84a-6514f571aa44
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2205'
 ht-degree: 0%
 
 ---
@@ -12,37 +13,37 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 
 ## Einführung {#intro}
 
-In diesem Dokument werden die serverseitigen Metriken zur Adobe Primetime-Authentifizierung beschrieben, die vom Entitlement Service Monitoring (ESM)-Dienst generiert wurden. Es werden nicht die Ereignisse beschrieben, die aus der Client-seitigen Perspektive betrachtet werden (was die Programmierer sehen würden, wenn sie einen Messungsdienst wie Adobe Analytics auf ihrer Seite/Anwendung implementieren würden).  
+In diesem Dokument werden die serverseitigen Metriken zur Adobe Primetime-Authentifizierung beschrieben, die vom Entitlement Service Monitoring (ESM)-Dienst generiert wurden. Es werden nicht die Ereignisse beschrieben, die aus der Client-seitigen Perspektive betrachtet werden (was die Programmierer sehen würden, wenn sie einen Messungsdienst wie Adobe Analytics auf ihrer Seite/Anwendung implementieren würden).
 
 ## Ereigniszusammenfassung {#events_summary}
 
-Aus serverseitiger Sicht der Adobe Primetime-Authentifizierung werden die folgenden Ereignisse generiert:
+Vom Server-seitigen Standpunkt der Adobe Primetime-Authentifizierung aus werden die folgenden Ereignisse generiert:
 
-* **Im Authentifizierungsfluss erzeugte Ereignisse**(Eine tatsächliche Anmeldung mit dem MVPD)
+* **Im Authentifizierungsfluss generierte Ereignisse**(Eine tatsächliche Anmeldung mit dem MVPD)
 
    * Benachrichtigung über AuthN-Versuch - Dies wird generiert, wenn der Benutzer an die MVPD-Anmeldeseite gesendet wird.
    * Benachrichtigung über &quot;AuthN ausstehend&quot;- Wenn es dem Benutzer gelingt, sich mit seinem MVPD anzumelden, wird dies generiert, wenn der Benutzer zur Primetime-Authentifizierung zurückgeleitet wird.
-   * Benachrichtigung über AuthN Granted (AuthN gewährt): Diese wird generiert, wenn der Benutzer wieder auf der Website des Programmierers ist und das Authentifizierungstoken erfolgreich aus der Primetime-Authentifizierung abgerufen hat. 
+   * Benachrichtigung über AuthN Granted (AuthN gewährt): Diese wird generiert, wenn der Benutzer wieder auf der Website des Programmierers ist und das Authentifizierungstoken erfolgreich aus der Primetime-Authentifizierung abgerufen hat.
 * **Autorisierungsfluss** (Nur Prüfung auf Autorisierung mit einem MVPD)\
-   *Voraussetzung:* Ein gültiges AuthN-Token
+  *Voraussetzung:* Ein gültiges AuthN-Token
    * Benachrichtigung über AuthZ-Versuch
    * Benachrichtigung über die Gewährung von AuthZ
 * **Erfolgreiche Play-Anfrage**\
-   *Voraussetzung:* Gültige AuthN- und AuthZ-Token
-   * Benachrichtigung über einen Check mit Adobe Primetime-Authentifizierung 
-   * Eine Wiedergabeanforderung erfordert sowohl eine erteilte Authentifizierung als auch eine erteilte Autorisierung
+  *Voraussetzung:* Gültige AuthN- und AuthZ-Token
+   * Benachrichtigung über einen Check mit Adobe Primetime-Authentifizierung
+   * Eine Wiedergabeanforderung erfordert sowohl eine erteilte Authentifizierung als auch eine erteilte Genehmigung
 
 
 Die Anzahl der Unique Users wird im Abschnitt [Unique Users](#unique-users) unten. Da die Antworten auf erteilte Authentifizierung und Autorisierung in der Regel zwischengespeichert werden, gelten in der Regel die folgenden Formeln:
 
 * Anzahl der AuthN-Versuche \> Anzahl der gewährten AuthN
 * Anzahl der AuthZ-Versuche \> Anzahl der gewährten AuthZ
-* Anzahl der AuthZ-Versuche \> Anzahl der gewährten AuthN (in der Regel)
+* Anzahl der AuthZ-Versuche \> Anzahl der gewährten AuthN (normalerweise)
 * Anzahl erfolgreicher Wiedergabeanforderungen \> Anzahl der erteilten AuthZ
 
 
@@ -50,7 +51,14 @@ Die Anzahl der Unique Users wird im Abschnitt [Unique Users](#unique-users) unte
 
 Das folgende Beispiel zeigt die serverseitigen Metriken für einen Monat für eine Marke:
 
-| Metrik | MVPD 1 | MVPD 2 | ... | MVPD n | Insgesamt | | — | — | — | - | — | — | | Erfolgreiche Authentifizierungen | 1125 | 2892 | | 2203 | SUM(MVP1+...MVPD n) | | Erfolgreiche Berechtigungen | 2527 | 5603 | | 5904 | SUM(MVP1+...MVPD n) | | Erfolgreiche Abspielanforderungen | 4201 | 10518 | | 10737 | SUM(MVP1+...MVPD n) | | Unique Users | 1375 | 2400 | | 2890 | SUM aller Benutzer für alle deduplizierten MVPDs\* | | Vorgesehene Authentifizierungen | 2147 | 3887 | | 3108 | SUM(MVP1+...MVPD n) | | Versuchsberechtigungen | 2889 | 6139 | | 6039 | SUM(MVP1+...MVPD n) |
+| Metrik | MVPD 1 | MVPD 2 | … | MVPD n | Ingesamt |
+| -------------------------- | ------ | ------ | - | ------ | ---------------------------------------------- |
+| Erfolgreiche Authentifizierungen | 1125 | 2892 |   | 2203 | SUM(MVP1+...MVPD n) |
+| Erfolgreiche Berechtigungen | 2527 | 5603 |   | 5904 | SUM(MVP1+...MVPD n) |
+| Erfolgreiche Abspielanforderungen | 4201 | 10518 |   | 10737 | SUM(MVP1+...MVPD n) |
+| Unique Users | 1375 | 2400 |   | 2890 | SUM aller Benutzer für alle deduplizierten MVPDs\* |
+| versucht Authentifizierungen | 2147 | 3887 |   | 3108 | SUM(MVP1+...MVPD n) |
+| Versuchsberechtigungen | 2889 | 6139 |   | 6039 | SUM(MVP1+...MVPD n) |
 
 </br>
 
@@ -72,7 +80,7 @@ Der Fluss umfasst Rundfahrten zu MVPDs für die Authentifizierung (#5 bis \#7) u
 
 
 
-Nach Abschluss des Workflows werden die Authentifizierungs- und Autorisierungstoken auf dem Gerät des Benutzers zwischengespeichert. Die TTL-Werte (Time-to-Live) für Authentifizierungstoken liegen zwischen 6 Stunden und 90 Tagen. Ein AuthN-Token-Ablauf erzwingt automatisch den Ablauf eines AuthZ-Tokens. Der TTL-Wert für das Autorisierungstoken beträgt in der Regel 24 Stunden.
+Nach Abschluss des Workflows werden die Authentifizierungs- und Autorisierungstoken auf dem Gerät des Benutzers zwischengespeichert. Die TTL-Werte (Time-to-Live) für Authentifizierungstoken liegen zwischen 6 Stunden und 90 Tagen. Ein AuthN-Token-Ablauf erzwingt automatisch den Ablauf eines AuthZ-Tokens. Der TTL-Wert für das Autorisierungstoken beträgt in der Regel 24 Stunden.
 
 | Ausgelöste serverseitige Ereignisse | <ul><li>Authentifizierungsversuch, Authentifizierung ausstehend, Authentifizierung gewährt</li><li>Autorisierungsversuch, Autorisierung erteilt</li><li>Erfolgreiche Play-Anfrage</li></ul> |
 |---|---|
@@ -111,7 +119,7 @@ Dieser Fluss beinhaltet eine Hin- und Rückfahrt zum MVPD.
 
 ### Authentifizierungsversuch {#authentication-attempt}
 
-Wie im obigen Diagramm dargestellt, werden die Authentifizierungsereignisse nur ausgelöst, wenn der Benutzer einen Hin- und Rückflug zum MVPD durchführt. Authentifizierungsereignisse enthalten keine zwischengespeicherten Token-Authentifizierungen.
+Wie im obigen Diagramm dargestellt, werden die Authentifizierungsereignisse nur ausgelöst, wenn der Benutzer einen Hin- und Rücklauf zum MVPD durchführt. Authentifizierungs-Ereignisse enthalten keine zwischengespeicherten Token-Authentifizierungen.
 
 Das Authentifizierungsversuch-Ereignis wird ausgelöst, nachdem der Benutzer in der Auswahl auf einen bestimmten MVPD geklickt hat.
 
@@ -128,12 +136,12 @@ Dieses Ereignis tritt auf, wenn der Umleitungsprozess zur Adobe Primetime-Authen
 
 Der Benutzer ist ein bekannter Abonnent des MVPD, in der Regel mit einem Pay TV-Abonnement, manchmal aber nur mit Internetzugang. Eine erfolgreiche Authentifizierung kann entweder dadurch erfolgen, dass der Benutzer explizit gültige Anmeldeinformationen mit seinem MVPD eingegeben hat oder weil er zuvor gültige Anmeldeinformationen eingegeben und &quot;mich speichern&quot;aktiviert hatte (und die vorherige Sitzung noch nicht abgelaufen war).
 
-Der MVPD sendet daher eine positive Antwort auf die Authentifizierungsanforderung an die Adobe Primetime-Authentifizierung und die Adobe Primetime-Authentifizierung erstellt eine *AuthN-Token*.
+Der MVPD sendet daher eine positive Antwort auf die Authentifizierungsanforderung an die Adobe Primetime-Authentifizierung und die Adobe Primetime-Authentifizierung erstellt eine *AuthN-Token*.
 
 * Die Authentifizierung wird normalerweise über einen langen Zeitraum (einen Monat oder länger) zwischengespeichert. Aus diesem Grund sind Authentifizierungsereignisse erst dann mehr vorhanden, wenn das Token abläuft und der Fluss erneut gestartet wird.
 * Wenn Sie von einer anderen Site/App über Single Sign-On eingehen, werden keine Authentifizierungsereignisse für den Trigger angezeigt.
 
- 
+
 
 ### Comcast-Authentifizierung {#comcast-authentication}
 
@@ -143,7 +151,7 @@ Die folgenden Funktionen beschreiben die Unterschiede:
 
 * **Sitzungs-Cookie-Verhalten**: Dadurch werden alle Authentifizierungstoken entfernt, nachdem der Benutzer den Browser geschlossen hat. Diese Funktion ist nur im Internet verfügbar. Der Hauptzweck besteht darin sicherzustellen, dass Ihre Comcast-Sitzung nicht auf unsicheren/freigegebenen Computern beibehalten wird. Die Auswirkung besteht darin, dass es mehr Authentifizierungsversuche/genehmigte Flüsse als für den Rest der MVPDs geben wird.
 
-* **AuthN pro requestorID**: Comcast lässt nicht zu, dass der AuthN-Status von einer Anforderer-ID an eine andere zwischengespeichert wird. Daher muss jede Website/App zu Comcast gehen, um ein Authentifizierungstoken zu erhalten. Abgesehen von den Überlegungen zum Benutzererlebnis wird wie oben gezeigt, dass mehr Authentifizierungsversuche/gewährte Ereignisse generiert werden.
+* **AuthN pro requestorID**: Comcast lässt nicht zu, dass der AuthN-Status von einer Anfrage-ID zu einer anderen zwischengespeichert wird. Daher muss jede Website/App zu Comcast gehen, um ein Authentifizierungstoken zu erhalten. Abgesehen von den Überlegungen zum Benutzererlebnis wird wie oben gezeigt, dass mehr Authentifizierungsversuche/gewährte Ereignisse generiert werden.
 
 * **Passive Authentifizierung**: Um das Benutzererlebnis zu verbessern, aber dennoch die AuthN-Funktion pro Anfrage-ID beizubehalten, erfolgt ein passiver Authentifizierungsfluss in einem ausgeblendeten iFrame. Der Benutzer sieht nichts, aber die Ereignisse werden weiterhin wie zuvor ausgelöst.
 
@@ -169,24 +177,24 @@ Einige Hinweise zu den Metriken:
 
 ### Autorisierungsversuch {#authorization_attempt}
 
-Zusätzlich zum Abrufen eines Authentifizierungstokens müssen Benutzer vor dem Abspielen von Inhalten auch ein Autorisierungstoken erhalten. Dies geschieht normalerweise nach der Authentifizierung oder nach Ablauf des Autorisierungstokens. Da diese Prüfung Server-seitig durchgeführt wird (von den Adobe Primetime-Authentifizierungsservern zu den MVPD-Servern), ist der Benutzer nicht verpflichtet, irgendetwas zu tun.
+Zusätzlich zum Abrufen eines Authentifizierungstokens müssen Benutzer vor dem Abspielen von Inhalten auch ein Autorisierungstoken erhalten. Dies geschieht normalerweise nach der Authentifizierung oder nach Ablauf des Autorisierungstokens. Da diese Prüfung Server-seitig durchgeführt wird (von den Adobe Primetime-Authentifizierungsservern zu den MVPD-Servern), ist der Benutzer nicht verpflichtet, irgendetwas zu tun.
 
-### Bewilligte Genehmigung {#authorization-granted}
+### Genehmigte Genehmigung erteilt {#authorization-granted}
 
 Eine &quot;Autorisierung erteilt&quot;signalisiert, dass das Abonnement des authentifizierten Benutzers die angeforderte Programmierung enthält.
 
-Beachten Sie, dass nicht alle MVPDs einen separaten Genehmigungsschritt unterstützen. für einige Authentifizierung ist mit der Autorisierung gleichgesetzt. Der MVPD sendet Adobe Primetime-Authentifizierung eine erfolgreiche Antwort auf die Backchannel AuthZ-Anfrage, und die Adobe Primetime-Authentifizierung erstellt ein AuthZ-Token.
+Beachten Sie, dass nicht alle MVPDs einen separaten Autorisierungsschritt unterstützen. Für einige Authentifizierung ist mit Autorisierung gleichgesetzt. Der MVPD sendet Adobe Primetime-Authentifizierung eine erfolgreiche Antwort auf die Backchannel AuthZ-Anfrage, und die Adobe Primetime-Authentifizierung erstellt ein AuthZ-Token.
 
 * Das AuthZ-Token wird für einen bestimmten Zeitraum zwischengespeichert, in der Regel 24 Stunden Während dieses Zeitraums werden keine AuthZ-Ereignisse ausgelöst.
-* Einige MVPDs funktionieren mit Asset-Level-Berechtigungen, andere mit Berechtigungen auf Kanalebene. - Je nachdem, welches verwendet wird, werden mehr oder weniger AuthZ-Ereignisse ausgelöst. Selbst für die Autorisierung auf Kanalebene ist das Caching vorhanden. Wenn dasselbe Asset also in weniger als 24 Stunden angefordert wird, werden keine Ereignisse ausgelöst.
+* Manche MVPDs funktionieren mit Asset-Level-Berechtigungen, andere arbeiten mit Kanalebene-Berechtigungen. Je nachdem, welche Option verwendet wird, werden mehr oder weniger AuthZ-Ereignisse ausgelöst. Selbst für die Autorisierung auf Kanalebene ist das Caching vorhanden. Wenn dasselbe Asset also in weniger als 24 Stunden angefordert wird, werden keine Ereignisse ausgelöst.
 
-### Autorisierung verweigert {#authorization-denied}
+### Genehmigung verweigert {#authorization-denied}
 
 Wenn eine Autorisierung verweigert wird, verfügt der authentifizierte Benutzer nicht über ein bestätigtes Abonnement für die angeforderte Programmierung. Die wahrscheinlichste Ursache ist, dass der Kanal nicht Teil des Abonnementpakets des Benutzers ist, aber dies kann auch für einen Benutzer gelten, der nur über einen Internetzugang von MVPD verfügt.
 
-Für einige MVPDs sind Benutzer erfolgreich authentifiziert, obwohl sie nur über ein Internet-Abonnement des MVPD verfügen (kein Pay-TV-Abonnement). In diesem Fall wird die Autorisierung verweigert, auch wenn der Kanal, für den der Benutzer die Autorisierung anfordert, im Basispaket enthalten ist.
+Bei einigen MVPDs sind Benutzer erfolgreich authentifiziert, obwohl sie nur über ein Internet-Abonnement des MVPD verfügen (kein Pay-TV-Abonnement). In diesem Fall wird die Autorisierung verweigert, auch wenn der Kanal, für den der Benutzer die Autorisierung anfordert, im Basispaket enthalten ist.
 
-Einige MVPDs bieten benutzerdefinierte Fehlermeldungen für AuthZ-Abweisungen, die Angebote zur Aktualisierung ihres Pakets enthalten können.
+Einige MVPDs bieten benutzerdefinierte Fehlermeldungen für AuthZ-Ablehnungen, die Angebote zur Aktualisierung ihres Pakets enthalten können.
 
 
 ### Autorisierungs-Konversionsrate {#authorization-conversion-rate}
@@ -256,7 +264,7 @@ Ausgelöste Ereignisse:
 
 Benutzer XYZ sieht sich ein weiteres Video an.
 
-Wie an Tag 1 seit dem Ablauf der AuthN-Zwischenspeicherung.
+Wie an Tag 1, seit die AuthN-Zwischenspeicherung abgelaufen ist.
 
 Wenn derselbe Benutzer die Autorisierung nicht erfolgreich abschließen sollte, wird die Anzahl der Unique Users pro Monat dennoch um 1 erhöht, da es zwei Ereignisse gibt, die die Benutzer-ID enthalten: Authentifizierung gewährt und Autorisierungsversuch.
 

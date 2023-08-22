@@ -1,20 +1,19 @@
 ---
 title: Fragen und Antworten zu Zertifikaten
 description: Fragen und Antworten zu Zertifikaten
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: d4e493b0-4467-42b1-9758-16c5941d8051
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
 
 ---
 
-
-
 # Fragen und Antworten zu Zertifikaten {#certificates-q}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 </br>
 
@@ -30,7 +29,6 @@ ht-degree: 0%
 
 </br>
 
-**Q3:** Ist ein neues Zertifikat für Webseiten erforderlich, die den neuen flexiblen TempPass verwenden? 
+**Q3:** Ist ein neues Zertifikat für Webseiten erforderlich, die den neuen flexiblen TempPass verwenden?
 
-**A:** Das Zertifikat (und jedes Zertifikat tatsächlich) wird auf Ebene von Media Company &amp; Programmer konfiguriert. FlexibleTempPass ist ein MVPD, Sie müssen dafür kein Zertifikat konfigurieren. Wenn Sie also einen vorhandenen Programmierer mit flexiblem TempPass integrieren, wird das bereits auf Programmier-/Media-Firmenebene konfigurierte Zertifikat verwendet.
-
+**A:** Das Zertifikat (und jedes Zertifikat tatsächlich) wird auf Ebene von Media Company &amp; Programmer konfiguriert. FlexibleTempPass ist ein MVPD, Sie müssen dafür kein Zertifikat konfigurieren. Wenn Sie also einen vorhandenen Programmierer mit flexiblem TempPass integrieren, wird das bereits auf Programmier-/Media-Firmenebene konfigurierte Zertifikat verwendet.

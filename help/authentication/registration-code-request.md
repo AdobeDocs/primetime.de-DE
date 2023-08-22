@@ -1,13 +1,13 @@
 ---
 title: Registrierungsseite
 description: Registrierungsseite
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%
 
 ---
-
 
 # Registrierungsseite {#registration-page}
 
@@ -15,40 +15,40 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 &lt;reggie_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
+</br>
 
 ## Beschreibung {#create-reg-code-svc}
 
 Gibt zufällig generierten Registrierungscode und Anmeldeseiten-URI zurück.
 
-| Endpunkt | aufgerufen  </br>von | Eingabe   </br>Parameter | HTTP  </br>Methode | Reaktion | HTTP  </br>Reaktion |
+| Endpunkt | aufgerufen  </br>von | Eingabe   </br>Parameter | HTTP  </br>Methode | Reaktion | HTTP  </br>Reaktion |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>/reggie/v1/{requestor}/regcode</br>Beispiel:</br>REGGIE_FQDN/reggie/v1/sampleRequestId/regcode | Streaming-App</br>oder</br>Programmiererdienst | 1. Anforderer  </br>    (Pfadkomponente)</br>2.  deviceId (Hash)   </br>    (Obligatorisch)</br>3.  device_info/X-Device-Info (erforderlich)</br>4.  mvpd (optional)</br>5.  ttl (optional)</br>6.  _deviceType_</br> 7.  _deviceUser_ (Veraltet)</br>8.  _appId_ (Veraltet) | POST | XML oder JSON, die einen Registrierungs-Code und Informationen oder Fehlerdetails enthalten, falls diese nicht erfolgreich sind. Siehe Schemata und Beispiele unten. | 201 |
+| &lt;reggie_fqdn>/reggie/v1/{requestor}/regcode</br>Beispiel:</br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | Streaming-App</br>oder</br>Programmiererdienst | 1. Antragsteller  </br>    (Pfadkomponente)</br>2.  deviceId (Hash)   </br>    (Obligatorisch)</br>3.  device_info/X-Device-Info (erforderlich)</br>4.  mvpd (optional)</br>5.  ttl (optional)</br>6.  _deviceType_</br> 7.  _deviceUser_ (Veraltet)</br>8.  _appId_ (Veraltet) | POST | XML oder JSON, die einen Registrierungs-Code und Informationen oder Fehlerdetails enthalten, falls diese nicht erfolgreich sind. Siehe Schemata und Beispiele weiter unten. | 201 |
 
 {style="table-layout:auto"}
 
 | Eingabeparameter | Beschreibung |
 | --- | --- |
-| Anforderer | Die Programmer-Anfrage-ID, für die dieser Vorgang gültig ist. |
+| Anfragender | Die Programmer-Anfrage-ID, für die dieser Vorgang gültig ist. |
 | deviceId | Die Geräte-ID-Bytes. |
-| device_info/</br>X-Device-Info | Informationen zum Streaming-Gerät.</br>**Hinweis**: Dieser Parameter kann als URL-Parameter an device_info übergeben werden. Aufgrund der potenziellen Größe dieses Parameters und der Längenbeschränkungen einer GET-URL sollte er jedoch als X-Device-Info in der HTTP-Kopfzeile übergeben werden. </br>Weitere Informationen finden Sie unter [Weitergeben von Geräte- und Verbindungsinformationen](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| device_info/</br>X-Device-Info | Informationen zum Streaming-Gerät.</br>**Hinweis**: Dieser Parameter kann als URL-Parameter an device_info übergeben werden. Aufgrund der potenziellen Größe dieses Parameters und der Längenbeschränkungen einer GET-URL sollte er jedoch als X-Device-Info in der HTTP-Kopfzeile übergeben werden. </br>Weitere Informationen finden Sie unter [Weitergeben von Geräte- und Verbindungsinformationen](/help/authentication/passing-client-information-device-connection-and-application.md). |
 | mvpd | Die MVPD-ID, für die dieser Vorgang gültig ist. |
-| ttl | Wie lange dieser Regcode in Sekunden leben soll.</br>**Hinweis**: Der maximal zulässige Wert für ttl beträgt 36000 Sekunden (10 Stunden). Höhere Werte führen zu einer 400-HTTP-Antwort (ungültige Anfrage). Wenn `ttl` leer ist, setzt die Primetime-Authentifizierung einen Standardwert von 30 Minuten. |
-| _deviceType_ | Der Gerätetyp (z. B. Roku, PC).</br>Wenn dieser Parameter korrekt festgelegt ist, bietet ESM Metriken an, die [aufgeschlüsselt nach Gerätetyp](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) bei Verwendung von ClientLess, sodass verschiedene Arten der Analyse durchgeführt werden können, z. B. Roku, AppleTV und Xbox.</br>Siehe [Vorteile der Verwendung von Client-losen Gerätetypparametern in Pass-Metriken ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**Hinweis**: ersetzt device_info diesen Parameter. |
+| ttl | Wie lange dieser Regcode in Sekunden leben soll.</br>**Hinweis**: Der maximal zulässige Wert für ttl beträgt 36000 Sekunden (10 Stunden). Höhere Werte führen zu einer 400-HTTP-Antwort (ungültige Anfrage). Wenn `ttl` leer ist, setzt die Primetime-Authentifizierung einen Standardwert von 30 Minuten. |
+| _deviceType_ | Der Gerätetyp (z. B. Roku, PC).</br>Wenn dieser Parameter korrekt festgelegt ist, bietet ESM Metriken an, die [aufgeschlüsselt nach Gerätetyp](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) bei Verwendung von ClientLess, sodass verschiedene Arten der Analyse durchgeführt werden können, z. B. Roku, AppleTV und Xbox.</br>Siehe [Vorteile der Verwendung von Client-losen Gerätetypparametern in Pass-Metriken ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br>**Hinweis**: Der Parameter device_info ersetzt diesen Parameter. |
 | _deviceUser_ | Die Benutzer-ID des Geräts. |
-| _appId_ | Die Anwendungs-ID/der Name. </br>**Hinweis**: ersetzt device_info diesen Parameter. |
+| _appId_ | Die Anwendungs-ID/der Name. </br>**Hinweis**: Der Parameter device_info ersetzt diesen. |
 
 {style="table-layout:auto"}
 
@@ -57,11 +57,10 @@ Gibt zufällig generierten Registrierungscode und Anmeldeseiten-URI zurück.
 >
 >**IP-Adresse des Streaming-Geräts**
 ></br>
->Bei Client-zu-Server-Implementierungen wird die IP-Adresse des Streaming-Geräts implizit mit diesem Aufruf gesendet.  Bei Server-zu-Server-Implementierungen, bei denen die Variable **regcode** -Aufruf erfolgt als Programmierer-Dienst und nicht als Streaming-Gerät. Der folgende Header ist erforderlich, um die IP-Adresse des Streaming-Geräts zu übergeben:
+>Bei Client-zu-Server-Implementierungen wird die IP-Adresse des Streaming-Geräts implizit mit diesem Aufruf gesendet.  Bei Server-zu-Server-Implementierungen, bei denen die Variable **regcode** -Aufruf erfolgt als Programmierer-Dienst und nicht als Streaming-Gerät. Der folgende Header ist erforderlich, um die IP-Adresse des Streaming-Geräts zu übergeben:
 >
 >
->
-```
+>```
 >X-Forwarded-For : <streaming_device_ip> 
 >```
 >
@@ -69,10 +68,10 @@ Gibt zufällig generierten Registrierungscode und Anmeldeseiten-URI zurück.
 ></br></br>
 >Beispiel :</br>
 >
->
-```
+>```
 >POST /reggie/v1/{req_id}/regcode HTTP/1.1</br>X-Forwarded-For:203.45.101.20
 >```
+>
 </br>
 
 ### Antwort-XML-Schema {#xml-schema}
@@ -112,13 +111,13 @@ Gibt zufällig generierten Registrierungscode und Anmeldeseiten-URI zurück.
     </xs:schema>
 ```
 
- </br>
+</br>
 
 | Elementname | Beschreibung |
 | --------------- | ------------------------------------------------------------------------------------ |
 | id | Vom Registrierungs-Code-Dienst generierte UUID |
 | code | Registrierungs-Code, der vom Registrierungs-Code-Dienst generiert wird |
-| Anforderer | Anforderer-ID |
+| Anfragender | Anforderer-ID |
 | mvpd | Mvpd ID |
 | generiert | Zeitstempel der Erstellung des Registrierungs-Codes (in Millisekunden seit dem 1. Januar 1970 GMT) |
 | expires | Zeitstempel, wenn der Registrierungs-Code abläuft (in Millisekunden seit dem 1. Januar 1970 GMT) |
@@ -130,9 +129,9 @@ Gibt zufällig generierten Registrierungscode und Anmeldeseiten-URI zurück.
 | registrationURL | URL zur Anmelde-Webanwendung, die dem Endbenutzer angezeigt werden soll |
 
 {style="table-layout:auto"}
- </br>
+</br>
 
- 
+
 
 ### Fehlermeldung XSD  {#error-message}
 
@@ -153,7 +152,7 @@ Gibt zufällig generierten Registrierungscode und Anmeldeseiten-URI zurück.
         </xs:element>
     </xs:schema>
 ```
- 
+
 
 ### Beispielantwort {#sample-response}
 
@@ -178,7 +177,7 @@ Gibt zufällig generierten Registrierungscode und Anmeldeseiten-URI zurück.
         </info>
     </ns2:regcode>
 ```
- 
+
 **JSON:**
 
 ```JSON
@@ -199,4 +198,3 @@ Gibt zufällig generierten Registrierungscode und Anmeldeseiten-URI zurück.
         }
     }
 ```
-

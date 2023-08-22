@@ -1,8 +1,9 @@
 ---
 product: adobe primetime
 audience: end-user
+feature: Account IQ
 user-guide-description: Hilfe zu Primetime Account IQ gibt Informationen zu den Konto-IQ-Komponenten und führt Sie durch die Journey zur Verwendung der verschiedenen Komponenten.
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 + [Übersicht über Konto-IQ](/help/AccountIQ/home.md)
 + [Erste Schritte mit Konto-IQ](/help/AccountIQ/get-started.md)
-+ Konto-IQ-Komponenten {#account-iq-components}
++ Kontokomponenten {#account-iq-components}
    + [Segmente und Zeitrahmen](/help/AccountIQ/segments-timeframe.md)
    + [Dashboard](/help/AccountIQ/dashboard.md)
    + Berichte {#reports-account-iq}

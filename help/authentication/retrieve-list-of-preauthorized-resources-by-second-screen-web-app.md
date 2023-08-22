@@ -1,31 +1,31 @@
 ---
 title: Abrufen einer Liste vorab autorisierter Ressourcen von der Second Screen Web App
 description: Abrufen einer Liste vorab autorisierter Ressourcen von der Second Screen Web App
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 78eeaf24-4cc1-4523-8298-999c9effdb7a
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
-
 # Abrufen einer Liste vorab autorisierter Ressourcen von der Second Screen Web App {#retrieve-list-of-preauthorized-resources-by-second-screen-web-app}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## REST-API-Endpunkte {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
@@ -33,17 +33,19 @@ ht-degree: 0%
 
 Anfrage an die Adobe Primetime-Authentifizierung zum Abrufen der Liste der vorautorisierten Ressourcen.
 
-Es gibt zwei API-Sätze: einen Satz für die Streaming-App oder den Programmierer-Dienst und einen Satz für die Second Screen Web App. Auf dieser Seite wird die API für die AuthN-App beschrieben.
+Es gibt zwei Gruppen von APIs: einen Satz für die Streaming-App oder den Programmierer-Dienst und einen Satz für die Second Screen Web App. Auf dieser Seite wird die API für die AuthN-App beschrieben.
 
- \
-| Endpunkt | aufgerufen  </br>von | Eingabe   </br>Parameter | HTTP  </br>Methode | Antwort | HTTP  </br>Reaktion | | — | — | — | — | — | — | | &lt;sp_fqdn>/api/v1/preauthorize/{Registrierungs-Code} | AuthN-Modul | 1.  Registrierungscode  </br>    (Pfadkomponente)</br>2.  Antragsteller (erforderlich)</br>3.  Ressourcenliste (erforderlich) | GET | XML oder JSON, die einzelne Entscheidungen vor der Autorisierung oder Fehlerdetails enthalten. Siehe Beispiele unten. | 200 - Erfolg</br></br>400 - Ungültige Anfrage</br></br>401 - Unerlaubt</br></br>405 - Methode nicht zulässig  </br></br>412 - Vorbedingung fehlgeschlagen</br></br>500 - Interner Server-Fehler |
+
+| Endpunkt | aufgerufen  </br>von | Eingabe   </br>Parameter | HTTP  </br>Methode | Reaktion | HTTP  </br>Reaktion |
+| --- | --- | --- | --- | --- | --- |
+| &lt;sp_fqdn>/api/v1/preauthorize/{Registrierungs-Code} | AuthN-Modul | 1. Registrierungs-Code  </br>    (Pfadkomponente)</br>2.  Antragsteller (erforderlich)</br>3.  Ressourcenliste (erforderlich) | GET | XML oder JSON, die einzelne Entscheidungen vor der Autorisierung oder Fehlerdetails enthalten. Siehe Beispiele unten. | 200 - Erfolg</br></br>400 - Ungültige Anfrage</br></br>401 - Unerlaubt</br></br>405 - Methode nicht zulässig  </br></br>412 - Vorbedingung fehlgeschlagen</br></br>500 - Interner Server-Fehler |
 
 
 
 | Eingabeparameter | Beschreibung |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Registrierungscode | Der vom Benutzer am Anfang des Authentifizierungsflusses angegebene Registrierungscode-Wert. |
-| Anforderer | Die Programmer-Anfrage-ID, für die dieser Vorgang gültig ist. |
+| Anfragender | Die Programmer-Anfrage-ID, für die dieser Vorgang gültig ist. |
 | Ressourcenliste | Eine Zeichenfolge, die eine kommagetrennte Liste von resourceIds enthält, die den Inhalt identifiziert, auf den ein Benutzer zugreifen kann, und die von MVPD-Autorisierungsendpunkten erkannt wird. |
 
 
@@ -58,23 +60,23 @@ Adobe-Response-Confidence : full
 Content-Type: application/xml; charset=utf-8
 
 <resources>
-    <resource>
-        <id>TestStream1</id>
-        <authorized>true</authorized>
-    </resource>
-    <resource>
-        <id>TestStream2</id>
-        <authorized>false</authorized>  
-        <error>
-            <status>403</status>
-            <code>authorization_denied_by_mvpd</code>
-            <message>User not authorized</message>
-            <details>Your subscription package does not include the "TestStream3" channel.</details>
-            <helpUrl>https://experienceleague-review.corp.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html#error-codes</helpUrl>
-            <trace>0453f8c8-167a-4429-8784-cd32cfeaee58</trace>
-            <action>none</action>
-        </error>
-    <resource>
+    <resource>
+        <id>TestStream1</id>
+        <authorized>true</authorized>
+    </resource>
+    <resource>
+        <id>TestStream2</id>
+        <authorized>false</authorized>  
+        <error>
+            <status>403</status>
+            <code>authorization_denied_by_mvpd</code>
+            <message>User not authorized</message>
+            <details>Your subscription package does not include the "TestStream3" channel.</details>
+            <helpUrl>https://experienceleague-review.corp.adobe.com/docs/primetime/authentication/auth-features/error-reportn/enhanced-error-codes.html#error-codes</helpUrl>
+            <trace>0453f8c8-167a-4429-8784-cd32cfeaee58</trace>
+            <action>none</action>
+        </error>
+    <resource>
 </resources>
 ```
 
@@ -108,4 +110,3 @@ Content-Type: application/json; charset=utf-8
     ]
 }
 ```
-
