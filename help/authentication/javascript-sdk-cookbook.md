@@ -2,9 +2,9 @@
 title: JavaScript SDK-Cookbook
 description: JavaScript SDK-Cookbook
 exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: df9d2bbef16cceb6a7e594f9b81262d475a5b334
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 >
 >Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
-## Einführung (#intro)
+## Einführung {#intro}
 
 In diesem Dokument werden die Berechtigungs-Workflows beschrieben, die die Anwendung eines Programmierers auf oberster Ebene für eine JavaScript-Integration mit dem Adobe Primetime-Authentifizierungsdienst implementiert. Links zur JavaScript-API-Referenz sind überall enthalten.
 
 Beachten Sie außerdem, dass [Verwandte Informationen](#related) enthält einen Link zu einer Reihe von JavaScript-Codebeispielen.
 
-## Berechtigungsfluss (#entitlement)
+## Berechtigungsflüsse {#entitlement}
 
 1. [Voraussetzungen](#prereq)
 2. [Startup-Fluss](#startup)
@@ -34,7 +34,7 @@ Beachten Sie außerdem, dass [Verwandte Informationen](#related) enthält einen 
 ![](assets/javascript-flows.png)
 
 
-## Voraussetzungen(#prereq)
+## Voraussetzungen {#prereq}
 
 **Abhängigkeiten:**
 
@@ -141,7 +141,7 @@ Aufruf `getAuthentication()` um den Authentifizierungsstatus abzurufen ODER den 
 
 Der Authentifizierungsfluss wird abgeschlossen, wenn der AccessEnabler aufruft `setAuthenticationStatus()`mit `isAuthenticated == 1`.
 
-## 4. Autorisierungsfluss (#authz)
+## 4. Genehmigungsprozess {#authz}
 
 **Abhängigkeiten:**
 
@@ -164,7 +164,7 @@ Verwenden Sie den Media Token Verifier, um das shortMediaToken zu validieren, da
 - Wenn die Validierung erfolgreich ist: Anzeigen/Wiedergeben des angeforderten Mediums für den Benutzer.
 - Wenn es fehlschlägt: Das AuthZ-Token war ungültig, die Medienanforderung sollte abgelehnt werden und dem Benutzer sollte eine Fehlermeldung angezeigt werden.
 
-## 5. Medienfluss anzeigen (#logout)
+## 5. Medienfluss anzeigen {#logout}
 
 - Der Benutzer wählt das Medium aus, das angezeigt werden soll.
    - Sind Medien geschützt?
@@ -173,7 +173,7 @@ Verwenden Sie den Media Token Verifier, um das shortMediaToken zu validieren, da
          - Wenn das Medium nicht geschützt ist, fahren Sie mit dem Fluss Medien anzeigen fort.
          - Wiedergabemedien
 
-## Konfigurieren der Besucher-ID (#visitorID)
+## Konfigurieren der Besucher-ID {#visitorID}
 
 Konfigurieren eines [Experience Cloud visitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html) -Wert ist aus analytischer Sicht sehr wichtig. Sobald ein EC visitorID -Wert festgelegt ist, sendet das SDK diese Informationen zusammen mit jedem Netzwerkaufruf und der Adobe Primetime-Authentifizierungsdienst erfasst diese Informationen. Auf diese Weise können Sie die Analysedaten aus dem Adobe Primetime-Authentifizierungsdienst mit allen anderen Analyseberichten korrelieren, die Sie möglicherweise aus anderen Anwendungen oder Websites haben. Informationen zum Einrichten der EC-Besucher-ID finden Sie unter [here](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
 
