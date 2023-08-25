@@ -1,7 +1,7 @@
 ---
 title: Einführung in die gleichzeitige Überwachung
 description: Einführung in die gleichzeitige Überwachung
-source-git-commit: ac0c15b951f305e29bb8fa0bd45aa2c53de6ad15
+source-git-commit: 9bc4298edb22d72131156bf92717284866728ec5
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -15,9 +15,9 @@ Weitere Informationen [Eskalationsverfahren](/help/concurrency-monitoring/cm-esc
 
 Die gleichzeitige Überwachung ermöglicht es sowohl Identitäts- als auch Inhaltsanbietern (MVPDs und Programmierern), Beschränkungen für die gleichzeitige Nutzung über mehrere Anwendungen hinweg zu definieren und durchzusetzen (möglicherweise im Besitz mehrerer Partner).
 
-**Die API für die Überwachung von gleichzeitigem Zugriff wird an folgendem Speicherort gehostet:
+**Die Concurrency Monitoring-API wird an folgendem Speicherort gehostet:**
 
-* V2.0: [Context Monitoring-API](http://docs.adobeptime.io/cm-api-v2/)**
+* **V2.0: [Context Monitoring-API](http://docs.adobeptime.io/cm-api-v2/)**
 
 Um sich für unseren Concurrency Monitoring-Dienst anzumelden, kontaktieren Sie bitte unsere [Supportteam](mailto:tve-support@adobe.com). Geben Sie die folgenden Informationen an und unser Team hilft Ihnen gerne weiter:
 
