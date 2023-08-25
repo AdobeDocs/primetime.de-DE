@@ -1,19 +1,19 @@
 ---
 title: SSO über passive Authentifizierung
 description: SSO über passive Authentifizierung
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: ce45899f-6e94-4bb0-a2c1-51f03bd66d8d
+source-git-commit: 914ef0b9baaf5c51e6c26a280af9102ea0df5271
 workflow-type: tm+mt
 source-wordcount: '776'
 ht-degree: 0%
 
 ---
 
-
 # SSO über passive Authentifizierung
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 
 ## Einführung
@@ -28,15 +28,15 @@ Solange das Token noch gültig ist, erscheinen die Benutzer direkt als authentif
 
 
 
-Der hier beschriebene geschäftliche Anwendungsfall ist eine sehr spezifische Anforderung: dass der Benutzer mindestens einmal für jede besuchte Site authentifiziert werden MUSS. Dadurch kann der MVPD Geschäftsregeln für die authN-Sitzung anwenden, die je nach Netzwerk variieren können. Es widerspricht dem aktuellen TVE-Versprechen, dass sich ein Benutzer nur einmal anmelden muss und auf allen Sites authentifiziert wird, die Teil des Adobe Primetime-Authentifizierungs-Ökosystems sind.
+Der hier beschriebene geschäftliche Anwendungsfall ist eine sehr spezifische Anforderung: Der Benutzer MUSS mindestens einmal für jede besuchte Site authentifiziert werden. Dadurch kann der MVPD Geschäftsregeln für die authN-Sitzung anwenden, die je nach Netzwerk variieren können. Es widerspricht dem aktuellen TVE-Versprechen, dass sich ein Benutzer nur einmal anmelden muss und auf allen Sites authentifiziert wird, die Teil des Adobe Primetime-Authentifizierungs-Ökosystems sind.
 
 
 
-Um die Geschäftsregel zu pflegen und gleichzeitig ein gutes Benutzererlebnis zu gewährleisten, erfordert der MVPD NICHT, dass ein Benutzer die Anmeldeinformationen manuell bereitstellt. Wir können von dem zuvor festgelegten Sitzungs-Cookie profitieren und versuchen, eine automatische erneute Authentifizierung mithilfe des passiven Flusses durchzuführen. aus der Benutzerperspektive erscheint er als automatisch angemeldet.
+Um die Geschäftsregel zu pflegen, aber auch ein gutes Benutzererlebnis zu gewährleisten, erfordert der MVPD NICHT, dass ein Benutzer die Anmeldeinformationen manuell bereitstellt. Wir können von dem zuvor festgelegten Sitzungs-Cookie profitieren und versuchen, eine automatische erneute Authentifizierung mithilfe des passiven Flusses durchzuführen. Aus der Sicht des Benutzers erscheint er automatisch als angemeldet.
 
 
 
-Um dies zu beheben, haben wir zwei verschiedene Funktionen implementiert: Authentifizierung pro Netzwerk und Unterstützung der passiven Authentifizierung. Die MVPDs unterstützen passive SAML-Authentifizierung, bei der ein Benutzer einfach erneut authentifiziert wird, wenn eine authN-Sitzung auf dem IdP vorhanden ist, unabhängig davon, auf welcher Site die Sitzung erstellt wurde.
+Um diese Probleme zu lösen, haben wir zwei verschiedene Funktionen implementiert: Authentifizierung pro Netzwerk und passive Authentifizierungsunterstützung. Die MVPDs unterstützen passive SAML-Authentifizierung, bei der ein Benutzer einfach erneut authentifiziert wird, wenn eine authN-Sitzung auf dem IdP vorhanden ist, unabhängig davon, auf welcher Site die Sitzung erstellt wurde.
 
 
 
@@ -101,7 +101,9 @@ SAML-Anforderungsbeispiel Hier finden Sie eine SAML-Anforderungsstichprobe für 
 </saml2p:AuthnRequest>
 ```
 
-Geschäftsregeln MVPDs weisen bestimmte SSO-Scoping-Domänenbeschränkungen auf. So könnten beispielsweise nur einige Domänen von einigen MVPDs zugelassen werden (SSO für dasselbe Medienunternehmen, aber nicht unternehmensübergreifend).
+## Geschäftsregeln
+
+MVPDs weisen bestimmte SSO-Scoping-Domänenbeschränkungen auf. So könnten beispielsweise nur einige Domänen von einigen MVPDs zugelassen werden (SSO für dasselbe Medienunternehmen, aber nicht unternehmensübergreifend).
 Einige MVPDs erfordern möglicherweise unterschiedliche Authentifizierungsregeln, um durchgesetzt zu werden. Beispielsweise können MVPDs je nach Netzwerk unterschiedliche Authentifizierungs-TTLs aufweisen. MVPDs können auch für einige Netzwerke eine häusliche Authentifizierung ermöglichen, für andere jedoch nicht (Anwendungsfälle der elterlichen Kontrolle sind hier stark vertreten).
 
 
@@ -111,7 +113,9 @@ Dies kann durch die Verwendung der Authentifizierung pro Netzwerk mit passiver a
 
 
 
-Bekannte Einschränkungen in iOS - Aufgrund der Art des lokalen Speichers in iOS funktionieren SSO-Flüsse nicht für Anwendungen, die von verschiedenen Anbietern entwickelt wurden. Weitere Informationen zur einmaligen Anmeldung in iOS 8 und höher finden Sie in dieser technischen Anmerkung.
+## Bekannte Einschränkungen
+
+iOS - Aufgrund der Art des lokalen Speichers in iOS funktionieren SSO-Flüsse nicht für Anwendungen, die von verschiedenen Anbietern entwickelt wurden. Weitere Informationen zur einmaligen Anmeldung in iOS 8 und höher finden Sie in dieser technischen Anmerkung.
 
 
 <!--
