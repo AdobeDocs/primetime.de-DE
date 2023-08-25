@@ -1,23 +1,23 @@
 ---
 title: Authentifizierung mit dem OAuth 2.0-Protokoll
 description: Authentifizierung mit dem OAuth 2.0-Protokoll
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 0c1f04fe-51dc-4b4d-88e7-66e8f4609e02
+source-git-commit: d7d284e7e8563c5ca1ab1c8627cb75ecb1e1cbe5
 workflow-type: tm+mt
 source-wordcount: '1074'
 ht-degree: 0%
 
 ---
 
-
 # Authentifizierung mit dem OAuth 2.0-Protokoll
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Übersicht {#overview}
 
-Obwohl SAML immer noch das Hauptprotokoll ist, das für die Authentifizierung von US-MVPDs und Unternehmen im Allgemeinen verwendet wird, gibt es einen klaren Trend zum Übergang zu OAuth 2.0 als Primärauthentifizierungsprotokoll. Das OAuth 2.0-Protokoll (https://tools.ietf.org/html/rfc6749) wurde hauptsächlich für Websites für Verbraucher entwickelt und wurde schnell von Internetgiganten wie Facebook, Google und Twitter übernommen.
+Obwohl SAML immer noch das Hauptprotokoll ist, das für die Authentifizierung von US-MVPDs und Unternehmen im Allgemeinen verwendet wird, gibt es einen klaren Trend zum Übergang zu OAuth 2.0 als Primärauthentifizierungsprotokoll. Das OAuth 2.0-Protokoll (https://tools.ietf.org/html/rfc6749) wurde hauptsächlich für Konsumentensites entwickelt und schnell von Internetgiganten wie Facebook, Google und Twitter übernommen.
 
 OAuth 2.0 ist äußerst erfolgreich, was Unternehmen dazu veranlasst hat, ihre Infrastruktur langsam zu modernisieren, um sie zu unterstützen.
 
@@ -39,7 +39,7 @@ Das Protokoll bietet außerdem mehr Flexibilität in Bezug auf die Daten, die ve
 
 Um die Authentifizierung mit OAuth 2.0 zu unterstützen, muss ein MVPD die folgenden Voraussetzungen erfüllen:
 
-Zuallererst muss der MVPD sicherstellen, dass er das * unterstützt[Autorisierungs-Code-Förderung](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html) Fluss.
+Zuallererst muss der MVPD sicherstellen, dass er die [Autorisierungs-Code-Förderung](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/authcode.html) Fluss.
 
 Nach Bestätigung, dass der Fluss unterstützt wird, muss uns der MVPD die folgenden Informationen zur Verfügung stellen:
 
@@ -47,13 +47,13 @@ Nach Bestätigung, dass der Fluss unterstützt wird, muss uns der MVPD die folge
    * Der Endpunkt stellt den Autorisierungscode bereit, der später im Austausch für das Aktualisierungs- und Zugriffstoken verwendet wird.
 * der /token-Endpunkt
    * Dadurch werden das Aktualisierungs-Token und das Zugriffstoken bereitgestellt
-   * Das Aktualisierungs-Token muss stabil sein (es darf sich nicht jedes Mal ändern, wenn wir ein neues Zugriffstoken anfordern
+   * Das Aktualisierungs-Token muss stabil sein (es darf sich nicht bei jeder Anforderung eines neuen Zugriffstokens ändern
    * MVPD muss für jedes Aktualisierungstoken mehrere aktive Zugriffstoken zulassen
    * dieser Endpunkt tauscht auch ein Aktualisierungs-Token gegen ein Zugriffstoken
 * benötigen wir eine **Endpunkt für Benutzerprofil**
    * Dieser Endpunkt stellt die userID bereit, die für ein Konto eindeutig sein muss und keine personenbezogenen Informationen enthalten sollte.
 * die **/logout** Endpunkt (optional)
-   * Die Adobe Primetime-Authentifizierung leitet zu diesem Endpunkt weiter und stellt dem MVPD einen Weiterleitungs-URI bereit. an diesem Endpunkt kann der MVPD die Cookies auf dem Client-Computer löschen oder eine beliebige Logik für die Abmeldung anwenden
+   * Die Adobe Primetime-Authentifizierung leitet zu diesem Endpunkt weiter, stellt dem MVPD einen Weiterleitungs-URI bereit. An diesem Endpunkt kann der MVPD die Cookies auf dem Clientcomputer löschen oder eine beliebige Logik für die Abmeldung anwenden.
 * Es wird dringend empfohlen, die Unterstützung autorisierter Clients zu nutzen (Client-Apps, die keine Benutzerautorisierungsseite Trigger haben)
 * Außerdem benötigen wir:
    * **clientID** und **Client-Geheimnis** für die Integrationskonfigurationen
@@ -108,7 +108,6 @@ Aus technischer Sicht:
 
 1. Adobe ermöglicht eine OAuth 2.0-Integration zwischen dem Programmierer und dem MVPD, OHNE die SAML-Integration zu löschen.
 1. Nach der Aktivierung verwenden alle neuen Benutzer die OAuth 2.0-Flüsse.
-1. Bereits authentifizierte Benutzer, die bereits über ein lokales AuthN-Token verfügen, das die SAML-Betreffkennung enthält, werden von Adobe automatisch über die SAML-Integration weitergeleitet.
-1. Wenn das von SAML generierte AuthN-Token für Benutzer in Schritt 3 abläuft, behandelt Adobe sie als neue Benutzer und verhält sich wie die Benutzer in Schritt 2.
+1. Bereits authentifizierte Benutzer, die bereits über ein lokales AuthN-Token verfügen, das die SAML-Betreff-ID enthält, werden von Adobe automatisch über die SAML-Integration weitergeleitet.
+1. Für die Benutzer in Schritt 3 behandelt Adobe sie nach Ablauf des von SAML generierten AuthN-Tokens als neue Benutzer und verhält sich wie die Benutzer in Schritt 2.
 1. Adobe überprüft Nutzungsmuster, um festzustellen, wann die SAML-Integration sicher deaktiviert werden kann.
-
