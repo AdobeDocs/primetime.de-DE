@@ -2,7 +2,7 @@
 title: Amazon FireOS-Integrations-Cookbook
 description: Amazon FireOS-Integrations-Cookbook
 exl-id: 1982c485-f0ed-4df3-9a20-9c6a928500c2
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: e5e42763fecae437cfc34bae98a5d2bd5adc4643
 workflow-type: tm+mt
 source-wordcount: '1433'
 ht-degree: 0%
@@ -198,7 +198,6 @@ Die `event` Parameter gibt an, welches Berechtigungsereignis aufgetreten ist; di
 
 ### F. Abmeldefluss {#logout_flow}
 
-1. Aufruf [`logout()`](#$logout) , um den Benutzer abzumelden.\
-   AccessEnabler löscht alle zwischengespeicherten Werte und Token, die der Benutzer für das aktuelle MVPD von allen Anfragenden erhält, die die Anmeldung über Single Sign On nutzen. Nachdem der Cache gelöscht wurde, führt der AccessEnabler einen Server-Aufruf durch, um die Server-seitigen Sitzungen zu bereinigen.  Da der Server-Aufruf zu einer SAML-Umleitung zum IdP führen kann (dies ermöglicht die Sitzungsbereinigung auf der IdP-Seite), muss dieser Aufruf allen Umleitungen folgen. Aus diesem Grund wird dieser Aufruf innerhalb eines WebView-Steuerelements verarbeitet, das für den Benutzer unsichtbar ist.
+1. Aufruf [`logout()`](#$logout) , um den Benutzer abzumelden. AccessEnabler löscht alle zwischengespeicherten Werte und Token, die der Benutzer für das aktuelle MVPD von allen Anfragenden erhält, die die Anmeldung über Single Sign On nutzen. Nachdem der Cache gelöscht wurde, führt der AccessEnabler einen Server-Aufruf durch, um die Server-seitigen Sitzungen zu bereinigen.  Da der Server-Aufruf zu einer SAML-Umleitung zum IdP führen kann (dies ermöglicht die Sitzungsbereinigung auf der IdP-Seite), muss dieser Aufruf allen Umleitungen folgen. Aus diesem Grund wird dieser Aufruf innerhalb eines WebView-Steuerelements verarbeitet, das für den Benutzer unsichtbar ist.
 
    **Hinweis:** Der Abmeldefluss unterscheidet sich vom Authentifizierungsfluss insofern, als der Benutzer in keiner Weise mit der WebView interagieren muss. Daher ist es möglich (und empfohlen), das WebView-Steuerelement während des Abmeldevorgangs unsichtbar (d. h. ausgeblendet) zu machen.
