@@ -2,7 +2,7 @@
 title: Technische Übersicht über Amazon FireOS
 description: Technische Übersicht über Amazon FireOS
 exl-id: 939683ee-0dd9-42ab-9fde-8686d2dc0cd0
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 4691e769e1fee51507550c8e1fbecdcdff7e44eb
 workflow-type: tm+mt
 source-wordcount: '2142'
 ht-degree: 0%
@@ -80,7 +80,7 @@ Nach erfolgreicher Authentifizierung und Autorisierung stellt die Primetime-Auth
 
 #### Authentifizierungstoken
 
-- **AccessEnabler 1.10.1 für FireOS** basiert auf AccessEnabler für Android 1.9.1 - Dieses SDK führt eine neue Methode der Tokenspeicherung ein, die mehrere Programmer-MVPD-Buckets und damit mehrere Authentifizierungstoken ermöglicht.
+- **AccessEnabler 1.10.1 für FireOS** basiert auf AccessEnabler für Android 1.9.1 - Mit diesem SDK wird eine neue Methode der Token-Speicherung eingeführt, die mehrere Programmer-MVPD-Buckets und damit mehrere Authentifizierungstoken ermöglicht.
 
 #### Autorisierungstoken
 
