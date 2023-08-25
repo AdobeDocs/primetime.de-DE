@@ -2,7 +2,7 @@
 title: Android SDK - Übersicht
 description: Android SDK - Übersicht
 exl-id: a1d98325-32a1-4881-8635-9a3c38169422
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 4b858a06080ec221c60548e2a2a0f3b6010ede15
 workflow-type: tm+mt
 source-wordcount: '2707'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Nach erfolgreicher Authentifizierung und Autorisierung stellt die Primetime-Auth
 
 #### Authentifizierungstoken
 
-- **AccessEnabler 1.6 und älter** - **** Die Art und Weise, wie Authentifizierungstoken auf dem Gerät zwischengespeichert werden, hängt von der **Authentifizierung pro Anforderer&quot;** Markierung, die mit dem aktuellen MVPD verknüpft ist:
+- **AccessEnabler 1.6 und älter** - Wie Authentifizierungstoken auf dem Gerät zwischengespeichert werden, hängt von der **Authentifizierung pro Anforderer&quot;** Markierung, die mit dem aktuellen MVPD verknüpft ist:
 
 
 1. Wenn die Funktion &quot;Authentifizierung pro Anforderer&quot; *disabled*, wird ein einzelnes Authentifizierungstoken lokal in der globalen Zwischenablage gespeichert. Dieses Token wird für alle Anwendungen freigegeben, die in das aktuelle MVPD integriert sind.
