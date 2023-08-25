@@ -2,7 +2,7 @@
 title: Amazon FireOS Native Client-API-Referenz
 description: Amazon FireOS Native Client-API-Referenz
 exl-id: 8ac9f976-fd6b-4b19-a80d-49bfe57134b5
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 220c571db04afbd6bafc026b3179f78f60543372
 workflow-type: tm+mt
 source-wordcount: '3416'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Wenn ein Wert für *urls* festgelegt ist, werden alle in der Variablen *urls* -P
 | ```public void setRequestor(String requestorId)``` |
 
 
-**Verfügbarkeit:**Version 3.0+
+**Verfügbarkeit:** v3.0+
 
 
 | API-Aufruf: Konfiguration des Anforderers |
