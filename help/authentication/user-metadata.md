@@ -2,7 +2,7 @@
 title: Benutzermetadaten
 description: Benutzermetadaten
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 6779e20e37f1396402f36564e2c85d48d8c581a3
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
@@ -33,8 +33,6 @@ ht-degree: 0%
 
 Abrufen von Metadaten, die MVPD über den authentifizierten Benutzer freigegeben hat.
 
-<div>
-
 
 | Endpunkt | aufgerufen  </br>von | Eingabe   </br>Parameter | HTTP  </br>Methode | Reaktion | HTTP  </br>Reaktion |
 | --- | --- | --- | --- | --- | --- |
@@ -54,7 +52,8 @@ Abrufen von Metadaten, die MVPD über den authentifizierten Benutzer freigegeben
 > 
 >Benutzer-Metadateninformationen sollten nach Abschluss des Authentifizierungsflusses verfügbar sein, können jedoch je nach MVPD und Metadatentyp über den Autorisierungsfluss aktualisiert werden.
 
-</br>
+
+
 
 ## Beispielantwort {#sample-response}
 
@@ -87,6 +86,6 @@ Im Stammverzeichnis des Objekts befinden sich drei Knoten:
 
 Im Fall eines Fehlers gibt der Server ein XML- oder JSON-Objekt zurück, das eine detaillierte Fehlermeldung angibt.
 
-Weitere Informationen finden Sie unter [Benutzermetadaten](/help/authentication/user-metadata.md).
+Weitere Informationen finden Sie unter [Benutzermetadaten](/help/authentication/user-metadata-feature.md).
 
 ### [Zurück zur REST-API-Referenz](/help/authentication/rest-api-reference.md).
