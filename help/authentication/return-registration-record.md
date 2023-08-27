@@ -2,9 +2,9 @@
 title: Registrierungsdatensatz
 description: Registrierungsdatensatz
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 0%
 
 ## REST-API-Endpunkte {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
+`<REGGIE_FQDN>`:
 
 * Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>:
+`<SP_FQDN>`:
 
 * Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
@@ -42,7 +42,7 @@ Gibt den Registrierungs-Code-Datensatz mit der Registrierungs-Code-UUID, dem Reg
 
 | Endpunkt | aufgerufen  </br>von | Eingabe   </br>Parameter | HTTP  </br>Methode | Reaktion | HTTP  </br>Reaktion |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Beispiel:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestId/regcode/TJJCFK?format=xml | Streaming-App</br></br>oder</br></br>Programmiererdienst | 1. Antragsteller  </br>    (Pfadkomponente)</br>2.  Registrierungscode  </br>    (Pfadkomponente) | GET | XML oder JSON, die einen Registrierungs-Code und Informationen enthalten. Siehe Schema und Beispiel unten. | 200 |
+| `<REGGIE_FQDN>`;/reggie/v1/`{requestorId}`/regcode/`{registrationCode}`<p>Beispiel:<p>`<REGGIE_FQDN>`/reggie/v1/sampleRequestId/regcode/TJJCFK?format=xml | Streaming-App</br></br>oder</br></br>Programmiererdienst | 1. Antragsteller  </br>    (Pfadkomponente)</br>2.  Registrierungscode  </br>    (Pfadkomponente) | GET | XML oder JSON, die einen Registrierungs-Code und Informationen enthalten. Siehe Schema und Beispiel unten. | 200 |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Gibt den Registrierungs-Code-Datensatz mit der Registrierungs-Code-UUID, dem Reg
 | Anfragender | Anforderer-ID |
 | mvpd | MVPD ID |
 | generiert | Zeitstempel der Erstellung des Registrierungs-Codes (in Millisekunden seit dem 1. Januar 1970 GMT) |
-| expires | Zeitstempel, wenn der Registrierungs-Code abläuft (in Millisekunden seit dem 1. Januar 1970 GMT) |
+| expires | Zeitstempel, wenn der Registrierungscode abläuft (in Millisekunden seit dem 1. Januar 1970 GMT) |
 | deviceId | Eindeutige Geräte-ID (oder XSTS-Token) |
 | deviceType | Gerätetyp |
 | deviceUser | Benutzer, der beim Gerät angemeldet ist |
