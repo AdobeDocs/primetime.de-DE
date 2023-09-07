@@ -2,7 +2,7 @@
 title: Registrierungsdatensatz
 description: Registrierungsdatensatz
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
+source-git-commit: 9e1d178e00c49cab7bcf9693c3b16234cb29ba4c
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 * Produktion - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Staging - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-</br>
+
 
 
 ## Beschreibung {#description}
@@ -37,7 +37,7 @@ Gibt den Registrierungs-Code-Datensatz mit der Registrierungs-Code-UUID, dem Reg
 
 
 
-<div>
+
 
 
 | Endpunkt | aufgerufen  </br>von | Eingabe   </br>Parameter | HTTP  </br>Methode | Reaktion | HTTP  </br>Reaktion |
@@ -46,14 +46,16 @@ Gibt den Registrierungs-Code-Datensatz mit der Registrierungs-Code-UUID, dem Reg
 
 {style="table-layout:auto"}
 
-</br>
+
+
 
 | Eingabeparameter | Beschreibung |
 | --- | --- |
 | Anfragender | Die Programmer-Anfrage-ID, für die dieser Vorgang gültig ist. |
 | Registrierungscode | Der Registrierungscode-Wert, der auf dem Streaming-Gerät angezeigt wird (in den Authentifizierungsfluss einzugeben). |
 
-</br>
+
+
 
 ## Antwort-XML-Schema {#response-xml-schema}
 
