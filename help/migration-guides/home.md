@@ -2,39 +2,37 @@
 title: Hilfe zur Primetime-Migration
 description: Hilfe zur Primetime-Migration
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1f3f1a5b-95c7-4d47-a36f-7ad934a7d49d
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 44%
+source-wordcount: '200'
+ht-degree: 0%
 
 ---
 
+# Hilfe zur Primetime-Migration und -Konversion
 
-# Hilfe zur Primetime-Migration und -Umrechnung
-
-Willkommen bei der Migrations- und Umrechnungshilfe für Adobe Primetime. Die im linken Navigationsbereich aufgelisteten Dokumente erläutern den Konvertierungs- und Migrationsprozess, um von der vorhandenen Primetime TVSDK Suite zur Suite der nächsten Generation zu wechseln.
+Willkommen bei der Migrations- und Konversionshilfe für Adobe Primetime. In den im linken Navigationsbereich aufgelisteten Dokumenten wird der Konvertierungs- und Migrationsprozess erläutert, um von der vorhandenen Primetime TVSDK-Suite zur Suite der nächsten Generation zu wechseln.
 
 ## Siehe auch
 
 | Benutzerhandbuch | Beschreibung |
 |--- |--- |
-| [Primetime-Versionshinweise](/help/release-notes/home.md) | Enthält versionsspezifische Informationen, Systemanforderungen, Einschränkungen sowie behobene und bekannte Probleme. |
-| [Hilfe zur Primetime-Programmierung](/help/programming/home.md) | Ermöglicht die Entwicklung von Anwendungen und Video-Playern mit Java auf Android-Geräten und Objective-C auf iOS-Geräten. |
-| [Referenzimplementierung](/help/android-reference-implementation/home.md) | Das Tutorial hilft, das TVSDK zu verstehen und die Funktions-Manager zu modifizieren, um Ihren persönlichen Player anzupassen. |
-| [Hilfe zu Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Erklärt, wie man Inhalte durch Einfügen nutzergerechter dynamischer Anzeigen auf dem Server monetarisieren und die Zielgruppe mit personalisierten Anzeigen ansprechen kann. |
+| [Primetime - Versionshinweise](/help/release-notes/home.md) | Enthält versionsspezifische Informationen, Systemanforderungen, Einschränkungen, behobene Probleme und bekannte Probleme. |
+| [Hilfe zur Primetime-Programmierung](/help/programming/home.md) | Hier erfahren Sie, wie Sie Anwendungen und Videoplayer mit Java auf Android-Geräten und Objective-C auf iOS-Geräten entwickeln. |
+| [Referenzimplementierung](/help/android-reference-implementation/home.md) | Hilft, das TVSDK zu verstehen und die Feature Manager zu ändern, um Ihren persönlichen Player anzupassen. |
+| [Hilfe zu Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Erläutert, wie Inhalte durch Einfügen benutzerspezifischer dynamischer Anzeigen auf dem Server monetarisiert und die Interaktion der Zielgruppe mit personalisierten Anzeigen ermöglicht werden. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Hilft Ihnen, mehr über verschiedene Benutzerszenarien in Digital Rights Management (DRM) zu erfahren |
-| [Primetime-API-Verweise](/help/reference/api-references.md) | Enthält detaillierte Informationen über TVSDK-Funktionen, Datenstrukturen und andere Programmkonstrukte. |
-| [Archive](https://helpx.adobe.com/primetime/archives.html) | Laden Sie PDFs der archivierten Dokumentation herunter. |
+| [Primetime-API-Referenzen](/help/reference/api-references.md) | Enthält detaillierte Informationen zu TVSDK-Funktionen, Datenstrukturen und anderen Programmierkonstrukten. |
+| [Archive](https://helpx.adobe.com/primetime/archives.html) | Laden Sie die PDF der archivierten Dokumentation herunter. |
 
 ## Hilfreiche Ressourcen
 
 * [Adobe Primetime kennenlernen](https://www.adobe.com/in/marketing/primetime.html)
 
-* [Parallelüberwachung](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
+* [Überwachung der Parallelität](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
 
 * [Primetime-Authentifizierung](https://tve.helpdocsonline.com/home)
 
 * [Adobe Primetime DRM-Foren](https://forums.adobe.com/community/adobe_access)
 
-* [Adobe Primetime Developer Resources](https://www.adobe.com/devnet/primetime.html)

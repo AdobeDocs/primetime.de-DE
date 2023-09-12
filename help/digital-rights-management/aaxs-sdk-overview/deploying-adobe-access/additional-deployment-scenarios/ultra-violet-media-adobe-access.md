@@ -1,37 +1,35 @@
 ---
-description: Adobe Access kann mit anderen Content-Streaming-Lösungen von Drittanbietern verwendet werden, um ein komplettes und sicheres DRM-basiertes Medienverteilungsnetzwerk einzurichten.
-title: UltraViolet-Adobe-Zugriff
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Adobe Access kann mit anderen Content-Streaming-Lösungen von Drittanbietern verwendet werden, um ein vollständiges und sicheres DRM-basiertes Medienverteilungs-Ökosystem einzurichten.
+title: UltraViolet-Medien und Adobe-Zugriff
+exl-id: cca476a4-1961-46d8-aad4-bc7c996d7b02
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
+# UltraViolet-Medien und Adobe-Zugriff {#ultraviolet-media-and-adobe-access}
 
-# UltraViolet Media- und Adobe-Access {#ultraviolet-media-and-adobe-access}
+Adobe Access kann mit anderen Content-Streaming-Lösungen von Drittanbietern verwendet werden, um ein vollständiges und sicheres DRM-basiertes Medienverteilungs-Ökosystem einzurichten.
 
-Adobe Access kann mit anderen Content-Streaming-Lösungen von Drittanbietern verwendet werden, um ein komplettes und sicheres DRM-basiertes Medienverteilungsnetzwerk einzurichten.
+UltraViolet ist ein Digital Rights Authentication- und Cloud-basiertes Distributionssystem, das es Verbrauchern von Digital Home Entertainment-Inhalten ermöglicht, erworbene Inhalte über mehrere Plattformen und Geräte zu streamen und herunterzuladen. UltraViolet-Inhalte werden in einem Common File Format (CFF) mit Common Encryption (CENC) heruntergeladen (oder gestreamt).
 
-UltraViolet ( [](https://www.uvvu.com/)) ist ein Digital-Rights-Authentifizierungs- und Cloud-basiertes Distributionssystem, das es den Nutzern digitaler Home-Entertainment-Inhalte ermöglichen kann, erworbene Inhalte über mehrere Plattformen und Geräte zu streamen und herunterzuladen. UltraViolet-Inhalte werden mit Common Encryption (CENC) in einem Common File Format (CFF) heruntergeladen (oder gestreamt).
-
-Es ist einfach, ein UltraViolet System zusammen mit Adobe Access einzurichten. Im folgenden Anwendungsfall wird das Verhalten des Inhaltsflusses dargestellt:
+Es ist einfach, ein UltraViolet System zusammen mit Adobe Access einzurichten. Das folgende Nutzungsszenario zeigt das Verhalten des Inhaltsflusses:
 
 <!--<a id="fig_cxy_dc2_44"></a>-->
 
 ![](assets/AdobeUV_web.png)
 
-1. Der Inhaltsbesitzer kodiert und packt den Inhalt in CFF. Die verpackten Inhalte sind für den Vertrieb an einen Händler lizenziert.
-1. Der Einzelhändler lädt die Inhalte auf einen digitalen Dienstleister wie CDN hoch. Der Inhalt kann jetzt heruntergeladen werden. Beachten Sie, dass einige dieser Rollen von einer oder mehreren Firmen wiedergegeben werden können.
+1. Der Inhaltseigentümer kodiert und packt den Inhalt in CFF. Der gepackte Inhalt ist für einen Einzelhändler zum Vertrieb lizenziert.
+1. Der Einzelhändler lädt den Inhalt auf einen digitalen Dienstleister hoch, z. B. CDN. Der Inhalt kann jetzt heruntergeladen werden. Beachten Sie, dass einige dieser Rollen von einem oder mehreren Unternehmen gespielt werden können.
 
-   Der Endbenutzer verfügt über ein Gerät, das Adobe AIR unterstützt. Darüber hinaus muss der Benutzer eine UltraViolet-kompatible Anwendung installieren. Die Anwendung enthält den erforderlichen Code, um den CFF zu analysieren und ihn für den Verbrauch durch die Laufzeit darzustellen. Alle sensiblen kryptographischen Vorgänge werden in der sicheren Laufzeit verarbeitet.
-1. Die Anwendung kann eine Domäne für das Gerät, das mit dem Koordinator interagiert, als Trigger verwenden. Der Koordinator unterhält einen Zugriffsschutz, eine Benutzerdatenbank und Domänen. Der Domänenmanager des Koordinators wird mithilfe des Adobe Access SDK erstellt, um Adobe Access-spezifische Vorgänge zum Verbinden/Verlassen von Domänen zu implementieren.
-1. Der Benutzer kann dann mit der Anwendung ein Video auswählen, das er vom Händler erwerben möchte. Der Einzelhändler stellt in der Regel ein Webportal bereit und verarbeitet die gesamte Geschäftslogik.
-1. Der Händler interagiert dann mit dem Koordinator, um ein Berechtigungstoken hinzuzufügen. Der Einzelhändler leitet die Anforderung für den eigentlichen Inhaltsdownload an den Dienstleister weiter.
-1. Wenn das Gerät noch keine Inhaltslizenz besitzt, wird eine Lizenzanforderung mit dem CFF Trigger. Die Anforderung umfasst in der Regel ein Domänenzertifikat, Benutzeranmeldeinformationen und Informationen zur Anwendung. Der Dienstleister betreibt eine Adobe Access License Server (entwickelt mit dem Adobe Access SDK), die den UltraViolet Spezifikationen entspricht.
-1. Die UltraViolet Geschäftslogik des Dienstleisters interagiert bei Bedarf mit dem Koordinator, um das entsprechende Berechtigungstoken abzurufen, um zu bestimmen, ob eine Inhaltslizenz erteilt werden soll.
+   Der Endbenutzer verfügt über ein Gerät, das Adobe AIR unterstützt. Zusätzlich muss der Benutzer eine UltraViolet-kompatible Anwendung installieren. Die Anwendung enthält den erforderlichen Code, um den CFF zu analysieren und ihn zur Verwendung durch die Laufzeit darzustellen. Alle sensiblen kryptografischen Vorgänge werden in der sicheren Laufzeitumgebung verarbeitet.
+1. Die Anwendung kann einen Domain-Join für das Gerät Trigger haben, der mit dem Koordinator interagiert. Der Koordinator unterhält einen Sperrer für Rechte, eine Benutzerdatenbank und Domänen. Der Domain-Manager des Koordinators wird mithilfe des Adobe Access SDK erstellt, um Adobe-Zugriffs-spezifische Domain-Join-/Urlaubsvorgänge zu implementieren.
+1. Der Benutzer kann dann die Anwendung verwenden, um ein Video auszuwählen, das er vom Einzelhändler erwerben möchte. Der Einzelhändler stellt in der Regel ein Webportal bereit und übernimmt die gesamte Geschäftslogik.
+1. Der Händler interagiert dann mit dem Koordinator, um ein Berechtigungstoken hinzuzufügen. Der Einzelhändler leitet die Anfrage dann an den Dienstleister für den tatsächlichen Download des Inhalts weiter.
+1. Wenn das Gerät noch keine Lizenz für den Inhalt besitzt, wird eine Lizenzanforderung mit dem CFF Trigger. Die Anfrage umfasst in der Regel ein Domänenzertifikat, Benutzeranmeldeinformationen und Informationen zur Anwendung. Der Dienstleister betreibt einen Adobe Access License Server (entwickelt mit dem Adobe Access SDK), der den UltraViolet-Spezifikationen entspricht.
+1. Die UltraViolet-Geschäftslogik des Dienstleisters interagiert bei Bedarf mit dem Koordinator, um das entsprechende Berechtigungstoken abzurufen und zu bestimmen, ob eine Inhaltslizenz ausgestellt werden soll.
 
-   Die Inhaltslizenz ist an die Domäne gebunden. Die Clientanwendung kann die Lizenz in die CFF-Datei einfügen. Inhalte können jetzt in der Anwendung wiedergegeben werden, wobei alle Sicherheits- und Nutzungsregeln von der Adobe Access-Komponente in der Laufzeit verarbeitet werden.
+   Die Inhaltslizenz ist an die Domäne gebunden. Die Client-Anwendung kann die Lizenz in die CFF-Datei einfügen. Inhalte können jetzt in der Anwendung wiedergegeben werden, wobei die gesamte Schutz- und Anwendungsregeldurchsetzung von der Adobe Access-Komponente zur Laufzeit verarbeitet wird.
 1. Andere Geräte und Anwendungen, die demselben Endbenutzer gehören, können beim Koordinator registriert werden. Der Inhalt kann jetzt auf anderen Adobe Access-Geräten geladen werden, ohne dass eine externe Transaktion erforderlich ist.
-

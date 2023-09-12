@@ -2,19 +2,16 @@
 title: Adobe AIR
 description: Adobe AIR
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 23f49e1e-9a0b-4b01-aa64-31be2dfbbed6
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '155'
 ht-degree: 0%
 
 ---
 
-
 # Adobe AIR{#adobe-air}
 
-Adobe AIR ist eine betriebssystemübergreifende Laufzeitumgebung, die es Inhaltsproduzenten ermöglicht, ihre bestehenden Investitionen im Web auf den Desktop auszudehnen, indem sie benutzerdefinierte Multimedia-Anwendungen entwickeln. Basierend auf bewährten, offenen Technologien bietet es Unternehmen eine zuverlässige, vereinfachte Möglichkeit, benutzerdefinierte Anwendungen zu entwickeln und bereitzustellen, die darauf vertrauen können, dass sie eine sicherere und angenehmere Benutzererfahrung bieten. Adobe AIR ermöglicht Unternehmen die einfache Integration von Rich-Media-Inhalten, um eine noch interaktivere Benutzererfahrung zu schaffen. Damit können Entwickler vertraute Tools wie HTML, JavaScript, Flash oder Adobe®-Flex® verwenden, um ihre einzigartige Kombination aus Rich-Internet-Anwendungen für Windows, Macintosh oder Linux bereitzustellen.
+Adobe AIR ist eine betriebssystemübergreifende Laufzeitumgebung, mit der Inhaltsersteller ihre bereits getätigten Investitionen im Web auf den Desktop ausweiten können, indem sie benutzerdefinierte Multimedia-Anwendungen entwerfen. Basierend auf bewährten, offenen Technologien bietet es eine zuverlässige, vereinfachte Möglichkeit für Unternehmen, benutzerdefinierte Anwendungen zu entwickeln und bereitzustellen, mit denen vertraut werden kann, dass sie eine sicherere und angenehmere Benutzererfahrung bieten. Adobe AIR ermöglicht Unternehmen die einfache Integration von Rich Media, um ein interaktiveres Benutzererlebnis zu schaffen. Damit können Entwickler bekannte Tools wie HTML, JavaScript, Flash oder Adobe® Flex® verwenden, um ihre einzigartige Kombination aus Rich-Internet-Anwendungen unter Windows, Macintosh oder Linux bereitzustellen.
 
-Unternehmen haben die vollständige Kontrolle über die Benutzeroberfläche und können eine Benutzererfahrung entwickeln, die ihre Marke widerspiegelt und stärkt. Dank der integrierten Unterstützung für die Wiedergabe von mit dem Adobe Primetime DRM SDK geschützten Inhalten können Sie mit Adobe AIR benutzerspezifische End-to-End-Distributionsketten erstellen.
-
-Weitere Informationen zu Adobe AIR finden Sie unter: [www.adobe.com/go/air](https://www.adobe.com/go/air)
+Unternehmen haben die vollständige Kontrolle über die Benutzeroberfläche und können ein Benutzererlebnis gestalten, um ihre Marke widerzuspiegeln und zu stärken. Dank der integrierten Unterstützung für die Wiedergabe von mit dem Adobe Primetime DRM SDK geschützten Inhalten hilft Adobe AIR bei der Erstellung benutzerdefinierter, durchgängiger Inhaltsverteilungsketten.

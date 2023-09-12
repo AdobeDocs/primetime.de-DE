@@ -2,9 +2,9 @@
 title: Android SDK Cookbook
 description: Android SDK Cookbook
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 9fcbb5285ffa85306c0e18337da9564ac862a6eb
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1685'
 ht-degree: 0%
 
 ---
@@ -155,7 +155,7 @@ Die Netzwerkaktivität von AccessEnabler erfolgt in einem anderen Thread, sodass
 
    **Hinweis:** An dieser Stelle hat der Benutzer die Möglichkeit, den Authentifizierungsfluss abzubrechen. In diesem Fall ist Ihre UI-Schicht dafür verantwortlich, den AccessEnabler über dieses Ereignis zu informieren, indem sie `setSelectedProvider()` mit `null` als Parameter. Dadurch kann AccessEnabler den internen Status bereinigen und den Authentifizierungsfluss zurücksetzen.
 
-1. Nach erfolgreicher Anmeldung durch den Benutzer erkennt Ihre Anwendungsebene das Laden einer &quot;benutzerdefinierten Umleitungs-URL&quot;(d. h.: [http://adobepass.android.app](http://adobepass.android.app/)). Diese benutzerdefinierte URL ist tatsächlich eine ungültige URL, die nicht von WebView geladen werden soll. Es ist ein Signal, dass der Authentifizierungsfluss abgeschlossen ist und die WebView geschlossen werden muss.
+1. Nach erfolgreicher Anmeldung durch den Benutzer erkennt Ihre Anwendungsebene das Laden einer &quot;benutzerdefinierten Umleitungs-URL&quot;(d. h.: `http://adobepass.android.app`). Diese benutzerdefinierte URL ist tatsächlich eine ungültige URL, die nicht von WebView geladen werden soll. Es ist ein Signal, dass der Authentifizierungsfluss abgeschlossen ist und die WebView geschlossen werden muss.
 
 1. WebView-Steuerelement schließen und aufrufen `getAuthenticationToken()`, der AccessEnabler anweist, das Authentifizierungstoken vom Backend-Server abzurufen.
 
@@ -207,7 +207,7 @@ Die Netzwerkaktivität von AccessEnabler erfolgt in einem anderen Thread, sodass
 
    a. Entsprechend dem gleichen Muster wie der Authentifizierungs-Workflow sendet die AccessEnabler-Domäne eine Anfrage an die UI-Anwendungsebene (über die`navigateToUrl()` callback) , um ein WebView-Steuerelement zu erstellen und dieses Steuerelement anzuweisen, die URL des Abmelde-Endpunkts auf den Backend-Server zu laden.
 
-   b. Auch hier muss die Benutzeroberfläche die Aktivität des WebView-Steuerelements überwachen und den Zeitpunkt erkennen, zu dem das Steuerelement während mehrerer Umleitungen die benutzerdefinierte URL der Anwendung lädt (d. h.: [http://adobepass.android.app/](http://adobepass.android.app/)). Sobald dieses Ereignis stattfindet, schließt die UI-Anwendungsebene die WebView und der Abmeldevorgang ist abgeschlossen.
+   b. Auch hier muss die Benutzeroberfläche die Aktivität des WebView-Steuerelements überwachen und den Zeitpunkt erkennen, zu dem das Steuerelement während mehrerer Umleitungen die benutzerdefinierte URL der Anwendung lädt (d. h.: `http://adobepass.android.app/`). Sobald dieses Ereignis stattfindet, schließt die UI-Anwendungsebene die WebView und der Abmeldevorgang ist abgeschlossen.
 
    **Hinweis:** Der Abmeldefluss unterscheidet sich vom Authentifizierungsfluss insofern, als der Benutzer in keiner Weise mit der WebView interagieren muss. Die UI-Anwendungsebene verwendet eine WebView, um sicherzustellen, dass alle Umleitungen befolgt werden. Daher ist es möglich (und empfohlen), das WebView-Steuerelement während des Abmeldevorgangs unsichtbar (d. h. ausgeblendet) zu machen.
 
