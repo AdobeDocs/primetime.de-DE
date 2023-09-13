@@ -3,9 +3,9 @@ title: UltraViolet-Medien und Adobe Primetime DRM
 description: UltraViolet-Medien und Adobe Primetime DRM
 copied-description: true
 exl-id: 03b01a29-e8e0-4fb5-a685-63a745a6417c
-source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
+source-git-commit: d49042b559ce6083eca0738517d04c490755a033
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ Es ist einfach, ein UltraViolet-System zusammen mit Adobe Primetime DRM einzuric
 ![](assets/AdobeUV_web.png)
 
 1. Der Inhaltseigentümer kodiert und packt den Inhalt in CFF. Der gepackte Inhalt ist für einen Einzelhändler zum Vertrieb lizenziert.
-1. Der Einzelhändler lädt den Inhalt auf einen digitalen Dienstleister hoch, z. B. CDN. Der Inhalt kann jetzt heruntergeladen werden. Beachten Sie, dass einige dieser Rollen von einem oder mehreren Unternehmen gespielt werden können.
+1. Der Einzelhändler lädt den Inhalt auf einen digitalen Dienstleister hoch, z. B. CDN. Der Inhalt kann jetzt heruntergeladen werden. Einige dieser Rollen können von einem oder mehreren Unternehmen gespielt werden.
 
-   Der Endbenutzer verfügt über ein Gerät, das Adobe AIR unterstützt. Zusätzlich muss der Benutzer eine UltraViolet-kompatible Anwendung installieren. Die Anwendung enthält den erforderlichen Code, um den CFF zu analysieren und ihn zur Verwendung durch die Laufzeit darzustellen. Alle sensiblen kryptografischen Vorgänge werden in der sicheren Laufzeitumgebung verarbeitet.
+   Der Endbenutzer verfügt über ein Gerät, das Adobe AIR unterstützt. Außerdem muss der Benutzer eine UltraViolet-kompatible Anwendung installieren. Die Anwendung enthält den erforderlichen Code, um den CFF zu analysieren und ihn zur Verwendung durch die Laufzeit darzustellen. Alle sensiblen kryptografischen Vorgänge werden in der sicheren Laufzeitumgebung verarbeitet.
 1. Die Anwendung kann einen Domain-Join für das Gerät Trigger haben, der mit dem Koordinator interagiert. Der Koordinator unterhält einen Sperrer für Rechte, eine Benutzerdatenbank und Domänen. Der Domain-Manager des Koordinators wird mithilfe des Primetime DRM SDK erstellt, um Primetime-DRM-spezifische Domain-Join-/Urlaubsvorgänge zu implementieren.
 1. Der Benutzer kann dann die Anwendung verwenden, um ein Video auszuwählen, das er vom Einzelhändler erwerben möchte. Der Einzelhändler stellt in der Regel ein Webportal bereit und übernimmt die gesamte Geschäftslogik.
 1. Der Händler interagiert dann mit dem Koordinator, um ein Berechtigungstoken hinzuzufügen. Der Einzelhändler leitet die Anfrage dann an den Dienstleister für den tatsächlichen Download des Inhalts weiter.
