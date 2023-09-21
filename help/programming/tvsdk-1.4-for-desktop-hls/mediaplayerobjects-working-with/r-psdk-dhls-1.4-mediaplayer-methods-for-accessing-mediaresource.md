@@ -1,18 +1,16 @@
 ---
-description: Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über den Inhaltsstream abrufen, der von einer geladenen MediaResource dargestellt wird.
+description: Die Methoden in der MediaPlayerItem-Klasse ermöglichen es Ihnen, Informationen über den Inhalts-Stream abzurufen, der durch eine geladene MediaResource dargestellt wird.
 title: MediaPlayer-Methoden für den Zugriff auf MediaResource-Informationen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
 
 ---
 
-
 # MediaPlayer-Methoden für den Zugriff auf MediaResource-Informationen{#mediaplayer-methods-for-accessing-mediaresource-information}
 
-Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über den Inhaltsstream abrufen, der von einer geladenen MediaResource dargestellt wird.
+Die Methoden in der MediaPlayerItem-Klasse ermöglichen es Ihnen, Informationen über den Inhalts-Stream abzurufen, der durch eine geladene MediaResource dargestellt wird.
 
 <table frame="all" colsep="1" rowsep="1" id="table_77B55D506FE24326A03D97AA087231FF"> 
  <thead> 
@@ -23,121 +21,120 @@ Mit den Methoden in der MediaPlayerItem-Klasse können Sie Informationen über d
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"> <b>Live-Stream  </b> </td> 
+   <td colname="1"> <b>Live-Stream </b> </td> 
    <td colname="2"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get isLive():Boolean;  </span> </td> 
-   <td colname="3"> <p>True, wenn der Stream live ist; false, wenn es VOD ist. </p> </td> 
+   <td colname="2"> <span class="codeph"> function get isLive():Boolean; </span> </td> 
+   <td colname="3"> <p>True , wenn der Stream live ist, false , wenn es VOD ist. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>DRM-geschützt</b> </td> 
    <td colname="2"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get isProtected():Boolean;  </span> </td> 
-   <td colname="3"> <p>True, wenn der Stream DRM-geschützt ist. </p> </td> 
+   <td colname="2"> <span class="codeph"> Funktion get isProtected():Boolean; </span> </td> 
+   <td colname="3"> <p>True , wenn der Stream DRM-geschützt ist. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get drmMetadataInfos(): Vektor.&lt;drmmetadatainfo&gt;;  </span> </td> 
-   <td colname="3"> <p>Liste aller DRM-Metadatenobjekte, die im Manifest gefunden werden. </p> </td> 
+   <td colname="2"> <span class="codeph"> Funktion get drmMetadataInfos(): Vector.&lt;drmmetadatainfo&gt;; </span> </td> 
+   <td colname="3"> <p>Listet alle DRM-Metadatenobjekte auf, die im Manifest gefunden wurden. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <b>Untertitel</b> </td> 
+   <td colname="1"> <b>Geschlossene Untertitel</b> </td> 
    <td colname="2"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get hasClosedCaptions():Boolean;  </span> </td> 
-   <td colname="3"> <p>True, wenn Untertitel-Tracks verfügbar sind. </p> </td> 
+   <td colname="2"> <span class="codeph"> function get hasClosedCaptions():Boolean; </span> </td> 
+   <td colname="3"> <p>True , wenn geschlossene Untertitelspuren verfügbar sind. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get closeCaptionsTracks():Vector.&lt;closedcaptionstrack&gt;;  </span> </td> 
-   <td colname="3"> <p>Bietet eine Liste der verfügbaren Untertitelspuren. </p> </td> 
+   <td colname="2"> <span class="codeph"> Funktion get closedCaptionsTracks():Vector.&lt;closedcaptionstrack&gt;; </span> </td> 
+   <td colname="3"> <p>Bietet eine Liste der verfügbaren Tracks mit geschlossenen Untertiteln. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get selectedClosedCaptionsTrack():ClosedCaptionsTrack  </span> </td> 
-   <td colname="3"> <p>Ruft die aktuelle Untertitelspur ab, die mit <span class="codeph"> SelectClosedCaptionsTrack </span> ausgewählt wurde. </p> </td> 
+   <td colname="2"> <span class="codeph"> Funktion get selectedClosedCaptionsTrack():ClosedCaptionsTrack </span> </td> 
+   <td colname="3"> <p>Ruft die aktuelle Untertitelspur ab, die mit <span class="codeph"> SelectClosedCaptionsTrack </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectClosedCaptionsTrack (closeCaptionsTrack: com.adobe.mediacore.info:ClosedCaptionsTrack )  </span> </td> 
-   <td colname="3"> <p>Legt eine Untertitelspur als aktuelle Untertitelspur fest. </p> </td> 
+   <td colname="2"> <span class="codeph"> selectClosedCaptionsTrack (closedCaptionsTrack: com.adobe.mediacore.info:ClosedCaptionsTrack ) </span> </td> 
+   <td colname="3"> <p>Legt fest, dass eine Untertitelspur die aktuelle Untertitelspur ist. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <b>Alternative Audiospuren  </b> </td> 
+   <td colname="1"> <b>Alternative Audiospuren </b> </td> 
    <td colname="2"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get hasAlternateAudio():Boolean;  </span> </td> 
-   <td colname="3"> <p>True, wenn der Stream über alternative Audiospuren verfügt. </p> <p>Tipp:  Die Haupt- (Standard-)Audiospur ist ebenfalls Teil der alternativen Liste der Audiospur. </p> <p>TVSDK for Desktop HLS betrachtet die Hauptaudiospur als eines der Elemente in der alternativen Audio-Track-Liste. Aus diesem Grund gibt <span class="codeph"> MediaPlayerItem.hasAlternateAudio </span> nur dann false zurück, wenn der Stream überhaupt kein Audio hat. Wenn der Inhalt nur eine Audiospur hat, gibt diese Methode true zurück und <span class="codeph"> get AudioTracks </span> gibt eine Liste mit einem einzelnen Element (die Standard-Audiospur) zurück. </p> </td> 
+   <td colname="2"> <span class="codeph"> function get hasAlternateAudio():Boolean; </span> </td> 
+   <td colname="3"> <p>True , wenn der Stream alternative Audiospuren hat. </p> <p>Tipp: Der Haupt-Audio-Track (Standard) ist ebenfalls Teil der alternativen Audio-Track-Liste. </p> <p>TVSDK für Desktop HLS betrachtet den Haupt-Audio-Track als eines der Elemente in der alternativen Audio-Track-Liste. Aus diesem Grund ist der einzige Fall, in dem <span class="codeph"> MediaPlayerItem.hasAlternateAudio </span> gibt "false"zurück, wenn der Stream überhaupt keine Audiowiedergabe hat. Wenn der Inhalt nur eine Audiospur enthält, gibt diese Methode "true"zurück und <span class="codeph"> get AudioTracks </span> gibt eine Liste mit einem einzelnen Element (dem standardmäßigen Audio-Track) zurück. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> Funktion get audioTracks():Vector.&lt;audiotrack&gt;;  </span> </td> 
+   <td colname="2"> <span class="codeph"> Funktion get audioTracks():Vector.&lt;audiotrack&gt;; </span> </td> 
    <td colname="3"> Bietet eine Liste der verfügbaren alternativen Audiospuren. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> Funktion get audioTracks():Vector.&lt;audiotrack&gt;;  </span> </td> 
+   <td colname="2"> <span class="codeph"> Funktion get audioTracks():Vector.&lt;audiotrack&gt;; </span> </td> 
    <td colname="3"> <p>Bietet eine Liste der verfügbaren alternativen Audiospuren. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get selectedAudioTrack():AudioTrack;  </span> </td> 
-   <td colname="3"> <p>Ruft die mit <span class="codeph"> selectAudioTrack </span> ausgewählte Audiospur ab. </p> </td> 
+   <td colname="2"> <span class="codeph"> Funktion get selectedAudioTrack():AudioTrack; </span> </td> 
+   <td colname="3"> <p>Ruft den mit ausgewählten Audio-Track ab <span class="codeph"> selectAudioTrack </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectAudioTrack(audioTrack: AudioTrack )  </span> </td> 
-   <td colname="3"> <p>Wählt eine Audiospur als aktuelle Audiospur aus. </p> </td> 
+   <td colname="2"> <span class="codeph"> selectAudioTrack(audioTrack: AudioTrack ) </span> </td> 
+   <td colname="3"> <p>Wählt einen Audio-Track als aktuellen Audio-Track aus. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>Zeitgesteuerte Metadaten</b> </td> 
    <td colname="2"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get hasTimedMetadata():Boolean;  </span> </td> 
-   <td colname="3"> <p>True, wenn dem Stream Zeitmetadaten zugeordnet sind. </p> </td> 
+   <td colname="2"> <span class="codeph"> function get hasTimedMetadata():Boolean; </span> </td> 
+   <td colname="3"> <p>True , wenn dem Stream zeitgesteuerte Metadaten zugeordnet sind. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get timedMetadata():Vector.&lt;timedmetadata&gt;;  </span> </td> 
-   <td colname="3"> <p>Bietet eine Liste der zeitgesteuerten Metadatenobjekte, die mit dem Stream verknüpft sind. </p> </td> 
+   <td colname="2"> <span class="codeph"> Funktion get timedMetadata():Vector.&lt;timedmetadata&gt;; </span> </td> 
+   <td colname="3"> <p>Stellt eine Liste der zeitgesteuerten Metadatenobjekte bereit, die mit dem Stream verknüpft sind. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get isDynamic():Boolean;  </span> </td> 
-   <td colname="3"> <p>True, wenn der Stream ein MBR-Stream (multiple bit rate) ist. </p> </td> 
+   <td colname="2"> <span class="codeph"> function get isDynamic():Boolean; </span> </td> 
+   <td colname="3"> <p>True , wenn es sich bei dem Stream um einen MBR-Stream (multiple bit rate) handelt. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get Profils():Vector.&lt;profile&gt;;  </span> </td> 
-   <td colname="3"> <p>Bietet eine Liste der zugehörigen Profile zur Bitrate. Für jedes Profil können Sie die Bitrate sowie die Höhe und Breite des Profils abrufen. </p> </td> 
+   <td colname="2"> <span class="codeph"> Funktion get profiles():Vector.&lt;profile&gt;; </span> </td> 
+   <td colname="3"> <p>Enthält eine Liste der zugehörigen Bitratenprofile. Für jedes Profil können Sie dessen Bitrate sowie Höhe und Breite abrufen. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <b>Trick Play  </b> </td> 
+   <td colname="1"> <b>Trick play </b> </td> 
    <td colname="2"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get isTrickPlaySupported():Boolean;  </span> </td> 
-   <td colname="3"> <p>"True", wenn der Player schnelle Vorwärts-, Zurückspulen- und Wiederaufnahme unterstützt. </p> </td> 
+   <td colname="2"> <span class="codeph"> function get isTrickPlaySupported():Boolean; </span> </td> 
+   <td colname="3"> <p>True , wenn der Player die schnelle Weiterleitung, Zurückspulen und Wiederaufnehmen unterstützt. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get availablePlaybackRates():Vector.&lt;number&gt; </span> </td> 
-   <td colname="3"> <p>Bietet die Liste der verfügbaren Wiedergaberaten im Kontext der Funktion "Trick-play". </p> </td> 
+   <td colname="2"> <span class="codeph"> Funktion get availablePlaybackRates():Vector.&lt;Number&gt; </span> </td> 
+   <td colname="3"> <p>Bietet die Liste der verfügbaren Wiedergaberaten im Kontext der Funktion "Trick-Play". </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <b>Medienplayer  </b> </td> 
+   <td colname="1"> <b>Medienplayer </b> </td> 
    <td colname="2"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get player():MediaPlayer  </span> </td> 
-   <td colname="3"> <p>Gibt den Medienplayer zurück, der derzeit mit diesem Player verknüpft ist. </p> </td> 
+   <td colname="2"> <span class="codeph"> Funktion get player():MediaPlayer </span> </td> 
+   <td colname="3"> <p>Gibt den Medienplayer zurück, der diesem Player derzeit zugeordnet ist. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>Medienressource</b> </td> 
    <td colname="2"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> function get resource():MediaResource;  </span> </td> 
-   <td colname="3"> <p>Gibt die mit diesem Element verknüpfte Medienressource zurück. </p> </td> 
+   <td colname="2"> <span class="codeph"> Funktion get resource():MediaResource; </span> </td> 
+   <td colname="3"> <p>Gibt die diesem Element zugeordnete Medienressource zurück. </p> </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="2"> <span class="codeph"> function get resourceId():int  </span> </td> 
+   <td colname="2"> <span class="codeph"> function get resourceId():int </span> </td> 
    <td colname="3"> <p>Gibt die mit diesem Element verknüpfte Medienkennung zurück. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

@@ -1,24 +1,22 @@
 ---
-title: Versand und Datenspeicherung
-description: Versand und Datenspeicherung
+title: Versand und Speicherung
+description: Versand und Speicherung
 copied-description: true
-exl-id: 84ccc140-02e6-4293-b087-13f87aee355b,8af58261-9277-4f46-9349-10b641238e1d
-translation-type: tm+mt
-source-git-commit: f0e58c59e5f71ff79861dc634d9c9b3364e49db6
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
-# Versand und Datenspeicherung {#delivery-and-storage}
+# Versand und Speicherung {#delivery-and-storage}
 
-Primetime Ad Insertion unterstützt die kreative Datenspeicherung von Anzeigen auf CDNs oder CDNs, die auf Adoben gehostet werden.
+Primetime Ad Insertion unterstützt die Werbemittelspeicherung für Kunden-CDNs oder Adobe-gehostete CDNs.
 
 ## Multi-CDN-Unterstützung {#multi-cdn-support}
 
-Primetime Ad Insertion stellt standardmäßig transkodierte Werbeinhalte von Adobe-gehosteten CDNs (Akamai) bereit.  Kunden können zusätzliche CDN-Standorte zum Hosten des transkodierten Assets auswählen oder das von der Adobe gehostete CDN als Herkunft für ihre eigenen CDNs verwenden.  Beide Fälle ermöglichen die Bereitstellung von Inhalten und Werbekreativen vom gleichen CDN und/oder Hostnamen.
+Primetime Ad Insertion stellt standardmäßig transkodierte Anzeigenkreative von Adobe-gehosteten CDNs (Akamai) bereit.  Kunden können zusätzliche CDN-Standorte auswählen, um das transkodierte Asset zu hosten, oder das auf Adobe gehostete CDN als Ursprung für ihre eigenen CDNs verwenden.  In beiden Fällen können Inhalte und Werbemittel vom selben CDN und/oder Hostnamen bereitgestellt werden.
 
-Informationen zu Multi-CDN-Versänden, die Primetime Ad Insertion als CDN-Herkunft verwenden, finden Sie unter: [Manifestumschreibung](../technical-reference/manifest-rewriting.md)
+Informationen zum Versand mit mehreren CDN unter Verwendung von Primetime Ad Insertion als CDN-Herkunft finden Sie unter: [Umschreiben des Manifests](../technical-reference/manifest-rewriting.md)
 
-Wenden Sie sich an Ihren Kundenbetreuer, um Multi-CDN-Datenspeicherung/Uploads zu aktivieren.
+Wenden Sie sich an Ihren technischen Kundenbetreuer, um Multi-CDN-Speicher/-Uploads zu aktivieren.

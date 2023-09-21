@@ -1,33 +1,31 @@
 ---
-title: Liste mit Nicht-SWF-Anwendungen zulassen
-description: Liste mit Nicht-SWF-Anwendungen zulassen
+title: Zulassungsliste für Nicht-SWF-Anwendungen
+description: Zulassungsliste für Nicht-SWF-Anwendungen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
 
 ---
 
+# Zulassungsliste für Nicht-SWF-Anwendungen {#non-swf-application-isting}
 
-# Nicht-SWF-Anwendung Listen zulassen {#non-swf-application-isting}
+AIR war die erste Plattform mit einer Zulassungsauflistung für Anwendungen und dem Namen der Eigenschaft, die Sie für die Zulassungsliste von Nicht-SWF-Anwendungen (Adobe AIR, iOS, Android usw.) verwenden. behält seinen ursprünglichen Namen bei: `policy.allowedAIRApplication.n`. Auf diese Weise können Inhalte von allen Nicht-Flash-Anwendungen wiedergegeben werden, die vor der Veröffentlichung mit einem Signaturzertifikat signiert wurden. Dies wird als *Bewerbungs-ID*. Sie können die Anwendungs-ID mithilfe der [!DNL AdobePublisherIDUtility.jar] -Tool. Diese Zulassungsauflistung wird auf jedem Client erzwungen, der Primetime DRM unterstützt.
 
-AIR war die erste Plattform, auf der spezielle Anwendungen die Auflistung zulassen, und der Name der Eigenschaft, die Sie zur Zulassungsliste von Nicht-SWF-Anwendungen verwenden (Adobe AIR, iOS, Android usw.) behält seinen ursprünglichen Namen bei: `policy.allowedAIRApplication.n`. Auf diese Weise können die Inhalte von allen Nicht-Flash-Anwendungen wiedergegeben werden, die vor der Veröffentlichung mit einem Signaturzertifikat signiert wurden. Dies wird als *Anwendungs-ID* bezeichnet. Sie können die Anwendungs-ID mithilfe des Tools [!DNL AdobePublisherIDUtility.jar] extrahieren. Diese Zulässigkeitsliste wird auf jedem Client erzwungen, der Primetime DRM unterstützt.
+Die Anwendungs-ID wird aus dem öffentlichen Schlüssel des Signaturzertifikats abgeleitet, das zum Signieren einer bestimmten Anwendung verwendet wird. Wenn der öffentliche Schlüssel im Zertifikat jemals abläuft, dann dürfen alle vorherigen Inhalte, die aufgeführt sind, nur in Apps wiedergegeben werden, die mit dem alten Zertifikat signiert sind, nicht in der neuen App (mit dem neuen Zertifikat signiert).
 
-Die Anwendungs-ID wird aus dem öffentlichen Schlüssel des Signaturzertifikats abgeleitet, mit dem eine bestimmte Anwendung signiert wird. Wenn der öffentliche Schlüssel im Zertifikat jemals abläuft, ist es zulässig, dass alle zuvor aufgelisteten Inhalte nur in Apps wiedergegeben werden, die mit dem alten Zertifikat signiert wurden, nicht in der neuen App (mit dem neuen Zertifikat signiert).
+Wenn Sie sich in einer Situation befinden, in der eine Inhaltsbibliothek für Anwendungen aufgelistet ist, die mit einem bestimmten Signaturzertifikat signiert wurden, dieses Zertifikat abläuft und Sie ein neues Zertifikat erhalten (mit einem anderen öffentlichen/privaten Keypair), wird Ihr alter Inhalt nicht in Ihrer neuen App wiedergegeben *es* Sie führen einen der folgenden Schritte aus:
 
-Wenn Sie sich in einer Situation befinden, in der eine Inhaltsbibliothek für Anwendungen, die mit einem bestimmten Unterschriftszertifikat signiert wurden, zugelassen ist und dieses Zertifikat abläuft und Sie ein neues Zertifikat erhalten (mit einem anderen öffentlichen/privaten Schlüssel), wird Ihr alter Inhalt nicht auf Ihrer neuen App *abgespielt, es sei denn,* Sie führen einen der folgenden Schritte aus:
-
-* Verwenden Sie einen `PolicyUpdateList` auf Ihrem Lizenzserver, um die eingehende Zulassungsliste zu überschreiben und einen neuen Anwendungseintrag mit dem Digest Ihres neuen Signaturzertifikats einzufügen.
-* Aktualisieren Sie die Logik des Lizenzservers, um die eingehende Richtlinie zu überschreiben und einen neuen Eintrag für die Zulassungsliste einzufügen.
-* Fordern Sie an, dass der Aussteller des Unterschriftszertifikats Ihnen ein neues Zertifikat ausstellt, das denselben öffentlichen/privaten Schlüssel verwendet wie das vorherige Zertifikat.
-* Wenn Sie HDS-/HLS-Inhalte bereitstellen, die auf einen URL-Endpunkt verweisen, um das `DRMMetadata` abzurufen, können Sie das `DRMMetadata` (mit dem Primetime DRM Java SDK) neu generieren, um eine neue DRM-Richtlinie einzufügen, die einen aktualisierten Eintrag für die Application Zulassungsliste enthält.
+* Verwenden Sie eine `PolicyUpdateList` auf Ihrem Lizenzserver verwenden, um die eingehende Richtlinie zu überschreiben und einen neuen Eintrag für die Zulassungsliste der Anwendung mit dem Digest Ihres neuen Signaturzertifikats einzufügen.
+* Aktualisieren Sie die Logik Ihres Lizenzservers, um die eingehende Richtlinie zu überschreiben und einen neuen Eintrag für die Anwendungs-Zulassungsliste einzufügen.
+* Fordern Sie an, dass der Aussteller des Signaturzertifikats Ihnen ein neues Zertifikat ausstellt, das dasselbe öffentliche/private Schlüsselpaar verwendet, das auch Ihr vorheriges Zertifikat verwendet hat.
+* Wenn Sie HDS-/HLS-Inhalte bereitstellen, die auf einen URL-Endpunkt verweisen, um die `DRMMetadata`, können Sie die `DRMMetadata` (unter Verwendung des Primetime DRM Java SDK) zum Einfügen einer neuen DRM-Richtlinie, die einen aktualisierten Eintrag für die Zulassungsliste von Anwendungen enthält.
 
 * Komprimieren Sie alle alten Inhalte mit einer neuen DRM-Richtlinie, die den Digest Ihres neuen Signaturzertifikats enthält.
 
-Weitere Informationen finden Sie unter `policy.allowedAIRApplication.n` in *Konfigurationseigenschaften*.
+Siehe `policy.allowedAIRApplication.n` in *Konfigurationseigenschaften* für Details.
 
 >[!NOTE]
 >
->Für das Auflisten einer iOS-Anwendung ist ein besonderer Ansatz erforderlich. Siehe [Zulassungsliste Ihrer iOS-Anwendung](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md) im *TVSDK für iOS-Programmierhandbuch*.
+>Für das Zulassen der Auflistung einer iOS-Anwendung ist ein spezieller Ansatz erforderlich. Siehe [Zulassungsliste Ihrer iOS-Anwendung](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md) im *TVSDK für iOS-Programmierhandbuch*.

@@ -1,30 +1,28 @@
 ---
-description: Mit benutzerdefinierten Anzeigenmarken können Sie eine Reihe von TimeRange-Spezifikationen, die Zeitleistensegmente darstellen, an TVSDK weiterleiten.
+description: Mit benutzerdefinierten Anzeigenmarken können Sie eine Reihe von TimeRange-Spezifikationen übergeben, die Zeitleistensegmente für TVSDK darstellen.
 title: TimeRange-Klasse
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
-
 # TimeRange-Klasse{#timerange-class}
 
-Mit benutzerdefinierten Anzeigenmarken können Sie eine Reihe von TimeRange-Spezifikationen, die Zeitleistensegmente darstellen, an TVSDK weiterleiten.
+Mit benutzerdefinierten Anzeigenmarken können Sie eine Reihe von TimeRange-Spezifikationen übergeben, die Zeitleistensegmente für TVSDK darstellen.
 
 <!--<a id="section_42EB6D62627A424ABA250E3246EFEFC3"></a>-->
 
-Jede TimeRange-Spezifikation im Satz stellt ein Segment in der Wiedergabeschlüssel dar, das intern von TVSDK gepflegt wird und entsprechend als anzeigenbezogene Zeitspanne gekennzeichnet werden muss.
+Jede TimeRange-Spezifikation im Satz stellt ein Segment auf der Wiedergabescheitleiste dar, das intern von TVSDK gepflegt wird und entsprechend als anzeigenbezogenen Zeitraum gekennzeichnet werden muss.
 
-Die `TimeRange`-Klasse ist eine einfache Datenstruktur, die die Position des Beginns und die Endposition auf der Zeitleiste offen legt. Diese beiden schreibgeschützten Eigenschaften widerspiegeln die Vorstellung eines Zeitraums in der Wiedergabeschlüssel.
+Die `TimeRange` -Klasse ist eine einfache Datenstruktur, die die Anfangs- und Endposition auf der Timeline anzeigt. Diese beiden schreibgeschützten Eigenschaften widerspiegeln die Idee eines Zeitraums in der Wiedergabe-Timeline.
 
 >[!TIP]
 >
->Beide Werte werden in Millisekunden angegeben.
+>Beide Werte werden in Millisekunden ausgedrückt.
 
-Im Folgenden finden Sie eine Zusammenfassung der `TimeRange`-Klasse:
+Im Folgenden finden Sie eine Zusammenfassung der `TimeRange` -Klasse:
 
 ```java
 public final class TimeRange {
@@ -37,4 +35,3 @@ public final class TimeRange {
     public long getDuration() {...}
 }
 ```
-

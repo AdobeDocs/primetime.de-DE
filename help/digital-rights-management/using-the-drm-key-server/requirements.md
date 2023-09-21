@@ -2,8 +2,7 @@
 title: Voraussetzungen für die Verwendung des Primetime DRM Key Servers
 description: Voraussetzungen für die Verwendung des Primetime DRM Key Servers
 copied-description: true
-exl-id: a5c0db05-15a1-45b0-abb9-11f857f5e34c
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -24,5 +23,5 @@ Die Mindestanforderungen für die Verwendung von Primetime DRM Key Server sind:
   >
   >PKCS11 (64-Bit) wird jetzt in OpenJDK 8 unterstützt: [https://openjdk.java.net/jeps/131](https://openjdk.java.net/jeps/131)und Oracle
 * [Apache Tomcat 7](https://tomcat.apache.org)
-* Von der Adobe ausgestellte Anmeldeinformationen
+* Von Adobe ausgestellte Anmeldeinformationen
 * Von Microsoft ausgestellte Anmeldeinformationen (für Xbox 360-Clients)

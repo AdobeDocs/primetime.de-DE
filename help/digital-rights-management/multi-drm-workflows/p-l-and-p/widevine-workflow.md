@@ -1,28 +1,26 @@
 ---
-description: Dieser Multi-DRM-Arbeitsablauf führt Sie durch Einrichtung, Verpackung, Lizenzierung und Wiedergabe von DASH-Inhalten, die mit Widevine und PlayReady verschlüsselt wurden.
-title: Multi-DRM-Workflow für Widevine und PlayReady
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Dieser Multi-DRM-Workflow führt Sie durch Einrichtung, Verpackung, Lizenzierung und Wiedergabe von DASH-Inhalten, die mit Widevine und PlayReady verschlüsselt wurden.
+title: Multi-DRM Workflow für Widevine und PlayReady
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
 
 ---
 
+# Multi-DRM Workflow für Widevine und PlayReady {#multi-drm-workflow-for-widevine-and-playready}
 
-# Multi-DRM-Workflow für Widevine und PlayReady {#multi-drm-workflow-for-widevine-and-playready}
+Dieser Multi-DRM-Workflow führt Sie durch Einrichtung, Verpackung, Lizenzierung und Wiedergabe von DASH-Inhalten, die mit Widevine und PlayReady verschlüsselt wurden.
 
-Dieser Multi-DRM-Arbeitsablauf führt Sie durch Einrichtung, Verpackung, Lizenzierung und Wiedergabe von DASH-Inhalten, die mit Widevine und PlayReady verschlüsselt wurden.
-
-Primetime TVSDK unterstützt die Wiedergabe von Widevine-verschlüsselten oder PlayReady-verschlüsselten DASH-Inhalten auf HTML5 und Android nur in TVSDK Version 2.X. Die Verschlüsselung von DASH-Inhalten wird durch die Common Encryption-Spezifikation definiert, deren Einzelheiten nicht in den Anwendungsbereich dieses Dokuments fallen. Dieser Abschnitt enthält relevante Details zum DASH-Format und die Verschlüsselungsspezifikation sowie Informationen zu einigen der Werkzeuge, die Sie zum Generieren der unterstützten Inhalte verwenden können.
+Primetime TVSDK unterstützt nur die Wiedergabe von Widevine-verschlüsselten oder PlayReady-verschlüsselten DASH-Inhalten auf HTML5 und Android in TVSDK-Version 2.X. Die Verschlüsselung des DASH-Inhalts wird durch die allgemeine Verschlüsselungsspezifikation definiert, deren vollständige Details außerhalb des Anwendungsbereichs dieses Dokuments liegen. Dieser Abschnitt enthält relevante Details zum DASH-Format, die Verschlüsselungsspezifikation und Informationen zu einigen der Tools, die Sie zum Generieren des unterstützten Inhalts verwenden können.
 
 >[!NOTE]
 >
->Es wurden keine Pläne für eine Rückportierung auf Android TVSDK 1.X für die Wiedergabe von Widevine-verschlüsselten DASH-Inhalten erstellt.
+>Es wurden keine Pläne für die Rückportierung der Wiedergabe von Widevine-verschlüsselten DASH-Inhalten auf Android TVSDK 1.X erstellt.
 
 ## DASH-Inhalt und allgemeine Verschlüsselung auf einen Blick {#section_33A881158F724835B4B89AAE97302B17}
 
-Dashboard-Inhalt besteht aus einem in XML geschriebenen Hauptmanifest, das auf Video- und Audiodateien zur Wiedergabe verweist. Im Beispiel unten verweist das DASH-Manifest auf eine Video-URL, video/1080_30.mp4, und eine Audio-URL, audio/1080_30.mp4, relativ zur URL des Manifests.
+Dash-Inhalt besteht aus einem in XML geschriebenen Hauptmanifest, das auf Video- und Audiodateien zur Wiedergabe verweist. Im folgenden Beispiel verweist das DASH-Manifest auf eine Video-URL, video/1080_30.mp4, und eine Audio-URL, audio/1080_30.mp4, relativ zur URL des Manifests.
 
 ```
 <MPD xmlns="urn:mpeg:DASH:schema:MPD:2011" xmlns:cenc="urn:mpeg:cenc:2013" xmlns:scte35="urn:scte:scte35:2013" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"mediaPresentationDuration="PT30S" minBufferTime="PT8S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" type="static" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 DASH-MPD.xsd">
@@ -44,7 +42,7 @@ Dashboard-Inhalt besteht aus einem in XML geschriebenen Hauptmanifest, das auf V
 </MPD>
 ```
 
-Nachstehend finden Sie ein Beispielmanifest mit Anwendung der allgemeinen Verschlüsselung. Die XML-Elemente für den Schutz von umfangreichen Inhalten (die `<ContentProtection>`-Blöcke) im Manifest enthalten ein Base64-kodiertes pssh-Feld (Protection System specific Header). Das Feld &quot;pssh&quot;enthält die Daten, die zum Initialisieren der Inhaltsentschlüsselung erforderlich sind. Diese Daten werden auch in den Video-/Audioinhalt eingebettet, auf den sich das Manifest bezieht. DASH-Inhalte können über mehrere Inhaltsschutzelemente verfügen, z. B. 1 für PlayReady und 1 für Widevine.
+Im Folgenden finden Sie ein Beispielmanifest mit Anwendung der allgemeinen Verschlüsselung. Die XML-Elemente für den umfassenden Inhaltsschutz (die `<ContentProtection>` -Blöcke) im Manifest ein base64-kodiertes pssh-Feld (Protection System Specific Header) enthalten. Das Feld &quot;pssh&quot;enthält die Daten, die zum Initialisieren der Entschlüsselung des Inhalts benötigt werden. Diese Daten sind auch in den Video-/Audioinhalt eingebettet, auf den das Manifest verweist. DASH-Inhalt kann mehrere Inhaltsschutzelemente enthalten, z. B. 1 für PlayReady und 1 für Widevine.
 
 ```
 <?xml version="1.0" ?>
@@ -121,7 +119,7 @@ Nachstehend finden Sie ein Beispielmanifest mit Anwendung der allgemeinen Versch
 </MPD>
 ```
 
-Beachten Sie, dass im ersten Beispiel oben nur eine Datei für jeden Stream angegeben wird, während sich das zweite Beispiel auf eine Reihe kleiner Inhaltsfragmente bezieht. Statt explizit auf Fragmente zu verweisen, können Sie auch eine Fragmentvorlage definieren, zum Beispiel:
+Beachten Sie, dass das erste Beispiel oben nur eine Datei für jeden Stream referenziert, während das zweite Beispiel eine Reihe kleiner Inhaltsfragmente betrifft. Anstatt explizit auf Fragmente zu verweisen, können Sie auch eine Fragmentvorlage definieren, zum Beispiel:
 
 ```
 <Representation bandwidth="348000" codecs="avc1.42c01e" height="360" id="1" width="640">
@@ -137,4 +135,4 @@ Beachten Sie, dass im ersten Beispiel oben nur eine Datei für jeden Stream ange
 </Representation>
 ```
 
-In diesem Fall erwartet der Inhaltsanalysator (TVSDK), Videoinhalte unter Jaigo0.m4s, Jaigo1.m4s, Jaigo2.m4s usw. zu finden. Dies wird hauptsächlich für Live-Streaming verwendet und hat den Vorteil, dass der Client das Manifest nicht von Zeit zu Zeit erneut herunterladen muss.
+In diesem Fall erwartet der Inhaltsparser (TVSDK), Videoinhalte unter Jaigo0.m4s, Jaigo1.m4s, Jaigo2.m4s usw. zu finden. Dies wird hauptsächlich für Live-Streaming verwendet und hat den Vorteil, dass der Client das Manifest nicht von Zeit zu Zeit erneut herunterladen muss.

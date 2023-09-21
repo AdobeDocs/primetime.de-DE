@@ -1,24 +1,21 @@
 ---
-title: Sicheres Laden von Anzeigen über HTTPS
-description: Sicheres Laden von Anzeigen über HTTPS
+title: Laden sicherer Anzeigen über HTTPS
+description: Laden sicherer Anzeigen über HTTPS
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
+# Laden sicherer Anzeigen über HTTPS {#secure-ad-loading-over-https}
 
-# Sicheres Laden von Anzeigen über HTTPS {#secure-ad-loading-over-https}
+Adobe Primetime bietet die Möglichkeit, den ersten Aufruf an den Primetime-Anzeigenserver und CRS-bezogene Aufrufe über HTTPS anzufordern.
 
-Adobe Primetime bietet eine Option zum Anfordern des ersten Aufrufs an den Primetime-Anzeigen-Server und CRS-bezogene Aufrufe über HTTPS.
-
-Die Funktion ist nicht standardmäßig aktiviert. Verwenden Sie Folgendes, um sicheres Laden der Anzeige zu aktivieren.
+Die Funktion ist standardmäßig nicht aktiviert. Verwenden Sie Folgendes, um sicheres Laden von Anzeigen zu aktivieren.
 
 ```
 AuditudeSettings auditudeSettings = new AuditudeSettings(); 
 auditudeSettings. getForceHttpsConfiguration().setAdServerCalls(true);
 ```
-

@@ -1,33 +1,31 @@
 ---
 description: TVSDK unterstützt das programmatische Löschen und Ersetzen von Anzeigeninhalten in VOD-Streams.
-title: Benutzerdefinierte Zeitraumoperationen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Benutzerdefinierte Zeitbereichsoperationen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#custom-time-range-operations-overview}
 
 TVSDK unterstützt das programmatische Löschen und Ersetzen von Anzeigeninhalten in VOD-Streams.
 
-Die Funktion zum Löschen und Ersetzen erweitert die Funktion für benutzerdefinierte Anzeigenmarken. Benutzerspezifische Anzeigenmarkierungen markieren Abschnitte des Hauptinhalts als inhaltliche Zeiträume für Anzeigen. Neben der Kennzeichnung dieser Zeiträume können Sie auch Zeitbereiche löschen und ersetzen.
+Die Funktion zum Löschen und Ersetzen erweitert die Funktion für benutzerdefinierte Anzeigenmarkierungen. Benutzerdefinierte Anzeigenmarkierungen markieren Abschnitte des Hauptinhalts als anzeigenbezogene Inhaltszeiträume. Neben der Kennzeichnung dieser Zeiträume können Sie auch Zeitbereiche löschen und ersetzen.
 
 <!--<a id="section_D3FE668CAF764DCC912373D5410C932C"></a>-->
 
-Das Löschen und Ersetzen von Anzeigen werden mit benutzerdefinierten Markern implementiert, die verschiedene Arten von Zeitbereichen in einem VOD-Stream identifizieren: markieren, löschen und ersetzen. Für jeden benutzerdefinierten Zeitraum können Sie zugehörige Vorgänge durchführen, einschließlich Löschen oder Ersetzen von Anzeigeninhalten.
+Das Löschen und Ersetzen von Anzeigen wird mit benutzerdefinierten Markern implementiert, die verschiedene Arten von Zeitbereichen in einem VOD-Stream identifizieren: Markieren, Löschen und Ersetzen. Für jeden benutzerdefinierten Zeitraum können Sie zugehörige Vorgänge ausführen, einschließlich Löschen oder Ersetzen von Anzeigeninhalten.
 
-Für das Löschen und Ersetzen von Anzeigen enthält TVSDK die folgenden Modi *benutzerdefinierter Zeitbereich*:
+Für das Löschen und Ersetzen von Anzeigen enthält TVSDK Folgendes: *benutzerdefinierter Zeitbereichsvorgang* Modi:
 
-* MARK - Dispatches `AdBreak` Ereignis für die markierten Bereiche. (Dies wurde in früheren Versionen von TVSDK als `customAdMarker` bezeichnet.) In diesem Modus ist das Einfügen von Anzeigen nicht zulässig.
+* MARK - Dispatches `AdBreak` -Ereignisse für die markierten Regionen. (Dies heißt `customAdMarker` in früheren Versionen von TVSDK.) In diesem Modus ist das Einfügen von Anzeigen nicht zulässig.
 
-* DELETE - In diesem Modus verwendet die App die `TimeRangeCollection`-Klasse, um Zeitbereiche für die Löschung von C3-Anzeigen zu definieren. In diesem Modus ist das Einfügen von Anzeigen zulässig.
-* ERSETZEN - In diesem Modus ersetzt die App ein `timeRange` durch eine Adobe Primetime-Anzeigenentscheidung `AdBreak`. Der Vorgang &quot;Ersetzen&quot;wird in Beginn ausgeführt, in denen der Löschvorgang der C3-Anzeige stattfindet und zum angegebenen Zeitpunkt endet (kürzer oder länger als der ursprüngliche Zeitraum).
+* DELETE - In diesem Modus verwendet das Programm die `TimeRangeCollection` -Klasse zum Definieren von Zeitbereichen für das Löschen von C3-Anzeigen. In diesem Modus ist das Einfügen von Anzeigen zulässig.
+* ERSETZEN - In diesem Modus ersetzt die App eine `timeRange` mit einer Adobe Primetime-Anzeigenentscheidung `AdBreak`. Der Ersetzungsvorgang beginnt an der Stelle, an der das Löschen der C3-Anzeige erfolgt, und endet zum angegebenen Zeitpunkt (kürzer oder länger als der ursprüngliche Zeitraum).
 
-TVSDK bietet eine `CustomRangesOpportunityGenerator`-Klasse zum Generieren von Platzierungsmöglichkeiten für die Bereiche MARK und DELETE. Für den REPLACE-Modus generiert TVSDK zwei Platzierungsmöglichkeiten für jeden Zeitraum:
+TVSDK bietet eine `CustomRangesOpportunityGenerator` -Klasse, um Platzierungsmöglichkeiten für die Bereiche MARK und DELETE zu generieren. Für den ERSETZUNGSmodus generiert TVSDK zwei Platzierungsmöglichkeiten für jeden Zeitraum:
 
-* Das `CustomRangeResolver` generiert Platzierungsmöglichkeiten für DELETE
-* Das `AuditudeAdResolver` generiert Platzierungsmöglichkeiten für INSERT.
+* Die `CustomRangeResolver` schafft Platzierungsmöglichkeiten für DELETE
+* Die `AuditudeAdResolver` bietet Platzierungsmöglichkeiten für INSERT.

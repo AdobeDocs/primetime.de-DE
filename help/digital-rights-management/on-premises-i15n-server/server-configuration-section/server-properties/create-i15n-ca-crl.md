@@ -1,37 +1,35 @@
 ---
-title: Zertifikatsperrliste für Individualisierungskonten erstellen
-description: Zertifikatsperrliste für Individualisierungskonten erstellen
+title: Erstellen einer CRL für individuelle Zertifizierungsstellen
+description: Erstellen einer CRL für individuelle Zertifizierungsstellen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
 
 ---
 
+# Erstellen einer CRL für individuelle Zertifizierungsstellen{#create-individualization-ca-crl}
 
-# Erstellen einer CA-Zertifikatsperrliste für die Personalisierung {#create-individualization-ca-crl}
-
-Dieser Zertifikatsperrlisten-Verteilungspunkt (Certificate Revocation Liste, CRL) ist in jedem vom Individualisierungsserver ausgestellten Computerzertifikat enthalten. Während der Validierung des Computerzertifikats auf dem Lizenzserver wird diese Zertifikatssperrliste von dem im Zertifikat aufgelisteten Verteilungspunkt heruntergeladen (oder aus dem Cache gelesen, wenn dieser bereits heruntergeladen wurde) und überprüft, ob das Zertifikat nicht widerrufen wurde.
+Dieser Zertifikatsperrlisten-Verteilungspunkt (CRL) ist in jedem vom Individualisierungsserver ausgestellten Maschinenzertifikat enthalten. Während der Validierung des maschinellen Zertifikats auf dem Lizenzserver wird diese Zertifikatsperrliste von dem im Zertifikat aufgelisteten Verteilungspunkt heruntergeladen (oder aus dem Cache gelesen, falls bereits heruntergeladen) und überprüft, ob das Zertifikat nicht widerrufen wurde.
 
 >[!NOTE]
 >
->Um die URL für den Zertifikatsperrlisten-Verteilungspunkt festzulegen, müssen Sie das Feld [!DNL AdobeInitial.properties] `cert.machine.crldp` festlegen. Dieser Verteilungspunkt ist *nicht* von Primetime DRM auf Gültigkeit überprüft. Sie müssen überprüfen, ob diese URL gültig ist. Fehler, die durch eine ungültige URL verursacht werden, werden erst sichtbar, wenn Überprüfungsfehler vom Lizenzserver angezeigt werden.
+>Um die URL für den Zertifikatsperrlisten-Verteilungspunkt festzulegen, müssen Sie die [!DNL AdobeInitial.properties] `cert.machine.crldp` -Feld. Dieser Verteilungspunkt ist *not* von Primetime DRM auf Gültigkeit überprüft. Sie müssen sicherstellen, dass diese URL gültig ist. Fehler, die aus einer ungültigen URL resultieren, werden erst sichtbar, wenn vom Lizenzserver Validierungsfehler auftreten.
 
-Nachstehend finden Sie vereinfachte Beispielanweisungen für die Verwendung von OpenSSL zum Erstellen von Zertifikatsperrlisten, die Ihr Lizenzserver verwenden kann. Adobe empfiehlt, diese Schritte auf sichere Weise und mit Umgebung durchzuführen, sobald eine Produktionsindividualisierungs-CA-Berechtigung vorliegt.
+Unten finden Sie vereinfachte Beispielanweisungen für die Verwendung von OpenSSL zum Erstellen von Zertifikatsperrlisten, die Ihr Lizenzserver verwenden kann. Adobe empfiehlt, diese Schritte auf sichere Weise und in einer sicheren Umgebung auszuführen, sobald eine Zertifizierungsstelle für die Produktionsindividualisierung erworben wurde.
 
-1. Ändern Sie den Arbeitsordner in den Ordner [!DNL create_crl], der in dieser Distribution enthalten ist.
-1. Kopieren Sie Ihre Personalization CA [!DNL pfx] in denselben Ordner [!DNL create_crl].
+1. Ändern Sie den Arbeitsordner in [!DNL create_crl] in dieser Distribution enthaltenen Verzeichnis.
+1. Kopieren der individuellen Zertifizierungsstelle [!DNL pfx] auf denselben [!DNL create_crl] Verzeichnis.
 
-   Bei den nachfolgenden Schritten wird davon ausgegangen, dass die CA-Datei für Individualisierung [!DNL i15n.pfx] heißt. Passen Sie die Einstellungen entsprechend an.
-1. Extrahieren Sie den privaten Schlüssel der Datei &quot;Individualization CA [!DNL pfx]&quot;.
+   Bei den nachfolgenden Schritten wird davon ausgegangen, dass der Name der Spezialisierungs-CA-pfx [!DNL i15n.pfx]. Passen Sie entsprechend Ihrer Einrichtung an.
+1. Extrahieren der Individualisierungs-Zertifizierungsstelle [!DNL pfx] den privaten Schlüssel der Datei.
 
    ```
    openssl pkcs12 -ini15n.pfx -nocerts -out i15n_priv.pem
    ```
 
-1. Konvertieren Sie den privaten Schlüssel in das Format [!DNL pksc8].
+1. Konvertieren des privaten Schlüssels in [!DNL pksc8] Format.
 
    ```
    openssl pkcs8 -topk8 -in i15n_priv.pem -inform pem -out i15n_pk8.pem -outform pem -nocrypt
@@ -44,9 +42,9 @@ Nachstehend finden Sie vereinfachte Beispielanweisungen für die Verwendung von 
      -out onprem-individualization -ca.crl
    ```
 
-   In diesem Beispiel wird eine Zertifikatsperrliste mit einer standardmäßigen Gültigkeitsdauer von 1 Monat erstellt. Verwenden Sie die Optionen `-crldays` und `-crlhours`, um die Standardwerte zu überschreiben.
+   In diesem Beispiel wird eine Zertifikatsperrliste mit einer standardmäßigen Gültigkeitsdauer von 1 Monat erstellt. Verwenden Sie die `-crldays` und `-crlhours` -Optionen, um die Standardwerte zu überschreiben.
 
-   Beim Generieren einer Zertifikatsperrliste wird die Datei [!DNL index] und [!DNL crlnumber] verwendet, auf die in [!DNL openssl.conf] verwiesen wird. Standardmäßig wird der Speicherort [!DNL demoCA] im Arbeitsverzeichnis verwendet. Beispieldateien [!DNL index] und [!DNL crlnumber] sind im bereitgestellten Ordner [!DNL demoCA] enthalten.
+   Beim Generieren einer Zertifikatsperrliste wird die [!DNL index] und [!DNL crlnumber] -Datei, auf die in Ihrem [!DNL openssl.conf]. Standardmäßig wird die Variable [!DNL demoCA] -Speicherort im Arbeitsverzeichnis verwendet wird. Beispiel [!DNL index] und [!DNL crlnumber] -Dateien sind in der bereitgestellten [!DNL demoCA] Verzeichnis.
 
-1. Stellen Sie die im vorherigen Schritt generierte CRL-Datei an einem geeigneten Speicherort bereit, der vom Lizenzserver erreicht werden kann (z. B.: Individualisierungsserver [!DNL ROOT]).
+1. Stellen Sie die im vorherigen Schritt generierte CRL-Datei an einem geeigneten Speicherort bereit, der vom Lizenzserver erreichbar ist (z. B.: Individualisierungsserver [!DNL ROOT]).
 1. Starten Sie den Lizenzserver neu, sobald die Zertifikatsperrliste eingerichtet ist.

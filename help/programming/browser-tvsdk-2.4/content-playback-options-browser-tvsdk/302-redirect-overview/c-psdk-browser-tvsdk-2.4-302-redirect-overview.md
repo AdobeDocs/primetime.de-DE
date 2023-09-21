@@ -1,33 +1,31 @@
 ---
-description: Die 302-Umleitungsoptimierung minimiert die Anzahl der 302 Umleitungs-Antworten, wodurch Ihre Anwendung den Lastenausgleich effektiver gestalten kann.
-title: HTTP 302 Umleitungsoptimierung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Die 302-Umleitungsoptimierung minimiert die Anzahl der 302 Umleitantworten, was es Ihrer Anwendung ermöglicht, den Lastenausgleich effektiver zu gestalten.
+title: HTTP 302-Umleitungsoptimierung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '149'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# HTTP 302-Umleitungsoptimierung {#http-redirect-optimization}
 
-# HTTP 302 Umleitungsoptimierung {#http-redirect-optimization}
+Die 302-Umleitungsoptimierung minimiert die Anzahl der 302 Umleitantworten, was es Ihrer Anwendung ermöglicht, den Lastenausgleich effektiver zu gestalten.
 
-Die 302-Umleitungsoptimierung minimiert die Anzahl der 302 Umleitungs-Antworten, wodurch Ihre Anwendung den Lastenausgleich effektiver gestalten kann.
-
-Wenn eine Hauptmanifestanforderung umgeleitet wird und die 302-Optimierung im Player aktiviert ist, verwenden nachfolgende Anforderungen für Assets aus diesem Manifest den endgültigen Domänenspeicherort, wodurch weitere 302 Antworten vermieden werden. Diese Funktion ist standardmäßig aktiviert. Sie können diese Einstellung ändern.
+Wenn eine Hauptmanifest-Anforderung umgeleitet wird und die Optimierung von 302 in Ihrem Player aktiviert ist, verwenden nachfolgende Anforderungen für Assets aus diesem Manifest den endgültigen Domänenspeicherort, wodurch zusätzliche 302 Antworten vermieden werden. Diese Funktion ist standardmäßig aktiviert und Sie können diese Einstellung ändern.
 
 >[!IMPORTANT]
 >
->Diese Funktion wird nur in zertifizierten Browsern unterstützt, die die `responseURL`-Eigenschaft im `XMLHttpRequest`-Objekt unterstützen.
+>Diese Funktion wird nur in zertifizierten Browsern unterstützt, die die `responseURL` -Eigenschaft in der `XMLHttpRequest` -Objekt.
 
-Beachten Sie für Flash-Fallback die folgenden Informationen:
+Beachten Sie beim Flash-Fallback die folgenden Informationen:
 
-* Endbenutzer müssen Adobe Flash Player Version 23 oder höher installiert haben.
-* Wenn die Stream-Integrität deaktiviert ist, wird 302-Umleitungen nur in zertifizierten Browsern unterstützt.
+* Ihre Endbenutzer müssen Adobe Flash Player Version 23 oder höher installiert haben.
+* Wenn die Stream-Integrität deaktiviert ist, wird die 302-Weiterleitung nur bei zertifizierten Browsern unterstützt.
 
-## Deaktivieren der 302-Umleitungsoptimierung {#disabling-redirect-optimization}
+## Deaktivieren der Umleitungsoptimierung 302 {#disabling-redirect-optimization}
 
-Mit der useRedirectUrl-Eigenschaft können Sie 302-Umleitungen aktivieren (true) oder deaktivieren (false).
+Sie können die useRedirectUrl -Eigenschaft verwenden, um die 302-Umleitung (true) oder die Deaktivierung (false) zu aktivieren.
 
 Beispiel:
 

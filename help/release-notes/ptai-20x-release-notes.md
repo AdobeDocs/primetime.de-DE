@@ -1,254 +1,252 @@
 ---
-title: PTAI 20.12.1 - Versionshinweise
-description: Die PTAI Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Ad Insertion im Jahr 2020.
-translation-type: tm+mt
-source-git-commit: 8133c35bed7fc72a6c642016a2a4b69204ad8f7a
+title: Versionshinweise zu PTAI 20.12.1
+description: Die PTAI-Versionshinweise beschreiben, was neu oder geändert ist, die gelösten und bekannten Probleme in Primetime Ad Insertion im Jahr 2020.
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
 
 ---
 
-
 # Primetime Ad Insertion 20.12.1 - Versionshinweise
 
-Die Versionshinweise Primetime Ad Insertion 20.12.1 beschreiben, was neu oder geändert ist, gelöste Probleme und bekannte Probleme in Primetime Ad Insertion im Jahr 2020.
+Die Primetime-Ad Insertion-Versionshinweise 20.12.1 beschreiben, was neu ist oder geändert wurde, Probleme gelöst wurden und bekannte Probleme in Primetime Ad Insertion im Jahr 2020.
 
 ## Neue Funktionen in PTAI 20.12.1
 
-**Wann:** Dienstag, Dezember 08, 2020 von 01:00 Uhr bis 04:00 Uhr Eastern Time
+**Wenn:** Dienstag, 8. Dezember 2020 von 01:00 Uhr bis 04:00 Uhr Ostzeit
 
 **Änderungen**
 
-* Beinhaltet Hotfix zur Behebung von Problemen mit der zeitweiligen Clientverbindung (5xx) in Primetime Ad Insertion, die am 30. November 2020 aufgetreten sind.
+* Enthält Hotfix zur Behebung zeitweiliger Probleme bei der Client-Konnektivität (5xx) beim Primetime-Ad Insertion am 30. November 2020.
 
 ## Verbesserungen und Fehlerbehebungen in früheren Versionen
 
 ### Version 20.11.1
 
-**Wann:** Donnerstag, 5. November 2020 von 2:00 Uhr bis 05:00 Uhr Eastern Time
+**Wenn:** Donnerstag, 5. November 2020 von 2:00 Uhr bis 05:00 Uhr Ostzeit
 
 **Änderungen**
 
-* Aktualisierungen der Wartung.
+* Wartungs-Updates.
 
 ### Version 20.10.2
 
-**Wann:** Donnerstag, 29. Oktober 2020 von 12:01 bis 06:00 Uhr Eastern Time
+**Wenn:** Donnerstag, 29. Oktober 2020 von 12:01 Uhr bis 06:00 Uhr Ostzeit
 
 **Änderungen**
 
-* Aktualisierungen der Wartung.
+* Wartungs-Updates.
 
-### Version 20.11.1
+### Version 20.10.1
 
-**Wann:** Dienstag, 13. Oktober 2020 von 03:00 Uhr bis 07:00 Uhr Eastern Time
+**Wenn:** Dienstag, 13. Oktober 2020 von 03:00 Uhr bis 07:00 Uhr Ostzeit
 
 **Änderungen**
 
-* Aktualisierungen der Wartung.
+* Wartungs-Updates.
 
 ### Version 20.9.3
 
-**Wann:** Mittwoch, 30. September 2020 um 3:30 Uhr bis 6:30 Uhr östliche Zeit
+**Wenn:** Mittwoch, 30. September 2020 um 3:30 Uhr bis 6:30 Uhr Ostzeit
 
 **Änderungen**
 
-* Der Bootstrap-API-Parameter `ptparallelstream` wurde hinzugefügt. Dadurch können Kunden mit Playern, die parallel CMAF-demuxed Audio- oder Videostreams anfordern, sicherstellen, dass Anzeigen in Audio- und Videospuren konsistent sind. Setzen Sie den Parameterwert auf true, um diese Funktion zu aktivieren oder zu deaktivieren.
+* Bootstrap-API-Parameter hinzugefügt `ptparallelstream`. Dadurch können Kunden mit Playern, die parallel CMAF-demuxed Audio- oder Videostreams anfordern, sicherstellen, dass Anzeigen in Audio- und Videospuren konsistent sind. Setzen Sie den Parameterwert auf &quot;true&quot;, um diese Funktion zu aktivieren, oder lassen Sie die Deaktivierung weg.
 
 ### Version 20.9.2
 
-**Wann:** Dienstag, 15. September 2020, von 3:30 Uhr bis 6:30 Uhr östliche Zeit
+**Wenn:** Dienstag, 15. September 2020 von 3:30 Uhr bis 6:30 Uhr Ostzeit
 
 **Verbesserungen**
 
-* Unterstützung für die Einbeziehung nicht-linearer Anzeigentypen mit `EXT-X-MARKER`-Tags.
-Wenden Sie sich an Ihren Kundenbetreuer, um weitere Informationen zu erhalten oder diese Funktion zu aktivieren.
+* Unterstützung für die Einbeziehung nicht-linearer Anzeigentypen mithilfe von `EXT-X-MARKER` Tags.
+Weitere Informationen oder die Aktivierung dieser Funktion erhalten Sie von Ihrem Support-Mitarbeiter.
 
-* Unterstützung für die Begrenzung der gesamten Anzeigenauflösungszeit, wenn die Reaktion der Anbieter zu lange dauert. Um die Begrenzung zu aktivieren, setzen Sie den Bootstrap-API-Parameter `ptadtimeout` auf einen Wert in Millisekunden.
+* Unterstützung für die Beschränkung der gesamten Anzeigenauflösungszeit, wenn die Reaktion der Anbieter zu lange dauert. Um die Begrenzung zu aktivieren, legen Sie den Bootstrap-API-Parameter fest `ptadtimeout` auf einen Wert in Millisekunden.
 
-   >[!NOTE]
-   >
-   >Dieser Timeout gilt nur für Anzeigenanforderungen, nicht für Werbeanforderungen.
+  >[!NOTE]
+  >
+  >Diese Zeitüberschreitung gilt nur für Anzeigenanfragen, nicht für Anzeigenanfragen.
 
 ### Version 20.9.1
 
-**Wann:** Dienstag, 1. September 2020, von 3:30 Uhr bis 7:30 Uhr östliche Zeit
+**Wenn:** Dienstag, 1. September 2020 von 3:30 Uhr bis 7:30 Uhr Ostzeit
 
 **Änderungen**
 
-* Korrektur des Fehlers bei Kunden, die HLS/CMAF verwenden, bei dem EXT-X-MAP manchmal CDN-Token oder EXT-X-MAP-Tags fehlten, die manchmal fälschlicherweise aus dem DVR-Fenster gerollt wurden.
+* Es wurde ein Problem für Kunden behoben, die HLS/CMAF verwenden und bei denen EXT-X-MAP manchmal CDN-Token oder EXT-X-MAP-Tags fehlten, die manchmal fälschlicherweise aus dem DVR-Fenster ausgerollt wurden.
 
 ### Version 20.8.4
 
-**Wann:** Mittwoch, 19. August 2020 von 03:30 Uhr bis 07:30 Uhr Eastern Time
+**Wenn:** Mittwoch, 19. August 2020 von 03:30 Uhr bis 07:30 Uhr Ostzeit
 
 **Verbesserungen und Fehlerbehebungen**
 
-Aktualisierungen der Wartung.
+Wartungs-Updates.
 
 ### Version 20.8.1
 
-**Wann:** Dienstag, 4. August 2020 von 3:00 Uhr bis 6:00 Uhr östliche Zeit
+**Wenn:** Dienstag, 4. August 2020 von 3:00 Uhr bis 6:00 Uhr Ostzeit
 
 **Verbesserungen und Fehlerbehebungen**
 
-Aktualisierungen der Wartung.
+Wartungs-Updates.
 
 ### Version 20.7.1
 
-**Wann:** Donnerstag, 9. Juli 2020 von 03:00 Uhr bis 05:00 Uhr Eastern Time
+**Wenn:** Donnerstag, 9. Juli 2020 von 03:00 Uhr bis 05:00 Uhr Ostzeit
 
 **Neue Funktionen und Verbesserungen**
 
-* SCTE35-Erweiterung, um entweder die Beginn-/Endmeldungen des Anbieters oder die Beginn-/Endmeldungen zu verwenden, um den Cue zu identifizieren.
+* SCTE35-Verbesserung zur Verwendung von Start-/Endmeldungen von Provider-Anzeigen oder Break Start-/End-Meldungen, um den Cue-Point zu identifizieren.
 
-* X-ADBE-AI-X1-Header mit zusätzlichen Informationen zur Fehlerbehebung aktualisiert.
+* Der Header X-ADBE-AI-X1 wurde um zusätzliche Informationen zur Fehlerbehebung erweitert.
 
-* Erweiterte Metrikaggregation.
+* Erweiterte Aggregation von Metriken.
 
-* Erweitertes SSAI-Konsolen-Dashboard für das Bedienfeld &quot;Sitzungsstatistik&quot;
+* Verbessertes SSAI-Konsolen-Dashboard für den Bereich Sitzungsstatistik
 
 ### Version 20.6.2
 
-**Wann:** Donnerstag, 18. Juni 2020 von 03:00 Uhr bis 04:00 Uhr Eastern Time
+**Wenn:** Donnerstag, 18. Juni 2020 von 03:00 Uhr bis 04:00 Uhr Ostzeit
 
 **Verbesserungen**
 
-Verbesserte Stream-Synchronisierung für Video-Clients, die eine Genauigkeit von Millisekunden erfordern. Wenden Sie sich an die Support-Adobe, um die Millisekunden-Präzision für `#EXT-X-PROGRAM-DATE-TIME tags` zu aktivieren.
+Verbesserte Stream-Synchronisation für Video-Clients, die eine Genauigkeit von Millisekunden erfordern. Adobe-Support kontaktieren, um Millisekunde-Genauigkeit für `#EXT-X-PROGRAM-DATE-TIME tags`.
 
 ### Version 20.6.1
 
-**Wann:** Dienstag, 2. Juni 2020 von 03:00 Uhr bis 05:00 Uhr östliche Zeit
+**Wenn:** Dienstag, 2. Juni 2020 von 03:00 Uhr bis 05:00 Uhr Ostzeit
 
 **Neue Funktionen**
 
-Wenden Sie sich an den Support für Adoben, um die folgenden neuen Funktionen über eine serverseitige Konfiguration zu aktivieren:
+Wenden Sie sich an den Adobe-Support , um die folgenden neuen Funktionen über die serverseitige Konfiguration zu aktivieren:
 
-* Manifestverwaltung: HLS-Segment- und -Ressourcen-URLs können jetzt zwischen HTTP und HTTPS transformiert werden, um die Leistung zu erhöhen, indem TLS-Handshakes bei Back-End-Anforderungen reduziert werden. Sie kann auch verwendet werden, um Anzeigen-/Inhaltsfragmente auf denselben CDNs zu vereinheitlichen.
+* Manifestverwaltung: HLS-Segment- und Ressourcen-URLs können jetzt zwischen HTTP und HTTPS transformiert werden, um die Leistung zu steigern, indem TLS-Handshakes bei Back-End-Anforderungen reduziert werden. Sie kann auch verwendet werden, um Anzeigen-/Inhaltsfragmente auf denselben CDNs zu vereinheitlichen.
 
-* VOD: Langform Verbesserte APIs, um die Sitzung mit langen VOD-Assets am Leben zu erhalten.
+* Long Form VOD: Verbesserte APIs zur Beibehaltung der Sitzungsdauer mit langen VOD-Assets.
 
 **Fehlerbehebungen**
 
 * Es wurde ein Problem behoben, bei dem WebVTT-Fragmente unabhängig vom angeforderten Originalprotokoll immer unter dem HTTP-Protokoll angefordert wurden.
 
-* Es wurde ein Problem behoben, bei dem EXT-X-DISCONTINUITY-Tags vom Anfang der Wiedergabeliste entfernt wurden, wenn von Anzeigen zu Inhalt zurückgekehrt wurde. Wenden Sie sich an den Support für Adoben, um diese Fehlerbehebung zu aktivieren.
+* Es wurde ein Problem behoben, bei dem EXT-X-DISCONTINUITY -Tags vom Anfang der Wiedergabeliste entfernt wurden, wenn von Anzeigen zurück zu Inhalten gewechselt wurde. Wenden Sie sich an den Adobe-Support , um diese Fehlerbehebung zu aktivieren.
 
 ### Version 20.5.1
 
-**Wann:** Dienstag, 5. Mai 2020 von 04:00 Uhr bis 05:00 Uhr Eastern Time
+**Wenn:** Dienstag, 5. Mai 2020 von 04:00 Uhr bis 05:00 Uhr Ostzeit
 
-* Es wurde ein Fehler behoben, der sicherstellte, dass beim Senden von if-Modified-Since-Headern korrekte CORS-Header bereitgestellt werden.
+* Es wurde ein Fehler behoben, der sicherstellte, dass beim Senden von If-Modified-Since -Headern korrekte CORS-Header bereitgestellt werden.
 
-* Fehlerbehebungen am CRS-Dashboard.
+* Fehlerbehebungen im CRS-Dashboard.
 
-* Aktualisierungen der Wartung.
+* Wartungs-Updates.
 
 ### Version 20.3.4
 
-**Wann:** Mittwoch, 1. April 2020 von 03:00 Uhr bis 04:00 Uhr Eastern Time
+**Wenn:** Mittwoch, 1. April 2020 von 03:00 Uhr bis 04:00 Uhr Ostzeit
 
-* Es wurde ein Fehler behoben, der dazu führte, dass Untertitel nach dem Einfügen der Anzeige in VOD/WebVTT nicht mehr synchronisiert wurden.
+* Es wurde ein Fehler behoben, der dazu führte, dass Untertitel nach dem Einfügen einer Anzeige in VOD/WebVTT nicht mehr synchronisiert wurden.
 
-* Sicherheitsaktualisierungen.
+* Sicherheitsupdates.
 
 ### Version 20.3.3
 
-**Wann:** Donnerstag, 26. März 2020 von 03:00 Uhr bis 04:00 Uhr Eastern Time
+**Wenn:** Donnerstag, 26. März 2020 von 03:00 Uhr bis 04:00 Uhr Ostzeit
 
-* SSAI 4XX- und 5XX-Antworten liefern jetzt korrekt CORS-bezogene Header, sodass domänenübergreifende JavaScript-Webview-Clients Fehlerantworten erfolgreich lesen können.
+* SSAI 4XX- und 5XX-Antworten liefern nun ordnungsgemäß CORS-bezogene Kopfzeilen, sodass domänenübergreifende JavaScript-Webansichtsclients Fehlerantworten erfolgreich lesen können.
 
-* Es wurde ein Problem mit X-Forwarded-For-Headern behoben, bei dem IPv6-Adressen nicht korrekt URL-kodiert wurden, wenn sie an die Anzeigen-Server weitergeleitet wurden.
+* Es wurde ein Problem mit Headern vom Typ X-Forwarded-For behoben, bei denen IPv6-Adressen nicht korrekt URL-kodiert wurden, wenn sie an die Anzeigen-Server übergeben wurden.
 
-* Es wurde ein Problem mit CMAF/demuxed Audio-Streams behoben, bei dem EXT-X-MEDIA-SEQUENCE-Nummern in bestimmten Szenarien falsch inkrementiert wurden.
+* Es wurde ein Problem mit CMAF/demuxed Audio-Streams behoben, bei dem die Anzahl der EXT-X-MEDIA-SEQUENCE-Zahlen in bestimmten Szenarien falsch erhöht wurde.
 
 ### Version 20.3.2
 
-**Wann:** Mittwoch, 11. März 2020 von 05:30 Uhr bis 07:00 Uhr Eastern Time
+**Wenn:** Mittwoch, 11. März 2020 von 05:30 Uhr bis 07:00 Uhr Ostzeit
 
-* Verbesserte SCTE35-Signalverarbeitung.
+* Verbesserungen bei der Signalverarbeitung SCTE35.
 
-* Aktualisierungen der Wartung.
+* Wartungs-Updates.
 
 ### Version 20.3.1
 
-**Wann:** Donnerstag, 05. März 2020 von 02:30 Uhr bis 04:30 Uhr Eastern Time
+**Wenn:** Donnerstag, 5. März 2020 von 02:30 Uhr bis 04:30 Uhr Ostzeit
 
 * Leistungsverbesserungen:
 
-   * Cache-Unterstützung für Übergeordnet/media m3u8-Manifeste hinzugefügt. Diese Manifeste reagieren jetzt auf die Cachesteuerung: öffentliche und Max-Age-Kopfzeilen, die häufig die Leistung von Video-Beginn verbessern können.
+   * Die Cache-Unterstützung für Master-/Media-m3u8-Manifeste wurde hinzugefügt. Diese Manifeste reagieren jetzt auf Cache-Control: öffentliche und Max-Age-Header, die häufig die Videostartleistung verbessern können.
 
-   * Es wurde Unterstützung hinzugefügt, um zu erzwingen, dass HTTPS-kreative Elemente über HTTP abgerufen werden, was auch die Leistung von Video-Beginn verbessern kann.
+   * Unterstützung für das Erzwingen des Abrufs von HTTPS-kreativen Elementen über HTTP hinzugefügt, wodurch auch die Videostartleistung verbessert werden kann.
 
-* Sicherheits- und Wartungs-Fehlerbehebungen.
+* Sicherheits- und Wartungskorrekturen.
 
 ### Version 20.2.1
 
-**Wann:** Donnerstag, 13. Februar 2020 von 04:30 Uhr bis 05:30 Uhr Eastern Time
+**Wenn:** Donnerstag, 13. Februar 2020 von 04:30 Uhr bis 05:30 Uhr Ostzeit
 
-* Unterstützung für das Zusammenfügen von Anzeigenelementen mit mehreren reinen Audiostreams, basierend auf Sprache/Codec/Bitrate.
-* Geringfügige Leistungsverbesserungen und Wartungs-Updates.
+* Unterstützung für das Stitching von Anzeigen-Assets hinzugefügt, die mehrere reine Audiostreams enthalten, die auf Sprache/Codec/Bitrate basieren.
+* Geringfügige Leistungsverbesserungen und Wartungsupdates.
 
 ### Version 20.1.3
 
-**Wann:** Dienstag, 28. Januar 2020 von 2:00 Uhr bis 03:00 Uhr östliche Zeit
+**Wenn:** Dienstag, 28. Januar 2020 von 2:00 Uhr bis 03:00 Uhr Ostzeit
 
 * **VMAP mit FER-Unterstützung für nbc CueFormat**
 
-   Konvertieren Sie Hinweise aus dem FER-Stream in Zeitleisten, um Parameter zu überschreiben, wenn `ptcueformat=nbc` verwendet wird und der Stream ein VOD-Stream mit In-Manifest-Hinweisen und Backed-In-Anzeigen ist.
+  Konvertieren von Hinweisen aus FER-Stream in Parameter zur Überschreibung von FW-Zeitleisten `ptcueformat=nbc` wird verwendet und der Stream ist ein VOD-Stream mit In-Manifest-Hinweisen und Backed-in-Anzeigen.
 
-* Bereinigen Sie das Feld &quot;user-agent&quot;im HTTP-Header, bevor Sie es an Drittanbieter/CDN weiterleiten.
+* Bereinigen Sie das Feld &quot;user-agent&quot;im HTTP-Header, bevor Sie es an Drittanbieter von Anzeigen/CDN weiterleiten.
 
-* Filtern Sie vor dem Senden an Auditude und andere Anzeigenanbieter (CDNs) die Steuerungs-/Nicht-Druckzeichen (ASCII-Code &lt; 32) aus HTTP-Headern des Benutzeragents heraus. Auditude Ad-Call hat bei solchen ungültigen Headern früher nicht funktioniert.
+* Filtern Sie Kontroll-/Nicht-druckbare Zeichen (ASCII-Code &lt; 32) aus HTTP-Headern für Benutzeragenten, bevor Sie sie an Auditude und andere Anzeigenanbieter, CDNs, senden. Auditude Ad-Call, der für solche ungültigen Kopfzeilen verwendet wurde, schlägt fehl.
 
-* Entfernen Sie alte V1-Objekte aus NetStorage-Gruppen, um die Objektanzahl innerhalb sicherer Grenzen von Akamai zu halten.
+* Bereinigen Sie alte V1-Objekte von NetStorage-Gruppen, um die Objektanzahl innerhalb sicherer Grenzen von Akamai zu halten.
 
 ### Version 20.1.2 (Hotfix)
 
-**Wann:** Montag, 20. Januar 2020 von 02:00 Uhr bis 03:00 Uhr Eastern Time
+**Wenn:** Montag, 20. Januar 2020 von 02:00 Uhr bis 03:00 Uhr Ostzeit
 
-* Aktualisierungen der Wartung.
+* Wartungs-Updates.
 
 ### Version 20.1.1
 
-**Wann:** Mittwoch, 15. Januar 2020 von 04:00 Uhr bis 05:00 Uhr Eastern Time
+**Wenn:** Mittwoch, 15. Januar 2020 von 04:00 Uhr bis 05:00 Uhr Ostzeit
 
-* Der Creative Repackage-Dienst ermöglicht jetzt eine schnellere Anzeigeneinfügung, indem er die Auflistung fehlerhafter kreativer Elemente automatisch sperrt.
+* Der Creative Repackaging-Dienst ermöglicht jetzt ein schnelleres Einfügen von Anzeigen durch die automatische Blockierung von falsch formatierten Kreativen.
 
-* Unterstützung für Phase 1 für das neue Cue-Format SCTE 35 in serverseitiger Anzeigeneinfügung hinzugefügt.
+* Unterstützung für Phase 1 für das neue Cue-Format SCTE 35 beim serverseitigen Anzeigen-Einfügen hinzugefügt.
 
-* Wartungs-Upgrades.
+* Wartungsaktualisierungen.
 
-## Behobene Probleme {#Resolved-issues}
+## Gelöste Probleme {#Resolved-issues}
 
-Wenn die Lösung mit einem gemeldeten Problem verbunden ist, wird ein Zendesk-Verweis angezeigt. Beispiel, `ZD#xxxxx`.
+Wenn die Lösung mit einem gemeldeten Problem verknüpft ist, wird eine Zendesk-Referenz angezeigt. Beispiel: `ZD#xxxxx`.
 
 **PTAI 20.9.1**
 
-* Korrektur des Fehlers bei Kunden, die HLS/CMAF verwenden, bei dem EXT-X-MAP manchmal CDN-Token oder EXT-X-MAP-Tags fehlten, die manchmal fälschlicherweise aus dem DVR-Fenster gerollt wurden.
+* Es wurde ein Problem für Kunden behoben, die HLS/CMAF verwenden und bei denen EXT-X-MAP manchmal CDN-Token oder EXT-X-MAP-Tags fehlten, die manchmal fälschlicherweise aus dem DVR-Fenster ausgerollt wurden.
 
 **PTAI 20.6.1**
 
-* `WebVTT` Fragmente wurden immer unter dem HTTP-Protokoll angefordert, unabhängig vom ursprünglichen Protokoll angefordert.
+* `WebVTT` Fragmente wurden unabhängig vom angeforderten Originalprotokoll immer unter dem HTTP-Protokoll angefordert.
 
-* `EXT-X-DISCONTINUITY` -Tags werden von oben in der Wiedergabeliste entfernt, wenn von Anzeigen zurück zum Inhalt gewechselt wird. Wenden Sie sich an den Support für Adoben, um diese Fehlerbehebung zu aktivieren.
+* `EXT-X-DISCONTINUITY` -Tags werden vom Anfang der Wiedergabeliste entfernt, wenn von Anzeigen zurück zu Inhalten gewechselt wird. Wenden Sie sich an den Adobe-Support , um diese Fehlerbehebung zu aktivieren.
 
 **PTAI 20.5.1**
 
-* Probleme mit CORS-Headern beim Senden von if-Modified-Since-Headern.
+* Probleme mit CORS-Headern beim Senden von If-Modified-Since-Headern.
 
 * Probleme im CRS-Dashboard.
 
 **PTAI 20.3.4**
 
-* Problem, das dazu führte, dass Untertitel nach dem Einfügen der Anzeige in VOD/WebVTT nicht mehr synchronisiert wurden.
+* Problem, das dazu führte, dass Untertitel nach dem Einfügen einer Anzeige in VOD/WebVTT nicht mehr synchronisiert wurden.
 
 **PTAI 20.3.3**
 
-* Problem mit X-Forwarded-For-Headern, bei denen IPv6-Adressen nicht korrekt URL-kodiert wurden, wenn sie an die Anzeigen-Server weitergeleitet wurden.
+* Problem mit X-Forwarded-For-Headern, bei denen IPv6-Adressen nicht korrekt URL-kodiert wurden, wenn sie an die Adserver übergeben wurden.
 
-* Problem mit CMAF/demuxed Audio-Streams, bei denen in bestimmten Szenarien EXT-X-MEDIA-SEQUENCE-Zahlen in bestimmten Szenarien falsch inkrementiert werden
+* Problem mit CMAF/demuxed Audio-Streams, bei denen in bestimmten Szenarien die EXT-X-MEDIA-SEQUENCE-Zahlen in bestimmten Szenarien falsch inkrementiert werden
 
 ## Bekannte Probleme und Einschränkungen
 

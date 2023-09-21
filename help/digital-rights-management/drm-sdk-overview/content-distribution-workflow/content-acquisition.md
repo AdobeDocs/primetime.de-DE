@@ -1,45 +1,42 @@
 ---
-description: 'Wenn ein Verbraucher eine geschützte Inhaltsdatei von einer Website oder einem CDN erwirbt, muss er auch eine Lizenz erwerben, die einen Schlüssel zum Entschlüsseln des Videos enthält, bevor es wiedergegeben werden kann. Die folgenden Schritte illustrieren einen gemeinsamen Arbeitsablauf für den Zugriff auf geschützte Inhalte durch einen Computer, auf dem Flash Player oder Adobe AIR ausgeführt wird '
+description: Wenn ein Verbraucher eine geschützte Inhaltsdatei von einer Website oder einem CDN erhält, muss er auch eine Lizenz erwerben, die einen Schlüssel zum Entschlüsseln des Videos enthält, bevor es wiedergegeben werden kann. Die folgenden Schritte veranschaulichen einen gemeinsamen Arbeitsablauf für den Zugriff auf geschützte Inhalte durch einen Computer, auf dem Flash Player oder Adobe AIR ausgeführt wird
 title: Inhaltsakquise
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 0%
 
 ---
 
-
 # Inhaltsakquise{#content-acquisition}
 
-Wenn ein Verbraucher eine geschützte Inhaltsdatei von einer Website oder einem CDN erwirbt, muss er auch eine Lizenz erwerben, die einen Schlüssel zum Entschlüsseln des Videos enthält, bevor es wiedergegeben werden kann. Die folgenden Schritte illustrieren einen gemeinsamen Arbeitsablauf für den Zugriff auf geschützte Inhalte auf einem Computer, auf dem Flash Player oder Adobe AIR ausgeführt wird:
+Wenn ein Verbraucher eine geschützte Inhaltsdatei von einer Website oder einem CDN erhält, muss er auch eine Lizenz erwerben, die einen Schlüssel zum Entschlüsseln des Videos enthält, bevor es wiedergegeben werden kann. Die folgenden Schritte veranschaulichen einen gemeinsamen Arbeitsablauf für den Zugriff auf geschützte Inhalte durch einen Computer, auf dem Flash Player oder Adobe AIR ausgeführt wird:
 
-1. Der Verbraucher besucht die Website des Einzelhändlers und wählt ein Video aus, das er sehen möchte. Der Kunde versucht, das geschützte Video mit einem Flash Player oder einer Adobe AIR-Anwendung herunterzuladen oder auf seinen Computer zu übertragen.
+1. Der Verbraucher besucht die Website des Einzelhändlers und wählt ein Video zum Ansehen aus. Der Verbraucher versucht, das geschützte Video herunterzuladen bzw. über eine Flash Player- oder Adobe AIR-Anwendung auf seinen Computer zu übertragen.
 
-   Ist dies das erste Mal, dass der Kunde versucht hat, auf geschützten Inhalt mit diesem bestimmten Computer zuzugreifen, muss der Flash Player oder die Adobe AIR-Laufzeit zuerst individualisiert werden, wie in Schritt 2 beschrieben. Wenn der Laufzeitclient bereits individualisiert wurde, erfolgt der Erwerb einer Lizenz wie in Schritt 3 beschrieben.
+   Wenn der Benutzer zum ersten Mal versucht hat, mit diesem bestimmten Computer auf geschützte Inhalte zuzugreifen, muss die Flash Player- oder Adobe AIR-Laufzeitumgebung zuerst individualisiert werden, wie in Schritt 2 beschrieben. Wenn der Laufzeitclient bereits individualisiert wurde, erfolgt der Lizenzerwerb wie in Schritt 3 beschrieben.
 
-1. Der Flash Player- oder Adobe AIR-Laufzeitclient erhält ein eindeutiges digitales Zertifikat (das als *Computerzertifikat* bezeichnet wird) von einem Adobe-gehosteten Server.
+1. Der Flash Player- oder Adobe AIR-Laufzeitclient erhält ein eindeutiges digitales Zertifikat (das als *Maschinenzertifikat*) von einem Adobe-gehosteten Server aus.
 
-   Dieser Prozess der Zuweisung eines eindeutigen Zertifikats wird als *Individualisierung* bezeichnet. Die Individualisierung identifiziert eindeutig sowohl den Computer als auch die Flash Player- oder Adobe AIR-Laufzeitumgebung, mit der Inhalte wiedergegeben werden.
+   Dieser Vorgang der Zuweisung eines eindeutigen Zertifikats wird als *Individualisierung*. Durch die Individualisierung werden der Computer und die Flash Player- oder Adobe AIR-Laufzeitumgebung für die Wiedergabe von Inhalten eindeutig identifiziert.
 
-   Durch den Individualisierungsprozess können die heruntergeladenen Lizenzen an einen bestimmten Computer gebunden werden, auf dem der Client installiert ist. Jeder Computer erhält eine eindeutige Maschinenberechtigung (maschineller privater Schlüssel und Computerzertifikat). Sollte ein bestimmter Client gefährdet werden, kann er widerrufen und vom Erwerb von Lizenzen für neue Inhalte ausgeschlossen werden.
+   Der Individualisierungsprozess ermöglicht es, die heruntergeladenen Lizenzen an einen bestimmten Computer zu binden, auf dem der Client installiert ist. Jeder Computer erhält eine eindeutige Maschinenberechtigung (maschineller privater Schlüssel und Maschinenzertifikat). Sollte ein bestimmter Kunde kompromittiert werden, kann er widerrufen und von der Beschaffung von Lizenzen für neue Inhalte ausgeschlossen werden.
 
-1. Der Client analysiert den geschützten Inhalt, während er beginnt, ihn auf den Computer des Verbrauchers herunterzuladen oder zu streamen, und extrahiert die URL des Lizenzservers des Einzelhändlers aus den in die Datei eingebetteten Primetime-DRM-Metadaten.
+1. Der Client analysiert den geschützten Inhalt, während er beginnt, ihn herunterzuladen oder auf den Computer des Verbrauchers zu streamen, und extrahiert die URL des Lizenzservers des Einzelhändlers aus den in die Datei eingebetteten Primetime-DRM-Metadaten.
 
-   Die Primetime-DRM-Metadaten sind in der Regel vom Inhalt getrennt, z. B. eingebettet in eine begleitende Manifestdatei oder als binärer Block, können aber auch in die Inhaltsdatei eingebettet werden. Der Client kontaktiert den Lizenzserver unter der angegebenen URL und erwirbt eine Lizenz (wie in Schritt 4 beschrieben).
+   Die Primetime-DRM-Metadaten sind in der Regel separat vom Inhalt, z. B. eingebettet in eine zugehörige Manifestdatei oder als Binärblock, können aber auch in die Inhaltsdatei eingebettet werden. Der Client kontaktiert den Lizenzserver unter der angegebenen URL und erwirbt eine Lizenz (wie unten in Schritt 4 beschrieben).
 1. Der Kunde erhält eine Lizenz vom Lizenzserver des Einzelhändlers.
 
-   Während der Lizenzerwerbung sendet der Kunde Informationen zur Identifizierung des angeforderten Inhalts (die DRM-Primetime-Metadaten *) und das Computerzertifikat (zur Identifizierung des Computers des Verbrauchers) an den Lizenzserver des Händlers.* Die an den Server gesendete Lizenzanforderung wird mit dem öffentlichen Transportschlüssel verschlüsselt, der auch in den Primetime DRM-Metadaten enthalten ist.
+   Während der Lizenzakquise sendet der Client Informationen, die den angeforderten Inhalt identifizieren (die *Primetime-DRM-Metadaten*) und das Maschinenzertifikat (mit dem der Computer des Verbrauchers identifiziert wird) an den Lizenzserver des Einzelhändlers. Die an den Server gesendete Lizenzanforderung wird mit dem öffentlichen Transportschlüssel verschlüsselt, der auch in den Primetime DRM-Metadaten enthalten ist.
 
-   Lizenzserver — die in die Abrechnungs- und Authentifizierungs-Infrastruktur des Einzelhändlers integriert werden können — kann eine Geschäftsregelprüfung durchführen, um zu überprüfen, ob der Benutzer zur Ansicht des angeforderten Inhalts berechtigt ist. Wenn die Geschäftsregeln dies zulassen, gibt der Lizenzserver eine Lizenz mit dem Schlüssel für die Inhaltsverschlüsselung aus, um den Inhalt und die mit dem Konto dieses Benutzers verknüpften Nutzungsregeln zu entschlüsseln. Zur Verarbeitung einer Lizenzanforderung entschlüsselt der Lizenzserver die Anforderung mit seinem privaten Transportschlüssel. Das CEK in den Metadaten wird mithilfe des privaten Schlüssels für License Server entschlüsselt und erneut verschlüsselt, um die Lizenz an das Gerät zu binden, auf dem die Anforderung ausgeführt wird. Die Lizenz wird mit dem privaten Lizenzserver-Schlüssel signiert. Die Lizenzantwort wird mit dem privaten Transportschlüssel signiert und verschlüsselt, bevor sie an den Client zurückgegeben wird.
+   Der Lizenzserver, der in die Abrechnungs- und Authentifizierungsinfrastruktur des Einzelhändlers integriert werden kann, kann eine Prüfung der Geschäftsregeln durchführen, um zu überprüfen, ob der Benutzer berechtigt ist, die angeforderten Inhalte anzuzeigen. Wenn die Geschäftsregeln dies zulassen, gibt der Lizenzserver eine Lizenz mit dem Schlüssel zur Inhaltsverschlüsselung aus, um den Inhalt und die mit dem Konto des Benutzers verknüpften Nutzungsregeln zu entschlüsseln. Um eine Lizenzanfrage zu verarbeiten, entschlüsselt der Lizenzserver die Anfrage mit seinem privaten Transportschlüssel. Der CEK in den Metadaten wird mithilfe des privaten Lizenzserver-Schlüssels entschlüsselt und neu verschlüsselt, um die Lizenz an das Gerät zu binden, das die Anforderung ausführt. Die Lizenz wird mithilfe des privaten Schlüssels des Lizenzservers signiert. Die Lizenzantwort wird mit dem privaten Transportschlüssel signiert und verschlüsselt, bevor sie an den Client zurückgegeben wird.
 
-   Sofern die Lizenz dies zulässt, speichert der Client die Lizenz, um *Offline-Zugriff* für die Lizenz zu aktivieren. Die Lizenzzwischenspeicherung ermöglicht es dem Kunden, geschützte Inhalte Ansicht, ohne jedes Mal, wenn er Inhalte Ansicht, eine neue Lizenz zu erwerben.
+   Sofern durch die Lizenz erlaubt, speichert der Client die Lizenz, um *Offline-Zugriff* der Lizenz. Lizenzzwischenspeicherung ermöglicht es dem Verbraucher, geschützte Inhalte anzuzeigen, ohne jedes Mal, wenn er Inhalte anzeigen möchte, eine Lizenz erneut zu erwerben.
 
-1. Sobald der Flash Player- oder Adobe AIR-Laufzeitclient über eine Lizenz verfügt, extrahiert der Client das CEK aus der Lizenz und der Kunde kann die Inhalte, auf die er zugreifen darf, Ansicht vornehmen.
+1. Sobald der Flash Player- oder Adobe AIR-Laufzeitclient über eine Lizenz verfügt, extrahiert der Client das CEK aus der Lizenz und der Kunde kann den Inhalt anzeigen, auf den er zugreifen darf.
 
    <!--<a id="fig_s43_gc2_44"></a>-->
 
    ![](assets/FMRMS_fig01_web.png)
 
-   Das vorstehende Beispiel zeigt nur einen möglichen Arbeitsablauf. Alternativ können Sie einen Workflow mit einem proaktiven Download von Inhalten verwenden, bei dem die Lizenzerfassung viel später erfolgt. Eine andere Möglichkeit besteht darin, einen Workflow für die Vorabbestellung zu implementieren, bei dem die Lizenzerfassung stattfindet, bevor auf den Inhalt zugegriffen wird.
-
+   Das vorstehende Beispiel zeigt nur einen möglichen Workflow. Alternativ können Sie einen Workflow mit einem proaktiven Download von Inhalten verwenden, bei dem die Lizenzakquise viel später erfolgt. Eine weitere Möglichkeit besteht darin, einen Workflow für die Vorab-Bestellung zu implementieren, bei dem die Lizenzakquise erfolgt, bevor auf den Inhalt zugegriffen wird.

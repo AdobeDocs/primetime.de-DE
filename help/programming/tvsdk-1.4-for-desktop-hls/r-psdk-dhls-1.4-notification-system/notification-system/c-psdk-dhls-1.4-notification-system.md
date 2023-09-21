@@ -1,19 +1,17 @@
 ---
-description: MediaPlayerNotification-Objekte enthalten Informationen zu Änderungen des Player-Status, zu Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Status des Players.
-title: Benachrichtigungen über Player-Status, Aktivität, Fehler und Protokollierung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaPlayerNotification -Objekte liefern Informationen zu Änderungen des Player-Status, von Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Status des Players.
+title: Benachrichtigungen bezüglich Player-Status, Aktivität, Fehler und Protokollierung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#notifications-for-player-status-activity-errors-and-logging-overview}
 
-MediaPlayerNotification-Objekte enthalten Informationen zu Änderungen des Player-Status, zu Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Status des Players.
+MediaPlayerNotification -Objekte liefern Informationen zu Änderungen des Player-Status, von Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Status des Players.
 
-Ihre Anwendung kann die Benachrichtigungen und Statusinformationen abrufen. Sie können mithilfe der Benachrichtigungsinformationen auch ein Protokollierungssystem für die Diagnose und Überprüfung erstellen.
+Ihre Anwendung kann die Benachrichtigung und Statusinformationen abrufen. Sie können mithilfe der Benachrichtigungsinformationen auch ein Protokollierungssystem für Diagnose und Validierung erstellen.
 
-Sie implementieren Ereignis-Listener, um Ereignis zu erfassen und darauf zu reagieren. In vielen Ereignissen werden Statusbenachrichtigungen für `MediaPlayerNotification` bereitgestellt.
+Sie implementieren Ereignis-Listener, um Ereignisse zu erfassen und darauf zu reagieren. Viele Ereignisse bieten `MediaPlayerNotification` Statusbenachrichtigungen.

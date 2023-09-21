@@ -1,20 +1,18 @@
 ---
-description: Mit der Anzeigeneinfügung werden Anzeigen für Video-on-Demand (VOD), für Live-Streaming und für lineares Streaming mit Anzeigenverfolgung und Anzeigenwiedergabe aufgelöst. TVSDK stellt die erforderlichen Anforderungen an den Anzeigen-Server, empfängt Informationen über Anzeigen für den angegebenen Inhalt und platziert die Anzeigen in den Inhalten in Phasen.
+description: Durch die Anzeigeneinfügung werden Anzeigen für Video-On-Demand (VOD) , für Live-Streaming und für lineares Streaming mit Anzeigen-Tracking und Anzeigenwiedergabe aufgelöst. TVSDK sendet die erforderlichen Anfragen an den Anzeigen-Server, empfängt Informationen über Anzeigen für den angegebenen Inhalt und platziert die Anzeigen in Phasen.
 title: Anzeigen einfügen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 0%
 
 ---
 
+# Anzeigen einfügen {#insert-ads}
 
-# Anzeigen {#insert-ads} einfügen
+Durch die Anzeigeneinfügung werden Anzeigen für Video-On-Demand (VOD) , für Live-Streaming und für lineares Streaming mit Anzeigen-Tracking und Anzeigenwiedergabe aufgelöst. TVSDK sendet die erforderlichen Anfragen an den Anzeigen-Server, empfängt Informationen über Anzeigen für den angegebenen Inhalt und platziert die Anzeigen in Phasen.
 
-Mit der Anzeigeneinfügung werden Anzeigen für Video-on-Demand (VOD), für Live-Streaming und für lineares Streaming mit Anzeigenverfolgung und Anzeigenwiedergabe aufgelöst. TVSDK stellt die erforderlichen Anforderungen an den Anzeigen-Server, empfängt Informationen über Anzeigen für den angegebenen Inhalt und platziert die Anzeigen in den Inhalten in Phasen.
-
-Ein *`ad break`* enthält eine oder mehrere Anzeigen, die nacheinander abgespielt werden. TVSDK fügt Anzeigen in den Hauptinhalt als Mitglieder einer oder mehrerer Werbeunterbrechungen ein.
+Ein *`ad break`* enthält eine oder mehrere Anzeigen, die nacheinander abgespielt werden. TVSDK fügt Anzeigen im Hauptinhalt als Mitglieder einer oder mehrerer Werbeunterbrechungen ein.
 
 >[!TIP]
 >
@@ -22,29 +20,29 @@ Ein *`ad break`* enthält eine oder mehrere Anzeigen, die nacheinander abgespiel
 
 ## Auflösen und Einfügen von VOD-Anzeigen {#section_157344F857C64F36B48AD441F6E7FABA}
 
-TVSDK unterstützt mehrere Anwendungsfälle für VOD-Anzeigenauflösung und -einfügung.
+TVSDK unterstützt mehrere Anwendungsfälle für das Auflösen und Einfügen von VOD-Anzeigen.
 
-* Einfügen von Pre-Roll-Anzeigen, wobei Anzeigen am Anfang des Inhalts eingefügt werden.
-* Einfügen von Mid-Roll-Anzeigen, wobei mindestens eine Anzeige in der Mitte des Inhalts eingefügt wird.
-* Einfügen von Post-Roll-Anzeigen, wobei mindestens eine Anzeige am Ende des Inhalts angehängt wird.
+* Einfügen einer Pre-Roll-Anzeige, wobei Anzeigen am Anfang des Inhalts eingefügt werden.
+* Mid-Roll-Anzeigeneinfügung, wobei mindestens eine Anzeige in der Mitte des Inhalts eingefügt wird.
+* Einfügen einer Post-Roll-Anzeige, wobei mindestens eine Anzeige am Ende des Inhalts angehängt wird.
 
-TVSDK löst die Anzeigen, fügt die Anzeigen an den vom Anzeigen-Server definierten Orten ein und berechnet die virtuelle Zeitleiste vor dem Beginn der Wiedergabe. Nach der Wiedergabe können keine Beginn mehr auftreten, wie z. B. eingefügte oder eingefügte Anzeigen, die entfernt werden.
+TVSDK löst die Anzeigen auf, fügt die Anzeigen an vom Anzeigen-Server definierten Positionen ein und berechnet die virtuelle Timeline vor dem Start der Wiedergabe. Nach dem Start der Wiedergabe können keine Änderungen auftreten, z. B. beim Einfügen oder Entfernen von Anzeigen.
 
-## Auflösen und Einfügen einer Live- und linearen Anzeige {#section_A6A1BB262D084462A1D134083556B7CC}
+## Live- und lineare Anzeige auflösen und einfügen {#section_A6A1BB262D084462A1D134083556B7CC}
 
-TVSDK unterstützt mehrere Anwendungsfälle zum Auflösen und Einfügen von Live- und linearen Anzeigen.
+TVSDK unterstützt mehrere Anwendungsfälle für das Auflösen und Einfügen von Live- und linearen Anzeigen.
 
-* Einfügen von Pre-Roll-Anzeigen, wobei mindestens eine Anzeige am Anfang des Inhalts eingefügt wird.
-* Einfügen von Mid-Roll-Anzeigen, wobei mindestens eine Anzeige in der Mitte des Inhalts eingefügt wird.
+* Einfügen einer Pre-Roll-Anzeige, wobei mindestens eine Anzeige am Anfang des Inhalts eingefügt wird.
+* Mid-Roll-Anzeigeneinfügung, wobei mindestens eine Anzeige in der Mitte des Inhalts eingefügt wird.
 
-TVSDK löst die Anzeigen und fügt sie ein, wenn ein Cue-Point im Live- oder linearen Stream gefunden wird. TVSDK unterstützt standardmäßig die folgenden Hinweise als gültige Anzeigenmarkierungen beim Auflösen und Platzieren von Anzeigen:
+TVSDK löst die Anzeigen auf und fügt sie ein, wenn ein Cue-Punkt im Live- oder linearen Stream auftritt. TVSDK unterstützt standardmäßig die folgenden Hinweise als gültige Anzeigenmarkierungen bei der Auflösung und Platzierung von Anzeigen:
 
-* # EXT-X-CUEPOINT
-* # EXT-X-AD
-* # EXT-X-CUE
-* # EXT-X-CUE-OUT
+* #EXT-X-CUEPOINT
+* #EXT-X-AD
+* #EXT-X-CUE
+* #EXT-X-CUE-OUT
 
-Diese Markierungen erfordern die Angabe `DURATION` des Metadatenfelds in Sekunden und die eindeutige ID des Cue-Points. Beispiel:
+Diese Markierungen erfordern die `DURATION` in Sekunden und der eindeutigen Kennung des Cue-Point. Beispiel:
 
 ```
 #EXT-X-CUE DURATION=27 ID=identiferForThisCue ... 
@@ -52,34 +50,34 @@ Diese Markierungen erfordern die Angabe `DURATION` des Metadatenfelds in Sekunde
 
 Weitere Informationen zu zusätzlichen Hinweisen finden Sie unter [Benutzerdefinierte Tags abonnieren](../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-subscribe.md).
 
-## Tracking-Client-Anzeige {#section_12355C7A35F14C15A2A18AAC90FEC2F5}
+## Tracking von Client-Anzeigen {#section_12355C7A35F14C15A2A18AAC90FEC2F5}
 
-TVSDK verfolgt automatisch Anzeigen für VOD und live/linear Streaming.
+TVSDK verfolgt automatisch Anzeigen für VOD und Live-/Lineares Streaming.
 
-Benachrichtigungen werden verwendet, um Ihre Anwendung über den Fortschritt einer Anzeige zu informieren, einschließlich Informationen darüber, wann eine Anzeige beginnt und wann sie endet.
+Benachrichtigungen informieren Ihre Anwendung über den Fortschritt einer Anzeige, einschließlich Informationen darüber, wann eine Anzeige beginnt und wann sie endet.
 
-## Implementieren eines Zeilenumbruchs für eine frühe Werbeunterbrechung {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
+## Implementieren einer frühen Werbeunterbrechung {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
 
-Beim Einfügen von Livestream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
+Für das Einfügen von Live-Stream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
 
-Im Folgenden finden Sie einige Beispiele für eine Rückkehr zu einer frühen Werbeunterbrechung:
+Im Folgenden finden Sie einige Beispiele für die Rückgabe einer frühzeitigen Werbeunterbrechung:
 
-* Die Dauer der Werbeunterbrechung in bestimmten Ereignissen.
+* Die Dauer der Werbeunterbrechung bei bestimmten Sportveranstaltungen.
 
-   Obwohl eine Standarddauer angegeben ist, muss die Werbeunterbrechung beendet werden, wenn das Spiel wieder aufgenommen wird, bevor die Pause abgeschlossen ist.
+  Obwohl eine Standarddauer angegeben ist, muss die Werbeunterbrechung beendet werden, wenn das Spiel wieder aufgenommen wird, bevor die Pause beendet wird.
 * Ein Notsignal während einer Werbeunterbrechung in einem Live-Stream.
 
-Die Möglichkeit, eine Werbeunterbrechung frühzeitig zu beenden, wird durch ein benutzerdefiniertes Tag im Manifest, das als SLICE-In- oder Cue-In-Tag bezeichnet wird, identifiziert. TVSDK ermöglicht es der Anwendung, diese SLICE-in-Tags zu abonnieren, um eine SLICE-Gelegenheit zu bieten.
+Die Möglichkeit, eine Werbeunterbrechung frühzeitig zu beenden, wird durch ein benutzerdefiniertes Tag im Manifest identifiziert, das als Splink-in- oder Cue-in-Tag bezeichnet wird. TVSDK ermöglicht es der Anwendung, diese Splink-in-Tags zu abonnieren, um eine Splink-in-Möglichkeit zu bieten.
 
-* So verwenden Sie das `#EXT-X-CUE-IN`-Tag als Gelegenheit zum Einteilen und implementieren eine frühe Werbeunterbrechung:
+* So verwenden Sie die `#EXT-X-CUE-IN` -Tag als Spleice-in-Gelegenheit markieren und eine frühe Werbeunterbrechung implementieren:
 
-   1. Abonnieren Sie das Tag.
+   1. Abonnieren Sie das -Tag.
 
       ```
       [PTSDKConfig setSubscribedTags:[NSArray arrayWithObject:@"#EXT-X-CUE-IN"]];
       ```
 
-   1. hinzufügen den Cue-in-Opportunitätsauflöser.
+   1. Fügen Sie den Cue-in-Opportunity-Resolver hinzu.
 
       ```
       // self.player is the PTMediaPlayer instance created for content and ad playback 
@@ -89,13 +87,13 @@ Die Möglichkeit, eine Werbeunterbrechung frühzeitig zu beenden, wird durch ein
       [clientFactory registerOpportunityResolver:[PTDefaultAdSpliceInOpportunityResolver adSpliceInOpportunityResolverWithTag:@"#EXT-X-CUE-IN"]];
       ```
 
-* So geben Sie das gleiche Tag für das Splice-out und das Splice-In frei:
+* So geben Sie dasselbe Tag für die Aufteilung und die Aufteilung frei:
 
-1. Wenn die Anwendung denselben Cue-Point verwendet, um Cue-out/Splice-out und Cue-In/SLICE-In anzugeben, erweitern Sie `PTDefaultAdOpportunityResolver` und implementieren Sie die `preparePlacementOpportunity`-Methode.
+1. Wenn die Anwendung denselben Cue-Point verwendet, um Cue-out/Spllice-out und Cue-in/Spleice-in anzugeben, erweitern Sie `PTDefaultAdOpportunityResolver` und implementieren `preparePlacementOpportunity` -Methode.
 
    >[!TIP]
    >
-   >Im folgenden Code wird davon ausgegangen, dass die App über eine Implementierung für die `isCueInOpportunity`-Methode verfügt.
+   >Im folgenden Code wird davon ausgegangen, dass die App über eine Implementierung für die `isCueInOpportunity` -Methode.
 
    ```
    - (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
@@ -111,7 +109,7 @@ Die Möglichkeit, eine Werbeunterbrechung frühzeitig zu beenden, wird durch ein
    }
    ```
 
-1. Registrieren Sie den erweiterten Opportunitätsauflöser für die `PTDefaultMediaPlayerClientFactory`-Instanz.
+1. Registrieren Sie den Resolver für erweiterte Möglichkeiten auf der `PTDefaultMediaPlayerClientFactory` -Instanz.
 
 ```
    // self.player is the PTMediaPlayer instance created for content and ad playback 

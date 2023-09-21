@@ -1,36 +1,34 @@
 ---
-description: Diese Klassen bieten Informationen zu Anzeigen, die innerhalb einer Zeitleiste auftreten.
-title: Zeitschienenwerbungskurse
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Diese Klassen liefern Informationen über Anzeigen, die innerhalb einer Timeline auftreten.
+title: Zeitleistenanzeigenklassen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 0%
 
 ---
 
+# Zeitleistenanzeigenklassen{#timeline-advertising-classes}
 
-# Zeitschienenwerbungsklassen{#timeline-advertising-classes}
+Diese Klassen liefern Informationen über Anzeigen, die innerhalb einer Timeline auftreten.
 
-Diese Klassen bieten Informationen zu Anzeigen, die innerhalb einer Zeitleiste auftreten.
+Package: [com.adobe.mediacore.timeline.advertising](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/package-summary.html)
 
-Paket: [com.adobe.mediacore.timeline.advertising](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/package-summary.html)
-
-Paket: [com.adobe.mediacore.timeline.advertising.auditude](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/package-summary.html)
+Package: [com.adobe.mediacore.timeline.advertising.auditude](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/package-summary.html)
 
 | Name | Beschreibung |
 |--- |--- |
-| [Anzeige](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | Klasse, die die Abstraktion der Anzeige definiert und alle Anzeigeninformationen enthält. Er wird durch eine eindeutige ID, eine Dauer und ein `MediaResource` definiert. Das `MediaResource` enthält die URL, in der sich der tatsächliche Anzeigeninhalt befindet. |
-| [AdAsset](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdAsset.html) | Klasse, die ein anzuzeigendes Asset darstellt. Klasse, die ein Anzeigenasset darstellt. |
-| [AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | Klasse, die eine einheitliche Ansicht für mehrere Anzeigen bietet, die zu einem bestimmten Zeitpunkt während der Wiedergabe wiedergegeben werden. |
-| [AdBreakPlacement](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreakPlacement.html) | Platzierungsklasse für Werbeunterbrechungen. |
+| [Anzeige](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/Ad.html) | Klasse, die die Anzeigenabstraktion definiert und alle Anzeigeninformationen enthält. Sie wird durch eine eindeutige ID, eine Dauer und eine `MediaResource`. Die `MediaResource` enthält die URL, in der sich der tatsächliche Anzeigeninhalt befindet. |
+| [AdAsset](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdAsset.html) | Klasse, die ein anzuzeigendes Asset darstellt. Klasse, die ein Anzeigen-Asset darstellt. |
+| [AdBreak](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreak.html) | Klasse, die eine einheitliche Ansicht für mehrere Anzeigen bietet, die irgendwann während der Wiedergabe wiedergegeben werden. |
+| [AdBreakPlacement](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreakPlacement.html) | Vorgangsklasse für Werbeunterbrechungen. |
 | [AdBreakPolicy](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdBreakPolicy.html) | Auflistung, die die Richtlinie zur Anzeigenwiedergabe definiert, die sich auf den Benutzer bezieht, der Anzeigen bei der Suche umgeht. |
-| [AdClick](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdClick.html) | Klasse, die eine mit einem Asset verknüpfte Klickinstanz darstellt. Diese Instanz enthält Informationen zur Clickthrough-URL und zum Titel, mit denen dem Benutzer zusätzliche Informationen bereitgestellt werden können. |
-| [AdPolicyInfo](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdPolicyInfo.html) | Schnittstelle, die Eigenschaften für AdPolicySelector-API-Aufrufe definiert. Diese Eigenschaften bieten den Kontext zum Erzwingen jedes Anzeigenverhaltens. |
-| [AdPolicySelector](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdPolicySelector.html) | Eine Oberfläche zur Auswahl von Anzeigenrichtlinien zum Erzwingen von Anzeigenverhalten. Anwendungen können dieser Schnittstelle entsprechen, indem sie alle erforderlichen Methoden implementieren oder die vorhandene Standard-Richtliniensatzklasse erweitern, um bestimmte Verhaltensweisen anzupassen. |
+| [AdClick](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdClick.html) | Klasse, die eine mit einem Asset verknüpfte Klickinstanz darstellt. Diese Instanz enthält Informationen zur Clickthrough-URL und zum Titel, die verwendet werden können, um dem Benutzer zusätzliche Informationen bereitzustellen. |
+| [AdPolicyInfo](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdPolicyInfo.html) | Schnittstelle, die Eigenschaften für AdPolicySelector-API-Aufrufe definiert. Diese Eigenschaften bieten den Kontext für die Erzwingung jedes Anzeigenverhaltens. |
+| [AdPolicySelector](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/AdPolicySelector.html) | Eine Benutzeroberfläche zur Auswahl von Anzeigenrichtlinien zum Durchsetzen von Anzeigenverhalten. Anwendungen können dieser Schnittstelle entsprechen, indem sie alle erforderlichen Methoden implementieren oder die vorhandene Standard-Richtlinienauswahlklasse erweitern, um bestimmte Verhaltensweisen anzupassen. |
 | `auditude.AuditudeAdProvider` | Veraltet. Verwenden Sie AuditudeResolver. |
-| [AuditudeResolver](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/AuditudeResolver.html) | Klasse, die die Primetime-und die Auflösung im Phrase-Prozess verarbeitet. |
-| [AuditudeTracker](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/AuditudeTracker.html) | Klasse, die die ContentTracker-Schnittstelle implementiert und Primetime-Ereignis zur Anzeigenverfolgung definiert. |
-| [ContentResolver](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentResolver.html) | Klasse, die den Teil mit der Anzeigenauflösung im Phrase-Prozess verarbeitet. |
-| [ContentTracker](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentTracker.html) | Schnittstelle, die das Protokoll definiert, das Sie implementieren müssen, wenn Sie ein Anzeigenverfolgungsmodul erstellen möchten, das in die Bibliothek oder einen benutzerdefinierten Anzeigentracker integriert werden soll. Für diese Oberfläche müssen Sie festlegen, wie Ereignis mit Anzeigenfortschritten dem Remote-Anzeigenverfolgungssystem gemeldet werden. |
-| [Platzierungsinformationen](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/PlacementInformation.html) | Klasse, die eine Platzierungsinformationen-Anforderung abstrahiert. Jeder aufgelösten Anzeige muss eine Platzierungsinformationen beigefügt sein. Die Platzierungsinformationen beschreiben, wo die Anzeige auf der Zeitschiene platziert werden soll. Er enthält Informationen wie: <ul><li>Platzierungsposition (in ms) </li><li>Platzierungstyp (Pre-Roll, Mid-Roll oder Post-Roll) </li><li>Dauer des Hauptinhaltsblocks, der ersetzt werden soll</li></ul> |
+| [AuditudeResolver](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/AuditudeResolver.html) | Klasse, die die Primetime-Anzeigenauflösung im Phrase-Prozess verarbeitet. |
+| [AuditudeTracker](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/auditude/AuditudeTracker.html) | Klasse, die die ContentTracker-Schnittstelle implementiert und Primetime-Anzeigenverfolgungsereignisse definiert. |
+| [ContentResolver](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentResolver.html) | Klasse, die den Teil mit Anzeigenauflösung im Phrase-Prozess verarbeitet. |
+| [ContentTracker](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/ContentTracker.html) | Schnittstelle, die das Protokoll definiert, das Sie implementieren müssen, wenn Sie ein Anzeigen-Tracking-Modul erstellen möchten, das zur Integration in die Bibliothek oder einen benutzerdefinierten Anzeigen-Tracker entwickelt wurde. Für diese Schnittstelle müssen Sie festlegen, wie Ereignisse des Anzeigenfortschritts dem Remote-Anzeigen-Tracking-System gemeldet werden. |
+| [PlacementInformation](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/advertising/PlacementInformation.html) | Klasse, die eine Platzierungsinformationen-Anfrage abstrahiert. An jede aufgelöste Anzeige muss eine Platzierungsinformationen angehängt sein. Die Platzierungsinformationen beschreiben, wo die Anzeige in der Timeline platziert werden soll. Er enthält Informationen wie: <ul><li>Platzierung (in ms) </li><li>Platzierungstyp (Pre-Roll, Mid-Roll oder Post-Roll) </li><li>Dauer des Hauptinhaltsabschnitts, der ersetzt werden soll</li></ul> |

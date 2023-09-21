@@ -2,25 +2,22 @@
 title: HSM-Voreinstellungen
 description: HSM-Voreinstellungen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
-
 # HSM-Voreinstellungen {#hsm-preferences}
 
-Die Voreinstellungen in dieser Registerkarte müssen nur angegeben werden, wenn auf der Registerkarte &quot;Packager&quot;das Kontrollkästchen **[!UICONTROL Enable HSM]** aktiviert ist. In der folgenden Tabelle werden die folgenden Voreinstellungen beschrieben:
+Die Voreinstellungen in dieser Registerkarte müssen nur angegeben werden, wenn die Variable **[!UICONTROL Enable HSM]** auf der Registerkarte Packager aktiviert ist. In der folgenden Tabelle werden diese Voreinstellungen beschrieben:
 
-| Voreinstellung | Beschreibung |
+| Präferenz | Beschreibung |
 |---|---|
-| Sun PKCS#11 Konfigurationsdateiname | Der vollständige Pfad zur Konfigurationsdatei des Sun PKCS#11-Anbieters. Einzelheiten zum Inhalt dieser Konfigurationsdatei finden Sie im Java PKCS#11-Referenzhandbuch auf der Sun-Website. |
-| Partitionskennwort | Das in der PKCS#11-Konfigurationsdatei angegebene Kennwort für die HSM-Partition. |
-| Lizenzserver-Zertifikatalias | Alias für das von der Adobe ausgestellte Lizenzserverzertifikat, das auf dem HSM gespeichert ist. Dieses Zertifikat wird zum Verschlüsseln des CEK während der Verpackung verwendet. Geben Sie dies anstelle von *Lizenzserverzertifikat* auf der Registerkarte &quot;Packager&quot;an. |
-| Lizenzserver-Transportzertifikatalias | Alias für auf HSM gespeicherte, von der Adobe ausgestellte Servertransportzertifikate. Dieses Zertifikat dient zum Schützen der Kommunikation zwischen dem Client und dem Lizenzserver. Geben Sie dies anstelle von *License Server Transport Certificate* auf der Registerkarte Packager an. |
-| Alias für Packager-Berechtigungen | Alias für von der Adobe ausgestellte Paketberechtigung (Zertifikat und privater Schlüssel), die auf dem HSM gespeichert ist. Dadurch werden die Metadaten beim Verpacken signiert. Geben Sie dies anstelle von *Packager Credential* auf der Registerkarte &quot;Packager&quot;an. |
-| Berechtigungsalias für Lizenzserver | Alias für von der Adobe ausgestellte Lizenzserver-Berechtigungen (Zertifikat und privater Schlüssel), die auf dem HSM gespeichert sind. Mit dieser Berechtigung werden Listen zur Richtlinienaktualisierung signiert. Geben Sie dies anstelle von *Lizenzserverberechtigung* auf der Registerkarte Liste für Richtlinienaktualisierung an. (Dieser Alias ist wahrscheinlich mit *Lizenzserver-Zertifikatalias* identisch.) |
-
+| Sun PKCS#11 Konfigurationsdateiname | Der vollständige Pfad zur Konfigurationsdatei des Sun PKCS#11-Anbieters. Weitere Informationen zum Inhalt dieser Konfigurationsdatei finden Sie im Java PKCS#11 Reference Guide auf der Sun-Website. |
+| Partitionenkennwort | Das Kennwort für die in der Konfigurationsdatei PKCS#11 angegebene HSM-Partition. |
+| Lizenzserver-Zertifikatalias | Alias für das auf HSM gespeicherte Zertifikat des Adobe-erteilten Lizenzservers. Dieses Zertifikat wird zum Verschlüsseln des CEK während der Verpackung verwendet. Geben Sie anstelle von *Lizenzserver-Zertifikat* auf der Registerkarte &quot;Packager&quot;. |
+| Lizenzserver-Transport-Zertifikatalias | Alias für auf HSM gespeicherte, von Adobe ausgestellte Server-Transportzertifikate. Dieses Zertifikat dient zur Sicherung der Kommunikation zwischen dem Client und dem Lizenzserver. Geben Sie anstelle von *Lizenzserver-Transportzertifikat* auf der Registerkarte &quot;Packager&quot;. |
+| Package Credential Alias | Alias für Adobe-ausgestellte Paketberechtigungen (Zertifikat und privater Schlüssel), die auf HSM gespeichert sind. Damit werden die Metadaten während der Verpackung signiert. Geben Sie anstelle von *Packager Credential* auf der Registerkarte &quot;Packager&quot;. |
+| Berechtigungsalias für Lizenzserver | Alias für auf HSM gespeicherte Adobe-erteilte Lizenzserverberechtigungen (Zertifikat und privater Schlüssel). Diese Berechtigung wird zum Signieren von Listen für Richtlinienaktualisierungen verwendet. Geben Sie anstelle von *Lizenzserver-Berechtigungen* auf der Registerkarte Liste der Richtlinienaktualisierungen . (Dieser Alias entspricht wahrscheinlich dem *Lizenzserver-Zertifikatalias*. |

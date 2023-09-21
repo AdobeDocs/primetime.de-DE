@@ -1,18 +1,16 @@
 ---
-description: Die TimeRangeCollection-Dienstprogrammklasse fasst die Vorstellung einer geordneten Auflistung von TimeRange-Spezifikationen zusammen und stellt Dienste bereit, die sich selbst in eine Metadateninstanz übersetzen.
+description: Die Dienstprogrammklasse TimeRangeCollection stellt die Vorstellung einer geordneten Sammlung von TimeRange-Spezifikationen dar und bietet Dienste, um sich selbst in eine Metadaten-Instanz zu übersetzen.
 title: TimeRangeCollection-Klasse
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%
 
 ---
 
-
 # TimeRangeCollection-Klasse{#timerangecollection-class}
 
-Die TimeRangeCollection-Dienstprogrammklasse fasst die Vorstellung einer geordneten Auflistung von TimeRange-Spezifikationen zusammen und stellt Dienste bereit, die sich selbst in eine Metadateninstanz übersetzen.
+Die Dienstprogrammklasse TimeRangeCollection stellt die Vorstellung einer geordneten Sammlung von TimeRange-Spezifikationen dar und bietet Dienste, um sich selbst in eine Metadaten-Instanz zu übersetzen.
 
 <!--<a id="section_D87AA7BC628D458DAB12D5247AD34B41"></a>-->
 
@@ -32,4 +30,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-Der Parameter `type`, der erste Positionsparameter in der Signatur der Konstruktormethoden, ist eine Instanz der Auflistung `TimeRangeCollection#Type`. Dies ist Teil der `TimeRangeCollection`-Klasse. Die Werte, die derzeit von dieser Auflistung definiert werden, sind `MARK_RANGES`, `DELETE_RANGES` und `REPLACE_RANGES`. Sie können `TimeRangeCollection`-Objekte mit diesen drei Typen erstellen.
+Die `type` -Parameter, der den ersten Positionsparameter in der Signatur der Konstruktormethoden darstellt, ist eine Instanz der `TimeRangeCollection#Type` -Auflistung. Dies ist Teil der `TimeRangeCollection` -Klasse. Die Werte, die derzeit von dieser Auflistung definiert werden, sind `MARK_RANGES`, `DELETE_RANGES`, und `REPLACE_RANGES`. Sie können `TimeRangeCollection` Objekte, die diese drei Typen verwenden.

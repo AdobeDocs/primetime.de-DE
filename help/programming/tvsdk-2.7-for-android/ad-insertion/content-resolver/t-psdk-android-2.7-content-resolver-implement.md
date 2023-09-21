@@ -1,22 +1,20 @@
 ---
-description: Sie können Ihre eigenen Inhaltsauflöser auf Basis der Standardauflöser implementieren.
+description: Sie können Ihre eigenen Content Resolver basierend auf den Standard-Resolver implementieren.
 title: Implementieren eines benutzerdefinierten Inhaltsauflösers
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
 # Implementieren eines benutzerdefinierten Inhaltsauflösers {#implement-a-custom-content-resolver}
 
-Sie können Ihre eigenen Inhaltsauflöser auf Basis der Standardauflöser implementieren.
+Sie können Ihre eigenen Content Resolver basierend auf den Standard-Resolver implementieren.
 
-Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-Auflöser, die nach einer suchen, die in der Lage ist, diese Gelegenheit zu lösen. Das erste, das `true` zurückgibt, wird ausgewählt, um die Gelegenheit zu lösen. Wenn kein Inhaltsauflöser geeignet ist, wird diese Gelegenheit übersprungen. Da die Inhaltsauflösung normalerweise asynchron abläuft, ist der Content-Auflöser dafür verantwortlich, TVSDK zu benachrichtigen, wenn der Prozess abgeschlossen ist.
+Wenn TVSDK eine neue Chance generiert, iteriert es durch die registrierten Content-Resolver, die nach einer suchen, die in der Lage ist, diese Gelegenheit zu lösen. Die erste, die `true` ausgewählt wird, um die Gelegenheit zu lösen. Wenn kein Content Resolver in der Lage ist, wird diese Möglichkeit übersprungen. Da die Inhaltsauflösung normalerweise asynchron erfolgt, ist der Content Resolver für die Benachrichtigung von TVSDK verantwortlich, wenn der Prozess abgeschlossen ist.
 
-1. Implementieren Sie Ihre eigene benutzerdefinierte `ContentFactory`, indem Sie die `ContentFactory`-Schnittstelle erweitern und `retrieveResolvers` überschreiben.
+1. Eigene benutzerdefinierte Implementierung `ContentFactory`, indem die `ContentFactory` Benutzeroberfläche und Überschreiben `retrieveResolvers`.
 
    Beispiel:
 
@@ -51,7 +49,7 @@ Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-
    } 
    ```
 
-1. Registrieren Sie `ContentFactory` auf `MediaPlayer`.
+1. Registrieren `ContentFactory` der `MediaPlayer`.
 
    Beispiel:
 
@@ -68,9 +66,9 @@ Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-
    itemLoader.load(resource, id, config);
    ```
 
-1. Übergeben Sie ein `AdvertisingMetadata`-Objekt wie folgt an TVSDK:
-   1. Erstellen Sie ein `AdvertisingMetadata`-Objekt.
-   1. Speichern Sie das `AdvertisingMetadata`-Objekt in `MediaPlayerItemConfig`.
+1. Übergeben eines `AdvertisingMetadata` -Objekt auf TVSDK wie folgt fest:
+   1. Erstellen Sie eine `AdvertisingMetadata` -Objekt.
+   1. Speichern Sie die `AdvertisingMetadata` Objekt zu `MediaPlayerItemConfig`.
 
       ```java
       AdvertisingMetadata advertisingMetadata = new AdvertisingMetadata(); 
@@ -81,7 +79,7 @@ Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-
       mediaPlayerItemConfig.setAdvertisingMetadata(advertisingMetadata); 
       ```
 
-1. Erstellen Sie eine benutzerdefinierte Anzeigenauflösungsklasse, die die `ContentResolver`-Klasse erweitert.
+1. Erstellen Sie eine benutzerdefinierte Anzeigenauflöser-Klasse, die die `ContentResolver` -Klasse.
    1. Überschreiben Sie im benutzerdefinierten Anzeigenauflöser `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup`:
 
       ```java
@@ -91,7 +89,7 @@ Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-
       void doCleanup();
       ```
 
-      Sie erhalten Ihr `advertisingMetadata`-Element aus dem Element, das in `doConfigure` übergeben wird:
+      Sie erhalten Ihre `advertisingMetadata` aus dem übergebenen Element `doConfigure`:
 
       ```java
       MediaPlayerItemConfig itemConfig = item.getConfig(); 
@@ -100,9 +98,9 @@ Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-
         mediaPlayerItemConfig.getAdvertisingMetadata(); 
       ```
 
-   1. Erstellen Sie für jede Platzierungsmöglichkeit ein `List<TimelineOperation>`.
+   1. Erstellen Sie für jede Platzierungsmöglichkeit eine `List<TimelineOperation>`.
 
-      Dieses Beispiel `TimelineOperation` stellt eine Struktur für `AdBreakPlacement` bereit:
+      Dieses Beispiel `TimelineOperation` bietet eine Struktur für `AdBreakPlacement`:
 
       ```java
       AdBreakPlacement( 
@@ -115,28 +113,28 @@ Wenn TVSDK eine neue Chance generiert, durchläuft es die registrierten Content-
 
    1. Rufen Sie nach Auflösung der Anzeigen eine der folgenden Funktionen auf:
 
-      * Wenn die Anzeigenauflösung erfolgreich ist, rufen Sie `process(List<TimelineOperation> proposals)` und `notifyCompleted(Opportunity opportunity)` auf die `ContentResolverClient`
+      * Wenn die Anzeigenauflösung erfolgreich ist, rufen Sie auf `process(List<TimelineOperation> proposals)` und `notifyCompleted(Opportunity opportunity)` auf `ContentResolverClient`
 
-         ```java
-         _client.process(timelineOperations); 
-         _client.notifyCompleted(opportunity); 
-         ```
+        ```java
+        _client.process(timelineOperations); 
+        _client.notifyCompleted(opportunity); 
+        ```
 
-      * Wenn die Anzeigenauflösung fehlschlägt, rufen Sie `notifyResolveError` auf dem `ContentResolverClient` auf
+      * Wenn die Anzeigenauflösung fehlschlägt, rufen Sie auf `notifyResolveError` auf `ContentResolverClient`
 
-         ```java
-         _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
-         ```
+        ```java
+        _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
+        ```
 
-         Beispiel:
+        Beispiel:
 
-         ```java
-         _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
-         ```
+        ```java
+        _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
+        ```
 
 <!--<a id="example_463B718749504A978F0B887786844C39"></a>-->
 
-Mit diesem Beispiel-benutzerdefinierten Anzeigenauflöser wird eine Gelegenheit gelöst und eine einfache Anzeige bereitgestellt:
+Mit diesem benutzerdefinierten Beispiel-Anzeigenauflöser wird eine Chance gelöst und eine einfache Anzeige bereitgestellt:
 
 ```java
 public class CustomContentResolver extends ContentResolver { 
@@ -169,4 +167,3 @@ public class CustomContentResolver extends ContentResolver {
     protected void doCleanup() {} 
 } 
 ```
-

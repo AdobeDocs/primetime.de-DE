@@ -1,8 +1,7 @@
 ---
 title: Einschränkungen und bekannte Probleme
 description: Bekannte Probleme im Produkt.
-exl-id: 08d65716-8b6a-4300-acda-fec63e1e6815
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Bekannte Probleme und Einschränkungen {#known-issues}
 
-Adobe strebt über seine Angebote eine robuste Funktionalität und nahtlose Benutzererlebnisse an. Die aktuelle Version (Version 1.0) von Account IQ bietet Streaming-Anbietern mit hoher Konfidenz Analysen zur Nutzung und Abonnementfreigabe. Die folgenden Einschränkungen werden jedoch in den kommenden Versionen behoben.
+Adobe bemüht sich durch seine Angebote um robuste Funktionen und nahtlose Benutzererlebnisse. Die aktuelle Version (Version 1.0) von Account IQ bietet Streaming-Anbietern mit hoher Konfidenz Analysen zur Nutzung und Abonnementfreigabe. Die folgenden Einschränkungen werden jedoch in den kommenden Versionen behoben.
 
 * Bei der Definition von Kohorten auf den Dashboard- oder Berichtsseiten gibt es derzeit keine Option zum Hinzufügen von Metriken wie **Anzahl der Geräte** , um das Segment zu verfeinern. Diese Funktion wird in einer zukünftigen Version verfügbar sein.
 
@@ -25,7 +24,7 @@ Adobe strebt über seine Angebote eine robuste Funktionalität und nahtlose Benu
 
 * Die Option, Kontostatistiken zu exportieren, ist ab sofort auf den Export von 1000 Konten beschränkt.
 
-* Die auszuwählende Option [Segmenttyp](#segment-type) bei der Definition von Vorgängen auf **Feste Anzahl von Konten**. Die **Variablenanzahl der Konten** in einer kommenden Version verfügbar sein.
+* Die ausgewählte Option [Segmenttyp](#segment-type) bei der Definition von Vorgängen auf **Feste Anzahl von Konten**. Die **Variablenanzahl Konten** in einer kommenden Version verfügbar sein.
 
 * Die Abschnitte &quot;Benchmarking&quot;, &quot;Detection Models&quot;, &quot;Segmente&quot;, &quot;Snapshots&quot;und &quot;Regeln&quot;im linken Navigationsbereich sind derzeit deaktiviert und werden in einer kommenden Version verfügbar sein.
 

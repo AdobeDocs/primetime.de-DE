@@ -1,22 +1,20 @@
 ---
-description: Sie sollten die Logik der Benutzeroberfläche Ihres Players von dem Prozess trennen, der die Verwaltung von Anzeigenklicks ausführt. Eine Möglichkeit dazu besteht darin, mehrere Fragmente für eine Aktivität zu implementieren.
-title: Trennen des klickbaren Anzeigenprozesses
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie sollten die Logik der Benutzeroberfläche Ihres Players von dem Prozess trennen, der Anzeigenklicks verwaltet. Eine Möglichkeit dazu besteht darin, mehrere Fragmente für eine Aktivität zu implementieren.
+title: Trennen Sie den klickbaren Anzeigenprozess.
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
 
 ---
 
+# Trennen Sie den klickbaren Anzeigenprozess.{#separate-the-clickable-ad-process}
 
-# Trennen Sie den klickbaren Anzeigenprozess{#separate-the-clickable-ad-process}
+Sie sollten die Logik der Benutzeroberfläche Ihres Players von dem Prozess trennen, der Anzeigenklicks verwaltet. Eine Möglichkeit dazu besteht darin, mehrere Fragmente für eine Aktivität zu implementieren.
 
-Sie sollten die Logik der Benutzeroberfläche Ihres Players von dem Prozess trennen, der die Verwaltung von Anzeigenklicks ausführt. Eine Möglichkeit dazu besteht darin, mehrere Fragmente für eine Aktivität zu implementieren.
+1. Implementieren eines Fragments, das die `MediaPlayer` und die für die Videowiedergabe verantwortlich sind.
 
-1. Implementieren Sie ein Fragment, das das `MediaPlayer` enthält und für die Videowiedergabe verantwortlich ist.
-
-   Dieses Fragment sollte `notifyClick` aufrufen.
+   Dieses Fragment sollte aufrufen `notifyClick`.
 
    ```java
    public class PlayerFragment extends SherlockFragment { 
@@ -28,9 +26,9 @@ Sie sollten die Logik der Benutzeroberfläche Ihres Players von dem Prozess tren
    } 
    ```
 
-1. Implementieren Sie ein anderes Fragment, um ein UI-Element anzuzeigen, das anzeigt, dass eine Anzeige anklickbar ist, überwachen Sie dieses UI-Element und teilen Sie dem Fragment mit, das das `MediaPlayer` enthält.
+1. Implementieren Sie ein anderes Fragment, um ein UI-Element anzuzeigen, das anzeigt, dass auf eine Anzeige geklickt werden kann, dieses UI-Element zu überwachen und Benutzer-Klicks mit dem Fragment zu kommunizieren, das die `MediaPlayer`.
 
-   Dieses Fragment sollte eine Schnittstelle für die Fragmentkommunikation deklarieren. Das Fragment erfasst die Implementierung der Schnittstelle während der onAttach-Lebenszyklusmethode und kann die Schnittstellenmethoden aufrufen, um mit der Aktivität zu kommunizieren.
+   Dieses Fragment sollte eine Schnittstelle für die Fragmentkommunikation deklarieren. Das Fragment erfasst die Implementierung der Schnittstelle während der onAttach-Lebenszyklusmethode und kann die Oberflächenmethoden aufrufen, um mit der Aktivität zu kommunizieren.
 
    ```java
    public class PlayerClickableAdFragment extends SherlockFragment { 
@@ -90,4 +88,3 @@ Sie sollten die Logik der Benutzeroberfläche Ihres Players von dem Prozess tren
        } 
    } 
    ```
-

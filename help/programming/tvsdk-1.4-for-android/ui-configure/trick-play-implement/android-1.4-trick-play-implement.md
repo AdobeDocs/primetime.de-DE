@@ -1,27 +1,25 @@
 ---
-description: Wenn Benutzer die Medien schnell vorwärts oder schnell zurückspulen, befinden sie sich im Trick Play-Modus. Um in den Trick Play-Modus zu wechseln, müssen Sie die MediaPlayer-Wiedergaberate auf einen anderen Wert als 1 einstellen.
-title: Schnelles Vorwärts- und Zurückspulen implementieren
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Wenn Benutzer schnell vorwärts oder schnell durch die Medien zurückkehren, befinden sie sich im Trick Play-Modus. Um in den Trick Play-Modus zu wechseln, müssen Sie die MediaPlayer-Wiedergaberate auf einen anderen Wert als 1 festlegen.
+title: Schnelles Vorwärts- und Rückspulen implementieren
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#implement-fast-forward-and-rewind-overview}
 
-Wenn Benutzer die Medien schnell vorwärts oder schnell zurückspulen, befinden sie sich im Trick Play-Modus. Um in den Trick Play-Modus zu wechseln, müssen Sie die MediaPlayer-Wiedergaberate auf einen anderen Wert als 1 einstellen.
+Wenn Benutzer schnell vorwärts oder schnell durch die Medien zurückkehren, befinden sie sich im Trick Play-Modus. Um in den Trick Play-Modus zu wechseln, müssen Sie die MediaPlayer-Wiedergaberate auf einen anderen Wert als 1 festlegen.
 
-Um die Geschwindigkeit zu wechseln, müssen Sie einen Wert einstellen.
+Um die Geschwindigkeit zu wechseln, müssen Sie einen Wert festlegen.
 
-1. Wechseln Sie vom normalen Wiedergabemodus (1x) zum Trick-play-Modus, indem Sie die Rate für das `MediaPlayer` auf einen erlaubten Wert einstellen.
+1. Wechseln Sie vom normalen Wiedergabemodus (1x) zum Wiedergabemodus, indem Sie die Rate auf der `MediaPlayer` auf einen zulässigen Wert.
 
-   * Die `MediaPlayerItem`-Klasse definiert die zulässigen Wiedergaberaten.
+   * Die `MediaPlayerItem` -Klasse definiert die zulässigen Wiedergaberaten.
    * TVSDK wählt die nächstzulässige Rate aus, wenn die angegebene Rate nicht zulässig ist.
 
-   In diesem Beispiel wird die interne Wiedergaberate des Players auf die angeforderte Rate eingestellt.
+   In diesem Beispiel wird die interne Wiedergaberate des Players auf die angeforderte Rate gesetzt.
 
    ```java
    import com.adobe.mediacore.MediaPlayer; 
@@ -47,13 +45,12 @@ Um die Geschwindigkeit zu wechseln, müssen Sie einen Wert einstellen.
    }
    ```
 
-1. Sie können optional auf Ratenänderungen-Ereignis hören, die Sie darüber informieren, wann Sie eine Ratenänderung angefordert haben und wann eine Ratenänderung tatsächlich stattfindet.
+1. Optional können Sie auf Ratenänderungs-Ereignisse warten, die Sie darüber informieren, wann Sie eine Ratenänderung angefordert haben und wann eine Ratenänderung tatsächlich stattfindet.
 
-       TVSDK sendet die folgenden Ereignisse im Zusammenhang mit der Trickwiedergabe:
+       TVSDK sendet die folgenden Ereignisse im Zusammenhang mit der Trick Play-Methode:
    
-   * `AdobePSDK.PSDKEventType.RATE_SELECTED` wenn sich der  `rate` Wert in einen anderen Wert ändert.
+   * `AdobePSDK.PSDKEventType.RATE_SELECTED` wenn die `rate` ändert sich in einen anderen Wert.
 
    * `AdobePSDK.PSDKEventType.RATE_PLAYING` wenn die Wiedergabe mit der ausgewählten Rate fortgesetzt wird.
 
-      TVSDK löst beide Ereignis aus, wenn der Player vom Trick-Play-Modus zum normalen Wiedergabemodus zurückkehrt.
-
+     TVSDK sendet beide Ereignisse, wenn der Player aus dem Trick-Play-Modus in den normalen Wiedergabemodus zurückkehrt.

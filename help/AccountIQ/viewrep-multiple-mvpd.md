@@ -1,8 +1,7 @@
 ---
 title: Anzeigen von Berichten zur Kontofreigabe für mehrere MVPDs
 description: So zeigen Sie Freigabeberichte für mehrere MVPDs an.
-exl-id: c616e6e1-373c-471d-a2dc-c484b7cd5cf5
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 0%
@@ -25,9 +24,9 @@ So zeigen Sie Statistiken zur Kontofreigabe für mehrere MVPDs an:
 
 * [Dashboard](/help/AccountIQ/dashboard.md) (Dashboard gibt einen Überblick über die ausgewählten Diagramme aus verschiedenen Seiten in Berichten).
 
-   ![](assets/mult-mvpds-dashboard.png)
+  ![](assets/mult-mvpds-dashboard.png)
 
-   *Abbildung: Dashboard-Bericht für mehrere MVPDs*
+  *Abbildung: Dashboard-Bericht für mehrere MVPDs*
 
 * [Allgemeine Nutzung](/help/AccountIQ/general-usage-reports.md)
 

@@ -1,26 +1,24 @@
 ---
 description: Der Status des Medienplayers bestimmt, welche Aktionen zulässig sind.
 title: Lebenszyklus und Status des MediaPlayer-Objekts
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%
 
 ---
 
-
 # Lebenszyklus und Status des MediaPlayer-Objekts {#lifecycle-and-statuses-of-the-mediaplayer-object}
 
 Der Status des Medienplayers bestimmt, welche Aktionen zulässig sind.
 
-Zum Arbeiten mit Medienplayer-Status:
+Für die Arbeit mit Medienplayer-Status:
 
-* Sie können den aktuellen Status des `MediaPlayer`-Objekts mit `MediaPlayer.getStatus()` abrufen.
+* Sie können den aktuellen Status der `MediaPlayer` Objekt mit `MediaPlayer.getStatus()`.
 
-* Die Liste der Status wird in der Enum [MediaPlayerStatus](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/com/adobe/mediacore/MediaPlayerStatus.html) definiert.
+* Die Liste der Status wird im Abschnitt [MediaPlayerStatus](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/com/adobe/mediacore/MediaPlayerStatus.html) enum.
 
-Status-Transition-Diagramm für den Lebenszyklus einer `MediaPlayer` Instanz:
+Status-Transition-Diagramm für den Lebenszyklus eines `MediaPlayer` instance:
 <!--<a id="fig_A6425F24C7734DC681D992859D2A6743"></a>-->
 
 ![](assets/media_player_statuses.png)
@@ -41,50 +39,50 @@ Die folgende Tabelle enthält Details zum Lebenszyklus und den Status des Medien
   </tr> 
   <tr> 
    <td colname="col1"> INITIALISIERUNG </td> 
-   <td colname="col2"> <p>Ihre Anwendung ruft <span class="codeph"> MediaPlayer.replaceCurrentItem() </span> auf. </p> <p>Das Medienplayer-Element wird geladen. </p> </td> 
+   <td colname="col2"> <p>Ihre App-Aufrufe <span class="codeph"> MediaPlayer.replaceCurrentItem() </span>. </p> <p>Das Medienplayer-Element wird geladen. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> INITIALISIERT </td> 
-   <td colname="col2"> <p>TVSDK hat das Medienplayer-Element erfolgreich eingestellt. </p> </td> 
+   <td colname="col2"> <p>TVSDK hat das Medienplayer-Element erfolgreich festgelegt. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> VORBEREITUNG </td> 
-   <td colname="col2"> <p>Ihre Anwendung ruft <span class="codeph"> MediaPlayer.prepareToPlay() </span> auf. Der Medienplayer lädt das Medienplayer-Element und alle zugehörigen Ressourcen. </p> </td> 
+   <td colname="col2"> <p>Ihre App-Aufrufe <span class="codeph"> MediaPlayer.prepareToPlay() </span>. Der Medienplayer lädt das Medienplayer-Element und alle zugehörigen Ressourcen. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> VORBEREITT </td> 
-   <td colname="col2"> <p>TVSDK hat den Medienstream vorbereitet und versucht, die Auflösung von Anzeigen und das Einfügen von Anzeigen (sofern aktiviert) durchzuführen. Der Inhalt wird vorbereitet und Anzeigen wurden in die Zeitleiste eingefügt, oder der Anzeigenvorgang ist fehlgeschlagen. </p> <p>Die Pufferung oder Wiedergabe kann beginnen. </p> </td> 
+   <td colname="col1"> VORBEREITET </td> 
+   <td colname="col2"> <p>TVSDK hat den Medien-Stream vorbereitet und versucht, die Anzeigenauflösung und das Einfügen von Anzeigen durchzuführen (sofern aktiviert). Der Inhalt wird vorbereitet und Anzeigen wurden in die Timeline eingefügt, oder die Anzeigenverarbeitung ist fehlgeschlagen. </p> <p>Die Pufferung oder Wiedergabe kann beginnen. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> PLAYING/PAUSED </td> 
-   <td colname="col2"> <p>Während die Anwendung das Medium abspielt und anhält, wechselt der Medienplayer zwischen diesen Status. </p> </td> 
+   <td colname="col1"> WIEDERGABE/ANGEHALTEN </td> 
+   <td colname="col2"> <p>Während die Anwendung die Medien wiedergibt und aussetzt, wechselt der Medienplayer zwischen diesen Status. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> AUSGESETZT </td> 
-   <td colname="col2"> <p>Wenn die Anwendung weg von der Wiedergabe navigiert, das Gerät herunterfährt oder Anwendungen wechselt, während der Player abgespielt oder angehalten wird, wird der Medienplayer ausgesetzt und Ressourcen werden freigegeben. </p> <p>Durch Aufruf von <span class="codeph"> MediaPlayer.restore() </span> wird der Player auf den Status zurückgesetzt, in dem sich der Player vor dem AUSSETZEN befand. Die Ausnahme ist, wenn der Spieler SUCHT, wenn suspendiert aufgerufen wird, der Spieler PAUSED und dann AUSGESETZT wird. </p> <p>Wichtig:  <p>Beachten Sie die folgenden Informationen: 
+   <td colname="col2"> <p>Wenn die Anwendung von der Wiedergabe weg navigiert, das Gerät herunterfährt oder Anwendungen wechselt, während der Player wiedergegeben oder angehalten wird, wird der Medienplayer ausgesetzt und die Ressourcen werden freigegeben. </p> <p>Aufruf <span class="codeph"> MediaPlayer.restore() </span> gibt den Player in den Status zurück, in dem sich der Player befand, bevor er AUSGESETZT wurde. Die Ausnahme besteht darin, dass der Player beim Aufrufen der Unterbrechung SUCHT, der Player angehalten und anschließend AUSGESETZT wird. </p> <p>Wichtig:  <p>Beachten Sie die folgenden Informationen: 
       <ul id="ul_1B21668994D1474AAA0BE839E0D69B00"> 
-       <li id="li_08459A3AB03C45588D73FA162C27A56C">Der <span class="codeph"> MediaPlayer </span> ruft <span class="codeph"> die Aussetzung </span> nur dann automatisch auf, wenn das Oberflächenobjekt, das von <span class="codeph"> MediaPlayerView </span> verwendet wird, zerstört wird. </li> 
-       <li id="li_B9926AA2E7B9441490F37D24AE2678A1">Der <span class="codeph"> MediaPlayer </span> ruft <span class="codeph"> restore() </span> nur dann automatisch auf, wenn ein neues Oberflächenobjekt erstellt wird, das von <span class="codeph"> MediaPlayerView </span> verwendet wird. </li> 
-      </ul> </p> </p> <p>Wenn die Wiedergabe bei der Wiederherstellung des MediaPlayer immer angehalten werden soll, verwenden Sie den Anwendungsaufruf <span class="codeph"> MediaPlayer.pause() </span> in der Methode <span class="codeph"> der Android-Aktivität </span>. onPause() . </p> </td> 
+       <li id="li_08459A3AB03C45588D73FA162C27A56C">Die <span class="codeph"> MediaPlayer </span> automatische Aufrufe <span class="codeph"> aussetzen </span> nur, wenn das von der <span class="codeph"> MediaPlayerView </span> zerstört wird. </li> 
+       <li id="li_B9926AA2E7B9441490F37D24AE2678A1">Die <span class="codeph"> MediaPlayer </span> automatische Aufrufe <span class="codeph"> restore() </span> nur bei einem neuen Oberflächenobjekt, das von der <span class="codeph"> MediaPlayerView </span> erstellt wird. </li> 
+      </ul> </p> </p> <p>Wenn die Wiedergabe bei der Wiederherstellung des MediaPlayer immer angehalten werden soll, rufen Sie Ihre Anwendung auf <span class="codeph"> MediaPlayer.pause() </span> in der Android-Aktivität <span class="codeph"> onPause() </span> -Methode. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> VOLLSTÄNDIG </td> 
-   <td colname="col2"> <p>Der Player hat das Ende des Streams erreicht und die Wiedergabe wurde gestoppt. </p> </td> 
+   <td colname="col1"> COMPLETE </td> 
+   <td colname="col2"> <p>Der Player hat das Ende des Streams erreicht und die Wiedergabe wurde angehalten. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> VERÖFFENTLICHT </td> 
-   <td colname="col2"> <p>Ihre Anwendung hat den Medienplayer veröffentlicht, der auch alle zugehörigen Ressourcen freigibt. Sie können diese Instanz nicht mehr verwenden. </p> </td> 
+   <td colname="col2"> <p>Ihre Anwendung hat den Medienplayer veröffentlicht, in dem auch alle zugehörigen Ressourcen veröffentlicht werden. Sie können diese Instanz nicht mehr verwenden. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> FEHLER </td> 
-   <td colname="col2"> <p>Während des Prozesses ist ein Fehler aufgetreten. Ein Fehler kann sich auch darauf auswirken, was die Anwendung als Nächstes tun kann. Weitere Informationen finden Sie unter <a href="../../../tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-error-handling-set-up.md#set-up-error-handling" format="dita" scope="local"> Einrichten der Fehlerbearbeitung </a>. </p> </td> 
+   <td colname="col2"> <p>Während des Prozesses ist ein Fehler aufgetreten. Ein Fehler kann sich auch darauf auswirken, was die Anwendung als Nächstes tun kann. Weitere Informationen finden Sie unter <a href="../../../tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-error-handling-set-up.md#set-up-error-handling" format="dita" scope="local"> Einrichten der Fehlerbehandlung </a>. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!TIP]
 >
->Sie können den Status verwenden, um Feedback zum Prozess bereitzustellen, z. B. einen Spinner, während Sie auf die nächste Statusänderung warten, oder die nächsten Schritte beim Abspielen der Medien ausführen, z. B. auf den entsprechenden Status warten, bevor Sie die nächste Methode aufrufen.
+>Sie können den Status verwenden, um Feedback zum Prozess bereitzustellen, z. B. ein Spinner beim Warten auf die nächste Statusänderung oder die nächsten Schritte beim Abspielen der Medien, z. B. warten auf den entsprechenden Status, bevor Sie die nächste Methode aufrufen.
 
 Beispiel:
 
@@ -109,4 +107,3 @@ mediaPlayer.addEventListener(MediaPlayerEvent STATUS_CHANGED, new StatusChangeEv
     } 
 }); 
 ```
-

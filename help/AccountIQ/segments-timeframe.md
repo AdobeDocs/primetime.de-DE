@@ -1,8 +1,7 @@
 ---
 title: Abonnierte Segmente und Zeitraum
 description: Definieren Sie Kohorten oder wählen Sie Abonnentensegmente aus, um die Möglichkeiten zur Kontofreigabe und die Muster Ihrer Kanal-Viewer für die Verwendung grafischer Tools und Berichte in Konto IQ zu messen.
-exl-id: c38cde37-70d9-486d-b8d0-7c1cbd2baf2e
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 0%
@@ -26,7 +25,7 @@ Die folgenden Dropdown-Optionen werden zum Definieren von Segmenten verwendet:
 
 **MVPDs im Segment**
 
-Die **MVPDs im Segment** Auswahl der [MVPDs](/help/AccountIQ/product-concepts.md#mvpd-def) (Einzelanwender oder Gruppe), für deren Abonnent Sie die Berichte zur Kontofreigabe anzeigen möchten.
+Die **MVPDs im Segment** -Auswahl können Sie die [MVPDs](/help/AccountIQ/product-concepts.md#mvpd-def) (Einzelanwender oder Gruppe), für deren Abonnent Sie die Berichte zur Kontofreigabe anzeigen möchten.
 
 In diesem Selektor können Sie neben der Auswahl der einzelnen MVPDs auch die folgenden Gruppen auswählen:
 
@@ -75,7 +74,7 @@ Wenn Sie als MVPD-Benutzer angemeldet sind, wird Ihr Name im Feld für **MVPDs i
 
 ## Granularität und Zeitrahmen {#granularity-timeframe}
 
-Die **Granularität und Zeitrahmen** Mit dem -Selektor können Sie Datum und Dauer sowie die Zeitspanne angeben, für die Sie das Teilungsverhalten der Abonnenten anzeigen möchten.
+Die **Granularität und Zeitrahmen** Mit dem -Selektor können Sie Datum und Dauer sowie die Zeitspanne angeben, für die Sie das Teilungsverhalten des Abonnenten anzeigen möchten.
 
 ![Granularität und Zeitrahmen](assets/granularity-timeframe-weekwise.png)
 

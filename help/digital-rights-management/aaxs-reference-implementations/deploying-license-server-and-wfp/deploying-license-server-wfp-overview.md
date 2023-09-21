@@ -1,22 +1,20 @@
 ---
-title: Überblick über die Bereitstellung des Lizenzservers und des Packager für überwachte Ordner
-description: Überblick über die Bereitstellung des Lizenzservers und des Packager für überwachte Ordner
+title: Übersicht über das Bereitstellen des Lizenzservers und den überwachten Ordner-Packager
+description: Übersicht über das Bereitstellen des Lizenzservers und den überwachten Ordner-Packager
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%
 
 ---
 
+# Übersicht über das Bereitstellen des Lizenzservers und den überwachten Ordner-Packager {#deploying-the-license-server-and-watched-folder-packager-overview}
 
-# Übersicht über den Lizenzserver und den überwachten Ordner-Packager bereitstellen{#deploying-the-license-server-and-watched-folder-packager-overview}
+Kopieren Sie die WAR-Dateien des Lizenzservers in die Datei von Tomcat. [!DNL webapps] Verzeichnis. Wenn Sie die WAR-Datei bereits bereitgestellt haben, müssen Sie möglicherweise die entpackten WAR-Ordner manuell löschen ( [!DNL flashaccess], [!DNL edcws], und [!DNL flashaccess-packager] in Tomcat [!DNL webapps] Verzeichnis). Um zu verhindern, dass Tomcat WAR-Dateien entpackt, bearbeiten Sie die [!DNL server.xml] -Datei im Verzeichnis &quot;conf&quot;von Tomcat und legen Sie die `unpackWARs` Attribut `false`.
 
-Kopieren Sie die WAR-Dateien des Lizenzservers in den Ordner [!DNL webapps] von Tomcat. Wenn Sie die WAR-Datei bereits bereitgestellt haben, müssen Sie möglicherweise die entpackten WAR-Ordner ( [!DNL flashaccess], [!DNL edcws] und [!DNL flashaccess-packager] im Ordner [!DNL webapps] von Tomcat) manuell löschen. Um zu verhindern, dass Tomcat WAR-Dateien entpackt, bearbeiten Sie die Datei [!DNL server.xml] im conf-Verzeichnis von Tomcat und setzen Sie das `unpackWARs`-Attribut auf `false`.
+Die Eigenschaftendatei ( [!DNL flashaccess-refimpl.properties]) muss sich im Klassenpfad befinden, damit der Server die Eigenschaften laden kann. Kopieren Sie diese Datei in ein Verzeichnis und aktualisieren Sie die Datei mit den entsprechenden Werten. Bearbeiten Sie die [!DNL catalina.properties] -Datei in Tomcat [!DNL conf] und fügen Sie den Ordner hinzu, der [!DNL flashaccess-refimpl.properties] der `shared.loader` -Eigenschaft. Die [!DNL log4j.xml] -Datei zum Konfigurieren der Protokollierung muss sich ebenfalls im Klassenpfad befinden (siehe [!DNL resources\log4j.xml] Beispiel).
 
-Die Eigenschaftendatei ( [!DNL flashaccess-refimpl.properties]) muss sich im Klassenpfad befinden, damit der Server die Eigenschaften laden kann. Kopieren Sie diese Datei in ein Verzeichnis und aktualisieren Sie die Datei mit den entsprechenden Werten. Bearbeiten Sie die Datei [!DNL catalina.properties] im Ordner [!DNL conf] von Tomcat und fügen Sie den Ordner mit [!DNL flashaccess-refimpl.properties] der Eigenschaft `shared.loader` hinzu. Die [!DNL log4j.xml]-Datei zum Konfigurieren der Protokollierung muss sich ebenfalls im Klassenpfad befinden (ein Beispiel finden Sie unter [!DNL resources\log4j.xml]).
+Der Referenz-Implementierungsserver verwendet mehrere Zertifikatdateien, Richtliniendateien und andere Ressourcen. Diese Dateien befinden sich alle in einem Ressourcenordner. Standardmäßig ist der Ordner der Ressource [!DNL C:\flashaccess-server-resources], aber dieser Speicherort kann in [!DNL flashaccess-refimpl.properties]. Kopieren Sie alle erforderlichen Ressourcen an diesen Speicherort, bevor Sie den Server starten.
 
-Der Referenz-Implementierungsserver verwendet mehrere Zertifikatdateien, Richtliniendateien und andere Ressourcen. Diese Dateien befinden sich alle in einem Ressourcenordner. Standardmäßig ist der Ressourcenordner [!DNL C:\flashaccess-server-resources], aber dieser Speicherort kann unter [!DNL flashaccess-refimpl.properties] geändert werden. Stellen Sie sicher, dass alle erforderlichen Ressourcen an diesen Speicherort kopiert werden, bevor Sie den Server starten.
-
-Führen Sie zum Beginn Tomcat und des Lizenzservers `catalina.bat start` aus dem Tomcat-Ordner [!DNL bin] aus.
+Um Tomcat und den Lizenzserver zu starten, führen Sie `catalina.bat start` von Tomcat [!DNL bin] Verzeichnis.

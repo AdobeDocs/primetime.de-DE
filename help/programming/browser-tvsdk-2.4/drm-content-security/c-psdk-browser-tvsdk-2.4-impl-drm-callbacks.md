@@ -1,22 +1,20 @@
 ---
 description: Mit den folgenden neuen APIs können Sie DRM-Rückrufe definieren.
-title: Implementierung von DRM-Rückrufen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Implementieren von DRM-Rückrufen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
 
 ---
 
-
-# Implementierung von DRM-Rückrufen{#implementing-drm-callbacks}
+# Implementieren von DRM-Rückrufen{#implementing-drm-callbacks}
 
 Mit den folgenden neuen APIs können Sie DRM-Rückrufe definieren.
 
 <!--<a id="section_1090BFDB2C1D4EA4AAC9F9A6EC9DCD51"></a>-->
 
-Sie können eine Rückruffunktion definieren (z. B. `parseContentIdCallback`), um die Inhalts-ID zu analysieren und mithilfe der API auf `drmManager` einzustellen.`setParseContentIdCallback`
+Sie können eine Callback-Funktion definieren (z. B. `parseContentIdCallback`), um die Inhalts-ID zu analysieren und festzulegen, dass `drmManager` durch Verwendung von `setParseContentIdCallback` API.
 
 ```js
 var arrayToString = function (array) { 
@@ -39,7 +37,7 @@ drmManager.setParseContentIdCallback(parseContentIdCallback);
 
 <!--<a id="section_1E082B428EA74D9CA11C052158A83947"></a>-->
 
-Sie können eine Rückruffunktion definieren (z. B. `onCertificateResponseCallback`), um eine Antwort auf ein Textzertifikat zu verarbeiten und die Funktion mithilfe der API `setCertificateResponseCallback` auf `drmManager` festzulegen. Sie können `setCertificateResponseCallback` so einstellen, dass das Standardverhalten außer Kraft gesetzt wird. Wenn Sie z. B. ein `certificateResponseType` haben, das nicht `ArrayBuffer` ist, können Sie mit diesem Rückruf die Zertifikatantwort in den Typ `ArrayBuffer` konvertieren.
+Sie können eine Callback-Funktion definieren (z. B. `onCertificateResponseCallback`), um eine Textzertifikatantwort zu verarbeiten und die Funktion auf `drmManager` durch Verwendung von `setCertificateResponseCallback` API. Sie können `setCertificateResponseCallback` , um das Standardverhalten zu überschreiben. Wenn Sie beispielsweise eine `certificateResponseType` , die andere als `ArrayBuffer`können Sie diesen Rückruf verwenden, um die Zertifikatantwort in die `ArrayBuffer` Typ.
 
 ```js
 var base64DecodeUint8Array = function (input) { 
@@ -66,7 +64,7 @@ drmManager.setCertificateResponseCallback(onCertificateResponseCallback);
 
 <!--<a id="section_4DCC1B3ABCED484EB5340A558C9A770A"></a>-->
 
-Sie können Rückruffunktionen definieren, um die Lizenzmeldung und die Lizenzantwort zu analysieren und sie in einem Aufruf an `drmManager.acquireLicense` weiterzugeben. `onLicenseResponseCallback` ist ein neuer Parameter in der  `acquireLicense` API.
+Sie können Callback-Funktionen definieren, um die Lizenzmeldung und die Lizenzantwort zu analysieren und sie in einem Aufruf an `drmManager.acquireLicense`. `onLicenseResponseCallback` ist ein neuer Parameter im `acquireLicense` API.
 
 ```js
 var base64EncodeUint8Array = function (input) { 
@@ -121,7 +119,7 @@ var base64EncodeUint8Array = function (input) {
 drmManager.acquireLicense(drmMetadata, null, acquireLicenseListener, onLicenseMessageCallback, onLicenseResponseCallback);
 ```
 
-In den Schutzdaten wird das neue Feld **[!UICONTROL certificateResponseType]** verwendet, um den Zertifikatsantworttyp festzulegen. Hier ein Beispiel für Schutzdaten:
+In den Schutzdaten ist die neue **[!UICONTROL certificateResponseType]** -Feld verwendet wird, um den Zertifikatantworttyp festzulegen. Im Folgenden finden Sie ein Beispiel für Schutzdaten:
 
 ```js
 { 
@@ -137,4 +135,4 @@ In den Schutzdaten wird das neue Feld **[!UICONTROL certificateResponseType]** v
 }
 ```
 
-Die Verwendung des Felds `certificateResponseType` ist optional. Wird er nicht verwendet, wird der Wert als `ArrayBuffer` angenommen.
+Verwenden der `certificateResponseType` -Feld ist optional. Wenn er nicht verwendet wird, wird der Wert als `ArrayBuffer`.

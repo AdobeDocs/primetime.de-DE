@@ -1,8 +1,7 @@
 ---
 description: Sie können Ihren Player so konfigurieren, dass die Videonutzung verfolgt und analysiert wird.
 title: Videoanalyse initialisieren und konfigurieren
-exl-id: 3f108ca4-2562-4400-b4e2-10933bde3254
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 0%
@@ -21,35 +20,35 @@ Stellen Sie vor der Aktivierung der Videoverfolgung (Video Heartbeats) sicher, d
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
-   <td colname="col2"> <p>Wichtig:  Dieser JSON-Konfigurationsdateiname muss <span class="codeph"> ADBMobileConfig.json </span> bleiben. Der Name und der Pfad dieser Konfigurationsdatei können nicht geändert werden. Der Pfad zu dieser Datei muss <span class="codeph"> &lt;source root&gt;/AdobeMobile </span> lauten. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
+   <td colname="col2"> <p>Wichtig: Der Name dieser JSON-Konfigurationsdatei muss beibehalten werden. <span class="codeph"> ADBMobileConfig.json </span>. Der Name und der Pfad dieser Konfigurationsdatei können nicht geändert werden. Der Pfad zu dieser Datei muss <span class="codeph"> &lt;source root=""&gt;/AdobeMobile </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> Endpunkt des AppMeasurement- </span> Tracking-Servers </td> 
-   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts der Adobe Analytics (ehemals SiteCatalyst). </td> 
+   <td colname="col1"> <span class="codeph"> AppMeasurement </span> Endpunkt des Tracking-Servers </td> 
+   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts der Adobe Analytics (früher SiteCatalyst). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Video Analytics-Tracking-Server-Endpunkt </td> 
-   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts für die Videoanalyse. Hier werden alle Video Heartbeat-Tracking-Aufrufe gesendet. <p>Tipp:  Die URL des Besucher-Tracking-Servers entspricht der URL des Analytics-Tracking-Servers. Informationen zur Implementierung des Besucher-ID-Diensts finden Sie unter <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementieren des ID-Diensts </a>. </p> </td> 
+   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts für die Videoanalyse. Hier werden alle Video Heartbeat-Tracking-Aufrufe gesendet. <p>Tipp: Die URL des Besucher-Tracking-Servers entspricht der URL des Analytics-Tracking-Servers. Informationen zur Implementierung des Besucher-ID-Service finden Sie unter <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementieren des ID-Diensts </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Kontoname </td> 
    <td colname="col2"> Wird auch als Report Suite-ID (RSID) bezeichnet. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Organisations-ID des Marketing Cloud </td> 
+   <td colname="col1"> Organisations-ID des Marketings Cloud </td> 
    <td colname="col2"> Ein string -Wert, der für die Instanziierung der Besucherkomponente erforderlich ist. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Herausgeber </td> 
-   <td colname="col2"> Dies ist die Herausgeber-ID, die Kunden von ihrem Adobe-Support-Mitarbeiter bereitgestellt wird. <p>Tipp:  Diese ID ist nicht nur eine Zeichenfolge mit dem Namen der Marke/des Fernsehgeräts. </p> </td> 
+   <td colname="col2"> Dies ist die Herausgeber-ID, die Kunden von ihrem Adobe-Support-Mitarbeiter bereitgestellt wird. <p>Tipp: Diese ID ist nicht nur eine Zeichenfolge mit dem Namen Marke/Fernsehgerät. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 So konfigurieren Sie das Video-Tracking in Ihrem Player:
 
-1. Überprüfen Sie, ob die Ladezeitoptionen in der Ressourcendatei `ADBMobileConfig.json` korrekt sind.
+1. Bestätigen Sie, dass die Ladezeitoptionen in der `ADBMobileConfig.json` die Ressourcendatei korrekt ist.
 
    ```
    { 
@@ -82,8 +81,8 @@ So konfigurieren Sie das Video-Tracking in Ihrem Player:
 
    So konfigurieren Sie Ladezeitoptionen:
 
-   1. Vergewissern Sie sich, dass die `ADBMobileConfig.json`-Datei die entsprechenden Werte enthält, die von Adobe bereitgestellt werden.
-   1. Vergewissern Sie sich, dass sich diese Datei im Ordner `AdobeMobile` befindet.
+   1. Vergewissern Sie sich, dass `ADBMobileConfig.json` -Datei enthält die entsprechenden Werte, die von Adobe bereitgestellt werden.
+   1. Vergewissern Sie sich, dass sich diese Datei im Ordner `AdobeMobile` Ordner.
 
       Dieser Ordner muss sich im Stammverzeichnis der Quellstruktur der Anwendung befinden.
    1. Kompilieren und erstellen Sie Ihre Anwendung.

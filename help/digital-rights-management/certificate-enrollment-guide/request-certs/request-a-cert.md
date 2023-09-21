@@ -2,37 +2,34 @@
 title: Zertifikat anfordern (Anforderer)
 description: Zertifikat anfordern (Anforderer)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
-
 # Zertifikat anfordern (Anforderer){#request-a-certificate-requester}
 
-1. Melden Sie sich bei der Zertifikatregistrierungssite an.
+1. Melden Sie sich bei der Zertifikatregistrierungs-Site an.
 
-   Der Benutzer, der ein Zertifikat anfordert, muss ein Anforderer sein.
+   Der Benutzer, der ein Zertifikat anfordert, muss ein Antragsteller sein.
 
-1. Wählen Sie auf der Registerkarte Anforderung den Zertifikattyp aus (Lizenzserver, Packager oder Transport).
+1. Wählen Sie auf der Registerkarte &quot;Anfrage&quot;den Zertifikatstyp aus (Lizenzserver, Packager oder Transport).
 
    >[!NOTE]
    >
-   >Diese Option wird nicht für die Test- und Test-SDK-Versionen angezeigt. Diese SDK-Versionen verwenden ein Zertifikat.
+   >Diese Option wird für die Test- und Test-SDK-Versionen nicht angezeigt. Diese SDK-Versionen verwenden ein Zertifikat.
 
 1. Führen Sie einen der folgenden Schritte aus:
 
    * Laden Sie die CSR-Datei hoch.
-   * Kopieren Sie die CSR-Informationen aus dem CSR und fügen Sie sie in das Formular ein.
+   * Kopieren Sie die CSR-Informationen aus der CSR und fügen Sie sie in das Formular ein.
 
-      >[!NOTE]
-      >
-      >Um die CSR-Informationen zu kopieren, wählen Sie den Text zwischen dem Start-Tag `(-----BEGIN CERTIFICATE REQUEST-----)` und dem End-Tag `(-----END CERTIFICATE REQUEST-----)`, jedoch nicht einschließlich, aus.
+     >[!NOTE]
+     >
+     >Um die CSR-Informationen zu kopieren, wählen Sie den Text zwischen dem Anfangs-Tag, das nicht enthalten ist, aus `(-----BEGIN CERTIFICATE REQUEST-----)` und End-Tag `(-----END CERTIFICATE REQUEST-----)`.
 
-1. Klicken Sie auf die Schaltfläche **[!UICONTROL Submit Request]**.
+1. Klicken Sie auf **[!UICONTROL Submit Request]** Schaltfläche.
 
-   Eine E-Mail wird zur Überprüfung an das Konto und an Sekundär Administratoren gesendet. Der Anforderer ist Cc&#39;d.
-
+   Eine E-Mail wird zur Überprüfung an das Konto und die Sekundären Administratoren gesendet. Der Anforderer ist Cc&#39;d.

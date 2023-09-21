@@ -1,24 +1,22 @@
 ---
 description: Sie können Zeitintervalle im VOD-Inhalt als Werbeunterbrechungen festlegen.
 title: Markierbereiche
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
-
-# Markierungsbereiche {#mark-ranges}
+# Markierbereiche {#mark-ranges}
 
 Sie können Zeitintervalle im VOD-Inhalt als Werbeunterbrechungen festlegen.
 
-Das `TimeRanges` zwischen dem `begin` und dem `end` in `localTime` wird in der Zeitleiste als `AdBreak` markiert. Andere Anzeigeneinstellungen werden ignoriert.
+Die `TimeRanges` zwischen `begin` und `end` in `localTime` als `AdBreak` in der Timeline. Andere Anzeigeneinstellungen werden ignoriert.
 
 >[!TIP]
 >
->Wenn Sie nur bestimmte Bereiche des Inhalts ohne dynamische Anzeigeneinfügung als Anzeigen markieren möchten, erstellen Sie eine `CustomRangeMetadata`-Instanz und geben Sie den Typ als `MARK`-Vorgang mit den definierten benutzerdefinierten Bereichen an.
+>Wenn Sie nur bestimmte Bereiche des Inhalts als Anzeigen markieren möchten, ohne eine dynamische Anzeige einzufügen, erstellen Sie eine `CustomRangeMetadata` und geben Sie den Typ als `MARK` -Vorgang mit den definierten benutzerdefinierten Bereichen.
 
 1. Markieren Sie die Bereiche:
 

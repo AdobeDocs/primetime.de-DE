@@ -1,20 +1,18 @@
 ---
 description: Mit diesen Klassen können Sie die Protokollierung anpassen.
 title: Protokollierungsklassen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
 
 ---
 
-
 # Protokollierungsklassen{#logging-classes}
 
 Mit diesen Klassen können Sie die Protokollierung anpassen.
 
-Paket: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/package-detail.html)
+Package: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/package-detail.html)
 
 <table frame="all" colsep="1" rowsep="1" id="table_389797D3CEF14EA2862E0B20C6E6CC41"> 
  <thead> 
@@ -26,11 +24,11 @@ Paket: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/BaseLogger.html" format="html" scope="external"> BaseLogger</a></span> </td> 
-   <td colname="2"> Klasse. Basisimplementierungsklasse der Protokollschnittstelle. </td> 
+   <td colname="2"> Klasse. Basisimplementierungsklasse der Logger-Schnittstelle. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/DefaultLogger.html" format="html" scope="external"> DefaultLogger</a></span> </td> 
-   <td colname="2"> Klasse. Die Standardprotokollierung sendet alle eingehenden Nachrichten zur Ablaufverfolgung. </td> 
+   <td colname="2"> Klasse. Die Standardprotokollierung sendet alle eingehenden Nachrichten zur Verfolgung. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Log.html" format="html" scope="external"> Protokoll</a></span> </td> 
@@ -38,11 +36,11 @@ Paket: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/LogFactory.html" format="html" scope="external"> LogFactory</a></span> </td> 
-   <td colname="2"> Klasse. Standardmäßige Protokollierungsfabrik.</td> 
+   <td colname="2"> Klasse. Standard-Protokollierungsfactory.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Logger</a></span> </td> 
-   <td colname="2">Schnittstelle. Die zum Implementieren einer benutzerdefinierten Protokollfunktion für die Wortgruppe erforderlichen Methoden. </td> 
+   <td colname="2">Schnittstelle. Die Methoden, die zum Implementieren eines benutzerdefinierten Loggers für die Wortgruppe erforderlich sind. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/NullLogger.html" format="html" scope="external"> NullLogger</a></span> </td> 
@@ -50,4 +48,3 @@ Paket: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/
   </tr> 
  </tbody> 
 </table>
-

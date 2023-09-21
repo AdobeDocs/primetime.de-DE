@@ -1,24 +1,22 @@
 ---
-description: Für Anzeigen (oder kreative Anzeigen) mit digitaler Videoanzeigenserie (VAST), bei denen die Ausweichregel aktiviert ist, behandelt TVSDK eine Anzeige mit einem ungültigen Medientyp als leere Anzeige und versucht stattdessen Ausweichanzeigen zu verwenden. Sie können einige Aspekte des Ausweichverhaltens konfigurieren.
-keywords: Null-Länge-Anzeige;Leere Anzeige
-title: Ad-Fallback für VAST- und VMAP-Anzeigen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Bei Anzeigen (oder kreativen Werbevorlagen) mit aktivierter Ausweichregel für digitale Videoanzeigen behandelt TVSDK eine Anzeige mit einem ungültigen Medientyp als leere Anzeige und versucht stattdessen, Fallback-Anzeigen zu verwenden. Sie können einige Aspekte des Ausweichverhaltens konfigurieren.
+keywords: Anzeige mit Nulllänge; leere Anzeige
+title: Anzeigen-Fallback für VAST- und VMAP-Anzeigen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
 
 ---
 
+# Anzeigen-Fallback für VAST- und VMAP-Anzeigen {#ad-fallback-for-vast-and-vmap-ads}
 
-# Ad Fallback für VAST- und VMAP-Anzeigen {#ad-fallback-for-vast-and-vmap-ads}
+Bei Anzeigen (oder kreativen Werbevorlagen) mit aktivierter Ausweichregel für digitale Videoanzeigen behandelt TVSDK eine Anzeige mit einem ungültigen Medientyp als leere Anzeige und versucht stattdessen, Fallback-Anzeigen zu verwenden. Sie können einige Aspekte des Ausweichverhaltens konfigurieren.
 
-Für Anzeigen (oder kreative Anzeigen) mit digitaler Videoanzeigenserie (VAST), bei denen die Ausweichregel aktiviert ist, behandelt TVSDK eine Anzeige mit einem ungültigen Medientyp als leere Anzeige und versucht stattdessen Ausweichanzeigen zu verwenden. Sie können einige Aspekte des Ausweichverhaltens konfigurieren.
-
-Die VAST/Digital Video Multiple Ad Playlist (VMAP)-Spezifikation besagt, dass bei Anzeigen, bei denen VAST-Fallback aktiviert ist, bei leeren Anzeigen automatisch die Verwendung von Fallback-Anzeigen Trigger wird. Wenn eine VAST-Anzeige leer ist, sucht TVSDK nach einem gültigen HLS-Medientyp-Ersatz unter den Fallback-Anzeigen. Wenn eine VAST-Anzeige in einem Wrapper einen ungültigen Medientyp hat, behandelt TVSDK diese Anzeige als leer. Sie können konfigurieren, ob TVSDK dasselbe für Inline-Anzeigen in einem VMAP tun soll. Weitere Informationen zur Funktion VAST `fallbackOnNoAd` finden Sie unter [Vorlage für digitale Videoanzeige (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
+Die Spezifikation VAST/Digital Video Multiple Ad Play List (VMAP) besagt, dass bei Anzeigen mit aktiviertem VAST-Fallback bei leeren Anzeigen automatisch die Verwendung von Fallback-Anzeigen Trigger wird. Wenn eine VAST-Anzeige leer ist, sucht TVSDK unter den Fallback-Anzeigen nach einem gültigen HLS-Medientyp-Ersatz. Wenn eine VAST-Anzeige in einem Wrapper einen ungültigen Medientyp aufweist, behandelt TVSDK diese Anzeige als leer. Sie können konfigurieren, ob TVSDK für inline-Anzeigen in einem VMAP dasselbe tun soll. Weitere Informationen zum VAST `fallbackOnNoAd` -Funktion, siehe [Vorlage für digitale Videoanzeige (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
 
 >[!NOTE]
 >
->**Nulllängenanzeigen** : Wenn TVSDK auf eine VAST-Antwort stößt, die eine Anzeige mit einer Dauer von null enthält, oder auf eine Werbeunterbrechung ohne Anzeigen, werden AD_BREAK_BEGINN/AD_BREAK_COMPLETE-Ereignis für diese unvollständigen Werbeunterbrechungen ausgelöst. *Dieses Verhalten gilt nur für VOD-Streams.* TVSDK löst diese Ereignis auch dann aus, wenn Ihre App die SKIP-Anzeigenrichtlinie verwendet.
+>**Null Längenanzeigen** - Wenn TVSDK auf eine VAST-Antwort stößt, die eine Anzeige von null Dauer enthält, oder auf eine Werbeunterbrechung ohne Anzeigen, werden AD_BREAK_START / AD_BREAK_COMPLETE-Ereignisse für diese Werbeunterbrechungen mit null Länge ausgelöst. *Dieses Verhalten gilt nur für VOD-Streams.* TVSDK löst diese Ereignisse auch dann aus, wenn Ihre App die SKIP-Anzeigenrichtlinie verwendet.
 >
->TVSDK löst *nicht* AD_BREAK_BEGINN/AD_BREAK_COMPLETE-Ereignis für Live-Streams aus, oder wenn ein Benutzer Trickplay verwendet oder versucht, über die Nulllänge-Anzeige hinauszugehen.
+>TVSDK *not* Auslösen von AD_BREAK_START / AD_BREAK_COMPLETE-Ereignissen für Live-Streams oder wenn ein Benutzer Trickplay verwendet oder versucht, die Anzeige mit einer Länge von null zu überspringen.

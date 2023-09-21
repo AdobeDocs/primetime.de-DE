@@ -1,27 +1,25 @@
 ---
-description: Sie können angeben, ob die Wiedergabe zulässig ist, bevor alle Anzeigen geladen und in die Zeitleiste platziert werden. Die Wiedergabe auf diese Weise zu starten, ermöglicht einem Viewer einen schnelleren Zugriff auf den Hauptinhalt. Diese Funktion ist nur für Live-DVR verfügbar und funktioniert nicht, z. B. bei VOD-Assets.
+description: Sie können angeben, ob die Wiedergabe zulässig ist, bevor alle Anzeigen geladen und in die Timeline platziert werden. Durch den Start der Wiedergabe auf diese Weise erhält ein Betrachter schneller Zugriff auf den Hauptinhalt. Diese Funktion ist nur für Live-DVR verfügbar und funktioniert nicht mit, sagen wir VOD-Assets.
 title: Verzögertes Laden von Anzeigen aktivieren
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
 
 ---
 
+# Verzögertes Laden von Anzeigen aktivieren{#enable-lazy-ad-loading}
 
-# Verzögertes Laden der Anzeige aktivieren{#enable-lazy-ad-loading}
+Sie können angeben, ob die Wiedergabe zulässig ist, bevor alle Anzeigen geladen und in die Timeline platziert werden. Durch den Start der Wiedergabe auf diese Weise erhält ein Betrachter schneller Zugriff auf den Hauptinhalt. Diese Funktion ist nur für Live-DVR verfügbar und funktioniert nicht mit, sagen wir VOD-Assets.
 
-Sie können angeben, ob die Wiedergabe zulässig ist, bevor alle Anzeigen geladen und in die Zeitleiste platziert werden. Die Wiedergabe auf diese Weise zu starten, ermöglicht einem Viewer einen schnelleren Zugriff auf den Hauptinhalt. Diese Funktion ist nur für Live-DVR verfügbar und funktioniert nicht, z. B. bei VOD-Assets.
+1. Verwenden der booleschen Eigenschaft `delayAdLoading` in `AdvertisingMetadata`.
 
-1. Verwenden Sie die boolesche Eigenschaft `delayAdLoading` in `AdvertisingMetadata`.
+   * Bei &quot;false&quot;wartet TVSDK, bis alle Anzeigen aufgelöst und platziert werden, bevor zum Status VORBEREITT übergegangen wird. Der Standardwert ist &quot;false&quot;.
+   * Wenn &quot;true&quot;, löst TVSDK nur die ersten Anzeigen auf und wechselt in den Status VORBEREITT . Die verbleibenden Anzeigen werden während der Wiedergabe aufgelöst und platziert.
 
-   * Bei &quot;false&quot;wartet TVSDK, bis alle Anzeigen aufgelöst und platziert wurden, bevor zum Status &quot;VORBEREITT&quot;übergegangen wird. Der Standardwert lautet false.
-   * Wenn &quot;true&quot;, löst TVSDK nur die anfänglichen Anzeigen und Transitionen auf den Status &quot;VORBEREITT&quot;auf. Die verbleibenden Anzeigen werden während der Wiedergabe aufgelöst und platziert.
+1. Um auch verzögertes Laden von Anzeigen mit Adobe Primetime-Anzeigenentscheidungen zu aktivieren, setzen Sie dies auf `true` bei der Erstellung `AuditudeSettings`.
 
-1. Um auch verzögertes Laden der Anzeige bei der Adobe Primetime-Anzeigenentscheidung zu aktivieren, setzen Sie diese auf `true`, wenn Sie `AuditudeSettings` erstellen.
-
-   Die `AuditudeSettings`-Klasse erbt diese Eigenschaft von `AdvertisingMetadata`, übernimmt jedoch nicht den aktuellen Wert.
+   Die `AuditudeSettings` -Klasse erbt diese Eigenschaft von `AdvertisingMetadata`, übernimmt jedoch nicht den aktuellen Wert.
 
    ```
    var auditudeSettings:AuditudeSettings = new AuditudeSettings(); 
@@ -30,11 +28,11 @@ Sie können angeben, ob die Wiedergabe zulässig ist, bevor alle Anzeigen gelade
    auditudeSettings.delayAdLoading = true;
    ```
 
-1. Um Anzeigen als Hinweise auf einer Scrubbing-Leiste genau wiederzugeben, sollten Sie auf `TimelineEvent` achten. `TIMELINE_UPDATED` Ereignis und zeichnen Sie die Scrubbing-Leiste jedes Mal, wenn Sie dieses Ereignis erhalten.
+1. Um Anzeigen als Hinweise auf einer Scrubbing-Leiste genau wiederzugeben, sollten Sie auf die `TimelineEvent`. `TIMELINE_UPDATED` -Ereignis und zeichnen Sie die Scrub-Leiste jedes Mal neu, wenn Sie dieses Ereignis erhalten.
 
-   Wenn VoD-Streams verzögertes Laden von Anzeigen verwenden, werden nicht alle Anzeigen auf der Zeitleiste platziert, wenn Ihr Player den Status &quot;VORBEREITT&quot;erreicht. Daher müssen Sie die Scrubbing-Leiste explizit neu zeichnen.
+   Wenn VoD-Streams verzögertes Laden von Anzeigen verwenden, werden nicht alle Anzeigen auf der Timeline platziert, wenn Ihr Player in den Status VORBEREITT wechselt. Daher müssen Sie die Scrubbing-Leiste explizit neu zeichnen.
 
-   TVSDK optimiert den Versand dieses Ereignisses, um die Anzahl der Male zu minimieren, die Sie die Scrubbing-Leiste neu zeichnen müssen. Daher steht die Anzahl der Zeitschienen-Ereignis nicht in Zusammenhang mit der Anzahl der Werbeunterbrechungen, die auf der Zeitschiene platziert werden sollen. Wenn Sie beispielsweise fünf Werbeunterbrechungen haben, erhalten Sie möglicherweise nicht genau fünf Ereignis.
+   TVSDK optimiert den Versand dieses Ereignisses, um die Häufigkeit zu minimieren, mit der Sie die Scrubbing-Leiste neu zeichnen müssen. Daher hängt die Anzahl der Timeline-Ereignisse nicht mit der Anzahl der Werbeunterbrechungen zusammen, die auf der Timeline platziert werden sollen. Wenn Sie beispielsweise fünf Werbeunterbrechungen haben, erhalten Sie möglicherweise nicht genau fünf Ereignisse.
 
    ```
    mediaPlayer.addEventListener(TimelineEvent.TIMELINE_UPDATED, onTimelineUpdated); 
@@ -45,4 +43,3 @@ Sie können angeben, ob die Wiedergabe zulässig ist, bevor alle Anzeigen gelade
        drawMarkers(markers); 
    } 
    ```
-

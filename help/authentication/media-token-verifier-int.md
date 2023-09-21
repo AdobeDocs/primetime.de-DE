@@ -1,19 +1,18 @@
 ---
 title: Integrieren des Medien-Token-Verifikators
 description: Integrieren des Medien-Token-Verifikators
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '916'
 ht-degree: 0%
 
 ---
 
-
 # Integrieren des Medien-Token-Verifikators
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Über den Media Token Verifier {#about-media-token-verifier}
 
@@ -23,10 +22,10 @@ Wenn die Autorisierung erfolgreich ist, erstellt die Adobe Primetime-Authentifiz
 Ein AuthZ-Token autorisiert den Benutzer der Site, eine bestimmte Ressource anzuzeigen.  Es hat eine typische Time-to-Live (TTL) von 6 bis 24 Stunden, nach der das Token abläuft. **Für den tatsächlichen Anzeigezugriff verwendet die Primetime-Authentifizierung das AuthZ-Token, um ein kurzlebiges Medien-Token zu generieren, das Sie abrufen und an Ihren Medienserver übergeben**. Diese kurzlebigen Medien-Token verfügen über eine sehr kurze TTL (normalerweise einige Minuten).
 
 
-In AccessEnabler-Integrationen erhalten Sie das kurzlebige Medien-Token über die `setToken()` Callback. Für Client-lose API-Integrationen rufen Sie das kurzlebige Medien-Token mit der `<SP_FQDN>/api/v1/tokens/media` API-Aufruf. Das Token ist eine Zeichenfolge, die in Klartext gesendet wird und von der Adobe signiert wird und den Tokenschutz verwendet, der auf PKI (Public Key Infrastructure) basiert. Mit diesem PKI-basierten Schutz wird das Token mithilfe eines asymmetrischen Schlüssels signiert, der der Adobe von einer Zertifizierungsstelle ausgestellt wurde.
+In AccessEnabler-Integrationen erhalten Sie das kurzlebige Medien-Token über die `setToken()` Callback. Für Client-lose API-Integrationen rufen Sie das kurzlebige Medien-Token mit der `<SP_FQDN>/api/v1/tokens/media` API-Aufruf. Das Token ist eine Zeichenfolge, die in Klartext gesendet wird und von Adobe signiert wird und Token-Schutz verwendet, der auf PKI (Public Key Infrastructure) basiert. Mit diesem PKI-basierten Schutz wird das Token mithilfe eines asymmetrischen Schlüssels signiert, der Adobe von einer Zertifizierungsstelle ausgestellt wurde.
 
 
-Da Client-seitig keine Validierung für das Token vorhanden ist, kann ein böswilliger Benutzer Tools verwenden, um gefälschte Inhalte einzuschleusen `setToken()` -Aufrufe. Daher **cannot** sich einfach darauf zu verlassen, dass `setToken()` ausgelöst wurde, wenn geprüft wird, ob ein Benutzer autorisiert ist oder nicht. Sie müssen überprüfen, ob das Token mit kurzer Lebensdauer selbst legitim ist. Das Tool zum Ausführen der Überprüfung ist die Media Token Verifier Library.
+Da Client-seitig keine Validierung für das Token vorhanden ist, kann ein böswilliger Benutzer Tools verwenden, um falsche Daten einzuschleusen `setToken()` -Aufrufe. Daher **cannot** sich einfach darauf zu verlassen, dass `setToken()` ausgelöst wurde, wenn geprüft wird, ob ein Benutzer autorisiert ist oder nicht. Sie müssen überprüfen, ob das Token mit kurzer Lebensdauer selbst legitim ist. Das Tool zum Ausführen der Überprüfung ist die Media Token Verifier Library.
 
 
 >[!TIP]
@@ -45,9 +44,9 @@ Die [Media Token Verifier Library](https://adobeprimetime.zendesk.com/auth/v2/lo
 
 Die Media Token Verifier-Bibliothek ist im Java-Archiv enthalten. `mediatoken-verifier-VERSION.jar`. Die -Bibliothek definiert:
 
-* Eine Token-Verifizierungs-API (`ITokenVerifier` -Schnittstelle) mit JavaDoc-Dokumentation
-* Der öffentliche Adobe-Schlüssel, mit dem überprüft wird, ob das Token tatsächlich von der Adobe stammt
-* Eine Referenzimplementierung (`com.adobe.entitlement.test.EntitlementVerifierTest.java`), die zeigt, wie die Verifier-API verwendet wird und wie der öffentliche Adobe-Schlüssel in der Bibliothek zur Überprüfung der Herkunft verwendet wird
+* Eine Tokenüberprüfungs-API (`ITokenVerifier` -Schnittstelle), mit JavaDoc-Dokumentation
+* Der öffentliche Adobe-Schlüssel, mit dem überprüft wird, ob das Token tatsächlich von Adobe stammt
+* Eine Referenzimplementierung (`com.adobe.entitlement.test.EntitlementVerifierTest.java`), die zeigt, wie die Verifier-API verwendet wird und wie der öffentliche Adobe-Schlüssel in der Bibliothek verwendet wird, um den Ursprung zu überprüfen
 
 
 Das Archiv enthält alle Abhängigkeiten und Zertifikat-Keystores. Das Standardkennwort für den eingeschlossenen Zertifikatkeystore ist &quot;123456&quot;.
@@ -56,10 +55,10 @@ Das Archiv enthält alle Abhängigkeiten und Zertifikat-Keystores. Das Standardk
 * Verwenden Sie Ihren bevorzugten JCE-Anbieter für den Signaturalgorithmus &quot;SHA256WithRSA&quot;.
 
 
-**Die Überprüfungsbibliothek muss die einzige Methode sein, mit der der Inhalt des Tokens analysiert wird. Programmierer sollten das Token nicht analysieren und die Daten selbst extrahieren, da das Tokenformat nicht garantiert ist und künftigen Änderungen unterliegt.** Es ist garantiert, dass nur die Verifier-API ordnungsgemäß funktioniert. Das direkte Parsen der Zeichenfolge kann vorübergehend funktionieren, verursacht aber in Zukunft Probleme, wenn sich das Format ändern könnte. Die Verifier-API ruft Informationen aus dem Token ab, z. B.:
+**Die Überprüfungsbibliothek muss die einzige Methode sein, mit der der Inhalt des Tokens analysiert wird. Programmierer sollten das Token nicht analysieren und die Daten selbst extrahieren, da das Token-Format nicht garantiert ist und künftigen Änderungen unterliegt.** Es ist garantiert, dass nur die Verifier-API ordnungsgemäß funktioniert. Das direkte Parsen der Zeichenfolge kann vorübergehend funktionieren, verursacht aber in Zukunft Probleme, wenn sich das Format ändern könnte. Die Verifier-API ruft Informationen aus dem Token ab, z. B.:
 
 * Ist das Token gültig (die `isValid()` Methode)?
-* Die mit dem Token verbundene Ressourcen-ID (die `getResourceID()` -Methode); Dies kann mit dem anderen Parameter der `setToken()` Funktionsrückruf. Wenn dies nicht der Fall ist, kann dies auf betrügerisches Verhalten hinweisen.
+* Die mit dem Token verbundene Ressourcen-ID (die `getResourceID()` -Methode); dies kann mit dem anderen Parameter der `setToken()` Funktionsrückruf. Wenn dies nicht der Fall ist, kann dies auf betrügerisches Verhalten hinweisen.
 * Der Zeitpunkt der Ausgabe des Tokens (`getTimeIssued()` -Methode).
 * TTL (`getTimeToLive()` -Methode).
 * Eine anonymisierte Authentifizierungs-GUID, die vom MVPD empfangen wurde (`getUserSessionGUID()` -Methode).
@@ -87,11 +86,11 @@ Die `isValid()` -Methode gibt einen der folgenden Statuswerte zurück:
 
 Zusätzliche Methoden bieten spezifischen Zugriff auf die Ressourcen-ID, die ausgegebene Zeit und die Live-Zeit für ein bestimmtes Token.
 
-* Verwendung `getResourceID()` , um die mit dem Token verknüpfte Ressourcen-ID abzurufen und mit der von der setToken() -Anfrage zurückgegebenen ID zu vergleichen.
+* Verwendung `getResourceID()` , um die mit dem Token verknüpfte Ressourcen-ID abzurufen und sie mit der von der setToken() -Anfrage zurückgegebenen ID zu vergleichen.
 * Verwendung `getTimeIssued()` um den Zeitpunkt abzurufen, zu dem das Token ausgegeben wurde.
 * Verwendung `getTimeToLive()` um die TTL abzurufen.
 * Verwendung `getUserSessionGUID()` um eine anonymisierte GUID abzurufen, die vom MVPD festgelegt wurde.
-* Verwendung `getMvpdId()` um die ID des MVPD abzurufen, der den Benutzer authentifiziert hat.
+* Verwendung `getMvpdId()` , um die Kennung des MVPD abzurufen, der den Benutzer authentifiziert hat.
 * Verwendung `getProxyMvpdId()` , um die Kennung des Proxy-MVPD abzurufen, der den Benutzer authentifiziert hat.
 
 ## Beispielcode {#sample-code}

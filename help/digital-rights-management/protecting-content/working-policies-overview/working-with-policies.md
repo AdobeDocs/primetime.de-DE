@@ -1,36 +1,34 @@
 ---
-title: Arbeiten mit DRM-Richtlinien - Übersicht
-description: Arbeiten mit DRM-Richtlinien - Übersicht
+title: Übersicht über DRM-Richtlinien verwenden
+description: Übersicht über DRM-Richtlinien verwenden
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#working-with-drm-policies-overview}
 
-Content Provider können DRM-Richtlinien mit dem Primetime DRM SDK auf Mediendateien anwenden. Administratoren können dann DRM-Richtlinien mithilfe von Richtlinien-Management-APIs erstellen, Ansichten erstellen und aktualisieren.
+Inhaltsanbieter können DRM-Richtlinien mithilfe des Primetime DRM SDK auf Mediendateien anwenden. Administratoren können dann DRM-Richtlinien mithilfe von Policy Management-APIs erstellen, Details dazu anzeigen und aktualisieren.
 
-Ein *`DRM policy`* ist eine Sammlung von Informationen mit Sicherheitseinstellungen, Authentifizierungsanforderungen und Verwendungsrechten. Die Richtlinie definiert, wie Ansichten von Inhalten für Benutzer möglich sind. DRM-Richtlinien, Verschlüsselung und Unterzeichnung ermöglichen es Inhaltsanbietern, die Kontrolle über ihre Inhalte unabhängig von der Verteilung der Inhalte zu behalten.
+A *`DRM policy`* ist eine Sammlung von Informationen, die Sicherheitseinstellungen, Authentifizierungsanforderungen und Verwendungsrechte enthalten. Die Richtlinie definiert, wie Benutzer Inhalte anzeigen können. DRM-Richtlinien, Verschlüsselung und Signatur ermöglichen es Inhaltsanbietern, die Kontrolle über ihren Inhalt zu behalten, unabhängig davon, wie weit der Inhalt verteilt ist.
 
-Eine DRM-Richtlinie dient als Vorlage, die der Lizenzserver beim Generieren einer Lizenz verwendet. Ein Client kann auch auf die DRM-Richtlinie verweisen, bevor er eine Lizenz anfordert, um festzustellen, ob der Client den Benutzer zur Authentifizierung auffordern muss, bevor er eine Lizenzanforderung an den Server sendet.
+Eine DRM-Richtlinie dient als Vorlage, die der Lizenzserver bei der Erstellung einer Lizenz verwendet. Ein Client kann auch auf die DRM-Richtlinie verweisen, bevor er eine Lizenz anfordert, um festzustellen, ob der Client den Benutzer zur Authentifizierung auffordern muss, bevor er eine Lizenzanfrage an den Server sendet.
 
-Sie können geschützte Inhalte mit Adobe Flash Media Server oder einem HTTP-Server bereitstellen. Benutzer können geschützte Inhalte in benutzerdefinierten Playern herunterladen und abspielen, die mit dem Primetime DRM SDK erstellt wurden.
+Sie können geschützte Inhalte über einen Adobe-Flash Media Server oder einen HTTP-Server bereitstellen. Benutzer können geschützte Inhalte in benutzerdefinierten Playern herunterladen und abspielen, die mit dem Primetime DRM SDK erstellt wurden.
 
-Eine DRM-Richtlinie gibt eine oder mehrere Rechte an, die dem Kunden gewährt werden. Normalerweise enthält eine DRM-Richtlinie mindestens das *`Play Right`*. Sie können auch mehrere Wiedergaberechte mit jeweils unterschiedlichen Einschränkungen angeben. Wenn der Client eine Lizenz mit mehreren Abspielrechten erhält, verwendet er die erste Lizenz, die alle Einschränkungen erfüllt. Sie können beispielsweise verschiedene Ausgabeschutzeinstellungen auf verschiedenen Plattformen erzwingen.
+Eine DRM-Richtlinie gibt eine oder mehrere Rechte an, die dem Kunden gewährt werden. Normalerweise umfasst eine DRM-Richtlinie mindestens die *`Play Right`*. Sie können auch mehrere Wiedergabeberechtigungen mit jeweils unterschiedlichen Einschränkungen angeben. Wenn der Client eine Lizenz mit mehreren Wiedergabedokumenten erhält, verwendet er die erste Lizenz, die alle Einschränkungen erfüllt. Sie können beispielsweise verschiedene Einstellungen für den Ausgabeschutz auf verschiedenen Plattformen erzwingen.
 
-Beispielcode, der dieses Beispiel illustriert, finden Sie unter `CreatePolicyWithOutputProtection.java` im Verzeichnis der Referenzimplementierungs-Befehlszeilenwerkzeuge [!DNL samples].
+Siehe `CreatePolicyWithOutputProtection.java` in den Befehlszeilenwerkzeugen für die Referenzimplementierung [!DNL samples] -Verzeichnis für Beispielcode, das dieses Beispiel veranschaulicht.
 
-Sie können die folgenden Aufgaben mit den Primetime DRM Policy Management APIs durchführen:
+Sie können die folgenden Aufgaben mit den Primetime DRM-Richtlinienmanagement-APIs ausführen:
 
 * Richtlinien erstellen und aktualisieren
-* Informationen zur DRM-Politik der Ansicht
+* Details zur DRM-Richtlinie anzeigen
 * Listen zur Aktualisierung von DRM-Richtlinien verwalten
 
-Weitere Informationen zur Java-API finden Sie unter *Primetime DRM-API-Referenz*.
+Siehe *Primetime-DRM-API-Referenz* für Details zur Java-API.
 
-Informationen zum DRM Policy Manager von Primetime finden Sie im Handbuch *Verwenden der Primetime-DRM-Referenzimplementierungen*.
+Siehe *Verwenden der Primetime-DRM-Referenzimplementierungen* Handbuch für Informationen zum Primetime DRM Policy Manager.

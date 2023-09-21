@@ -1,19 +1,18 @@
 ---
 title: Verhindern der Anzeige von MVPDs im Dialogfeld "Auswahl"
 description: Verhindern der Anzeige von MVPDs im Dialogfeld "Auswahl"
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
-
 # Verhindern der Anzeige von MVPDs im Dialogfeld &quot;Auswahl&quot;
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Problem {#issue-prevent-mvpd-sel-dialog}
 
@@ -22,7 +21,7 @@ Sie müssen verhindern, dass bestimmte MVPDs (&quot;Blockierungsliste&quot;) im 
 
 ## Lösung {#solution-prevent-mvpd-sel-dialog}
 
-Die Lösung besteht darin, beim `displayProviderDialog()` aufgerufen wird.
+Die Lösung besteht darin, eine Blockierungsliste zu erstellen, wenn `displayProviderDialog()` aufgerufen wird.
 
 Wenn Sie z. B. möchten, dass CableCompany_1 und CableCompany_2 nicht im MVPD-Selektor angezeigt werden, würden Sie etwas wie das tun, was im folgenden Beispiel gezeigt wird.
 

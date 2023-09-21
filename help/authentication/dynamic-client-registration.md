@@ -1,29 +1,28 @@
 ---
 title: Dynamische Kundenregistrierung
 description: Dynamische Kundenregistrierung
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
 
 ---
 
-
 # Dynamische Kundenregistrierung {#dynamic-client-registration}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Kontext {#context}
 
 Zur Anpassung an moderne Sicherheitspraktiken, verbesserte UX- und Plattformeigentümeranforderungen, das Adobe Primetime Authentication Android SDK und das iOS SDK gehen in Richtung der Übernahme [Benutzerdefinierte Registerkarten für Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari view controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}.
 
-Die aktuelle AdobePass-Implementierung verwendet plattformspezifische Webansichten, um die Webumgebung für die Anzeige der MVPD-Anmeldeseite bereitzustellen. Diese Webansichten verwenden keine gemeinsame Berechtigungsverwaltung für Plattformbrowser. Daher kann der Benutzer bei Verwendung einer Adobe Primetime-Authentifizierungsanwendung kein im Browser gespeichertes Kennwort verwenden. Aus Sicherheitsgründen werden die WebView-Controller von einigen Plattformen für Authentifizierungsaufgaben eingestellt. Sowohl Google als auch Apple bieten alternative Optionen wie &quot;Benutzerdefinierte Chrome-Registerkarten&quot;und &quot;Safari View Controller&quot;. Dabei handelt es sich im Wesentlichen um einzelne Benutzerregisterkarten ihrer jeweiligen Browser. Die Adobe Primetime-Authentifizierung wird diese neuen Komponenten 2018 übernehmen.
+Die aktuelle AdobePass-Implementierung verwendet plattformspezifische Webansichten, um die Webumgebung für die Anzeige der MVPD-Anmeldeseite bereitzustellen. Diese Webansichten verwenden keine gemeinsame Berechtigungsverwaltung für Plattformbrowser. Daher kann der Benutzer bei Verwendung einer Adobe Primetime-Authentifizierungsanwendung kein im Browser gespeichertes Kennwort verwenden. Aus Sicherheitsgründen werden die WebView-Controller bei einigen Plattformen für Authentifizierungsaufgaben nicht mehr unterstützt. Sowohl Google als auch Apple bieten alternative Optionen wie &quot;Benutzerdefinierte Chrome-Registerkarten&quot;und &quot;Safari View Controller&quot;. Dabei handelt es sich im Wesentlichen um einzelne Benutzerregisterkarten ihrer jeweiligen Browser. Die Adobe Primetime-Authentifizierung wird diese neuen Komponenten 2018 übernehmen.
 
 ## Details {#details}
 
-Derzeit gibt es zwei Möglichkeiten, Anwendungen durch die Adobe Pass-Authentifizierung zu identifizieren und zu registrieren:
+Derzeit gibt es zwei Möglichkeiten, wie Adobe Pass Authentication Anwendungen identifiziert und registriert:
 
 * Browser-basierte Clients werden über die Zulassungsdomänenliste registriert
 * native Anwendungsclients wie iOS und Android-Anwendungen werden über den signierten Anforderungsmechanismus registriert.

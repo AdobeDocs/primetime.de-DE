@@ -1,37 +1,35 @@
 ---
-description: Damit der Anzeigenauflöser funktionieren kann, müssen Anzeigenanbieter, wie z. B. Adobe Primetime und die Entscheidungsfindung, Konfigurationswerte eingeben, um Ihre Verbindung zum Anbieter zu aktivieren.
-title: Anzeigeneinfügemetadaten
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Damit der Anzeigenauflöser funktioniert, erfordern Anzeigenanbieter wie Adobe Primetime und die Entscheidungsfindung Konfigurationswerte, um Ihre Verbindung zum Provider zu ermöglichen.
+title: Anzeigeneinfüge-Metadaten
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#ad-insertion-metadata-overview}
 
-Damit der Anzeigenauflöser funktionieren kann, müssen Anzeigenanbieter, wie z. B. Adobe Primetime und die Entscheidungsfindung, Konfigurationswerte eingeben, um Ihre Verbindung zum Anbieter zu aktivieren.
+Damit der Anzeigenauflöser funktioniert, erfordern Anzeigenanbieter wie Adobe Primetime und die Entscheidungsfindung Konfigurationswerte, um Ihre Verbindung zum Provider zu ermöglichen.
 
-Browser TVSDK enthält die Adobe Primetime-Entscheidungsbibliothek für Anzeigen. Damit Ihre Inhalte Werbung vom Adobe Primetime-Ad-Decision-Server enthalten, muss Ihre Anwendung die folgenden erforderlichen AudidtudeSettings-Informationen bereitstellen:
+Browser TVSDK enthält die Adobe Primetime-Bibliothek für Anzeigenentscheidungen. Damit Ihre Inhalte Werbung vom Adobe Primetime-Adentscheidung-Server enthalten, muss Ihre Anwendung die folgenden erforderlichen AudidtudeSettings-Informationen bereitstellen:
 
-* `mediaID`, was eine eindeutige ID für das abzuspielende Video darstellt.
+* `mediaID`: eine eindeutige Kennung für das abzuspielende Video.
 
-   Der Herausgeber weist die mediaID beim Senden von Videoinhalten und Anzeigeninformationen an den Adobe Primetime-Ad-Decision-Server zu. Diese ID wird von der Adobe Primetime-Anzeigenentscheidung verwendet, um zugehörige Werbeinformationen für das Video vom Server abzurufen.
+  Der Herausgeber weist die mediaID beim Senden von Videoinhalten und Anzeigeninformationen an den Adobe Primetime-Ad Decisioning-Server zu. Diese ID wird von Adobe Primetime-Anzeigenentscheidungen verwendet, um verwandte Werbeinformationen für das Video vom Server abzurufen.
 
 * (Optional) `defaultMediaId`, der die Anzeigen angibt, die bereitgestellt werden, wenn die folgenden Bedingungen erfüllt sind:
 
    * Ihre Anfrage an den Anzeigen-Server ist ungültig oder der Inhalt ist falsch konfiguriert.
-   * Bei der Adobe Primetime-Anzeigenentscheidung treten Verzögerungen bei der Datenübertragung auf.
-   * Einer der Adobe Primetime-Anzeigenentscheidungsprozesse im Back-End funktioniert nicht oder ist nicht verfügbar.
+   * Adobe Primetime-Anzeigenentscheidungen verzögern die Datenübertragung.
+   * Einer der Backend-Prozesse der Adobe Primetime-Anzeigenentscheidung funktioniert nicht oder ist nicht verfügbar.
 
-   >[!TIP]
-   >
-   >Adobe empfiehlt die Verwendung von `defaultMediaId`.
+  >[!TIP]
+  >
+  >Adobe empfiehlt, `defaultMediaId`.
 
-* Ihre `zoneID`, die der Adobe zugeordnet ist, kennzeichnet Ihre Firma oder Website.
-* Die Domäne des zugewiesenen Anzeigenservers.
+* Ihre `zoneID`, die von Adobe zugewiesen wird, identifiziert Ihr Unternehmen oder Ihre Website.
+* Die Domäne Ihres zugewiesenen Anzeigenservers.
 * Andere Targeting-Parameter.
 
-   Sie können diese Parameter abhängig von Ihren Anforderungen und den Anforderungen des Anzeigenanbieters einbeziehen.
+  Sie können diese Parameter entsprechend Ihren Anforderungen und den Anforderungen des Anzeigenanbieters einbeziehen.

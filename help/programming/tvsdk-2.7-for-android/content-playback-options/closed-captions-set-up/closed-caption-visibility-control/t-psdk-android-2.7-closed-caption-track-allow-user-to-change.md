@@ -1,18 +1,16 @@
 ---
-description: Dieser Vorgang ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mit der ein Benutzer eine Untertitelspur auswählen kann.
-title: Benutzer können die Beschriftungsspur ändern
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Dieses Verfahren ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mit der ein Benutzer eine Untertitelspur auswählen kann.
+title: Benutzern erlauben, die Beschriftungsspur zu ändern
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# Benutzern erlauben, die Beschriftungsspur zu ändern {#allow-users-to-change-the-caption-track}
 
-# Benutzer können die Beschriftungsspur {#allow-users-to-change-the-caption-track} ändern
-
-Dieser Vorgang ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mit der ein Benutzer eine Untertitelspur auswählen kann.
+Dieses Verfahren ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mit der ein Benutzer eine Untertitelspur auswählen kann.
 
 1. Erstellen Sie eine Schaltfläche, um die Untertitelspur zu ändern.
 
@@ -28,9 +26,9 @@ Dieser Vorgang ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mi
      android:text="CC" /> 
    ```
 
-1. Konvertieren Sie die Liste der verfügbaren Untertitelspuren in ein Zeichenfolgenarray.
+1. Konvertieren Sie die Liste der verfügbaren Untertitelspuren in ein Zeichenfolgen-Array.
 
-   Die Untertitel-Tracks mit Aktivität, d. h. Kanal, für die TVSDK Daten entdeckt hat, werden entsprechend markiert.
+   Die Untertitelspuren, die Aktivitäten aufweisen, d. h. Kanäle, für die TVSDK Daten entdeckt hat, werden entsprechend markiert.
 
    ```java
    /** 
@@ -58,7 +56,7 @@ Dieser Vorgang ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mi
    } 
    ```
 
-1. Wenn der Benutzer auf die Schaltfläche klickt, wird ein Dialogfeld angezeigt, in dem alle standardmäßigen Untertitel Liste werden.
+1. Wenn der Benutzer auf die Schaltfläche klickt, zeigen Sie ein Dialogfeld an, in dem alle standardmäßigen Untertitelspuren aufgelistet sind.
 
    ```java
    public void selectClosedCaptioningClick(View view) { 
@@ -87,4 +85,3 @@ Dieser Vorgang ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mi
        ab.show(); 
    } 
    ```
-

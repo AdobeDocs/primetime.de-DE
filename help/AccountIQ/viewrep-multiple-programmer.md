@@ -1,7 +1,7 @@
 ---
 title: Anzeigen von Berichten zur Kontofreigabe für mehrere Programmierer und Kanäle
 description: Anzeigen von Berichten zur Kontofreigabe für mehrere Programmierer und Kanäle
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -24,9 +24,9 @@ So zeigen Sie Statistiken zur Kontofreigabe für mehrere Kanäle an:
 
 * [Dashboard](/help/AccountIQ/dashboard.md) (Dashboard gibt einen Überblick über die ausgewählten Diagramme aus verschiedenen Seiten in Berichten).
 
-   ![](assets/mult-prog-dashboard.png)
+  ![](assets/mult-prog-dashboard.png)
 
-   *Abbildung: Dashboard-Bericht für mehrere Programmierer*
+  *Abbildung: Dashboard-Bericht für mehrere Programmierer*
 
 * [Allgemeine Nutzung](/help/AccountIQ/general-usage-reports.md)
 

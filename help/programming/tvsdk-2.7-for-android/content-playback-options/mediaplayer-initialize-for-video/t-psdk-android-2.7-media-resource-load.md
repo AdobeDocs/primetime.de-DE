@@ -1,39 +1,37 @@
 ---
-description: Laden Sie eine Ressource, indem Sie MediaResource direkt instanziieren und den wiederzugebenden Videoinhalt laden. Dies ist eine Möglichkeit, eine Medienressource zu laden.
+description: Laden Sie eine Ressource, indem Sie eine MediaResource direkt instanziieren und den abzuspielenden Videoinhalt laden. Dies ist eine Möglichkeit, eine Medienressource zu laden.
 title: Laden einer Medienressource im Medienplayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
+# Laden einer Medienressource im Medienplayer {#load-a-media-resource-in-the-media-player}
 
-# Medienressource im Medienplayer {#load-a-media-resource-in-the-media-player} laden
+Laden Sie eine Ressource, indem Sie eine MediaResource direkt instanziieren und den abzuspielenden Videoinhalt laden. Dies ist eine Möglichkeit, eine Medienressource zu laden.
 
-Laden Sie eine Ressource, indem Sie MediaResource direkt instanziieren und den wiederzugebenden Videoinhalt laden. Dies ist eine Möglichkeit, eine Medienressource zu laden.
+1. Legen Sie den Medienplayer fest, um die neue Ressource wiederzugeben.
 
-1. Legen Sie für den Medienplayer die Wiedergabe der neuen Ressource fest.
+   Ersetzen Sie das derzeit abspielbare Element durch `MediaPlayer.replaceCurrentResource()` und Übergeben vorhandener `MediaResource` -Instanz.
 
-   Ersetzen Sie das derzeit abspielbare Element, indem Sie `MediaPlayer.replaceCurrentResource()` aufrufen und eine vorhandene `MediaResource`-Instanz übergeben.
+   Dadurch wird der Ladevorgang der Ressource gestartet.
 
-   Dadurch wird der Ressourcenladevorgang Beginn.
-
-1. Registrieren Sie das `MediaPlayerEvent.STATUS_CHANGED`-Ereignis mit der `MediaPlayer`-Instanz. Überprüfen Sie im Rückruf mindestens die folgenden Statuswerte:
+1. Registrieren `MediaPlayerEvent.STATUS_CHANGED` -Ereignis mit dem `MediaPlayer` -Instanz. Überprüfen Sie im Rückruf mindestens die folgenden Statuswerte:
 
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.ERROR`
 
-   Durch diese Ereignis benachrichtigt das `MediaPlayer`-Objekt Ihre Anwendung, wenn sie die Medienressource erfolgreich geladen hat.
-1. Wenn der Status des Medienplayers in `INITIALIZED` geändert wird, können Sie `MediaPlayer.prepareToPlay()` aufrufen.
+   Durch diese Ereignisse wird die `MediaPlayer` -Objekt benachrichtigt Ihre Anwendung, wenn sie die Medienressource erfolgreich geladen hat.
+1. Wenn sich der Status des Medienplayers in `INITIALIZED`, können Sie `MediaPlayer.prepareToPlay()`.
 
-   Dieser Status gibt an, dass das Medium erfolgreich geladen wurde. Das neue `MediaPlayerItem` ist für die Wiedergabe bereit. Durch Aufruf von `prepareToPlay()` werden die Auflösung und Platzierung der Werbung (sofern vorhanden) Beginn.
+   Dieser Status zeigt an, dass das Medium erfolgreich geladen wurde. Die neue `MediaPlayerItem` ist für die Wiedergabe bereit. Aufruf `prepareToPlay()` startet den Prozess zur Auflösung und Platzierung der Werbung, falls vorhanden.
 
-Wenn ein Fehler auftritt, wechselt der Medienplayer zum Status `ERROR`.
+Wenn ein Fehler auftritt, wechselt der Medienplayer zum `ERROR` -Status.
 
-Der folgende vereinfachte Beispielcode veranschaulicht den Vorgang zum Laden einer Medienressource:
+Der folgende vereinfachte Beispielcode veranschaulicht den Ladevorgang einer Medienressource:
 
 ```java
 // mediaResource is a properly configured MediaResource instance 

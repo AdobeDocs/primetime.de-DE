@@ -2,17 +2,15 @@
 title: Wiederholungsschutz
 description: Wiederholungsschutz
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
-
 # Wiederholungsschutz{#replay-protection}
 
-Der Schutz vor Wiederholung verhindert, dass ein Angreifer eine Lizenzanforderungsmeldung wiedergibt und möglicherweise einen DoS-Angriff (Denial-of-Service, Diensteverweigerung) gegen den Client auslöst (A *Einen DoS-Angriff ist ein Versuch von Angreifern, legitime Benutzer eines Dienstes daran zu hindern, diesen Dienst zu verwenden.)* Beispielsweise könnte ein erneuter play-Angriff mit dem Rollback-Zähler dazu verwendet werden, den License Server zu &quot;trick&quot;zu der Annahme zu führen, dass der DRM-Client seinen Status zurückfährt, was eine Aussetzung des Kontos zur Folge hat.
+Der Wiederholungsschutz verhindert, dass ein Angreifer eine Lizenzanforderungsnachricht wiederholt und möglicherweise einen Denial-of-Service-Angriff (DoS) gegen den Client (A *Dienstverweigerung* -Angriff ist ein Versuch von Angreifern, zu verhindern, dass legitime Benutzer eines Dienstes diesen Dienst verwenden.) Beispielsweise könnte ein Wiedergabeangriff mit dem Rollback-Zähler verwendet werden, um den Lizenzserver zu der Annahme zu &quot;verleiten&quot;, dass der DRM-Client seinen Status zurücksetzt, was zu einer Aussetzung des Kontos führt.
 
-Weitere Informationen zum Wiederholungsschutz finden Sie unter `AbstractRequestMessage.getMessageId()` der *API-Referenz für den Zugriff auf Adoben*.
+Weitere Informationen zum Wiederholungsschutz finden Sie unter `AbstractRequestMessage.getMessageId()` die *Adobe Access API-Referenz*.

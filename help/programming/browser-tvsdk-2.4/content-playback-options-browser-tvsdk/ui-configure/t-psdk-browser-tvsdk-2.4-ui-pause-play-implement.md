@@ -1,34 +1,31 @@
 ---
-description: Sie können Browser TVSDK-Verhalten hinzufügen, um Schaltflächen zum Anhalten und Abspielen hinzuzufügen.
+description: Sie können das Verhalten von Browser TVSDK hinzufügen, um Schaltflächen zum Anhalten und Abspielen hinzuzufügen.
 title: Video abspielen und anhalten
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
+# Video abspielen und anhalten{#play-and-pause-a-video}
 
-# Video{#play-and-pause-a-video} abspielen und anhalten
+Sie können das Verhalten von Browser TVSDK hinzufügen, um Schaltflächen zum Anhalten und Abspielen hinzuzufügen.
 
-Sie können Browser TVSDK-Verhalten hinzufügen, um Schaltflächen zum Anhalten und Abspielen hinzuzufügen.
-
-1. Erstellen Sie eine Pause-/Wiedergabeschaltfläche, die Folgendes ausführt:
-   1. Warten Sie, bis Ihr Spieler mindestens den Status VORBEREITT hat.
-   1. Rufen Sie zur Wiedergabe des Beginns die Browser TVSDK-Wiedergabemethode auf:
+1. Erstellen Sie eine Pause-/Play-Schaltfläche mit folgenden Funktionen.
+   1. Warten Sie, bis Ihr Player mindestens den Status VORBEREITET aufweist.
+   1. Um die Wiedergabe zu starten, rufen Sie die Browser TVSDK-Wiedergabemethode auf:
 
       ```js
       play() → {AdobePSDK.PSDKErrorCode.SUCCESS}
       ```
 
-   1. Um die Wiedergabe anzuhalten, rufen Sie die Browser TVSDK-Pausenmethode auf:
+   1. Um die Wiedergabe anzuhalten, rufen Sie die Methode &quot;Browser TVSDK pause&quot;auf:
 
       ```java
       void pause() throws IllegalStateException;
       ```
 
-1. Suchen Sie nach dem `AdobePSDK.MediaPlayerStatusChangeEvent`-Ereignis, um nach Fehlern zu suchen oder andere geeignete Maßnahmen zu ergreifen.
+1. Suchen Sie nach `AdobePSDK.MediaPlayerStatusChangeEvent` -Ereignis, um nach Fehlern zu suchen oder andere geeignete Aktionen durchzuführen.
 
-   Browser TVSDK Trigger dieses Ereignis, wenn Pause- oder Wiedergabemethoden aufgerufen werden, und gibt Informationen zum Ereignis-Objekt, einschließlich des neuen Status, wie `MediaPlayerStatus.PLAYING` oder `MediaPlayerStatus.PAUSED` weiter.
-
+   Browser TVSDK Trigger dieses Ereignis beim Aufruf der Pause- oder Wiedergabemethoden und Übergibt Informationen zum Ereignisobjekt, einschließlich des neuen Status, z. B. `MediaPlayerStatus.PLAYING` oder `MediaPlayerStatus.PAUSED`.

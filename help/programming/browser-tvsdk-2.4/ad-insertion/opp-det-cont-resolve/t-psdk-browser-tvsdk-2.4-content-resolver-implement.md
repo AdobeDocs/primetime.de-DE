@@ -1,30 +1,28 @@
 ---
-description: Sie können Ihre eigenen Inhaltsauflöser auf Basis der Standardauflöser implementieren.
+description: Sie können Ihre eigenen Content Resolver basierend auf den Standard-Resolver implementieren.
 title: Implementieren eines benutzerdefinierten Inhaltsauflösers
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Implementieren eines benutzerdefinierten Inhaltsauflösers{#implement-a-custom-content-resolver}
 
-Sie können Ihre eigenen Inhaltsauflöser auf Basis der Standardauflöser implementieren.
+Sie können Ihre eigenen Content Resolver basierend auf den Standard-Resolver implementieren.
 
-Wenn Browser TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Content-Auflöser, die nach einer Lösung suchen, die diese Gelegenheit mithilfe der `canResolve`-Methode lösen kann. Das erste, das &quot;true&quot;zurückgibt, wird ausgewählt, um die Gelegenheit zu lösen. Wenn kein Inhaltsauflöser geeignet ist, wird diese Gelegenheit übersprungen. Da die Inhaltsauflösung normalerweise asynchron abläuft, ist der Inhaltsauflöser dafür verantwortlich, Browser TVSDK zu benachrichtigen, wenn der Prozess abgeschlossen ist.
+Wenn Browser TVSDK eine neue Chance erkennt, durchläuft es die registrierten Content-Resolver, die nach einer suchen, die in der Lage ist, diese Gelegenheit mithilfe der `canResolve` -Methode. Die erste, die &quot;true&quot;zurückgibt, wird ausgewählt, um die Gelegenheit zu lösen. Wenn kein Content Resolver in der Lage ist, wird diese Möglichkeit übersprungen. Da die Inhaltsauflösung normalerweise asynchron erfolgt, ist der Inhaltsauflöser für die Benachrichtigung des Browser TVSDK verantwortlich, wenn der Prozess abgeschlossen ist.
 
 Beachten Sie die folgenden Informationen:
 
-* Der Inhaltsauflöser ruft `client.process` auf, um anzugeben, welche Zeitleiste von TVSDK ausgeführt werden muss.
+* Die Aufrufe des Content Resolver `client.process` um anzugeben, welcher Timeline-Vorgang von TVSDK ausgeführt werden muss.
 
-   Der Vorgang ist in der Regel eine Platzierung von Werbeunterbrechungen.
+  Der Vorgang ist normalerweise eine Platzierung von Werbeunterbrechungen.
 
-* Der Inhaltsauflöser ruft `client.notifyCompleted` auf, wenn der Auflösungsprozess erfolgreich ist, oder `client.notifyFailed`, wenn der Prozess fehlschlägt.
+* Die Aufrufe des Content Resolver `client.notifyCompleted` wenn der Auflösungsprozess erfolgreich ist oder `client.notifyFailed` , wenn der Prozess fehlschlägt.
 
-1. Erstellen Sie einen benutzerdefinierten Opportunitätsauflöser.
+1. Erstellen Sie einen benutzerdefinierten Opportunity-Resolver.
 
    ```js
    /** 
@@ -106,9 +104,9 @@ Beachten Sie die folgenden Informationen:
    }; 
    ```
 
-1. Registrieren Sie die benutzerdefinierte Inhaltsfactory für den wiederzugebenden Medienstream.
+1. Registrieren Sie die benutzerdefinierte Inhaltsfactory für die Wiedergabe des Medien-Streams.
 
-   Im UI Framework-Player können Sie die Factory für benutzerdefinierte Inhalte wie folgt festlegen:
+   Im UI Framework-Player können Sie die benutzerdefinierte Inhaltsfactory wie folgt angeben:
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
@@ -132,4 +130,3 @@ Beachten Sie die folgenden Informationen:
    
    }); 
    ```
-

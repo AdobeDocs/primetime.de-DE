@@ -1,47 +1,45 @@
 ---
-description: Um Banneranzeigen anzuzeigen, müssen Sie Bannerinstanzen erstellen und zulassen, dass Browser TVSDK auf anzeigenbezogene Ereignis überwacht.
-title: Anzeigen von Bannerwerbung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Um Banneranzeigen anzuzeigen, müssen Sie Bannerinstanzen erstellen und zulassen, dass Browser TVSDK auf anzeigenbezogene Ereignisse überwacht.
+title: Anzeigen von Banneranzeigen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
-
 # Anzeigen von Banneranzeigen {#display-banner-ads}
 
-Um Banneranzeigen anzuzeigen, müssen Sie Bannerinstanzen erstellen und zulassen, dass Browser TVSDK auf anzeigenbezogene Ereignis überwacht.
+Um Banneranzeigen anzuzeigen, müssen Sie Bannerinstanzen erstellen und zulassen, dass Browser TVSDK auf anzeigenbezogene Ereignisse überwacht.
 
-Browser TVSDK bietet eine Liste von begleitenden Banneranzeigen, die über das `AdobePSDK.PSDKEventType.AD_STARTED`-Ereignis mit einer linearen Anzeige verknüpft sind.
+Browser TVSDK bietet eine Liste mit begleitenden Banneranzeigen, die einer linearen Anzeige über die `AdobePSDK.PSDKEventType.AD_STARTED` -Ereignis.
 
-Manifeste können begleitende Banneranzeigen wie folgt angeben:
+Manifeste können begleitende Banneranzeigen wie folgt spezifizieren:
 
 * Ein HTML-Snippet
 * Die URL einer iFrame-Seite
-* Die URL einer statischen Bilddatei oder einer Flash-SWF-Datei einer Adobe
+* Die URL eines statischen Bildes oder einer Adobe-Flash-SWF-Datei
 
-Browser TVSDK gibt für jede Begleitanzeige an, welche Typen für Ihre Anwendung verfügbar sind.
+Für jede begleitende Anzeige zeigt Browser TVSDK an, welche Typen für Ihre Anwendung verfügbar sind.
 
-hinzufügen Sie einen Listener für das Ereignis `AdobePSDK.PSDKEventType.AD_STARTED`, das Folgendes ausführt:
+Hinzufügen eines Listeners für das Ereignis `AdobePSDK.PSDKEventType.AD_STARTED` das Folgendes bewirkt:
 1. Löscht vorhandene Anzeigen in der Bannerinstanz.
-1. Ruft die Liste der begleitenden Anzeigen von `Ad.getCompanionAssets` ab.
-1. Wenn die Liste der begleitenden Anzeigen nicht leer ist, müssen Sie die Liste für Bannerinstanzen durchlaufen.
+1. Ruft die Liste der begleitenden Anzeigen von ab `Ad.getCompanionAssets`.
+1. Wenn die Liste der begleitenden Anzeigen nicht leer ist, navigieren Sie für Bannerinstanzen über die Liste.
 
-   Jede Bannerinstanz (ein `AdBannerAsset`) enthält Informationen wie Breite, Höhe, Ressourcentyp (html, iframe oder statisch) und Daten, die zum Anzeigen des begleitenden Banners erforderlich sind.
-1. Wenn bei einer Videoanzeige keine begleitenden Anzeigen gebucht wurden, enthält die Liste der begleitenden Assets keine Daten für diese Videoanzeige.
-1. Sendet die Bannerinformationen an eine Funktion auf Ihrer Seite, die die Banner an einer geeigneten Position anzeigt.
+   Jede Bannerinstanz (eine `AdBannerAsset`) Informationen wie Breite, Höhe, Ressourcentyp (HTML, iframe oder statisch) sowie Daten enthält, die zum Anzeigen des begleitenden Banners erforderlich sind.
+1. Wenn für eine Videoanzeige keine begleitenden Anzeigen gebucht wurden, enthält die Liste der begleitenden Assets keine Daten für diese Videoanzeige.
+1. Sendet die Bannerinformationen an eine Funktion auf Ihrer Seite, die die Banner an einer geeigneten Stelle anzeigt.
 
-   Dies ist normalerweise ein `div` und Ihre Funktion verwendet das `div ID`, um das Banner anzuzeigen. Beispiel:
+   Dies ist normalerweise ein `div`und Ihre -Funktion verwendet die `div ID` , um das Banner anzuzeigen. Beispiel:
 
-   hinzufügen Ereignis-Listener:
+   Fügen Sie den Ereignis-Listener hinzu:
 
    ```js
    _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
    ```
 
-   Implementieren des Listener-Handlers:
+   Implementieren Sie den Listener-Handler:
 
    ```js
    private function onAdStarted(event:AdPlaybackEvent):void 
@@ -75,4 +73,3 @@ hinzufügen Sie einen Listener für das Ereignis `AdobePSDK.PSDKEventType.AD_STA
        } 
    }
    ```
-

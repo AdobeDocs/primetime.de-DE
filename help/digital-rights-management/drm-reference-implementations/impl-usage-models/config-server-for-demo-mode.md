@@ -1,30 +1,28 @@
 ---
-title: Demo-Modus des Gebrauchsmodells konfigurieren
-description: Demo-Modus des Gebrauchsmodells konfigurieren
+title: Demomodus des Nutzungsmodells konfigurieren
+description: Demomodus des Nutzungsmodells konfigurieren
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
+# Demomodus des Nutzungsmodells konfigurieren{#configure-usage-model-demo-mode}
 
-# Demo-Modus des Gebrauchsmodells konfigurieren{#configure-usage-model-demo-mode}
-
-Bevor der Referenz-Implementierungsserver Lizenzen für die Demo zum Verwendungsmodell ausstellen kann, müssen Sie den Server so konfigurieren, dass festgelegt wird, wie Lizenzen für jedes der vier Nutzungsmodelle generiert werden. Dies bedeutet, dass Sie für jedes Nutzungsmodell eine DRM-Richtlinie angeben müssen. Die Referenzimplementierung enthält die folgenden DRM-Beispielrichtlinien im Ordner [!DNL Reference Implementation/Server/Reference Implementation Server/resources/]:
+Bevor der Referenz-Implementierungsserver Lizenzen für die Demo des Nutzungsmodells ausgeben kann, müssen Sie den Server so konfigurieren, dass angegeben wird, wie Lizenzen für jedes der vier Nutzungsmodelle generiert werden. Das bedeutet, dass Sie für jedes Nutzungsmodell eine DRM-Richtlinie angeben müssen. Die Referenzimplementierung umfasst die folgenden DRM-Beispielrichtlinien im [!DNL Reference Implementation/Server/Reference Implementation Server/resources/] directory:
 
 * `dto-policy.pol` - (Download-To-Own)
-* `vod-policy.pol` - (Miete/Video-On-Demand)
-* `sub-policy.pol` - (Abonnement)
-* `ad-policy.pol` - (Ad-finanziert)
+* `vod-policy.pol` - (Vermietung/Video-On-Demand)
+* `sub-policy.pol` - (Anmeldung)
+* `ad-policy.pol` - (Anzeigenfinanziert)
 
 >[!NOTE]
 >
 >Sie können diese Beispielrichtlinien durch Ihre eigenen DRM-Richtlinien ersetzen.
 
-1. Legen Sie diese Eigenschaften in [!DNL flashaccess-refimpl.properties] fest, um die DRM-Richtlinie anzugeben, die Sie für jedes Nutzungsmodell anwenden möchten:
+1. Legen Sie diese Eigenschaften in fest. [!DNL flashaccess-refimpl.properties] um die DRM-Richtlinie anzugeben, die Sie für jedes Nutzungsmodell anwenden möchten:
 
    ```
    # DRM Policy file name for Download To Own usage 
@@ -37,4 +35,4 @@ Bevor der Referenz-Implementierungsserver Lizenzen für die Demo zum Verwendungs
    RefImpl.UsageModelDemo.Policy.Free=ad-policy.pol
    ```
 
-1. Kopieren Sie die Beispielrichtliniendateien in den Ordner, den Sie in der `config.resourcesDirectory`-Eigenschaft in [!DNL flashaccess-refimpl.properties] angeben.
+1. Kopieren Sie die Beispielrichtliniendateien in den Ordner, den Sie im `config.resourcesDirectory` -Eigenschaft in [!DNL flashaccess-refimpl.properties].

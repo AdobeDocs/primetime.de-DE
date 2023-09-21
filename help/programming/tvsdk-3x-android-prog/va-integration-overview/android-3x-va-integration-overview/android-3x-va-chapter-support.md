@@ -1,27 +1,25 @@
 ---
-title: Kapitelunterstützung implementieren
-description: Kapitelunterstützung implementieren
+title: Implementieren der Kapitelunterstützung
+description: Implementieren der Kapitelunterstützung
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%
 
 ---
 
+# Implementieren der Kapitelunterstützung {#implement-chapter-support}
 
-# Kapitelunterstützung {#implement-chapter-support} implementieren
+Sie können *custom* Kapitel für Video-Tracking in TVSDK-basierten Anwendungen.
 
-Sie können *benutzerspezifische* Kapitel für die Videoverfolgung in TVSDK-basierten Anwendungen definieren und verfolgen.
-
-Benutzerspezifische Kapitel werden von der Anwendung verwaltet und basieren auf CMS-Daten oder auf einer anderen Methode, die die Anwendung zum Definieren von Kapiteln verwendet.
+Benutzerdefinierte Kapitel werden von der Anwendung verwaltet und basieren auf CMS-Daten oder auf einer anderen Methode, mit der die Anwendung Kapitel definiert.
 
 >[!CAUTION]
 >
 >Standardkapitel werden im 3.0 Android TVSDK nicht unterstützt.
 
-Definieren und verfolgen Sie benutzerspezifische Kapitel.
+Definieren und verfolgen Sie benutzerdefinierte Kapitel.
 
 ```java
 // First, enable chapter tracking by setting   

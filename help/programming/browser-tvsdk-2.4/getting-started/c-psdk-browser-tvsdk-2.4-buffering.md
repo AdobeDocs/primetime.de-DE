@@ -1,20 +1,18 @@
 ---
 description: Sie können Visualisierungen konfigurieren, um den Benutzer darüber zu informieren, dass Inhalte gepuffert werden.
 title: Pufferung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '56'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
-
 
 # Pufferung{#buffering}
 
 Sie können Visualisierungen konfigurieren, um den Benutzer darüber zu informieren, dass Inhalte gepuffert werden.
 
-Suchen Sie nach den Ereignissen `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` und `AdobePSDK.PSDKEventType.BUFFERING_END`. Beispiel:
+Suchen Sie nach `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` und `AdobePSDK.PSDKEventType.BUFFERING_END` -Ereignisse. Beispiel:
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_BEGIN,  
@@ -30,7 +28,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_END,
                         });
 ```
 
-Das UI-Framework bietet eine standardmäßige Implementierung des Pufferüberlagerungsverhaltens, die wie folgt erweitert werden kann:
+Das UI Framework bietet eine standardmäßige Implementierung des Pufferüberlagerungsverhaltens, die wie unten gezeigt erweitert werden kann:
 
 ```js
 // Using UI Framework 
@@ -49,7 +47,7 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-So sieht das Ergebnis von DOM aus:
+So sieht das Ergebnis-DOM aus:
 
 ```
 <div id=" videoDiv" class="ptp-root-element"> 
@@ -58,4 +56,3 @@ So sieht das Ergebnis von DOM aus:
 </div> 
 </div> 
 ```
-

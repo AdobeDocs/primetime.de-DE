@@ -2,18 +2,16 @@
 title: Beispiel eines benutzerdefinierten VOD-Assets
 description: Beispiel eines benutzerdefinierten VOD-Assets
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
 
 ---
 
+# Beispiel eines benutzerdefinierten VOD-Assets{#example-of-a-customized-vod-asset}
 
-# Beispiel für ein benutzerdefiniertes VOD-Asset{#example-of-a-customized-vod-asset}
-
-Hier ein Beispiel für ein benutzerdefiniertes VOD-Asset:
+Im Folgenden finden Sie ein Beispiel für ein benutzerdefiniertes VOD-Asset:
 
 ```
 #EXTM3U
@@ -43,6 +41,5 @@ seg5.ts
 
 Ihre Anwendung könnte die folgenden Szenarien einrichten:
 
-* Eine Benachrichtigung, wenn `#EXT-X-ASSET`-Tags oder andere Gruppen von benutzerdefinierten Tag-Namen, für die Sie ein Abonnement abgeschlossen haben, in der Datei vorhanden sind.
-* Fügen Sie Anzeigen ein, wenn ein `#EXT-X-AD`-Tag oder ein anderer benutzerdefinierter Tag-Name im Stream gefunden wird.
-
+* Eine Benachrichtigung bei `#EXT-X-ASSET` -Tags oder andere benutzerdefinierte Tag-Namen, die Sie abonniert haben, sind in der Datei vorhanden.
+* Fügen Sie Anzeigen ein, wenn eine `#EXT-X-AD` -Tag oder einen anderen benutzerdefinierten Tag-Namen finden Sie im Stream.

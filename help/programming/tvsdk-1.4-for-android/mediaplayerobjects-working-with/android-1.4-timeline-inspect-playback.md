@@ -1,8 +1,7 @@
 ---
 description: Sie können eine Beschreibung der Timeline abrufen, die mit dem aktuell ausgewählten Element verknüpft ist, das von TVSDK wiedergegeben wird. Dies ist am nützlichsten, wenn Ihre Anwendung ein benutzerdefiniertes Scroll-Bar-Steuerelement anzeigt, in dem die Inhaltsbereiche identifiziert werden, die mit Anzeigeninhalten übereinstimmen.
 title: Inspect der Wiedergabezeitleiste
-exl-id: af373f1e-ed5b-40a9-a91e-9eb0e4a181de
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%

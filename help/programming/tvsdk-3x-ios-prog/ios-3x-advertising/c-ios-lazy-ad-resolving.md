@@ -1,54 +1,49 @@
 ---
-description: Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiedergabe auf dem Beginn wartet, zu einer inakzeptablen Verzögerung führen. Die Funktion "Auflösen von verzögerten Anzeigen"kann diese Startverzögerung verringern. Anzeigen können nun in einem bestimmten Intervall vor der Position der Werbeunterbrechung aufgelöst werden. Dies wird durch den Einsatz eines dualen Player-Ansatzes erreicht.
-title: Just-in-time-Anzeigenauflösung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Das Auflösen von Anzeigen und Laden von Anzeigen kann zu einer inakzeptablen Verzögerung für einen Benutzer führen, der auf den Start der Wiedergabe wartet. Die Funktion "Lazy Ad Loading Resolving"kann diese Startverzögerung reduzieren. Anzeigen können jetzt in einem bestimmten Intervall vor der Position der Werbeunterbrechung aufgelöst werden. Dies wird durch die Verwendung eines dualen Player-Ansatzes erreicht.
+title: Just-in-Time-Anzeigenauflösung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
 
 ---
 
+# Just-in-Time-Anzeigenauflösung {#just-in-time-ad-resolving}
 
-# Just-in-Time-Anzeigen lösen {#just-in-time-ad-resolving}
+Das Auflösen von Anzeigen und Laden von Anzeigen kann zu einer inakzeptablen Verzögerung für einen Benutzer führen, der auf den Start der Wiedergabe wartet. Die Funktion &quot;Lazy Ad Loading Resolving&quot;kann diese Startverzögerung reduzieren. Anzeigen können jetzt in einem bestimmten Intervall vor der Position der Werbeunterbrechung aufgelöst werden. Dies wird durch die Verwendung eines dualen Player-Ansatzes erreicht.
 
-Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiedergabe auf dem Beginn wartet, zu einer inakzeptablen Verzögerung führen. Die Funktion &quot;Auflösen von verzögerten Anzeigen&quot;kann diese Startverzögerung verringern. Anzeigen können nun in einem bestimmten Intervall vor der Position der Werbeunterbrechung aufgelöst werden. Dies wird durch den Einsatz eines dualen Player-Ansatzes erreicht.
+**Grundlegender Prozess zur Anzeigenauflösung und zum Laden:**
 
-**Grundlegender Prozess zum Auflösen und Laden von Anzeigen:**
+1. TVSDK lädt ein Manifest (Wiedergabeliste) herunter und *auflöst* alle Anzeigen.
+1. TVSDK *lädt* alle Anzeigen und fügt die Anzeigensegmente in die Manifeste ein.
+1. TVSDK verschiebt den Player in den Status VORBEREITT , und die Wiedergabe des Inhalts beginnt.
 
-1. TVSDK lädt ein Manifest (Wiedergabeliste) und *löst* alle Anzeigen auf.
-1. TVSDK *lädt* alle Anzeigen und ordnet die Anzeigensegmente in die Manifeste ein.
-1. TVSDK verschiebt den Player in den Status &quot;VORBEREITT&quot;, und die Wiedergabe des Inhalts beginnt.
-
-Der Player verwendet die URLs im Manifest, um den Anzeigeninhalt (kreative Elemente) abzurufen, stellt sicher, dass der Anzeigeninhalt in einem Format vorliegt, das TVSDK wiedergeben kann, und TVSDK platziert die Anzeigen auf der Zeitleiste. Dieser grundlegende Prozess des Auflösens und Ladens von Anzeigen kann zu einer unannehmbar langen Verzögerung für Benutzer führen, die auf die Wiedergabe ihres Inhalts warten, insbesondere wenn das Manifest mehrere Anzeigen-URLs enthält.
+Der Player verwendet die URLs im Manifest, um den Anzeigeninhalt (kreative Inhalte) zu erhalten, stellt sicher, dass der Anzeigeninhalt in einem Format vorliegt, das TVSDK wiedergeben kann, und TVSDK platziert die Anzeigen auf der Timeline. Dieser grundlegende Prozess der Auflösung und des Ladens von Anzeigen kann dazu führen, dass ein Benutzer, der darauf wartet, seinen Inhalt wiederzugeben, unannehmbar lange verzögert ist, insbesondere wenn das Manifest mehrere Anzeigen-URLs enthält.
 
 **Lazy Ad Resolving:**
 
 1. TVSDK lädt die Wiedergabeliste herunter.
-1. TVSDK *löst und lädt* alle Pre-Roll-Anzeigen, verschiebt den Player in den Status &quot;VORBEREITT&quot;und die Inhaltswiedergabe beginnt.
-1. TVSDK *löst* jede Werbeunterbrechung vor ihrer Position basierend auf dem in `PTAdMetadata::delayAdLoadingTolerance` definierten Wert.
+1. TVSDK *löst und lädt* Alle Pre-Roll-Anzeigen verschieben den Player in den Status VORBEREITET , und die Inhaltswiedergabe beginnt.
+1. TVSDK *auflöst* Jede Anzeige unterbricht vor ihrer Position basierend auf dem Wert, der in `PTAdMetadata::delayAdLoadingTolerance`.
 
-Zum Beispiel ist `delayAdLoadingTolerance` standardmäßig auf 5 Sekunden eingestellt. Wenn AdBreak auf die Wiedergabe um 3:00 Uhr eingestellt ist, wird es um 2:55:00 Uhr aufgelöst. Sie können diesen Wert erhöhen, wenn Sie glauben, dass Ihre Anzeigenauflösung länger als 5 Sekunden dauern wird.
+Zum Beispiel standardmäßig `delayAdLoadingTolerance` auf 5 Sekunden eingestellt ist. Wenn eine AdBreak für 3:00 Uhr festgelegt ist, wird sie mit 2 aufgelöst:55:00 Sie können diesen Wert erhöhen, wenn Sie glauben, dass Ihre Anzeigenauflösung länger als 5 Sekunden dauert.
 
 >[!IMPORTANT]
 >
->**Faktoren, die bei der Auflösung von Lazy Ad zu berücksichtigen sind:**
->* Lazy Ad Resolving wird nur für VOD-Streams mit den Modi SERVER_MAP Anzeigensignalisierung unterstützt.
->* Die verzögerte Anzeigenauflösung ist nicht standardmäßig aktiviert. Sie müssen `PTAdMetadata::delayAdLoading` = YES festlegen, um diese Option zu aktivieren.
->* Die verzögerte Anzeigenauflösung ist nicht mit der Funktion &quot;Sofortiges Anzeigen&quot;kompatibel. Weitere Informationen zu &quot;Sofort ein&quot;finden Sie unter [Sofort auf](../../tvsdk-3x-ios-prog/ios-3x-instant-on-ios.md).
->* Der Bild-in-Bild-Modus wird bei der Auflösen von Lazy-Anzeigen nicht unterstützt. Bitte deaktivieren Sie alle Bild-in-Bild-Modi, wenn Sie Lazy Ad Resolving aktivieren.
+>**Faktoren, die bei der verzögerten Anzeigenauflösung berücksichtigt werden sollten:**
+>* Die verzögerte Anzeigenauflösung wird nur für VOD-Streams mit den Modi SERVER_MAP-Anzeigensignalisierungsmodus unterstützt.
+>* Die verzögerte Anzeigenauflösung ist standardmäßig nicht aktiviert. Sie müssen `PTAdMetadata::delayAdLoading` = JA , um es zu aktivieren.
+>* Die verzögerte Anzeigenauflösung ist mit der Funktion &quot;Instant On&quot;nicht kompatibel. Weitere Informationen zu Instant On finden Sie unter [Sofort aktiviert](../../tvsdk-3x-ios-prog/ios-3x-instant-on-ios.md).
+>* Der Modus Bild-im-Bild wird bei verzögerter Anzeigenauflösung nicht unterstützt. Deaktivieren Sie alle Bild-im-Bild-Modi, wenn Sie Lazy Ad Resolving aktivieren.
 >* Eine verzögerte Anzeigenauflösung wirkt sich nicht auf Pre-Roll-Anzeigen aus.
-
 >
+**Verzögertes Auflösen von Anzeigen aktivieren**
 
+Sie können die Funktion &quot;Lazy Ad Resolving&quot;mithilfe des vorhandenen Lazy Ad Loading-Mechanismus aktivieren oder deaktivieren (Lazy Ad Resolving ist standardmäßig deaktiviert).
 
-**Verzögerte Anzeigenauflösung aktivieren**
+Sie können die verzögerte Anzeigenauflösung aktivieren, indem Sie `PTAdMetadata::delayAdLoading`= JA beim Einrichten Ihrer Anzeigenmetadaten.
 
-Sie können die Funktion &quot;Lazy Ad Resolving&quot;über den vorhandenen Lazy Ad Loading Mechanismus aktivieren oder deaktivieren (Lazy Ad Resolving ist standardmäßig deaktiviert).
-
-Sie können &quot;Verzögerte Anzeigenauflösung&quot;aktivieren, indem Sie `PTAdMetadata::delayAdLoading`= YES beim Einrichten Ihrer Anzeigenmetadaten festlegen.
-
-**APIs für verzögerte Anzeigenauflösung:**
+**Für verzögerte Anzeigenauflösung relevante APIs:**
 
 ```
 Class:    PTAdMetadata 

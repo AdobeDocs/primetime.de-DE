@@ -1,22 +1,20 @@
 ---
-description: Standardmäßig werden VOD-Medien-Beginn beim Starten der Wiedergabe bei 0 und Live-Media-Beginn am Live-Point des Clients (MediaPlayer.LIVE_POINT) gestartet. Sie können das Standardverhalten überschreiben.
-title: Geben Sie einen Stream zu einem bestimmten Zeitpunkt ein
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Standardmäßig beginnt beim Starten der Wiedergabe das VOD-Medium bei 0 und das Live-Medium am Client-Live-Point (MediaPlayer.LIVE_POINT). Sie können das Standardverhalten überschreiben.
+title: Stream zu einem bestimmten Zeitpunkt eingeben
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '117'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Stream zu einem bestimmten Zeitpunkt eingeben {#enter-a-stream-at-a-specific-time}
 
-# Geben Sie einen Stream zu einem bestimmten Zeitpunkt ein.{#enter-a-stream-at-a-specific-time}
+Standardmäßig beginnt beim Starten der Wiedergabe das VOD-Medium bei 0 und das Live-Medium am Client-Live-Point (MediaPlayer.LIVE_POINT). Sie können das Standardverhalten überschreiben.
 
-Standardmäßig werden VOD-Medien-Beginn beim Starten der Wiedergabe bei 0 und Live-Media-Beginn am Live-Point des Clients (MediaPlayer.LIVE_POINT) gestartet. Sie können das Standardverhalten überschreiben.
+1. Übergeben einer Position an `MediaPlayer.prepareToPlay`.
 
-1. Übergeben Sie eine Position an `MediaPlayer.prepareToPlay`.
-
-   TVSDK betrachtet die angegebene Position als Ausgangspunkt für das Asset und es ist kein Suchvorgang erforderlich. Wenn sich die Position nicht innerhalb des suchbaren Bereichs befindet, verwendet TVSDK die Standardposition. Weitere Informationen finden Sie unter [Medienressource im Medienplayer](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-load.md) laden.
+   TVSDK betrachtet die angegebene Position als Ausgangspunkt für das Asset und es ist kein Suchvorgang erforderlich. Wenn sich die Position nicht innerhalb des suchbaren Bereichs befindet, verwendet TVSDK die Standardposition. Weitere Informationen finden Sie unter [Laden einer Medienressource im Medienplayer](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-load.md).
 
    Beispiel:
 

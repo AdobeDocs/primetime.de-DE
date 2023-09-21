@@ -1,17 +1,15 @@
 ---
-title: Wiedergeben eines lokal gepackten Videos
-description: Wiedergeben eines lokal gepackten Videos
+title: Wiedergeben eines lokal verpackten Videos
+description: Wiedergeben eines lokal verpackten Videos
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
-
-# Wiedergeben eines lokal gepackten Videos {#play-back-a-locally-packaged-video}
+# Wiedergeben eines lokal verpackten Videos {#play-back-a-locally-packaged-video}
 
 1. Um einen Player zu öffnen, geben Sie die folgende URL in einen Browser ein:
 
@@ -19,5 +17,5 @@ ht-degree: 0%
    https://drmtest2.adobe.com:8080/AccessPlayer/player.html
    ```
 
-1. Geben Sie die URL des lokal verpackten Inhalts in das Feld für die Medien-URL des Players ein und spielen Sie sie ab.
-Wenn der lokal verpackte Inhalt nicht aus dem Internet erreichbar ist, können Sie einen Video-Player für die Adobe (AccessPlayer) von ht<span></span>tp://drmtest2.adobe.com:8080/AccessPlayer.zip herunterladen und ihn auf Ihrem lokalen Webserver ablegen, um ihn zu verwenden.
+1. Geben Sie Ihre lokal gepackte Inhalts-URL in das Feld für die Medien-URL des Players ein und geben Sie sie wieder.
+Wenn Ihr lokal verpackter Inhalt nicht über das Internet erreichbar ist, können Sie einen Adobe-Beispiel-Videoplayer (AccessPlayer) von<span></span>tp://drmtest2.adobe.com:8080/AccessPlayer.zip und platzieren Sie sie auf Ihrem lokalen Webserver, um sie zu verwenden.

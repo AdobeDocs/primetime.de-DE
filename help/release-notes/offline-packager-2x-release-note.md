@@ -1,46 +1,44 @@
 ---
 title: Primetime Offline Packager 2.x-Versionen
-description: Neue Funktionen in Primetime Offline Packager 2.1 und 2.3.1
+description: Neue Funktionen in den Versionen Primetime Offline Packager 2.1 und 2.3.1
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 0%
 
 ---
 
-
 # Primetime Offline Packager-Versionen {#primetime-offline-packager-x-releases}
 
-Neue Funktionen in Primetime Offline Packager 2.1 und 2.3.1
+Neue Funktionen in den Versionen Primetime Offline Packager 2.1 und 2.3.1
 
-## Neue Funktionen in Primetime Offline Packager 2.3.1 (Oktober 2016) {#what-s-new-in-primetime-offline-packager-oct}
+## Neue Funktionen in Primetime Offline Packager 2.3.1 (Oktober 2016)  {#what-s-new-in-primetime-offline-packager-oct}
 
-Die Version aktiviert On-Demand-Profil für MPEG-DASH, unterstützt die Option `validate` für das PlaylistCreator-Tool und hat wenige wichtige Korrekturen für die unten aufgeführten Multi-DRM-Szenarien.
+Die Version aktiviert On-Demand-Profil für MPEG-DASH, fügt Unterstützung für die `validate` -Option für das PlaylistCreator-Tool verwendet und es gibt unten einige wichtige Fehlerbehebungen für Multi-DRM-Szenarien.
 
-| **Ausgabenummer** | **Beschreibung** |
+| **Nummer des Problems** | **Beschreibung** |
 |---|---|
 | PTPUB-985 | HLS AAXS und Sample-AES funktionieren nicht für vom Packager generierten Schlüssel |
-| PTPUB-973 | Korrektur des Fehlers beim Verschlüsselungsalgorithmus für bestimmte Weitwinkelinhalte |
-| PTPUB-964 | CENC-Verschlüsselung für bestimmte Medientypen auf bestimmten Playern - Android TVSDK. |
-| PTPUB-954 | Die AES-Verschlüsselung umgeht AAXS DRM standardmäßig / Fehler, der bei aktiviertem Remote-Key-Versand ausgegeben wird. |
-| PTPUB-951 | Offline Packager gibt keine Ausnahme aus, wenn key_file_path nicht mit Widevine angegeben wurde. Stattdessen wird NPE geworfen. |
+| PTPUB-973 | Fehlerkorrektur - Verschlüsselungsalgorithmus für einen bestimmten umfangreichen Inhalt |
+| PTPUB-964 | CENC-Verschlüsselung für bestimmte Medientypen auf bestimmten Playern unterbrochen - Android TVSDK. |
+| PTPUB-954 | Die Sample-AES-Verschlüsselung umgeht standardmäßig AAXS DRM / Fehler bei aktivierter Remote-Schlüsselbereitstellung. |
+| PTPUB-951 | Der Offline-Packager löst keine Ausnahme aus, wenn key_file_path nicht mit Widevine angegeben ist. Stattdessen wird NPE ausgegeben. |
 
-Die aktuelle Dokumentation zu Primetime Packagers finden Sie unter [https://help.adobe.com/en_US/primetime/api/packagers/index.html](https://help.adobe.com/en_US/primetime/api/packagers/index.html).
+Die aktuelle Dokumentation zu Primetime Packagern finden Sie unter [https://help.adobe.com/en_US/primetime/api/packagers/index.html](https://help.adobe.com/en_US/primetime/api/packagers/index.html).
 
 ### Bekanntes Problem in Version 2.3.1 {#known-issue-in-version}
 
 Die folgenden Probleme treten in dieser Version auf.
 
-| **Ausgabenummer** | **Beschreibung** |
+| **Nummer des Problems** | **Beschreibung** |
 |---|---|
 | PTPUB-1005 | PlaylistCreator stellt nicht die richtige URL für die .pssh-Datei in der endgültigen .mpd-Datei auf Setebene bereit, die für das AAXS DRM generiert wurde. |
-| PTPUB-1001 | PlaylistCreator sollte Fehler auslösen, wenn leerer Pfad über den Parameter in_path bereitgestellt wird |
-| PTPUB-990 | Für DASH schreibt Offline Packager keinen Paketersteller, der IV auf Festplatte generiert hat, wenn die Parameter `log_vi` und `iv_out_path` angegeben wurden. |
-| PTPUB-980 | Wenn die Konfigurationsdatei zum Verpacken verwendet wird, entfernt der Parameter `key_url` die Anführungszeichen nicht aus den bereitgestellten Eingaben. |
+| PTPUB-1001 | PlaylistCreator sollte einen Fehler ausgeben, wenn ein leerer Pfad über den Parameter in_path bereitgestellt wird |
+| PTPUB-990 | Für DASH schreibt Offline Packager den IV generierten Packager nicht auf die Festplatte, wenn die Parameter `log_vi` &amp; `iv_out_path` angegeben werden. |
+| PTPUB-980 | Wenn die Konfigurationsdatei für die Verpackung verwendet wird, wird der Parameter verwendet `key_url` entfernt die Anführungszeichen nicht aus den bereitgestellten Eingaben. |
 
 ## Adobe Primetime Offline Packager 2.3.1 {#adobe-primetime-offline-packager}
 
@@ -52,7 +50,7 @@ Unterstützte Betriebssysteme
 
 Hardwareanforderungen
 
-* Intel® Pentium® 4 Prozessor mit 3,2 GHz (Intel Xeon® Dualcore oder schneller empfohlen)
+* Intel® Pentium® 4 Prozessor mit 3,2 GHz (Intel Xeon® Dualcore oder höher empfohlen)
 
 * 64-Bit-Betriebssysteme: 4 GB RAM (8 GB empfohlen)
 
@@ -60,7 +58,7 @@ Hardwareanforderungen
 
 (Disk-SAS): Mindestens 10 GB mit 7,5 K RPM
 
-(Disk-SSD): 400 MBps Lese-/Schreibgeschwindigkeit
+(Disk-SSD): Lese-/Schreibgeschwindigkeit 400 MBit/s
 
 (NAS): 1 GB dedizierter Link
 
@@ -70,29 +68,29 @@ Softwareanforderungen
 
 ### Adobe Primetime Offline Packager 2.3.1 {#adobe-primetime-offline-packager-1}
 
-1. Laden Sie die Java SE-Software von der [Oracle-Site](https://www.oracle.com/technetwork/java/javase/downloads/index.html) herunter und befolgen Sie die Installationsanweisungen.
-1. Extrahieren Sie die Adobe Primetime Offline Packager 2.3.1-Archivdatei mit dem Namen `PrimetimeOfflinePackager-2-3-1-b47-10142016.zip` auf die Festplatte.
+1. Laden Sie die Java SE-Software aus dem [Oracle-Site](https://www.oracle.com/technetwork/java/javase/downloads/index.html) und befolgen Sie die Installationsanweisungen.
+1. Extrahieren Sie die Adobe Primetime Offline Packager 2.3.1-Archivdatei mit dem Namen `PrimetimeOfflinePackager-2-3-1-b47-10142016.zip` auf den Datenträger.
 
 ### Konfigurieren von Offline Packager 2.3.1 {#configuring-the-offline-packager}
 
-Die Konfigurationsanweisungen sind im Handbuch Erste Schritte mit Primetime Offline Packager unter [https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html) verfügbar
+Die Konfigurationsanweisungen finden Sie im Erste-Schritte-Handbuch zu Primetime Offline Packager unter [https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)
 
 ## Neue Funktionen in Primetime Offline Packager 2.1 (Juli 2015) {#what-s-new-in-primetime-offline-packager-july}
 
-Unterstützung für PlayReady BuyDRM (für DASH). Weitere Informationen finden Sie in der Hilfe Dokumentation [hier ](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
+Unterstützung für PlayReady BuyDRM (für DASH). Weitere Informationen finden Sie in der Hilfedokumentation [hier verfügbar](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
 
 Die folgenden Verbesserungen wurden auch am Offline-Packager vorgenommen.
 
-PTPUB-780 Zusätzliche Unterstützung für EXT-X-BEGINN-Tag
+PTPUB-780 Unterstützung für EXT-X-START-Tag hinzugefügt
 
 ## Neue Funktionen in Primetime Offline Packager 2.0 (Juni 2015) {#what-s-new-in-primetime-offline-packager-june}
 
-Die DASH-Ausgabenunterstützung wurde entfernt. Weitere Informationen finden Sie in der Produktdokumentation [hier](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html).
+Es wurde eine deutliche DASH-Ausgabeunterstützung hinzugefügt. Siehe Produktdokumentation . [here](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html) für Details.
 
-Folgende Probleme wurden in dieser Version ebenfalls behoben.
+Die folgenden Probleme wurden in dieser Version ebenfalls behoben.
 
 * PTPUB-783 Offline Packager kann jetzt leere WebVTT-Dateien verarbeiten.
-* PTPUB- 781 Artifacts in HLS geben in Chrome aus, wenn bestimmte transkodierte MP4-Assets mit Offline-Packager verpackt werden, um eine MBR-Ausgabe zu erzeugen.
+* PTPUB- 781 Artifacts in HLS-Ausgabe in Chrome, wenn bestimmte transkodierte MP4-Assets mit Offline-Packager gepackt werden, um eine MBR-Ausgabe zu generieren.
 
 ## Adobe Primetime Offline Packager 2.1 {#adobe-primetime-offline-packager-2}
 
@@ -104,16 +102,16 @@ Folgende Probleme wurden in dieser Version ebenfalls behoben.
 
 **Hardwareanforderungen**
 
-* Intel® Pentium® 4 Prozessor mit 3,2 GHz (Intel Xeon® Dualcore oder schneller empfohlen)
+* Intel® Pentium® 4 Prozessor mit 3,2 GHz (Intel Xeon® Dualcore oder höher empfohlen)
 
 * 64-Bit-Betriebssysteme: 4 GB RAM (8 GB empfohlen)
 
-* 1-Gbit-Ethernet-Karte empfohlen (mehrere Netzwerkkarten und 10 Gbit werden ebenfalls unterstützt)
+* 1 Gbit Ethernet-Karte empfohlen (mehrere Netzwerkkarten und 10 Gbit werden ebenfalls unterstützt)
 
 * Festplatte
 
    * (Disk-SAS): Mindestens 10 GB mit 7,5 K RPM
-   * (Disk-SSD): 400 MBps Lese-/Schreibgeschwindigkeit
+   * (Disk-SSD): Lese-/Schreibgeschwindigkeit 400 MBit/s
    * (NAS): 1 GB dedizierter Link
 
 **Softwareanforderungen**
@@ -122,13 +120,13 @@ Folgende Probleme wurden in dieser Version ebenfalls behoben.
 
 ### Installieren von Offline Packager 2.1 {#installing-offline-packager}
 
-1. Laden Sie die Java SE-Software von der [Oracle-Site](https://www.oracle.com/technetwork/java/javase/downloads/index.html) herunter und befolgen Sie die Installationsanweisungen.
-1. Extrahieren Sie das `Adobe Primetime - Offline Packager 2.1.0 archive file, PrimetimeOfflinePackager-2-1-0-b15-07082015.zip` auf Ihre Festplatte.
+1. Laden Sie die Java SE-Software aus dem [Oracle-Site](https://www.oracle.com/technetwork/java/javase/downloads/index.html) und befolgen Sie die Installationsanweisungen.
+1. Extrahieren Sie die `Adobe Primetime - Offline Packager 2.1.0 archive file, PrimetimeOfflinePackager-2-1-0-b15-07082015.zip`, auf Ihre Festplatte.
 
 ### Konfigurieren von Offline Packager 2.1 {#configuring-the-offline-packager-1}
 
-Die Konfigurationsdetails finden Sie im Dokument Erste Schritte mit Primetime Offline Packager unter [https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)
+Die hier verfügbaren Konfigurationsdetails finden Sie im Dokument Erste Schritte mit Primetime Offline Packager . [https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html](https://help.adobe.com/en_US/primetime/api/packagers/offline/index.html)
 
 ## Hilfreiche Ressourcen {#helpful-resources}
 
-* Siehe vollständige Hilfedokumentation auf der Seite [Adobe Primetime Learn &amp; Support](https://helpx.adobe.com/support/primetime.html).
+* Siehe vollständige Hilfedokumentation unter [Adobe Primetime - Lernen und Support](https://helpx.adobe.com/support/primetime.html) Seite.

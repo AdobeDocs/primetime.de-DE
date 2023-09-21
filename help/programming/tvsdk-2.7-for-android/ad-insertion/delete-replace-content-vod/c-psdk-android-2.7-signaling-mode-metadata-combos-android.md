@@ -1,33 +1,31 @@
 ---
-description: Sie können Zeitbereiche in VOD-Streams mit unterschiedlichen Kombinationen aus Anzeigensignalisierungsmodus und Anzeigenmetadaten markieren, löschen und ersetzen. Verschiedene Kombinationen aus Signalmodus und Metadaten führen zu unterschiedlichem Verhalten.
-title: Auswirkungen auf Kombinationen aus Anzeigeneinfügung und -löschung im Anzeigensignalisierungsmodus und Anzeigenmetadaten
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können Zeitbereiche in VOD-Streams markieren, löschen und ersetzen, indem Sie verschiedene Kombinationen aus Anzeigensignalisierungsmodus und Anzeigenmetadaten verwenden. Verschiedene Kombinationen aus Signalmodus und Metadaten führen zu unterschiedlichem Verhalten.
+title: Auswirkungen auf Anzeigeneinfügung und -löschung im Anzeigenanzeigemodus und auf Anzeigenmetadaten-Kombinationen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%
 
 ---
 
+# Auswirkungen auf Anzeigeneinfügung und -löschung im Anzeigenanzeigemodus und auf Anzeigenmetadaten-Kombinationen {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
-# Auswirkungen auf das Einfügen und Löschen von Anzeigen im Anzeigensignalisierungsmodus und auf Kombinationen von Anzeigenmetadaten {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
-
-Sie können Zeitbereiche in VOD-Streams mit unterschiedlichen Kombinationen aus Anzeigensignalisierungsmodus und Anzeigenmetadaten markieren, löschen und ersetzen. Verschiedene Kombinationen aus Signalmodus und Metadaten führen zu unterschiedlichem Verhalten.
+Sie können Zeitbereiche in VOD-Streams markieren, löschen und ersetzen, indem Sie verschiedene Kombinationen aus Anzeigensignalisierungsmodus und Anzeigenmetadaten verwenden. Verschiedene Kombinationen aus Signalmodus und Metadaten führen zu unterschiedlichem Verhalten.
 
 >[!TIP]
 >
->Bei einem Konflikt zwischen Zeitbereichen und Anzeigensignalisierungsmodi gibt TVSDK den Zeitbereichen Priorität.
+>Wenn es einen Konflikt zwischen Zeitbereichen und Anzeigenanzeigemodi gibt, gibt TVSDK den Zeitbereichen Priorität.
 
-Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmodus und Metadaten:
+Die folgende Tabelle enthält Details zum Verhalten der Signalmethode und der Metadaten-Kombination:
 
 <table id="table_6044AA1ACFA244FA814EA2D0766C6D12"> 
  <thead> 
   <tr> 
-   <th class="entry"> Anzeigensignalisierungsmodus </th> 
+   <th class="entry"> Anzeigenanzeigemodus </th> 
    <th class="entry"> Anzeigenmetadaten </th> 
-   <th class="entry"> Erstellte Auflösungen </th> 
-   <th class="entry"><span class="codeph"> </span> PlatzierungInformationsbildung erstellt </th> 
-   <th class="entry"> Ergebnis </th> 
+   <th class="entry"> Erstellte Resolver </th> 
+   <th class="entry"><span class="codeph"> PlacementInformations</span> created </th> 
+   <th class="entry"> Resultierendes Verhalten </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -43,7 +41,7 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
    <td> Löschen </td> 
    <td> Löschen </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)</span> </td> 
-   <td> Bereiche gelöscht </td> 
+   <td> Gelöschte Bereiche </td> 
   </tr> 
   <tr> 
    <td></td> 
@@ -51,17 +49,17 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
    <td> Löschen, Auditude </td> 
    <td> 
     <ul id="ul_E0A2F885E93B4D23A486C37B305E17D8"> 
-     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
+     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
      <li id="li_439886CB38AA46239C2E40352443888A"><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
-   <td> Bereiche gelöscht, Anzeigen eingefügt </td> 
+   <td> Gelöschte Bereiche, eingefügte Anzeigen </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Zielgruppe </td> 
-   <td> Zielgruppe </td> 
+   <td> Auditude </td> 
+   <td> Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </td> 
-   <td> Eingefügte Anzeigen </td> 
+   <td> Hinzugefügte Anzeigen </td> 
   </tr> 
   <tr> 
    <td></td> 
@@ -72,7 +70,7 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
   </tr> 
   <tr> 
    <td></td> 
-   <td> Markierung </td> 
+   <td> Mark </td> 
    <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Markierte Bereiche </td> 
@@ -82,10 +80,10 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
    <td> Mark, Auditude </td> 
    <td> CustomAd, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
-   <td> Markierte Bereiche, keine Anzeigen eingefügt </td> 
+   <td> Bereiche markiert, keine Anzeigen eingefügt </td> 
   </tr> 
   <tr> 
-   <td colname="1"> <p><b>Manifestfarben</b> </p> </td> 
+   <td colname="1"> <p><b>Manifestfälle</b> </p> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -93,10 +91,10 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
   </tr> 
   <tr> 
    <td></td> 
-   <td> Zielgruppe </td> 
-   <td> Zielgruppe </td> 
+   <td> Auditude </td> 
+   <td> Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.PRE_ROLL, Mode.INSERT)</span> </td> 
-   <td> Eingefügte Anzeigen </td> 
+   <td> Hinzugefügte Anzeigen </td> 
   </tr> 
   <tr> 
    <td></td> 
@@ -107,25 +105,25 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
      <li id="li_F39A69EFA7ED45C18978A2C462AF7641"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)</span> </li> 
      <li id="li_8CCDA3B1C63F4BC396F28F443D8C42F8"><span class="codeph"> PlacementInfo (Type.PRE_ROLL, Mode.INSERT)</span> </li> 
     </ul> </td> 
-   <td> Bereiche gelöscht, Anzeigen eingefügt </td> 
+   <td> Entfernte Bereiche, eingefügte Anzeigen </td> 
   </tr> 
   <tr> 
    <td></td> 
    <td> Mark, Auditude </td> 
    <td> Mark, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
-   <td> Markierte Bereiche, keine eingefügten Anzeigen </td> 
+   <td> Bereiche markiert, keine Anzeigen eingefügt </td> 
   </tr> 
   <tr> 
    <td></td> 
    <td> Löschen </td> 
    <td> Löschen </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)</span> </td> 
-   <td> Bereiche gelöscht </td> 
+   <td> Gelöschte Bereiche </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Markierung </td> 
+   <td> Mark </td> 
    <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Markierte Bereiche </td> 
@@ -149,19 +147,19 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
    <td> Löschen </td> 
    <td> Löschen </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)</span> </td> 
-   <td> Bereiche gelöscht </td> 
+   <td> Gelöschte Bereiche </td> 
   </tr> 
   <tr> 
    <td></td> 
    <td> Löschen, Auditude </td> 
    <td> Löschen, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)</span> </td> 
-   <td> Bereiche gelöscht, keine Anzeigen eingefügt </td> 
+   <td> Gelöschte Bereiche, keine Anzeigen eingefügt </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Zielgruppe </td> 
-   <td> Zielgruppe </td> 
+   <td> Auditude </td> 
+   <td> Auditude </td> 
    <td> Keines </td> 
    <td> Keine Anzeigen eingefügt </td> 
   </tr> 
@@ -170,11 +168,11 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
    <td> Ersetzen, Auditude </td> 
    <td> Löschen, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
-   <td> Bereiche durch Anzeigen ersetzt </td> 
+   <td> Durch Anzeigen ersetzte Bereiche </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Markierung </td> 
+   <td> Mark </td> 
    <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Markierte Bereiche </td> 
@@ -184,7 +182,7 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
    <td> Mark, Auditude </td> 
    <td> Benutzerspezifische Anzeige, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
-   <td> Markierte Bereiche, keine eingefügten Anzeigen </td> 
+   <td> Bereiche markiert, keine Anzeigen eingefügt </td> 
   </tr> 
   <tr> 
    <td colname="1"> <p><b>Nicht festgelegt (Standard)</b> </p> </td> 
@@ -198,32 +196,32 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
    <td> Löschen </td> 
    <td> Löschen </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)</span> </td> 
-   <td> Bereiche gelöscht </td> 
+   <td> Gelöschte Bereiche </td> 
   </tr> 
   <tr> 
    <td></td> 
    <td> Löschen, Auditude </td> 
    <td> Löschen, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </td> 
-   <td> Bereiche gelöscht, Anzeigen eingefügt </td> 
+   <td> Entfernte Bereiche, eingefügte Anzeigen </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Zielgruppe </td> 
-   <td> Zielgruppe </td> 
+   <td> Auditude </td> 
+   <td> Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </td> 
-   <td> Eingefügte Anzeigen </td> 
+   <td> Hinzugefügte Anzeigen </td> 
   </tr> 
   <tr> 
    <td></td> 
    <td> Ersetzen, Auditude </td> 
    <td> Löschen, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
-   <td> Bereiche durch Anzeigen ersetzt </td> 
+   <td> Durch Anzeigen ersetzte Bereiche </td> 
   </tr> 
   <tr> 
    <td></td> 
-   <td> Markierung </td> 
+   <td> Mark </td> 
    <td> CustomAd </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Markierte Bereiche </td> 
@@ -237,4 +235,3 @@ Die folgende Tabelle enthält Details zum Verhalten der Kombination aus Signalmo
   </tr> 
  </tbody> 
 </table>
-

@@ -1,42 +1,40 @@
 ---
-description: Sie können Browser TVSDK verwenden, um Informationen über die Medien abzurufen, die Sie in der Suchleiste anzeigen können.
+description: Sie können Browser TVSDK verwenden, um Informationen zu den Medien abzurufen, die Sie in der Suchleiste anzeigen können.
 title: Dauer, aktuelle Zeit und verbleibende Zeit des Videos anzeigen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
 
 ---
 
+# Dauer, aktuelle Zeit und verbleibende Zeit des Videos anzeigen{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
-# Dauer, aktuelle Zeit und verbleibende Zeit des Videos{#display-the-duration-current-time-and-remaining-time-of-the-video} anzeigen
+Sie können Browser TVSDK verwenden, um Informationen zu den Medien abzurufen, die Sie in der Suchleiste anzeigen können.
 
-Sie können Browser TVSDK verwenden, um Informationen über die Medien abzurufen, die Sie in der Suchleiste anzeigen können.
+1. Warten Sie, bis Ihr Player mindestens den Status VORBEREITET aufweist.
+1. Rufen Sie die aktuelle Abspielleistenzeit mit dem `MediaPlayer.currentTime` -Attribut.
 
-1. Warten Sie, bis Ihr Spieler mindestens den Status VORBEREITT hat.
-1. Rufen Sie die aktuelle Abspielposition mit dem Attribut `MediaPlayer.currentTime` ab.
-
-   Dieses Attribut gibt die aktuelle Abspielposition auf der virtuellen Zeitleiste in Millisekunden zurück. Die Zeit wird relativ zum aufgelösten Stream berechnet, der mehrere Instanzen alternativen Inhalts enthalten kann, z. B. mehrere Anzeigen oder Werbeunterbrechungen, die in den Hauptstrom kopiert werden. Bei Live-/linearen Streams liegt die zurückgegebene Zeit immer im Bereich des Wiedergabefensters.
+   Dieses Attribut gibt die aktuelle Abspielposition auf der virtuellen Timeline in Millisekunden zurück. Die Zeit wird relativ zum aufgelösten Stream berechnet, der möglicherweise mehrere Instanzen von alternativen Inhalten enthält, z. B. mehrere Anzeigen oder Werbeunterbrechungen, die in den Haupt-Stream aufgeteilt sind. Bei Live-/linearen Streams befindet sich die zurückgegebene Zeit immer im Bereich des Wiedergabefensters.
 
    ```js
    MediaPlayer.currentTime
    ```
 
 1. Rufen Sie den Wiedergabebereich des Streams ab und bestimmen Sie die Dauer.
-   1. Verwenden Sie die Eigenschaft `mediaPlayer.playbackRange`, um den virtuellen Zeitleistenzeitbereich abzurufen.
+   1. Verwenden Sie die  `mediaPlayer.playbackRange` -Eigenschaft, um den virtuellen Zeitbereich der Zeitleiste abzurufen.
 
-   1. Um die Dauer zu bestimmen, ziehen Sie den Beginn vom Ende des Bereichs ab.
+   1. Um die Dauer zu bestimmen, subtrahieren Sie den Start vom Ende des Bereichs.
 
-      Dies umfasst die Dauer zusätzlicher Inhalte, die in den Stream (Anzeigen) eingefügt werden.
+      Dies umfasst die Dauer von zusätzlichem Inhalt, der in den Stream (Anzeigen) eingefügt wird.
 
-      Bei VOD beginnt der Bereich immer mit null und der Endwert entspricht der Summe der Dauer des Hauptinhalts und der Dauer des zusätzlichen Inhalts, der in den Stream eingefügt wird (Anzeigen).
+      Bei VOD beginnt der Bereich immer mit null und der Endwert entspricht der Summe der Dauer des Hauptinhalts und der Dauer des zusätzlichen Inhalts, der in den Stream (Anzeigen) eingefügt wird.
 
-      Bei einem linearen/Live-Asset steht der Bereich für den Bereich des Wiedergabefensters, und dieser Bereich ändert sich während der Wiedergabe.
+      Bei einem linearen/Live-Asset stellt der Bereich den Bereich des Wiedergabefensters dar und dieser Bereich ändert sich während der Wiedergabe.
 
 1. Verwenden Sie die in den MediaPlayer- und Browser TVSDK-Elementen verfügbaren Methoden, um die Suchleistenparameter einzurichten.
 
-   Hier ist beispielsweise ein mögliches Layout, um die Suchleiste in HTML anzuzeigen.
+   Hier ist beispielsweise ein Layout, mit dem die Suchleiste im HTML angezeigt werden kann.
 
    ```
    <div class="seekbar" id="seekbar"> 
@@ -50,7 +48,7 @@ Sie können Browser TVSDK verwenden, um Informationen über die Medien abzurufen
      </div> 
    ```
 
-   Im Folgenden finden Sie die entsprechenden CSS:
+   Im Folgenden finden Sie die entsprechende CSS-Datei:
 
    ```
    #seekbar { 
@@ -172,7 +170,7 @@ Sie können Browser TVSDK verwenden, um Informationen über die Medien abzurufen
        } 
    ```
 
-   In diesem Beispiel wird ein seekbar-Objekt erstellt, um die Suchleiste zu aktualisieren:
+   In diesem Beispiel wird ein Suchleistenobjekt erstellt, um die Suchleiste zu aktualisieren:
 
    ```js
    /** 
@@ -343,4 +341,3 @@ Sie können Browser TVSDK verwenden, um Informationen über die Medien abzurufen
    
            })(); 
    ```
-

@@ -1,64 +1,62 @@
 ---
-description: Durch Aktivieren von "Sofort ein"werden ein oder mehrere Kanal vorgeladen. Wenn Benutzer einen Kanal auswählen oder den Kanal wechseln, wird der Inhalt sofort abgespielt. Die Pufferung ist abgeschlossen, wenn der Benutzer die Anzeige Beginn.
-title: Sofort ein
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Die Aktivierung von Instant on bedeutet, dass mindestens ein Kanal vorab geladen wird. Wenn Benutzer einen Kanal auswählen oder Kanäle wechseln, wird der Inhalt sofort wiedergegeben. Die Pufferung ist abgeschlossen, wenn der Benutzer mit der Wiedergabe beginnt.
+title: Sofort aktiviert
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
 
 ---
 
+# Sofort aktiviert {#instant-on}
 
-# Sofort bei {#instant-on}
+Die Aktivierung von Instant on bedeutet, dass mindestens ein Kanal vorab geladen wird. Wenn Benutzer einen Kanal auswählen oder Kanäle wechseln, wird der Inhalt sofort wiedergegeben. Die Pufferung ist abgeschlossen, wenn der Benutzer mit der Wiedergabe beginnt.
 
-Durch Aktivieren von &quot;Sofort ein&quot;werden ein oder mehrere Kanal vorgeladen. Wenn Benutzer einen Kanal auswählen oder den Kanal wechseln, wird der Inhalt sofort abgespielt. Die Pufferung ist abgeschlossen, wenn der Benutzer die Anzeige Beginn.
+Ohne Instant On initialisiert TVSDK die abzuspielenden Medien, startet jedoch nicht die Pufferung des Streams, bis die Anwendung aufruft `play`. Der Benutzer sieht keinen Inhalt, bis die Pufferung abgeschlossen ist. Mit Instant On können Sie mehrere Instanzen des Medienplayers (oder des Medienplayer-Element-Laders) starten, und TVSDK startet sofort die Pufferung der Streams. Wenn ein Benutzer den Kanal ändert und der Stream ordnungsgemäß gepuffert wurde, wird `play` im neuen Kanal wird die Wiedergabe sofort gestartet.
 
-Ohne Instant On initialisiert TVSDK die wiederzugebenden Medien, puffert den Stream jedoch nicht, bis die Anwendung `play` aufruft. Dem Benutzer werden erst dann Inhalte angezeigt, wenn die Pufferung abgeschlossen ist. Mit &quot;Sofort ein&quot;können Sie mehrere Instanzen des Medienplayers (oder des Medienplayer-Elementladers) starten, und TVSDK-Beginn können die Streams sofort zwischenspeichern. Wenn ein Benutzer den Kanal ändert und der Stream ordnungsgemäß gepuffert wurde, wird `play` auf den neuen Kanal-Beginn sofort wiedergegeben.
-
-Auch wenn die Anzahl der TVSDK-Instanzen `MediaPlayer` und `MediaPlayerItemLoader` nicht begrenzt ist, verbraucht das Ausführen von mehr Instanzen mehr Ressourcen. Die Anwendungsleistung kann durch die Anzahl der ausgeführten Instanzen beeinträchtigt werden. Weitere Informationen zu `MediaPlayerItemLoader` finden Sie unter [Medienressource im Medienplayer](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md) laden.
+Die Anzahl der `MediaPlayer` und `MediaPlayerItemLoader` -Instanzen, die TVSDK ausführen kann, wodurch mehr Instanzen ausgeführt werden, mehr Ressourcen verbrauchen. Die Anwendungsleistung kann durch die Anzahl der ausgeführten Instanzen beeinflusst werden. Weitere Informationen finden Sie unter `MediaPlayerItemLoader`, siehe [Laden einer Medienressource im Medienplayer](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load.md).
 
 >[!IMPORTANT]
 >
->TVSDK unterstützt kein einzelnes `QoSProvider`, um sowohl mit `itemLoader` als auch mit `MediaPlayer` zu arbeiten. Wenn der Kunde Instant On verwendet, muss die Anwendung zwei QoS-Instanzen verwalten und beide Instanzen für die Informationen verwalten.
+>TVSDK unterstützt keine einzelne `QoSProvider` für beide `itemLoader` und `MediaPlayer`. Wenn der Kunde Instant On verwendet, muss die Anwendung zwei QoS-Instanzen verwalten und beide Instanzen für die Informationen verwalten.
 
-Weitere Informationen zu `MediaPlayerItemLoader` finden Sie unter [Medienressource mit MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md) laden.
+Weitere Informationen finden Sie unter `MediaPlayerItemLoader`, siehe [Laden einer Medienressource mit MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md).
 
-## hinzufügen einer QoS-Provider-Instanz zu mediaPlayerItemLoader {#section_2F9F24C7BFAD49599D043D64F767F9A0}
+## Hinzufügen einer QoS-Provider-Instanz zu mediaPlayerItemLoader {#section_2F9F24C7BFAD49599D043D64F767F9A0}
 
-* Einen QoS-Provider erstellen und an eine `mediaPlayerItemLoader`-Instanz anhängen
+* Erstellen und Anfügen eines QoS-Anbieters an einen `mediaPlayerItemLoader` instance
 
-   ```
-   // Create an instance of QoSProvider  
-   private QOSProvider _qosProvider = new QOSProvider(this._context);  
-   
-   // Attach the QoSProvider instance to the mediaPlayerItemLoaderInstance  
-   // (before calling load API on mediaPlayerItemLoader instance)  
-   _qosProvider.attachMediaPlayerItemLoader(this._loader); 
-   ```
+  ```
+  // Create an instance of QoSProvider  
+  private QOSProvider _qosProvider = new QOSProvider(this._context);  
+  
+  // Attach the QoSProvider instance to the mediaPlayerItemLoaderInstance  
+  // (before calling load API on mediaPlayerItemLoader instance)  
+  _qosProvider.attachMediaPlayerItemLoader(this._loader); 
+  ```
 
-   Verwenden Sie nach den Beginn für die Wiedergabe `_qosProvider`, um `timeToLoad` und `timeToPrepare` QoSdata abzurufen. Die verbleibenden QoS-Metriken können mithilfe der `QoSProvider`, die mit `mediaPlayer` verbunden sind, abgerufen werden.
+  Sobald die Wiedergabe beginnt, verwenden Sie die `_qosProvider` um `timeToLoad` und `timeToPrepare` QoSdata Die verbleibenden QoS-Metriken können mit der `QoSProvider` an die `mediaPlayer`.
 
-   Weitere Informationen zu `MediaPlayerItemLoader` finden Sie unter [Medienressource mit MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md#use-mediaplayeritemloader) laden.
+  Weitere Informationen finden Sie unter `MediaPlayerItemLoader`, siehe [Laden einer Medienressource mit MediaPlayerItemLoader](../../../tvsdk-2.7-for-android/content-playback-options/mediaplayer-initialize-for-video/t-psdk-android-2.7-media-resource-load-using-mediaplayeritemloader.md#use-mediaplayeritemloader).
 
-## Pufferung für Instant on konfigurieren{#section_4FE346B7BE434BA8A2203896D6E52146}
+## Pufferung für Sofortiges Aktivieren konfigurieren {#section_4FE346B7BE434BA8A2203896D6E52146}
 
-TVSDK stellt Methoden und Status bereit, mit denen Sie Instant On mit einer Medienressource verwenden können.
+TVSDK bietet Methoden und Status, mit denen Sie Instant On mit einer Medienressource verwenden können.
 
 >[!NOTE]
 >
->Adobe empfiehlt die Verwendung von `MediaPlayerItemLoader` für InstantOn. Informationen zum Verwenden von `MediaPlayerItemLoader` anstelle von `MediaPlayer` finden Sie unter media-resource-load-using-mediaplayeritemloader .
+>Adobe empfiehlt, `MediaPlayerItemLoader` für InstantOn. Verwendung `MediaPlayerItemLoader`, anstatt `MediaPlayer`, siehe media-resource-load-using-mediaplayeritemloader .
 
 1. Vergewissern Sie sich, dass die Ressource geladen wurde und der Player bereit ist, die Ressource wiederzugeben.
-1. Rufen Sie vor dem Aufruf von `play` für jede `MediaPlayer`-Instanz `prepareBuffer` auf.
+1. Vor dem Aufruf `play`, Aufruf `prepareBuffer` für jeden `MediaPlayer` -Instanz.
 
    >[!NOTE]
    >
-   >`prepareBuffer` aktiviert Instant On- und TVSDK-Beginn sofort Pufferung und löst das  `BUFFERING_COMPLETED` Ereignis aus, wenn der Puffer voll ist.
+   >`prepareBuffer` aktiviert Instant On und TVSDK startet die Pufferung sofort und sendet die `BUFFERING_COMPLETED` -Ereignis, wenn der Puffer voll ist.
 
    >[!TIP]
    >
-   >Standardmäßig richten `prepareBuffer` und `prepareToPlay` den Medienstream auf Beginn ein, der von Anfang an abgespielt wird. Übergeben Sie die Position (in Millisekunden) an `prepareToPlay`, um einen Beginn an einer anderen Position durchzuführen.
+   >Standardmäßig ist `prepareBuffer` und `prepareToPlay` Richten Sie den Medien-Stream so ein, dass die Wiedergabe von Anfang an beginnt. Um an einer anderen Position zu beginnen, übergeben Sie die Position (in Millisekunden) an `prepareToPlay`.
 
    ```
    @Override 
@@ -78,9 +76,8 @@ TVSDK stellt Methoden und Status bereit, mit denen Sie Instant On mit einer Medi
    }
    ```
 
-1. Wenn Sie das `BUFFERING_COMPLETE`-Ereignis erhalten, geben Sie beim Abspielen des Elements oder durch visuelles Feedback an, dass der Inhalt vollständig gepuffert ist.
+1. Wenn Sie die `BUFFERING_COMPLETE` -Ereignis, starten Sie die Wiedergabe des Elements oder zeigen Sie visuelles Feedback an, um anzuzeigen, dass der Inhalt vollständig gepuffert ist.
 
    >[!NOTE]
    >
-   >Wenn Sie `play` aufrufen, sollte die Wiedergabe sofort beginnen.
-
+   >Wenn Sie `play`, sollte die Wiedergabe sofort beginnen.

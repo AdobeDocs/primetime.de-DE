@@ -1,30 +1,28 @@
 ---
-description: Sie können die Auflösungen auf Basis der Standardauflöser implementieren.
-title: Implementieren eines benutzerdefinierten Angebots-/Inhaltsauflösers
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können Ihre Resolver auf der Basis der Standard-Resolver implementieren.
+title: Implementieren eines benutzerdefinierten Opportunities/Content Resolvers
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
 
 ---
 
+# Implementieren eines benutzerdefinierten Opportunities/Content Resolvers {#implement-a-custom-opportunity-content-resolver}
 
-# Implementieren eines benutzerdefinierten Angebots-/Inhaltsauflösers {#implement-a-custom-opportunity-content-resolver}
-
-Sie können die Auflösungen auf Basis der Standardauflöser implementieren.
+Sie können Ihre Resolver auf der Basis der Standard-Resolver implementieren.
 
 <!--<a id="fig_CC41E2A66BDB4115821F33737B46A09B"></a>-->
 
 ![](assets/ios_psdk_content_resolver.png)
 
-1. Entwickeln Sie einen benutzerdefinierten Anzeigenauflöser, indem Sie die abstrakte Klasse `PTContentResolver` erweitern.
+1. Entwickeln Sie einen benutzerdefinierten Anzeigenauflöser, indem Sie die `PTContentResolver` abstrakte Klasse.
 
-   `PTContentResolver` ist eine Schnittstelle, die von einer Content-Auflöser-Klasse implementiert werden muss. Eine abstrakte Klasse mit demselben Namen ist ebenfalls verfügbar und verarbeitet die Konfiguration automatisch (Abrufen des Delegaten).
+   `PTContentResolver` ist eine Schnittstelle, die von einer Content Resolver-Klasse implementiert werden muss. Eine abstrakte Klasse mit demselben Namen ist ebenfalls verfügbar und verarbeitet die Konfiguration automatisch (Abrufen des Delegats).
 
    >[!TIP]
    >
-   >`PTContentResolver` durch die  `PTDefaultMediaPlayerClientFactory` Klasse verfügbar gemacht wird. Kunden können einen neuen Content-Auflöser registrieren, indem sie die abstrakte Klasse `PTContentResolver` erweitern. Standardmäßig wird ein `PTDefaultAdContentResolver` in `PTDefaultMediaPlayerClientFactory` registriert, sofern es nicht ausdrücklich entfernt wurde.
+   >`PTContentResolver` über die `PTDefaultMediaPlayerClientFactory` -Klasse. Clients können einen neuen Inhaltsauflöser registrieren, indem sie die `PTContentResolver` abstrakte Klasse. Standardmäßig und sofern nicht ausdrücklich entfernt, wird ein `PTDefaultAdContentResolver` im `PTDefaultMediaPlayerClientFactory`.
 
    ```
    @protocol PTContentResolver <NSObject> 
@@ -52,27 +50,28 @@ Sie können die Auflösungen auf Basis der Standardauflöser implementieren.
    @end
    ```
 
-1. Implementieren Sie `shouldResolveOpportunity` und geben Sie `YES` zurück, wenn das empfangene `PTPlacementOpportunity` verarbeitet werden soll.
-1. Implementieren Sie `resolvePlacementOpportunity`, welche Beginn die alternativen Inhalte oder Anzeigen laden.
-1. Nachdem die Anzeigen geladen wurden, bereiten Sie ein `PTTimeline` mit den Informationen über den einzufügenden Inhalt vor.
+1. Implementierung `shouldResolveOpportunity` und zurück `YES` ob sie die empfangenen `PTPlacementOpportunity`.
+1. Implementierung `resolvePlacementOpportunity`, wodurch das Laden der alternativen Inhalte oder Anzeigen beginnt.
+1. Nachdem die Anzeigen geladen wurden, bereiten Sie eine `PTTimeline` mit den Informationen zum einzufügenden Inhalt.
 
-       Im Folgenden finden Sie einige nützliche Informationen zu Zeitschienen:
+       Im Folgenden finden Sie einige nützliche Informationen zu Zeitleisten:
    
-   * Es kann mehrere `PTAdBreak`s von Pre-Roll-, Mid-Roll- und Post-Roll-Typen geben.
+   * Es kann mehrere `PTAdBreak`s der Typen &quot;Pre-Roll&quot;, &quot;Mid-Roll&quot;und &quot;Post-Roll&quot;.
 
-      * Ein `PTAdBreak` hat Folgendes:
+      * A `PTAdBreak` hat Folgendes:
 
-         * Ein `CMTimeRange` mit der Beginn- und Pausenzeit.
+         * A `CMTimeRange` mit der Startzeit und Dauer der Pause.
 
-            Dies wird als range-Eigenschaft von `PTAdBreak` festgelegt.
+           Dies wird als Bereichseigenschaft von `PTAdBreak`.
 
-         * `NSArray` von  `PTAd`s.
+         * `NSArray` von `PTAd`s.
 
-            Dies wird als Ads-Eigenschaft von `PTAdBreak` festgelegt.
-   * Eine `PTAd` stellt die Anzeige dar und jede `PTAd` hat folgende Eigenschaften:
+           Dies wird als Ads-Eigenschaft von `PTAdBreak`.
 
-      * Ein `PTAdHLSAsset` wird als primäre Asset-Eigenschaft der Anzeige festgelegt.
-      * Möglicherweise mehrere `PTAdAsset`-Instanzen als anklickbare Anzeigen oder Banneranzeigen.
+   * A `PTAd` stellt die Anzeige dar und jeder `PTAd` hat Folgendes:
+
+      * A `PTAdHLSAsset` als primäre Asset-Eigenschaft der Anzeige festlegen.
+      * Möglicherweise mehrere `PTAdAsset` Instanzen als anklickbare Anzeigen oder Banneranzeigen.
 
    Beispiel:
 
@@ -103,8 +102,8 @@ Sie können die Auflösungen auf Basis der Standardauflöser implementieren.
    _timeline.adBreaks = ptBreaks;
    ```
 
-1. Rufen Sie `didFinishResolvingPlacementOpportunity` auf, wodurch `PTTimeline` bereitgestellt wird.
-1. Registrieren Sie den benutzerdefinierten Inhalts-/Anzeigenauflöser bei der standardmäßigen Medienplayer-Factory, indem Sie `registerContentResolver` aufrufen.
+1. Aufruf `didFinishResolvingPlacementOpportunity`, der die `PTTimeline`.
+1. Registrieren Sie Ihre benutzerdefinierten Inhalte/Anzeigenauflöser bei der standardmäßigen Medienplayer-Factory, indem Sie `registerContentResolver`.
 
    ```
    //Remove default content/ad resolver 
@@ -117,11 +116,11 @@ Sie können die Auflösungen auf Basis der Standardauflöser implementieren.
    [[PTDefaultMediaPlayerFactory defaultFactory] registerContentResolver:[contentResolver autorelease]];
    ```
 
-1. Wenn Sie einen benutzerdefinierten Opportunitätsauflöser implementiert haben, registrieren Sie ihn bei der standardmäßigen Medienplayer-Factory.
+1. Wenn Sie einen benutzerdefinierten Opportunities Resolver implementiert haben, registrieren Sie ihn bei der standardmäßigen Medienplayer-Factory.
 
    >[!TIP]
    >
-   >Sie müssen keinen benutzerdefinierten Opportunitätsauflöser registrieren, um einen benutzerdefinierten Content-/Anzeigen-Auflöser zu registrieren.
+   >Sie müssen keinen benutzerdefinierten Opportunity-Resolver registrieren, um einen benutzerdefinierten Content/Anzeigen-Resolver zu registrieren.
 
    ```
    //Remove default opportunity resolver 
@@ -135,7 +134,7 @@ Sie können die Auflösungen auf Basis der Standardauflöser implementieren.
               registerOpportunityResolver:[opportunityResolver autorelease]];
    ```
 
-Wenn der Player den Inhalt lädt und festgestellt wird, dass er vom Typ VOD oder LIVE ist, geschieht Folgendes:
+Wenn der Player den Inhalt lädt und als VOD- oder LIVE-Typ ermittelt wird, geschieht eine der folgenden Aktionen:
 
-* Wenn der Inhalt VOD ist, wird der benutzerdefinierte Inhaltsauflöser verwendet, um die Zeitleiste der Anzeige des gesamten Videos abzurufen.
-* Wenn der Inhalt LIVE ist, wird der benutzerdefinierte Inhaltsauflöser jedes Mal aufgerufen, wenn eine Platzierungsmöglichkeit (Cue-Point) im Inhalt erkannt wird.
+* Wenn der Inhalt VOD ist, wird der benutzerdefinierte Content Resolver verwendet, um die Anzeigen-Timeline des gesamten Videos abzurufen.
+* Wenn der Inhalt LIVE ist, wird der Resolver für benutzerspezifischen Inhalt jedes Mal aufgerufen, wenn eine Platzierungsmöglichkeit (Cue-Punkt) im Inhalt erkannt wird.

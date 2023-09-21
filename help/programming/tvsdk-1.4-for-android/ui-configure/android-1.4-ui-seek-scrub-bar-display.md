@@ -1,46 +1,44 @@
 ---
-description: TVSDK unterstützt die Suche nach einer bestimmten Position (Zeit), an der der Stream eine Sliding-Window-Playlist ist, sowohl in Video on Demand (VOD) als auch in Live-Streams.
-title: Anzeigen einer Suchleiste mit der aktuellen Wiedergabeposition
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK unterstützt das Suchen nach einer bestimmten Position (Uhrzeit), an der der Stream eine gleitende Fensterwiedergabeliste ist, sowohl in Video On Demand (VOD) als auch in Live-Streams.
+title: Anzeigen einer Suchscrubb-Leiste mit der aktuellen Wiedergabeposition
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
+# Anzeigen einer Suchscrubb-Leiste mit der aktuellen Wiedergabeposition {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
-# Anzeigen einer Suchleiste mit der aktuellen Wiedergabeposition {#display-a-seek-scrub-bar-with-the-current-playback-position}
-
-TVSDK unterstützt die Suche nach einer bestimmten Position (Zeit), an der der Stream eine Sliding-Window-Playlist ist, sowohl in Video on Demand (VOD) als auch in Live-Streams.
+TVSDK unterstützt das Suchen nach einer bestimmten Position (Uhrzeit), an der der Stream eine gleitende Fensterwiedergabeliste ist, sowohl in Video On Demand (VOD) als auch in Live-Streams.
 
 >[!IMPORTANT]
 >
->Die Suche in einem Live-Stream ist nur für DVR zulässig.
+>Die Suche in einem Live-Stream ist nur für DVR erlaubt.
 
 1. Richten Sie Rückrufe für die Suche ein.
 
-       Die Suche erfolgt asynchron, sodass TVSDK die folgenden suchbezogenen Ereignis auslöst:
+       Die Suche ist asynchron, sodass TVSDK die folgenden suchbezogenen Ereignisse sendet:
    
-   * `QOSEventListener.onSeekStart` - Suche beginnt.
+   * `QOSEventListener.onSeekStart` - Suche starten.
    * `QOSEventListener.onSeekComplete` - Suche erfolgreich.
    * `QOSEventListener.onOperationFailed` - Suche fehlgeschlagen.
 
-1. Warten Sie, bis der Player einen gültigen Status für die Suche aufweist.
+1. Warten Sie, bis der Player für die Suche einen gültigen Status aufweist.
 
-   Gültige Status sind &quot;VORBEREITEN&quot;, &quot;ABGESCHLOSSEN&quot;, &quot;ANGEHALTEN&quot;und &quot;WIEDERGABE&quot;.
+   Gültige Status sind PREPARED, COMPLETE, PAUSED und PLAYING.
 
-1. Verwenden Sie die native SeekBar, um `OnSeekBarChangeListener` einzustellen, um zu sehen, wann der Benutzer scrubbt.
-1. Suchen Sie nach `QOSEventListener.onOperationFailed` und gehen Sie entsprechend vor.
+1. Verwenden Sie die native SeekBar, um `OnSeekBarChangeListener` , um zu sehen, wann der Benutzer scrubbt.
+1. Suchen Sie nach `QOSEventListener.onOperationFailed` und geeignete Maßnahmen ergreifen.
 
-   Dieses Ereignis gibt die entsprechende Warnung aus. Ihre Anwendung legt fest, wie Sie zum Beispiel fortfahren, indem Sie die Suche erneut ausführen oder die Wiedergabe von der vorherigen Position fortsetzen.
+   Dieses Ereignis übergibt die entsprechende Warnung. Ihre Anwendung bestimmt beispielsweise, wie Sie fortfahren, indem Sie die Suche erneut durchführen oder die Wiedergabe von der vorherigen Position fortsetzen.
 
-1. Warten Sie, bis TVSDK den Rückruf `QOSEventListener.onSeekComplete` aufruft.
-1. Rufen Sie die endgültige angepasste Abspielposition mit dem Parameter position des Callbacks ab.
+1. Warten Sie, bis TVSDK die `QOSEventListener.onSeekComplete` Callback.
+1. Rufen Sie die endgültige angepasste Wiedergabeposition mithilfe des Positionsparameters des Rückrufs ab.
 
-   Dies ist wichtig, da sich die tatsächliche Position des Beginns nach der Suche von der angeforderten Position unterscheiden kann. Das Wiedergabeverhalten kann beeinträchtigt werden, wenn eine Suche oder eine andere Neupositionierung mitten in einer Werbeunterbrechung endet oder Werbeunterbrechungen übersprungen werden.
+   Dies ist wichtig, da sich die tatsächliche Startposition nach der Suche von der angeforderten Position unterscheiden kann. Das Wiedergabe-Verhalten kann beeinträchtigt werden, wenn eine Suche oder eine andere Neupositionierung mitten in einer Werbeunterbrechung endet oder die Anzeige abgebrochen wird.
 
-1. Verwenden Sie die Positionsinformationen, wenn Sie eine Suchabfrageleiste anzeigen.
+1. Verwenden Sie die Positionsinformationen, wenn Sie eine Suchleiste anzeigen.
 
 <!--<a id="example_9657AA855B6A4355B0E7D854596FFB54"></a>-->
 
@@ -79,4 +77,3 @@ seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
     } 
 }; 
 ```
-

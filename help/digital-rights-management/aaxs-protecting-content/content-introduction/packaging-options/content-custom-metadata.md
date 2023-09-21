@@ -2,19 +2,17 @@
 title: Benutzerspezifische Metadaten
 description: Benutzerspezifische Metadaten
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
 
 ---
 
-
 # Benutzerspezifische Metadaten {#custom-metadata}
 
-**Geben Sie einen benutzerdefinierten Schlüssel/Wert an, um Inhaltsmetadaten hinzuzufügen, die von der Serveranwendung interpretiert werden können.**
+**Geben Sie einen benutzerdefinierten Schlüssel/Wert an, der zu Inhaltsmetadaten hinzugefügt werden soll, die von der Serveranwendung interpretiert werden können.**
 
-Das Metadatenformat &quot;Adobe-Zugriff&quot;ermöglicht die Einbeziehung benutzerdefinierter Schlüssel/Wert-Paare zur Verpackungszeit, die vom Lizenzserver während der Lizenzausgabe verarbeitet werden. Diese Metadaten sind von der Richtlinie getrennt und können für jedes Inhaltselement eindeutig sein.
+Das Metadatenformat Adobe Access content ermöglicht die Einbeziehung benutzerdefinierter Schlüssel/Wert-Paare bei der Verpackung, die vom Lizenzserver während der Lizenzerteilung verarbeitet werden. Diese Metadaten sind separat von der Richtlinie und können für jedes Inhaltselement eindeutig sein.
 
-Verwendungsbeispiel: Während einer Beta-Phase fügen Sie die benutzerdefinierte Eigenschaft &quot;Release:BETA&quot;zur Verpackungszeit hinzu. Lizenzserver können während der Beta-Phase Lizenzen für diesen Inhalt bereitstellen, nach Ablauf der Beta-Zeit jedoch verweigern die Lizenzserver den Zugriff auf den Inhalt.
+Anwendungsbeispiel: Während einer Beta-Phase schließen Sie die benutzerdefinierte Eigenschaft &quot;Release:BETA&quot;zur Verpackungszeit ein. Lizenzserver können während der Beta-Phase Lizenzen für diesen Inhalt bereitstellen, aber nach Ablauf der Beta-Zeit verbieten die Lizenzserver den Zugriff auf den Inhalt.

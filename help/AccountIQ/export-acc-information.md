@@ -1,8 +1,7 @@
 ---
 title: Exportieren von Informationen zu Konten mit hoher Sharing-Punktzahl
 description: Exportieren Sie Informationen für Konten mit hoher Sharing-Punktzahl.
-exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 1%
@@ -23,9 +22,9 @@ Die Option zum Exportieren der Kontofreigabeinformationen finden Sie unter [Allg
 
 So exportieren Sie die Informationen zur Kontofreigabe:
 
-1. Definieren Sie ein gewünschtes Segment entsprechend den Schritten unter [Definieren von Segmenten und Auswählen von Zeitrahmen](/help/AccountIQ/howto-select-segment-timeframe.md) zur Bewertung von [Segment und Zeitrahmen](/help/AccountIQ/segments-timeframe.md) Bereich.
+1. Definieren Sie ein gewünschtes Segment entsprechend den Schritten unter [Definieren von Segmenten und Auswählen von Zeitrahmen](/help/AccountIQ/howto-select-segment-timeframe.md) zur Bewertung von [Segment und Zeitrahmen](/help/AccountIQ/segments-timeframe.md) Bedienfeld.
 
-1. Wählen Sie die **Export der 1000 wichtigsten Konten** -Option, um die Kontoinformationen für 1000 Abonnenten mit der höchsten Freigabewahrscheinlichkeit zu exportieren.
+1. Wählen Sie die **Export der 1000 wichtigsten Konten** Option zum Exportieren der Kontoinformationen für 1000 Abonnenten mit der höchsten Freigabewahrscheinlichkeit.
 
 Wenn Sie die Exportoption verwenden, werden die Statistiken für 1000 Konten mit den höchsten Teilungswahrscheinlichkeiten (für einen bestimmten Zeitraum) in den Ordner Downloads Ihres lokalen Computers heruntergeladen.
 
@@ -101,7 +100,7 @@ Gibt an, wie oft ein MVPD einen Stream autorisiert oder Zugriff (auf Inhalte) au
 
 >[!NOTE]
 >
->Die **# AuthZ OK** ist mit dem **# Abspielanforderungen**; kleiner als die **# Abspielanforderungen** weil Adobe die Berechtigungen, die für MVPDs kommen, in der Regel 24 Stunden lang zwischenspeichert.
+>Die **# AuthZ OK** ist mit dem **# Abspielanforderungen**; sie ist kleiner als die **# Abspielanforderungen** weil Adobe die Berechtigungen, die für MVPDs kommen, in der Regel 24 Stunden lang zwischenspeichert.
 
 **# Abspielanforderungen**
 
@@ -121,7 +120,7 @@ Gesamtzahl der verschiedenen Kanäle, die das Konto im Zeitraum angesehen hat.
 
 Die Zahlen in dieser Spalte sind Kennungen, die einem der 14 Muster zugeordnet sind, als die wir alle Benutzerkonten identifizieren.
 
-*Tabelle: Nutzungsmuster-IDs in der exportierten CSV-Zuordnung mit Nutzungsmustern*
+*Tabelle: Nutzungsmuster-IDs in exportierter CSV-Zuordnung mit Nutzungsmustern*
 
 | ID | 1 | 2 | 3 | 4 | 5 und 8 | 6 | 7 | 9 | 10 und 11 | 12 | 13 | 14 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|

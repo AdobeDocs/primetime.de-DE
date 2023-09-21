@@ -1,27 +1,24 @@
 ---
-description: Sie können ein Steuerelement der Benutzeroberfläche für die Lautstärke einrichten.
-title: Volumensteuerung bereitstellen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können ein Benutzeroberflächensteuerelement für die Lautstärke einrichten.
+title: Bereitstellen der Lautstärkeregelung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 0%
 
 ---
 
+# Bereitstellen der Lautstärkeregelung{#provide-volume-control}
 
-# Volumensteuerung{#provide-volume-control}
+Sie können ein Benutzeroberflächensteuerelement für die Lautstärke einrichten.
 
-Sie können ein Steuerelement der Benutzeroberfläche für die Lautstärke einrichten.
+1. Warten Sie auf die `MediaPlayer` -Instanz einen gültigen Status für diesen Befehl aufweisen.
 
-1. Warten Sie, bis sich die `MediaPlayer`-Instanz in einem gültigen Status für diesen Befehl befindet.
-
-   Jeder Status außer RELEASED oder FEHLER ist gültig.
-1. Legen Sie das Volumenattribut auf der `MediaPlayer`-Instanz fest, um die Lautstärke festzulegen.
+   Jeder Status außer RELEASED oder ERROR ist gültig.
+1. Legen Sie das Volumenattribut auf der `MediaPlayer` -Instanz, um die Lautstärke festzulegen.
 
    ```js
    player.volume = ...
    ```
 
-   Der Wert für das Volumen entspricht dem beantragten Volumen, ausgedrückt als Anteil des maximalen Volumens, wobei 0 stumm ist und das maximale Volumen ist.
-
+   Der Wert für das Volumen stellt das angeforderte Volumen dar, ausgedrückt als Anteil des maximalen Volumens, wobei 0 stumm ist und das maximale Volumen ist.

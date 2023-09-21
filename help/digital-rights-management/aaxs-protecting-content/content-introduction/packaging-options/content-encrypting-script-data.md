@@ -1,15 +1,13 @@
 ---
-title: Skriptdaten verschlüsseln
-description: Skriptdaten verschlüsseln
+title: Verschlüsseln von Skriptdaten
+description: Verschlüsseln von Skriptdaten
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
 
 ---
-
 
 # Verschlüsseln von Skriptdaten{#encrypting-script-data}
 
@@ -17,6 +15,6 @@ Gibt an, ob im Inhalt eingebettete Skriptdaten verschlüsselt sind.
 
 >[!NOTE]
 >
->Diese Regel gilt nur für das FLV-Dateiformat. Skriptdaten bleiben bei Dateien im F4V-Format immer im Leerzeichen.
+>Diese Regel gilt nur für das FLV-Dateiformat. Für Dateien im F4V-Format bleiben Skriptdaten immer im Klartext.
 
-Verwendungsbeispiel: Verwenden Sie diese Option, um die Skriptdaten unverschlüsselt zu belassen, sodass Metadaten von geschützten Inhalten mit den Metadaten-Aggregationstools gelesen werden können.
+Anwendungsbeispiel: Verwenden Sie diese Option, um Skriptdaten unverschlüsselt zu lassen. Dies ermöglicht Metadaten-Aggregations-Tools zum Lesen der Metadaten geschützter Inhalte.

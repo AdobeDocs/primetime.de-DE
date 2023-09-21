@@ -1,20 +1,18 @@
 ---
-description: Entfernen Sie TimeRanges zwischen "begin"und "end"in localTime aus der Zeitleiste.
-title: Löschen von Bereichen mit Primetime-Anzeige und Entscheidungsfunktion
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Entfernen Sie die Zeitbereiche zwischen Beginn und Ende in localTime aus der Timeline.
+title: Löschen von Bereichen mit Primetime-Anzeigenentscheidungen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
+# Löschen von Bereichen mit Primetime-Anzeigenentscheidungen{#delete-ranges-with-primetime-ad-decisioning-ad}
 
-# Löschen von Bereichen mit Primetime-Anzeige und Entscheidungsfunktion{#delete-ranges-with-primetime-ad-decisioning-ad}
+Entfernen Sie die Zeitbereiche zwischen Beginn und Ende in localTime aus der Timeline.
 
-Entfernen Sie TimeRanges zwischen &quot;begin&quot;und &quot;end&quot;in localTime aus der Zeitleiste.
-
-Löschen Sie Bereiche mit einer Wortgruppe.
+Löschen Sie Bereiche mit einer Wortgruppe-Anzeige.
 
 ```
 {   
@@ -66,4 +64,3 @@ Löschen Sie Bereiche mit einer Wortgruppe.
     "id": "vod_003"
 }
 ```
-

@@ -1,19 +1,17 @@
 ---
-title: Ersetzen Sie Zeiträume durch eine Adobe Primetime-Anzeigenentscheidungswerbeanzeige.
-description: Ersetzen Sie Zeiträume durch eine Adobe Primetime-Anzeigenentscheidungswerbeanzeige.
+title: Ersetzen von Zeitbereichen durch eine Adobe Primetime-Anzeigenentscheidung
+description: Ersetzen von Zeitbereichen durch eine Adobe Primetime-Anzeigenentscheidung
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
+# Ersetzen von Zeitbereichen durch eine Adobe Primetime-Anzeigenentscheidung{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
 
-# Ersetzen Sie Zeiträume durch eine Adobe Primetime-Anzeige-Entscheidungsanzeige{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
-
-Entfernen Sie `TimeRanges` zwischen `begin` und `end` in `localTime` aus der Zeitleiste. Ersetzen Sie sie durch einen AdBreak von `begin` in `begin+replaceDuration`.
+Entfernen `TimeRanges` zwischen `begin` und `end` in `localTime` aus der Timeline. Ersetzen Sie sie durch eine AdBreak von `begin` nach `begin+replaceDuration`.
 
 Ersetzen Sie Bereiche durch Primetime- und Entscheidungsanzeigen.
 
@@ -70,4 +68,3 @@ Ersetzen Sie Bereiche durch Primetime- und Entscheidungsanzeigen.
     "id": "vod_003"
 }
 ```
-

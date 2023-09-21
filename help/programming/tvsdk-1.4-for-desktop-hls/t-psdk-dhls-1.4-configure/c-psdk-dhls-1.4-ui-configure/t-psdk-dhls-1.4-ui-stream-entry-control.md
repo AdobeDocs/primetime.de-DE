@@ -1,22 +1,20 @@
 ---
-description: Standardmäßig werden VOD-Medien-Beginn beim Starten der Wiedergabe bei 0 und Live-Media-Beginn am Live-Point des Clients (DefaultMediaPlayer.LIVE_POINT) gestartet.
-title: Geben Sie einen Stream zu einem bestimmten Zeitpunkt ein
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Standardmäßig beginnt beim Starten der Wiedergabe das VOD-Medium bei 0 und das Live-Medium am Client-Live-Point (DefaultMediaPlayer.LIVE_POINT).
+title: Stream zu einem bestimmten Zeitpunkt eingeben
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Stream zu einem bestimmten Zeitpunkt eingeben{#enter-a-stream-at-a-specific-time}
 
-# Geben Sie einen Stream zu einem bestimmten Zeitpunkt ein{#enter-a-stream-at-a-specific-time}
+Standardmäßig beginnt beim Starten der Wiedergabe das VOD-Medium bei 0 und das Live-Medium am Client-Live-Point (DefaultMediaPlayer.LIVE_POINT).
 
-Standardmäßig werden VOD-Medien-Beginn beim Starten der Wiedergabe bei 0 und Live-Media-Beginn am Live-Point des Clients (DefaultMediaPlayer.LIVE_POINT) gestartet.
+Übergeben einer Position an `MediaPlayer.prepareToPlay`.
 
-Übergeben Sie eine Position an `MediaPlayer.prepareToPlay`.
-
-TVSDK betrachtet die angegebene Position als Ausgangspunkt für das Asset. Es ist kein Suchvorgang erforderlich. Wenn sich die Position nicht innerhalb des suchbaren Bereichs befindet, wird die Standardposition verwendet.
+TVSDK betrachtet die angegebene Position als Ausgangspunkt für das Asset. Es ist kein Suchvorgang erforderlich. Wenn sich die Position nicht innerhalb des suchbaren Bereichs befindet, verwendet die Standardposition.
 
 Beispiel:
 

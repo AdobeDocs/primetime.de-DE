@@ -1,33 +1,31 @@
 ---
-description: Sofortiges Vorausladen von Medienteilen auf einem oder mehreren Kanälen. Nachdem ein Benutzer Kanal ausgewählt oder gewechselt hat, wird der Inhalt früher Beginn, da ein Teil der Pufferung bereits abgeschlossen ist.
-title: Sofort-on
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sofortiges Vorausfüllen lädt Teile des Mediums auf einen oder mehrere Kanäle. Nachdem ein Benutzer Kanäle ausgewählt oder wechselt, wird der Inhalt früher gestartet, da einige der Pufferungen bereits abgeschlossen sind.
+title: Sofort-On
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
+# Sofort-On{#instant-on}
 
-# Instant-on{#instant-on}
+Sofortiges Vorausfüllen lädt Teile des Mediums auf einen oder mehrere Kanäle. Nachdem ein Benutzer Kanäle ausgewählt oder wechselt, wird der Inhalt früher gestartet, da einige der Pufferungen bereits abgeschlossen sind.
 
-Sofortiges Vorausladen von Medienteilen auf einem oder mehreren Kanälen. Nachdem ein Benutzer Kanal ausgewählt oder gewechselt hat, wird der Inhalt früher Beginn, da ein Teil der Pufferung bereits abgeschlossen ist.
-
-Wenn sich Ihr Player im Status `PTMediaPlayerStatusReady` befindet, rufen Sie `prepareToPlay` auf, um einen Teil des Inhalts für die spätere Wiedergabe vorab zu laden und zu verarbeiten.
+Wenn Ihr Player im `PTMediaPlayerStatusReady` Status, Aufruf `prepareToPlay` , um einen Teil des Inhalts für die spätere Wiedergabe vorab zu laden und zu verarbeiten.
 
 >[!TIP]
 >
->Wenn Sie `prepareToPlay` nicht aufrufen, wird `play` beim Aufrufen von `prepareToPlay` automatisch zuerst aufgerufen. Das Vorausladen und die Verarbeitung sind derzeit abgeschlossen.
+>Wenn Sie nicht `prepareToPlay`, aufrufen `play` automatische Aufrufe `prepareToPlay` zuerst. Das Vorausfüllen und die Verarbeitung sind derzeit abgeschlossen.
 
-TVSDK führt einige oder alle der folgenden Aufgaben für `prepareToPlay` aus:
+TVSDK führt einige oder alle der folgenden Aufgaben für `prepareToPlay`:
 
-* Wenn der Metadatenschlüssel `kSyncCookiesWithAVAsset` festgelegt ist, stellt TVSDK eine Anforderung an die ursprüngliche M3U8-Datei zur Synchronisierung von Cookies.
+* Wenn der Metadatenschlüssel `kSyncCookiesWithAVAsset` festgelegt ist, sendet TVSDK eine Anfrage an die ursprüngliche M3U8-Datei, um Cookies zu synchronisieren.
 * Lädt DRM-Metadatenschlüssel.
 * Erstellt und bereitet einige Strukturen, Elemente oder Assets vor, die für die Wiedergabe von Inhalten erforderlich sind.
 
 >[!TIP]
 >
->Die Methoden `PTMediaPlayer` und `PTMediaPlayerItem` `prepareToPlay` sind gleich. Um zu vermeiden, dass für jedes Asset eine separate `PTMediaPlayer`-Instanz erstellt wird, verwenden Sie die `PTMediaPlayerItem`-Methode.
+>Die `PTMediaPlayer` und `PTMediaPlayerItem` `prepareToPlay` -Methoden sind gleich. So vermeiden Sie die Erstellung eines separaten `PTMediaPlayer` -Instanz für jedes Asset verwenden Sie die `PTMediaPlayerItem` -Methode.
 
-Mit Instant-On können Sie mehrere Instanzen des Medienplayers oder Instanzen des Medienplayer-Elementladers gleichzeitig im Hintergrund starten und Video-Streams in allen diesen Instanzen puffern. Wenn ein Benutzer den Kanal ändert und der Stream ordnungsgemäß gepuffert wurde, wird bei einem Aufruf von `play` auf dem neuen Kanal die Wiedergabe früher Beginn.
+Mit Instant-on können Sie mehrere Instanzen des Medienplayers oder des Medienplayer-Element-Laders gleichzeitig im Hintergrund starten und Videostreams in all diesen Instanzen puffern. Wenn ein Benutzer den Kanal ändert und der Stream ordnungsgemäß gepuffert wurde, wird `play` im neuen Kanal wird die Wiedergabe früher gestartet.

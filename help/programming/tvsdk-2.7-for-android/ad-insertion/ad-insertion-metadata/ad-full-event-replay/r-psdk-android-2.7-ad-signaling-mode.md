@@ -1,30 +1,28 @@
 ---
-description: Der Anzeigensignalisierungsmodus gibt an, wo der Videostream Werbeinformationen erhalten soll.
-title: Anzeigensignalisierungsmodus
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Der Anzeigesignalmodus gibt an, wo der Videostream Werbeinformationen erhalten soll.
+title: Anzeigenanzeigemodus
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
 
 ---
 
+# Anzeigenanzeigemodus {#ad-signaling-mode-overview}
 
-# Anzeigensignalisierungsmodus {#ad-signaling-mode-overview}
+Der Anzeigesignalmodus gibt an, wo der Videostream Werbeinformationen erhalten soll.
 
-Der Anzeigensignalisierungsmodus gibt an, wo der Videostream Werbeinformationen erhalten soll.
+Die gültigen Werte sind `DEFAULT`, `SERVER_MAP`, und `MANIFEST_CUES`.
 
-Die gültigen Werte sind `DEFAULT`, `SERVER_MAP` und `MANIFEST_CUES`.
-
-In der folgenden Tabelle werden die Auswirkungen von `AdSignalingMode`-Werten für die verschiedenen HLS-Streams beschrieben:
+In der folgenden Tabelle werden die Auswirkungen von `AdSignalingMode` Werte für die verschiedenen Arten von HLS-Streams:
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
   <tr rowsep="1"> 
    <th colname="1" class="entry"> </th> 
    <th colname="2" class="entry"> Standard </th> 
-   <th colname="3" class="entry"> Manifestzeichen </th> 
-   <th colname="4" class="entry"> Anzeigenserverzuordnung </th> 
+   <th colname="3" class="entry"> Manifestbefehle </th> 
+   <th colname="4" class="entry"> Ad Server Map </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -32,7 +30,7 @@ In der folgenden Tabelle werden die Auswirkungen von `AdSignalingMode`-Werten f�
    <td colname="1"> Video on Demand (VOD) </td> 
    <td colname="2"> 
     <ul id="ul_E79DA79107364D0D8B46A1859CA75B5C"> 
-     <li id="li_B259ED87743F463095071F58DC840E39"> Verwendet Serverzuordnung zur Platzierungserkennung </li> 
+     <li id="li_B259ED87743F463095071F58DC840E39"> Verwendet die Serverzuordnung zur Platzierungserkennung </li> 
      <li id="li_8957E4151466467BA6C954E5010E34EA"> Anzeigen werden eingefügt </li> 
     </ul> </td> 
    <td colname="3"> 
@@ -43,7 +41,7 @@ In der folgenden Tabelle werden die Auswirkungen von `AdSignalingMode`-Werten f�
     </ul> </td> 
    <td colname="4"> 
     <ul id="ul_F10192B1B6F745CBB0D4C1A6D52A57B4"> 
-     <li id="li_2ADACF71FA5F4A08A00A3399F5593420"> Verwendet Serverzuordnung zur Platzierungserkennung </li> 
+     <li id="li_2ADACF71FA5F4A08A00A3399F5593420"> Verwendet die Serverzuordnung zur Platzierungserkennung </li> 
      <li id="li_1201085B9C554A4BBD471E7EB2E363AC"> Anzeigen werden eingefügt </li> 
     </ul> </td> 
   </tr> 
@@ -63,4 +61,3 @@ In der folgenden Tabelle werden die Auswirkungen von `AdSignalingMode`-Werten f�
   </tr> 
  </tbody> 
 </table>
-

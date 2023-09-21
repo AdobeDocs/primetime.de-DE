@@ -1,31 +1,29 @@
 ---
-description: Dieses Beispiel zeigt die empfohlene Methode, um TimeRange-Spezifikationen in die Zeitleiste der Wiedergabe einzubeziehen.
-title: Platzieren Sie TimeRange-Anzeigenmarken auf der Zeitleiste
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: In diesem Beispiel wird die empfohlene Methode zum Einbeziehen von TimeRange-Spezifikationen in die Wiedergabe-Timeline veranschaulicht.
+title: Platzieren von TimeRange-Anzeigenmarkierungen auf der Timeline
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
 
 ---
 
+# Platzieren von TimeRange-Anzeigenmarkierungen auf der Timeline {#place-timerange-ad-markers-on-the-timeline}
 
-# Platzieren Sie TimeRange-Anzeigenmarken auf der Zeitleiste {#place-timerange-ad-markers-on-the-timeline}
+In diesem Beispiel wird die empfohlene Methode zum Einbeziehen von TimeRange-Spezifikationen in die Wiedergabe-Timeline veranschaulicht.
 
-Dieses Beispiel zeigt die empfohlene Methode, um TimeRange-Spezifikationen in die Zeitleiste der Wiedergabe einzubeziehen.
+1. Übersetzen Sie die Out-of-Band-Anzeigenpositionsinformationen in eine Liste von `TimeRange` Spezifikationen (also Instanzen der `TimeRange` -Klasse).
+1. Verwenden Sie die `TimeRange` Spezifikationen zum Ausfüllen einer Instanz der `TimeRangeCollection` -Klasse.
+1. Übergeben Sie die Metadateninstanz, die aus dem `TimeRangeCollection` -Instanz, um `replaceCurrentItem` -Methode (Teil der MediaPlayer-Schnittstelle).
+1. Warten Sie, bis TVSDK zum `PREPARED` state durch Warten auf `PlaybackEventListener#onPrepared` Callback auszulösen.
+1. Starten Sie die Videowiedergabe, indem Sie `play()` -Methode (Teil der `MediaPlayer` -Schnittstelle).
 
-1. Übersetzen Sie die Out-of-Band-Positionierungsinformationen in eine Liste der Spezifikationen `TimeRange` (d. h. Instanzen der `TimeRange`-Klasse).
-1. Verwenden Sie den Satz der `TimeRange`-Spezifikationen, um eine Instanz der `TimeRangeCollection`-Klasse zu füllen.
-1. Übergeben Sie die Metadateninstanz, die von der `TimeRangeCollection`-Instanz abgerufen werden kann, an die `replaceCurrentItem`-Methode (Teil der MediaPlayer-Schnittstelle).
-1. Warten Sie, bis TVSDK auf Transition zum Status `PREPARED` wartet, bis der Rückruf `PlaybackEventListener#onPrepared` ausgelöst wird.
-1. Beginn-Videowiedergabe durch Aufruf der `play()`-Methode (Teil der `MediaPlayer`-Schnittstelle).
+* Umgang mit Timeline-Konflikten: Es kann in einigen Fällen vorkommen, in denen `TimeRange` Spezifikationen überschneiden sich auf der Wiedergabescheitleiste. Beispielsweise der Wert der Startposition, der einem `TimeRange` Die Spezifikation kann unter dem Wert der Endposition liegen, die bereits platziert wurde. In diesem Fall passt TVSDK die Startposition der Straftat still an `TimeRange` -Spezifikation, um Zeitleistenkonflikte zu vermeiden. Durch diese Anpassung wird die neue `TimeRange` kürzer als ursprünglich angegeben ist. Wenn die Anpassung so extrem ist, dass sie zu einer `TimeRange` mit einer Dauer von null ms, senkt TVSDK still die Straftat `TimeRange` Spezifikation.
+* Wann `TimeRange` Spezifikationen für benutzerdefinierte Werbeunterbrechungen bereitgestellt werden, versucht TVSDK, diese in Anzeigen zu übersetzen, die in Werbeunterbrechungen gruppiert sind. TVSDK sucht nach dem benachbarten `TimeRange` -Spezifikationen und fasst sie in separate Werbeunterbrechungen zusammen. Wenn es Zeiträume gibt, die nicht an einen anderen Zeitraum angrenzen, werden sie in Werbeunterbrechungen mit einer einzelnen Anzeige übersetzt.
+* Es wird davon ausgegangen, dass das Medienplayer-Element, das geladen wird, auf ein VOD-Asset verweist. TVSDK überprüft dies jedes Mal, wenn Ihre Anwendung versucht, eine Medienressource zu laden, deren Metadaten enthalten `TimeRange` -Spezifikationen, die nur im Kontext der benutzerdefinierten Anzeigenmarkierungsfunktion verwendet werden können. Wenn das zugrunde liegende Asset nicht vom Typ VOD ist, löst die TVSDK-Bibliothek eine Ausnahme aus.
+* Beim Umgang mit benutzerdefinierten Anzeigenmarken deaktiviert TVSDK andere Mechanismen zur Anzeigenauflösung (über Adobe Primetime-Anzeigenentscheidungen (früher als Auditude bezeichnet) oder ein anderes Anzeigenbereitstellungssystem). Sie können eines der verschiedenen von TVSDK bereitgestellten Anzeigenauflöser-Module oder den benutzerdefinierten Anzeigenmarkierungsmechanismus verwenden. Bei Verwendung der benutzerdefinierten Anzeigen-Marker-API gilt der Anzeigeninhalt als bereits aufgelöst und in der Timeline platziert.
 
-* Umgang mit Zeitleistenkonflikten: Es kann vorkommen, dass sich einige `TimeRange`-Spezifikationen in der Wiedergabedauer überschneiden. Der Wert der Position des Beginns, der einer Spezifikation von `TimeRange` entspricht, kann beispielsweise niedriger sein als der Wert der bereits platzierten Endposition. In diesem Fall passt TVSDK die Position des Beginns der verletzenden `TimeRange`-Spezifikation im Hintergrund an, um Zeitlinienkonflikte zu vermeiden. Durch diese Anpassung wird das neue `TimeRange` kürzer als ursprünglich angegeben. Wenn die Anpassung so extrem ist, dass sie zu einem `TimeRange` mit einer Dauer von null ms führen würde, entfernt TVSDK die verletzende `TimeRange`-Spezifikation leise.
-* Wenn `TimeRange`-Spezifikationen für benutzerdefinierte Werbeunterbrechungen bereitgestellt werden, versucht TVSDK, diese in Anzeigen zu übersetzen, die in Werbeunterbrechungen gruppiert sind. TVSDK sucht nach benachbarten `TimeRange` Spezifikationen und gruppiert diese in separate Werbeunterbrechungen. Wenn es Zeiträume gibt, die nicht an einen anderen Zeitraum angrenzen, werden sie in Werbeunterbrechungen mit einer einzigen Anzeige umgewandelt.
-* Es wird davon ausgegangen, dass das Medienplayer-Element, das geladen wird, auf ein VOD-Asset verweist. TVSDK überprüft dies, wenn Ihre Anwendung versucht, eine Medienressource zu laden, deren Metadaten `TimeRange`-Spezifikationen enthalten, die nur im Zusammenhang mit der Funktion für benutzerdefinierte Anzeigenmarken verwendet werden können. Wenn das zugrunde liegende Asset nicht VOD ist, löst die TVSDK-Bibliothek eine Ausnahme aus.
-* Beim Umgang mit benutzerdefinierten Anzeigenmarken deaktiviert TVSDK andere Anzeigenauflösungsmechanismen (über Adobe Primetime-Anzeigenentscheidungsfunktionen (früher Auditude genannt) oder andere Anzeigenbereitstellungssysteme). Sie können eines der verschiedenen von TVSDK bereitgestellten Anzeigenauflöser-Module oder den benutzerdefinierten Anzeigenmarkierungsmechanismus verwenden. Bei Verwendung der benutzerdefinierten Anzeigen-Marker-API gilt der Anzeigeninhalt als bereits aufgelöst und in der Zeitleiste platziert.
-
-Das folgende Codefragment bietet ein einfaches Beispiel, bei dem eine Reihe von drei TimeRange-Spezifikationen als benutzerdefinierte Anzeigenmarken auf der Zeitleiste platziert werden.
+Das folgende Codefragment bietet ein einfaches Beispiel, bei dem eine Reihe von drei TimeRange-Spezifikationen als benutzerdefinierte Anzeigenmarkierungen auf der Timeline platziert werden.
 
 ```java>
 // Assume that the 3 timerange specs are obtained through external means: CMS, etc. 

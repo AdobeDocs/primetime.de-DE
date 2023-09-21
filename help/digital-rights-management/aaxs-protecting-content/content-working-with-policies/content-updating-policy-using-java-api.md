@@ -2,27 +2,25 @@
 title: Aktualisieren einer Richtlinie mit der Java-API
 description: Aktualisieren einer Richtlinie mit der Java-API
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-
 # Aktualisieren einer Richtlinie mit der Java-API {#updating-a-policy-using-the-java-api}
 
-So aktualisieren Sie eine Richtlinie mithilfe der Java-API:
+Um eine Richtlinie mithilfe der Java-API zu aktualisieren, führen Sie die folgenden Schritte aus:
 
-1. Richten Sie Ihre Development-Umgebung ein und fügen Sie alle JAR-Dateien ein, die unter [Einrichten der Development-Umgebung](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) in Ihrem Projekt erwähnt werden.
-1. Erstellen Sie eine `Policy`-Instanz und lesen Sie die Richtlinie aus einer Datei oder Datenbank.
+1. Richten Sie Ihre Entwicklungsumgebung ein und schließen Sie alle JAR-Dateien ein, die in [Einrichten der Entwicklungsumgebung](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) in Ihrem Projekt.
+1. Erstellen Sie eine `Policy` und in der Richtlinie aus einer Datei oder Datenbank lesen.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Aktualisieren Sie das `Policy`-Objekt, indem Sie seine Eigenschaften festlegen, z. B. seinen Namen und seine Verwendungsregeln.
+1. Aktualisieren Sie die `Policy` -Objekt durch Festlegen der Eigenschaften, z. B. des Namens und der Nutzungsregeln.
 
    ```java
      // Change the policy name.  
@@ -47,7 +45,7 @@ So aktualisieren Sie eine Richtlinie mithilfe der Java-API:
      }
    ```
 
-1. Serialisieren Sie das aktualisierte `Policy`-Objekt und speichern Sie es in einer Datei oder Datenbank.
+1. Serialisieren der aktualisierten `Policy` -Objekt und speichern Sie es in einer Datei oder Datenbank.
 
    ```java
       // Serialize the policy.  
@@ -61,4 +59,4 @@ So aktualisieren Sie eine Richtlinie mithilfe der Java-API:
       out.close(); 
    ```
 
-Die vollständige Quelle dieses Beispielcodes finden Sie unter `com.adobe.flashaccess.samples.policy.UpdatePolicy` im Ordner &quot;samples&quot;der Referenzimplementierungs-Befehlszeilenwerkzeuge.
+Die vollständige Quelle dieses Beispielcodes finden Sie unter `com.adobe.flashaccess.samples.policy.UpdatePolicy` im Verzeichnis &quot;samples&quot;der Referenzimplementierungs-Befehlszeilenwerkzeuge.

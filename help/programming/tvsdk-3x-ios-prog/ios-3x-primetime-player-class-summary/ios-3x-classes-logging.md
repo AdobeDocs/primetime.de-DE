@@ -1,14 +1,12 @@
 ---
 description: Mit diesen Klassen können Sie die Protokollierung anpassen.
 title: Protokollierungsklassen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%
 
 ---
-
 
 # Protokollierungsklassen {#logging-classes}
 
@@ -28,11 +26,11 @@ Mit diesen Klassen können Sie die Protokollierung anpassen.
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTLogFactory.html" format="html" scope="external"> PTLogFactory</a> </td> 
-   <td colname="2"> Klasse, die die benutzerdefinierte Protokollierung aktiviert.</td> 
+   <td colname="2"> Klasse, die eine benutzerdefinierte Protokollierung ermöglicht.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTLogger.html" format="html" scope="external"> PTLogger</a> </td> 
-   <td colname="2"> Protokoll. Die zum Implementieren einer benutzerdefinierten Protokollfunktion für das TVSDK erforderlichen Methoden. </td> 
+   <td colname="2"> Protokoll. Die erforderlichen Methoden zum Implementieren einer benutzerdefinierten Protokollfunktion für das TVSDK. </td> 
   </tr> 
  </tbody> 
 </table>

@@ -1,34 +1,32 @@
 ---
 description: Um Flash Player zu verwenden, stellen Sie sicher, dass Ihre Umgebung die erforderlichen Anforderungen erfüllt.
-title: Anforderungen an Flash Player
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Flash Player
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '142'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
-# Anforderungen an Flash Player{#flash-player-requirements}
+# Flash Player{#flash-player-requirements}
 
 Um Flash Player zu verwenden, stellen Sie sicher, dass Ihre Umgebung die erforderlichen Anforderungen erfüllt.
 
 <!--<a id="section_FEE654D506EC4D85AE77302AD2A27777"></a>-->
 
-Die folgenden Anforderungen gelten für den Flash Player:
+Hier finden Sie die Anforderungen für die Flash Player:
 
-* Um die Wiedergabe mit `Primetime.js` wiederherzustellen, installieren Sie mindestens Flash Player Version 23.
-* Um nach Updates für Flash Player Version 23 oder höher gefragt zu werden, installieren Sie mindestens Flash Player Version 11.0.0.
+* So spielen Sie mit `Primetime.js`, installieren Sie mindestens Flash Player Version 23.
+* Um nach Updates auf Flash Player-Version 23 oder höher gefragt zu werden, installieren Sie mindestens Flash Player-Version 11.0.0.
 
 ## Verpackungsanforderungen {#section_F95FC1FEEFEA44D28C9596D2F359AFC7}
 
-Für die Wiedergabe mit Flash Player sind die folgenden SWF-Dateien erforderlich:
+Die Wiedergabe mit Flash Player erfordert die folgenden SWF-Dateien:
 
-* Die SWF-Hauptdatei der Anwendung, die Browser TVSDK-APIs verarbeitet.
-* Die SWF-Datei `playerProductInstall.swf`, die die Installation und Aktualisierung von Flash Playern verarbeitet.
+* Die Hauptanwendungs-SWF-Datei, die Browser TVSDK-APIs verarbeitet.
+* Die `playerProductInstall.swf` SWF-Datei, die Flash Player installiert und aktualisiert.
 
-Darüber hinaus ist für die Videowiedergabe in Flash eine Autorisierungstoken-Datei erforderlich, die eine SWF- oder `.DAT`-Datei sein kann. Der Pfad zu den SWF-Dateien, die Autorisierungstoken-Datei sowie der Name und der Typ der Tokendatei können mit den AdobePSDK-APIs angegeben werden.
+Darüber hinaus erfordert die Videowiedergabe auf Flash eine Autorisierungstoken-Datei, die eine SWF oder eine `.DAT` -Datei. Der Pfad zu den SWF-Dateien, die Autorisierungstoken-Datei sowie der Name und Typ der Token-Datei können mithilfe der AdobePSDK-APIs angegeben werden.
 
 Beispiel:
 
@@ -47,4 +45,3 @@ AdobePSDK.setAuthorizationTokenFilename("hlsaf_localhost.swf");
 //Set the token type, "DAT" or "SWF". Defaults to "DAT" 
 AdobePSDK.setAuthorizationTokenType("SWF");
 ```
-

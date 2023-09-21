@@ -2,8 +2,7 @@
 title: Details zur NATIVE_ERROR-Benachrichtigung
 description: Details zur NATIVE_ERROR-Benachrichtigung
 copied-description: true
-exl-id: 51c75349-0fa8-405d-9e09-b51b425fe21b
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6868'
 ht-degree: 2%
@@ -37,7 +36,7 @@ Wenn TVSDK einen nativen Fehler verarbeitet, werden einige oder alle der folgend
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> BESCHREIBUNG</span> </td> 
-   <td colname="col2"> Lange Beschreibung der Benachrichtigung (z. B. fehlgeschlagener Vorgang zur Anzeigenauflösung). </td> 
+   <td colname="col2"> Lange Beschreibung der Benachrichtigung (z. B. fehlgeschlagene Anzeigenauflösung). </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> PSDK_ERROR_CODE</span> </td> 
@@ -140,17 +139,17 @@ Wenn TVSDK einen nativen Fehler verarbeitet, werden einige oder alle der folgend
    <td colname="col2"></td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> Auditude_ERROR_CODE</span> </td> 
-   <td colname="col2"> Auditude Fehlercode (Zahl). </td> 
+   <td colname="col1"><span class="codeph"> AUDITUDE_ERROR_CODE</span> </td> 
+   <td colname="col2"> Auditude-Fehlercode (Zahl). </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## NATIVE_ERROR: DRM-Werte {#section_D240082B93D34902A18C3923C1C717B3}
 
-Die Video Encoder-Benutzeroberfläche der Adobe Video-Engine gibt diese DRM-Benachrichtigungen im `NATIVE_ERROR` Metadatenobjekt.
+Die Video Encoder-Benutzeroberfläche der Adobe-Video-Engine gibt diese DRM-Benachrichtigungen im `NATIVE_ERROR` Metadatenobjekt.
 
-Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variable `NATIVE_SUBERROR_CODE` und `DRM_ERROR_STRING` für Hilfe zur Fehlerbehebung.
+Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die `NATIVE_SUBERROR_CODE` und `DRM_ERROR_STRING` für Unterstützung bei der Fehlerbehebung.
 
 >[!TIP]
 >
@@ -177,7 +176,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
       </ul> </li> 
      <li id="li_060B5D60C9BB419CBFA7B062FBCF2632">Was sollte der Händler tun: 
       <ul id="ul_FADB29DBF0DA4A0E8E54134AEB7DCD8A"> 
-       <li id="li_FC5B1C04D21E4AECB0EBD9ADD3198504">Wenn weitere Versuche für andere Konfigurationen als Chrome mit Flash unter Version 11.6 nicht erfolgreich sind, ist möglicherweise ein Fehler in der Verpackung aufgetreten. </li> 
+       <li id="li_FC5B1C04D21E4AECB0EBD9ADD3198504">Wenn weitere Versuche bei anderen Konfigurationen als Chrome mit Flash unter Version 11.6 nicht erfolgreich sind, ist möglicherweise ein Fehler in der Verpackung aufgetreten. </li> 
        <li id="li_A720ECE591254021879B335B81B1F76D">Überprüfen Sie, ob das Problem für bestimmte Inhalte und Umpackungen spezifisch ist. </li> 
       </ul> </li> 
     </ul> </td> 
@@ -188,7 +187,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
    <td colname="col3"> <p>Der Server konnte den Client nicht authentifizieren oder autorisieren. </p> 
     <ul id="ul_BE77AC1848FB4C09B6318359ACF1B8EE"> 
      <li id="li_6FB37D317D174E8488C5070D20CD241C">Die Software des Distributors sollte alle erforderlichen Maßnahmen ergreifen, um die Anmeldeinformationen des Benutzers wiederherzustellen oder den Benutzer zum Erwerb des Zugriffs auf den Inhalt zu führen. </li> 
-     <li id="li_BE071D59805B42D38E3E7650BC936417">Der Händler sollte bestätigen, dass der Autorisierungs- und Authentifizierungsmechanismus des Distributors ordnungsgemäß funktioniert. <p>Wenn die Distributoren nicht planen, die Authentifizierungs- oder Autorisierungsfunktionen zu verwenden, sollten sie überprüfen, ob die Richtlinie des fehlerhaften Inhalts Authentifizierung erfordert, und sich über Diskrepanzen bei der Diagnoserichtlinie/Lizenz informieren. </p> </li> 
+     <li id="li_BE071D59805B42D38E3E7650BC936417">Der Händler sollte bestätigen, dass der Autorisierungs- und Authentifizierungsmechanismus des Distributors ordnungsgemäß funktioniert. <p>Wenn die Distributoren nicht planen, die Authentifizierungs- oder Autorisierungsfunktionen zu verwenden, sollten sie überprüfen, ob die Richtlinie des fehlerhaften Inhalts eine Authentifizierung erfordert, und sich über Diskrepanzen bei der Diagnoserichtlinie/Lizenz informieren. </p> </li> 
     </ul> <p>Weitere Informationen zu diesem Fehlercode finden Sie unter <a href="https://forums.adobe.com/thread/1277149" format="https" scope="external"> Ursachen und Auflösung des DRM-Fehlers 3301</a>. </p> </td> 
   </tr> 
   <tr> 
@@ -197,7 +196,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
    <td colname="col3"> <p>Auf Access 4.0 und höher wird dieser Fehler in iOS ausgegeben, wenn die Remote-Schlüssel-URL HTTPS nicht als Schema verwendet. HTTPS ist erforderlich. </p> 
     <ul id="ul_3D47777BBCA14B67B107FBBE3E37E40C"> 
      <li id="li_7F7BBB27AE754CC39ABAAF9269739C49">Wenn der Distributor eine Version verwendet, die älter als Access v4 ist, oder die Version mindestens 4, die Plattform jedoch nicht iOS ist, sollte die Software des Distributors den Fehler protokollieren. <p>Der Fehler wird nur bei iOS ausgegeben. </p> </li> 
-     <li id="li_D83C427D2A0D47408F723EF7195070B6">Wenn die Software des Distributors mindestens Adobe Access Version 4 ist und die Plattform iOS ist, müssen die Distributoren die Remote-Key-Server-URL, die sie verwenden, in HTTPS ändern. <p>Wenn sie nur HTTP verwenden, müssen Distributoren möglicherweise einen HTTPS-Server einrichten. Andernfalls müssen die Distributoren die protokollierten Informationen an Adobe übermitteln und das Problem eskalieren. </p> </li> 
+     <li id="li_D83C427D2A0D47408F723EF7195070B6">Wenn die Software des Distributors mindestens Adobe Access Version 4 ist und die Plattform iOS ist, müssen die Distributoren die Remote-Key-Server-URL, die sie verwenden, in HTTPS ändern. <p>Wenn sie nur HTTP verwenden, müssen Distributoren möglicherweise einen HTTPS-Server einrichten. Andernfalls müssen die Distributoren die protokollierten Informationen an die Adobe senden und das Problem eskalieren. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -237,7 +236,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
      </ul> </p> 
     <ul id="ul_EE4AE6AD4F1745A5B5623E53B599DB62"> 
      <li id="li_7A83869D4262443DA35FA1DF8D3097DD">Die Software des Distributors sollte den Benutzer warnen und den Betrieb abbrechen. <p>Wenn die Software ermitteln kann, ob ein Upgrade verfügbar ist, leiten Sie den Benutzer auf die geeignete Weise zu diesem Upgrade für die Plattform. </p> </li> 
-     <li id="li_AF9C2711FDE54DA196EB9D2864632000">Tritt das Problem aufgrund einer freigegebenen Domäne auf, muss der Distributor mit Adobe nach einer aktualisierten Laufzeitumgebung oder Bibliothek suchen. <p>Für Flash-Laufzeitumgebungen kann der Distributor die Aktualisierung in seiner Anwendung direkt erzwingen. Im Fall einer Bibliothek muss der Distributor eine aktualisierte Bibliothek abrufen, seine Anwendung neu erstellen und sie für seine Benutzer bereitstellen. </p> <p>Tritt das Problem aufgrund mehrerer DRMSessions auf, muss der Distributor seine Anwendung aktualisieren, um die iOS-Versionsnummer zu überprüfen, bevor mehrere DRMSessions hinzugefügt werden. Oder sie können die Verteilung ihrer Anwendung auf iOS v5 und höher einschränken. </p> <p>Wenn das Problem auftritt, weil die Metadatenversion höher als Version 2 ist, ist das Problem wahrscheinlich mit beschädigten Metadaten behaftet. Sie können versuchen, die Metadaten neu zu erstellen und sich die Ergebnisse anzusehen. Wenn das Problem weiterhin auftritt, protokollieren Sie das Problem und eskalieren Sie zu Adobe. </p> </li> 
+     <li id="li_AF9C2711FDE54DA196EB9D2864632000">Tritt das Problem aufgrund einer freigegebenen Domäne auf, muss der Distributor mit Adobe nach einer aktualisierten Laufzeitumgebung oder Bibliothek suchen. <p>Für Flash-Laufzeitumgebungen kann der Distributor die Aktualisierung in seiner Anwendung direkt erzwingen. Im Fall einer Bibliothek muss der Distributor eine aktualisierte Bibliothek abrufen, seine Anwendung neu erstellen und sie für seine Benutzer bereitstellen. </p> <p>Tritt das Problem aufgrund mehrerer DRMSessions auf, muss der Distributor seine Anwendung aktualisieren, um die iOS-Versionsnummer zu überprüfen, bevor mehrere DRMSessions hinzugefügt werden. Oder sie können die Verteilung ihrer Anwendung auf iOS v5 und höher einschränken. </p> <p>Wenn das Problem auftritt, weil die Metadatenversion höher als Version 2 ist, ist das Problem wahrscheinlich mit den Metadaten beschädigt. Sie können versuchen, die Metadaten neu zu erstellen und sich die Ergebnisse anzusehen. Wenn das Problem weiterhin auftritt, protokollieren Sie das Problem und eskalieren Sie zu Adobe. </p> </li> 
     </ul> <p>Weitere Informationen zu diesem Fehlercode finden Sie unter <a href="https://forums.adobe.com/thread/1266675" format="https" scope="external"> Beheben eines 3306 DRMErrorEvent-Fehlercodes</a> </p> </td> 
   </tr> 
   <tr> 
@@ -245,8 +244,8 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
    <td colname="col2"><span class="codeph"> AAXS_InternalFailure</span> </td> 
    <td colname="col3"> <p>Dies stellt im Allgemeinen einen Fehler im Adobe Access-Code dar und ist unerwartet, es sei denn, es gibt einen bekannten Fehler, wie unten dargestellt. subErrorId enthält einen clientspezifischen Fehler oder Zeilenfehler. </p> 
     <ul id="ul_79F4A9655A2148519B1E9509C41F78C3"> 
-     <li id="li_0E093AB4D6BD489B852279E6C1525A15">Wenn der Browser unter Windows Chrome ist und die Flash-Version 11.6 ist (SWF-Version 19 oder höher), sollte die Software des Distributors davon ausgehen, dass der Benutzer gepresst hat. <span class="uicontrol"> Ablehnen</span> mit dem Infobar zu verabreichen und mit dem gleichen Arzneimittel wie 3368 zu behandeln. </li> 
-     <li id="li_0215D1089B344861A2C0A73E1067CFEF">Wenn 3307 auftritt, wenn der Browser nicht Chrome ist oder die Flash-Version nicht 11.6 ist, sollte der Distributor auf Adobe eskalieren. </li> 
+     <li id="li_0E093AB4D6BD489B852279E6C1525A15">Wenn der Browser unter Windows Chrome ist und die Flash-Version 11.6 ist (SWF-Version 19 oder höher), sollte die Software des Distributors davon ausgehen, dass der Benutzer gepresst hat <span class="uicontrol"> Ablehnen</span> mit dem Infobar zu verabreichen und mit dem gleichen Arzneimittel wie 3368 zu behandeln. </li> 
+     <li id="li_0215D1089B344861A2C0A73E1067CFEF">Wenn 3307 auftritt, wenn der Browser nicht Chrome- oder Flash-Version 11.6 ist, sollte der Distributor auf Adobe eskalieren. </li> 
     </ul> <p>Wichtig: <span class="codeph"> 3307:1107296344 (FailedToGetBrokerHandle)</span> kann mit den Chrome-Browserversionen 24-28 auftreten. </p> </td> 
   </tr> 
   <tr> 
@@ -254,7 +253,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
    <td colname="col2"><span class="codeph"> AAXS_WrongLicenseKey</span> </td> 
    <td colname="col3"> <p>Dieser Fehler wird immer dann ausgegeben, wenn die verwendete Lizenz den falschen Schlüssel zum Entschlüsseln des Inhalts enthält. subErrorId enthält einen clientspezifischen Fehler oder Zeilenfehler. </p> <p>Es gibt offenbar nur zwei Möglichkeiten, diesen Fehler zu generieren: 
      <ul id="ul_1C955BD74C7843809D1B5A0CDCA5ED7B"> 
-      <li id="li_18F0A7FDA6584887AD9DB3EDE54080D8">Der Kunde hat die standardmäßigen Adobe-Tools für die Lizenzgenerierung geändert (z. B. das Java-Framework des Lizenzservers). <p>In diesem Fall enthält die Lizenz einen ungültigen Schlüssel, der möglicherweise keinem Inhalt entspricht. </p> </li> 
+      <li id="li_18F0A7FDA6584887AD9DB3EDE54080D8">Der Kunde hat die standardmäßigen Adobe-Tools für die Erstellung von Lizenzen geändert (z. B. das Java-Framework des Lizenzservers). <p>In diesem Fall enthält die Lizenz einen ungültigen Schlüssel, der möglicherweise keinem Inhalt entspricht. </p> </li> 
       <li id="li_21D04ED1F1FA464785BC297D385766FF">Der Kunde hat mehrere Lizenzen mit derselben Lizenz-ID ausgestellt. <p>In diesem Fall gibt es mehrere Lizenzen, die auf dem Client verfügbar sind und mit den Inhaltsmetadaten übereinstimmen. Der Zugriffs-Code hat die falsche zur Verwendung ausgewählt. </p> </li> 
      </ul> </p> 
     <ul id="ul_64AEE62BE36946F290067CF475A36ECA"> 
@@ -283,7 +282,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
   <tr> 
    <td colname="col1"> 3310 </td> 
    <td colname="col2"><span class="codeph"> AAXS_AppIDMismatch </span> </td> 
-   <td colname="col3">Die Android-Anwendung stimmt nicht mit der verwendeten überein. <p>Die richtige AIR-Anwendung oder Flash-SWF wird nicht verwendet. </p> </td> 
+   <td colname="col3">Die Android-Anwendung entspricht nicht der verwendeten. <p>Die richtige AIR-Anwendung oder Flash-SWF wird nicht verwendet. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3311 </td> 
@@ -298,7 +297,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
   <tr> 
    <td colname="col1"> 3313 </td> 
    <td colname="col2"><span class="codeph"> AAXS_WriteMicrosafeFailed </span> </td> 
-   <td colname="col3"> <p>Dieses Problem tritt auf, wenn das System nicht in das Dateisystem schreiben kann. <span class="codeph"> subErrorId</span> enthält einen Client-spezifischen Fehler oder Zeilenfehler. </p> <p>Unter Microsoft Windows wird der Fehler 3313 möglicherweise vom Active X- oder NPAPI-Plug-Flash-Player ausgegeben, wenn der verschlüsselte Inhalt eine licenseID oder eine policyID aufweist, die zu lang ist. Dies liegt an der maximalen Pfadlänge in Windows. (Das Pepper-Plug-in hat dieses Problem nicht.) </p> <p>Siehe Watson 3549660 </p> 
+   <td colname="col3"> <p>Dieses Problem tritt auf, wenn das System nicht in das Dateisystem schreiben kann. <span class="codeph"> subErrorId</span> enthält einen Client-spezifischen Fehler oder Zeilenfehler. </p> <p>Unter Microsoft Windows wird der Fehler 3313 möglicherweise vom Active X- oder NPAPI-Plug-Flash-Player ausgegeben, wenn der verschlüsselte Inhalt eine licenseID oder eine policyID aufweist, die zu lang ist. Dies liegt an der maximalen Pfadlänge in Windows. (Das Pepper-Plug-in hat dieses Problem nicht.) </p> <p>Siehe Aufgaben 3549660 </p> 
     <ul id="ul_DFD527D1E1224A439766DF7BED878E3B"> 
      <li id="li_FAF8FD98A4E8478CA7A92F770676ADFC">Die Software des Distributors sollte den Benutzer auffordern, zu bestätigen, dass sein Benutzerverzeichnis weder gesperrt noch auf einem vollen oder gesperrten Volume gespeichert ist. </li> 
      <li id="li_6D1136EA750A459BBECEEE5F73F527BB">Wenn der Distributor AIR anstelle von Flash verwendet, kann das Problem durch eine Pfadlängenbegrenzung verursacht werden. <p>Distributoren sollten den Namen ihrer AIR-Anwendung auf einen vernünftigen Wert kürzen. Veröffentlichen Sie auch Inhalte erneut mit einer kürzeren <span class="codeph"> licenseID</span> und <span class="codeph"> policyID</span>. </p> </li> 
@@ -321,12 +320,12 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
   <tr> 
    <td colname="col1"> 3316 </td> 
    <td colname="col2"><span class="codeph"> AAXS_NOTUSED_MOVED </span> </td> 
-   <td colname="col3"> was <span class="codeph"> ADOBECPSHIM_MinorErr_MissingAdobeCPModul</span>. Aufgrund eines Konflikts mit dem Flash-Fehlercode wurde auf 3344 verschoben. </td> 
+   <td colname="col3"> was <span class="codeph"> ADOBECPSHIM_MinorErr_MissingAdobeCPModul</span>. Aufgrund eines Konflikts mit Flash-Fehlercode wurde auf 3344 verschoben. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3317 </td> 
    <td colname="col2"><span class="codeph"> AAXS_LoadAdobeCPFailed </span> </td> 
-   <td colname="col3"> <p>Wichtig: Dies ist ein seltener Fehler und tritt normalerweise nicht in einer Produktionsumgebung auf. </p> <p>Wenn der Fehler auftritt, können Sie einen der folgenden Schritte ausführen: 
+   <td colname="col3"> <p>Wichtig: Dies ist ein seltener Fehler, der normalerweise nicht in einer Produktionsumgebung auftritt. </p> <p>Wenn der Fehler auftritt, können Sie einen der folgenden Schritte ausführen: 
      <ul id="ul_BC435E61623444BB98A86216531DC892"> 
       <li id="li_FA433D0758B642D2AFDCF04906B3FE18">Wenn Sie AIR verwenden, installieren Sie es neu. </li> 
       <li id="li_F08D9AAFF46244F8842DEE5FD9CBBE0A">Wenn Sie Flash Player verwenden, laden Sie die <span class="codeph"> AdobeCP</span> -Module erneut. </li> 
@@ -350,18 +349,18 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
   <tr> 
    <td colname="col1"> 3321 </td> 
    <td colname="col2"><span class="codeph"> AAXS_I15nFailed </span> </td> 
-   <td colname="col3"> <p>Der Prozess der Bereitstellung von Schlüsseln für den Client ist fehlgeschlagen. subErrorId enthält einen Client-spezifischen, Server-spezifischen oder Zeilenfehler. </p> 
+   <td colname="col3"> <p>Die Bereitstellung von Schlüsseln für den Client ist fehlgeschlagen. subErrorId enthält einen Client-spezifischen, Server-spezifischen oder Zeilenfehler. </p> 
     <ul id="ul_98D919B9060A441AACB6106F6D8E8DA7"> 
      <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">Die Software des Distributors sollte den Betrieb mindestens einmal wiederholen. <p>Wenn Sie Google Chrome unter Windows verwenden, erläutern Sie, wie Sie den Zugriff auf Plug-ins zulassen, die sich nicht in einer Sandbox befinden. Nicht-Sandbox-Zugriff von Google Chrome verweigert</a>. </p> </li> 
      <li id="li_7FB7681FE32D444BB1BDBA3E5953A2C3">Der Händler sollte eine der folgenden Aufgaben ausführen: 
       <ul id="ul_486B64F187C44AE3B4775953A6142836"> 
        <li id="li_095B1D4CD051427CB2BFA7082B454056">Wenn der Fehler plattformübergreifend konsistent ist, sollten Sie das Problem mit Adobe eskalieren. </li> 
        <li id="li_0C6EB7B912FA41E59657216498DA3515">Wenn der Fehler unter Windows auf Chrome beschränkt ist, weisen Sie den Benutzer an, den Zugriff auf das unsandbox-Plug-in zuzulassen. </li> 
-      </ul> <p>Distributoren sollten ihre SWF auf Version 19 oder höher aktualisieren. Beim Chrome-spezifischen 3321-Fehler wird ein 3368-Fehler ausgegeben. Fehler 3368 kann genauer von der Software des Distributors verarbeitet werden. Diese Änderung wurde in der Chrome Stable Channel-Version 26.0.1410.43 eingeführt. </p> <p>Tipp: Fehler <span class="codeph"> 3321:1090519056</span> möglicherweise mit den Flash Player-Versionen 11.1 bis 11.6. Wir empfehlen, ein Upgrade auf die neueste Flash Player-Version durchzuführen. </p> </li> 
+      </ul> <p>Distributoren sollten ihre SWF auf Version 19 oder höher aktualisieren. Beim Chrome-spezifischen 3321-Fehler wird ein 3368-Fehler ausgegeben. Fehler 3368 kann genauer von der Software des Distributors verarbeitet werden. Diese Änderung wurde in der Chrome Stable Channel-Version 26.0.1410.43 eingeführt. </p> <p>Tipp: Fehler <span class="codeph"> 3321:1090519056</span> kann bei Flash Player-Versionen 11.1 bis 11.6 auftreten. Wir empfehlen ein Upgrade auf die neueste Flash Player-Version. </p> </li> 
     </ul> <p>Weitere Informationen finden Sie unter <a href="https://forums.adobe.com/thread/1277138" format="https" scope="external"> DRM-Fehler 3321 Ursachen und Lösung</a>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><b>Korruptionsfehler im globalen Speicher</b> </td> 
+   <td colname="col1"><b>Fehler bei der Beschädigung im globalen Store</b> </td> 
    <td colname="col2"> </td>
    <td colname="col3"> </td>
   </tr> 
@@ -370,9 +369,9 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
    <td colname="col2"><span class="codeph"> AAXS_DeviceBindingFailed </span> </td> 
    <td colname="col3"> <p>Das Gerät scheint nicht mit der Konfiguration übereinzustimmen, die bei der Initialisierung vorhanden war. subErrorId enthält einen clientspezifischen Fehler oder einen Zeilenfehler. </p> <p>Die Software des Distributors sollte eine der folgenden Aufgaben ausführen: 
      <ul id="ul_444401051A2E407B95BC44491E9BB71C"> 
-      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>Wenn das Gerät keinen Flash Player verwendet und AIR, iOS usw. verwendet, rufen Sie <span class="codeph"> DRMManager.resetDRMVouchers()</span>. </p> <p>Wenn das Problem in einer Entwicklungsphase auf iOS auftritt, bitten Sie den Entwickler zu bestätigen, ob das Problem beim Wechsel zwischen Builds, die von Drittanbieter-Distributionssystemen (z. B. HockeyApp) heruntergeladen wurden, und einem lokalen Build aus Xcode behoben wird. Attribute einer vorherigen Installation werden beim Wechsel zwischen einem von HockeyApp verteilten Build und einem Build aus Xcode nicht vollständig überschrieben. Diese Situation könnte den Fehler 3322 Trigger haben. </p> <p>Um dieses Problem zu beheben, sollte der Entwickler den älteren Build vom Gerät entfernen, bevor er den neuen Build installiert. </p> </li> 
-      <li id="li_A5C9633F11584C788A2D9A23CC18FA6D">Wenn das Gerät Flash Player verwendet und aus 3322- oder 3346-Fehlercodes nicht verwendet werden kann, lesen Sie die Anweisungen aus der Adobe darüber, wie Sie Ihren DRM-Lizenzspeicher programmgesteuert zurücksetzen auf <a href="https://forums.adobe.com/message/5535907#5535907" format="https" scope="external"> DRM-Fehler 3322/3346/3368 in Chrome (Info-Bar-Probleme)</a>. </li> 
-     </ul> </p> <p>Es wird nicht erwartet, dass dieser Fehler häufig auftritt. In Unternehmensumgebungen, die Roamingprofile verwenden, steigt die Wahrscheinlichkeit, dass ein Benutzer Inhalte anzeigt, die durch DRM geschützt sind, dass der Fehler 3322 auftritt, wenn sich der Benutzer von verschiedenen Computern aus anmeldet. Wenn möglich, sollte der Distributor versuchen, diese Informationen vom Benutzer zu erhalten. </p> <p>Wenn der Fehler häufig auftritt, eskalieren Sie zu Adobe. Sie müssen Adobe darüber informieren, ob das Zurücksetzen des Lizenzspeichers das Problem gelöst hat (oder nicht), und die Adobe darüber informieren, auf welchen Browsern der Fehler auftritt. </p> <p>Weitere Informationen finden Sie in den folgenden Artikeln: 
+      <li id="li_93493EA05DB44CB1AEC368663F1ABA8D"> <p>Wenn das Gerät kein Flash Player verwendet und AIR, iOS usw. verwendet, rufen Sie <span class="codeph"> DRMManager.resetDRMVouchers()</span>. </p> <p>Wenn das Problem in einer Entwicklungsphase auf iOS auftritt, bitten Sie den Entwickler zu bestätigen, ob das Problem beim Wechsel zwischen Builds, die von Drittanbieter-Distributionssystemen (z. B. HockeyApp) heruntergeladen wurden, und einem lokalen Build aus Xcode behoben wird. Attribute einer vorherigen Installation werden beim Wechsel zwischen einem von HockeyApp verteilten Build und einem Build aus Xcode nicht vollständig überschrieben. Diese Situation könnte den Fehler 3322 Trigger haben. </p> <p>Um dieses Problem zu beheben, sollte der Entwickler den älteren Build vom Gerät entfernen, bevor er den neuen Build installiert. </p> </li> 
+      <li id="li_A5C9633F11584C788A2D9A23CC18FA6D">Wenn das Gerät Flash Player verwendet und aus einem 3322- oder 3346-Fehlercode nicht verwendet werden kann, lesen Sie die Anweisungen von Adobe, wie Sie Ihren DRM-Lizenzspeicher programmgesteuert auf zurücksetzen <a href="https://forums.adobe.com/message/5535907#5535907" format="https" scope="external"> DRM-Fehler 3322/3346/3368 in Chrome (Info-Bar-Probleme)</a>. </li> 
+     </ul> </p> <p>Es wird nicht erwartet, dass dieser Fehler häufig auftritt. In Unternehmensumgebungen, die Roamingprofile verwenden, steigt die Wahrscheinlichkeit, dass ein Benutzer Inhalte anzeigt, die durch DRM geschützt sind, dass der Fehler 3322 auftritt, wenn sich der Benutzer von verschiedenen Computern aus anmeldet. Wenn möglich, sollte der Distributor versuchen, diese Informationen vom Benutzer zu erhalten. </p> <p>Wenn der Fehler häufig auftritt, eskalieren Sie auf Adobe. Sie müssen Adobe darüber informieren, ob das Zurücksetzen des Lizenzspeichers das Problem gelöst hat (oder nicht), und Adobe mitteilen, auf welchen Browsern der Fehler auftritt. </p> <p>Weitere Informationen finden Sie in den folgenden Artikeln: 
      <ul id="ul_C468409D1EA046178CA7F54DCDCB84EA"> 
       <li id="li_20C8CA3853574CE486F21E7A3667DAB9"><a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> https://forums.adobe.com/message/5520902</a> </li> 
       <li id="li_6E6F1BD6FE7843449B3E2F06F342EFF7"><a href="https://forums.adobe.com/message/5535911" format="https" scope="external"> https://forums.adobe.com/message/5535911</a> </li> 
@@ -392,7 +391,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
   <tr> 
    <td colname="col1"> 3324 </td> 
    <td colname="col2"><span class="codeph"> AAXS_MachineTokenInvalid </span> </td> 
-   <td colname="col3"> Setzen Sie den lokalen DRM-Speicher für diese Anwendung zurück. Rufen Sie DRMManager.resetDRM auf. <p>Der Lizenzserver kann möglicherweise keine Verbindung zum CRL-Server (Certificate Revocation List) herstellen, um seine Zertifikatsperrlisten-Dateien zu aktualisieren, oder der Clientcomputer fordert eine Lizenz/Authentifizierung an, die vom Lizenzserver widerrufen wurde. </p> <p>In den Serverprotokollen lautet der Fehlercode 111 MachineTokenInvalid. Auf Client-Ebene wird jedoch der Fehlercode 111 in den Fehlercode 3324 übersetzt. </p> <p>Der Administrator des DRM-Lizenzservers sollte prüfen, ob der Lizenzserver des Kunden die Adobe-Zertifikatsperrlisten jemals abrufen konnte. Wenn der Kunde Tomcat verwendet, kann der Kunde die<span class="filepath"> tomcat/temp/</span> -Verzeichnis, um zu sehen, ob es 4 CRL-Dateien gibt. </p> 
+   <td colname="col3"> Setzen Sie den lokalen DRM-Speicher für diese Anwendung zurück. Rufen Sie DRMManager.resetDRM auf. <p>Der Lizenzserver kann möglicherweise keine Verbindung zum CRL-Server (Certificate Revocation List) herstellen, um seine Zertifikatsperrlisten-Dateien zu aktualisieren, oder der Clientcomputer fordert eine Lizenz/Authentifizierung an, die vom Lizenzserver widerrufen wurde. </p> <p>In den Serverprotokollen lautet der Fehlercode 111 MachineTokenInvalid. Auf Client-Ebene wird jedoch der Fehlercode 111 in den Fehlercode 3324 übersetzt. </p> <p>Der Administrator des DRM-Lizenzservers sollte prüfen, ob der Lizenzserver des Kunden die Adobe-CRL-Dateien jemals abrufen konnte. Wenn der Kunde Tomcat verwendet, kann der Kunde die<span class="filepath"> tomcat/temp/</span> -Verzeichnis, um zu sehen, ob es 4 CRL-Dateien gibt. </p> 
     <ul id="ul_23B7F1A104AF49E79EA87DB8E15E337E"> 
      <li id="li_855D87F251184FE688A8D5FA0F6C9EF5">Wenn sich die Dateien in diesem Ordner befinden, doppelklicken Sie in Windows Explorer auf die Dateien und in der CRL-Viewer-Anwendung, um zu ermitteln, ob eine der Dateien abgelaufen ist. </li> 
      <li id="li_58EC4EDA2B5146188A0FF7B33C91E2FD">Wenn keine Dateien in tomcat/temp/ vorhanden sind, kann davon ausgegangen werden, dass dieser Lizenzserver aufgrund eines Firewall-/Routing-Problems nie in der Lage war, den Adobe-Zertifikatsperrlisten-Server zu erreichen. </li> 
@@ -402,7 +401,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
       <li id="li_6431689260554EAFAFDA2EC31798DCB5"><a href="https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl</a> </li> 
       <li id="li_2939674D0F854ADEB67E45FD216288A2"><a href="https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl" format="http" scope="external"> crl2.adobe.com/Adobe/FlashAccessRootCA.crl</a> </li> 
       <li id="li_96386E00BE9D4CB99D100057A5F7C6DD">crl3.adobe.com/AdobeSystemsIncorporated FlashAccessRuntime/LatestCRL.crl</li> 
-     </ul> </p> <p>Wenn die Firewall-Regeln geöffnet sind und keine aktuellen 3324-Fehler vorliegen, ist möglicherweise ein temporäres Netzwerkproblem aufgetreten. Überprüfen Sie die Serverprotokolle des Kunden, die sich wahrscheinlich in der <span class="codeph"> /tomcat/logs/</span> -Verzeichnis, um zu ermitteln, ob ein Fehler aufgetreten ist, wenn der Lizenzserver versucht hat, die Zertifikatsperrlisten abzurufen. <p>Wichtig: Es kann zu einem Fehler kommen, wenn eine große Anzahl von Clients (oder ein Bersten) einen 3324-Fehler bei einem temporären Netzwerkproblem meldet, wenn eine Zertifikatsperrlisten-Datei erneuert wird. Als das Netzwerkproblem behoben wurde, wurden auch die 3324-Probleme behoben. </p> </p> <p>Wenn alle 4 CRL-Dateien im <span class="filepath"> tomcat/temp/</span> und Clients weiterhin 3324-Fehlercodes erhalten, kann es zu Problemen mit dem Dateizugriff auf die CRL-Dateien kommen. Um dieses Problem zu beheben, sollten Sie die Protokolle überprüfen und die vorhandenen Zertifikatsperrlisten-Dateien bereinigen. </p> <p>Wenn keine Serverprobleme vorliegen, fordern Sie den Benutzer auf, sich wie in 3322 beschrieben zurückzusetzen. </p> </td> 
+     </ul> </p> <p>Wenn die Firewall-Regeln geöffnet sind und keine aktuellen 3324-Fehler vorliegen, ist möglicherweise ein temporäres Netzwerkproblem aufgetreten. Überprüfen Sie die Serverprotokolle des Kunden, die sich wahrscheinlich in der <span class="codeph"> /tomcat/logs/</span> -Verzeichnis, um zu ermitteln, ob ein Fehler aufgetreten ist, wenn der Lizenzserver versucht hat, die Zertifikatsperrlisten abzurufen. <p>Wichtig: Es kann zu einem Fehler kommen, wenn eine große Anzahl von Clients (oder ein Absturz) einen 3324-Fehler bei einem temporären Netzwerkproblem meldet, wenn eine Zertifikatsperrlisten-Datei erneuert wird. Als das Netzwerkproblem behoben wurde, wurden auch die 3324-Probleme behoben. </p> </p> <p>Wenn alle 4 CRL-Dateien im <span class="filepath"> tomcat/temp/</span> und Clients weiterhin 3324-Fehlercodes erhalten, kann es zu Problemen mit dem Dateizugriff auf die CRL-Dateien kommen. Um dieses Problem zu beheben, sollten Sie die Protokolle überprüfen und die vorhandenen Zertifikatsperrlisten-Dateien bereinigen. </p> <p>Wenn keine Serverprobleme vorliegen, fordern Sie den Benutzer auf, sich wie in 3322 beschrieben zurückzusetzen. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><b>Fehler bei der Beschädigung des Serverspeichers</b> </td> 
@@ -415,13 +414,13 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
    <td colname="col3"> <p>Die vom DRM-Client verwendeten Dateien wurden unerwartet geändert. <span class="codeph"> subErrorId</span> enthält einen Client-spezifischen Fehler oder Zeilenfehler. </p> 
     <ul id="ul_860D2402DA61460AB0D938F1116F6D64"> 
      <li id="li_CF368C43452B4265B62ADA3E223894BA">Die Software des Distributors sollte den Vorgang erneut versuchen, da AdobeCP den fehlerhaften Serverspeicher intern gelöscht hat und ein erneuter Versuch erfolgreich sein sollte. Wenn ein erneuter Versuch fehlschlägt, protokollieren Sie das Problem. </li> 
-     <li id="li_51A5803A1F754970BB4EBD6494F5DC96">Wenn weitere Zustellversuche mit einer Fehlerrate fehlschlagen, die größer ist als die erwartete Fehlerrate der Festplatten Ihrer Benutzerbasis, eskalieren Sie das Problem auf die Adobe. </li> 
+     <li id="li_51A5803A1F754970BB4EBD6494F5DC96">Wenn weitere Zustellversuche in einer Geschwindigkeit fehlschlagen, die größer ist als die erwartete Fehlerrate der Festplatten Ihrer Benutzerbasis, eskalieren Sie das Problem auf Adobe. </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3326 </td> 
    <td colname="col2"><span class="codeph"> AAXS_StoreTamperingDetected </span> </td> 
-   <td colname="col3"> Aufruf <span class="codeph"> DRMManager.resetDRM</span>. <p>Der Lizenzspeicher wurde manipuliert/beschädigt und kann nicht mehr verwendet werden. </p> <p>Die Software des Distributors sollte den Benutzer dazu bringen, auf die in 3322 beschriebene Weise zurückzusetzen. </p> </td> 
+   <td colname="col3"> Aufruf <span class="codeph"> DRMManager.resetDRM</span>. <p>Der Lizenzspeicher wurde verändert/beschädigt und kann nicht mehr verwendet werden. </p> <p>Die Software des Distributors sollte den Benutzer dazu bringen, auf die in 3322 beschriebene Weise zurückzusetzen. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3327 </td> 
@@ -475,7 +474,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
   <tr> 
    <td colname="col1"> 3334 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InvalidDRMPlatform </span> </td> 
-   <td colname="col3"> <p>Diese Plattform ist nicht berechtigt, den Inhalt wiederzugeben, da der Inhaltsanbieter beispielsweise die Adobe Access so konfiguriert hat, dass der Adobe-Zugriff auf eine Plattform verweigert wird oder eine freigegebene Domain-gebundene Lizenz an ein freigegebenes Domain-Token gebunden ist, das für eine andere Partition bestimmt ist. </p> <p>Der CDM kann diesen Fehler auslösen, wenn Inhalt nicht mithilfe einer entsprechenden (CDM Feature Gated) Packager-Zertifizierung gepackt wurde. </p> <p>Wenn der Inhalt mit einem falschen PHDS-/PHLS-Zertifikat gepackt ist, funktioniert der Inhalt möglicherweise in Chrome, nicht aber in anderen Browsern (oder umgekehrt). <p>Tipp: Dies liegt daran, dass Chrome verschiedene PHDS-/PHLS-Zertifikate verwendet. </p>Um zu bestätigen, welches Zertifikat verwendet wird, speichern Sie die Details der Inhaltsmetadaten und suchen Sie nach der <i>Empfängerzertifikate</i>. Weitere Informationen finden Sie unter <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>. </p> </td> 
+   <td colname="col3"> <p>Diese Plattform ist nicht berechtigt, den Inhalt wiederzugeben, da der Inhaltsanbieter beispielsweise Adobe Access so konfiguriert hat, dass er den Adobe-Zugriff auf Inhalte auf einer Plattform verweigert, oder eine freigegebene Domain-gebundene Lizenz an ein freigegebenes Domain-Token gebunden ist, das für eine andere Partition bestimmt ist. </p> <p>Der CDM kann diesen Fehler auslösen, wenn Inhalt nicht mithilfe einer entsprechenden (CDM Feature Gated) Packager-Zertifizierung gepackt wurde. </p> <p>Wenn der Inhalt mit einem falschen PHDS-/PHLS-Zertifikat gepackt ist, funktioniert der Inhalt möglicherweise in Chrome, nicht aber in anderen Browsern (oder umgekehrt). <p>Tipp: Dies liegt daran, dass Chrome verschiedene PHDS/PHLS-Zertifikate verwendet. </p>Um zu bestätigen, welches Zertifikat verwendet wird, speichern Sie die Details der Inhaltsmetadaten und suchen Sie nach der <i>Empfängerzertifikate</i>. Weitere Informationen finden Sie unter <a href="https://adobeprimetime.zendesk.com/agent/tickets/2891" format="https" scope="external"> https://adobeprimetime.zendesk.com/agent/tickets/2891</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3335 </td> 
@@ -494,19 +493,19 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
   <tr> 
    <td colname="col1"> 3337 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InvalidRuntimeVersion </span> </td> 
-   <td colname="col3"> Aktualisieren Sie auf die neueste Version von TVSDK für Android. <p>Dies tritt auf, wenn der Inhalt oder der Server so konfiguriert ist, dass die Wiedergabe für eine bestimmte Version des Flashs oder AIR-Laufzeitumgebungen verweigert wird. </p> 
+   <td colname="col3"> Aktualisieren Sie auf die neueste Version von TVSDK für Android. <p>Dies tritt auf, wenn der Inhalt oder der Server so konfiguriert ist, dass die Wiedergabe für eine bestimmte Version der Flash- oder AIR-Laufzeitumgebungen verweigert wird. </p> 
     <ul id="ul_B0732D941256483CABBDD30C9BF43249"> 
-     <li id="li_72782B1D638F48C0B87084689FB9C798">Wenn sich der Benutzer auf einem Betriebssystem befindet, auf dem der Flash aktualisiert werden kann, sollte die Software des Distributors den Benutzer auffordern, den Flash zu aktualisieren und es erneut zu versuchen. Ansonsten empfehlen Sie dem Benutzer, einen anderen Computer zu verwenden. </li> 
-     <li id="li_1E3FD93CE39E43F2B7D961299B1211DA">Wenn der Fehler 3337s vermutet wird, ermitteln Sie, ob er für bestimmte Inhalte auftritt, und verpacken Sie diesen Inhalt neu. Informationen zum korrekten Packen von Inhalten finden Sie unter Diskrepanzen bei der Diagnostik von Richtlinien/Lizenzen . </li> 
+     <li id="li_72782B1D638F48C0B87084689FB9C798">Wenn sich der Benutzer auf einem Betriebssystem befindet, auf dem Flash aktualisiert werden kann, sollte die Software des Distributors den Benutzer auffordern, Flash zu aktualisieren und es erneut zu versuchen. Ansonsten empfehlen Sie dem Benutzer, einen anderen Computer zu verwenden. </li> 
+     <li id="li_1E3FD93CE39E43F2B7D961299B1211DA">Wenn der Fehler 3337s vermutet wird, ermitteln Sie, ob er für bestimmte Inhalte auftritt, und verpacken Sie diesen Inhalt neu. Informationen zum korrekten Packen von Inhalten finden Sie unter Diskrepanzen bei der Diagnoserichtlinie/Lizenz . </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3338 </td> 
    <td colname="col2"><span class="codeph"> AAXS_UnknownConnectionType </span> </td> 
-   <td colname="col3"> <p>Der Verbindungstyp kann nicht erkannt werden. Die Richtlinie erfordert, dass Sie den Output Protection aktivieren. Dieses Problem wird nur erwartet, wenn der Inhalt so verpackt ist, dass er einen digitalen oder analogen Ausgabeschutz erfordert. </p> <p>Ein Problem in Versionen von Flash Player, die älter als Version 11.8.800.168 sind, verursachte den Fehler 3338 gelegentlich bei Inhalten, für die die Richtlinie anzeigte, dass der Inhaltsschutz <span class="codeph"> VERWENDEN, WENN VERFÜGBAR</span>. Dieses Problem wurde in Version 11.8.800.168 und höher behoben. </p> 
+   <td colname="col3"> <p>Der Verbindungstyp kann nicht erkannt werden. Die Richtlinie erfordert, dass Sie den Output Protection aktivieren. Dieses Problem wird nur erwartet, wenn der Inhalt so verpackt ist, dass er einen digitalen oder analogen Ausgabeschutz erfordert. </p> <p>Ein Problem in Versionen von Flash Player, die älter als Version 11.8.800.168 sind, führte gelegentlich zu Fehler 3338 bei Inhalten, für die die Richtlinie anzeigte, dass der Inhaltsschutz <span class="codeph"> VERWENDEN, WENN VERFÜGBAR</span>. Dieses Problem wurde in Version 11.8.800.168 und höher behoben. </p> 
     <ul id="ul_4B6CA26A53F84838B5B95400925464D4"> 
-     <li id="li_CBD890F467E449EBB5116E1561252058">Die Software des Distributors wählt eine Variante des Inhalts aus, die keinen Ausgabeschutz erfordert (z. B. SD-Variante eines HD-Streams). <p>Wenn der Fehler 3338 auf <span class="codeph"> USE_IF_AVAILABLE </span> Inhalt, suchen Sie nach der Player-Versionsnummer. Wenn die Player-Version kleiner als 11.8.800.168 ist, empfehlen Sie dem Benutzer, den Flash Player zu aktualisieren. Wenn bei Versionen über 11.8.800.168 der Fehler 3338 auftritt, protokollieren Sie, welcher Inhalt den Fehler verursacht hat. </p> </li> 
-     <li id="li_62886C1D96264B129928A7E29E6C70E1">Der Distributor sollte überprüfen, welcher Inhalt diesen Fehler verursacht, und überprüfen, ob die Richtlinie des Inhalts <span class="codeph"> NO_PROTECTION</span> oder <span class="codeph"> USE_IF_AVAILABLE</span> für analoge und digitale Ausgaben. <p>Wenn Inhalt versehentlich mit <span class="codeph"> NO_OUTPUT</span> oder <span class="codeph"> ERFORDERLICH</span>, verpacken Sie den Inhalt neu. Wenn der Inhalt richtig verpackt ist, lesen Sie die Informationen zu Diagnoserichtlinien/Lizenzdiskrepanzen. Eskalieren Sie andernfalls zur Adobe. </p> </li> 
+     <li id="li_CBD890F467E449EBB5116E1561252058">Die Software des Distributors wählt eine Variante des Inhalts aus, die keinen Ausgabeschutz erfordert (z. B. SD-Variante eines HD-Streams). <p>Wenn der Fehler 3338 auf <span class="codeph"> USE_IF_AVAILABLE </span> Inhalt, suchen Sie nach der Player-Versionsnummer. Wenn die Player-Version kleiner als 11.8.800.168 ist, empfehlen Sie dem Benutzer, das Flash Player zu aktualisieren. Wenn bei Versionen über 11.8.800.168 der Fehler 3338 auftritt, protokollieren Sie, welcher Inhalt den Fehler verursacht hat. </p> </li> 
+     <li id="li_62886C1D96264B129928A7E29E6C70E1">Der Distributor sollte überprüfen, welcher Inhalt diesen Fehler verursacht, und überprüfen, ob die Richtlinie des Inhalts <span class="codeph"> NO_PROTECTION</span> oder <span class="codeph"> USE_IF_AVAILABLE</span> für analoge und digitale Ausgaben. <p>Wenn Inhalt versehentlich mit <span class="codeph"> NO_OUTPUT</span> oder <span class="codeph"> ERFORDERLICH</span>, verpacken Sie den Inhalt neu. Wenn der Inhalt richtig verpackt ist, lesen Sie die Informationen zu Diagnoserichtlinien/Lizenzdiskrepanzen. Eskalieren Sie andernfalls auf Adobe. </p> </li> 
     </ul> <p>Weitere Informationen finden Sie unter <a href="https://forums.adobe.com/message/5518688" format="https" scope="external"> Unerwartete 3338-Fehler erhalten, wenn Ihre DRM-Richtlinie auf USE_IF_AVAILABLE gesetzt ist?</a> </p> </td> 
   </tr> 
   <tr> 
@@ -532,14 +531,14 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
   <tr> 
    <td colname="col1"> 3343 </td> 
    <td colname="col2"><span class="codeph"> AAXS_IntegrityVerificationFailed </span> </td> 
-   <td colname="col3"> <p>Gilt nicht für Android. </p> <p>Dieser Fehler tritt derzeit bekanntermaßen zunächst auf, nachdem eine neue Version von Flash veröffentlicht wurde. Dies geschieht, weil der Flash aktualisiert wurde, während der Flash geöffnet war, was den Flash in einen schlechten Zustand versetzt, bis der Browser neu gestartet wird. </p> 
+   <td colname="col3"> <p>Gilt nicht für Android. </p> <p>Dieser Fehler tritt derzeit erst nach der Veröffentlichung einer neuen Version von Flash auf. Dies geschieht, weil Flash aktualisiert wurde, während Flash geöffnet war, was die Flash in einen schlechten Zustand versetzt, bis der Browser neu gestartet wird. </p> 
     <ul id="ul_A0AC4A77550E40409A04BD33748EA987"> 
      <li id="li_F41C1ABD838D41ABB0DF65093E664A29">Die Software des Distributors sollte die folgenden Aufgaben ausführen: 
       <ul id="ul_79B2AB1372074D448F129851AA24F985"> 
        <li id="li_B93EDD263D78434FAF198A01938D3508">Es wird empfohlen, dass der Benutzer alle Browser schließt oder beendet und dann erneut geöffnet wird. </li> 
-       <li id="li_ADFBCFA66AD849E18DB390455458528E">Überprüfen Sie, ob die Version von Flash aktuell ist. <p>Wenn die Version nicht aktuell ist, empfehlen Sie dem Kunden, ein Upgrade durchzuführen, alle Registerkarten in seinem Browser zu schließen und erneut zu öffnen. </p> </li> 
+       <li id="li_ADFBCFA66AD849E18DB390455458528E">Überprüfen Sie, ob die Flash-Version aktuell ist. <p>Wenn die Version nicht aktuell ist, empfehlen Sie dem Kunden, ein Upgrade durchzuführen, alle Registerkarten in seinem Browser zu schließen und erneut zu öffnen. </p> </li> 
       </ul> </li> 
-     <li id="li_281B54582B5949AEA7D166246917EE41">Wenn nach einem erfolgreichen Neustart des Browsers ein Fehler auftritt, eskalieren Sie auf Adobe. <p>Wenn eine neue Version veröffentlicht wird, empfehlen wir Ihnen, sich an den Adobe Support zu wenden, um zu sehen, ob das Problem mit Hintergrundaktualisierungen behoben wurde. </p> </li> 
+     <li id="li_281B54582B5949AEA7D166246917EE41">Wenn nach einem erfolgreichen Neustart des Browsers ein Fehler auftritt, eskalieren Sie zu Adobe. <p>Wenn eine neue Version veröffentlicht wird, empfehlen wir Ihnen, sich an den Adobe-Support zu wenden, um zu sehen, ob das Problem mit Hintergrundaktualisierungen behoben wurde. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -564,9 +563,9 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
      <li id="li_3C44F0740B08490E9C62D89C40B57DC2">Die Software des Distributors sollte einen der folgenden Schritte ausführen: 
       <ul id="ul_7D90526684BF4EB2BBADCF598AA13086"> 
        <li id="li_D15B4BEDAF7340F6B9BC886DF6E346EC">Wenn AIR, rufen Sie <span class="codeph"> DRMManager.resetDRMVouchers()</span> </li> 
-       <li id="li_40A51D35408249CFA28DBC49FDA3408B">Wenn der Flash aufgrund des Fehlercodes 3322 oder 3346 unbrauchbar ist, sollten Benutzer zu <a href="https://forums.adobe.com/message/5535907#5535907" format="http" scope="external"> https://forums.adobe.com/message/5535907#5535907</a> und befolgen Sie die Anweisungen des Adobe-Artikels, um ihren DRM-Lizenzspeicher programmgesteuert zurückzusetzen. </li> 
+       <li id="li_40A51D35408249CFA28DBC49FDA3408B">Wenn Flash aufgrund des Fehlercodes 3322 oder 3346 unbrauchbar ist, sollten Benutzer zu <a href="https://forums.adobe.com/message/5535907#5535907" format="http" scope="external"> https://forums.adobe.com/message/5535907#5535907</a> und befolgen Sie die Anweisungen des Adobe-Artikels, um ihren DRM-Lizenzspeicher programmgesteuert zurückzusetzen. </li> 
       </ul> </li> 
-     <li id="li_0464471E4A094C80BF2986694341921A">Tritt dieser Fehler häufig auf, sollte der Distributor die Details zur Frequenzplayer-Version und zur Browserversion zur Adobe angeben. </li> 
+     <li id="li_0464471E4A094C80BF2986694341921A">Tritt dieser Fehler häufig auf, sollte der Distributor die Details zur Frequenzplayer-Version und zur Browserversion zum Adobe angeben. </li> 
     </ul> <p>Weitere Informationen finden Sie in den folgenden Forumsartikeln: 
      <ul id="ul_44E0077FEAA749CC9549BF3846065304"> 
       <li id="li_2BE3B2443380415DA73B7AA3B6547B31"><a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> DRM-Fehler 3322/3346/3368 in Chrome (Info-Bar-Probleme)</a> </li> 
@@ -620,7 +619,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
   <tr> 
    <td colname="col1"> 3355 </td> 
    <td colname="col2"><span class="codeph"> AAXS_DomainJoinFailed </span> </td> 
-   <td colname="col3"> Domain-Join ist fehlgeschlagen. </td> 
+   <td colname="col3"> Domänenbeitritt fehlgeschlagen. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3356 </td> 
@@ -670,7 +669,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
   <tr> 
    <td colname="col1"> 3365 </td> 
    <td colname="col2"><span class="codeph"> AAXS_IncognitoModeNotAllowed </span> </td> 
-   <td colname="col3"> <p>Diese Kombination aus Browser und Plattform ermöglicht keine DRM-geschützte Wiedergabe im Inkognito-Modus. </p> <p>Die Software des Distributors sollte den Benutzer anweisen, den Inkognito-Modus zu beenden oder einen anderen Browser zu verwenden. Weitere Informationen finden Sie unter <a href="https://forums.adobe.com/thread/1266622" format="https" scope="external"> Ursache und Auflösung des DRM-Fehlers 3365</a>. </p> </td> 
+   <td colname="col3"> <p>Diese Kombination aus Browser und Plattform ermöglicht keine DRM-geschützte Wiedergabe im Inkognito-Modus. </p> <p>Die Software des Distributors sollte den Benutzer anweisen, den Inkognito-Modus zu beenden oder einen anderen Browser zu verwenden. Weitere Informationen finden Sie unter <a href="https://forums.adobe.com/thread/1266622" format="https" scope="external"> DRM-Fehler 3365 Ursache und Auflösung</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3366 </td> 
@@ -690,7 +689,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
   <tr> 
    <td colname="col1"> 3369 </td> 
    <td colname="col2"><span class="codeph"> AAXS_InterfaceNotAvailable</span> </td> 
-   <td colname="col3"> <p>Eine erforderliche Browser-Oberfläche ist nicht verfügbar. Dieses Problem tritt nur bei Pepper auf. Zwischen dem Flash-Plugin und der Browserversion kann es zu Abweichungen kommen. </p> <p>Die Software des Verteilers sollte den Benutzer anweisen, sicherzustellen, dass die neueste Version des Browsers installiert ist. </p> <p> Wenn die Häufigkeit dieses Fehlers zunimmt und einer Browseraktualisierung entspricht, eskalieren Sie auf Adobe. </p> </td> 
+   <td colname="col3"> <p>Eine erforderliche Browser-Oberfläche ist nicht verfügbar. Dieses Problem tritt nur bei Pepper auf. Zwischen dem Flash-Plug-in und der Browserversion kann es zu Abweichungen kommen. </p> <p>Die Software des Verteilers sollte den Benutzer anweisen, sicherzustellen, dass die neueste Version des Browsers installiert ist. </p> <p> Wenn die Häufigkeit dieses Fehlers zunimmt und einer Browseraktualisierung entspricht, eskalieren Sie auf Adobe. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3370 </td> 
@@ -705,12 +704,12 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
   <tr> 
    <td colname="col1"> 3372 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ResolutionLargerThanMaxResolution</span> </td> 
-   <td colname="col3"> <p>Die Auflösung des Inhalts ist größer als die in der Ausgabeschutzbegrenzung angegebene maximale Auflösung. </p> <p>Wenn das Betriebsteam des Distributors diesen Fehler in seinen Protokollen sieht, sollte es die auflösungsbasierte Ausgabeschutzrichtlinie überprüfen und den Inhalt bei Bedarf neu verpacken. </p> </td> 
+   <td colname="col3"> <p>Die Auflösung des Inhalts ist größer als die in der Ausgabeschutzbegrenzung angegebene maximale Auflösung. </p> <p>Wenn das Betriebsteam des Distributors diesen Fehler in seinen Protokollen sieht, sollte es die auflösungsbasierte Ausgabeschutzrichtlinie überprüfen und den Inhalt ggf. neu verpacken. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3373 </td> 
    <td colname="col2"><span class="codeph"> AAXS_MinorErr_DisplayResolutionLargerThanConfirm</span> </td> 
-   <td colname="col3"> <p>Die Auflösung des Inhalts ist größer als die Auflösung, die durch die derzeit aktive Ausgabeschränkung angegeben wird. </p> <p>Wenn das Betriebsteam des Distributors diesen Fehler in seinen Protokollen sieht, sollte es die auflösungsbasierte Ausgabeschutzrichtlinie überprüfen und den Inhalt bei Bedarf neu verpacken. </p> </td> 
+   <td colname="col3"> <p>Die Auflösung des Inhalts ist größer als die Auflösung, die durch die derzeit aktive Ausgabeschränkung angegeben wird. </p> <p>Wenn das Betriebsteam des Distributors diesen Fehler in seinen Protokollen sieht, sollte es die auflösungsbasierte Ausgabeschutzrichtlinie überprüfen und den Inhalt ggf. neu verpacken. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3374 </td> 
@@ -720,7 +719,7 @@ Stellen Sie bei der Meldung von DRM-Fehlern an Adobe sicher, dass Sie die Variab
  </tbody> 
 </table>
 
-## NATIVE_ERROR: Videowiedergabewerte {#section_7079501250C2487499639F92EC774525}
+## NATIVE_ERROR: Werte für die Videowiedergabe {#section_7079501250C2487499639F92EC774525}
 
 Die Video Encoder-Oberfläche von AVE gibt diese Benachrichtigungen zur Videowiedergabe im `NATIVE_ERROR` Metadatenobjekt.
 
@@ -1206,12 +1205,12 @@ Die Video Encoder-Oberfläche von AVE gibt diese Benachrichtigungen zur Videowie
   <tr> 
    <td colname="col1"> 93 </td> 
    <td colname="col2"><span class="codeph"> TRICKPLAY_ENDED_DUE_TO_ERROR</span> </td> 
-   <td colname="col3">Beim Abspielen von Medien in <i>Trick Play</i> -Modus. Der Trick Play-Modus wird beendet und der Stream wird angehalten. Aufruf <span class="codeph"> Play()</span> , um die Medien im normalen Modus abzuspielen. </td> 
+   <td colname="col3">Beim Abspielen von Medien in <i>Trick Play</i> -Modus. Der Trick Play-Modus wird beendet und der Stream wird angehalten. Aufruf <span class="codeph"> Play()</span> , um die Medien im normalen Modus wiederzugeben. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 95 </td> 
    <td colname="col2"><span class="codeph"> LIVE_WINDOW_MOVED_AHEAD</span> </td> 
-   <td colname="col3"> Der Spieler ist nicht im Live-Fenster und muss nach vorne suchen, um aufzuholen. </td> 
+   <td colname="col3"> Der Spieler ist nicht im Live-Fenster und muss nach vorn suchen, um aufzuholen. </td> 
   </tr> 
  </tbody> 
 </table>

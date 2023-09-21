@@ -1,46 +1,44 @@
 ---
-description: TVSDK verarbeitet Blackouts in Live-Video-Streams und bietet alternativen Inhalt während einer Blackout-Phase.
+description: TVSDK behandelt Blackouts in Live-Video-Streams und bietet alternative Inhalte während einer Blackout-Phase.
 title: Umgang mit Blackouts
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 0%
 
 ---
 
-
 # Umgang mit Blackouts {#handle-blackouts}
 
-TVSDK verarbeitet Blackouts in Live-Video-Streams und bietet alternativen Inhalt während einer Blackout-Phase.
+TVSDK behandelt Blackouts in Live-Video-Streams und bietet alternative Inhalte während einer Blackout-Phase.
 
-Der häufigste Anwendungsfall im Zusammenhang mit einem Blackout beim Programmieren ist der Fall, wenn Ihre Player-App Benutzern, die nicht zum Anzeigen des Hauptstreams berechtigt sind, alternativen Inhalt bereitstellt. Diese App kann TVSDK verwenden, um den Beginn und das Ende der Blackout-Phase zu bestimmen. Auf diese Weise kann zu Beginn der Blackout-Phase die Wiedergabe vom Hauptstrom zu einem alternativen Stream wechseln und dann zum Hauptstrom wechseln, wenn die Blackout-Phase vorüber ist.
+Der häufigste Anwendungsfall, der mit einem Programmier-Blackout verbunden ist, besteht darin, dass Ihre Player-App Benutzern, die nicht zum Anzeigen des Hauptstreams berechtigt sind, alternative Inhalte bereitstellt. Diese App kann TVSDK verwenden, um den Anfang und das Ende der Blackout-Phase zu bestimmen. Auf diese Weise kann die Wiedergabe zu Beginn der Blackout-Phase vom Hauptstrom zu einem alternativen Stream wechseln und dann wieder zum Hauptstrom wechseln, wenn die Blackout-Phase vorüber ist.
 
 So implementieren Sie die Lösung für diesen Anwendungsfall:
 
 1. Richten Sie Ihre App so ein, dass sie Blackout-Tags in einem Live-Stream-Manifest abonniert.
 
-   TVSDK kennt keine Blackout-Tags, aber es ermöglicht Ihrer App das Abonnieren von Benachrichtigungen, wenn beim Analysieren von Manifestdateien bestimmte Tags gefunden werden.
-1. hinzufügen einen Benachrichtigungs-Listener für `PTTimedMetadataChangedNotification`.
+   TVSDK kennt keine Blackout-Tags, aber es ermöglicht Ihrer App, Benachrichtigungen zu abonnieren, wenn beim Analysieren von Manifestdateien bestimmte Tags auftreten.
+1. Hinzufügen eines Benachrichtigungs-Listeners für `PTTimedMetadataChangedNotification`.
 
-   Diese Benachrichtigung wird jedes Mal ausgelöst, wenn ein abonniertes Tag im Manifest analysiert wird und ein neuer `PTTimedMetadata` darauf vorbereitet wird.
+   Diese Benachrichtigung wird jedes Mal gesendet, wenn ein abonniertes Tag im Manifest geparst wird, und eine neue `PTTimedMetadata` ist darauf vorbereitet.
 
-1. Implementieren Sie eine Listener-Methode wie `onMediaPlayerSubscribedTagIdentified` für `PTTimedMetadata`-Objekte im Vordergrund.
+1. Implementieren einer Listener-Methode, z. B. `onMediaPlayerSubscribedTagIdentified`, für `PTTimedMetadata` Objekte im Vordergrund.
 
-1. Verwenden Sie bei jedem Update während der Wiedergabe den `PTMediaPlayerTimeChangeNotification`-Listener, um `PTTimedMetadata`-Objekte zu verarbeiten.
+1. Jedes Mal, wenn während der Wiedergabe ein Update erfolgt, verwenden Sie die `PTMediaPlayerTimeChangeNotification` Listener zum Verarbeiten `PTTimedMetadata` Objekte.
 
-1. hinzufügen Sie den `PTTimedMetadata`-Handler.
+1. Fügen Sie die `PTTimedMetadata` Handler.
 
-   Mit diesem Handler können Sie zu alternativen Inhalten wechseln und zum Hauptinhalt zurückkehren, wie durch das `PTTimedMetadata`-Objekt und seine Wiedergabezeit angegeben.
+   Mit diesem Handler können Sie zu alternativen Inhalten wechseln und zum Hauptinhalt zurückkehren, wie durch die Variable `PTTimedMetadata` -Objekt und dessen Wiedergabedauer.
 
-1. Verwenden Sie `onSubscribedTagInBackground`, um die Listener-Methode für `PTTimedMetadata`-Objekte im Hintergrund zu implementieren.
+1. Verwendung `onSubscribedTagInBackground` , um die Listener-Methode für `PTTimedMetadata` Objekte im Hintergrund.
 
-   Diese Methode überwacht das Timing im Hintergrundstream, was Ihnen hilft, festzustellen, wann Sie von alternativen Inhalten zurück zum Hauptinhalt wechseln können.
+   Diese Methode überwacht die Timing-Funktion im Hintergrund-Stream, mit der Sie feststellen können, wann Sie von alternativen Inhalten zurück zum Hauptinhalt wechseln können.
 
 1. Implementieren Sie eine Listener-Methode für Hintergrundfehler.
 1. Wenn sich der Blackout-Bereich im DVR im Wiedergabestream befindet, aktualisieren Sie die nicht suchbaren Bereiche.
 
-   In den folgenden Fällen muss die Anwendung den nicht suchbaren Bereich im DVR einstellen:
+   In den folgenden Fällen muss Ihre Anwendung den nicht suchbaren Bereich im DVR festlegen:
 
-   * Bei der Verbindung zum Hauptstrom, wenn sich ein Blackout im DVR befindet.
-   * Beim Zurückschalten zum Hauptinhalt vom alternativen Inhalt.
+   * Beim Beitritt zum Hauptstrom, wenn ein Stromausfall in der DVR auftritt.
+   * Beim Wechsel zum Hauptinhalt vom alternativen Inhalt

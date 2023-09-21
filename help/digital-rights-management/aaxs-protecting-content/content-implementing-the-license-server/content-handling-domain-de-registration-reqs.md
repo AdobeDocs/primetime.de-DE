@@ -1,22 +1,20 @@
 ---
-title: Bearbeitung von Domänenderegistrierungsanfragen
-description: Bearbeitung von Domänenderegistrierungsanfragen
+title: Umgang mit Domänenderegistrierungsanfragen
+description: Umgang mit Domänenderegistrierungsanfragen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 0%
 
 ---
 
+# Umgang mit Domänenderegistrierungsanfragen{#handling-domain-de-registration-requests}
 
-# Bearbeitung von Domänenderegistrierungsanfragen{#handling-domain-de-registration-requests}
+Wenn die Client-Anwendung eine Domäne verlassen muss, wird die `DRMManager.removeFromDeviceGroup()`ActionScript-API oder die `leaveLicenseDomain()` iOS-API zum Initiieren der Domänenderegistrierung. Die Domänenderegistrierung ist ein zweistufiger Prozess. Der Client sendet zunächst eine Vorschauanforderung zur Deregistrierung. Der Domain-Server prüft die Anfrage und ermittelt, ob der Client die Domäne verlassen darf (es kann ein Fehler zurückgegeben werden, wenn der Computer derzeit nicht zur Domäne gehört). Bei einer erfolgreichen Antwort löscht der Client seine Domain-Anmeldeinformationen und alle Lizenzen, die für diese Domäne ausgestellt wurden, und sendet dann eine Anfrage zur Aufhebung der Registrierung.
 
-Wenn die Clientanwendung eine Domäne verlassen muss, ruft sie die `DRMManager.removeFromDeviceGroup()`ActionScript-API oder die `leaveLicenseDomain()` iOS-API auf, um den Domänenderegistrierungsprozess zu starten. Die Domänenderegistrierung ist ein zweistufiger Prozess. Der Client sendet zuerst eine Vorschau zur Deregistrierung. Der Domänenserver prüft die Anforderung und stellt fest, ob der Client die Domäne verlassen darf (es kann ein Fehler zurückgegeben werden, wenn der Computer derzeit nicht zur Domäne gehört). Bei erfolgreicher Antwort löscht der Client seine Domänenberechtigungen und alle Lizenzen, die für diese Domäne erteilt wurden, und sendet dann eine Deregistrierungsanfrage.
+* Die Anfrage-Handler-Klasse lautet `com.adobe.flashaccess.sdk.protocol.domain.DomainDeRegistrationHandler`
+* Die Anforderungsmeldungsklasse lautet `com.adobe.flashaccess.sdk.protocol.domain.DomainDeRegistrationRequestMessage`
+* Wenn sowohl der Client als auch der Server das Protokoll Version 5 unterstützen, lautet die Anforderungs-URL &quot;Domain Server URL in metadata: + &quot;/flashaccess/dereg/v4&quot;. Andernfalls lautet die Anforderungs-URL Domain Server URL in den Metadaten &quot;+ &quot;/flashaccess/dereg/v3&quot;
 
-* Die Anforderungs-Handler-Klasse ist `com.adobe.flashaccess.sdk.protocol.domain.DomainDeRegistrationHandler`
-* Die Anforderungsmeldungsklasse ist `com.adobe.flashaccess.sdk.protocol.domain.DomainDeRegistrationRequestMessage`
-* Wenn Client und Server das Protokoll Version 5 unterstützen, lautet die Anforderungs-URL &quot;URL des Domänenservers in Metadaten: + &quot;/flashaccess/dereg/v4&quot;. Andernfalls lautet die Anforderungs-URL in den Metadaten &quot;URL des Domänenservers&quot; + &quot;/flashaccess/dereg/v3&quot;
-
-Bei der Verarbeitung von Domänenderegistrierungsanforderungen verwendet der Server `getRequestPhase()`, um zu ermitteln, ob sich der Client in der Vorschau- oder Deregistrierungsphase befindet. In der Vorschau prüft der Domänenserver die Anforderung und stellt fest, ob der Client die Domäne verlassen darf (die Anforderung kann beispielsweise verweigert werden, wenn der Computer derzeit nicht zur Domäne gehört). In der Entregistrierung zeichnet der Server die Tatsache auf, dass der Computer die Domäne verlassen hat. Der Server wird dringend empfohlen, dieselbe Logik in der Anforderung der Vorschau auszuwerten wie in der Anfrage zur Löschung der Registrierung, um die Wahrscheinlichkeit eines Fehlers in der zweiten Phase zu minimieren.
+Bei der Verarbeitung von Domänenderegistrierungsanfragen verwendet der Server `getRequestPhase()` , um zu bestimmen, ob sich der Client in der Vorschau- oder Abmeldephase befindet. In der Vorschauphase prüft der Domain-Server die Anfrage und bestimmt, ob der Client die Domäne verlassen darf (die Anfrage kann beispielsweise verweigert werden, wenn der Computer derzeit nicht zur Domäne gehört). In der Abmeldephase zeichnet der Server die Tatsache auf, dass der Computer die Domäne verlassen hat. Es wird dringend empfohlen, dass der Server dieselbe Logik in der Vorschauanforderung wie in der eigentlichen Registrierungsanfrage auswertet, um die Wahrscheinlichkeit eines Fehlschlagens der zweiten Phase zu minimieren.

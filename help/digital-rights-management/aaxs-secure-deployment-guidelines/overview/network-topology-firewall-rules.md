@@ -2,20 +2,18 @@
 title: Firewall-Regeln
 description: Firewall-Regeln
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
 
 ---
 
-
 # Firewall-Regeln {#firewall-rules}
 
 ## Eingehende URLs {#section-F111526A9DB844CBBF21A3CAE5F50880}
 
-Konfigurieren Sie Ihre äußere Firewall so, dass sie nur die URLs für die Anwendungsfunktionalität bereitstellt, die Sie den Endbenutzern bereitstellen möchten. Externe Benutzer können nur über die äußere Firewall auf die in der folgenden Tabelle aufgeführten URLs zugreifen:
+Konfigurieren Sie Ihre äußere Firewall so, dass sie nur die URLs für die Anwendungsfunktionalität verfügbar macht, die Sie den Endbenutzern bereitstellen möchten. Erlauben Sie externen Benutzern den Zugriff über die äußere Firewall nur auf die in der folgenden Tabelle aufgelisteten URLs:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-bqs-whz-n4"> 
  <thead class="- topic/thead "> 
@@ -37,7 +35,7 @@ Konfigurieren Sie Ihre äußere Firewall so, dass sie nur die URLs für die Anwe
      <li id="li-ED3C15EB4D194FFE99954BDB7D5C1E41"><span class="filepath"> /flashaccess/authn/v4/*</span> </li> 
      <li id="li-4DD6CBBE939F4E6EABA474E3DCCBD893"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs für die Benutzerauthentifizierung. Auf diese URL muss nur zugegriffen werden können, wenn Sie zur Benutzerauthentifizierung Adobe Access Client-APIs verwenden. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs für die Benutzerauthentifizierung. Auf diese URL darf nur zugegriffen werden, wenn Sie zur Benutzerauthentifizierung Adobe Access Client-APIs verwenden. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -56,7 +54,7 @@ Konfigurieren Sie Ihre äußere Firewall so, dass sie nur die URLs für die Anwe
      <li id="li-B333B85FFE8A46DD884595B0A620B4EE"><span class="filepath"> /flashaccess/sync/v4</span> </li> 
      <li id="li-E4771D3C5AA5454CA1EDCFAA3E027CC1"><span class="filepath"> /flashaccess/sync/v5</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs für Synchronisierungsanforderungen. Auf diese URL muss nur zugegriffen werden können, wenn Sie die Synchronisierungsanforderungen in Ihren Lizenzen angeben. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs für Synchronisierungsanfragen. Auf diese URL darf nur zugegriffen werden, wenn Sie die Synchronisierungsanforderungen in Ihren Lizenzen angeben. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -65,7 +63,7 @@ Konfigurieren Sie Ihre äußere Firewall so, dass sie nur die URLs für die Anwe
      <li id="li-40F0952F09674CA3B9AAFB5A62F9D02E"><span class="filepath"> /flashaccess/domain/v4</span> </li> 
      <li id="li-3ADE44B959B548F8A31A6FF08537AF46"><span class="filepath"> /flashaccess/domain/v5</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs für die Domänenregistrierung. Auf diese URL muss nur zugegriffen werden können, wenn Sie Domänenunterstützung implementieren. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs für die Domänenregistrierung. Auf diese URL darf nur zugegriffen werden, wenn Sie die Domänenunterstützung implementieren. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -74,30 +72,30 @@ Konfigurieren Sie Ihre äußere Firewall so, dass sie nur die URLs für die Anwe
      <li id="li-AB33657BC7E140E695767710DF7AEC72"><span class="filepath"> /flashaccess/dereg/v4</span> </li> 
      <li id="li-D15B32BCD4674269A3A2644DD5204707"><span class="filepath"> /flashaccess/dereg/v5</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs für die Domänenderegistrierung. Auf diese URL muss nur zugegriffen werden können, wenn Sie die Domänenunterstützung implementieren. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs zur Domänenderegistrierung. Auf diese URL darf nur zugegriffen werden, wenn Sie die Domänenunterstützung implementieren. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs, die vom Client zur Konvertierung von FMRMS 1.x DRM-Metadaten in DRM-Metadaten für den Zugriff auf Adoben verwendet werden. </p> <p class="- topic/p ">Hinweis: <i class="+ topic/ph hi-d/i ">Diese URL muss SSL (HTTPS)</i> verwenden. </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URLs zur Verwendung durch den Client zum Konvertieren von DRM-Metadaten von FMRMS 1.x in Adobe Access DRM-Metadaten. </p> <p class="- topic/p ">Hinweis: <i class="+ topic/ph hi-d/i ">Diese URL muss SSL (HTTPS) verwenden</i>. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycles Rights Management ES-Webdienst-URL. Wenn Inhalte mit einer früheren FMRMS-Version veröffentlicht wurden, ermöglicht diese URL älteren Clients, eine Serververbindung herzustellen und aufgefordert zu werden, ein Upgrade auf Adobe Access durchzuführen. </p> <p class="- topic/p ">Hinweis: <i class="+ topic/ph hi-d/i ">Diese URL muss SSL (HTTPS)</i> verwenden. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">LiveCycle Rights Management ES-Webdienst-URL. Wenn Inhalte mit einer früheren FMRMS-Version veröffentlicht wurden, können ältere Clients über diese URL eine Verbindung zum Server herstellen und aufgefordert werden, ein Upgrade auf Adobe Access durchzuführen. </p> <p class="- topic/p ">Hinweis: <i class="+ topic/ph hi-d/i ">Diese URL muss SSL (HTTPS) verwenden</i>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/lreturn/v5</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>URLs für die Lizenzwiedergabe. Die URL muss nur verfügbar sein, wenn Sie die Unterstützung für die Lizenzrückgabe implementieren. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>URLs für die Lizenzwiedergabe. Die URL darf nur verfügbar sein, wenn Sie die Unterstützung für die Lizenzrückgabe implementieren. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->Die interne Firewall darf nur zulassen, dass über den Reverse-Proxy Verbindungen zum Lizenzserver für Adobe Access hergestellt werden, und nur zu den oben aufgeführten URLs. Zur Verbesserung der Skalierbarkeit werden die Verbindungen zwischen dem Reverse-Proxy und Adobe Access über HTTP hergestellt.
+>Die interne Firewall darf nur zulassen, dass Verbindungen zum Adobe Access-Lizenzserver über den Reverse-Proxy hergestellt werden, und nur zu den oben aufgeführten URLs. Um die Skalierbarkeit zu verbessern, werden die Verbindungen zwischen dem Reverse-Proxy und Adobe Access über HTTP hergestellt.
 
 ## Ausgehende URLs {#section-FFF9F7BB353149F4A27F8788E9934A48}
 
-Der Lizenzserver benötigt Zugriff über die Firewall, um die folgenden Zertifikatsperrlisten von der Adobe herunterzuladen:
+Der Lizenzserver benötigt Zugriff über die Firewall, um die folgenden Zertifikatsperrlisten von Adobe herunterzuladen:
 
 * h<span></span>ttps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
 * ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl

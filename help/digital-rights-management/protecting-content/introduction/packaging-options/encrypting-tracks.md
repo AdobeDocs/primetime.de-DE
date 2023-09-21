@@ -1,18 +1,16 @@
 ---
-title: Verschlüsseln von Spuren
-description: Verschlüsseln von Spuren
+title: Verschlüsseln von Tracks
+description: Verschlüsseln von Tracks
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 0%
 
 ---
 
-
-# Verschlüsseln von Spuren {#encrypting-tracks}
+# Verschlüsseln von Tracks {#encrypting-tracks}
 
 Diese Verpackungsoption gibt an, welche Teile des Inhalts Sie verschlüsseln möchten: Audio, Video oder beides.
 
-Verwendungsbeispiel: Erlaubt das Verschlüsseln nur der Spuren, die geschützt werden müssen, reduziert den Entschlüsselungsaufwand auf dem Client und verbessert die Wiedergabeleistung.
+Anwendungsbeispiel: Erlaubt, dass nur die Tracks verschlüsselt werden, die geschützt werden müssen, um den Mehraufwand für die Entschlüsselung auf dem Client zu reduzieren und die Wiedergabeleistung zu verbessern.

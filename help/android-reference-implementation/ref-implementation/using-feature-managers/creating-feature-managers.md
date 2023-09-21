@@ -1,32 +1,30 @@
 ---
 description: TVSDK-Funktionen werden durch die Konfiguration gesteuert und über den MediaPlayer implementiert.
-title: Erstellen von Funktionsmanagern durch Weiterleiten von Konfigurationsinformationen an den MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Erstellen von Funktionsmanagern durch Übergabe von Konfigurationsinformationen an den MediaPlayer
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
 
 ---
 
-
-# Erstellen von Funktionsmanagern durch Weiterleiten von Konfigurationsinformationen an den MediaPlayer {#creating-feature-managers-by-passing-configuration-information-to-the-mediaplayer}
+# Erstellen von Funktionsmanagern durch Übergabe von Konfigurationsinformationen an den MediaPlayer {#creating-feature-managers-by-passing-configuration-information-to-the-mediaplayer}
 
 TVSDK-Funktionen werden durch die Konfiguration gesteuert und über den MediaPlayer implementiert.
 
-* Die Konfiguration ist die Liste bestimmter Einstellungen für die Funktion, z. B. die anfängliche Bitrate der ABR-Steuerung und die standardmäßige Sichtbarkeit von Untertiteln.
+* Konfiguration ist die Liste spezifischer Einstellungen für die Funktion, z. B. die anfängliche Bitrate der ABR-Steuerung und die standardmäßige Sichtbarkeit der verdeckten Untertitel.
 
-   Funktionsmanager müssen die Konfigurationen abrufen, um das Funktionsverhalten zu bestimmen.
+  Feature Manager müssen die Konfigurationen abrufen, um das Verhalten der Funktionen zu bestimmen.
 
-   In der Primetime-Referenzimplementierung wird die Konfiguration in freigegebenen Voreinstellungen gespeichert. Sie können die Konfiguration jedoch auf jede für Ihre Umgebung sinnvolle Weise speichern.
+  In der Primetime-Referenzimplementierung wird die Konfiguration in freigegebenen Voreinstellungen gespeichert. Sie können die Konfiguration jedoch auf jede für Ihre Umgebung sinnvolle Weise speichern.
 
 * `MediaPlayer` ist das TVSDK-Medienplayer-Objekt, das die Videoressource enthält.
 
-   Funktionsmanager registrieren TVSDK-Ereignis-Listener für dieses Player-Objekt, rufen Daten aus der Wiedergabesitzung ab und Trigger TVSDK-Funktionen zur Wiedergabesitzung.
+  Feature Manager registrieren TVSDK-Ereignis-Listener für dieses Player-Objekt, rufen Daten aus der Wiedergabesitzung ab und Trigger TVSDK-Funktionen für die Wiedergabesitzung.
 
-Jede Funktion verfügt über eine entsprechende Konfigurationsoberfläche. `CCManager` verwendet beispielsweise `ICCConfig`, um die Konfiguration abzurufen. `ICCConfig` enthält Methoden zum Abrufen der Konfigurationsinformationen, die sich ausschließlich auf die Untertitelung beziehen.
+Jede Funktion verfügt über eine entsprechende Konfigurationsoberfläche. Beispiel: `CCManager` uses `ICCConfig` , um die Konfiguration abzurufen. `ICCConfig` enthält Methoden, um die Konfigurationsinformationen abzurufen, die sich nur auf die Untertitelung beziehen.
 
-Das folgende Beispiel zeigt die Datei [!DNL ICCConfig.java], die für den Empfang von Informationen zur Sichtbarkeit der Bildunterschrift, zum Schriftstil und zur Schriftartkante von `MediaPlayer` konfiguriert wurde:
+Das folgende Beispiel zeigt die [!DNL ICCConfig.java] -Datei, die für den Empfang von Informationen über Sichtbarkeit, Schriftschnitt und Schriftrand der geschlossenen Beschriftung konfiguriert ist. `MediaPlayer`:
 
 ```java
 // Constructor of CCManager 
@@ -64,7 +62,7 @@ Das folgende Beispiel zeigt die Datei [!DNL ICCConfig.java], die für den Empfan
 }
 ```
 
-Eine Anwendung, die eine TVSDK-Funktion verwendet, kann ihren Funktionsmanager mit einem Konfigurationsanbieter und einem `MediaPlayer`-Objekt erstellen. Beispiel:
+Eine Anwendung, die eine TVSDK-Funktion verwendet, kann ihren Feature Manager mit einem Konfigurationsanbieter und einem `MediaPlayer` -Objekt. Beispiel:
 
 ```java
 // This application needs to use the advertising workflow feature 

@@ -1,24 +1,22 @@
 ---
-description: Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabedauer mit der Beginn-Zeit übereinstimmt.
-title: Verwenden von Zeitmetadaten
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabezeit mit der Startzeit übereinstimmt.
+title: Zeitgesteuerte Metadaten verwenden
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Zeitgesteuerte Metadaten verwenden{#use-timed-metadata}
 
-# Verwenden Sie zeitgesteuerte Metadaten{#use-timed-metadata}
+Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabezeit mit der Startzeit übereinstimmt.
 
-Sie können TimedMetadata verwenden, wenn die aktuelle Wiedergabedauer mit der Beginn-Zeit übereinstimmt.
+So verwenden Sie diese gespeicherten `PTTimedMetadata` Objekte während der Wiedergabe verwenden Sie das gespeicherte Wörterbuch aus [Speichern von zeitgesteuerten Metadatenobjekten beim Versand](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
 
-Um diese gespeicherten `PTTimedMetadata`-Objekte während der Wiedergabe zu verwenden, verwenden Sie das gespeicherte Wörterbuch von [Zeitmetadatenobjekte speichern, während sie gesendet werden.](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md)
+1. Extrahieren und aktualisieren Sie die aktuelle Wiedergabedauer aus dieser Benachrichtigung und suchen Sie alle `PTTimedMetadata` -Objekte mit Startzeiten, die der aktuellen Wiedergabedauer entsprechen.
 
-1. Extrahieren und aktualisieren Sie die aktuelle Wiedergabezeit aus dieser Benachrichtigung und suchen Sie alle `PTTimedMetadata`-Objekte mit Beginn-Zeiten, die der aktuellen Wiedergabezeit entsprechen.
-
-   Mit diesen Objekten können Sie verschiedene Aktionen ausführen.
+   Sie können diese Objekte verwenden, um verschiedene Aktionen durchzuführen.
 
    Beispiel:
 
@@ -57,4 +55,4 @@ Um diese gespeicherten `PTTimedMetadata`-Objekte während der Wiedergabe zu verw
    }
    ```
 
-1. Regelmäßig die statische `PTTimedMetadata`-Instanzen aus der Liste entfernen, um zu verhindern, dass der Speicher ständig wächst.
+1. Periodisches Leeren veraltet `PTTimedMetadata` -Instanzen aus der Liste, um zu verhindern, dass der Speicher ständig wächst.

@@ -1,17 +1,15 @@
 ---
-title: Signaturmodus und Zeitbereich
-description: Signaturmodus und Zeitbereich
+title: Signalmodus und Zeitbereich
+description: Signalmodus und Zeitbereich
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
-
-# Signaturmodus und Zeitbereich {#signaling-mode-and-time-range}
+# Signalmodus und Zeitbereich {#signaling-mode-and-time-range}
 
 <table> 
  <thead> 
@@ -24,7 +22,7 @@ ht-degree: 0%
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> CustomRange OpportunityGenerator  </span> </td> 
+   <td> <span class="codeph"> CustomRange OpportunityGenerator </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -43,7 +41,7 @@ ht-degree: 0%
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> ServerMap- </span> Signalisierungsmodus </td> 
+   <td> <span class="codeph"> ServerMap </span> Signaturmodus </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -66,7 +64,7 @@ ht-degree: 0%
    <td> N/A (automatischer CustomRange-Signalmodus) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> ManifestCue- </span> Signalisierungsmodus </td> 
+   <td> <span class="codeph"> ManifestCue </span> Signaturmodus </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -90,7 +88,7 @@ ht-degree: 0%
    <td> N/A (automatischer CustomRange-Signalmodus) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Benutzerdefinierter  </span> Signalisierungsmodus </td> 
+   <td> <span class="codeph"> CustomRange </span> Signaturmodus </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -143,7 +141,7 @@ ht-degree: 0%
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator  </span> </td> 
+   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -162,7 +160,7 @@ ht-degree: 0%
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> ServerMap- </span> Signalisierungsmodus </td> 
+   <td> <span class="codeph"> ServerMap </span> Signaturmodus </td> 
    <td> Nicht vorhanden (Anzeige ist deaktiviert). </td> 
    <td> 
     <code>
@@ -173,10 +171,10 @@ ht-degree: 0%
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> N/A (automatischer <span class="codeph"> CustomRange </span> Signalmodus) </td> 
+   <td> Nicht zutreffend (automatisch) <span class="codeph"> CustomRange </span> Signalmodus) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> ManifestCue- </span> Signalisierungsmodus </td> 
+   <td> <span class="codeph"> ManifestCue </span> Signaturmodus </td> 
    <td> Nicht vorhanden (Anzeige ist deaktiviert). </td> 
    <td> 
     <code>
@@ -187,13 +185,13 @@ ht-degree: 0%
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> N/A (automatischer <span class="codeph"> CustomRange </span> Signalmodus) </td> 
+   <td> Nicht zutreffend (automatisch) <span class="codeph"> CustomRange </span> Signalmodus) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Benutzerdefinierter  </span> Signalisierungsmodus </td> 
+   <td> <span class="codeph"> CustomRange </span> Signaturmodus </td> 
    <td> Nicht vorhanden (Anzeige ist deaktiviert). </td> 
    <td> Keines </td> 
-   <td> Keine (wird in <span class="codeph"> CustomRangeOpportunityGenerator </span> aufgearbeitet) </td> 
+   <td> Keines (zur Behandlung von <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
   </tr> 
  </tbody> 
 </table>

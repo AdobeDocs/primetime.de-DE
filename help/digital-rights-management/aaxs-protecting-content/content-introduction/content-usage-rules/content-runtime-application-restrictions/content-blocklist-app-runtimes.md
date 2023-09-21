@@ -1,24 +1,22 @@
 ---
-title: Blockierungsliste von Anwendungslaufzeiten, die den Zugriff auf geschützten Inhalt einschränken
-description: Blockierungsliste von Anwendungslaufzeiten, die den Zugriff auf geschützten Inhalt einschränken
+title: Blockierungsliste der Anwendungslaufzeiten, die vom Zugriff auf geschützten Inhalt ausgeschlossen sind
+description: Blockierungsliste der Anwendungslaufzeiten, die vom Zugriff auf geschützten Inhalt ausgeschlossen sind
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
 
 ---
 
+# Blockierungsliste der Anwendungslaufzeiten, die vom Zugriff auf geschützten Inhalt ausgeschlossen sind {#blocklist-of-application-runtimes-restricted-from-accessing-protected-content}
 
-# Blockierungsliste von Anwendungs-Laufzeitumgebungen, die vom Zugriff auf geschützten Inhalt eingeschränkt sind{#blocklist-of-application-runtimes-restricted-from-accessing-protected-content}
+Gibt die Version von Primetime oder Flash Runtime an, die nicht auf Inhalte zugreifen kann. Geben Sie die eingeschränkte Laufzeit (Flash Player, AIR oder iOS), Plattform und Version an.
 
-Gibt die Primetime- oder Flash-Laufzeitversion an, die keinen Zugriff auf Inhalte hat. Geben Sie die eingeschränkte Laufzeit (Flash Player, AIR oder iOS), Plattform und Version an.
+Anwendungsbeispiel: Ähnlich wie bei der DRM-Client-Blockierungsliste kann auch die neueste Version der Flash Player-, AIR- oder iOS-Laufzeitumgebungen als die Mindestversion angegeben werden, die für die Lizenzakquise und die Inhaltswiedergabe erforderlich ist.
 
-Verwendungsbeispiel: Ähnlich wie bei der DRM-Client-Blockierungsliste kann auch die neueste Version des Flash Players, der AIR- oder iOS-Laufzeitumgebungen als Mindestversion für die Lizenzerfassung und Inhaltswiedergabe angegeben werden.
-
-Die Anwendungslaufzeit kann durch eines der Attribute identifiziert werden, die für DRM-Clientversionen unterstützt werden, zusätzlich zu den folgenden Attributen:
+Die Anwendungslaufzeit kann durch eines der Attribute identifiziert werden, die für DRM-Client-Versionen unterstützt werden, zusätzlich zu den folgenden Attributen:
 
 | **Attribut** | **Unterstützte Werte** | **Übereinstimmungskriterien** | **Beschreibung** |
 |---|---|---|---|
-| Anwendung | &quot;FlashPlayer&quot;, &quot;AIR&quot;, &quot;DRM_Library&quot;, &quot;AVE&quot; | Exakte Übereinstimmung | Identifiziert den Namen der Anwendungslaufzeit. |
+| Anwendung | &quot;FlashPlayer&quot;, &quot;AIR&quot;, &quot;DRM_Library&quot;, &quot;AVE&quot; | Exakte Übereinstimmung | Gibt den Namen der Anwendungslaufzeit an. |

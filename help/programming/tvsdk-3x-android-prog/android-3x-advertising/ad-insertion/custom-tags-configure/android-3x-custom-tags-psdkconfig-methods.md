@@ -1,44 +1,42 @@
 ---
-description: Mit der MediaPlayerItemConfig-Klasse können Sie benutzerdefinierte Tag-Namen in TVSDK global konfigurieren.
-title: Methoden der Config-Klasse für Tags
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können benutzerdefinierte Tag-Namen in TVSDK global mit der MediaPlayerItemConfig -Klasse konfigurieren.
+title: Konfigurationsklassenmethoden für Tags
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
+# Konfigurationsklassenmethoden für Tags {#config-class-methods-for-tags}
 
-# Methoden der Config-Klasse für Tags {#config-class-methods-for-tags}
+Sie können benutzerdefinierte Tag-Namen in TVSDK global mit der MediaPlayerItemConfig -Klasse konfigurieren.
 
-Mit der MediaPlayerItemConfig-Klasse können Sie benutzerdefinierte Tag-Namen in TVSDK global konfigurieren.
+TVSDK wendet die globale Konfiguration automatisch auf alle Medien-Streams an, die keine Stream-spezifische Konfiguration angeben.
 
-TVSDK wendet die globale Konfiguration automatisch auf jeden Medienstream an, der keine Stream-spezifische Konfiguration angibt.
-
-`MediaPlayerItemConfig` stellt die folgenden Methoden zur Verwaltung der benutzerdefinierten Tags bereit:
+`MediaPlayerItemConfig` stellt diese Methoden zum Verwalten der benutzerdefinierten Tags bereit:
 
 **Abonnieren bestimmter benutzerdefinierter Tags**
 
 | <b>Methode</b> | <b>Beschreibung</b> |
 |--- |--- |
 | `public final String[] getSubscribedTags` | Ruft die aktuelle Liste der abonnierten Tags ab. |
-| `public final void setSubscribedTags(String[] tags);` | Legt die Liste der abonnierten Tags fest, die der Anwendung angezeigt werden.  Ihre Anwendung wird auch automatisch für alle Tags abonniert, die über `setAdTags` übertragen werden. |
+| `public final void setSubscribedTags(String[] tags);` | Legt die Liste der abonnierten Tags fest, die der Anwendung angezeigt werden.  Ihre Anwendung wird auch automatisch für alle Tags angemeldet, die über `setAdTags`. |
 
-**Anpassen der vom Standard-Opportunitätsdetektor verwendeten Anzeigen-Tags**
+**Anpassen der Anzeigen-Tags, die vom standardmäßigen Opportunity-Detektor verwendet werden**
 
 | <b>Methode</b> | <b>Beschreibung</b> |
 |--- |--- |
 | `public final String[] getAdTags;` | Ruft die aktuelle Liste der Anzeigen-Tags ab. |
-| `public final void setAdTags(String[] tags);` | Legt die Liste der Anzeigen-Tags fest, die vom standardmäßigen Opportunitätsgenerator verwendet werden. |
+| `public final void setAdTags(String[] tags);` | Legt die Liste der Anzeigen-Tags fest, die vom standardmäßigen Opportunity-Generator verwendet werden. |
 
 Beachten Sie Folgendes:
 
-* Die set-Methoden lassen nicht zu, dass der Parameter tags Null-Werte enthält.
+* Die Setter-Methoden erlauben nicht, dass der Tag-Parameter Nullwerte enthält.
 
-   Wenn TVSDK gefunden, wird ein `IllegalArgumentException` ausgegeben.
-* Der benutzerdefinierte Tag-Name muss das Präfix `#` enthalten.
+  Wenn festgestellt, gibt TVSDK eine `IllegalArgumentException`.
+* Der benutzerdefinierte Tag-Name muss die Variable `#` -Präfix.
 
-   `#EXT-X-ASSET` ist beispielsweise ein korrekter benutzerdefinierter Tag-Name, `EXT-X-ASSET` ist jedoch nicht korrekt.
+  Beispiel: `#EXT-X-ASSET` ist ein korrekter benutzerdefinierter Tag-Name, aber `EXT-X-ASSET` ist falsch.
 
-* Sie können die Konfiguration nach dem Laden des Medienstreams nicht mehr ändern.
+* Sie können die Konfiguration nach dem Laden des Medien-Streams nicht mehr ändern.

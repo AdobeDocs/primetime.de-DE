@@ -1,41 +1,39 @@
 ---
-description: Die Definition der Video Player Ad-Serving Interface (VPAID) bietet eine gemeinsame Oberfläche zum Abspielen von Videoanzeigen. VPAID bietet eine Rich-Media-Erfahrung für Benutzer und ermöglicht es Herausgebern, Anzeigen besser zu Zielgruppen, Anzeigenimpressionen zu verfolgen und Videoinhalte zu monetarisieren.
+description: Die Definition der Video Player Ad-Serving Interface (VPAID) bietet eine gemeinsame Oberfläche zum Abspielen von Videoanzeigen. VPAID bietet Anwendern ein Rich-Media-Erlebnis und ermöglicht es Herausgebern, Anzeigen besser auszurichten, Anzeigenimpressionen zu verfolgen und Videoinhalte zu monetarisieren.
 title: Benutzerdefinierte Anzeigenanforderungen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
 
 ---
 
+# Benutzerdefinierte Anzeigenanforderungen {#custom-ad-requirements}
 
-# Benutzerspezifische Anzeigenanforderungen {#custom-ad-requirements}
+Der TVSDK-Player kann digitale Video-Player-Ad-Interface-Definition-Anzeigen (VPAID) abspielen und den Anzeigenladestatus anzeigen. Wenn Fehler in der Anzeige auftreten oder das Laden von Anzeigen zu lange dauert, ignoriert TVSDK diese Anzeigen.
 
-Der TVSDK-Player kann Anzeigen mit digitaler Video Player Ad-Interface Definition (VPAID) abspielen und den Anzeigenladestatus anzeigen. Wenn die Anzeige Fehler enthält oder die Anzeige zu lange lädt, ignoriert TVSDK diese Anzeigen.
-
-Die Definition der Video Player Ad-Serving Interface (VPAID) bietet eine gemeinsame Oberfläche zum Abspielen von Videoanzeigen. VPAID bietet eine Rich-Media-Erfahrung für Benutzer und ermöglicht es Herausgebern, Anzeigen besser zu Zielgruppen, Anzeigenimpressionen zu verfolgen und Videoinhalte zu monetarisieren.
+Die Definition der Video Player Ad-Serving Interface (VPAID) bietet eine gemeinsame Oberfläche zum Abspielen von Videoanzeigen. VPAID bietet Anwendern ein Rich-Media-Erlebnis und ermöglicht es Herausgebern, Anzeigen besser auszurichten, Anzeigenimpressionen zu verfolgen und Videoinhalte zu monetarisieren.
 
 <!--<a id="section_9A358902CBC24999BA34206EE2029616"></a>-->
 
-TVSDK unterstützt die folgenden Funktionen:
+Das TVSDK unterstützt die folgenden Funktionen:
 
 * Version 1.0 und 2.0 der VPAID-Spezifikation
-* Lineare VPAID-Anzeigen auf Video-on-Demand (VOD)-Inhalten
-* Flash-VPAID-Anzeigen
+* Lineare VPAID-Anzeigen für Video-On-Demand (VOD)-Inhalte
+* Flash VPAID-Anzeigen
 
-   VPAID-Anzeigen müssen auf Flashs basieren, und die Anzeigenantwort muss den Medientyp der VPAID-Anzeige als `application/x-shockwave-flash` identifizieren.
+  VPAID-Anzeigen müssen auf Flash basieren und die Anzeigenantwort muss den Medientyp der VPAID-Anzeige als `application/x-shockwave-flash`.
 
 Die folgenden Funktionen werden nicht unterstützt:
 
-* Nichtlineare Anzeigen wie Überlagerungsanzeigen und dynamische Begleitanzeigen
+* Nichtlineare Anzeigen wie Überlagerungsanzeigen und dynamische begleitende Anzeigen
 * Vorabladen von VPAID-Anzeigen
 * VPAID-Anzeigen in Live-Inhalten
-* JavaScript VPAID-Anzeigen
+* JavaScript-VPAID-Anzeigen
 
 ## Ladestatus {#section_5F55C0101CD44A65BCFE1D124CBDF239}
 
-Das TVSDK sendet die folgenden Ereignis:
+Das TVSDK sendet die folgenden Ereignisse:
 
 * `AdLoading`
 * `AdLoaded`
@@ -43,14 +41,14 @@ Das TVSDK sendet die folgenden Ereignis:
 * `AdPlaying`
 * `AdStopped`
 
-Nach dem Ereignis `AdStopped` setzt das TVSDK den Videoinhalt fort.
+Nach dem `AdStopped` -Ereignis, setzt das TVSDK den Videoinhalt fort.
 
 >[!TIP]
 >
->Wenn Sie den Wert Null angeben, versucht TVSDK, die Anzeige zu laden, bis sie geladen wird, oder es ist ein Fehler aufgetreten.
+>Wenn Sie den Wert null angeben, versucht TVSDK, die Anzeige zu laden, bis sie geladen wird, oder es ist ein Fehler aufgetreten.
 
 ## Ignorieren von Anzeigen {#section_3EA452F420884335AE90DF23C17E416A}
 
-Wenn das Laden der Anzeige zu lange dauert oder Fehler in der Anzeige auftreten, kann die TVSDK die Anzeige ignorieren und die nächste Anzeige im Werbeunterbrechung wird automatisch wiedergegeben.
+Wenn das Laden der Anzeige zu lange dauert oder Fehler in der Anzeige auftreten, kann TVSDK die Anzeige ignorieren und die nächste Anzeige im Anzeigen-Pod wird automatisch wiedergegeben.
 
-Wenn die Einstellung `AuditudeSettings.customAdLoadTimeout` eine Anzahl von Sekunden größer als null angibt, versucht TVSDK, die Anzeige auf die angegebene Dauer zu laden. Wenn die Anzeige nicht geladen werden kann, wird sie übersprungen. Wenn Sie beispielsweise `AuditudeSettings.customAdLoadTimeout:5` konfigurieren, versucht TVSDK, die Anzeige für maximal 5 Sekunden zu laden. Wenn die Anzeige trotzdem nicht geladen wird, wird sie ignoriert.
+Wenn die Variable `AuditudeSettings.customAdLoadTimeout` -Einstellung gibt eine Anzahl von Sekunden an, die größer als null ist. Das TVSDK versucht, die Anzeige auf die angegebene Dauer zu laden. Wenn die Anzeige nicht geladen werden kann, wird die Anzeige übersprungen. Wenn Sie beispielsweise `AuditudeSettings.customAdLoadTimeout:5`, versucht das TVSDK, die Anzeige für maximal 5 Sekunden zu laden. Wenn die Anzeige weiterhin nicht geladen wird, wird sie ignoriert.

@@ -1,22 +1,20 @@
 ---
-description: Sie können Ihre eigenen Inhaltsauflöser auf Basis der Standardauflöser implementieren.
+description: Sie können Ihre eigenen Content Resolver basierend auf den Standard-Resolver implementieren.
 title: Implementieren eines benutzerdefinierten Inhaltsauflösers
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '241'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Implementieren eines benutzerdefinierten Inhaltsauflösers {#implement-a-custom-content-resolver}
 
-Sie können Ihre eigenen Inhaltsauflöser auf Basis der Standardauflöser implementieren.
+Sie können Ihre eigenen Content Resolver basierend auf den Standard-Resolver implementieren.
 
-Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Content-Auflöser, die nach einer suchen, die diese Gelegenheit lösen kann. Das erste, das &quot;true&quot;zurückgibt, wird ausgewählt, um die Gelegenheit zu lösen. Wenn kein Inhaltsauflöser geeignet ist, wird diese Gelegenheit übersprungen. Da die Inhaltsauflösung in der Regel asynchron abläuft, ist der Inhaltsauflöser dafür verantwortlich, benachrichtigt zu werden, wenn der Prozess abgeschlossen ist.
+Wenn TVSDK eine neue Chance erkennt, durchläuft es die registrierten Content-Resolver, die nach einer suchen, die diese Gelegenheit lösen kann. Die erste, die &quot;true&quot;zurückgibt, wird ausgewählt, um die Gelegenheit zu lösen. Wenn kein Content Resolver in der Lage ist, wird diese Möglichkeit übersprungen. Da die Inhaltsauflösung normalerweise asynchron abläuft, ist der Inhaltsauflöser dafür verantwortlich, darüber zu informieren, wann der Prozess abgeschlossen ist.
 
-1. Erstellen Sie eine benutzerdefinierte `AdvertisingFactory`-Instanz und überschreiben Sie `createContentResolver`.
+1. Benutzerdefiniert erstellen `AdvertisingFactory` Instanz und Überschreibung `createContentResolver`.
 
    Beispiel:
 
@@ -43,7 +41,7 @@ Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Conte
    }
    ```
 
-1. Registrieren Sie die Client-Factory der Anzeige bei `MediaPlayer`.
+1. Registrieren Sie die Client-Factory der Anzeige bei der `MediaPlayer`.
 
    Beispiel:
 
@@ -53,9 +51,9 @@ Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Conte
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Übergeben Sie ein `AdvertisingMetadata`-Objekt wie folgt an TVSDK:
-   1. Erstellen Sie ein `AdvertisingMetadata`-Objekt und ein `MetadataNode`-Objekt.
-   1. Speichern Sie das `AdvertisingMetadata`-Objekt in `MetadataNode`.
+1. Übergeben eines `AdvertisingMetadata` -Objekt auf TVSDK wie folgt fest:
+   1. Erstellen Sie eine `AdvertisingMetadata` Objekt und `MetadataNode` -Objekt.
+   1. Speichern Sie die `AdvertisingMetadata` Objekt zu `MetadataNode`.
 
    ```java
    MetadataNode result = new MetadataNode(); 
@@ -63,7 +61,7 @@ Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Conte
                   advertisingMetadata);
    ```
 
-1. Erstellen Sie eine benutzerdefinierte Anzeigenauflösungsklasse, die die `ContentResolver`-Klasse erweitert.
+1. Erstellen Sie eine benutzerdefinierte Anzeigenauflöser-Klasse, die die `ContentResolver` -Klasse.
    1. Überschreiben Sie im benutzerdefinierten Anzeigenauflöser diese geschützte Funktion:
 
       ```java
@@ -71,13 +69,13 @@ Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Conte
                         PlacementOpportunity placementOpportunity)
       ```
 
-      Metadaten enthalten Ihr `AdvertisingMetada`. Verwenden Sie sie für die folgende Vektorgenerierung `TimelineOperation`.
+      Metadaten enthalten Ihre `AdvertisingMetada`. Verwenden Sie ihn für Folgendes `TimelineOperation` Vektorgenerierung.
 
-   1. Erstellen Sie für jede Platzierungsmöglichkeit ein `Vector<TimelineOperation>`.
+   1. Erstellen Sie für jede Platzierungsmöglichkeit eine `Vector<TimelineOperation>`.
 
-      Der Vektor kann leer, jedoch nicht null sein.
+      Der Vektor kann leer, aber nicht null sein.
 
-      Dieses Beispiel `TimelineOperation` stellt eine Struktur für `AdBreakPlacement` bereit:
+      Dieses Beispiel `TimelineOperation` bietet eine Struktur für `AdBreakPlacement`:
 
       ```java
       AdBreakPlacement(AdBreak.createAdBreak( 
@@ -92,10 +90,10 @@ Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Conte
 
    1. Rufen Sie nach Auflösung der Anzeigen eine der folgenden Funktionen auf:
 
-      * Bei erfolgreicher Anzeigenauflösung: `notifyResolveComplete(Vector<TimelineOperation> proposals)`
+      * Wenn die Anzeigenauflösung erfolgreich ist: `notifyResolveComplete(Vector<TimelineOperation> proposals)`
       * Wenn die Anzeigenauflösung fehlschlägt: `notifyResolveError(Error error)`
 
-      Wenn dies z. B. fehlschlägt:
+      Wenn dies beispielsweise fehlschlägt:
 
       ```java
       Metadata metadata = new MetadataNode(); 
@@ -103,10 +101,9 @@ Wenn TVSDK eine neue Gelegenheit erkennt, durchläuft es die registrierten Conte
       error.setMetadata(metadata);
       ```
 
-
 <!--<a id="example_4F0D7692A92E480A835D6FDBEDBE75E7"></a>-->
 
-Dieser benutzerdefinierte Beispiel-Anzeigenauflöser sendet eine HTTP-Anforderung an den Anzeigenserver und empfängt eine JSON-Antwort.
+Dieser benutzerdefinierte Beispiel-Anzeigenauflöser sendet eine HTTP-Anfrage an den Anzeigenserver und erhält eine JSON-Antwort.
 
 ```java
 public class CustomAdResolver extends ContentResolver { 
@@ -125,7 +122,7 @@ public class CustomAdResolver extends ContentResolver {
 }
 ```
 
-Beispiel-JSON-Anzeigenserverantwort für einen Live-Stream:
+Beispiel-JSON-Anzeigenserver-Antwort für einen Live-Stream:
 
 ```
 {     
@@ -162,7 +159,7 @@ Beispiel-JSON-Anzeigenserverantwort für einen Live-Stream:
 } 
 ```
 
-Beispiel-JSON-Anzeigenserverantwort für VOD:
+Beispiel für eine JSON-Anzeigenserverantwort für VOD:
 
 ```
 {     
@@ -223,4 +220,3 @@ Beispiel-JSON-Anzeigenserverantwort für VOD:
     } 
 } 
 ```
-

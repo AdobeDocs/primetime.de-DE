@@ -1,41 +1,39 @@
 ---
-description: Dieses Handbuch enthält Informationen zur Entwicklung von Videoplayer-Anwendungen mit TVSDK für Android, das in Java implementiert ist.
-title: Produktübersicht, Audience und dieses Handbuch
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: In diesem Handbuch erfahren Sie, wie Sie mit TVSDK für Android, das in Java implementiert ist, Videoplayer-Anwendungen entwickeln.
+title: Produktübersicht, Zielgruppe und dieses Handbuch
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 0%
 
 ---
 
+# Produktübersicht, Zielgruppe und dieses Handbuch {#product-overview-audience-and-this-guide}
 
-# Produktübersicht, Audience und dieses Handbuch {#product-overview-audience-and-this-guide}
-
-Dieses Handbuch enthält Informationen zur Entwicklung von Videoplayer-Anwendungen mit TVSDK für Android, das in Java implementiert ist.
+In diesem Handbuch erfahren Sie, wie Sie mit TVSDK für Android, das in Java implementiert ist, Videoplayer-Anwendungen entwickeln.
 
 <!--<a id="section_FC24E86A2E6442B8A3769160769BBDFA"></a>-->
 
-* Eine Liste der von TVSDK unterstützten Funktionen finden Sie unter [Primetime TVSDK features](../../tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md).
-* Spezifische Hardware- und Softwareanforderungen für die Verwendung von TVSDK finden Sie unter [Anforderungen](../../tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md).
+* Eine Liste der Funktionen, die von TVSDK unterstützt werden, finden Sie unter [Primetime TVSDK-Funktionen](../../tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md).
+* Spezifische Hardware- und Softwareanforderungen für die Verwendung von TVSDK finden Sie unter [Voraussetzungen](../../tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md).
 * Eine Liste der verfügbaren APIs finden Sie unter [TVSDK Android-APIs](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/).
 
 ## Produktübersicht {#section_9664959F25C948878F2F7EF3D360CA95}
 
-TVSDK enthält API-Beschreibungen und Codebeispiele, mit denen Sie erweiterte Videofunktionen, Inhaltsschutz und Werbefunktionen in Ihren Player integrieren können. Sie verwenden Java, um eine Videoplayer-Benutzeroberfläche zu erstellen. TVSDK hilft Ihnen, diese Benutzeroberfläche mit dem Medienplayer zu verbinden. Auf diese Weise können Sie Videos und Werbung auf der Grundlage von Medienmanifesten abspielen. Sie können TVSDK auch verwenden, um Informationen zum Video abzurufen, die Sicherheit zu gewährleisten und die Wiedergabe zu steuern und zu überwachen.
+TVSDK enthält API-Beschreibungen und Codebeispiele, mit denen Sie erweiterte Videofunktionen, Inhaltsschutz und Werbefunktionen in Ihren Player integrieren können. Sie verwenden Java, um eine Videoplayer-Benutzeroberfläche zu erstellen. Mit TVSDK können Sie diese Benutzeroberfläche mit dem Medienplayer verbinden. Auf diese Weise können Sie Videos und Werbung basierend auf Medienmanifesten wiedergeben. Sie können TVSDK auch verwenden, um Informationen zum Video abzurufen, die Sicherheit zu handhaben und die Wiedergabe zu steuern und zu überwachen.
 
-## Audience {#section_527860B373734D3BA89FCF5EC1F6DC37}
+## Zielgruppe {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
-In diesem Handbuch wird davon ausgegangen, dass Sie mit der Entwicklung von Anwendungen und Videoplayern mit Java vertraut sind. Sie implementieren Ihre Videoplayer-Benutzeroberfläche in Java und integrieren die TVSDK-Funktionen, die Sie benötigen.
+In diesem Handbuch wird davon ausgegangen, dass Sie wissen, wie Sie Anwendungen und Videoplayer mit Java entwickeln. Sie implementieren Ihre Videoplayer-Benutzeroberfläche in Java und integrieren die erforderlichen TVSDK-Funktionen.
 
 ## Informationen zu diesem Handbuch {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 
-Dieses Handbuch enthält Informationen, mit denen Sie TVSDK-Funktionen mit Java auf Android-Geräten in einen Videoplayer integrieren können.
+Dieses Handbuch enthält Informationen, mit denen Sie TVSDK-Funktionen mithilfe von Java auf Android-Geräten in einen Videoplayer integrieren können.
 
-## Namensraum-Notation in diesem Handbuch {#section_8B866054E9ED4B5F99DCA7A681404632}
+## Namespace-Notation in diesem Handbuch {#section_8B866054E9ED4B5F99DCA7A681404632}
 
 >[!TIP]
 >
->Das TVSDK-API-Namensraum-Präfix [!DNL com.adobe.mediacore] wird oft aus Gründen der Kürze ausgelassen.
+>Das TVSDK-API-Namespace-Präfix [!DNL com.adobe.mediacore] wird oft aus Gründen der Kürze weggelassen.
 >
->Viele API-Elemente werden ohne ihren übergeordneten Klassenbezeichner referenziert, wenn der Kontext klar ist.
+>Wenn der Kontext klar ist, werden viele API-Elemente ohne den zugehörigen übergeordneten Klassenbezeichner referenziert.

@@ -1,22 +1,20 @@
 ---
-title: Richtlinien mit der Java-API erstellen
-description: Richtlinien mit der Java-API erstellen
+title: Erstellen einer Richtlinie mit der Java-API
+description: Erstellen einer Richtlinie mit der Java-API
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
+# Erstellen einer Richtlinie mit der Java-API {#creating-a-policy-using-the-java-api}
 
-# Richtlinien mit der Java-API {#creating-a-policy-using-the-java-api} erstellen
+Um eine Richtlinie mithilfe der Java-API zu erstellen, führen Sie die folgenden Schritte aus:
 
-So erstellen Sie eine Richtlinie mithilfe der Java-API:
-
-1. Richten Sie Ihre Development-Umgebung ein und fügen Sie alle JAR-Dateien ein, die unter [Einrichten der Development-Umgebung](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) in Ihrem Projekt erwähnt werden.
-1. Erstellen Sie ein `com.adobe.flashaccess.sdk.policy.Policy`-Objekt und geben Sie dessen Eigenschaften an, z. B. die Rechte, die Dauer der Lizenzzwischenspeicherung und das Enddatum der Richtlinie.
+1. Richten Sie Ihre Entwicklungsumgebung ein und schließen Sie alle JAR-Dateien ein, die in [Einrichten der Entwicklungsumgebung](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) in Ihrem Projekt.
+1. Erstellen Sie eine `com.adobe.flashaccess.sdk.policy.Policy` -Objekt ein und geben Sie dessen Eigenschaften an, z. B. Berechtigungen, die Aufbewahrungsfrist im Lizenz-Caching und das Enddatum der Richtlinie.
 
    ```java
      // Create a new Policy object.  
@@ -52,7 +50,7 @@ So erstellen Sie eine Richtlinie mithilfe der Java-API:
      }
    ```
 
-1. Serialisieren Sie das `Policy`-Objekt und speichern Sie es in einer Datei oder Datenbank.
+1. Serialisieren Sie die `Policy` -Objekt und speichern Sie es in einer Datei oder Datenbank.
 
    ```java
      // Serialize the policy  
@@ -66,4 +64,4 @@ So erstellen Sie eine Richtlinie mithilfe der Java-API:
      out.close();
    ```
 
-Die vollständige Quelle dieses Beispielcodes finden Sie unter *com.adobe.flashaccess.samples.policy.CreatePolicy* im Ordner &quot;Referenz-Implementierungsbefehls-Linientools &quot;[!DNL samples]&quot;.
+Die vollständige Quelle dieses Beispielcodes finden Sie unter *com.adobe.flashaccess.samples.policy.CreatePolicy* in den Befehlszeilenwerkzeugen für die Referenzimplementierung &quot; [!DNL samples]&quot;.

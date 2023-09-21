@@ -1,19 +1,18 @@
 ---
 title: Versionshinweise zur Adobe Primetime-Authentifizierung 2.63
 description: Versionshinweise zur Adobe Primetime-Authentifizierung 2.63
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 0%
 
 ---
 
-
 # Versionshinweise zur Adobe Primetime-Authentifizierung 2.63 {#pt-authn-263-rn}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 Auf dieser Seite werden neue Funktionen, Änderungen und bekannte Probleme in dieser Version beschrieben:
 
@@ -44,7 +43,7 @@ Diese Funktion bietet MVPDs die Möglichkeit, ihre eigenen Authentifizierungs- u
 
 #### Hinzufügen einer proximierten ID in der Kopfzeile der Autorisierungsaufrufe {#add-proxied-id}
 
-Mit dieser Funktion wird die ID eines von Synacor proximierten MVPD im Header des Autorisierungsaufrufs hinzugefügt. Dadurch kann Synacor Geschäftsregeln für jeden einzelnen Proxy (z. B. Routing zu verschiedenen Domänen pro proximiertem MVPD).
+Mit dieser Funktion wird die ID eines von Synacor proximierten MVPD im Header des Autorisierungsaufrufs hinzugefügt. Dadurch kann Synacor Geschäftsregeln für jeden einzelnen Proxy einrichten (z. B. Routing zu verschiedenen Domänen pro proximiertem MVPD).
 
 
 #### TVE Dashboard {#tve-dashboard}
@@ -56,6 +55,3 @@ In dieser Version haben wir ein Problem behoben, bei dem authN oder authZ TTL au
 
 * Die Verwendung von `eval` -Funktion verwenden, sodass das SDK mit der Content Security Policy konform ist.
 * Fehlerkorrektur - Der Authentifizierungsfluss kann jetzt erfolgreich abgeschlossen werden, wenn der lokale Speicher des Browsers explizit von einer Partner-Anwendung gelöscht wird.
-
-
-

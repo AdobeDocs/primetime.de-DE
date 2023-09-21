@@ -1,16 +1,14 @@
 ---
-title: SSL konfigurieren
-description: SSL konfigurieren
+title: Konfigurieren von SSL
+description: Konfigurieren von SSL
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
-
 # Konfigurieren von SSL {#configuring-ssl}
 
-Secure Sockets Layer (SSL) ist nur erforderlich, wenn Sie Flash Media Rights Management Server 1.x-Clients unterstützen müssen. SSL mit Client-Authentifizierung ist für den Adobe Access Key Server erforderlich. Weitere Informationen finden Sie unter *Verwenden des Adobe Access Key Servers *.
+Secure Sockets Layer (SSL) ist nur erforderlich, wenn Sie Unterstützung für Flash Media Rights Management Server 1.x-Clients benötigen. SSL mit Client-Authentifizierung ist für den Adobe Access Key Server erforderlich. Weitere Informationen finden Sie unter Verwenden des Adobe Access Key Servers .

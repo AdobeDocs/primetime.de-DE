@@ -1,24 +1,21 @@
 ---
-description: Sie können Anzeigen in Ihre VOD- und Live-/Linearinhalte einfügen, indem Sie die Adobe Primetime-Benutzeroberfläche für die Anzeigenentscheidung verwenden.
+description: Sie können Anzeigen in Ihren VOD- und Live-/Linearinhalt einfügen, indem Sie die Adobe Primetime-Benutzeroberfläche für Anzeigenentscheidungen verwenden.
 title: Werbeanforderungen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-
 # Werbeanforderungen{#advertising-requirements}
 
-Sie können Anzeigen in Ihre VOD- und Live-/Linearinhalte einfügen, indem Sie die Adobe Primetime-Benutzeroberfläche für die Anzeigenentscheidung verwenden.
+Sie können Anzeigen in Ihren VOD- und Live-/Linearinhalt einfügen, indem Sie die Adobe Primetime-Benutzeroberfläche für Anzeigenentscheidungen verwenden.
 
 <!--<a id="section_4889E0ED7A4241D98E61AD6C846B84B6"></a>-->
 
-Die Primetime-Anzeigenentscheidung funktioniert mit TVSDK, um Anzeigenchancen zu identifizieren, Anzeigen zu lösen und gelöste Anzeigen in Ihre Videostreams einzufügen.
-Um Anzeigen in Ihren Videoinhalt zu integrieren, stellen Sie sicher, dass die Anzeigen- und Hauptvideoinhalte die folgenden Anforderungen erfüllen:
+Die Primetime-Anzeigenentscheidung funktioniert mit TVSDK, um Anzeigengelegenheiten zu identifizieren, Anzeigen aufzulösen und gelöste Anzeigen in Ihre Video-Streams einzufügen.
+Um Anzeigen in Ihren Videoinhalt zu integrieren, stellen Sie sicher, dass die Werbung und der Hauptvideoinhalt die folgenden Anforderungen erfüllen:
 
-* Die HLS-Version des Werbeinhalts darf nicht höher sein als die HLS-Version des Hauptinhalts.
-* Die Anzeigen müssen nicht (ohne Einschränkungen) mehrfach geschaltet werden, unabhängig davon, ob der Hauptinhalt geforscht wird.
-
+* Die HLS-Version des Werbeinhalts kann nicht höher sein als die HLS-Version des Hauptinhalts.
+* Anzeigen müssen nicht (ohne Einschränkungen) durch Multiplexing angereichert werden, unabhängig davon, ob der Hauptinhalt durch Multiplexing gekennzeichnet ist.

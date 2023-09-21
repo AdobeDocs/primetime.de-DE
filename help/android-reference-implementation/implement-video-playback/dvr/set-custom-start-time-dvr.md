@@ -1,26 +1,24 @@
 ---
-title: Festlegen einer benutzerdefinierten Beginn-Zeit in der Referenzimplementierung
-description: Festlegen einer benutzerdefinierten Beginn-Zeit in der Referenzimplementierung
+title: Festlegen einer benutzerdefinierten Startzeit in der Referenzimplementierung
+description: Festlegen einer benutzerdefinierten Startzeit in der Referenzimplementierung
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
+# Festlegen einer benutzerdefinierten Startzeit in der Referenzimplementierung {#set-a-custom-start-time-in-the-reference-implementation}
 
-# Festlegen einer benutzerdefinierten Beginn-Zeit in der Referenzimplementierung {#set-a-custom-start-time-in-the-reference-implementation}
+Sie können das Bedienfeld DVR-Steuerelemente in der Einstellungsoberfläche verwenden, um die Startposition in der Referenzimplementierung zu aktivieren und zu bearbeiten. Wenn Sie diese Parameter bearbeiten, wird die Konfiguration in SharedPreferences aktualisiert und der Player aktualisiert.
 
-Sie können das DVR-Bedienfeld in der Einstellungsoberfläche verwenden, um die Position des Beginns in der Referenzimplementierung zu aktivieren und zu bearbeiten. Wenn Sie diese Parameter bearbeiten, wird die Konfiguration in den SharedPreferences aktualisiert und der Player aktualisiert.
-
-1. Öffnen Sie das Dialogfeld &quot;Primetime-Einstellungen&quot;.
-1. Wählen Sie **[!UICONTROL DVR controls]**.
+1. Öffnen Sie das Dialogfeld Primetime-Einstellungen .
+1. Auswählen **[!UICONTROL DVR controls]**.
 
    <!--<a id="fig_5C7A4E8F0390404F97E667364DB8B0A6"></a>-->
 
    ![](assets/dvr-configuration.jpg)
 
-1. **Die Zeitsteuerung für benutzerdefinierte Beginn** muss festgelegt werden,  **[!UICONTROL ON]** wenn Sie beim Eingeben des Streams eine benutzerdefinierte Position im DVR-Fenster wählen möchten.
-1. Legen Sie die Uhrzeit des benutzerdefinierten Beginns in **Wählen Sie die Uhrzeit des benutzerdefinierten Beginns**.
+1. **Benutzerdefinierte Startzeitsteuerung** muss **[!UICONTROL ON]** , wenn Sie beim Betreten des Streams eine benutzerdefinierte Position im DVR-Fenster wählen möchten.
+1. Festlegen der benutzerdefinierten Startzeit in **Benutzerdefinierte Startzeit auswählen**.

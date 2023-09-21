@@ -1,31 +1,29 @@
 ---
-title: Bestimmen, ob der Referenz-Implementierungslizenzserver ordnungsgemäß ausgeführt wird
-description: Bestimmen, ob der Referenz-Implementierungslizenzserver ordnungsgemäß ausgeführt wird
+title: Bestimmen, ob der Lizenzserver für Referenzimplementierung ordnungsgemäß ausgeführt wird
+description: Bestimmen, ob der Lizenzserver für Referenzimplementierung ordnungsgemäß ausgeführt wird
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
 
 ---
 
+# Bestimmen, ob der Lizenzserver für Referenzimplementierung ordnungsgemäß ausgeführt wird {#determining-if-reference-implementation-license-server-runs-properly}
 
-# Bestimmen, ob der Referenz-Implementierungslizenzserver ordnungsgemäß ausgeführt wird{#determining-if-reference-implementation-license-server-runs-properly}
+Es gibt mehrere Möglichkeiten, festzustellen, ob Ihr Referenz-Implementierungs-Lizenzserver ordnungsgemäß gestartet wurde. Sie können die [!DNL catalina.log] -Protokolle reichen möglicherweise nicht aus, da der Lizenzserver seine eigenen Protokolldateien protokolliert. Führen Sie die folgenden Schritte aus, um sicherzustellen, dass Ihre Referenzimplementierung ordnungsgemäß gestartet wurde.
 
-Es gibt mehrere Möglichkeiten, um festzustellen, ob Ihr Referenz-Implementierungslizenzserver korrekt gestartet wurde. Sie können die [!DNL catalina.log]-Protokolle möglicherweise nicht ausreichend Ansicht werden, da der Lizenzserver sich bei seinen eigenen Protokolldateien anmeldet. Führen Sie die folgenden Schritte aus, um sicherzustellen, dass Ihre Referenzimplementierung ordnungsgemäß gestartet wurde.
+* Überprüfen Sie Ihre [!DNL AdobeFlashAccess.log] -Datei. Hier schreibt die Referenzimplementierung Protokollinformationen. Der Speicherort dieser Protokolldatei wird durch Ihre [!DNL log4j.xml] und können geändert werden, um auf einen beliebigen Ort zu verweisen. Standardmäßig wird die Protokolldatei in das Arbeitsverzeichnis kopiert, in das Sie catalina ausführen.
 
-* Überprüfen Sie Ihre [!DNL AdobeFlashAccess.log]-Datei. Hier schreibt die Referenzimplementierung Protokollinformationen. Der Speicherort dieser Protokolldatei wird durch Ihre [!DNL log4j.xml]-Datei angegeben und kann so geändert werden, dass sie auf einen beliebigen Speicherort verweist. Standardmäßig wird die Protokolldatei in den Arbeitsordner kopiert, in dem Sie catalina ausführen.
+* Gehen Sie zur folgenden URL: [!DNL https:// flashaccess/license/v4]*Ihr Server:Server-Anschluss*. Sie sollten den Text &quot;Lizenzserver ist richtig eingerichtet&quot;sehen.
 
-* Gehen Sie zur folgenden URL: [!DNL https:// flashaccess/license/v4]*Ihr Server:Server-Anschluss*. Sie sollten den Text &quot;License Server ist korrekt eingerichtet&quot;sehen.
-
-Eine andere Möglichkeit, zu testen, ob Ihr Server ordnungsgemäß ausgeführt wird, besteht darin, ein Segment des Testinhalts zu verpacken, einen Beispiel-Videoplayer einzurichten und es dann abzuspielen.
+Eine weitere Möglichkeit, zu testen, ob Ihr Server ordnungsgemäß ausgeführt wird, besteht darin, ein Segment des Testinhalts zu verpacken, einen Beispiel-Videoplayer einzurichten und anschließend abzuspielen.
 
 Im folgenden Verfahren wird dieser Vorgang beschrieben:
 
-1. Wechseln Sie zum Ordner [!DNL \Reference Implementation\Command Line Tools].
+1. Navigieren Sie zu [!DNL \Reference Implementation\Command Line Tools] Ordner.
 
-   Informationen zum Installieren der Befehlszeilenwerkzeuge finden Sie unter [Installieren der Befehlszeilenwerkzeuge](../drm-reference-implementations/command-line-tools/install-command-line-tools.md).
+   Siehe [Installieren der Befehlszeilen-Tools](../drm-reference-implementations/command-line-tools/install-command-line-tools.md) Informationen zur Installation der Befehlszeilen-Tools.
 
 1. Geben Sie den folgenden Befehl ein, um eine einfache anonyme DRM-Richtlinie zu erstellen:
 
@@ -33,11 +31,11 @@ Im folgenden Verfahren wird dieser Vorgang beschrieben:
        java -jar libs\AdobePolicyManager.jar new policy_test.pol -x
    ```
 
-   Informationen zum Erstellen von DRM-Richtlinien mit dem DRM Policy Manager finden Sie unter [Befehlszeilenverwendung](../drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-command-line-usage.md).
+   Siehe [Befehlszeilenverwendung](../drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-command-line-usage.md) Informationen zum Erstellen von DRM-Richtlinien mit dem DRM Policy Manager.
 
-1. Legen Sie die Eigenschaft `encrypt.license.serverurl` in der Datei [!DNL flashaccesstools.properties] auf die URL des Lizenzservers fest.
+1. Legen Sie die `encrypt.license.serverurl` -Eigenschaft in der [!DNL flashaccesstools.properties] -Datei an die URL des Lizenzservers.
 
-   Beispiel, [!DNL https:// localhost:8080/]. Die Datei [!DNL flashaccesstools.properties] befindet sich im Ordner [!DNL \Reference Implementation\Command Line Tools].
+   Beispiel: [!DNL https:// localhost:8080/]. Die [!DNL flashaccesstools.properties] befindet sich im [!DNL \Reference Implementation\Command Line Tools] Ordner.
 
 1. Geben Sie den folgenden Befehl ein, um ein Segment des Inhalts zu verpacken:
 
@@ -52,15 +50,14 @@ Im folgenden Verfahren wird dieser Vorgang beschrieben:
        </i class="+ topic>
 ```
 
-1. Kopieren Sie die beiden generierten Dateien in den Ordner [!DNL webapps\ROOT\Content] auf dem Tomcat-Server.
-1. Wechseln Sie zum Ordner [!DNL Reference Implementation\Sample Video Players\Desktop\Flash Player\Release] und kopieren Sie den Inhalt in den Ordner [!DNL webapps\ROOT\SVP\] auf dem Tomcat-Server.
+1. Kopieren Sie die beiden generierten Dateien in die [!DNL webapps\ROOT\Content] auf dem Tomcat-Server.
+1. Navigieren Sie zu [!DNL Reference Implementation\Sample Video Players\Desktop\Flash Player\Release] und kopieren Sie den Inhalt in den [!DNL webapps\ROOT\SVP\] auf dem Tomcat-Server.
 
-1. Installieren Sie Flash Player 10.1 oder höher.
-1. Öffnen Sie einen Webbrowser und gehen Sie zur folgenden URL: [!DNL        https:// localhost:8080/SVP/player.html]
+1. Installieren Sie Flash Player Version 10.1 oder höher.
+1. Öffnen Sie einen Webbrowser und navigieren Sie zur folgenden URL: [!DNL        https:// localhost:8080/SVP/player.html]
 
-1. Gehen Sie zur folgenden URL und klicken Sie dann auf **[!UICONTROL Play]**: [!DNL https:// localhost:8080/Content/] *`your_encrypted_FLV`*.
+1. Gehen Sie zur folgenden URL und klicken Sie auf **[!UICONTROL Play]**: [!DNL https:// localhost:8080/Content/] *`your_encrypted_FLV`*.
 
-1. Wenn das Video nicht abgespielt werden kann, überprüfen Sie, ob Fehlercodes im Protokollbereich des Beispiel-Video-Players angezeigt oder der Datei [!DNL AdobeFlashAccess.log] hinzugefügt werden.
+1. Wenn die Wiedergabe des Videos fehlschlägt, überprüfen Sie, ob im Protokollfenster des Beispiel-Video-Players Fehlercodes angezeigt oder zum [!DNL AdobeFlashAccess.log] -Datei.
 
-   Sie können jetzt in der Datei log4j.xml nach dem Speicherort der Protokolldatei suchen und diese dann ändern. [!DNL AdobeFlashAccess.log] Standardmäßig wird die Protokolldatei in den Arbeitsordner kopiert, in dem Sie catalina ausführen.
-
+   Sie können jetzt nach dem Speicherort der [!DNL AdobeFlashAccess.log] Protokolldatei in der Datei log4j.xml speichern und dann ändern. Standardmäßig wird die Protokolldatei in das Arbeitsverzeichnis kopiert, in das Sie die Katalina ausführen.

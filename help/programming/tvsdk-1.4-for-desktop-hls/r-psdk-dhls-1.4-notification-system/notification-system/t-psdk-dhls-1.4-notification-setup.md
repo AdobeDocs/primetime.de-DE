@@ -1,32 +1,29 @@
 ---
-description: Sie können auf Benachrichtigungen warten und eigene Benachrichtigungen zum Benachrichtigungsverlauf hinzufügen.
-title: Einrichten des Benachrichtigungssystems
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können Benachrichtigungen überwachen und eigene Benachrichtigungen zum Benachrichtigungsverlauf hinzufügen.
+title: Benachrichtigungssystem einrichten
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
+# Benachrichtigungssystem einrichten{#set-up-your-notification-system}
 
-# Einrichten des Benachrichtigungssystems{#set-up-your-notification-system}
+Sie können Benachrichtigungen überwachen und eigene Benachrichtigungen zum Benachrichtigungsverlauf hinzufügen.
 
-Sie können auf Benachrichtigungen warten und eigene Benachrichtigungen zum Benachrichtigungsverlauf hinzufügen.
+Der Kern des Primetime-Player-Benachrichtigungssystems ist die Benachrichtigungsklasse, die eine eigenständige Benachrichtigung darstellt.
 
-Der Kern des Primetime Player-Benachrichtigungssystems ist die Notification-Klasse, die eine eigenständige Benachrichtigung darstellt.
+Die NotificationHistory -Klasse bietet einen Mechanismus zum Ansammeln von Benachrichtigungen. Es speichert ein Benachrichtigungsprotokoll ( `NotificationHistoryItem`) Objekte, die eine Sammlung von Benachrichtigungen darstellen.
 
-Die NotificationHistory-Klasse stellt einen Mechanismus zum Akkumulieren von Benachrichtigungen bereit. Es speichert ein Protokoll von Benachrichtigungsobjekten ( `NotificationHistoryItem`), das eine Sammlung von Benachrichtigungen darstellt.
-
-So empfangen Sie Benachrichtigungen:
+Benachrichtigungen erhalten:
 
 * Benachrichtigungen abrufen
-* hinzufügen Benachrichtigungen zum Benachrichtigungsverlauf
+* Hinzufügen von Benachrichtigungen zum Benachrichtigungsverlauf
 
 1. Suchen Sie nach Statusänderungen.
-1. Implementieren Sie den `MediaPlayer.StatusChangeEvent.STATUS_CHANGED`-Ereignis-Listener.
-1. TVSDK übergibt eine `MediaPlayer.StatusChangeEvent`-Instanz an den Ereignis-Listener, der zwei Parameter enthält:
+1. Implementieren des `MediaPlayer.StatusChangeEvent.STATUS_CHANGED` Ereignis-Listener.
+1. TVSDK übergibt eine `MediaPlayer.StatusChangeEvent` -Instanz zum Ereignis-Listener, der zwei Parameter enthält:
 
    * Der neue Status ( `MediaPlayer.Status`)
-   * Ein `MediaPlayerNotification`-Objekt
-
+   * A `MediaPlayerNotification` Objekt

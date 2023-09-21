@@ -1,43 +1,42 @@
 ---
-description: Der Flash Runtime TVSDK benötigt ein signiertes Token, um zu überprüfen, ob Sie berechtigt sind, die TVSDK-API in der Domäne aufzurufen, in der sich Ihre Anwendung befindet.
+description: Das Flash Runtime TVSDK benötigt ein signiertes Token, um zu überprüfen, ob Sie berechtigt sind, die TVSDK-API in der Domäne aufzurufen, in der sich Ihre Anwendung befindet.
 title: Signiertes Token laden
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
+# Signiertes Token laden {#load-your-signed-token}
 
-# Signiertes Token {#load-your-signed-token} laden
+Das Flash Runtime TVSDK benötigt ein signiertes Token, um zu überprüfen, ob Sie berechtigt sind, die TVSDK-API in der Domäne aufzurufen, in der sich Ihre Anwendung befindet.
 
-Der Flash Runtime TVSDK benötigt ein signiertes Token, um zu überprüfen, ob Sie berechtigt sind, die TVSDK-API in der Domäne aufzurufen, in der sich Ihre Anwendung befindet.
+1. Rufen Sie für jede Ihrer Domänen ein signiertes Token von Ihrem Adobe-Support-Mitarbeiter ab (wobei jede Domäne eine bestimmte Domäne oder eine Wildcard-Domäne sein kann).
 
-1. Besorgen Sie sich ein signiertes Token von Ihrem Kundenbetreuer für jede Ihrer Domänen (wobei jede Domäne eine bestimmte Domäne oder Wildcard-Domäne sein kann).
-
-       Um ein Token zu erhalten, geben Sie entweder Adobe über die Domäne, in der Ihre Anwendung gespeichert oder geladen wird, oder vorzugsweise über die Domäne als SHA256-Hash. Im Gegenzug gibt Ihnen Adobe für jede Domäne ein unterschriebenes Token. Diese Token haben eine der folgenden Formen:
+       Um ein Token zu erhalten, geben Sie Adobe entweder die Domäne an, in der Ihre Anwendung gespeichert oder geladen wird, oder vorzugsweise die Domäne als SHA256-Hash. Im Gegenzug stellt Adobe ein signiertes Token für jede Domäne bereit. Diese Token haben eine der folgenden Formen:
    
-   * Eine [!DNL .xml]-Datei, die als Token für eine einzelne Domäne oder Wildcard-Domäne fungiert.
+   * Ein [!DNL .xml] -Datei, die als Token für eine einzelne Domäne oder Wildcard-Domäne fungiert.
 
-      >[!NOTE]
-      >
-      >Ein Token für eine Wildcard-Domäne deckt diese Domäne und alle zugehörigen Subdomänen ab. Beispielsweise würde ein Platzhalter-Token für die Domäne [!DNL mycompany.com] auch für [!DNL vids.mycompany.com] und [!DNL private.vids.mycompany.com] gelten; ein Platzhaltertoken für [!DNL vids.mycompany.com] würde auch [!DNL private.vids.mycompany.com] abdecken. *Platzhalterdomänentoken werden nur für bestimmte Flash Player unterstützt.*
+     >[!NOTE]
+     >
+     >Ein Token für eine Wildcard-Domäne deckt diese Domäne und alle zugehörigen Subdomänen ab. Beispiel: ein Platzhalter-Token für die Domäne [!DNL mycompany.com] würde auch [!DNL vids.mycompany.com] und [!DNL private.vids.mycompany.com]; ein Platzhalter-Token für [!DNL vids.mycompany.com] würde auch [!DNL private.vids.mycompany.com]. *Wildcard-Domänen-Token werden nur für bestimmte Flash Player-Versionen unterstützt.*
 
-   * Eine [!DNL .swf]-Datei mit Token-Informationen für mehrere Domänen (ohne Platzhalter) (Einzel- oder Platzhalterdaten), die Ihre Anwendung dynamisch laden kann.
+   * A [!DNL .swf] -Datei mit Token-Informationen für mehrere Domänen (ohne Platzhalter) (einzeln oder als Platzhalter), die Ihre Anwendung dynamisch laden kann.
 
-1. Speichern Sie die Tokendatei im selben Speicherort oder in der gleichen Domäne wie Ihre Anwendung.
+1. Speichern Sie die Token-Datei am selben Speicherort oder in der Domäne wie Ihre Anwendung.
 
-   Standardmäßig sucht TVSDK nach dem Token an diesem Speicherort. Alternativ können Sie den Namen und Speicherort des Tokens in `flash_vars` in Ihrer HTML-Datei angeben.
-1. Wenn Ihre Tokendatei eine einzelne XML-Datei ist:
-   1. Verwenden Sie `utils.AuthorizedFeaturesHelper.loadFrom`, um die unter der angegebenen URL gespeicherten Daten (die Tokendatei) herunterzuladen und die `authorizedFeatures`-Informationen daraus zu extrahieren.
+   Standardmäßig sucht TVSDK an dieser Stelle nach dem Token. Alternativ können Sie den Namen und Speicherort des Tokens unter `flash_vars` in Ihrer HTML-Datei.
+1. Wenn Ihre Token-Datei eine einzelne XML-Datei ist:
+   1. Verwendung `utils.AuthorizedFeaturesHelper.loadFrom` , um die unter der angegebenen URL gespeicherten Daten (die Token-Datei) herunterzuladen und die `authorizedFeatures` Informationen.
 
-      Dieser Schritt kann unterschiedlich sein. Sie können beispielsweise eine Authentifizierung durchführen, bevor Sie die Anwendung starten, oder Sie erhalten das Token direkt vom Content-Management-System (CMS).
+      Dieser Schritt kann variieren. Sie können beispielsweise eine Authentifizierung durchführen, bevor Sie die Anwendung starten, oder das Token direkt von Ihrem Content Management System (CMS) empfangen.
 
-   1. TVSDK löst ein `COMPLETED`-Ereignis aus, wenn die Belastung erfolgreich ist, oder ein `FAILED`-Ereignis, wenn dies nicht der Fall ist. Gehen Sie beim Erkennen eines Ereignisses entsprechend vor.
+   1. TVSDK sendet eine `COMPLETED` -Ereignis, wenn das Laden erfolgreich war, oder ein `FAILED` ansonsten. Führen Sie geeignete Maßnahmen durch, wenn Sie eines der beiden Ereignisse erkennen.
 
-      Dies muss erfolgreich sein, damit Ihre Anwendung die erforderlichen `authorizedFeatures`-Objekte in Form eines `MediaPlayerContext`-Objekts für TVSDK bereitstellen kann.
-   Dieses Beispiel zeigt, wie Sie eine Datei mit einem einzelnen Token [!DNL .xml] verwenden können.
+      Dies muss erfolgreich sein, damit Ihre Anwendung die erforderlichen `authorizedFeatures` Objekte in Form eines `MediaPlayerContext`.
+
+   Dieses Beispiel zeigt, wie Sie ein einzelnes Token verwenden können [!DNL .xml] -Datei.
 
    ```
    private function loadDirectTokenURL():void { 
@@ -52,21 +51,21 @@ Der Flash Runtime TVSDK benötigt ein signiertes Token, um zu überprüfen, ob S
     }
    ```
 
-1. Wenn Ihr Token eine [!DNL .swf]-Datei ist:
-   1. Definieren Sie eine `Loader`-Klasse, um die [!DNL .swf]-Datei dynamisch zu laden.
-   1. Legen Sie `LoaderContext` fest, um das Laden in der aktuellen Anwendungsdomäne anzugeben, wodurch TVSDK das richtige Token in der Datei [!DNL .swf] auswählen kann. Wenn `LoaderContext` nicht angegeben ist, wird standardmäßig `Loader.load` die .swf-Datei in die untergeordnete Domäne der aktuellen Domäne geladen.
-   1. Suchen Sie nach dem VOLLSTÄNDIGEN Ereignis, das TVSDK auslöst, wenn die Belastung erfolgreich ist.
+1. Wenn Ihr Token ein [!DNL .swf] Datei:
+   1. Definieren Sie eine `Loader` -Klasse, um die [!DNL .swf] -Datei.
+   1. Legen Sie die `LoaderContext` , um das Laden anzugeben, das in der aktuellen Anwendungsdomäne enthalten sein soll, wodurch TVSDK das richtige Token innerhalb der [!DNL .swf] -Datei. Wenn `LoaderContext` nicht angegeben ist, wird die Standardaktion von `Loader.load` ist es, die .swf-Datei in die untergeordnete Domäne der aktuellen Domäne zu laden.
+   1. Suchen Sie nach dem COMPLETE-Ereignis, das von TVSDK ausgelöst wird, wenn das Laden erfolgreich ist.
 
-      Suchen Sie auch nach dem FEHLER-Ereignis und ergreifen Sie entsprechende Maßnahmen.
-   1. Wenn die Belastung erfolgreich ist, verwenden Sie `AuthorizedFeaturesHelper`, um ein `ByteArray` zu erhalten, das die PCKS-7-kodierten Sicherheitsdaten enthält.
+      Suchen Sie auch nach dem ERROR-Ereignis und ergreifen Sie geeignete Maßnahmen.
+   1. Wenn das Laden erfolgreich ist, verwenden Sie die `AuthorizedFeaturesHelper` um eine `ByteArray` enthält die PCKS-7-kodierten Sicherheitsdaten.
 
-      Diese Daten werden über die AVE V11-API verwendet, um eine Autorisierungsbestätigung vom Flash Runtime Player zu erhalten. Wenn das Byte-Array keinen Inhalt hat, verwenden Sie stattdessen das Verfahren, um nach einer Tokendatei mit einer einzigen Domäne zu suchen.
-   1. Verwenden Sie `AuthorizedFeatureHelper.loadFeatureFromData`, um die erforderlichen Daten aus dem Bytearray abzurufen.
-   1. Entladen Sie die Datei [!DNL .swf].
+      Diese Daten werden über die AVE V11-API verwendet, um eine Autorisierungsbestätigung vom Flash Runtime Player zu erhalten. Wenn das Byte-Array keinen Inhalt hat, verwenden Sie stattdessen das Verfahren, um nach einer Token-Datei mit einer Domäne zu suchen.
+   1. Verwendung `AuthorizedFeatureHelper.loadFeatureFromData` , um die erforderlichen Daten aus dem Byte-Array abzurufen.
+   1. Entladen Sie die [!DNL .swf] -Datei.
 
-   Die folgenden Beispiele zeigen, wie Sie eine Datei mit mehreren Token [!DNL .swf] verwenden können.
+   Die folgenden Beispiele zeigen, wie Sie ein Multitoken verwenden können [!DNL .swf] -Datei.
 
-   **Beispiel 1 für mehrere Token:**
+   **Beispiel 1 für ein Multitoken:**
 
    ```
    private function onApplicationComplete(event:FlexEvent):void { 
@@ -110,7 +109,7 @@ Der Flash Runtime TVSDK benötigt ein signiertes Token, um zu überprüfen, ob S
    } 
    ```
 
-   **Beispiel 2 mit mehreren Token:**
+   **Beispiel 2 für ein Multitoken:**
 
    ```
    private function tokenSwfLoadedHandler(e:Event):void { 
@@ -156,4 +155,3 @@ Der Flash Runtime TVSDK benötigt ein signiertes Token, um zu überprüfen, ob S
        authorizedFeatureHelper.loadFrom(tokenUrl); 
    }
    ```
-

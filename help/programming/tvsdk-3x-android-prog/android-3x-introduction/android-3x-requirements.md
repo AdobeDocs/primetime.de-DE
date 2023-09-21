@@ -1,8 +1,7 @@
 ---
 description: TVSDK hat spezifische Anforderungen an Medieninhalte, Manifestinhalte, DRM und Softwareversionen.
 title: Voraussetzungen
-exl-id: 85bf7b85-5f4b-4ed5-aa4f-765dabc5d4d8
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 0%
@@ -34,14 +33,14 @@ Um TVSDK zu verwenden, stellen Sie sicher, dass Ihre Hardware, Ihr Betriebssyste
 
 ## #EXT-X-VERSIONSANFORDERUNGEN {#section_49A33664651A46EC9ED888BA9C1C3F6D}
 
-Die Version von `#EXT-X-VERSION` im [!DNL .m3u8] Die Manifestdatei beeinflusst, welche Funktionen für Ihre Anwendung verfügbar sind und welche `EXT` -Tags sind gültig.
+Die Version von `#EXT-X-VERSION` in der Manifestdatei [!DNL .m3u8] wirkt sich darauf aus, welche Funktionen für Ihre Anwendung verfügbar sind und welche `EXT` -Tags gültig sind.
 
-Im Folgenden finden Sie einige Informationen zum `#EXT-X-VERSION` -Tag, das die HLS-Protokollversion angibt:
+Im Folgenden finden Sie einige Informationen zum Tag `#EXT-X-VERSION` , das die HLS-Protokollversion angibt:
 
-* Die Version muss mit den Funktionen und Attributen in der HLS-Wiedergabeliste übereinstimmen. Andernfalls können Wiedergabefehler auftreten. Weitere Informationen finden Sie unter [HTTP-Live-Streaming-Spezifikation](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
+* Die Version muss mit den Funktionen und Attributen in der HLS-Wiedergabeliste übereinstimmen. Andernfalls kann es zu Wiedergabefehlern kommen. Weitere Informationen finden Sie unter [HTTP-Live-Streaming-Spezifikation](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
 * Adobe empfiehlt die Verwendung von mindestens Version 2 von HLS für die Wiedergabe in TVSDK-basierten Clients.
 
-   Clients und Server müssen die Versionen wie folgt implementieren:
+  Clients und Server müssen die Versionen wie folgt implementieren:
 
 <table frame="all" colsep="1" rowsep="1" id="table_62EB98EDD9DE49EC84CB1C7D59BC40E6"> 
  <thead> 
@@ -59,7 +58,7 @@ Im Folgenden finden Sie einige Informationen zum `#EXT-X-VERSION` -Tag, das die 
    <td colname="1"> <span class="codeph"> EXT-X-VERSION:3 </span> </td> 
    <td colname="2"> 
     <ul id="ul_C9500D3F934848639C204BF248F139FF"> 
-     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Gleitkomma <span class="codeph"> EXTINF </span> Dauerwerte <p>The duration tags ( <span class="codeph"> #EXTINF: </span>&lt;duration&gt;,&lt;title&gt;) in version 2 were rounded to integer values. Für Version 3 und höher müssen die Zeiträume genau angegeben werden, und zwar im Gleitpunkt. </p> </li> 
+     <li id="li_535A7E3FABCB46FE872A7EA5DE2A1784">Gleitkommawerte <span class="codeph"> EXTINF </span> Dauer <p>Die Dauer-Tags ( <span class="codeph"> #EXTINF: </span>&lt;Dauer&gt;,&lt;Titel&gt;) in Version 2 wurden auf Ganzzahlwerte gerundet. Für Version 3 und höher müssen die Zeiträume genau angegeben werden, und zwar im Gleitpunkt. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr rowsep="0"> 

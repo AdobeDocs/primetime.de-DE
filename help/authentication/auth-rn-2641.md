@@ -1,19 +1,18 @@
 ---
 title: Versionshinweise zur Adobe Primetime-Authentifizierung 2.6.4.1
 description: Versionshinweise zur Adobe Primetime-Authentifizierung 2.6.4.1
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
-
 # Versionshinweise zur Adobe Primetime-Authentifizierung 2.6.4.1 {#authn-264-rn}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 Auf dieser Seite werden neue Funktionen, Änderungen und bekannte Probleme in dieser Version beschrieben:
 
@@ -25,7 +24,7 @@ Auf dieser Seite werden neue Funktionen, Änderungen und bekannte Probleme in di
 ### Build-Nummer {#build-number-2641}
 
 Adobe Primetime-Authentifizierung: adobe-pass-**2,64,1**
-Releasedatum: **01/31/2023 - 02/02/2023**
+Releasedatum: **31.1.2023 - 02.02.2023**
 
 ### Versionsübersicht {#release-overview-2641}
 

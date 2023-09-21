@@ -1,44 +1,42 @@
 ---
-description: Ein Opportunitätsdetektor ist eine TVSDK-Komponente, die benutzerdefinierte Tags in einem Stream erkennt und Platzierungsmöglichkeiten identifiziert. Diese Möglichkeiten werden an den Inhaltsauflöser gesendet, der den Arbeitsablauf zum Einfügen von Inhalten/Anzeigen basierend auf den Eigenschaften und Metadaten der Platzierungsgelegenheit anpassen kann.
-title: Opportunity-Generatoren und Content-Auflösungen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Ein Opportunitätsdetektor ist eine TVSDK-Komponente, die benutzerdefinierte Tags in einem Stream erkennt und Platzierungsmöglichkeiten erkennt. Diese Möglichkeiten werden an den Content Resolver gesendet, der den Inhalts-/Anzeigen-Einfüge-Workflow basierend auf den Eigenschaften der Platzierungsgelegenheiten und Metadaten personalisiert.
+title: Opportunity-Generatoren und Content-Resolver
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '487'
 ht-degree: 0%
 
 ---
 
+# Opportunity-Generatoren und Content-Resolver {#opportunity-generators-and-content-resolvers}
 
-# Opportunity-Generatoren und Content-Auflösungen {#opportunity-generators-and-content-resolvers}
+Ein Opportunitätsdetektor ist eine TVSDK-Komponente, die benutzerdefinierte Tags in einem Stream erkennt und Platzierungsmöglichkeiten erkennt. Diese Möglichkeiten werden an den Content Resolver gesendet, der den Inhalts-/Anzeigen-Einfüge-Workflow basierend auf den Eigenschaften der Platzierungsgelegenheiten und Metadaten personalisiert.
 
-Ein Opportunitätsdetektor ist eine TVSDK-Komponente, die benutzerdefinierte Tags in einem Stream erkennt und Platzierungsmöglichkeiten identifiziert. Diese Möglichkeiten werden an den Inhaltsauflöser gesendet, der den Arbeitsablauf zum Einfügen von Inhalten/Anzeigen basierend auf den Eigenschaften und Metadaten der Platzierungsgelegenheit anpassen kann.
+TVSDK enthält einen standardmäßigen Opportunity-Detektor:
 
-TVSDK enthält einen Standard-Opportunitätsdetektor:
+* `SpliceOutPlacementOpportunityDetector`, der die standardmäßigen Anzeigencodes versteht
 
-* `SpliceOutPlacementOpportunityDetector`, der die Standard-Anzeigenbezeichnungen versteht
+TVSDK enthält auch Standard-Content-Resolver, die Inhalte bereitstellen, die basierend auf dem Metadatenschlüssel im Player-Element eingefügt werden sollen:
 
-TVSDK enthält außerdem Standard-Content-Auflösungen, die Inhalte bereitstellen, die basierend auf dem Metadatenschlüssel im Player-Element eingefügt werden sollen:
+* `AuditudeResolver` für `AUDITUDE_METADATA_KEY`, der mit Adobe Primetime-Werbesechancen (früher als Auditude bezeichnet) kommunizieren und Werbeunterbrechungen zurückgeben kann.
 
-* `AuditudeResolver` for  `AUDITUDE_METADATA_KEY`, das in der Lage ist, mit Adobe Primetime-Werbeanzeigen-Entscheidungsservern (früher Auditude genannt) zu kommunizieren und Werbeunterbrechungen zurückzugeben, die platziert werden sollen.
+* `MetadataResolver` für `JSON_METADATA_KEY`
 
-* `MetadataResolver` for  `JSON_METADATA_KEY`
+* `CustomAdMarkersContentResolver` für `TIME_RANGES_METADATA_KEY`
 
-* `CustomAdMarkersContentResolver` for  `TIME_RANGES_METADATA_KEY`
+Sie können die standardmäßigen Opportunity-Detektoren und Content Resolver überschreiben, um den Werbe-Workflow wie folgt anzupassen:
 
-Sie können die standardmäßigen Opportunitätsdetektoren und Inhaltsauflöser überschreiben, um den Werbe-Workflow wie folgt anzupassen:
-
-* hinzufügen Unterstützung der benutzerdefinierten Tag-Erkennung
-* Erkennen benutzerdefinierter Tags für die Anzeigeneinfügung
+* Unterstützung für benutzerdefinierte Tag-Erkennung hinzufügen
+* Erkennen benutzerdefinierter Tags für das Einfügen von Anzeigen
 * Erstellen eines benutzerdefinierten Anzeigenanbieters
-* Schwarzer Inhalt
+* Schwarze Inhalte
 
-TVSDK bietet standardmäßige Opportunitätserzeuger und Content-Auflöser, die Anzeigen in der Zeitleiste platzieren, und diese Generatoren und Auflösungen basieren auf nicht standardmäßigen Tags im Manifest. Möglicherweise muss Ihre Anwendung die Zeitschiene entsprechend den im Manifest festgelegten Möglichkeiten, wie z. B. Indikatoren für eine Sperrfrist, ändern.
+TVSDK bietet standardmäßige Opportunity-Generatoren und Content Resolver, die Anzeigen in der Timeline platzieren. Diese Generatoren und Resolver basieren auf nicht standardmäßigen Tags im Manifest. Ihre Anwendung muss die Timeline möglicherweise basierend auf den im Manifest identifizierten Möglichkeiten ändern, z. B. anhand von Indikatoren für einen Blackout-Zeitraum.
 
-Ein *`opportunity`* stellt einen Interessensort auf der Zeitschiene dar, der normalerweise auf eine Anzeigenplatzierungsmöglichkeit hinweist. Diese Gelegenheit kann auch einen benutzerdefinierten Vorgang anzeigen, der sich auf die Zeitschiene auswirken kann, z. B. einen Sperrzeitraum. Ein *`opportunity generator`* identifiziert bestimmte Möglichkeiten (Tags) in der Zeitleiste und benachrichtigt TVSDK, dass diese Möglichkeiten getaggt wurden. Chancen werden in einer Zeitschiene durch Einfügen eines nicht standardmäßigen Tags (Nicht-HLS) identifiziert.
+Ein *`opportunity`* stellt einen Zielpunkt auf der Timeline dar, der normalerweise auf eine Anzeigenplatzierungsmöglichkeit hinweist. Diese Möglichkeit kann auch einen benutzerdefinierten Vorgang angeben, der sich auf die Timeline auswirken kann, z. B. einen Abmeldezeitraum. Ein *`opportunity generator`* identifiziert spezifische Möglichkeiten (Tags) in der Zeitleiste und benachrichtigt TVSDK darüber, dass diese Möglichkeiten getaggt wurden. Chancen werden in einer Timeline in durch Einfügung eines nicht standardmäßigen (Nicht-HLS)-Tags identifiziert.
 
-Wenn Ihre Anwendung über eine Gelegenheit (Tag) benachrichtigt wird, kann Ihre Anwendung die Zeitschiene ändern, indem Sie z. B. eine Reihe von Anzeigen einfügen, zu einem alternativen Stream (Blackouts) wechseln oder den Inhalt der Zeitschiene anderweitig bearbeiten. TVSDK ruft standardmäßig das entsprechende *`content resolver`* auf, um die erforderlichen Änderungen oder Aktionen in der Zeitschiene zu implementieren. Ihre Anwendung kann den standardmäßigen TVSDK Advertisement Content-Auflöser verwenden oder einen eigenen Content-Auflöser registrieren.
+Wenn Ihre Anwendung über eine Gelegenheit (Tag) benachrichtigt wird, kann Ihre Anwendung die Timeline ändern, indem Sie beispielsweise eine Reihe von Anzeigen einfügen, zu einem alternativen Stream (Blackouts) wechseln oder den Timeline-Inhalt anderweitig bearbeiten. Standardmäßig ruft TVSDK die entsprechende *`content resolver`* , um die erforderlichen Timeline-Änderungen oder -Aktionen zu implementieren. Ihre Anwendung kann den standardmäßigen TVSDK-Advertising Content Resolver verwenden oder einen eigenen Content Resolver registrieren.
 
-Sie können `MediaPlayerItemConfig.setAdTags` auch verwenden, um weitere Anzeigenmarken-Tags/Hinweise hinzuzufügen, damit TVSDK `MediaPlayerItemConfig.subscribedTags` erkennen und verwenden kann, und Ihre Anwendung über zusätzliche Tags benachrichtigen kann, die möglicherweise Informationen zum Anzeigenarbeitsablauf enthalten.
+Sie können auch `MediaPlayerItemConfig.setAdTags` , um weitere Anzeigenmarkierungen-Tags/-Hinweise hinzuzufügen, damit TVSDK sie erkennen und verwenden kann. `MediaPlayerItemConfig.subscribedTags` und benachrichtigen Sie Ihre Anwendung über zusätzliche Tags, die möglicherweise Informationen zum Werbe-Workflow enthalten.
 
-Eine mögliche Verwendung eines benutzerdefinierten Auflösers ist für Blackout-Zeiträume. Um diese Zeiträume zu bearbeiten, könnte Ihre Anwendung einen Blackout-Opportunitätsdetektor implementieren und registrieren, der für die Handhabung von Blackout-Tags zuständig ist. Wenn TVSDK auf dieses Tag trifft, fragt es alle registrierten Content-Auflöser ab, um den ersten zu finden, der das angegebene Tag verarbeitet. In diesem Beispiel ist es der Blackout-Inhaltsauflöser, der beispielsweise das aktuelle Element durch alternativen Inhalt im Player für die vom Tag angegebene Dauer ersetzen kann.
+Eine mögliche Verwendung eines benutzerdefinierten Resolver ist für Blackout-Zeiträume. Um diese Zeiträume zu handhaben, könnte Ihre Anwendung einen Blackout-Opportunity-Detektor implementieren und registrieren, der für die Verarbeitung von Blackout-Tags zuständig ist. Wenn TVSDK auf dieses Tag trifft, fragt es alle registrierten Content Resolver ab, um den ersten zu finden, der das angegebene Tag verarbeitet. In diesem Beispiel handelt es sich um den Blackout-Inhaltsauflöser, der beispielsweise das aktuelle Element durch alternativen Inhalt im Player für die durch das Tag angegebene Dauer ersetzen kann.

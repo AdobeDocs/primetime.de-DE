@@ -1,36 +1,31 @@
 ---
-description: Sie können die TVSDK-Konfigurationsdatei (AdobeTVSDKConfig.json) verwenden, um die Prioritäten für die Auswahl von Werbeanzeigen in VAST/VMAP-Antworten zu aktualisieren. Sie können diese Konfigurationsdatei auch verwenden, um die Quell-URL-Konvertierungsregeln für Anzeigenkreative zu definieren.
-keywords: kreative Auswahlregeln;AdobeTVSDKConfig;Ad-kreative Prioritäten;Transformationsregeln
-title: Aktualisieren von Regeln zur kreativen Auswahl von Werbeanzeigen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können die TVSDK-Konfigurationsdatei (AdobeTVSDKConfig.json) verwenden, um die Prioritäten für die Anzeigenauswahl in VAST-/VMAP-Antworten zu aktualisieren. Sie können diese Konfigurationsdatei auch verwenden, um die Transformationsregeln für die Quell-URL-Weiterleitung von Werbeanzeigen zu definieren.
+keywords: kreative Auswahlregeln; AdobeTVSDKConfig; Anzeigenkreativprioritäten; Umwandlungsregeln
+title: Aktualisieren der kreativen Anzeigenauswahlregeln
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#update-ad-creative-selection-rules-overview}
 
-Sie können die TVSDK-Konfigurationsdatei (AdobeTVSDKConfig.json) verwenden, um die Prioritäten für die Auswahl von Werbeanzeigen in VAST/VMAP-Antworten zu aktualisieren. Sie können diese Konfigurationsdatei auch verwenden, um die Quell-URL-Konvertierungsregeln für Anzeigenkreative zu definieren.
+Sie können die TVSDK-Konfigurationsdatei (AdobeTVSDKConfig.json) verwenden, um die Prioritäten für die Anzeigenauswahl in VAST-/VMAP-Antworten zu aktualisieren. Sie können diese Konfigurationsdatei auch verwenden, um die Transformationsregeln für die Quell-URL-Weiterleitung von Werbeanzeigen zu definieren.
 
-Wenn Ihr Videoplayer eine Anforderung an einen Werbeserver sendet, enthält die VAST/VMAP-Antwort in der Regel mehrere Werbeinhalte ( `MediaFile`), von denen jede eine URL zu einer anderen Container-Codec-Version bereitstellt. In einigen Fällen bieten Anzeigenkreative in der VAST/VMAP-Antwort jeweils eine andere Bitrate für die Anzeige. Wenn Sie Ihre eigenen Prioritäten- und Transformationsregeln für diese Anzeigenkreative angeben möchten, können Sie dies in der Konfigurationsdatei [!DNL AdobeTVSDKConfig.json] tun.
+Wenn Ihr Videoplayer eine Anforderung an einen Anzeigenserver sendet, enthält die VAST-/VMAP-Antwort in der Regel mehrere Werbeinformationen ( `MediaFile` -Elemente), die jeweils eine URL zu einer anderen Container-Codec-Version bereitstellen. In einigen Fällen stellen Werbeinterstellungselemente in der VAST-/VMAP-Antwort jeweils eine andere Bitrate für die Anzeige bereit. Wenn Sie für diese Anzeigenkreativen eigene Prioritäten und Umwandlungsregeln festlegen möchten, können Sie dies im [!DNL AdobeTVSDKConfig.json] Konfigurationsdatei.
 
 >[!IMPORTANT]
 >
->* Ändern Sie nicht den Namen der TVSDK-Konfigurationsdatei. Der Name muss [!DNL AdobeTVSDKConfig.json] bleiben.
+>* Ändern Sie nicht den Namen der TVSDK-Konfigurationsdatei. Der Name muss beibehalten werden. [!DNL AdobeTVSDKConfig.json].
 >* Sie können diese Datei an einer beliebigen Stelle platzieren, auf die Ihr Bundle zugreifen kann.
-
 >
 
-
-
-Sie können zwei Regeltypen in [!DNL AdobeTVSDKConfig.json] angeben: *Priorität* und *Normalisieren*-Regeln.
+Sie können zwei Regeltypen in [!DNL AdobeTVSDKConfig.json]: *Priorität* Regeln und *Normalisieren* Regeln.
 
 **[!UICONTROL Disabling Pre-Roll]**
 
-Um Pre-Roll zu deaktivieren, müssen Sie die standardmäßigen Opportunitätsgeneratoren ändern, damit der Pre-Roll-Aufruf nicht erfolgt. TVSDK verwendet standardmäßig die folgenden Opportunitätsgeneratoren:
+Um die Pre-roll-Funktion zu deaktivieren, müssen Sie die standardmäßigen Opportunity-Generatoren ändern, damit kein Pre-Roll-Aufruf erfolgt. TVSDK verwendet standardmäßig die folgenden Opportunity-Generatoren:
 
 ```
 /** 
@@ -44,7 +39,7 @@ override protected function doRetrieveGenerators(item:MediaPlayerItem):Vector.<O
 } 
 ```
 
-Um die Pre-Roll-Funktion für Live-Streams zu deaktivieren, sollte diese Änderung nur SpliceOutOpportunityGenerator umfassen:
+Um die Pre-Roll-Funktion für Live-Streams zu deaktivieren, sollte dies geändert werden, um nur den SplliceOutOpportunityGenerator aufzunehmen:
 
 ```
 /** 

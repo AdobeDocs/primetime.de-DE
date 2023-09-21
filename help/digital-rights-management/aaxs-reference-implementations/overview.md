@@ -1,24 +1,22 @@
 ---
-title: Übersicht - Verwenden der Referenzimplementierungen
-description: Übersicht - Verwenden der Referenzimplementierungen
+title: Übersicht - Verwendung der Referenzimplementierungen
+description: Übersicht - Verwendung der Referenzimplementierungen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
 
 ---
 
-
-# Übersicht - Verwenden der Referenzimplementierungen {#overview-using-the-reference-implementations}
+# Übersicht - Verwendung der Referenzimplementierungen {#overview-using-the-reference-implementations}
 
 Das Adobe Access-Produkt enthält eine Referenzimplementierung für die folgenden Komponenten:
 
 * Befehlszeilenwerkzeuge
-* Lizenzserver und Packager für überwachte Ordner
+* Lizenzserver und überwachter Ordner-Packager
 * Flash Access Manager AIR-Anwendung
 
 >[!NOTE]
 >
->Sie sollten entweder das Adobe Access Server für Protected Streaming, die Referenzimplementierung oder Ihren eigenen Lizenzserver bereitstellen.
+>Sie sollten entweder Adobe Access Server für geschütztes Streaming, die Referenzimplementierung oder Ihren eigenen Lizenzserver bereitstellen.

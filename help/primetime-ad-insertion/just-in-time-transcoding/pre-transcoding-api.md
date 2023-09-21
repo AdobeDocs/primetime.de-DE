@@ -1,26 +1,24 @@
 ---
-title: Vortranskodierungs-API
-description: Sie können die Just-in-time-Umpackungs-API verwenden, um Werbeinhalte bereits im Voraus zu transkodieren. Bei Bedarf stehen inhaltliche Versionen zur Verfügung, sodass eine Verzögerung von 2-4 Minuten bei der Just-in-time-Umverpackung (JIT) vermieden wird.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Pre-Transcoding-API
+description: Sie können die Just-in-time-Umpackungs-API verwenden, um Werbeinhalte vorzeitig zu transkodieren, sodass bei Bedarf inhaltskompatible Versionen verfügbar sind. Dadurch wird die Verzögerung von 2-4 Minuten, die mit der Just-in-time (JIT)-Umverpackung verbunden ist, beseitigt.
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 0%
 
 ---
 
+# API für Vortranskodierung und Umpackung {#pre-transcoding-api}
 
-# Vor-Transkodierung und Neuverpackung API {#pre-transcoding-api}
-
-Primetime Ad Insertion Angebot eine vordefinierte Transkodierungs-API für Situationen, in denen kreative URLs im Voraus bekannt sind, z. B. für große, direkt verkaufte Ereignis.  Dadurch entfällt die mit der Just-in-time-Transkodierung verbundene Verzögerung von 2-4 Minuten.
+Primetime Ad Insertion bietet eine Pre-Transcoding-API für Situationen, in denen vorab kreative URLs bekannt sind, z. B. für große, direkt verkaufte Ereignisse.  Dadurch wird die Verzögerung von 2 bis 4 Minuten bei der Just-in-time-Transkodierung beseitigt.
 
 ## HTTP-Anforderung {#section_F616F5722F0B4AB7939EE2ECBEDDB297}
 
-Senden Sie den Befehl &quot;HTTP-POST&quot;an die angegebene URL, um CRS mitzuteilen, welche Werbemittel transkodiert werden sollen und welche Optionen Sie verwenden möchten. Der Antwortcode meldet Erfolg oder Misserfolg und andere Informationen.
+Senden Sie einen HTTP-POST-Befehl an die angegebene URL, um CRS mitzuteilen, welche Werbegestaltung transkodiert werden soll und welche Optionen Sie verwenden möchten. Der Antwort-Code meldet Erfolg oder Fehler und andere Informationen.
 
-Für diese Anforderung sind Benutzername und Kennwort erforderlich. Diese können Sie von Ihrem technischen Kundenbetreuer der Adobe abrufen. Wenn Sie Informationen zur Authentifizierung benötigen, wenden Sie sich an Ihren Adobe Primetime-Kundenbetreuer.
+Diese Anfrage erfordert einen Benutzernamen und ein Kennwort. Diese können Sie von Ihrem technischen Kundenbetreuer für Adobe abrufen. Wenn Sie Informationen zur Authentifizierung benötigen, wenden Sie sich an Ihren Adobe Primetime-Aktivierungsbeauftragten.
 
-Um eine Transkodierungsanforderung an CRS zu senden, senden Sie eine HTTP-Nachricht wie folgt:
+Um eine Transkodierungsanfrage an CRS zu senden, senden Sie wie folgt eine HTTP-Nachricht:
 
 * **URL -** [https://id3.auditude.com/repackage](https://id3.auditude.com/repackage)
 
@@ -30,29 +28,29 @@ Um eine Transkodierungsanforderung an CRS zu senden, senden Sie eine HTTP-Nachri
 
 * **Kopfzeile -** `Content-Type: text/xml`
 
-* **Body-** XML wie im folgenden Beispiel:
+* **Body -** XML wie im folgenden Beispiel:
 
-   ```xml
-   <RepackageList>
-       <Repackage>
-           <AdSystem>Auditude</AdSystem>
-           <AdID>AUD1</AdID>
-           <CreativeID>AUD-CR1</CreativeID>
-           <CreativeURL>https://cdn.auditude.com/assets/ip/starbucks2.mp4</CreativeURL>
-           <Zone>3</Zone>
-       </Repackage>
-       <Repackage>
-           <AdSystem>Auditude</AdSystem>
-           <AdID>AUD2</AdID>
-           <CreativeID>AUD-CR1</CreativeID>
-           <CreativeURL>https://cdn.auditude.com/assets/ip/starbucks2.mp4</CreativeURL>
-           <Format>id3 targetdur=5</Format>
-           <Zone>3</Zone>
-       </Repackage>
-   </RepackageList>
-   ```
+  ```xml
+  <RepackageList>
+      <Repackage>
+          <AdSystem>Auditude</AdSystem>
+          <AdID>AUD1</AdID>
+          <CreativeID>AUD-CR1</CreativeID>
+          <CreativeURL>https://cdn.auditude.com/assets/ip/starbucks2.mp4</CreativeURL>
+          <Zone>3</Zone>
+      </Repackage>
+      <Repackage>
+          <AdSystem>Auditude</AdSystem>
+          <AdID>AUD2</AdID>
+          <CreativeID>AUD-CR1</CreativeID>
+          <CreativeURL>https://cdn.auditude.com/assets/ip/starbucks2.mp4</CreativeURL>
+          <Format>id3 targetdur=5</Format>
+          <Zone>3</Zone>
+      </Repackage>
+  </RepackageList>
+  ```
 
-Der `RepackageList`-Block im Körper kann 1 bis 300 `Repackage`-Blöcke enthalten. Wenn die Anzahl der `Repackage`-Blöcke im Körper 300 überschreitet, schlägt die HTTP-Anforderung mit dem folgenden Fehler fehl:
+Die `RepackageList` -Block im Körper kann 1 bis 300 enthalten. `Repackage` Bausteine. Wenn die Anzahl der `Repackage` -Blöcke im Hauptteil größer als 300 sind, schlägt die HTTP-Anforderung mit dem folgenden Fehler fehl:
 
 ```
 <codeph>
@@ -62,47 +60,48 @@ Der `RepackageList`-Block im Körper kann 1 bis 300 `Repackage`-Blöcke enthalte
 ```
 
 
-Die erforderlichen und optionalen Parameter in einem `Repackage`-Block lauten wie folgt:
+Die erforderlichen und optionalen Parameter in einer `Repackage` -Block wie folgt aussehen:
 
-* **`AdSystem`** (Erforderlich) - Der Quell-Anzeigenserver, z. B.  `Auditude`,  `FreeWheel`,  `Apad.tv`. Dies ist ein Zeichenfolgenwert, der dem VAST-Element `AdSystem` entspricht.
+* **`AdSystem`** (Erforderlich) - Der Quell-Anzeigenserver, beispielsweise `Auditude`, `FreeWheel`, `Apad.tv`. Dies ist ein string -Wert, der dem VAST-Element entspricht. `AdSystem`.
 
-* **`AdId`** (Erforderlich) - Dies ist ein Bezeichner für den in der Anforderung angegebenen Drittanbieter-Anzeigenserver. Es entspricht dem Attribut `id` des Elements `Ad` in einer VAST-Antwort.
+* **`AdId`** (Erforderlich) - Dies ist eine Kennung für den in der Anfrage angegebenen Drittanbieter-Anzeigenserver. Sie entspricht dem `id` -Attribut `Ad` -Element in einer VAST-Antwort.
 
-* **`CreativeURL`** (Erforderlich) - Der Speicherort (URI) des zu transkodierenden Werbekreises. Dies entspricht dem Element VAST `MediaFile`.
+* **`CreativeURL`** (Erforderlich) - Der Speicherort (URI) des Anzeigenmotivs, der transkodiert werden soll. Dies entspricht dem VAST `MediaFile` -Element.
 
-* `CreativeID` (optional) - Der Bezeichner für das Werbekreativ, das als Teil des Anzeigenerlebnisses einbezogen werden soll.
-* **`Zone`** (Erforderlich) - Zonen-ID für Ihr Konto (bei Ihrem technischen Kundenbetreuer abrufen). Dies ist ein numerischer Wert, der der Einstellung für die Auditude-Plattform `publisher_site_id` entspricht.
+* `CreativeID` (optional) - Die Kennung für das Anzeigenmotiv, das als Teil des Anzeigenerlebnisses einbezogen werden soll.
+* **`Zone`** (Erforderlich) - Bereichs-ID für Ihr Konto (erhalten Sie von Ihrem technischen Kundenbetreuer). Dies ist ein numerischer Wert, der der Auditude-Plattform entspricht. `publisher_site_id` -Einstellung.
 
-* **`Format`** (Optional) - Parameter zur Steuerung der Transkodierung der Werbekreative durch CRS:
+* **`Format`** (optional) - Parameter zur Steuerung, wie CRS die Anzeigenkreationen transkodiert:
 
-   * `clientside` - Generieren Sie eine Ausgabe, die mit der URL kompatibel ist, die TVSDK für die Kommunikation mit dem CDN verwendet.
-   >[!IMPORTANT]
-   >
-   >Sie müssen diesen Parameter angeben, wenn die neu verpackte Anzeige mit der clientseitigen Ad Insertion kompatibel sein soll. Wenn Sie dies nicht angeben, ist die neu verpackte Anzeige nur mit der serverseitigen Ad Insertion kompatibel.
+   * `clientside` - Generieren Sie eine Ausgabe, die mit der URL kompatibel ist, die TVSDK zur Kommunikation mit dem CDN verwendet.
 
-   * `hls` - Erstellen Sie ein HLS-kompatibles transkodiertes Werbekreativ.
-   * `dash` - Erstellen Sie ein DASH-kompatibles transkodiertes Anzeigenkreativ.
-   * `id3` - Fügen Sie ID3-Metadaten-Tags in das transkodierte Werbekreativ ein.
-   * `targetdur` - Segmentdauer (in Sekunden) für das transkodierte Werbekreativ. Der Standardwert ist `targetdur=4`. Dieser Wert sollte mit dem Wert übereinstimmen, der im Manifest für `<s>` im Tag für die Zielgruppe angegeben ist: `#EXT-X-TARGETDURATION:<s>`.
+  >[!IMPORTANT]
+  >
+  >Sie müssen diesen Parameter angeben, wenn die neu verpackte Anzeige mit Client-seitigem Ad Insertion kompatibel sein soll. Wenn Sie dies nicht angeben, ist die neu verpackte Anzeige nur mit Server Side Ad Insertion kompatibel.
 
-   >[!NOTE]
-   >
-   >DASH-kompatible Assets sind nicht mit dem Einfügen von Adobe Primetime-Anzeigen kompatibel.
+   * `hls` - Generieren Sie ein HLS-kompatibles transkodiertes Anzeigenmotiv.
+   * `dash` - Generieren Sie ein DASH-kompatibles transkodiertes Anzeigenmotiv.
+   * `id3` - Fügen Sie ID3-zeitgesteuerte Metadaten-Tags in das transkodierte Anzeigenmotiv ein.
+   * `targetdur` - Segmentdauer (in Sekunden) für die transkodierten Anzeigenmotive. Der Standardwert ist `targetdur=4`. Dieser Wert sollte dem Wert entsprechen, der im Manifest für `<s>` im Tag der Zieldauer: `#EXT-X-TARGETDURATION:<s>`.
+
+  >[!NOTE]
+  >
+  >DASH-kompatible Assets sind nicht mit Adobe Primetime-Anzeigeneinfügungen kompatibel.
 
 >[!IMPORTANT]
 >
->Um eine reibungslose Wiedergabe sicherzustellen, stellen Sie `targetdur` so ein, dass sie der Dauer des Inhaltsteiles entspricht.
+>Um eine reibungslose Wiedergabe sicherzustellen, legen Sie `targetdur` , um die Dauer des Inhaltssatzes abzugleichen.
 
 ## HTTP-Antwort {#section_B30D27E4A6AC4AAD9E758162EFF7D963}
 
-CRS beantwortet die Anforderung mit einem der folgenden Statuscodes:
+CRS antwortet auf die Anfrage mit einem der folgenden Statuscodes:
 
-* **HTTP 202**  - Akzeptiert (mit leerem Text). Dies zeigt den Erfolg an. CRS lädt die transkodierte Anzeige auf den CDN-Server hoch.
-* **HTTP 400**  - Fehlerhafte Anforderung. Die veröffentlichte XML ist ungültig.
-* **HTTP 500**  - Interner Serverfehler. Auf dem Server ist ein internes Problem aufgetreten (der Server konnte beispielsweise keine Verbindung zu einer Datenbank herstellen).
+* **HTTP 202** - Akzeptiert (mit leerem Text). Dies zeigt den Erfolg an. CRS lädt die transkodierte Anzeige auf den CDN-Server hoch.
+* **HTTP 400** - Ungültige Anfrage. Die veröffentlichte XML ist ungültig.
+* **HTTP 500** - Interner Server-Fehler. Auf dem Server ist ein internes Problem aufgetreten (z. B. konnte der Server keine Verbindung zu einer Datenbank herstellen).
 
 ## Vortranskodieren von Assets für SSAI oder CSAI {#section_098888BB74FD4DC1AD0BD507B2A48318}
 
-Mithilfe der Repacker-API können Sie zukünftige SSAI- oder CSAI-Ereignis vortranskodieren. Wenn die Assets künftig mit SSAI verwendet werden sollen, stellen Sie sicher, dass alle Parameter in den POST-Aufrufen eindeutig sind. Die Parameter sind: AdSystem, AdId, CreativeURL, Zone, Format. Jegliche Unterschiede in diesem Parametersatz führen zu einer neuen Transkodierungsanforderung für SSAI.
+Mithilfe der Repackaging-API können Sie zukünftige SSAI- oder CSAI-Ereignisse vorab transkodieren. Wenn die Assets künftig mit SSAI verwendet werden sollen, stellen Sie sicher, dass alle Parameter in den POST-Aufrufen eindeutig sind. Die Parameter sind: AdSystem, AdId, CreativeURL, Zone, Format. Jegliche Unterschiede in diesem Parametersatz führen zu einer neuen Transkodierungsanfrage für SSAI.
 
 Bei Assets, die in Zukunft mit CSAI verwendet werden, hängt die Eindeutigkeit des Assets von Zone und CreativeURL ab. AdSystem und AdId führen nicht zu unterschiedlichen transkodierten Assets, die für Clients verfügbar sind.

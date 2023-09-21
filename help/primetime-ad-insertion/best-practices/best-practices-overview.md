@@ -1,22 +1,20 @@
 ---
-title: Bewährte Verfahren
-description: Bewährte Verfahren
+title: Best Practices
+description: Best Practices
 copied-description: true
-exl-id: 2dae6032-5e22-4274-a5a2-02960fcbcf19
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
-# Bewährte Verfahren {#best-practices}
+# Best Practices {#best-practices}
 
-Um eine optimale Performance und Beginn-Up-Zeit für Ihre Video-Streams zu erzielen, sollten Sie Ihre Anzeigen- und Content-Workflows anhand der folgenden Best Practices analysieren und optimieren.
+Um eine optimale Leistung und Startzeit für Ihre Video-Streams zu erzielen, sollten Sie Ihre Anzeigen- und Inhalts-Workflows anhand der folgenden Best Practices analysieren und optimieren.
 
-+ [Optimieren Sie die Beginn-Up-Zeiten für Videos](optimize-video-startup-time.md)
-+ [Leistung analysieren](analyze-performance.md)
++ [Optimieren der Startzeiten von Videos](optimize-video-startup-time.md)
++ [Analysieren der Leistung](analyze-performance.md)
 + [HTTP-Zwischenspeicherung](caching.md)
-+ [Optimieren von Routen und Protokollen](optimize-routes-protocols.md)
-+ [Einschränkungen bei der Anzeigenauflösung anwenden](apply-ad-resolution-constraints.md)
++ [Routen und Protokolle optimieren](optimize-routes-protocols.md)
++ [Anz. Auflösungsbegrenzungen anwenden](apply-ad-resolution-constraints.md)

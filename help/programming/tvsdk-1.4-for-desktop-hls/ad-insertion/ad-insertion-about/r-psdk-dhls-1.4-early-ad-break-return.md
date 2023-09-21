@@ -1,44 +1,42 @@
 ---
-description: Beim Einfügen von Livestream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
-title: Implementieren der Rückgabe einer frühen Werbeunterbrechung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Für das Einfügen von Live-Stream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
+title: Implementieren einer frühen Werbeunterbrechung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
 
 ---
 
+# Implementieren einer frühen Werbeunterbrechung{#implementing-an-early-ad-break-return}
 
-# Implementieren einer Zeilenumbruch-Frühanzeige{#implementing-an-early-ad-break-return}
-
-Beim Einfügen von Livestream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
+Für das Einfügen von Live-Stream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
 
 >[!NOTE]
 >
->Sie müssen die Splice-out-/In-Anzeigenmarken ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` und `#EXT-X-CUE`) abonnieren.
+>Sie müssen die Aufteilung/Verwendung der Anzeigenmarkierungen ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN`, und `#EXT-X-CUE`).
 
-Es gibt einige zu berücksichtigende Anforderungen:
+Beachten Sie Folgendes:
 
-* Parsen Sie Markierungen wie `EXT-X-CUE-IN` (oder ein äquivalentes Marker-Tag), die in den linearen oder FER-Streams angezeigt werden.
+* Analysieren Sie Markierungen wie `EXT-X-CUE-IN` (oder äquivalentes Marker-Tag), die in den linearen oder FER-Streams angezeigt werden.
 
-   Registrieren Sie die Markierungen als Marker für den Anzeigenrückkehrpunkt. Wiedergabe von `adBreaks` nur bis zu dieser Markenposition während der Wiedergabe, wodurch die Dauer von `adBreak`, die durch die führende `EXE-X-CUE-OUT`-Markierung gekennzeichnet ist, außer Kraft gesetzt wird.
+  Registrieren Sie die Marker als Marker für den Anzeigenfrühen Rückkehrpunkt. Nur Wiedergabe `adBreaks` bis zu dieser Markerposition während der Wiedergabe, die die Dauer der `adBreak` durch einen vorangestellten `EXE-X-CUE-OUT` Markieren.
 
-* Wenn zwei `EXT-X-CUE-IN`-Markierungen für dieselbe `EXT-X-CUE-OUT`-Markierung vorhanden sind, wird die erste `EXT-X-CUE-IN`-Markierung angezeigt, die zählt.
+* Wenn zwei `EXT-X-CUE-IN` -Markierungen sind für dieselbe `EXT-X-CUE-OUT` Markierung, die erste `EXT-X-CUE-IN` Die angezeigte Markierung zählt.
 
-* Wenn die `EXE-X-CUE-IN`-Markierung in der Zeitleiste ohne führende `EXT-X-CUE-OUT`-Markierung angezeigt wird, wird die `EXE-X-CUE-IN`-Markierung verworfen.
+* Wenn die Variable `EXE-X-CUE-IN` -Markierung wird in der Timeline ohne vorangestellten `EXT-X-CUE-OUT` Marker, `EXE-X-CUE-IN` -Markierung wird verworfen.
 
-   Wenn in einem Live-Stream die führende `EXT-X-CUE-OUT`-Markierung gerade aus dem Fenster verschoben wurde, reagiert das TVSDK nicht darauf.
+  In einem Live-Stream, wenn der führende `EXT-X-CUE-OUT` -Markierung gerade aus dem Fenster verschoben wurde, reagiert das TVSDK nicht darauf.
 
-* Bei einer frühen Rückkehr aus einer Werbeunterbrechung wird das `adBreak` so lange abgespielt, bis die Abspielleiste an die ursprüngliche Position zurückkehrt, an der die Werbeunterbrechung beendet werden sollte, und die Wiedergabe des Hauptinhalts von dieser Position an fortgesetzt.
+* Wenn es eine frühe Rückkehr aus einer Werbeunterbrechung gibt, wird die `adBreak` wird wiedergegeben, bis die Abspielleiste an die ursprüngliche Position zurückkehrt, an der die Werbeunterbrechung beendet werden sollte, und die Wiedergabe des Hauptinhalts von dieser Position an fortgesetzt wird.
 
 ## SpliceOut und SpliceIn {#section_36DD55BA58084E21BD3DC039BB245C82}
 
-`SpliceOut` und  `SpliceIn` Markierungen markieren den Anfang und das Ende der Werbeunterbrechung. Die Dauer des `SpliceOut`-Typs der `EXE-X-CUE`-Markierung kann null sein, und der `SpliceIn`-Typ der `EXE-X-CUE`-Markierung markiert das Ende der Werbeunterbrechung. Sie werden in einem Tag angezeigt und unterscheiden sich nach Typ.
+`SpliceOut` und `SpliceIn` Markierungen markieren den Anfang und das Ende der Werbeunterbrechung. Die Dauer der `SpliceOut` Typ der `EXE-X-CUE` -Markierung kann null sein und `SpliceIn` Typ von `EXE-X-CUE` -Markierung markiert das Ende der Werbeunterbrechung. Sie werden in einem Tag angezeigt und unterscheiden sich je nach Typ.
 
-**Eine Marke mit verschiedenen Typen**
+**Eine Markierung mit unterschiedlichen Typen**
 
-Beispiel: Es gibt hier einen Marker mit verschiedenen Typen:
+Hier ist beispielsweise eine Markierung mit verschiedenen Typen:
 
 ```
 #EXTM3U#EXT-X-TARGETDURATION:10
@@ -65,13 +63,13 @@ https://server-host/path/file57.ts
 https://server-host/path/file58.ts
 ```
 
-Wenn die Dauer des Typs `SpliceOut` bei einer Marke mit verschiedenen Typen null ist, müssen `SpliceOut` und `SpliceIn` bei jeder Werbeunterbrechung zusammenarbeiten. Derzeit ist eine `SpliceOut`-Markierung mit einer Dauer von ungleich null und benötigt keine Paarung von `SpliceIn`-Markern.
+Wenn die Dauer der `SpliceOut` type ist null, die `SpliceOut` und `SpliceIn` muss für jede Werbeunterbrechung zusammenarbeiten. Derzeit ist ein `SpliceOut` -Markierung mit einer Dauer ungleich null und erfordert keine Paarung `SpliceIn` -Markierungen sind typischer.
 
 **Zwei separate Markierungen**
 
-Das typischere Szenario ist ein `SpliceOut`-Marker mit einer Dauer von ungleich null und das keine Paarung `SpliceIn`-Markierungen benötigt. Hier markiert eine Paarung mit der Markierung `SpliceIn` das Ende der Werbeunterbrechung während der Wiedergabe der Werbeunterbrechung, aber der Werbeunterbrechung wird an der `SpliceIn`-Markenposition abgeschnitten und die Beginn mit dem Hauptinhalt an dieser Position.
+Das typischere Szenario ist ein `SpliceOut` -Markierung mit einer Dauer ungleich null , die keine Paarung benötigt `SpliceIn` Markierungen. Hier eine Paarung `SpliceIn` -Markierung markiert das Ende der Werbeunterbrechung während der Wiedergabe der Werbeunterbrechung, aber die Werbeunterbrechung wird am `SpliceIn` Markierungsposition und der Hauptinhalt beginnt an dieser Position.
 
-Hier sind beispielsweise zwei verschiedene Marker:
+Hier sind beispielsweise zwei separate Markierungen:
 
 ```
 #EXT-X-CUE-OUT:ID=105,DURATION=30.0,TIME=1081.08
@@ -87,4 +85,3 @@ Hier sind beispielsweise zwei verschiedene Marker:
 #EXTINF:6.006000,no-desc
 /live/hls/nbc-fer/QualityLevels(2200000)/Fragments(video=14332589330665811,format=m3u8-aapl-v4)
 ```
-

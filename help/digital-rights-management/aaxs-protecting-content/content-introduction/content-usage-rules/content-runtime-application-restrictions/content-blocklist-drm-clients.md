@@ -1,38 +1,35 @@
 ---
-title: Blockierungsliste von DRM-Clients, die auf geschützten Inhalt zugreifen dürfen
-description: Blockierungsliste von DRM-Clients, die auf geschützten Inhalt zugreifen dürfen
+title: Blockierungsliste von DRM-Clients, die den Zugriff auf geschützte Inhalte untersagen
+description: Blockierungsliste von DRM-Clients, die den Zugriff auf geschützte Inhalte untersagen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
 
 ---
 
+# Blockierungsliste von DRM-Clients, die den Zugriff auf geschützte Inhalte untersagen {#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
 
-# Blockierungsliste von DRM-Clients, die den Zugriff auf geschützte Inhalte untersagen. {#blocklist-of-drm-clients-restricted-from-accessing-protected-content}
+**Adobe Zugriff auf DRM-Modulversionen, die den Zugriff auf geschützte Inhalte untersagen.**
 
-**Adobe Access DRM-Modulversionen sind vom Zugriff auf geschützte Inhalte eingeschränkt.**
+Gibt den DRM-Client an, der nicht auf Inhalte zugreifen kann. Wird durch die DRM-Client-Version und -Plattform angegeben.
 
-Gibt den DRM-Client an, der nicht auf Inhalte zugreifen kann. Wird durch die DRM-Clientversion und -Plattform angegeben.
+Anwendungsbeispiel: Im Fall einer Sicherheitsverletzung kann eine neuere Version des DRM-Clients als die für die Lizenzakquise und die Inhaltswiedergabe erforderliche Mindestversion angegeben werden. Der Lizenzserver prüft vor der Lizenzerteilung, ob der DRM-Client, der die Lizenzanfrage stellt, die Versionsanforderungen erfüllt. Der DRM-Client überprüft auch die DRM-Version in der Lizenz, bevor Inhalte wiedergegeben werden. Diese Client-Prüfung ist erforderlich, wenn Domänen auf einen anderen Computer übertragen werden können.
 
-Verwendungsbeispiel: Im Ereignis einer Sicherheitslücke kann eine neuere Version des DRM-Clients als Mindestversion für die Lizenzerfassung und Inhaltswiedergabe angegeben werden. Der Lizenzserver prüft, ob der DRM-Client, der die Lizenzanforderung durchführt, die Versionsanforderungen erfüllt, bevor eine Lizenz erteilt wird. Der DRM-Client überprüft auch die DRM-Version in der Lizenz, bevor Inhalte abgespielt werden. Diese Clientprüfung ist erforderlich, wenn eine Lizenz auf einen anderen Computer übertragen werden kann.
-
-Eine DRM-Clientversion kann anhand der in der folgenden Tabelle angegebenen Attribute identifiziert werden:
+Eine DRM-Client-Version kann anhand der in der folgenden Tabelle angegebenen Attribute identifiziert werden:
 
 | **Attribut** | **Unterstützte Werte** | **Übereinstimmungskriterien** | **Beschreibung** |
 |---|---|---|---|
-| Umgebung | &quot;PC&quot;, &quot;PortingKit&quot; | Exakte Übereinstimmung | Gibt an, ob der Client auf einem Desktop oder einem anderen Gerät ausgeführt wird. |
-| OS | &quot;Win&quot;, &quot;Mac&quot;, &quot;Linux&quot;, &quot;Android&quot;, &quot;iOS&quot;, &quot;ChromeOS&quot; | Exakte Übereinstimmung | Plattform |
-| Architektur | &quot;32&quot;, &quot;64&quot; | Exakte Übereinstimmung | 32 Bit oder 64 Bit |
-| Bildschirmtyp | &quot;PC&quot;, &quot;Mobil&quot;, &quot;TV&quot; | Exakte Übereinstimmung |  |
-| Laufzeitversion | Eine gültige Versionsnummer. Beispiel: &quot;2.0.0&quot;, &quot;3.0&quot;, &quot;4.0&quot;, &quot;11.0&quot; usw. | Sucht, wenn die Clientversion kleiner oder gleich der angegebenen Version ist. | Die Versionsnummer wird als Kombination aus Zahlen und Punkten (&quot;&quot;) angegeben. beliebiger Länge. |
-| DRM-Bibliotheksversion | Eine gültige Versionsnummer. Beispiel: &quot;2.0.0&quot;. | Sucht, wenn die Clientversion kleiner oder gleich der angegebenen Version ist. | Die Versionsnummer wird als Kombination aus Zahlen und Punkten (&quot;&quot;) angegeben. beliebiger Länge. |
-| OEM-Anbieter | OEM-Händlerzeichenfolge | Exakte Übereinstimmung | Identifikationszeichenfolge des OEM-Herstellers für das Gerät, das das Portierungskit verwendet. |
-| Modell | Modellzeichenfolge. Beispiel: &quot;iOS_Mobile&quot;, &quot;Android_Mobile&quot;, &quot;Chrome&quot;, &quot;ChromeOS_ARM&quot;, &quot;WindowsOnARM&quot;, &quot;AVE&quot; | Exakte Übereinstimmung | Gerätemodellidentifizierungszeichenfolge für das Gerät mit dem Portierungs-Kit. |
+| Umgebung | &quot;PC&quot;, &quot;PortingKit&quot; | Exakte Übereinstimmung | Gibt an, ob der Client auf einem Desktop- oder einem anderen Gerät ausgeführt wird. |
+| BS | &quot;Win&quot;, &quot;Mac&quot;, &quot;Linux&quot;, &quot;Android&quot;, &quot;iOS&quot;, &quot;ChromeOS&quot; | Exakte Übereinstimmung | Plattform |
+| Architektur | “32”, “64” | Exakte Übereinstimmung | 32-Bit oder 64-Bit |
+| Bildschirmtyp | &quot;PC&quot;, &quot;Mobile&quot;, &quot;TV&quot; | Exakte Übereinstimmung | |
+| Laufzeitversion | Eine gültige Versionsnummer. Beispielsweise &quot;2.0.0&quot;, &quot;3.0&quot;, &quot;4.0&quot;, &quot;11.0&quot; usw. | Sucht, wenn die Client-Version kleiner oder gleich der angegebenen Version ist. | Versionsnummer wird als Kombination aus Zahlen und Zeiträumen (&quot;.&quot;) angegeben. beliebiger Länge. |
+| DRM-Bibliotheksversion | Eine gültige Versionsnummer. Beispiel: &quot;2.0.0&quot;. | Sucht, wenn die Client-Version kleiner oder gleich der angegebenen Version ist. | Versionsnummer wird als Kombination aus Zahlen und Zeiträumen (&quot;.&quot;) angegeben. beliebiger Länge. |
+| OEM-Hersteller | Zeichenfolge des OEM-Anbieters | Exakte Übereinstimmung | Identifikationszeichenfolge des OEM-Anbieters für das Gerät, das das Portierungs-Kit verwendet. |
+| Modell | Modellzeichenfolge. Beispiel: &quot;iOS_Mobile&quot;, &quot;Android_Mobile&quot;, &quot;Chrome&quot;, &quot;ChromeOS_ARM&quot;, &quot;WindowsOnARM&quot;, &quot;AVE&quot; | Exakte Übereinstimmung | Identifizierungszeichenfolge des Gerätemodells für das Gerät, das das Portierungs-Kit verwendet. |
 
 >[!NOTE]
 >
->Bei der Angabe eines Eintrags in der Blockierungsliste können Werte für eines oder mehrere der in der vorherigen Tabelle genannten Attribute festgelegt werden. Jedes Attribut, das nicht angegeben ist, wird als Platzhalter behandelt. Entspricht der DRM-Client allen Werten, die in einem Eintrag für die Blockierungsliste angegeben sind, kann der Zugriff auf geschützten Inhalt von diesem Client ausgeschlossen werden.
-
+>Bei der Angabe eines Eintrags in der Blockierungsliste können Werte für eines oder mehrere der in der vorangehenden Tabelle genannten Attribute festgelegt werden. Jedes Attribut, das nicht angegeben ist, wird als Platzhalter behandelt. Wenn der DRM-Client mit allen in einem Blockierungsliste-Eintrag angegebenen Werten übereinstimmt, kann der Zugriff auf geschützte  durch diesen Client nicht erfolgen.

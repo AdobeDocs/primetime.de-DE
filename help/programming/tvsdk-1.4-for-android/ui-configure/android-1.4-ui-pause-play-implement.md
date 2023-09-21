@@ -1,34 +1,31 @@
 ---
-description: Sie können TVSDK-Verhalten hinzufügen, um Schaltflächen zum Anhalten und Abspielen hinzuzufügen.
+description: Sie können das TVSDK-Verhalten hinzufügen, um die Schaltflächen zum Anhalten und Abspielen hinzuzufügen.
 title: Video abspielen und anhalten
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
+# Video abspielen und anhalten{#play-and-pause-a-video}
 
-# Video{#play-and-pause-a-video} abspielen und anhalten
+Sie können das TVSDK-Verhalten hinzufügen, um die Schaltflächen zum Anhalten und Abspielen hinzuzufügen.
 
-Sie können TVSDK-Verhalten hinzufügen, um Schaltflächen zum Anhalten und Abspielen hinzuzufügen.
-
-1. Erstellen Sie eine Pause-/Wiedergabeschaltfläche, die Folgendes ausführt:
-   1. Warten Sie, bis Ihr Spieler mindestens den Status VORBEREITT hat.
-   1. Rufen Sie zur Wiedergabe des Beginns die TVSDK-Wiedergabemethode auf:
+1. Erstellen Sie eine Pause-/Play-Schaltfläche mit folgenden Funktionen.
+   1. Warten Sie, bis Ihr Player mindestens den Status VORBEREITET aufweist.
+   1. Rufen Sie zum Starten der Wiedergabe die TVSDK-Wiedergabemethode auf:
 
       ```java
       void play() throws IllegalStateException;
       ```
 
-   1. Rufen Sie zum Anhalten der Wiedergabe die TVSDK-Pausenmethode auf:
+   1. Um die Wiedergabe anzuhalten, rufen Sie die TVSDK-Pausenmethode auf:
 
       ```java
       void pause() throws IllegalStateException;
       ```
 
-1. Verwenden Sie den Rückruf `MediaPlayer.PlaybackEventListener.onStateChanged`, um nach Fehlern zu suchen oder andere geeignete Aktionen durchzuführen.
+1. Verwenden Sie die `MediaPlayer.PlaybackEventListener.onStateChanged` Callback, um nach Fehlern zu suchen oder andere geeignete Aktionen durchzuführen.
 
-   TVSDK ruft diesen Rückruf auf, wenn die Pause- oder play-Methode aufgerufen wird. TVSDK übergibt Informationen zur Statusänderung im Rückruf, einschließlich des neuen Status, wie PAUSED oder PLAYING.
-
+   TVSDK ruft diesen Rückruf auf, wenn die Methode zum Anhalten oder Abspielen aufgerufen wird. TVSDK übergibt Informationen über die Statusänderung im Rückruf, einschließlich des neuen Status, z. B. &quot;PAUSED&quot;oder &quot;PLAYING&quot;.

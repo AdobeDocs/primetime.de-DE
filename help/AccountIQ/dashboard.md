@@ -1,8 +1,7 @@
 ---
 title: Dashboard "Konto-IQ"
 description: Das Dashboard hilft, die Instanzen der Kennwortfreigabe zu identifizieren, indem es eine breite Palette von Abonnentendaten analysiert.
-exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -16,10 +15,10 @@ Das Dashboard fasst Daten in einer Sammlung von Diagrammen und Berichten zusamme
 
 +++Programmer- Dashboard
 
-![Dashboard von Konto-IQ für Programmierer-Benutzer](assets/dashboard-programr.png)
+![Dashboard von Konto-IQ für Programmierer](assets/dashboard-programr.png)
 
 
-Abbildung: Das Dashboard für Programmierer
+Abbildung: Dashboard für Programmierer
 
 +++
 
@@ -27,9 +26,9 @@ Abbildung: Das Dashboard für Programmierer
 
 Das Dashboard für MVPD-Benutzer unterscheidet sich geringfügig von dem der Programmierer-Benutzer.
 
-![Dashboard von Konto-IQ für Programmierer-Benutzer](assets/dashboard-mvpd.png)
+![Dashboard von Konto-IQ für Programmierer](assets/dashboard-mvpd.png)
 
-Abbildung: Das Dashboard für MVPD-Benutzer
+Abbildung: Dashboard für MVPD-Benutzer
 
 +++
 
@@ -42,11 +41,11 @@ Die Werte helfen Ihnen dabei, das Ausmaß der Weitergabe von Anmeldedaten durch 
 ![](assets/aggregate-sharing-score.png)
 
 
-*Abbildung: Bedienfeld &quot;Durchschnittliche Teilungsbewertung&quot;- für das aktuelle Segment aggregiert*
+*Abbildung: Bedienfeld für die durchschnittliche Teilungsbewertung - aggregiert für das aktuelle Segment*
 
 Die folgenden drei Metriken sind Komponenten der durchschnittlichen Sharing-Bewertung.
 
-### Teilungsebene {#sharing-level}
+### Freigabestufe {#sharing-level}
 
 Der Freigabewert zeigt den Prozentsatz aller Abonnentenkonten (im definierten Segment) an, die während des ausgewählten Zeitraums freigegeben werden.
 
@@ -55,7 +54,7 @@ Ein Wert, der auf der Grundlage der durchschnittlichen Freigabewahrscheinlichkei
 ![](assets/sharing-level.png)
 
 
-*Abbildung: Teilungsebene*
+*Abbildung: Freigabestufe*
 
 Der Trend -Indikator zeigt die prozentuale Änderung des Werts der Metrik im Vergleich zum vorherigen Zeitrahmen an.
 
@@ -68,13 +67,13 @@ Sie können auch den Trend -Indikator sehen, der einen Anstieg oder Rückgang de
 ![](assets/usage-4mshared-accounts.png)
 
 
-*Abbildung: Nutzung durch freigegebene Konten*
+*Abbildung: Nutzung über freigegebene Konten*
 
 ### Gesamte Teilungsbewertung {#overall-sharing-score}
 
 Die Gesamtbewertung für die Freigabe besteht aus Sharing-Werten wie &quot;Sharing Level&quot;und &quot;z Usage from shared accounts&quot;.
 
-Sie bietet einen Wert, der die relativen Auswirkungen der Freigabe im Vergleich zur Branche widerspiegelt. Der Zweck ist ähnlich dem eines Kreditwerts, bei dem die Situation mit einer einzelnen Zahl zusammengefasst wird. Aber in diesem Fall gilt: Je höher die Zahl, desto größer ist der potenzielle Schaden.
+Sie bietet einen Wert, der die relativen Auswirkungen der Freigabe im Vergleich zur Branche widerspiegelt. Der Zweck ist ähnlich dem eines Kreditwerts, bei dem die Situation mit einer einzelnen Zahl zusammengefasst wird. Aber in diesem Fall gilt: Je höher die Zahl ist, desto größer ist der potenzielle Schaden.
 
 ![](assets/overall-sharing-score.png)
 
@@ -107,7 +106,7 @@ Diese Tabelle bietet einen vergleichenden Überblick über die Freigabe von Wert
 ![](assets/sharing-scores-by-channels-mvpds.png)
 
 
-*Abbildung: Teilen von Bewertungen nach Kanälen und MVPDs*
+*Abbildung: Teilen von Werten nach Kanälen und MVPDs*
 
 ## Wahrscheinlichkeit der Kontofreigabe {#accounts-sharing-probability}
 
@@ -121,7 +120,7 @@ Dieses Diagramm teilt in Bereiche mit Wahrscheinlichkeitsquintilien von sehr nie
 ![](assets/dashboard-ac-sharing-prob.png)
 
 
-*Abbildung: Anzahl und Prozentsatz der Abonnentenkonten in verschiedenen Wahrscheinlichkeitsbereichen für die Freigabe*
+*Abbildung: Anzahl und Prozentsatz der Teilnehmerkonten in verschiedenen Wahrscheinlichkeitsbereichen für die Freigabe*
 
 ## Anzahl der Konten und Nutzung nach Freigabe der Wahrscheinlichkeitsstufe {#number-of-accounts-usage-sharing-probability}
 
@@ -130,7 +129,7 @@ Dieses Bedienfeld bietet eine tabellarische Ansicht von Konten, die in Bereiche 
 ![](assets/no-acc-usage-prob-level.png)
 
 
-*Abbildung: Anzahl der Konten, Trends und Verwendungen, die in verschiedene Wahrscheinlichkeitsbereiche fallen*
+*Abbildung: Anzahl der Konten, Trends und Verwendungen mit unterschiedlichen Wahrscheinlichkeitsbereichen*
 
 <!--
 +++Dashboard for programmers

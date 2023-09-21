@@ -1,26 +1,24 @@
 ---
-description: Dieser Abschnitt enthält eine Beispielkonfiguration, die die Konzepte und die Form der Konfiguration veranschaulicht.
+description: In diesem Abschnitt wird eine Beispielkonfiguration vorgestellt, die die Konzepte und die Form der Konfiguration veranschaulicht.
 title: Beispiel-RBOP-Konfiguration
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
-
 # Beispiel-RBOP-Konfiguration {#sample-rbop-configuration}
 
-Dieser Abschnitt enthält eine Beispielkonfiguration, die die Konzepte und die Form der Konfiguration veranschaulicht.
+In diesem Abschnitt wird eine Beispielkonfiguration vorgestellt, die die Konzepte und die Form der Konfiguration veranschaulicht.
 
-Die folgende JSON-Beispielkonfiguration definiert eine Pixelausgaberichtlinie, die Folgendes festlegt:
+Die folgende JSON-Beispielkonfiguration definiert eine Pixelausgaberichtlinie, die Folgendes angibt:
 
-* Verschlüsselung des Videos auf Auflösungen von 1080 oder weniger beschränken
-* Besondere Einschränkungen für Auflösungen von 720 und 480 festlegen:
+* Beschränken Sie die Entschlüsselung des Videos auf Auflösungen von 1080 oder darunter
+* Legen Sie spezifische Einschränkungen für die Auflösungen 720 und 480 fest:
 
-   * Für eine Auflösung von 720: HDCP für digitale Ausgabe erforderlich; erfordern den Schutz des Analog *(CGMS-A) für den analogen Ausgang.*
-   * Für eine Auflösung von 480: HDCP für digitale Ausgabe erforderlich; keinen Schutz für analoge
+   * Für 720 Auflösung: HDCP für digitale Ausgabe erforderlich; erforderlich *Kopiergenerierungssystem - Analog* (CGMS-A) Schutz für analoge Ausgabe.
+   * Für eine Auflösung von 480: HDCP für digitale Ausgabe erforderlich; kein Schutz für analoge
 
 ```
 { 
@@ -49,8 +47,7 @@ Die folgende JSON-Beispielkonfiguration definiert eine Pixelausgaberichtlinie, d
 
 Beachten Sie Folgendes zur obigen Beispielkonfiguration:
 
-* Die Spezifikationen für `pixelCount` befinden sich in der JSON-Struktur innerhalb des Abschnitts `pixelConstraints` auf einer Ebene nach unten.
+* Die `pixelCount` -Spezifikationen sind in der JSON-Struktur innerhalb der `pixelConstraints` Abschnitt.
 
-* Innerhalb jeder Pixelanzahl-Spezifikation wird der Ausgabeschutz für digitale und analoge Ausgabe angegeben.
-* In den Spezifikationen für die digitale Ausgabe werden HDCP-Versionen angegeben, obwohl der Client derzeit keine HDCP-Versionierung unterstützt. Weitere Informationen finden Sie in den häufig gestellten Fragen.
-
+* In jeder Spezifikation für die Pixelanzahl ist der Ausgabeschutz für digitale und analoge Ausgabe angegeben.
+* In den digitalen Ausgabespezifikationen werden HDCP-Versionen angegeben, obwohl der Client derzeit keine HDCP-Versionierung unterstützt. Weitere Informationen finden Sie in den häufig gestellten Fragen .

@@ -1,43 +1,41 @@
 ---
-description: Wenn Sie eine MediaPlayer-Instanz zurücksetzen, wird sie an ihren nicht initialisierten IDLE-Status zurückgegeben, wie in MediaPlayerStatus definiert.
+description: Wenn Sie eine MediaPlayer-Instanz zurücksetzen, wird sie in den nicht initialisierten IDLE-Status zurückversetzt, wie in MediaPlayerStatus definiert.
 title: Zurücksetzen oder Wiederverwenden einer MediaPlayer-Instanz
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
 
 ---
 
-
 # Zurücksetzen oder Wiederverwenden einer MediaPlayer-Instanz{#reset-or-reuse-a-mediaplayer-instance}
 
-Sie können eine MediaPlayer-Instanz, die Sie nicht mehr benötigen, zurücksetzen, wiederverwenden oder freigeben.
+Sie können eine nicht mehr benötigte MediaPlayer-Instanz zurücksetzen, wiederverwenden oder freigeben.
 
-Wenn Sie eine MediaPlayer-Instanz zurücksetzen, wird sie an ihren nicht initialisierten IDLE-Status zurückgegeben, wie in MediaPlayerStatus definiert.
+Wenn Sie eine MediaPlayer-Instanz zurücksetzen, wird sie in den nicht initialisierten IDLE-Status zurückversetzt, wie in MediaPlayerStatus definiert.
 
 Dieser Vorgang ist in den folgenden Fällen nützlich:
 
-* Sie möchten eine `MediaPlayer`-Instanz wiederverwenden, müssen jedoch eine neue `MediaResource` (Videoinhalt) laden und die vorherige Instanz ersetzen.
+* Sie möchten eine `MediaPlayer` -Instanz, aber eine neue laden müssen `MediaResource` (Videoinhalt) und ersetzen Sie die vorherige Instanz.
 
-   Durch Zurücksetzen können Sie die `MediaPlayer`-Instanz wiederverwenden, ohne den Aufwand für die Freigabe von Ressourcen, das Neuerstellen der `MediaPlayer`-Instanz und das Neuzuordnen von Ressourcen zu verursachen. Die Methoden `replaceCurrentItem` und `replaceCurrentResource` führen diese Schritte automatisch für Sie aus, ohne die Methode reset aufrufen zu müssen.
+  Durch Zurücksetzen können Sie die `MediaPlayer` -Instanz ohne den Mehraufwand für das Freigeben von Ressourcen, die `MediaPlayer`und die Neuzuweisung von Ressourcen. Die `replaceCurrentItem` und `replaceCurrentResource` -Methoden führen diese Schritte automatisch für Sie aus, ohne die Methode reset aufrufen zu müssen.
 
-* Wenn das `MediaPlayer` einen ERROR-Status hat und gelöscht werden muss.
+* Wenn die Variable `MediaPlayer` hat einen ERROR-Status und muss gelöscht werden.
 
-   >[!IMPORTANT]
-   >
-   >Dies ist die einzige Möglichkeit, um sich vom ERROR-Status zu erholen.
+  >[!IMPORTANT]
+  >
+  >Dies ist die einzige Möglichkeit, den ERROR-Status wiederherzustellen.
 
-1. Rufen Sie `reset` auf, um die `MediaPlayer`-Instanz in ihren nicht initialisierten Status zurückzugeben:
+1. Aufruf `reset` , um `MediaPlayer` -Instanz in ihren nicht initialisierten Status zurück:
 
    ```
    function reset():void; 
    ```
 
-1. Verwenden Sie `MediaPlayer.replaceCurrentItem` oder `MediaPlayer.replaceCurrentResource`, um ein anderes `MediaResource` zu laden.
+1. Verwendung `MediaPlayer.replaceCurrentItem` oder `MediaPlayer.replaceCurrentResource` Laden eines anderen `MediaResource`.
 
    >[!TIP]
    >
-   >Um einen Fehler zu löschen, laden Sie dasselbe `MediaResource`.
+   >Um einen Fehler zu löschen, müssen Sie denselben `MediaResource`.
 
-1. Wenn Sie das `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` mit dem Status `PREPARED` erhalten, wird die Wiedergabe Beginn.
+1. Wenn Sie die `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` mit dem `PREPARED` -Status, starten Sie die Wiedergabe.

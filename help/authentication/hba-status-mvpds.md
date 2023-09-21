@@ -1,19 +1,18 @@
 ---
 title: HBA-Status für MVPDs
 description: HBA-Status für MVPDs
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%
 
 ---
 
-
 # HBA-Status für MVPDs
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 
 * HBA mit SAML-fähigen MVPDs
@@ -24,25 +23,24 @@ ht-degree: 0%
 
 | MVPD | Grundlegende Funktionalität verfügbar? | Sendet das Flag für die Authentifizierungsantwort | SSO? | Kommentare |
 |---|---|---|---|---|
-| DirecTV | Ja | Nein |  |  |
-| Dish | In Bearbeitung | In Bearbeitung |  |  |
-| Spektrum | Ja | Ja |  |  |
-| Charta | Ja | Nein |  |  |
-| Cox | Ja | Nein |  | Die elterlichen Kontrollen müssen aktiviert werden |
-| AT&amp;T | Ja | Nein |  |  |
-| Verizon | Ja | Ja |  |  |
-| Seilbahn | In Bearbeitung | In Bearbeitung |  |  |
-| Sudenlink | Ja | In Bearbeitung |  |  |
-| MediaAcom | Ja | In Bearbeitung |  |  |
-| Mitteleuropa | Ja | In Bearbeitung |  |  |
-| Massilon | Ja | Nein |  |  |
-| Google Fiber | Ja | In Bearbeitung |  |  |
-| AlticeOne | Ja | Ja |  |  |
+| DirecTV | Ja | Nein |      |                                      |
+| Dish | Gestartet | Gestartet |      |                                      |
+| Funkfrequenzen | Ja | Ja |      |                                      |
+| Charta | Ja | Nein |      |                                      |
+| Cox | Ja | Nein |      | Die elterlichen Kontrollen müssen aktiviert werden |
+| AT&amp;T | Ja | Nein |      |                                      |
+| Verizon | Ja | Ja |      |                                      |
+| Seilbahn | In Bearbeitung | Gestartet |      |                                      |
+| Sudenlink | Ja | Gestartet |      |                                      |
+| MediaAcom | Ja | Gestartet |      |                                      |
+| Mitteleuropa | Ja | Gestartet |      |                                      |
+| Massilon | Ja | Nein |      |                                      |
+| Google Fiber | Ja | Gestartet |      |                                      |
+| AlticeOne | Ja | Ja |      |                                      |
 
 
 ## HBA mit OAuth 2.0-aktivierten MVPDs {#hba-with-oauth2-enabled-mvpds}
 
 | MVPD | Grundlegende Funktionalität verfügbar? | Sendet das Flag für die Authentifizierungsantwort | SSO? | Kommentare |
 |---|---|---|---|---|
-| Comcast | Ja | Ja |  |  |
-
+| Comcast | Ja | Ja | | |

@@ -1,23 +1,21 @@
 ---
-description: Die physische Sicherung Ihrer Adobe Primetime DRM-Umgebung ist entscheidend, um einen unbefugten Zugriff zu verhindern.
+description: Die physische Sicherung Ihrer DRM-Umgebung in Adobe Primetime ist von entscheidender Bedeutung, um einen unbefugten Zugriff zu verhindern.
 title: Physische Sicherheit und Zugang
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%
 
 ---
 
+# Physische Sicherheit und Zugang{#physical-security-and-access}
 
-# Physische Sicherheit und Zugriff{#physical-security-and-access}
+Die physische Sicherung Ihrer DRM-Umgebung in Adobe Primetime ist von entscheidender Bedeutung, um einen unbefugten Zugriff zu verhindern.
 
-Die physische Sicherung Ihrer Adobe Primetime DRM-Umgebung ist entscheidend, um einen unbefugten Zugriff zu verhindern.
+Die physische Sicherheit Ihrer Primetime DRM-Umgebung kann von der Server-Platzierung in einem sicheren Raum unter Schloss und Schlüssel bis hin zu einem gesicherten, von anderen Computern isolierten alarmierten Käfig reichen, eine zweiteilige Authentifizierung, wie Abzeichen und Fingerabdruck, aufweist und von Closed Circuit Television (CCTV) kontinuierlich überwacht wird. Der Grad der Sicherheit, den Sie implementieren, hängt von den Richtlinien Ihres Unternehmens, dem Potenzial für Verlust und Schweregrad bei Verlust eines Abzeichens oder Schlüssels sowie anderen gesetzlichen Compliance-Anforderungen ab.
 
-Die physische Sicherheit Ihrer Primetime DRM-Umgebung kann von dem Server reichen, der in einen gesicherten Raum unter Verschluss gestellt wird, bis hin zu einem gesicherten, von anderen Computern isolierten Warenkorb, der eine zweiteilige Authentifizierung wie Abzeichen und Fingerabdruck aufweist und von Closed Circuit Television (CCTV) kontinuierlich überwacht wird. Der Grad der Sicherheit, den Sie implementieren, hängt von den Richtlinien Ihres Unternehmens, dem Risiko von Verlust und Schwere bei Verlust eines Kennzeichens oder Schlüssels und anderen rechtlichen Compliance-Anforderungen ab.
+Ihre Primetime-DRM-Umgebung sollte sich in einem sicheren Serverraum befinden, in dem der Zugriff mit mindestens einem Kartenleser elektronisch gesteuert wird. Der Raum sollte von der Sicherheit oder von einer Person, die schnell auf eine Verletzung oder einen Vorfall reagieren wird, beunruhigt und überwacht werden, und der gesamte Zugang wird ständig im CCTV aufgezeichnet. Ihr Sicherheitsteam muss immer wissen, wer in dem Zimmer ist und wann diese Personen den Raum betreten. Wenn der Serverraum groß ist und viele Benutzer Zugriff haben, muss sich der Server in einem sicheren Käfig oder Rack befinden, um den weiteren Zugriff zu beschränken.
 
-Ihre Primetime-DRM-Umgebung sollte sich in einem sicheren Serverraum befinden, in dem der Zugriff elektronisch mit mindestens einem Kartenleser gesteuert wird. Der Raum sollte von der Sicherheit oder von jemandem, der schnell auf eine Verletzung oder einen Zwischenfall reagieren wird, alarmiert und überwacht werden, und der Zugriff wird kontinuierlich im CCTV aufgezeichnet. Ihr Sicherheitsteam muss immer wissen, wer im Raum ist und wann diese Leute den Raum betreten. Wenn der Serverraum groß ist und viele Personen Zugriff haben, muss sich der Server in einem sicheren Käfig oder Rack befinden, um den Zugriff weiter zu beschränken.
-
-Um ein extrem hohes Sicherheitsniveau zu gewährleisten, muss der Schutz sich auf die Stromversorgung, die unterbrechungsfreie Stromversorgung (USV), die Netzausrüstung und andere zugehörige Geräte erstrecken. Unterbrechungen dieser Elemente wirken sich auf den Server aus, insbesondere wenn der Server jederzeit betriebsbereit sein muss. Es muss einen zweiteiligen Zugriff geben, wie z.B. Abzeichen und PIN oder Abdruck und Fingerabdruck. Außerdem müssen an der Tür Anti-Schneiden-Vorrichtungen angebracht sein, um zu verhindern, dass autorisierte Personen die Einreise zulassen.
+Um ein extrem hohes Maß an Sicherheit zu gewährleisten, muss der Schutz auf die Stromversorgung, die unterbrechungsfreie Stromversorgung (USV), Netzgeräte und andere zugehörige Geräte ausgedehnt werden. Unterbrechungen dieser Elemente wirken sich auf den Server aus, insbesondere wenn der Server jederzeit betriebsbereit sein muss. Es muss zweiteiligen Zugriff geben, z. B. Badge und PIN oder Badge und Fingerabdruck. Außerdem müssen an der Tür Vorrichtungen zur Abgleichsicherung angebracht sein, um zu verhindern, dass autorisierte Personen unberechtigte Personen einreisen können.
 
 Allgemeine Informationen und Empfehlungen zu physischen Sicherheitsstandards finden Sie unter [https://www.iso.org/frequently-asked-questions-faqs.html](https://www.iso.org/frequently-asked-questions-faqs.html).

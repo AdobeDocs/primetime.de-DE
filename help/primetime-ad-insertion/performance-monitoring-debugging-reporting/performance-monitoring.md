@@ -2,9 +2,7 @@
 title: Leistungsüberwachung
 description: Leistungsüberwachung
 copied-description: true
-exl-id: 6fe66f77-2663-4674-81a1-6402db7db943
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 0%
@@ -13,4 +11,4 @@ ht-degree: 0%
 
 # Leistungsüberwachung {#monitoring-performance}
 
-Die Primetime-Ad Insertion verfügt über ein dediziertes [Überwachungs- und Debugging-Tool](https://ssai.console.primetime.adobe.com/), das Dashboard zur Überwachung der Anzeigeneinfüge und des Dienststatus enthält, wie z.B. http-Erfolgs-/Fehlerquoten, gleichzeitige Anfragen/Sitzungen, Werbeschaltungsstatistiken, Debugging und mehr.
+Die Primetime-Ad Insertion verfügt über eine eigene [Überwachungs- und Debugging-Tool](https://ssai.console.primetime.adobe.com/) , das Dashboards zur Überwachung der Anzeigeneinfüge und des Dienststatus enthält, wie z. B. Erfolgs-/Fehlerquoten bei HTTP, gleichzeitige Anforderungen/Sitzungen, Anzeigenstatistiken, Debugging und mehr.

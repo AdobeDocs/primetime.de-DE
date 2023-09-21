@@ -1,63 +1,61 @@
 ---
-description: Wenn Sie eine MediaPlayer-Instanz zurücksetzen, wird sie an ihren nicht initialisierten IDLE-Status zurückgegeben, wie in MediaPlayerState definiert.
+description: Wenn Sie eine MediaPlayer-Instanz zurücksetzen, wird sie in den nicht initialisierten IDLE-Status zurückversetzt, wie in MediaPlayerState definiert.
 title: Zurücksetzen oder Wiederverwenden einer MediaPlayer-Instanz
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 0%
 
 ---
 
-
 # Zurücksetzen, Wiederverwenden oder Entfernen einer MediaPlayer-Instanz {#reset-or-reuse-a-mediaplayer-instance}
 
-Sie können eine MediaPlayer-Instanz, die Sie nicht mehr benötigen, zurücksetzen, wiederverwenden oder freigeben.
+Sie können eine nicht mehr benötigte MediaPlayer-Instanz zurücksetzen, wiederverwenden oder freigeben.
 
-Wenn Sie eine MediaPlayer-Instanz zurücksetzen, wird sie an ihren nicht initialisierten IDLE-Status zurückgegeben, wie in MediaPlayerState definiert.
+Wenn Sie eine MediaPlayer-Instanz zurücksetzen, wird sie in den nicht initialisierten IDLE-Status zurückversetzt, wie in MediaPlayerState definiert.
 
 Dieser Vorgang ist in den folgenden Fällen nützlich:
 
-* Sie möchten eine `MediaPlayer`-Instanz wiederverwenden, müssen jedoch eine neue `MediaResource` (Videoinhalt) laden und die vorherige Instanz ersetzen.
+* Sie möchten eine `MediaPlayer` -Instanz, aber eine neue laden müssen `MediaResource` (Videoinhalt) und ersetzen Sie die vorherige Instanz.
 
-   Durch Zurücksetzen können Sie die `MediaPlayer`-Instanz wiederverwenden, ohne den Aufwand für die Freigabe von Ressourcen, das Neuerstellen der `MediaPlayer`-Instanz und das Neuzuordnen von Ressourcen zu verursachen.
+  Durch Zurücksetzen können Sie die `MediaPlayer` -Instanz ohne den Mehraufwand für das Freigeben von Ressourcen, die `MediaPlayer`und die Neuzuweisung von Ressourcen.
 
-* Wenn sich das `MediaPlayer` in einem ERROR-Status befindet und gelöscht werden muss.
+* Wenn die Variable `MediaPlayer` hat einen ERROR-Status und muss gelöscht werden.
 
-   >[!IMPORTANT]
-   >
-   >Dies ist die einzige Möglichkeit, sich vom FEHLER-Zustand zu erholen.
+  >[!IMPORTANT]
+  >
+  >Dies ist die einzige Möglichkeit, den FEHLER-Status wiederherzustellen.
 
-1. Rufen Sie `reset` auf, um die `MediaPlayer`-Instanz in ihren nicht initialisierten Status zurückzugeben:
+1. Aufruf `reset` , um `MediaPlayer` -Instanz in ihren nicht initialisierten Status zurück:
 
    ```java
    void reset() throws IllegalStateException; 
    ```
 
-1. Verwenden Sie `MediaPlayer.replaceCurrentResource`, um ein weiteres `MediaResource` zu laden.
+1. Verwendung `MediaPlayer.replaceCurrentResource` Laden eines anderen `MediaResource`.
 
    >[!TIP]
    >
-   >Um einen Fehler zu löschen, laden Sie dasselbe `MediaResource`.
+   >Um einen Fehler zu löschen, müssen Sie denselben `MediaResource`.
 
-1. Wenn Sie den `STATUS_CHANGED`-Ereignis-Rückruf mit VORBEREITENDEM Status erhalten, wird die Wiedergabe Beginn.
+1. Wenn Sie die `STATUS_CHANGED` Ereignisrückruf mit VORBEREITTEM Status, die Wiedergabe starten.
 
 ## MediaPlayer-Instanz und -Ressourcen freigeben{#release-a-mediaplayer-instance-and-resources}
 
-Sie sollten eine MediaPlayer-Instanz und Ressourcen freigeben, wenn Sie MediaResource nicht mehr benötigen.
+Sie sollten eine MediaPlayer-Instanz und Ressourcen freigeben, wenn Sie die MediaResource nicht mehr benötigen.
 
-Wenn Sie ein `MediaPlayer`-Objekt freigeben, werden die zugrunde liegenden Hardwareressourcen, die mit diesem `MediaPlayer`-Objekt verknüpft sind, dezugeordnet.
+Wenn Sie eine `MediaPlayer` -Objekt, die zugrunde liegenden Hardware-Ressourcen, die damit verknüpft sind `MediaPlayer` -Objekt zugewiesen wird.
 
-Es gibt einige Gründe, MediaPlayer zu veröffentlichen:
+Im Folgenden finden Sie einige Gründe für die Veröffentlichung eines MediaPlayers:
 
-* Das Halten unnötiger Ressourcen kann sich auf die Leistung auswirken.
-* Wenn Sie ein unnötiges `MediaPlayer`-Objekt verlassen, kann dies zu einem kontinuierlichen Akkuverbrauch für Mobilgeräte führen.
-* Wenn mehrere Instanzen desselben Video-Codecs auf einem Gerät nicht unterstützt werden, kann es zu einem Wiedergabefehler für andere Anwendungen kommen.
+* Das Halten unnötiger Ressourcen kann die Leistung beeinträchtigen.
+* Unnötig machen `MediaPlayer` -Objekt kann zu einem kontinuierlichen Akkuverbrauch für Mobilgeräte führen.
+* Wenn mehrere Instanzen desselben Video-Codecs auf einem Gerät nicht unterstützt werden, kann es bei anderen Anwendungen zu Wiedergabefehlern kommen.
 
-1. Lassen Sie `MediaPlayer` los.
+1. Lassen Sie die `MediaPlayer`.
 
    ```java
    void release() throws IllegalStateException;
    ```
 
-Nachdem die `MediaPlayer`-Instanz freigegeben wurde, können Sie sie nicht mehr verwenden. Wenn eine Methode der `MediaPlayer`-Schnittstelle nach der Veröffentlichung aufgerufen wird, wird ein `IllegalStateException`-Ereignis ausgelöst.
+Nach dem `MediaPlayer` -Instanz veröffentlicht wurde, können Sie sie nicht mehr verwenden. Wenn eine Methode der `MediaPlayer` -Schnittstelle aufgerufen wird, nachdem sie veröffentlicht wurde, wird ein `IllegalStateException` geworfen wird.

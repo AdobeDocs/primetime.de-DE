@@ -1,30 +1,28 @@
 ---
-description: Sie sollten eine MediaPlayer-Instanz und Ressourcen freigeben, wenn Sie MediaResource nicht mehr benötigen.
-title: Eine MediaPlayer-Instanz und Ressourcen freigeben
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie sollten eine MediaPlayer-Instanz und Ressourcen freigeben, wenn Sie die MediaResource nicht mehr benötigen.
+title: MediaPlayer-Instanz und -Ressourcen freigeben
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%
 
 ---
 
-
 # MediaPlayer-Instanz und -Ressourcen freigeben{#release-a-mediaplayer-instance-and-resources}
 
-Sie sollten eine MediaPlayer-Instanz und Ressourcen freigeben, wenn Sie MediaResource nicht mehr benötigen.
+Sie sollten eine MediaPlayer-Instanz und Ressourcen freigeben, wenn Sie die MediaResource nicht mehr benötigen.
 
-Wenn Sie ein `MediaPlayer`-Objekt freigeben, werden die zugrunde liegenden Hardwareressourcen, die mit diesem `MediaPlayer`-Objekt verknüpft sind, dezugeordnet.
+Wenn Sie eine `MediaPlayer` -Objekt, die zugrunde liegenden Hardware-Ressourcen, die damit verknüpft sind `MediaPlayer` -Objekt zugewiesen wird.
 
-Es gibt einige Gründe für die Veröffentlichung eines `MediaPlayer`:
+Im Folgenden finden Sie einige Gründe für die Veröffentlichung einer `MediaPlayer`:
 
-* Das Halten unnötiger Ressourcen kann sich auf die Leistung auswirken.
-* Wenn mehrere Instanzen desselben Video-Codecs auf einem Gerät nicht unterstützt werden, kann es zu einem Wiedergabefehler für andere Anwendungen kommen.
+* Das Halten unnötiger Ressourcen kann die Leistung beeinträchtigen.
+* Wenn mehrere Instanzen desselben Video-Codecs auf einem Gerät nicht unterstützt werden, kann es bei anderen Anwendungen zu Wiedergabefehlern kommen.
 
-1. Lassen Sie `MediaPlayer` los.
+1. Lassen Sie die `MediaPlayer`.
 
    ```
    function release():void;
    ```
 
-Nachdem die `MediaPlayer`-Instanz freigegeben wurde, können Sie sie nicht mehr verwenden. Wenn eine Methode der `MediaPlayer`-Schnittstelle nach der Veröffentlichung aufgerufen wird, wird ein `IllegalStateException`-Ereignis ausgelöst.
+Nach dem `MediaPlayer` -Instanz veröffentlicht wurde, können Sie sie nicht mehr verwenden. Wenn eine Methode der `MediaPlayer` -Schnittstelle aufgerufen wird, nachdem sie veröffentlicht wurde, wird ein `IllegalStateException` geworfen wird.

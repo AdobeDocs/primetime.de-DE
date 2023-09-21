@@ -1,52 +1,49 @@
 ---
-description: Um TVSDK am effektivsten zu verwenden, sollten Sie bestimmte Details zu seiner Funktionsweise berücksichtigen und bestimmte Best Practices befolgen.
+description: Um TVSDK am effektivsten zu verwenden, sollten Sie bestimmte Details seines Betriebs berücksichtigen und bestimmte Best Practices befolgen.
 title: Überlegungen und Best Practices
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
 
 ---
 
-
 # Überlegungen und Best Practices{#considerations-and-best-practices}
 
-Um TVSDK am effektivsten zu verwenden, sollten Sie bestimmte Details zu seiner Funktionsweise berücksichtigen und bestimmte Best Practices befolgen.
+Um TVSDK am effektivsten zu verwenden, sollten Sie bestimmte Details seines Betriebs berücksichtigen und bestimmte Best Practices befolgen.
 
 ## Überlegungen {#section_tvsdk_considerations}
 
 Beachten Sie bei Verwendung von TVSDK die folgenden Informationen:
 
-* Adobe Primetime funktioniert nicht auf iOS-Simulatoren.
+* Adobe Primetime funktioniert nicht mit iOS-Simulatoren.
 
-   Sie müssen echte Geräte zum Testen verwenden.
+  Sie müssen echte Geräte zum Testen verwenden.
 * Die Wiedergabe wird nur für HLS-Inhalte (HTTP Live Streaming) unterstützt.
-* Hauptvideoinhalte können im Multiplex-Modus dargestellt werden, wobei Video- und Audiostreams in derselben Darstellung oder nicht im Multiplexverfahren vorliegen, wobei Video- und Audiostreams in separaten Darstellungen dargestellt werden.
-* Die TVSDK API wird in Objective-C implementiert.
-* Für die Videowiedergabe ist das native Apple AV Foundation-Framework erforderlich. Dies wirkt sich darauf aus, wie und wann auf Medienressourcen, einschließlich Bildunterschriften und Zeitschienen, zugegriffen werden kann:
+* Hauptvideoinhalte können durch Multiplexing gesteuert werden, wobei Video- und Audio-Streams sich in derselben Ausgabedarstellung befinden oder nicht durch einen Multiplexing gekennzeichnet sind, wobei Video- und Audio-Streams in separaten Ausgabedarstellungen enthalten sind.
+* Die TVSDK-API wird in Objective-C implementiert.
+* Für die Videowiedergabe ist das native Apple AV Foundation-Framework erforderlich. Dies wirkt sich darauf aus, wie und wann auf Medienressourcen wie Untertitel und Zeitpläne zugegriffen werden kann:
 
-   * Zeitleistenanpassungen können nach der ersten Einrichtung nicht mehr geändert werden.
+   * Zeitleistenanpassungen können nach der Ersteinrichtung nicht mehr geändert werden.
 
-      Beispielsweise kann eine Werbung nicht mehr aus der Zeitleiste entfernt werden, nachdem sie wiedergegeben wurde. Wenn der Benutzer in der Präsentation die Suche zurückführt, wird dieselbe Anzeige erneut wiedergegeben, selbst wenn die Richtlinie darin bestand, die Anzeige zu entfernen.
-   * Abhängig von der Genauigkeit des Encoder kann die tatsächliche Dauer der kodierten Medien von der Dauer abweichen, die im Stream-Ressourcenmanifest aufgezeichnet wird.
+     Beispielsweise kann eine Anzeige nicht aus der Timeline entfernt werden, nachdem sie wiedergegeben wurde. Wenn der Benutzer zur Präsentation zurückkehrt, wird dieselbe Anzeige wiedergegeben, selbst wenn die Richtlinie darin bestanden hätte, die Anzeige zu entfernen.
+   * Abhängig von der Genauigkeit des Kodierers unterscheidet sich die tatsächliche kodierte Mediendauer möglicherweise von der Dauer, die im Stream-Ressourcen-Manifest aufgezeichnet wird.
 
-      Es gibt keine zuverlässige Methode, um zwischen der idealen virtuellen Zeitleiste und der tatsächlichen Wiedergabedauer neu zu synchronisieren. Die Fortschrittsverfolgung der Stream-Wiedergabe für die Anzeigenverwaltung und Video Analytics muss die tatsächliche Wiedergabedauer verwenden, sodass das Verhalten von Berichte und Benutzeroberfläche die Medien- und Anzeigeninhalte möglicherweise nicht genau verfolgen kann.
-   * Der eingehende Benutzeragent für alle HTTP-Anforderungen von TVSDK auf dieser Plattform wird vom Gerät und der auf dem Gerät ausgeführten iOS-Version bestimmt.
+     Es gibt keine zuverlässige Methode, um zwischen der idealen virtuellen Timeline und der tatsächlichen Wiedergabescheitleiste neu zu synchronisieren. Das Fortschritts-Tracking der Stream-Wiedergabe für die Anzeigenverwaltung und Video Analytics muss die tatsächliche Wiedergabedauer verwenden, sodass bei der Berichterstellung und dem Verhalten der Benutzeroberfläche die Medien- und Werbeinhalte möglicherweise nicht genau verfolgt werden.
+   * Der eingehende Benutzeragent für alle HTTP-Anfragen von TVSDK auf dieser Plattform wird durch das Gerät und die iOS-Version bestimmt, die auf dem Gerät ausgeführt wird.
 
-      Der Wert der Benutzeragenten-Zeichenfolge ist standardmäßig vom Betriebssystem zugewiesen.
+     Der Wert der Benutzeragenten-Zeichenfolge entspricht standardmäßig dem vom Betriebssystem zugewiesenen Wert.
 
-## Bewährte Verfahren {#section_tvsdk_best_practices}
+## Best Practices {#section_tvsdk_best_practices}
 
 Hier finden Sie empfohlene Vorgehensweisen für TVSDK:
 
-* Verwenden Sie HLS Version 3.0 oder höher für Programm-Inhalte.
-* Verwenden Sie das Media-Validator-Tool von Apple, um VOD-Streams zu validieren.
-* Die `PTSDKConfig`-Klasse stellt Methoden zum Erzwingen von SSL für Anforderungen bereit, die an Primetime-Anzeigen, DRM- und Video Analytics-Servern gesendet werden.
+* Verwenden Sie HLS Version 3.0 oder höher für Programminhalte.
+* Verwenden Sie das Tool mediastreamvalidator von Apple, um VOD-Streams zu validieren.
+* Die `PTSDKConfig` -Klasse stellt Methoden bereit, um SSL für Anfragen zu erzwingen, die an Primetime-Anzeigenentscheidungen-, DRM- und Video Analytics-Server gesendet werden.
 
-   Weitere Informationen finden Sie in den Methoden `forceHTTPS` und `isForcingHTTPS` in dieser Klasse.
+  Weitere Informationen finden Sie unter `forceHTTPS` und `isForcingHTTPS` -Methoden in dieser Klasse.
 
-   >[!IMPORTANT]
-   >
-   >Anforderungen an Drittanbieter-Domänen wie Anzeigenverfolgungspixel, Inhalts- und Anzeigen-URLs und ähnliche Anforderungen werden nicht geändert. Es liegt in der Verantwortung der Inhaltsanbieter und Anzeigenserver, URLs bereitzustellen, die über HTTPS unterstützt werden.
-
+  >[!IMPORTANT]
+  >
+  >Anforderungen an Drittanbieter-Domänen wie Anzeigenverfolgungspixel, Inhalts- und Anzeigen-URLs und ähnliche Anforderungen werden nicht geändert. Die Bereitstellung von URLs, die über HTTPS unterstützt werden, liegt in der Verantwortung der Inhaltsanbieter und Adserver.

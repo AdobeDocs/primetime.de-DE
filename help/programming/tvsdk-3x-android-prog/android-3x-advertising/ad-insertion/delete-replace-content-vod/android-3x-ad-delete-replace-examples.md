@@ -1,20 +1,18 @@
 ---
-description: Im Folgenden finden Sie einige Beispiele für den Vorgang zum Löschen und Ersetzen von Anzeigen.
+description: Im Folgenden finden Sie einige Beispiele für den Prozess zum Löschen und Ersetzen von Anzeigen.
 title: Beispiele zum Löschen und Ersetzen von Anzeigen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
-
 # Beispiele zum Löschen und Ersetzen von Anzeigen {#examples-to-delete-and-replace-ads}
 
-Im Folgenden finden Sie einige Beispiele für den Vorgang zum Löschen und Ersetzen von Anzeigen.
+Im Folgenden finden Sie einige Beispiele für den Prozess zum Löschen und Ersetzen von Anzeigen.
 
-Hier ein Beispiel für die Verwendung von `DELETE_RANGE`:
+Im Folgenden finden Sie ein Beispiel für die Verwendung der `DELETE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means,  
@@ -43,7 +41,7 @@ config.setCustomRangeMetadata(customRangeMetadata);
 mediaPlayer.replaceCurrentResource(mediaResource, config);
 ```
 
-Hier ein Beispiel für die Verwendung von `REPLACE_RANGE`:
+Im Folgenden finden Sie ein Beispiel für die Verwendung der `REPLACE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means, like 

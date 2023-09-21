@@ -1,41 +1,39 @@
 ---
-description: Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarkeit aktiviert ist, wird die aktuell ausgewählte Spur angezeigt. Wenn Sie ändern, welche Spur aktuell ist, bleibt die Sichtbarkeitseinstellung gleich.
-title: Sichtbarkeit von Bildunterschriften steuern
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können die Sichtbarkeit geschlossener Untertitel steuern. Wenn die Sichtbarkeit aktiviert ist, wird der aktuell ausgewählte Track angezeigt. Wenn Sie ändern, welcher Track aktuell ist, bleibt die Sichtbarkeitseinstellung gleich.
+title: Sichtbarkeit der Untertitel steuern
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
 
 ---
 
+# Sichtbarkeit der Untertitel steuern{#control-closed-caption-visibility}
 
-# Sichtbarkeit bei geschlossener Beschriftung kontrollieren{#control-closed-caption-visibility}
-
-Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarkeit aktiviert ist, wird die aktuell ausgewählte Spur angezeigt. Wenn Sie ändern, welche Spur aktuell ist, bleibt die Sichtbarkeitseinstellung gleich.
+Sie können die Sichtbarkeit geschlossener Untertitel steuern. Wenn die Sichtbarkeit aktiviert ist, wird der aktuell ausgewählte Track angezeigt. Wenn Sie ändern, welcher Track aktuell ist, bleibt die Sichtbarkeitseinstellung gleich.
 
 >[!TIP]
 >
->Wenn Untertiteltext angezeigt wird, wenn der Player in den Suchmodus wechselt, wird der Text nach Abschluss der Suche nicht mehr angezeigt. Stattdessen zeigt TVSDK nach einigen Sekunden den nächsten Untertiteltext im Video nach der Endsuchposition an.
+>Wenn der Beschriftungstext angezeigt wird, wenn der Player in den Suchmodus wechselt, wird der Text nach Abschluss der Suche nicht mehr angezeigt. Stattdessen zeigt TVSDK nach einigen Sekunden den nächsten Untertiteltext im Video nach der Endsuchposition an.
 
 >[!NOTE]
 >
->Die Sichtbarkeitswerte für Untertitel werden in `ClosedCaptionsVisibility` definiert.
+>Die Sichtbarkeitswerte für geschlossene Beschriftungen werden in `ClosedCaptionsVisibility`.
 >
->
-```
+>```
 >public static const HIDDEN:String = hidden; 
 >public static const VISIBLE:String = visible;
 >```
+>
 
-1. Warten Sie, bis `MediaPlayer` mindestens den Status &quot;VORBEREITET&quot;aufweist (siehe [Warten Sie auf einen gültigen Status](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
-1. Um die aktuelle Sichtbarkeitseinstellung für Untertitel abzurufen, verwenden Sie die get-Methode in `MediaPlayer`, die einen Sichtbarkeitswert zurückgibt.
+1. Warten Sie auf die `MediaPlayer` mindestens den Status VORBEREITT (siehe [Auf gültigen Status warten](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
+1. Um die aktuelle Sichtbarkeitseinstellung für geschlossene Untertitel zu erhalten, verwenden Sie die Getter-Methode in `MediaPlayer`, der einen Sichtbarkeitswert zurückgibt.
 
    ```
    public function get ccVisibility():String
    ```
 
-1. Um die Sichtbarkeit von Untertiteln zu ändern, verwenden Sie die Setter-Methode und übergeben Sie einen Sichtbarkeitswert von `ClosedCaptionsVisibility`.
+1. Um die Sichtbarkeit für geschlossene Beschriftungen zu ändern, verwenden Sie die Set-Methode und übergeben Sie einen Sichtbarkeitswert von `ClosedCaptionsVisibility`.
 
    Beispiel:
 
@@ -52,14 +50,14 @@ Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarke
                    prompt="CC"/>
    ```
 
-1. Definieren Sie ein bindbares Array mit Untertitelspuren.
+1. Definieren Sie ein bindbares Array mit geschlossenen Untertitelspuren.
 
    ```
    [Bindable] private var _ccTracks:ArrayCollection =  
      new ArrayCollection(); // active tracks 
    ```
 
-1. Richten Sie Listener ein.
+1. Listener einrichten.
 
    ```
    player.addEventListener(MediaPlayerItemEvent.ITEM_CREATED, onItemCreated); 
@@ -73,7 +71,7 @@ Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarke
    player.removeEventListener(MediaPlayerItemEvent.CAPTIONS_UPDATED, onCaptionUpdated);
    ```
 
-1. Erstellen und aktualisieren Sie die Liste, wenn ein Benutzer eine Auswahl aus der Liste trifft.
+1. Erstellen und aktualisieren Sie die Liste, wenn ein Benutzer aus der Liste eine Auswahl trifft.
 
    ```
    private function onCCTrackChange(event:IndexChangeEvent):void { 
@@ -146,4 +144,3 @@ Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarke
        ccTracksList.selectedIndex = selectedIndex; 
    } 
    ```
-

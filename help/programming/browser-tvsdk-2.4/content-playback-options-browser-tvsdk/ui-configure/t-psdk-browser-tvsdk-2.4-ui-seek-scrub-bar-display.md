@@ -1,42 +1,40 @@
 ---
-description: In Browser TVSDK können Sie eine bestimmte Position (Zeit) in einem Stream suchen. Ein Stream kann ein Sliding-Window-Playlist oder Video-on-Demand (VOD)-Inhalt sein.
-title: Verarbeiten der Suche bei Verwendung der Suchleiste
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Im Browser TVSDK können Sie nach einer bestimmten Position (Uhrzeit) in einem Stream suchen. Ein Stream kann eine gleitende Fensterwiedergabeliste oder ein VOD-Inhalt (Video-on-Demand) sein.
+title: Suchen bei Verwendung der Suchleiste bearbeiten
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
 
 ---
 
+# Suchen bei Verwendung der Suchleiste bearbeiten{#handle-seek-when-using-the-seek-bar}
 
-# Verarbeiten Sie die Suche bei Verwendung der Suchleiste{#handle-seek-when-using-the-seek-bar}
-
-In Browser TVSDK können Sie eine bestimmte Position (Zeit) in einem Stream suchen. Ein Stream kann ein Sliding-Window-Playlist oder Video-on-Demand (VOD)-Inhalt sein.
+Im Browser TVSDK können Sie nach einer bestimmten Position (Uhrzeit) in einem Stream suchen. Ein Stream kann eine gleitende Fensterwiedergabeliste oder ein VOD-Inhalt (Video-on-Demand) sein.
 
 >[!IMPORTANT]
 >
->Die Suche in einem Live-Stream ist nur für DVR zulässig.
+>Die Suche in einem Live-Stream ist nur für DVR erlaubt.
 
-1. Warten Sie, bis Browser TVSDK sich in einem gültigen Status für die Suche befindet.
+1. Warten Sie, bis das Browser TVSDK für die Suche einen gültigen Status aufweist.
 
-   Gültige Status sind &quot;VORBEREITEN&quot;, &quot;ABGESCHLOSSEN&quot;, &quot;ANGEHALTEN&quot;und &quot;WIEDERGABE&quot;. Wenn Sie sich in einem gültigen Status befinden, wird sichergestellt, dass die Medienressource erfolgreich geladen wurde. Wenn sich der Player nicht in einem gültigen, suchbaren Zustand befindet, wird beim Versuch, die folgenden Methoden aufzurufen, ein `IllegalStateException` zurückgegeben.
+   Gültige Status sind PREPARED, COMPLETE, PAUSED und PLAYING. Ein gültiger Status stellt sicher, dass die Medienressource erfolgreich geladen wurde. Wenn der Player keinen gültigen suchbaren Status aufweist, wird beim Versuch, die folgenden Methoden aufzurufen, ein `IllegalStateException`.
 
-   Sie können beispielsweise auf Browser TVSDK auf Trigger `AdobePSDK.MediaPlayerStatusChangeEvent` mit einem `event.status` von `AdobePSDK.MediaPlayerStatus.PREPARED` warten.
+   Sie können beispielsweise auf den Trigger Browser TVSDK warten  `AdobePSDK.MediaPlayerStatusChangeEvent`  mit einer `event.status` von `AdobePSDK.MediaPlayerStatus.PREPARED`.
 
-1. Übergeben Sie die angeforderte Suchposition als Parameter an die `MediaPlayer.seek`-Methode in Millisekunden.
+1. Übergeben Sie die angeforderte Suchposition an die `MediaPlayer.seek` -Methode als Parameter in Millisekunden.
 
    Dadurch wird der Abspielkopf an eine andere Position im Stream verschoben.
 
    >[!TIP]
    >
-   >Die angeforderte Suchposition kann nicht mit der tatsächlichen berechneten Position übereinstimmen.
+   >Die angeforderte Suchposition entspricht möglicherweise nicht der tatsächlichen berechneten Position.
 
    ```js
    void seek(long position) throws IllegalStateException;
    ```
 
-1. Warten Sie, bis Browser TVSDK das Ereignis `AdobePSDK.PSDKEventType.SEEK_END` Trigger, das die angepasste Position im Attribut `actualPosition` des Ereignisses zurückgibt:
+1. Warten Sie, bis das Browser TVSDK den Trigger  `AdobePSDK.PSDKEventType.SEEK_END`  -Ereignis, das die angepasste Position im Ereignis `actualPosition` Attribut:
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
@@ -45,12 +43,12 @@ In Browser TVSDK können Sie eine bestimmte Position (Zeit) in einem Stream such
    }
    ```
 
-   Dies ist wichtig, da sich die tatsächliche Position des Beginns nach der Suche von der angeforderten Position unterscheiden kann. Es gelten möglicherweise einige der folgenden Regeln:
+   Dies ist wichtig, da sich die tatsächliche Startposition nach der Suche von der angeforderten Position unterscheiden kann. Es können einige der folgenden Regeln angewendet werden:
 
-   * Das Wiedergabeverhalten wird beeinträchtigt, wenn eine Suche oder eine andere Neupositionierung in der Mitte einer Werbeunterbrechung endet oder Werbeunterbrechungen übersprungen werden.
-   * Sie können nur in der suchbaren Dauer des Assets suchen. Bei VOD ist dies von 0 bis zur Laufzeit des Assets.
+   * Das Wiedergabe-Verhalten ist betroffen, wenn eine Suche oder eine andere Neupositionierung mitten in einer Werbeunterbrechung endet oder Werbeunterbrechungen überspringt.
+   * Sie können nur in der suchbaren Dauer des Assets suchen. Bei VOD ist dies von 0 bis zur Dauer des Assets.
 
-1. Suchen Sie für die im obigen Beispiel erstellte Suchleiste nach `setPositionChangeListener()`, um zu sehen, wann der Benutzer scrubbt:
+1. Suchen Sie für die im obigen Beispiel erstellte Suchleiste nach `setPositionChangeListener()` , um zu sehen, wann der Benutzer scrubbt:
 
    ```js
    seekBar.setPositionChangeListener(function (pos) { 
@@ -66,11 +64,10 @@ In Browser TVSDK können Sie eine bestimmte Position (Zeit) in einem Stream such
                }); 
    ```
 
-1. Richten Sie Ereignis-Listener-Rückrufe für Änderungen in der Suchfunktion des Benutzers ein.
+1. Richten Sie Ereignis-Listener-Rückrufe für Änderungen in der Suchaktivität des Benutzers ein.
 
-       Der Suchvorgang ist asynchron, sodass Browser TVSDK die folgenden Ereignisse im Zusammenhang mit der Suche auslöst:
+       Der Suchvorgang ist asynchron, sodass Browser TVSDK diese Ereignisse im Zusammenhang mit der Suche sendet:
    
    * `AdobePSDK.PSDKEventType.SEEK_BEGIN` , um anzugeben, dass die Suche beginnt.
-   * `AdobePSDK.PSDKEventType.SEEK_END` , um anzuzeigen, dass die Suche erfolgreich war.
-   * `AdobePSDK.PSDKEventType.SEEK_POSITION_ADJUSTED` , um anzugeben, dass der Medienplayer die vom Benutzer bereitgestellte Suchposition angepasst hat.
-
+   * `AdobePSDK.PSDKEventType.SEEK_END` , um anzugeben, dass die Suche erfolgreich war.
+   * `AdobePSDK.PSDKEventType.SEEK_POSITION_ADJUSTED` , um anzugeben, dass der Medienplayer die vom Benutzer angegebene Suchposition angepasst hat.

@@ -1,22 +1,20 @@
 ---
-description: Wenn eine vollständige Wiedergabeliste fehlt, z. B. wenn die in einer Manifestdatei der obersten Ebene angegebene M3U8-Datei nicht heruntergeladen wird, versucht TVSDK eine Wiederherstellung. Wenn die Wiederherstellung nicht möglich ist, bestimmt Ihre Anwendung den nächsten Schritt.
+description: Wenn beispielsweise eine komplette Wiedergabeliste fehlt, wenn die in einer Manifestdatei der obersten Ebene angegebene M3U8-Datei nicht heruntergeladen wird, versucht TVSDK, die Wiedergabe wiederherzustellen. Wenn die Wiederherstellung nicht möglich ist, bestimmt Ihre Anwendung den nächsten Schritt.
 title: Fehlendes Wiedergabelisten-Failover
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 0%
 
 ---
 
+# Fehlendes Wiedergabelisten-Failover{#missing-playlist-failover}
 
-# Fehlendes Playlist-Failover{#missing-playlist-failover}
+Wenn beispielsweise eine komplette Wiedergabeliste fehlt, wenn die in einer Manifestdatei der obersten Ebene angegebene M3U8-Datei nicht heruntergeladen wird, versucht TVSDK, die Wiedergabe wiederherzustellen. Wenn die Wiederherstellung nicht möglich ist, bestimmt Ihre Anwendung den nächsten Schritt.
 
-Wenn eine vollständige Wiedergabeliste fehlt, z. B. wenn die in einer Manifestdatei der obersten Ebene angegebene M3U8-Datei nicht heruntergeladen wird, versucht TVSDK eine Wiederherstellung. Wenn die Wiederherstellung nicht möglich ist, bestimmt Ihre Anwendung den nächsten Schritt.
+Wenn die Wiedergabeliste, die mit der Bitrate der mittleren Auflösung verknüpft ist, fehlt, sucht TVSDK mit derselben Auflösung nach einer VariantenWiedergabeliste. Wenn sie die gleiche Auflösung findet, beginnt sie mit dem Download der Varianten-Wiedergabeliste und der Segmente von der entsprechenden Position. Wenn TVSDK nicht dieselbe Auflösungs-Playlist findet, wird versucht, andere Bitratenspiellisten und deren Varianten zu durchlaufen. Eine unmittelbar niedrigere Bitrate ist die erste Wahl, dann ihre Variante usw. Wenn alle Wiedergabelisten mit niedrigerer Bitrate und ihre Varianten erschöpft sind, um eine gültige Wiedergabeliste zu finden, wird TVSDK zur höchsten Bitrate wechseln und von dort unten zählen. Wenn keine gültige Wiedergabeliste gefunden werden kann, schlägt der Prozess fehl und der Player wechselt in den ERROR-Status.
 
-Wenn die Wiedergabeliste, die mit der Bitrate mit mittlerer Auflösung verknüpft ist, fehlt, sucht TVSDK nach einer Varianten-Playlist mit derselben Auflösung. Wenn die gleiche Auflösung gefunden wird, werden die Variantenplaylist und die Segmente von der entsprechenden Position heruntergeladen. Wenn TVSDK nicht die gleiche Auflösungs-Playlist findet, wird versucht, durch andere Bitrate-Playlists und deren Varianten zu blättern. Eine unmittelbar niedrigere Bitrate ist die erste Wahl, dann die Variante usw. Wenn alle Playlisten mit niedrigeren Bitraten und ihre Varianten erschöpft sind, um eine gültige Playlist zu finden, wird TVSDK zur obersten Bitrate gehen und von dort unten zählen. Wenn keine gültige Wiedergabeliste gefunden werden kann, schlägt der Prozess fehl und der Player wechselt zum FEHLER-Status.
-
-Ihre Anwendung kann bestimmen, wie diese Situation zu handhaben ist. Sie können beispielsweise die Player-Aktivität schließen und den Benutzer zur Katalog-Aktivität weiterleiten. Das gewünschte Ereignis ist das Ereignis `STATE_CHANGED` und der entsprechende Rückruf ist die `onStateChanged`-Methode. Der folgende Code überwacht, ob der Player seinen internen Status in FEHLER ändert:
+Ihre Anwendung kann bestimmen, wie diese Situation behandelt wird. Sie können beispielsweise die Player-Aktivität schließen und den Benutzer zur Katalogaktivität weiterleiten. Das Ereignis von Interesse ist die `STATE_CHANGED` -Ereignis und der entsprechende Rückruf ist der `onStateChanged` -Methode. Im Folgenden finden Sie Code, der überwacht, ob der Player seinen internen Status in ERROR ändert:
 
 ```java
 case ERROR: 
@@ -24,7 +22,7 @@ case ERROR:
     break;
 ```
 
-Weitere Informationen finden Sie in der Datei [!DNL PlayerFragment.java] in Ihrem SDK:
+Weitere Informationen finden Sie unter [!DNL PlayerFragment.java] -Datei in Ihrem SDK:
 
 ```
 […]/samples/PrimetimeReference/src/PrimetimeReference/src/com/adobe/primetime/reference/ui/player/
@@ -38,7 +36,7 @@ getNetworkDownVerificationUrl() const { return
 _networkDownVerificationUrl; }
 ```
 
-Die API stellt die URL bereit, mit der überprüft wird, ob das clientseitige Netzwerk ausfällt. Dies sollte eine gültige URL sein, die HTTP-Antwortcode 200 bei HTTP-Anforderungen zurückgibt.
+Die API stellt die URL bereit, mit der überprüft wird, ob das clientseitige Netzwerk ausfällt. Dies sollte eine gültige URL sein, die HTTP-Antwort-Code 200 für HTTP-Anfragen zurückgibt.
 
 ```
 psdkutils::PSDKErrorCode 
@@ -46,4 +44,4 @@ psdkutils::PSDKErrorCode
 _networkDownVerificationUrl = value; return psdkutils::kECSuccess; }
 ```
 
-Wenn setNetworkDownVerificationUrl nicht eingestellt ist, verwendet TVSDK standardmäßig die MainManifest-URL, um festzustellen, ob das Netzwerk ausfällt.
+Wenn setNetworkDownVerificationUrl nicht festgelegt ist, verwendet TVSDK standardmäßig die MainManifest-URL, um zu ermitteln, ob das Netzwerk ausfällt.

@@ -2,8 +2,7 @@
 title: Details zum Richtlinien-Workflow
 description: Details zum Richtlinien-Workflow
 copied-description: true
-exl-id: e3daf7a9-def0-48a9-8190-adb25eec7b59
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -42,7 +41,7 @@ Verwenden Sie beispielsweise den Primetime DRM Policy Manager ( [!DNL AdobePolic
 
 ## Package-Workflow-Details {#package-workflow-details}
 
-Bei der Verpackung Ihrer Adobe Access-protected content müssen Sie eine Ihrer BEES-bezogenen DRM-Richtlinien auf den Inhalt anwenden.
+Bei der Verpackung Ihres Adobe Access-geschützten Inhalts müssen Sie eine Ihrer BEES-bezogenen DRM-Richtlinien auf den Inhalt anwenden.
 
 ## Details zum Authentifizierungs-Workflow {#authentication-workflow-details}
 
@@ -62,7 +61,7 @@ DRMManager mgr = new DRMManager(<DRM Metadata of CloudDRM content>);
 mgr.setAuthenticationToken(<auth token>);
 ```
 
-Das Token wird mit allen Lizenzanfragen gesendet, bis das Token durch Aufruf von geleert wird. `.setAuthenticationToken` mit null als Parameter.
+Das Token wird mit allen Lizenzanfragen gesendet, bis das Token durch Aufruf von geleert wird. `.setAuthenticationToken` , wobei null als Parameter angegeben wird.
 
 ## Details zum Lizenzarbeitsablauf{#license-workflow-details}
 

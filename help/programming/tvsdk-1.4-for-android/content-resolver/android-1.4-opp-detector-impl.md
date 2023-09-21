@@ -1,20 +1,18 @@
 ---
-description: Sie können eigene Opportunity-Detektoren implementieren, indem Sie die Schnittstelle PlacementOpportunityDetector implementieren.
-title: Implementieren eines benutzerdefinierten Opportunitätsdetektors
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können Ihre eigenen Opportunity-Detektoren implementieren, indem Sie die Schnittstelle PlacementOpportunityDetector implementieren.
+title: Implementieren eines benutzerdefinierten Opportunity-Detektors
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Implementieren eines benutzerdefinierten Opportunity-Detektors {#implement-a-custom-opportunity-detector}
 
-# Implementieren eines benutzerdefinierten Opportunitätsdetektors {#implement-a-custom-opportunity-detector}
+Sie können Ihre eigenen Opportunity-Detektoren implementieren, indem Sie die Schnittstelle PlacementOpportunityDetector implementieren.
 
-Sie können eigene Opportunity-Detektoren implementieren, indem Sie die Schnittstelle PlacementOpportunityDetector implementieren.
-
-1. Erstellen Sie eine benutzerdefinierte `AdvertisingFactory`-Instanz und überschreiben Sie `createOpportunityDetector`. Beispiel:
+1. Benutzerdefiniert erstellen `AdvertisingFactory` Instanz und Überschreibung `createOpportunityDetector`. Beispiel:
 
    ```java
    new AdvertisingFactory() { 
@@ -27,7 +25,7 @@ Sie können eigene Opportunity-Detektoren implementieren, indem Sie die Schnitts
    }
    ```
 
-1. Registrieren Sie die Client-Factory der Anzeige bei `MediaPlayer`. Beispiel:
+1. Registrieren Sie die Client-Factory der Anzeige bei der `MediaPlayer`. Beispiel:
 
    ```java
    // register the custom advertising factory with media player 
@@ -35,16 +33,16 @@ Sie können eigene Opportunity-Detektoren implementieren, indem Sie die Schnitts
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Erstellen Sie eine benutzerdefinierte Opportunitätsdetektorklasse, die die `PlacementOpportunityDetector`-Klasse erweitert.
-   1. Überschreiben Sie im benutzerdefinierten Opportunitätsdetektor diese Funktion:
+1. Erstellen Sie eine benutzerdefinierte Opportunity-Detektorklasse, die die `PlacementOpportunityDetector` -Klasse.
+   1. Überschreiben Sie im benutzerdefinierten Opportunity-Detektor diese Funktion:
 
       ```java
       public List<PlacementOpportunity> process(List<TimedMetadata> timedMetadataList, Metadata metadata)
       ```
 
-      Die `timedMetadataList` enthält die Liste der verfügbaren `TimedMetadata`, die sortiert wird. Metadaten enthalten die Targeting-Parameter und die benutzerdefinierten Parameter, die an den Anzeigenanbieter gesendet werden.
+      Die `timedMetadataList` enthält die Liste der verfügbaren `TimedMetadata`, der sortiert wird. Metadaten enthalten die Targeting-Parameter und die benutzerdefinierten Parameter, die an den Anzeigenanbieter gesendet werden.
 
-   1. Erstellen Sie für jedes `TimedMetadata` ein `List<PlacementOpportunity>`. Die Liste kann leer, jedoch nicht null sein. `PlacementOpportunity` sollte die folgenden Attribute aufweisen:
+   1. Für jeden `TimedMetadata`, erstellen Sie eine `List<PlacementOpportunity>`. Die Liste kann leer, aber nicht null sein. `PlacementOpportunity` sollte die folgenden Attribute aufweisen:
 
       ```java
       PlacementOpportunity( 
@@ -54,9 +52,9 @@ Sie können eigene Opportunity-Detektoren implementieren, indem Sie die Schnitts
       )
       ```
 
-   1. Nachdem Platzierungsmöglichkeiten für alle erkannten Metadatenobjekte erstellt wurden, geben Sie einfach die `PlacementOpportunity`-Liste zurück.
+   1. Nachdem Platzierungsmöglichkeiten für alle erkannten zeitgesteuerten Metadatenobjekte erstellt wurden, geben Sie einfach die `PlacementOpportunity` Liste.
 
-Dies ist ein Beispiel für eine benutzerdefinierte Platzierungsmöglichkeit:
+Dies ist ein Beispiel für einen benutzerdefinierten Platzierungsoptionsdetektor:
 
 ```java
 public class CustomPlacementOpportunityDetector implements PlacementOpportunityDetector { 
@@ -82,4 +80,3 @@ public class CustomPlacementOpportunityDetector implements PlacementOpportunityD
     ... 
 } 
 ```
-

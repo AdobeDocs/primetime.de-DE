@@ -1,8 +1,7 @@
 ---
 title: Nutzungsmuster
 description: Zeigen Sie das Verhalten der Kontofreigabe für verschiedene Benutzertypologien an.
-exl-id: 2faa7e75-b3a1-491b-bb7d-bd3a149cbe79
-source-git-commit: 560611f2af2605ba399e4cf5ddfd331b6e8e0231
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Nutzungsmuster {#usage-patterns}
 
-Konto IQ klassifiziert Benutzer von Abonnentenkonten in verschiedene Kategorien hinsichtlich ihres sozialen Verhaltens, wie z. B. Reisende oder Pendler, Große Familie und Community-Freigabe. Die **Nutzungsmuster** Seite zeigt mehrere verschiedene Analyse- und Berichtstypen für diese Benutzertypologien. Beispiel: **Verteilung der Nutzungsmuster - Benutzer im Segment im Vergleich zur Gesamtsumme** -Bericht vergleicht das Nutzungsverhalten für das aktuelle Segment mit dem für die gesamte Branche.
+Konto IQ klassifiziert Benutzer von Abonnentenkonten in verschiedene Kategorien hinsichtlich ihres sozialen Verhaltens, wie z. B. Reisende oder Pendler, Große Familie und Community-Freigabe. Die **Nutzungsmuster** Seite zeigt mehrere verschiedene Analyse- und Berichtstypen für diese Benutzertypologien. Beispiel: **Verteilung der Nutzungsmuster - Benutzer im Vergleich zur Gesamtsumme** -Bericht vergleicht das Nutzungsverhalten für das aktuelle Segment mit dem für die gesamte Branche.
 
 Wie die anderen Seiten in der App basieren die Analyse und Berichte hier auf dem aktuellen Segment, wie in der [Segmentbereich](/help/AccountIQ/segments-timeframe.md).
 

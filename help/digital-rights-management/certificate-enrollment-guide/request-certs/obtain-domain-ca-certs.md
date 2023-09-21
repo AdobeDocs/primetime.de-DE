@@ -1,28 +1,26 @@
 ---
-title: Abrufen von CA-Domänenzertifikaten
-description: Abrufen von CA-Domänenzertifikaten
+title: Abrufen von Zertifizierungsdomäne-Zertifikaten
+description: Abrufen von Zertifizierungsdomäne-Zertifikaten
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
+# Abrufen von Zertifizierungsdomäne-Zertifikaten{#obtain-domain-ca-certificates}
 
-# CA-Domänenzertifikate abrufen{#obtain-domain-ca-certificates}
+Im Gegensatz zum Lizenzserver-, Packager- oder Transportzertifikat wird das CA-Zertifikat der Domain nicht von Adobe ausgestellt. Sie können dieses Zertifikat von einer Zertifizierungsstelle abrufen oder Sie können ein selbstsigniertes Zertifikat generieren, das zu diesem Zweck verwendet werden kann.
 
-Im Gegensatz zum Lizenzserver-, Packager- oder Transportzertifikat wird das CA-Domänenzertifikat nicht von der Adobe ausgestellt. Sie können dieses Zertifikat von einer Zertifizierungsstelle abrufen oder ein selbst signiertes Zertifikat zu diesem Zweck generieren.
+Das CA-Zertifikat der Domain sollte einen 1024-Bit-Schlüssel verwenden und die in einem CA-Zertifikat erforderlichen Standardattribute enthalten:
 
-Das CA-Domänenzertifikat sollte einen 1024-Bit-Schlüssel verwenden und die Standardattribute enthalten, die für ein CA-Zertifikat erforderlich sind:
+* Grundlegende Einschränkungserweiterung mit der Zertifizierungsstelle-Markierung auf &quot;true&quot;
+* Schlüsselverwendungserweiterung, die angibt, dass die Zertifikatsignatur zulässig ist
 
-* Grundlegende Einschränkungserweiterung mit dem CA-Flag auf &quot;true&quot;
-* Key Usage extension specifying Certificate Signing is allowed
+Beispielsweise kann mit OpenSSL ein selbstsigniertes CA-Zertifikat wie folgt generiert werden:
 
-Bei Verwendung von OpenSSL kann beispielsweise ein selbst signiertes CA-Zertifikat wie folgt generiert werden:
-
-1. Erstellen Sie eine Datei mit dem Namen [!DNL ca-extensions.txt] mit:
+1. Erstellen Sie eine Datei mit dem Namen [!DNL ca-extensions.txt] enthält:
 
    ```
    keyUsage=critical,keyCertSign  
@@ -55,10 +53,9 @@ Bei Verwendung von OpenSSL kann beispielsweise ein selbst signiertes CA-Zertifik
    openssl rand -base64 8 
    ```
 
-1. PFX generieren:
+1. Generieren von PFX:
 
    ```
    openssl pkcs12 -export -inkey domain-ca.key \ 
    -in domain-ca.cer -out domain-ca.pfx
    ```
-

@@ -1,28 +1,25 @@
 ---
-description: Ereignis aus Browser TVSDK geben den Player-Status, Fehler, die auftreten, den Abschluss von angeforderten Aktionen an, wie z. B. die Videowiedergabe oder implizit auftretende Aktionen, wie z. B. das Abschließen einer Anzeige.
-title: Primetime Player-Ereignis suchen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Ereignisse aus Browser TVSDK geben den Status des Players, aufgetretene Fehler, den Abschluss von angeforderten Aktionen an, z. B. einen Videobeginn oder implizit auftretende Aktionen wie das Abschließen einer Anzeige.
+title: Primetime-Player-Ereignisse überwachen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#listen-for-primetime-player-events-overview}
 
-Ereignis aus Browser TVSDK geben den Player-Status, Fehler, die auftreten, den Abschluss von angeforderten Aktionen an, wie z. B. die Videowiedergabe oder implizit auftretende Aktionen, wie z. B. das Abschließen einer Anzeige.
+Ereignisse aus Browser TVSDK geben den Status des Players, aufgetretene Fehler, den Abschluss von angeforderten Aktionen an, z. B. einen Videobeginn oder implizit auftretende Aktionen wie das Abschließen einer Anzeige.
 
-Da Ihre Anwendung auf viele dieser Ereignis reagieren muss, müssen Sie Ereignis-Bereitstellungsroutinen implementieren und diese Routinen mit Browser TVSDK registrieren. Die Routinen rufen die entsprechenden Browser TVSDK-Methoden auf, um angemessen zu reagieren.
+Da Ihre Anwendung auf viele dieser Ereignisse reagieren muss, müssen Sie Ereignisverarbeitungsroutinen implementieren und diese Routinen mit Browser TVSDK registrieren. Die Routinen rufen die relevanten Browser TVSDK-Methoden auf, um angemessen zu reagieren.
 
-Im Folgenden finden Sie weitere Informationen zu Ereignissen:
+Im Folgenden finden Sie einige zusätzliche Informationen zu Ereignissen:
 
-* Die Echtzeit-Natur der Videowiedergabe erfordert für viele Browser TVSDK-Vorgänge eine asynchrone Aktivität (ohne Blockierung).
-* Browser TVSDK unterstützt einen Ereignis-basierten Videoplayer.
+* Die Echtzeit-Wiedergabe von Videos erfordert für viele Browser TVSDK-Vorgänge eine asynchrone (nicht blockierende) Aktivität.
+* Browser TVSDK unterstützt einen ereignisgesteuerten Video-Player.
 
-   Es stellt Ereignis bereit, die allen wichtigen Schritten im Ablauf entsprechen. Sie registrieren diese Ereignis mit dem Ereignis-Mechanismus Ihrer Plattform und erstellen Ereignis-Handler, die aufgerufen werden, wenn diese Ereignis auftreten. *`Event Handlers`* werden auch als Callback-Routinen oder Ereignis-Listener bezeichnet. Browser TVSDK bietet eine komplette Palette von Methoden, die von den Ereignis-Handlern verwendet werden können.
-* Ihre Anwendung initiiert im Allgemeinen Vorgänge zum Entfernen von Blockern, z. B. um anzufordern, dass ein Video-Beginn abgespielt wird.
+  Es stellt Ereignisse bereit, die allen wichtigen Schritten im Wiedergabeprozess entsprechen. Sie registrieren diese Ereignisse beim Ereignismechanismus Ihrer Plattform und erstellen Ereignishandler, die aufgerufen werden, wenn diese Ereignisse auftreten. *`Event Handlers`* werden auch als Callback-Routinen oder Ereignis-Listener bezeichnet. Browser TVSDK bietet eine vollständige Palette von Methoden, die von den Ereignishandlern verwendet werden können.
+* Ihre Anwendung initiiert im Allgemeinen nicht-blockierende Vorgänge, z. B. die Anforderung, die Videowiedergabe zu starten.
 
-   Browser TVSDK kommuniziert asynchron mit Ihrer Anwendung, indem Ereignis ausgelöst werden, z. B. wenn die Videowiedergabe Beginn und ein Ereignis nach Abschluss des Videos sind. Andere Ereignis können auf Statusänderungen in Ihrem Player und Fehlerbedingungen hinweisen. Ihre Ereignis-Handler ergreifen entsprechende Maßnahmen.
-
+  Browser TVSDK kommuniziert asynchron mit Ihrer Anwendung, indem Ereignisse ausgelöst werden, z. B. wenn die Videowiedergabe beginnt, und ein Ereignis, wenn das Video abgeschlossen ist. Andere Ereignisse können auf Statusänderungen in Ihrem Player und Fehlerbedingungen hinweisen. Ihre Ereignishandler ergreifen die entsprechenden Aktionen.

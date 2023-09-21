@@ -1,22 +1,20 @@
 ---
-description: Wenn StageVideo nicht verfügbar ist und Ihre Anwendung versucht, StageVideo zu verwenden, gibt das TVSDK keinen Fehler aus. Ihre Anwendung kann ermitteln, ob StageVideo verfügbar ist, indem Sie auf das StageVideoAvailabilityEvent warten.
+description: Wenn StageVideo nicht verfügbar ist und Ihre Anwendung versucht, StageVideo zu verwenden, gibt das TVSDK keinen Fehler aus. Ihre Anwendung kann bestimmen, ob StageVideo verfügbar ist, indem sie auf das StageVideoAvailabilityEvent überwacht.
 title: Überprüfen, ob StageVideo verfügbar ist
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Überprüfen, ob StageVideo verfügbar ist{#check-whether-stagevideo-is-available}
 
-Wenn StageVideo nicht verfügbar ist und Ihre Anwendung versucht, StageVideo zu verwenden, gibt das TVSDK keinen Fehler aus. Ihre Anwendung kann ermitteln, ob StageVideo verfügbar ist, indem Sie auf das StageVideoAvailabilityEvent warten.
+Wenn StageVideo nicht verfügbar ist und Ihre Anwendung versucht, StageVideo zu verwenden, gibt das TVSDK keinen Fehler aus. Ihre Anwendung kann bestimmen, ob StageVideo verfügbar ist, indem sie auf das StageVideoAvailabilityEvent überwacht.
 
-Ab Flash 15 und höher, wenn die Hardware `StageVideo` nicht verfügbar ist, wird sie auf Software `StageVideo` zurückgesetzt. Für Flash 14 und früher können Sie festlegen, ob `StageVideo` verfügbar ist. Wenn `StageVideo` nicht verfügbar ist, können Sie `StageVideoAvailabilityEvent` verwenden, um zu verstehen, warum es nicht verfügbar ist.
+von Flash 15 und höher, wenn Hardware `StageVideo` nicht verfügbar ist, wird auf Software zurückgesetzt `StageVideo`. Bei Flash 14 und früher können Sie bestimmen, ob `StageVideo` ist verfügbar. Wenn `StageVideo` nicht verfügbar ist, können Sie `StageVideoAvailabilityEvent` um zu verstehen, warum sie nicht verfügbar ist.
 
-1. Suchen Sie nach `StageVideoAvailabilityEvent`, um festzustellen, ob `StageVideo` verfügbar ist.
+1. Suchen Sie nach `StageVideoAvailabilityEvent` um festzustellen, ob `StageVideo` ist verfügbar.
 
    Beispiel:
 

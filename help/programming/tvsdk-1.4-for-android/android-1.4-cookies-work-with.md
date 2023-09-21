@@ -1,35 +1,33 @@
 ---
-description: Sie können TVSDK verwenden, um beliebige Daten in Cookie-Headern für Sitzungsverwaltung, Gate-Zugriff usw. zu senden.
-title: Mit Cookies arbeiten
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können TVSDK verwenden, um beliebige Daten in Cookie-Headern für die Sitzungsverwaltung, den Gate-Zugriff usw. zu senden.
+title: Arbeiten mit Cookies
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 0%
 
 ---
 
+# Arbeiten mit Cookies{#work-with-cookies}
 
-# Mit Cookies arbeiten{#work-with-cookies}
+Sie können TVSDK verwenden, um beliebige Daten in Cookie-Headern für die Sitzungsverwaltung, den Gate-Zugriff usw. zu senden.
 
-Sie können TVSDK verwenden, um beliebige Daten in Cookie-Headern für Sitzungsverwaltung, Gate-Zugriff usw. zu senden.
+Im Folgenden finden Sie ein Beispiel mit einer Art Authentifizierung bei Anforderungen an den Schlüsselserver:
 
-Hier ein Beispiel mit einer Art Authentifizierung bei Anforderungen an den Schlüsselserver:
-
-1. Ihr Kunde meldet sich in einem Browser bei Ihrer Website an und seine Anmeldung zeigt, dass er Inhalte Ansicht haben darf.
-1. Ihre Anwendung generiert ein Authentifizierungstoken, basierend auf den Erwartungen des Lizenzservers. Übergeben Sie diesen Wert an TVSDK.
-1. TVSDK legt diesen Wert im Cookie-Header fest.
-1. Wenn TVSDK eine Anforderung an den Schlüsselserver sendet, um einen Schlüssel zum Entschlüsseln des Inhalts abzurufen, enthält diese Anforderung den Authentifizierungswert im Cookie-Header, sodass der Schlüsselserver weiß, dass die Anforderung gültig ist.
+1. Ihr Kunde meldet sich in einem Browser bei Ihrer Website an und seine Anmeldung zeigt an, dass er Inhalte anzeigen darf.
+1. Ihre Anwendung generiert ein Authentifizierungstoken, das auf den Erwartungen des Lizenzservers basiert. Übergeben Sie diesen Wert an TVSDK.
+1. TVSDK legt diesen Wert in der Cookie-Kopfzeile fest.
+1. Wenn TVSDK eine Anfrage an den Schlüsselserver sendet, um einen Schlüssel zum Entschlüsseln des Inhalts abzurufen, enthält diese Anfrage den Authentifizierungswert im Cookie-Header, sodass der Schlüsselserver weiß, dass die Anfrage gültig ist.
 
 So arbeiten Sie mit Cookies:
 
-1. Erstellen Sie ein `cookieManager` und fügen Sie Ihre Cookies für die URIs zu Ihrem `cookieStore` hinzu.
+1. Erstellen Sie eine `cookieManager` und fügen Sie Ihre Cookies für die URIs zu Ihren `cookieStore`.
 
    Beispiel:
 
    >[!IMPORTANT]
    >
-   >Wenn 302-Umleitungen aktiviert sind, kann die Anzeigenanforderung an eine Domäne weitergeleitet werden, die sich von der Domäne unterscheidet, zu der das Cookie gehört.
+   >Wenn die Weiterleitung von 302 aktiviert ist, kann die Anzeigenanforderung an eine Domäne umgeleitet werden, die sich von der Domäne unterscheidet, zu der das Cookie gehört.
 
    ```java
    CookieManager cookieManager= new CookieManager(); 
@@ -41,9 +39,9 @@ So arbeiten Sie mit Cookies:
    cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
    ```
 
-   TVSDK Abfrage diesen cookieManager zur Laufzeit, prüft, ob mit der URL verknüpfte Cookies vorhanden sind, und verwendet diese automatisch.
+   TVSDK fragt diesen CookieManager zur Laufzeit ab, prüft, ob der URL Cookies zugeordnet sind, und verwendet diese automatisch.
 
-   Eine andere Möglichkeit besteht darin, `cookieHeaders` in `NetworkConfiguration` zu verwenden, um eine beliebige Cookie-Header-Zeichenfolge für Anforderungen festzulegen. Standardmäßig wird dieser Cookie-Header nur mit Schlüsselanforderungen gesendet. Um den Cookie-Header mit allen Anforderungen zu senden, verwenden Sie die `NetworkConfiguration`-Methode `setUseCookieHeadersForAllRequests`:
+   Eine weitere Option ist die Verwendung von `cookieHeaders` in `NetworkConfiguration` , um eine beliebige Cookie-Header-Zeichenfolge festzulegen, die für Anfragen verwendet werden soll. Standardmäßig wird dieser Cookie-Header nur mit Schlüsselanfragen gesendet. Um den Cookie-Header mit allen Anforderungen zu senden, verwenden Sie die `NetworkConfiguration` method `setUseCookieHeadersForAllRequests`:
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 

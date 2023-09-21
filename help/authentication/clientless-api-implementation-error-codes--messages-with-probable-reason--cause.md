@@ -1,58 +1,57 @@
 ---
-title: Clickless API Implementierung-Fehler Codes/Nachrichten mit wahrscheinlichem Grund/Ursache
-description: Clickless API Implementierung-Fehler Codes/Nachrichten mit wahrscheinlichem Grund/Ursache
-exl-id: 616e35fc-9b72-422b-9a05-e6248bd52490
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+title: Clientlose API-Implementierung – Fehler Codes/Nachrichten mit wahrscheinlichem Grund/Ursache
+description: Clientlose API-Implementierung – Fehler Codes/Nachrichten mit wahrscheinlichem Grund/Ursache
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
-# Clickless API Implementierung-Fehler Codes/Nachrichten mit wahrscheinlichem Grund/Ursache {#clientless-api-implementation--error-codes-messages-with-probable-reason-cause}
+# Clientlose API-Implementierung – Fehler Codes/Nachrichten mit wahrscheinlichem Grund/Ursache {#clientless-api-implementation--error-codes-messages-with-probable-reason-cause}
 
 >[!NOTE]
 >
->Die Inhalte dieser Seite wird nur zu Informationszwecken bereitgestellt. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe Systems erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Die Inhalte auf dieser Seite werden nur zu Informationszwecken zur Verfügung gestellt. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe Systems erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 </br>
 
 
-## Fehler: nicht autorisiert
+## Fehler: Nicht autorisiert
 
 ### Ursachen:
 
-1. Fehlende Autorisierung Kopfzeile im Post
-1. Geben Sie bei Autorisierung Kopfzeile ein, wenn Anfrage in Millisekunden Zeit beträgt.
+1. Autorisierung Kopfzeile fehlt im POST
+1. Problem mit Autorisierung Kopfzeile – prüfen Sie, ob Anfrage Zeit in Millisekunden angegeben ist.
 
-## Fehler: SC 400 während der authentifizieren
-
-### Ursachen:
-
-1. Der Server fand keinen Registrierung Code, der für einen bestimmten Requestor und Umgebung erstellt wurde.
-1. Sie können domänenübergreifende Scripting Probleme ausführen
-1. Richtiges Spuchen sollte der Datei/etc/Hosts zugewiesen werden
-
-## Fehler: 400 schlechte Anfrage
+## Fehler: SC 400 während der Authentifizierung
 
 ### Ursachen:
 
-1. Fehlgebildete URL für Post/Get
-1. SamlassertionParserException – die verschlüsselte SAML-Behauptung konnte am Ende des Adobe Systems nicht entschlüsselt werden.
+1. Der Server konnte den registrierung Code, der für eine bestimmte Anforderung erstellt wurde, nicht finden, und Umgebung.
+1. Möglicherweise treten domänenübergreifende Scripting Probleme auf
+1. Korrektes Spoofing sollte in die Datei /etc/hosts eingefügt werden
 
-## Fehler: 403 verboten
+## Fehler: 400 Ungültige Anfrage
 
 ### Ursachen:
 
-1. Zu viele schnelle Anfragen-eine Funktion des API Managements, um die Angriffe von DOS zu verhindern.
-2. Wenn Sie vorqual Umgebung, dann fügen Sie ein Spuchen hinzu, ansonsten stellen Sie sicher, dass das Spuchen aus der/etc/hosts entfernt wurde.
+1. Falsch formatierte URL für POST/GET
+1. SAMLAssertionParserException – Die verschlüsselte SAML-Assertion konnte bei Adobe Systems nicht entschlüsselt werden
 
-## Fehler: kann nicht auf mvpd Anmeldung Seite
+## Fehler: 403 Verboten
+
+### Ursachen:
+
+1. Zu viele schnelle Anfragen - eine Funktion des API-Managements, um DoS-Angriffe zu verhindern.
+2. Wenn Sie prequal Umgebung verwenden, fügen Sie Spoofing hinzu, andernfalls stellen Sie sicher, dass Spoofing aus der Datei /etc/hosts entfernt wurde
+
+## Fehler: Anmeldung zu MVPD-Seite nicht möglich
 
 ### Ursachen:
 
 1. Benutzername und Kennwort stimmen nicht überein
-2. Möglicherweise wurden Anmeldung deaktiviert.
+2. Anmeldung wurde möglicherweise deaktiviert
 3. Überprüfen Sie, ob die Anmeldung für Produktion oder Staging verwendet wird.
 
 

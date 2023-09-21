@@ -1,26 +1,24 @@
 ---
-description: Richten Sie eine zentrale Stelle ein, um Fehler zu verarbeiten.
-title: Fehlerverarbeitung einrichten
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Richten Sie eine zentrale Stelle ein, an der Fehler verarbeitet werden können.
+title: Einrichten der Fehlerbehandlung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '99'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Einrichten der Fehlerbehandlung{#set-up-error-handling}
 
-# Einrichten der Fehlerverarbeitung{#set-up-error-handling}
+Richten Sie eine zentrale Stelle ein, an der Fehler verarbeitet werden können.
 
-Richten Sie eine zentrale Stelle ein, um Fehler zu verarbeiten.
+1. Implementieren einer Ereignisrückruffunktion für `MediaPlayerStatusChangeEvent.STATUS_CHANGED`.
 
-1. Implementieren Sie eine Ereignis-Rückruffunktion für `MediaPlayerStatusChangeEvent.STATUS_CHANGED`.
+   TVSDK übergibt Ereignisinformationen, z. B. `MediaPlayerStatusChangeEvent` -Objekt.
+1. Wenn im Callback der Status des Ereignisparameters `MediaPlayerStatus.ERROR`, stellen Sie eine Logik bereit, um alle Fehler zu verarbeiten.
+1. Nachdem der Fehler verarbeitet wurde, setzen Sie die `MediaPlayer` -Objekt oder laden Sie eine neue Medienressource.
 
-   TVSDK übergibt Informationen zum Ereignis, z. B. ein `MediaPlayerStatusChangeEvent`-Objekt.
-1. Geben Sie im Rückruf eine Logik an, wenn der Ereignis-Parameter `MediaPlayerStatus.ERROR` lautet.
-1. Nachdem der Fehler behandelt wurde, setzen Sie das `MediaPlayer`-Objekt zurück oder laden Sie eine neue Medienressource.
-
-   Wenn sich das `MediaPlayer`-Objekt im ERROR-Status befindet, kann es diesen Status erst dann beenden, wenn Sie entweder das `MediaPlayer`-Objekt zurücksetzen (über die `MediaPlayer.reset`-Methode) oder eine neue Medienressource ( `MediaPlayer.replaceCurrentItem`) laden.
+   Wenn die Variable `MediaPlayer` -Objekt befindet sich im ERROR-Status, kann diesen Status erst beenden, wenn Sie die `MediaPlayer` -Objekt (über die `MediaPlayer.reset` -Methode oder Laden einer neuen Medienressource ( `MediaPlayer.replaceCurrentItem`).
 
 <!--<a id="example_49FF225E92EA494AA06B2E5F26101F4C"></a>-->
 
@@ -37,4 +35,3 @@ private void onStatusChanged(event:MediaPlayerStatusChangeEvent):void {
     } 
 } 
 ```
-

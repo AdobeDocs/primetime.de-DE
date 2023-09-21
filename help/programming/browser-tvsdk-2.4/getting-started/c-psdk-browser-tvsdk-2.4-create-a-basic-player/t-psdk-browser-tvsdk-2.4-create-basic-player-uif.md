@@ -1,21 +1,19 @@
 ---
-title: Erstellen eines einfachen Players mit dem UI-Framework
-description: Erstellen eines einfachen Players mit dem UI-Framework
+title: Erstellen eines einfachen Players mithilfe des UI Framework
+description: Erstellen eines einfachen Players mithilfe des UI Framework
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Erstellen eines einfachen Players mithilfe des UI Framework{#create-a-basic-player-using-the-ui-framework}
 
-# Erstellen eines einfachen Players mit dem UI-Framework{#create-a-basic-player-using-the-ui-framework}
+So erstellen Sie einen einfachen Player mit dem UI Framework:
 
-So erstellen Sie einen einfachen Player mit dem UI-Framework:
-
-1. Erstellen Sie ein `<div>` für Ihre Player-Instanz.
+1. Erstellen Sie eine `<div>` für Ihre Player-Instanz.
 
    Beispiel:
 
@@ -34,7 +32,7 @@ So erstellen Sie einen einfachen Player mit dem UI-Framework:
    </script>
    ```
 
-   Wenn der Player erstellt wird, erhält das angegebene `<div>`-Element die CSS-Klasse `ptp-main-video-div-style`. Das resultierende DOM wird in etwa wie folgt angezeigt:
+   Wenn der Player erstellt wird, wird die angegebene `<div>` -Element erhält eine CSS-Klasse von `ptp-main-video-div-style`. Das resultierende DOM sieht ungefähr so aus:
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -42,9 +40,9 @@ So erstellen Sie einen einfachen Player mit dem UI-Framework:
    </div>
    ```
 
-1. hinzufügen eines UI-Steuerelements.
+1. Fügen Sie ein UI-Steuerelement hinzu.
 
-   Fügen Sie beispielsweise eine Steuerleiste hinzu, die angezeigt wird, wenn der Mauszeiger über den Player bewegt wird:
+   Fügen Sie beispielsweise eine Steuerleiste hinzu, die angezeigt wird, wenn Sie den Mauszeiger über den Player bewegen:
 
    ```js
    <script> 
@@ -71,7 +69,7 @@ So erstellen Sie einen einfachen Player mit dem UI-Framework:
    </div>
    ```
 
-Das Objekt, das vom Aufruf von `ptp.videoPlayer()` zurückgegeben wird, stellt ein Verhalten bereit, das die TVSDK-Medienplayer-API umschließt und eine programmgesteuerte Steuerung der Wiedergabe ermöglicht. Wenn Sie die Media Player-Instanz aufrufen, wird die Benutzeroberfläche auf der Grundlage der vom Medienplayer ausgelösten Ereignis aktualisiert:
+Das Objekt, das vom Aufrufen `ptp.videoPlayer()` bietet ein Verhalten, das die TVSDK-Medienplayer-API umbricht und eine programmgesteuerte Wiedergabe ermöglicht. Wenn Sie Aufrufe für die Medienplayer-Instanz ausführen, aktualisiert sich die Benutzeroberfläche selbst auf der Grundlage der vom Medienplayer ausgelösten Ereignisse:
 
 ```js
 <script> 

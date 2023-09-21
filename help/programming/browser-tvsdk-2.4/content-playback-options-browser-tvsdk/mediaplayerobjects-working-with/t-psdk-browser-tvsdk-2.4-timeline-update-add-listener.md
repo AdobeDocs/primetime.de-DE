@@ -1,20 +1,18 @@
 ---
-description: Um Benachrichtigungen zu Aktualisierungen der Zeitschiene zu erhalten, registrieren Sie die entsprechenden Ereignis-Listener.
-title: hinzufügen Listener für TimelineUpdatedEvent
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Um Benachrichtigungen zu Timeline-Aktualisierungen zu erhalten, registrieren Sie die entsprechenden Ereignis-Listener.
+title: Listener für TimelineUpdatedEvent hinzufügen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
+# Listener für TimelineUpdatedEvent hinzufügen{#add-listeners-for-timelineupdatedevent}
 
-# hinzufügen Listener für TimelineUpdatedEvent{#add-listeners-for-timelineupdatedevent}
+Um Benachrichtigungen zu Timeline-Aktualisierungen zu erhalten, registrieren Sie die entsprechenden Ereignis-Listener.
 
-Um Benachrichtigungen zu Aktualisierungen der Zeitschiene zu erhalten, registrieren Sie die entsprechenden Ereignis-Listener.
-
-Bei jeder Aktualisierung der Zeitleiste löst `MediaPlayer` `AdobePSDK.TimelineEvent` den Wert `AdobePSDK.PSDKEventType.TIMELINE_UPDATED` aus.
+Bei jeder Aktualisierung der Timeline wird die `MediaPlayer` dispatches `AdobePSDK.TimelineEvent` mit Typ `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
 1. Implementieren Sie die entsprechenden Listener.
 
    ```js
@@ -39,4 +37,3 @@ Bei jeder Aktualisierung der Zeitleiste löst `MediaPlayer` `AdobePSDK.TimelineE
    player.addEventListener(AdobePSDK.PSDKEventType.TIMELINE_UPDATED,  
        onTimelineUpdatedEvent);
    ```
-

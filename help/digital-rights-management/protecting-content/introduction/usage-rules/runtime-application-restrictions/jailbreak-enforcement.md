@@ -1,21 +1,18 @@
 ---
-title: Strafverfolgung (Adobe Primetime DRM erforderlich)
-description: Strafverfolgung (Adobe Primetime DRM erforderlich)
+title: Durchsetzung von Jailbreak (Adobe Primetime DRM erforderlich)
+description: Durchsetzung von Jailbreak (Adobe Primetime DRM erforderlich)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%
 
 ---
 
+# Durchsetzung von Jailbreak (Adobe Primetime DRM erforderlich){#jailbreak-enforcement-requires-adobe-primetime-drm}
 
-# Rechtsdurchsetzung (Adobe Primetime DRM erforderlich){#jailbreak-enforcement-requires-adobe-primetime-drm}
-
-Auf Plattformen, die die Jailbreak-Erkennung unterstützen, wie Android- und iOS-Mobilgeräte, können Sie die Jailbreak-Durchsetzung aktivieren, um die Wiedergabe von Inhalten zu deaktivieren, wenn auf dem Gerät [!DNL jailbreak/root] erkannt wurde.
+Auf Plattformen, die die Jailbreak-Erkennung unterstützen, wie z. B. Android- und iOS-Mobilgeräte, können Sie die Aktivierung der Jailbreak-Funktion aktivieren, um die Wiedergabe von Inhalten zu deaktivieren, wenn [!DNL jailbreak/root] wurde auf dem Gerät erkannt.
 
 >[!NOTE]
 >
->Diese Nutzungsregel wird von Adobe Primetime DRM-Client Version 4.0 oder höher unterstützt. Es hat jedoch keine Auswirkungen auf Plattformen, die die Erkennung von Inhaftierungen nicht unterstützen. Das Verhalten älterer Clients hängt von der vom Lizenzserver unterstützten Clientversion ab.
-
+>Diese Nutzungsregel wird von der Adobe Primetime DRM-Client-Version 4.0 oder höher unterstützt. Dies hat jedoch keine Auswirkungen auf Plattformen, die die Erkennung von Ausfällen nicht unterstützen. Das Verhalten bei älteren Clients hängt von der vom Lizenzserver unterstützten Mindestversion des Clients ab.

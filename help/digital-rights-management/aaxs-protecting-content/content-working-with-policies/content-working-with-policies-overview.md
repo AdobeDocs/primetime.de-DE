@@ -2,29 +2,27 @@
 title: Übersicht
 description: Übersicht
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%
 
 ---
 
+# Übersicht  {#overview}
 
-# Übersicht {#overview}
+Mit Adobe® Access™ können Inhaltsanbieter Richtlinien auf Mediendateien anwenden. Mithilfe der APIs für die Richtlinienverwaltung können Administratoren Richtlinien erstellen, anzeigen und aktualisieren.
 
-Mithilfe von Adobe® Access™ können Inhaltsanbieter Richtlinien auf Mediendateien anwenden. Mithilfe der Policy-Management-APIs können Administratoren Ansichten erstellen, Details zu Richtlinien erstellen und aktualisieren.
+A *policy* definiert, wie Benutzer Inhalte anzeigen können. Es handelt sich dabei um eine Sammlung von Informationen, die Sicherheitseinstellungen, Authentifizierungsanforderungen und Verwendungsrechte enthalten. Wenn Richtlinien angewendet werden, ermöglichen Verschlüsselung und Signatur den Anbietern von Inhalten, die Kontrolle über ihren Inhalt zu behalten, unabhängig davon, wie weit er verteilt ist. Geschützte Dateien können über Adobe® Flash® Media Server oder einen HTTP-Server bereitgestellt werden. Sie können heruntergeladen und in benutzerdefinierten Playern wiedergegeben werden, die mit Adobe® AIR®, Adobe® Flash® Player und Adobe® Primetime SDK für iOS entwickelt wurden. Die Richtlinie ist eine Vorlage, die der Lizenzserver bei der Erstellung einer Lizenz verwenden kann. Der Client kann auch auf die Richtlinie verweisen, bevor er eine Lizenz anfordert, um festzustellen, ob er den Benutzer zur Authentifizierung auffordern muss, bevor er eine Lizenzanfrage an den Server sendet.
 
-Eine *policy* definiert, wie Ansichten von Inhalten durchgeführt werden können. Es handelt sich um eine Sammlung von Informationen, die Sicherheitseinstellungen, Authentifizierungsanforderungen und Verwendungsrechte enthalten. Wenn Richtlinien angewendet werden, ermöglichen die Verschlüsselung und Unterzeichnung Anbietern von Inhalten, die Kontrolle über ihren Inhalt zu behalten, unabhängig davon, wie weit er verteilt wird. Geschützte Dateien können mit Adobe® Flash® Media Server oder einem HTTP-Server bereitgestellt werden. Sie können in benutzerdefinierten Playern heruntergeladen und abgespielt werden, die mit Adobe® AIR®, Adobe® Flash® Player und Adobe® Primetime SDK für iOS erstellt wurden. Die Richtlinie ist eine Vorlage, die der Lizenzserver beim Generieren einer Lizenz verwenden kann. Der Client kann auch auf die Richtlinie verweisen, bevor er eine Lizenz anfordert, um festzustellen, ob er den Benutzer zur Authentifizierung auffordern muss, bevor er eine Lizenzanforderung an den Server ausstellt.
+Eine Richtlinie gibt eine oder mehrere Rechte an, die dem Kunden gewährt werden. In der Regel enthält eine Richtlinie mindestens &quot;Recht abspielen&quot;. Es ist auch möglich, mehrere Wiedergabeberechtigungen mit jeweils unterschiedlichen Einschränkungen anzugeben. Wenn der Client auf eine Lizenz mit mehreren Wiedergabedregeln trifft, verwendet er die erste, für die er alle Einschränkungen erfüllt. Diese Funktion kann beispielsweise verwendet werden, um verschiedene Einstellungen für den Ausgabeschutz auf verschiedenen Plattformen durchzusetzen. Beispiel-Code, der dieses Beispiel veranschaulicht, finden Sie unter `CreatePolicyWithOutputProtection.java` im Verzeichnis &quot;samples&quot;der Referenzimplementierungs-Befehlszeilenwerkzeuge.
 
-Eine Richtlinie gibt eine oder mehrere Rechte an, die dem Kunden gewährt werden. In der Regel enthält eine Richtlinie mindestens die Option &quot;Recht abspielen&quot;. Es ist auch möglich, mehrere Wiedergaberechte mit jeweils unterschiedlichen Einschränkungen anzugeben. Wenn der Client auf eine Lizenz mit mehreren Abspielrechten stößt, verwendet er die erste, für die er alle Einschränkungen erfüllt. Diese Funktion kann beispielsweise verwendet werden, um verschiedene Ausgabeschutzeinstellungen auf verschiedenen Plattformen zu erzwingen. Beispiel-Code, der dieses Beispiel illustriert, finden Sie unter `CreatePolicyWithOutputProtection.java` im Verzeichnis &quot;samples&quot;der Referenzimplementierungs-Befehlszeilenwerkzeuge.
-
-Sie können die folgenden Aufgaben mithilfe der Richtlinienverwaltungs-APIs ausführen:
+Mithilfe der Richtlinien-Management-APIs können Sie die folgenden Aufgaben ausführen:
 
 * Richtlinien erstellen und aktualisieren
-* Details zur Ansicht
-* Listen zur Richtlinienaktualisierung verwalten
+* Richtliniendetails anzeigen
+* Listen zum Aktualisieren von Richtlinien verwalten
 
-Weitere Informationen zur Java-API, die in diesem Kapitel behandelt werden, finden Sie unter *API-Referenz für den Zugriff auf Adoben*.
+Weitere Informationen zur in diesem Kapitel behandelten Java-API finden Sie unter *Adobe Access API-Referenz*.
 
-Informationen zur Implementierung der Policy Manager-Referenz finden Sie unter *Verwenden der Adobe Access Reference Implementierungen*.
+Informationen zur Referenzimplementierung von Policy Manager finden Sie unter *Verwenden der Adobe Access Reference-Implementierungen*.

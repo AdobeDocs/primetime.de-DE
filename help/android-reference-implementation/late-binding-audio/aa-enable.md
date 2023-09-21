@@ -1,36 +1,33 @@
 ---
-description: Sie können spätbindende oder alternative Audiostreams in Ihren Player integrieren, indem Sie einen alternativen Audio-Feature-Manager erstellen.
-title: Integration von spätbindenden Audiodaten
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können spätbindende oder alternative Audio-Streams in Ihren Player integrieren, indem Sie einen alternativen Audio-Feature-Manager erstellen.
+title: Integrieren von spätbindendem Audio
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 0%
 
 ---
 
+# Integrieren von spätbindendem Audio {#integrate-late-binding-audio}
 
-# Integration von spätbindenden Audiodaten {#integrate-late-binding-audio}
-
-Sie können spätbindende oder alternative Audiostreams in Ihren Player integrieren, indem Sie einen alternativen Audio-Feature-Manager erstellen.
+Sie können spätbindende oder alternative Audio-Streams in Ihren Player integrieren, indem Sie einen alternativen Audio-Feature-Manager erstellen.
 
 * So erstellen Sie einen alternativen Audio-Manager:
 
-   ```java
-   AAManager aaManager = new AAManagerOn(); 
-   ```
+  ```java
+  AAManager aaManager = new AAManagerOn(); 
+  ```
 
-* Um mithilfe von ManagerFactory alternative Audiodaten zu aktivieren, stellen Sie sicher, dass die folgende Codezeile in der Datei `PlayerFragment.java` enthalten ist:
+* Wenn Sie ManagerFactory verwenden möchten, um alternative Audioinhalte zu aktivieren, stellen Sie sicher, dass die folgende Codezeile im `PlayerFragment.java` Datei:
 
-   ```java
-   aaManager = ManagerFactory.getAAManager( 
-   <b>true</b>,config, mediaPlayer);
-   ```
+  ```java
+  aaManager = ManagerFactory.getAAManager( 
+  <b>true</b>,config, mediaPlayer);
+  ```
 
-   So deaktivieren Sie alternative Audio:
+  So deaktivieren Sie alternative Audio:
 
-   ```java
-   aaManager = ManagerFactory.getAAManager( 
-   <b>false</b>,config, mediaPlayer);
-   ```
-
+  ```java
+  aaManager = ManagerFactory.getAAManager( 
+  <b>false</b>,config, mediaPlayer);
+  ```

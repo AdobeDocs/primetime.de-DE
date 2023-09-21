@@ -1,26 +1,24 @@
 ---
-description: Sie können eine Stelle einrichten, an der Fehler behandelt werden.
-title: Fehlerverarbeitung einrichten
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können eine Stelle einrichten, an der Fehler verarbeitet werden.
+title: Einrichten der Fehlerbehandlung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '90'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Einrichten der Fehlerbehandlung {#set-up-error-handling}
 
-# Einrichten der Fehlerverarbeitung {#set-up-error-handling}
+Sie können eine Stelle einrichten, an der Fehler verarbeitet werden.
 
-Sie können eine Stelle einrichten, an der Fehler behandelt werden.
+1. Implementieren einer Ereignisrückruffunktion für `MediaPlayerEvent.STATUS_CHANGED`.
 
-1. Implementieren Sie eine Ereignis-Rückruffunktion für `MediaPlayerEvent.STATUS_CHANGED`.
+   TVSDK übergibt Ereignisinformationen, z. B. `MediaPlayerStatusChangeEvent` -Objekt.
+1. Wenn im Callback der zurückgegebene Status `MediaPlayerStatus.ERROR`, stellen Sie eine Logik bereit, um alle Fehler zu verarbeiten.
+1. Nachdem der Fehler verarbeitet wurde, setzen Sie die `MediaPlayer` -Objekt oder laden Sie eine neue Medienressource.
 
-   TVSDK übergibt Informationen zum Ereignis, z. B. ein `MediaPlayerStatusChangeEvent`-Objekt.
-1. Wenn der zurückgegebene Status im Rückruf `MediaPlayerStatus.ERROR` lautet, geben Sie eine Logik zur Verarbeitung aller Fehler ein.
-1. Nachdem der Fehler behandelt wurde, setzen Sie das `MediaPlayer`-Objekt zurück oder laden Sie eine neue Medienressource.
-
-   Wenn sich das `MediaPlayer`-Objekt im Fehlerstatus befindet, bleibt es in diesem Status, bis Sie es mit der `MediaPlayer.reset`-Methode zurücksetzen.
+   Wenn die Variable `MediaPlayer` -Objekt befindet sich im Fehlerstatus und bleibt in diesem Status, bis Sie es mithilfe der `MediaPlayer.reset` -Methode.
 
 <!--<a id="example_E74BB605ED08450295B8902F1E4BB8F5"></a>-->
 

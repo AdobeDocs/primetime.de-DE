@@ -1,33 +1,30 @@
 ---
-description: Ein Opportunitätsdetektor ist eine TVADK-Komponente, die benutzerdefinierte Tags in einem Stream erkennt und Platzierungsmöglichkeiten identifiziert. Diese Möglichkeiten werden an den Inhaltsauflöser gesendet, der den Arbeitsablauf zum Einfügen von Inhalten/Anzeigen basierend auf den Eigenschaften und Metadaten der Platzierungsgelegenheit anpassen kann.
-title: Anpassen von Opportunitätsdetektoren und Inhaltsauflösungen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Ein Opportunitätsdetektor ist eine TVADK-Komponente, die benutzerdefinierte Tags in einem Stream erkennt und Platzierungsmöglichkeiten erkennt. Diese Möglichkeiten werden an den Content Resolver gesendet, der den Inhalts-/Anzeigen-Einfüge-Workflow basierend auf den Eigenschaften der Platzierungsgelegenheiten und Metadaten personalisiert.
+title: Anpassen von Opportunity-Detektoren und Content Resolver
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#customize-opportunity-detectors-and-content-resolvers-overiew}
 
-Ein Opportunitätsdetektor ist eine TVADK-Komponente, die benutzerdefinierte Tags in einem Stream erkennt und Platzierungsmöglichkeiten identifiziert. Diese Möglichkeiten werden an den Inhaltsauflöser gesendet, der den Arbeitsablauf zum Einfügen von Inhalten/Anzeigen basierend auf den Eigenschaften und Metadaten der Platzierungsgelegenheit anpassen kann.
+Ein Opportunitätsdetektor ist eine TVADK-Komponente, die benutzerdefinierte Tags in einem Stream erkennt und Platzierungsmöglichkeiten erkennt. Diese Möglichkeiten werden an den Content Resolver gesendet, der den Inhalts-/Anzeigen-Einfüge-Workflow basierend auf den Eigenschaften der Platzierungsgelegenheiten und Metadaten personalisiert.
 
 TVSDK enthält standardmäßige Opportunitätsdetektoren:
 
-* `SpliceOutOpportunityDetector`, der die Standard-Anzeigenbezeichnungen versteht
-* `AdSignalingModeOpportunityGenerator`, der für die Schaffung von Möglichkeiten zur Erstplatzierung von Anzeigen auf der Grundlage des Anzeigensignalisierungsmodus verantwortlich ist
-* `SpliceOutOpportunityGenerator`, der für die Erstellung von Anzeigenplatzierungsmöglichkeiten aus einem beliebigen #EXT-X-CUE-Tag verantwortlich ist
+* `SpliceOutOpportunityDetector`, der die standardmäßigen Anzeigencodes versteht
+* `AdSignalingModeOpportunityGenerator`, der für die Erstellung von Platzierungsmöglichkeiten für erste Anzeigen basierend auf dem Anzeigensignalisierungsmodus verantwortlich ist
+* `SpliceOutOpportunityGenerator`, der für die Erstellung von Anzeigenplatzierungsmöglichkeiten über ein beliebiges #EXT-X-CUE -Tag verantwortlich ist
 
-TVSDK enthält auch einen Standard-Content-Resolver, der Inhalte bereitstellt, die basierend auf dem Metadatenschlüssel im Player-Element eingefügt werden:
+TVSDK enthält auch einen standardmäßigen Inhaltsauflöser, der Inhalte bereitstellt, die basierend auf dem Metadatenschlüssel im Player-Element eingefügt werden sollen:
 
-* `AuditudeResolver`, die mit Adobe Primetime-Ad-Decision-Servern kommunizieren können (früher als Auditude bezeichnet) und die Platzierung von Werbeunterbrechungen zurückgeben.
+* `AuditudeResolver`, kann mit Adobe Primetime-Werbe-Entscheidungsservern (früher als Auditude bezeichnet) kommunizieren und gibt Werbeunterbrechungen zurück, die platziert werden sollen.
 
-Sie können die standardmäßigen Opportunitätsdetektoren und Inhaltsauflöser überschreiben, um den Werbe-Workflow wie folgt anzupassen:
+Sie können die standardmäßigen Opportunity-Detektoren und Content Resolver überschreiben, um den Werbe-Workflow wie folgt anzupassen:
 
-* hinzufügen Unterstützung der benutzerdefinierten Tag-Erkennung
-* Erkennen benutzerdefinierter Tags für die Anzeigeneinfügung
+* Unterstützung für benutzerdefinierte Tag-Erkennung hinzufügen
+* Erkennen benutzerdefinierter Tags für das Einfügen von Anzeigen
 * Erstellen eines benutzerdefinierten Anzeigenanbieters
-* Schwarzer Inhalt
-
+* Schwarze Inhalte

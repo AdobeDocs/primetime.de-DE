@@ -1,38 +1,35 @@
 ---
-description: Es gibt einige Einschränkungen und einige Probleme in der Art und Weise, wie sich der Trick Play-Modus verhält.
-title: Einschränkungen und Verhalten bei der Trick-Wiedergabe
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Es gibt einige Einschränkungen und einige Probleme in der Art, wie sich der Trick Play-Modus verhält.
+title: Einschränkungen und Verhalten bei der Trickwiedergabe
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
 
 ---
 
+# Einschränkungen und Verhalten bei der Trickwiedergabe{#limitations-and-behavior-for-trick-play}
 
-# Einschränkungen und Verhalten bei Trick Play{#limitations-and-behavior-for-trick-play}
-
-Es gibt einige Einschränkungen und einige Probleme in der Art und Weise, wie sich der Trick Play-Modus verhält.
+Es gibt einige Einschränkungen und einige Probleme in der Art, wie sich der Trick Play-Modus verhält.
 
 <!--<a id="section_8B88E281A0FA4661B4C2C70A0ABED57C"></a>-->
 
-Im Folgenden finden Sie die Einschränkungen für den Trick Play-Modus:
+Hier finden Sie die Einschränkungen für den Trick Play-Modus:
 
-* Die Übergeordnet-Wiedergabeliste muss nur I-Frame-Segmente enthalten. Auf dem Bildschirm werden nur die Schlüsselbilder aus der I-Frame-Spur angezeigt.
-* Die Audiospur und die Untertitel sind deaktiviert.
+* Die Master-Wiedergabeliste muss nur I-Frame-Segmente enthalten. Auf dem Bildschirm werden nur die Schlüsselrahmen der I-Frame-Spur angezeigt.
+* Der Audio-Track und die Untertitel sind deaktiviert.
 * Die Logik der adaptiven Bitrate (ABR) ist deaktiviert. TVSDK wählt eine Bitrate zwischen der niedrigsten bereitgestellten Rate und 800 Kbit/s aus und verwendet diese Rate während der gesamten Trick-Play-Sitzung.
 * Wiedergabe und Pause sind aktiviert.
-* Suche ist verboten. Um zu suchen, rufen Sie `pause` auf, um den Trick Play-Modus zu beenden, und rufen Sie dann `seek` auf.
+* Suche ist verboten. Um zu suchen, rufen Sie `pause` , um den Wiedergabemodus zu beenden, und rufen Sie dann `seek`.
 
-* Sie können vom Trick Play-Modus zu einer beliebigen zulässigen Wiedergabegeschwindigkeit (Wiedergabe oder Pause) wechseln.
-* Wenn Anzeigen in den Stream eingebunden werden:
+* Sie können vom Trick-Play-Modus zu einer beliebigen zulässigen Wiedergaberate wechseln (Wiedergabe oder Pause).
+* Wenn Anzeigen in den Stream integriert werden:
 
-   * Sie können nur zum Trick play gehen, während Sie den Hauptinhalt wiedergeben. Wenn Sie versuchen, während einer Werbeunterbrechung zu &quot;trick play&quot;zu wechseln, wird ein Fehler ausgelöst.
-   * Nach dem Starten des Trick Play-Modus werden Werbeunterbrechungen ignoriert und es werden keine Ereignis ausgelöst.
+   * Sie können nur während der Wiedergabe des Hauptinhalts zum Trick Play gehen. Ein Fehler wird ausgelöst, wenn Sie versuchen, während einer Werbeunterbrechung zu &quot;trick play&quot;zu wechseln.
+   * Nach dem Starten des Trick Play-Modus werden die Werbeunterbrechungen ignoriert und es werden keine Anzeigenereignisse ausgelöst.
    * Die Zeitleiste, die TVSDK der Player-Anwendung zur Verfügung stellt, wird auch dann nicht geändert, wenn Werbeunterbrechungen übersprungen werden.
-   * Der aktuelle Zeitwert springt mit der Dauer der übersprungenen Werbeunterbrechung vorwärts (bei schnellem Vorwärts) oder rückwärts (bei schnellem Zurückspulen). Durch dieses Sprungverhalten für die aktuelle Zeit bleibt die Stream-Dauer während der Trick-Wiedergabe unverändert. Ihre Player-Anwendung kann den lokalen Zeitwert abrufen, um die Zeit relativ zum Hauptinhalt zu verfolgen. Für die Werte, die für die lokale Zeit zurückgegeben werden, wenn eine Anzeige übersprungen wird, werden keine Zeitsprünge ausgeführt.
-   * Das `MediaPlayerEvent.AD_BREAK_SKIPPED`-Ereignis wird unmittelbar vor dem Überspringen einer Werbeunterbrechung ausgelöst. Ihr Player kann dieses Ereignis verwenden, um benutzerdefinierte Logik in Bezug auf die übersprungenen Werbeunterbrechungen zu implementieren.
-   * Beim Beenden der Trick-Wiedergabe werden dieselben Regeln für die Anzeigenwiedergabe aufgerufen wie beim Beenden der Suche.
+   * Der aktuelle Zeitwert springt mit der Dauer der übersprungenen Werbeunterbrechung vorwärts (schnell vorwärts) oder rückwärts (bei schnellem Zurückspulen). Durch dieses Sprungverhalten für die aktuelle Zeit kann die Stream-Dauer während der Trick Play-Zeit unverändert bleiben. Ihre Player-Anwendung kann den lokalen Zeitwert abrufen, um die Zeit relativ zum Hauptinhalt zu verfolgen. Für die Werte, die beim Überspringen einer Anzeige für die lokale Zeit zurückgegeben werden, werden keine Zeitpunkte ausgeführt.
+   * Die `MediaPlayerEvent.AD_BREAK_SKIPPED` -Ereignis unmittelbar bevor eine Werbeunterbrechung übersprungen wird. Ihr Player kann dieses Ereignis verwenden, um benutzerdefinierte Logik im Zusammenhang mit den übersprungenen Werbeunterbrechungen zu implementieren.
+   * Beim Beenden der Suche wird dieselbe Richtlinie für die Anzeigenwiedergabe aufgerufen wie beim Beenden der Suche.
 
-      Wie bei der Suche hängt das Verhalten daher davon ab, ob sich die Wiedergaberichtlinie Ihrer Anwendung von der Standardrichtlinie unterscheidet. Die Standardeinstellung ist, dass die letzte übersprungene Werbeunterbrechung an dem Punkt wiedergegeben wird, an dem Sie aus dem Trick-Play-Modus herauskommen.
-
+     Wie bei der Suche hängt das Verhalten daher davon ab, ob sich die Wiedergaberichtlinie Ihrer Anwendung von der standardmäßigen unterscheidet. Die Standardeinstellung ist, dass die letzte übersprungene Werbeunterbrechung an dem Punkt wiedergegeben wird, an dem Sie aus dem Trick Play-Modus kommen.

@@ -1,26 +1,24 @@
 ---
 description: Sie können Anzeigen in VOD-Inhalte einfügen.
-title: Ersetzen von Zeitbereichen durch eine Anzeige
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Ersetzen von Zeitbereichen durch Anzeigen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
-
-# Ersetzen Sie Zeitbereiche durch eine Anzeige {#replace-time-ranges-with-an-ad}
+# Ersetzen von Zeitbereichen durch Anzeigen {#replace-time-ranges-with-an-ad}
 
 Sie können Anzeigen in VOD-Inhalte einfügen.
 
-Die `TimeRanges` zwischen `begin` und `end` in `localTime` werden aus der Zeitleiste entfernt. Diese Bereiche werden durch `AdBreak` von `begin` bis `begin+replaceDuration` ersetzt. Wenn `replacement-duration` nicht als Parameter vorhanden ist, trifft der Server die Entscheidung für die zurückgegebene `Adbreak`.
+Die `TimeRanges` zwischen `begin` und `end` in `localTime` werden aus der Timeline entfernt. Diese Bereiche werden durch eine `AdBreak` von `begin` nach `begin+replaceDuration`. Wenn die Variable `replacement-duration` nicht als Parameter vorhanden ist, trifft der Server die Entscheidung für `Adbreak`.
 
 >[!TIP]
 >
->Sie sollten immer ein `replacement-duration` für benutzerdefinierte Bereiche angeben. Wenn keine Anzeigen dazu bestimmt sind, diesen benutzerdefinierten Bereich zu ersetzen, geben Sie einen Wert von `replacement-duration` von 0 ein.
+>Sie sollten immer eine `replacement-duration` für benutzerdefinierte Bereiche. Wenn keine Anzeigen als Ersatz für diesen benutzerdefinierten Bereich vorgesehen sind, stellen Sie eine `replacement-duration` von 0.
 
-1. So ersetzen Sie die Bereiche durch Primetime- und Entscheidungsanzeigen:
+1. So ersetzen Sie die Bereiche durch Primetime und Entscheidungsfindungen:
 
    ```
    {   
@@ -80,4 +78,3 @@ Die `TimeRanges` zwischen `begin` und `end` in `localTime` werden aus der Zeitle
        "id": "vod_003"
    }
    ```
-

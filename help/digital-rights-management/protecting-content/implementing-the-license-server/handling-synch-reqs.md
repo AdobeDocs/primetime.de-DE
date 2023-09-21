@@ -1,26 +1,24 @@
 ---
-title: Umgang mit Synchronisierungsanforderungen
-description: Umgang mit Synchronisierungsanforderungen
+title: Verarbeitung von Synchronisierungsanfragen
+description: Verarbeitung von Synchronisierungsanfragen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
 
 ---
 
+# Verarbeitung von Synchronisierungsanfragen {#handle-synchronization-requests}
 
-# Verarbeiten von Synchronisierungsanforderungen {#handle-synchronization-requests}
+Wenn eine Lizenz Synchronisierungsanforderungen angibt  [Anforderungen an die Synchronisierung,](../../protecting-content/introduction/usage-rules/authentication/synchronization.md) Der Client sendet regelmäßig Synchronisierungsanfragen an den Server, basierend auf der in der Lizenz angegebenen Häufigkeit. Um Synchronisierungsmeldungen zu aktivieren, legen Sie `SyncFrequencyRequirements` in einem PlayRight.
 
-Wenn eine Lizenz die Synchronisierungsanforderungen [Anforderungen für die Synchronisierung festlegt, sendet der Client regelmäßig Synchronisierungsanfragen an den Server, basierend auf der in der Lizenz angegebenen Häufigkeit. ](../../protecting-content/introduction/usage-rules/authentication/synchronization.md) Um Synchronisierungsmeldungen zu aktivieren, legen Sie `SyncFrequencyRequirements` in PlayRight fest.
+* Die Anfrage-Handler-Klasse lautet `com.adobe.flashaccess.sdk.protocol.sync.SynchronizationHandler`
+* Die Anforderungsmeldungsklasse lautet `com.adobe.flashaccess.sdk.protocol.sync.SynchronizationRequestMessage`
+* Wenn sowohl der Client als auch der Server das Protokoll Version 5 unterstützen, lautet die Anforderungs-URL &quot;Lizenzserver-URL in Metadaten: + &quot;. [!DNL /flashaccess/sync/v4]&quot;. Andernfalls lautet die Anforderungs-URL &quot;Lizenzserver-URL in Metadaten&quot; + &quot; [!DNL /flashaccess/sync/v3]&quot;
 
-* Die Anforderungs-Handler-Klasse ist `com.adobe.flashaccess.sdk.protocol.sync.SynchronizationHandler`
-* Die Anforderungsmeldungsklasse ist `com.adobe.flashaccess.sdk.protocol.sync.SynchronizationRequestMessage`
-* Wenn Client und Server das Protokoll Version 5 unterstützen, lautet die Anforderungs-URL &quot;URL des Lizenzservers in Metadaten: + &quot; [!DNL /flashaccess/sync/v4]&quot;. Andernfalls lautet die Anforderungs-URL &quot;URL des Lizenzservers in Metadaten&quot; + &quot; [!DNL /flashaccess/sync/v3]&quot;
+Synchronisierungsmeldungen werden verwendet, um die Zeit des Clients mit der Zeit des Servers zu synchronisieren. Wenn Lizenzen in den Inhalt eingebettet sind und nicht von einem Lizenzserver abgerufen werden müssen, ist eine Synchronisierung der Zeit des Kunden wichtig, um zu verhindern, dass der Client seine Uhr ändert, um den Lizenzablauf zu umgehen.
 
-Synchronisierungsmeldungen werden verwendet, um die Zeit des Clients mit der Zeit des Servers zu synchronisieren. Wenn Lizenzen in den Inhalt eingebettet sind und nicht von einem Lizenzserver abgerufen werden müssen, ist eine Synchronisierung der Zeit des Clients wichtig, um zu verhindern, dass der Client seine Uhr ändert, um den Ablauf der Lizenz zu umgehen.
+Synchronisierungsmeldungen können auch verwendet werden, um die Client-Statusinformationen an den Server zu übermitteln ( `getClientState()`) für die Rollback-Erkennung.
 
-Synchronisierungsmeldungen können auch verwendet werden, um die Clientstatusinformationen zur Rollback-Erkennung an den Server ( `getClientState()`) zu übermitteln.
-
-Siehe [Rollback-Schutz](../../protecting-content/implementing-the-license-server/processing-drm-requests.md#rollback-detection).
+Siehe [Rollschutz](../../protecting-content/implementing-the-license-server/processing-drm-requests.md#rollback-detection).

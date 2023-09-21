@@ -1,44 +1,41 @@
 ---
-description: Laden Sie eine Ressource, indem Sie MediaResource direkt instanziieren und den wiederzugebenden Videoinhalt laden.
-title: Laden einer Medienressource in den MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Laden Sie eine Ressource, indem Sie eine MediaResource direkt instanziieren und den abzuspielenden Videoinhalt laden.
+title: Laden einer Medienressource im MediaPlayer
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
 
 ---
 
+# Laden einer Medienressource im MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
 
-# Medienressource im MediaPlayer {#load-a-media-resource-in-the-mediaplayer} laden
+Laden Sie eine Ressource, indem Sie eine MediaResource direkt instanziieren und den abzuspielenden Videoinhalt laden.
 
-Laden Sie eine Ressource, indem Sie MediaResource direkt instanziieren und den wiederzugebenden Videoinhalt laden.
+1. Legen Sie Ihre `MediaPlayer` des abspielbaren Elements des Objekts mit der neuen Ressource, die wiedergegeben werden soll.
 
-1. Legen Sie das abspielbare Element Ihres `MediaPlayer`-Objekts mit der neuen Ressource fest, die wiedergegeben werden soll.
+   Vorhandene ersetzen `MediaPlayer` Das derzeit abspielbare Objekt des Objekts durch Aufruf von `replaceCurrentResource` und Übergeben vorhandener `MediaResource` -Instanz.
 
-   Ersetzen Sie das derzeit abspielbare Element des vorhandenen `MediaPlayer`-Objekts durch den Aufruf von `replaceCurrentResource` und die Übergabe einer vorhandenen `MediaResource`-Instanz.
-
-1. Warten Sie, bis Browser TVSDK `AdobePSDK.MediaPlayerStatusChangeEvent` mit `event.status` auslöst, das einer der folgenden Werte entspricht:
+1. Warten Sie, bis Browser TVSDK gesendet wird `AdobePSDK.MediaPlayerStatusChangeEvent` mit `event.status` der einem der folgenden Werte entspricht:
 
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.ERROR`
 
-      Über diese Ereignis benachrichtigt das MediaPlayer-Objekt Ihre Anwendung, ob die Medienressource erfolgreich geladen wurde.
+     Durch diese Ereignisse benachrichtigt das MediaPlayer-Objekt Ihre Anwendung, ob die Medienressource erfolgreich geladen wurde.
 
-1. Wenn der Status des Medienplayers in `MediaPlayerStatus.INITIALIZED` geändert wird, können Sie `MediaPlayer.prepareToPlay` aufrufen.
+1. Wenn sich der Status des Medienplayers in `MediaPlayerStatus.INITIALIZED`, können Sie `MediaPlayer.prepareToPlay`.
 
-   Der Status INITIALIZED gibt an, dass das Medium erfolgreich geladen wurde. Durch Aufruf von `prepareToPlay` werden die Auflösung und Platzierung der Werbung (sofern vorhanden) Beginn.
-1. Wenn Browser TVSDK das `MediaPlayerStatus.PREPARED`-Ereignis auslöst, wurde der Medienstream erfolgreich geladen (ein MediaPlayerItem wird erstellt) und für die Wiedergabe vorbereitet.
+   Der Status INITIALISIERT zeigt an, dass das Medium erfolgreich geladen wurde. Aufruf `prepareToPlay` startet den Prozess zur Auflösung und Platzierung der Werbung, falls vorhanden.
+1. Wenn Browser TVSDK die `MediaPlayerStatus.PREPARED` -Ereignis, wenn der Medien-Stream erfolgreich geladen wurde (ein MediaPlayerItem erstellt wurde) und für die Wiedergabe vorbereitet ist.
 
-Wenn ein Fehler auftritt, wechselt `MediaPlayer` zum `MediaPlayerStatus.ERROR`.
+Wenn ein Fehler auftritt, wird die `MediaPlayer` wechselt zu `MediaPlayerStatus.ERROR`.
 
-Sie benachrichtigt Ihre Anwendung auch, indem Sie das `MediaPlayerStatus.ERROR`-Ereignis auslöst.
+Außerdem wird Ihre Anwendung benachrichtigt, indem die `MediaPlayerStatus.ERROR` -Ereignis.
 
 ><!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
 
-
-Der folgende vereinfachte Beispielcode veranschaulicht den Vorgang zum Laden einer Medienressource:
+Der folgende vereinfachte Beispielcode veranschaulicht den Ladevorgang einer Medienressource:
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  

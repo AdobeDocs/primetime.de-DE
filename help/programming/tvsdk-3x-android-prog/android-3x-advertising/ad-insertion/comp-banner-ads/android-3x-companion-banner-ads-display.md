@@ -1,38 +1,36 @@
 ---
-description: Um Banneranzeigen anzuzeigen, müssen Sie Bannerinstanzen erstellen und TVSDK erlauben, auf anzeigenbezogene Ereignis zu hören.
-title: Anzeigen von Bannerwerbung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Um Banneranzeigen anzuzeigen, müssen Sie Bannerinstanzen erstellen und zulassen, dass TVSDK auf anzeigenbezogene Ereignisse überwacht.
+title: Anzeigen von Banneranzeigen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
-
 # Anzeigen von Banneranzeigen {#display-banner-ads}
 
-Um Banneranzeigen anzuzeigen, müssen Sie Bannerinstanzen erstellen und TVSDK erlauben, auf anzeigenbezogene Ereignis zu hören.
+Um Banneranzeigen anzuzeigen, müssen Sie Bannerinstanzen erstellen und zulassen, dass TVSDK auf anzeigenbezogene Ereignisse überwacht.
 
-TVSDK bietet eine Liste von begleitenden Banneranzeigen, die über das `AdPlaybackEventListener.onAdBreakStart`-Ereignis mit einer linearen Anzeige verknüpft sind.
+TVSDK bietet eine Liste mit begleitenden Banneranzeigen, die über die `AdPlaybackEventListener.onAdBreakStart` -Ereignis.
 
-Manifeste können begleitende Banneranzeigen wie folgt angeben:
+Manifeste können begleitende Banneranzeigen wie folgt spezifizieren:
 
 * Ein HTML-Snippet
 * Die URL einer iFrame-Seite
-* Die URL einer statischen Bilddatei oder einer Flash-SWF-Datei einer Adobe
+* Die URL eines statischen Bildes oder einer Adobe-Flash-SWF-Datei
 
-Für jede Begleitanzeige gibt TVSDK an, welche Typen für Ihre Anwendung verfügbar sind.
+TVSDK gibt für jede begleitende Anzeige an, welche Typen für Ihre Anwendung verfügbar sind.
 
-1. hinzufügen Sie einen Listener für das `AdPlaybackEventListener.onAdBreakStart`-Ereignis, das Folgendes ausführt:
+1. Fügen Sie einen Listener für die `AdPlaybackEventListener.onAdBreakStart` -Ereignis, das Folgendes ausführt:
 
    * Löscht vorhandene Anzeigen in der Bannerinstanz.
-   * Ruft die Liste der begleitenden Anzeigen von `Ad.getCompanionAssets` ab.
-   * Wenn die Liste der begleitenden Anzeigen nicht leer ist, müssen Sie die Liste für Bannerinstanzen durchlaufen.
+   * Ruft die Liste der begleitenden Anzeigen von ab `Ad.getCompanionAssets`.
+   * Wenn die Liste der begleitenden Anzeigen nicht leer ist, navigieren Sie für Bannerinstanzen über die Liste.
 
-      Jede Bannerinstanz (ein `AdAsset`) enthält Informationen wie Breite, Höhe, Ressourcentyp (html, iframe oder statisch) und Daten, die zum Anzeigen des begleitenden Banners erforderlich sind.
-   * Wenn bei einer Videoanzeige keine begleitenden Anzeigen gebucht wurden, enthält die Liste der begleitenden Assets keine Daten für diese Videoanzeige.
-   * Um eine eigenständige Anzeige anzuzeigen, fügen Sie die Logik zu Ihrem Skript hinzu, um ein normales DFP (DoubleClick for Publishers)-Display-Tag in der entsprechenden Bannerinstanz auszuführen.
-   * Sendet die Bannerinformationen an eine Funktion auf Ihrer Seite, die die Banner an einer geeigneten Position anzeigt.
+     Jede Bannerinstanz (eine `AdAsset`) Informationen wie Breite, Höhe, Ressourcentyp (HTML, iframe oder statisch) sowie Daten enthält, die zum Anzeigen des begleitenden Banners erforderlich sind.
+   * Wenn für eine Videoanzeige keine begleitenden Anzeigen gebucht wurden, enthält die Liste der begleitenden Assets keine Daten für diese Videoanzeige.
+   * Um eine eigenständige Display-Anzeige anzuzeigen, fügen Sie die Logik zu Ihrem Skript hinzu, um ein normales DFP-Display-Anzeigen-Tag (DoubleClick for Publishers) in der entsprechenden Bannerinstanz auszuführen.
+   * Sendet die Bannerinformationen an eine Funktion auf Ihrer Seite, die die Banner an einer geeigneten Stelle anzeigt.
 
-      Dies ist normalerweise ein `div` und Ihre Funktion verwendet das `div ID`, um das Banner anzuzeigen.
+     Dies ist normalerweise ein `div`und Ihre -Funktion verwendet die `div ID` , um das Banner anzuzeigen.

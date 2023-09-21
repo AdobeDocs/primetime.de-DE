@@ -2,20 +2,18 @@
 title: Dateien konvertieren
 description: Dateien konvertieren
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
 
 ---
 
-
 # Dateien konvertieren{#convert-files}
 
-Mithilfe eines Dienstprogramms wie OpenSSL und dem privaten Schlüssel generiert der Anforderer die PKCS#12- (pfx) und PEM/DER-Dateien, indem er die folgenden Befehle aus einem Befehlsfenster eingibt:
+Mithilfe eines Dienstprogramms wie OpenSSL und des privaten Schlüssels generiert der Anforderer die PKCS#12 (pfx)- und PEM/DER-Dateien, indem er die folgenden Befehle aus einem Befehlsfenster eingibt:
 
-1. Konvertieren Sie die PKCS#7-Datei in eine temporäre PEM-Datei.
+1. Konvertieren Sie die Datei PKCS#7 in eine temporäre PEM-Datei.
 
    Um OpenSSL zu verwenden, öffnen Sie ein Befehlsfenster und geben Sie Folgendes ein:
 
@@ -26,7 +24,7 @@ Mithilfe eines Dienstprogramms wie OpenSSL und dem privaten Schlüssel generiert
 
    >[!NOTE]
    >
-   >Dieses temporäre PEM enthält Ihr Zertifikat und die Zertifikate für Zwischenkonten. Verwenden Sie diese Zertifikate, um die PFX-Datei zu generieren.
+   >Dieses temporäre PEM enthält Ihr Zertifikat und die Zertifikate für zwischengeschaltete Zertifizierungsstellen. Verwenden Sie diese Zertifikate, um die PFX-Datei zu generieren.
 
 1. Konvertieren Sie die temporäre PEM-Datei in eine PFX-Datei.
 
@@ -47,9 +45,9 @@ Mithilfe eines Dienstprogramms wie OpenSSL und dem privaten Schlüssel generiert
 
    >[!NOTE]
    >
-   >Obwohl dies nicht erforderlich ist, empfiehlt Adobe die Verwendung unterschiedlicher Kennwörter für den privaten Schlüssel (private_key_password) und das PFX (pfx_password).
+   >Obwohl dies nicht erforderlich ist, empfiehlt Adobe die Verwendung unterschiedlicher Kennwörter für den privaten Schlüssel (private_key_password) und den PFX (pfx_password).
 
-   Diese letzte PEM-Datei enthält nur Ihr Zertifikat.
+   Diese endgültige PEM-Datei enthält nur Ihr Zertifikat.
 
 1. Konvertieren Sie die PEM-Datei in eine DER-Datei.
 
@@ -61,5 +59,4 @@ Mithilfe eines Dienstprogramms wie OpenSSL und dem privaten Schlüssel generiert
 
    >[!NOTE]
    >
-   >DER-Dateien sind nur für den HTTP Dynamic Streaming Packager erforderlich.
-
+   >DER-Dateien sind nur für den HTTP Dynamic Streaming-Packager erforderlich.

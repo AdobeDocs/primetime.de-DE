@@ -1,20 +1,18 @@
 ---
-description: Erstellen Sie einen PlaybackManager, der den HLS-Stream-Setup und -Wiedergabe-Vorgang verarbeitet. Es ist keine andere Konfiguration erforderlich.
-title: Aktivieren der Videowiedergabe
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Erstellen Sie einen Play-backManager, der die HLS-Stream-Einrichtung und -Wiedergabe verarbeitet. Es ist keine andere Konfiguration erforderlich.
+title: Videowiedergabe aktivieren
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
+# Videowiedergabe aktivieren {#enable-video-playback}
 
-# Aktivieren der Videowiedergabe {#enable-video-playback}
+Erstellen Sie einen Play-backManager, der die HLS-Stream-Einrichtung und -Wiedergabe verarbeitet. Es ist keine andere Konfiguration erforderlich.
 
-Erstellen Sie einen PlaybackManager, der den HLS-Stream-Setup und -Wiedergabe-Vorgang verarbeitet. Es ist keine andere Konfiguration erforderlich.
-
-1. Erstellen Sie das Medienplayer-Objekt, indem Sie sicherstellen, dass der folgende Code in [!DNL PlayerFragment.java] vorhanden ist:
+1. Erstellen Sie das Medienplayer-Objekt, indem Sie sicherstellen, dass der folgende Code in [!DNL PlayerFragment.java]:
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -30,26 +28,26 @@ Erstellen Sie einen PlaybackManager, der den HLS-Stream-Setup und -Wiedergabe-Vo
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
    ```
 
-1. Implementieren Sie `PlaybackManagerEventListener` in `PlayerFragment`, um die Wiedergabe-Ereignis zu verarbeiten:
+1. Implementieren des `PlaybackManagerEventListener` im `PlayerFragment` um die Wiedergabeereignisse zu verarbeiten:
 
    ```java
    private final PlaybackManagerEventListener playbackManagerEventListener =  
      new PlaybackManagerEventListener() 
    ```
 
-1. Registrieren Sie den Ereignis-Listener in `PlayerFragment`:
+1. Registrieren Sie den Ereignis-Listener im `PlayerFragment`:
 
    ```
    playbackManager.addEventListener(playbackManagerEventListener);
    ```
 
-1. Einrichten der Videoressource:
+1. Richten Sie die Videoressource ein:
 
    ```
    playbackManager.setupVideo(url, adsManager); 
    ```
 
-1. Richten Sie die Vorgänge der Steuerleiste in `PlayerFragment` ein:
+1. Richten Sie die Vorgänge der Steuerleiste im `PlayerFragment`:
 
    ```
    controlBar.pressPlay() { 

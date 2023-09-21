@@ -2,22 +2,20 @@
 title: Adobe Primetime-Authentifizierung (optional)
 description: Adobe Primetime-Authentifizierung (optional)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 0%
 
 ---
 
-
 # Adobe Primetime-Authentifizierung (optional) {#adobe-primetime-authentication-optional}
 
-Wenn die DRM-Richtlinie, die zum Verpacken des Inhalts verwendet wird, eine anonyme Richtlinie ist, wird eine Lizenz für alle Lizenzanforderungen erteilt. Optional unterstützt Primetime Cloud DRM auch die Authentifizierung über die Adobe Primetime-Authentifizierung. Wenn diese Funktion aktiviert ist, wird eine Lizenz nur dann erteilt, wenn das Client-Gerät zum ersten Mal ein Primetime-Authentifizierungstoken erworben und es lokal über die entsprechende Client-API ( `setAuthenticationToken`) zum Festlegen benutzerdefinierter Authentifizierungstoken festgelegt hat. Weitere Informationen zur Integration der Primetime-Authentifizierung in Ihren Authentifizierungsarbeitsablauf finden Sie unter: [Adobe Primetime-Authentifizierung.](https://tve.helpdocsonline.com/home)
+Wenn es sich bei der DRM-Richtlinie, die zum Verpacken des Inhalts verwendet wird, um eine anonyme Richtlinie handelt, wird eine Lizenz für alle Lizenzanfragen erteilt. Optional unterstützt Primetime Cloud DRM auch die Authentifizierung über die Adobe Primetime-Authentifizierung. Wenn diese Funktion aktiviert ist, wird eine Lizenz nur dann erteilt, wenn das Client-Gerät zunächst ein Primetime-Authentifizierungstoken erworben und über die entsprechende Client-API lokal festgelegt hat ( `setAuthenticationToken`) zum Festlegen von benutzerdefinierten Authentifizierungstoken. Weitere Informationen zur Integration der Primetime-Authentifizierung in Ihren Authentifizierungs-Workflow finden Sie unter: [Adobe Primetime-Authentifizierung.](https://tve.helpdocsonline.com/home)
 
-Wenn die DRM-Richtlinie bei der Lizenzerfassung vorsieht, dass eine Pri-metime-Authentifizierung erforderlich ist, analysiert und validiert der Lizenzserver das Primetime-Authentifizierungstoken für Kurzmedien. Wenn die DRM-Richtlinie ein `ResourceID` oder `RequestorID` angibt, validiert der Lizenzserver auch das Token für diese Eigenschaften. Wenn sie nicht festgelegt sind, gibt der Lizenzserver die Eigenschaften während der Token-Überprüfung als &quot;null&quot;an. Nur wenn die Token-Validierung erfolgreich ist, wird eine Lizenz erteilt. Andernfalls wird ein 3328 DRMErrorEvent mit einem 305-Unterfehlercode (Benutzer nicht autorisiert) vom Client gesendet.
+Wenn während der Lizenzakquise die DRM-Richtlinie festlegt, dass eine Pri-metime-Authentifizierung erforderlich ist, analysiert und validiert der Lizenzserver das Primetime-Authentifizierungs-Short-Media-Token. Wenn die DRM-Richtlinie eine `ResourceID` oder `RequestorID`, validiert der Lizenzserver das Token auch anhand dieser Eigenschaften. Wenn sie nicht festgelegt sind, gibt der Lizenzserver die Eigenschaften während der Token-Validierung als &quot;null&quot;an. Nur wenn die Token-Validierung erfolgreich ist, wird eine Lizenz erteilt. Andernfalls wird vom Client ein 3328 DRMErrorEvent mit einem 305-Unterfehlercode (Benutzer nicht autorisiert) gesendet.
 
-Die Parameter für die Primetime-Authentifizierung müssen in der Richtlinie angegeben werden, die zum Verpacken der Inhalte verwendet wird, für die eine Primetime-Authentifizierung erforderlich ist.
+Die Parameter für die Primetime-Authentifizierung müssen in der Richtlinie angegeben werden, die zum Verpacken des Inhalts verwendet wird, der für die Primetime-Authentifizierung vorgesehen ist.
 
 Die relevanten Eigenschaften sind:
 
@@ -29,4 +27,4 @@ Die relevanten Eigenschaften sind:
 
 >[!NOTE]
 >
->Beachten Sie bei der Verwendung der Primetime-Authentifizierung in Verbindung mit der DRM-Funktion zur Lizenzdrehung, dass das Primetime-Authentifizierungs-Kurzmedientoken (SMT) eine kurze Gültigkeitsdauer hat. Wenn Ihre Anwendung die Lizenzrotation verwenden möchte (z. B. um den Anwendungsfall *Blackouts* zu unterstützen), muss die Anwendung dies beachten und ihre Primetime-Authentifizierung für Kurzmedien aktualisieren, bevor sie ihre Lizenz rotieren kann.
+>Beachten Sie bei der Verwendung der Primetime-Authentifizierung in Verbindung mit der Funktion zum Rotieren von (DRM)-Lizenzen, dass das Primetime-Authentifizierungs-Short-Media-Token (SMT) ein kurzes Gültigkeitsdatum hat. Wenn Ihre Anwendung die Lizenzrotation (z. B. zur Unterstützung der *Blackouts* -Anwendungsfall), muss die Anwendung dies beachten und ihr Primetime-Authentifizierungs-Short-Media-Token aktualisieren, bevor sie ihre Lizenz rotiert.

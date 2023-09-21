@@ -1,88 +1,85 @@
 ---
-description: MediaPlayerStatus-Objekte enthalten Informationen zu Änderungen im Player-Status. Benachrichtigungsobjekte bieten Informationen zu Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Status des Players. Sie implementieren Ereignis-Listener, um Ereignis (MediaPlayerEvent-Objekte) zu erfassen und darauf zu reagieren.
-title: Benachrichtigungen und Ereignis für Player-Status, Aktivität, Fehler und Protokollierung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: MediaPlayerStatus-Objekte liefern Informationen zu Änderungen im Player-Status. Benachrichtigungsobjekte bieten Informationen zu Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Status des Players. Sie implementieren Ereignis-Listener zum Erfassen und Reagieren auf Ereignisse (MediaPlayerEvent-Objekte).
+title: Benachrichtigungen und Ereignisse für Player-Status, -Aktivität, Fehler und Protokollierung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
 
 ---
 
+# Benachrichtigungen und Ereignisse für Player-Status, -Aktivität, Fehler und Protokollierung {#notifications-and-events-for-player-status-activity-errors-and-logging}
 
-# Benachrichtigungen und Ereignis für Player-Status, Aktivität, Fehler und Protokollierung {#notifications-and-events-for-player-status-activity-errors-and-logging}
+Mit Ereignissen und Benachrichtigungen können Sie die asynchronen Aspekte der Videoanwendung verwalten.
 
-Mithilfe von Ereignissen und Benachrichtigungen können Sie die asynchronen Aspekte der Videoanwendung verwalten.
+MediaPlayerStatus-Objekte liefern Informationen zu Änderungen im Player-Status. Benachrichtigungsobjekte bieten Informationen zu Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Status des Players. Sie implementieren Ereignis-Listener zum Erfassen und Reagieren auf Ereignisse (MediaPlayerEvent-Objekte).
 
-MediaPlayerStatus-Objekte enthalten Informationen zu Änderungen im Player-Status. Benachrichtigungsobjekte bieten Informationen zu Warnungen und Fehlern. Fehler, die die Wiedergabe des Videos stoppen, führen auch zu einer Änderung des Status des Players. Sie implementieren Ereignis-Listener, um Ereignis (MediaPlayerEvent-Objekte) zu erfassen und darauf zu reagieren.
-
-Ihre Anwendung kann Benachrichtigungen und Statusinformationen abrufen. Mithilfe dieser Informationen können Sie auch ein Protokollierungssystem für die Diagnose und Überprüfung erstellen.
+Ihre Anwendung kann Benachrichtigungen und Statusinformationen abrufen. Mithilfe dieser Informationen können Sie auch ein Protokollierungssystem für Diagnose und Validierung erstellen.
 
 ## Benachrichtigungsinhalt {#section_DF951FF601794CF592841BB7406DC1A1}
 
-`MediaPlayerNotification` enthält Informationen zum Status des Spielers.
+`MediaPlayerNotification` enthält Informationen zum Status des Players.
 
-TVSDK stellt eine chronologische Liste der `MediaPlayerNotification`-Benachrichtigungen bereit. Jede Benachrichtigung enthält die folgenden Informationen:
+TVSDK bietet eine chronologische Liste von `MediaPlayerNotification` Benachrichtigungen und jede Benachrichtigung enthält die folgenden Informationen:
 
 * Ein Zeitstempel
 * Diagnostische Metadaten, die aus den folgenden Elementen bestehen:
 
    * `type`: INFO, WARN oder FEHLER.
    * `code`: Eine numerische Darstellung der Benachrichtigung.
-   * `name`: Eine für Menschen lesbare Beschreibung der Anmeldung, z. B. SEEK_ERROR
-   * `metadata`: Schlüssel/Wert-Paare, die relevante Informationen zur Benachrichtigung enthalten. Beispielsweise stellt ein Schlüssel mit dem Namen `URL` einen Wert bereit, der eine URL im Zusammenhang mit der Benachrichtigung ist.
+   * `name`: Eine für Menschen lesbare Beschreibung der Benachrichtigung, z. B. SEEK_ERROR
+   * `metadata`: Schlüssel-Wert-Paare, die relevante Informationen zur Benachrichtigung enthalten. Beispiel: ein Schlüssel mit dem Namen `URL` stellt einen Wert bereit, der eine URL im Zusammenhang mit der Benachrichtigung ist.
 
-   * `innerNotification`: Ein Verweis auf ein anderes  `MediaPlayerNotification` Objekt, das sich direkt auf diese Benachrichtigung auswirkt.
+   * `innerNotification`: Ein Verweis auf einen anderen `MediaPlayerNotification` -Objekt, das sich direkt auf diese Benachrichtigung auswirkt.
 
-Sie können diese Informationen zur späteren Analyse lokal speichern oder zur Protokollierung und grafischen Darstellung an einen Remote-Server senden.
+Sie können diese Informationen lokal zur späteren Analyse speichern oder zur Protokollierung und grafischen Darstellung an einen Remote-Server senden.
 
-## Einrichten des Benachrichtigungssystems {#section_9E37C09ECFA54B3DA8D3AA9ED1BAFC17}
+## Benachrichtigungssystem einrichten {#section_9E37C09ECFA54B3DA8D3AA9ED1BAFC17}
 
-Sie können auf Benachrichtigungen warten.
+Sie können Benachrichtigungen überwachen.
 
-Der Kern des Primetime Player-Benachrichtigungssystems ist die `Notification`-Klasse, die eine eigenständige Benachrichtigung darstellt.
+Der Kern des Primetime Player-Benachrichtigungssystems ist der `Notification` -Klasse, die eine eigenständige Benachrichtigung darstellt.
 
 Um Benachrichtigungen zu erhalten, warten Sie wie folgt auf Benachrichtigungen:
 
-1. Implementieren Sie den Rückruf `NotificationEventListener.onNotification()`.
-1. TVSDK übergibt ein `NotificationEvent`-Objekt an den Rückruf.
+1. Implementieren des `NotificationEventListener.onNotification()` Callback.
+1. TVSDK übergibt eine `NotificationEvent` -Objekt auf den Rückruf zurück.
 
    >[!NOTE]
    >
-   >Benachrichtigungstypen werden im Enum `Notification.Type` aufgelistet:
+   >Die Benachrichtigungstypen werden im Abschnitt `Notification.Type` enum:
 
    * `ERROR`
    * `INFO`
    * `WARNING`
 
-## hinzufügen Echtzeit-Protokollierung und -Debugging {#section_9D4004308CB243AD9B50818895D10005}
+## Echtzeit-Protokollierung und -Debugging hinzufügen {#section_9D4004308CB243AD9B50818895D10005}
 
-Sie können Benachrichtigungen verwenden, um die Echtzeit-Anmeldung in Ihrer Videoanwendung zu implementieren.
+Sie können Benachrichtigungen verwenden, um die Echtzeit-Protokollierung in Ihrer Videoanwendung zu implementieren.
 
-Mit dem Benachrichtigungssystem können Sie Protokollierungs- und Debugging-Informationen für die Diagnose und Validierung erfassen, ohne das System zu belasten.
+Mit dem Benachrichtigungssystem können Sie Protokollierungs- und Debugging-Informationen für Diagnose und Validierung erfassen, ohne das System zu belasten.
 
 >[!IMPORTANT]
 >
->Das Back-End für die Protokollierung ist nicht Teil eines Produktions-Setups und wird voraussichtlich nicht mit hohem Traffic verarbeitet. Wenn Ihre Implementierung nicht vollständig sein muss, sollten Sie die Effizienz der Datenübertragung berücksichtigen, um eine Überlastung Ihres Systems zu vermeiden.
+>Das Protokollierungs-Backend ist nicht Teil eines Produktions-Setups und wird voraussichtlich nicht mit hohem Traffic verarbeitet. Wenn Ihre Implementierung nicht vollständig sein muss, sollten Sie die Effizienz der Datenübertragung berücksichtigen, um eine Überlastung Ihres Systems zu vermeiden.
 
-Im Folgenden finden Sie ein Beispiel zum Abrufen von Benachrichtigungen:
+Im Folgenden finden Sie ein Beispiel für den Abruf von Benachrichtigungen:
 
-1. Erstellen Sie einen Timer-basierten Ausführungsthread für Ihre Videoanwendung, der die vom TVSDK-Benachrichtigungssystem erfassten Daten in regelmäßigen Abständen Abfrage.
-1. Wenn das Zeitintervall zu groß ist und die Liste des Ereignisses zu klein ist, wird die Liste des Ereignisses für Benachrichtigungen überlaufen.
+1. Erstellen Sie einen Timer-basierten Ausführungs-Thread für Ihre Videoanwendung, der regelmäßig die vom TVSDK-Benachrichtigungssystem erfassten Daten abfragt.
+1. Wenn das Intervall des Timers zu groß ist und die Größe der Ereignisliste zu klein ist, wird die Benachrichtigungs-Ereignisliste überlaufen.
 
    >[!NOTE]
    >
-   >Führen Sie einen der folgenden Schritte aus, um diesen Überlauf zu vermeiden:
+   >Um diesen Überlauf zu vermeiden, führen Sie einen der folgenden Schritte aus:
    >
-   >1. Verringern Sie das Zeitintervall, das den Thread auslöst, der nach neuen Ereignissen fragt.
-   >1. Vergrößern Sie die Benachrichtigungs-Liste.
+   >1. Verringern Sie das Zeitintervall, das den Thread steuert, der nach neuen Ereignissen abfragt.
+   >1. Vergrößern Sie die Benachrichtigungsliste.
+   >
 
-
-1. Serialisieren Sie die neuesten Benachrichtigungs-Ereignis-Einträge im JSON-Format und senden Sie die Einträge zur Nachbearbeitung an einen Remoteserver.
+1. Serialisieren Sie die neuesten Benachrichtigungsereigniseinträge im JSON-Format und senden Sie die Einträge zur Nachbearbeitung an einen Remote-Server.
 
    >[!NOTE]
    >
    >Der Remote-Server kann die bereitgestellten Daten grafisch in Echtzeit anzeigen.
 
-1. Um den Verlust von Benachrichtigungs-Ereignissen zu ermitteln, suchen Sie nach Lücken in der Sequenz von Ereignis-Indexwerten.
-
+1. Um den Verlust von Benachrichtigungsereignissen zu erkennen, suchen Sie nach Lücken in der Reihenfolge der Ereignisindexwerte.

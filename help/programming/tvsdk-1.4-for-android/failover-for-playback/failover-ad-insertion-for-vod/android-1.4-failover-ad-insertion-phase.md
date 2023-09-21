@@ -1,21 +1,19 @@
 ---
-description: TVSDK fügt den alternativen Inhalt (Anzeigen) in die Zeitleiste ein, die dem Hauptinhalt entspricht.
+description: TVSDK fügt den alternativen Inhalt (Anzeigen) in die Timeline ein, der dem Hauptinhalt entspricht.
 title: Anzeigeneinfügephase
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
-
 # Anzeigeneinfügephase{#ad-insertion-phase}
 
-TVSDK fügt den alternativen Inhalt (Anzeigen) in die Zeitleiste ein, die dem Hauptinhalt entspricht.
+TVSDK fügt den alternativen Inhalt (Anzeigen) in die Timeline ein, der dem Hauptinhalt entspricht.
 
-Nach Abschluss der Phase der Anzeigenauflösung verfügt TVSDK über eine geordnete Liste von Anzeigenressourcen, die in Werbeunterbrechungen gruppiert werden. Jede Werbeunterbrechung wird auf der Timeline des Hauptinhalts mithilfe eines Beginn-Zeitwerts positioniert, der in Millisekunden (ms) ausgedrückt wird. Jede Anzeige in einer Werbeunterbrechung hat eine Eigenschaft &quot;duration&quot;, die auch in ms ausgedrückt wird. Die Anzeigen in einer Werbeunterbrechung werden nacheinander miteinander verkettet. Die Dauer einer Werbeunterbrechung entspricht demnach der Summe der Dauer der einzelnen Werbeunterbrechungen.
+Wenn die Phase der Anzeigenauflösung abgeschlossen ist, verfügt TVSDK über eine geordnete Liste von Anzeigenressourcen, die in Werbeunterbrechungen gruppiert sind. Jede Werbeunterbrechung wird in der Timeline des Hauptinhalts mit einem Startzeitwert positioniert, der in Millisekunden (ms) ausgedrückt wird. Jede Anzeige in einer Werbeunterbrechung verfügt über eine Eigenschaft &quot;duration&quot;, die ebenfalls in ms ausgedrückt wird. Die Anzeigen in einer Werbeunterbrechung werden nacheinander miteinander verkettet. Daher entspricht die Dauer einer Werbeunterbrechung der Summe der Dauer der einzelnen zusammenstellenden Anzeigen.
 
-Failover kann in dieser Phase mit Konflikten auftreten, die auf der Zeitleiste während des Anzeigeneinfügens auftreten können. Bei bestimmten Kombinationen von Beginn-/Zeitwerten für Werbeunterbrechungen können sich Anzeigensegmente überschneiden. Die Überschneidung tritt auf, wenn der letzte Teil einer Werbeunterbrechung den Anfang der ersten Anzeige in der nächsten Werbeunterbrechung schneidet. In diesen Fällen verwirft TVSDK die spätere Werbeunterbrechung und setzt den Anzeigeneinfügeprozess mit dem nächsten Element auf der Liste fort, bis alle Werbeunterbrechungen eingefügt oder verworfen werden.
+Failover kann in dieser Phase mit Konflikten auftreten, die während des Anzeigeneinfügens auf der Timeline auftreten können. Bei bestimmten Kombinationen von Start-/Dauer-Werten für Werbeunterbrechungen können sich Anzeigensegmente überschneiden. Die Überschneidung tritt auf, wenn sich der letzte Teil einer Werbeunterbrechung mit dem Anfang der ersten Anzeige in der nächsten Werbeunterbrechung überschneidet. In diesen Situationen verwirft TVSDK die spätere Werbeunterbrechung und setzt den Anzeigeneinfügeprozess mit dem nächsten Element in der Liste fort, bis alle Werbeunterbrechungen eingefügt oder verworfen werden.
 
-TVSDK gibt eine Warnmeldung zum Fehler aus und fährt mit der Verarbeitung fort.
+TVSDK gibt eine Warnmeldung zum Fehler aus und setzt die Verarbeitung fort.

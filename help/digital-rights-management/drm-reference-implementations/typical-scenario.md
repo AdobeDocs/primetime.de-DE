@@ -2,23 +2,21 @@
 title: Typischer Workflow
 description: Typischer Workflow
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
-
 # Typischer Workflow{#typical-workflow}
 
-Dies ist ein typischer Workflow für Primetime-DRM-Referenzimplementierungen, der sowohl die Befehlszeilenwerkzeuge als auch den Lizenzserver umfasst:
+Dies ist ein typischer Workflow für Primetime-DRM-Referenzimplementierungen, der sowohl die Befehlszeilen-Tools als auch den Lizenzserver umfasst:
 
-1. Erstellen Sie eine DRM-Richtlinie mit dem Befehlszeilenwerkzeug &quot;Richtlinie&quot;.
-1. Verschlüsseln Sie Inhalte mit dem Befehlszeilenwerkzeug von Packager.
-1. Stellen Sie den Referenz-Implementierungslizenzserver bereit.
+1. Erstellen Sie eine DRM-Richtlinie mithilfe des Befehlszeilen-Tools Richtlinie .
+1. Verschlüsseln Sie Inhalte mit dem Befehlszeilen-Tool von Packager.
+1. Stellen Sie den Referenz-Implementierungs-Lizenzserver bereit.
 1. Laden Sie einen Videoplayer auf einen Webserver hoch.
-1. Verwenden Sie den hochgeladenen Videoplayer, um eine Lizenz zu erwerben und Ihre verschlüsselten Inhalte wiederzugeben.
+1. Verwenden Sie den hochgeladenen Videoplayer, um eine Lizenz zu erwerben und Ihren verschlüsselten Inhalt wiederzugeben.
 
-Da dieser typische Arbeitsablauf sowohl die Befehlszeilenwerkzeuge als auch den Lizenzserver verwendet, sollten Sie beide Komponenten installieren und konfigurieren, bevor Sie fortfahren.
+Da dieser typische Workflow sowohl die Befehlszeilen-Tools als auch den Lizenzserver verwendet, sollten Sie beide Komponenten installieren und konfigurieren, bevor Sie fortfahren.

@@ -1,35 +1,33 @@
 ---
-description: Die 302-Umleitungsoptimierung minimiert die Anzahl der 302 Umleitungs-Antworten, wodurch Ihre Anwendung den Lastenausgleich effektiver gestalten kann.
-title: HTTP 302 Umleitungsoptimierung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Die 302-Umleitungsoptimierung minimiert die Anzahl der 302 Umleitantworten, was es Ihrer Anwendung ermöglicht, den Lastenausgleich effektiver zu gestalten.
+title: HTTP 302-Umleitungsoptimierung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '185'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# HTTP 302-Umleitungsoptimierung{#http-redirect-optimization}
 
-# HTTP 302 Umleitungsoptimierung{#http-redirect-optimization}
+Die 302-Umleitungsoptimierung minimiert die Anzahl der 302 Umleitantworten, was es Ihrer Anwendung ermöglicht, den Lastenausgleich effektiver zu gestalten.
 
-Die 302-Umleitungsoptimierung minimiert die Anzahl der 302 Umleitungs-Antworten, wodurch Ihre Anwendung den Lastenausgleich effektiver gestalten kann.
+Wenn eine Hauptmanifest-Anforderung umgeleitet wird und die Optimierung von 302 in Ihrem Player aktiviert ist, verwenden nachfolgende Anforderungen für Assets aus diesem Manifest den endgültigen Domänenspeicherort, wodurch zusätzliche 302 Antworten vermieden werden.
 
-Wenn eine Hauptmanifestanforderung umgeleitet wird und die 302-Optimierung im Player aktiviert ist, verwenden nachfolgende Anforderungen für Assets aus diesem Manifest den endgültigen Domänenspeicherort, wodurch weitere 302 Antworten vermieden werden.
+Diese Funktion ist standardmäßig deaktiviert und Sie können diese Einstellung ändern.
 
-Diese Funktion ist standardmäßig deaktiviert. Sie können diese Einstellung ändern.
+Wenn Sie diese Funktion aktivieren, funktioniert sie nur dann ordnungsgemäß, wenn *all* die folgenden Bedingungen erfüllt sind; andernfalls findet keine Umleitungsoptimierung statt und es werden weiterhin 302 Antworten ausgegeben:
 
-Wenn Sie diese Funktion aktivieren, funktioniert sie nur dann fehlerfrei, wenn *alle* der folgenden Bedingungen wahr sind: Andernfalls findet keine Umleitungsoptimierung statt, und es werden weiterhin 302 Antworten angezeigt:
-
-* Ihre Anwendung wurde für Adobe Flash Player 11.8 mit `-swf-version` 21 oder höher kompiliert.
+* Ihre Applikation wurde für Adobe Flash Player 11.8 kompiliert, unter Verwendung von `-swf-version` 21 oder höher.
 * Ihre Endbenutzer haben Adobe Flash Player 11.8 oder höher installiert.
 
 >[!IMPORTANT]
 >
->Um sicherzustellen, dass Cookies mit Anzeigenanforderungen übergeben werden, deaktivieren Sie die 302-Umleitung. Wenn 302-Umleitungen aktiviert sind, wird die Anzeigenanforderung möglicherweise in eine Domäne umgeleitet, die sich von der Domäne unterscheidet, von der das Cookie stammt.
+>Um sicherzustellen, dass Cookies mit Anzeigenanfragen übergeben werden, deaktivieren Sie die 302-Umleitung. Wenn die Umleitung auf 302 aktiviert ist, wird die Anzeigenanforderung möglicherweise an eine Domäne umgeleitet, die sich von der Domäne unterscheidet, von der das Cookie stammt.
 
-## 302-Umleitungsoptimierung {#section_D6687FC44C61446F878008B629A5FA19} deaktivieren oder aktivieren
+## 302-Umleitungsoptimierung deaktivieren oder aktivieren {#section_D6687FC44C61446F878008B629A5FA19}
 
-Verwenden Sie die Eigenschaft `useRedirectedUrl`, um die 302-Umleitung zu aktivieren (true) oder zu deaktivieren (false).
+Verwenden Sie die `useRedirectedUrl` -Eigenschaft zum Aktivieren (true) oder Deaktivieren (false) der 302-Umleitung.
 
 <!--<a id="example_B886777252B745AAB48B1FCC42C97A25"></a>-->
 
@@ -50,4 +48,3 @@ var mediaResource = new MediaResource( url, MediaResourceType.HLS, result);
 // load the resource 
 mediaPlayer.replaceCurrentResource( mediaResource, mediaPlayerItemConfig );
 ```
-

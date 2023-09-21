@@ -1,8 +1,7 @@
 ---
 title: Allgemeine Nutzungsberichte
 description: Allgemeine Nutzungsberichte
-exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
-source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 0%
@@ -23,7 +22,7 @@ device filters
 segment and definition replicate to cohorts. Number of people and number of account that ......
 content consumption.....-->
 
-Die Berichte basieren alle auf dem aktuellen Segment, das mithilfe von [Segmente und Zeitrahmen](/help/AccountIQ/howto-select-segment-timeframe.md) Bereich. Sie können Ihre Auswahl anpassen und weiter einschränken, indem Sie unter [Momentaufnahme Übersicht - Konten oberhalb der Schwellenwerte](#snapshot-overview) Bereich.
+Die Berichte basieren alle auf dem aktuellen Segment, das mithilfe von [Segmente und Zeitrahmen](/help/AccountIQ/howto-select-segment-timeframe.md) Bedienfeld. Sie können Ihre Auswahl anpassen und weiter einschränken, indem Sie unter [Momentaufnahme Übersicht - Konten oberhalb der Schwellenwerte](#snapshot-overview) Bedienfeld.
 
 <!--To view General Usage Reports:
 
@@ -66,34 +65,34 @@ Die X-Achse zeigt die Einheiten im aktuellen Zeitrahmen und die Y-Achse stellt d
 
 * **AuthN OK**
 
-   AuthN OK ist die Anzahl erfolgreicher Authentifizierungen. Weitere Informationen und Definitionen finden Sie unter [Produktkonzepte: AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
+  AuthN OK ist die Anzahl erfolgreicher Authentifizierungen. Weitere Informationen und Definitionen finden Sie unter [Produktkonzepte: AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
 
 * **AuthZ OK**
 
-   AuthZ OK ist die Anzahl erfolgreicher Berechtigungen. Weitere Informationen und Definitionen finden Sie unter [Produktkonzepte: AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
+  AuthZ OK ist die Anzahl erfolgreicher Berechtigungen. Weitere Informationen und Definitionen finden Sie unter [Produktkonzepte: AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
 
 * **Abspielanforderungen**
 
-   Wiedergabeanforderungen entsprechen der Anzahl der Wiedergabeanforderungen. Weitere Informationen und Definitionen finden Sie unter [Produktkonzepte: Abspielanforderungen](/help/AccountIQ/product-concepts.md#play-requests-def)
+  Wiedergabeanforderungen entsprechen der Anzahl der Wiedergabeanforderungen. Weitere Informationen und Definitionen finden Sie unter [Produktkonzepte: Wiedergabeanforderungen](/help/AccountIQ/product-concepts.md#play-requests-def)
 
-   >[!NOTE]
-   >
-   >Das Liniendiagramm für Wiedergabeanforderungen ist für MVPD-Benutzer nicht verfügbar.
+  >[!NOTE]
+  >
+  >Das Liniendiagramm für Wiedergabeanforderungen ist für MVPD-Benutzer nicht verfügbar.
 
 
-* **Eindeutige Abonnenten**
+* **Unique Subscribers**
 
-   Unique Abonnenten sind die Anzahl erfolgreicher Unique Abonnenten. Weitere Informationen und Definitionen finden Sie unter [Produktkonzepte: Eindeutige Abonnenten](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
+  Unique Abonnenten sind die Anzahl erfolgreicher Unique Abonnenten. Weitere Informationen und Definitionen finden Sie unter [Produktkonzepte: Unique Subscribers](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
 
-   >[!NOTE]
-   >
-   >Die Gesamtanzahl der Unique Abonnenten umfasst auch die Anzahl der individuellen Geräte, wenn die Nutzung der Adobe TempPass durch einen Programmierer (d. h. eine kostenlose Vorschau) Teil des Segments ist.
+  >[!NOTE]
+  >
+  >Die Gesamtanzahl der Unique Abonnenten umfasst auch die Anzahl der eindeutigen Geräte, wenn die Nutzung von Adobe TempPass durch einen Programmierer (d. h. eine kostenlose Vorschau) Teil des Segments ist.
 
 ## Momentaufnahme Übersicht - Konten oberhalb der Schwellenwerte {#snapshot-overview}
 
 Passen Sie Ihre Analyse und Berichte mithilfe dieses zusätzlichen Filters an, um verschiedene Verwendungsschwellen festzulegen. Nachdem Sie Ihr Segment (oder Ihre Kohorte) zur Analyse definiert haben, indem Sie die gewünschten MVPDs und Kanäle auswählen, können Sie auch die folgenden Filter für verwenden, um das Verhalten der Abonnenten zu analysieren:
 
-* Schwellenwert für Anzahl der Geräte
+* Schwellenwert für Anzahl Geräte
 
 * IP-Schwellenwert
 
@@ -123,7 +122,7 @@ Das Diagramm zeigt Ihnen Folgendes:
 
 * prozentualen Anteil an den Gesamtabonnentenkonten in diesem Segment,
 
-   die X Geräte-Anzahl, Y IP-Anzahl und Z-Anzahl von Postleitzahlen verwenden, um Inhalte aus Ihrem Kanal für die (definierten Segmente von) MVPDs für einen bestimmten Zeitraum zu nutzen.
+  die X Geräte-Anzahl, Y IP-Anzahl und Z-Anzahl von Postleitzahlen verwenden, um Inhalte aus Ihrem Kanal für die (definierten Segmente von) MVPDs für einen bestimmten Zeitraum zu nutzen.
 
 ![](assets/select-thresholds.png)
 
@@ -131,7 +130,7 @@ Das Diagramm zeigt Ihnen Folgendes:
 
 Die **Balkendiagramm** bietet Einblicke in das Nutzungsverhalten in die Art und Weise, wie Abonnenten ihre Geräte für den Zugriff auf Inhalte verwenden.
 
-Die X-Achse zeigt die Anzahl der Konten und die Anzahl der Geräte auf der y-Achse an. Basierend auf dem Schwellenwert, den Sie für die Anzahl der Geräte pro Konto festlegen, wird die absolute Anzahl der Abonnentenkonten angezeigt, die Inhalte von einer bestimmten Anzahl von Geräten in einer Woche verbrauchen.
+Die X-Achse zeigt die Anzahl der Konten und die Anzahl der Geräte auf der y-Achse an. Basierend auf dem Schwellenwert, den Sie für die Anzahl der Geräte pro Konto festgelegt haben, wird die absolute Anzahl der Abonnentenkonten angezeigt, die Inhalte von einer bestimmten Anzahl von Geräten in einer Woche verbrauchen.
 
 ![](assets/bar-gr-devices-w-acc.png)
 
@@ -139,7 +138,7 @@ Wenn Sie den Mauszeiger über eine Leiste bewegen (spezifisch für die Anzahl de
 
 Das Diagramm markiert auch Folgendes:
 
-* Eine rote Linie, um den festgelegten Schwellenwert zu markieren.
+* Eine rote Linie, die den festgelegten Schwellenwert markiert.
 
 * Eine grüne Linie, die die durchschnittliche Anzahl verschiedener Geräte angibt, die von einem Abonnentenkonto pro Woche (oder Monat) verwendet werden.
 
@@ -155,13 +154,13 @@ Das Ringdiagramm hilft Ihnen dabei, das Ausmaß der Abonnentenkonten, die Kanali
 
 liken [Geräte pro Woche (oder Monat) pro Konto](#devices-week-account)können Sie mit der Metrik Standorte pro Woche (oder Monat) pro Konto die Nutzung des Abonnentenkontos von verschiedenen Orten aus analysieren, um die Freigabe von Passwörtern genauer zu identifizieren. Die X-Achse zeigt die Anzahl der Konten und die Anzahl der Standorte auf der y-Achse an.
 
-Ergebnisse aus dieser Metrik kombiniert mit der Anzahl der [Geräte pro Woche (oder Monat) pro Konto](#devices-week-account) und Anzahl der [IPs pro Woche (oder Monat) pro Konto](#ip-week-account) hilft Ihnen, die Kennwortfreigabe-Instanzen genauer zu beurteilen; sodass authentische Benutzer nicht berücksichtigt werden.
+Ergebnisse aus dieser Metrik kombiniert mit der Anzahl der [Geräte pro Woche (oder Monat) pro Konto](#devices-week-account) und Anzahl der [IPs pro Woche (oder Monat) pro Konto](#ip-week-account) hilft Ihnen, die Instanzen der Kennwortfreigabe genauer zu beurteilen, sodass authentische Benutzer nicht berücksichtigt werden.
 
 ![](assets/graph-loc-week-acc.png)
 
 Nachdem Sie ein Segment definiert und den Schwellenwert für die Anzahl der Standorte festgelegt haben, können Sie aus dem Diagramm identifizieren:
 
-* Anzahl (und Prozentsatz) der Abonnenten, die Inhalte von (einer bestimmten) x Anzahl von Orten in einer Woche konsumieren.
+* Anzahl (und Prozentsatz) der Abonnenten, die Inhalte von (einer bestimmten) x Anzahl von Orten in einer Woche nutzen.
 
 * Prozentsatz der Gesamtanzahl der Abonnentenkonten, die Inhalte von mehr Standorten als dem Schwellenwert anzeigen.
 
@@ -185,13 +184,13 @@ Nachdem Sie ein Segment definiert haben (durch Auswahl von MVPDs und Kanälen) u
 
 ## Kontosegment - Historische Ansicht {#account-segment-historical-view}
 
-Mit dem Balkendiagramm für die Historische Ansicht können Sie die Nutzungsmetriken über verschiedene Zeitrahmen hinweg vergleichen. Außerdem werden die verschiedenen Nutzungsmetriken, wie z. B. [Geräte pro Woche (oder Monat) pro Konto](#devices-week-account), [Standorte pro Woche (oder Monat) pro Konto](#locations-week-account)und [IPs pro Woche (oder Monat) pro Konto](#ip-week-account).
+Mit dem Balkendiagramm für die Historische Ansicht können Sie die Nutzungsmetriken über verschiedene Zeitrahmen hinweg vergleichen. Außerdem werden die verschiedenen Nutzungsmetriken, wie z. B. [Geräte pro Woche (oder Monat) pro Konto](#devices-week-account), [Standorte pro Woche (oder Monat) pro Konto](#locations-week-account), und [IPs pro Woche (oder Monat) pro Konto](#ip-week-account).
 
-* Die X-Achse zeichnet den Zeitrahmen auf und zeigt die Anzahl der Abonnentenkonten, Geräte, Standorte und IPs auf der y-Achse an.
+* Die X-Achse zeichnet den Zeitrahmen auf und zeigt die Anzahl der Teilnehmerkonten, Geräte, Standorte und IPs auf der y-Achse an.
 
 * Die orangefarbenen Balken kennzeichnen Segmente in verschiedenen Zeitrahmen.
 
-* Das Liniendiagramm zeichnet die Änderungen in [Geräte pro Woche (oder Monat) pro Konto](#devices-week-account), [Standorte pro Woche (oder Monat) pro Konto](#locations-week-account)und [IPs pro Woche (oder Monat) pro Konto](#ip-week-account) -Werte über den gesamten Zeitraum basierend auf dem Schwellenwert hinweg.
+* Das Liniendiagramm zeichnet die Änderungen in [Geräte pro Woche (oder Monat) pro Konto](#devices-week-account), [Standorte pro Woche (oder Monat) pro Konto](#locations-week-account), und [IPs pro Woche (oder Monat) pro Konto](#ip-week-account) -Werte über den gesamten Zeitraum basierend auf dem Schwellenwert hinweg.
 
 ![](assets/historical-view.png)
 
@@ -204,4 +203,3 @@ Mit dem Balkendiagramm für die Historische Ansicht können Sie die Nutzungsmetr
 >[!MORELIKETHIS]
 >
 >* Erfahren Sie, wie Sie Berichte für die 1000 wichtigsten Abonnenten im ausgewählten Segment mithilfe von Filtern im allgemeinen Nutzungsbericht mit [Export der 1000 wichtigsten Konten](/help/AccountIQ/export-acc-information.md) -Option.
-

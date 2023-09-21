@@ -1,20 +1,18 @@
 ---
-description: Dieser Abschnitt behandelt die Grammatik der Konfigurationseingabe, hebt gültige und ungültige Eingabeoptionen hervor und erklärt, wie ausgelassene optionale Felder interpretiert werden.
-title: RBOP-Grammatik
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: In diesem Abschnitt wird die Grammatik der Konfigurationseingabe beschrieben, wobei gültige und ungültige Eingabeoptionen hervorgehoben werden und erläutert wird, wie ausgelassene optionale Felder interpretiert werden.
+title: RBOP Grammar
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 0%
 
 ---
 
-
 # RBOP Grammar {#rbop-grammar}
 
-Dieser Abschnitt behandelt die Grammatik der Konfigurationseingabe, hebt gültige und ungültige Eingabeoptionen hervor und erklärt, wie ausgelassene optionale Felder interpretiert werden.
+In diesem Abschnitt wird die Grammatik der Konfigurationseingabe beschrieben, wobei gültige und ungültige Eingabeoptionen hervorgehoben werden und erläutert wird, wie ausgelassene optionale Felder interpretiert werden.
 
-Die auflösungsbasierte Grammatik zum Ausgabeschutz wird als Regelsequenz definiert, bei der jede Regel mehrere gültige Formulare haben kann:
+Die auflösungsbasierte Grammatik des Ausgabeschutzes wird als eine Folge von Regeln definiert, bei denen jede Regel mehrere gültige Formulare haben kann:
 
 ```
 Rule ::=       
@@ -30,11 +28,11 @@ AnotherRule ::=
 
 >[!NOTE]
 >
->Um die Lesbarkeit der Grammatik zu verbessern, werden die folgenden Eigenschaften nicht in der Grammatik widergespiegelt, aber dennoch true:
+>Um die Lesbarkeit der Grammatik zu verbessern, spiegeln sich die folgenden Eigenschaften nicht in der Grammatik wider, halten aber dennoch wahr:
 
-1. Die Reihenfolge der in den Objekten definierten Paare ist nicht festgelegt; so ist jede Permutation der Paare gültig.
+1. Die Reihenfolge der in den Objekten definierten Paare ist nicht festgelegt, daher ist jede Permutation der Paare gültig.
 
-   Wenn wir beispielsweise ein Objekt wie das folgende definiert haben:
+   Wenn wir beispielsweise ein Objekt wie dieses definiert haben:
 
    ```
    {  
@@ -44,7 +42,7 @@ AnotherRule ::=
    }
    ```
 
-   die folgende Struktur gilt ebenfalls als gültig: =
+   dann würde die folgende Struktur auch als gültig angesehen: =
 
    ```
    {  
@@ -54,9 +52,9 @@ AnotherRule ::=
    }
    ```
 
-1. Für jedes Paar innerhalb eines Objekts wird davon ausgegangen, dass nur eine Instanz dieses Paars in einer bestimmten Instanz eines bestimmten Objekts vorhanden ist.
+1. Für jedes Paar innerhalb eines Objekts wird davon ausgegangen, dass nur eine Instanz dieses Paares in einer bestimmten Instanz eines bestimmten Objekts vorhanden ist.
 
-   Wenn wir beispielsweise ein Objekt wie das folgende definiert haben:
+   Wenn wir beispielsweise ein Objekt wie dieses definiert haben:
 
    ```
    {  
@@ -66,7 +64,7 @@ AnotherRule ::=
    }
    ```
 
-   ist die folgende Instanz ungültig, da sich innerhalb desselben Objekts zwei `foo`-Paare befinden:
+   dann wäre die folgende Instanz ungültig, da es zwei `foo` -Paare innerhalb desselben Objekts:
 
    ```
    { 
@@ -76,7 +74,7 @@ AnotherRule ::=
    } 
    ```
 
-   Außerdem haben zwei Objekte wie:
+   Außerdem haben Sie zwei Objekte wie:
 
    ```
    {  
@@ -98,23 +96,23 @@ AnotherRule ::=
 
    ist gültig, da es sich um unabhängige Instanzen desselben Objekts handelt.
 
-1. Für Definitionen, bei denen eine oder mehrere Zeichenfolgen ausgewählt werden können, sollten Sie die Zeichenfolgen wie einen Satz behandeln, bei dem Duplikat-Einträge als ein einzelner Eintrag behandelt werden. `["foo", "bar", "foo", "baz"]` entspricht beispielsweise `["foo", "bar", "baz"]`
+1. Bei Definitionen, bei denen eine oder mehrere Zeichenfolgen ausgewählt werden können, behandeln Sie die Zeichenfolgen wie einen Satz, in dem doppelte Einträge als ein einzelner Eintrag behandelt werden. Beispiel: `["foo", "bar", "foo", "baz"]` entspricht `["foo", "bar", "baz"]`
 
-1. Beim Definieren von Zahlen wird zwischen den Regeln ein Leerzeichen verwendet (z. B. `Digit Digits`). Bei der Anwendung der Regel sollte jedoch kein solcher Leerzeichen verwendet werden.
+1. Beim Definieren von Zahlen wird zwischen den Regeln ein Leerzeichen verwendet (z. B. `Digit Digits`), aber bei Anwendung der Regel sollte kein solches Leerzeichen verwendet werden.
 
-   Wenn wir z. B. die Zahl *einhundertdreiundzwanzig* pro NonZeroInteger-Regel angeben, sollte sie als `123` anstatt als `1 2 3` ausgedrückt werden, obwohl die Regel ein Leerzeichen zwischen NonZeroDigit und Digits enthält.
+   Wenn wir beispielsweise die Zahl *einhundertdreiunddreißig* Gemäß der NonZeroInteger-Regel sollte sie als `123` anstelle von `1 2 3`, auch wenn die Regel ein Leerzeichen zwischen NonZeroDigit und Digits enthält.
 
-1. Einige Regeln lassen mehrere Formulare zu. In diesen Fällen werden die verschiedenen Formulare durch das Zeichen `'|'` getrennt.
+1. Einige der Regeln erlauben mehrere Formulare. In diesen Fällen werden die verschiedenen Formulare durch die `'|'` Zeichen.
 
-   Beispiel:
+   Diese Regel beispielsweise:
 
    ```
    Foo ::= "A" | "B" | "C"
    ```
 
-   bedeutet, dass eine Instanz von `Foo` durch &quot;A&quot;, &quot;B&quot;oder &quot;C&quot;ersetzt werden kann. Dies sollte nicht mit einem Formular verwechselt werden, das mehrere Zeilen umfasst. Dies ist eine Funktion, die die Lesbarkeit längerer Formulare erleichtert.
+   bedeutet, dass `Foo` kann durch &quot;A&quot;, &quot;B&quot;oder &quot;C&quot;ersetzt werden. Dies sollte nicht mit einem Formular verwechselt werden, das mehrere Zeilen umfasst. Dies ist eine Funktion, mit der längere Formulare lesbarer werden können.
 
-## Grammatik {#section_52189FD66B1A46BA9F8FDDE1D7C8E8E8}
+## Die Grammatik {#section_52189FD66B1A46BA9F8FDDE1D7C8E8E8}
 
 ```
 PixelBasedOPConfig ::= 
@@ -235,27 +233,27 @@ NonZeroDigit ::=
 
 ## Semantik: Rechtliche, aber ungültige Konfigurationen {#section_709BE240FF0041D4A1B0A0A7544E4966}
 
-Das Thema *Beispielausgabeschutzkonfiguration* stellte eine gültige Konfiguration zusammen mit ihrer semantischen Bedeutung vor. Im vorherigen Abschnitt in *diesem* Thema wurden die Grammatikregeln für Konfigurationen vorgestellt. Obwohl die Grammatik die syntaktische Korrektheit gewährleistet, gibt es syntaktisch nicht semantisch korrekte juristische Konfigurationen (d.h. sie sind nicht logisch). Dieser Abschnitt enthält Konfigurationen, die *syntaktisch* legal, aber *semantisch* nicht korrekt sind. Denken Sie daran, dass die Beispiele in diesem Abschnitt auf die Mindeststruktur reduziert wurden, die zur Veranschaulichung des diskutierten Szenarios erforderlich ist.
+Die *Konfiguration des Output Protection-Beispiels* -Thema präsentierte eine gültige Konfiguration zusammen mit ihrer semantischen Bedeutung. Der vorherige Abschnitt in *this* -Thema präsentierte die Grammatikregeln für Konfigurationen. Während die Grammatik dazu beiträgt, die syntaktische Korrektheit sicherzustellen, gibt es syntaktisch legale Konfigurationen, die nicht semantisch korrekt sind (d. h. sie sind nicht logisch). Dieser Abschnitt enthält Konfigurationen, die *syntaktisch* , aber *semantisch* nicht korrekt. Beachten Sie, dass die Beispiele in diesem Abschnitt auf die Mindeststruktur reduziert wurden, die zur Veranschaulichung des zur Diskussion stehenden Szenarios erforderlich ist.
 
-* Es ist ungültig, mehrere Pixelbeschränkungen mit derselben Pixelanzahl zu definieren.
+* Es ist ungültig, mehrere Pixelbegrenzungen mit derselben Pixelanzahl zu definieren.
 
-   ```
-   {  
-     "pixelConstraints":  
-       [  
-         { "pixelCount": 720 }  
-       ]  
-    }  
-   ```
+  ```
+  {  
+    "pixelConstraints":  
+      [  
+        { "pixelCount": 720 }  
+      ]  
+   }  
+  ```
 
 * Die Pixelanzahl darf die angegebene maximale Pixelauflösung nicht überschreiten.
 
-   ```
-   { 
-     "maxPixel": 720, 
-     "pixelConstraints": 
-       [ 
-         {"pixelCount": 1080} 
-       ] 
-   } 
-   ```
+  ```
+  { 
+    "maxPixel": 720, 
+    "pixelConstraints": 
+      [ 
+        {"pixelCount": 1080} 
+      ] 
+  } 
+  ```

@@ -1,36 +1,33 @@
 ---
-description: Full-Ereignis Replay (FER) ist ein VOD-Asset, das als Live-/DVR-Asset fungiert. Daher muss Ihre Anwendung Schritte unternehmen, um sicherzustellen, dass Anzeigen korrekt platziert werden.
-title: Aktivieren von Anzeigen bei vollständiger Wiedergabe im Ereignis
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Die Wiederholung eines vollständigen Ereignisses (FER) ist ein VOD-Asset, das als Live-/DVR-Asset fungiert. Daher muss Ihre Anwendung Maßnahmen ergreifen, um sicherzustellen, dass Anzeigen korrekt platziert werden.
+title: Aktivieren von Anzeigen bei vollständiger Ereigniswiedergabe
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 0%
 
 ---
 
+# Aktivieren von Anzeigen bei vollständiger Ereigniswiedergabe{#enable-ads-in-full-event-replay}
 
-# Anzeigen im Vollbildmodus aktivieren{#enable-ads-in-full-event-replay}
+Die Wiederholung eines vollständigen Ereignisses (FER) ist ein VOD-Asset, das als Live-/DVR-Asset fungiert. Daher muss Ihre Anwendung Maßnahmen ergreifen, um sicherzustellen, dass Anzeigen korrekt platziert werden.
 
-Full-Ereignis Replay (FER) ist ein VOD-Asset, das als Live-/DVR-Asset fungiert. Daher muss Ihre Anwendung Schritte unternehmen, um sicherzustellen, dass Anzeigen korrekt platziert werden.
+Für Live-Inhalte verwendet TVSDK die Metadaten/Hinweise im Manifest, um zu bestimmen, wo Anzeigen platziert werden sollen. Manchmal ähneln Live-/lineare Inhalte jedoch möglicherweise VOD-Inhalten. Wenn beispielsweise Live-Inhalte abgeschlossen sind, wird ein `EXT-X-ENDLIST` -Tag an das Live-Manifest angehängt. Bei HLS muss die Variable `EXT-X-ENDLIST` -Tag bedeutet, dass der Stream ein VOD-Stream ist. TVSDK kann diesen Stream nicht automatisch von einem normalen VOD-Stream unterscheiden, um Anzeigen korrekt einzufügen.
 
-Für Live-Inhalte verwendet TVSDK die Metadaten/Hinweise im Manifest, um zu bestimmen, wo Anzeigen platziert werden sollen. Manchmal ähneln Live-/Lineare Inhalte jedoch möglicherweise VOD-Inhalten. Wenn beispielsweise Live-Inhalte abgeschlossen sind, wird dem Live-Manifest ein `EXT-X-ENDLIST`-Tag angehängt. Bei HLS bedeutet das `EXT-X-ENDLIST`-Tag, dass der Stream ein VOD-Stream ist. TVSDK kann diesen Stream nicht automatisch von einem normalen VOD-Stream unterscheiden, um Anzeigen korrekt einzufügen.
+Ihre Anwendung muss TVSDK mitteilen, ob der Inhalt live oder VOD ist, indem Sie die `AdSignalingMode`.
 
-Ihre Anwendung muss TVSDK mitteilen, ob der Inhalt live oder VOD ist, indem Sie `AdSignalingMode` angeben.
+Bei einem FER-Stream sollte der Adobe Primetime-Ad Decisioning-Server nicht die Liste der Werbeunterbrechungen bereitstellen, die in die Timeline eingefügt werden müssen, bevor die Wiedergabe gestartet wird. Dies ist der typische Prozess für VOD-Inhalte. Stattdessen liest TVSDK durch Angabe eines anderen Signalmodus alle Cue-Punkte aus dem FER-Manifest und geht für jeden Cue-Punkt zum Anzeigen-Server, um eine Werbeunterbrechung anzufordern. Dieser Prozess ähnelt Live-/DVR-Inhalten.
 
-Bei einem FER-Stream sollte der Adobe Primetime-Ad-Entscheidungsserver nicht die Liste von Werbeunterbrechungen bereitstellen, die vor dem Starten der Wiedergabe in die Zeitleiste eingefügt werden müssen. Dies ist der typische Prozess für VOD-Inhalte. Stattdessen liest TVSDK durch Angabe eines anderen Signalisierungsmodus alle Cue-Points aus dem FER-Manifest und wechselt für jeden Cue-Point zum Anzeigen-Server, um eine Werbeunterbrechung anzufordern. Dieser Prozess ähnelt Live-/DVR-Inhalten.
-
-Zusätzlich zu jeder Anforderung, die mit einem Cue-Point verknüpft ist, stellt TVSDK eine zusätzliche Anzeigenanforderung für Pre-Roll-Anzeigen auf.
+Zusätzlich zu jeder Anfrage, die mit einem Cue-Punkt verknüpft ist, stellt TVSDK eine zusätzliche Anzeigenanforderung für Pre-Roll-Anzeigen vor.
 
 1. Rufen Sie von einer externen Quelle wie vCMS den zu verwendenden Signalmodus ab.
 1. Erstellen Sie die werbebezogenen Metadaten.
-1. Wenn das Standardverhalten überschrieben werden muss, geben Sie das `AdSignalingMode` mit `AdvertisingMetadata.setSignalingMode` an.
+1. Wenn das Standardverhalten überschrieben werden muss, geben Sie die `AdSignalingMode` mithilfe von `AdvertisingMetadata.setSignalingMode`.
 
-   Die gültigen Werte sind `DEFAULT, SERVER_MAP` und `MANIFEST_CUES`.
+   Die gültigen Werte sind `DEFAULT, SERVER_MAP`, und `MANIFEST_CUES`.
 
-   Sie müssen den Anzeigensignalisierungsmodus festlegen, bevor Sie `prepareToPlay` aufrufen. Nachdem TVSDK-Beginn Anzeigen auflösen und auf der Zeitleiste platzieren, werden Änderungen am Anzeigensignalisierungsmodus ignoriert. Legen Sie den Modus fest, wenn Sie das `AuditudeSettings`-Objekt erstellen.
+   Sie müssen den Anzeigenanzeigemodus festlegen, bevor Sie `prepareToPlay`. Wenn TVSDK beginnt, Anzeigen aufzulösen und auf der Timeline zu platzieren, werden Änderungen am Anzeigenanzeigemodus ignoriert. Legen Sie den Modus fest, wenn Sie die `AuditudeSettings` -Objekt.
 
-1. Fahren Sie mit der Wiedergabe fort.
+1. Wiedergabe fortsetzen.
 
 <!--<a id="example_3567B4A0D53E4DA99C10C13244454026"></a>-->
-

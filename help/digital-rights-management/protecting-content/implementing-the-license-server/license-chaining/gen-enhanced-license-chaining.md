@@ -1,23 +1,20 @@
 ---
-title: Erweiterte Lizenzketten
-description: Erweiterte Lizenzketten
+title: Verbesserte Lizenzketten
+description: Verbesserte Lizenzketten
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
+# Verbesserte Lizenzketten {#enhanced-license-chaining}
 
-# Erweiterte Lizenzketten {#enhanced-license-chaining}
+Wenn eine DRM-Richtlinie verwendet wird, um eine Lizenz zu generieren, die Lizenzketten unterstützt, muss der Server entscheiden, ob er eine Leaf-Lizenz, eine Root-Lizenz oder beides ausstellt. Wenn Sie feststellen möchten, welche Art von Lizenz eine DRM-Richtlinie unterstützt, müssen Sie `Policy.getLicenseChainType()`oder Aufruf `Policy.getRootLicenseId()` um festzustellen, ob die DRM-Richtlinie über eine Stammlizenz verfügt. Mit der Adobe Primetime DRM 2.0-Lizenzverkettung stellt der Server normalerweise eine Laublizenz aus, wenn ein Benutzer danach zum ersten Mal eine Lizenz für einen bestimmten Computer und eine Root-Lizenz anfordert. Wenn Sie feststellen möchten, ob der Computer bereits über eine Laublizenz für die angegebene Richtlinie verfügt, müssen Sie `LicenseRequestMessage.clientHasLeafForPolicy()`.
 
-Wenn eine DRM-Richtlinie zum Generieren einer Lizenz verwendet wird, die Lizenzketten unterstützt, muss der Server entscheiden, ob eine Leaf-Lizenz, eine Root-Lizenz oder beides ausgegeben werden soll. Wenn Sie bestimmen möchten, welche Art von Lizenz eine DRM-Richtlinie unterstützt, müssen Sie `Policy.getLicenseChainType()` verwenden oder `Policy.getRootLicenseId()` aufrufen, um festzustellen, ob die DRM-Richtlinie über eine Root-Lizenz verfügt. Bei der Verkettung von Adobe Primetime DRM 2.0-Lizenzen gibt der Server in der Regel eine Laublizenz aus, wenn ein Benutzer danach zum ersten Mal eine Lizenz für einen bestimmten Computer und eine Root-Lizenz anfordert. Wenn Sie ermitteln möchten, ob auf dem Computer bereits eine Laublizenz für die angegebene Richtlinie vorhanden ist, müssen Sie `LicenseRequestMessage.clientHasLeafForPolicy()` aufrufen.
-
-Aufgrund der verbesserten Lizenzketten in Adobe Primetime DRM 3.0 wird empfohlen, beim ersten Anfordern einer Lizenz für einen bestimmten Computer sowohl ein Leaf als auch einen Root auszustellen. Wenn der Benutzer bereits über eine Root-Lizenz verfügt, kann der Server nur ein Leaf ausstellen (Aufruf `LicenseRequestMessage.clientHasEnhancedRootForPolicy()`, um zu ermitteln, ob der Client bereits über einen 3.0-Erweiterten Stammordner verfügt). Bei nachfolgenden Lizenzanforderungen weist der Client dann darauf hin, dass er bereits über einen Leaf und einen Stamm verfügt. Daher sollte der Server eine neue Root-Lizenz ausstellen. Wenn die erweiterte Lizenzverkettung verwendet wird, muss `setRootKeyRetrievalInfo()` aufgerufen werden, um die Anmeldeinformationen bereitzustellen, die zum Entschlüsseln des Stamm-Verschlüsselungsschlüssels in der DRM-Richtlinie erforderlich sind.
+Aufgrund der verbesserten Lizenzketten in Adobe Primetime DRM 3.0 wird empfohlen, beim ersten Anfordern einer Lizenz für einen bestimmten Computer sowohl ein Leaf als auch einen Root auszustellen. Wenn der Benutzer bereits über die Root-Lizenz verfügt, kann der Server nur ein Leaf ausstellen (Aufruf `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` , um zu ermitteln, ob der Client bereits über einen 3.0-erweiterten Stamm verfügt. Bei nachfolgenden Lizenzanfragen weist der Client dann darauf hin, dass er bereits über ein Leaf und einen Root verfügt. Daher sollte der Server eine neue Root-Lizenz ausstellen. Wenn die erweiterte Lizenzkachel verwendet wird `setRootKeyRetrievalInfo()` muss aufgerufen werden, um die Anmeldeinformationen bereitzustellen, die zum Entschlüsseln des Root-Verschlüsselungsschlüssels in der DRM-Richtlinie erforderlich sind.
 
 >[!NOTE]
 >
->Wenn die Richtlinie die erweiterte Lizenzketten von 3.0 unterstützt, der Client jedoch Primetime DRM 2.0 ist, gibt der Server eine ursprüngliche verkettete Lizenz von 2.0 aus. Verwenden Sie zum Bestimmen der Clientversion `LicenseRequestMessage.getClientVersion()`.
-
+>Wenn die Richtlinie 3.0 Enhanced License Verketten unterstützt, der Client jedoch Primetime DRM 2.0 ist, gibt der Server eine 2.0-Originallizenz für verkettete Lizenzen aus. Verwenden Sie zum Bestimmen der Clientversion die `LicenseRequestMessage.getClientVersion()`.

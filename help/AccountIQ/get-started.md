@@ -1,13 +1,12 @@
 ---
 title: Einstieg in Account IQ und Erste Schritte
-description: 'Informationen zur Integration, zu Voraussetzungen und zu den ersten Schritten mit Konto IQ. '
-source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
+description: Informationen zur Integration, zu Voraussetzungen und zu den ersten Schritten mit Konto IQ.
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
 
 ---
-
 
 # Einstieg in Account IQ und Erste Schritte {#onboard}
 
@@ -52,6 +51,4 @@ Konto-IQ ist mit den neuesten Versionen der folgenden Browser kompatibel:
 
 >[!IMPORTANT]
 >
->Wenn Ihre Benutzer nicht auf das Konto-IQ-Dashboard zugreifen können, wenden Sie sich an den Support der Adobe, um sicherzustellen, dass die ID Ihres Unternehmens in Konto IQ auf die Whitelist gesetzt ist.
-
-
+>Wenn Ihre Benutzer nicht auf das Konto-IQ-Dashboard zugreifen können, wenden Sie sich an den Adobe-Support, um sicherzustellen, dass die ID Ihres Unternehmens in Konto IQ auf die Whitelist gesetzt ist.

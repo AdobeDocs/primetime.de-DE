@@ -2,8 +2,7 @@
 title: Videoanalyse initialisieren und konfigurieren
 description: Videoanalyse initialisieren und konfigurieren
 copied-description: true
-exl-id: 26bdc11e-b8f6-414f-a3e9-53bc895d25ce
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 0%
@@ -18,28 +17,28 @@ Stellen Sie vor der Aktivierung der Videoverfolgung (Video Heartbeats) sicher, d
 * TVSDK 3.0 für Android.
 * Konfigurations-/Initialisierungsinformationen
 
-   Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Informationen zu Ihrem spezifischen Video-Tracking-Konto zu erhalten:
+  Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um Informationen zu Ihrem Video-Tracking-Konto zu erhalten:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
-   <td colname="col2"> <p>Wichtig:  Dieser JSON-Konfigurationsdateiname muss <span class="filepath"> ADBMobileConfig.json </span> bleiben. Der Name und der Pfad dieser Konfigurationsdatei können nicht geändert werden. Der Pfad zu dieser Datei muss <span class="filepath"> &lt;source root&gt;/assets </span> lauten. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
+   <td colname="col2"> <p>Wichtig: Der Name dieser JSON-Konfigurationsdatei muss beibehalten werden. <span class="filepath"> ADBMobileConfig.json </span>. Der Name und der Pfad dieser Konfigurationsdatei können nicht geändert werden. Der Pfad zu dieser Datei muss <span class="filepath"> &lt;source root=""&gt;/assets </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Endpunkt des AppMeasurement-Tracking-Servers </td> 
-   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts der Adobe Analytics (ehemals SiteCatalyst). </td> 
+   <td colname="col1"> AppMeasurement-Tracking-Server-Endpunkt </td> 
+   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts der Adobe Analytics (früher SiteCatalyst). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Video Analytics-Tracking-Server-Endpunkt </td> 
-   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts für die Videoanalyse. Hier werden alle Video Heartbeat-Tracking-Aufrufe gesendet. <p>Tipp:  Die URL des Besucher-Tracking-Servers entspricht der URL des Analytics-Tracking-Servers. Informationen zur Implementierung des Besucher-ID-Diensts finden Sie unter <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementieren des ID-Diensts </a>. </p> </td> 
+   <td colname="col2"> Die URL des Back-End-Erfassungsendpunkts für die Videoanalyse. Hier werden alle Video Heartbeat-Tracking-Aufrufe gesendet. <p>Tipp: Die URL des Besucher-Tracking-Servers entspricht der URL des Analytics-Tracking-Servers. Informationen zur Implementierung des Besucher-ID-Service finden Sie unter <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementieren des ID-Diensts </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Kontoname </td> 
    <td colname="col2"> Wird auch als Report Suite-ID (RSID) bezeichnet. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Organisations-ID des Marketing Cloud </td> 
+   <td colname="col1"> Organisations-ID des Marketings Cloud </td> 
    <td colname="col2"> Ein string -Wert, der für die Instanziierung der Besucherkomponente erforderlich ist. </td> 
   </tr> 
  </tbody> 
@@ -47,7 +46,7 @@ Stellen Sie vor der Aktivierung der Videoverfolgung (Video Heartbeats) sicher, d
 
 So konfigurieren Sie das Video-Tracking in Ihrem Player:
 
-1. Überprüfen Sie, ob die Ladezeitoptionen in der Ressourcendatei `ADBMobileConfig.json` korrekt sind.
+1. Bestätigen Sie, dass die Ladezeitoptionen in der `ADBMobileConfig.json` die Ressourcendatei korrekt ist.
 
    ```
    { 
@@ -81,8 +80,8 @@ So konfigurieren Sie das Video-Tracking in Ihrem Player:
    So konfigurieren Sie Ladezeitoptionen:
 
 
-   1. Vergewissern Sie sich, dass die `ADBMobileConfig.json`-Datei die entsprechenden Werte enthält (bereitgestellt von Adobe).
-   1. Vergewissern Sie sich, dass sich diese Datei im Ordner `assets/` befindet.
+   1. Vergewissern Sie sich, dass `ADBMobileConfig.json` -Datei enthält die entsprechenden Werte (bereitgestellt von Adobe).
+   1. Vergewissern Sie sich, dass sich diese Datei im Ordner `assets/` Ordner.
 
       Dieser Ordner muss sich im Stammverzeichnis der Quellstruktur der Anwendung befinden.
 
@@ -95,7 +94,7 @@ So konfigurieren Sie das Video-Tracking in Ihrem Player:
 
    >[!IMPORTANT]
    >
-   >Sie können das Video Analytics-Modul Midstream anhalten und es bei Bedarf erneut initialisieren. Bevor das Modul neu initialisiert wird, stellen Sie sicher, dass die Metadaten für die Videoanalyse auch auf die richtigen Inhaltsmetadaten aktualisiert werden. Um die Metadaten neu zu erstellen, wiederholen Sie die ersten beiden Schritte unten (die Unterschritte **a** und **b**).
+   >Sie können das Video Analytics-Modul Midstream anhalten und es bei Bedarf erneut initialisieren. Bevor das Modul neu initialisiert wird, stellen Sie sicher, dass die Metadaten für die Videoanalyse auch auf die richtigen Inhaltsmetadaten aktualisiert werden. Wiederholen Sie die ersten beiden Schritte unten (Unterschritte), um die Metadaten neu zu erstellen **a** und **b**).
 
    1. Erstellen Sie eine Instanz der Video Analytics-Metadaten.
 
@@ -132,13 +131,13 @@ So konfigurieren Sie das Video-Tracking in Ihrem Player:
       VideoAnalyticsProvider videoAnalyticsProvider = new VideoAnalyticsProvider(appContext); 
       ```
 
-   1. Legen Sie die Video Analytics-Metadaten auf der `videoAnalyticsProvider`-Instanz fest.
+   1. Legen Sie die Video Analytics-Metadaten auf der `videoAnalyticsProvider` -Instanz.
 
       ```java
       videoAnalyticsProvider.setVideoAnalyticsMetadata(vaMetadata);
       ```
 
-   1. Hängen Sie die Medienplayer-Instanz an die `videoAnalyticsProvider`-Instanz an:
+   1. Hängen Sie die Medienplayer-Instanz an die `videoAnalyticsProvider` instance:
 
       ```java
       videoAnalyticsProvider.attachMediaPlayer(mediaPlayer); 
@@ -146,7 +145,7 @@ So konfigurieren Sie das Video-Tracking in Ihrem Player:
 
    1. Zerstören Sie den Video Analytics-Anbieter.
 
-      Bevor Sie eine neue Inhaltswiedergabesitzung starten, zerstören Sie die vorherige Instanz des Videoanbieters. Nachdem Sie das Ereignis zum Abschluss des Inhalts (oder die Benachrichtigung) erhalten haben, warten Sie einige Minuten, bis Sie die Provider-Instanz für die Videoanalyse zerstören. Die sofortige Zerstörung der Instanz kann die Fähigkeit des Video Analytics-Anbieters beeinträchtigen, einen &quot;Video complete&quot;-Ping zu senden.
+      Bevor Sie eine neue Sitzung zur Inhaltswiedergabe starten, zerstören Sie die vorherige Instanz des Videoanbieters. Nachdem Sie das Ereignis zum Abschluss des Inhalts (oder die Benachrichtigung) erhalten haben, warten Sie einige Minuten, bis Sie die Provider-Instanz für die Videoanalyse zerstören. Die sofortige Zerstörung der Instanz kann die Fähigkeit des Video Analytics-Anbieters beeinträchtigen, einen &quot;Video complete&quot;-Ping zu senden.
 
       ```java
       if (videoAnalyticsProvider) { 

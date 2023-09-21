@@ -1,20 +1,20 @@
 ---
-title: Grundlegendes zu Adobe-Umgebungen
-description: Grundlegendes zu Adobe-Umgebungen
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Grundlagen zu Adobe-Umgebungen
+description: Grundlagen zu Adobe-Umgebungen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
 
 ---
 
-# Grundlegendes zu Adobe-Umgebungen {#understanding-the-adobe-environments}
+# Grundlagen zu Adobe-Umgebungen {#understanding-the-adobe-environments}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
-Die offizielle Dokumentation zu den Umgebungen für Adoben ist verfügbar. [Einrichten der Umgebung und Testen in der Pre-qual-Phase](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md):
+Die offizielle Dokumentation zu den Adobe-Umgebungen ist verfügbar. [Einrichten der Umgebung und Testen in der Pre-qual-Phase](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md):
 
 Die Adobe-Umgebungen, zusammengefasst in wenigen Worten:
 

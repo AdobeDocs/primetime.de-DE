@@ -1,37 +1,31 @@
 ---
-description: Einige Anzeigen (oder kreative Elemente) von Drittanbietern können nicht in den HTTP Live Streaming (HLS)-Inhaltsstream eingefügt werden, da ihr Videoformat mit HLS nicht kompatibel ist. Primetime-Anzeigen und TVSDK können optional versuchen, inkompatible Anzeigen in kompatible M3U8-Videos zu verpacken.
-title: Verpacken Sie inkompatible Anzeigen mit dem Adobe Creative Repackage Service (CRS) neu.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Einige Drittanbieter-Anzeigen (oder Kreative) können nicht in den HTTP Live Streaming (HLS)-Inhaltsstream eingebunden werden, da ihr Videoformat mit HLS inkompatibel ist. Primetime-Anzeigeneinfügung und TVSDK können optional versuchen, inkompatible Anzeigen in kompatible M3U8-Videos zu verpacken.
+title: Komprimieren Sie inkompatible Anzeigen mit dem Adobe Creative Repackaging Service (CRS) neu.
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
 
 ---
 
+# Komprimieren Sie inkompatible Anzeigen mit dem Adobe Creative Repackaging Service (CRS) neu. {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
 
-# Komprimieren Sie inkompatible Anzeigen mit dem Adobe Creative Repackage Service (CRS) {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
+Einige Drittanbieter-Anzeigen (oder Kreative) können nicht in den HTTP Live Streaming (HLS)-Inhaltsstream eingebunden werden, da ihr Videoformat mit HLS inkompatibel ist. Primetime-Anzeigeneinfügung und TVSDK können optional versuchen, inkompatible Anzeigen in kompatible M3U8-Videos zu verpacken.
 
-Einige Anzeigen (oder kreative Elemente) von Drittanbietern können nicht in den HTTP Live Streaming (HLS)-Inhaltsstream eingefügt werden, da ihr Videoformat mit HLS nicht kompatibel ist. Primetime-Anzeigen und TVSDK können optional versuchen, inkompatible Anzeigen in kompatible M3U8-Videos zu verpacken.
+Anzeigen, die von verschiedenen Drittanbietern bereitgestellt werden, z. B. von einer Agentur und einem Server, Ihrem Inventarpartner oder einem Werbenetzwerk, werden häufig in inkompatiblen Formaten wie dem progressiven Download-MP4-Format bereitgestellt.
 
-Anzeigen, die von verschiedenen Drittanbietern bereitgestellt werden, z. B. von einer Agentur und einem Server, Ihrem Bestandspartner oder einem Werbenetzwerk, werden häufig in inkompatiblen Formaten wie dem progressiven Download im MP4-Format bereitgestellt.
+Wenn TVSDK erstmals auf eine inkompatible Anzeige trifft, ignoriert der Player die Anzeige und sendet eine Anfrage an den CRS (Creative Repackaging Service), der Teil des Primetime-Anzeigeneinfüge-Backend ist, um die Anzeige in ein kompatibles Format zu verpacken. CRS versucht, M3U8-Ausgabeformate der Anzeige mit mehreren Bitraten zu generieren und speichert diese Ausgabeformate im Primetime Content Delivery Network (CDN). Wenn TVSDK das nächste Mal eine Anzeigenantwort erhält, die auf diese Anzeige verweist, verwendet der Player die HLS-kompatible M3U8-Version aus dem CDN.
 
-Wenn TVSDK zum ersten Mal auf eine inkompatible Anzeige stößt, ignoriert der Player die Anzeige und sendet eine Anforderung an den Kreativ-Umverpackungsdienst (CRS), der Teil des Primetime-Anzeigenende ist, um die Anzeige in ein kompatibles Format zu verpacken. CRS versucht, M3U8-Darstellungen der Anzeige mit mehreren Bitraten zu generieren, und speichert diese Darstellungen im Primetime Content Versand Network (CDN). Wenn TVSDK das nächste Mal eine Anzeigenantwort erhält, die auf diese Anzeige verweist, verwendet der Player die HLS-kompatible M3U8-Version vom CDN.
-
-Wenden Sie sich an Ihren Kundenbetreuer, um diese optionale CRS-Funktion zu aktivieren.
+Wenden Sie sich zur Aktivierung dieser optionalen CRS-Funktion an Ihren Adobe-Support-Mitarbeiter.
 
 >[!NOTE]
 >
->Für Kunden mit CRS Version 3.0 (und früher) haben die folgenden Änderungen ab CRS Version 3.1 sowohl die Sicherheit als auch die Leistung verbessert:
+>Kunden von CRS Version 3.0 (und früher), beginnend mit CRS Version 3.1, haben die folgenden Änderungen sowohl die Sicherheit als auch die Leistung verbessert:
 >
->* CRS 3.1 fährt mit `https:` fort, wenn der neu verpackte Inhalt `https:` verwendet. Dadurch wird das Potenzial einiger Player verringert, unsichere Inhalte zu präsentieren.
-   >
-   >
-* Mit CRS 3.1 werden Netzwerkaufrufe erheblich minimiert, wodurch die Zeit des Videostarts erheblich verkürzt wird.
-
+>* CRS 3.1 wird mit `https:` wenn der neu verpackte Inhalt verwendet `https:`. Dadurch wird das Potenzial einiger Player verringert, unsichere Inhalte zu präsentieren.
 >
-
-
+>* CRS 3.1 minimiert Netzwerkaufrufe erheblich und verbessert so die Startzeit des Videos.
+>
 
 Weitere Informationen zu CRS finden Sie unter [Creative Packaging Service (CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_certificate_enrollment.pdf).
 

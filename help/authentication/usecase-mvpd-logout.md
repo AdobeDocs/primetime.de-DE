@@ -1,19 +1,18 @@
 ---
 title: MVPD-Abmeldung
 description: MVPD-Abmeldung
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
 
 ---
 
-
 # MVPD-Abmeldung
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 Anwendungsfälle für die Abmeldung können entweder durch eine SAML-Abmeldeanfrage implementiert werden, die an das IdP gesendet wird, oder durch einen benutzerdefinierten Abmeldeendpunkt, der aufgerufen wird.  Die folgenden Anforderungs- und Antwortbeispiele enthalten Beispiele für die SAML-Abmeldeimplementierung.
 

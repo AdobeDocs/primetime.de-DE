@@ -1,32 +1,30 @@
 ---
-description: Verwenden Sie die Hilfsklasse AuditudeSettings, die die MetadataNode-Klasse erweitert, um Adobe Primetime-Anzeigenentscheidungsmetadaten einzurichten.
-title: Einrichten von Anzeigeneinfügemetadaten
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Verwenden Sie die Hilfsklasse AuditudeSettings , die die MetadataNode-Klasse erweitert, um Adobe Primetime-Anzeigenentscheidungen-Metadaten einzurichten.
+title: Einrichten von Anzeigeneinfüge-Metadaten
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
 
 ---
 
+# Einrichten von Anzeigeneinfüge-Metadaten {#set-up-ad-insertion-metadata}
 
-# Einrichten von Anzeigeneinfügemetadaten {#set-up-ad-insertion-metadata}
-
-Verwenden Sie die Hilfsklasse AuditudeSettings, die die MetadataNode-Klasse erweitert, um Adobe Primetime-Anzeigenentscheidungsmetadaten einzurichten.
+Verwenden Sie die Hilfsklasse AuditudeSettings , die die MetadataNode-Klasse erweitert, um Adobe Primetime-Anzeigenentscheidungen-Metadaten einzurichten.
 
 >[!TIP]
 >
->Adobe Primetime-Anzeigenentscheidung war früher als Auditude bekannt.
+>Adobe Primetime-Anzeigenentscheidungen wurden früher als Auditude bezeichnet.
 
-Anzeigenmetadaten befinden sich in der Eigenschaft `MediaResource.Metadata`. Beim Starten der Wiedergabe eines neuen Videos ist Ihre Anwendung dafür verantwortlich, die richtigen Anzeigenmetadaten festzulegen.
+Advertising-Metadaten befinden sich im `MediaResource.Metadata` -Eigenschaft. Beim Starten der Wiedergabe eines neuen Videos ist Ihre Anwendung für das Festlegen der richtigen Werbe-Metadaten verantwortlich.
 
-1. Erstellen Sie die Instanz `AuditudeSettings`.
+1. Erstellen Sie die `AuditudeSettings` -Instanz.
 
    ```java
    AuditudeSettings auditudeSettings = new AuditudeSettings();
    ```
 
-1. Legen Sie die Adobe Primetime-Anzeigenentscheidungen `mediaID`, `zoneID`, `domain` und die optionalen Targeting-Parameter fest.
+1. Festlegen der Adobe Primetime-Anzeigenentscheidung `mediaID`, `zoneID`, `domain`und den optionalen Targeting-Parametern.
 
    ```java
    auditudeSettings.setZoneId("yourZoneId"); 
@@ -44,10 +42,9 @@ Anzeigenmetadaten befinden sich in der Eigenschaft `MediaResource.Metadata`. Bei
 
    >[!TIP]
    >
-   >Die Medien-ID wird von TVSDK als Zeichenfolge verwendet, die in einen md5-Wert konvertiert wird und für den `u`-Wert in der Primetime-Anfrage zur Auswahl der Anzeige verwendet wird. Beispiel:
+   >Die Medien-ID wird von TVSDK als Zeichenfolge verwendet, die in einen md5-Wert konvertiert wird und für die `u` -Wert in der URL-Anfrage für Primetime-Anzeigenentscheidungen. Beispiel:
    >
-   >
-   ```
+   >```
    >https://ad.auditude.com/adserver?
    >u=c76d04ee31c91c4ce5c8cee41006c97d
    >   &z=114100 
@@ -57,25 +54,25 @@ Anzeigenmetadaten befinden sich in der Eigenschaft `MediaResource.Metadata`. Bei
    >   &g=1000002
    >```
 
-1. Erstellen Sie eine `MediaResource`-Instanz mithilfe der Medienstream-URL und der zuvor erstellten Anzeigenmetadaten.
+1. Erstellen Sie eine `MediaResource` -Instanz mithilfe der Medien-Stream-URL und der zuvor erstellten Werbe-Metadaten.
 
    ```java
    MediaResource mediaResource = new MediaResource( 
    "https://example.com/media/test_media.m3u8", MediaResource.Type.HLS, Metadata);
    ```
 
-1. Laden Sie das `MediaResource`-Objekt über die `MediaPlayer.replaceCurrentResource`-Methode.
+1. Laden Sie die `MediaResource` -Objekt durch `MediaPlayer.replaceCurrentResource` -Methode.
 
-   Die `MediaPlayer`-Beginn, die das Medienstream-Manifest laden und verarbeiten.
+   Die `MediaPlayer` startet das Laden und Verarbeiten des Medien-Stream-Manifests.
 
-1. Wenn `MediaPlayer` den Status `INITIALIZED` Transition, rufen Sie die Medienstream-Eigenschaften mithilfe der `MediaPlayer.CurrentItem`-Methode in Form einer `MediaPlayerItem`-Instanz ab.
-1. (Optional) Abfrage der `MediaPlayerItem`-Instanz, um zu sehen, ob der Stream live ist, unabhängig davon, ob er über alternative Audiospuren verfügt oder ob der Stream geschützt ist.
+1. Wenn die Variable `MediaPlayer` Transitionen zu `INITIALIZED` -Status, um die Eigenschaften des Medien-Streams in Form eines `MediaPlayerItem` -Instanz über die `MediaPlayer.CurrentItem` -Methode.
+1. (Optional) Abfragen der `MediaPlayerItem` -Instanz, um zu sehen, ob der Stream live ist, unabhängig davon, ob er alternative Audiospuren aufweist oder ob der Stream geschützt ist.
 
-   Anhand dieser Informationen können Sie die Benutzeroberfläche für die Wiedergabe vorbereiten. Wenn Sie beispielsweise wissen, dass es zwei Audiospuren gibt, können Sie ein UI-Steuerelement einschließen, das zwischen diesen Spuren umschaltet.
+   Diese Informationen können Ihnen bei der Vorbereitung der Benutzeroberfläche für die Wiedergabe helfen. Wenn Sie beispielsweise wissen, dass es zwei Audiospuren gibt, können Sie ein UI-Steuerelement einfügen, das zwischen diesen Spuren umschaltet.
 
-1. Rufen Sie `MediaPlayer.prepareToPlay` auf, um den Werbe-Workflow Beginn.
+1. Aufruf `MediaPlayer.prepareToPlay` , um den Werbe-Workflow zu starten.
 
-   Nachdem die Anzeigen aufgelöst und auf der Zeitleiste platziert wurden, wird der Status `MediaPlayer` in `PREPARED` Transition.
-1. Rufen Sie `MediaPlayer.play` auf, um die Wiedergabe Beginn.
+   Nachdem die Anzeigen aufgelöst und auf der Timeline platziert wurden, wird die `MediaPlayer` Transitionen zu `PREPARED` state.
+1. Aufruf `MediaPlayer.play` , um die Wiedergabe zu starten.
 
 TVSDK enthält jetzt Anzeigen, wenn Ihre Medien wiedergegeben werden.

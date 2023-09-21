@@ -3,8 +3,7 @@ title: TVSDK 2.4.1 für Android - Versionshinweise
 description: In den Versionshinweisen zu TVSDK 2.4.1 für Android werden die neuen und unterstützten Funktionen sowie die bekannten Probleme und Einschränkungen in TVSDK Android 2.4.1 beschrieben.
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: 3de09048-ae32-43b4-a019-34b217931a4c
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 0%
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 In den Versionshinweisen zu TVSDK 2.4.1 für Android werden die neuen und unterstützten Funktionen sowie die bekannten Probleme und Einschränkungen in TVSDK Android 2.4.1 beschrieben.
 
-## TVSDK Android 2.4.1 {#tvsdk-android}
+## TVSDK 2.4.1 {#tvsdk-android}
 
 Adobe veröffentlicht TVSDK 2.4.1 für Android.
 
@@ -48,11 +47,11 @@ Hier finden Sie die wichtigsten neuen Funktionen in Version 2.4.1:
 * HLS-Version 4-Funktionen
 
    * **Videowiedergabe** (Wiedergabe, Pause, Suche) mit Player-Kontrolle für Live-, Linear- und VOD-Streams.
-   * **verdeckte Untertitel.** TVSDK kann 608/708 geschlossene Untertitel mit einer Auswahl an Schriftarten, Schriftgrößen, Farben und Hintergrund anzeigen. Es kann auch Videos mit Rollup-Beschriftungen unterstützen und zwischen Sprachspuren wechseln, sofern diese verfügbar sind.
+   * **verdeckte Untertitel.** TVSDK kann 608/708 geschlossene Untertitel mit einer Auswahl an Schriftarten, Schriftgrößen, Farben und Hintergrund anzeigen. Es kann auch Videos mit Rollup-Untertiteln unterstützen und zwischen Sprachspuren wechseln, sofern diese verfügbar sind.
    * **Wiedergabemodus auswählen** unterstützt schnelle Vorwärts- und Rückspulen für HLS-Streams, die I-Frames verwenden. Alle Steuerelemente für die Videowiedergabe funktionieren auf dem Inhalt. Langsame Bewegung (Vorwärts) ist für den externen Videowiedergabemodus mit Raten zwischen 0 und 1 verfügbar.
    * **Adaptive Bitrate (ABR)** ermöglicht dem Player, basierend auf Netzwerk- und anderen Bedingungen dynamisch auszuwählen, welche von mehreren Versionen desselben Inhalts-Streams wiedergegeben werden sollen. Sie können Parameter dynamisch oder in der Manifestdatei festlegen, um unter aggressiven, moderaten und konservativen Auswahlrichtlinien auszuwählen.
    * **Byte-Bereiche** aktivieren Sie eine einzelne TS-Datei, die mehrere TS-Segmente enthält.
-   * **Alternative Audioausgabeformate** den Player aktivieren, um zwischen verfügbaren Audiospuren zu wechseln.
+   * **Alternative Audiowiedergaben** den Player aktivieren, um zwischen verfügbaren Audiospuren zu wechseln.
    * **ID3-Unterstützung.** TVSDK kann HLS-Audio- und Videostreams mit ID3-Audio-Metadaten wie Künstlername, Titel und Album wiedergeben.
    * **Failover. **TVSDK verwendet Strategien, um die unterbrechungsfreie Wiedergabe trotz Fehlern von Host-Servern, Wiedergabelisten und Segmenten fortzusetzen.
    * **Mehrkanal-Audio-Pass-Through (DD+).** TVSDK kann Dolby Digital Plus Audio (E-AC3)-Daten an unterstützende Hardware übergeben.
@@ -63,11 +62,11 @@ Hier finden Sie die wichtigsten neuen Funktionen in Version 2.4.1:
 
       * Lizenzwechsel
       * Schlüsselrotation
-      * Lizenzzwischenspeicherung
+      * Lizenzcache
       * Policy time
       * IV Rotation
 
-* **AES 128-Wiedergabe.** TVSDK kann HLS-Inhalte des erweiterten Verschlüsselungsstandards (AES) mit einer Schlüsselgröße von 128 Bit wiedergeben.
+* **AES 128-Wiedergabe.** TVSDK kann HLS-Inhalte des erweiterten Verschlüsselungsstandards (AES) mit Schlüsselgrößen von 128 Bit wiedergeben.
 * **Geschützte HLS (PHLS)** bietet eine begrenzte Anzahl vordefinierter DRM-Richtlinien, eine Untergruppe der Funktionen von Adobe Access, um einfache DRM über HLS für Live- und VOD-Streams zu ermöglichen.
 
 * Funktionen für Werbung/alternative Inhalte und Monetarisierung
@@ -75,7 +74,7 @@ Hier finden Sie die wichtigsten neuen Funktionen in Version 2.4.1:
    * **Tracking für serverseitig eingefügte Anzeigen.** TVSDK kann durch den Adobe Cloud-Anzeigeneinfüge-Dienst eingefügte Anzeigen verfolgen. Es unterstützt lineare Anzeigen in VAST2-, VAST3- und VMAP-Formaten für VOD- und Live/Linear-Streams.
    * **Benutzerdefinierte HLS-Tags.** TVSDK verwendet seine `MediaPlayerConfig` -Klasse, um die Benachrichtigung der Player-Anwendung zu aktivieren, wenn benutzerdefinierte HLS-Tags im Stream angezeigt werden.
    * **Client-seitige Anzeigeneinfügung.** Die Auditude-Anzeigeneinfüge-Bibliothek arbeitet mit Adobe Auditude-Servern zusammen, um Anzeigen für das dynamische Einfügen in Live-, Linear- und VOD-Inhalte bei Pre-Roll-, Mid-Roll- oder Post-Roll-Positionen aufzulösen.
-   * **Benutzerdefinierte Anzeigenauflöser.** Die `ContentResolver, OpportunityGenerator,` und `MediaPlayerClientFactory` -Schnittstellen ermöglichen es Ihnen, einen benutzerdefinierten Inhalts-Resolver zu implementieren und einen benutzerdefinierten Opportunity-Detektor für die Verwendung mit TVSDK zu registrieren. Die `TestAdResolver` und `AuditudeResolver` -Klassen bieten C++-Beispiele für die Implementierung eines Content Resolver. Ein JavaScript-Beispiel finden Sie unter `samples/jspsdk/testapp/psdk.js`.
+   * **Benutzerdefinierte Anzeigenauflöser.** Die `ContentResolver, OpportunityGenerator,` und `MediaPlayerClientFactory` -Schnittstellen ermöglichen es Ihnen, einen benutzerdefinierten Inhalts-Resolver zu implementieren und einen benutzerdefinierten Opportunity-Detektor für die Verwendung mit TVSDK zu registrieren. Die `TestAdResolver` und `AuditudeResolver` -Klassen bieten C++-Beispiele für die Implementierung eines Content-Resolvers. Ein JavaScript-Beispiel finden Sie unter `samples/jspsdk/testapp/psdk.js`.
    * **Konsistentes Anzeigenverhalten.** Verwenden Sie die `AdPolicySelector` -Schnittstelle verwenden, um ein konsistentes Verhalten aller Player für Vorgänge wie Suchen und Trick Play zu ermöglichen, wenn Anzeigen im Inhalt vorhanden sind. Wenn Sie Ihre eigene Implementierung nicht vornehmen, verwendet TVSDK `DefaultAdPolicySelector`.
    * **Entfernen/ersetzen Sie C3-Anzeigen.** Verwenden Sie die entsprechende TVSDK-API, um benutzerdefinierte Inhaltsbereiche zu entfernen und neue Anzeigen dynamisch einzufügen, ohne dass zusätzliche Vorbereitungsarbeiten erforderlich sind. Dies ist praktisch, wenn Live-/lineare Inhalte übertragen und dann sofort ohne Bereinigung auf Anfrage zur Verfügung gestellt werden.
 
@@ -103,7 +102,7 @@ Diese Funktion verknüpft Wiedergabeschränkungen mit bestimmten Auflösungen un
 
 * **Trickplay mit adaptiver Bitrate (ABR)**
 
-Mit dieser Funktion kann TVSDK im Trick Play-Modus zwischen iFrame-Streams wechseln. Sie können Nicht-iFrame-Profile verwenden, um Tricks mit geringeren Geschwindigkeiten abzuspielen.
+Mit dieser Funktion kann TVSDK im Trick Play-Modus zwischen iFrame-Streams wechseln. Sie können Nicht-iFrame-Profile verwenden, um Tricks mit geringeren Geschwindigkeiten wiederzugeben.
 
 * **Smoother Trick Play**
 
@@ -133,24 +132,24 @@ TVSDK 2.4 unterstützt eine Reihe von Funktionen, die Sie implementieren können
 
 | **Funktion** | **Content-Typ** | **HLS** | **DASH** |
 |---|---|---|---|
-| Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | VOD + Live | ï | Ö (nur VOD) |
-| FER - Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | FER VOD | ï | Nicht unterstützt |
+| Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | VOD + Live | √ | Ö (nur VOD) |
+| FER - Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | FER VOD | √ | Nicht unterstützt |
 | MP3 | VOD | Nicht unterstützt | Nicht unterstützt |
-| MP4-Inhaltswiedergabe | VOD | ï | ï |
-| Adaptive Bit Rate Switching Logic | VOD + Live | ï | Nicht unterstützt |
-| Nur-Audio-Wiedergabe | VOD + Live | ï | Nicht unterstützt |
-| Geschlossene Untertitel - 608/708 | VOD + Live | ï | Ö (nur VOD) |
-| Geschlossene Untertitel - WebVTT | VOD + Live | ï | Ö (nur VOD) |
-| Manifest-Failover | VOD + Live | ï | Ö (nur VOD) |
-| Erweitertes Failover | VOD + Live | ï | Ö (nur VOD) |
-| QoS- und Player-Benachrichtigungen | VOD + Live | ï | Ö (nur VOD) |
-| Unterstützung für Cookie-Kopfzeilen | VOD + Live | ï | Ö (nur VOD) |
+| MP4-Inhaltswiedergabe | VOD | √ | √ |
+| Adaptive Bit Rate Switching Logic | VOD + Live | √ | Nicht unterstützt |
+| Nur-Audio-Wiedergabe | VOD + Live | √ | Nicht unterstützt |
+| Untertitel - 608/708 | VOD + Live | √ | Ö (nur VOD) |
+| Geschlossene Untertitel - WebVTT | VOD + Live | √ | Ö (nur VOD) |
+| Manifest-Failover | VOD + Live | √ | Ö (nur VOD) |
+| Erweitertes Failover | VOD + Live | √ | Ö (nur VOD) |
+| QoS- und Player-Benachrichtigungen | VOD + Live | √ | Ö (nur VOD) |
+| Unterstützung für Cookie-Kopfzeilen | VOD + Live | √ | Ö (nur VOD) |
 | Unterstützung für benutzerdefinierte Kopfzeilen | VOD + Live | Nicht unterstützt | Nicht unterstützt |
-| Puffersteuerungsparameter festlegen | VOD + Live | ï | Ö (nur VOD) |
-| Festlegen von adaptiven Bitratensteuerelementen | VOD + Live | ï | Ö (nur VOD) |
-| Benutzerdefinierte Manifest-Tags (HLS)/Ereignis-Streams (DASH) | VOD + Live | ï | Ö (nur VOD) |
-| Spätes gebundenes Audio | VOD + Live | ï | Ö (nur VOD) |
-| 302 Umleitung | VOD + Live | ï | Ö (nur VOD) |
+| Puffersteuerungsparameter festlegen | VOD + Live | √ | Ö (nur VOD) |
+| Festlegen von adaptiven Bitratensteuerelementen | VOD + Live | √ | Ö (nur VOD) |
+| Benutzerdefinierte Manifest-Tags (HLS)/Ereignis-Streams (DASH) | VOD + Live | √ | Ö (nur VOD) |
+| Spätes gebundenes Audio | VOD + Live | √ | Ö (nur VOD) |
+| 302 Umleitung | VOD + Live | √ | Ö (nur VOD) |
 
 ### Erweiterte Wiedergabefunktionen {#advanced-playback-features}
 
@@ -165,31 +164,31 @@ TVSDK 2.4 unterstützt eine Reihe von Funktionen, die Sie implementieren können
   <tr>
    <td>Wiedergabe mit Versatz</td> 
    <td>Live</td> 
-   <td>ï</td> 
+   <td>√</td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
    <td>Nur-Audio-Wiedergabe</td> 
    <td>VOD + Live</td> 
-   <td>ï</td> 
+   <td>√</td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
    <td>Trick Play </td> 
    <td>VOD + Live</td> 
-   <td>ï</td> 
+   <td>√</td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
    <td>Glattes Trick Play (mit ABR)</td> 
    <td>VOD + Live</td> 
-   <td>ï</td> 
+   <td>√</td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
    <td>ID3-Analyse (HLS)/Zeitgesteuerte Metadaten (DASH)</td> 
    <td>VOD + Live</td> 
-   <td>ï</td> 
+   <td>√</td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
@@ -201,7 +200,7 @@ TVSDK 2.4 unterstützt eine Reihe von Funktionen, die Sie implementieren können
   <tr>
    <td>Sofort aktiviert</td> 
    <td>VOD + Live</td> 
-   <td>ï</td> 
+   <td>√</td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
@@ -211,13 +210,13 @@ TVSDK 2.4 unterstützt eine Reihe von Funktionen, die Sie implementieren können
      <li>Mehrzeiträume (DASH)</li> 
     </ul> </td> 
    <td>VOD + Live</td> 
-   <td>ï</td> 
+   <td>√</td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
    <td>302 Weiterleitungs-Sticky</td> 
    <td>VOD + Live</td> 
-   <td>ï</td> 
+   <td>√</td> 
    <td>Ö (nur VOD)</td> 
   </tr>
   <tr>
@@ -229,21 +228,21 @@ TVSDK 2.4 unterstützt eine Reihe von Funktionen, die Sie implementieren können
   <tr>
    <td>Stream-Integrität </td> 
    <td>VOD + Live</td> 
-   <td>ï</td> 
+   <td>√</td> 
    <td>Nicht unterstützt</td> 
   </tr>
  </tbody>
 </table>
 
-### Zentrale Ad Insertion-Funktionen (CSAI) {#core-ad-insertion-features-csai}
+### Core Ad Insertion Features (CSAI) {#core-ad-insertion-features-csai}
 
 | **Funktion** | **Content-Typ** | **HLS** | **DASH** |
 |---|---|---|---|
-| Allgemeine Wiedergabe, Anzeigen aktiviert | VOD + Live | ï | Ö (nur VOD-Vorrollen) |
-| Fairer Inhalt mit aktivierten Anzeigen | VOD | ï | Nicht unterstützt |
-| Standardmäßige Anzeigenverhalten | VOD + Live | ï | Ö (nur VOD-Vorrollen) |
-| VAST 2.0/3.0 | VOD + Live | ï | Ö (nur VOD-Vorrollen) |
-| VMAP 1.0 | VOD + Live | ï | Ö (nur VOD-Vorrollen) |
+| Allgemeine Wiedergabe, Anzeigen aktiviert | VOD + Live | √ | Ö (nur VOD-Vorrollen) |
+| Fairer Inhalt mit aktivierten Anzeigen | VOD | √ | Nicht unterstützt |
+| Standardmäßige Anzeigenverhalten | VOD + Live | √ | Ö (nur VOD-Vorrollen) |
+| VAST 2.0/3.0 | VOD + Live | √ | Ö (nur VOD-Vorrollen) |
+| VMAP 1.0 | VOD + Live | √ | Ö (nur VOD-Vorrollen) |
 | MP4-Anzeigen | VOD + Live | Ö (aus CRS) | Ö (von CRS, nur Vorrollen) |
 
 ### Erweiterte Ad Insertion-Funktionen (CSAI) {#advanced-ad-insertion-features-csai}
@@ -259,7 +258,7 @@ TVSDK 2.4 unterstützt eine Reihe von Funktionen, die Sie implementieren können
   <tr>
    <td>Trick Play mit aktivierten Anzeigen</td> 
    <td>VOD + Live</td> 
-   <td>ï</td> 
+   <td>√</td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
@@ -271,31 +270,31 @@ TVSDK 2.4 unterstützt eine Reihe von Funktionen, die Sie implementieren können
   <tr>
    <td>Targeting-Parameter</td> 
    <td>VOD + Live</td> 
-   <td>ï</td> 
+   <td>√</td> 
    <td>Ö (nur VOD-Vorrollen)</td> 
   </tr>
   <tr>
    <td>Benutzerdefinierte Parameter</td> 
    <td>VOD + Live</td> 
-   <td>ï</td> 
+   <td>√</td> 
    <td>Ö (nur VOD-Vorrollen)</td> 
   </tr>
   <tr>
    <td>Benutzerdefiniertes Anzeigenverhalten</td> 
    <td>VOD + Live</td> 
-   <td>ï</td> 
+   <td>√</td> 
    <td>Ö (nur VOD-Vorrollen)</td> 
   </tr>
   <tr>
    <td>Benutzerdefinierte Anzeigen-Tags</td> 
    <td>Live</td> 
-   <td>ï </td> 
+   <td>√ </td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
    <td>Benutzerdefinierte Anzeigenauflöser</td> 
    <td>VOD + Live</td> 
-   <td>ï </td> 
+   <td>√ </td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
@@ -307,13 +306,13 @@ TVSDK 2.4 unterstützt eine Reihe von Funktionen, die Sie implementieren können
   <tr>
    <td>C3 Ad Replacement </td> 
    <td>VOD + Live</td> 
-   <td>ï </td> 
+   <td>√ </td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
    <td>Lazy Ad Loading</td> 
    <td>VOD</td> 
-   <td>ï </td> 
+   <td>√ </td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
@@ -323,13 +322,13 @@ TVSDK 2.4 unterstützt eine Reihe von Funktionen, die Sie implementieren können
      <li>Mehrzeiträume (DASH)</li> 
     </ul> </td> 
    <td>VOD + Live</td> 
-   <td>ï </td> 
+   <td>√ </td> 
    <td> </td> 
   </tr>
   <tr>
-   <td>Companion Ads, Banneranzeigen und klickbare Anzeigen</td> 
+   <td>Companion Ads, Banneranzeigen und anklickbare Anzeigen</td> 
    <td>VOD + Live</td> 
-   <td>ï </td> 
+   <td>√ </td> 
    <td>Ö (nur VOD-Vorrollen)</td> 
   </tr>
   <tr>
@@ -341,19 +340,19 @@ TVSDK 2.4 unterstützt eine Reihe von Funktionen, die Sie implementieren können
   <tr>
    <td>Beenden einer frühzeitigen Anzeige</td> 
    <td>Live</td> 
-   <td>ï </td> 
+   <td>√ </td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
    <td>Regelbasierte kreative VOD + Live-Priorisierung</td> 
    <td>VOD + Live</td> 
-   <td>ï </td> 
+   <td>√ </td> 
    <td>Nicht unterstützt</td> 
   </tr>
   <tr>
    <td>CRS-Regeln </td> 
    <td>VOD + Live</td> 
-   <td>ï </td> 
+   <td>√ </td> 
    <td>Nicht unterstützt</td> 
   </tr>
  </tbody>
@@ -363,11 +362,11 @@ TVSDK 2.4 unterstützt eine Reihe von Funktionen, die Sie implementieren können
 
 | **Funktion** | **Content-Typ** | **HLS** | **DASH** |
 |---|---|---|---|
-| AES-Verschlüsselung | VOD + Live | ï | Ö (nur VOD) |
-| AES-Beispielverschlüsselung | VOD + Live | ï |  |
-| Tokenisierte Streams | VOD + Live | ï |  |
+| AES-Verschlüsselung | VOD + Live | √ | Ö (nur VOD) |
+| AES-Beispielverschlüsselung | VOD + Live | √ |  |
+| Tokenisierte Streams | VOD + Live | √ |  |
 | DRM | VOD + Live | Nur Primetime DRM (Future: Widevine) | Nur widew |
-| Externe Wiedergabe (RBOP) | VOD + Live | Nur Primetime DRM | Nicht unterstützt |
+| Externe Wiedergabe (BOP) | VOD + Live | Nur Primetime DRM | Nicht unterstützt |
 | Lizenzrotation | VOD + Live | Nur Primetime DRM | Nicht unterstützt |
 | Hauptrolle | VOD + Live | Nur Primetime DRM | Nicht unterstützt |
 
@@ -375,17 +374,17 @@ TVSDK 2.4 unterstützt eine Reihe von Funktionen, die Sie implementieren können
 
 | **Funktion** | **Content-Typ** | **HLS** | **DASH** |
 |---|---|---|---|
-| Adobe Analytics VHL-Integration | VOD + Live | ï | ï |
-| Rechnungsstellung | VOD + Live | ï | Nicht unterstützt |
+| Adobe Analytics VHL-Integration | VOD + Live | √ | √ |
+| Rechnungsstellung | VOD + Live | √ | Nicht unterstützt |
 
 ## Nicht unterstützte Funktionen {#features-not-supported}
 
 Diese TVSDK-Version unterstützt nicht:
 
-* Werbeunterbrechung.
+* Werbeanzeigen ausschließen.
 * Langsame Bewegung im Trickspiel.
 * Suchen und trickplay mit MP4-Inhalt.
-* Anzeigeneinfügung mit MP4-Hauptinhalt.
+* Anzeigeneinfügung mit MP4-Hauptinhalt
 * Suchen Sie, wann eine Anzeige wiedergegeben wird.
 * Wiedergabe von Anzeigen mit Nur-Audio-Medien.
 
@@ -406,4 +405,4 @@ Ohne Video gibt es keine Viewport-Dimension und ohne Viewport-Dimension können 
 
 ## Hilfreiche Ressourcen {#helpful-resources}
 
-* Die vollständige Hilfedokumentation finden Sie unter [Adobe Primetime - Lernen und Support](https://experienceleague.adobe.com/docs/primetime.html) Seite.
+* Siehe vollständige Hilfedokumentation unter [Adobe Primetime - Lernen und Support](https://experienceleague.adobe.com/docs/primetime.html) Seite.

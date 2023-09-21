@@ -1,8 +1,7 @@
 ---
-description: 'Sie müssen die Servereigenschaften entsprechend Ihrer Umgebung konfigurieren. Dazu können Sie einen der folgenden Schritte ausführen '
+description: Sie müssen die Servereigenschaften entsprechend Ihrer Umgebung konfigurieren. Dazu können Sie einen der folgenden Schritte ausführen
 title: Anwenden von Eigenschaften auf Serverumgebungen
-exl-id: 0c78011a-e8c8-43a8-8c2d-a5c4ed54a8d7
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
@@ -17,14 +16,14 @@ Sie müssen die Servereigenschaften entsprechend Ihrer Umgebung konfigurieren. D
 
 * [!DNL AdobeInitial.properties] - Beispiel im [!DNL /shared] Ordner auf der DVD
 
-   Sie können diese Datei verwenden, um die in der WAR-Datei festgelegten Eigenschaften wie folgt zu überschreiben:
+  Sie können diese Datei verwenden, um die in der WAR-Datei festgelegten Eigenschaften wie folgt zu überschreiben:
 
-   1. Legen Sie die überschreibenden Eigenschaftswerte in fest. [!DNL AdobeInitial.properties]
+   1. Legen Sie die übergeordneten Eigenschaftswerte in fest. [!DNL AdobeInitial.properties]
    1. Ort [!DNL AdobeInitial.properties] auf den Klassenpfad.
 
-   >[!NOTE]
-   >
-   >Adobe empfiehlt, die [!DNL AdobeInitial.properties] -Datei, da Sie damit Ihre Anwendungs-WAR-Dateien aktualisieren können, ohne den Verlust der vorherigen Eigenschaftskonfigurationseinstellungen zu riskieren, die Sie möglicherweise in der [!DNL flashaccess-i15n.properties] -Datei.
+  >[!NOTE]
+  >
+  >Adobe empfiehlt, die [!DNL AdobeInitial.properties] -Datei, da Sie damit Ihre Anwendungs-WAR-Dateien aktualisieren können, ohne den Verlust der vorherigen Eigenschaftskonfigurationseinstellungen zu riskieren, die Sie möglicherweise in der [!DNL flashaccess-i15n.properties] -Datei.
 
 * Der Java-Systemeigenschaftsmechanismus.
 
@@ -65,4 +64,4 @@ Der Server verwendet diese Suchreihenfolge für Eigenschaften:
 >[!NOTE]
 >
 >Sie müssen den Umgebungsnamen des Servers beim Starten des Servers als Java-Systemeigenschaft angeben. Wenn Sie beispielsweise Tomcat mit [!DNL catalina.bat], legen Sie die `CATALINA_OPTS` Umgebungsvariable wie folgt:
->-DENVIRONMENT_NAME=[ DEV | STAGE | PROD ]
+>-DENVIRONMENT_NAME=[DEV | STAGE | PROD]

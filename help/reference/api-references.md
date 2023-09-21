@@ -2,8 +2,7 @@
 title: Adobe Primetime API-Referenzen
 description: Mithilfe der APIs können Sie schnell und einfach eine funktionale Anwendung oder Integration erstellen.
 topic-tags: API-references
-exl-id: 6862764e-c1d8-413a-a0c0-66b31eac8e53
-source-git-commit: 61904f8bf2ed2942072f75fd4b2d9b3f4bbe21f9
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
@@ -51,7 +50,7 @@ ht-degree: 0%
 + DRM-APIs {#drm-apis}
    + [DRM-Client-APIs für Android](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/index.html)
    + [DRM-Client-APIs für iOS](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/index.html)
-   + [DRM SDK-Server-APIs](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/)
+   + [DRM SDK Server APIs](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/)
 
 + Sonstiges {#miscellaneous}
    + [Video Heartbeat Library](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/index.html)

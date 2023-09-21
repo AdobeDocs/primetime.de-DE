@@ -1,19 +1,18 @@
 ---
 title: Single-Sign-On-Support
 description: Single-Sign-On-Support
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 0%
 
 ---
 
-
 # Single-Sign-On-Support
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Übersicht {#overview-sso-support}
 
@@ -30,21 +29,21 @@ Nachdem sich ein Benutzer mit seinen MVPD-Anmeldeinformationen angemeldet hat, g
 | Plattform/Gerät | SSO-Unterstützung | SSO-Typ | MVPD-Abdeckung | Hinweise |
 |:-------------------:|:-----------:|:---------------------------------------:|-----------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | Web (JavaScript) | Ja | Freigegebenes Authentifizierungstoken (Adobe SSO) | Alle | Keine browserübergreifende SSO Bitte befolgen Sie die Anweisungen im Programmierer-Integrationsleitfaden für JavaScript. Nach Befolgen der Anweisungen ist SSO standardmäßig aktiviert.  Aktivierung der Authentifizierung nach Anforderer bricht SSO ab |
-| iOS | Ja | Platform SSO - Token-Austausch | Abhängig vom Apple-Support - die Liste finden Sie hier . | Ab iOS 10 führte Apple &amp; Adobe SSO-Funktionen für teilnehmende Programmierer und MVPDs ein. Durch die Verwendung der neuesten Adobe iOS SDK oder der clientlosen REST-API von Adobe und die Implementierung der Apple SSO-Funktion können Sie von SSO auf iOS-Geräten profitieren. Weitere Informationen zur SDK-Implementierung finden Sie hier und weitere Details zur clientless-Implementierung finden Sie hier. Zusätzliche Hinweise: - Wenn Sie die Apple SSO nicht verwenden möchten, können Sie weiterhin eine eingeschränkte SSO zwischen Apps desselben Anbieters (dieselbe Bundle-ID) verwenden, die Speicher und ID (IDFV) gemeinsam nutzen können. Daher ist die einmalige Anmeldung nur auf die Apps desselben Anbieters beschränkt. |
+| iOS | Ja | Platform SSO - Token-Austausch | Abhängig vom Apple-Support - die Liste finden Sie hier . | Ab iOS 10 führte Apple &amp; Adobe SSO-Funktionen für teilnehmende Programmierer und MVPDs ein. Durch die Verwendung der neuesten Adobe iOS SDK oder durch Verwendung der Adobe Client less REST API und Implementierung der Apple SSO-Funktion können Sie von SSO auf iOS-Geräten profitieren. Weitere Informationen zur SDK-Implementierung finden Sie hier und weitere Details zur clientless-Implementierung finden Sie hier. Zusätzliche Hinweise: - Wenn Sie Apple SSO nicht verwenden möchten, können Sie weiterhin eine begrenzte SSO zwischen Apps desselben Anbieters (dieselbe Bundle-ID) verwenden, die Speicher und ID (IDFV) gemeinsam nutzen können. Daher ist SSO nur auf die Apps desselben Anbieters beschränkt. |
 | Android | Ja | Freigegebenes Authentifizierungstoken (Adobe SSO) | Alle | Wenn der Benutzer die Berechtigungsanfrage WRITE_EXTERNAL_STORAGE nicht akzeptiert, verwendet die Bibliothek einen lokalen Sandbox-Speicher. In diesem Fall wird es keine einmalige Anmeldung zwischen verschiedenen Anwendungen geben, wenn der lokale Speicher verwendet wird. |
-| tvOS - neues Apple TV | Ja | Platform SSO - Token-Austausch | Abhängig vom Apple-Support - die Liste finden Sie hier . | Ab tvOS 10 führte Apple &amp; Adobe SSO-Funktionen für teilnehmende Programmierer und MVPDs ein. Durch die Verwendung der neuesten Adobe tvOS SDK oder der clientlosen REST-API der Adobe und Implementierung der Apple SSO-Funktion können Sie von SSO auf tvOS-Geräten profitieren. Weitere Informationen zum tvOS-SDK: hier und hier sowie weitere Details zur clientless-Implementierung finden Sie hier. |
+| tvOS - neues Apple TV | Ja | Platform SSO - Token-Austausch | Abhängig vom Apple-Support - die Liste finden Sie hier . | Ab tvOS 10 führte Apple &amp; Adobe SSO-Funktionen für teilnehmende Programmierer und MVPDs ein. Durch die Verwendung der neuesten Adobe tvOS SDK oder durch die Implementierung der Apple SSO-Funktion &quot;Adobe Client less REST API&quot;und der SSO-Funktion können Sie von SSO auf tvOS-Geräten profitieren. Weitere Informationen zum tvOS-SDK: hier und hier sowie weitere Details zur clientless-Implementierung finden Sie hier. |
 | Roku | Ja | Freigegebenes Authentifizierungstoken (Adobe SSO) | Umfassende Liste erheblicher Abdeckung wird demnächst vorgelegt. | Roku SSO arbeitet standardmäßig mit der ClientLess-API für alle Kunden, die die Roku-Richtlinien einhalten. Es ist keine spezielle Implementierung erforderlich. SSO basiert auf Informationen zur Geräteidentifizierung, die Roku sicher an Adobe sendet. |
 | Amazon FireTV | Ja | Freigegebenes Authentifizierungstoken (Adobe SSO) | Umfassende Liste erheblicher Abdeckung wird demnächst vorgelegt. | Das FireTV SDK unterstützt Single Sign-On auf der Basis von Android-Funktionen. Die einmalige Anmeldung auf dieser Plattform ist nur zwischen Apps möglich, die derzeit das Adobe FireTV SDK verwenden. Weitere Informationen zum neuen FireTV-SDK finden Sie hier . FireTV-Apps, die zusätzlich zur ClientLess-API implementiert wurden, können ab EOY 2018 von der einmaligen Anmeldung profitieren. |
-| Xbox 360 | Nein |  |  | Es gibt keine Geräte-ID, die wir verwenden können. Es gibt eine App-ID, sodass Benutzer nicht jedes Mal authentifiziert werden müssen. |
-| Xbox One | Nein |  |  | Es gibt keine Geräte-ID, die wir verwenden können. Es gibt eine App-ID, sodass Benutzer nicht jedes Mal authentifiziert werden müssen. |
-| Windows 8/10 | Nein |  |  | Es gibt keine Geräte-ID, die wir verwenden können. Es gibt eine App-ID, sodass Benutzer nicht jedes Mal authentifiziert werden müssen. |
-| Samsung TVs | Nein |  |  | Es gibt keine Geräte-ID, die wir verwenden können. Es gibt eine App-ID, sodass Benutzer nicht jedes Mal authentifiziert werden müssen. |
+| Xbox 360 | Nein |                                         |                                                     | Es gibt keine Geräte-ID, die wir verwenden können. Es gibt eine App-ID, sodass Benutzer nicht jedes Mal authentifiziert werden müssen. |
+| Xbox One | Nein |                                         |                                                     | Es gibt keine Geräte-ID, die wir verwenden können. Es gibt eine App-ID, sodass Benutzer nicht jedes Mal authentifiziert werden müssen. |
+| Windows 8/10 | Nein |                                         |                                                     | Es gibt keine Geräte-ID, die wir verwenden können. Es gibt eine App-ID, sodass Benutzer nicht jedes Mal authentifiziert werden müssen. |
+| Samsung TVs | Nein |                                         |                                                     | Es gibt keine Geräte-ID, die wir verwenden können. Es gibt eine App-ID, sodass Benutzer nicht jedes Mal authentifiziert werden müssen. |
 
 ### Hinweise zu Xbox 360 und Xbox One {#notes-xbox-360}
 
-* **Xbox 360**- Xbox 360 verlässt sich bei der Bereitstellung des Tokens, das die deviceID einbettet, auf den Live-Dienst. Der Live-Dienst wird im appID-Wert für deviceID auf die Ebene gesetzt, sodass er nur auf die App übertragen wird. Für Xbox 360 stellte Microsoft eine Java-Bibliothek zur Adobe der Analyse des Tokens bereit.
+* **Xbox 360**- Xbox 360 verlässt sich bei der Bereitstellung des Tokens, das die deviceID einbettet, auf den Live-Dienst. Der Live-Dienst wird im appID-Wert für deviceID auf die Ebene gesetzt, sodass er nur auf die App übertragen wird. Für Xbox 360 stellte Microsoft eine Java-Bibliothek zur Verfügung, die Adobe beim Parsen des Tokens unterstützt.
 
-* **Xbox One**- Es wird ein JSON-Web-Token ausgegeben, das mit dem Zertifikat/Schlüssel des Herausgebers verschlüsselt und von Microsoft signiert wird. Adobe extrahiert die deviceID aus einem Parameter namens DPI (Device Paarweise ID), der sich von der Xbox 360-Parameter-PDID (Partner Device ID) unterscheidet. Die PDID existiert auch in Xbox One, soll jedoch durch diesen neuen Parameter &quot;Device Paarthrough ID&quot;(DPI) ersetzt werden.
+* **Xbox One**- Es wird ein JSON-Web-Token ausgegeben, das mit dem Zertifikat/Schlüssel des Herausgebers verschlüsselt und von Microsoft signiert wird. Adobe extrahiert die deviceID aus einem Parameter mit dem Namen DPI (Device Paarweise ID), der sich von der Xbox 360-Parameter-PDID (Partner Device ID) unterscheidet. Die PDID existiert auch in Xbox One, soll jedoch durch diesen neuen Parameter &quot;Device Paarthrough ID&quot;(DPI) ersetzt werden.
 
 
 ### SSO deaktivieren {#disable-sso}
@@ -56,7 +55,7 @@ In bestimmten Situationen sollten einige Apps oder Sites SSO deaktivieren, um er
 
 >[!IMPORTANT]
 >
->WICHTIGER HINWEIS FÜR CLIENTLESS API SSO: Einige MVPDs erfordern, dass jedes Netzwerk (Anfrage-ID) einen eigenen Authentifizierungsfluss durchführt. Bei SDK-basierten Flüssen (iOS usw.) wird dies automatisch vom SDK verarbeitet. Für die Client-losen APIs muss dies jedoch vom Programmierer verarbeitet werden. Wir empfehlen Programmierern dringend, zu diesem Zeitpunkt keine SSO-Flüsse für Client-lose APIs zu aktivieren und stattdessen eine Geräte-ID- und App-ID-Kombination für Geräte-IDs zu verwenden. Adobe arbeitet auch an der Verbesserung der clientlosen API-Flüsse, sodass eine ordnungsgemäße SSO eingerichtet werden kann.
+>WICHTIGER HINWEIS FÜR CLIENTLESS API SSO: Einige MVPDs erfordern, dass jedes Netzwerk (Anfragende-ID) einen eigenen Authentifizierungsfluss durchführt. Bei SDK-basierten Flüssen (iOS usw.) wird dies automatisch vom SDK verarbeitet. Für die Client-losen APIs muss dies jedoch vom Programmierer verarbeitet werden. Wir empfehlen Programmierern dringend, zu diesem Zeitpunkt keine SSO-Flüsse für Client-lose APIs zu aktivieren und stattdessen eine Geräte-ID- und App-ID-Kombination für Geräte-IDs zu verwenden. Adobe arbeitet auch an der Verbesserung der clientlosen API-Flüsse, sodass eine ordnungsgemäße SSO eingerichtet werden kann.
 
 ### Abmelden {#logout-sso-support}
 

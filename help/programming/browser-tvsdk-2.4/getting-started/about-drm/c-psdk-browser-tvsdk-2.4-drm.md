@@ -1,20 +1,18 @@
 ---
-description: Sie können DRM-spezifische Workflows abschließen.
+description: Sie können DRM-spezifische Workflows (Digital Rights Management) ausführen.
 title: Digital Rights Management
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
-
 # Digital Rights Management {#digital-rights-management}
 
-Sie können DRM-spezifische Workflows abschließen.
+Sie können DRM-spezifische Workflows (Digital Rights Management) ausführen.
 
-Sie können das `AdobePSDK.DRMMetadataInfoEvent`-Ereignis abhören, um DRM-Workflows zu bearbeiten:
+Sie können die `AdobePSDK.DRMMetadataInfoEvent` -Ereignis zur Verarbeitung von DRM-Workflows:
 
 ```js
 ... 
@@ -22,15 +20,15 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 ...
 ```
 
-## hinzufügen Digital Rights Management {#add-digital-rights-management}
+## Digital Rights Management hinzufügen {#add-digital-rights-management}
 
-1. hinzufügen Sie `DRMMetadataInfoAvailableEvent`, um `DRMMetadata` abzurufen.
+1. Fügen Sie die `DRMMetadataInfoAvailableEvent` um die `DRMMetadata`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. Implementieren Sie den Abschnitt `onDRMMetadataInfoAvailable` über der Zeile in Schritt 1.
+1. Implementieren des `onDRMMetadataInfoAvailable` -Abschnitt über der Zeile in Schritt 1.
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
@@ -45,7 +43,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. Erstellen Sie den DRMManager in der Methode setupVideo.
+1. Erstellen Sie den DRMManager in der Methode setupVideo .
 
    ```js
    var drmManager = player.drmManager;
@@ -69,13 +67,13 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. hinzufügen die Schutzdaten an den drmManager.
+1. Fügen Sie die Schutzdaten zum drmManager hinzu.
 
    ```js
    drmManager.setProtectionData(protectionData);
    ```
 
-1. Ändern Sie die Ressourcen-URL in einen DASH-Teststream.
+1. Ändern Sie die Ressourcen-URL in einen DASH-Test-Stream.
 
    >[!TIP]
    >

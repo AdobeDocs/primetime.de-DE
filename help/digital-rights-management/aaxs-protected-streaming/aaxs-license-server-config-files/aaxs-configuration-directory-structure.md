@@ -1,22 +1,20 @@
 ---
-description: 'Für das Adobe Access Server for Protected Streaming sind zwei Arten von Konfigurationsdateien erforderlich: eine globale Konfigurationsdatei (flashaccess-global.xml) und eine Mandant-Konfigurationsdatei für jeden Mandanten (flashaccess-tenant.xml).'
-title: Konfigurationsverzeichnisstruktur
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: 'Adobe Access Server for Protected Streaming erfordert zwei Arten von Konfigurationsdateien: eine globale Konfigurationsdatei (flashaccess-global.xml) und eine Mandantenkonfigurationsdatei für jeden Mandanten (flashaccess-tenant.xml).'
+title: Konfigurationsordnerstruktur
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
+# Konfigurationsdateien des Lizenzservers und Verzeichnisstruktur der Konfiguration {#configuration-directory-structure}
 
-# Konfigurationsdateien des Lizenzservers und Konfigurationsverzeichnisstruktur {#configuration-directory-structure}
+Adobe Access Server for Protected Streaming erfordert zwei Arten von Konfigurationsdateien: eine globale Konfigurationsdatei (flashaccess-global.xml) und eine Mandantenkonfigurationsdatei für jeden Mandanten (flashaccess-tenant.xml).
 
-Für das Adobe Access Server for Protected Streaming sind zwei Arten von Konfigurationsdateien erforderlich: eine globale Konfigurationsdatei (flashaccess-global.xml) und eine Mandantenkonfigurationsdatei für jeden Mandanten (flashaccess-tenant.xml).
+Nach der Bearbeitung der Konfigurationsdateien empfiehlt Adobe, die mit Adobe Access Server bereitgestellten Dienstprogramme für geschütztes Streaming zu verwenden, um zu überprüfen, ob die Dateien korrekt formatiert sind. Weitere Informationen finden Sie unter &quot;[Konfigurationsvalidator](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)&quot;.
 
-Nach dem Bearbeiten der Konfigurationsdateien empfiehlt Adobe die Verwendung der mit Adobe Access Server bereitgestellten Dienstprogramme für Protected Streaming, um sicherzustellen, dass die Dateien korrekt formatiert sind. Weitere Informationen finden Sie unter &quot;[Configuration Validator](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)&quot;.
-
-Um zu vermeiden, dass Passwörter in unverschlüsseltem Text in den Konfigurationsdateien verfügbar gemacht werden, müssen alle in den Konfigurationsdateien für Global und Mandant angegebenen Passwörter verschlüsselt sein. Weitere Informationen zum Verschlüsseln von Kennwörtern finden Sie unter &quot;[Password Scrambler](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)&quot;.
+Um zu vermeiden, dass Passwörter in unverschlüsseltem Text in den Konfigurationsdateien verfügbar gemacht werden, müssen alle in den globalen und Mandantenkonfigurationsdateien angegebenen Passwörter verschlüsselt werden. Weitere Informationen zum Verschlüsseln von Kennwörtern finden Sie unter[Password Scrambler](../../aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)&quot;.
 
 Die Konfigurationsordner haben die folgende Struktur:
 
@@ -43,4 +41,3 @@ Die Konfigurationsordner haben die folgende Struktur:
  </i class="+ topic> 
 </i class="+ topic>
 ```
-

@@ -1,20 +1,18 @@
 ---
 description: Code kann einen Schlüssel über DRMManager anfordern.
-title: Arbeitsablauf für Schlüsselanforderungen in HTML5 TVSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Workflow für Schlüsselanforderungen auf HTML5 TVSDK
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
-
-# Arbeitsablauf für Schlüsselanfragen bei HTML5 TVSDK{#key-request-workflow-on-html-tvsdk}
+# Workflow für Schlüsselanforderungen auf HTML5 TVSDK{#key-request-workflow-on-html-tvsdk}
 
 Code kann einen Schlüssel über DRMManager anfordern.
 
-Das Browser TVSDK stellt außerdem eine setProtectionData-API über das DRMManager-Objekt bereit:
+Das Browser TVSDK stellt auch eine setProtectionData-API über das DRMManager-Objekt bereit:
 
 ```
 [  /** 
@@ -31,9 +29,9 @@ license acquisition. </p>
    setProtectionData: function(protectionData) 
 ```
 
-Ihr Code muss diese API aufrufen, bevor die Inhaltswiedergabe normal gestartet wird. MediaPlayer.vo.protection.ProtectionData ist hier dokumentiert: [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
+Ihr Code muss diese API aufrufen, bevor die Inhaltswiedergabe auf die normale Weise gestartet wird. MediaPlayer.vo.protection.ProtectionData wird hier dokumentiert: [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
 
-Im Folgenden finden Sie ein Beispiel für ein Datenschutzdatenobjekt mit Lizenz-Server-URLs für PlayReady und Widevine.
+Hier finden Sie ein Beispiel für ein Datenschutzobjekt mit Lizenzserver-URLs für PlayReady und Widevine.
 
 ```
 var protectionData = { 

@@ -2,41 +2,38 @@
 title: Fehlerbehebung
 description: Fehlerbehebung
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
-
 # Fehlerbehebung {#troubleshooting}
 
-Nachstehend sind allgemeine Probleme und Lösungen für die Bereitstellung aufgeführt:
+Im Folgenden finden Sie allgemeine Probleme und Lösungen für die Implementierung:
 
 * Wenn der folgende Fehler angezeigt wird:
 
-   ```
-       "Error decoding the password for HandlerConfiguration.ServerTransportCredential.password  
-       javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
-   ```
+  ```
+      "Error decoding the password for HandlerConfiguration.ServerTransportCredential.password  
+      javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
+  ```
 
-   Vergewissern Sie sich, dass das Kennwort mit der bereitgestellten `ScrambleUtil`-Klasse verschlüsselt ist.
-
-* Wenn der folgende Fehler angezeigt wird:
-
-   ```
-       "Unable to load credential from file.pfx -- possibly wrong password."
-   ```
-
-   Stellen Sie sicher, dass Sie das richtige verschlüsselte Kennwort für die PFX-Datei angegeben haben.
+  Stellen Sie sicher, dass das Kennwort mit dem bereitgestellten `ScrambleUtil` -Klasse.
 
 * Wenn der folgende Fehler angezeigt wird:
 
-   ```
-       "javax.crypto.BadPaddingException: Given final block not properly padded"
-   ```
+  ```
+      "Unable to load credential from file.pfx -- possibly wrong password."
+  ```
 
-   Vergewissern Sie sich, dass Sie die mit der Referenz-Implementierung bereitgestellte Password crambler-Klasse verwendet haben (dieses Dienstprogramm unterscheidet sich von dem mit Adobe® Access™ Server für geschütztes Streaming bereitgestellten).
+  Stellen Sie sicher, dass Sie das richtige verschlüsselte Kennwort für die PFX-Datei angegeben haben.
 
+* Wenn der folgende Fehler angezeigt wird:
+
+  ```
+      "javax.crypto.BadPaddingException: Given final block not properly padded"
+  ```
+
+  Vergewissern Sie sich, dass Sie die mit der Referenzimplementierung bereitgestellte Passwort-Schuster-Klasse verwendet haben (dieses Schuster-Dienstprogramm unterscheidet sich von dem mit dem Adobe® Access™-Server für geschütztes Streaming bereitgestellten Dienstprogramm).

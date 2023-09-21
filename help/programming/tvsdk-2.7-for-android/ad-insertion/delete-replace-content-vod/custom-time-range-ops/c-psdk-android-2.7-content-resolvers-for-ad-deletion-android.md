@@ -1,18 +1,16 @@
 ---
-description: Sie können mehrere Inhaltsauflöser verwenden, um verschiedene Zeitschienen-Vorgänge zu bearbeiten.
-title: Inhaltsauflöser für das Löschen und Ersetzen von Werbeanzeigen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können mehrere Content Resolver verwenden, um verschiedene Timeline-Vorgänge zu verarbeiten.
+title: Inhaltsauflöser für das Löschen/Ersetzen von Anzeigen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
 
 ---
 
+# Inhaltsauflöser für das Löschen/Ersetzen von Anzeigen  {#content-resolvers-for-ad-deletion-replacement}
 
-# Inhaltsauflöser für das Löschen und Ersetzen von Anzeigen {#content-resolvers-for-ad-deletion-replacement}
-
-Sie können mehrere Inhaltsauflöser verwenden, um verschiedene Zeitschienen-Vorgänge zu bearbeiten.
+Sie können mehrere Content Resolver verwenden, um verschiedene Timeline-Vorgänge zu verarbeiten.
 
 ```java
 public List<ContentResolver> retrieveResolvers(MediaPlayerItem item) { 
@@ -39,4 +37,3 @@ public List<ContentResolver> retrieveResolvers(MediaPlayerItem item) {
     return resolvers; 
 } 
 ```
-

@@ -2,24 +2,21 @@
 title: Lokal generierte Zertifikatsperrlisten verwenden
 description: Lokal generierte Zertifikatsperrlisten verwenden
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
-
 # Lokal generierte Zertifikatsperrlisten verwenden{#consume-locally-generated-crls}
 
-Um lokal generierte Zertifikatsperrlisten (CRLs) und Listen zur Richtlinienaktualisierung zu verwenden, verwenden Sie Adobe Access APIs, um die Signatur zu überprüfen. Die APIs überprüfen, ob die Listen nicht manipuliert wurden und ob sie vom richtigen License Server signiert wurden.
+Um lokal generierte Zertifikatsperrlisten (CRLs) und Richtlinien-Aktualisierungslisten zu verwenden, verwenden Sie Adobe Access-APIs, um die Signatur zu überprüfen. Die APIs überprüfen, ob die Listen nicht manipuliert wurden und ob sie vom richtigen Lizenzserver signiert wurden.
 
-* Rufen Sie `RevocationList.verifySignature` auf, um die Signatur zu prüfen, bevor Sie die RevocationList für alle APIs bereitstellen.
+* Aufruf `RevocationList.verifySignature` , um die Signatur zu überprüfen, bevor Sie die RevocationList für beliebige APIs bereitstellen.
 
-   Weitere Informationen finden Sie unter `RevocationListFactory` in der *Adobe Access API Reference*.
+  Weitere Informationen finden Sie unter `RevocationListFactory` im *Adobe Access API-Referenz*.
 
-* Rufen Sie `PolicyUpdateList.verifySignature`auf, um die Signatur zu überprüfen, bevor Sie `PolicyUpdateList` für APIs bereitstellen.
+* Aufruf `PolicyUpdateList.verifySignature`, um die Signatur vor der Bereitstellung der `PolicyUpdateList` auf alle APIs zugreifen.
 
-   Weitere Informationen finden Sie unter `PolicyUpdateList` in der *Adobe Access API Reference*.
-
+  Weitere Informationen finden Sie unter `PolicyUpdateList` im *Adobe Access API-Referenz*.

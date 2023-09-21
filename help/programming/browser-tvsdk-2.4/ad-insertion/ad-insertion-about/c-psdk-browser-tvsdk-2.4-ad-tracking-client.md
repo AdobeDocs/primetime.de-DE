@@ -1,17 +1,15 @@
 ---
-description: Browser TVSDK verfolgt automatisch Anzeigen für VOD und Live/Lineares Streaming.
-title: Kundenanzeigenverfolgung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Browser TVSDK verfolgt automatisch Anzeigen für VOD und Live-/Lineares Streaming.
+title: Tracking von Client-Anzeigen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
+# Tracking von Client-Anzeigen{#client-ad-tracking}
 
-# Tracking der Kundenwerbung{#client-ad-tracking}
+Browser TVSDK verfolgt automatisch Anzeigen für VOD und Live-/Lineares Streaming.
 
-Browser TVSDK verfolgt automatisch Anzeigen für VOD und Live/Lineares Streaming.
-
-Benachrichtigungen werden verwendet, um Ihre Anwendung über den Fortschritt einer Anzeige zu informieren, einschließlich Informationen darüber, wann eine Anzeige beginnt und wann sie endet.
+Benachrichtigungen informieren Ihre Anwendung über den Fortschritt einer Anzeige, einschließlich Informationen darüber, wann eine Anzeige beginnt und wann sie endet.

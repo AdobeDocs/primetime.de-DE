@@ -1,21 +1,19 @@
 ---
-title: Grundlegende Vorgänge bei der Videowiedergabe
-description: Der PlaybackManager bietet wesentliche Vorgänge für das HLS-Streaming
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Grundlegende Vorgänge der Videowiedergabe
+description: Der PlaybackManager bietet wichtige Vorgänge des HLS-Streaming.
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
-
 # Grundlegende Vorgänge der Videowiedergabe {#essential-operations-of-video-playback}
 
-Der PlaybackManager bietet wesentliche Vorgänge für das HLS-Streaming:
+Der PlaybackManager bietet wichtige Vorgänge des HLS-Streaming:
 
-* Ruft den [PlaybackManagerEventListener](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.PlaybackManagerEventListener.html) auf, der auf Video-Ereignis angemessen reagieren kann.
-* Bietet Wiedergabevorgang wie &quot;Abspielen&quot;, &quot;Anhalten&quot;und &quot;Suchen&quot;.
-* Gibt Informationen zum Player zurück, z. B. Player-Status, Wiedergabefeld und den Live-Stream des Videos.
-* Bestimmt, ob ABR aktiviert ist, und legt die ABR- und Puffersteuerungsparameter je nach den bereitgestellten Konfigurationsdaten fest.
-* Bestimmt, ob die Puffersteuerung aktiviert ist, und legt die Parameter für die Puffersteuerung je nach den bereitgestellten Konfigurationsdaten fest.
+* Ruft die [PlaybackManagerEventListener](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/PlaybackManager.PlaybackManagerEventListener.html), die angemessen auf Videoereignisse reagieren kann.
+* Bietet Wiedergabevorgang wie Wiedergabe, Pause und Suchen.
+* Gibt Informationen zum Player zurück, z. B. Player-Status, Wiedergabefeld und Live-Stream des Videos.
+* Bestimmt, ob ABR aktiviert ist, und legt die ABR- und Puffersteuerungsparameter entsprechend den bereitgestellten Konfigurationsdaten fest.
+* Bestimmt, ob die Puffersteuerung aktiviert ist, und legt die Parameter der Puffersteuerung entsprechend den bereitgestellten Konfigurationsdaten fest.

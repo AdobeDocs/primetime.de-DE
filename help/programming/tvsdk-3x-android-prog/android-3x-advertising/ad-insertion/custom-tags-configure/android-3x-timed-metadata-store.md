@@ -1,33 +1,31 @@
 ---
-description: Ihre Anwendung muss die entsprechenden TimedMetadata-Objekte zu den richtigen Zeiten verwenden.
-title: Speichern Sie zeitgesteuerte Metadatenobjekte, während sie gesendet werden
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Ihre Anwendung muss die entsprechenden TimedMetadata-Objekte zu den entsprechenden Zeiten verwenden.
+title: Speichern zeitgesteuerter Metadatenobjekte beim Versand
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%
 
 ---
 
+# Speichern zeitgesteuerter Metadatenobjekte beim Versand {#store-timed-metadata-objects-as-they-are-dispatched}
 
-# Speichern Sie zeitgesteuerte Metadatenobjekte, während sie gesendet werden. {#store-timed-metadata-objects-as-they-are-dispatched}
-
-Ihre Anwendung muss die entsprechenden TimedMetadata-Objekte zu den richtigen Zeiten verwenden.
+Ihre Anwendung muss die entsprechenden TimedMetadata-Objekte zu den entsprechenden Zeiten verwenden.
 
 Beim Analysieren von Inhalten, das vor der Wiedergabe erfolgt, identifiziert TVSDK abonnierte Tags und benachrichtigt Ihre Anwendung über diese Tags.
 
 >[!TIP]
 >
->Die Zeit, die jedem `TimedMetadata` zugeordnet ist, ist die Ortszeit in der Wiedergabeschlüssel.
+>Die mit jedem `TimedMetadata` ist die lokale Zeit auf der Wiedergabescheitleiste.
 
-So speichern Sie zeitgesteuerte Metadatenobjekte beim Auslösen:
+So speichern Sie zeitgesteuerte Metadatenobjekte beim Versand:
 
 1. Behalten Sie die aktuelle Wiedergabezeit im Auge.
-1. Ordnen Sie die aktuelle Wiedergabezeit den ausgelösten Objekten `TimedMetadata` zu.
+1. Übereinstimmung der aktuellen Wiedergabezeit mit der gesendeten `TimedMetadata` Objekte.
 
-1. Verwenden Sie das `TimedMetadata`, wobei die Beginn-Zeit der aktuellen lokalen Wiedergabezeit entspricht.
+1. Verwenden Sie die `TimedMetadata` wobei die Startzeit der aktuellen lokalen Wiedergabezeit entspricht.
 
-   Das folgende Beispiel zeigt, wie `TimedMetadata`-Objekte in einem `ArrayList` gespeichert werden.
+   Das folgende Beispiel zeigt, wie Sie speichern `TimedMetadata` Objekte in `ArrayList`.
 
    ```java
    private List<TimedMetadata> _timedMetadataList =  
@@ -41,4 +39,3 @@ So speichern Sie zeitgesteuerte Metadatenobjekte beim Auslösen:
        ... 
    }
    ```
-

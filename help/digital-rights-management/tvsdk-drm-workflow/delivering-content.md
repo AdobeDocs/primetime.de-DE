@@ -1,21 +1,19 @@
 ---
-title: Bereitstellen von Inhalten
-description: Bereitstellen von Inhalten
+title: Inhalt bereitstellen
+description: Inhalt bereitstellen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
 
 ---
 
+# Inhalt bereitstellen {#delivering-content}
 
-# Bereitstellen von Inhalten {#delivering-content}
+Primetime DRM ist unabhängig vom Bereitstellungsmechanismus des Inhalts, da die Laufzeitumgebung die Netzwerkschicht abstrahiert und dem Primetime-DRM-Subsystem einfach den geschützten Inhalt bereitstellt. Daher können Inhalte über HTTP, HTTP Dynamic Streaming, RTMP, RTMPE, HLS usw. bereitgestellt werden.
 
-Primetime DRM ist unabhängig vom Versand-Mechanismus des Inhalts, da die Laufzeitumgebung die Netzwerkschicht abstrahiert und die geschützten Inhalte einfach dem Primetime DRM-Subsystem zur Verfügung stellt. Daher können Inhalte über HTTP, HTTP Dynamic Streaming, RTMP, RTMPE, HLS usw. bereitgestellt werden.
-
-Abhängig vom Protokoll kann es jedoch zu komplizierten Eingriffen beim Abrufen der Metadaten des geschützten Inhalts kommen ( `DRMContentData` - normalerweise in Form einer sid geladenen [!DNL .metadata]-Datei). Diese DRM-Metadaten sind erforderlich, um eine beliebige `DRMManager`-API aufzurufen, wie z. B. das Vorabrufen der Lizenz, die DRM-Authentifizierung oder das Verbinden einer Gerätedomäne. Beispielsweise können mit dem RTMP/RTMPE-Protokoll nur FLV- und F4V-Daten über den Flash Media Server (FMS) an den Client gesendet werden. Aus diesem Grund muss der Client den Metadatenblock auf andere Weise abrufen. Eine Option zur Lösung dieses Problems besteht darin, die Metadaten auf einem HTTP-Webserver zu hosten und den Client-Videoplayer zu implementieren, um die entsprechenden Metadaten abzurufen, je nachdem, welcher Inhalt wiedergegeben wird.
+Abhängig vom Protokoll können jedoch auch die Metadaten des geschützten Inhalts ( `DRMContentData` - in der Regel in Form einer Seitenladung [!DNL .metadata] -Datei). Diese DRM-Metadaten sind erforderlich, um alle `DRMManager` API, z. B. Vorabruf der Lizenz, DRM-Authentifizierung oder Beitritt zu einer Gerätedomäne. Beispielsweise können mit dem RTMP/RTMPE-Protokoll nur FLV- und F4V-Daten über den Flash Media Server (FMS) an den Client gesendet werden. Aus diesem Grund muss der Client den Metadatenblock auf andere Weise abrufen. Eine Option zur Lösung dieses Problems besteht darin, die Metadaten auf einem HTTP-Webserver zu hosten und den Client-Videoplayer zu implementieren, um die entsprechenden Metadaten abzurufen, je nach wiedergegebenen Inhalten.
 
 ```
 private function getMetadata():void { 
@@ -37,4 +35,3 @@ private function getMetadata():void {
     } 
 } 
 ```
-

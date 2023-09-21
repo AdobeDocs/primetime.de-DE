@@ -1,20 +1,18 @@
 ---
-description: Sie können eine Stelle in Ihrer Anwendung einrichten, an der die Fehlerverarbeitung als Reaktion auf den FEHLER-Status durchgeführt wird.
-title: Fehlerverarbeitung einrichten
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können eine Stelle in Ihrer Anwendung einrichten, um die Fehlerbehandlung als Reaktion auf den ERROR-Status durchzuführen.
+title: Einrichten der Fehlerbehandlung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '122'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
+# Einrichten der Fehlerbehandlung{#set-up-error-handling}
 
-# Einrichten der Fehlerverarbeitung{#set-up-error-handling}
+Sie können eine Stelle in Ihrer Anwendung einrichten, um die Fehlerbehandlung als Reaktion auf den ERROR-Status durchzuführen.
 
-Sie können eine Stelle in Ihrer Anwendung einrichten, an der die Fehlerverarbeitung als Reaktion auf den FEHLER-Status durchgeführt wird.
-
-1. hinzufügen eines Ereignis-Listeners für `AdobePSDK.MediaPlayerStatusChangeEvent`.
+1. Hinzufügen eines Ereignis-Listeners für `AdobePSDK.MediaPlayerStatusChangeEvent`.
 
    Beispiel:
 
@@ -23,13 +21,13 @@ Sie können eine Stelle in Ihrer Anwendung einrichten, an der die Fehlerverarbei
                            onStatusChange);
    ```
 
-1. Wenn `event.status` in Ihrem Ereignis-Listener `AdobePSDK.MediaPlayerStatus.ERROR`  ist, geben Sie die Logik an, um alle Fehler zu verarbeiten.
-1. Nachdem der Fehler behandelt wurde, setzen Sie das `MediaPlayer`-Objekt zurück oder laden Sie eine neue Medienressource.
+1. Wenn in Ihrem Ereignis-Listener die Variable `event.status` is `AdobePSDK.MediaPlayerStatus.ERROR`, stellen Sie die Logik zur Verarbeitung aller Fehler bereit.
+1. Nachdem der Fehler verarbeitet wurde, setzen Sie die `MediaPlayer` -Objekt oder laden Sie eine neue Medienressource.
 
-       Wenn sich das MediaPlayer-Objekt im ERROR-Status befindet, kann es diesen Status erst beenden, nachdem Sie eine der folgenden Aufgaben abgeschlossen haben:
+       Wenn sich das MediaPlayer-Objekt im FEHLER-Status befindet, kann es diesen Status erst beenden, nachdem Sie eine der folgenden Aufgaben ausgeführt haben:
    
-   * Setzen Sie das MediaPlayer-Objekt mit der `MediaPlayer.reset`-Methode zurück.
-   * Laden Sie eine neue Medienressource mit der `MediaPlayer.replaceCurrentResource`-Methode.
+   * Setzen Sie das MediaPlayer-Objekt mithilfe der `MediaPlayer.reset` -Methode.
+   * Laden Sie eine neue Medienressource mithilfe der `MediaPlayer.replaceCurrentResource` -Methode.
 
 <!--<a id="example_342CA5A8CD7C45BD88233C5BDBB17220"></a>-->
 
@@ -45,4 +43,3 @@ onStatusChange = function (event) {
     } 
 } 
 ```
-

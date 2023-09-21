@@ -1,10 +1,9 @@
 ---
 description: Sie können die Dauer des derzeit aktiven Inhalts anzeigen.
 title: Dauer des Videos anzeigen
-exl-id: a41cb291-9355-44cf-80bb-9c3cf6628b81
-source-git-commit: 85818281390b68522da2663496be025acf8f8675
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---

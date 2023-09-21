@@ -1,55 +1,52 @@
 ---
-description: 'TVSDK für Android umfasst eine Reihe von Funktionen und bietet die folgenden Hauptfunktionen: '
+description: 'TVSDK für Android umfasst eine Vielzahl von Funktionen und bietet die folgenden Hauptfunktionen: '
 title: Primetime TVSDK-Funktionen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
+# Primetime TVSDK-Funktionen{#primetime-tvsdk-features}
 
-# Primetime-TVSDK-Funktionen{#primetime-tvsdk-features}
+TVSDK für Android umfasst eine Vielzahl von Funktionen und bietet die folgenden Hauptfunktionen:
 
-TVSDK für Android umfasst eine Reihe von Funktionen und bietet die folgenden Hauptfunktionen:
+* VOD- und Live-/lineare Wiedergabe
 
-* VOD- und Live-/Lineare Wiedergabe
-
-   * Verwaltung des Wiedergabefensters, einschließlich Methoden zum Abspielen, Anhalten, Anhalten, Suchen und Abrufen der Abspielposition
+   * Verwaltung des Wiedergabefensters, einschließlich Methoden zum Abspielen, Stoppen, Anhalten, Suchen und Abrufen der Abspielposition
    * Unterstützung für Wiederholung des vollständigen Ereignisses
-   * Untertitel (608, 708, WebVTT) und alternative Audioformate zur Verbesserung der Barrierefreiheit
-   * Steuerelement für Textstile in Beschriftungen
-   * DVR-Fähigkeit, schneller Vorwärts-/Schnellrücklauf (Trick-Play-Modus)
-   * Logik der adaptiven Bitrate (ABR) und erste Einrichtung von ABR-Steuerelementen
+   * Verdeckte Untertitel (608, 708, WebVTT) und alternative Audioformen für verbesserte Barrierefreiheit
+   * Steuerung des Textstils in Beschriftungen
+   * DVR-Funktion , schnelle Vorwärts-/schnelle Rückspaltung (Trick-Play-Modus)
+   * Logik der adaptiven Bitrate (ABR) und anfängliche Einrichtung von ABR-Steuerelementen
    * Unterstützung für Live-Manifest-Failover
    * Anpassbare Wiedergabepuffer
-   * Unterstützung für Fragmentdauer, -größe und Downloadzeit
+   * Unterstützung von Fragmentdauer, -größe und Downloadzeit
 
 * Werbung
 
    * VPAID 2.0
    * Clientseitige Anzeigenzuordnung
 
-      * Teil-Werbeunterbrechung, die ein TV-ähnliches Erlebnis in der Mitte einer Anzeige ermöglicht.
-      * Nahtlose Anzeigeneinfügung, einschließlich Unterstützung für VAST/VMAP
-      * Unterstützung benutzerdefinierter Cue-Tags für Anzeigen
+      * Teil-Anzeigenunterbrechung-Einfügen, die es einem TV-ähnlichen Erlebnis ermöglicht, mitten in einer Anzeige Mitglied zu werden.
+      * Nahtloses Hinzufügen von Anzeigen, einschließlich Unterstützung für VAST/VMAP
+      * Unterstützung für benutzerdefinierte Cue-Tags für Anzeigen
       * Unterstützung für das Markieren, Ersetzen und Löschen von C3-Anzeigen
-      * Anpassbare Arbeitsabläufe zum Einfügen von Inhalten/Anzeigen einschließlich Blackout-Signalisierung
+      * Anpassbarer Arbeitsablauf für Inhalte/Anzeigen, einschließlich Blackout-Signalisierung
 
 * Inhaltsschutz
 
    * Zugang zu DRM-bezogenen Diensten (Digital Rights Management)
-   * Wiedergabe von HLS-Streams unverschlüsselt oder mit Protected HTTP Live Streaming (PHLS)
+   * Wiedergabe von HLS-Streams unverschlüsselt oder mit geschütztem HTTP Live Streaming (PHLS)
    * Auflösungsbasierte Ausgabesteuerung basierend auf DRM-Politik
 
-* Video- und Anzeigenverfolgung
+* Video- und Anzeigen-Tracking
 
-   * Verfolgung von QoS-Ereignissen
-   * Benachrichtigungen, die TVSDK und Ihrer Applikation dabei unterstützen, asynchron über den Status von Videos, Anzeigen und anderen Elementen zu kommunizieren, und auch die Aktivität protokollieren
+   * QoS-Ereignis-Tracking
+   * Benachrichtigungen, die TVSDK und Ihrer Anwendung dabei helfen, asynchron über den Status von Videos, Anzeigen und anderen Elementen zu kommunizieren, sowie über diese Protokollaktivität
 
 * Protokollierung
 
    * Debug-Protokollierung
-   * Unterstützung zur Verfolgung von Fragmentdauer, -größe und Downloadzeit
-
+   * Tracking-Unterstützung für Fragmentdauer, -größe und Downloadzeit

@@ -1,18 +1,16 @@
 ---
-description: Das Dienstprogramm SWF Hash Calculator berechnet den Digest einer SWF-Anwendung, die sich in einer Datei befindet.
-title: SWF-Hash-Rechner
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Das SWF Hash Calculator-Dienstprogramm berechnet den Digest einer SWF-Anwendung, die sich in einer Datei befindet.
+title: SWF Hash Rechner
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 0%
 
 ---
 
+# SWF Hash Rechner{#swf-hash-calculator}
 
-# SWF-Hash-Rechner{#swf-hash-calculator}
-
-Das Dienstprogramm SWF Hash Calculator berechnet den Digest einer SWF-Anwendung, die sich in einer Datei befindet.
+Das SWF Hash Calculator-Dienstprogramm berechnet den Digest einer SWF-Anwendung, die sich in einer Datei befindet.
 
 Geben Sie Folgendes ein, um den Hasher auszuführen:
 
@@ -41,4 +39,4 @@ SWF Hash:
 </i class="+ topic>
 ```
 
-Mit diesem Wert können Sie die SWF-Zusammenfassung in [!DNL flashaccess-tenant.xml] angeben.
+Mit diesem Wert können Sie den SWF-Digest in [!DNL flashaccess-tenant.xml].

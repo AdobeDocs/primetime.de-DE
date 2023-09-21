@@ -1,33 +1,31 @@
 ---
 description: Betriebssysteme und Anwendungsserver sind in Ihrer Adobe Primetime DRM-Lösung enthalten.
-title: Herstellerspezifische Sicherheitsinformationen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Anbieterspezifische Sicherheitsinformationen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
 
 ---
 
-
-# Herstellerspezifische Sicherheitsinformationen{#vendor-specific-security-information}
+# Anbieterspezifische Sicherheitsinformationen{#vendor-specific-security-information}
 
 Betriebssysteme und Anwendungsserver sind in Ihrer Adobe Primetime DRM-Lösung enthalten.
 
-Informationen zur herstellerspezifischen Sicherheit für Ihr Betriebssystem und Ihren Anwendungsserver finden Sie unter Verwenden des Adobe Primetime DRM-Schlüsselservers.
+Informationen zu herstellerspezifischen Sicherheitsinformationen für Ihr Betriebssystem und Ihren Anwendungsserver finden Sie unter Verwenden des Adobe Primetime DRM Key Servers .
 
 ## Informationen zur Betriebssystemsicherheit {#section_53CAD802FCA54C4D8CE0C4E1B3045E52}
 
-Beim Schützen des Betriebssystems müssen Sie die vom Betriebssystemhersteller beschriebenen Maßnahmen implementieren.
+Beim Schützen Ihres Betriebssystems müssen Sie die von Ihrem Betriebssystemanbieter beschriebenen Maßnahmen implementieren.
 
-Hier einige der Maßnahmen:
+Im Folgenden finden Sie einige der Kennzahlen:
 
 * Definieren und Steuern von Benutzern, Rollen und Berechtigungen
-* Überwachungsprotokolle und Prüfpfade
+* Überwachungsprotokolle und Prüfprotokolle
 * Entfernen unnötiger Dienste und Anwendungen
 * Sichern von Dateien
 
-Im Folgenden finden Sie einige Informationen zu den von Adobe Primetime DRM unterstützten Betriebssystemen:
+Im Folgenden finden Sie einige Informationen zu den Betriebssystemen, die von Adobe Primetime DRM unterstützt werden:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_ugl_kjz_n4"> 
  <thead class="- topic/thead "> 
@@ -59,8 +57,8 @@ Im Folgenden finden Sie einige Informationen zu Ansätzen zur Minimierung von Si
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Sicherheits-Patches </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Es besteht ein erhöhtes Risiko, dass ein nicht autorisierter Benutzer Zugriff auf den Anwendungsserver erhält, wenn vom Anbieter bereitgestellte Sicherheits-Patches und -Aktualisierungen nicht zeitnah angewendet werden. </p> <p>Hinweis:  Stellen Sie sicher, dass Sie Sicherheits-Patches testen, bevor Sie sie auf Produktionsserver anwenden. </p> <p class="- topic/p ">Sie müssen Richtlinien und Verfahren erstellen, um Patches regelmäßig zu suchen und zu installieren. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Sicherheitspatches </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Es besteht ein erhöhtes Risiko, dass ein nicht autorisierter Benutzer Zugriff auf den Anwendungsserver erhält, wenn Sicherheits-Patches und -Upgrades des des Anbieters nicht zeitnah angewendet werden. </p> <p>Hinweis: Stellen Sie sicher, dass Sie Sicherheits-Patches testen, bevor Sie sie auf Produktionsserver anwenden. </p> <p class="- topic/p ">Sie müssen Richtlinien und Verfahren erstellen, um regelmäßig nach Patches zu suchen und diese zu installieren. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Virenschutzsoftware </p> </td> 
@@ -68,22 +66,21 @@ Im Folgenden finden Sie einige Informationen zu Ansätzen zur Minimierung von Si
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Network Time Protocol (NTP) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Für einen ordnungsgemäßen Betrieb und eine forensische Analyse sollten Sie auf den Primetime DRM-Servern und -Packagern die richtige Zeit behalten. Verwenden Sie eine sichere Version von NTP, um die Primetime DRM-Zeit auf allen Systemen zu synchronisieren, die mit dem Internet verbunden sind. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Für einen ordnungsgemäßen Betrieb und eine forensische Analyse sollten Sie auf Primetime-DRM-Servern und -Packagern eine genaue Zeit haben. Verwenden Sie eine sichere Version von NTP, um die Primetime DRM-Zeit auf allen mit dem Internet verbundenen Systemen zu synchronisieren. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Informationen zur Sicherheit des Anwendungsservers {#section_22986936F1A547CEAB2D97E9E9D4825C}
+## Sicherheitsinformationen für den Anwendungsserver {#section_22986936F1A547CEAB2D97E9E9D4825C}
 
-Beim Schützen des Anwendungsservers müssen Sie die vom Serverhersteller beschriebenen Maßnahmen implementieren.
+Beim Schützen des Anwendungsservers müssen Sie die von Ihrem Serveranbieter beschriebenen Maßnahmen implementieren.
 
-Hier einige dieser Maßnahmen:
+Im Folgenden finden Sie einige dieser Kennzahlen:
 
-* Verwenden eines nicht offensichtlichen Benutzernamens des Administrators
+* Verwenden eines nicht offensichtlichen Benutzernamens für Administratoren
 * Deaktivieren unnötiger Dienste
 * Schützen des Konsolenmanagers
-* Aktivieren sicherer Cookies
-* Schließen nicht benötigter Anschlüsse
-* Eingrenzen von Verwaltungsschnittstellen nach IP-Adressen oder Domänen
-* Verwenden des Java™ Security Managers
-
+* Sichere Cookies aktivieren
+* Schließen nicht benötigter Ports
+* Grenzen von Verwaltungsschnittstellen nach IP-Adressen oder Domänen
+* Verwenden von Java™ Security Manager

@@ -1,19 +1,18 @@
 ---
 title: Anwendungsfälle für Programmierer
 description: Anwendungsfälle für Programmierer
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1643'
 ht-degree: 0%
 
 ---
 
-
 # Anwendungsfälle für Programmierer {#programmer-use-cases}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Übersicht {#overview}
 
@@ -22,11 +21,11 @@ In diesem Dokument werden die Anwendungsfälle für die Programmiererintegration
 ## Anwendungsbeispiele {#use-cases}
 
 
-### Grundlegende Integration: Federated Authentifizierung und Autorisierung für ein einzelnes Kanalnetzwerk {#basic-integration}
+### Grundlegende Integration: Federated Authentication and Authorization für ein einzelnes Kanal-Netzwerk {#basic-integration}
 
 **Priorität** - Hoch
 
-**Aufschlüsselung** - TVE-App mit Single-Programmierer-Branding und einem Kanal-Netzwerk, das innerhalb des Erlebnisses gehostet wird
+**Verteilung** - TVE-App mit Single-Programmierer-Branding und einem Kanal-Netzwerk, das innerhalb des Erlebnisses gehostet wird
 
 Dadurch können Programmierer in ihrer eigenen TVE-App* Premium-Inhalte mit einer Federated-Berechtigungsprüfung an den MVPD anbieten. Die Anforderer-ID sollte an der Marke der Anwendung ausgerichtet werden, die den Inhalt für den Viewer bereitstellt. In diesem Szenario besteht eine 1:1-Beziehung zwischen der Adobe Primetime-Authentifizierungsanfrage-ID und der Ressourcen-ID, die für die Berechtigung verifiziert wird.
 
@@ -38,11 +37,11 @@ Dadurch können Programmierer in ihrer eigenen TVE-App* Premium-Inhalte mit eine
 
 | Priorität | Anwendungsfall | Beschreibung | Plattformen | MVPD-Hinweise |
 |:--------:|:-----------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------:|:-----------------------------------------:|
-| Hoch | MVPD Discovery von der Programmierer-TVE-App | Der Benutzer startet in der TVE-App des Programmierers und wird aufgefordert, seinen MVPD-Provider auszuwählen. | Web (SWF/JS) Mobile (iOS/Android) Clientlose API (für 2. Bildschirm) |  |
-| Hoch | Federated Authentication from the Programmer TVE App | Der Benutzer startet in der TVE-App des Programmierers und nach Auswahl seines MVPD-Anbieters wechselt der Benutzer zur eigenen Anmeldeseite des MVPD, um seine Anmeldeinformationen einzugeben. | Web (SWF/JS) Mobile (iOS/Android) |  |
-| Hoch | Autorisierung von der Programmierer-TVE-App | Nachdem der Benutzer authentifiziert wurde, kann die TVE-App des Programmierers Back-Channel-Autorisierungsanfragen an den MVPD senden, um die Berechtigung des Benutzers zu überprüfen. Normalerweise wird dabei nur geprüft, ob sich das Channel-Netzwerk im Benutzer-MVPD-Abonnementpaket befindet.                                  In diesem Fall stimmen die Anforderer-ID und die Ressourcen-ID mit 1:1 überein. | Alle Plattformen |  |
+| Hoch | MVPD Discovery von der Programmierer-TVE-App | Der Benutzer startet in der TVE-App des Programmierers und wird aufgefordert, seinen MVPD-Provider auszuwählen. | Web (SWF/JS) Mobile (iOS/Android) Clientlose API (für 2. Bildschirm) |                                           |
+| Hoch | Federated Authentication from the Programmer TVE App | Der Benutzer startet in der TVE-App des Programmierers und nach Auswahl seines MVPD-Anbieters wechselt der Benutzer zur eigenen Anmeldeseite des MVPD, um seine Anmeldeinformationen einzugeben. | Web (SWF/JS) Mobile (iOS/Android) |                                           |
+| Hoch | Autorisierung von der Programmierer-TVE-App | Nachdem der Benutzer authentifiziert wurde, kann die TVE-App des Programmierers Back-Channel-Autorisierungsanfragen an den MVPD senden, um die Berechtigung des Benutzers zu überprüfen. Normalerweise wird dabei nur geprüft, ob sich das Channel-Netzwerk im Benutzer-MVPD-Abonnement-Paket befindet.                                  In diesem Fall stimmen die Anforderer-ID und die Ressourcen-ID mit 1:1 überein. | Alle Plattformen |                                           |
 | Mittel | Abmelden von der Programmierungs-TVE-App | Ermöglicht dem Benutzer das Abmelden und Löschen der AuthN/AuthZ-Token für die Adobe Primetime-Authentifizierung. In vielen Fällen meldet dies auch den Benutzer aus dem MVPD ab. MVPDs variieren jedoch in der Frage, ob dies unterstützt wird. Sie löscht immer die Adobe Primetime-Authentifizierungssitzung und Token. | Alle Plattformen außer XBox Native | Mehrere MVPDs unterstützen dies nicht. |
-| Hoch | Single-Sign-On über Sites und Apps hinweg | Ermöglicht dem Benutzer, die Anmeldesitzung über Sites und Apps hinweg freizugeben, ohne sich erneut anmelden zu müssen. | Alle Plattformen außer ClientLess-API | Erfordert mindestens SDK 1.7 für einige MVPDs. |
+| Hoch | Single-Sign-On über Sites und Apps hinweg | Ermöglicht dem Benutzer, die Anmeldesitzung über Sites und Apps hinweg freizugeben, ohne sich erneut anmelden zu müssen. | Alle Plattformen außer ClientLess API | Erfordert mindestens SDK 1.7 für einige MVPDs. |
 
 ### Einzelne TVE-App, die mehrere Kanalnetzwerke hostet {#single-app-multi-channel}
 
@@ -55,13 +54,13 @@ Ermöglicht dem Programmierer das Aggregieren mehrerer Inhaltskanäle auf demsel
 | Priorität | Anwendungsfall | Beschreibung | Plattformen | MVPD-Hinweise |
 |--------|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Hoch | Unique Channel-Autorisierung | Der Benutzer kann Inhalte aus mehreren Kanalnetzwerken innerhalb derselben TVE-App ansehen. Der Programmierer kann Autorisierungsaufrufe durchführen, die für jedes Kanalnetzwerk spezifisch sind, um die Berechtigung des Benutzers zu bestätigen. | Alle Plattformen | Alle MVPDs unterstützen dies jetzt in irgendeiner Form. |
-| Niedrig | Preflight-Autorisierungsabfrage | Dadurch kann der Programmierer in einem einzelnen API-Aufruf überprüfen, welche Kanäle der Benutzer in seinem Paket hat. Dies geschieht vor tatsächlichen AuthZ-Aufrufen, um Inhalte aus der Benutzeroberfläche zu filtern, auf die der Benutzer keinen Zugriff hat. |  | Die meisten MVPDs stellen diese Daten noch nicht als Benutzerattribute bereit. Daher führt Adobe AuthZ-Aufrufe durch, um sie zu erhalten. Außerdem sind die meisten MVPDs auf jeweils fünf begrenzt, da sie nicht mehrere Kanäle in einem einzelnen Aufruf unterstützen.                             Es ist sehr wichtig zu überprüfen, wie viele Kanäle der Programmierer benötigt, um den Preflight-Check durchzuführen. Unabhängig von der Nummer müssen wir überprüfen, ob sie mit den MVPDs in Ordnung ist. Die meisten MVPDs unterstützen derzeit nicht mehr als 5 Kanäle (3. Quartal 2013). |
+| Niedrig | Preflight-Autorisierungsabfrage | Dadurch kann der Programmierer in einem einzelnen API-Aufruf überprüfen, welche Kanäle der Benutzer in seinem Paket hat. Dies geschieht vor tatsächlichen AuthZ-Aufrufen, um Inhalte aus der Benutzeroberfläche zu filtern, auf die der Benutzer keinen Zugriff hat. |               | Die meisten MVPDs stellen diese Daten noch nicht als Benutzerattribute zur Verfügung. Daher führt Adobe AuthZ-Aufrufe durch, um sie zu erhalten. Außerdem sind die meisten MVPDs auf jeweils fünf begrenzt, da sie nicht mehrere Kanäle in einem einzelnen Aufruf unterstützen.                             Es ist sehr wichtig zu überprüfen, wie viele Kanäle der Programmierer benötigt, um den Preflight-Check durchzuführen. Unabhängig von der Nummer müssen wir überprüfen, ob sie mit den MVPDs in Ordnung ist. Die meisten MVPDs unterstützen derzeit nicht mehr als 5 Kanäle (3. Quartal 2013). |
 
 ### Autorisierung auf Asset-Ebene {#asset-level-authz}
 
 **Priorität** - Niedrig
 
-**Aufschlüsselung** - Übergeben einer Asset-ID bei einer Autorisierungsanfrage
+**Verteilung** - Übergeben einer Asset-ID bei einer Autorisierungsanfrage
 
 **Plattformen** - Alle Plattformen
 
@@ -84,7 +83,7 @@ Aktiviert die Anwendung von MVPD-Benutzerkontobeschränkungen auf die TVE-App de
 
 | Priorität | Anwendungsfall | Beschreibung | Plattformen | MVPD-Hinweise |
 |--------|-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|-----------------------------------|
-| Niedrig | Filtern von Inhalten anhand von Benutzerattributen | Ermöglicht dem Programmierer, die zulässige Maximalbewertung für einen Benutzer zu überprüfen, bevor dem Benutzer die Liste der verfügbaren Inhalte gerendert wird. | Web (Flash/JS) Mobile (iOS/Android) | Funktioniert derzeit nur mit einem MVPD. |
+| Niedrig | Filtern von Inhalten anhand von Benutzerattributen | Ermöglicht dem Programmierer, die zulässige Maximalbewertung für einen Benutzer zu überprüfen, bevor die Liste der verfügbaren Inhalte für den Benutzer gerendert wird. | Web (Flash/JS) Mobile (iOS/Android) | Funktioniert derzeit nur mit einem MVPD. |
 | Niedrig | Übergeben von Inhaltsbewertungen in der AuthZ-Anfrage | Ermöglicht es dem Programmierer, die spezifische Bewertung des Inhalts, den der Benutzer im Rahmen der AuthZ-Anfrage ansehen möchte, an den MVPD im Zusammenhang mit #3 zu übergeben, da die Bewertungen normalerweise auf Asset-Ebene erfolgen. | Alle Plattformen | Funktioniert derzeit nur mit einem MVPD. |
 
 #### Anpassung der MVPD-Integration pro Programmierer-Marke {#mvpd-int-cust-prog-brand}
@@ -104,7 +103,7 @@ Aktiviert das benutzerdefinierte Erlebnis während AuthN oder für AuthZ-Fehlerm
 | Priorität | Anwendungsfall | Beschreibung | Plattformen | MVPD-Hinweise |
 |--------|-------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Mittel | XBox LiveID SSO über Apps und Konsolen hinweg | Ermöglicht dem Benutzer, die AuthN-Sitzung zwischen Apps und zwischen verschiedenen Spielkonsolen freizugeben, die mit seinem LiveID-Konto verknüpft sind. | Natives XBox-SDK | Die meisten MVPDs mögen dies nicht, da das typische Modell darin besteht, das Token an das Gerät zu binden - nicht an den Benutzer.                             Wir empfehlen diesen Ansatz nicht mehr, wenn möglich. |
-| Hoch | Connected Device with Tokens Bound to the appID on the Device | Ermöglicht dem Programmierer, die MVPD-Berechtigung im Token an die appID auf dem Gerät zu binden, an das sie ausgegeben wurde. | Clientlose API | Dadurch wird das Connected Device enger an der standardmäßigen Implementierung für Token für die Übergabe ausgerichtet.                             Eine geräteweite ID muss weiterhin verbessert werden. |
+| Hoch | Verbundenes Gerät mit Token, die an die appID auf dem Gerät gebunden sind | Ermöglicht dem Programmierer, die MVPD-Berechtigung im Token an die appID auf dem Gerät zu binden, an das sie ausgegeben wurde. | Clientlose API | Dadurch wird das Connected Device enger an der standardmäßigen Implementierung für Token für die Übermittlung angepasst.                             Eine geräteweite ID muss weiterhin verbessert werden. |
 
 ### Gerätespezifische AuthN-TTL-Länge {#authn-ttl-length}
 
@@ -112,7 +111,7 @@ Aktivieren Sie die TVE-Berechtigung für Spezialereignisse, bei denen es sich m�
 
 | Priorität | Anwendungsfall | Beschreibung | Plattformen | MVPD-Hinweise |
 |--------|------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|--------------------------------------------------------------------------------------------------------------------------|
-| Hoch | Festlegen verschiedener TTL-Werte pro Plattform | Ermöglicht es dem Programmierer, eine andere TTL-Länge für Web-, Mobile- und vernetzte Geräte festzulegen. Derzeit unterstützt die Adobe Primetime-Authentifizierung die Möglichkeit, drei separate TTL-Werte zu verwenden: Web (Flash) Mobile/HTML5 Clientless - Connected Devices |  | Einige MVPDs legen die TTL dynamisch fest. Adobe kann diese dynamischen Einstellungen bei Bedarf mithilfe der Konfigurationseinstellungen überschreiben. |
+| Hoch | Festlegen verschiedener TTL-Werte pro Plattform | Ermöglicht es dem Programmierer, eine andere TTL-Länge für Web-, Mobile- und vernetzte Geräte festzulegen. Derzeit unterstützt die Adobe Primetime-Authentifizierung die Möglichkeit, drei separate TTL-Werte zu verwenden: Web (Flash) Mobile/HTML5 Client less - Connected Devices |           | Einige MVPDs legen die TTL dynamisch fest. Adobe kann diese dynamischen Einstellungen bei Bedarf mithilfe der Konfigurationseinstellungen überschreiben. |
 
 ### Spezielle ereignisbasierte Anwendungen {#special-event}
 
@@ -131,7 +130,7 @@ Aktivieren Sie die TVE-Berechtigung für Spezialereignisse, bei denen es sich m�
 **Priorität**- Mittel
 
 Aktivieren der Validierung des Medien-Tokens vor dem Freigeben des Video-Streams im Client-Player
-| Priorität | Anwendungsfall | Beschreibung | Plattformen | MVPD-Hinweise | |—|—|—|—|—|—| | Hoch | Programmer Federated Player - mit Autorisierung auf Seitenebene | Adobe Primetime-Authentifizierungs-APIs werden in JavaScript auf der Seite ausgeführt und das Token wird an den Player übergeben. Token können auf verschiedene Weise an den Validierungsdienst übergeben werden: Abrufen des Parameters für den URL-Parameter des Validierungsdienstes, der in der Abfragezeichenfolge der externen API der Stream-URL-Schnittstelle FlashVars übergeben wird | | | | Mittel | Programmer Federated Player - mit interner Player-Autorisierung | Adobe Primetime-Authentifizierungs-APIs werden im ActionScript auf der Player-SWF ausgeführt, sodass das Token vom Callback aus für den Player verfügbar ist.                                                                                                                                                                                         | | | | Hoch | Syndizierter Player - Auf MVPD-Portal gehostet mit Seitenebenenautorisierung Mit einem iFrame zum Aufnehmen des Players | Ähnlich wie der Player mit Autorisierung auf Seitenebene, jedoch mit dem Player-Seiten-Wrapper iFramed in das MVPD-Portal. Die Authentifizierung muss separat im MVPD-Portal erfolgen.                                                                                                                                                    |           |                        |
+| Priorität | Anwendungsfall | Beschreibung | Plattformen | MVPD-Hinweise | |—|—|—|—|—|—| | Hoch | Programmer Federated Player - mit Autorisierung auf Seitenebene | Adobe Primetime-Authentifizierungs-APIs werden in JavaScript auf der Seite ausgeführt und das Token wird an den Player übergeben. Token können auf verschiedene Weise an den Validierungsdienst übergeben werden: Parameter für den URL-Parameter des Validierungsdienstes abrufen, der in der Abfragezeichenfolge der externen API FlashVars der Stream-URL übergeben wird | | | | Mittel | Programmer Federated Player - mit interner Player-Autorisierung | Adobe Primetime-Authentifizierungs-APIs werden im ActionScript auf der Player-SWF ausgeführt, sodass das Token vom Callback aus für den Player verfügbar ist.                                                                                                                                                                                         | | | | Hoch | Syndizierter Player - Auf MVPD-Portal gehostet mit Seitenebenenautorisierung Mit einem iFrame zum Aufnehmen des Players | Ähnlich wie der Player mit Autorisierung auf Seitenebene, jedoch mit dem Player-Seiten-Wrapper iFramed in das MVPD-Portal. Die Authentifizierung muss separat im MVPD-Portal erfolgen.                                                                                                                                                    |           |                        |
 
 
 <!--

@@ -1,14 +1,12 @@
 ---
 title: PSDK-Fehlercodes
-description: Informationen zu verschiedenen Fehlercodes, Warnungen und systemeigenen Fehlercodes.
-translation-type: tm+mt
-source-git-commit: eddc327087411a6214cfd8dafef66b850a603f97
+description: Informationen zu verschiedenen Fehlercodes, Warnungen und nativen Fehlercodes.
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1897'
 ht-degree: 6%
 
 ---
-
 
 # PSDK-Fehlercodes {#psdk-error-codes}
 
@@ -16,7 +14,7 @@ Lesen Sie weiter, um mehr über PSDK-Fehlercodes, Warnungen und native Fehlercod
 
 ## Fehler
 
-Die folgende Tabelle enthält detaillierte Informationen zu FEHLERTypbenachrichtigungen. Die meisten Fehler enthalten relevante Metadaten. zum Beispiel die URL der Ressource, die nicht heruntergeladen werden konnte. Einige Benachrichtigungen enthalten Metadaten, um anzugeben, ob das Problem im Hauptvideoinhalt, im alternativen Audioinhalt oder in einer Anzeige aufgetreten ist.
+Die folgende Tabelle enthält detaillierte Informationen zu FEHLER-Benachrichtigungen. Die meisten Fehler enthalten relevante Metadaten, beispielsweise die URL der Ressource, die nicht heruntergeladen werden konnte. Einige Benachrichtigungen enthalten Metadaten, die angeben, ob das Problem im Hauptvideoinhalt, im alternativen Audioinhalt oder in einer Anzeige aufgetreten ist.
 
 <table frame="all" colsep="1" rowsep="1">
   <tr> 
@@ -27,7 +25,7 @@ Die folgende Tabelle enthält detaillierte Informationen zu FEHLERTypbenachricht
   <tr>
     <td>ERFOLG</td>
     <td>0</td>
-    <td>Der Vorgang, der von der zugrunde liegenden API ausgeführt wird, ist erfolgreich.</td>
+    <td>Der von der zugrunde liegenden API ausgeführte Vorgang ist erfolgreich.</td>
   </tr>
   <tr>
     <td>INVALID_ARGUMENT</td>
@@ -37,7 +35,7 @@ Die folgende Tabelle enthält detaillierte Informationen zu FEHLERTypbenachricht
   <tr>
     <td>NULL_POINTER</td>
     <td>2</td>
-    <td>Eines der übergebenen Argumente ist NULL. Eines der internen Member wurde nicht initialisiert.</td>
+    <td>Eines der übergebenen Argumente ist NULL oder eines der internen Elemente wurde nicht initialisiert.</td>
   </tr>
   <tr>
     <td>ILLEGAL_STATE</td>
@@ -47,7 +45,7 @@ Die folgende Tabelle enthält detaillierte Informationen zu FEHLERTypbenachricht
   <tr>
     <td>INTERFACE_NOT_FOUND</td>
     <td>4</td>
-    <td>Die Methode "interfaceCast"gibt diesen Fehler aus, wenn die angeforderte Schnittstelle nicht implementiert/vererbt wird.</td>
+    <td>Die Methode "interfaceCast"gibt diesen Fehler aus, wenn die angeforderte Schnittstelle nicht implementiert/vererbt wurde.</td>
   </tr>
   <tr>  
     <td>CREATION_FAILED</td>
@@ -62,12 +60,12 @@ Die folgende Tabelle enthält detaillierte Informationen zu FEHLERTypbenachricht
   <tr>
     <td>DATA_NOT_AVAILABLE</td>
     <td>7</td>
-    <td>Die angeforderten Daten stehen derzeit nicht zur Verfügung.</td>
+    <td>Die angeforderten Daten sind derzeit nicht verfügbar.</td>
   </tr>
   <tr>
     <td>SEEK_ERROR</td>
     <td>8</td>
-    <td>Beim Durchführen eines Suchvorgangs ist ein Fehler aufgetreten.</td>
+    <td>Beim Ausführen eines Suchvorgangs ist ein Fehler aufgetreten.</td>
   </tr>
   <tr>
     <td>UNSUPPORTED_FEATURE</td>
@@ -77,12 +75,12 @@ Die folgende Tabelle enthält detaillierte Informationen zu FEHLERTypbenachricht
   <tr>
     <td>RANGE_ERROR</td>
     <td>10</td>
-    <td>Der angegebene Wert liegt außerhalb des zulässigen Bereichs.</td>
+    <td>Der angegebene Wert liegt außerhalb des Bereichs.</td>
   </tr>
   <tr>
     <td>CODEC_NOT_SUPPORTED</td>
     <td>11</td>
-    <td>Der Audio-/Video-Codec des angegebenen Streams wird nicht von TVSDK oder dem zugrunde liegenden Gerät unterstützt.</td>
+    <td>Der Audio-/Video-Codec des angegebenen Streams wird weder von TVSDK noch vom zugrunde liegenden Gerät unterstützt.</td>
   </tr>
   <tr>
     <td>MEDIA_ERROR</td>
@@ -97,7 +95,7 @@ Die folgende Tabelle enthält detaillierte Informationen zu FEHLERTypbenachricht
   <tr>
     <td>GENERIC_ERROR</td>
     <td>14</td>
-    <td>Ereignis für generische Fehler. Nicht tatsächlich ausgestellt von TVSDK. Dies ist nur eine Markierung für das Ende des Bereichs numerischer Ereignis, die TVSDK-Fehlermeldungen entsprechen.</td>
+    <td>Generisches Fehlerereignis. Nicht tatsächlich von TVSDK ausgestellt. Dies ist nur eine Markierung für das Ende des Bereichs numerischer Codes, die TVSDK-Fehlerereignissen entsprechen.</td>
   </tr>
   <tr>
     <td>INVALID_SEEK_TIME</td>
@@ -107,12 +105,12 @@ Die folgende Tabelle enthält detaillierte Informationen zu FEHLERTypbenachricht
   <tr>
     <td>AUDIO_TRACK_ERROR</td>
     <td>16</td>
-    <td>Es ist ein Fehler im Zusammenhang mit einer Audiospur aufgetreten (Alternatives Audio)</td>
+    <td>Es ist ein Fehler im Zusammenhang mit einem Audio-Track aufgetreten (Alternativton).</td>
   </tr>
   <tr>
     <td>ACCESS_FROM_DIFFERENT_THREAD</td>
     <td>17</td>
-    <td>PSDK API wird aus einem anderen Thread aufgerufen als der Thread, in dem PSDK initialisiert wurde.</td>
+    <td>Die PSDK-API wird aus einem anderen Thread als dem Thread aufgerufen, in dem PSDK initialisiert wurde.</td>
   </tr>
   <tr>
     <td>ELEMENT_NOT_FOUND</td>
@@ -120,14 +118,14 @@ Die folgende Tabelle enthält detaillierte Informationen zu FEHLERTypbenachricht
     <td>Das Element wurde nicht gefunden.</td>
   </tr>
   <tr>
-    <td>NOT_IMPLEMENTITED</td>
+    <td>NOT_IMPLEMENTED</td>
     <td>19</td>
-    <td>Funktion nicht implementiert.</td>
+    <td>Funktion nicht implementiert</td>
   </tr>
   <tr>
     <td>PRE_ROLL_DISABLED</td>
     <td>20</td>
-    <td>Die Vorgabe wurde über AdvertisingMetadata deaktiviert.</td>
+    <td>Das Vorrecht wurde über AdvertisingMetadata deaktiviert.</td>
   </tr>
   <tr>
     <td>PLAYBACK_NOT_AUTHORIZED</td>
@@ -137,14 +135,14 @@ Die folgende Tabelle enthält detaillierte Informationen zu FEHLERTypbenachricht
   <tr>
     <td>NETWORK_TIMEOUT</td>
     <td>58</td>
-    <td>Netzwerk-Zeitüberschreitung beim Abrufen eines Ressourcen-/Verbindungsservers.</td>
+    <td>Netzwerk Zeitüberschreitung beim Abrufen einer Ressource/eines Verbindungsservers.</td>
   </tr>
 </table>
 
 ## Warnungen
 
 Die folgende Tabelle enthält detaillierte Informationen zu WARN-Typbenachrichtigungen.
-Die meisten Warnungen enthalten relevante Metadaten. zum Beispiel die URL der Ressource, die nicht heruntergeladen werden konnte. Einige Benachrichtigungen enthalten Metadaten, um anzugeben, ob das Problem im Hauptvideoinhalt, im alternativen Audioinhalt oder in einer Anzeige aufgetreten ist.
+Die meisten Warnungen enthalten relevante Metadaten, z. B. die URL der Ressource, die nicht heruntergeladen werden konnte. Einige Benachrichtigungen enthalten Metadaten, die angeben, ob das Problem im Hauptvideoinhalt, im alternativen Audioinhalt oder in einer Anzeige aufgetreten ist.
 
 <table frame="all" colsep="1" rowsep="1">
   <tr>
@@ -165,7 +163,7 @@ Die meisten Warnungen enthalten relevante Metadaten. zum Beispiel die URL der Re
   <tr>
     <td>AD_RESOLVER_FAILED</td>
     <td>202</td>
-    <td>Anzeigen-Plugin konnte keine Anzeigen auflösen.</td>
+    <td>Das Anzeigen-Plugin konnte Anzeigen nicht auflösen.</td>
   </tr>
   <tr>
     <td>AD_MANIFEST_LOAD_FAILED</td>
@@ -188,15 +186,15 @@ Die meisten Warnungen enthalten relevante Metadaten. zum Beispiel die URL der Re
     <th><b>Beschreibung</b></th>
   </tr>
   <tr>
-    <td>REVENUE_OPTIMIZATION_BERICHTE</td>
+    <td>REVENUE_OPTIMIZATION_REPORTING</td>
     <td>300</td>
-    <td>TVSDK detaillierte Benachrichtigungen für weitere Berichte und Analysen.</td>
+    <td>TVSDK-detaillierte Benachrichtigungen für weitere Berichte und Analysen.</td>
   </tr>
  </table>
 
 ## Native Fehlercodes
 
-Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigungen im Metadatenobjekt NATIVE_ERROR zurück.
+Die Video Encoder-Schnittstelle der AVE gibt diese Benachrichtigungen zur Videowiedergabe im Metadatenobjekt NATIVE_ERROR zurück.
 
 <table frame="all" colsep="1" rowsep="1">
   <tr>
@@ -217,7 +215,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>
     <td>ASYNC_OPERATION_IN_PROGRESS</td>
     <td>1</td>
-    <td>Asynchroner Vorgang. Der Antrag wurde gestellt. Erfolgs-/Fehlerinformationen stehen später zur Verfügung.</td>
+    <td>Asynchroner Vorgang. Die Vorgangsanfrage wurde durchgeführt. Erfolgs-/Fehlerinformationen sind später verfügbar.</td>
   </tr>
   <tr>
     <td>EOF</td>
@@ -226,13 +224,13 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr>
   <tr>
     <td>DECODER_FAILED</td>
-    <td>1</td>
-    <td>Der Decoder ist zur Laufzeit fehlgeschlagen.</td>
+    <td>3</td>
+    <td>Der Decoder schlug zur Laufzeit fehl.</td>
   </tr>
   <tr>
     <td>DEVICE_OPEN_ERROR</td>
     <td>4</td>
-    <td>Hardwaredecoder konnte nicht geöffnet werden.</td>
+    <td>Hardware-Decoder konnte nicht geöffnet werden.</td>
   </tr>
   <tr>
     <td>FILE_NOT_FOUND</td>
@@ -247,12 +245,12 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>
     <td>IRRECOVERABLE_ERROR</td>
     <td>7</td>
-    <td>Eine Fehlerbedingung, von der die Video-Engine nicht wiederhergestellt werden kann.</td>
+    <td>Eine Fehlerbedingung, von der die Video-Engine keine Wiederherstellung durchführen kann.</td>
   </tr>
   <tr>
     <td>LOST_CONNECTION_RECOVERABLE</td>
     <td>8</td>
-    <td>Netzwerkfehler beim Versuch der Wiederherstellung.</td>
+    <td>Netzwerkfehler, der versucht, den Fehler wiederherzustellen.</td>
   </tr>
   <tr> 
     <td>NO_FIXED_SIZE</td>
@@ -260,9 +258,9 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
     <td>Die Größe der Ressource kann nicht bestimmt werden.</td>
   </tr>
   <tr>
-    <td>NOT_IMPLEMENTITED</td>
+    <td>NOT_IMPLEMENTED</td>
     <td>10</td>
-    <td>Funktion nicht implementiert.</td>
+    <td>Funktion nicht implementiert</td>
   </tr>
   <tr>
     <td>OUT_OF_MEMORY</td>
@@ -282,7 +280,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>  
     <td>UNDER_FLOW</td>
     <td>14</td>
-    <td>Unterlaufbedingung.</td>
+    <td>Flussbedingung.</td>
   </tr>
   <tr> 
     <td>UNSUPPORTED_CONFIG</td>
@@ -292,7 +290,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>  
     <td>UNSUPPORTED_OPERATION</td>
     <td>16</td>
-    <td>Vorgang wird nicht unterstützt.</td>
+    <td>Der Vorgang wird nicht unterstützt.</td>
   </tr>
   <tr>
     <td>WAITING_FOR_INIT</td>
@@ -307,7 +305,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>
     <td>INVALID_OPERATION</td>
     <td>19</td>
-    <td>Vorgang nicht zulässig.</td>
+    <td>Vorgang nicht erlaubt.</td>
   </tr>
   <tr>
     <td>OP_ONLY_ALLOWED_IN_PAUSED_STATE</td>
@@ -317,7 +315,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr> 
     <td>OP_INVALID_WITH_AUDIO_ONLY_FILE</td>
     <td>21</td>
-    <td>Der Vorgang kann nicht für reinen Audiodateien verwendet werden.</td>
+    <td>Der Vorgang kann nicht für Audiodateien verwendet werden.</td>
   </tr>
   <tr>
     <td>PREVIOUS_STEP_SEEK_IN_PROGRESS</td>
@@ -332,7 +330,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>
     <td>RANGE_ERROR</td>
     <td>24</td>
-    <td>Der angegebene Wert liegt außerhalb des zulässigen Bereichs.</td>
+    <td>Der angegebene Wert liegt außerhalb des Bereichs.</td>
   </tr>
   <tr>
     <td>INVALID_SEEK_TIME</td>
@@ -362,7 +360,7 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>
     <td>SEEK_FAILED</td>
     <td>30</td>
-    <td>Suche fehlgeschlagen.</td>
+    <td>Die Suche ist fehlgeschlagen.</td>
   </tr>
   <tr>
     <td>CODEC_NOT_SUPPORTED</td>
@@ -370,9 +368,9 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
     <td>Nicht unterstützter Codec.</td>
   </tr>
   <tr>
-    <td>NETWORK_UNVERFÜGBAR</td>
+    <td>NETWORK_UNAVAILABLE</td>
     <td>32</td>
-    <td>Netzwerk ist nicht verfügbar.</td>
+    <td>Das Netzwerk ist nicht verfügbar.</td>
   </tr>
   <tr>  
     <td>NETWORK_ERROR</td>
@@ -380,14 +378,14 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
     <td>Fehler beim Abrufen von Daten aus dem Netzwerk.</td>
   </tr>
   <tr>
-    <td>ÜBERLAUF</td>
+    <td>ÜBERFLUSS</td>
     <td>34</td>
     <td>Überlauf.</td>
   </tr>
   <tr>  
-    <td>VIDEO_PROFIL_NOT_SUPPORTED</td>
+    <td>VIDEO_PROFILE_NOT_SUPPORTED</td>
     <td>35</td>
-    <td>Nicht unterstütztes Video-Profil.</td>
+    <td>Nicht unterstütztes Videoprofil.</td>
   </tr>
   <tr>
     <td>PERIOD_NOT_LOADED</td>
@@ -402,47 +400,47 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>
     <td>CALLED_FROM_WRONG_THREAD</td>
     <td>38</td>
-    <td>API kann nicht aus dem falschen Thread aufgerufen werden. Meistens für API-Elemente, die nur aus dem Main-Thread aufgerufen werden sollten.</td>
+    <td>API kann nicht aus dem falschen Thread aufgerufen werden. Meistens für API-Elemente, die nur aus dem Haupt-Thread aufgerufen werden sollten.</td>
   </tr>
   <tr>
     <td>FRAGMENT_READ_ERROR</td>
     <td>39</td>
-    <td>Fragmentlesefehler. Kein Failover vorhanden. Engine versucht, das nächste Fragment zu lesen.</td>
+    <td>Fehler beim Lesen von Fragmenten. Kein Failover vorhanden. Die Engine versucht, das nächste Fragment zu lesen.</td>
   </tr>
   <tr>
-    <td>ABGESCHLOSSEN</td>
+    <td>ABORTED</td>
     <td>40</td>
-    <td>Der Vorgang wurde durch einen expliziten Abort- oder Destroy-Aufruf abgebrochen.</td>
+    <td>Der Vorgang wurde durch einen expliziten Abort - oder Zerstörungsaufruf abgebrochen.</td>
   </tr>
   <tr>
     <td>UNSUPPORTED_HLS_VERSION</td>
     <td>41</td>
-    <td>Diese Version des HLS-Mediums kann nicht wiedergegeben werden.</td>
+    <td>Diese Version von HLS-Medien kann nicht wiedergegeben werden.</td>
   </tr>
   <tr>
     <td>CANNOT_FAIL_OVER</td>
     <td>42</td>
-    <td>Kann nicht übersprungen werden.</td>
+    <td>Kann nicht durchfallen.</td>
   </tr>
   <tr> 
     <td>HTTP_TIME_OUT</td>
     <td>43</td>
-    <td>Beim HTTP-Download ist ein Timeout aufgetreten.</td>
+    <td>HTTP-Download ist abgelaufen.</td>
   </tr>
   <tr>
     <td>NETWORK_DOWN</td>
     <td>44</td>
-    <td>Die Netzwerkverbindung des Benutzers ist nicht verfügbar. Die Wiedergabe kann jeden Moment unterbrochen werden und wird fortgesetzt, sobald die Verbindung verfügbar ist.</td>
+    <td>Die Netzwerkverbindung des Benutzers ist ausgeschaltet. Die Wiedergabe kann jeden Moment unterbrochen werden und wird fortgesetzt, sobald die Verbindung verfügbar ist.</td>
   </tr>
   <tr>
-    <td>NO_USABLE_BITRATE_PROFIL</td>
+    <td>NO_USABLE_BITRATE_PROFILE</td>
     <td>45</td>
-    <td>Es wurde kein nutzbares Bitrate-Profil im Stream gefunden.</td>
+    <td>Es wurde kein nutzbares Bitratenprofil im Stream gefunden.</td>
   </tr>
   <tr>
     <td>BAD_MANIFEST_SIGNATURE</td>
     <td>46</td>
-    <td>Das Manifest hat eine ungültige Unterschrift. Der Manifestsignierungstest ist fehlgeschlagen.</td>
+    <td>Das Manifest hat eine ungültige Signatur. Der Manifestsignierungstest ist fehlgeschlagen.</td>
   </tr>
   <tr>
     <td>CANNOT_LOAD_PLAYLIST</td>
@@ -452,17 +450,17 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>
     <td>REPLACEMENT_FAILED</td>
     <td>48</td>
-    <td>In einer Einfüge-API angegebene Ersetzung konnte nicht erfolgreich durchgeführt werden. Das bedeutet, dass die Einfügung erfolgreich war, die Ersetzung jedoch nicht. Der Austausch kann fehlschlagen, wenn das zu ersetzende Manifest aus der Zeitleiste entfernt wurde.</td>
+    <td>Die in einer Einfügen-API angegebene Ersetzung konnte nicht erfolgreich sein. Dies bedeutet, dass die Einfügung erfolgreich war, die Ersetzung jedoch nicht. Die Ersetzung konnte fehlschlagen, wenn das zu ersetzende Manifest aus der Timeline entfernt wurde.</td>
   </tr>
   <tr>
-    <td>SWITCH_TO_ASYMMETRIC_PROFIL</td>
+    <td>SWITCH_TO_ASYMMETRIC_PROFILE</td>
     <td>49</td>
-    <td>DRM wechselt zu einem asymmetrischen Profil. Es wird erwartet, dass alle Profil in ihrer Dauer ausgerichtet werden. Andernfalls wird diese Warnung ausgegeben und es kann zu Sprüngen bei der Wiedergabe kommen.</td>
+    <td>DRM wechselt zu einem asymmetrischen Profil. Es wird erwartet, dass alle Profile an der Dauer ausgerichtet werden. Andernfalls wird diese Warnung ausgegeben und es kann zu Sprüngen bei der Wiedergabe kommen.</td>
   </tr>
   <tr>
     <td>LIVE_WINDOW_MOVED_BACKWARD</td>
     <td>50</td>
-    <td>Es wird erwartet, dass das Live-Fenster nur vorwärts geht. Andernfalls wird diese Warnung ausgegeben und das Fenster wird nicht gelesen. Aus diesem Grund kann es bei der Wiedergabe zu Sprüngen (oder Stopp/Long Pause) kommen.</td>
+    <td>Es wird erwartet, dass das Live-Fenster nur weiter geht. Andernfalls wird diese Warnung ausgegeben und das Fenster wird nicht gelesen. Aus diesem Grund kann es bei der Wiedergabe zu Sprüngen (oder Stopp/Long Pause) kommen.</td>
   </tr>
   <tr>
     <td>CURRENT_PERIOD_EXPIRED</td>
@@ -477,17 +475,17 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>
     <td>PERIOD_HOLD</td>
     <td>53</td>
-    <td>Der Medienleser kann keine weiteren Informationen lesen, da er die mit der setHoldAt-API festgelegte Zeit erreicht hat.</td>
+    <td>Der Medienleser kann nicht weiter lesen, da er die durch die setHoldAt-API festgelegte Zeit erreicht hat.</td>
   </tr>
   <tr>  
     <td>LIVE_HOLD</td>
     <td>54</td>
-    <td>Der Medienleser kann keine Segmente laden, da er das Ende des Live-Fensters erreicht hat. Das Laden des Segments wird fortgesetzt, wenn der Server neue Medien in das Live-Fenster einfügt. Dieser Status wird normalerweise erreicht, wenn:<ul><li>bufferTime ist zu hoch (gleich oder höher als die Live-Fensterdauer).</li><li>Eine Kombination aus einer oder mehreren der API zum Einfügen/Löschen ersetzt mehr Medien als hinzugefügt.</li><li>Der nächste Zeitraum ist ein Live-Zeitraum mit einem ausstehenden Medienaustausch (aufgrund des InsertBy-API-Aufrufs)</li></ul></td>
+    <td>Der Medienleser kann keine Segmente laden, da das Ende des Live-Fensters erreicht wurde. Das Laden des Segments wird fortgesetzt, wenn der Server neue Medien zum Live-Fenster hinzufügt. Dieser Status wird normalerweise erreicht, wenn:<ul><li>Die bufferTime ist zu hoch (entspricht oder höher als die Dauer des Live-Fensters).</li><li>Eine Kombination aus einer oder mehreren der API zum Einfügen/Löschen ersetzte mehr Medien als hinzugefügt.</li><li>Der nächste Zeitraum ist ein Live-Zeitraum mit einem ausstehenden Medienersatz (aufgrund des InsertBy-API-Aufrufs).</li></ul></td>
   </tr>
   <tr>
     <td>BAD_MEDIA_INTERLEAVING</td>
     <td>55</td>
-    <td>Das Audio- und Videointeragieren in den Medien wird nicht ordnungsgemäß ausgeführt. Dies ist ein Verpackungsfehler. Die Warnung wird ausgelöst, wenn der Unterschied zwei Sekunden überschreitet.</td>
+    <td>Die Audio- und Videointeraktion in den Medien erfolgt nicht ordnungsgemäß. Dies ist ein Verpackungsfehler. Die Warnung wird ausgelöst, wenn die Differenz zwei Sekunden überschreitet.</td>
   </tr>
   <tr>
     <td>DRM_NOT_AVAILABLE</td>
@@ -497,47 +495,47 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>  
     <td>PLAYBACK_NOT_AUTHORIZED</td>
     <td>57</td>
-    <td>Die HLS-Wiedergabe wurde im Flash Player nicht aktiviert. Siehe AuthorizedFeatures.enableHLSPlayback.</td>
+    <td>Die HLS-Wiedergabe wurde im Flash Player nicht aktiviert. Siehe AuthorizedFeatures.enableHLSPlayback .</td>
   </tr>
   <tr>
     <td>BAD_MEDIA_SAMPLE_FOUND</td>
     <td>58</td>
-    <td>Der Decoder hat ein schlechtes Beispiel erhalten, das nicht dekodiert werden kann. Dies ist in der Regel kein fataler Fehler, deutet aber darauf hin, dass es möglicherweise Fehler im Audio/Video gibt. Zu viele Instanzen dieses Fehlers deuten auf eine fehlerhafte Kodierung oder fehlerhafte Datei hin.</td>
+    <td>Der Decoder erhielt eine ungültige Stichprobe, die nicht dekodiert werden kann. Dies ist normalerweise kein schwerwiegender Fehler, weist aber darauf hin, dass es möglicherweise zu Fehlern im Audio/Video kommt. Zu viele Instanzen dieses Fehlers weisen auf eine fehlerhafte Kodierung oder eine fehlerhafte Datei hin.</td>
   </tr>
   <tr>
     <td>RANGE_SPANS_READ_HEAD</td>
     <td>59</td>
-    <td>Nach dem Start der Wiedergabe sollte der Bereich "Einfügen/Ersetzen"den Lesekopf nicht enthalten.</td>
+    <td>Nachdem die Wiedergabe gestartet wurde, sollte der Bereich "Einfügen/Ersetzen"den Lesekopf nicht enthalten.</td>
   </tr>
   <tr> 
     <td>POSTROLL_WITH_LIVE_NOT_ALLOWED</td>
     <td>60</td>
-    <td>Einfügungen nach dem Rollen sind auf einem Live-Datenträger nicht zulässig. Sie sind jedoch zulässig, nachdem der Server die Medien als abgeschlossen markiert hat.</td>
+    <td>Einfügungen nach dem Roll sind auf einem Live-Medium nicht zulässig. Sie sind jedoch zulässig, nachdem der Server die Medien als abgeschlossen markiert hat.</td>
   </tr>
   <tr>
     <td>INTERNAL_ERROR</td>
     <td>61</td>
-    <td>Ein sehr seltenes Thema, das nie passieren sollte.</td>
+    <td>Ein sehr seltenes Problem, das niemals auftreten sollte.</td>
   </tr>
   <tr>  
     <td>SPS_PPS_FOUND_OUTSIDE_AVCC</td>
     <td>62</td>
-    <td>Der Stream entspricht nicht der Verpackungsempfehlung, immer H264 SPS/PPS in einen AVCC zu setzen. Probleme mit der Suche/Wiedergabe werden möglicherweise angezeigt.</td>
+    <td>Der Stream folgt nicht der Verpackungsempfehlung, immer H264 SPS/PPS in einen AVCC einzufügen. Möglicherweise treten Probleme bei der Suche/Wiedergabe auf.</td>
   </tr>
   <tr>  
     <td>PARTIAL_REPLACEMENT</td>
     <td>63</td>
-    <td>In der Einfüge-API angegebene Ersetzung wurde nur teilweise vorgenommen. Dies geschieht, wenn replaceDuration sich über die Zeitschienendauer erstreckt.</td>
+    <td>Die in einer Einfügen-API angegebene Ersetzung wurde nur teilweise durchgeführt. Dies geschieht, wenn die Option replaceDuration über die Zeitleistendauer erstreckt.</td>
   </tr>
   <tr>
     <td>RENDITION_M3U8_ERROR</td>
     <td>64</td>
-    <td>Beim Laden der Wiedergabeliste für Darstellungen ist ein Fehler aufgetreten. Dies gilt nur für AVE, nicht für FlashPlayer.</td>
+    <td>Die Wiedergabeliste für Ausgabedarstellungen hatte einen Fehler beim Laden. Dies gilt nur für AVE, nicht für FlashPlayer.</td>
   </tr>
   <tr>
     <td>NULL_OPERATION</td>
     <td>65</td>
-    <td>Operation tut nichts.</td>
+    <td>Der Vorgang führt nichts aus.</td>
   </tr>
   <tr>
     <td>SEGMENT_SKIPPED_ON_FAILURE</td>
@@ -567,22 +565,22 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>
     <td>CANNOT_SPLIT_TIMELINE</td>
     <td>71</td>
-    <td>Split-Vorgang auf einer Zeitleiste kann nicht durchgeführt werden.</td>
+    <td>Es kann kein Aufspaltungsvorgang für eine Timeline durchgeführt werden.</td>
   </tr>
   <tr>
     <td>CANNOT_ERASE_TIMELINE</td>
     <td>72</td>
-    <td>Vorgang zum Löschen auf einer Zeitleiste kann nicht ausgeführt werden.</td>
+    <td>Kann keine Löschoperation für eine Timeline durchführen.</td>
   </tr>
   <tr>
     <td>DID_NOT_GET_NEXT_FRAGMENT</td>
     <td>73</td>
-    <td>Das nächste Fragment wurde nicht abgerufen.</td>
+    <td>Das nächste Fragment wurde nicht erhalten.</td>
   </tr>
   <tr>
     <td>NO_TIMELINE</td>
     <td>74</td>
-    <td>Keine Zeitschiene in einer internen Datenstruktur vorhanden.</td>
+    <td>In einer internen Datenstruktur ist keine Timeline vorhanden.</td>
   </tr>
   <tr>
     <td>LISTENER_NOT_FOUND</td>
@@ -590,18 +588,18 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
     <td>In einer internen Datenstruktur wurde kein Listener gefunden.</td>
   </tr>
   <tr>
-    <td>AUDIO_BEGINN_ERROR</td>
+    <td>AUDIO_START_ERROR</td>
     <td>76</td>
-    <td>Audio kann nicht Beginn werden.</td>
+    <td>Audio kann nicht gestartet werden.</td>
   </tr>
   <tr>
     <td>NO_AUDIO_SINK</td>
     <td>77</td>
-    <td>In einer internen Datenstruktur ist kein Audiobecken vorhanden.</td>
+    <td>In einer internen Datenstruktur ist kein Audio-Senken vorhanden.</td>
   </tr>
   <tr>  
     <td>FILE_OPEN_ERROR</td>
-    <td>58</td>
+    <td>78</td>
     <td>Datei kann nicht geöffnet werden.</td>
   </tr>
   <tr>
@@ -616,8 +614,8 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   </tr>
   <tr>
     <td>ID3PARSE_ERROR</td>
-    <td>61</td>
-    <td>Bei der Analyse der ID3-Daten ist ein Fehler aufgetreten.</td>
+    <td>81</td>
+    <td>Beim Analysieren von ID3-Daten ist ein Fehler aufgetreten.</td>
   </tr>
   <tr>
     <td>SECURITY_ERROR</td>
@@ -627,17 +625,17 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>
     <td>TIMELINE_TOO_SHORT</td>
     <td>83</td>
-    <td>Die Zeitschiene ist zu kurz. Wenn es sich um einen Live-Stream handelt, kann es zu häufigen Pufferungen kommen.</td>
+    <td>Die Timeline-Dauer ist zu kurz. Wenn es sich um einen Live-Stream handelt, kann es zu häufigen Pufferungen kommen.</td>
   </tr>
   <tr>
-    <td>AUDIO_ONLY_STREAM_BEGINN</td>
+    <td>AUDIO_ONLY_STREAM_START</td>
     <td>84</td>
-    <td>Der Stream wurde auf einen reinen Audiostream umgestellt.</td>
+    <td>Der Stream wurde auf einen reinen Audio-Stream umgestellt.</td>
   </tr>
   <tr>  
     <td>AUDIO_ONLY_STREAM_END</td>
     <td>85</td>
-    <td>Der Stream wurde mit Video von reinem Audio auf einen Stream umgestellt.</td>
+    <td>Der Stream wurde mit Video von Nur-Audio in einen Stream umgeschaltet.</td>
   </tr>
   <tr>
     <td>KEY_NOT_FOUND</td>
@@ -662,21 +660,21 @@ Die Video Encoder-Schnittstelle der AVE gibt diese Videowiedergabebenachrichtigu
   <tr>
     <td>UNREPORTED_TIME_DISCONTINUITY_FOUND</td>
     <td>91</td>
-    <td>Diskontinuität der nicht gemeldeten Zeit (PTS) festgestellt.</td>
+    <td>Nicht gemeldete Diskontinuität (PTS) festgestellt.</td>
   </tr>
   <tr>
     <td>UNMATCHED_AV_DISCONTINUITY_FOUND</td>
     <td>92</td>
-    <td>Uneinheitliche Audio- und Videounterbrechung gefunden.</td>
+    <td>Nicht übereinstimmende Audio- und Videounterbrechung gefunden.</td>
   </tr>
   <tr>
     <td>TRICKPLAY_ENDED_DUE_TO_ERROR</td>
     <td>93</td>
-    <td>Beim Abspielen von Medien im Trick Play-Modus ist ein Fehler aufgetreten. Der Trick Play-Modus wird beendet und der Stream wird angehalten. Rufen Sie Play() auf, um die Medien im normalen Modus abzuspielen.</td>
+    <td>Beim Abspielen von Medien im Trick Play-Modus trat ein Fehler auf. Der Trick Play-Modus wird beendet und der Stream wird angehalten. Rufen Sie Play() auf, um die Medien im normalen Modus wiederzugeben.</td>
   </tr>
   <tr>
     <td>LIVE_WINDOW_MOVED_AHEAD</td>
     <td>95</td>
-    <td>Der Spieler ist außerhalb des Live-Fensters und muss nach vorn suchen, um aufzuholen.</td>
+    <td>Der Spieler ist nicht im Live-Fenster und muss nach vorn suchen, um aufzuholen.</td>
   </tr>
 </table>

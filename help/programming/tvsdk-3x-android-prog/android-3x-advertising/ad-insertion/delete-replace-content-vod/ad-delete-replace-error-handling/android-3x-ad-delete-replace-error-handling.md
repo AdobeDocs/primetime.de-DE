@@ -1,42 +1,40 @@
 ---
-description: TVSDK behandelt Zeitraumfehler entsprechend dem jeweiligen Problem, indem die falsch definierten Zeiträume zusammengeführt oder neu angeordnet werden.
-title: Verarbeitung von Fehlern beim Löschen und Ersetzen von Anzeigen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK behandelt Zeitbereichsfehler entsprechend dem jeweiligen Problem, indem die falsch definierten Zeiträume zusammengeführt oder neu angeordnet werden.
+title: Umgang mit Anzeigenlöschungen und Ersatzfehlern
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
 
 ---
 
+# Umgang mit Anzeigenlöschungen und Ersatzfehlern  {#ad-deletion-and-replacement-error-handling}
 
-# Verarbeitung von Fehlern beim Löschen und Ersetzen von Anzeigen {#ad-deletion-and-replacement-error-handling}
+TVSDK behandelt Zeitbereichsfehler entsprechend dem jeweiligen Problem, indem die falsch definierten Zeiträume zusammengeführt oder neu angeordnet werden.
 
-TVSDK behandelt Zeitraumfehler entsprechend dem jeweiligen Problem, indem die falsch definierten Zeiträume zusammengeführt oder neu angeordnet werden.
+TVSDK verwaltet `timeRanges` Fehler durch standardmäßige Zusammenführungs- und Neuanordnungsprozesse. Zunächst sortiert der Player kundendefinierte Zeiträume nach dem *begin* Zeit. Basierend auf dieser Sortierreihenfolge führt TVSDK benachbarte Bereiche zusammen und fügt diese Bereiche zusammen, wenn es Untergruppen und Schnittmengen gibt.
 
-TVSDK verwaltet `timeRanges`-Fehler durch standardmäßige Zusammenführungs- und Neuanordnungsprozesse. Zunächst sortiert der Player benutzerdefinierte Zeitbereiche nach der Zeit *begin*. Auf der Grundlage dieser Sortierreihenfolge führt TVSDK angrenzende Bereiche zusammen, wenn es Untergruppen und Schnittpunkte zwischen den Bereichen gibt.
+TVSDK behandelt Zeitbereichsfehler mit den folgenden Optionen:
 
-TVSDK behandelt Zeitraumfehler mit folgenden Optionen:
+* **Nicht in Reihenfolge** TVSDK ordnet die Zeiträume neu an.
 
-* **Out of** orderTVSDK ordnet die Zeiträume neu an.
+* **Untergruppe** TVSDK führt die Zeitbereich-Teilmengen zusammen.
 
-* **** SubsetTVSDK führt die Teilmengen des Zeitraums zusammen.
+* **Schnittmenge** TVSDK führt die sich überschneidenden Zeiträume zusammen.
 
-* **** IntersectTVSDK führt die sich überschneidenden Zeiträume zusammen.
-
-* **Ersetzungsbereiche** konfliktfreiTVSDK wählt die Ersetzungsdauer aus der frühesten in  `timeRange` der widersprüchlichen Gruppe angezeigten Gruppe aus.
+* **Bereichskonflikt ersetzen** TVSDK wählt die Ersetzungsdauer von der ersten `timeRange` in der in Konflikt stehenden Gruppe angezeigt.
 
 TVSDK behandelt Signalmoduskonflikte mit Anzeigenmetadaten wie folgt:
 
-* Wenn der Anzeigensignalisierungsmodus mit den Zeitraummetadaten in Konflikt steht, haben die Zeitraummetadaten immer Priorität.
+* Wenn der Anzeigenanzeigemodus mit den Zeitbereichs-Metadaten in Konflikt steht, haben die Zeitbereichsmetadaten immer Priorität.
 
-   Wenn beispielsweise der Anzeigensignalisierungsmodus als Serverzuordnung oder als Manifestzeichen festgelegt ist und die Anzeigenmetadaten auch Zeitspannen für den Markierungsmodus aufweisen, wird das Ergebnis angezeigt, dass die Bereiche markiert sind und keine Anzeigen eingefügt werden.
-* Bei REPLACE-Bereichen werden die Bereiche, wenn der Signalisierungsmodus als Serverzuordnung oder als Manifestzeichen festgelegt ist, wie in den REPLACE-Bereichen angegeben ersetzt und es wird keine Anzeige über die Serverzuordnung oder die Manifestzuordnung eingefügt.
+  Wenn beispielsweise der Anzeigenanzeigemodus als Server-Mapping- oder Manifestangaben festgelegt ist und die Anzeigenmetadaten auch MÄRKTE-Zeitspannen aufweisen, wird das resultierende Verhalten dadurch verursacht, dass die Bereiche markiert sind und keine Anzeigen eingefügt werden.
+* Wenn der Signalmodus für Ersetzungsbereiche als Serverzuordnung oder Manifestzeichen festgelegt ist, werden die Bereiche wie in den ERSETZUNGSBEREICHEN angegeben ersetzt und es wird keine Anzeige über Serverzuordnungen oder Manifestanzeigen eingefügt.
 
-   Weitere Informationen finden Sie in der Tabelle *Verhalten bei der Kombination von Signalen/Metadaten* in [Auswirkungen auf das Einfügen und Löschen von Anzeigen im Signalisierungsmodus](../../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/delete-replace-content-vod/android-3x-signaling-mode-android.md).
+  Weitere Informationen finden Sie unter *Verhalten der Signalmethode/Metadatenkombination* Tabelle in [Auswirkung auf das Einfügen und Löschen von Anzeigen im Anzeigesignalmodus](../../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/delete-replace-content-vod/android-3x-signaling-mode-android.md).
 
 Beachten Sie Folgendes:
 
-* Wenn der Server kein gültiges `AdBreaks` zurückgibt, generiert und verarbeitet TVSDK ein `NOPTimelineOperation` für das leere AdBreak und es wird keine Anzeige wiedergegeben.
+* Wenn der Server keine Gültigkeit zurückgibt `AdBreaks`, generiert und verarbeitet TVSDK eine `NOPTimelineOperation` für die leere AdBreak verwenden und keine Anzeige wiedergegeben wird.
 
 * Obwohl das Löschen/Ersetzen von C3-Anzeigen nur für VOD unterstützt werden soll, werden, sofern in den Anzeigenmetadaten angegeben, auch Zeitbereiche für Live-Streams verarbeitet.

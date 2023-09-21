@@ -1,19 +1,18 @@
 ---
 title: Umfang des Dienstleisters
 description: Umfang des Dienstleisters
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '313'
 ht-degree: 0%
 
 ---
 
-
 # Umfang des Dienstleisters {#service-provoider-scoping}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Übersicht {#overview}
 
@@ -31,7 +30,7 @@ Die Adobe Primetime-Authentifizierung unterstützt die folgenden beiden Möglich
 
 >[!NOTE]
 >
->Mit der &quot;Anforderer-ID&quot;bezieht sich die Adobe Primetime-Authentifizierung auf die Netzwerkmarke des Programmierers (z. B.: &quot;CNN&quot; ist eine der Marken des Turner-Netzes).
+>Die &quot;Anforderer-ID&quot; bezieht sich auf die Netzwerkmarke des Programmierers, wie z. B.: &quot;CNN&quot; ist eine der Marken des Turner-Netzwerks.
 
 ### SAML-Ausstellungsansatz {#saml-issuer-approach}
 

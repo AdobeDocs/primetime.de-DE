@@ -1,33 +1,31 @@
 ---
-description: Browser TVSDK sendet Ereignis/Benachrichtigungen in allgemein erwarteten Sequenzen. Ihr Player kann Aktionen auf der Grundlage von Ereignissen in der erwarteten Sequenz implementieren.
-title: Reihenfolge der Ereignis
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Browser TVSDK sendet Ereignisse/Benachrichtigungen in allgemein erwarteten Sequenzen. Ihr Player kann Aktionen basierend auf Ereignissen in der erwarteten Sequenz implementieren.
+title: Reihenfolge der Wiedergabeereignisse
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
+# Reihenfolge der Wiedergabeereignisse{#order-of-playback-events}
 
-# Reihenfolge der Ereignis für die Wiedergabe{#order-of-playback-events}
-
-Browser TVSDK sendet Ereignis/Benachrichtigungen in allgemein erwarteten Sequenzen. Ihr Player kann Aktionen auf der Grundlage von Ereignissen in der erwarteten Sequenz implementieren.
+Browser TVSDK sendet Ereignisse/Benachrichtigungen in allgemein erwarteten Sequenzen. Ihr Player kann Aktionen basierend auf Ereignissen in der erwarteten Sequenz implementieren.
 
 <!--<a id="section_D247A5873A854A079EFA6AC2E80AB894"></a>-->
 
-Die folgenden Beispiele zeigen die Reihenfolge einiger Ereignis, die Ereignis für die Wiedergabe enthalten.
+Die folgenden Beispiele zeigen die Reihenfolge einiger Ereignisse, die Wiedergabeereignisse enthalten.
 
-* Beim erfolgreichen Laden einer Medienressource über `replaceCurrentResource` lautet die Reihenfolge der Ereignis:
+* Beim erfolgreichen Laden einer Medienressource über `replaceCurrentResource`lautet die Reihenfolge der Ereignisse:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` mit `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* Beim Vorbereiten der Wiedergabe über `MediaPlayer.prepareToPlay` lautet die Reihenfolge der Ereignis:
+* Beim Vorbereiten der Wiedergabe über `MediaPlayer.prepareToPlay`lautet die Reihenfolge der Ereignisse:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` mit `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
@@ -100,4 +98,3 @@ onStatusChange = function (event) {
     } 
 };
 ```
-

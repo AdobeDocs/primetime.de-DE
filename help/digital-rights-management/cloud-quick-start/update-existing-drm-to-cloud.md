@@ -1,39 +1,37 @@
 ---
-title: Vorhandene DRM-Inhalte für die Verwendung von Cloud DRM aktualisieren (Optional)
-description: Vorhandene DRM-Inhalte für die Verwendung von Cloud DRM aktualisieren (Optional)
+title: Vorhandenen DRM-Inhalt für die Verwendung von Cloud DRM aktualisieren (optional)
+description: Vorhandenen DRM-Inhalt für die Verwendung von Cloud DRM aktualisieren (optional)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
 
 ---
 
+# Vorhandenen DRM-Inhalt für die Verwendung von Cloud DRM aktualisieren (optional) {#update-existing-drm-content-to-use-cloud-drm-optional}
 
-# Vorhandenen DRM-Inhalt für die Verwendung von Cloud DRM aktualisieren (Optional) {#update-existing-drm-content-to-use-cloud-drm-optional}
+Wenn Sie über eine vorhandene, durch Primetime DRM geschützte Inhaltsbibliothek verfügen, ist es möglich, den vorhandenen Inhalt für die Verwendung des Primetime Cloud DRM-Dienstes &quot;erneut zu komprimieren&quot;und die ursprünglichen Quelldateien nicht erneut zu verpacken/zu verschlüsseln. Beim erneuten Headern des Inhalts werden lediglich die DRM-Metadaten des Inhalts im HLS-Manifest aktualisiert. Es wird keine Entschlüsselung/erneute Verschlüsselung des ursprünglichen Assets durchgeführt. Dies kann eine nützliche Option sein, wenn der ursprüngliche Quellinhalt nicht verfügbar ist oder wenn Bedenken hinsichtlich der Menge der Ressourcen bestehen, die zum erneuten Verpacken einer großen Bibliothek erforderlich sind.
 
-Wenn Sie über eine vorhandene, durch Primetime DRM geschützte Inhaltsbibliothek verfügen, ist es möglich, die vorhandenen Inhalte zu &quot;reheader&quot;zu machen, um den Primetime Cloud DRM-Dienst zu verwenden, anstatt die ursprünglichen Quelldateien erneut verpacken/verschlüsseln zu müssen. Beim erneuten Headern des Inhalts werden einfach die DRM-Metadaten des Inhalts im HLS-Manifest aktualisiert. Es wird keine Entschlüsselung/erneute Verschlüsselung des Originalassets durchgeführt. Diese Option kann nützlich sein, wenn der ursprüngliche Quellinhalt nicht verfügbar ist oder wenn Bedenken hinsichtlich der erforderlichen Ressourcen zum erneuten Verpacken einer großen Bibliothek bestehen.
+Es ist möglich, das Primetime DRM Java SDK zu verwenden, um die Metadaten programmgesteuert zu aktualisieren. Darüber hinaus wird die [!DNL OfflinePackager.jar] Das in diesem Schutzkit enthaltene Befehlszeilen-Tool kann diese Aufgabe auch mithilfe der `-drm_refresh` -Option.
 
-Sie können das Primetime DRM Java SDK verwenden, um die Metadaten programmgesteuert zu aktualisieren. Darüber hinaus kann das in diesem Schutzkit enthaltene Befehlszeilenwerkzeug [!DNL OfflinePackager.jar] diese Aufgabe auch mit der Option `-drm_refresh` durchführen.
+## Details der Kopfzeile {#section_3F3980D8E775450588C64E02A8448189}
 
-## Details der neuen Kopfzeile {#section_3F3980D8E775450588C64E02A8448189}
-
-Beim erneuten Bearbeiten von Headern müssen die folgenden Felder aktualisiert werden, um CloudDRM verwenden zu können:
+Bei der Neubearbeitung müssen die folgenden Felder aktualisiert werden, damit CloudDRM verwendet werden kann:
 
 * Lizenzserver-URL (zu [!DNL ht<span></span>tps://access.adobeprimetime.com/flashaccessserver/axs_prod])
-* Lizenzserverzertifikat (in das CloudDRM-Lizenzserverzertifikat)
+* Lizenzserver-Zertifikat (an das CloudDRM-Lizenzserverzertifikat)
 * Transportbescheinigung (in das CloudDRM-Transportzertifikat)
-* Packager-Berechtigung (für die Paketberechtigung, die Sie für die Verwendung mit CloudDRM aktiviert haben)
+* Paketberechtigung (an die Paketberechtigung, die Sie für die Verwendung mit CloudDRM aktiviert haben)
 
-## Suchen der DRM-Metadaten {#section_28721CB7966F40708AEC8637F2E9BB72}
+## Finden der DRM-Metadaten {#section_28721CB7966F40708AEC8637F2E9BB72}
 
-Bei Inhalten, die HTTP-Technologie verwenden (z. B. HDS oder HLS), wird ein Manifest verwendet, das auf die DRM-Metadaten für den Zugriff auf die Adobe verweist. In HDS werden die Metadaten vom `<drmmeta>`-Tag referenziert und in HLS vom `#EXT-X-FAXS-CM`-Tag. In beiden Szenarien können die Metadaten als Base-64-kodierter Block im Manifest oder extern als Binärdatei referenziert werden. Wenn die Metadaten im Manifest eingebettet/eingebettet sind, müssen Sie die Metadaten zunächst base64-dekodieren, bevor Sie diese Daten zur Instanziierung der DRM-Metadaten verwenden.
+Inhalte, die HTTP-Technologie verwenden (z. B. HDS oder HLS), verwenden ein Manifest, das auf die DRM-Metadaten des Adobe-Zugriffs verweist. In HDS werden die Metadaten durch die `<drmmeta>` und in HLS durch die Variable `#EXT-X-FAXS-CM` -Tag. In beiden Szenarien können die Metadaten inline im Manifest als base-64-kodierter Blob oder extern als Binärdatei referenziert werden. Wenn die Metadaten im Manifest eingebettet/inline sind, müssen Sie die Metadaten möglicherweise zuerst base64-dekodieren, bevor Sie diese Daten zur Instanziierung von DRM-Metadaten verwenden.
 
-## Verwenden der im Lieferumfang enthaltenen Datei OfflinePacger.jar {#section_37C2091856E44AA380D742C72B4DD1A7}
+## Verwenden der im Lieferumfang enthaltenen Datei OfflinePlayer.jar {#section_37C2091856E44AA380D742C72B4DD1A7}
 
-Geben Sie `-drm_refresh option` an die Befehlszeile an. Eine neue Manifestdatei wird mit aktualisierten DRM-Metadaten erstellt, während der Inhalt nicht erneut verschlüsselt wird.
+Lieferung der `-drm_refresh option` zur Befehlszeile. Eine neue Manifestdatei wird mit aktualisierten DRM-Metadaten erstellt, während der Inhalt nicht erneut verschlüsselt wird.
 
-## Verwenden des Primetime DRM Java SDK to Re-Header {#section_7EDBAC4C78DF4CD5BE8410EEAD8437A2}
+## Verwenden des Primetime DRM Java SDK zum erneuten Header {#section_7EDBAC4C78DF4CD5BE8410EEAD8437A2}
 
-Die Aktualisierung vorhandener DRM-Metadaten kann mithilfe des Primetime DRM (früher Adobe Access DRM) Java SDK für einen programmatischen Ansatz durchgeführt werden. Weitere Informationen finden Sie im Codebeispiel [!DNL RegenerateMetadata.java] im [!DNL /Reference Implmentation/Command Line Tools/samples/]-Paket des SDK. Das Java-SDK für Adobe Access ist nicht Bestandteil dieses CloudDRM-Schutzkits und muss direkt von der Adobe erworben werden. Für weitere Informationen wenden Sie sich bitte an Ihren Ansprechpartner bei der Adobe.
+Die Aktualisierung vorhandener DRM-Metadaten kann mithilfe des Primetime DRM (ehemals Adobe Access DRM) Java SDK für einen programmatischen Ansatz durchgeführt werden. Weitere Informationen finden Sie im Abschnitt [!DNL RegenerateMetadata.java] Codebeispiel in [!DNL /Reference Implmentation/Command Line Tools/samples/] -Paket des SDK. Das Adobe Access Java SDK ist nicht Teil dieses CloudDRM Protection Kits und muss direkt von Adobe erworben werden. Für weitere Informationen wenden Sie sich bitte an Ihren Adobe-Ansprechpartner.

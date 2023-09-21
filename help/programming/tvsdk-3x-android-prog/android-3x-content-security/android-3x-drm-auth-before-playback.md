@@ -1,27 +1,25 @@
 ---
-description: Wenn die DRM-Metadaten für ein Video vom Medienstream getrennt sind, sollten Sie sich vor Beginn der Wiedergabe authentifizieren.
+description: Wenn die DRM-Metadaten für ein Video vom Medien-Stream getrennt sind, sollten Sie sich authentifizieren, bevor Sie mit der Wiedergabe beginnen.
 title: DRM-Authentifizierung vor der Wiedergabe
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '339'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # DRM-Authentifizierung vor der Wiedergabe {#drm-authentication-before-playback}
 
-Wenn die DRM-Metadaten für ein Video vom Medienstream getrennt sind, sollten Sie sich vor Beginn der Wiedergabe authentifizieren.
+Wenn die DRM-Metadaten für ein Video vom Medien-Stream getrennt sind, sollten Sie sich authentifizieren, bevor Sie mit der Wiedergabe beginnen.
 
-Ein Video-Asset kann über eine zugeordnete DRM-Metadatendatei verfügen, z. B.:
+Ein Video-Asset kann über eine verknüpfte DRM-Metadatendatei verfügen, z. B.:
 
 * `"url": "https://www.domain.com/asset.m3u8"`
 * `"drmMetadata": "https://www.domain.com/asset.metadata"`
 
-In diesem Beispiel können Sie mit den Methoden `DRMHelper` den Inhalt der DRM-Metadatendatei herunterladen, analysieren und prüfen, ob DRM-Authentifizierung erforderlich ist.
+In diesem Beispiel können Sie `DRMHelper` -Methoden, um den Inhalt der DRM-Metadatendatei herunterzuladen, sie zu analysieren und zu überprüfen, ob die DRM-Authentifizierung erforderlich ist.
 
-1. Verwenden Sie `loadDRMMetadata`, um den Metadaten-URL-Inhalt zu laden und die heruntergeladenen Bytes in ein `DRMMetadata` zu analysieren.
+1. Verwendung `loadDRMMetadata` , um den Metadaten-URL-Inhalt zu laden und die heruntergeladenen Bytes in eine `DRMMetadata`.
 
    >[!TIP]
    >
@@ -44,11 +42,11 @@ In diesem Beispiel können Sie mit den Methoden `DRMHelper` den Inhalt der DRM-M
 
 1. Informieren Sie den Benutzer darüber, dass dieser Vorgang asynchron ist. Es empfiehlt sich, den Benutzer darauf aufmerksam zu machen.
 
-   Wenn Benutzer nicht wissen, dass der Vorgang asynchron ist, fragen sie sich möglicherweise, warum die Wiedergabe noch nicht gestartet wurde. Sie können beispielsweise ein Kreisel anzeigen, während die DRM-Metadaten heruntergeladen und analysiert werden.
+   Wenn Benutzer nicht wissen, dass der Vorgang asynchron ist, fragen sie sich möglicherweise, warum die Wiedergabe noch nicht gestartet wurde. Sie können beispielsweise ein Rotationsrad anzeigen, während die DRM-Metadaten heruntergeladen und geparst werden.
 
-1. Implementieren Sie die Rückrufe in `DRMLoadMetadataListener`.
+1. Implementieren Sie die Rückrufe im `DRMLoadMetadataListener`.
 
-   Das `loadDRMMetadata` ruft diese Ereignis-Handler auf.
+   Die `loadDRMMetadata` ruft diese Ereignishandler auf.
 
    ```java
    public interface DRMLoadMetadataListener { 
@@ -65,13 +63,13 @@ In diesem Beispiel können Sie mit den Methoden `DRMHelper` den Inhalt der DRM-M
    } 
    ```
 
-   Im Folgenden finden Sie weitere Informationen zu den Handlern:
+   Im Folgenden finden Sie weitere Details zu den Handlern:
 
    * `onLoadMetadataUrlStart` erkennt, wann das Laden der Metadaten-URL begonnen hat.
    * `onLoadMetadataUrlComplete` erkennt, wann das Laden der Metadaten-URL abgeschlossen ist.
-   * `onLoadMetadataUrlError` gibt an, dass das Laden der Metadaten fehlgeschlagen ist.
+   * `onLoadMetadataUrlError` gibt an, dass die Metadaten nicht geladen werden konnten.
 
-1. Überprüfen Sie nach Abschluss des Ladevorgangs das `DRMMetadata`-Objekt, um festzustellen, ob DRM-Authentifizierung erforderlich ist.
+1. Nachdem das Laden abgeschlossen ist, überprüfen Sie die `DRMMetadata` -Objekt, um zu bestimmen, ob DRM-Authentifizierung erforderlich ist.
 
    ```java
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
@@ -95,66 +93,66 @@ In diesem Beispiel können Sie mit den Methoden `DRMHelper` den Inhalt der DRM-M
 
 1. Führen Sie eine der folgenden Aufgaben aus:
 
-   * Ist keine Authentifizierung erforderlich, beginnen Sie mit der Wiedergabe.
+   * Wenn keine Authentifizierung erforderlich ist, starten Sie die Wiedergabe.
    * Wenn eine Authentifizierung erforderlich ist, schließen Sie die Authentifizierung durch Erwerb der Lizenz ab.
 
-      ```java
-      /** 
-      * Helper method to perform DRM authentication. 
-      * 
-      * @param drmManager 
-      * the DRMManager, used to perform the authentication. 
-      * @param drmMetadata 
-      * the DRMMetadata, containing the DRM specific information. 
-      * @param authenticationListener 
-      * the listener, on which the user can be notified about the 
-      * authentication process status. 
-      */ 
-      public static void performDrmAuthentication( 
-           final DRMManager drmManager,  
-           final DRMMetadata drmMetadata, 
-           final String authUser,  
-           final String authPass,  
-           final DRMAuthenticationListener authenticationListener);
-      ```
+     ```java
+     /** 
+     * Helper method to perform DRM authentication. 
+     * 
+     * @param drmManager 
+     * the DRMManager, used to perform the authentication. 
+     * @param drmMetadata 
+     * the DRMMetadata, containing the DRM specific information. 
+     * @param authenticationListener 
+     * the listener, on which the user can be notified about the 
+     * authentication process status. 
+     */ 
+     public static void performDrmAuthentication( 
+          final DRMManager drmManager,  
+          final DRMMetadata drmMetadata, 
+          final String authUser,  
+          final String authPass,  
+          final DRMAuthenticationListener authenticationListener);
+     ```
 
-      In diesem Beispiel werden aus Gründen der Einfachheit der Benutzername und das Kennwort explizit kodiert:
+     In diesem Beispiel werden der Name und das Kennwort des Benutzers aus Gründen der Einfachheit explizit codiert:
 
-      ```java
-      DRMHelper.performDrmAuthentication(drmManager,  
-                                         drmMetadata,  
-                                         DRM_USERNAME,  
-                                         DRM_PASSWORD, new DRMAuthenticationListener() { 
-          @Override 
-          public void onAuthenticationStart() { 
-              Log.i(LOG_TAG + "#onAuthenticationStart", "DRM authentication started."); 
-              // Spinner is already showing. 
-          } 
-          @Override 
-          public void onAuthenticationError(int major,  
-                                            int minor,  
-                                            String errorString,  
-                                            String serverErrorURL) { 
-              Log.e(LOG_TAG +  
-                    "#onAuthenticationError",  
-                    "DRM authentication failed. " +  
-                    major + " 0x" + Long.toHexString(minor)); 
-              showToast(getString(R.string.drmAuthenticationError));   
-              showLoadingSpinner(false); 
-          } 
-          @Override 
-          public void onAuthenticationComplete(byte[] authenticationToken) { 
-              Log.i(LOG_TAG +  
-                    "#onAuthenticationComplete", "Auth successful. Launching content."); 
-              showLoadingSpinner(false); 
-              startPlayerActivity(ASSET_URL); 
-          } 
-      }); 
-      ```
+     ```java
+     DRMHelper.performDrmAuthentication(drmManager,  
+                                        drmMetadata,  
+                                        DRM_USERNAME,  
+                                        DRM_PASSWORD, new DRMAuthenticationListener() { 
+         @Override 
+         public void onAuthenticationStart() { 
+             Log.i(LOG_TAG + "#onAuthenticationStart", "DRM authentication started."); 
+             // Spinner is already showing. 
+         } 
+         @Override 
+         public void onAuthenticationError(int major,  
+                                           int minor,  
+                                           String errorString,  
+                                           String serverErrorURL) { 
+             Log.e(LOG_TAG +  
+                   "#onAuthenticationError",  
+                   "DRM authentication failed. " +  
+                   major + " 0x" + Long.toHexString(minor)); 
+             showToast(getString(R.string.drmAuthenticationError));   
+             showLoadingSpinner(false); 
+         } 
+         @Override 
+         public void onAuthenticationComplete(byte[] authenticationToken) { 
+             Log.i(LOG_TAG +  
+                   "#onAuthenticationComplete", "Auth successful. Launching content."); 
+             showLoadingSpinner(false); 
+             startPlayerActivity(ASSET_URL); 
+         } 
+     }); 
+     ```
 
 1. Verwenden Sie einen Ereignis-Listener, um den Authentifizierungsstatus zu überprüfen.
 
-   Dieser Prozess impliziert Netzwerkkommunikation, also handelt es sich auch um einen asynchronen Vorgang.
+   Dieser Prozess erfordert Netzwerkkommunikation, also handelt es sich auch um einen asynchronen Vorgang.
 
    ```java
    public interface DRMAuthenticationListener { 
@@ -190,7 +188,7 @@ In diesem Beispiel können Sie mit den Methoden `DRMHelper` den Inhalt der DRM-M
    } 
    ```
 
-1. Bei erfolgreicher Authentifizierung wird die Wiedergabe Beginn.
-1. Wenn die Authentifizierung nicht erfolgreich ist, benachrichtigen Sie den Beginn und führen Sie keine Wiedergabe durch.
+1. Wenn die Authentifizierung erfolgreich ist, starten Sie die Wiedergabe.
+1. Wenn die Authentifizierung nicht erfolgreich ist, benachrichtigen Sie den Benutzer und starten Sie die Wiedergabe nicht.
 
-   Ihre Anwendung muss alle Authentifizierungsfehler behandeln. Wird die Authentifizierung vor dem Abspielen nicht erfolgreich durchgeführt, wird TVSDK in einen Fehlerstatus versetzt und die Wiedergabe wird beendet. Ihre Anwendung muss das Problem lösen, den Player zurücksetzen und die Ressource neu laden.
+   Ihre Anwendung muss etwaige Authentifizierungsfehler beheben. Wenn die Authentifizierung vor der Wiedergabe nicht erfolgreich durchgeführt werden konnte, wird TVSDK in einen Fehlerstatus versetzt und die Wiedergabe wird beendet. Ihre Anwendung muss das Problem beheben, den Player zurücksetzen und die Ressource neu laden.

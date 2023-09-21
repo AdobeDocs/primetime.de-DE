@@ -1,18 +1,16 @@
 ---
-title: Zugriffsberechtigungen für Adoben
-description: Zugriffsberechtigungen für Adoben
+title: Adobe Access-Anmeldeinformationen
+description: Adobe Access-Anmeldeinformationen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
+# Adobe Access-Anmeldeinformationen {#adobe-access-credentials}
 
-# Zugriffsberechtigungen für Adoben {#adobe-access-credentials}
+Um gültige Lizenzen auszustellen, die von einem Adobe Access-Client akzeptiert werden, muss die Adobe Access Server for Protected Streaming mit einer Reihe von Berechtigungen konfiguriert werden, die von Adobe ausgestellt werden. Diese Anmeldeinformationen können entweder in PKCS#12-Dateien (.pfx) oder auf einem HSM gespeichert werden.
 
-Um gültige Lizenzen ausstellen zu können, die von einem Adobe Access-Client akzeptiert wurden, muss das Adobe Access Server für Protected Streaming mit einem von der Adobe ausgestellten Berechtigungssatz konfiguriert werden. Diese Anmeldeinformationen können entweder in PKCS#12-Dateien (.pfx) oder auf einem HSM gespeichert werden.
-
-Die .pfx-Dateien können sich an einer beliebigen Stelle befinden. Zur einfacheren Konfiguration sollten Sie die .pfx-Dateien jedoch im Konfigurationsverzeichnis des Mandanten ablegen. Weitere Informationen finden Sie unter &quot;[Konfigurationsdateien des Lizenzservers](../../aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-configuration-directory-structure.md)&quot;.
+Die .pfx-Dateien befinden sich möglicherweise an einer beliebigen Stelle. Zur einfachen Konfiguration wird jedoch empfohlen, die .pfx-Dateien im Konfigurationsverzeichnis des Mandanten zu platzieren. Weitere Informationen finden Sie unter &quot;[Konfigurationsdateien des Lizenzservers](../../aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-configuration-directory-structure.md)&quot;.

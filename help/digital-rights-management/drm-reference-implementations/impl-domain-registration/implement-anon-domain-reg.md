@@ -2,19 +2,17 @@
 title: Anonyme Domänenregistrierung implementieren
 description: Anonyme Domänenregistrierung implementieren
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
 
 ---
 
-
 # Anonyme Domänenregistrierung implementieren{#implement-anonymous-domain-registration}
 
 1. Erstellen Sie eine DRM-Richtlinie, die angibt, dass eine Domänenregistrierung erforderlich ist.
-1. Geben Sie die URL des Domänenservers an als:
+1. Geben Sie die URL des Domänenservers wie folgt an:
 
    ```
    https://[host:port]/flashaccess/domainserver/domainname/
@@ -22,7 +20,7 @@ ht-degree: 0%
 
 1. Anonyme Authentifizierung erforderlich machen.
 
-   Legen Sie in der Datei [!DNL .properties] Folgendes fest:
+   In der [!DNL .properties] -Datei, festlegen:
 
    ```
    policy.domain.anonymous=true 

@@ -1,20 +1,18 @@
 ---
-description: Der MediaPlayer stellt eine notificationClick()-Funktion bereit, mit der bei der Wiedergabe einer klickbaren Anzeige anzeigenbezogene Ereignis ausgelöst werden. Diese Ereignis enthalten Anzeigen- und Werbeunterbrechungsinformationen, die Ihre App zur Bereitstellung von Clickthrough-Funktionen verwenden kann.
-title: Handhabung anklickbarer Anzeigen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Der MediaPlayer stellt eine notifyClick()-Funktion bereit, die anzeigenbezogene Ereignisse auslöst, wenn eine anklickbare Anzeige wiedergegeben wird. Diese Ereignisse stellen Anzeigen- und Werbeunterbrechungsinformationen bereit, mit denen Ihre App Clickthrough-Funktionen bereitstellen kann.
+title: Umgang mit anklickbaren Anzeigen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
+# Umgang mit anklickbaren Anzeigen {#handle-clickable-ads}
 
-# Umgang mit klickbaren Anzeigen {#handle-clickable-ads}
+Der MediaPlayer stellt eine notifyClick()-Funktion bereit, die anzeigenbezogene Ereignisse auslöst, wenn eine anklickbare Anzeige wiedergegeben wird. Diese Ereignisse stellen Anzeigen- und Werbeunterbrechungsinformationen bereit, mit denen Ihre App Clickthrough-Funktionen bereitstellen kann.
 
-Der MediaPlayer stellt eine notificationClick()-Funktion bereit, mit der bei der Wiedergabe einer klickbaren Anzeige anzeigenbezogene Ereignis ausgelöst werden. Diese Ereignis enthalten Anzeigen- und Werbeunterbrechungsinformationen, die Ihre App zur Bereitstellung von Clickthrough-Funktionen verwenden kann.
-
-Der MediaPlayer löst folgende Ereignis aus, wenn eine anklickbare Anzeige wiedergegeben wird:
+Der MediaPlayer löst die folgenden Ereignisse aus, wenn eine anklickbare Anzeige wiedergegeben wird:
 
 * `AdobePSDK.PSDKEventType.AD_STARTED`
 * `AdobePSDK.PSDKEventType.AD_CLICKED`
@@ -22,10 +20,10 @@ Der MediaPlayer löst folgende Ereignis aus, wenn eine anklickbare Anzeige wiede
 
 Die `AdClickedEvent` enthält die Informationen, die zur Verarbeitung der Clickthrough-Funktion erforderlich sind.
 
-1. Geben Sie in Ihrem Player ein Steuerelement an, damit Benutzer auf klickbare Anzeigen klicken können.
+1. Geben Sie in Ihrem Player ein Steuerelement an, über das Benutzer auf anklickbare Anzeigen klicken können.
 
-   Dies kann eine Schaltfläche oder ein anderes Element zur Erfassung des Klicks des Benutzers sein.
-1. hinzufügen ein Ereignis-Listener für das Anzeigen-Klick-Ereignis des Benutzers.
+   Dies kann eine Schaltfläche oder ein anderes Element sein, um den Klick des Benutzers zu erfassen.
+1. Fügen Sie einen Ereignis-Listener für das Anzeigen-Klick-Ereignis des Benutzers hinzu.
 
    Beispiel:
 
@@ -34,9 +32,9 @@ Die `AdClickedEvent` enthält die Informationen, die zur Verarbeitung der Clickt
    <i>your_click_control_id</i>]).addEventListener("click", onAdClick);
    ```
 
-1. hinzufügen einen Handler für das click-Ereignis des Benutzers.
+1. Fügen Sie einen Handler für das Klickereignis des Benutzers hinzu.
 
-   Dieser Handler muss den MediaPlayer auffordern, das `AdClicked`-Ereignis auszulösen.
+   Dieser Handler muss den MediaPlayer auffordern, den `AdClicked` -Ereignis.
 
    ```
    onAdClick = function (event) { 
@@ -50,7 +48,7 @@ Die `AdClickedEvent` enthält die Informationen, die zur Verarbeitung der Clickt
    } 
    ```
 
-1. hinzufügen Ereignis-Listener für den MediaPlayer-Anzeigenordner, Benachrichtigungen mit angeklickter und abgeschlossener Anzeige.
+1. Fügen Sie Ereignis-Listener für den MediaPlayer-Anzeigenstart, -Klick und -abgeschlossene Benachrichtigungen hinzu.
 
    ```
     <i>your_player</i>().addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted); 
@@ -60,8 +58,8 @@ Die `AdClickedEvent` enthält die Informationen, die zur Verarbeitung der Clickt
     <i>your_player</i>().addEventListener(AdobePSDK.PSDKEventType.AD_CLICKED, onAdClickedEvent);
    ```
 
-1. hinzufügen Ereignis-Handler.
-a. Behandeln Sie das Ereignis des Beginns der Anzeige.
+1. Fügen Sie Ereignishandler hinzu.
+a. Verarbeiten Sie das Anzeigenstartereignis.
 Dies kann alles bewirken, z. B. das Einrichten der Benutzeroberfläche für den Benutzer.
 
    ```
@@ -77,8 +75,8 @@ Dies kann alles bewirken, z. B. das Einrichten der Benutzeroberfläche für den 
    }
    ```
 
-   b. Behandeln Sie das angeklickte Ereignis.
-In diesem Beispiel erhalten wir Anzeigeninformationen aus dem Ereignis und öffnen ein neues Browserfenster mit den folgenden Informationen:
+   b. Behandeln Sie das angeklickte Anzeigen-Ereignis.
+In diesem Beispiel erhalten wir Anzeigeninformationen aus dem Ereignis und öffnen ein neues Browser-Fenster mit diesen Informationen:
 
    ```
    onAdClickedEvent = function (event) { 
@@ -96,7 +94,7 @@ In diesem Beispiel erhalten wir Anzeigeninformationen aus dem Ereignis und öffn
    }
    ```
 
-   c. Behandeln Sie das Ereignis mit abgeschlossener Anzeige.
+   c. Behandeln Sie das Ereignis &quot;ad completed&quot;.
 
    ```
    onAdCompleted = function (event) { 

@@ -2,9 +2,7 @@
 title: Erweiterte Telemetrie
 description: Erweiterte Telemetrie
 copied-description: true
-exl-id: 3a030dc8-c3e5-4bf5-9d69-58cfa880bf6a
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%
@@ -13,4 +11,4 @@ ht-degree: 0%
 
 # Erweiterte Telemetrie {#advanced-telemetry}
 
-Kunden haben die Möglichkeit, Primetime-Ad Insertion zur Erfassung von Ereignissen und Metriken zu Anzeigen und Sitzungen zu verwenden, um die wichtigsten Ursachen von Inhalten und Anzeigenfehlern zu ermitteln und Einblicke in die Video- und Anzeigenleistung zu erhalten.  Anzeigenanforderungen können auf der Grundlage von Rohanfragen erfasst werden, sodass Operatoren bestimmte VAST- oder VMAP-Tags direkt von Anbietern debuggen können.
+Kunden können Primetime-Ad Insertion verwenden, um Ereignisse und Metriken zu Anzeigen und Sitzungen zu erfassen und so die wichtigsten Ursachen für Inhalte und Anzeigenfehler zu ermitteln, um Einblicke in Video- und Anzeigenleistung zu erhalten.  Anzeigenanfragen können auf der Rohanfrageebene erfasst werden, sodass Benutzer bestimmte VAST- oder VMAP-Tags direkt von Providern debuggen können.

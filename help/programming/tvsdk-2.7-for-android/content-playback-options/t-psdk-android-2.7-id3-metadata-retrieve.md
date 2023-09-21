@@ -1,18 +1,16 @@
 ---
-description: ID3-Tags enthalten Informationen zu einer Audio- oder Videodatei, wie z. B. den Titel der Datei oder den Namen des Künstlers. TVSDK erkennt ID3-Tags auf der Segmentebene Transport Stream (TS) in HLS-Streams und sendet ein Ereignis. Die Anwendung kann Daten aus dem Tag extrahieren.
+description: ID3-Tags bieten Informationen zu einer Audio- oder Videodatei, wie den Titel der Datei oder den Namen des Künstlers. TVSDK erkennt ID3-Tags auf der Segmentebene des Transport-Streams (TS) in HLS-Streams und sendet ein Ereignis. Die Anwendung kann Daten aus dem -Tag extrahieren.
 title: ID3-Tags
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
 
 ---
 
-
 # ID3-Tags {#id-tags}
 
-ID3-Tags enthalten Informationen zu einer Audio- oder Videodatei, wie z. B. den Titel der Datei oder den Namen des Künstlers. TVSDK erkennt ID3-Tags auf der Segmentebene Transport Stream (TS) in HLS-Streams und sendet ein Ereignis. Die Anwendung kann Daten aus dem Tag extrahieren.
+ID3-Tags bieten Informationen zu einer Audio- oder Videodatei, wie den Titel der Datei oder den Namen des Künstlers. TVSDK erkennt ID3-Tags auf der Segmentebene des Transport-Streams (TS) in HLS-Streams und sendet ein Ereignis. Die Anwendung kann Daten aus dem -Tag extrahieren.
 
 >[!IMPORTANT]
 >
@@ -23,16 +21,16 @@ Wenn TVSDK ID3-Metadaten erkennt, wird eine Benachrichtigung mit den folgenden D
 * TYPE = ID3
 * NAME = ID3
 
-1. Implementieren Sie einen Ereignis-Listener für `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` und registrieren Sie ihn beim `MediaPlayer`-Objekt.
+1. Implementieren eines Ereignis-Listeners für `MediaPlayer.TimedMetadataEventListener#onTimedMetadata(TimeMetadata timeMetadata)` und registrieren Sie sie bei der `MediaPlayer` -Objekt.
 
-   TVSDK ruft diesen Listener auf, wenn er `ID3`-Metadaten erkennt.
+   TVSDK ruft diesen Listener auf, wenn er erkennt `ID3` Metadaten.
 
    >[!TIP]
    >
-   >Benutzerdefinierte Anzeigenbezeichnungen verwenden dasselbe `onTimedMetadata`-Ereignis, um die Erkennung eines neuen Tags anzuzeigen. Dies sollte keine Verwirrung stiften, da auf Manifestebene benutzerdefinierte Anzeigenbezeichnungen erkannt werden und ID3-Tags im Stream eingebettet werden. Weitere Informationen finden Sie unter [Benutzerspezifische Tags](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md).
+   >Benutzerdefinierte Anzeigencodes verwenden dieselbe `onTimedMetadata` -Ereignis, um die Erkennung eines neuen Tags anzuzeigen. Dies sollte keine Verwirrung verursachen, da benutzerdefinierte Anzeigencodes auf Manifestebene erkannt und ID3-Tags in den Stream eingebettet werden. Weitere Informationen finden Sie unter [Benutzerdefinierte Tags](../../tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-configure.md).
 
 
-1. Abrufen der Metadaten.
+1. Rufen Sie die Metadaten ab.
 
    ```java
    @Override 
@@ -48,4 +46,3 @@ Wenn TVSDK ID3-Metadaten erkennt, wird eine Benachrichtigung mit den folgenden D
        } 
    }
    ```
-

@@ -1,25 +1,23 @@
 ---
-title: Beispiel-Clientanforderungen
-description: Beispiel-Clientanforderungen
+title: Beispiel-Client-Anforderungen
+description: Beispiel-Client-Anforderungen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '105'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Beispiel-Client-Anforderungen{#sample-client-requests}
 
-# Beispiel-Clientanforderungen{#sample-client-requests}
-
-Sie können eine Bibliothek mit Beispiel-Clientanforderungen mit Werkzeugen wie Charles Proxy oder Wireshark erfassen. Sie sollten Clientanforderungen nach Einrichtung des Individualisierungsservers mit der Berechtigung &quot;Individualisierungstransport&quot;erfassen. Anschließend können Sie diese Clientanforderungen (über *curl* oder ein anderes Tool) an den Endpunkt des Individualisierungsservers senden, um sicherzustellen, dass der Server ordnungsgemäß funktioniert. Beispiel:
+Sie können eine Bibliothek mit Beispiel-Client-Anforderungen mit Tools wie Charles Proxy oder Wireshark erfassen. Sie sollten Clientanforderungen erfassen, nachdem der Individualisierungsserver eingerichtet wurde. Verwenden Sie dazu die Berechtigung Individualization Transport . Diese Clientanfragen können dann gesendet werden (über *curl* oder ein anderes Tool) zum Endpunkt des Individualisierungsservers hinzu, um zu überprüfen, ob der Server ordnungsgemäß ausgeführt wird. Beispiel:
 
 ```
 curl https://<<yourindivserver:port>>/flashaccess/i15n/v5 -­data-binary  
 @sample_client_request.bin > sample_client_response.ber
 ```
 
-Sie können diese Anforderungen auch nach jeder Änderung der Serverkonfiguration oder nach ECI-/CRL-Aktualisierungen erneut senden.
+Sie können diese Anfragen auch nach jeder Änderung der Serverkonfiguration oder ECI-/CRL-Aktualisierungen erneut senden.
 
-Außerdem sollten Sie die Seite &quot;Personalisierungsstatistik&quot;mit erfolgreichen Individualisierungstransaktionen entsprechend aktualisieren.
+Außerdem sollten Sie die Seite Individualisierungsstatistiken entsprechend mit erfolgreichen Individualisierungstransaktionen aktualisieren.

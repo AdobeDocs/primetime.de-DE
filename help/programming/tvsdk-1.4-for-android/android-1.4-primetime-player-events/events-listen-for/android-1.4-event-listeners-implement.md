@@ -1,44 +1,42 @@
 ---
-description: Ereignis-Handler ermöglichen es TVSDK, auf Ereignis zu reagieren.
+description: Ereignis-Handler ermöglichen es TVSDK, auf Ereignisse zu reagieren.
 title: Implementieren von Ereignis-Listenern und -Rückrufen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 0%
 
 ---
 
-
 # Implementieren von Ereignis-Listenern und -Rückrufen{#implement-event-listeners-and-callbacks}
 
-Ereignis-Handler ermöglichen es TVSDK, auf Ereignis zu reagieren.
+Ereignis-Handler ermöglichen es TVSDK, auf Ereignisse zu reagieren.
 
-Wenn ein Ereignis auftritt, ruft der Ereignis-Mechanismus von TVSDK Ihren registrierten Ereignis-Handler auf und übergibt die Ereignis-Informationen an den Handler.
+Wenn ein Ereignis eintritt, ruft der Ereignismechanismus von TVSDK Ihren registrierten Ereignishandler auf und übergibt die Ereignisinformationen an den Handler.
 
-TVSDK definiert Listener als öffentliche interne Schnittstellen in der `MediaPlayer`-Schnittstelle.
+TVSDK definiert Listener als öffentliche interne Schnittstellen in der `MediaPlayer` -Schnittstelle.
 
-Ihre Anwendung muss Ereignis-Listener für TVSDK-Ereignis implementieren, die Ihre Anwendung betreffen.
+Ihre Anwendung muss Ereignis-Listener für TVSDK-Ereignisse implementieren, die sich auf Ihre Anwendung auswirken.
 
-Eine vollständige Liste der Ereignis für Videoanalysen finden Sie unter Core-Video-Wiedergabe verfolgen.
+Eine vollständige Liste der Ereignisse für Videoanalysen finden Sie unter Tracking der Core-Videowiedergabe.
 
-1. Bestimmen Sie, auf welche Ereignis Ihre Anwendung hören muss.
+1. Bestimmen Sie, auf welche Ereignisse die Anwendung überwachen muss.
 
-   * **Erforderliche Ereignis**: Suchen Sie nach allen Ereignissen für die Wiedergabe.
+   * **Erforderliche Ereignisse**: Suchen Sie nach allen Wiedergabeereignissen.
 
-      >[!IMPORTANT]
-      >
-      >Das play-Ereignis `onStateChanged` stellt den Player-Status einschließlich Fehler bereit. Jeder Status kann sich auf den nächsten Schritt Ihres Spielers auswirken
+     >[!IMPORTANT]
+     >
+     >Das Wiedergabeereignis `onStateChanged` stellt den Player-Status bereit, einschließlich Fehlern. Jeder Status kann sich auf den nächsten Schritt Ihres Players auswirken
 
    * **Andere Ereignisse**: Optional, je nach Anwendung.
 
-      Wenn Sie z. B. Werbung in Ihre Wiedergabe integrieren, implementieren Sie die AdPlaybackEventListener-Rückrufe.
+     Wenn Sie beispielsweise Werbung in Ihre Wiedergabe integrieren, implementieren Sie die AdPlaybackEventListener-Rückrufe.
 
 1. Implementieren Sie Ereignis-Listener für jedes Ereignis.
 
-   TVSDK gibt Parameterwerte an Ihre Ereignis-Listener-Rückrufe zurück. Diese Werte liefern relevante Informationen über das Ereignis, das Sie in Ihren Listenern verwenden können, um entsprechende Aktionen durchzuführen.
+   TVSDK gibt Parameterwerte an Ihre Ereignis-Listener-Rückrufe zurück. Diese Werte enthalten relevante Informationen zum Ereignis, das Sie in Ihren Listenern verwenden können, um geeignete Aktionen durchzuführen.
 
-   `MediaPlayer.EventListener` Liste aller Callback-Schnittstellen. Jede Schnittstelle zeigt den Rückruffamen und die Parameter an, die für jedes Ereignis zurückgegeben werden.
+   `MediaPlayer.EventListener` listet alle Callback-Schnittstellen auf. Jede Schnittstelle zeigt den Callback-Namen und die Parameter an, die für jedes Ereignis zurückgegeben werden.
 
    Beispiel:
 
@@ -47,7 +45,7 @@ Eine vollständige Liste der Ereignis für Videoanalysen finden Sie unter Core-V
     MediaPlayer.PlayerState state, MediaPlayerNotification notification)
    ```
 
-1. Registrieren Sie Ihre Callback-Listener mit dem `MediaPlayer`-Objekt, indem Sie `MediaPlayer.addEventListener` verwenden.
+1. Registrieren Sie Ihre Callback-Listener bei der `MediaPlayer` -Objekt mithilfe von `MediaPlayer.addEventListener`.
 
    ```
    mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK, 
@@ -59,35 +57,35 @@ Eine vollständige Liste der Ereignis für Videoanalysen finden Sie unter Core-V
    }
    ```
 
-## Reihenfolge der Wiedergabe-Ereignis {#section_6D412C33ACE54E9D90DB1DAA9AA30272}
+## Reihenfolge der Wiedergabeereignisse {#section_6D412C33ACE54E9D90DB1DAA9AA30272}
 
-TVSDK sendet Ereignis/Benachrichtigungen in allgemein erwarteten Sequenzen. Ihr Player kann Aktionen auf der Grundlage von Ereignissen in der erwarteten Sequenz implementieren.
+TVSDK sendet Ereignisse/Benachrichtigungen in allgemein erwarteten Sequenzen. Ihr Player kann Aktionen basierend auf Ereignissen in der erwarteten Sequenz implementieren.
 
-Die folgenden Beispiele zeigen die Reihenfolge einiger Ereignis, die Ereignis für die Wiedergabe enthalten.
+Die folgenden Beispiele zeigen die Reihenfolge einiger Ereignisse, die Wiedergabeereignisse enthalten.
 
-* Beim erfolgreichen Laden einer Medienressource über `MediaPlayer.replaceCurrentResource` lautet die Reihenfolge der Ereignis:
+* Beim erfolgreichen Laden einer Medienressource über `MediaPlayer.replaceCurrentResource`lautet die Reihenfolge der Ereignisse:
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` with state  `MediaPlayer.PlayerState.INITIALIZING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` mit Status `MediaPlayer.PlayerState.INITIALIZING`
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` with state  `MediaPlayer.PlayerState.INITIALIZED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` mit Status `MediaPlayer.PlayerState.INITIALIZED`
 
 >[!TIP]
 >
->Laden Sie Ihre Medienressource in den Hauptthread. Wenn Sie eine Medienressource in einen Hintergrund-Thread laden, kann dieser Vorgang oder nachfolgende TVSDK-Vorgänge oder beides einen Fehler auslösen (z. B. `IllegalStateException`) und beenden.
+>Laden Sie Ihre Medienressource in den Haupt-Thread. Wenn Sie eine Medienressource in einen Hintergrund-Thread laden, kann dieser Vorgang oder nachfolgende TVSDK-Vorgänge oder beides einen Fehler auslösen (z. B. `IllegalStateException`) und beenden Sie.
 
-* Beim Vorbereiten der Wiedergabe über `MediaPlayer.prepareToPlay` lautet die Reihenfolge der Ereignis:
+* Beim Vorbereiten der Wiedergabe über `MediaPlayer.prepareToPlay`lautet die Reihenfolge der Ereignisse:
 
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` with state  `MediaPlayerStatus.PREPARING`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` mit Status `MediaPlayerStatus.PREPARING`
 
 1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` wenn Anzeigen eingefügt wurden.
-1. `MediaPlayer.PlaybackEventListener.onStateChanged` with state  `MediaPlayerStatus.PREPARED`
+1. `MediaPlayer.PlaybackEventListener.onStateChanged` mit Status `MediaPlayerStatus.PREPARED`
 
-* Bei Live-/linearen Streams lautet die Reihenfolge der Ereignis während der Wiedergabe, während das Wiedergabefenster erweitert und weitere Möglichkeiten aufgelöst werden, wie folgt:
+* Bei Live-/linearen Streams lautet die Reihenfolge der Ereignisse während der Wiedergabe, während das Wiedergabefenster wechselt und zusätzliche Möglichkeiten aufgelöst werden:
 
 1. `MediaPlayer.PlaybackEventListener.onUpdated`
-1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` wenn Anzeigen eingefügt wurden
+1. `MediaPlayer.PlaybackEventListener.onTimelineUpdated` , wenn Anzeigen eingefügt wurden
 1. `MediaPlayerItemEvent.ITEM_UPDATED`
-1. `TimelineEvent.TIMELINE_UPDATED` wenn Anzeigen eingefügt wurden
+1. `TimelineEvent.TIMELINE_UPDATED` , wenn Anzeigen eingefügt wurden
 
 Das folgende Beispiel zeigt eine typische Progression von Ereignissen:
 
@@ -110,22 +108,22 @@ mediaPlayer.addEventListener(MediaPlayer.Event.PLAYBACK,
 });
 ```
 
-## Reihenfolge der Ereignis für Werbung {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
+## Reihenfolge von Werbeintereignissen {#section_7B3BE3BD3B6F4CF69D81F9CFAC24CAD5}
 
-Wenn Ihre Wiedergabe Werbung enthält, sendet TVSDK Ereignisse/Benachrichtigungen in allgemein erwarteten Sequenzen. Ihr Player kann Aktionen auf der Grundlage von Ereignissen in der erwarteten Sequenz implementieren.
+Wenn Ihre Wiedergabe Werbung enthält, sendet TVSDK Ereignisse/Benachrichtigungen in allgemein erwarteten Sequenzen. Ihr Player kann Aktionen basierend auf Ereignissen in der erwarteten Sequenz implementieren.
 
-Beim Abspielen von Anzeigen lautet die Reihenfolge der Ereignis:
+Beim Abspielen von Anzeigen lautet die Reihenfolge der Ereignisse:
 
 * `AdPlaybackEventListener.onAdBreakStart`
-* Für jede Anzeige in der Werbeunterbrechung werden die folgenden Meldungen ausgelöst:
+* Folgendes wird für jede Anzeige in der Werbeunterbrechung gesendet:
 
    * `AdPlaybackEventListener.onAdStart`
-   * `AdPlaybackEventListener.onAdProgress` (mehrere Male während der Wiedergabe einer Anzeige)
+   * `AdPlaybackEventListener.onAdProgress` (mehrmals während der Wiedergabe einer Anzeige)
    * `AdPlaybackEventListener.onAdClick` (für jeden Klick)
    * `AdPlaybackEventListener.onAdStart`
    * `AdPlaybackEventListener.onAdBreakComplete`
 
-Das folgende Beispiel zeigt eine typische Progression von Ereignissen zur Anzeigenwiedergabe:
+Das folgende Beispiel zeigt eine typische Progression von Anzeigenwiedergabeereignissen:
 
 ```java
 mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,  
@@ -145,19 +143,19 @@ mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,
 });
 ```
 
-Beim Abspielen von Anzeigen lautet die Reihenfolge der Ereignis:
+Beim Abspielen von Anzeigen lautet die Reihenfolge der Ereignisse:
 
 * `AdPlaybackEventListener.onAdBreakStart`
-* Für jede Anzeige in der Werbeunterbrechung werden die folgenden Meldungen ausgelöst:
+* Folgendes wird für jede Anzeige in der Werbeunterbrechung gesendet:
 
    * `AdPlaybackEventListener.onAdStart`
-   * `AdPlaybackEventListener.onAdProgress` (mehrere Male während der Wiedergabe einer Anzeige)
+   * `AdPlaybackEventListener.onAdProgress` (mehrmals während der Wiedergabe einer Anzeige)
    * `AdPlaybackEventListener.onAdClick` (für jeden Klick)
    * `AdPlaybackEventListener.onAdStart`
 
 * `AdPlaybackEventListener.onAdBreakComplete`
 
-Das folgende Beispiel zeigt eine typische Progression von Ereignissen zur Anzeigenwiedergabe:
+Das folgende Beispiel zeigt eine typische Progression von Anzeigenwiedergabeereignissen:
 
 ```java
 mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,  
@@ -177,11 +175,11 @@ mediaPlayer.addEventListener(MediaPlayer.Event.AD_PLAYBACK,
 });
 ```
 
-## QoS-Ereignis {#section_9BFF3CD7AA1C4BD6960ACF6B9C0B25CC}
+## QoS-Ereignisse {#section_9BFF3CD7AA1C4BD6960ACF6B9C0B25CC}
 
-TVSDK sendet Servicequalitäts-(QoS-)Ereignis, um Ihre Anwendung über Ereignis zu informieren, die die Berechnung der QoS-Statistiken beeinflussen könnten, wie z.B. Pufferung und Suche von Ereignissen.
+TVSDK sendet Servicequalitätsereignisse (QoS), um Ihre Anwendung über Ereignisse zu informieren, die die Berechnung von QoS-Statistiken beeinflussen könnten, z. B. Pufferungs- und Suchereignisse.
 
-Das folgende Beispiel zeigt eine typische Progression dieser Ereignis:
+Das folgende Beispiel zeigt eine typische Progression dieser Ereignisse:
 
 ```java
 mediaPlayer.addEventListener(MediaPlayer.Event.QOS,  
@@ -205,11 +203,11 @@ mediaPlayer.addEventListener(MediaPlayer.Event.QOS,
 });
 ```
 
-## DRM-Ereignis {#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
+## DRM-Ereignisse {#section_3FECBF127B3E4EFEAB5AE87E89CCDE7C}
 
-TVSDK sendet DRM-Ereignis (Digital Rights Management) als Reaktion auf DRM-bezogene Vorgänge, z. B. wenn neue DRM-Metadaten verfügbar werden. Ihr Player kann entsprechend diesen Ereignissen Aktionen implementieren.
+TVSDK sendet Digital Rights Management (DRM)-Ereignisse als Reaktion auf DRM-bezogene Vorgänge, z. B. wenn neue DRM-Metadaten verfügbar werden. Ihr Player kann als Reaktion auf diese Ereignisse Aktionen implementieren.
 
-Um über alle DRM-bezogenen Ereignis informiert zu werden, suchen Sie nach `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`. TVSDK sendet zusätzliche DRM-Ereignis über die `DRMManager`-Klasse.
+Um über alle DRM-bezogenen Ereignisse benachrichtigt zu werden, suchen Sie nach `onDRMMetadata(DRMMetadataInfo drmMetadataInfo)`. TVSDK sendet zusätzliche DRM-Ereignisse über die `DRMManager` -Klasse.
 
 Das folgende Beispiel zeigt eine typische Progression:
 
@@ -221,12 +219,11 @@ mediaPlayer.addEventListener(MediaPlayer.Event.DRM,
 }); 
 ```
 
-## Loader-Ereignis {#section_5638F8EDACCE422A9425187484D39DCC}
+## Ladeereignisse {#section_5638F8EDACCE422A9425187484D39DCC}
 
-Ihr Player kann Aktionen auf der Grundlage der folgenden Ereignis implementieren:
+Ihr Player kann Aktionen basierend auf den folgenden Ereignissen implementieren:
 
 | Ereignis | Bedeutung |
 |---|---|
-| `onLoadComplete (mediaPlayerItem playerItem)` | Laden der Medienressource erfolgreich abgeschlossen. |
+| `onLoadComplete (mediaPlayerItem playerItem)` | Das Laden der Medienressource wurde erfolgreich abgeschlossen. |
 | `onError` | Beim Laden der Medienressource ist ein Problem aufgetreten. |
-

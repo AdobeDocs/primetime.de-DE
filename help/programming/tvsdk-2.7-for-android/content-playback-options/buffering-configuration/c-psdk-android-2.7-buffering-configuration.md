@@ -1,75 +1,73 @@
 ---
-description: Um eine reibungslosere Anzeige zu ermöglichen, puffert TVSDK manchmal den Videostream. Sie können konfigurieren, wie der Player zwischenspeichert.
+description: Um eine reibungslosere Anzeige zu ermöglichen, puffert TVSDK manchmal den Videostream. Sie können konfigurieren, wie der Player gepuffert wird.
 title: Pufferung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#buffering-overview}
 
-Um eine reibungslosere Anzeige zu ermöglichen, puffert TVSDK manchmal den Videostream. Sie können konfigurieren, wie der Player zwischenspeichert.
+Um eine reibungslosere Anzeige zu ermöglichen, puffert TVSDK manchmal den Videostream. Sie können konfigurieren, wie der Player gepuffert wird.
 
-TVSDK definiert eine Wiedergabepufferlänge von mindestens 30 Sekunden und eine anfängliche Pufferzeit von mindestens 2 Sekunden, bevor die Beginn abgespielt werden. Nachdem die Anwendung &quot;`play`&quot;aufruft, aber bevor die Wiedergabe beginnt, puffert TVSDK die Medien bis zur Anfangsphase, um einen glatten Beginn zu erhalten, wenn die Wiedergabe tatsächlich Beginn ist.
+TVSDK definiert eine Wiedergabepufferlänge von mindestens 30 Sekunden und eine anfängliche Pufferzeit von mindestens 2 Sekunden, bevor die Medienwiedergabe beginnt. Nach den App-Aufrufen `play`, aber bevor die Wiedergabe beginnt, puffert TVSDK die Medien bis zur Anfangsphase, um einen reibungslosen Start zu ermöglichen, wenn die Wiedergabe tatsächlich beginnt.
 
-Sie können die Pufferzeiten ändern, indem Sie neue Pufferrichtlinien definieren. Sie können auch ändern, wann die anfängliche Pufferung erfolgt, indem Sie Instant on verwenden.
+Sie können die Pufferzeiten ändern, indem Sie neue Pufferrichtlinien definieren und ändern, wann die anfängliche Pufferung erfolgt, indem Sie Instant on verwenden.
 
-## Zeitrichtlinien für die Pufferung {#section_9B3407D52F1E4CB48E7A4836EBDA8F70}
+## Pufferung von Zeitrichtlinien {#section_9B3407D52F1E4CB48E7A4836EBDA8F70}
 
-Abhängig von Ihrer Umgebung (einschließlich des Geräts, des Betriebssystems oder der Netzwerkbedingungen) können Sie verschiedene Pufferrichtlinien für Ihren Player festlegen, z. B. die Änderung der Mindestdauer für die anfängliche Pufferung und für die kontinuierliche Wiedergabe-Pufferung.
+Abhängig von Ihrer Umgebung (einschließlich Gerät, Betriebssystem oder Netzwerkbedingungen) können Sie für Ihren Player verschiedene Pufferungsrichtlinien festlegen, z. B. die Mindestdauer für die anfängliche Pufferung und für die laufende Wiedergabe ändern.
 
-Nach dem Aufruf von `play` beginnt der Medienplayer mit der Pufferung des Videos. Wenn der Medienplayer die durch die anfängliche Pufferzeit angegebene Videomenge gepuffert hat, beginnt die Wiedergabe. Dieser Vorgang verbessert die Beginn-Up-Zeit, da der Player nicht darauf wartet, dass der gesamte Wiedergabepuffer gefüllt wird, bevor die Wiedergabe gestartet wird. Stattdessen beginnt die Wiedergabe, nachdem die ersten Sekunden gepuffert wurden.
+Nach dem Aufruf `play`, beginnt der Medienplayer mit der Pufferung des Videos. Wenn der Medienplayer die durch die anfängliche Pufferzeit angegebene Videomenge gepuffert hat, beginnt die Wiedergabe. Dieser Prozess verbessert die Startzeit, da der Player nicht darauf wartet, dass der gesamte Wiedergabepuffer gefüllt wird, bevor die Wiedergabe gestartet wird. Stattdessen beginnt die Wiedergabe, nachdem die ersten Sekunden gepuffert wurden.
 
-Während das Video wiedergegeben wird, puffert TVSDK weiterhin neue Fragmente, bis der in der Wiedergabepufferzeit angegebene Betrag gepuffert wurde. Wenn die aktuelle Pufferlänge unter die Wiedergabepufferzeit fällt, lädt der Player zusätzliche Fragmente herunter. Sobald die aktuelle Pufferlänge um einige Sekunden über der Wiedergabepufferzeit liegt, beendet TVSDK das Herunterladen von Fragmenten.
-
->[!TIP]
->
->Wenn der anfängliche Pufferwert hoch ist, kann dies dem Benutzer eine lange anfängliche Pufferzeit geben, bevor er beginnt. Dies kann eine reibungslose Wiedergabe über einen längeren Zeitraum ermöglichen. Bei schlechten Netzwerkbedingungen kann die anfängliche Wiedergabe jedoch verzögert sein.
-
-Wenn Sie den Instant on-Modus durch Aufruf von `prepareBuffer` aktivieren, beginnt die anfängliche Pufferung zu diesem Zeitpunkt, anstatt auf `play` zu warten.
-
-## Pufferzeiten {#section_05CDD927869D47EBA1D2069B1416B2E4} festlegen
-
-Das `MediaPlayer` stellt Methoden zum Festlegen und Abrufen der anfänglichen Pufferzeit und der Wiedergabepufferzeit bereit.
+Während das Video gerendert wird, puffert TVSDK weiterhin neue Fragmente, bis der in der Wiedergabepufferzeit angegebene Betrag gepuffert wurde. Wenn die aktuelle Pufferlänge unter die Wiedergabepufferzeit fällt, lädt der Player zusätzliche Fragmente herunter. Sobald die aktuelle Pufferlänge um einige Sekunden über der Wiedergabepufferzeit liegt, stoppt TVSDK das Herunterladen von Fragmenten.
 
 >[!TIP]
 >
->Wenn Sie die Parameter für die Puffersteuerung nicht vor Beginn der Wiedergabe festlegen, wird der Medienplayer standardmäßig auf 2 Sekunden für den anfänglichen Puffer und auf 30 Sekunden für die laufende Wiedergabepufferzeit eingestellt.
+>Wenn der anfängliche Pufferwert hoch ist, kann es Ihrem Benutzer eine lange anfängliche Pufferzeit geben, bevor er startet. Dies kann eine reibungslose Wiedergabe über einen längeren Zeitraum ermöglichen. Wenn jedoch die Netzwerkbedingungen schlecht sind, kann die anfängliche Wiedergabe verzögert sein.
 
-1. Richten Sie das `BufferControlParameters`-Objekt ein, das die Steuerungsparameter für die anfängliche Pufferzeit und die Wiedergabepufferzeit enthält.
+Wenn Sie Instant On aktivieren, rufen Sie `prepareBuffer`, beginnt die anfängliche Pufferung zu diesem Zeitpunkt, anstatt auf `play`.
+
+## Pufferzeiten festlegen {#section_05CDD927869D47EBA1D2069B1416B2E4}
+
+Die `MediaPlayer` bietet Methoden zum Festlegen und Abrufen der anfänglichen Pufferzeit und der Wiedergabepufferzeit.
+
+>[!TIP]
+>
+>Wenn Sie die Puffersteuerungsparameter nicht vor Beginn der Wiedergabe festlegen, wird der Medienplayer für den anfänglichen Puffer auf 2 Sekunden und für die laufende Wiedergabepufferzeit auf 30 Sekunden gesetzt.
+
+1. Richten Sie die `BufferControlParameters` -Objekt, das die Steuerungsparameter für die anfängliche Pufferzeit und die Wiedergabepufferzeit einkapselt.
 
    Diese Klasse stellt die folgenden Factory-Methoden bereit:
 
    * So legen Sie die anfängliche Pufferzeit auf die Wiedergabepufferzeit fest:
 
-      ```
-      public static BufferControlParameters createSimple(long bufferTime)
-      ```
+     ```
+     public static BufferControlParameters createSimple(long bufferTime)
+     ```
 
    * So legen Sie die Start- und Wiedergabepufferzeiten fest:
 
-      ```
-      public static BufferControlParameters createDual( 
-        long initialBuffer,  
-        long bufferTime)
-      ```
-   Wenn die Parameter nicht gültig sind, geben diese Methoden `MediaPlayerException` mit dem Fehlercode `PSDKErrorCode.INVALID_ARGUMENT` aus, z. B. wenn die folgenden Bedingungen erfüllt sind:
+     ```
+     public static BufferControlParameters createDual( 
+       long initialBuffer,  
+       long bufferTime)
+     ```
+
+   Wenn die Parameter nicht gültig sind, geben diese Methoden `MediaPlayerException` mit Fehlercode `PSDKErrorCode.INVALID_ARGUMENT`, z. B. wenn die folgenden Bedingungen erfüllt sind:
 
    * Die anfängliche Pufferzeit ist kleiner als null.
    * Die anfängliche Pufferzeit ist größer als die Pufferzeit.
 
-
-1. Verwenden Sie zum Festlegen der Pufferparameterwerte die folgende `MediaPlayer`-Methode:
+1. Verwenden Sie zum Festlegen der Pufferparameterwerte Folgendes `MediaPlayer` -Methode:
 
    ```java
    void setBufferControlParameters(BufferControlParameters params)
    ```
 
-1. Um die aktuellen Pufferparameterwerte abzurufen, verwenden Sie die folgende `MediaPlayer`-Methode:
+1. Um die aktuellen Pufferparameterwerte zu erhalten, verwenden Sie diese `MediaPlayer` -Methode:
 
    ```java
       BufferControlParameters getBufferControlParameters()  

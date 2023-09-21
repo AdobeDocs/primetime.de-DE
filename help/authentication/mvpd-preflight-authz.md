@@ -1,19 +1,18 @@
 ---
 title: MVPD Preflight-Autorisierung
 description: MVPD Preflight-Autorisierung
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 0%
 
 ---
 
-
 # MVPD Preflight-Autorisierung
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Einführung {#mvpd-preflight-authz-intro}
 
@@ -22,7 +21,7 @@ ht-degree: 0%
 Die Adobe Primetime-Authentifizierung kann die Preflight-Autorisierung derzeit auf zwei Arten für MVPDs unterstützen, entweder über AuthN-Antwortattribute oder über eine mehrkanalige AuthZ-Anfrage.  In den folgenden Szenarien werden die Kosten/Nutzen der verschiedenen Methoden beschrieben, mit denen Sie die Vorabgenehmigung implementieren können:
 
 * **Best-Case-Szenario** - Der MVPD stellt die Liste der bereits autorisierten Ressourcen während der Autorisierungsphase (Multi-Channel AuthZ) zur Verfügung.
-* **Szenario mit dem schlimmsten Fall** - Wenn ein MVPD keine Mehrfachressourcenautorisierung unterstützt, führt der Adobe Primetime-Authentifizierungsserver einen Autorisierungsaufruf an den MVPD für jede Ressource in der Ressourcenliste durch. Dieses Szenario wirkt sich (proportional zur Anzahl der Ressourcen) auf die Reaktionszeit für die Vorabgenehmigung aus. Dies kann die Auslastung auf Adobe- und MVPD-Servern erhöhen und zu Leistungsproblemen führen. Außerdem werden Autorisierungsanfragen/Antwortereignisse generiert, ohne dass eine Wiedergabe tatsächlich erforderlich ist.
+* **Szenario mit dem schlimmsten Fall** - Wenn ein MVPD keine Mehrfachressourcenautorisierung unterstützt, führt der Adobe Primetime-Authentifizierungsserver einen Autorisierungsaufruf an den MVPD für jede Ressource in der Ressourcenliste durch. Dieses Szenario wirkt sich (proportional zur Anzahl der Ressourcen) auf die Reaktionszeit für die Vorabgenehmigung aus. Dies kann die Auslastung auf beiden Adobe- und MVPD-Servern erhöhen und zu Leistungsproblemen führen. Außerdem werden Autorisierungsanfragen/Antwortereignisse generiert, ohne dass eine Wiedergabe tatsächlich erforderlich ist.
 * **Veraltet** - Der MVPD stellt während der Authentifizierungsphase die Liste der bereits autorisierten Ressourcen bereit, sodass keine Netzwerkaufrufe erforderlich sind, nicht einmal die Preflight-Anfrage, da die Liste auf dem Client zwischengespeichert wird.
 
 Während MVPDs keine Preflight-Autorisierung unterstützen müssen, werden in den folgenden Abschnitten einige Vorabgenehmigungsverfahren beschrieben, die von der Adobe Primetime-Authentifizierung unterstützt werden können, bevor auf das oben genannte Worst-Case-Szenario zurückgegriffen wird.
@@ -33,7 +32,7 @@ Dieses Preflight-Szenario ist OLCA-kompatibel (Cableabs). In Abschnitt 7.5.2 der
 
 ### Benutzerdefinierte Ressourcenliste in SAML-Attributanweisung {#custom-res-saml-attr}
 
-Die SAML-Authentifizierungsantwort des IdP muss eine AttributeStatement mit Ressourcennamen enthalten, die AdobePass autorisieren soll.  Einige MVPDs bieten dies im folgenden Format:
+Die SAML-Authentifizierungsantwort des IdP muss eine AttributeStatement mit Ressourcennamen enthalten, die von AdobePass autorisiert werden sollen.  Einige MVPDs bieten dies im folgenden Format:
 
 ```XML
 <saml:AttributeStatement>
@@ -44,7 +43,7 @@ Die SAML-Authentifizierungsantwort des IdP muss eine AttributeStatement mit Ress
 </saml:AttributeStatement>
 ```
 
-Das obige Beispiel enthält eine Liste mit zwei vorab autorisierten Ressourcen: &quot;MMOD&quot;und &quot;Olympische Spiele 2012&quot;.
+Das obige Beispiel enthält eine Liste mit zwei vorab autorisierten Ressourcen: &quot;MMOD&quot;und &quot;Olympic2012&quot;.
 
 Dadurch wird das beste Fallszenario erreicht, und es werden keine Netzwerkaufrufe durchgeführt, wenn der Programmierer checkPreauthorizedResources() aufruft, da alles bereits auf dem Client ist.
 
@@ -55,7 +54,7 @@ Diese Preflight-Implementierung ist auch OLCA-kompatibel (Cablelabs).  In der Sp
 
 Die Adobe Primetime-Authentifizierung erhält die Liste der Ressourcen von der Anwendung des Programmierers. Die MVPD-Integration der Adobe Primetime-Authentifizierung kann dann einen AuthZ-Aufruf ausführen, der alle diese Ressourcen enthält, dann die Antwort analysieren und die verschiedenen Entscheidungen über Genehmigungen/Ablehnungen extrahieren.  Der Fluss für das Preflight-Szenario mit einem mehrkanaligen AuthZ-Szenario funktioniert wie folgt:
 
-1. Das Programm des Programmierers sendet eine kommagetrennte Liste von Ressourcen über die Preflight-Client-API, z. B.: &quot;TestChannel1,TestChannel2,TestChannel3&quot;.
+1. Die App des Programmierers sendet eine kommagetrennte Liste von Ressourcen über die Preflight-Client-API, z. B. &quot;TestChannel1,TestChannel2,TestChannel3&quot;.
 1. Der MVPD Preflight AuthZ-Anfrageaufruf enthält die verschiedenen Ressourcen und weist die folgende Struktur auf:
 
 ```XML
@@ -117,7 +116,7 @@ Die Adobe Primetime-Authentifizierung erhält die Liste der Ressourcen von der A
 
 Einige MVPDs verfügen über Autorisierungsendpunkte, die die Autorisierung mehrerer Ressourcen in einer Anfrage unterstützen, aber nicht unter das in Multi-Channel-AuthZ beschriebene Szenario fallen. Diese spezifischen MVPDs erfordern benutzerdefinierte Arbeit.
 
-Adobe kann auch die mehrfache Kanalautorisierung unterstützen, ohne die vorhandene Implementierung zu ändern.  Dieser Ansatz muss zwischen der Adobe und dem MVPD-Technikteam überprüft werden, um sicherzustellen, dass er erwartungsgemäß funktioniert.
+Adobe kann auch die Autorisierung mehrerer Kanäle ohne Änderungen an der bestehenden Implementierung unterstützen.  Dieser Ansatz muss zwischen der Adobe und dem technischen MVPD-Team überprüft werden, um sicherzustellen, dass er erwartungsgemäß funktioniert.
 
 ## MVPDs, die die Preflight-Autorisierung unterstützen {#mvpds-supp-preflight-authz}
 
@@ -125,7 +124,7 @@ In der folgenden Tabelle sind die MVPDs aufgeführt, die die Preflight-Autorisie
 
 | Preflight-Ansatz | MVPD | Hinweise |
 |:-------------------------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------:|
-| Mehrkanal-AuthZ | Comcast AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |  |
+| Multi-Channel-AuthZ | Comcast AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |                                                                    |
 | Kanalverbindung in Benutzermetadaten | Sudenlink HTC | Alle direkten Synacor-Integrationen können diesen Ansatz ebenfalls unterstützen. |
 | Verzweigung und Beitritt | Alle anderen, oben nicht aufgeführten | Standardmäßig ist die maximale Anzahl der aktivierten Ressourcen = 5. |
 

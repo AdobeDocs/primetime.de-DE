@@ -1,30 +1,28 @@
 ---
-description: Sie können die Videonutzung verfolgen, indem Sie TVSDK mit Adobe Analytics integrieren.
-title: Integration von Videoanalysen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können die Videonutzung verfolgen, indem Sie TVSDK in Adobe Analytics integrieren.
+title: Video Analytics-Integration
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
+# Video Analytics-Integration {#video-analytics-integration}
 
-# Integration von Videoanalysen {#video-analytics-integration}
+Sie können die Videonutzung verfolgen, indem Sie TVSDK in Adobe Analytics integrieren.
 
-Sie können die Videonutzung verfolgen, indem Sie TVSDK mit Adobe Analytics integrieren.
+Video-Tracking in TVSDK verwendet die **Adobe Analytics-Video-Grundlagen** -Dienst, der Videointeraktionsmetriken wie Videoansichten, Videobeendigungen, Anzeigenimpressionen, Besuchszeit für Video usw. bereitstellt. Weitere Informationen zu diesem Dienst erhalten Sie von Ihrem Adobe-Support-Mitarbeiter.
 
-Die Videoverfolgung in TVSDK verwendet den Dienst **Adobe Analytics Video Essentials**, der Videonutzungsmetriken bereitstellt, z. B. Ansichten, Videobeendigungen, Anzeigenimpressionen, Besuchszeit für Videos usw. Weitere Informationen zu diesem Dienst erhalten Sie von Ihrem Kundenbetreuer.
-
-Im folgenden Verfahren werden die Schritte zur Aktivierung der Videoverfolgung im Player zusammengefasst:
+Im folgenden Verfahren werden die Schritte zum Aktivieren der Videoverfolgung im Player zusammengefasst:
 
 1. Initialisieren und/oder konfigurieren Sie die folgenden Videoverfolgungskomponenten:
 
-   Unter iOS sind diese Komponenten Teil von TVSDK:
+   In iOS sind diese Komponenten Teil von TVSDK:
 
    * JSON-Konfigurationsdatei
-   * Videoanalysemetadatenobjekt
+   * Video Analytics-Metadatenobjekt
    * Globales Metadatenobjekt
-   * Videoanalysen-Verfolgungsobjekt
+   * Video Analytics-Tracker-Objekt
 
-1. Richten Sie den Berichte für Videoanalysen serverseitig mit den Adobe Analytics Admin Tools ein.
+1. Richten Sie die Videoanalyseberichte serverseitig mithilfe der Adobe Analytics Admin Tools ein.

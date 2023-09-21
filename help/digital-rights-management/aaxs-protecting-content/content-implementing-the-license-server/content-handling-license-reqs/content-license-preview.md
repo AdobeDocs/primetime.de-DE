@@ -1,18 +1,16 @@
 ---
-title: Vorschau der Lizenz
-description: Vorschau der Lizenz
+title: Lizenzvorschau
+description: Lizenzvorschau
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
 
 ---
 
+# Lizenzvorschau{#license-preview}
 
-# Vorschau der Lizenz{#license-preview}
+Der Client kann eine Lizenzvorschau-Anfrage senden. Das bedeutet, dass die Anwendung einen Vorschauvorgang durchführen kann, bevor der Benutzer aufgefordert wird, den Inhalt zu kaufen, um festzustellen, ob der Computer des Benutzers tatsächlich alle für die Wiedergabe erforderlichen Kriterien erfüllt. *Lizenzvorschau* bezieht sich auf die Fähigkeit des Kunden, eine Vorschau der Lizenz anzuzeigen (um zu sehen, welche Rechte die Lizenz zulässt), anstatt den Inhalt in der Vorschau anzuzeigen (einen kleinen Teil des Inhalts anzuzeigen, bevor er sich für den Kauf entscheidet). Einige der Parameter, die für jeden Computer eindeutig sind, sind: verfügbare Ausgaben und ihr Schutzstatus, die verfügbare Laufzeit-/DRM-Version und die DRM-Client-Sicherheitsstufe. Der Lizenzvorschau-Modus ermöglicht es dem Laufzeit-/DRM-Client, die Geschäftslogik des Lizenzservers zu testen und dem Benutzer Informationen zurückzugeben, damit er eine fundierte Entscheidung treffen kann. So kann der Client sehen, wie eine gültige Lizenz aussieht, aber nicht den Schlüssel zum Entschlüsseln des Inhalts erhalten. Die Unterstützung für die Lizenzvorschau ist optional und nur erforderlich, wenn Sie einen benutzerdefinierten Client implementieren, der diese Funktion verwendet.
 
-Der Client kann eine Lizenzanforderung senden, d. h., die Vorschau kann eine Vorschau durchführen, bevor der Benutzer aufgefordert wird, den  zu erwerben, um festzustellen, ob der Computer des Benutzers tatsächlich alle für die Wiedergabe erforderlichen Kriterien erfüllt. *Die Lizenzvorschau* bezieht sich auf die Fähigkeit des Kunden, die Lizenz Vorschau (um zu sehen, welche Rechte die Lizenz erlaubt), im Gegensatz zur Vorschau des Inhalts (Betrachten eines kleinen Teils des Inhalts, bevor der Kauf beschlossen wird). Einige der Parameter, die für die einzelnen Computer eindeutig sind, sind: verfügbare Ausgaben und deren Schutzstatus, die verfügbare Laufzeit-/DRM-Version und die DRM-Client-Sicherheitsstufe. Der Lizenzmodus ermöglicht es dem Laufzeit-/DRM-Vorschau-Client, die Geschäftslogik des Lizenzservers zu testen und dem Benutzer Informationen zurückzugeben, damit er eine fundierte Entscheidung treffen kann. So kann der Kunde sehen, wie eine gültige Lizenz aussieht, aber nicht tatsächlich den Schlüssel zum Entschlüsseln des Inhalts erhalten. Die Lizenzunterstützung ist optional und nur erforderlich, wenn Sie einen benutzerdefinierten Client implementieren, der diese Vorschau verwendet.
-
-Rufen Sie `LicenseRequestMessage.getRequestPhase()`auf und vergleichen Sie diese mit `LicenseRequestMessage.RequestPhase.Acquire`, um festzustellen, ob der Client eine Anforderung zur Vorschau oder Lizenzerteilung gesendet hat.
+Rufen Sie auf, um festzustellen, ob der Client eine Vorschau-Anfrage oder eine Lizenzakquise-Anfrage gesendet hat `LicenseRequestMessage.getRequestPhase()`und vergleichen Sie sie mit `LicenseRequestMessage.RequestPhase.Acquire`

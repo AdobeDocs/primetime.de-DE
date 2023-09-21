@@ -1,33 +1,30 @@
 ---
-description: Bei VOD-Inhalten (Video-on-Demand) fügt Browser TVSDK Werbeunterbrechungen ein, indem die Anzeigen im Hauptinhalt geteilt werden, sodass die Zeitschiene länger ist.
-title: VOD-Anzeige auflösen und einfügen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Bei Video-On-Demand (VOD)-Inhalten fügt Browser TVSDK die Anzeigen im Hauptinhalt durch Aufteilung der Anzeigen ein, sodass die Timeline-Dauer erhöht wird.
+title: Auflösung und Einfügen von VOD-Anzeigen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
+# Auflösung und Einfügen von VOD-Anzeigen{#vod-ad-resolving-and-insertion}
 
-# VOD-Anzeige auflösen und einfügen{#vod-ad-resolving-and-insertion}
+Bei Video-On-Demand (VOD)-Inhalten fügt Browser TVSDK die Anzeigen im Hauptinhalt durch Aufteilung der Anzeigen ein, sodass die Timeline-Dauer erhöht wird.
 
-Bei VOD-Inhalten (Video-on-Demand) fügt Browser TVSDK Werbeunterbrechungen ein, indem die Anzeigen im Hauptinhalt geteilt werden, sodass die Zeitschiene länger ist.
-
-Vor der Wiedergabe löst Browser TVSDK bekannte Anzeigen auf, fügt Anzeigenumbrüche in den Hauptinhalt ein, wie in einer Zeitleiste beschrieben, die von Adobe Primetime bei der Anzeigenentscheidung zurückgegeben wird, und berechnet die virtuelle Zeitschiene ggf. neu.
+Vor der Wiedergabe löst Browser TVSDK bekannte Anzeigen auf, fügt im Hauptinhalt Anzeigen ein und bricht sie ein, wie durch eine Timeline beschrieben, die von der Adobe Primetime-Anzeigenentscheidung zurückgegeben wird, und berechnet bei Bedarf die virtuelle Timeline neu.
 
 Browser TVSDK fügt Anzeigen wie folgt ein:
 
-* **Pre-Roll**, d. h. vor dem Inhalt.
-* **Post-Roll**, der nach dem Inhalt liegt.
+* **Pre-roll**, der vor dem Inhalt steht.
+* **Post-Roll**, der hinter dem Inhalt steht.
 
-Nach der Wiedergabe können keine weiteren Beginn am Inhalt auftreten. Anzeigen können nicht sein:
+Nach dem Start der Wiedergabe können keine weiteren Änderungen am Inhalt vorgenommen werden. Anzeigen können nicht sein:
 
-* Eingefügt
+* Einfügen
 * Gelöscht
 
-   So können Sie beispielsweise keine integrierten Anzeigen aus den Inhalten löschen, um ein werbefreies Erlebnis Angebot.
+  Sie können beispielsweise keine integrierten Anzeigen aus dem Inhalt löschen, um ein anzeigenfreies Erlebnis anzubieten.
 * Ersetzt
 
-   Beispielsweise können integrierte Anzeigen nicht durch zielgerichtete Anzeigen ersetzt werden.
-
+  Sie können beispielsweise keine integrierten Anzeigen durch zielgerichtete Anzeigen ersetzen.

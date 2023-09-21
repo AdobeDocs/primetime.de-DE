@@ -1,24 +1,22 @@
 ---
-description: Wenn Sie Ereignis-Listener mit Browser TVSDK registrieren, geben Sie einen Ereignistyp an, der überwacht werden soll, und den Namen Ihres Rückrufs. Wenn ein Ereignis auftritt, ruft Browser TVSDK Ihren Rückruf auf und übergibt ihm ein Ereignis des entsprechenden Typs.
-title: Ereignistyp und Klassen für Rückrufe
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Wenn Sie Ereignis-Listener mit Browser TVSDK registrieren, geben Sie einen Ereignistyp an, auf den überwacht werden soll, und den Namen Ihres Rückrufs. Wenn ein Ereignis eintritt, ruft Browser TVSDK Ihren Rückruf auf und übergibt ihm ein Ereignisobjekt des entsprechenden Typs.
+title: Ereignistypen und -klassen für Rückrufe
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
+# Ereignistypen und -klassen für Rückrufe{#event-types-and-classes-for-callbacks}
 
-# Ereignistyp und Klassen für Rückrufe{#event-types-and-classes-for-callbacks}
-
-Wenn Sie Ereignis-Listener mit Browser TVSDK registrieren, geben Sie einen Ereignistyp an, der überwacht werden soll, und den Namen Ihres Rückrufs. Wenn ein Ereignis auftritt, ruft Browser TVSDK Ihren Rückruf auf und übergibt ihm ein Ereignis des entsprechenden Typs.
+Wenn Sie Ereignis-Listener mit Browser TVSDK registrieren, geben Sie einen Ereignistyp an, auf den überwacht werden soll, und den Namen Ihres Rückrufs. Wenn ein Ereignis eintritt, ruft Browser TVSDK Ihren Rückruf auf und übergibt ihm ein Ereignisobjekt des entsprechenden Typs.
 
 <table frame="all" colsep="1" rowsep="1" id="table_FE58AD65AF3B4483816C00D7EAD2FB4F"> 
  <thead> 
   <tr rowsep="1"> 
-   <th colname="2" class="entry"> Wenn Sie auf diesen Ereignis warten (AdobePSDK.EventType) </th> 
-   <th class="entry">phrases/browser-tvsdk-name gibt ein Ereignis an Ihren Rückruf dieses Objekttyps (<span class="codeph"> AdobePSDK.Ereignis</span>) </th> 
+   <th colname="2" class="entry"> Wenn Sie auf diesen Ereignisnamen warten (AdobePSDK.EventType) </th> 
+   <th class="entry">phrases/browser-tvsdk-name übergibt ein Ereignis an Ihren Rückruf dieses Objekttyps (<span class="codeph"> AdobePSDK.Event</span>) </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -47,7 +45,7 @@ Wenn Sie Ereignis-Listener mit Browser TVSDK registrieren, geben Sie einen Ereig
   <tr rowsep="1"> 
    <td colname="2"> 
     <ul id="ul_eny_tc4_2y"> 
-     <li id="li_13F95E4BF905425CA5A95ECC138CC078"><span class="codeph"> BUFFERING_BEGIN</span> </li> 
+     <li id="li_13F95E4BF905425CA5A95ECC138CC078"><span class="codeph"> PUFFERING_BEGIN</span> </li> 
      <li id="li_BA6F4E38E2F440FAAA4E70DF906A3350"><span class="codeph"> BUFFERING_END</span> </li> 
     </ul> </td> 
    <td><span class="codeph"> BufferEvent</span> </td> 
@@ -65,7 +63,7 @@ Wenn Sie Ereignis-Listener mit Browser TVSDK registrieren, geben Sie einen Ereig
     <ul id="ul_kwy_cd4_2y"> 
      <li id="li_D5455D287EA5472D95A45AD1A8835D61"><span class="codeph"> AUDIO_UPDATED</span> </li> 
      <li id="li_AFF5B14338AB4AA8B4DF3963F2FDD4CF"><span class="codeph"> CAPTIONS_UPDATED</span> </li> 
-     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> Übergeordnet_UPDATED</span> </li> 
+     <li id="li_F7C9B933C6A44E80B57EB5274640A17B"><span class="codeph"> MASTER_UPDATED</span> </li> 
      <li id="li_C9FDF852BF4F4B638A8A1CAAFC27A23F"><span class="codeph"> ITEM_CREATED</span> </li> 
      <li id="li_85E13B35A6DB44A4BA0F93EA52B9D08A"><span class="codeph"> ITEM_UPDATED</span> </li> 
     </ul> </td> 
@@ -92,11 +90,11 @@ Wenn Sie Ereignis-Listener mit Browser TVSDK registrieren, geben Sie einen Ereig
    <td><span class="codeph"> PlaybackRateEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> Profil_CHANGED</span> </td> 
-   <td><span class="codeph"> profileEvent</span> </td> 
+   <td colname="2"><span class="codeph"> PROFILE_CHANGED</span> </td> 
+   <td><span class="codeph"> ProfileEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PLAY_BEGINN</span> </td> 
+   <td colname="2"><span class="codeph"> PLAY_START</span> </td> 
    <td><span class="codeph"> PSDKEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -130,4 +128,3 @@ Wenn Sie Ereignis-Listener mit Browser TVSDK registrieren, geben Sie einen Ereig
   </tr> 
  </tbody> 
 </table>
-

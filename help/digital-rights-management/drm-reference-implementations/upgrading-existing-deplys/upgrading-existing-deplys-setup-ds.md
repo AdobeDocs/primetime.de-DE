@@ -2,26 +2,24 @@
 title: Einrichten eines Domänenservers
 description: Einrichten eines Domänenservers
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 0%
 
 ---
 
-
 # Einrichten eines Domänenservers{#set-up-a-domain-server}
 
-So konfigurieren Sie einen Domänenserver bei einer vorhandenen Lizenzserverinstallation:
+So konfigurieren Sie einen Domänenserver für eine bestehende Installation des Lizenzservers:
 
-1. Öffnen Sie im Ordner [!DNL tomcat/lib] die Datei [!DNL flashaccess-refimpl.properties].
-1. Füllen Sie unter der Option `Domain CA certificate` das CA-Domänenzertifikat aus.
+1. Im [!DNL tomcat/lib] Verzeichnis, öffnen Sie die [!DNL flashaccess-refimpl.properties] -Datei.
+1. Unter dem `Domain CA certificate` -Option das Zertifikat der Zertifizierungsstelle für die Domäne ausfüllen.
 
-   Dieses Zertifikat wird dann für die Annahme der Domänentoken verwendet.
-1. Füllen Sie unter der Option `Domain CA credential` die `Domain CA credential certificate (PFX)`-Details aus.
+   Dieses Zertifikat wird dann für die Akzeptanz der Domänen-Token verwendet.
+1. Unter dem `Domain CA credential` -Option, beenden Sie die `Domain CA credential certificate (PFX)` Details.
 
    Dieses Zertifikat wird dann zum Signieren von Domänenzertifikaten und -Token verwendet.
-1. Geben Sie den Wert für `DomainServerlURL` an.
+1. Geben Sie den Wert für `DomainServerlURL`.
 
-   Wenn dieser Wert auf `NULL` festgelegt ist, kann die Domänenauthentifizierung erfolgreich sein. Beim Beitritt zur Domäne kann es jedoch zu einem Fehler in der Verbindungsdomäne kommen.
+   Wenn dieser Wert auf `NULL`, kann die Domänenauthentifizierung erfolgreich sein. Beim Beitritt zur Domäne kann es jedoch zu einem Fehler bei der Join-Domäne kommen.

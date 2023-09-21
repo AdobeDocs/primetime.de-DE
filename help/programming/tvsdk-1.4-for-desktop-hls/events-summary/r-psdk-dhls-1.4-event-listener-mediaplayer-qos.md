@@ -1,26 +1,23 @@
 ---
-description: TVSDK sendet Servicequalitäts-(QoS-)Ereignis, um Ihre Anwendung über Ereignis zu informieren, die die Berechnung von Servicestatistiken wie Pufferung oder Suche beeinflussen könnten.
-title: QoS-Ereignis
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK sendet Servicequalitätsereignisse (QoS), um Ihre Anwendung über Ereignisse zu informieren, die die Berechnung von QoS-Statistiken beeinflussen könnten, z. B. Pufferung oder Suche.
+title: QoS-Ereignisse
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
 
 ---
 
+# QoS-Ereignisse{#qos-events}
 
-# QoS-Ereignis{#qos-events}
+TVSDK sendet Servicequalitätsereignisse (QoS), um Ihre Anwendung über Ereignisse zu informieren, die die Berechnung von QoS-Statistiken beeinflussen könnten, z. B. Pufferung oder Suche.
 
-TVSDK sendet Servicequalitäts-(QoS-)Ereignis, um Ihre Anwendung über Ereignis zu informieren, die die Berechnung von Servicestatistiken wie Pufferung oder Suche beeinflussen könnten.
-
-Um über alle QoS-bezogenen Ereignis benachrichtigt zu werden, registrieren Sie Ereignis-Listener mit dem `MediaPlayer`-Objekt für die folgenden Ereignis:
+Um über alle QoS-bezogenen Ereignisse informiert zu werden, registrieren Sie Ereignis-Listener bei der `MediaPlayer` -Objekt für die folgenden Ereignisse:
 
 | Ereignis | Bedeutung |
 |---|---|
 | BufferEvent.[BUFFERING_END](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/BufferEvent.html#BUFFERING_END) | Die Pufferung ist abgeschlossen. |
-| BufferEvent.[BUFFERING_BEGIN](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/BufferEvent.html#BUFFERING_BEGIN) | Die Pufferung wurde gestartet. |
+| BufferEvent.[PUFFERING_BEGIN](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/BufferEvent.html#BUFFERING_BEGIN) | Die Pufferung wurde gestartet. |
 | SeekEvent.[SEEK_COMPLETED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html#SEEK_END) | Die Suche ist abgeschlossen. |
 | SeekEvent.[SEEK_BEGIN](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html#SEEK_BEGIN) | Die Suche fängt an. |
-| SeekEvent.[SEEK_POSITION_ADJUSTED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html#SEEK_POSITION_ADJUSTED) | TVSDK änderte die Suchposition aufgrund der aktuellen Werbepolitik. |
-
+| SeekEvent.[SEEK_POSITION_ADJUSTED](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html#SEEK_POSITION_ADJUSTED) | TVSDK hat die Suchposition aufgrund der aktuellen Werberichtlinien geändert. |

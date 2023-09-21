@@ -1,25 +1,23 @@
 ---
-title: AAXS DRM External CEK Workflow
-description: Dieser Workflow unterscheidet sich von den meisten vorhandenen DRM-Systemen, da kein zentrales Repository oder Content Key Management System (CKMS) verwendet werden muss
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Workflow "AAXS DRM External CEK"
+description: Dieser Workflow unterscheidet sich von den meisten vorhandenen DRM-Systemen, da er keine Verwendung von zentralem Repository oder Content Key Management System (CKMS) erfordert
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
 
 ---
 
+# Workflow &quot;AAXS DRM External CEK&quot;{#aaxs-drm-external-cek-workflow}
 
-# AAXS DRM External CEK Workflow{#aaxs-drm-external-cek-workflow}
-
-Dieser Arbeitsablauf unterscheidet sich von den meisten vorhandenen DRM-Systemen, da er nicht die Verwendung eines zentralen Repository oder Content Key Management System (CKMS) erfordert. Für Kunden, die AAXS möchten, mit ihren vorhandenen CKMS zu arbeiten, bietet AAXS eine Funktion namens &quot;External CEK&quot;, in der das CEK extern zur Zeit der Paketerstellung und Lizenzausgabe bereitgestellt wird.
+Dieser Workflow unterscheidet sich von den meisten vorhandenen DRM-Systemen, da hierfür kein zentrales Repository oder Content Key Management System (CKMS) erforderlich ist. Für Kunden, die AAXS wünschen, mit ihrem bestehenden CKMS zu arbeiten, bietet AAXS eine Funktion namens &quot;External CEK&quot;, in der das CEK extern bei der Verpackung und Lizenzausgabe bereitgestellt wird.
 
 ![](assets/ECEK_Workflow.PNG)
 
-1. (Paket) Das AAXS Java SDK wird mit einer CEK und einer CEK ID bereitgestellt.
-1. (Paket) Das CEK wird zum Verschlüsseln von Inhalten verwendet.
-1. (Paket) Die CEK-ID wird in die DRM-Metadaten des Inhalts eingefügt.
-1. Das Gerät versucht, Inhalte wiederzugeben, indem es eine Lizenz vom AAXS-Server anfordert.
-1. (Lizenzierung) Der AAXS-Server extrahiert die CEK-ID aus den Inhaltsmetadaten.
-1. Der AAXS-Server ruft den CEK aus dem CKMS ab.
-1. (Lizenzierung) Der AAXS-Server gibt dem Gerät eine Lizenz aus, die das CEK enthält.
+1. (Package) Das AXS Java SDK wird mit einem CEK und einer CEK ID bereitgestellt.
+1. (Package) Das CEK wird zum Verschlüsseln von Inhalten verwendet.
+1. (Package) Die CEK-ID wird in die DRM-Metadaten des Inhalts eingefügt.
+1. Das Gerät versucht, Inhalte wiederzugeben, indem es eine Lizenz vom AXS-Server anfordert.
+1. (Lizenzierung) Der AXS-Server extrahiert die CEK-ID aus den Inhaltsmetadaten.
+1. Der AXS-Server ruft den CEK aus dem CKMS ab.
+1. (Lizenzierung) Der AXS-Server gibt dem Gerät eine Lizenz aus, die das CEK enthält.

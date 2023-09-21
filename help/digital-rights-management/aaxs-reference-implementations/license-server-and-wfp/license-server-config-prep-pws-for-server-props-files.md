@@ -1,55 +1,53 @@
 ---
-title: Vorbereiten von Kennwörtern für die Dateien mit den Servereigenschaften
-description: Vorbereiten von Kennwörtern für die Dateien mit den Servereigenschaften
+title: Vorbereiten von Kennwörtern für die Servereigenschaftsdateien
+description: Vorbereiten von Kennwörtern für die Servereigenschaftsdateien
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
+# Vorbereiten von Kennwörtern für die Servereigenschaftsdateien {#preparing-passwords-for-the-server-properties-files}
 
-# Vorbereiten von Kennwörtern für die Server-Eigenschaftendateien {#preparing-passwords-for-the-server-properties-files}
+Um die Sicherheit des Passworts Ihrer Anmeldedaten sicherzustellen, wird ein Tool bereitgestellt, um das Kennwort zu verschlüsseln, bevor es in die [!DNL flashaccess-refimpl.properties] oder [!DNL flashaccess-refimpl-packager.properties] -Datei.
 
-Um die Sicherheit des Passworts Ihrer Berechtigung sicherzustellen, wird ein Tool zum Verschlüsseln des Kennworts bereitgestellt, bevor es in die Datei [!DNL flashaccess-refimpl.properties] oder [!DNL flashaccess-refimpl-packager.properties] eingegeben wird.
+So führen Sie das Tool mit dem angegebenen ANT-Skript aus:
 
-So führen Sie das Tool mit dem bereitgestellten ANT-Skript aus:
+* Navigieren Sie zu *`<Reference Implementation Server Path>`* [!DNL \refimpl]
 
-* Gehen Sie zu *`<Reference Implementation Server Path>`* [!DNL \refimpl]
-
-* Stellen Sie sicher, dass die `sdkdir`-Eigenschaft in [!DNL build-refimpl.xml] auf den Ordner verweist, der das Adobe Access SDK enthält.
+* Stellen Sie die `sdkdir` -Eigenschaft in [!DNL build-refimpl.xml] verweist auf den Ordner, der das Adobe Access SDK enthält
 * Führen Sie den folgenden Befehl mit ANT aus:
 
-   ```
-       ant -f build-refimpl.xml
-   ```
+  ```
+      ant -f build-refimpl.xml
+  ```
 
-* Geben Sie bei Aufforderung das Kennwort Ihrer Berechtigung ein
+* Wenn Sie dazu aufgefordert werden, geben Sie das Kennwort Ihrer Anmeldedaten ein
 
 So führen Sie das Tool mit Java aus:
 
-* Gehen Sie zu *`<Reference Implementation Server Path>`*\ [!DNL scrambler]
+* Navigieren Sie zu *`<Reference Implementation Server Path>`*\ [!DNL scrambler]
 
-* Geben Sie an der Eingabeaufforderung den Befehl ein:
+* Geben Sie an der Eingabeaufforderung den folgenden Befehl ein:
 
-* Windows:
+* Unter Windows:
 
-   ```
-   java -classpath path_to_adobe-flashaccess-sdk.jar;.  
-   com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
-   ```
+  ```
+  java -classpath path_to_adobe-flashaccess-sdk.jar;.  
+  com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
+  ```
 
 * Unter Linux:
 
-   ```
-       java -classpath path_to_adobe-flashaccess-sdk.jar;.  
-       com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
-   ```
+  ```
+      java -classpath path_to_adobe-flashaccess-sdk.jar;.  
+      com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
+  ```
 
 Das Dienstprogramm gibt das verschlüsselte Kennwort aus, das Sie in die .properties-Datei kopieren müssen.
 
 >[!NOTE]
 >
->Kennwörter, die mit dem mit der Referenzimplementierung bereitgestellten Dienstprogramm zum Abwracken von Kennwörtern kodiert wurden, funktionieren nicht mit dem Adobe Access Server für geschütztes Streaming.
+>Passwörter, die mit dem Kennwort-Scrambling-Dienstprogramm kodiert wurden, das mit der Referenzimplementierung bereitgestellt wird, funktionieren nicht mit der Adobe Access Server für geschütztes Streaming.

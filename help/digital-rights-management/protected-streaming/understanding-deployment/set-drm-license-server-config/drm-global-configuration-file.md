@@ -1,29 +1,27 @@
 ---
-description: Die Konfigurationsdatei "flashaccess-global.xml"enthält Einstellungen, die für alle Mieter des Lizenzservers gelten.
+description: Die Konfigurationsdatei "flashaccess-global.xml"enthält Einstellungen, die für alle Mandanten des Lizenzservers gelten.
 title: Globale Konfigurationsdatei
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
 
 ---
 
-
 # Globale Konfigurationsdatei{#global-configuration-file}
 
-Die Konfigurationsdatei &quot;flashaccess-global.xml&quot;enthält Einstellungen, die für alle Mieter des Lizenzservers gelten.
+Die Konfigurationsdatei &quot;flashaccess-global.xml&quot;enthält Einstellungen, die für alle Mandanten des Lizenzservers gelten.
 
-Sie müssen die Konfigurationsdatei im Ordner [!DNL LicenseServer.ConfigRoot] ablegen.
+Sie müssen die Konfigurationsdatei im [!DNL LicenseServer.ConfigRoot] Verzeichnis.
 
-Ein Beispiel für eine globale Konfigurationsdatei finden Sie im Ordner [!DNL configs].
+Siehe [!DNL configs] -Verzeichnis für ein Beispiel einer globalen Konfigurationsdatei.
 
 Die globale Konfigurationsdatei enthält:
 
-* Zwischenspeicherung — Steuert die Zwischenspeicherung von Konfigurationsdateien im Speicher.
+* Zwischenspeicherung - Steuert die Zwischenspeicherung von Konfigurationsdateien im Speicher.
 
-   Informationen zu den Cacheeinstellungen finden Sie unter *Aktualisieren von Konfigurationsdateien*.
-* Protokollierung — Gibt die Protokollierungsstufe und die Häufigkeit des Rollovers von Protokolldateien an.
-* HSM-Kennwort — Nur erforderlich, wenn ein HSM zum Speichern von Serverberechtigungen verwendet wird.
+  Siehe *Aktualisieren von Konfigurationsdateien* für Informationen zu den Cacheeinstellungen.
+* Protokollierung - Gibt die Protokollierungsstufe und die Häufigkeit des Rollierens von Protokolldateien an.
+* HSM-Kennwort: Nur erforderlich, wenn HSM zum Speichern von Server-Anmeldeinformationen verwendet wird.
 
-Weitere Informationen finden Sie unter Kommentare in der Beispiel-Konfigurationsdatei unter Primetime DRM `<DVD>`\Adobe Primetime DRM Server für Protected Streaming\configs.
+Siehe Kommentare in der Beispiel-globalen Konfigurationsdatei, die sich in Primetime DRM befindet. `<DVD>`\Adobe Primetime DRM Server für geschütztes Streaming\Konfigurationen für weitere Informationen.

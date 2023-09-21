@@ -1,18 +1,16 @@
 ---
-description: Bei der Adobe Primetime-Anzeigenentscheidung können Sie Werbeanzeigen auf Schlüssel-Wert-Paare Zielgruppe werden.
+description: In der Adobe Primetime-Anzeigenentscheidung können Sie Anzeigen auf Schlüssel-Wert-Paare ausrichten.
 title: Targeting-Informationen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
 
 ---
 
-
 # Targeting-Informationen{#targeting-information}
 
-Bei der Adobe Primetime-Anzeigenentscheidung können Sie Werbeanzeigen auf Schlüssel-Wert-Paare Zielgruppe werden.
+In der Adobe Primetime-Anzeigenentscheidung können Sie Anzeigen auf Schlüssel-Wert-Paare ausrichten.
 
 So übergeben Sie diese Schlüsselwertpaare an Browser TVSDK:
 
@@ -26,4 +24,3 @@ targetingInfo.setValue(key2, value2);
  
 auditudeSettings.targetingInfo = targetingInfo;
 ```
-

@@ -1,8 +1,7 @@
 ---
 description: Ihre Anwendung kann die Aktivität in Ihrem Player und den sich ändernden Status des Players überwachen, indem sie auf die Ereignisse wartet, die von TVSDK gesendet werden.
 title: Übersicht über die Primetime-Player-Ereignisse
-exl-id: 3912f140-1600-41fb-9dc4-306646b7cd85
-source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 0%
@@ -19,11 +18,11 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 >[!TIP]
 >
->Die Ereigniscodes sind die Konstanten der `MediaPlayerEvent`-Enumeration.
+>Die Ereigniscodes sind die Konstanten der `MediaPlayerEvent` enum.
 
 `AdBreakCompletedEventListener`
 
-* **** Das bedeutet, dass die Wiedergabe der Werbeunterbrechung abgeschlossen ist.
+* **Bedeutung** Die Wiedergabe der Werbeunterbrechung ist abgeschlossen.
 
 * **Zu implementierende Rückrufe** `onAdBreakCompleted(AdBreakPlaybackEvent event)`
 
@@ -31,7 +30,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `AdBreakSkippedEventListener`
 
-* **** Das bedeutet, dass während der Wiedergabe eine Werbeunterbrechung übersprungen wurde.
+* **Bedeutung** Während der Wiedergabe wurde eine Werbeunterbrechung übersprungen.
 
 * **Zu implementierende Rückrufe** `onAdBreakSkipped(AdBreakPlaybackEvent event)`
 
@@ -39,7 +38,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `AdBreakStartedEventListener`
 
-* **** Das bedeutet, dass die Wiedergabe der Werbeunterbrechung gestartet wurde.
+* **Bedeutung** Die Wiedergabe der Werbeunterbrechung wurde gestartet.
 
 * **Zu implementierende Rückrufe** `onAdBreakStarted(AdBreakPlaybackEvent event)`
 
@@ -47,14 +46,14 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `AdClickedEventListener`
 
-* **** Das bedeutet, dass während der Wiedergabe auf eine Anzeige geklickt wurde.
+* **Bedeutung** Während der Wiedergabe wurde auf eine Anzeige geklickt.
 
 * **Zu implementierende Rückrufe** `onAdClicked(AdClickEvent event)`
 * **Ereigniscode** `AD_CLICK`
 
 `AdCompletedEventListener`
 
-* **** Das bedeutet, dass die Wiedergabe der Anzeige abgeschlossen ist.
+* **Bedeutung** Die Wiedergabe der Anzeige ist abgeschlossen.
 
 * **Zu implementierende Rückrufe** `onAdCompleted(AdPlaybackEvent event)`
 
@@ -62,7 +61,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `AdProgressEventListener`
 
-* **** bedeutet, den Fortschritt der Berichterstellung während der Wiedergabe zu melden.
+* **Bedeutung** Berichtsfortschritt während der Wiedergabe
 
 * **Zu implementierende Rückrufe** `onAdProgress(AdPlaybackEvent event)`
 
@@ -70,7 +69,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `AdResolutionCompleteEventListener`
 
-* **** Die Auflösung von Primetime und Entscheidungsfindung und Auflösung ist abgeschlossen. Dieses Ereignis gilt nur für VOD-Inhalte.
+* **Bedeutung** Die Primetime-Anzeigenentscheidung und -auflösung ist abgeschlossen. Dieses Ereignis gilt nur für VOD-Inhalte.
 
 * **Zu implementierende Rückrufe** `onAdResolutionComplete()`
 
@@ -78,7 +77,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `AdStartedEventListener`{#section_A4339C48F82640A8AF4AF09CB3B33188}
 
-* **** Das bedeutet, dass die Wiedergabe der Anzeige gestartet wurde.
+* **Bedeutung** Die Wiedergabe der Anzeige wurde gestartet.
 
 * **Zu implementierende Rückrufe** `onAdStarted(AdPlaybackEvent event)`
 
@@ -86,7 +85,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `AudioUpdatedEventListener`
 
-* **** Das bedeutet, dass ein neuer Audio-Track erkannt wurde.
+* **Bedeutung** Ein neuer Audio-Track wurde erkannt.
 
 * **Zu implementierende Rückrufe** `onAudioUpdated(MediaPlayerItemEvent event)`
 
@@ -94,7 +93,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `BufferingBeginEventListener`
 
-* **** Das bedeutet, dass der Player mit der Pufferung begonnen hat.
+* **Bedeutung** Der Player hat mit der Pufferung begonnen.
 
 * **Zu implementierende Rückrufe** `onBufferingBegin(BufferEvent event)`
 
@@ -102,7 +101,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `BufferingEndEventListener`
 
-* **** Das bedeutet, dass der Player die Pufferung beendet hat.
+* **Bedeutung** Der Player hat die Pufferung beendet.
 
 * **Zu implementierende Rückrufe** `onBufferingEnd(BufferEvent event)`
 
@@ -110,7 +109,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `BufferPreparedEventListener`
 
-* **** Das bedeutet, dass der Puffer vorbereitet wird.
+* **Bedeutung** Der Puffer wird vorbereitet.
 
 * **Zu implementierende Rückrufe** `onBufferPrepared()`
 
@@ -118,7 +117,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `CaptionsUpdatedEventListener`
 
-* **** Das bedeutet, dass eine neue Untertitelspur erkannt wurde.
+* **Bedeutung** Ein neuer Untertitelpfad wurde erkannt.
 
 * **Zu implementierende Rückrufe** `onCaptionsUpdated(MediaPlayerItemEvent event)`
 
@@ -126,7 +125,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `DRMMetadataInfoEventListener`
 
-* **** Das bedeutet, dass im Medien-Stream neue DRM-Metadaten erkannt wurden.
+* **Bedeutung** Im Medien-Stream wurden neue DRM-Metadaten erkannt.
 
 * **Zu implementierende Rückrufe** `onDRMMetadataInfo(DRMMetadataInfoEvent event)`
 
@@ -134,7 +133,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `ItemCreatedEventListener`
 
-* **** Das bedeutet, dass ein neues Medienplayer-Element erstellt wurde.
+* **Bedeutung** Ein neues Medienplayer-Element wurde erstellt.
 
 * **Zu implementierende Rückrufe** `onItemCreated(MediaPlayerItemEvent event)`
 
@@ -142,7 +141,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `ItemLoadCompleteEventListener`
 
-* **** Das bedeutet, dass für das aktuelle Element neue Ladeinformationen erstellt wurden.
+* **Bedeutung** Für das aktuelle Element wurden neue Ladeinformationen erstellt.
 
 * **Zu implementierende Rückrufe** `onLoadComplete(MediaPlayerItemEvent event)`
 
@@ -150,7 +149,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `LoadInformationEventListener`
 
-* **** Das bedeutet, dass ein neues Segment geladen wurde.
+* **Bedeutung** Ein neues Segment wurde geladen.
 
 * **Zu implementierende Rückrufe** `onLoadInformation(LoadInformationEvent event)`
 
@@ -158,7 +157,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `MainManifestUpdatedEventListener`
 
-* **** Das Hauptmanifest oder die Wiedergabeliste wurde aktualisiert.
+* **Bedeutung** Das Hauptmanifest oder die Wiedergabeliste wurde aktualisiert.
 
 * **Zu implementierende Rückrufe** `onMainManifestUpdated(MediaPlayerItemEvent event)`
 
@@ -166,7 +165,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `NotificationEventListener`
 
-* **** Das bedeutet, dass der Vorgang fehlgeschlagen ist.
+* **Bedeutung** Der Vorgang ist fehlgeschlagen.
 
 * **Zu implementierende Rückrufe** `onNotification(NotificationEvent event)`
 
@@ -174,7 +173,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `PlaybackRangeUpdatedEventListener`
 
-* **** Das bedeutet, dass der Wiedergabefeld aktualisiert wurde.
+* **Bedeutung** Der Wiedergabebereich wurde aktualisiert.
 
 * **Zu implementierende Rückrufe** `onPlaybackRangeUpdated(MediaPlayerItemEvent event)`
 
@@ -182,7 +181,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `PlaybackRatePlayingEventListener`
 
-* **** Das bedeutet, dass eine neue Wiedergaberate auf dem Bildschirm angezeigt wird.
+* **Bedeutung** Auf dem Bildschirm wird eine neue Wiedergaberate angezeigt.
 
 * **Zu implementierende Rückrufe** `onRatePlaying(PlaybackRateEvent event)`
 
@@ -190,7 +189,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `PlaybackRateSelectedEventListener`
 
-* **** Das bedeutet, dass das Ratenattribut von MediaPlayer festgelegt wurde.
+* **Bedeutung** Das Ratenattribut von MediaPlayer wurde festgelegt.
 
 * **Zu implementierende Rückrufe** `onRateSelected(PlaybackRateEvent event)`
 
@@ -198,7 +197,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `PlayStartEventListener`
 
-* **** Das bedeutet, dass die Wiedergabe gestartet wurde.
+* **Bedeutung** Die Wiedergabe wurde gestartet.
 
 * **Zu implementierende Rückrufe** `onPlayStart()`
 
@@ -206,7 +205,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `ProfileChangeEventListener`
 
-* **** Das bedeutet, dass sich das aktuelle Profil des MediaPlayer geändert hat.
+* **Bedeutung** Das aktuelle Profil des MediaPlayer wurde geändert.
 
 * **Zu implementierende Rückrufe** `onProfileChanged(ProfileEvent event)`
 
@@ -214,7 +213,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `ReservationReachedEventListener`
 
-* **** Das bedeutet, dass die Wiedergabe eine Zeitleistenreservierung erreicht hat.
+* **Bedeutung** Die Wiedergabe erreichte eine Timeline-Reservierung.
 
 * **Zu implementierende Rückrufe** `onReservationReached(ReservationEvent event)`
 
@@ -222,7 +221,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `SeekBeginEventListener`
 
-* **** Der Vorgang &quot;Bedeutende Suche&quot;wurde gestartet.
+* **Bedeutung** Der Suchvorgang wurde gestartet.
 
 * **Zu implementierende Rückrufe** `onSeekBegin(SeekEvent event)`
 
@@ -230,7 +229,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `SeekEndEventListener`
 
-* **** Das bedeutet, dass der Suchvorgang abgeschlossen ist.
+* **Bedeutung** Der Suchvorgang wurde abgeschlossen.
 
 * **Zu implementierende Rückrufe** `onSeekEnd(SeekEvent event)`
 
@@ -238,7 +237,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `SeekPositionAdjustedEventListener`
 
-* **** Das bedeutet, die Suchposition wurde aufgrund interner Wiedergaberegeln oder externer Geschäftsregeln angepasst.
+* **Bedeutung** Die Suchposition wurde aufgrund interner Wiedergaberegeln oder externer Geschäftsregeln angepasst.
 
 * **Zu implementierende Rückrufe** `onPositionAdjusted(SeekEvent event)`
 
@@ -246,7 +245,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `SizeAvailableEventListener`
 
-* **** Das bedeutet, dass die Größe des Mediums verfügbar ist.
+* **Bedeutung** Die Größe des Mediums ist verfügbar.
 
 * **Zu implementierende Rückrufe** `onSizeAvailable(SizeAvailableEvent event)`
 
@@ -254,7 +253,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `StatusChangeEventListener`
 
-* **** Das bedeutet, dass sich der MediaPlayer-Status geändert hat.
+* **Bedeutung** Der MediaPlayer-Status hat sich geändert.
 
 * **Zu implementierende Rückrufe** `onStatusChanged(MediaPlayerStatusChangeEvent event)`
 
@@ -262,7 +261,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `TimeChangeEventListener`
 
-* **** Das bedeutet, dass sich die Abspielleiste geändert hat.
+* **Bedeutung** Die Abspielleiste hat sich geändert.
 
 * **Zu implementierende Rückrufe** `onTimeChanged(TimeChangeEvent event)`
 
@@ -270,7 +269,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `TimedEventEventListener`
 
-* **** Das bedeutet, dass der Vorgang mit der für den Vorgang benötigten Zeit abgeschlossen ist.
+* **Bedeutung** Der Vorgang ist mit der für den Vorgang benötigten Zeit abgeschlossen.
 
 * **Zu implementierende Rückrufe** `onTimedEvent(TimedEventEvent event)`
 
@@ -278,7 +277,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `TimelineMetadataAddedInBackgroundEventListener`
 
-* **** Das bedeutet, dass einem Element im Hintergrund neue zeitgesteuerte Metadaten hinzugefügt wurden.
+* **Bedeutung** Ein Element im Hintergrund wurde um neue zeitgesteuerte Metadaten erweitert.
 
 * **Zu implementierende Rückrufe** `onTimedMetadata(TimedMetadataEvent event)`
 
@@ -286,7 +285,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `TimedMetadataEventListener`
 
-* **** Das bedeutet, dass im Medien-Stream neue zeitgesteuerte Metadaten erkannt wurden.
+* **Bedeutung** Im Medien-Stream wurden neue zeitgesteuerte Metadaten erkannt.
 
 * **Zu implementierende Rückrufe** `onTimedMetadata(TimedMetadataEvent event)`
 
@@ -294,7 +293,7 @@ TVSDK benachrichtigt Sie beim Auftreten von Ereignissen, auf die Ihre Anwendung 
 
 `TimelineUpdatedEventListener`
 
-* **** Das bedeutet, dass die Timeline geändert wurde. Anzeigen wurden der Timeline möglicherweise hinzugefügt oder daraus entfernt.
+* **Bedeutung** Die Timeline wurde geändert. Anzeigen wurden der Timeline möglicherweise hinzugefügt oder aus ihr entfernt.
 
 * **Zu implementierende Rückrufe** `onTimelineUpdated(TimelineEvent event)`
 

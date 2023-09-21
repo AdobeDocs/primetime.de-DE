@@ -1,28 +1,26 @@
 ---
 description: Bevor Sie die meisten TVSDK-Player-Methoden verwenden können, muss sich der Player in einem gültigen Status befinden.
-title: Warten auf gültigen Status
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Auf gültigen Status warten
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
 
 ---
 
+# Auf gültigen Status warten {#wait-for-a-valid-state}
 
-# Warten Sie auf einen gültigen Status {#wait-for-a-valid-state}
+Mit TVSDK können Sie das grundlegende Wiedergabeerlebnis für Live- und Video On Demand (VOD) steuern. TVSDK stellt Methoden und Eigenschaften in der Player-Instanz bereit, die Sie zum Konfigurieren der Player-Benutzeroberfläche verwenden können. Bevor Sie die meisten TVSDK-Player-Methoden verwenden können, muss sich der Player in einem gültigen Status befinden.
 
-Mit TVSDK können Sie die grundlegende Wiedergabe von Live- und Video On Demand (VOD) steuern. TVSDK stellt Methoden und Eigenschaften für die Player-Instanz bereit, die Sie zum Konfigurieren der Player-Benutzeroberfläche verwenden können. Bevor Sie die meisten TVSDK-Player-Methoden verwenden können, muss sich der Player in einem gültigen Status befinden.
+Der Player durchläuft verschiedene Status. Wenn darauf gewartet wird, dass der Player den richtigen Status aufweist, wird sichergestellt, dass die Medienressource erfolgreich geladen wurde. Wenn der Player nicht mindestens den erforderlichen Status aufweist, werfen viele Player-Methoden `IllegalStateException`.
 
-Der Player durchläuft verschiedene Status. Wenn Sie darauf warten, dass der Player den richtigen Status hat, wird sichergestellt, dass die Medienressource erfolgreich geladen wurde. Wenn sich der Player nicht in mindestens dem erforderlichen Status befindet, geben viele Player-Methoden throw `IllegalStateException` aus.
-
-Der erforderliche Status wird in der Regel VORBEREITT.
+Der erforderliche Status ist normalerweise VORBEREITT.
 
 1. So bestätigen Sie, dass der Status VORBEREITET ist:
 
-   Wenn der Player initialisiert wird, warten Sie, bis TVSDK den Rückruf für das `MediaPlayerStatusChangeEvent.STATUS_CHANGED`-Ereignis mit VORBEREITENDEM Status aufruft.
+   Wenn der Player initialisiert wird, warten Sie, bis TVSDK den Callback für die `MediaPlayerStatusChangeEvent.STATUS_CHANGED` -Ereignis mit dem Status VORBEREITET .
 
-   So prüfen Sie, ob der aktuelle Status des Objekts `MediaPlayer` mindestens VORBEREITET ist.
+   So prüfen Sie, ob der aktuelle Status der `MediaPlayer` -Objekt zumindest VORBEREITET ist.
 
    ```
    function getstatus():String;

@@ -1,30 +1,28 @@
 ---
 title: Registrierung von Android-Anwendungen
 description: Registrierung von Android-Anwendungen
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '598'
 ht-degree: 0%
 
 ---
 
-
-
 # Registrierung von Android-Anwendungen {#android-application-registration}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Einführung {#intro}
 
-Ab Version 3.0 des Android AccessEnabler SDK ändern wir den Authentifizierungsmechanismus mit den Servern der Adobe. Statt einen öffentlichen Schlüssel und ein geheimes System zum Signieren der Anforderer-ID zu verwenden, führen wir das Konzept einer Software-Anweisungszeichenfolge ein, mit der ein Zugriffstoken abgerufen werden kann, das später für alle Aufrufe verwendet wird, die das SDK an unsere Server sendet. Zusätzlich zu einer Softwareanweisung müssen Sie auch einen Deep-Link für Ihre Anwendung erstellen.
+Ab Version 3.0 des Android AccessEnabler SDK ändern wir den Authentifizierungsmechanismus mit Adobe-Servern. Statt einen öffentlichen Schlüssel und ein geheimes System zum Signieren der Anforderer-ID zu verwenden, führen wir das Konzept einer Software-Anweisungszeichenfolge ein, mit der ein Zugriffstoken abgerufen werden kann, das später für alle Aufrufe verwendet wird, die das SDK an unsere Server sendet. Zusätzlich zu einer Softwareanweisung müssen Sie auch einen Deep-Link für Ihre Anwendung erstellen.
 
 Weitere Informationen finden Sie unter [Dynamische Kundenregistrierung](/help/authentication/dynamic-client-registration.md)
 
 ## Was ist eine Software-Anweisung? {#what}
 
-Eine Software-Anweisung ist ein JWT-Token, das Informationen über Ihre Anwendung enthält. Jede Anwendung sollte über eine eindeutige Softwareanweisung verfügen, die von unseren Servern verwendet wird, um die Anwendung im System der Adobe zu identifizieren. Die Softwareanweisung muss übergeben werden, wenn Sie das AccessEnabler SDK initialisieren. Sie wird zur Registrierung der Anwendung bei Adobe verwendet. Nach der Registrierung erhält das SDK eine Client-ID und ein Client-Geheimnis, die zum Abrufen eines Zugriffstokens verwendet werden. Jeder Aufruf, den das SDK an unsere Server sendet, erfordert ein gültiges Zugriffstoken. Das SDK ist für die Registrierung der Anwendung, den Abruf und die Aktualisierung des Zugriffstokens zuständig.
+Eine Software-Anweisung ist ein JWT-Token, das Informationen über Ihre Anwendung enthält. Jede Applikation sollte über eine eindeutige Softwareanweisung verfügen, die von unseren Servern verwendet wird, um die Applikation im Adobe-System zu identifizieren. Die Software-Anweisung muss übergeben werden, wenn Sie das AccessEnabler SDK initialisieren. Sie wird zur Registrierung der Anwendung bei Adobe verwendet. Nach der Registrierung erhält das SDK eine Client-ID und ein Client-Geheimnis, die zum Abrufen eines Zugriffstokens verwendet werden. Jeder Aufruf, den das SDK an unsere Server sendet, erfordert ein gültiges Zugriffstoken. Das SDK ist für die Registrierung der Anwendung, den Abruf und die Aktualisierung des Zugriffstokens zuständig.
 
 >[!NOTE]
 >
@@ -32,7 +30,7 @@ Eine Software-Anweisung ist ein JWT-Token, das Informationen über Ihre Anwendun
 
 ## Wie erhalte ich eine Software-Anweisung? {#how-to-get-ss}
 
-### Wenn Sie Zugriff auf das TVE-Dashboard der Adobe haben:
+### Wenn Sie Zugriff auf das Adobe TVE-Dashboard haben:
 
 * Öffnen Sie den Browser und navigieren Sie zu [Adobe Primetime TVE-Dashboard](https://console.auth.adobe.com).
 * Navigieren Sie zu `Channels` und wählen Sie Ihren Kanal aus.
@@ -41,12 +39,12 @@ Eine Software-Anweisung ist ein JWT-Token, das Informationen über Ihre Anwendun
 * Geben Sie einen Namen und eine Version für Ihre Anwendung an und wählen Sie die Plattformen aus, auf denen sie verfügbar sein soll. Android in unserem Fall.
 * Geben Sie einen Domänennamen an, indem Sie aus einer Liste von Domänen auswählen, die bereits für Ihren Programmierer konfiguriert sind.
 * Übertragen Sie Ihre Änderungen auf den Server und navigieren Sie dann zurück zur Registerkarte Registrierte Anwendungen des Kanals.
-* Es sollte eine Liste mit allen registrierten Anwendungen angezeigt werden. Wählen Sie die **Download** auf der Anwendung, die Sie gerade erstellt haben. Möglicherweise müssen Sie einige Minuten warten, bis Ihre Software-Anweisung für den Download bereit ist.
+* Es sollte eine Liste mit allen registrierten Anwendungen angezeigt werden. Wählen Sie die **Herunterladen** auf der Anwendung, die Sie gerade erstellt haben. Möglicherweise müssen Sie einige Minuten warten, bis Ihre Software-Anweisung für den Download bereit ist.
 * Eine Textdatei wird heruntergeladen. Verwenden Sie den Inhalt als Ihre Software-Anweisung.
 
-Weitere Informationen finden Sie unter [Dynamisches Client-Registrierungsmanagement](/help/authentication/dynamic-client-registration-management.md)
+Weitere Informationen finden Sie unter [Dynamisches Client-Registrierungs-Management](/help/authentication/dynamic-client-registration-management.md)
 
-### Wenn Sie keinen Zugriff auf das TVE-Dashboard der Adobe haben:
+### Wenn Sie keinen Zugriff auf das Adobe TVE Dashboard haben:
 
 Senden Sie ein Ticket an `tve-support@adobe.com`. Bitte fügen Sie alle notwendigen Informationen wie Kanal, Anwendungsname, Version und Plattformen hinzu. Jemand aus unserem Supportteam wird eine Softwareanweisung für Sie erstellen.
 
@@ -68,4 +66,3 @@ In der Ressourcendatei Ihrer Anwendung `strings.xml` den folgenden Code hinzufü
     <string name="software_statement">softwarestatement value</string>
     <string name="redirect_uri">com.domain_name</string>
 ```
-

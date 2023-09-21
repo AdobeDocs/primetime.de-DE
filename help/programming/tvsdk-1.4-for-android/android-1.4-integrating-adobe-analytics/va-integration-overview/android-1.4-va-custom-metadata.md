@@ -1,22 +1,20 @@
 ---
-description: Mithilfe von Rückruffunktionen können Sie benutzerdefinierte Metadaten zu Inhalts-, Anzeigen- und Kapitelverfolgungsaufrufen bereitstellen.
-title: Unterstützung benutzerdefinierter Metadaten implementieren
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können mithilfe von Callback-Funktionen benutzerdefinierte Metadaten zu Inhalts-, Anzeigen- und Kapitel-Tracking-Aufrufen bereitstellen.
+title: Implementieren der Unterstützung benutzerdefinierter Metadaten
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
 
 ---
 
+# Implementieren der Unterstützung benutzerdefinierter Metadaten {#implement-custom-metadata-support}
 
-# Implementieren der Unterstützung für benutzerdefinierte Metadaten {#implement-custom-metadata-support}
+Sie können mithilfe von Callback-Funktionen benutzerdefinierte Metadaten zu Inhalts-, Anzeigen- und Kapitel-Tracking-Aufrufen bereitstellen.
 
-Mithilfe von Rückruffunktionen können Sie benutzerdefinierte Metadaten zu Inhalts-, Anzeigen- und Kapitelverfolgungsaufrufen bereitstellen.
+Callback-Funktionen werden kurz vor dem Tracking-Aufruf aufgerufen, sodass Ihre Anwendung die für eine Anzeige oder ein Kapitel spezifischen Metadaten anhängen kann.
 
-Rückruffunktionen werden unmittelbar vor dem Rückverfolgungsaufruf aufgerufen, sodass Ihre Anwendung die spezifischen Metadaten zu einer Anzeige oder einem Kapitel hinzufügen kann.
-
-Rufen Sie Rückruffunktionen für Inhalte, Anzeigen und Kapitel auf.
+Rufen Sie Callback-Funktionen für Inhalte, Anzeigen und Kapitel auf.
 
 ```java
 // Video Metadata Block 
@@ -55,4 +53,3 @@ vaMetadata.setChapterMetadataBlock(new VideoAnalyticsMetadata.ChapterMetadataBlo
     } 
 });
 ```
-

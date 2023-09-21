@@ -1,18 +1,16 @@
 ---
-title: Verarbeitung von Lizenzanfragefehlern
-description: Verarbeitung von Lizenzanfragefehlern
+title: Umgang mit Fehlern bei Lizenzanfragen
+description: Umgang mit Fehlern bei Lizenzanfragen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
+# Umgang mit Fehlern bei Lizenzanfragen {#license-request-error-handling}
 
-# Verarbeitung von Lizenzanforderungsfehlern {#license-request-error-handling}
+Wenn beim Analysieren von Anforderungen ein Fehler auftritt, wird eine `HandlerParsingException` auftritt. Diese Ausnahme umfasst Fehlerinformationen, die an den Client zurückgegeben werden. Wenn Sie die Fehlerinformationen abrufen müssen, müssen Sie `HandlerParsingException.getErrorData()`. Tritt während der Lizenzerstellung ein Fehler auf, weil die DRM-Richtlinienanforderungen nicht erfüllt wurden, wird ein `PolicyEvaluationException` auftritt. Diese Ausnahme umfasst auch `ErrorData` an den Client zurückgegeben.
 
-Tritt bei der Anforderungsanalyse ein Fehler auf, tritt ein `HandlerParsingException` auf. Diese Ausnahme enthält Fehlerinformationen, die an den Client zurückgegeben werden. Wenn Sie die Fehlerinformationen abrufen müssen, müssen Sie `HandlerParsingException.getErrorData()` aufrufen. Tritt während der Generierung einer Lizenz aufgrund von DRM-Richtlinienanforderungen, die nicht erfüllt wurden, ein Fehler auf, tritt ein `PolicyEvaluationException` auf. Diese Ausnahme umfasst auch `ErrorData`, die an den Client zurückgegeben werden.
-
-Weitere Informationen dazu, wie DRM-Richtlinien während der Lizenzerstellung bewertet werden, finden Sie in der API-Dokumentation für `LicenseRequestMessage.generateLicense()`.
+Siehe API-Dokumentation für `LicenseRequestMessage.generateLicense()` für Details dazu, wie DRM-Richtlinien bei der Lizenzerstellung bewertet werden.

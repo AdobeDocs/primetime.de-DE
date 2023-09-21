@@ -1,23 +1,22 @@
 ---
 title: Weiterleitungs-Temp-Pass
 description: Weiterleitungs-Temp-Pass
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1523'
 ht-degree: 0%
 
 ---
 
-
 # Weiterleitungs-Temp-Pass {#promotional-temp-pass}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Funktionszusammenfassung {#feature-summary}
 
-Der temporäre Weiterleitungs-Pass ermöglicht es Programmierern, Benutzern ohne Konto-Anmeldeinformationen mit einem MVPD temporären Zugriff auf ihren geschützten Inhalt zu gewähren.
+Mit dem temporären Weiterleitungs-Pass können Programmierer Benutzern, die keine Kontoanmeldeinformationen mit einem MVPD haben, temporären Zugriff auf ihren geschützten Inhalt anbieten.
 
 Der temporäre Weiterleitungs-Pass ist für die Durchführung von Werbekampagnen konzipiert, bei denen ein Benutzer nach der Bereitstellung gültiger Identifizierungsinformationen (z. B. E-Mail-Adresse) an den Programmierer eine **vordefinierte Anzahl verschiedener VOD-Titel für einen vordefinierten Zeitraum**.
 
@@ -37,7 +36,7 @@ Sobald die vordefinierte Höchstanzahl von VOD-Titeln oder der vordefinierte Zei
 
 | Temporärer Pass | Weiterleitungs-Temp-Pass |
 |----------------------------------|----------------------------------------------------------------------------------------|
-| Zugang zu Inhalten <ul><li>zeitbasiert</li></ul> | Zugang zu Inhalten <ul><li>zeitbasiert</li><li>basierend auf der Anzahl der Ressourcen</li></ul> |
+| Inhaltszugriff <ul><li>zeitbasiert</li></ul> | Inhaltszugriff <ul><li>zeitbasiert</li><li>basierend auf der Anzahl der Ressourcen</li></ul> |
 | Zugriffssicherheit basierend auf <ul><li>Geräte-ID</li></ul> | Sicherheit basierend auf <ul><li>Geräte-ID</li><li>Hash über die bereitgestellten Benutzerkennungsinformationen (z. B. E-Mail)</li></ul> |
 | Client-Fehler-API verfügbar | Client-Fehler-API verfügbar |
 | Zurücksetzen/Bereinigen verfügbar | Zurücksetzen/Bereinigen verfügbar |
@@ -46,7 +45,7 @@ Sobald die vordefinierte Höchstanzahl von VOD-Titeln oder der vordefinierte Zei
 
 Diese Funktion ermöglicht es Benutzern, von einem bestimmten Gerät (Telefon und Tablet) aus auf Werbeinhalte zuzugreifen, nachdem sie eindeutige Informationen wie die E-Mail-Adresse in der Anwendung des Programmierers bereitgestellt haben.
 
-Der Programmierer stellt einen Hash über die PII des Benutzers in den Authentifizierungs- und Autorisierungs-APIs bereit. Dieser Hash wird zusammen mit der Geräte-ID zum Generieren eines eindeutigen Schlüssels verwendet, um den Benutzer und das Gerät zu identifizieren.
+Der Programmierer stellt einen Hash über die PII des Benutzers in den Authentifizierungs- und Autorisierungs-APIs bereit. Dieser Hash wird zusammen mit der Geräte-ID verwendet, um einen eindeutigen Schlüssel zur Identifizierung des Benutzers und des Geräts zu generieren.
 
 Basierend auf der Geräte-ID und den vom Benutzer angegebenen Informationen und entsprechend der unten stehenden Logik bestimmt die Adobe Primetime-Authentifizierung, ob sich der Benutzer in einer neuen oder in einer vorhandenen Testphase befindet:
 
@@ -56,7 +55,7 @@ Basierend auf der Geräte-ID und den vom Benutzer angegebenen Informationen und 
 * vorhandener Hash über vom Benutzer bereitgestellte Informationen (z. B. E-Mail), vorhandene Geräte-ID => vorhandene Testversion
 
 >[!NOTE]
->Die Validierung und das Hashing der vom Benutzer bereitgestellten Informationen werden vom Programmierer und nicht von der Adobe verarbeitet.
+>Die Validierung und das Hashing der vom Benutzer bereitgestellten Informationen wird vom Programmierer und nicht von Adobe durchgeführt.
 
 **Die Funktion zum Weiterleiten eines Vorlagenpasses kann auf der Grundlage der folgenden Eigenschaften konfiguriert werden:**
 
@@ -66,11 +65,11 @@ Basierend auf der Geräte-ID und den vom Benutzer angegebenen Informationen und 
 
 ### Benutzermetadaten {#user-metadata}
 
-Um die Umsetzung der Anwendung des Programmierers zu erleichtern, gehen Sie wie folgt vor: **Benutzermetadaten werden angezeigt** im Vorlagenübergang für Werbeaktionen mit entsprechenden Schlüsseln (zur Aktivierung der Schlüssel wenden Sie sich an tve-support@adobe.com):
+Um die Umsetzung der Programmanwendung zu erleichtern, gehen Sie wie folgt vor: **Benutzermetadaten werden angezeigt** im Vorlagenübergang für Werbeaktionen mit entsprechenden Schlüsseln (zur Aktivierung der Schlüssel wenden Sie sich an tve-support@adobe.com):
 
-* **rest_resources**: die Anzahl der verbleibenden Ressourcen, zu deren Nutzung der aktuelle Benutzer berechtigt ist
+* **rest_resources**: die Anzahl der verbleibenden Ressourcen, die der aktuelle Benutzer verbrauchen darf.
 * **used_assets**: die Liste der Ressourcen, die der aktuelle Benutzer bereits verwendet hat
-* **expiration_date**: das aktuelle Ablaufdatum des Benutzers
+* **expiration_date**: das Ablaufdatum des aktuellen Benutzers
 
 ### Wie wird die Anzeigezeit berechnet? {#compute-viewing-time}
 
@@ -88,7 +87,7 @@ Bei temporären Weiterleitungsströmen kommunizieren Authentifizierung und Autor
 
 Wenn ein Preflight- oder eine Vorabautorisierungsanfrage für einen Promotional Temp Pass MVPD gestellt wird, enthält die entsprechende zurückgegebene Preflight-Antwort die gesamte Liste der Ressourcen aus der Preflight-Anfrage als Preflight-Erfolg.
 
-Die Logik dahinter ist: Die Autorisierungsbedingungen für den temporären Promotionpass basieren auf der Zeitbeschränkung und der Anzahl der Ressourcen und nicht auf bestimmten Ressourcen. Insbesondere werden die aufgerufenen Ressourcen autorisiert, solange die Zeitbeschränkung eingehalten und die Ressourcenbegrenzung nicht überschritten wird.
+Die Logik dahinter ist: Die Autorisierungsbedingungen für den temporären Weiterleitungs-Pass basieren auf der Zeit- und Ressourcennummerbegrenzung und nicht auf bestimmten Ressourcen. Insbesondere werden die aufgerufenen Ressourcen autorisiert, solange die Zeitbeschränkung eingehalten und die Ressourcenbegrenzung nicht überschritten wird.
 
 ### SSO {#sso}
 
@@ -102,9 +101,9 @@ Alle Token auf einem Gerät werden beim Abmelden gelöscht. Daher sollte der Wec
 
 ![Flussdiagramm für den temporären Weiterlauf der Promotion](assets/promo-temp-pass-flow.png)
 
-*Abbildung: Fluss zum temporären Weiterleiten von Promotions*
+*Abbildung: Fluss der Weiterleitungstermine*
 
-## Implementieren des vorübergehenden Weiterleitungsprozesses {#impl-promo-tempass}
+## Implementieren des Weiterleitungs-Temp-Übergangs {#impl-promo-tempass}
 
 Für den vorübergehenden Weiterlauf der Werbeaktion sind die folgenden clientseitigen Funktionen erforderlich:
 
@@ -114,7 +113,7 @@ Für den vorübergehenden Weiterlauf der Werbeaktion sind die folgenden clientse
 
 >[!IMPORTANT]
 >Authentifizierung erzwingen ist nur unter iOS und Android möglich.
->Die Primetime-Authentifizierung verfügt nicht über einen integrierten Mechanismus, um das kostenlose Streaming nach Ablauf der X Minuten zu stoppen. Die Primetime-Authentifizierung wird eingestellt **Autorisierung** und **Kurzmedien** Token, sobald der Benutzer die kostenlosen Y-Ressourcen verbraucht. Es ist Sache der Programmierer, den Zugriff zu beschränken, sobald der Promotiontempass abläuft.
+>Die Primetime-Authentifizierung verfügt nicht über einen integrierten Mechanismus, um das kostenlose Streaming nach Ablauf der X Minuten zu stoppen. Die Primetime-Authentifizierung wird eingestellt **Autorisierung** und **Kurzmedien** Token, sobald der Benutzer die kostenlosen Y-Ressourcen verbraucht. Es ist Sache der Programmierer, den Zugriff einzuschränken, sobald der Promotiontempass abläuft.
 
 ## Sicherheit {#security}
 
@@ -133,7 +132,7 @@ Bestimmte Geschäftsregeln erfordern eine regelmäßige Bereinigung von &quot;Pr
 
 | `DELETE https://mgmt.auth.adobe.com/reset-tempass/v2/reset` |
 |----|
-| <ul><li>Protokoll: **https**</li><li>Host:<ul><li>Version: **mgmt.auth.adobe.com**</li><li>Prequal: **mgmt-prequal.auth.adobe.com**</li></ul></li><li>Pfad: **/reset-tempass/v2/reset**</li><li>Abfrageparameter: **device_id=all&amp;requestor_id=THE_REQUESTOR_ID&amp;mvpd_id=THE_TEMPASS_MVPD_ID**</li><li>Kopfzeilen: ApiKey: **1232293681726481**</li> <li>Antwort:<ul><li>Erfolg: **HTTP 204**</li><li>Fehler: **HTTP 400** bei falschen Anforderungen, **HTTP 401** wenn ApiKey nicht angegeben ist, **HTTP 403** wenn ApiKey ungültig ist</li></ul></li></ul> |
+| <ul><li>Protokoll: **https**</li><li>Host:<ul><li>Version: **mgmt.auth.adobe.com**</li><li>Prequal: **mgmt-prequal.auth.adobe.com**</li></ul></li><li>Pfad: **/reset-tempass/v2/reset**</li><li>Abfrageparameter: **device_id=all&amp;requestor_id=THE_REQUESTOR_ID&amp;mvpd_id=THE_TEMPASS_MVPD_ID**</li><li>headers: ApiKey: **1232293681726481**</li> <li>Antwort:<ul><li>Erfolg: **HTTP 204**</li><li>Fehler: **HTTP 400** bei falschen Anforderungen, **HTTP 401** wenn ApiKey nicht angegeben ist, **HTTP 403** wenn ApiKey ungültig ist</li></ul></li></ul> |
 
 Zusätzlich zu den Anforderungen zum Bereinigen des Temp-Übergangs verwendet der Promotional Temp Pass den Hash über die Benutzer-ID-Informationen, die als **generic_data** zur Authentifizierung und Autorisierung für die Bereinigung.
 
@@ -161,7 +160,7 @@ In diesem Abschnitt werden die Einschränkungen beschrieben, die für die aktuel
 
 **Smart-Geräte ohne eindeutige Geräte-ID**
 
-Nicht alle Apps mit intelligenten Geräten können eine eindeutige Geräte-ID bereitstellen. Wenn keine vorhanden ist, kann die Adobe Primetime-Authentifizierung die vom Adobe Registration Code Service generierte UUID als Unique Device ID verwenden. Das bedeutet, dass bei der Abmeldung des Benutzers die Authentifizierungs- und Autorisierungstoken gelöscht werden. Sobald der Benutzer versucht, sich erneut zu authentifizieren, kann er dieses Mal mit verschiedenen Benutzerinformationen (z. B. E-Mail) erneut autorisieren. Adobe empfiehlt, einen UI-Fluss hinzuzufügen, der es einem Benutzer nicht erlaubt, das System zu &quot;täuschen&quot;und Logik hinzuzufügen, um zu bestimmen, ob es sich um einen neuen Benutzer handelt, der eine Testversion oder eine bestehende Testversion anfordert.
+Nicht alle Apps mit intelligenten Geräten können eine eindeutige Geräte-ID bereitstellen. Wenn keine vorhanden ist, kann die Adobe Primetime-Authentifizierung die vom Adobe-Registrierungs-Code-Dienst generierte UUID als eindeutige Geräte-ID verwenden. Das bedeutet, dass bei der Abmeldung des Benutzers die Authentifizierungs- und Autorisierungstoken gelöscht werden. Sobald der Benutzer versucht, sich erneut zu authentifizieren, kann er dieses Mal mit verschiedenen Benutzerinformationen (z. B. E-Mail) erneut autorisieren. Adobe empfiehlt, einen UI-Fluss hinzuzufügen, der es einem Benutzer nicht erlaubt, das System zu &quot;täuschen&quot;und Logik hinzuzufügen, um zu bestimmen, ob es sich um einen neuen Benutzer handelt, der eine Testphase oder eine bestehende Testphase anfordert.
 
 **Zurücksetzen/Bereinigen des Temp-Bestands**
 

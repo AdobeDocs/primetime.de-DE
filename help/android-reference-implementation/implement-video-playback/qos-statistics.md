@@ -1,56 +1,54 @@
 ---
-description: Sie können Ihren Player so einrichten, dass er die Wiedergabe- und Gerätestatistiken des QoSProviders so oft wie nötig liest.
+description: Sie können Ihren Player so einrichten, dass die Wiedergabe- und Gerätestatistiken des QoSProviders beliebig oft gelesen werden.
 title: Anzeigen von QoS-Wiedergabe und Gerätestatistiken
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
+# Anzeigen von QoS-Wiedergabe und Gerätestatistiken {#display-qos-playback-and-device-statistics}
 
-# Anzeigen der QoS-Wiedergabe und Gerätestatistik {#display-qos-playback-and-device-statistics}
+Sie können Ihren Player so einrichten, dass die Wiedergabe- und Gerätestatistiken des QoSProviders beliebig oft gelesen werden.
 
-Sie können Ihren Player so einrichten, dass er die Wiedergabe- und Gerätestatistiken des QoSProviders so oft wie nötig liest.
+Die `QoSProvider` -Klasse stellt verschiedene Statistiken bereit, darunter die Framerate, die Profil-Bitrate, die Gesamtzeit, die mit der Pufferung verbracht wurde, die Anzahl der Pufferversuche, die Zeit, die zum Abrufen des ersten Bytes vom ersten Videofragment erforderlich war, die Zeit, die zum Rendern des ersten Frames benötigt wurde, die derzeit gepufferte Länge und die Pufferzeit.
 
-Die `QoSProvider`-Klasse stellt verschiedene Statistiken bereit, darunter die Bildrate, die Bitrate des Profils, die Gesamtdauer der Pufferung, die Anzahl der Pufferung-Versuche, die Zeit bis zum Abrufen des ersten Bytes aus dem ersten Videofragment, die Zeit bis zum Rendern des ersten Bilds, die aktuell gepufferte Länge und die Pufferzeit.
-
-Die Referenz-Implementierung stellt eine `QoSManager`-Klasse bereit, mit der Sie die Anzeige der QoS-Überlagerung aktivieren können. Sie können die QoS-Sichtbarkeit auch in der Benutzeroberfläche &quot;Einstellungen&quot;aktivieren:
+Die Referenzimplementierung bietet eine `QoSManager` -Klasse, in der Sie die Anzeige der QoS-Überlagerung aktivieren können. Sie können die QoS-Sichtbarkeit auch in der Benutzeroberfläche &quot;Einstellungen&quot;aktivieren:
 
 ![](assets/qos-configuration.jpg)
 
-Die `QoSManager` verfolgt QoS-Statistiken, indem Geräteinformationen abgerufen, an den Medienplayer angehängt und mit den neuesten Servicequalitätsinformationen aktualisiert werden.
+Die `QoSManager` verfolgt QoS-Statistiken, indem Geräteinformationen abgerufen, an den Medienplayer angehängt und mit den neuesten QoS-Informationen aktualisiert werden.
 
-**QoS-Statistiken-Berichte aktivieren oder deaktivieren**
+**Aktivieren oder Deaktivieren der Berichterstellung für QoS-Statistiken**
 
-1. Erstellen Sie einen QoManager oder aktivieren Sie den QoS-Berichte mit ManagerFactory.
+1. Erstellen Sie einen QoManager oder aktivieren Sie die QoS-Berichterstellung mithilfe von ManagerFactory.
 
    * So erstellen Sie einen QosManager:
-      * Diese Anwendung muss die Funktion für den Arbeitsablauf für Anzeigen verwenden
+      * Diese Anwendung muss die Werbe-Workflow-Funktion verwenden
 
    QoSManager qosManager = new QosManagerOn();
 
-   * So verwenden Sie eine ManagerFactory, um die Anzeige der QoS-Statistiken zu aktivieren:
+   * So verwenden Sie eine ManagerFactory, um die Anzeige von QoS-Statistiken zu ermöglichen:
 
    qosManager = ManagerFactory.getQosManager(
    <b>true</b>, config, mediaPlayer);
 
    >[!NOTE]
    >
-   >Wenn Sie den booleschen Wert in `false` ändern, wird der QoS-Berichte deaktiviert.
+   >Ändern des booleschen Werts in `false` deaktiviert QoS-Berichte.
 
-2. hinzufügen Ereignis-Listener:
+2. Hinzufügen von Ereignis-Listenern:
 
    `qosManager.addEventListener(qosManagerEventListener);`
 
-3. Erstellen Sie den QoS-Anbieter und fügen Sie ihn dem Kontext der Player-Aktivität hinzu:
+3. Erstellen Sie den QoS-Provider und hängen Sie ihn an den Kontext der Player-Aktivität an:
 
    `qosManager.createQOSProvider(getActivity());`
 
    >[!NOTE]
    >
-   >Wenn die Player-Aktivität zerstört werden soll, stellen Sie sicher, dass Sie [qosManager.deleteQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider()) aufrufen, um den QOS-Provider durch Abtrennen vom Medienplayer zu bereinigen.
+   >Wenn die Player-Aktivität zerstört werden soll, rufen Sie [qosManager.killQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider()) , um den QOS-Provider zu bereinigen, indem er ihn vom Medienplayer trennt.
 
 **Verwandte API-Dokumentation**
 

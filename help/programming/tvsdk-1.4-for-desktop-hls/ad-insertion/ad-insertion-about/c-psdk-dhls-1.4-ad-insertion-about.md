@@ -1,24 +1,22 @@
 ---
-description: Mit der Anzeigeneinfügung werden Anzeigen für Video-on-Demand (VOD), für Live-Streaming und für lineares Streaming mit Anzeigenverfolgung und Anzeigenwiedergabe aufgelöst. TVSDK stellt die erforderlichen Anforderungen an den Anzeigen-Server, empfängt Informationen über Anzeigen für den angegebenen Inhalt und platziert die Anzeigen in den Inhalten in Phasen.
+description: Durch die Anzeigeneinfügung werden Anzeigen für Video-On-Demand (VOD) , für Live-Streaming und für lineares Streaming mit Anzeigen-Tracking und Anzeigenwiedergabe aufgelöst. TVSDK sendet die erforderlichen Anfragen an den Anzeigen-Server, empfängt Informationen über Anzeigen für den angegebenen Inhalt und platziert die Anzeigen in Phasen.
 title: Anzeigen einfügen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#inserting-ads-overview}
 
-Mit der Anzeigeneinfügung werden Anzeigen für Video-on-Demand (VOD), für Live-Streaming und für lineares Streaming mit Anzeigenverfolgung und Anzeigenwiedergabe aufgelöst. TVSDK stellt die erforderlichen Anforderungen an den Anzeigen-Server, empfängt Informationen über Anzeigen für den angegebenen Inhalt und platziert die Anzeigen in den Inhalten in Phasen.
+Durch die Anzeigeneinfügung werden Anzeigen für Video-On-Demand (VOD) , für Live-Streaming und für lineares Streaming mit Anzeigen-Tracking und Anzeigenwiedergabe aufgelöst. TVSDK sendet die erforderlichen Anfragen an den Anzeigen-Server, empfängt Informationen über Anzeigen für den angegebenen Inhalt und platziert die Anzeigen in Phasen.
 
-Ein *`ad break`* enthält eine oder mehrere Anzeigen, die nacheinander abgespielt werden. TVSDK fügt Anzeigen in den Hauptinhalt als Mitglieder einer oder mehrerer Werbeunterbrechungen ein.
+Ein *`ad break`* enthält eine oder mehrere Anzeigen, die nacheinander abgespielt werden. TVSDK fügt Anzeigen im Hauptinhalt als Mitglieder einer oder mehrerer Werbeunterbrechungen ein.
 
-## Pre-Roll-Anzeigen {#disable-preroll-ads} deaktivieren
+## Pre-Roll-Anzeigen deaktivieren {#disable-preroll-ads}
 
-Um Pre-Roll zu deaktivieren, ändern Sie die standardmäßigen Opportunitätserzeuger, um den Pre-Roll-Aufruf nicht vorzunehmen. Die standardmäßigen Opportunitätsgeneratoren sind:
+Um die Pre-Roll-Funktion zu deaktivieren, ändern Sie die standardmäßigen Opportunity-Generatoren, sodass der Pre-Roll-Aufruf nicht erfolgt. Die standardmäßigen Opportunity-Generatoren sind:
 
 ```
 @inheritDoc 
@@ -31,7 +29,7 @@ return result;
 }
 ```
 
-Um die Pre-Roll-Funktion für Live-Streams zu deaktivieren, ändern Sie die obige Option, sodass nur SpliceOutOpportunityGenerator enthalten ist:
+Um die Pre-Roll-Funktion für Live-Streams zu deaktivieren, ändern Sie die obigen Parameter so, dass nur der SpliceOutOpportunityGenerator enthalten ist:
 
 ```
 @inheritDoc 

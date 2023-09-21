@@ -1,20 +1,18 @@
 ---
-description: Browser TVSDK sendet Servicequalitäts-Ereignis (QoS), um Ihre Anwendung über Ereignis zu informieren, die die Berechnung der Servicestatistik beeinflussen könnten, wie z.B. Pufferung und Suche von Ereignissen.
-title: QoS-Ereignis
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Browser TVSDK sendet Servicequalitätsereignisse (QoS), um Ihre Anwendung über Ereignisse zu informieren, die die Berechnung von QoS-Statistiken beeinflussen könnten, z. B. Pufferungs- und Suchereignisse.
+title: QoS-Ereignisse
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '105'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# QoS-Ereignisse{#qos-events}
 
-# QoS-Ereignis{#qos-events}
+Browser TVSDK sendet Servicequalitätsereignisse (QoS), um Ihre Anwendung über Ereignisse zu informieren, die die Berechnung von QoS-Statistiken beeinflussen könnten, z. B. Pufferungs- und Suchereignisse.
 
-Browser TVSDK sendet Servicequalitäts-Ereignis (QoS), um Ihre Anwendung über Ereignis zu informieren, die die Berechnung der Servicestatistik beeinflussen könnten, wie z.B. Pufferung und Suche von Ereignissen.
-
-Um über alle QoS-bezogenen Ereignis benachrichtigt zu werden, erstellen Sie eine Instanz von `AdobePSDK.QOSProvider` und fügen Sie die MediaPlayer-Instanz an diese `QOSProvider`-Instanz an:
+Um über alle QoS-bezogenen Ereignisse benachrichtigt zu werden, erstellen Sie eine Instanz von `AdobePSDK.QOSProvider` und hängen Sie die MediaPlayer-Instanz an diese an `QOSProvider` instance:
 
 ```js
 var qosProvider = new AdobePSDK.QOSProvider(); 
@@ -22,7 +20,7 @@ var qosProvider = new AdobePSDK.QOSProvider();
 qosProvider.attachMediaPlayer(player);
 ```
 
-Konfigurieren Sie einen Timer in Ihrer Anwendung, um die `playbackInformation`-Eigenschaft der `qosProvider`-Instanz regelmäßig zu überprüfen. Die `playbackInformation`-Eigenschaft stellt eine Momentaufnahme der aktuellen Wiedergabestatistik bereit. Beispiel:
+Konfigurieren Sie einen Timer in Ihrer Anwendung, um regelmäßig die `playbackInformation` -Eigenschaft der `qosProvider` -Instanz. Die `playbackInformation` -Eigenschaft liefert eine Momentaufnahme der aktuellen Wiedergabestatistiken. Beispiel:
 
 ```js
 var startTimer = function () { 
@@ -34,4 +32,3 @@ var startTimer = function () {
 } 
 window.setTimeout(startTimer, 500) 
 ```
-

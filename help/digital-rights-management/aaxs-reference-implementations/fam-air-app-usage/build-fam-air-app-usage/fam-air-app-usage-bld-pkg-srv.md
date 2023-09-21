@@ -2,15 +2,13 @@
 title: Erstellen des Packager-Servers
 description: Erstellen des Packager-Servers
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '28'
 ht-degree: 0%
 
 ---
 
-
 # Erstellen des Packager-Servers {#building-the-packager-server}
 
-Wenn Sie den Quellcode ändern möchten, lesen Sie die Anweisungen zum Kompilieren der Referenz-Implementierung.
+Informationen zum Ändern des Quellcodes finden Sie in den Anweisungen zum Kompilieren der Referenzimplementierung.

@@ -1,31 +1,29 @@
 ---
 description: Nachdem eine MediaPlayer-Ansicht zum Abspielen von Videos verwendet wurde, können Sie sie ausblenden und erneut anzeigen, indem Sie eine TVSDK-Methode oder manuell verwenden.
-title: Ansichten ausblenden
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Ausblenden einer Videoansicht
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '156'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
-# Eine Video-Ansicht{#hide-a-video-view} ausblenden
+# Ausblenden einer Videoansicht{#hide-a-video-view}
 
 Nachdem eine MediaPlayer-Ansicht zum Abspielen von Videos verwendet wurde, können Sie sie ausblenden und erneut anzeigen, indem Sie eine TVSDK-Methode oder manuell verwenden.
 
 Sie müssen ein Video anhalten, bevor Sie es löschen oder von der Anzeige verschieben.
-* Option 1: Löschen Sie den Videobild mit `MediaPlayer.clearVideo` &#x200B; und ersetzen Sie ihn später.
+* Option 1: Löschen Sie den Videobild mit `MediaPlayer.clearVideo`&#x200B; und ersetzen Sie den Rahmen später.
    * Halten Sie das Video an, das Sie ausblenden möchten.
-   * Entfernen Sie den angezeigten Videobild, indem Sie `MediaPlayer.clearVideo` aufrufen.
-   * Rufen Sie `replaceCurrentResource` oder `replaceCurrentItem` auf, um das `MediaPlayer` so zurückzusetzen, dass es erneut wiedergegeben werden kann.
-* Option 2: Verschieben Sie die `MediaPlayer`-Ansicht vom Bildschirm und verschieben Sie sie später zurück, ohne sie ersetzen zu müssen.
+   * Entfernen Sie den angezeigten Video-Frame, indem Sie `MediaPlayer.clearVideo`.
+   * So setzen Sie die `MediaPlayer` , damit es erneut wiedergegeben werden kann, rufen Sie `replaceCurrentResource` oder `replaceCurrentItem`.
+* Option 2: Verschieben Sie die `MediaPlayer` Sie können den Bildschirm anzeigen und ihn später wieder verschieben, ohne ihn ersetzen zu müssen.
    * Halten Sie das Video an, das Sie ausblenden möchten.
    * Verschieben Sie die Ansicht aus der Bühne. Beispiel:
 
-      ```
-      view.x = -300; 
-      view.y = -300;
-      ```
+     ```
+     view.x = -300; 
+     view.y = -300;
+     ```
 
-   * Um das Video erneut anzuzeigen, verschieben Sie die Ansicht zurück auf die Bühne.
+   * Um das Video erneut anzuzeigen, verschieben Sie die Ansicht zurück in die Bühne.

@@ -1,44 +1,39 @@
 ---
 description: TVSDK unterstützt das programmatische Löschen und Ersetzen von Anzeigeninhalten in VOD-Streams.
-title: Benutzerdefinierte Zeitraumoperationen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Benutzerdefinierte Zeitbereichsoperationen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
 
 ---
 
-
-# Benutzerdefinierte Zeitraumoperationen {#custom-time-range-operations}
+# Benutzerdefinierte Zeitbereichsoperationen {#custom-time-range-operations}
 
 TVSDK unterstützt das programmatische Löschen und Ersetzen von Anzeigeninhalten in VOD-Streams.
 
-Die Funktion zum Löschen und Ersetzen erweitert die Funktion für benutzerdefinierte Anzeigenmarken. Benutzerspezifische Anzeigenmarkierungen markieren Abschnitte des Hauptinhalts als inhaltliche Zeiträume für Anzeigen. Neben der Kennzeichnung dieser Zeiträume können Sie auch Zeitbereiche löschen und ersetzen.
+Die Funktion zum Löschen und Ersetzen erweitert die Funktion für benutzerdefinierte Anzeigenmarkierungen. Benutzerdefinierte Anzeigenmarkierungen markieren Abschnitte des Hauptinhalts als anzeigenbezogene Inhaltszeiträume. Neben der Kennzeichnung dieser Zeiträume können Sie auch Zeitbereiche löschen und ersetzen.
 
-Das Löschen und Ersetzen von Anzeigen wird mit `TimeRange`-Elementen implementiert, die verschiedene Arten von Zeitbereichen in einem VOD-Stream identifizieren: markieren, löschen und ersetzen. Für jeden dieser benutzerdefinierten Zeitraumtypen können Sie entsprechende Vorgänge durchführen, einschließlich Löschen und Ersetzen von Anzeigeninhalten.
+Das Löschen und Ersetzen von Anzeigen wird mit implementiert. `TimeRange` Elemente, die verschiedene Arten von Zeitbereichen in einem VOD-Stream identifizieren: markieren, löschen und ersetzen. Für jeden dieser benutzerdefinierten Zeitbereichstypen können Sie die entsprechenden Vorgänge ausführen, einschließlich Löschen und Ersetzen von Anzeigeninhalten.
 
-Für das Löschen und Ersetzen von Anzeigen verwendet TVSDK die folgenden *benutzerdefinierten Zeitraumoperationen*:
+Für das Löschen und Ersetzen von Anzeigen verwendet TVSDK Folgendes *benutzerdefinierter Zeitbereichsvorgang* Modi:
 
 * **MARK**
-(Diese wurden in früheren Versionen von TVSDK als benutzerdefinierte Anzeigenmarken bezeichnet). Sie markieren die Start- und Endzeiten für Anzeigen, die bereits in den VOD-Stream platziert wurden. Wenn im Stream Zeitraummarkierungen vom Typ MARK vorhanden sind, wird eine anfängliche Platzierung von 
-`Mode.MARK` vom  `CustomAdMarkersContentResolver`. Es werden keine Anzeigen eingefügt.
+(Diese wurden in früheren Versionen von TVSDK als benutzerdefinierte Anzeigenmarkierungen bezeichnet.) Sie markieren die Start- und Endzeiten für Anzeigen, die bereits in den VOD-Stream platziert wurden. Wenn Zeitbereichsmarkierungen des Typs MARK im Stream vorhanden sind, wird eine erste Platzierung von `Mode.MARK` wird von der `CustomAdMarkersContentResolver`. Es werden keine Anzeigen eingefügt.
 
-* ****
-DELETEF- oder DELETE-Zeitbereiche, eine 
-`placementInformation` vom Typ  `Mode.DELETE` wird von der entsprechenden Seite erstellt und aufgelöst  `DeleteContentResolver`. `ContentRemoval` ist eine neue Version,  `timelineOperation` die die Bereiche definiert, die aus der Zeitleiste entfernt werden sollen. TVSDK verwendet `removeByLocalTime` aus der Adobe Video Engine (AVE) API, um diesen Vorgang zu erleichtern. Wenn es DELETE- und Adobe Primetime-Anzeigenentscheidungsmetadaten (früher Auditude genannt) gibt, werden die Bereiche zuerst gelöscht, dann löst `AuditudeResolver` Anzeigen mit dem normalen Adobe Primetime-Anzeigenbestimmungsarbeitsablauf.
+* **DELETE**
+Für DELETE-Zeiträume wird eine erste `placementInformation` des Typs `Mode.DELETE` erstellt und aufgelöst durch die entsprechende `DeleteContentResolver`. `ContentRemoval` ist neu `timelineOperation` definiert die Bereiche, die aus der Timeline entfernt werden sollen. TVSDK verwendet `removeByLocalTime` über die Adobe Video Engine (AVE)-API, um diesen Vorgang zu erleichtern. Wenn es DELETE- und Adobe Primetime-Anzeigenentscheidungen (ehemals Auditude)-Metadaten gibt, werden die Bereiche zuerst gelöscht, dann wird die `AuditudeResolver` löst Anzeigen mithilfe des normalen Adobe Primetime-Arbeitsablaufs für Anzeigenentscheidungen auf.
 
-* **REPLACEF-**
-oder REPLACE-Zeitbereiche, zwei anfängliche 
-`placementInformations` erstellt werden, eins  `Mode.DELETE` und eins  `Mode.REPLACE`. Mit `DeleteContentResolver` werden die Zeitbereiche zuerst gelöscht und mit `AuditudeResolver` werden Anzeigen des angegebenen `replaceDuration` in die Zeitleiste eingefügt. Wenn kein `replaceDuration` angegeben ist, bestimmt der Server, was eingefügt werden soll.
+* **ERSETZEN**
+Für ERSETZUNGS-Zeiträume werden zwei anfängliche `placementInformations` erstellt werden, eine `Mode.DELETE` und einem `Mode.REPLACE`. Die `DeleteContentResolver` löscht zunächst die Zeiträume und dann die `AuditudeResolver` fügt Anzeigen des angegebenen `replaceDuration` in die Zeitleiste ein. Wenn nicht `replaceDuration` festgelegt ist, bestimmt der Server, was eingefügt werden soll.
 
-Zur Unterstützung dieser benutzerdefinierten Zeitraumoperationen stellt TVSDK Folgendes bereit:
+Zur Unterstützung dieser benutzerdefinierten Zeitbereichsvorgänge stellt TVSDK Folgendes bereit:
 
 * Mehrere Inhaltsauflöser
 
-   Ein Stream kann über mehrere Inhaltsauflöser verfügen, die auf dem Anzeigensignalisierungsmodus und den Anzeigenmetadaten basieren. Das Verhalten ändert sich mit verschiedenen Kombinationen von Anzeigensignalisierungsmodi und Anzeigenmetadaten.
-* Mehrere anfängliche `PlacementInformations` Die `DefaultMediaPlayer`-Variable erstellt eine Liste von anfänglich `PlacementInformations`, basierend auf dem Anzeigensignalisierungsmodus und den Anzeigenmetadaten, die durch die `MediaPlayerClient` aufgelöst werden sollen.
+  Ein Stream kann basierend auf dem Anzeigensignalisierungsmodus und den Anzeigenmetadaten über mehrere Inhaltsauflöser verfügen. Das Verhalten ändert sich mit verschiedenen Kombinationen von Anzeigensignalisierungsmodi und Anzeigenmetadaten.
+* Mehrere Initialisierungen `PlacementInformations` Die `DefaultMediaPlayer` erstellt eine Liste der ersten `PlacementInformations` basierend auf dem Anzeigenanzeigemodus und den Anzeigenmetadaten, die vom `MediaPlayerClient`.
 
-* Neuer Anzeigensignalisierungsmodus: Benutzerdefinierte Zeitbereiche
+* Neuer Anzeigesignaturmodus: Benutzerdefinierte Zeitbereiche
 
-   Die Platzierung von Anzeigen basiert auf den Daten des Zeitraums aus einer externen Quelle (z. B. einer JSON-Datei).
+  Anzeigen werden basierend auf Zeitbereichsdaten aus einer externen Quelle platziert (z. B. einer JSON-Datei).

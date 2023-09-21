@@ -1,28 +1,26 @@
 ---
-title: Herstellerspezifische Sicherheitsinformationen
-description: Herstellerspezifische Sicherheitsinformationen
+title: Anbieterspezifische Sicherheitsinformationen
+description: Anbieterspezifische Sicherheitsinformationen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
 
 ---
 
-
-# Herstellerspezifische Sicherheitsinformationen{#vendor-specific-security-information}
+# Anbieterspezifische Sicherheitsinformationen{#vendor-specific-security-information}
 
 Dieser Abschnitt enthält sicherheitsbezogene Informationen zu Betriebssystemen und Anwendungsservern, die in Ihre Adobe Access-Lösung integriert sind.
 
-Verwenden Sie die Links in diesem Abschnitt, um herstellerspezifische Sicherheitsinformationen für Ihr Betriebssystem und Ihren Anwendungsserver zu finden.
+Verwenden Sie die in diesem Abschnitt angegebenen Links, um herstellerspezifische Sicherheitsinformationen für Ihr Betriebssystem und Ihren Anwendungsserver zu finden.
 
 ## Informationen zur Betriebssystemsicherheit {#section-B6D9D6CEA7CC42A8A20346600EFB5E4E}
 
-Implementieren Sie beim Schützen Ihres Betriebssystems sorgfältig die von Ihrem Betriebssystemhersteller beschriebenen Maßnahmen, einschließlich der folgenden:
+Führen Sie beim Schützen Ihres Betriebssystems die von Ihrem Betriebssystemanbieter beschriebenen Maßnahmen sorgfältig durch, einschließlich der folgenden:
 
 * Definieren und Steuern von Benutzern, Rollen und Berechtigungen
-* Überwachungsprotokolle und Prüfpfade
+* Überwachungsprotokolle und Prüfprotokolle
 * Entfernen unnötiger Dienste und Anwendungen
 * Sichern von Dateien
 
@@ -47,7 +45,7 @@ Sicherheitsinformationen zu von Adobe Access unterstützten Betriebssystemen fin
  </tbody> 
 </table>
 
-In der folgenden Tabelle werden einige mögliche Ansätze zur Minimierung von Sicherheitslücken im Betriebssystem beschrieben.
+In der folgenden Tabelle werden einige potenzielle Ansätze zum Minimieren von Sicherheitslücken im Betriebssystem beschrieben.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-whl-kjz-n4"> 
  <thead class="- topic/thead "> 
@@ -58,8 +56,8 @@ In der folgenden Tabelle werden einige mögliche Ansätze zur Minimierung von Si
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Sicherheits-Patches </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Es besteht ein erhöhtes Risiko, dass ein nicht autorisierter Benutzer Zugriff auf den Anwendungsserver erhält, wenn vom Anbieter bereitgestellte Sicherheits-Patches und -Aktualisierungen nicht zeitnah angewendet werden. Testen Sie Sicherheits-Patches, bevor Sie sie auf Produktionsserver anwenden. </p> <p class="- topic/p ">Erstellen Sie außerdem Richtlinien und Verfahren, um Patches regelmäßig zu überprüfen und zu installieren. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Sicherheitspatches </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Es besteht ein erhöhtes Risiko, dass ein nicht autorisierter Benutzer Zugriff auf den Anwendungsserver erhält, wenn Sicherheits-Patches und -Upgrades des des Anbieters nicht zeitnah angewendet werden. Testen Sie Sicherheits-Patches, bevor Sie sie auf Produktionsserver anwenden. </p> <p class="- topic/p ">Erstellen Sie außerdem Richtlinien und Verfahren, um regelmäßig nach Patches zu suchen und diese zu installieren. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Virenschutzsoftware </p> </td> 
@@ -67,20 +65,19 @@ In der folgenden Tabelle werden einige mögliche Ansätze zur Minimierung von Si
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Network Time Protocol (NTP) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Für einen ordnungsgemäßen Betrieb und eine forensische Analyse sollten Sie die Zeit auf Adobe Access-Servern und Adobe Access-Paketen genau halten. Verwenden Sie eine sichere Version von NTP, um die Zeit auf allen Systemen zu synchronisieren, die mit dem Internet verbunden sind. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Halten Sie sowohl für den ordnungsgemäßen Betrieb als auch für die forensische Analyse genaue Zeit auf Adobe Access-Servern und Adobe Access-Packagern bereit. Verwenden Sie eine sichere Version von NTP, um die Zeit auf allen mit dem Internet verbundenen Systemen zu synchronisieren. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Informationen zur Sicherheit des Anwendungsservers {#section-EBB4EF371CFF4A848694CC240B23D404}
+## Sicherheitsinformationen für den Anwendungsserver {#section-EBB4EF371CFF4A848694CC240B23D404}
 
-Beim Schützen des Anwendungsservers müssen Sie die vom Serverhersteller beschriebenen Maßnahmen implementieren, einschließlich der folgenden:
+Beim Schützen des Anwendungsservers müssen Sie die vom Serveranbieter beschriebenen Maßnahmen implementieren, einschließlich der folgenden:
 
-* Verwenden eines nicht offensichtlichen Benutzernamens des Administrators
+* Verwenden eines nicht offensichtlichen Benutzernamens für Administratoren
 * Deaktivieren unnötiger Dienste
 * Schützen des Konsolenmanagers
-* Aktivieren sicherer Cookies
-* Schließen nicht benötigter Anschlüsse
-* Eingrenzen von Verwaltungsschnittstellen nach IP-Adressen oder Domänen
-* Verwenden des Java™ Security Managers
-
+* Sichere Cookies aktivieren
+* Schließen nicht benötigter Ports
+* Grenzen von Verwaltungsschnittstellen nach IP-Adressen oder Domänen
+* Verwenden von Java™ Security Manager

@@ -1,26 +1,24 @@
 ---
-title: Implementieren der Übersicht über die Nutzungsmodelle
-description: Implementieren der Übersicht über die Nutzungsmodelle
+title: Übersicht über das Implementieren von Nutzungsmodellen
+description: Übersicht über das Implementieren von Nutzungsmodellen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
 
 ---
 
+# Übersicht über das Implementieren von Nutzungsmodellen {#implementing-the-usage-models-overview}
 
-# Implementieren der Übersicht über Nutzungsmodelle {#implementing-the-usage-models-overview}
-
-Die Referenzimplementierung enthält eine Geschäftslogik, mit der gezeigt wird, wie die folgenden vier verschiedenen Nutzungsmodelle für ein Paket von Inhalten aktiviert werden können:
+Die Referenzimplementierung umfasst eine Geschäftslogik, die zeigt, wie die folgenden vier verschiedenen Nutzungsmodelle für ein gepacktes Inhaltselement aktiviert werden:
 
 * Download-to-own (DTO)
-* Miete/Video-on-Demand (VOD)
-* Abonnement (alles, was Sie essen können)
-* Werbefinanziert
+* Vermietung/Video-on-Demand (VOD)
+* Anmeldung (alles, was Sie essen können)
+* Anzeigenfinanziert
 
-Um die Demo zum Verwendungsmodell zu aktivieren, geben Sie die benutzerdefinierte Eigenschaft `RI_UsageModelDemo=true` zur Verpackungszeit an. Wenn Sie Inhalte mit dem Befehlszeilenwerkzeug von Media Packager verpacken, geben Sie Folgendes an:
+Um die Demo des Nutzungsmodells zu aktivieren, geben Sie die benutzerdefinierte Eigenschaft an `RI_UsageModelDemo=true` zum Zeitpunkt der Verpackung. Wenn Sie Inhalte mit dem Befehlszeilen-Tool Media Packager verpacken, geben Sie Folgendes an:
 
 ```
     java -jar AdobeMediaPackager.jar source.flv dest.flv -k RI_UsageModelDemo=true
@@ -28,34 +26,34 @@ Um die Demo zum Verwendungsmodell zu aktivieren, geben Sie die benutzerdefiniert
 
 >[!NOTE]
 >
->Wenn Sie den optionalen Demo-Modus nicht zur Verpackungszeit aktivieren, verwendet der Lizenzserver die beim Verpacken angegebene Richtlinie, um eine Lizenz auszustellen. Wenn mehrere Richtlinien angegeben wurden, verwendet der Lizenzserver die erste gültige Richtlinie.
+>Wenn Sie den optionalen Demomodus nicht während der Verpackung aktivieren, verwendet der Lizenzserver die bei der Verpackung angegebene Richtlinie, um eine Lizenz zu erteilen. Wenn mehrere Richtlinien angegeben wurden, verwendet der Lizenzserver die erste gültige Richtlinie.
 
-In der Demo steuert die Geschäftslogik auf dem Server die tatsächlichen Attribute der generierten Lizenzen. Beim Verpacken müssen nur minimale Richtlinieninformationen in den Inhalt aufgenommen werden. Insbesondere muss die Richtlinie nur angeben, ob für den Zugriff auf den Inhalt eine Authentifizierung erforderlich ist. Um alle vier Nutzungsmodelle zu aktivieren, fügen Sie eine Richtlinie hinzu, die den anonymen Zugriff zulässt (für das Ad-funding-Modell), und eine Richtlinie, die die Authentifizierung von Benutzername und Kennwort erfordert (für die anderen 3 Verwendungsmodelle). Beim Anfordern einer Lizenz kann eine Clientanwendung anhand der Authentifizierungsinformationen in den Richtlinien bestimmen, ob der Benutzer zur Authentifizierung aufgefordert werden soll.
+In der Demo steuert die Geschäftslogik auf dem Server die tatsächlichen Attribute der generierten Lizenzen. Zum Zeitpunkt der Verpackung dürfen nur minimale Richtlinieninformationen in den Inhalt aufgenommen werden. Insbesondere muss die Richtlinie nur angeben, ob für den Zugriff auf den Inhalt eine Authentifizierung erforderlich ist. Um alle vier Nutzungsmodelle zu aktivieren, fügen Sie eine Richtlinie hinzu, die den anonymen Zugriff ermöglicht (für das Modell mit Anzeigenunterstützung), und eine Richtlinie, für die die Authentifizierung von Benutzernamen und Kennwort erforderlich ist (für die anderen 3 Nutzungsmodelle). Beim Anfordern einer Lizenz kann eine Client-Anwendung anhand der Authentifizierungsinformationen in den Richtlinien bestimmen, ob der Benutzer zur Authentifizierung aufgefordert werden soll.
 
-Um das Nutzungsmodell zu steuern, unter dem ein bestimmter Benutzer eine Lizenz erhalten soll, können der Referenz-Implementierungsdatenbank Einträge hinzugefügt werden. Die Tabelle `Customer` enthält Benutzernamen und Kennwörter für die Authentifizierung von Benutzern. Es gibt auch an, ob der Benutzer über ein Abonnement verfügt. Benutzer mit Abonnements erhalten Lizenzen im Rahmen des Verwendungsmodells *Abonnement*. Um einem Benutzer Zugriff unter den Verwendungsmodellen *In Eigene herunterladen* oder *Video-on-Demand* zu gewähren, kann der Tabelle `CustomerAuthorization` ein Eintrag hinzugefügt werden, der alle Inhalte angibt, auf die der Benutzer zugreifen darf, sowie das Nutzungsmodell. Einzelheiten zum Ausfüllen der einzelnen Tabellen finden Sie im Skript [!DNL PopulateSampleDB.sql].
+Um das Nutzungsmodell zu steuern, unter dem ein bestimmter Benutzer eine Lizenz erhalten soll, können Einträge zur Referenz-Implementierungsdatenbank hinzugefügt werden. Die `Customer` -Tabelle enthält Benutzernamen und Kennwörter für die Authentifizierung von Benutzern. Sie gibt auch an, ob der Benutzer über ein Abonnement verfügt. Benutzer mit Abonnements erhalten Lizenzen im Rahmen der *Abonnement* Nutzungsmodell. So gewähren Sie einem Benutzer Zugriff unter *Herunterladen in Eigene* oder *Video on Demand* Verwendungsmodelle verwenden, kann ein Eintrag zum `CustomerAuthorization` -Tabelle, die jedes Inhaltselement angibt, auf das der Benutzer zugreifen darf, und das Nutzungsmodell. Siehe [!DNL PopulateSampleDB.sql] -Skript für Details zum Ausfüllen der einzelnen Tabellen.
 
-Wenn ein Benutzer eine Lizenz anfordert, prüft der Referenz-Implementierungsserver die vom Client gesendeten Metadaten, um festzustellen, ob der Inhalt mit der `RI_UsageModelDemo`-Eigenschaft gepackt wurde. In diesem Fall werden die folgenden Geschäftsregeln verwendet:
+Wenn ein Benutzer eine Lizenz anfordert, überprüft der Referenz-Implementierungsserver die vom Client gesendeten Metadaten, um festzustellen, ob der Inhalt mit dem `RI_UsageModelDemo` -Eigenschaft. Wenn ja, werden die folgenden Geschäftsregeln verwendet:
 
 * Wenn eine der Richtlinien Authentifizierung erfordert:
 
-   * Wenn die Anforderung ein gültiges Authentifizierungstoken enthält, suchen Sie in der Tabelle &quot;Kundendatenbank&quot;nach dem Benutzer. Wenn der Benutzer gefunden wurde:
+   * Wenn die Anfrage ein gültiges Authentifizierungstoken enthält, suchen Sie in der Tabelle der Kundendatenbank nach dem Benutzer. Wenn der Benutzer gefunden wurde:
 
-      * Wenn die `Customer.IsSubscriber`-Eigenschaft `true` lautet, generieren Sie eine Lizenz für das *Abonnement*-Nutzungsmodell und senden Sie es an den Benutzer.
+      * Wenn die Variable `Customer.IsSubscriber` Eigenschaft ist `true`, generieren Sie eine Lizenz für die *Abonnement* Nutzungsmodell verwenden und an den Benutzer senden.
 
-      * Suchen Sie in der `CustomerAuthorization`-Datenbanktabelle nach einem Eintrag für diese Benutzer- und Inhalts-ID. Wenn ein Datensatz gefunden wurde:
+      * Suchen Sie nach einem Datensatz im `CustomerAuthorization` Datenbanktabelle für diese Benutzer- und Inhalts-ID. Wenn ein Datensatz gefunden wurde:
 
-         * Wenn `CustomerAuthorization.UsageType` `DTO` ist, generieren Sie eine Lizenz für das *In Eigene herunterladen*-Nutzungsmodell und senden Sie es an den Benutzer.
+         * Wenn `CustomerAuthorization.UsageType` is `DTO`, generieren Sie eine Lizenz für die *Herunterladen in Eigene* Nutzungsmodell verwenden und an den Benutzer senden.
 
-         * Wenn `CustomerAuthorization.UsageType` `VOD` ist, generieren Sie eine Lizenz für das *Video On Demand*-Nutzungsmodell und senden Sie es an den Benutzer.
+         * Wenn `CustomerAuthorization.UsageType` is `VOD`, generieren Sie eine Lizenz für die *Video On Demand* Nutzungsmodell verwenden und an den Benutzer senden.
+
    * Wenn keine der Richtlinien den anonymen Zugriff zulässt:
 
-      * Wenn die Anforderung kein gültiges Authentifizierungstoken enthält, geben Sie den Fehler &quot;Authentifizierung erforderlich&quot;zurück.
-      * Andernfalls wird der Fehler &quot;nicht autorisiert&quot;zurückgegeben.
+      * Wenn die Anfrage kein gültiges Authentifizierungstoken enthält, geben Sie den Fehler &quot;Authentifizierung erforderlich&quot;zurück.
+      * Andernfalls wird der Fehler &quot;Nicht autorisiert&quot;zurückgegeben.
 
+* Wenn eine der Richtlinien den anonymen Zugriff zulässt, generieren Sie eine Lizenz für das Ad-supported-Nutzungsmodell und senden Sie sie an den Benutzer.
 
-* Wenn eine der Richtlinien den anonymen Zugriff zulässt, generieren Sie eine Lizenz für das Ad-finanziert-Nutzungsmodell und senden Sie sie an den Benutzer.
-
-Bevor der Referenz-Implementierungsserver Lizenzen für die Demo zum Verwendungsmodell ausstellen kann, muss der Server so konfiguriert werden, dass angegeben wird, wie Lizenzen für jedes der vier Nutzungsmodelle generiert werden. Dies erfolgt durch Angabe einer Richtlinie für jedes Nutzungsmodell. Die Referenzimplementierung enthält vier Beispielrichtlinien ( [!DNL dto-policy.pol], [!DNL vod-policy.pol], [!DNL sub-policy.pol], [!DNL ad-policy.pol]) oder Sie können Ihre eigenen Richtlinien ersetzen. Legen Sie in [!DNL flashaccess-refimpl.properties] die folgenden Eigenschaften fest, um die für jedes Nutzungsmodell zu verwendende Richtlinie anzugeben und die Richtliniendateien in dem Ordner abzulegen, der von der `config.resourcesDirectory`-Eigenschaft angegeben wird:
+Bevor der Referenz-Implementierungsserver Lizenzen für die Demo des Nutzungsmodells ausgeben kann, muss der Server so konfiguriert werden, dass er angibt, wie Lizenzen für jedes der vier Nutzungsmodelle generiert werden. Dies geschieht durch Angabe einer Richtlinie für jedes Nutzungsmodell. Die Referenzimplementierung umfasst vier Beispielrichtlinien ( [!DNL dto-policy.pol], [!DNL vod-policy.pol], [!DNL sub-policy.pol], [!DNL ad-policy.pol]) oder Sie können Ihre eigenen Richtlinien ersetzen. In [!DNL flashaccess-refimpl.properties], legen Sie die folgenden Eigenschaften fest, um die Richtlinie anzugeben, die für jedes Nutzungsmodell verwendet werden soll, und platzieren Sie die Richtliniendateien in dem Ordner, der durch das `config.resourcesDirectory` Eigenschaft:
 
 ```
 # Policy file name for Download To Own usage  
@@ -67,4 +65,3 @@ RefImpl.UsageModelDemo.Policy.Subscribe=sub-policy.pol
 # Policy file name for Ad Supported (free) usage  
 RefImpl.UsageModelDemo.Policy.Free=ad-policy.pol
 ```
-

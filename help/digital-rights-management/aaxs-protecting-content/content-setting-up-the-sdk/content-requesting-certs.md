@@ -2,19 +2,17 @@
 title: Anfordern von Zertifikaten
 description: Anfordern von Zertifikaten
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
 
 ---
 
-
 # Anfordern von Zertifikaten{#requesting-certificates}
 
-Bei der Registrierung wird von der Adobe ein Zertifikat angefordert. Sie können Ihre Schlüssel generieren und eine Anforderung erstellen, die an die Adobe gesendet wird. Adobe generiert dann das Zertifikat und sendet es an Sie zurück. Adobe kennt den Inhalt des privaten Schlüssels nicht. Daher müssen Sie über eine Möglichkeit verfügen, den Schlüssel zu sichern, damit Sie ihn im Falle eines Hardwareausfalls wiederherstellen können.
+Bei der Registrierung wird ein Zertifikat von der Adobe angefordert. Sie können Ihre Schlüssel generieren und eine Anfrage erstellen, die an Adobe gesendet wird. Adobe generiert dann das Zertifikat und sendet es zurück an Sie. Adobe kennt den Inhalt des privaten Schlüssels nicht. Daher müssen Sie über eine Möglichkeit verfügen, den Schlüssel zu sichern, damit Sie ihn bei einem Hardwarefehler wiederherstellen können.
 
-Im Gegensatz zum Lizenzserver-, Packager- oder Transportzertifikat wird das CA-Domänenzertifikat nicht von der Adobe ausgestellt. Sie können dieses Zertifikat von einer Zertifizierungsstelle abrufen oder ein selbst signiertes Zertifikat generieren.
+Im Gegensatz zum Lizenzserver-, Packager- oder Transportzertifikat wird das CA-Zertifikat der Domain nicht von Adobe ausgestellt. Sie können dieses Zertifikat von einer Zertifizierungsstelle abrufen oder ein selbstsigniertes Zertifikat generieren.
 
-Anweisungen zum Abrufen der Anmeldedaten für den Zugriff auf die Adobe finden Sie im *Handbuch für den Adoben-Zugriff auf Zertifikatsregistrierung*.
+Anweisungen zum Abrufen der Adobe Access-Zugangsdaten finden Sie in der *Registrierungsleitfaden für Adobe-Zugriffszertifikate*.

@@ -1,18 +1,16 @@
 ---
-title: Von der Adobe veröffentlichte Zertifikatsperrlisten verwenden
-description: Von der Adobe veröffentlichte Zertifikatsperrlisten verwenden
+title: Von Adobe veröffentlichte Zertifikatsperrlisten nutzen
+description: Von Adobe veröffentlichte Zertifikatsperrlisten nutzen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%
 
 ---
 
+# Von Adobe veröffentlichte Zertifikatsperrlisten nutzen{#consume-crls-published-by-adobe}
 
-# Zertifikatsperrlisten verwenden, die von Adobe{#consume-crls-published-by-adobe} veröffentlicht werden
+Das SDK lädt regelmäßig von Adobe veröffentlichte Zertifikatsperrlisten herunter. Blockieren Sie nicht den Zugriff auf diese Dateien oder verhindern Sie die Durchsetzung dieser Zertifikatsperrlisten.
 
-Das SDK lädt regelmäßig von der Adobe veröffentlichte Zertifikatsperrlisten herunter. Sperren Sie den Zugriff auf diese Dateien nicht oder verhindern Sie die Durchsetzung dieser Zertifikatsperrlisten.
-
-Das SDK verfügt über eine Konfigurationsoption, um Fehler beim Abrufen der Zertifikatsperrlisten für Adoben zu ignorieren. Diese Option kann nur in Entwicklungs-Umgebung verwendet werden. In Produktionsumgebungen muss der Lizenzserver in der Lage sein, die Zertifikatsperrlisten aus der Adobe abzurufen. Das Nichtabrufen einer gültigen Zertifikatsperrliste ist ein Fehler.
+Das SDK verfügt über eine Konfigurationsoption zum Ignorieren von Fehlern beim Abrufen der Adobe-Zertifikatsperrlisten. Diese Option darf nur in Entwicklungsumgebungen verwendet werden. In Produktionsumgebungen muss der Lizenzserver in der Lage sein, die Zertifikatsperrlisten von Adobe abzurufen. Das Nichteinholen einer gültigen Zertifikatsperrliste ist ein Fehler.

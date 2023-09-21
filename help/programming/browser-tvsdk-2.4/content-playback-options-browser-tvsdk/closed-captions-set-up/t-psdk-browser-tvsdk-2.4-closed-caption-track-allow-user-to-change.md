@@ -1,27 +1,25 @@
 ---
-description: Im Folgenden finden Sie ein Beispiel dafür, wie ein Benutzer eine Untertitel-Spur auswählen kann.
+description: Im Folgenden finden Sie ein Beispiel dafür, wie ein Benutzer eine Verfolgung mit geschlossener Beschriftung auswählen kann.
 title: Benutzer können die Verfolgung ändern
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
 
 ---
 
+# Benutzer können die Verfolgung ändern{#allow-the-user-to-change-the-track}
 
-# Dem Benutzer das Ändern der Spur{#allow-the-user-to-change-the-track} erlauben
+Im Folgenden finden Sie ein Beispiel dafür, wie ein Benutzer eine Verfolgung mit geschlossener Beschriftung auswählen kann.
 
-Im Folgenden finden Sie ein Beispiel dafür, wie ein Benutzer eine Untertitel-Spur auswählen kann.
-
-1. Um die verfügbaren Untertitelspuren anzuzeigen, verwenden Sie die Eigenschaft `MediaPlayerItem.closedCaptionsTracks`.
+1. Um die verfügbaren Untertitelspuren anzuzeigen, verwenden Sie die `MediaPlayerItem.closedCaptionsTracks` -Eigenschaft.
 
    ```js
    var tracks = item.closedCaptionsTracks;
    ```
 
-1. Um festzulegen, welche Untertitel-Spur aktuell ist, verwenden Sie die `MediaPlayerItem.selectClosedCaptionsTrack`-Methode.
-1. Nachdem das Medienplayer-Element vorbereitet wurde, rufen Sie es mit der ` MediaPlayer.  currentItem `-Methode vom Medienplayer ab.
+1. Um festzulegen, welche Untertitelspur aktuell ist, verwenden Sie die `MediaPlayerItem.selectClosedCaptionsTrack` -Methode.
+1. Nachdem das Medienplayer-Element vorbereitet wurde, rufen Sie es mithilfe der ` MediaPlayer.  currentItem ` -Methode.
 
    ```js
    // Select the cc track with index k. 
@@ -32,4 +30,3 @@ Im Folgenden finden Sie ein Beispiel dafür, wie ein Benutzer eine Untertitel-Sp
        item.selectClosedCaptionsTrack(tracks[k]); 
    }
    ```
-

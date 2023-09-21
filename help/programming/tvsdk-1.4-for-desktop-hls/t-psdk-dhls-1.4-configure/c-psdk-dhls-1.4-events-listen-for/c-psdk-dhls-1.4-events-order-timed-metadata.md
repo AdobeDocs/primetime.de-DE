@@ -1,21 +1,18 @@
 ---
-description: TVSDK sendet zeitgesteuerte Metadaten-Ereignis und generiert zeitgesteuerte Metadaten, wenn Standard- oder benutzerdefinierte Tags gefunden werden oder sich eine Wiedergabeliste in einem Manifest ändert. Ereignis werden in der Reihenfolge ausgelöst, in der sie im Manifest angezeigt werden.
-title: Zeitgesteuerte Metadaten-Ereignis
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK sendet zeitgesteuerte Metadaten-Ereignisse und generiert zeitgesteuerte Metadaten, sobald standardmäßige oder benutzerdefinierte Tags auftreten oder sich eine Wiedergabeliste in einem Manifest ändert. Ereignisse werden in der Reihenfolge gesendet, in der sie im Manifest angezeigt werden.
+title: Zeitgesteuerte Metadaten-Ereignisse
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
+# Zeitgesteuerte Metadaten-Ereignisse{#timed-metadata-events}
 
-# Zeitgesteuerte Metadaten-Ereignis{#timed-metadata-events}
+TVSDK sendet zeitgesteuerte Metadaten-Ereignisse und generiert zeitgesteuerte Metadaten, sobald standardmäßige oder benutzerdefinierte Tags auftreten oder sich eine Wiedergabeliste in einem Manifest ändert. Ereignisse werden in der Reihenfolge gesendet, in der sie im Manifest angezeigt werden.
 
-TVSDK sendet zeitgesteuerte Metadaten-Ereignis und generiert zeitgesteuerte Metadaten, wenn Standard- oder benutzerdefinierte Tags gefunden werden oder sich eine Wiedergabeliste in einem Manifest ändert. Ereignis werden in der Reihenfolge ausgelöst, in der sie im Manifest angezeigt werden.
+Ihr Player implementiert Aktionen basierend auf den folgenden Ereignissen:
 
-Ihr Player führt Aktionen aus den folgenden Ereignissen durch:
-
-* `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED`: Wird ausgelöst, wenn eine mit ID3 zeitgesteuerte Metadaten verarbeitet wurde.
+* `TimedMetadataEvent.TIMED_METADATA_ID3_ADDED`: Wird ausgelöst, wenn eine zeitgesteuerte ID3-Metadaten verarbeitet wurde.
 * `TimedMetadataEvent.TIMED_METADATA_SKIPPED`: Wird ausgelöst, wenn zeitgesteuerte Metadaten verarbeitet wurden und keine Gelegenheit erkannt wurde.
-

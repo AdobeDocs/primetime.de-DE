@@ -1,22 +1,20 @@
 ---
 description: Um Benachrichtigungen über Tags im Manifest zu erhalten, müssen Sie die entsprechenden Ereignis-Listener implementieren.
-title: hinzufügen Listener für zeitgesteuerte Metadaten-Benachrichtigungen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Hinzufügen von Listenern für zeitgesteuerte Metadatenbenachrichtigungen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
-
-# hinzufügen Listener für zeitgesteuerte Metadatenbenachrichtigungen {#add-listeners-for-timed-metadata-notifications}
+# Hinzufügen von Listenern für zeitgesteuerte Metadatenbenachrichtigungen {#add-listeners-for-timed-metadata-notifications}
 
 Um Benachrichtigungen über Tags im Manifest zu erhalten, müssen Sie die entsprechenden Ereignis-Listener implementieren.
 
-Sie können zeitgesteuerte Metadaten überwachen, indem Sie nach `onTimedMetadata` suchen, die Ihre Anwendung über die entsprechende Aktivität informieren. Jedes Mal, wenn während der Analyse des Inhalts ein eindeutiges abonniertes Tag identifiziert wird, bereitet TVSDK ein neues `TimedMetadata`-Objekt vor und löst dieses Ereignis aus. Das Objekt enthält den Namen des Tags, für das Sie ein Abonnement abgeschlossen haben, die lokale Zeit in der Wiedergabe, in der dieses Tag angezeigt wird, und andere Daten.
+Sie können zeitgesteuerte Metadaten überwachen, indem Sie auf `onTimedMetadata`, die Ihre Anwendung über zugehörige Aktivitäten informieren. Jedes Mal, wenn beim Analysieren des Inhalts ein eindeutiges abonniertes Tag identifiziert wird, bereitet TVSDK eine neue `TimedMetadata` -Objekt und sendet dieses Ereignis. Das Objekt enthält den Namen des Tags, für das Sie ein Abonnement abgeschlossen haben, die lokale Zeit in der Wiedergabe, in der dieses Tag angezeigt wird, und andere Daten.
 
-1. Hör auf Ereignisse!
+1. Suchen Sie nach Ereignissen.
 
    ```java
    private final TimedMetadataEventListener timedMetadataEventListener = new TimedMetadataEventListener() { 
@@ -38,4 +36,4 @@ Sie können zeitgesteuerte Metadaten überwachen, indem Sie nach `onTimedMetadat
    }; 
    ```
 
-ID3-Metadaten verwenden denselben `onTimedMetadata`-Listener, um das Vorhandensein eines ID3-Tags anzugeben. Dies sollte jedoch keine Verwirrung stiften, da Sie mit der `TimedMetadata` `type`-Eigenschaft zwischen TAG und ID3 unterscheiden können. Weitere Informationen zu ID3-Tags finden Sie unter [ID3-Tags](../../content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md).
+ID3-Metadaten verwenden die gleiche `onTimedMetadata` Listener, um das Vorhandensein eines ID3-Tags anzugeben. Dies sollte jedoch nicht zu Verwirrung führen, da Sie die `TimedMetadata` `type` -Eigenschaft, um zwischen TAG und ID3 zu unterscheiden. Weitere Informationen zu ID3-Tags finden Sie unter  [ID3-Tags](../../content-playback-options/t-psdk-android-2.7-id3-metadata-retrieve.md).

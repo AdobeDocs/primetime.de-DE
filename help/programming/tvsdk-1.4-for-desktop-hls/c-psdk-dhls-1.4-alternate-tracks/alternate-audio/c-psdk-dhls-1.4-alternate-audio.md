@@ -1,34 +1,32 @@
 ---
-description: Mit alternativem oder spätgebundenem Audio können Sie zwischen den verfügbaren Audiospuren für eine Videospur wechseln. Auf diese Weise können Benutzer beim Abspielen des Videos eine Sprachspur auswählen.
+description: Mit alternativem oder spätbindendem Audio können Sie zwischen verfügbaren Audiospuren für einen Videospur wechseln. Auf diese Weise können Benutzer eine Sprachspur auswählen, wenn das Video wiedergegeben wird.
 title: Alternativaudio
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
-
 # Alternativaudio{#alternate-audio}
 
-Mit alternativem oder spätgebundenem Audio können Sie zwischen den verfügbaren Audiospuren für eine Videospur wechseln. Auf diese Weise können Benutzer beim Abspielen des Videos eine Sprachspur auswählen.
+Mit alternativem oder spätbindendem Audio können Sie zwischen verfügbaren Audiospuren für einen Videospur wechseln. Auf diese Weise können Benutzer eine Sprachspur auswählen, wenn das Video wiedergegeben wird.
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-Wenn TVSDK die `MediaPlayerItem`-Instanz für das aktuelle Video erstellt, wird für jede verfügbare Audiospur ein `AudioTrack`-Element erstellt. Das Element enthält eine `name`-Eigenschaft, eine Zeichenfolge, die in der Regel eine benutzererkennbare Beschreibung der Sprache dieser Spur enthält. Das Element enthält auch Informationen darüber, ob diese Verfolgung standardmäßig verwendet werden soll.
+Wenn TVSDK die `MediaPlayerItem` -Instanz für das aktuelle Video erstellt sie eine `AudioTrack` -Element für jeden verfügbaren Audio-Track. Das Element enthält eine `name` -Eigenschaft, eine Zeichenfolge, die normalerweise eine benutzererkennbare Beschreibung der Sprache dieser Verfolgung enthält. Das Element enthält auch Informationen darüber, ob diese Verfolgung standardmäßig verwendet werden soll.
 
-Wenn es Zeit ist, das Video abzuspielen, können Sie nach einer Liste der verfügbaren Audiospuren fragen, optional eine Audiospur auswählen und das Video mit der ausgewählten Spur abspielen lassen.
+Wenn es Zeit ist, das Video abzuspielen, können Sie nach einer Liste der verfügbaren Audiospuren fragen, den Benutzer optional eine auswählen und das Video mit dem ausgewählten Track abspielen lassen.
 
-Obwohl dies selten der Fall ist, löst TVSDK ein `MediaPlayerItem.AUDIO_UPDATED`-Ereignis aus, wenn eine zusätzliche Audiospur verfügbar wird, nachdem das `MediaPlayerItem` erstellt wurde.
+Obwohl selten, wenn ein zusätzlicher Audio-Track verfügbar wird, nachdem er die `MediaPlayerItem`, gibt TVSDK eine `MediaPlayerItem.AUDIO_UPDATED` -Ereignis.
 
-## APIs {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE} hinzugefügt
+## APIs hinzugefügt {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
 Die folgenden APIs wurden hinzugefügt, um alternative Audio zu unterstützen:
 
 `hasAlternateAudio`
 
-Wenn das angegebene Medium über eine andere Audiospur als die Standardspur verfügt, gibt diese boolesche Funktion `true` zurück. Wenn keine alternative Audiospur vorhanden ist, gibt die Funktion `false` zurück.
+Wenn das angegebene Medium über eine andere Audiospur als die Standardspur verfügt, gibt diese boolesche Funktion `true`. Wenn kein alternativer Audio-Track vorhanden ist, gibt die Funktion `false`.
 
 ```
 bool MediaPlayerItemImpl::hasAlternateAudio() const { 
@@ -38,7 +36,7 @@ bool MediaPlayerItemImpl::hasAlternateAudio() const {
 
 ** `getAudioTracks`**
 
-Diese Funktion gibt die Liste aller aktuell verfügbaren Audiospuren in einem angegebenen Medium zurück.
+Diese Funktion gibt eine Liste aller derzeit verfügbaren Audiospuren in einem angegebenen Medium zurück.
 
 ```
 virtual PSDKErrorCode getAudioTracks(PSDKImmutableArray<AudioTrack>*& out) const { 
@@ -53,7 +51,7 @@ virtual PSDKErrorCode getAudioTracks(PSDKImmutableArray<AudioTrack>*& out) const
 
 `getSelectedAudioTrack`
 
-Diese Funktion gibt die derzeit ausgewählte alternative Audiospur und Eigenschaften wie Sprache zurück. Die automatische Auswahl der Spur kann ebenfalls extrahiert werden.
+Diese Funktion gibt die derzeit ausgewählte alternative Audiospur und Eigenschaften wie Sprache zurück. Auch die automatische Auswahl von Track kann extrahiert werden.
 
 ```
 PSDKErrorCode MediaPlayerItemImpl::getSelectedAudioTrack(AudioTrack &out) const { 
@@ -64,7 +62,7 @@ PSDKErrorCode MediaPlayerItemImpl::getSelectedAudioTrack(AudioTrack &out) const 
 
 `selectAudioTrack`
 
-Diese Funktion wählt eine alternative Audiospur für die Wiedergabe aus.
+Diese Funktion wählt einen alternativen Audiotrack zur Wiedergabe aus.
 
 ```
 PSDKErrorCode MediaPlayerItemImpl::selectAudioTrack(const AudioTrack &audioTrack) { 
@@ -87,4 +85,3 @@ PSDKErrorCode MediaPlayerItemImpl::selectAudioTrack(const AudioTrack &audioTrack
     return result; 
 }
 ```
-

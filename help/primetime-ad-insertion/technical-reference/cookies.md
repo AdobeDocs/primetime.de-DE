@@ -1,23 +1,21 @@
 ---
-description: Beim Einfügen von Primetime-Anzeigen werden Cookies für interne Zwecke verwendet, um die Arbeit mit Streams und Anzeigen-Servern zu erleichtern.
+description: Die Primetime-Anzeigeneinfügung verwendet Cookies für interne Zwecke und um die Arbeit mit Streams und Anzeigen-Servern zu erleichtern.
 title: Cookies
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
-
 # Cookies {#cookies}
 
 Beim Einfügen von Primetime-Anzeigen werden Cookies für interne Zwecke verwendet, um die Arbeit mit Streams und Anzeigen-Servern zu erleichtern.  Cookies werden zur Verwendung empfohlen und es wird empfohlen, meine Client-Player zu aktivieren.
 
-## Liste von Cookies
+## Liste der Cookies
 
-Beim Einfügen der Primetime-Anzeige werden die folgenden Cookies beibehalten:
+Beim Einfügen von Primetime-Anzeigen werden die folgenden Cookies beibehalten:
 
-* `ssaiPub` hilft beim Abrufen von Inhalts-URLs aus Streams, die eine Cookie-Authentifizierung erfordern, um die  `m3u8` Datei abzurufen.
-* `ssai3` enthält Sitzungs-Cookies für Anzeigenserver, die diese benötigen.
-* `AWSELB` und  `ssaiSession` speichern Sie sitzungsbezogene Informationen.
+* `ssaiPub` hilft beim Abrufen von Inhalts-URLs aus Streams, die Cookie-Authentifizierung erfordern, um die `m3u8` -Datei.
+* `ssai3` enthält Sitzungs-Cookies für Adserver, die sie erfordern.
+* `AWSELB` und `ssaiSession` sitzungsbezogene Informationen speichern.

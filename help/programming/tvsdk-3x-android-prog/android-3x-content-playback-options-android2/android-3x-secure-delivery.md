@@ -1,28 +1,26 @@
 ---
-description: TVSDK führt sicheren Versand über HTTPS ein.
-title: Sicherer Versand über HTTPS
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK führt eine sichere Bereitstellung über HTTPS ein.
+title: Sichere Bereitstellung über HTTPS
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
+# Sichere Bereitstellung über HTTPS {#secure-delivery-https}
 
-# Sicherer Versand über HTTPS {#secure-delivery-https}
-
-Adobe Primetime TVSDK unterstützt HTTPS-Versand für alle Aufrufe, die von TVSDK stammen, einschließlich
+Adobe Primetime TVSDK unterstützt die HTTPS-Bereitstellung für alle Aufrufe, die von TVSDK stammen, darunter
 
 * Auditude Ad Server-Aufrufe
 * CRS-Anforderungen
-* DRM-Lizenzanrufe
-* Videoanalysen-Pings
-* Rechnungspapiere
+* DRM-Lizenzaufrufe
+* Video Analytics-Pings
+* Abrechnungs-Pings
 
-Um diese Funktion zu verwenden, stellen Sie sicher, dass die für die Bereitstellung der oben genannten Anforderungen konfigurierten Server HTTPS unterstützen.
+Um diese Funktion verwenden zu können, stellen Sie sicher, dass die für die Bereitstellung der oben genannten Anfragen konfigurierten Server HTTPS unterstützen.
 
-Dieses neue Verhalten ist nicht standardmäßig aktiviert. Verwenden Sie Folgendes, um sicheren Versand vor dem Aufruf von `MediaPlayer.replaceCurrentResource()` zu aktivieren
+Dieses neue Verhalten ist standardmäßig nicht aktiviert. Verwenden Sie Folgendes, um einen sicheren Versand vor dem Aufruf von zu aktivieren `MediaPlayer.replaceCurrentResource()`
 
 ```java
 MediaPlayerItemConfig config = new MediaPlayerItemConfig(context);

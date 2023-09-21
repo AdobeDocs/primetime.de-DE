@@ -1,17 +1,15 @@
 ---
-description: ExpressPlay stellt Referenzdokumentation zu ihrer Website bereit. Einige der Anforderungs-/Antwortverweisdokumente von ExpressPlay, die für die Primetime Cloud DRM relevant sind, powered by ExpressPlay, werden ebenfalls hier veröffentlicht.
-title: ExpressPlay-Lizenz-Token-Anforderung/Antwortverweis
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: ExpressPlay stellt Referenzdokumentation auf ihrer Website bereit. Einige der Referenzdokumentation für Anfragen/Antworten von ExpressPlay, die für Primetime Cloud DRM relevant ist, powered by ExpressPlay, finden Sie ebenfalls hier , um sie zu vereinfachen.
+title: ExpressPlay-Lizenztoken-Anfrage/Antwortreferenz - Übersicht
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#expressplay-license-token-request-response-reference-overview}
 
-ExpressPlay stellt Referenzdokumentation zu ihrer Website bereit. Einige der Anforderungs-/Antwortverweisdokumente von ExpressPlay, die für die Primetime Cloud DRM relevant sind, powered by ExpressPlay, werden ebenfalls hier veröffentlicht.
+ExpressPlay stellt Referenzdokumentation auf ihrer Website bereit. Einige der Referenzdokumentation für Anfragen/Antworten von ExpressPlay, die für Primetime Cloud DRM relevant ist, powered by ExpressPlay, finden Sie ebenfalls hier , um sie zu vereinfachen.
 
-Die aktuelle, umfassende Dokumentation zur ExpressPlay API finden Sie hier: [https://www.expressplay.com/developer/restapi/](https://www.expressplay.com/developer/restapi/).
+Die aktuelle, umfassende Dokumentation zur ExpressPlay-API finden Sie hier: [https://www.expressplay.com/developer/restapi/](https://www.expressplay.com/developer/restapi/).

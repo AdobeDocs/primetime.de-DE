@@ -1,25 +1,23 @@
 ---
-title: Übersicht über die Netzwerktopologie
-description: Übersicht über die Netzwerktopologie
+title: Netzwerktopologie - Übersicht
+description: Netzwerktopologie - Übersicht
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#network-topology-overview}
 
-Nach der erfolgreichen Bereitstellung von Adobe Primetime DRM müssen Sie die Sicherheit des Primetime DRM-Produktionsservers gewährleisten.
+Nach der erfolgreichen Bereitstellung von Adobe Primetime DRM müssen Sie die Sicherheit des Primetime-DRM-Produktionsservers wahren.
 
 >[!NOTE]
 >
->Primetime DRM war früher als Adobe Access bekannt und davor als Flash Access.
+>Primetime DRM wurde früher als Adobe Access, und davor als Flash Access bezeichnet.
 
-Sie können einen *Reverse-Proxy* verwenden, um sicherzustellen, dass für externe und interne Benutzer verschiedene URLs für Primetime-DRM-Webanwendungen verfügbar sind. *Reverse* proxys ist sicherer, als es Benutzern zu ermöglichen, eine direkte Verbindung mit dem Anwendungsserver herzustellen, auf dem Primetime DRM ausgeführt wird. Diese Konfiguration führt alle HTTP-Anfragen für den Anwendungsserver durch, auf dem Primetime DRM ausgeführt wird. Benutzer können nur auf den Reverse-Proxy zugreifen und nur die URL-Verbindungen versuchen, die vom Reverse-Proxy unterstützt werden.
+Sie können eine *Reverse Proxy* , um sicherzustellen, dass externe und interne Benutzer verschiedene Sätze von URLs für Primetime-DRM-Webanwendungen erhalten. *Reverse Proxy* ist sicherer, als dass Benutzer eine direkte Verbindung zum Anwendungsserver herstellen können, auf dem Primetime DRM ausgeführt wird. Diese Konfiguration führt alle HTTP-Anfragen für den Anwendungsserver durch, auf dem Primetime DRM ausgeführt wird. Benutzer können nur auf den Reverse-Proxy zugreifen und nur die URL-Verbindungen versuchen, die vom Reverse-Proxy unterstützt werden.
 
 <!--<a id="fig_8083A8C794B646CD87985EC891B60663"></a>-->
 

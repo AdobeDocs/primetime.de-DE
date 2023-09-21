@@ -1,21 +1,19 @@
 ---
-title: Automatische Wiedergabe unter iOS
-description: Automatische Wiedergabe unter iOS
+title: Automatische Wiedergabe in iOS
+description: Automatische Wiedergabe in iOS
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 0%
 
 ---
 
+# Automatische Wiedergabe in iOS{#autoplay-on-ios}
 
-# Automatische Wiedergabe unter iOS{#autoplay-on-ios}
+Die Implementierung der Volume-API von AdobePSDK.MediaPlayer ermöglicht die automatische Wiedergabe von Inhalten auf Geräten mit iOS-Version 10 oder höher. iOS ermöglicht die automatische Wiedergabe nur, wenn das Volumen stummgeschaltet ist. Wenn die Lautstärke auf null gesetzt ist, setzt die API die `muted` -Eigenschaft des Video-Tags zu `true`, andernfalls `muted` -Eigenschaft auf `false`. Die `play` API startet die Wiedergabe ohne Benutzerinteraktion oder Benutzergeste.
 
-Die Implementierung der Volume-API von AdobePSDK.MediaPlayer ermöglicht die automatische Wiedergabe von Inhalten auf Geräten mit iOS Version 10 oder höher. iOS erlaubt die automatische Wiedergabe nur, wenn die Lautstärke stummgeschaltet ist. Wenn die Lautstärke auf null eingestellt ist, setzt die API die `muted`-Eigenschaft des Video-Tags auf `true`, andernfalls wird `muted`-Eigenschaft auf `false` eingestellt. Die `play`-API Beginn die Wiedergabe ohne Benutzerinteraktion oder Benutzergeste.
-
-Legen Sie für die automatische Wiedergabe auf dem iPhone zusätzlich die `playsInline`-Eigenschaft des `video`-Tags auf `true` fest.
+Legen Sie für die automatische Wiedergabe in iPhone zusätzlich die `playsInline` -Eigenschaft der `video` Tag in `true`.
 
 ```
 videoDiv.getElementsByTagName('video')[0].playsInline = true;
@@ -23,5 +21,4 @@ videoDiv.getElementsByTagName('video')[0].playsInline = true;
 
 >[!NOTE]
 >
->Die Verwendung der Eigenschaft `playsInline` Beginn die Wiedergabe ohne Vollbildmodus.
-
+>Verwendung von `playsInline` -Eigenschaft startet die Wiedergabe ohne den Vollbildmodus.

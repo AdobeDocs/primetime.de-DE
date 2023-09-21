@@ -1,38 +1,36 @@
 ---
-description: Sie können HTML-Überlagerungen mit StageVideo verwenden, um UI-Elemente in der Videoebene "Liste"des Flashs anzuzeigen. Diese Ebene befindet sich über der StageVideo-Ebene, sodass StageVideo immer hinter den Elementen der Display-Liste eines Flashs angezeigt wird.
+description: Sie können HTML-Überlagerungen mit StageVideo verwenden, um Benutzeroberflächen-Elemente in der Videoebene mit der Flash-Anzeigeliste anzuzeigen. Diese Ebene befindet sich über der StageVideo-Ebene, sodass StageVideo immer hinter allen Flash-Anzeigelistenelementen angezeigt wird.
 title: StageVideo- und HTML-Überlagerungen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
 
 ---
 
-
 # StageVideo- und HTML-Überlagerungen{#stagevideo-and-html-overlays}
 
-Sie können HTML-Überlagerungen mit StageVideo verwenden, um UI-Elemente in der Videoebene &quot;Liste&quot;des Flashs anzuzeigen. Diese Ebene befindet sich über der StageVideo-Ebene, sodass StageVideo immer hinter den Elementen der Display-Liste eines Flashs angezeigt wird.
+Sie können HTML-Überlagerungen mit StageVideo verwenden, um Benutzeroberflächen-Elemente in der Videoebene mit der Flash-Anzeigeliste anzuzeigen. Diese Ebene befindet sich über der StageVideo-Ebene, sodass StageVideo immer hinter allen Flash-Anzeigelistenelementen angezeigt wird.
 
-HTML-Überlagerungen sind Benutzeroberflächenelemente, die Sie in der Videoanzeigeebene des Flashs anzeigen können, die von `StageVideo` auf der eigenen Ebene wiedergegeben wird. Vor Flash 15 konnten Sie keine HTML-Überlagerungen verwenden, wenn keine Hardwarebeschleunigung verfügbar war. Ab Flash 15 werden HTML-Überlagerungen angezeigt, wenn `StageVideo` auf das Software-Rendering zurückfällt.
+HTML-Überlagerungen sind Benutzeroberflächen-Elemente, die Sie in der Flash-Anzeigeebene in Videos anzeigen können, die von `StageVideo` auf dem eigenen Flugzeug. Vor Flash 15 konnten Sie keine HTML-Überlagerungen verwenden, wenn die Hardwarebeschleunigung nicht verfügbar war. Ab Flash 15 werden HTML-Überlagerungen bei `StageVideo` zurück auf das Software-Rendering.
 
 >[!IMPORTANT]
 >
->Abhängig von den Systemfunktionen kann die Leistung bei der Verwendung von HTML-Überlagerungen um ein größeres oder geringeres Maß beeinträchtigt werden.
+>Abhängig von den Systemfunktionen kann sich die Leistung bei Verwendung von HTML-Überlagerungen bis zu einem größeren oder geringeren Grad verschlechtern.
 
-Berücksichtigen Sie die folgenden Informationen:
+Beachten Sie die folgenden Informationen:
 
 * Flash Player 15:
 
-   * Sie können HTML-Überlagerungen unabhängig davon verwenden, ob Hardwarebeschleunigung verfügbar ist.
-   * Um HTML-Überlagerungen zu verwenden, setzen Sie `wmode` auf `opaque`.
+   * Sie können HTML-Überlagerungen verwenden, unabhängig davon, ob die Hardwarebeschleunigung verfügbar ist.
+   * Um HTML-Überlagerungen zu verwenden, legen Sie `wmode` nach `opaque`.
 
 * Flash Player 14:
 
-   * Wenn die Hardwarebeschleunigung verfügbar ist, befindet sich `StageVideo` unter der Display-Liste des Flashs, sodass Sie HTML-Überlagerungen verwenden können.
-   * Wenn die Hardwarebeschleunigung nicht verfügbar ist, wird das Video über allen anderen Elementen im Browser wiedergegeben, wodurch die Verwendung von HTML-Überlagerungen verhindert wird.
+   * Wenn die Hardwarebeschleunigung verfügbar ist, `StageVideo` befindet sich unterhalb der Flash-Anzeigeliste, sodass Sie HTML-Überlagerungen verwenden können.
+   * Wenn die Hardwarebeschleunigung nicht verfügbar ist, wird das Video über allen anderen Elementen im Browser gerendert, was die Verwendung von HTML-Überlagerungen verhindert.
 
-Hier finden Sie die Mindestanforderungen für den Browser, um HTML-Überlagerungen mit `StageVideo` zu verwenden:
+Hier finden Sie die Mindestanforderungen an den Browser, um HTML-Überlagerungen mit `StageVideo`:
 
 * Firefox Version 4 und höher
 * Safari Version 4 und höher
@@ -41,9 +39,8 @@ Hier finden Sie die Mindestanforderungen für den Browser, um HTML-Überlagerung
    * Version 9+ unter Windows 7 und höher
    * Version 10+ unter Windows XP
 
-* Chrome Version 26 und neuer
+* Chrome-Version 26 und höher
 
-   >[!IMPORTANT]
-   >
-   >Chrome Pepper unter Windows XP und Windows Vista wird nicht unterstützt.
-
+  >[!IMPORTANT]
+  >
+  >Chrome Pepper unter Windows XP und Windows Vista wird nicht unterstützt.

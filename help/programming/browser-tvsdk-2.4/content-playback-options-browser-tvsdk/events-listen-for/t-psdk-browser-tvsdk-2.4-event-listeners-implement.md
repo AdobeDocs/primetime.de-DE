@@ -1,43 +1,41 @@
 ---
-description: Ereignis-Handler ermöglichen es Browser TVSDK, auf Ereignis zu reagieren.
+description: Ereignishandler ermöglichen es Browser TVSDK, auf Ereignisse zu reagieren.
 title: Implementieren von Ereignis-Listenern und -Rückrufen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '170'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Implementieren von Ereignis-Listenern und -Rückrufen{#implement-event-listeners-and-callbacks}
 
-Ereignis-Handler ermöglichen es Browser TVSDK, auf Ereignis zu reagieren.
+Ereignishandler ermöglichen es Browser TVSDK, auf Ereignisse zu reagieren.
 
-Wenn ein Ereignis auftritt, ruft der Ereignis-Mechanismus von Browser TVSDK Ihren registrierten Ereignis-Handler auf und leitet die Ereignis-Informationen an den Handler weiter.
+Wenn ein Ereignis eintritt, ruft der Ereignismechanismus des Browser TVSDK Ihren registrierten Ereignishandler auf und übergibt die Ereignisinformationen an den Handler.
 
-Ihre Anwendung muss Ereignis-Listener für Browser TVSDK-Ereignis implementieren, die Ihre Anwendung betreffen.
+Ihre Anwendung muss Ereignis-Listener für Browser TVSDK-Ereignisse implementieren, die sich auf Ihre Anwendung auswirken.
 
-1. Bestimmen Sie, auf welche Ereignis Ihre Anwendung hören muss.
+1. Bestimmen Sie, auf welche Ereignisse die Anwendung überwachen muss.
 
-   * **Erforderliche Ereignis**: Suchen Sie nach allen Ereignissen für die Wiedergabe.
+   * **Erforderliche Ereignisse**: Suchen Sie nach allen Wiedergabeereignissen.
 
-      >[!IMPORTANT]
-      >
-      >Das play-Ereignis `STATUS_CHANGED` stellt den Player-Status einschließlich Fehler bereit. Jeder Status kann sich auf den nächsten Schritt Ihres Spielers auswirken.
+     >[!IMPORTANT]
+     >
+     >Das Wiedergabeereignis `STATUS_CHANGED` stellt den Player-Status bereit, einschließlich Fehlern. Jeder Status kann sich auf den nächsten Schritt Ihres Players auswirken.
 
    * **Andere Ereignisse**: Optional, je nach Anwendung.
 
-      Wenn Sie z. B. Werbung in Ihre Wiedergabe integrieren, sollten Sie alle `AdBreakPlaybackEvent`- und `AdPlaybackEvent`-Ereignis abhören.
+     Wenn Sie beispielsweise Werbung in Ihre Wiedergabe integrieren, sollten Sie alle `AdBreakPlaybackEvent` und `AdPlaybackEvent` -Ereignisse.
 
 1. Implementieren Sie Ereignis-Listener für jedes Ereignis.
 
-   Browser TVSDK gibt Parameterwerte an Ihre Ereignis-Listener-Rückrufe zurück. Diese Werte liefern relevante Informationen über das Ereignis, das Sie in Ihren Listenern verwenden können, um entsprechende Aktionen durchzuführen.
+   Browser TVSDK gibt Parameterwerte an Ihre event-listener-Rückrufe zurück. Diese Werte enthalten relevante Informationen zum Ereignis, das Sie in Ihren Listenern verwenden können, um geeignete Aktionen durchzuführen.
 
    Beispiel:
 
    * Ereignistyp: `AdobePSDK.PSDKEventType.STATUS_CHANGED`
-   * Ereignis-Eigenschaft: `MediaPlayerStatus.<event>` wird wie folgt verwendet:
+   * Ereigniseigenschaft: `MediaPlayerStatus.<event>` verwendet wie folgt:
 
 ```js
 player.addEventListener( 
@@ -52,7 +50,7 @@ onStatusChange = function (event) {
             break;
 ```
 
-1. Registrieren Sie Ihre Callback-Listener mit dem `MediaPlayer`-Objekt, indem Sie `MediaPlayer.addEventListener` verwenden.
+1. Registrieren Sie Ihre Callback-Listener bei der `MediaPlayer` -Objekt mithilfe von `MediaPlayer.addEventListener`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  

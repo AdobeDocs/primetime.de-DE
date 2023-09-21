@@ -1,20 +1,18 @@
 ---
-description: Das forceflash-Flag in der Quellcode-Liste erzwingt den Flash-Fallback für eine URL. Für diese URL können Sie den Inhalt mit Adobe Flash Player wiedergeben.
-title: Erzwingen des Flash-Ausfalls mithilfe der Medienquellen-Liste
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Das erzwungene Flash-Flag in der Quellliste erzwingt das Flash-Fallback für eine URL. Für diese URL können Sie Adobe-Flash Player verwenden, um den Inhalt abzuspielen.
+title: Erzwingen des Flash-Fallback mithilfe der Medienquellenliste
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Erzwingen des Flash-Fallback mithilfe der Medienquellenliste{#forcing-the-flash-fallback-using-the-media-source-list}
 
-# Erzwingen des Flash-Fallback mithilfe der Medienquellen-Liste{#forcing-the-flash-fallback-using-the-media-source-list}
+Das erzwungene Flash-Flag in der Quellliste erzwingt das Flash-Fallback für eine URL. Für diese URL können Sie Adobe-Flash Player verwenden, um den Inhalt abzuspielen.
 
-Das forceflash-Flag in der Quellcode-Liste erzwingt den Flash-Fallback für eine URL. Für diese URL können Sie den Inhalt mit Adobe Flash Player wiedergeben.
-
-In der Medienquelldatei (z. B. in der Liste `sources.js`) können Sie `forceflash` auf `true` setzen. Beispiel:
+In der Liste der Medienquellen (z. B. in der `sources.js` Datei), können Sie `forceflash` nach `true`. Beispiel:
 
 ```js
 { 
@@ -31,4 +29,3 @@ In der Medienquelldatei (z. B. in der Liste `sources.js`) können Sie `forceflas
         "forceflash" : true
 },
 ```
-

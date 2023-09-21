@@ -1,19 +1,18 @@
 ---
-title: Testen von Authentifizierungs- und Autorisierungsflüssen mithilfe der API-Test-Site der Adobe
-description: Testen von Authentifizierungs- und Autorisierungsflüssen mithilfe der API-Test-Site der Adobe
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Testen der Authentifizierungs-Autorisierungsflüsse mithilfe der Adobe API-Test-Site
+description: Testen der Authentifizierungs-Autorisierungsflüsse mithilfe der Adobe API-Test-Site
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
 
 ---
 
-
-# Testen von Authentifizierungs- und Autorisierungsflüssen mithilfe der API-Test-Site der Adobe {#How-to-test-auth-flows}
+# Testen von Authentifizierungs-Autorisierungsflüssen mithilfe der Adobe API Test-Site {#How-to-test-auth-flows}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 Um die AuthN- und AuthZ-Flüsse zu testen, haben wir eine **API-Testseite** die Ihnen zur Verfügung steht. Unser Support-Team stellt Ihnen gerne Anmeldedaten zur Verfügung. Sie können uns kontaktieren unter **support@tve.zendesk.com**.
 
@@ -42,4 +41,3 @@ Führen Sie nach Abschluss von Teil I die folgenden Schritte aus:
 1. Um die Autorisierung zu testen, geben Sie im Eingabefeld der Ressource &quot;**requestorID**&quot; und klicken Sie auf die Schaltfläche &quot;getAuthorization&quot;.
 1. Daher wird im Textfeld &quot;setToken&quot;-\>&quot;resource id&quot;die Ressource angezeigt und im Textfeld &quot;setToken&quot;-\>&quot;token&quot;wird das shortAuthorizationToken angezeigt, was bedeutet, dass authZ erfolgreich war.
 1. Jetzt können Sie auf die Schaltfläche &quot;Abmelden&quot;klicken, um die Token zu löschen.
-

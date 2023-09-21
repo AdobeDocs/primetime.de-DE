@@ -1,32 +1,30 @@
 ---
-title: Erstellen der AIR-Flash Access-Manager-Anwendung
-description: Erstellen der AIR-Flash Access-Manager-Anwendung
+title: Erstellen der Flash Access Manager AIR-Anwendung
+description: Erstellen der Flash Access Manager AIR-Anwendung
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
+# Erstellen der Flash Access Manager AIR-Anwendung {#building-the-flash-access-manager-air-application}
 
-# Erstellen der AIR-Anwendung für Flash Access-Manager {#building-the-flash-access-manager-air-application}
+Um die AIR-Datei des Flash Access-Managers aus dem Quellcode zu erstellen, müssen Sie das Flex- und das AIR-SDK auf Ihrem Computer installiert haben. Bevor Sie die Anwendung verpacken und ausführen können, müssen Sie den MXML-Code mithilfe der [!DNL amxmlc] Compiler. Die [!DNL amxmlc] Compiler finden Sie im [!DNL bin] Verzeichnis des Flex SDK 4 oder höher. Bei Bedarf können Sie Ihre Pfadumgebungsvariable so einstellen, dass sie das bin-Verzeichnis des Flex SDK enthält, damit die Dienstprogramme einfacher über die Befehlszeile ausgeführt werden können.
 
-Zum Erstellen der AIR-Flash Access-Manager-Datei aus dem Quellcode müssen Sie das Flex- und das AIR-SDK auf Ihrem Computer installieren. Bevor Sie die Anwendung verpacken und ausführen können, müssen Sie den MXML mit dem [!DNL amxmlc]-Compiler in eine SWF-Datei kompilieren. Der [!DNL amxmlc]-Compiler befindet sich im Ordner [!DNL bin] des Flex 4-SDK oder höher. Bei Bedarf können Sie die Variable &quot;path Umgebung&quot;so einstellen, dass sie den Ordner &quot;Flex SDK bin&quot;enthält, damit die Dienstprogramme in der Befehlszeile leichter ausgeführt werden können.
+Führen Sie die folgenden Schritte aus, um die AIR-Datei von Flash Access Manager zu erstellen:
 
-Führen Sie zum Erstellen der AIR-Datei &quot;Flash Access Manager&quot;das folgende Verfahren aus:
-
-1. Öffnen Sie eine Befehlszeile oder ein Terminal und navigieren Sie zum Projektordner der AIR-Flash Access-Manager-Anwendung ( [!DNL UI Tools\Flash Access Manager] im Ordner &quot;Referenz-Implementierung&quot;).
+1. Öffnen Sie eine Befehlszeile oder ein Terminal und navigieren Sie zum Projektordner der Flash Access Manager AIR-Anwendung ( [!DNL UI Tools\Flash Access Manager] im Verzeichnis &quot;Referenzimplementierung&quot;).
 1. Geben Sie den folgenden Befehl ein:
 
    ```
    amxmlc src\FlashAccessmanager.mxml
    ```
 
-   Wenn Sie [!DNL amxmlc] ausführen, wird [!DNL FlashAccessManager.swf] generiert, was den kompilierten Code der Anwendung enthält.
+   Läuft [!DNL amxmlc] herstellt [!DNL FlashAccessManager.swf], der den kompilierten Code der Anwendung enthält.
 
-Das Adobe AIR SDK enthält das Dienstprogramm AIR Developer Tool (ADT), um AIR-Anwendungen zu verpacken und Zertifikate zu generieren. AIR-Anwendungen sollten digital signiert werden; Benutzern wird eine Warnung angezeigt, wenn Anwendungen installiert werden, die nicht ordnungsgemäß signiert oder gar nicht signiert sind. Um ein Zertifikat mit der Befehlszeile zu generieren, öffnen Sie ein Konsolenfenster im selben Ordner wie die AIR-Anwendung und geben Sie Folgendes ein:
+Das Adobe AIR SDK enthält das Dienstprogramm AIR Developer Tool (ADT) zum Packen von AIR-Anwendungen und Generieren von Zertifikaten. AIR-Anwendungen sollten digital signiert werden. Benutzer erhalten eine Warnung, wenn sie Anwendungen installieren, die nicht ordnungsgemäß signiert sind oder überhaupt nicht signiert sind. Um mithilfe der Befehlszeile ein Zertifikat zu generieren, öffnen Sie ein Konsolenfenster im selben Ordner wie Ihre AIR-Anwendung und geben Sie Folgendes ein:
 
 ```
 adt -certificate -cn SelfSigned 1024-RSA testCert.pfx  
@@ -35,14 +33,14 @@ adt -certificate -cn SelfSigned 1024-RSA testCert.pfx
 </i class="+ topic>
 ```
 
-Ersetzen Sie *some_password* durch ein Kennwort Ihrer Wahl. Nach einigen Sekunden muss ADT den Zertifikatsgenerierungsvorgang abschließen, und Sie sollten eine neue [!DNL testCert.pfx]-Datei im Anwendungsordner haben.
+Substitute *some_password* mit einem Kennwort Ihrer Wahl. Nach einigen Sekunden sollte ADT seinen Zertifikatgenerierungsprozess abschließen. Sie sollten über eine neue [!DNL testCert.pfx] -Datei in Ihrem Anwendungsverzeichnis.
 
-Verwenden Sie dann ADT, um die Anwendung mithilfe des Befehls in eine [!DNL .air]-Datei zu verpacken:
+Verwenden Sie als Nächstes ADT , um die Anwendung in ein [!DNL .air] -Datei mithilfe des Befehls:
 
 ```
 adt -package -storetype pkcs12 -keystore testCert.pfx FlashAccessManager.air src\FlashAccessManager-app.xml . -C src assets
 ```
 
-Mit diesem Befehl wird ADT angewiesen, Ihre Anwendung zu verpacken, indem die Schlüsseldatei in [!DNL testCert.pfx] verwendet wird. In der obigen Zeile konfigurieren Sie ADT, um die gesamte Anwendung in einer Datei mit dem Namen [!DNL FlashAccessManager.air] zu verpacken und die Dateien [!DNL FlashAccessManager-app.xml] und [!DNL FlashAccessManager.swf] sowie die Bilder aus dem Elementordner einzuschließen.
+Dieser Befehl weist ADT an, Ihre Anwendung mithilfe der Schlüsseldatei in [!DNL testCert.pfx]. In der obigen Zeile konfigurieren Sie ADT, um Ihre gesamte Anwendung in einer Datei mit dem Namen zu verpacken. [!DNL FlashAccessManager.air], und um die Dateien einzuschließen [!DNL FlashAccessManager-app.xml] und [!DNL FlashAccessManager.swf] und die Bilder aus dem Asset-Verzeichnis.
 
-Während dieses Vorgangs werden Sie nach dem Kennwort aufgefordert, das Sie für die neue Zertifikatdatei festgelegt haben. Geben Sie es ein, warten Sie einen Moment, und eine [!DNL FlashAccessManager.air]-Datei sollte im selben Verzeichnis wie die Projektdateien angezeigt werden.
+Im Rahmen dieses Prozesses werden Sie nach dem Kennwort gefragt, das Sie für Ihre neue Zertifikatdatei festgelegt haben. Geben Sie es ein, warten Sie einen Moment und [!DNL FlashAccessManager.air] sollte sich im selben Verzeichnis befinden wie Ihre Projektdateien.

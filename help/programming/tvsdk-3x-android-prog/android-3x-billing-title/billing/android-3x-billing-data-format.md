@@ -1,22 +1,20 @@
 ---
-description: TVSDK sendet Rechnungsmetriken an die Adobe im XML-Format.
+description: TVSDK sendet Abrechnungsmetriken im XML-Format an Adobe.
 title: Rechnungsmetriken übertragen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
+# Rechnungsmetriken übertragen {#transmit-billing-metrics}
 
-# Rechnungsmetriken senden {#transmit-billing-metrics}
-
-TVSDK sendet Rechnungsmetriken an die Adobe im XML-Format.
+TVSDK sendet Abrechnungsmetriken im XML-Format an Adobe.
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
-Wenn Sie ein Netzwerkerfassungstool verwenden, um die Statistiken zu überwachen, die TVSDK an die Adobe sendet, sollten Sie Einheiten wie die folgenden sehen:
+Wenn Sie ein Tool zur Netzwerkerfassung verwenden, um die Statistiken zu überwachen, die das TVSDK an Adobe übermittelt, sollten Einheiten wie die folgenden angezeigt werden:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -40,4 +38,4 @@ Wenn Sie ein Netzwerkerfassungstool verwenden, um die Statistiken zu überwachen
 </request>
 ```
 
-Die booleschen Eigenschaften `drmProtected`, `adsEnabled` und `midrollEnabled` werden nur angezeigt, wenn sie &quot;true&quot;sind.
+Die booleschen Eigenschaften `drmProtected`, `adsEnabled`, und `midrollEnabled` nur angezeigt werden, wenn sie wahr sind.

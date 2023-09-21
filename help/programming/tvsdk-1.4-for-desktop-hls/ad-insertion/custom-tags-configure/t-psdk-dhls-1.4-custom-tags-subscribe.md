@@ -1,29 +1,27 @@
 ---
 description: TVSDK bereitet TimedMetadata-Objekte für abonnierte Tags vor, sobald diese Objekte im Inhaltsmanifest gefunden werden.
 title: Benutzerdefinierte Tags abonnieren
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%
 
 ---
 
-
 # Benutzerdefinierte Tags abonnieren{#subscribe-to-custom-tags}
 
 TVSDK bereitet TimedMetadata-Objekte für abonnierte Tags vor, sobald diese Objekte im Inhaltsmanifest gefunden werden.
 
-Vor den Wiedergabe-Beginn müssen Sie die Tags abonnieren.
-Um Tags zu abonnieren, weisen Sie der Eigenschaft `subscribedTags` einen Vektor zu, der die benutzerdefinierten Tag-Namen enthält. Wenn Sie auch die vom standardmäßigen Opportunitätsgenerator verwendeten Anzeigen-Tags ändern müssen, weisen Sie der Eigenschaft `adTags` einen Vektor zu, der die benutzerdefinierten Tag-Namen der Anzeige enthält.
+Vor dem Start der Wiedergabe müssen Sie die Tags abonnieren.
+Um Tags zu abonnieren, weisen Sie der `subscribedTags` -Eigenschaft. Wenn Sie auch die Anzeigen-Tags ändern müssen, die vom standardmäßigen Opportunity Generator verwendet werden, weisen Sie dem `adTags` -Eigenschaft.
 
 So werden Sie über benutzerdefinierte Tags in HLS-Manifesten benachrichtigt:
 
-1. Stellen Sie die benutzerdefinierten Tag-Namen global ein, indem Sie einen Vektor mit den benutzerdefinierten Tags `subscribeTags` in `MediaPlayerItemConfig` zuweisen.
+1. Globales Festlegen der benutzerdefinierten Anzeigen-Tag-Namen durch Zuweisen eines Vektors, der die benutzerdefinierten Tags enthält zu `subscribeTags` in `MediaPlayerItemConfig`.
 
    >[!IMPORTANT]
    >
-   >Sie müssen beim Arbeiten mit HLS-Streams das Präfix `#` einschließen.
+   >Sie müssen die `#` Präfix beim Arbeiten mit HLS-Streams.
 
    Beispiel:
 
@@ -34,7 +32,7 @@ So werden Sie über benutzerdefinierte Tags in HLS-Manifesten benachrichtigt:
    PSDKConfig.subscribedTags = subscribedTags;
    ```
 
-1. Um die vom standardmäßigen Opportunitätsgenerator verwendeten Anzeigen-Tags global zu ändern, weisen Sie der Eigenschaft `adTags` in `PSDKConfig` einen Vektor zu, der die benutzerdefinierten Tag-Namen der Anzeige enthält.
+1. Um die Anzeigen-Tags, die vom standardmäßigen Opportunity Generator verwendet werden, global zu ändern, weisen Sie dem `adTags` -Eigenschaft in `PSDKConfig`.
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
@@ -49,13 +47,13 @@ So werden Sie über benutzerdefinierte Tags in HLS-Manifesten benachrichtigt:
    ```
 
 1. So legen Sie bei Bedarf die abonnierten Tag-Namen für einen Stream fest:
-   1. Erstellen Sie eine Medienplayer-Elementkonfiguration.
+   1. Erstellen Sie eine Elementkonfiguration für den Medienplayer.
 
       >[!TIP]
       >
       >Am einfachsten ist es, eine standardmäßige Medienplayer-Elementkonfiguration zu erstellen.
 
-   1. Weisen Sie `subscribeTags` in `MediaPlayerItemConfig` einen Vektor zu, der die benutzerdefinierten Tags enthält.
+   1. Weisen Sie einen Vektor zu, der die benutzerdefinierten Tags enthält zu `subscribeTags` in `MediaPlayerItemConfig`.
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig =  
@@ -67,7 +65,7 @@ So werden Sie über benutzerdefinierte Tags in HLS-Manifesten benachrichtigt:
    mediaPlayerItemConfig.subscribeTags = subscribedTags;
    ```
 
-1. Um die vom standardmäßigen Opportunitätsgenerator im angegebenen Stream verwendeten Anzeigen-Tags zu ändern, weisen Sie der `adTags`-Eigenschaft in `mediaPlayerItemConfig` einen Vektor zu, der die benutzerdefinierten Tag-Namen enthält
+1. Um die Anzeigen-Tags zu ändern, die vom standardmäßigen Opportunity-Generator im angegebenen Stream verwendet werden, weisen Sie dem `adTags` -Eigenschaft in `mediaPlayerItemConfig`
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
@@ -75,9 +73,8 @@ So werden Sie über benutzerdefinierte Tags in HLS-Manifesten benachrichtigt:
    mediaPlayerItemConfig.adTags = adTags;
    ```
 
-1. Damit die Änderungen für den Stream wirksam werden, verwenden Sie beim Laden des Medienstreams die Elementkonfiguration des Medienplayers.
+1. Damit die Änderungen für den Stream wirksam werden, verwenden Sie beim Laden des Medien-Streams die Elementkonfiguration des Medienplayers.
 
    ```
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
    ```
-

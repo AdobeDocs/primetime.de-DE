@@ -1,26 +1,24 @@
 ---
-description: Mit dem MediaPlayerView-Objekt können Sie die Position und Größe der Video-Ansicht steuern.
-title: Position und Größe der Video-Ansicht steuern
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können die Position und Größe der Videoansicht mithilfe des MediaPlayerView -Objekts steuern.
+title: Position und Größe der Videoansicht steuern
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
+# Position und Größe der Videoansicht steuern{#control-the-position-and-size-of-the-video-view}
 
-# Position und Größe der Video-Ansicht kontrollieren{#control-the-position-and-size-of-the-video-view}
+Sie können die Position und Größe der Videoansicht mithilfe des MediaPlayerView -Objekts steuern.
 
-Mit dem MediaPlayerView-Objekt können Sie die Position und Größe der Video-Ansicht steuern.
+TVSDK versucht standardmäßig, das Seitenverhältnis der Videoansicht beizubehalten, sobald sich die Größe oder Position des Videos ändert (aufgrund einer Änderung durch die Anwendung, durch einen Profilwechsel oder durch einen Inhaltswechsel usw.).
 
-TVSDK versucht standardmäßig, das Seitenverhältnis der Video-Ansicht beizubehalten, sobald sich die Größe oder Position des Videos ändert (aufgrund einer Änderung durch die Anwendung, durch einen Profil-Switch oder durch einen Inhaltsschalter usw.).
+Sie können das standardmäßige Seitenverhältnisverhalten außer Kraft setzen, indem Sie eine andere *Skalierungspolitik*. Geben Sie die Skalierungsrichtlinie mithilfe der `MediaPlayerView` -Objekt `scalePolicy` -Eigenschaft. Die `MediaPlayerView`Die standardmäßige Skalierungsrichtlinie wird mit einer Instanz der `MaintainAspectRatioScalePolicy` -Klasse. Um die Skalierungsrichtlinie zurückzusetzen, ersetzen Sie die Standardinstanz von `MaintainAspectRatioScalePolicy` on `MediaPlayerView.scalePolicy` mit Ihrer eigenen Richtlinie. (Sie können die Variable `scalePolicy` -Eigenschaft auf einen Nullwert gesetzt.)
 
-Sie können das standardmäßige Seitenverhältnis außer Kraft setzen, indem Sie eine andere *Skalierungsrichtlinie* angeben. Geben Sie die Skalierungsrichtlinie mit der Eigenschaft `MediaPlayerView` des Objekts `scalePolicy` an. Die standardmäßige Skalierungsrichtlinie von `MediaPlayerView` wird mit einer Instanz der Klasse `MaintainAspectRatioScalePolicy` festgelegt. Um die Skalierungsrichtlinie zurückzusetzen, ersetzen Sie die Standardinstanz von `MaintainAspectRatioScalePolicy` auf `MediaPlayerView.scalePolicy` durch Ihre eigene Richtlinie. (Die `scalePolicy`-Eigenschaft kann nicht auf einen Nullwert gesetzt werden.)
+1. Implementieren des `MediaPlayerViewScalePolicy` -Schnittstelle, um eine eigene Skalierungsrichtlinie zu erstellen.
 
-1. Implementieren Sie die `MediaPlayerViewScalePolicy`-Schnittstelle, um eine eigene Skalierungsrichtlinie zu erstellen.
-
-   Das `MediaPlayerViewScalePolicy` verfügt über eine Methode:
+   Die `MediaPlayerViewScalePolicy` verfügt über eine Methode:
 
    ```
    public function adjust(viewPort:Rectangle, 
@@ -29,13 +27,12 @@ Sie können das standardmäßige Seitenverhältnis außer Kraft setzen, indem Si
 
    >[!NOTE]
    >
-   >TVSDK verwendet ein `StageVideo`-Objekt zum Anzeigen des Videos. Da sich `StageVideo`-Objekte nicht in der Display-Liste befinden, enthält der `viewPort`-Parameter die absoluten Koordinaten des Videos.
+   >TVSDK verwendet eine `StageVideo` -Objekt zum Anzeigen des Videos und weil `StageVideo` -Objekte sich nicht in der Anzeigeliste befinden, wird die `viewPort` enthält die absoluten Koordinaten des Videos.
    >
    >
    >Beispiel:
    >
-   >
-   ```
+   >```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
@@ -57,15 +54,16 @@ Sie können das standardmäßige Seitenverhältnis außer Kraft setzen, indem Si
    >       } 
    >}
    >```
+   >
 
-1. Weisen Sie Ihre Implementierung der `MediaPlayerView`-Eigenschaft zu.
+1. Weisen Sie Ihre Implementierung dem `MediaPlayerView` -Eigenschaft.
 
    ```
    var view:MediaPlayerView = MediaPlayerView.create(stage.stageVideos[0]); 
    view.scalePolicy = new CustomScalePolicy();
    ```
 
-1. hinzufügen Sie Ihre Ansicht auf die `view`-Eigenschaft des Medienplayers.
+1. Hinzufügen Ihrer Ansicht zum Medienplayer `view` -Eigenschaft.
 
    ```
    addChild(view); 
@@ -75,7 +73,7 @@ Sie können das standardmäßige Seitenverhältnis außer Kraft setzen, indem Si
 
 <!--<a id="example_7B08ECCDA17B4DD191FC672BD1F4C850"></a>-->
 
-**Beispiel: Skalieren Sie das Video so, dass es die gesamte Ansicht ausfüllt, ohne das Seitenverhältnis beizubehalten:**
+**Beispiel: Skalieren Sie das Video, um die gesamte Videoansicht auszufüllen, ohne das Seitenverhältnis beizubehalten:**
 
 ```
 package com.adobe.mediacore.samples.utils { 
@@ -107,4 +105,3 @@ view.scalePolicy = new CustomScalePolicy();
 addChild(view); 
 mediaPlayer.view = view;
 ```
-

@@ -1,32 +1,30 @@
 ---
 description: Um Benachrichtigungen über Tags im Manifest zu erhalten, registrieren Sie die entsprechenden Ereignis-Listener.
-title: hinzufügen Listener für zeitgesteuerte Metadaten-Benachrichtigungen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Hinzufügen von Listenern für zeitgesteuerte Metadatenbenachrichtigungen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
-
-# hinzufügen Listener für zeitgesteuerte Metadaten-Benachrichtigungen{#add-listeners-for-timed-metadata-notifications}
+# Hinzufügen von Listenern für zeitgesteuerte Metadatenbenachrichtigungen{#add-listeners-for-timed-metadata-notifications}
 
 Um Benachrichtigungen über Tags im Manifest zu erhalten, registrieren Sie die entsprechenden Ereignis-Listener.
 
-Sie können zeitgesteuerte Metadaten überwachen, indem Sie auf die folgenden Ereignis achten, die Ihre Anwendung über die zugehörige Aktivität informieren:
+Sie können zeitgesteuerte Metadaten überwachen, indem Sie auf die folgenden Ereignisse warten, die Ihre Anwendung über zugehörige Aktivitäten informieren:
 
-* `MediaPlayerItemEvent.ITEM_CREATED`: Die anfängliche Liste von  `TimedMetadata` Objekten ist verfügbar, nachdem die erstellt  `MediaPlayerItem` wurde.
+* `MediaPlayerItemEvent.ITEM_CREATED`: Die erste Liste von `TimedMetadata` -Objekte sind verfügbar, nachdem `MediaPlayerItem` erstellt wird.
 
-   Dieses Ereignis benachrichtigt Ihre Anwendung in diesem Fall.
+  Dieses Ereignis benachrichtigt Ihre Anwendung in diesem Fall.
 
-* `MediaPlayerItemEvent.ITEM_UPDATED`: Bei Live-/linearen Streams, bei denen die Manifest-/Wiedergabeliste regelmäßig aktualisiert wird, können in der aktualisierten Wiedergabeliste/dem Manifest zusätzliche benutzerdefinierte Tags angezeigt werden, sodass zusätzliche  `TimedMetadata` Objekte zur  `MediaPlayerItem.timedMetadata` Eigenschaft hinzugefügt werden können.
+* `MediaPlayerItemEvent.ITEM_UPDATED`: Bei Live-/linearen Streams, bei denen das Manifest/die Wiedergabeliste regelmäßig aktualisiert wird, können zusätzliche benutzerdefinierte Tags in der aktualisierten Wiedergabeliste/dem aktualisierten Manifest angezeigt werden, sodass zusätzliche `TimedMetadata` -Objekte können zum `MediaPlayerItem.timedMetadata` -Eigenschaft.
 
-   Dieses Ereignis benachrichtigt Ihre Anwendung in diesem Fall.
+  Dieses Ereignis benachrichtigt Ihre Anwendung in diesem Fall.
 
-* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: Jedes Mal, wenn ein neues  `TimedMetadata` Objekt erstellt wird, wird dieses Ereignis vom MediaPlayer ausgelöst.
+* `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: Jedes Mal, wenn ein neuer `TimedMetadata` -Objekt erstellt wurde, wird dieses Ereignis vom MediaPlayer ausgelöst.
 
-   Dieses Ereignis wird nicht für das `TimedMetadata`-Objekt ausgelöst, das während der Initialisierungsphase erstellt wurde.
+  Dieses Ereignis wird nicht für die `TimedMetadata` -Objekt, das während der Initialisierungsphase erstellt wurde.
 
 1. Implementieren Sie die entsprechenden Listener.
 
@@ -56,4 +54,4 @@ Sie können zeitgesteuerte Metadaten überwachen, indem Sie auf die folgenden Er
                            onTimedMetadataAvailable);
    ```
 
-ID3-Metadaten werden über dasselbe `TimedMetadataEvent.TIMED_METADATA_AVAILABLE` gesendet. Dies sollte jedoch keine Verwirrung stiften, da Sie die `type`-Eigenschaft eines TimedMetadata-Objekts verwenden können, um zwischen TAG und ID3 zu unterscheiden. Weitere Informationen zu ID3-Tags finden Sie unter [ID3-Tags](../../../tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md).
+ID3-Metadaten werden über denselben `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`. Dies sollte jedoch nicht zu Verwirrung führen, da Sie die Funktion `type` -Eigenschaft, um zwischen TAG und ID3 zu unterscheiden. Weitere Informationen zu ID3-Tags finden Sie unter [ID3-Tags](../../../tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md).

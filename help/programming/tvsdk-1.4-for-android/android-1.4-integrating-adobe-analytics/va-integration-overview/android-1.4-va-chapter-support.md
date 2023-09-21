@@ -1,24 +1,22 @@
 ---
-title: Kapitelunterstützung implementieren
-description: Kapitelunterstützung implementieren
+title: Implementieren der Kapitelunterstützung
+description: Implementieren der Kapitelunterstützung
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
 
 ---
 
+# Implementieren der Kapitelunterstützung {#implement-chapter-support}
 
-# Kapitelunterstützung {#implement-chapter-support} implementieren
-
-Sie können Kapitel für die Videoverfolgung in einer TVSDK-basierten Anwendung wie folgt definieren und verfolgen:
+Sie können Kapitel für das Video-Tracking in einer TVSDK-basierten Anwendung wie folgt definieren und verfolgen:
 
 * Standardkapitel, die intern von TVSDK verwaltet werden.
 
-   Ein Kapitel ist definiert als die Zeit zwischen den einzelnen Werbeunterbrechungen. Beispielsweise wird die Zeit zwischen einer Pre-Roll-Werbeunterbrechung und der ersten Mid-Roll-Unterbrechung als erstes Kapitel definiert.
-* Benutzerspezifische Kapitel, die von der Anwendung verwaltet werden und auf CMS-Daten oder einer anderen Methode basieren, die die Anwendung zum Definieren von Kapiteln verwendet.
+  Ein Kapitel ist definiert als die Zeit zwischen den einzelnen Werbeunterbrechungen. Beispielsweise wird die Zeit zwischen einer Pre-Roll-Werbeunterbrechung und der ersten Mid-Roll als erstes Kapitel definiert.
+* Benutzerdefinierte Kapitel, die von der Anwendung verwaltet werden und auf CMS-Daten oder einer anderen Methode basieren, die die Anwendung zum Definieren von Kapiteln verwendet.
 
 1. Definieren und verfolgen Sie standardmäßige oder benutzerdefinierte Kapitel.
 

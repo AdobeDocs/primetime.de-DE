@@ -1,40 +1,38 @@
 ---
-description: Media-Streams können zusätzliche Metadaten in Form von Tags in der Wiedergabeliste/Manifestdatei enthalten. Diese Datei zeigt die Platzierung der Werbung an. Sie können benutzerdefinierte Tag-Namen angeben und benachrichtigt werden, wenn bestimmte Tags in der Manifestdatei angezeigt werden.
+description: Medien-Streams können zusätzliche Metadaten in Form von Tags in der Wiedergabeliste/Manifestdatei enthalten. Diese Datei zeigt die Platzierung der Werbung an. Sie können benutzerdefinierte Tag-Namen angeben und benachrichtigt werden, wenn bestimmte Tags in der Manifestdatei angezeigt werden.
 title: Benutzerdefinierte Tags
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#custom-tags-overview}
 
-Media-Streams können zusätzliche Metadaten in Form von Tags in der Wiedergabeliste/Manifestdatei enthalten. Diese Datei zeigt die Platzierung der Werbung an. Sie können benutzerdefinierte Tag-Namen angeben und benachrichtigt werden, wenn bestimmte Tags in der Manifestdatei angezeigt werden.
+Medien-Streams können zusätzliche Metadaten in Form von Tags in der Wiedergabeliste/Manifestdatei enthalten. Diese Datei zeigt die Platzierung der Werbung an. Sie können benutzerdefinierte Tag-Namen angeben und benachrichtigt werden, wenn bestimmte Tags in der Manifestdatei angezeigt werden.
 
 ## HLS-Inhalts-Tags {#section_E99299152089418FBA56F5F09FC547B0}
 
 >[!IMPORTANT]
 >
->Diese Funktion ist für Safari auf Apple-Computern nicht verfügbar, da TVSDK anstelle von Flash oder MSE das Video-Tag verwendet, um HLS-Inhalte wiederzugeben.
+>Diese Funktion ist für Safari auf Apple-Computern nicht verfügbar, da TVSDK zum Abspielen von HLS-Inhalten das Video-Tag anstelle von Flash oder MSE verwendet.
 
-TVSDK bietet vordefinierte Unterstützung für bestimmte #EXT-Werbetags. Ihre Anwendung kann benutzerdefinierte Tags verwenden, um den Arbeitsablauf für Anzeigen zu verbessern oder Blackout-Szenarien zu unterstützen. Zur Unterstützung erweiterter Workflows können Sie mit TVSDK zusätzliche Tags im Manifest angeben und abonnieren. Sie können benachrichtigt werden, wenn diese Tags in der Manifestdatei angezeigt werden.
+TVSDK bietet native Unterstützung für bestimmte #EXT-Werbe-Tags. Ihre Anwendung kann benutzerdefinierte Tags verwenden, um den Werbe-Workflow zu verbessern oder Blackout-Szenarien zu unterstützen. Zur Unterstützung erweiterter Workflows können Sie mit TVSDK zusätzliche Tags im Manifest angeben und abonnieren. Sie können benachrichtigt werden, wenn diese Tags in der Manifestdatei angezeigt werden.
 
 >[!TIP]
 >
->Sie können benutzerdefinierte Tags sowohl für VOD- als auch für Live-/lineare Streams abonnieren.
+>Sie können benutzerdefinierte Tags sowohl für VOD- als auch Live-/Linearstreams abonnieren.
 
 >[!NOTE]
 >
 >**Einschränkung**
 >
->Wenn HLS in Safari mit dem Tag `Video` wiedergegeben wird und nicht mit Flash Fallback, ist diese Funktion in Safari nicht verfügbar.
+>Wenn HLS mit der `Video` -Tag in Safari verwenden, ist diese Funktion nicht in Safari verfügbar, nicht aber durch die Verwendung von Flash Fallback.
 
-## Verwenden von benutzerdefinierten HLS-Tags {#section_AD032318AEF5418393D2B1DF36B0BABB}
+## Verwenden benutzerdefinierter HLS-Tags {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
-Hier ein Beispiel für ein benutzerdefiniertes VOD-Asset:
+Im Folgenden finden Sie ein Beispiel für ein benutzerdefiniertes VOD-Asset:
 
 ```
 #EXTM3U
@@ -64,9 +62,9 @@ seg5.ts
 
 Ihre Anwendung kann die folgenden Szenarien einrichten:
 
-* Eine Benachrichtigung, wenn `#EXT-X-ASSET`-Tags oder andere Gruppen von benutzerdefinierten Tag-Namen, für die Sie ein Abonnement abgeschlossen haben, in der Datei vorhanden sind.
-* Fügen Sie Anzeigen ein, wenn ein `#EXT-X-AD`-Tag oder ein anderer benutzerdefinierter Tag-Name im Stream gefunden wird.
+* Eine Benachrichtigung bei `#EXT-X-ASSET` -Tags oder andere benutzerdefinierte Tag-Namen, die Sie abonniert haben, sind in der Datei vorhanden.
+* Fügen Sie Anzeigen ein, wenn eine `#EXT-X-AD` -Tag oder einen anderen benutzerdefinierten Tag-Namen finden Sie im Stream.
 
-Sie können die folgenden Tags als benutzerdefinierte Tags abonnieren: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Beim Parsen von Manifestdateien wird Ihnen ein `TimedMetadata`-Ereignis gemeldet.
+Sie können eines der folgenden Tags als benutzerdefinierte Tags abonnieren: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Sie werden über eine `TimedMetadata` -Ereignis während des Parsens von Manifestdateien.
 
-Es gibt einige Werbetags, wie `EXT-X-CUE`, für die Sie bereits abonniert sind. Diese Anzeigen-Tags werden auch vom standardmäßigen Opportunitätsgenerator verwendet. Sie können festlegen, welche Anzeigen-Tags vom standardmäßigen Opportunitätsgenerator verwendet werden, indem Sie die Eigenschaft `adTags` festlegen.
+Es gibt einige Werbe-Tags, z. B. `EXT-X-CUE`, für die Sie bereits angemeldet sind. Diese Anzeigen-Tags werden auch vom standardmäßigen Opportunity-Generator verwendet. Sie können festlegen, welche Anzeigen-Tags vom standardmäßigen Opportunity-Generator verwendet werden, indem Sie die `adTags` -Eigenschaft.

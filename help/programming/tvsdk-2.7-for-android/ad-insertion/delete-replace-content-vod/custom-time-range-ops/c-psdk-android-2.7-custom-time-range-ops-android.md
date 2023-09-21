@@ -1,36 +1,33 @@
 ---
-description: Die CustomRangeMetadata-Klasse identifiziert verschiedene Arten von Zeitbereichen in einem VOD-Stream-Markierungszeichen, Löschen und Ersetzen. Für jeden dieser benutzerdefinierten Zeitraumtypen können Sie entsprechende Vorgänge durchführen, einschließlich Löschen und Ersetzen von Anzeigeninhalten.
-title: Benutzerdefinierte Zeitraumoperationen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Die CustomRangeMetadata-Klasse identifiziert verschiedene Arten von Zeitbereichen in einem VOD-Stream, das Markieren, Löschen und Ersetzen. Für jeden dieser benutzerdefinierten Zeitbereichstypen können Sie die entsprechenden Vorgänge ausführen, einschließlich Löschen und Ersetzen von Anzeigeninhalten.
+title: Benutzerdefinierte Zeitbereichsoperationen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#custom-time-range-operations}
 
-Die CustomRangeMetadata-Klasse identifiziert verschiedene Arten von Zeitbereichen in einem VOD-Stream: markieren, löschen und ersetzen. Für jeden dieser benutzerdefinierten Zeitraumtypen können Sie entsprechende Vorgänge durchführen, einschließlich Löschen und Ersetzen von Anzeigeninhalten.
+Die CustomRangeMetadata-Klasse identifiziert verschiedene Arten von Zeitbereichen in einem VOD-Stream: markieren, löschen und ersetzen. Für jeden dieser benutzerdefinierten Zeitbereichstypen können Sie die entsprechenden Vorgänge ausführen, einschließlich Löschen und Ersetzen von Anzeigeninhalten.
 
 <!--<a id="section_1323C0BAC259424C85A6ACFB48FE77EC"></a>-->
 
-Für das Löschen und Ersetzen von Anzeigen verwendet TVSDK die folgenden *benutzerdefinierten Zeitraumoperationen*:
+Für das Löschen und Ersetzen von Anzeigen verwendet TVSDK Folgendes *benutzerdefinierter Zeitbereichsvorgang* Modi:
 
-* **In früheren Versionen von TVSDK wurde** dieser Modus als benutzerdefinierte Anzeigenmarken bezeichnet. Der Modus markiert die Start- und Endzeiten für Anzeigen, die bereits im VOD-Stream platziert wurden. Wenn im Stream Zeitraummarken des Typs `MARK` vorhanden sind, wird eine anfängliche Platzierung von `Mode.MARK` von `CustomMarkerOpportunityGenerator` generiert und von `CustomRangeResolver` aufgelöst. Es werden keine Anzeigen eingefügt.
+* **MARK** Dieser Modus wurde in früheren Versionen von TVSDK als benutzerdefinierte Anzeigenmarkierungen bezeichnet. Der Modus markiert die Start- und Endzeiten für Anzeigen, die bereits in den VOD-Stream platziert wurden. Wenn Zeitbereichsmarkierungen vom Typ vorhanden sind `MARK` eine anfängliche Platzierung von `Mode.MARK` wird von `CustomMarkerOpportunityGenerator` und aufgelöst durch `CustomRangeResolver`. Es werden keine Anzeigen eingefügt.
 
-* **Bei** DELETEFs  `DELETE` Zeitbereichen  `placementInformation` wird eine Anfangstypdatei  `Mode.DELETE` erstellt und durch  `CustomRangeResolver`gelöst. `DeleteRangeTimelineOperation` definiert die Bereiche, die aus der Zeitleiste entfernt werden sollen, und TVSDK verwendet diese Operation  `removeByLocalTime` aus der Adobe Video Engine (AVE) API. Wenn DELETE- und Adobe Primetime-Anzeigenentscheidungsmetadaten vorhanden sind, werden die Bereiche zuerst gelöscht, dann löst `AuditudeResolver` Anzeigen mit dem typischen Adobe Primetime-Arbeitsablauf für Anzeigenentscheidungen.
+* **DELETE** Für `DELETE` Zeitbereiche, eine `placementInformation` des Typs `Mode.DELETE` erstellt und aufgelöst von `CustomRangeResolver`. `DeleteRangeTimelineOperation` definiert die Bereiche, die aus der Timeline entfernt werden sollen, und TVSDK verwendet `removeByLocalTime` über die Adobe Video Engine (AVE)-API, um diesen Vorgang abzuschließen. Wenn es DELETE- und Adobe Primetime-Anzeigenentscheidungen-Metadaten gibt, werden die Bereiche zuerst gelöscht, dann wird die `AuditudeResolver` löst Anzeigen mithilfe des typischen Adobe Primetime-Arbeitsablaufs für Anzeigenentscheidungen auf.
 
-* **** REPLACEFr  `REPLACE` Zeitbereiche  `placementInformations` werden zwei anfängliche Zeiträume erstellt, ein  `Mode.DELETE` und ein  `Mode.REPLACE`. `CustomRangeResolver` löscht zunächst die Zeiträume und  `AuditudeResolver` fügt dann Anzeigen des angegebenen Zeitraums  `replaceDuration` in die Zeitleiste ein. Wenn kein `replaceDuration` angegeben ist, bestimmt der Server, was eingefügt werden soll.
+* **ERSETZEN** Für `REPLACE` Zeitbereiche, zwei anfängliche `placementInformations` erstellt werden, eine `Mode.DELETE` und einem `Mode.REPLACE`. `CustomRangeResolver` löscht zunächst die Zeiträume und dann die `AuditudeResolver` fügt Anzeigen des angegebenen `replaceDuration` in die Zeitleiste ein. Wenn nicht `replaceDuration` festgelegt ist, bestimmt der Server, was eingefügt werden soll.
 
-Zur Unterstützung dieser benutzerdefinierten Zeitraumoperationen stellt TVSDK Folgendes bereit:
+Zur Unterstützung dieser benutzerdefinierten Zeitbereichsvorgänge stellt TVSDK Folgendes bereit:
 
 * Mehrere Inhaltsauflöser
 
-   Ein Stream kann über mehrere Inhaltsauflöser verfügen, die auf dem Anzeigensignalisierungsmodus und den Anzeigenmetadaten basieren. Das Verhalten ändert sich mit verschiedenen Kombinationen von Anzeigensignalisierungsmodi und Anzeigenmetadaten.
+  Ein Stream kann basierend auf dem Anzeigensignalisierungsmodus und den Anzeigenmetadaten über mehrere Inhaltsauflöser verfügen. Das Verhalten ändert sich mit verschiedenen Kombinationen von Anzeigensignalisierungsmodi und Anzeigenmetadaten.
 * Mehrere anfängliche Möglichkeiten mit `CustomMarkerOpportunityGenerator`.
-* Ein neuer Anzeigensignalisierungsmodus, `CUSTOM_RANGES`.
+* einen neuen Anzeigesignalmodus, `CUSTOM_RANGES`.
 
-   Die Platzierung von Anzeigen basiert auf den Daten des Zeitraums aus einer externen Quelle, z. B. einer JSON-Datei.
-
+  Anzeigen werden basierend auf Zeitbereichsdaten aus einer externen Quelle platziert, z. B. einer JSON-Datei.

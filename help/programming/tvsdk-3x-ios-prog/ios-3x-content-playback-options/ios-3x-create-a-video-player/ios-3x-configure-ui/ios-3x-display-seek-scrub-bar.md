@@ -1,18 +1,16 @@
 ---
-description: Sie können die aktuelle und die restliche Zeit des Inhalts anzeigen, der wiedergegeben wird.
-title: Anzeigen einer Suchleiste mit der aktuellen Wiedergabezeitposition
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können die aktuelle und die verbleibende Zeit des Inhalts anzeigen, der wiedergegeben wird.
+title: Anzeigen einer Suchscrubb-Leiste mit der aktuellen Wiedergabezeitposition
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
 
 ---
 
+# Anzeigen einer Suchscrubb-Leiste mit der aktuellen Wiedergabezeitposition {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
 
-# Anzeigen einer Suchleiste mit der aktuellen Wiedergabezeitposition {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
-
-Sie können die aktuelle und die restliche Zeit des Inhalts anzeigen, der wiedergegeben wird.
+Sie können die aktuelle und die verbleibende Zeit des Inhalts anzeigen, der wiedergegeben wird.
 
 Verwenden Sie den folgenden Beispielcode, um eine Scrubbing-Leiste zu implementieren:
 

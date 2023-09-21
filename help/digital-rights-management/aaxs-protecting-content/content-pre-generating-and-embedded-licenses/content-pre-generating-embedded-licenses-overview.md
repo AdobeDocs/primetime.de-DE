@@ -2,15 +2,13 @@
 title: Übersicht
 description: Übersicht
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht{#overview}
 
-Mit Adobe Access Professional können Sie Lizenzen vorab generieren und Inhalte einbetten. Diese Funktion kann mit der erweiterten Lizenzketten kombiniert werden, sodass eine Leaf-Lizenz vorab generiert und in den Inhalt eingebettet wird und der Client eine Root-Lizenz (an einen Computer oder eine Domäne gebunden) von einem Lizenzserver anfordern kann. Alternativ können Clientanwendungen einen Arbeitsablauf implementieren, bei dem sich das Gerät bei einem Server vorab registriert, der Server Lizenzen generiert, die an dieses Gerät gebunden sind, und der Client seine Lizenzen von einem einfachen HTTP-Webserver abruft.
+Mithilfe von Adobe Access Professional können Sie Lizenzen vorab generieren und Lizenzen in Inhalte einbetten. Diese Funktion kann mit der Enhanced License Verkettung kombiniert werden, sodass eine Leaf-Lizenz vorgeneriert und in den Inhalt eingebettet wird. Der Client kann eine Root-Lizenz (an einen Computer oder eine Domäne gebunden) von einem Lizenzserver anfordern. Alternativ können Clientanwendungen einen Workflow implementieren, bei dem das Gerät bei einem Server registriert, der Server Lizenzen vorab generiert, die an dieses Gerät gebunden sind, und der Client seine Lizenzen von einem einfachen HTTP-Webserver abruft.

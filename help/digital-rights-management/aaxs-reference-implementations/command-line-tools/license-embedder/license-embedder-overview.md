@@ -1,16 +1,14 @@
 ---
-title: Übersicht über die Lizenzeinbettung
-description: Übersicht über die Lizenzeinbettung
+title: Übersicht über License Einbetter
+description: Übersicht über License Einbetter
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '27'
 ht-degree: 0%
 
 ---
 
+# Übersicht über License Einbetter {#license-embedder-overview}
 
-# Überblick über die Lizenzeinbettung {#license-embedder-overview}
-
-Mit dem Befehlszeilenwerkzeug &quot;Lizenzeinbettung&quot;können Sie vorab generierte Lizenzen mit Media Packager in geschützte Inhalte einbetten.
+Mithilfe des Befehlszeilenwerkzeugs License Embedder können Sie vorgenerierte Lizenzen in mit Media Packager geschützte Inhalte einbetten.

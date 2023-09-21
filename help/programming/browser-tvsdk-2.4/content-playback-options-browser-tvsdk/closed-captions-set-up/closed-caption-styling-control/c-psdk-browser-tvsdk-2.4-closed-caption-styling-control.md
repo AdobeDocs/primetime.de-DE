@@ -1,17 +1,15 @@
 ---
-description: Mit der TextFormat-Klasse können Sie Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle Untertitel festgelegt, die vom Player angezeigt werden.
-title: Steuern des Stils für Untertitel
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können mithilfe der TextFormat -Klasse Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle von Ihrem Player angezeigten Untertitel festgelegt.
+title: Steuern des Stils von Untertiteln
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#control-closed-caption-styling-overview}
 
-Mit der TextFormat-Klasse können Sie Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle Untertitel festgelegt, die vom Player angezeigt werden.
+Sie können mithilfe der TextFormat -Klasse Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle von Ihrem Player angezeigten Untertitel festgelegt.
 
-Diese Klasse kapselt Stilinformationen für Untertitel, wie Schriftart, Größe, Farbe und Hintergrunddeckkraft.
+Diese Klasse enthält Informationen zum Stil von Untertiteln wie Schriftart, Größe, Farbe und Hintergrunddeckkraft.

@@ -1,23 +1,21 @@
 ---
-title: Anforderungen
-description: Anforderungen
+title: Voraussetzungen
+description: Voraussetzungen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
-
 # Voraussetzungen {#requirements}
 
 Sie müssen sicherstellen, dass Folgendes installiert ist:
 
 * Tomcat 6.0 oder höher
-* Eine Datenbank wie MySQL (nur für die Komponente License Server erforderlich)
+* Datenbank wie MySQL (nur für die Komponente &quot;License Server&quot;erforderlich)
 * Java 1.6 oder höher
-* Ant 1.8 oder höher (zur Verwendung der Musteraufbauskripten)
+* Ant 1.8 oder höher (zur Verwendung der Beispiel-Build-Skripte)
 
-Nachdem Sie Tomcat und MySQL installiert haben, erhalten Sie die Anmeldeinformationen von der Adobe.
+Nachdem Sie Tomcat und MySQL installiert haben, rufen Sie die Anmeldeinformationen von Adobe ab.

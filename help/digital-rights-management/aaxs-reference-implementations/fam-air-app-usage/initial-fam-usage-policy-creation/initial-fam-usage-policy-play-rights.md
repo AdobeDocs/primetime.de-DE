@@ -2,33 +2,31 @@
 title: Rechte abspielen
 description: Rechte abspielen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
 
 ---
 
-
 # Rechte abspielen {#play-rights}
 
-In der folgenden Tabelle werden die Voreinstellungen für die Wiedergabe von Rechten beschrieben:
+In der folgenden Tabelle werden die Voreinstellungen für Play Rights beschrieben:
 
-| Voreinstellung | Beschreibung |
+| Präferenz | Beschreibung |
 |--- |--- |
-| Wiedergabefenster | Die Dauer einer Lizenz ist gültig (in Minuten), nachdem der Benutzer den geschützten Inhalt zum ersten Mal wiedergegeben hat. |
-| Output Protection | Steuert, ob die Ausgabe auf externen Wiedergabegeräten geschützt werden soll. Analoge und digitale Ausgaben können unabhängig angegeben werden. |
-| Einschränkungen | Blockierungsliste von Clientversionen, die keine Inhaltswiedergabe zulassen. Alle Spalten sind optional. |
-| DRM | Gibt eine Liste von DRM-Versionen an, für die die Wiedergabe geschützter Inhalte nicht zulässig ist. |
-| Laufzeit | Gibt eine Liste von Laufzeitversionen an, bei denen geschützte Inhalte nicht abgespielt werden dürfen. |
+| Wiedergabefenster | Die Gültigkeitsdauer einer Lizenz (in Minuten) nach der ersten Wiedergabe des geschützten Inhalts durch den Benutzer. |
+| Output Protection | Steuert, ob die Ausgabe auf externe Rendering-Geräte geschützt werden soll. Analog- und digitale Ausgaben können unabhängig angegeben werden. |
+| Einschränkungen | Blockierungsliste von Clientversionen, die keine Inhalte wiedergeben dürfen. Alle Spalten sind optional. |
+| DRM | Gibt eine Liste der DRM-Versionen an, die keine geschützten Inhalte wiedergeben dürfen. |
+| Laufzeit | Gibt eine Liste der Laufzeitversionen an, die keine geschützten Inhalte wiedergeben dürfen. |
 | Mindestsicherheitsstufe |  |
-| DRM | DRM-Mindestsicherheitsstufe, die zum Abspielen geschützter Inhalte erforderlich ist. |
-| Laufzeit | Mindestsicherheitsstufe der Laufzeitumgebung, die zum Abspielen geschützter Inhalte erforderlich ist. |
-| Zulässige Anwendungen | Zulassungsliste von Clientanwendungen, die Inhalte abspielen dürfen. Wenn keine Anwendungen angegeben sind, ist jede SWF- oder AIR-Anwendung zulässig. |
-| SWF | Liste von SWF-URLs, die geschützte Inhalte wiedergeben dürfen. |
-| AIR | Liste von AIR-Anwendungen, die geschützte Inhalte abspielen dürfen. Herausgeber-ID erforderlich ist, sind die übrigen Felder optional. |
+| DRM | Minimale DRM-Sicherheitsstufe, die erforderlich ist, um geschützte Inhalte wiederzugeben. |
+| Laufzeit | Mindestens erforderliche Runtime-Sicherheitsstufe, um geschützte Inhalte wiederzugeben. |
+| Zulässige Anwendungen | Zulassungsliste der Clientanwendungen, die Inhalte abspielen dürfen. Wenn keine Anwendungen angegeben sind, ist jede SWF- oder AIR-Anwendung zulässig. |
+| SWF | Liste der SWF-URLs, die geschützte Inhalte abspielen dürfen. |
+| AIR | Liste der AIR-Anwendungen, die geschützte Inhalte abspielen dürfen. Die Herausgeber-ID ist erforderlich, die übrigen Felder sind optional. |
 
-Flash Access Manager unterstützt Richtlinien, die mehrere Wiedergabeberechtigungen enthalten. Um eine Richtlinie mit mehr als einer Wiedergaberechse zu erstellen, klicken Sie auf die Schaltfläche &quot;Hinzufügen zusätzliche Wiedergaberechte&quot;und füllen Sie die gewünschten Attribute für jede Wiedergaberechnung aus.
+Flash Access Manager unterstützt Richtlinien mit mehreren Wiedergabeberechtigungen. Um eine Richtlinie mit mehr als einer Play Right-Option zu erstellen, verwenden Sie die Schaltfläche &quot;Add additional Play Right&quot;(Zusätzliche Wiedergabequalität hinzufügen) und füllen Sie die gewünschten Attribute für jede Play Right-Option aus.
 
-Bei der Nutzung einer Lizenz verwendet der Client das erste Wiedergaberecht, für das er alle Anforderungen erfüllt. Mehrere Wiedergaberechte können verwendet werden, um für verschiedene Betriebssysteme unterschiedliche Einschränkungen festzulegen. Beispielsweise ist es möglich, eine Rechte mit Output Protection anzugeben, der für Windows erforderlich ist (indem DRM-Versionen unter Macintosh und Linux blockiert werden), und eine zweite Rechte mit Output Protection &quot;Use if available&quot;auf anderen Plattformen anzugeben (durch Blocklisten von DRM-Versionen unter Windows).
+Bei der Nutzung einer Lizenz verwendet der Client das erste Play Right, für das er alle Anforderungen erfüllt. Es können mehrere Wiedergaberechte verwendet werden, um verschiedene Einschränkungen für verschiedene Betriebssysteme anzugeben. Beispielsweise ist es möglich, eine Berechtigung mit für Windows erforderlichem Output Protection anzugeben (indem DRM-Versionen unter Macintosh und Linux auf die Blockierungsliste gesetzt werden) und eine zweite Berechtigung mit Output Protection &quot;Use if available&quot;auf anderen Plattformen anzugeben (indem DRM-Versionen unter Windows auf die Blockierungsliste gesetzt werden).

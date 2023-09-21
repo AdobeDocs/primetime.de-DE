@@ -2,8 +2,7 @@
 title: Informationen zu CRL-Dateien
 description: Informationen zu CRL-Dateien
 copied-description: true
-exl-id: 126a323d-9433-4a1e-a617-2d3bbf717cce
-source-git-commit: 6a00df9c061da43f6efa49d927873db629568597
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -28,7 +27,7 @@ Im Folgenden finden Sie eine Liste von extern gehosteten Zertifikatsperrlisten, 
 
    * URL: [!DNL <ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl>]
    * Datei: [!DNL http___crl2.adobe.com_Adobe_FlashAccessRootCA.crl]
-   * Gültigkeit: Gut für ca. 5 Jahre nach der Erstellung
+   * Gültigkeit: Gut für ca. 5 Jahre ab Erstellung
 
 * **Neueste Zertifikatsperrliste:**
 
@@ -36,7 +35,7 @@ Im Folgenden finden Sie eine Liste von extern gehosteten Zertifikatsperrlisten, 
    * Datei: [!DNL http___crl3.adobe.com_AdobeSystemsIncorporatedFlashAccessRuntime_LatestCRL.crl]
    * Gültigkeit: Gut für ca. 3 Monate ab Erstellung
 
-Wenden Sie sich an den Support von Adobe, um mehr über die extern gehosteten Zertifikatsperrlisten zu erfahren, die von Lizenzservern verwendet werden können.
+Wenden Sie sich an den Adobe-Support, um mehr über die extern gehosteten Zertifikatsperrlisten zu erfahren, die von Lizenzservern verwendet werden können.
 
 <!---
 

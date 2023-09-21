@@ -1,43 +1,41 @@
 ---
-description: TVSDK verarbeitet Zeitraumfehler entsprechend dem jeweiligen Problem, indem die falsch definierten Zeiträume entweder zusammengeführt oder neu angeordnet werden.
-title: Verarbeitung von Fehlern beim Löschen und Ersetzen von Anzeigen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK behandelt Zeitbereichsfehler entsprechend dem jeweiligen Problem, indem die falsch definierten Zeiträume entweder zusammengeführt oder neu angeordnet werden.
+title: Umgang mit Anzeigenlöschungen und Ersatzfehlern
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
 
 ---
 
+# Umgang mit Anzeigenlöschungen und Ersatzfehlern {#ad-deletion-and-replacement-error-handling}
 
-# Verarbeitung von Fehlern beim Löschen und Ersetzen von Anzeigen {#ad-deletion-and-replacement-error-handling}
+TVSDK behandelt Zeitbereichsfehler entsprechend dem jeweiligen Problem, indem die falsch definierten Zeiträume entweder zusammengeführt oder neu angeordnet werden.
 
-TVSDK verarbeitet Zeitraumfehler entsprechend dem jeweiligen Problem, indem die falsch definierten Zeiträume entweder zusammengeführt oder neu angeordnet werden.
+TVSDK-Angebote `timeRanges` Fehlern durch standardmäßige Zusammenführung und Neuanordnung. Zunächst werden kundendefinierte Zeiträume nach dem *begin* Zeit. Basierend auf dieser Sortierreihenfolge werden dann benachbarte Bereiche zusammengeführt und miteinander verbunden, wenn es Untergruppen und Schnittmengen zwischen den Bereichen gibt.
 
-TVSDK behandelt `timeRanges`-Fehler, indem es die standardmäßige Zusammenführung und Neuanordnung vornimmt. Zuerst sortiert es benutzerdefinierte Zeiträume nach der Zeit *begin*. Basierend auf dieser Sortierreihenfolge werden dann angrenzende Bereiche zusammengeführt und bei Untergruppen und Schnittpunkten zwischen den Bereichen verbunden.
-
-TVSDK verarbeitet Zeitraumfehler wie folgt:
+TVSDK behandelt Zeitbereichsfehler wie folgt:
 
 * Nicht in der Reihenfolge - TVSDK ordnet die Zeiträume neu an.
-* Untergruppe - TVSDK führt die Teilmengen des Zeitraums zusammen.
-* Intersect - TVSDK führt die sich überschneidenden Zeiträume zusammen.
-* Konflikt zwischen Ersetzungsbereichen - TVSDK wählt die Ersetzungsdauer aus der frühesten Anzeige von `timeRange` in der konfliktbehafteten Gruppe.
+* Teilmenge - TVSDK führt die Zeitbereichs-Teilmengen zusammen.
+* Schnittmenge - TVSDK führt die sich überschneidenden Zeiträume zusammen.
+* Bereichskonflikt ersetzen - TVSDK wählt die Ersetzungsdauer ab dem frühesten angezeigten Zeitpunkt aus `timeRange` in der in Konflikt stehenden Gruppe.
 
-TVSDK verarbeitet Signalmoduskonflikte wie folgt:
+TVSDK behandelt Signalmoduskonflikte wie folgt:
 
-* Wenn REPLACE-Bereiche definiert sind, ändert TVSDK automatisch den Signalmodus auf CUSTOM_RANGE.
-* Wenn DELETE- oder MARK-Bereiche definiert sind und der Signalmodus CUSTOM_RANGE lautet, löscht oder markiert TVSDK diese Bereiche. In diesem Fall gibt es keine Anzeigeneinfügung.
+* Wenn Ersatzbereiche definiert sind, ändert TVSDK automatisch den Signalmodus zu CUSTOM_RANGE.
+* Wenn DELETE- oder MARK-Bereiche definiert sind und der Signalmodus &quot;CUSTOM_RANGE&quot;lautet, löscht oder markiert TVSDK diese Bereiche. In diesem Fall gibt es keine Anzeigeneinfügung.
 * Wenn ein DELETE- oder MARK-Bereich eine Ersatzdauer definiert, ignoriert TVSDK diese Dauer.
 
-Wenn der Server kein gültiges `AdBreaks` zurückgibt:
+Wenn der Server keine Gültigkeit zurückgibt `AdBreaks`:
 
-* TVSDK generiert und verarbeitet ein `NOPTimelineOperation` für das leere `AdBreak`. Es wird keine Anzeige wiedergegeben.
+* TVSDK generiert und verarbeitet eine `NOPTimelineOperation` für leere `AdBreak`. Keine Anzeige wird wiedergegeben.
 
-## Beispiele für Zeitraumfehler {#time-range-error-examples}
+## Beispiele für Zeitbereichsfehler {#time-range-error-examples}
 
 TVSDK reagiert auf fehlerhafte Zeitbereichsspezifikationen, indem die Zeiträume entsprechend zusammengeführt oder ersetzt werden.
 
-Im folgenden Beispiel werden vier sich überschneidende DELETE-Zeitbereiche definiert. TVSDK führt die vier Zeitbereiche zu einem zusammen, sodass der tatsächliche Löschbereich zwischen 0 und 50 liegt.
+Im folgenden Beispiel werden vier sich überschneidende DELETE-Zeitbereiche definiert. TVSDK führt die vier Zeitbereiche zu einem aus, sodass der tatsächliche Löschbereich zwischen 0 und 50 liegt.
 
 ```
 "time-ranges": {
@@ -58,7 +56,7 @@ Im folgenden Beispiel werden vier sich überschneidende DELETE-Zeitbereiche defi
 }
 ```
 
-Im folgenden Beispiel werden vier REPLACE-Zeitbereiche mit miteinander in Konflikt stehenden Zeitbereichen definiert. In diesem Fall ersetzt TVSDK 0-50 durch 25 Anzeigen. Es wird mit der ersten Ersetzungsdauer in der Sortierreihenfolge gewechselt, da es in nachfolgenden Bereichen Konflikte gibt.
+Im folgenden Beispiel werden vier ERSETZUNGS-Zeitbereiche mit widersprüchlichen Zeitbereichen definiert. In diesem Fall ersetzt TVSDK 0-50 durch 25 Anzeigen. Sie wird mit der ersten Ersetzungsdauer in der Sortierreihenfolge aktualisiert, da in nachfolgenden Bereichen Konflikte auftreten.
 
 ```
 "time-ranges": {

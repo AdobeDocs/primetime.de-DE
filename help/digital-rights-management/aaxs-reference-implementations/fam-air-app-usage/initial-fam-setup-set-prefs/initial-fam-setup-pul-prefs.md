@@ -1,23 +1,20 @@
 ---
-title: Voreinstellungen für die Richtlinienaktualisierung - Liste
-description: Voreinstellungen für die Richtlinienaktualisierung - Liste
+title: Voreinstellungen für Richtlinien-Update-Liste
+description: Voreinstellungen für Richtlinien-Update-Liste
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%
 
 ---
 
+# Voreinstellungen für Richtlinien-Update-Liste {#policy-update-list-preferences}
 
-# Voreinstellungen für die Liste von Richtlinienaktualisierungen {#policy-update-list-preferences}
+Diese Registerkarte enthält Einstellungen, die zum Erstellen von Listen für Richtlinienaktualisierungen erforderlich sind. In der folgenden Tabelle werden die Voreinstellungen beschrieben:
 
-Diese Registerkarte enthält die zum Erstellen von Listen zur Richtlinienaktualisierung erforderlichen Einstellungen. In der folgenden Tabelle werden die Voreinstellungen beschrieben:
-
-| Voreinstellung | Beschreibung |
+| Präferenz | Beschreibung |
 |---|---|
-| Lizenzserver-Berechtigung | Die von der Adobe ausgestellte Lizenzserverberechtigung. Mit dieser Berechtigung werden Listen zur Richtlinienaktualisierung signiert. |
-| Dateiname | Die PKCS#12-Datei ( [!DNL .pfx]), die Zertifikat und privaten Schlüssel enthält. Die Datei muss sich im Ordner [!DNL Resource] befinden. |
-| Dateikennwort | Das Kennwort für die Datei [!DNL .pfx] |
-
+| Lizenzserver-Berechtigungen | Die Lizenz Server-Berechtigung, ausgestellt von Adobe. Diese Berechtigung wird zum Signieren von Listen für Richtlinienaktualisierungen verwendet. |
+| Dateiname | Die PKCS#12 ( [!DNL .pfx]) Datei mit Zertifikat und privatem Schlüssel. Die Datei muss sich im [!DNL Resource] Verzeichnis. |
+| File Password | Das Kennwort für [!DNL .pfx] file |

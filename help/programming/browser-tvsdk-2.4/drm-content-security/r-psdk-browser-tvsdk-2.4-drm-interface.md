@@ -1,35 +1,33 @@
 ---
-description: Browser TVSDK bietet eine DRM-Schnittstelle, mit der Sie Inhalte abspielen können, die durch verschiedene DRM-Lösungen geschützt sind, einschließlich FairPlay, PlayReady und Widevine.
+description: Browser TVSDK bietet eine DRM-Oberfläche, mit der Sie Inhalte wiedergeben können, die durch verschiedene DRM-Lösungen geschützt sind, darunter FairPlay, PlayReady und Widevine.
 title: Übersicht über die DRM-Oberfläche
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht über die DRM-Oberfläche{#drm-interface-overview}
 
-Browser TVSDK bietet eine DRM-Schnittstelle, mit der Sie Inhalte abspielen können, die durch verschiedene DRM-Lösungen geschützt sind, einschließlich FairPlay, PlayReady und Widevine.
+Browser TVSDK bietet eine DRM-Oberfläche, mit der Sie Inhalte wiedergeben können, die durch verschiedene DRM-Lösungen geschützt sind, darunter FairPlay, PlayReady und Widevine.
 
 <!--<a id="section_59994F2059B245E996E0776214804A0A"></a>-->
 
 >[!IMPORTANT]
 >
->DRM-Unterstützung ist für MPEG-Dash-Streams verfügbar, die mit Microsoft PlayReady (im Internet Explorer unter Windows 8.1 und Edge) und Widevine (unter Google Chrome) DRM-Systemen geschützt sind. DRM-Unterstützung ist für HLS-Streams in Safari verfügbar, die mit FairPlay geschützt sind.
+>DRM-Unterstützung ist für MPEG-Dash-Streams verfügbar, die mit Microsoft PlayReady (im Internet Explorer unter Windows 8.1 und Edge) und Widevine (in Google Chrome) DRM-Systemen geschützt sind. DRM-Unterstützung ist für HLS-Streams in Safari verfügbar, die mit FairPlay geschützt sind.
 
-Die wichtigste Schnittstelle des DRM-Workflows ist das `DRMManager`. Ein Verweis auf die `DRMManager`-Instanz kann über die MediaPlayer-Instanz abgerufen werden:
+Die wichtigste Benutzeroberfläche des DRM-Workflows ist die `DRMManager`. Ein Verweis auf die `DRMManager` -Instanz kann über die MediaPlayer-Instanz abgerufen werden:
 
 * `var mediaPlayer = new AdobePSDK.MediaPlayer();`
 * `var drmManager = mediaPlayer.drmManager;`
 
 <!--<a id="section_B7E8AD9A4D4F4BD9BA2A67ABC135D6F9"></a>-->
 
-Im Folgenden finden Sie einen Workflow auf hoher Ebene für die Wiedergabe von DRM-geschützten Inhalten:
+Hier finden Sie einen allgemeinen Workflow für die Wiedergabe von DRM-geschützten Inhalten:
 
-1. Um die DRM-systemspezifischen Daten anzuhängen, die von Browser TVSDK beim Lizenzerwerb für einen geschützten Stream verwendet werden, führen Sie den folgenden Aufruf aus, bevor Sie `mediaPlayer.replaceCurrentResource` aufrufen:
+1. Um die DRM-systemspezifischen Daten anzuhängen, die vom Browser TVSDK im Lizenzakquiseprozess für einen geschützten Stream verwendet werden, rufen Sie Folgendes auf, bevor Sie aufrufen `mediaPlayer.replaceCurrentResource`:
 
    ```js
    var protectionData = { 
@@ -47,7 +45,7 @@ Im Folgenden finden Sie einen Workflow auf hoher Ebene für die Wiedergabe von D
    drmManager.setProtectionData(protectionData);
    ```
 
-1. Wenn derselbe Inhalt in verschiedenen Browsern mit unterschiedlichen DRM-Systemen verwendet werden soll, können Schutzdaten für mehrere DRM-Systeme angegeben werden.
+1. Wenn erwartet wird, dass derselbe Inhalt in verschiedenen Browsern mit verschiedenen DRM-Systemen funktioniert, können Schutzdaten für mehrere DRM-Systeme angegeben werden.
 
    ```js
    var protectionData = { 
@@ -92,22 +90,22 @@ Im Folgenden finden Sie einen Workflow auf hoher Ebene für die Wiedergabe von D
    drmManager.setProtectionData(protectionData);
    ```
 
-1. Wenn keine Schutzdaten festgelegt sind, werden nötige Informationen wie die Lizenz-URL gegebenenfalls aus dem Feld PSSH für DRM-Systeme abgerufen.
+1. Wenn keine Schutzdaten festgelegt sind, werden nötige Informationen wie die Lizenzierungs-URL, falls zutreffend, aus dem PSSH-Feld für DRM-Systeme abgerufen.
 
    >[!TIP]
    >
-   >Durch Angabe von Schutzdaten wird die im Feld &quot;PSSH&quot;angegebene Lizenz-URL außer Kraft gesetzt.
+   >Durch die Angabe von Schutzdaten wird die im Feld &quot;PSSH&quot;angegebene Lizenz-URL überschrieben.
 
-1. Standardmäßig ist der Sitzungstyp für die DRM-Lizenz temporär, d. h. die Lizenz wird nach dem Schließen der Sitzung nicht gespeichert.
+1. Standardmäßig ist der Sitzungstyp für die DRM-Lizenz temporär. Das bedeutet, dass die Lizenz nach dem Schließen der Sitzung nicht gespeichert wird.
 
-   Sie können einen Sitzungstyp mit einer API in `DRMManager` angeben.  Zur Abwärtskompatibilität gehören die Sitzungstypen `temporary`, `persistent-license`, `persistent-usage-record` und `persistent`.
+   Sie können einen Sitzungstyp mithilfe einer API in `DRMManager`.  Zur Abwärtskompatibilität umfassen Sitzungstypen Folgendes: `temporary`, `persistent-license`, `persistent-usage-record`, und `persistent`.
 
    ```js
    var drmManager = mediaPlayer.drmManager; 
     drmManager.setEMESessionType(“<YOUR_SESSION_TYPE>”); 
    ```
 
-1. Wenn `sessionType` oder `persistent-license` oder `persistent` verwendet wird, kann die DRM-Lizenz zurückgegeben werden, indem `DRMManager.returnLicense` aufgerufen wird.
+1. Wenn die Variable `sessionType` verwendet wird `persistent-license` oder `persistent`, kann die DRM-Lizenz zurückgegeben werden, indem Sie `DRMManager.returnLicense`.
 
    ```js
    var onLicenseReturnFunc = function () { 
@@ -126,4 +124,3 @@ Im Folgenden finden Sie einen Workflow auf hoher Ebene für die Wiedergabe von D
        drmManager.returnLicense(null, null, null, false, returnLicenseListener, drmLicense.session); 
    }
    ```
-

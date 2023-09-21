@@ -1,20 +1,18 @@
 ---
-description: Client-Code gibt Daten an eine Android-API weiter.
-title: Arbeitsablauf für Schlüsselanforderungen auf Android PSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Client-Code übergibt Daten an eine Android-API.
+title: Workflow für Schlüsselanforderungen in Android PSDK
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
 
 ---
 
+# Workflow für Schlüsselanforderungen in Android PSDK{#key-request-workflow-on-android-psdk}
 
-# Arbeitsablauf für Schlüsselanforderungen auf Android-PSDK{#key-request-workflow-on-android-psdk}
+Client-Code übergibt Daten an eine Android-API.
 
-Client-Code gibt Daten an eine Android-API weiter.
-
-Unter Android sollte Ihr Clientcode die Lizenzserver-URL und die zugehörigen Lizenzakquise-Daten mit der folgenden API übermitteln:
+Unter Android sollte Ihr Clientcode die Lizenzserver-URL und die zugehörigen Lizenzakquise-Daten mithilfe der folgenden API übergeben:
 
 ```
 class DRMManager 
@@ -32,9 +30,9 @@ class DRMManager
     }
 ```
 
-Nach dem erfolgreichen Aufruf dieser API kann Ihr Code dann die Wiedergabe von Beginn wie gewohnt durchführen. Wenn Sie Expressplay verwenden, können Sie das Token entweder als Teil der Lizenzserver-URL oder als Anforderungseigenschaft übergeben und das Token aus der Lizenzserver-URL entfernen.
+Nachdem Sie diese API erfolgreich aufgerufen haben, kann Ihr Code die Inhaltswiedergabe auf die übliche Weise starten. Wenn Sie &quot;Expressplay&quot;verwenden, können Sie das Token entweder als Teil der Lizenzserver-URL oder als Anfrageeigenschaft übergeben und das Token aus der Lizenzserver-URL entfernen.
 
-Einige Android-Geräte unterstützen sowohl Widevine als auch PlayReady. Auf solchen Geräten sollte der Kunde PSDK zwingen, den Inhalt mit einem bestimmten DRM zu entschlüsseln, wenn der Inhalt mehrere DRM-Header hat. Dies kann durch Aufruf der folgenden API vor der Wiedergabe erfolgen:
+Einige Android-Geräte unterstützen sowohl Widevine als auch PlayReady. Auf solchen Geräten kann der Kunde PSDK zwingen, den Inhalt mit einem bestimmten DRM zu entschlüsseln, wenn der Inhalt mehrere DRM-Header enthält. Dies kann durch Aufruf der folgenden API vor der Wiedergabe erfolgen:
 
 ```
 class MediaPlayer 
@@ -48,4 +46,3 @@ class MediaPlayer
    public void setDRMScheme(String drm) throws MediaPlayerException 
    }
 ```
-

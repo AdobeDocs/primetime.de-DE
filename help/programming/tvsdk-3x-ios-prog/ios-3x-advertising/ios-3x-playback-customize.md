@@ -1,37 +1,35 @@
 ---
 description: Wenn die Wiedergabe eine Werbeunterbrechung erreicht, eine Werbeunterbrechung durchläuft oder in einer Werbeunterbrechung endet, definiert TVSDK ein Standardverhalten für die Positionierung der aktuellen Abspielleiste.
 title: Wiedergabe mit Anzeigen anpassen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '982'
 ht-degree: 0%
 
 ---
 
-
-# Wiedergabe mit Anzeigen {#customize-playback-with-ads} anpassen
+# Wiedergabe mit Anzeigen anpassen {#customize-playback-with-ads}
 
 Wenn die Wiedergabe eine Werbeunterbrechung erreicht, eine Werbeunterbrechung durchläuft oder in einer Werbeunterbrechung endet, definiert TVSDK ein Standardverhalten für die Positionierung der aktuellen Abspielleiste.
 
 >[!TIP]
 >
->Sie können das Standardverhalten mithilfe der `PTAdPolicySelector`-Klasse außer Kraft setzen.
+>Sie können das Standardverhalten überschreiben, indem Sie die `PTAdPolicySelector` -Klasse.
 
-Das Standardverhalten variiert je nachdem, ob der Benutzer die Werbeunterbrechung während der normalen Wiedergabe oder bei der Suche in einem Video durchläuft.
+Das Standardverhalten variiert je nachdem, ob der Benutzer die Werbeunterbrechung während der normalen Wiedergabe oder durch die Suche in einem Video übergibt.
 
 Sie können das Verhalten der Anzeigenwiedergabe wie folgt anpassen:
 
-* Speichern Sie die Position, an der der Benutzer das Video nicht mehr ansah, und nehmen Sie die Wiedergabe an derselben Position in einer zukünftigen Sitzung wieder auf.
-* Wenn dem Benutzer eine Werbeunterbrechung angezeigt wird, zeigen Sie für einige Minuten keine zusätzlichen Anzeigen an, selbst wenn der Benutzer nach einer neuen Position sucht.
-* Wenn der Inhalt nach einigen Minuten nicht wiedergegeben werden kann, starten Sie den Stream neu oder wechseln Sie zu einer anderen Quelle für denselben Inhalt.
+* Speichern Sie die Position, an der der Benutzer das Video angehalten und die Wiedergabe an derselben Position in einer zukünftigen Sitzung fortgesetzt hat.
+* Wenn dem Benutzer eine Werbeunterbrechung angezeigt wird, zeigen Sie für eine Anzahl von Minuten keine zusätzlichen Anzeigen an, selbst wenn der Benutzer zu einer neuen Position springt.
+* Wenn die Wiedergabe des Inhalts nach einigen Minuten fehlschlägt, starten Sie den Stream neu oder wechseln Sie für denselben Inhalt zu einer anderen Quelle.
 
-   Um dem Benutzer zu ermöglichen, Anzeigen zu überspringen und zur vorherigen fehlgeschlagenen Position zurückzukehren, können Sie während der Wiedergabesitzung Pre-Roll- und/oder Mid-Roll-Anzeigen deaktivieren. TVSDK bietet Methoden, um das Überspringen von Pre-Roll- und Mid-Roll-Anzeigen zu aktivieren.
+  In der Failover-Wiedergabesitzung können Sie Pre-Roll- und/oder Mid-Roll-Anzeigen deaktivieren, damit der Benutzer Anzeigen überspringen und zur vorherigen fehlgeschlagenen Position zurückkehren kann. TVSDK bietet Methoden zum Überspringen von Pre-Roll- und Mid-Roll-Anzeigen.
 
 ## API-Elemente für die Anzeigenwiedergabe {#section_296ADE00CFEA40CBA1B46142720D13A5}
 
-TVSDK bietet Klassen und Methoden, mit denen Sie das Wiedergabeverhalten von Inhalten, die Werbung enthalten, anpassen können.
-Die folgenden API-Elemente eignen sich zum Anpassen der Wiedergabe:
+TVSDK bietet Klassen und Methoden, mit denen Sie das Wiedergabeverhalten von Inhalt anpassen können, der Werbung enthält.
+Die folgenden API-Elemente sind zum Anpassen der Wiedergabe nützlich:
 
 <table id="table_B07E373B9D2B425AB36466B1D42411AD"> 
  <thead> 
@@ -42,46 +40,46 @@ Die folgenden API-Elemente eignen sich zum Anpassen der Wiedergabe:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTAdMetadata  </span> </td> 
-   <td colname="col2"> Legen Sie fest, ob eine Werbeunterbrechung als von einem Viewer gesehen gekennzeichnet werden soll, und wann, wenn ja, wann sie markiert werden soll. Legen Sie die überwachte Richtlinie mit der Eigenschaft <span class="codeph"> adBreakAsWatched </span> fest und rufen Sie sie ab. </td> 
+   <td colname="col1"> <span class="codeph"> PTAdMetadata </span> </td> 
+   <td colname="col2"> Legen Sie fest, ob eine Werbeunterbrechung von einem Viewer als überwacht markiert werden soll und wann sie mit einer Markierung versehen werden soll. Überwachte Richtlinie mithilfe von festlegen und abrufen <span class="codeph"> adBreakAsWatched </span> -Eigenschaft. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTAdPolicySelector  </span> </td> 
+   <td colname="col1"> <span class="codeph"> PTAdPolicySelector </span> </td> 
    <td colname="col2"> Protokoll, das die Anpassung des TVSDK-Anzeigenverhaltens ermöglicht. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTDefaultAdPolicySelector  </span> </td> 
-   <td colname="col2"> Klasse, die das standardmäßige TVSDK-Verhalten implementiert. Ihre Anwendung kann diese Klasse außer Kraft setzen, um das Standardverhalten anzupassen, ohne die vollständige Schnittstelle zu implementieren. </td> 
+   <td colname="col1"> <span class="codeph"> PTDefaultAdPolicySelector </span> </td> 
+   <td colname="col2"> Klasse, die das standardmäßige TVSDK-Verhalten implementiert. Ihre Anwendung kann diese Klasse überschreiben, um das Standardverhalten anzupassen, ohne die vollständige Benutzeroberfläche zu implementieren. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTMediaPlayer  </span> </td> 
+   <td colname="col1"> <span class="codeph"> PTMediaPlayer </span> </td> 
    <td colname="col2"> 
     <ul id="ul_37700A741403448A8760FDDA68B099AA"> 
-     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localTime  </span>. <p>Dies ist die lokale Zeit der Wiedergabe, wobei die platzierten Werbeunterbrechungen ausgeschlossen werden. </p> </li> 
-     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> searchToLocalTime  </span> . <p>Hier erfolgt die Suche relativ zu einer lokalen Zeit im Stream. </p> </li> 
-     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.convertToLocalTime  </span>. <p>Die virtuelle Position auf der Zeitleiste wird in die lokale Position umgewandelt. </p> </li> 
+     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localTime </span>. <p>Dies ist die lokale Zeit der Wiedergabe ohne die platzierten Werbeunterbrechungen. </p> </li> 
+     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> searchToLocalTime </span> . <p>Hier erfolgt die Suche relativ zu einer lokalen Zeit im Stream. </p> </li> 
+     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.convertToLocalTime </span>. <p>Die virtuelle Position auf der Timeline wird in die lokale Position konvertiert. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTAdBreak  </span> </td> 
-   <td colname="col2"> <span class="codeph"> isWatched- </span> Eigenschaft. Gibt an, ob der Viewer die Anzeige gesehen hat. </td> 
+   <td colname="col1"> <span class="codeph"> PTAdBreak </span> </td> 
+   <td colname="col2"> <span class="codeph"> isWatched </span> -Eigenschaft. Gibt an, ob der Viewer die Anzeige gesehen hat. </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Einrichten der benutzerdefinierten Wiedergabe {#section_8209BAACC7814C9399988DC7DE9CF4CA}
 
-Bevor Sie Anzeigenrichtlinien-Instanzen anpassen oder außer Kraft setzen können, registrieren Sie sie bei TVSDK.
+Bevor Sie Anzeigenverhalten anpassen oder überschreiben können, registrieren Sie die Anzeigenrichtlinieninstanz bei TVSDK.
 
-Führen Sie zum Anpassen des Anzeigenverhaltens einen der folgenden Schritte aus:
+Führen Sie einen der folgenden Schritte aus, um das Anzeigenverhalten anzupassen:
 
-* Befolgen Sie das `PTAdPolicySelector`-Protokoll und implementieren Sie alle erforderlichen Methoden zur Richtlinienauswahl.
+* Mit dem `PTAdPolicySelector` alle erforderlichen Methoden zur Richtlinienauswahl implementieren.
 
-   Diese Option wird empfohlen, wenn Sie **alle**-Standardanzeigeverhalten außer Kraft setzen müssen.
+  Diese Option wird empfohlen, wenn Sie **all** Standardverhalten der Anzeige.
 
-* Überschreiben Sie die `PTDefaultAdPolicySelector`-Klasse und stellen Sie Implementierungen nur für Verhalten bereit, die angepasst werden müssen.
+* Überschreiben Sie die `PTDefaultAdPolicySelector` -Klasse und stellen Implementierungen nur für jene Verhaltensweisen bereit, die angepasst werden müssen.
 
-   Diese Option wird empfohlen, wenn Sie nur **einige** der Standardverhaltensregeln außer Kraft setzen müssen.
+  Diese Option wird empfohlen, wenn Sie nur **some** des Standardverhaltens.
 
 Führen Sie für beide Optionen die folgenden Aufgaben aus:
 
@@ -89,7 +87,7 @@ Führen Sie für beide Optionen die folgenden Aufgaben aus:
 
    >[!NOTE]
    >
-   >Benutzerdefinierte Anzeigenrichtlinien, die zu Beginn der Wiedergabe registriert werden, werden gelöscht, wenn die `PTMediaPlayer`-Instanz dezuordnet wird. Ihre Anwendung muss jedes Mal, wenn eine neue Wiedergabesitzung erstellt wird, eine Richtliniensatzinstanz registrieren.
+   >Benutzerdefinierte Anzeigenrichtlinien, die zu Beginn der Wiedergabe registriert werden, werden gelöscht, wenn die Variable `PTMediaPlayer` -Instanz nicht zugewiesen wurde. Ihre Anwendung muss bei jeder Erstellung einer neuen Wiedergabesitzung eine Richtlinienselektorinstanz registrieren.
 
    Beispiel:
 
@@ -104,15 +102,15 @@ Führen Sie für beide Optionen die folgenden Aufgaben aus:
 
 1. Implementieren Sie Ihre Anpassungen.
 
-## Werbeunterbrechungen für einen Zeitraum {#section_99809BE4D9BB4DEEBBF596C746CA428A} überspringen
+## Werbeunterbrechungen für einen bestimmten Zeitraum überspringen {#section_99809BE4D9BB4DEEBBF596C746CA428A}
 
-Standardmäßig erzwingt TVSDK die Wiedergabe einer Werbeunterbrechung, wenn der Benutzer über eine Werbeunterbrechung sucht. Sie können das Verhalten anpassen, um einen Werbeunterbrechung zu überspringen, wenn der Zeitraum, der nach dem Abschluss eines vorherigen Umbruchs abgelaufen ist, innerhalb einer bestimmten Anzahl von Minuten liegt.
+Standardmäßig erzwingt TVSDK die Wiedergabe einer Werbeunterbrechung, wenn der Benutzer die Suche über eine Werbeunterbrechung durchführt. Sie können das Verhalten so anpassen, dass eine Werbeunterbrechung übersprungen wird, wenn die seit dem Abschluss einer vorherigen Werbeunterbrechung verstrichene Zeit innerhalb einer bestimmten Anzahl von Minuten liegt.
 
 >[!IMPORTANT]
 >
->Bei einer internen Suche, eine Anzeige zu überspringen, kann es zu einer leichten Pause bei der Wiedergabe kommen.
+>Wenn eine interne Suche besteht, um eine Anzeige zu überspringen, kann es bei der Wiedergabe zu einer leichten Pause kommen.
 
-Im folgenden Beispiel einer benutzerdefinierten Anzeigenrichtlinienauswahl werden Anzeigen in den nächsten fünf Minuten (Pinnwandzeit) übersprungen, nachdem ein Benutzer eine Werbeunterbrechung gesehen hat.
+Im folgenden Beispiel einer benutzerdefinierten Anzeigenrichtlinienauswahl werden Anzeigen in den nächsten fünf Minuten (Uhrzeit) übersprungen, nachdem ein Benutzer eine Werbeunterbrechung gesehen hat.
 
 1. Registrieren Sie die Richtlinieninstanz, die von TVSDK über die Client-Factory verwendet werden soll.
 
@@ -247,25 +245,25 @@ double MIN_BREAK_INTERVAL  = 60 * 5; // 5 minutes
 @end
 ```
 
-## Speichern Sie die Videoposition und setzen Sie die Wiedergabe später fort.{#section_FAE252E38CED48D4BDD38BAA4A6A20A4}
+## Speichern Sie die Videoposition und nehmen Sie die Fortsetzung später vor {#section_FAE252E38CED48D4BDD38BAA4A6A20A4}
 
 Sie können die aktuelle Wiedergabeposition in einem Video speichern und die Wiedergabe an derselben Position in einer zukünftigen Sitzung fortsetzen.
 
-Dynamisch eingefügte Anzeigen unterscheiden sich von Benutzersitzung zu Benutzersitzung. Daher bezieht sich das Speichern der Position **mit** geteilten Anzeigen auf eine andere Position in einer zukünftigen Sitzung. TVSDK stellt Methoden zum Abrufen der Wiedergabeposition bereit, während geteilte Anzeigen ignoriert werden.
+Dynamisch eingefügte Anzeigen unterscheiden sich zwischen Benutzersitzungen, sodass die Position gespeichert wird **mit** Geteilte Anzeigen beziehen sich auf eine andere Position in einer zukünftigen Sitzung. TVSDK bietet Methoden zum Abrufen der Wiedergabeposition bei gleichzeitigem Ignorieren von geteilten Anzeigen.
 
-1. Wenn der Benutzer ein Video beendet, ruft Ihre Anwendung die Position im Video ab und speichert sie.
+1. Wenn der Benutzer ein Video beendet, ruft die Anwendung die Position im Video ab und speichert sie.
 
    >[!TIP]
    >
-   >Die Anzeigendauer ist nicht inbegriffen.
+   >Anzeigendauern sind nicht enthalten.
 
-   Werbeunterbrechungen können je nach Sitzung unterschiedlich ausfallen, da Anzeigenmuster, Frequenzbegrenzungen usw. gelten. Die aktuelle Zeit des Videos in einer Sitzung kann in einer zukünftigen Sitzung anders sein. Beim Speichern einer Position im Video ruft die Anwendung die Ortszeit ab. Verwenden Sie die `localTime`-Eigenschaft, um diese Position zu lesen, die Sie auf dem Gerät oder in einer Datenbank auf dem Server speichern können.
+   Werbeunterbrechungen können in jeder Sitzung aufgrund von Anzeigenmustern, Frequenzlimitierung usw. variieren. Die aktuelle Zeit des Videos in einer Sitzung kann in einer zukünftigen Sitzung anders sein. Beim Speichern einer Position im Video ruft die Anwendung die Ortszeit ab. Verwenden Sie die  `localTime` -Eigenschaft, um diese Position zu lesen, die Sie auf dem Gerät oder in einer Datenbank auf dem Server speichern können.
 
-   Wenn sich der Benutzer beispielsweise in der 20. Minute des Videos befindet und diese Position fünf Minuten der Anzeigen umfasst, beträgt `currentTime` 1200 Sekunden, während `localTime` an dieser Position 900 Sekunden beträgt.
+   Wenn sich der Benutzer beispielsweise in der 20. Minute des Videos befindet und diese Position fünf Minuten Anzeigen enthält, `currentTime` auf 1200 Sekunden eingestellt ist, während `localTime` an dieser Position 900 Sekunden.
 
    >[!IMPORTANT]
    >
-   >Die lokale Zeit und die aktuelle Zeit sind für Live-/lineare Streams identisch. In diesem Fall hat `convertToLocalTime` keine Auswirkung. Bei VOD bleibt die Ortszeit unverändert, während Anzeigen abgespielt werden.
+   >Die lokale Zeit und die aktuelle Zeit sind für Live-/lineare Streams identisch. In diesem Fall `convertToLocalTime` hat keine Auswirkung. Für VOD bleibt die Ortszeit unverändert, während Anzeigen abgespielt werden.
 
    ```
    - (void) onMediaPlayerTimeChange:(NSNotification *)notification { 
@@ -280,15 +278,15 @@ Dynamisch eingefügte Anzeigen unterscheiden sich von Benutzersitzung zu Benutze
    }
    ```
 
-1. Um das Video an der gleichen Stelle wiederaufzunehmen, die in der vorherigen Sitzung gespeichert wurde, verwenden Sie `seekToLocalTime`.
+1. Um das Video an der Stelle wiederaufzunehmen, die in der vorherigen Sitzung gespeichert wurde, verwenden Sie `seekToLocalTime`.
 
    >[!TIP]
    >
-   >Diese Methode wird nur mit lokalen Zeitwerten aufgerufen. Wenn die Methode mit den aktuellen Zeitergebnissen aufgerufen wird, tritt ein falsches Verhalten auf.
+   >Diese Methode wird nur mit lokalen Zeitwerten aufgerufen. Wenn die Methode mit aktuellen Zeitergebnissen aufgerufen wird, tritt ein falsches Verhalten auf.
 
-   Um zur aktuellen Zeit zu suchen, verwenden Sie `seekToTime`.
+   Um zur aktuellen Zeit zu gelangen, verwenden Sie `seekToTime`.
 
-1. Wenn Ihre Anwendung das Ereignis `PTMediaPlayerStatusReady` zur Statusänderung erhält, suchen Sie nach der gespeicherten Ortszeit.
+1. Wenn Ihre Anwendung die `PTMediaPlayerStatusReady` Statusänderungsereignis, suchen Sie nach der gespeicherten lokalen Zeit.
 
    ```
    [self.player seekToLocalTime:CMTimeMake(900, 1) completionHandler:^(BOOL finished) { 
@@ -296,10 +294,10 @@ Dynamisch eingefügte Anzeigen unterscheiden sich von Benutzersitzung zu Benutze
    }];
    ```
 
-1. Stellen Sie die Werbeunterbrechungen gemäß den Angaben in der Benutzeroberfläche der Anzeigenrichtlinie bereit.
-1. Implementieren Sie eine benutzerdefinierte Anzeigenrichtlinienauswahl, indem Sie die standardmäßige Anzeigenrichtlinien-Auswahl erweitern.
-1. Stellen Sie die Werbeumbrüche bereit, die dem Benutzer durch Implementierung von `selectAdBreaksToPlay` angezeigt werden müssen.
+1. Stellen Sie die Werbeunterbrechungen bereit, wie in der Benutzeroberfläche der Anzeigenrichtlinie angegeben.
+1. Implementieren Sie eine benutzerdefinierte Anzeigenrichtlinienauswahl, indem Sie die standardmäßige Anzeigenrichtlinienauswahl erweitern.
+1. Stellen Sie die Werbeunterbrechungen bereit, die dem Benutzer durch Implementierung von `selectAdBreaksToPlay`
 
    >[!NOTE]
    >
-   >Diese Methode umfasst eine Pre-Roll-Werbeunterbrechung und die Mid-Roll-Werbeunterbrechungen vor der lokalen Zeitposition. Ihre Anwendung kann beschließen, eine Pre-Roll-Werbeunterbrechung auszuführen und zur angegebenen Ortszeit wiederaufzunehmen, eine Mid-Roll-Werbeunterbrechung abzuspielen und zur angegebenen Ortszeit fortzufahren oder keine Werbeunterbrechungen wiederzugeben.
+   >Diese Methode umfasst eine Pre-Roll-Werbeunterbrechung und die Mid-Roll-Werbeunterbrechungen vor der lokalen Zeitposition. Ihre Anwendung kann entscheiden, eine Pre-Roll-Werbeunterbrechung wiederzugeben und zur festgelegten lokalen Zeit fortzufahren, eine Mid-Roll-Werbeunterbrechung abzuspielen und zur festgelegten lokalen Zeit fortzufahren oder keine Werbeunterbrechungen wiederzugeben.

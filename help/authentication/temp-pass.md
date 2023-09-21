@@ -1,19 +1,18 @@
 ---
 title: Temporärer Übergang
 description: Temporärer Übergang
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2210'
 ht-degree: 0%
 
 ---
 
-
 # Temporärer Übergang {#temp-pass}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Funktionszusammenfassung {#tempass-featur-summary}
 
@@ -22,11 +21,11 @@ Mit dem Temp Pass können Programmierer temporären Zugriff auf ihren geschützt
 * Der Temp Pass kann konfiguriert werden, um temporären Zugriff für eine Vielzahl von Szenarien bereitzustellen, darunter die folgenden:
    * Ein Programmierer kann eine tägliche, kurze Vorschau (z.B. eine 10-minütige Vorschau) einer seiner Sites anbieten.
    * Ein Programmierer kann eine einzelne, lange Präsentation (z. B. vier Stunden) einer großen Sportereignis wie den Olympischen Spielen oder der NCAA-Marschmadness anbieten.
-   * Ein Programmierer kann eine Kombination der beiden vorherigen Szenarien bereitstellen. Beispiel: einen anfänglichen längeren Anzeigezeitraum von einem Tag, gefolgt von einer Reihe kurzer Zeiträume, die für einige der folgenden Tage täglich wiederholt werden.
+   * Ein Programmierer kann eine Kombination der beiden vorherigen Szenarien bereitstellen, z. B. einen anfänglichen längeren Anzeigezeitraum eines Tages, gefolgt von einer Reihe kurzer Zeiträume, die für einige weitere Tage täglich wiederholt werden.
 * Programmierer geben die Dauer (Time-To-Live oder TTL) ihres Temp-Passes an.
 * Der Temp Pass funktioniert pro Anfrage.  Beispielsweise könnte NBC einen 4-Stunden-Temp-Pass für den Anfragenden &quot;NBCOlympics&quot;einrichten.
 * Programmierer können alle Token zurücksetzen, die einem bestimmten Anfragenden gewährt werden.  Der &quot;temporäre MVPD&quot;, der zur Implementierung des Temp Pass verwendet wird, muss mit aktivierter Option &quot;Authentifizierung pro Anforderer&quot;konfiguriert werden.
-* **Der temporäre Pass-Zugriff wird einzelnen Benutzern auf bestimmten Geräten gewährt**. Nachdem der Zugriff auf den temporären Pass für einen Benutzer abläuft, kann dieser Benutzer keinen temporären Zugriff auf dasselbe Gerät erhalten, bis dessen Ablauf abgelaufen ist [Autorisierungstoken](/help/authentication/glossary.md#authz-token) vom Adobe Primetime-Authentifizierungsserver gelöscht wird.
+* **Der temporäre Pass-Zugriff wird einzelnen Benutzern auf bestimmten Geräten gewährt.**. Nachdem der Zugriff auf den temporären Pass für einen Benutzer abläuft, kann dieser Benutzer keinen temporären Zugriff auf dasselbe Gerät erhalten, bis dessen Ablauf abgelaufen ist [Autorisierungstoken](/help/authentication/glossary.md#authz-token) vom Adobe Primetime-Authentifizierungsserver gelöscht wird.
 
 
 >[!NOTE]
@@ -35,11 +34,11 @@ Mit dem Temp Pass können Programmierer temporären Zugriff auf ihren geschützt
 
 ## Funktionsdetails {#tempass-featur-details}
 
-* **Berechnung der Anzeigezeit** - Die Zeitdauer, die ein Temp Pass gültig bleibt, korreliert nicht mit der Zeit, die ein Benutzer mit der Anzeige von Inhalten in der Anwendung des Programmierers verbringt.  Bei der ersten Benutzeranfrage zur Autorisierung über den Temp Pass wird eine Ablaufzeit berechnet, indem die anfängliche aktuelle Anforderungszeit der vom Programmierer angegebenen TTL hinzugefügt wird. Diese Ablaufzeit ist mit der Geräte-ID des Benutzers und der Anforderer-ID des Programmierers verknüpft und in der Primetime-Authentifizierungsdatenbank gespeichert. Jedes Mal, wenn der Benutzer versucht, mithilfe von Temp Pass vom selben Gerät aus auf Inhalte zuzugreifen, vergleicht die Primetime-Authentifizierung die Server-Anforderungszeit mit der Ablaufzeit, die mit der Geräte-ID des Benutzers und der Anforderer-ID des Programmierers verknüpft ist. Wenn die Anforderungszeit des Servers kleiner als die Ablaufzeit ist, wird die Autorisierung erteilt. Andernfalls wird die Genehmigung verweigert.
+* **Berechnung der Anzeigezeit** - Die Zeitdauer, die ein Temp Pass gültig bleibt, korreliert nicht mit der Zeit, die ein Benutzer mit der Anzeige von Inhalten in der Anwendung des Programmierers verbringt.  Bei der ersten Benutzeranfrage zur Autorisierung über den Temp Pass wird eine Ablaufzeit berechnet, indem die anfängliche aktuelle Anforderungszeit der vom Programmierer angegebenen TTL hinzugefügt wird. Diese Ablaufzeit ist mit der Geräte-ID des Benutzers und der Anforderer-ID des Programmierers verknüpft und in der Primetime-Authentifizierungsdatenbank gespeichert. Jedes Mal, wenn der Benutzer versucht, mithilfe von Temp Pass vom selben Gerät aus auf Inhalte zuzugreifen, vergleicht die Primetime-Authentifizierung die Server-Anforderungszeit mit der Ablaufzeit, die mit der Geräte-ID des Benutzers und der Anforderer-ID des Programmierers verknüpft ist. Wenn die Anforderungszeit des Servers kleiner als die Ablaufzeit ist, wird die Autorisierung erteilt. Andernfalls wird die Autorisierung verweigert.
 * **Konfigurationsparameter** - Ein Programmierer kann die folgenden Parameter für den Temp Pass angeben, um eine Temp Pass-Regel zu erstellen:
    * **Token TTL** - Die Zeit, die ein Benutzer sehen darf, ohne sich bei einem MVPD anzumelden. Diese Zeit basiert auf der Uhr und läuft ab, unabhängig davon, ob der Benutzer Inhalte anschaut oder nicht.
-   >[!NOTE]
-   >Eine Anfrage-ID kann nicht mit mehr als einer Temp Pass-Regel verknüpft sein.
+  >[!NOTE]
+  >Eine Anfrage-ID kann nicht mit mehr als einer Temp Pass-Regel verknüpft sein.
 * **Authentifizierung/Autorisierung** - Im Temp Pass-Fluss geben Sie den MVPD als &quot;Temp Pass&quot; an.  Die Primetime-Authentifizierung kommuniziert nicht mit einem tatsächlichen MVPD im Temp Pass-Fluss, sodass der MVPD &quot;Temp Pass&quot; jede Ressource autorisiert. Programmierer können eine Ressource angeben, auf die über den Temp Pass zugegriffen werden kann, genau wie für die anderen Ressourcen auf ihrer Website. Die Media Verifier-Bibliothek kann wie gewohnt verwendet werden, um das Token für Kurzmedien vom Typ &quot;Temp Pass&quot;zu überprüfen und die Ressourcenüberprüfung vor der Wiedergabe zu erzwingen.
 * **Tracking von Daten im Zeitverlauf** - Zwei Punkte bezüglich der Verfolgung von Daten während eines Berechtigungsablaufs für den temporären Pass:
    * Die Tracking-ID, die von der Primetime-Authentifizierung an Ihre **sendTrackingData()** callback ist ein Hash der Geräte-ID.
@@ -49,7 +48,7 @@ Die folgende Abbildung zeigt den Fluss &quot;Temp Pass&quot;:
 
 ![Der Fluss &quot;Temp Pass&quot;](assets/temp-pass-flow.png)
 
-*Abbildung: Der Fluss &quot;Temp Pass&quot;*
+*Abbildung: Fluss der Temp-Weiterleitung*
 
 ## Implementieren des Vorlagenübergangs {#implement-tempass}
 
@@ -220,7 +219,7 @@ In diesem Beispiel wird gezeigt, wie der Temp Pass implementiert wird, wenn MVPD
 1. Der Benutzer klickt auf &quot;Temp Pass&quot;, sodass der Programmierer einem Cookie ein Flag hinzufügt, um zu verhindern, dass der Benutzer bei nachfolgenden Seitenbesuchen den Link &quot;Temp Pass&quot;sieht.
 1. Die Authentifizierungsanfrage für den Temp Pass erreicht die Primetime-Authentifizierungsserver und generiert ein Authentifizierungstoken. Die TTL entspricht dem vom Programmierer für den Temp Pass festgelegten Zeitraum.
 1. Die Autorisierungsanfrage für den Temp Pass erreicht die Primetime-Authentifizierungsserver.
-1. Die Primetime-Authentifizierungsserver extrahieren die Geräte- und Anfragende-IDs aus der Anfrage und speichern sie zusammen mit der Ablaufzeit in der Datenbank. Die Ablaufzeit wird wie folgt berechnet: anfängliche Zeit für die Anfrage zum Temp Pass und TTL (vom Programmierer angegeben).
+1. Die Primetime-Authentifizierungsserver extrahieren die Geräte- und Anfragende-IDs aus der Anfrage und speichern sie zusammen mit der Ablaufzeit in der Datenbank. Die Ablaufzeit wird berechnet als: anfängliche Zeit für die Anforderung des Temp Pass sowie TTL (vom Programmierer angegeben).
 1. Die Primetime-Authentifizierungsserver generieren ein Autorisierungstoken.
 1. Der Benutzer greift auf den geschützten Inhalt zu.
 
@@ -474,15 +473,15 @@ Das folgende Beispiel zeigt einen Fall, in dem ein Benutzer beim Besuch einer Si
 
 ## Verwenden mehrerer temporärer Durchgänge {#use-mult-tempass}
 
-Bestimmte Ereignisse erfordern einen stufenweisen freien Zugang zu Inhalten, z. B. ein anfängliches Intervall für den freien Zugang (z. B. 4 Stunden), gefolgt von täglichen freien Zugriffen (z. B. 10 Minuten an jedem nachfolgenden Tag).  Damit ein Programmierer dieses Szenario implementieren kann, muss er es mit seinem Ansprechpartner bei der Adobe arrangieren, um zwei temporäre MVPDs für den Programmierer zu konfigurieren.
+Bestimmte Ereignisse erfordern einen stufenweisen freien Zugang zu Inhalten, z. B. ein anfängliches Intervall für den freien Zugang (z. B. 4 Stunden), gefolgt von täglichen freien Zugriffen (z. B. 10 Minuten an jedem nachfolgenden Tag).  Damit ein Programmierer dieses Szenario implementieren kann, muss er es mit seinem Adobe-Ansprechpartner anordnen, um zwei temporäre MVPDs für den Programmierer zu konfigurieren.
 
-In diesem Beispielszenario (eine anfängliche 4-Stunden-kostenlose Sitzung, gefolgt von 10-minütigen freien Sitzungen) konfiguriert die Adobe einen MVPD namens TempPass1 mit einer Time-To-Live (TTL) von 4 Stunden und einen TempPass2 mit einer TTL von 10 Minuten für den Folgezeitraum.  Beide sind mit der Anforderungs-ID des Programmierers verknüpft.
+Für dieses Beispielszenario (eine anfängliche 4-Stunden-kostenlose Sitzung, gefolgt von 10-minütigen freien Sitzungen) konfiguriert Adobe einen MVPD namens TempPass1 mit einer Time-To-Live (TTL) von 4 Stunden und einen TempPass2 mit einer TTL von 10 Minuten für den Folgezeitraum.  Beide sind mit der Anforderungs-ID des Programmierers verknüpft.
 
 ### Programmdurchführung {#mult-tempass-prog-impl}
 
-Nachdem die Adobe die beiden TempPass-Instanzen konfiguriert hat, werden die beiden zusätzlichen MVPDs (TempPass1 und TempPass2) in der MVPD-Liste des Programmierers angezeigt.  Der Programmierer muss die folgenden Schritte ausführen, um die verschiedenen temporären Durchgänge zu implementieren:
+Nachdem Adobe die beiden TempPass-Instanzen konfiguriert hat, werden die beiden zusätzlichen MVPDs (TempPass1 und TempPass2) in der MVPD-Liste des Programmierers angezeigt.  Der Programmierer muss die folgenden Schritte ausführen, um die verschiedenen temporären Durchgänge zu implementieren:
 
-1. Melden Sie sich beim ersten Besuch des Benutzers auf der Site automatisch mit TempPass1 an. Sie können das obige Beispiel für Autologen als Ausgangspunkt für diese Aufgabe verwenden.
+1. Melden Sie sich beim ersten Besuch des Benutzers auf der Site automatisch mit TempPass1 an. Sie können das obige Beispiel für die Autologin als Ausgangspunkt für diese Aufgabe verwenden.
 1. Wenn Sie feststellen, dass TempPass1 abgelaufen ist, speichern Sie die Tatsache (in einem Cookie/lokalen Speicher) und stellen Sie dem Benutzer Ihre standardmäßige MVPD-Auswahl zur Verfügung. **Achten Sie darauf, TempPass1 und TempPass2 aus dieser Liste herauszufiltern.**.
 1. Wenn TempPass1 abgelaufen ist, müssen Sie diesen Benutzer an jedem nachfolgenden Tag automatisch mit TempPass2 anmelden.
 1. Wenn TempPass2 abgelaufen ist, speichern Sie die Tatsache (in einem Cookie/lokalen Speicher) für den Tag und präsentieren Sie dem Benutzer Ihre standardmäßige MVPD-Auswahl. Stellen Sie erneut sicher, dass Sie TempPass1 und TempPass2 aus dieser Liste herausfiltern.

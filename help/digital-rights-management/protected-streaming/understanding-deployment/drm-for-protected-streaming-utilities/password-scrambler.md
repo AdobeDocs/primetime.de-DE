@@ -1,20 +1,18 @@
 ---
-description: Das Dienstprogramm Password Scrambler verschlüsselt ein Kennwort für den Adobe Primetime DRM-Server für Konfigurationsdateien für geschütztes Streaming.
-title: Password crambler
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Das Dienstprogramm Password Scrambler verschlüsselt ein Kennwort für den Adobe Primetime DRM-Server für geschützte Streaming-Konfigurationsdateien.
+title: Passwort-Absender
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
+# Passwort-Absender {#password-scrambler}
 
-# Password crambler {#password-scrambler}
+Das Dienstprogramm Password Scrambler verschlüsselt ein Kennwort für den Adobe Primetime DRM-Server für geschützte Streaming-Konfigurationsdateien.
 
-Das Dienstprogramm Password Scrambler verschlüsselt ein Kennwort für den Adobe Primetime DRM-Server für Konfigurationsdateien für geschütztes Streaming.
-
-Geben Sie Folgendes ein, um den Scheuerschutz auszuführen:
+Geben Sie Folgendes ein, um den Schuster auszuführen:
 
 ```
 Scrambler.bat  
@@ -41,8 +39,8 @@ Encrypted password:
 </i class="+ topic>
 ```
 
-Alle Kennwörter, die Sie in den Dateien [!DNL flashaccess-global.xml] und [!DNL flashaccess-tenant.xml] angegeben haben, müssen verschlüsselt sein.
+Alle Kennwörter, die Sie in der [!DNL flashaccess-global.xml] und [!DNL flashaccess-tenant.xml] -Dateien müssen verschlüsselt sein.
 
 >[!NOTE]
 >
->Das Dienstprogramm Password Scrambler im Primetime DRM Server for Protected Streaming ist nicht mit dem Programm, das mit dem Referenz-Implementierungslizenzserver bereitgestellt wird, austauschbar.
+>Das Dienstprogramm Password Scrambler im Primetime DRM Server für geschütztes Streaming ist nicht mit dem Schuster austauschbar, der mit dem Referenz-Implementierungs-Lizenzserver bereitgestellt wird.

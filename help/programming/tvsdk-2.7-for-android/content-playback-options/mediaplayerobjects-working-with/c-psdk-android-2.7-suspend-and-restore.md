@@ -1,25 +1,23 @@
 ---
-description: Setzen und Wiederherstellen des TVSDK MediaPlayer aus, wenn ein Gerätebildschirm deaktiviert ist und von Ihrer Anwendung verarbeitet werden muss.
-keywords: SurfaceView;Suspend;Restore;BroadcastReceiver
+description: Aussetzen und Wiederherstellen des TVSDK MediaPlayer, wenn ein Gerätebildschirm deaktiviert ist und aktiviert ist, muss von Ihrer Anwendung verarbeitet werden.
+keywords: SurfaceView;Aussetzen;Wiederherstellen;BroadcastReceiver
 title: MediaPlayer aussetzen und wiederherstellen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
 
+# MediaPlayer aussetzen und wiederherstellen {#suspend-and-restore-mediaplayer}
 
-# MediaPlayer {#suspend-and-restore-mediaplayer} aussetzen und wiederherstellen
+Aussetzen und Wiederherstellen des TVSDK MediaPlayer, wenn ein Gerätebildschirm deaktiviert ist und aktiviert ist, muss von Ihrer Anwendung verarbeitet werden.
 
-Setzen und Wiederherstellen des TVSDK MediaPlayer aus, wenn ein Gerätebildschirm deaktiviert ist und von Ihrer Anwendung verarbeitet werden muss.
+Sie können Vorgänge zum Aussetzen und Wiederherstellen von `MediaPlayer` in den Broadcast-Empfänger von Android zum Ein-/Ausschalten des Bildschirms.
 
-Sie können Vorgänge zum Aussetzen und Wiederherstellen auf `MediaPlayer` innerhalb des Android-Broadcast-Empfängers für ein-/ausschalten.
+TVSDK kann nicht bestimmen, wann sich ein Fragment (oder eine Aktivität) im Hintergrund oder im Vordergrund befindet. Darüber hinaus wird die Android `SurfaceView` wird nicht zerstört, wenn der Gerätebildschirm deaktiviert ist (aber die Aktivität angehalten wurde). Allerdings `SurfaceView` *does* zerstört werden, wenn das Gerät Ihre Anwendung in den Hintergrund stellt. TVSDK kann diese Änderungen nicht erkennen. Daher müssen sie von Ihrer Anwendung verarbeitet werden.
 
-TVSDK kann nicht bestimmen, wann sich ein Fragment (oder eine Aktivität) im Hintergrund oder Vordergrund befindet. Außerdem wird das Android `SurfaceView` nicht zerstört, wenn der Gerätebildschirm deaktiviert ist (die Aktivität wird jedoch angehalten). `SurfaceView` *wird jedoch* zerstört, wenn das Gerät Ihre Anwendung in den Hintergrund stellt. TVSDK kann diese Änderungen nicht erkennen, daher müssen sie von Ihrer Anwendung verarbeitet werden.
-
-Der folgende Beispielcode, wie Ihre Anwendung das Aussetzen und Wiederherstellen des `MediaPlayer` behandeln kann, wenn der Gerätebildschirm auf Anwendungsebene ein- und ausgeschaltet ist:
+Der folgende Beispielcode, wie Ihre Anwendung das Aussetzen und Wiederherstellen der `MediaPlayer` wenn der Gerätebildschirm auf Anwendungsebene aktiviert und deaktiviert ist:
 
 ```java
 // Track the state of a fragment to determine if it is PAUSED or RESUMED 

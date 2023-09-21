@@ -1,20 +1,18 @@
 ---
 description: TVSDK stellt APIs und Beispielcode für die Handhabung von Blackout-Zeiträumen bereit.
-title: Implementierung der Blackout-Behandlung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Blackout-Handhabung implementieren
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-
-# Implementierung der Blackout-Behandlung{#implement-blackout-handling}
+# Blackout-Handhabung implementieren{#implement-blackout-handling}
 
 TVSDK stellt APIs und Beispielcode für die Handhabung von Blackout-Zeiträumen bereit.
 
-So implementieren Sie die Blackout-Behandlung, einschließlich der Bereitstellung von alternativen Inhalten während der Blackout-Aktion:
+So implementieren Sie die Blackout-Handhabung, einschließlich der Bereitstellung von alternativen Inhalten während der Blackout-Phase:
 
 1. Richten Sie Ihre App so ein, dass Blackout-Tags in einem Live-Stream-Manifest erkannt werden.
 
@@ -30,7 +28,7 @@ So implementieren Sie die Blackout-Behandlung, einschließlich der Bereitstellun
    }
    ```
 
-1. Erstellen Sie Ereignis-Listener für zeitgesteuerte Metadaten-Ereignis in Vorder- und Hintergrundstreams.
+1. Erstellen Sie Ereignis-Listener für zeitgesteuerte Metadaten-Ereignisse in Vorder- und Hintergrundstreams.
 
    ```
    private function createMediaPlayer(context:MediaPlayerContext):void { 
@@ -42,7 +40,7 @@ So implementieren Sie die Blackout-Behandlung, einschließlich der Bereitstellun
    }
    ```
 
-1. Implementieren Sie zeitgesteuerte Metadaten-Ereignis-Handler für Vordergrund- und Hintergrundstreams.
+1. Implementieren Sie zeitgesteuerte Metadaten-Ereignishandler für Vorder- und Hintergrundstreams.
 
    Vordergrund:
 
@@ -124,7 +122,7 @@ So implementieren Sie die Blackout-Behandlung, einschließlich der Bereitstellun
    }
    ```
 
-1. Richten Sie eine Prüfung der Liste von TimedMetadataObjects für jedes Vorkommen einer Aktualisierung auf die Abspielposition ein.
+1. Richten Sie für jedes Vorkommen einer Aktualisierung der Abspielposition eine Prüfung der Liste der TimedMetadataObjects ein.
 
    ```
    private function onTimeChange(event:TimeChangeEvent):void { 
@@ -157,7 +155,7 @@ So implementieren Sie die Blackout-Behandlung, einschließlich der Bereitstellun
    }
    ```
 
-1. Erstellen Sie Methoden zum Wechseln von Inhalten am Beginn und am Ende der Sperrfrist.
+1. Erstellen Sie Methoden zum Wechseln von Inhalten zu Beginn und am Ende des Blackout-Zeitraums.
 
    ```
    public function initiate(event:TimerEvent=null):void { 
@@ -195,4 +193,3 @@ So implementieren Sie die Blackout-Behandlung, einschließlich der Bereitstellun
        } 
    }
    ```
-

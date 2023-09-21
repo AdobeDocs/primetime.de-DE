@@ -1,18 +1,16 @@
 ---
-description: TVSDK kann mehrere anfängliche Platzierungsinformationen einrichten.
+description: TVSDK kann mehrere anfängliche PlacementInformations einrichten.
 title: Mehrere anfängliche Platzierungsinformationen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '20'
 ht-degree: 0%
 
 ---
 
-
 # Mehrere anfängliche Platzierungsinformationen{#multiple-initial-placementinformations}
 
-TVSDK kann mehrere anfängliche Platzierungsinformationen einrichten.
+TVSDK kann mehrere anfängliche PlacementInformations einrichten.
 
 ```java
 ArrayList<PlacementInformation> placementInformations = new ArrayList<PlacementInformation>(); 
@@ -48,4 +46,3 @@ else if (customRangeHelper.hasRanges() == CustomRangeHelper.REPLACE_RANGE) {
 } 
 return  placementInformations;
 ```
-

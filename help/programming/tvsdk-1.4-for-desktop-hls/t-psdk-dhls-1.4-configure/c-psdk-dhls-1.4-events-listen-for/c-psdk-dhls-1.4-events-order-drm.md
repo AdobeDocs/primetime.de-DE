@@ -1,20 +1,18 @@
 ---
-description: TVSDK sendet DRM-Ereignis (Digital Rights Management) als Reaktion auf DRM-bezogene Vorgänge, z. B. wenn neue DRM-Metadaten verfügbar werden. Ihr Player kann entsprechend diesen Ereignissen Aktionen implementieren.
+description: TVSDK sendet Digital Rights Management (DRM)-Ereignisse als Reaktion auf DRM-bezogene Vorgänge, z. B. wenn neue DRM-Metadaten verfügbar werden. Ihr Player kann als Reaktion auf diese Ereignisse Aktionen implementieren.
 title: DRM-Ereignisse
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
+# DRM-Ereignisse{#drm-events}
 
-# DRM-Ereignis{#drm-events}
+TVSDK sendet Digital Rights Management (DRM)-Ereignisse als Reaktion auf DRM-bezogene Vorgänge, z. B. wenn neue DRM-Metadaten verfügbar werden. Ihr Player kann als Reaktion auf diese Ereignisse Aktionen implementieren.
 
-TVSDK sendet DRM-Ereignis (Digital Rights Management) als Reaktion auf DRM-bezogene Vorgänge, z. B. wenn neue DRM-Metadaten verfügbar werden. Ihr Player kann entsprechend diesen Ereignissen Aktionen implementieren.
-
-Um über alle DRM-bezogenen Ereignis informiert zu werden, beachten Sie Folgendes:
+Um über alle DRM-bezogenen Ereignisse benachrichtigt zu werden, achten Sie auf Folgendes:
 
 ```
 DRMMetadataInfoEvent.DRM_METADATA_INFO_AVAILABLE
@@ -30,4 +28,3 @@ private function onDRMMetadataInfoAvailable(event:DRMMetadataInfoEvent){
     ... 
 } 
 ```
-

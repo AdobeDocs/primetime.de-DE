@@ -1,14 +1,12 @@
 ---
 description: Um die benutzerdefinierten Skins zu verwenden, müssen Sie die Anpassung ähnlich wie default-video-control.css schreiben und auf diese neue Anpassung im Player verweisen.
 title: Benutzerdefinierte Skins
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
 
 ---
-
 
 # Benutzerdefinierte Skins{#custom-skins}
 
@@ -23,29 +21,28 @@ Sie können die folgenden Arten von Änderungen vornehmen:
 
 * Vordergrundfarbe von Schaltflächen und Text
 
-   Alle Steuerelemente mit Vordergrund verwenden die `vid-skin-fgcolor`-Klasse. Um den Vordergrund aller Steuerelemente zu ändern, durchlaufen Sie alle Elemente mit der `vid-skin-fgcolor`-Klasse und geben Sie die gewünschte Farbe an.
+  Alle Steuerelemente mit einem Vordergrund verwenden die `vid-skin-fgcolor` -Klasse. Um den Vordergrund aller Steuerelemente zu ändern, navigieren Sie durch alle Elemente mit der `vid-skin-fgcolor` und geben Sie die gewünschte Farbe an.
 * Hintergrundfarbe von Schaltflächen und Text
 
-   Alle Steuerelemente mit Vordergrund verwenden die `vid-skin-bgcolor`-Klasse. Um den Vordergrund aller Steuerelemente zu ändern, durchlaufen Sie alle Elemente mit der Klasse `vid-skin-bgcolor` und geben Sie die gewünschte Farbe an.
-* Form des Abspielkopfs
+  Alle Steuerelemente mit einem Vordergrund verwenden die `vid-skin-bgcolor` -Klasse. Um den Vordergrund aller Steuerelemente zu ändern, navigieren Sie durch alle Elemente mit `vid-skin-bgcolor` und geben Sie die gewünschte Farbe an.
+* Form des Abspielkopfes
 
-   Der Abspielkopf kann quadratisch oder rund sein. Um den Abspielkopf zu ändern, fügen Sie die Klasse `square` oder `round` dem Element `playhead` hinzu.
-* Stil der Pufferspinners
+  Der Abspielkopf kann quadratisch oder rund sein. Um den Abspielkopf zu ändern, fügen Sie `square` oder `round` -Klasse zu `playhead` -Element.
+* Stil der Pufferung
 
-   Der Referenz-Player bietet die folgenden Stile von Spinnern können angezeigt werden, wenn der Player Inhalte puffert:
+  Der Referenz-Player bietet die folgenden Arten von Spinnern, die angezeigt werden können, wenn der Player Inhalte puffert:
 
-   * Overlay-text ( `overlay-text`)
-   * Rechteckige Kreisel ( `spinner`)
+   * Überlagerungstext ( `overlay-text`)
+   * Rechteckige Verdrehung ( `spinner`)
    * Signal ( `signal`)
    * Vertikale Balken ( `vertical`)
 
-      >[!TIP]
-      >
-      >Um einen der Pufferspiner zu verwenden, müssen Sie die Klasse im Puffer-Overlay-Element hinzufügen. Um beispielsweise `overlay-text` zu verwenden, fügen Sie der Datei `BufferOverlay.js` die folgenden Zeilen hinzu:
-      >
-      >
-      ```js
-      >var overlay = document.getElementById("buffering-overlay"); 
-      >overlay.classList.add ("spinner");
-      >```
-
+     >[!TIP]
+     >
+     >Um einen der Pufferspinner zu verwenden, müssen Sie die Klasse im Element &quot;Buffering-overlay&quot;hinzufügen. Verwenden Sie zum Beispiel `overlay-text`, fügen Sie die folgenden Zeilen in der `BufferOverlay.js` Datei:
+     >
+     >```js
+     >var overlay = document.getElementById("buffering-overlay"); 
+     >overlay.classList.add ("spinner");
+     >```
+     >

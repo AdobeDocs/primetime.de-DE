@@ -1,22 +1,20 @@
 ---
-title: Primetime-DRM-Inhaltsschutzoptionen
-description: Primetime-DRM-Inhaltsschutzoptionen
+title: DRM-Inhaltsschutzoptionen für Primetime
+description: DRM-Inhaltsschutzoptionen für Primetime
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
+# DRM-Inhaltsschutzoptionen für Primetime{#primetime-drm-content-protection-options}
 
-# Primetime-DRM-Inhaltsschutzoptionen{#primetime-drm-content-protection-options}
+Primetime DRM bietet eine Reihe von Optionen für Inhaltseigentümer zum Schutz ihrer Inhalte:
 
-Primetime DRM bietet eine Reihe von Optionen zum Schutz ihrer Inhalte für Eigentümer von Inhalten:
+* **SDK** - [ADOBE PRIMETIME DRM SDK](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_sdk_overview.pdf)
 
-* **SDK**  -  [Adobe Primetime DRM SDK](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_sdk_overview.pdf)
+* **Befehlszeilenwerkzeuge** - [Primetime Offline Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf), und [Primetime-DRM-Referenzimplementierungen](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_reference_implementations.pdf).
 
-* **Befehlszeilenwerkzeuge**  -  [Primetime Offline Packager](https://helpx.adobe.com/content/dam/help/en/primetime/guides/offline_packager_getting_started.pdf)- und  [Primetime DRM-Referenzimplementierungen](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_reference_implementations.pdf).
-
-* **Hardware- und Softwarekodierer**  - Kodierer, die das  [Adobe Primetime DRM ](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_sdk_overview.pdf) SDK oder die Adobe Broadcast SDK (HDKb) implementieren.
+* **Hardware- und Softwarekodierer** - Kodierer, die die [ADOBE PRIMETIME DRM SDK](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_sdk_overview.pdf) oder das Adobe Broadcast SDK (HDKb).

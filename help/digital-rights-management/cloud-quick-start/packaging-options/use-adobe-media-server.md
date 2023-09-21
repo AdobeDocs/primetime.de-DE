@@ -1,19 +1,17 @@
 ---
-title: Adobe Medien-Server verwenden
-description: Adobe Medien-Server verwenden
+title: Adobe Media Server verwenden
+description: Adobe Media Server verwenden
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '66'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
+# Adobe Media Server verwenden {#use-adobe-media-server}
 
-# Adobe Mediums-Server {#use-adobe-media-server} verwenden
-
-Einige Kunden verwenden möglicherweise bereits Adobe Mediums Server und möchten dieses Content Versand-Modell beibehalten. In diesem Fall können die erforderlichen DRM-spezifischen Primetime Cloud-Daten aus einer der Konfigurationsdateien, die in diesem Kit enthalten sind, abgerufen werden, um die JIT-XML-Konfiguration (Just-In-Time) für AMS zu füllen.
+Einige Kunden verwenden möglicherweise bereits Adobe Media Server und möchten dieses Inhaltsbereitstellungsmodell beibehalten. In diesem Fall können die erforderlichen DRM-spezifischen Primetime Cloud-Daten aus einer der in diesem Kit enthaltenen Konfigurationsdateien abgerufen werden, um die JIT-XML-Konfiguration (Just In Time) für AMS zu füllen.
 
 Beispiel:
 
@@ -43,4 +41,3 @@ Beispiel:
   </HDS>
 </Application>
 ```
-

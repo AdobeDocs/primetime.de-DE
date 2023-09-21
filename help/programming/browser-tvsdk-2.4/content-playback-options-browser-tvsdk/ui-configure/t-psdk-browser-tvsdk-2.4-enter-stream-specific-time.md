@@ -1,20 +1,18 @@
 ---
-description: Standardmäßig werden bei Wiedergabe-Beginn VOD-Media-Beginn bei 0 und Live-Media-Beginn am Live-Point des Clients (MediaPlayer.LIVE_POINT) gesendet. Sie können das Standardverhalten überschreiben.
-title: Geben Sie einen Stream zu einem bestimmten Zeitpunkt ein
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Wenn die Wiedergabe gestartet wird, beginnt das VOD-Medium standardmäßig bei 0 und das Live-Medium beginnt am Client-Live-Point (MediaPlayer.LIVE_POINT). Sie können das Standardverhalten überschreiben.
+title: Stream zu einem bestimmten Zeitpunkt eingeben
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '103'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Stream zu einem bestimmten Zeitpunkt eingeben{#enter-a-stream-at-a-specific-time}
 
-# Geben Sie einen Stream zu einem bestimmten Zeitpunkt ein{#enter-a-stream-at-a-specific-time}
+Wenn die Wiedergabe gestartet wird, beginnt das VOD-Medium standardmäßig bei 0 und das Live-Medium beginnt am Client-Live-Point (MediaPlayer.LIVE_POINT). Sie können das Standardverhalten überschreiben.
 
-Standardmäßig werden bei Wiedergabe-Beginn VOD-Media-Beginn bei 0 und Live-Media-Beginn am Live-Point des Clients (MediaPlayer.LIVE_POINT) gesendet. Sie können das Standardverhalten überschreiben.
-
-1. Übergeben Sie eine Position an `MediaPlayer.prepareToPlay`.
+1. Übergeben einer Position an `MediaPlayer.prepareToPlay`.
 1. Browser TVSDK verwendet diese Position als Ausgangspunkt für das Asset.
 
    >[!NOTE]
@@ -34,4 +32,3 @@ Standardmäßig werden bei Wiedergabe-Beginn VOD-Media-Beginn bei 0 und Live-Med
            break; 
    } 
    ```
-

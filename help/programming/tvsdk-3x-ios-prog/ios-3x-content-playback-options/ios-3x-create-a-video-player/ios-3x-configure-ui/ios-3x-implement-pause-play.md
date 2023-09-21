@@ -1,18 +1,16 @@
 ---
-description: Sie können Schaltflächen einrichten, mit denen TVSDK-Methoden aufgerufen werden, um die Medien anzuhalten und abzuspielen.
-title: Schaltfläche "Abspielen/Anhalten"implementieren
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können Schaltflächen einrichten, mit denen TVSDK-Methoden aufgerufen werden, um die Medien anzuhalten und wiederzugeben.
+title: Schaltfläche "Wiedergabe/Pause"implementieren
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
+# Schaltfläche &quot;Wiedergabe/Pause&quot;implementieren {#implement-a-play-pause-button}
 
-# Schaltfläche zum Abspielen/Anhalten {#implement-a-play-pause-button} implementieren
-
-Sie können Schaltflächen einrichten, mit denen TVSDK-Methoden aufgerufen werden, um die Medien anzuhalten und abzuspielen.
+Sie können Schaltflächen einrichten, mit denen TVSDK-Methoden aufgerufen werden, um die Medien anzuhalten und wiederzugeben.
 
 Verwenden Sie den folgenden Beispielcode, um eine Wiedergabe- oder Pause-Schaltfläche zu implementieren:
 

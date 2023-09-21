@@ -1,20 +1,18 @@
 ---
 description: Mit diesen Klassen können Sie die Protokollierung anpassen.
 title: Protokollierungsklassen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
 
 ---
 
-
 # Protokollierungsklassen{#logging-classes}
 
 Mit diesen Klassen können Sie die Protokollierung anpassen.
 
-Paket: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/package-summary.html)
+Package: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/package-summary.html)
 
 <table frame="all" colsep="1" rowsep="1" id="table_389797D3CEF14EA2862E0B20C6E6CC41"> 
  <thead> 
@@ -38,7 +36,7 @@ Paket: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Logger</a> </span></td> 
-   <td colname="2">Schnittstelle. Die zum Implementieren einer benutzerdefinierten Protokollfunktion für die Wortgruppe <code>primetime-sdk-name</code> erforderlichen Methoden. </td> 
+   <td colname="2">Schnittstelle. Die erforderlichen Methoden zum Implementieren eines benutzerdefinierten Loggers für die <code>primetime-sdk-name</code> Satz. </td> 
   </tr> 
  </tbody>
 </table>

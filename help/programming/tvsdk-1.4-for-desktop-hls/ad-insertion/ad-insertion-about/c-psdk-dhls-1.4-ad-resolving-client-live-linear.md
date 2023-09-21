@@ -1,27 +1,25 @@
 ---
-description: Bei Live-/linearen Inhalten ersetzt TVSDK einen Abschnitt des Hauptstream-Inhalts durch eine Werbeunterbrechung mit der gleichen Dauer, sodass die Zeitschienendauer unverändert bleibt.
-title: Live/Lineare Anzeigenauflösung und -einfügung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Bei Live-/linearen Inhalten ersetzt TVSDK einen Teil des Hauptstream-Inhalts durch eine Werbeunterbrechung derselben Dauer, sodass die Timeline-Dauer unverändert bleibt.
+title: Auflösung und Einfügen von Live/linearen Anzeigen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
 
 ---
 
+# Auflösung und Einfügen von Live/linearen Anzeigen{#live-linear-ad-resolving-and-insertion}
 
-# Auflösung und Einfügen von Live-/Linearen Anzeigen{#live-linear-ad-resolving-and-insertion}
+Bei Live-/linearen Inhalten ersetzt TVSDK einen Teil des Hauptstream-Inhalts durch eine Werbeunterbrechung derselben Dauer, sodass die Timeline-Dauer unverändert bleibt.
 
-Bei Live-/linearen Inhalten ersetzt TVSDK einen Abschnitt des Hauptstream-Inhalts durch eine Werbeunterbrechung mit der gleichen Dauer, sodass die Zeitschienendauer unverändert bleibt.
-
-Vor und während der Wiedergabe löst TVSDK bekannte Anzeigen, ersetzt Teile des Hauptinhalts durch Werbeunterbrechungen gleicher Dauer und berechnet bei Bedarf die virtuelle Zeitschiene neu. Die Positionen der Werbeunterbrechungen werden durch Cue-Points festgelegt, die durch das Manifest definiert werden.
+TVSDK löst vor und während der Wiedergabe bekannte Anzeigen auf, ersetzt Teile des Hauptinhalts durch Werbeunterbrechungen derselben Dauer und berechnet bei Bedarf die virtuelle Timeline neu. Die Positionen der Werbeunterbrechungen werden durch Cue-Punkte festgelegt, die durch das Manifest definiert werden.
 
 TVSDK fügt Anzeigen wie folgt ein:
 
-* **Pre-Roll**, der sich am Anfang des Inhalts befindet.
-* **Mid-Roll**, der sich in der Mitte des Inhalts befindet.
+* **Pre-roll**, der sich am Anfang des Inhalts befindet.
+* **Mid-roll**, der sich in der Mitte des Inhalts befindet.
 
-TVSDK akzeptiert die Werbeunterbrechung, selbst wenn die Dauer länger oder kürzer als die Cue-Point-Ersetzungsdauer ist. TVSDK unterstützt standardmäßig das `#EXT-X-CUE`-Cue als gültige Anzeigenmarke beim Auflösen und Platzieren von Anzeigen. Für diese Markierung ist das Metadatenfeld `DURATION` in Sekunden und die eindeutige ID des Cue erforderlich. Beispiel:
+TVSDK akzeptiert die Werbeunterbrechung auch dann, wenn die Dauer länger oder kürzer als die Cue-Point-Ersetzungsdauer ist. TVSDK unterstützt standardmäßig die `#EXT-X-CUE` Cue-Point als gültige Anzeigenmarke beim Auflösen und Platzieren von Anzeigen. Diese Markierung erfordert das Metadatenfeld `DURATION` in Sekunden und der eindeutigen Kennung des Cue-Point. Beispiel:
 
 ```
 #EXT-X-CUE:DURATION=27,ID="..."
@@ -29,6 +27,6 @@ TVSDK akzeptiert die Werbeunterbrechung, selbst wenn die Dauer länger oder kür
 
 >[!IMPORTANT]
 >
->Bei der Implementierung eines herkömmlichen `AdPolicySelector` kann eine andere Richtlinie für Pre-Roll-, Mid-Roll- und Post-Roll `AdBreakTimelineItem`s in `AdPolicyInfo` angegeben werden, die auf dem Typ der `AdBreakTimelineItem`s basiert. Sie können beispielsweise Inhalte mit mittlerem Roll nach der Wiedergabe beibehalten, Inhalte mit Pre-Roll-Unterbrechung nach der Wiedergabe jedoch entfernen.
+>Bei der Implementierung von `AdPolicySelector`, kann eine andere Richtlinie für Pre-Roll, Mid-Roll und Post-Roll festgelegt werden. `AdBreakTimelineItem`s in `AdPolicyInfo`, der auf dem Typ der `AdBreakTimelineItem`s. Sie können beispielsweise Mid-Roll-Inhalte nach der Wiedergabe beibehalten, aber Pre-Roll-Inhalte nach der Wiedergabe entfernen.
 
-Nach Beginn der Wiedergabe aktualisiert die Video-Engine die Manifestdatei in regelmäßigen Abständen. TVSDK löst alle neuen Anzeigen und fügt die Anzeigen ein, wenn ein Cue-Point im Live- oder linearen Stream gefunden wird, der im Manifest definiert wurde. Nachdem Anzeigen aufgelöst und eingefügt wurden, berechnet TVSDK die virtuelle Zeitleiste erneut und löst ein `TimelineEvent.TIMELINE_UPDATED`-Ereignis aus.
+Nach dem Start der Wiedergabe aktualisiert das Video-Engine die Manifestdatei regelmäßig. TVSDK löst alle neuen Anzeigen auf und fügt die Anzeigen ein, wenn ein Cue-Punkt im im Manifest definierten Live- oder linearen Stream auftritt. Nachdem Anzeigen aufgelöst und eingefügt wurden, berechnet TVSDK die virtuelle Timeline erneut und sendet eine `TimelineEvent.TIMELINE_UPDATED` -Ereignis.

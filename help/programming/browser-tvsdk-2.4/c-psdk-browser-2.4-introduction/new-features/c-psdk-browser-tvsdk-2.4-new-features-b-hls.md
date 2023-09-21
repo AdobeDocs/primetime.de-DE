@@ -1,33 +1,31 @@
 ---
 description: Browser TVSDK unterstützt eine Reihe von HLS-Funktionen, die Sie implementieren können, um Ihren Videoanwendungen Funktionen hinzuzufügen.
 title: Unterstützte HLS-Funktionen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 0%
 
 ---
 
-
 # Unterstützte HLS-Funktionen {#supported-hls-features}
 
 Browser TVSDK unterstützt eine Reihe von HLS-Funktionen, die Sie implementieren können, um Ihren Videoanwendungen Funktionen hinzuzufügen.
 
-* [HLS Core-Wiedergabe](#hls-core-playback)
-* [HLS Advanced-Wiedergabe](#hls-advanced-playback)
+* [HLS-Core-Wiedergabe](#hls-core-playback)
+* [HLS Advanced-Wiedergabefunktionen](#hls-advanced-playback)
 * [HLS-Inhaltsschutzfunktionen](#hls-content-protection)
-* [HLS Core-Anzeigeneinfügefunktionen](#hls-core-ad-insertion)
-* [HLS Erweiterte Anzeigeneinfügefunktionen](#hls-advanced-ad-insertion)
+* [HLS Core-Anzeigeneinfüge-Funktionen](#hls-core-ad-insertion)
+* [HLS Erweiterte Anzeigeneinfüge-Funktionen](#hls-advanced-ad-insertion)
 * [HLS-Integrationen](#hls-integrations)
 
 >[!TIP]
 >
->In den unten stehenden Funktionsmatrix-Tabellen bedeutet ![unterstütztes Symbol](assets/supported15.png), dass die Funktion in der aktuellen Version unterstützt wird.
+>In den Funktionsmatrix-Tabellen unten: ![unterstütztes Symbol](assets/supported15.png) bedeutet, dass die Funktion in der aktuellen Version unterstützt wird.
 
 >[!TIP]
 >
->In der Spalte &quot;Safari&quot;bedeutet &quot;Plattformbegrenzung&quot;, dass der Anwendungsfall nicht unterstützt wird, da diese Plattform die Implementierung der Unterstützung dafür nicht zulässt. Verwenden Sie im Falle eines Einfügens SSAI. Wenn für Sie Wiedergabebeschränkungen wichtig sind, erzwingen Sie den Fallback in Safari auf Flash, bis die Plattform den Anwendungsfall für die Anzeigeneinfügung unterstützt.
+>In der Safari-Spalte bedeutet &quot;Plattformbegrenzung&quot;, dass der Anwendungsfall nicht unterstützt wird, da diese Plattform keine Unterstützung dafür zulässt. Verwenden Sie im Falle eines Einfügens SSAI. Wenn Sie Wiedergabeschränkungen beachten müssen, erzwingen Sie das Fallback in Safari zum Flash, bis die Plattform den Anwendungsfall für das Einfügen von Anzeigen unterstützt.
 
 <!--<a id="section_9FB9193D5763448CB228B96164661738"></a>-->
 
@@ -83,29 +81,29 @@ Removed Nielsen row
 
 ## HLS-Integrationen {#hls-integrations}
 
-| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Integrationen | VOD + Live | Adobe Analytics VHL-Integration | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 
-## Erweiterte HLS-Anzeigeneinfügefunktionen (CSAI) {#hls-advanced-ad-insertion}
+## Erweiterte HLS-Anzeigeneinfüge-Funktionen (CSAI) {#hls-advanced-ad-insertion}
 
-| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Ad Insertion | VOD | Nur Anzeige | Nicht unterstützt | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 | Ad Insertion | VOD + Live | Targeting-Parameter | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Ad Insertion | VOD + Live | Benutzerspezifische Anzeigenrichtlinie | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
-| Ad Insertion | VOD + Live | Verzögertes Laden von Werbeanzeigen | ![unterstütztes Symbol](assets/supported15.png) | Nicht unterstützt | Plattformbeschränkung |
-| Ad Insertion | VOD | Ergänzende Anzeigen, Banneranzeigen und klickbare Anzeigen | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Ad Insertion | VOD + Live | Benutzerdefinierte Anzeigenrichtlinie | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
+| Ad Insertion | VOD + Live | Verzögertes Laden von Anzeigen | ![unterstütztes Symbol](assets/supported15.png) | Nicht unterstützt | Plattformbeschränkung |
+| Ad Insertion | VOD | Begleitanzeigen, Banneranzeigen und anklickbare Anzeigen | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 | Ad Insertion | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
 
-## HLS-Kern-Anzeigeneinfügefunktionen (CSAI) {#hls-core-ad-insertion}
+## HLS-Kernfunktionen für Anzeigeneinfügungen (CSAI) {#hls-core-ad-insertion}
 
-| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Ad Insertion | VOD + Live | Pre-Roll | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Ad Insertion | VOD + Live | Mid-Roll | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
+| Ad Insertion | VOD + Live | Pre-roll | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Ad Insertion | VOD + Live | Mid-roll | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
 | Ad Insertion | VOD + Live | Post-Roll | Nur VOD | Nur VOD | Nur VOD |
-| Ad Insertion | FER VOD | Anzeigenauflösung und Verhalten | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
+| Ad Insertion | FER VOD | Auflösung und Verhalten von Anzeigen | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
 | Ad Insertion | VOD + Live | Standard-Anzeigenrichtlinie | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
 | Ad Insertion | VOD + Live | VAST 2.0/3.0 | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 | Ad Insertion | VOD + Live | VMAP 1.0 | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
@@ -113,21 +111,21 @@ Removed Nielsen row
 
 ## HLS-Inhaltsschutzfunktionen {#hls-content-protection}
 
-| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Inhaltsschutz | VOD + Live | AES-128 | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Inhaltsschutz | VOD + Live | Beispiel-AES | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Inhaltsschutz | VOD | DRM | Zugriff auf Adoben | Nicht unterstützt | FairPlay |
+| Inhaltsschutz | VOD + Live | Sample-AES | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Inhaltsschutz | VOD | DRM | Adobe-Zugriff | Nicht unterstützt | FairPlay |
 
-## Erweiterte HLS-Wiedergabe-Funktionen {#hls-advanced-playback}
+## Erweiterte HLS-Wiedergabefunktionen {#hls-advanced-playback}
 
-| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Wiedergabe | VOD | Wiedergabe beim Versatz | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Wiedergabe | VOD | Nur Audio-Wiedergabe | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Wiedergabe | VOD | Trick Play | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Wiedergabe | VOD | Glattes Trick-Spiel | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
-| Wiedergabe | VOD + Live | ID3-Analyse | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Nicht unterstützt |
+| Wiedergabe | VOD | Wiedergabe mit Versatz | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Wiedergabe | VOD | Nur-Audio-Wiedergabe | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Wiedergabe | VOD | Trick play | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Wiedergabe | VOD | Glätte Trick-Wiedergabe | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
+| Wiedergabe | VOD + Live | ID3-Parsing | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Nicht unterstützt |
 | Wiedergabe | VOD + Live | Unterstützung von Diskontinuitätsmarken | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 | Wiedergabe | VOD + Live | Tokenisierte Streams | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
 | Wiedergabe | VOD + Live | Rechnungsstellung | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
@@ -135,19 +133,19 @@ Removed Nielsen row
 
 ## HLS-Core-Wiedergabe {#hls-core-playback}
 
-| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Wiedergabe | VOD + Live | Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 | Wiedergabe | FER VOD | Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 | Wiedergabe | VOD + Live | Adaptive Bitrate | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Wiedergabe | VOD + Live | 608/708 Beschriftungen | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Wiedergabe | VOD + Live | 608/708 Untertitel | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 | Wiedergabe | VOD + Live | WebVTT | ![unterstütztes Symbol](assets/supported15.png) | Nur VOD | Nur VOD |
 | Wiedergabe | VOD + Live | Manifest-Failover | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
-| Wiedergabe | VOD + Live | Erweiterte Failover | ![unterstütztes Symbol](assets/supported15.png) | Nur VOD | Plattformbeschränkung |
-| Wiedergabe | VOD + Live | Servicequalitäts- und Player-Benachrichtigungen | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Eingeschränkte QoS-Unterstützung |
+| Wiedergabe | VOD + Live | Erweitertes Failover | ![unterstütztes Symbol](assets/supported15.png) | Nur VOD | Plattformbeschränkung |
+| Wiedergabe | VOD + Live | QoS- und Player-Benachrichtigungen | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Eingeschränkte QoS-Unterstützung |
 | Wiedergabe | VOD + Live | Unterstützung für Cookie-Kopfzeilen | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
-| Wiedergabe | VOD + Live | Festlegen von Puffersteuerungsparametern | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
+| Wiedergabe | VOD + Live | Einrichten von Puffersteuerparametern | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
 | Wiedergabe | VOD + Live | Festlegen der Steuerelemente für die adaptive Bitrate | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
 | Wiedergabe | VOD + Live | Benutzerdefinierte Tags | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
-| Wiedergabe | VOD + Live | Spätbindendes Audio | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
-| Wiedergabe | VOD + Live | 302 Umleitung | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
+| Wiedergabe | VOD + Live | Spätbindende Audiowiedergabe | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |
+| Wiedergabe | VOD + Live | 302-Umleitung | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) | Plattformbeschränkung |

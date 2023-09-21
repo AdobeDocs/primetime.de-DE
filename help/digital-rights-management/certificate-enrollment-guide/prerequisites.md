@@ -2,20 +2,18 @@
 title: Voraussetzungen
 description: Voraussetzungen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
-
 # Voraussetzungen {#prerequisites}
 
-Wenn Sie die Zertifikatregistrierungs-Website zum Anfordern von Zertifikaten verwenden möchten, müssen Sie Folgendes wissen:
+Um die Zertifikatregistrierungs-Website zum Anfordern von Zertifikaten zu verwenden, benötigen Sie Folgendes:
 
-* Funktionsweise der PKI (Public Key Infrastructure)
+* Funktionsweise der Infrastruktur mit öffentlichen Schlüsseln (PKI)
 * Generieren von Schlüsselpaaren und Sichern Ihrer privaten Schlüssel
-* Erstellen einer Zertifikatsignaturanforderung (CSR)
-* Umwandlung von PKCS#7 in PKCS#12-, PEM- und DER-Dateien
+* Generieren einer Certificate Signing Request (CSR)
+* Konvertieren von PKCS#7 in PKCS#12-, PEM- und DER-Dateien

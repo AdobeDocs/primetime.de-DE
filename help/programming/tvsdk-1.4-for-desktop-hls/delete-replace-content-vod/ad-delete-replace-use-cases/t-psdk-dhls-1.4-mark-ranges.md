@@ -2,20 +2,18 @@
 title: Markierbereiche
 description: Markierbereiche
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '24'
 ht-degree: 0%
 
 ---
 
-
 # Markierbereiche{#mark-ranges}
 
-Markieren Sie `TimeRanges` zwischen `begin` und `end` in `localTime` als `AdBreak` in der Zeitleiste. Andere Anzeigeneinstellungen werden ignoriert.
+Mark `TimeRanges` zwischen `begin` und `end` in `localTime` als `AdBreak` aus der Timeline. Andere Anzeigeneinstellungen werden ignoriert.
 
-1. Markieren Sie Zeitbereiche.
+1. Zeitbereiche markieren.
 
    ```
    {   
@@ -58,4 +56,3 @@ Markieren Sie `TimeRanges` zwischen `begin` und `end` in `localTime` als `AdBrea
        "id": "vod_004"
    }
    ```
-

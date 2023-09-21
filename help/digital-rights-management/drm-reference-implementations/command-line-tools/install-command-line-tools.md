@@ -1,26 +1,24 @@
 ---
-title: Befehlszeilenwerkzeuge installieren
-description: Befehlszeilenwerkzeuge installieren
+title: Installieren Sie die Befehlszeilen-Tools
+description: Installieren Sie die Befehlszeilen-Tools
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
+# Installieren Sie die Befehlszeilen-Tools {#install-the-command-line-tools}
 
-# Installieren Sie die Befehlszeilenwerkzeuge {#install-the-command-line-tools}
-
-1. Kopieren Sie den Inhalt des Ordners [DRM SDK DVD]\Reference Implementation\Command Line Tools\ in ein Arbeitsverzeichnis Ihres Systems.
+1. Kopieren Sie den Inhalt der [DRM SDK-DVD]\Referenz Implementierung\Befehlszeilenwerkzeuge\ auf einen Arbeitsordner auf Ihrem System.
 
    [!DNL .../Command Line Tools/] Inhalt:
 
-   * [!DNL flashaccesstools.properties] - Die Standardkonfigurationsdatei für die Befehlszeilenwerkzeuge.
-   * [!DNL libs/] - Enthält die JAR-Dateien für die Befehlszeilenwerkzeuge
-   * [!DNL samples/] - Enthält das ant-Build-Skript (  [!DNL build-samples.xml]) und die Java-Quelldateien.
+   * [!DNL flashaccesstools.properties] - Die Standardkonfigurationsdatei für die Befehlszeilen-Tools.
+   * [!DNL libs/] - Enthält die JAR-Dateien der Befehlszeilen-Tools
+   * [!DNL samples/] - Enthält das ant-Build-Skript ( [!DNL build-samples.xml]) und Java-Quelldateien.
 
-      >[!NOTE]
-      >
-      >Die Java-Quelldateien zeigen, wie die Primetime DRM SDK-APIs verwendet werden. Um die Beispiele zu erstellen und auszuführen, führen Sie das Skript [!DNL build-samples.xml] Ant in [!DNL samples/] aus.
+     >[!NOTE]
+     >
+     >Die Java-Quelldateien zeigen, wie die Primetime DRM SDK-APIs verwendet werden. Führen Sie zum Erstellen und Ausführen der Beispiele den [!DNL build-samples.xml] Ant-Skript in [!DNL samples/].

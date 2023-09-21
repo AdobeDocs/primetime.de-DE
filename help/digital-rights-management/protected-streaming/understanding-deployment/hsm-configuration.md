@@ -1,30 +1,28 @@
 ---
-description: Wenn Sie ein HSM auswählen, um Ihre Serverberechtigungen zu speichern, müssen Sie die privaten Schlüssel und Zertifikate auf das HSM laden und eine Konfigurationsdatei "pkcs11.cfg"erstellen.
+description: Wenn Sie ein HSM auswählen, um Ihre Serverberechtigungen zu speichern, müssen Sie die privaten Schlüssel und Zertifikate auf das HSM laden und eine Konfigurationsdatei pkcs11.cfg erstellen.
 title: HSM-Konfiguration
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
-
 # HSM-Konfiguration{#hsm-configuration}
 
-Wenn Sie ein HSM auswählen, um Ihre Serverberechtigungen zu speichern, müssen Sie die privaten Schlüssel und Zertifikate auf das HSM laden und eine Konfigurationsdatei &quot;pkcs11.cfg&quot;erstellen.
+Wenn Sie ein HSM auswählen, um Ihre Serverberechtigungen zu speichern, müssen Sie die privaten Schlüssel und Zertifikate auf das HSM laden und eine Konfigurationsdatei pkcs11.cfg erstellen.
 
-Sie müssen die Konfigurationsdatei im Ordner *LicenseServer.ConfigRoot* suchen.
+Sie müssen die Konfigurationsdatei im *LicenseServer.ConfigRoot* Verzeichnis.
 
-Eine Beispielkonfigurationsdatei für PKCS11 finden Sie im Ordner [!DNL Adobe Primetime DRM Server for Protected Streaming/configs] auf der Adobe Primetime DRM-DVD.
+Siehe [!DNL Adobe Primetime DRM Server for Protected Streaming/configs] -Verzeichnis auf der Adobe Primetime DRM DVD für eine Beispiel-PKCS1-Konfigurationsdatei.
 
-Informationen zum Format der Datei [!DNL pkcs11.cfg] finden Sie in der Sun PKCS11-Provider-Dokumentation.
+Informationen zum Format von finden Sie in der Sun PKCS11-Provider-Dokumentation [!DNL pkcs11.cfg] -Datei.
 
-Sie können den folgenden Befehl aus dem Ordner verwenden, in dem sich die Datei [!DNL pkcs11.cfg] befindet ( [!DNL keytool] wird mit Java JRE und JDK installiert), um zu überprüfen, ob die Konfigurationsdatei für HSM und Sun PKCS11 korrekt konfiguriert wurde:
+Sie können den folgenden Befehl aus dem Verzeichnis verwenden, in dem die Variable [!DNL pkcs11.cfg] Datei befindet sich ( [!DNL keytool] mit Java JRE und JDK installiert ist), um zu überprüfen, ob die Konfigurationsdatei &quot;HSM&quot;und &quot;Sun PKCS11&quot;ordnungsgemäß konfiguriert wurde:
 
 ```
 keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunPKCS11 
   -providerArg pkcs11.cfg -list
 ```
 
-Wenn Sie Ihre Anmeldeinformationen in der Liste Ansicht haben, ist das HSM korrekt konfiguriert und der Lizenzserver kann nun auf die Anmeldeinformationen zugreifen.
+Wenn Sie Ihre Anmeldedaten in der Liste anzeigen können, ist das HSM korrekt konfiguriert und der Lizenzserver kann jetzt auf die Anmeldedaten zugreifen.

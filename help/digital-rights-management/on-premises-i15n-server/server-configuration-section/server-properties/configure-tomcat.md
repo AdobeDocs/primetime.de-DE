@@ -2,20 +2,18 @@
 title: Tomcat konfigurieren
 description: Tomcat konfigurieren
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
+# Tomcat konfigurieren{#configure-tomcat}
 
-# Tomcat{#configure-tomcat} konfigurieren
+Ändern Sie auf dem Individualisierungsserver die [!DNL conf/server.xml] -Datei, um zusätzliche Informationen in das Zugriffsprotokoll aufzunehmen. Sie können diese Informationen zu Berichtszwecken verwenden.
 
-Ändern Sie auf dem Individualisierungsserver die Datei [!DNL conf/server.xml] von Tomcat, um weitere Informationen in das Zugriffsprotokoll aufzunehmen. Sie können diese Informationen zum Berichte verwenden.
-
-1. Suchen Sie die Konfiguration für `AccessLogValve` in [!DNL server.xml] und ändern Sie das Muster wie folgt:
+1. Suchen Sie die Konfiguration für die `AccessLogValve` in [!DNL server.xml] und ändern Sie das Muster wie folgt:
 
    ```
    <Valve className="org.apache.catalina.valves.AccessLogValve" 
@@ -24,13 +22,12 @@ ht-degree: 0%
    %{request-id}r" resolveHosts="false"/>
    ```
 
-   `%{x-forwarded-for}i` erfasst den Wert der  `x-forwarded-for` Kopfzeile. Wenn Sie einen umgekehrten Apache-Proxy verwenden, um Anforderungen an den Tomcat-Server zu senden, enthält dieser Header die IP-Adresse des ursprünglichen Clients, während `%h` die IP-Adresse des Apache-Servers aufzeichnet. `%{request-id}r` erfasst die Anforderungs-ID, die der Anforderungs-ID im Anwendungsprotokoll Individualisierung entspricht.
+   `%{x-forwarded-for}i` speichert den Wert der `x-forwarded-for` -Kopfzeile. Wenn Sie einen Apache-Reverse-Proxy verwenden, um Anforderungen an den Tomcat-Server weiterzuleiten, enthält dieser Header die IP-Adresse des ursprünglichen Clients, während `%h` erfasst die IP-Adresse des Apache-Servers. `%{request-id}r` erfasst die Anforderungskennung, die der im Protokoll der Individualisierungsanwendung enthaltenen Anforderungs-ID entspricht.
 
-1. Bearbeiten Sie [!DNL conf/server.xml] und setzen Sie die `unpackwars`-Eigenschaft auf false.
+1. Bearbeiten [!DNL conf/server.xml] und legen Sie die `unpackwars` -Eigenschaft auf &quot;false&quot;gesetzt.
 
-   Sowohl bei den Servern für die Personalisierung als auch bei der Schlüsselgenerierung sollten Sie [!DNL conf/server.xml] bearbeiten und die `unpackwars`-Eigenschaft auf `false` setzen. Andernfalls müssen Sie beim Aktualisieren der WAR-Dateien möglicherweise auch die entpackten WAR-Ordner bereinigen.
+   Sowohl für die Individualisierungs- als auch für die Schlüsselgenerierungsserver ist es empfehlenswert, die [!DNL conf/server.xml] und legen Sie die `unpackwars` Eigenschaft auf `false`. Andernfalls müssen Sie beim Aktualisieren der WAR-Dateien möglicherweise auch die entpackten WAR-Ordner bereinigen.
 
 >[!NOTE]
 >
->Zukünftige DRM-Clients erfordern, dass Sie den für Tomcat verfügbaren CORS-Filter (Cross-Herkunft Resource Sharing) aktivieren und konfigurieren. Zurzeit haben keine DRM-Clients diese Anforderung.
-
+>Zukünftige DRM-Clients erfordern, dass Sie den für Tomcat verfügbaren CORS-Filter (Cross-Origin Resource Sharing) aktivieren und konfigurieren. Derzeit ist dies für DRM-Clients nicht erforderlich.

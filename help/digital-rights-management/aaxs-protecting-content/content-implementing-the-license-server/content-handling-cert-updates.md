@@ -1,31 +1,29 @@
 ---
-title: Verarbeiten von Zertifikataktualisierungen, wenn die von Ihrer Adobe ausgestellten Zertifikate ablaufen
-description: Verarbeiten von Zertifikataktualisierungen, wenn die von Ihrer Adobe ausgestellten Zertifikate ablaufen
+title: Umgang mit Zertifikataktualisierungen, wenn Ihre von Adobe ausgestellten Zertifikate ablaufen
+description: Umgang mit Zertifikataktualisierungen, wenn Ihre von Adobe ausgestellten Zertifikate ablaufen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
 
 ---
 
+# Umgang mit Zertifikataktualisierungen, wenn Ihre von Adobe ausgestellten Zertifikate ablaufen {#handling-certificate-updates-when-your-adobe-issued-certifcates-expire}
 
-# Verarbeiten von Zertifikataktualisierungen, wenn Ihre von der Adobe ausgestellten Zertifikate ablaufen {#handling-certificate-updates-when-your-adobe-issued-certifcates-expire}
+Es kann vorkommen, dass Sie ein neues Zertifikat von Adobe erhalten müssen. Wenn beispielsweise ein Produktionszertifikat abläuft, läuft ein Bewertungszertifikat ab oder Sie wechseln von einem Testzertifikat zu einem Produktionszertifikat. Wenn ein Zertifikat abläuft und Sie den Inhalt, der das alte Zertifikat verwendet hat, nicht erneut verpacken möchten. Sie können den Lizenzserver sowohl über die alten als auch über die neuen Zertifikate informieren.
 
-Es kann vorkommen, dass Sie ein neues Zertifikat von der Adobe erhalten müssen. Wenn beispielsweise ein Produktionszertifikat abläuft, läuft ein Evaluierungszertifikat ab oder Sie wechseln von einem Test zu einem Produktionszertifikat. Wenn ein Zertifikat abläuft und Sie den Inhalt, der das alte Zertifikat verwendet hat, nicht erneut verpacken möchten. Sie können den License Server sowohl auf die alten als auch auf die neuen Zertifikate aufmerksam machen.
+Führen Sie die folgenden Schritte aus, um Ihren Server mit den neuen Zertifikaten zu aktualisieren:
 
-Führen Sie das folgende Verfahren aus, um Ihren Server mit den neuen Zertifikaten zu aktualisieren:
+1. (Optional) Wenn Sie einer vorhandenen Liste mit Richtlinienaktualisierungen oder Sperrlisten neue Einträge hinzufügen, müssen Sie mit den neuen Anmeldedaten signieren und die Signatur in der vorhandenen Datei mit dem alten Zertifikat überprüfen.
 
-1. (Optional) Wenn Sie einer vorhandenen Liste zur Aktualisierung von Richtlinien oder zur Liste zum Sperren neue Einträge hinzufügen, müssen Sie sich mit den neuen Anmeldeinformationen signieren und mit dem alten Zertifikat die Signatur für die vorhandene Datei validieren.
-
-   Verwenden Sie beispielsweise die folgende Befehlszeile, um einer vorhandenen Liste zur Richtlinienaktualisierung, die mit einer anderen Berechtigung signiert wurde, einen Eintrag hinzuzufügen:
+   Verwenden Sie beispielsweise die folgende Befehlszeile, um einen Eintrag zu einer vorhandenen Liste mit Richtlinienaktualisierungen hinzuzufügen, die mit einer anderen Berechtigung signiert wurde:
 
    ```
    java -jar AdobePolicyUpdateListManager.jar newList -f oldList oldSigningCert.cer -u pol 0 "" ""
    ```
 
-1. Verwenden Sie die Java-API, um den Lizenzserver mit der neuen Liste zur Richtlinienaktualisierung oder -sperrung zu aktualisieren:
+1. Verwenden Sie die Java-API, um den Lizenzserver mit der neuen Liste der aktualisierten Richtlinien oder der Sperrliste zu aktualisieren:
 
    ```
     HandlerConfiguration.setRevocationList() 
@@ -37,41 +35,39 @@ Führen Sie das folgende Verfahren aus, um Ihren Server mit den neuen Zertifikat
     HandlerConfiguration.setPolicyUpdateList()
    ```
 
-   In der Referenzimplementierung werden die Eigenschaften `HandlerConfiguration.RevocationList` und `HandlerConfiguration.PolicyUpdateList` verwendet. Aktualisieren Sie auch das Zertifikat, das zur Überprüfung der Signaturen verwendet wird: `RevocationList.verifySignature.X509Certificate`.
+   In der Referenzimplementierung werden die Eigenschaften verwendet, die `HandlerConfiguration.RevocationList` und `HandlerConfiguration.PolicyUpdateList`. Aktualisieren Sie außerdem das Zertifikat, das zum Überprüfen der Signaturen verwendet wird: `RevocationList.verifySignature.X509Certificate`.
 
-1. Zum Verwenden von Inhalten, die mit den alten Zertifikaten gepackt wurden, benötigt der Lizenzserver die alten und neuen Anmeldeinformationen für den Lizenzserver und die Übertragungsberechtigungen. Aktualisieren Sie den Lizenzserver mit den neuen und alten Zertifikaten.
+1. Um Inhalte zu nutzen, die mit den alten Zertifikaten gepackt wurden, benötigt der Lizenzserver die alten und neuen Anmeldeinformationen des Lizenzservers sowie die Transportberechtigungen. Aktualisieren Sie den Lizenzserver mit den neuen und alten Zertifikaten.
 
-   Anmeldeinformationen des Lizenzservers:
+   Für die Anmeldedaten des Lizenzservers:
 
-   * Stellen Sie sicher, dass die aktuelle Berechtigung an den Konstruktor `LicenseHandler` übergeben wird:
+   * Stellen Sie sicher, dass die aktuelle Berechtigung an die `LicenseHandler` Konstruktor:
 
-      * Legen Sie sie in der Referenzimplementierung mithilfe der Eigenschaft `LicenseHandler.ServerCredential` fest.
-      * Im Adobe Access Server für geschütztes Streaming muss die aktuelle Berechtigung die erste im Element `LicenseServerCredential` in der Datei &quot;flashaccess-tenant.xml&quot;angegebene Berechtigung sein.
-   * Stellen Sie sicher, dass die aktuellen und alten Anmeldeinformationen für `AsymmetricKeyRetrieval` bereitgestellt werden.
+      * Legen Sie sie in der Referenzimplementierung durch die `LicenseHandler.ServerCredential` -Eigenschaft.
+      * In der Adobe Access Server für geschütztes Streaming muss die aktuelle Berechtigung die erste Berechtigung sein, die in der Datei `LicenseServerCredential` -Element in der Datei &quot;flashaccess-tenant.xml&quot;ein.
 
-      * Legen Sie sie in der Referenzimplementierung mithilfe der Eigenschaften `LicenseHandler.ServerCredential` und `AsymmetricKeyRetrieval.ServerCredential. n` fest.
-      * In Adobe Access Server für geschütztes Streaming werden die alten Anmeldeinformationen nach der ersten Berechtigung im Element `LicenseServerCredential` in der Datei &quot;flashaccess-tenant.xml&quot;angegeben.
+   * Stellen Sie sicher, dass die aktuellen und alten Anmeldedaten für `AsymmetricKeyRetrieval`
 
-   Für Beförderungsangaben:
+      * Legen Sie sie in der Referenzimplementierung durch die `LicenseHandler.ServerCredential` und `AsymmetricKeyRetrieval.ServerCredential. n` Eigenschaften.
+      * In der Adobe Access Server für geschütztes Streaming werden die alten Anmeldeinformationen nach der ersten Berechtigung in der `LicenseServerCredential` -Element in der Datei &quot;flashaccess-tenant.xml&quot;ein.
 
-   * Stellen Sie sicher, dass die aktuelle Berechtigung an die `HandlerConfiguration.setServerTransportCredential()`-Methode übergeben wird:
+   Für die Transport-Anmeldeinformationen:
 
-      * Legen Sie sie in der Referenzimplementierung mithilfe der Eigenschaft `HandlerConfiguration.ServerTransportCredential` fest.
-      * In Adobe Access Server für geschütztes Streaming muss die aktuelle Berechtigung die erste im Element `TransportCredential` in der Datei &quot;flashaccess-tenant.xml&quot;angegebene Berechtigung sein.
-   * Stellen Sie sicher, dass die alten Anmeldeinformationen für `HandlerConfiguration.setAdditionalServerTransportCredentials`() bereitgestellt werden:
+   * Stellen Sie sicher, dass die aktuelle Berechtigung an die `HandlerConfiguration.setServerTransportCredential()` -Methode:
 
-      * Legen Sie sie in der Referenzimplementierung mithilfe der `HandlerConfiguration.AdditionalServerTransportCredential. n`-Eigenschaften fest.
-      * Im Adobe Access Server für geschütztes Streaming wird dies nach der ersten Berechtigung im Element `TransportCredential` in der Datei &quot;flashaccess-tenant.xml&quot;angegeben.
+      * Legen Sie sie in der Referenzimplementierung durch die `HandlerConfiguration.ServerTransportCredential` -Eigenschaft.
+      * In der Adobe Access Server für geschütztes Streaming muss die aktuelle Berechtigung die erste Berechtigung sein, die in der `TransportCredential` -Element in der Datei &quot;flashaccess-tenant.xml&quot;ein.
 
+   * Stellen Sie sicher, dass die alten Anmeldedaten für `HandlerConfiguration.setAdditionalServerTransportCredentials`():
 
+      * Legen Sie sie in der Referenzimplementierung durch die `HandlerConfiguration.AdditionalServerTransportCredential. n` Eigenschaften.
+      * In der Adobe Access Server für geschütztes Streaming wird dies nach der ersten Berechtigung in der `TransportCredential` -Element in der Datei &quot;flashaccess-tenant.xml&quot;ein.
 
-
-1. Aktualisieren Sie die Verpackungstools, um sicherzustellen, dass sie Inhalte mit den aktuellen Anmeldeinformationen verpacken. Stellen Sie sicher, dass das aktuelle Lizenzserverzertifikat, das Transportzertifikat und die Paketberechtigung für das Verpacken verwendet werden.
-1. So aktualisieren Sie das Lizenzserverzertifikat des Schlüsselservers:
+1. Aktualisieren Sie die Verpackungs-Tools, um sicherzustellen, dass sie Inhalte mit den aktuellen Anmeldeinformationen verpacken. Stellen Sie sicher, dass für die Verpackung das aktuelle Lizenzserverzertifikat, das Transportzertifikat und die Paketberechtigung verwendet werden.
+1. Aktualisieren des Lizenzserverzertifikats des Schlüsselservers:
 
    * Aktualisieren Sie die Anmeldeinformationen in der Konfigurationsdatei des Adobe Access Key Server-Mandanten. Schließen Sie sowohl die alten als auch die neuen Schlüsselserver-Anmeldeinformationen in &quot;flashaccess-keyserver-tenant.xml&quot;ein.
-   * Stellen Sie sicher, dass das aktuelle Zertifikat an die `HandlerConfiguration.setKeyServerCertificate()`-Methode übergeben wird.
+   * Stellen Sie sicher, dass das aktuelle Zertifikat an die `HandlerConfiguration.setKeyServerCertificate()` -Methode.
 
-      * Legen Sie sie in der Referenzimplementierung mithilfe der Eigenschaft `HandlerConfiguration.KeyServerCertificate` fest.
-      * Geben Sie im Adobe Access Server für geschütztes Streaming das Zertifikat des Schlüsselservers im Element Configuration/Tenant/Certificates/KeyServer an.
-
+      * Legen Sie sie in der Referenzimplementierung durch die `HandlerConfiguration.KeyServerCertificate` -Eigenschaft.
+      * Geben Sie in Adobe Access Server für geschütztes Streaming das Zertifikat des Schlüsselservers im Element Configuration/Mandant/Certificates/KeyServer an.

@@ -1,19 +1,17 @@
 ---
-description: Die Regel "Normalisieren"definiert eine URL-Transformation, die auf eine Quell-URL angewendet wird, die aus einer VAST-/VMAP-Antwort stammt.
-keywords: Normalisierungsregel;kreative Auswahlregeln
+description: Die Normalisierungsregel definiert eine URL-Transformation, die auf eine Quell-Kreativ-URL angewendet wird, die von einer VAST-/VMAP-Antwort erhalten wurde.
+keywords: Normalisierungsregel; kreative Auswahlregeln
 title: Regeln normalisieren
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
+# Regeln normalisieren {#normalize-rules}
 
-# Normalisieren von Regeln {#normalize-rules}
-
-Die Regel &quot;Normalisieren&quot;definiert eine URL-Transformation, die auf eine Quell-URL angewendet wird, die aus einer VAST-/VMAP-Antwort stammt.
+Die Normalisierungsregel definiert eine URL-Transformation, die auf eine Quell-Kreativ-URL angewendet wird, die von einer VAST-/VMAP-Antwort erhalten wurde.
 
 ## Die Regel &quot;Normalisieren&quot;verfügt über die folgenden Attribute und möglichen Werte:
 
@@ -31,16 +29,16 @@ Die Regel &quot;Normalisieren&quot;definiert eine URL-Transformation, die auf ei
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> Zeichenfolge</span></td> 
    <td><span class="codeph"> normalisieren</span></td> 
-   <td>Der Wert muss immer <span class="codeph"> normalize</span> sein.</td> 
+   <td>Der Wert muss immer <span class="codeph"> normalisieren</span>.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> Zeichenfolge</span></td> 
-   <td><span class="codeph"> host</span></td> 
-   <td>Derzeit wird nur der Eintrag <span class="codeph"> host</span> unterstützt. Dieses Attribut muss vorhanden sein, wenn <span class="codeph"> Übereinstimmungen</span> und <span class="codeph"> Werte</span>-Attribute definiert sind.</td> 
+   <td><span class="codeph"> Host</span></td> 
+   <td>Derzeit nur <span class="codeph"> Host</span> wird unterstützt. Dieses Attribut muss vorhanden sein, wenn <span class="codeph"> matches</span> und <span class="codeph"> values</span> -Attribute definiert werden.</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> match</span></td> 
+   <td><span class="codeph"> matches</span></td> 
    <td></td> 
    <td></td> 
    <td>Mögliche Werte:
@@ -48,28 +46,28 @@ Die Regel &quot;Normalisieren&quot;definiert eine URL-Transformation, die auf ei
      <li><span class="codeph"> eq</span> - gleich</li> 
      <li><span class="codeph"> ne</span> - nicht gleich</li> 
      <li><span class="codeph"> co</span> - enthält</li> 
-     <li><span class="codeph"> nc</span> - enthält nicht</li> 
-     <li><span class="codeph"> sw</span>  - Beginn mit</li> 
-     <li><span class="codeph"> new</span>  - endet mit</li> 
+     <li><span class="codeph"> nc</span> - nicht enthält</li> 
+     <li><span class="codeph"> sw</span> - beginnt mit</li> 
+     <li><span class="codeph"> ew</span> - endet mit</li> 
     </ul></td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> Werte</span></td> 
+   <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Array</span></td> 
    <td></td> 
-   <td>TVSDK verwendet das Attribut <span class="codeph"> stimmt mit</span> im <span class="codeph">-Element</span> des Quellkreativs überein und stimmt mit den in diesem Array definierten Werten überein.</td> 
+   <td>TVSDK verwendet die <span class="codeph"> matches</span> -Attribut in der <span class="codeph"> item</span> des Quell-Kreativelements erstellen und mit den in diesem Array definierten Werten übereinstimmen.</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> finden</span></td> 
+   <td><span class="codeph"> find</span></td> 
    <td><span class="codeph"> regex</span></td> 
    <td></td> 
-   <td> Ein regulärer Ausdruck, der auf die passende kreative Quell-URL angewendet werden soll.</td> 
+   <td> Ein regulärer Ausdruck, der auf die zu vergleichende Quell-Kreativ-URL angewendet wird.</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> ersetzen</span></td> 
+   <td><span class="codeph"> replace</span></td> 
    <td><span class="codeph"> regex</span></td> 
    <td></td> 
-   <td> Ein regulärer Ausdruck, der auf die kreative Quellcode-URL angewendet wird, die basierend auf der Übereinstimmung ersetzt werden soll.</td> 
+   <td> Ein regulärer Ausdruck, der auf die Quell-Kreativ-URL angewendet wird, die basierend auf der Übereinstimmung ersetzt werden soll.</td> 
   </tr> 
  </tbody> 
 </table>
@@ -104,4 +102,3 @@ Die Regel &quot;Normalisieren&quot;definiert eine URL-Transformation, die auf ei
     }
 }
 ```
-

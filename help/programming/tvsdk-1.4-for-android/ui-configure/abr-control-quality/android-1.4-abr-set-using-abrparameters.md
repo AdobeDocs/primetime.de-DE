@@ -1,33 +1,31 @@
 ---
-description: Sie können ABR-Steuerelementwerte nur mit ABRControlParameters festlegen, aber Sie können jederzeit eine neue erstellen.
-title: Adaptive Bitraten mit ABRControlParameters konfigurieren
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können ABR-Kontrollwerte nur mit ABRControlParameters festlegen, aber Sie können jederzeit einen neuen erstellen.
+title: Adaptive Bitraten mithilfe von ABRControlParameters konfigurieren
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
+# Adaptive Bitraten mithilfe von ABRControlParameters konfigurieren{#configure-adaptive-bit-rates-using-abrcontrolparameters}
 
-# Adaptive Bitraten mit ABRControlParameters{#configure-adaptive-bit-rates-using-abrcontrolparameters} konfigurieren
-
-Sie können ABR-Steuerelementwerte nur mit ABRControlParameters festlegen, aber Sie können jederzeit eine neue erstellen.
+Sie können ABR-Kontrollwerte nur mit ABRControlParameters festlegen, aber Sie können jederzeit einen neuen erstellen.
 
 Die folgenden Bedingungen gelten für `ABRControlParameters`:
 
-* Sie müssen Werte für alle Parameter zur Bauzeit angeben.
-* Sie können nach der Bauzeit keine individuellen Werte mehr ändern.
-* Wenn die von Ihnen angegebenen Parameter außerhalb des zulässigen Bereichs liegen, wird ein `ArgumentError` ausgelöst.
+* Sie müssen Werte für alle Parameter zum Zeitpunkt der Erstellung angeben.
+* Sie können einzelne Werte nach der Bauzeit nicht mehr ändern.
+* Wenn die von Ihnen angegebenen Parameter außerhalb des zulässigen Bereichs liegen, wird ein `ArgumentError` geworfen wird.
 
-1. Entscheiden Sie sich für die anfänglichen, minimalen und maximalen Bitraten.
-1. Legen Sie die ABR-Richtlinie fest:
+1. Entscheiden Sie für die Start-, Mindest- und HöchstBitraten.
+1. Bestimmen Sie die ABR-Richtlinie:
 
    * `ABR_CONSERVATIVE`
    * `ABR_MODERATE`
    * `ABR_AGGRESSIVE`
 
-1. Legen Sie die ABR-Parameterwerte im `ABRControlParameters`-Konstruktor fest und weisen Sie sie dem Media Player zu.
+1. Legen Sie die ABR-Parameterwerte im `ABRControlParameters` und weisen Sie sie dem Media Player zu.
 
    ```java
    public ABRControlParameters(int initialBitRate, 
@@ -39,4 +37,3 @@ Die folgenden Bedingungen gelten für `ABRControlParameters`:
      int maxTrickPlayBandwidthUsage, 
      int maxPlayoutRate);
    ```
-

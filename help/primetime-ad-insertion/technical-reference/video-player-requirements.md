@@ -1,29 +1,27 @@
 ---
-description: Alle Videoplayer müssen Funktionen bereitstellen, auf die der Manifestserver zum Einfügen von Anzeigen und zur Aktivierung der Anzeigenverfolgung angewiesen ist.
+description: Alle Videoplayer müssen Funktionen bereitstellen, auf die der Manifestserver angewiesen ist, um Anzeigen einzufügen und das Anzeigen-Tracking zu aktivieren.
 title: Anforderungen an Videoplayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
 
 ---
 
+# Anforderungen an Videoplayer {#video-player-requirements}
 
-# Anforderungen für Videoplayer {#video-player-requirements}
-
-Alle Videoplayer müssen Funktionen bereitstellen, auf die der Manifestserver zum Einfügen von Anzeigen und zur Aktivierung der Anzeigenverfolgung angewiesen ist.
+Alle Videoplayer müssen Funktionen bereitstellen, auf die der Manifestserver angewiesen ist, um Anzeigen einzufügen und das Anzeigen-Tracking zu aktivieren.
 
 Um die Primetime-Anzeigen-Einfüge-API verwenden zu können, muss ein Videoplayer Folgendes erfüllen:
 
-* Kann die Position des Abspielkopfs verfolgen, während der Inhalt wiedergegeben wird.
-* Kann Tracking-URLs zu den angegebenen Zeiten anfordern.
+* Kann die Position der Abspielleiste verfolgen, während der Inhalt wiedergegeben wird.
+* Kann Tracking-URLs zum angegebenen Zeitpunkt anfordern.
 * Wird auf einer Geräteplattform ausgeführt, die HLS v3 oder höher unterstützt, einschließlich:
 
-   * PTS-Diskontinuitäten, wie durch `EXT-X-DISCONTINUITY`-Tags gekennzeichnet
+   * PTS-Unterbrechungen, gekennzeichnet durch `EXT-X-DISCONTINUITY` tags
    * `EXT-X-DISCONTINUITY-SEQUENCE`
    * `EXT-X-PROGRAM-DATE-TIME`
    * `EXT-X-START`
 
-* Wird auf einer Plattform ausgeführt, die HTTP-Umleitungen und das Parsen von JSON unterstützt.
-* Internetbasierte Player müssen auf Plattformen ausgeführt werden, die CORS unterstützen.
+* Führt auf einer Plattform aus, die HTTP-Umleitungen und das Parsen von JSON unterstützt.
+* Webbasierte Player müssen auf Plattformen ausgeführt werden, die CORS unterstützen.

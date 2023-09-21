@@ -1,46 +1,42 @@
 ---
-description: Laden Sie eine Ressource, indem Sie MediaResource direkt instanziieren und den wiederzugebenden Videoinhalt laden. Dies ist eine Möglichkeit, eine Medienressource zu laden.
-title: Laden einer Medienressource in den MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Laden Sie eine Ressource, indem Sie eine MediaResource direkt instanziieren und den abzuspielenden Videoinhalt laden. Dies ist eine Möglichkeit, eine Medienressource zu laden.
+title: Laden einer Medienressource im MediaPlayer
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
+# Laden einer Medienressource im MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
 
-# Medienressource im MediaPlayer {#load-a-media-resource-in-the-mediaplayer} laden
-
-Laden Sie eine Ressource, indem Sie MediaResource direkt instanziieren und den wiederzugebenden Videoinhalt laden. Dies ist eine Möglichkeit, eine Medienressource zu laden.
+Laden Sie eine Ressource, indem Sie eine MediaResource direkt instanziieren und den abzuspielenden Videoinhalt laden. Dies ist eine Möglichkeit, eine Medienressource zu laden.
 
 1. Legen Sie das abspielbare Element Ihres MediaPlayer mit der neuen Ressource fest, die wiedergegeben werden soll.
 
-   Ersetzen Sie das derzeit abspielbare Element Ihres MediaPlayer durch den Aufruf von `MediaPlayer.replaceCurrentItem` und die Übergabe einer vorhandenen `MediaResource`-Instanz.
+   Ersetzen Sie das derzeit abspielbare Element Ihres MediaPlayers durch einen Aufruf von `MediaPlayer.replaceCurrentItem` und Übergeben vorhandener `MediaResource` -Instanz.
 
-1. Registrieren Sie eine Implementierung der `MediaPlayer.PlaybackEventListener`-Schnittstelle mit der `MediaPlayer`-Instanz.
+1. Registrieren Sie eine Implementierung der `MediaPlayer.PlaybackEventListener` -Schnittstelle mit `MediaPlayer` -Instanz.
 
    * `onPrepared`
    * `onStateChanged`und suchen Sie nach INITIALIZED und FEHLER.
 
-1. Wenn sich der Status des Medienplayers in INITIALIZED ändert, können Sie `MediaPlayer.prepareToPlay`
+1. Wenn sich der Status des Medienplayers in INITIALISIERT ändert, können Sie `MediaPlayer.prepareToPlay`
 
-   Der Status INITIALIZED gibt an, dass das Medium erfolgreich geladen wurde. Durch Aufruf von `prepareToPlay` werden die Auflösung und Platzierung der Werbung (sofern vorhanden) Beginn.
+   Der Status INITIALISIERT zeigt an, dass das Medium erfolgreich geladen wurde. Aufruf `prepareToPlay` startet den Prozess zur Auflösung und Platzierung der Werbung, falls vorhanden.
 
-1. Wenn TVSDK den Rückruf `onPrepared` aufruft, wurde der Medienstream erfolgreich geladen und für die Wiedergabe vorbereitet.
+1. Wenn TVSDK die `onPrepared` -Rückruf, wurde der Medien-Stream erfolgreich geladen und für die Wiedergabe vorbereitet.
 
-   Beim Laden des Medienstreams wird ein `MediaPlayerItem` erstellt.
+   Wenn der Medien-Stream geladen wird, wird ein `MediaPlayerItem` erstellt wird.
 
->Tritt ein Fehler auf, wechselt `MediaPlayer` zum ERROR-Status. Sie benachrichtigt Ihre Anwendung auch über Ihren `PlaybackEventListener.onStateChanged`Rückruf.
+>Wenn ein Fehler auftritt, wird die `MediaPlayer` wechselt in den ERROR-Status. Sie benachrichtigt Ihre Anwendung auch, indem Sie Ihre `PlaybackEventListener.onStateChanged`Callback.
 >
 >Dadurch werden mehrere Parameter übergeben:
->* Ein `state`-Parameter des Typs `MediaPlayer.PlayerState` mit dem Wert `MediaPlayer.PlayerState.ERROR`.
-   >
-   >
-* Ein `notification`-Parameter des Typs `MediaPlayerNotification`, der diagnostische Informationen zum Ereignis &quot;error&quot;enthält.
+>* A `state` Parameter des Typs `MediaPlayer.PlayerState` mit dem Wert von `MediaPlayer.PlayerState.ERROR`.
+>
+>* A `notification` Parameter des Typs `MediaPlayerNotification` , die Diagnoseinformationen zum Fehlerereignis enthält.
 
-
-Der folgende vereinfachte Beispielcode veranschaulicht den Vorgang zum Laden einer Medienressource:
+Der folgende vereinfachte Beispielcode veranschaulicht den Ladevorgang einer Medienressource:
 
 ```java
 // mediaResource is a properly configured MediaResource instance 

@@ -1,26 +1,24 @@
 ---
-description: Die Wiedergabeliste für ein Video kann eine unbegrenzte Anzahl alternativer Audiospuren für den Hauptvideoinhalt angeben. Beispielsweise können Sie Ihren Videoinhalten verschiedene Sprachen hinzufügen oder dem Benutzer gestatten, während der Wiedergabe des Inhalts zwischen verschiedenen Spuren auf dem Gerät zu wechseln.
+description: Die Wiedergabeliste für ein Video kann eine unbegrenzte Anzahl alternativer Audiospuren für den Hauptvideoinhalt angeben. Beispielsweise können Sie Ihren Videoinhalten verschiedene Sprachen hinzufügen oder dem Benutzer erlauben, während der Wiedergabe des Inhalts zwischen verschiedenen Spuren auf seinem Gerät zu wechseln.
 title: Alternative Audiospuren in der Wiedergabeliste
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
-
 # Alternative Audiospuren in der Wiedergabeliste {#alternate-audio-tracks-in-the-playlist}
 
-Die Wiedergabeliste für ein Video kann eine unbegrenzte Anzahl alternativer Audiospuren für den Hauptvideoinhalt angeben. Beispielsweise können Sie Ihren Videoinhalten verschiedene Sprachen hinzufügen oder dem Benutzer gestatten, während der Wiedergabe des Inhalts zwischen verschiedenen Spuren auf dem Gerät zu wechseln.
+Die Wiedergabeliste für ein Video kann eine unbegrenzte Anzahl alternativer Audiospuren für den Hauptvideoinhalt angeben. Beispielsweise können Sie Ihren Videoinhalten verschiedene Sprachen hinzufügen oder dem Benutzer erlauben, während der Wiedergabe des Inhalts zwischen verschiedenen Spuren auf seinem Gerät zu wechseln.
 
-Mit alternativen Audiospuren können Benutzer zwischen mehreren Sprachspuren für HTTP-Videostreams (live/linear und VOD) wechseln. Sie müssen das Video nicht für jede Audiospur ändern, Duplikat erstellen oder neu verpacken. Sie können mehrere Sprachspuren für ein Video-Asset vor oder nach der ursprünglichen Verpackung des Assets bereitstellen.
+Alternative Audiospuren ermöglichen es Benutzern, für HTTP-Videostreams (live/linear und VOD) zwischen mehreren Sprachspuren zu wechseln. Sie müssen das Video nicht für jeden Audiotrack ändern, duplizieren oder neu verpacken. Sie können mehrere Sprachspuren für ein Video-Asset vor oder nach der anfänglichen Verpackung des Assets bereitstellen.
 
 >[!IMPORTANT]
 >
->Damit der alternative Ton mit der Videospur des Hauptmediums gemischt wird, müssen die Zeitstempel der alternativen Spur mit den Zeitstempeln des Tons in der Hauptspur übereinstimmen.
+>Damit das alternative Audio mit dem Video-Track des Hauptmediums gemischt wird, müssen die Zeitstempel des alternativen Titels mit den Zeitstempeln des Audios im Haupttrack übereinstimmen.
 
-Die Hauptaudiospur ist in der Audiospur mit der Beschriftung `default` enthalten. Metadaten für die alternativen Audio-Streams sind in der Wiedergabeliste der `#EXT-X-MEDIA`-Tags mit `TYPE=AUDIO` enthalten.
+Der Haupt-Audio-Track ist in der Audiospur-Sammlung mit der `default` Beschriftung. Metadaten für die alternativen Audio-Streams sind in der Wiedergabeliste im `#EXT-X-MEDIA` Tags mit `TYPE=AUDIO`.
 
 Beispielsweise könnte ein M3U8-Manifest, das mehrere alternative Audiostreams angibt, wie folgt aussehen:
 

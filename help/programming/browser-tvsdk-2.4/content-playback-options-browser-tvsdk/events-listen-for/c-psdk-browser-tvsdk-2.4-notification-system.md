@@ -1,36 +1,34 @@
 ---
-description: Mit dem Benachrichtigungsabschnitt der Browser TVSDK-Bibliothek können Sie ein Protokollierungs- und Debugging-System erstellen, das für Diagnose- und Validierungszwecke nützlich sein kann.
+description: Im Benachrichtigungsabschnitt der Browser TVSDK-Bibliothek können Sie ein Protokollierungs- und Debugging-System erstellen, das für Diagnose- und Validierungszwecke nützlich sein kann.
 title: Benachrichtigungssystem
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
-
 # Benachrichtigungssystem {#notification-system}
 
-Mit dem Benachrichtigungsabschnitt der Browser TVSDK-Bibliothek können Sie ein Protokollierungs- und Debugging-System erstellen, das für Diagnose- und Validierungszwecke nützlich sein kann.
+Im Benachrichtigungsabschnitt der Browser TVSDK-Bibliothek können Sie ein Protokollierungs- und Debugging-System erstellen, das für Diagnose- und Validierungszwecke nützlich sein kann.
 
 <!--<a id="section_EC5DBE8DDA434B70A01FA2F3EF4618BD"></a>-->
 
-Browser TVSDK hat eine *no throw*-Richtlinie für die API. Die meisten Methoden geben einen `PSDKErrorCode`-Wert zurück, der angibt, ob die Methode erfolgreich ausgeführt wurde. Eine vollständige Liste aller möglichen `PSDKErrorCode`-Werte finden Sie unter Browser TVSDK API-Referenzen.
+Browser TVSDK verfügt über eine *no throw* -Richtlinie für die zugehörige API. Die meisten Methoden geben eine `PSDKErrorCode` -Wert, um anzugeben, ob die Methode erfolgreich ausgeführt wurde. Für eine vollständige Liste aller möglichen `PSDKErrorCode` -Werte, siehe Browser TVSDK-API-Referenzen.
 
-Asynchrone Fehler werden über die spezifischen Ereignis gemeldet.
+Asynchrone Fehler werden über die spezifischen Ereignisse benachrichtigt.
 
-Browser TVSDK sendet `MediaPlayer`-Ereignis, um Informationen zur Player-Aktivität bereitzustellen. Sie müssen Ereignis-Listener implementieren, um diese Ereignis zu erfassen und darauf zu reagieren.
+Browser TVSDK-Dispatches `MediaPlayer` -Ereignisse, um Informationen zur Player-Aktivität bereitzustellen. Sie müssen Ereignis-Listener implementieren, um diese Ereignisse zu erfassen und darauf zu reagieren.
 
 >[!TIP]
 >
->Wichtige Ereignis und Informationen werden in der Webbrowser-Konsole protokolliert.
+>Wichtige Ereignisse und Informationen werden in der Webbrowser-Konsole protokolliert.
 
-## Benachrichtigungen {#section_06B96633433D497E842FB7ADD5F2C7DA}
+## Benachrichtigungen abrufen {#section_06B96633433D497E842FB7ADD5F2C7DA}
 
-Sie können auf Benachrichtigungen warten und eigene Benachrichtigungen zum Benachrichtigungsverlauf hinzufügen. Der Kern des Browser TVSDK-Benachrichtigungssystems ist die `Notification`-Klasse, die eine eigenständige Benachrichtigung darstellt.
+Sie können Benachrichtigungen überwachen und eigene Benachrichtigungen zum Benachrichtigungsverlauf hinzufügen. Der Kern des Browser TVSDK-Benachrichtigungssystems ist der `Notification` -Klasse, die eine eigenständige Benachrichtigung darstellt.
 
-So richten Sie Ihre Anwendung zum Warten auf Benachrichtigungen ein:
+So richten Sie Ihre Anwendung so ein, dass auf Benachrichtigungen überwacht wird:
 
 1. Suchen Sie mithilfe der MediaPlayer-Instanz nach Änderungen des MediaPlayer-Status.
 
@@ -41,6 +39,5 @@ So richten Sie Ihre Anwendung zum Warten auf Benachrichtigungen ein:
 
 1. Implementieren Sie den Rückruf.
 
-   Der Rückruf empfängt eine Instanz von `AdobePSDK.MediaPlayerStatusChangeEvent` und Browser TVSDK übergibt dieses Ereignis-Objekt an den Rückruf, der den neuen Player-Status enthält.
-1. Ihre Anwendung kann andere Ereignis abhören, die von Browser TVSDK mit der `MediaPlayer`-Instanz gesendet werden.
-
+   Der Rückruf empfängt eine Instanz der `AdobePSDK.MediaPlayerStatusChangeEvent`und Browser TVSDK übergibt dieses Ereignisobjekt an den Callback, der den neuen Player-Status enthält.
+1. Ihre Anwendung kann andere Ereignisse überwachen, die vom Browser TVSDK mithilfe der `MediaPlayer` -Instanz.

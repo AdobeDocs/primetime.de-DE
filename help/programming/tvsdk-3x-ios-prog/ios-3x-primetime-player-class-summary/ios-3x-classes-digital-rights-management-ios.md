@@ -1,19 +1,17 @@
 ---
-description: Hier finden Sie Informationen zur DRM-Aktivität (Digital Rights Management).
+description: Dies liefert Informationen zur Aktivität Digital Rights Management (DRM).
 title: Digital Rights Management-Klassen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 0%
 
 ---
 
-
 # Digital Rights Management-Klassen {#digital-rights-management-classes}
 
-Hier finden Sie Informationen zur DRM-Aktivität (Digital Rights Management).
+Dies liefert Informationen zur Aktivität Digital Rights Management (DRM).
 
-| **Class** | **Beschreibung** |
+| **Klasse** | **Beschreibung** |
 |---|---|
 | [PTDRMMetadataInfo](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTDRMMetadataInfo.html) | Stellt eine bestimmte DRM-Metadateninstanz dar. |

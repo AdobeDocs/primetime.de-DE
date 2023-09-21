@@ -1,43 +1,41 @@
 ---
-description: Passen Sie Ihre Referenzimplementierung an, um die Adobe Primetime-Authentifizierung für Ihre Produktionsversion zu integrieren.
-title: Primetime-Authentifizierung integrieren
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Passen Sie Ihre Referenzimplementierung an, um die Adobe Primetime-Authentifizierung für Ihre Produktionsumgebung zu integrieren.
+title: Integrieren der Primetime-Authentifizierung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 0%
 
 ---
 
+# Integrieren der Primetime-Authentifizierung {#integrate-primetime-authentication}
 
-# Primetime-Authentifizierung integrieren {#integrate-primetime-authentication}
+Passen Sie Ihre Referenzimplementierung an, um die Adobe Primetime-Authentifizierung für Ihre Produktionsumgebung zu integrieren.
 
-Passen Sie Ihre Referenzimplementierung an, um die Adobe Primetime-Authentifizierung für Ihre Produktionsversion zu integrieren.
+Die Integration der Referenzimplementierung des Primetime-Authentifizierungsdienstes funktioniert standardmäßig als Demonstration. Um die Integration jedoch in einem produktionsbereiten Player zu verwenden, müssen Sie die folgenden Anpassungen implementieren:
 
-Die Integration der Referenzimplementierung des Primetime-Authentifizierungsdienstes funktioniert standardmäßig als Demonstration. Um die Integration jedoch in einem produktionsfertigen Player zu verwenden, müssen Sie die folgenden Anpassungen implementieren:
+1. Berechtigungsflüsse aktivieren oder deaktivieren.
 
-1. Aktivieren oder deaktivieren Sie Berechtigungsabläufe.
-
-   Das `EntitlementManager` muss zunächst initialisieren und eine Instanz des Primetime-Authentifizierungs-SDK abrufen, damit diese aktiviert werden kann. Wenn `EntitlementManager` diese Bibliothek nicht initialisiert, wird der Manager deaktiviert.
-1. Aktivieren Sie `EntitlementManger` aus Ihrer Hauptanwendungsklasse:
+   Die `EntitlementManager` muss zuerst initialisieren und eine Instanz des Primetime-Authentifizierungs-SDK abrufen, damit sie aktiviert werden kann. Wenn die Variable `EntitlementManager` diese Bibliothek nicht initialisiert, wird der Manager deaktiviert.
+1. Aktivieren Sie die `EntitlementManger`, aus Ihrer Hauptanwendungsklasse:
 
    ```java
    // initialize the AccessEnabler library, required for Primetime PayTV Pass entitlement workflows 
    EntitlementManager.initializeAccessEnabler(this); // comment out this line to disable entitlement workflows
    ```
 
-1. Verwenden Sie die `ManagerFactory`-Klasse, um eine Instanz von `EntitlementManager` abzurufen.
+1. Verwenden Sie die `ManagerFactory` -Klasse, um eine Instanz der `EntitlementManager`.
 
-   Sie müssen immer `ManagerFactory` verwenden, um eine Instanz von `EntitlementManager` abzurufen, da `ManagerFactory` eine Instanz von EntitlementManager für Ihre Anwendung unterhält. Instanziieren Sie niemals die Klassen `EntitlementManager` oder `EntitlementManagerOn`, indem Sie ihre Konstruktoren verwenden.
+   Sie müssen immer die `ManagerFactory` , um eine Instanz der `EntitlementManager`als `ManagerFactory` verwaltet eine einzelne Instanz des EntitlementManager für Ihre Anwendung. Instanziieren Sie niemals die `EntitlementManager` oder `EntitlementManagerOn` -Klassen durch Verwendung ihrer -Konstruktoren.
 
    ```java
    EntitlementManager entitlementManager =  
    ManagerFactory.getEntitlementManager();
    ```
 
-   `ManagerFactory` gibt eine Instanz von `EntitlementManagerOn` zurück, bei der die Berechtigungsabläufe aktiviert sind, wenn Sie zuvor `EntitlementManager.initializeAccessEnabler` genannt haben. Wenn Sie `EntitlementManager.initializeAccessEnabler` nicht zum ersten Mal aufrufen, gibt `ManagerFactory` eine Instanz von `EntitlementManager` zurück, wobei die Berechtigungsabläufe deaktiviert sind. 1. Konfigurieren Sie die Anforderungs-ID.
+   Die `ManagerFactory` gibt eine Instanz von `EntitlementManagerOn`, wobei die Berechtigungsflüsse aktiviert sind, falls Sie zuvor `EntitlementManager.initializeAccessEnabler`. Wenn Sie nicht den ersten Aufruf `EntitlementManager.initializeAccessEnabler`, dann die `ManagerFactory` gibt eine Instanz von `EntitlementManager`, wobei die Berechtigungsflüsse deaktiviert sind. 1. Konfigurieren Sie die Anforderer-ID.
 
-   Die Referenz-Implementierung ist vorkonfiguriert und die Test-Anforderer-ID ist auf Folgendes eingestellt: &quot;REF&quot;. Mit dieser Anforderungs-ID können Sie Ihre Anwendung testen. Wenn Sie bereit sind, die Anforderungs-ID zu verwenden, die Ihnen Ihr Primetime-Authentifizierungsbeauftragter genannt hat, aktualisieren Sie die [!DNL res/values/strings.xml]-Datei der Anwendung mit Ihrer Anforderer-ID.
+   Die Referenzimplementierung ist vorkonfiguriert und die Test-Anforderer-ID ist auf &quot;REF&quot;festgelegt. Sie können diese Anforderer-ID verwenden, um Ihre Anwendung zu testen. Wenn Sie die Anforderer-ID verwenden möchten, die Ihnen Ihr Primetime-Authentifizierungsagent zur Verfügung stellt, aktualisieren Sie die [!DNL res/values/strings.xml] -Datei mit Ihrer Anforderer-ID.
 
    ```xml
    <!-- Programmer Requestor ID, change to ID provided by your Adobe  
@@ -53,24 +51,24 @@ Die Integration der Referenzimplementierung des Primetime-Authentifizierungsdien
    <string name="adobepass_sp_url_staging">sp.auth-staging.adobe.com</string>
    ```
 
-   Darüber hinaus müssen Sie möglicherweise die URLs ändern, die Ihre Anwendung zum Herstellen einer Verbindung mit den Primetime-Authentifizierungsdiensten verwendet. Dazu gehören die Primetime-Authentifizierungs-Staging- und Produktions-Server-URLs sowie eine URL zu einem Token-Verifizierungsdienst. Weitere Informationen erhalten Sie von Ihrem Adobe Primetime-Kundenbetreuer. 1. Unterschreiben Sie die Anforderungs-ID.
+   Darüber hinaus müssen Sie möglicherweise die URLs ändern, die Ihre Anwendung verwendet, um eine Verbindung zu den Primetime-Authentifizierungsdiensten herzustellen. Dazu gehören die Primetime-Authentifizierungs-Staging- und Produktionsserver-URLs sowie eine URL zu einem Token Verification Service. Weitere Informationen erhalten Sie von Ihrem Adobe Primetime-Support-Mitarbeiter. 1. Unterschreiben Sie die Anforderer-ID.
 
-   Um die Identität des Programmierers im Primetime-Authentifizierungssystem festzustellen, wird die Anforderungs-ID des Programmierers an das Primetime-Authentifizierungssystem gesendet. Als zusätzliche Sicherheitsebene muss die Anforderungs-ID vom Programmierer signiert werden, bevor sie an die Adobe gesendet wird. Adobe empfiehlt, dass der Programmierer einen Dienst zum Signieren der Anforderungs-ID in einem vertrauenswürdigen Netzwerk eingerichtet hat.
+   Um die Identität des Programmierers im Primetime-Authentifizierungssystem zu ermitteln, wird die Anforderungs-ID des Programmierers an das Primetime-Authentifizierungssystem gesendet. Als zusätzliche Sicherheitsschicht muss die Anforderer-ID vom Programmierer signiert werden, bevor sie an Adobe gesendet wird. Adobe empfiehlt dem Programmierer, einen Dienst zum Signieren der Anforderer-ID in einem vertrauenswürdigen Netzwerk einzurichten.
 
-   Die Primetime-Referenzimplementierung zeigt, wie die Anforderungs-ID signiert wird, jedoch nur zu Demonstrationszwecken. Adobe empfiehlt dringend, dass das Unterschriftszertifikat und der Unterschriftsgenerator-Code unter `com.adobe.primetime.reference.crypto` nicht in eine Produktionsanwendung aufgenommen werden sollten. Stattdessen sollten Sie ihn in einen vertrauenswürdigen vernetzten Dienst verschieben.
+   Die Primetime-Referenzimplementierung zeigt, wie die Anforderer-ID signiert wird. Dies dient jedoch nur zu Demonstrationszwecken. Adobe empfiehlt dringend, dass das Signaturzertifikat und der Signaturgeneratorcode unter `com.adobe.primetime.reference.crypto`, sollte nicht in eine Produktionsanwendung einbezogen werden. Stattdessen sollten Sie ihn in einen vertrauenswürdigen Netzwerkdienst verschieben.
 
-1. Konfigurieren Sie die Server-Umgebung.
+1. Konfigurieren Sie die Serverumgebung.
 
-   Der Primetime-Authentifizierungsdienst kann in zwei verschiedenen Umgebung ausgeführt werden:
+   Der Primetime-Authentifizierungsdienst kann in zwei separaten Umgebungen ausgeführt werden:
 
-   * Staging - Die Staging-Umgebung wird zum Testen der Anwendung verwendet.
-   * Produktion - Die Produktions-Umgebung wird für Live-Implementierungen Ihrer Applikation verwendet.
+   * Staging : Die Staging-Umgebung wird zum Testen Ihrer Anwendung verwendet.
+   * Produktion - Die Produktionsumgebung wird für Live-Bereitstellungen Ihrer Anwendung verwendet.
 
-   Sie legen die URIs sowohl für die Staging- als auch für die Produktions-Umgebung mithilfe der Anwendung fest. Sie müssen jedoch festlegen, welche dieser URIs von der Anwendung im Code verwendet werden. Stellen Sie in der `com.adobe.primetime.reference.manager.EntitlementManger`-Klasse die Variable `environmentUri` auf `STAGING_URI` oder `PRODUCTION_URI` ein, je nachdem, welche Primetime-Authentifizierungsdienst-Umgebung Sie verwenden.
+   Sie legen die URIs sowohl für die Staging- als auch für die Produktionsumgebung mit der Anwendung fest. Sie müssen jedoch festlegen, welche dieser URIs von der Anwendung im Code verwendet wird. Im `com.adobe.primetime.reference.manager.EntitlementManger` -Klasse, legen Sie die `environmentUri` entweder `STAGING_URI` oder `PRODUCTION_URI` je nachdem, welche Primetime-Authentifizierungsdienst-Umgebung Sie verwenden.
 
    >[!NOTE]
    >
-   >Die angegebene Anforderungs-ID (&quot;REF&quot;) sollte nur mit der Staging-Umgebung verwendet werden.
+   >Die bereitgestellte Anforderer-ID (&quot;REF&quot;) sollte nur in der Staging-Umgebung verwendet werden.
 
    `com.adobe.primetime.reference.manager.EntitlementManager`:
 
@@ -94,9 +92,9 @@ Die Integration der Referenzimplementierung des Primetime-Authentifizierungsdien
      TVS_URL = "https://" + environmentUri + "/tvs/v1/validate";
    ```
 
-1. Passen Sie das MVPD-Auswahlraster an.
+1. Anpassen des MVPD-Auswahlrasters.
 
-   Auf der Seite zur Auswahl des Content Providers wird eine Tabelle der neun wichtigsten MVPDs angezeigt, aus denen der Benutzer auswählen kann. Die Anwendung ruft die neun wichtigsten MVPDs aus einer bestellten Liste innerhalb der Anwendung ab, die mit den verfügbaren MVPDs übereinstimmt, die mit dem Programmierer im Primetime-Authentifizierungssystem integriert sind. Die bestellte Liste der primären MVPDs wird auf der MVPD-ID innerhalb des Primetime-Authentifizierungs-Systems und nicht auf dem MVPD-Anzeigenamen gezählt. Es ist wichtig zu überprüfen, ob die MVPD-IDs in der primären MVPD-Liste mit den MVPD-IDs übereinstimmen, die mit dem Programmiererkonto integriert sind, da die IDs in einigen Fällen von Integrationen verschieden sein können. Nachstehend finden Sie die geordnete Liste der primären MVPDs, die in der Klasse `com.adobe.primetime.reference.ui.entitlement.MvpdPickerFragment` enthalten ist.
+   Auf der Seite zur Auswahl des Inhaltsanbieters wird eine Tabelle der neun wichtigsten MVPDs angezeigt, aus denen der Benutzer auswählen kann. Die Anwendung ruft die neun wichtigsten MVPDs aus einer geordneten Liste innerhalb der Anwendung ab, die mit den verfügbaren MVPDs übereinstimmen, die mit dem Programmer im Primetime-Authentifizierungssystem integriert sind. Die geordnete Liste der primären MVPDs wird auf der MVPD-ID innerhalb des Primetime-Authentifizierungs-Systems und nicht auf dem MVPD-Anzeigenamen angegeben. Es ist wichtig zu überprüfen, ob die MVPD-IDs in der Liste der primären MVPDs mit den MVPD-IDs übereinstimmen, die mit dem -Konto des Programmierers integriert sind, da die IDs in einigen Fällen von Integrationen unterschiedlich sein können. Nachstehend finden Sie die geordnete Liste der primären MVPDs, die in der Klasse zu finden sind. `com.adobe.primetime.reference.ui.entitlement.MvpdPickerFragment`.
 
    ```java
    /* Array of MVPDs to display in a Grid of icons 
@@ -131,10 +129,10 @@ Die Integration der Referenzimplementierung des Primetime-Authentifizierungsdien
    };
    ```
 
-   Die folgende Tabelle zeigt ein Beispiel dafür, wie die geordnete Liste der primären MVPDs verwendet wird. Die erste Spalte Liste die in den Programmierer integrierten MVPDs. Die zweite Spalte ist die (gekürzte) geordnete Liste von MVPDs. Die dritte Spalte ist die Ergebnisspalte, die verwendet wird, um dem Benutzer die sechs wichtigsten MVPDs anzuzeigen.
+   Die folgende Tabelle zeigt ein Beispiel dafür, wie die geordnete Liste der primären MVPDs verwendet wird. In der ersten Spalte werden die mit dem Programmierer integrierten MVPDs aufgeführt. Die zweite Spalte ist die (gekürzte) geordnete Liste von MVPDs. Die dritte Spalte ist die Ergebnisliste, die verwendet wird, um dem Benutzer die sechs wichtigsten MVPDs anzuzeigen.
 
-   Dieses Beispiel verwendet die sechs besten MVPDs anstelle der eigentlichen neun, nur um das Beispiel einfach zu halten. Beachten Sie, dass die Liste result den Schnittpunkt der ersten beiden Listen enthält und dieselbe Reihenfolge wie die zweite Liste hat. Beachten Sie auch, dass AT&amp;T U-verse nicht in der endgültigen Liste ist, da nur die ersten übereinstimmenden sechs MVPDs genommen werden.
+   In diesem Beispiel werden die sechs wichtigsten MVPDs anstelle der tatsächlichen neun verwendet, nur um das Beispiel einfach zu halten. Beachten Sie, dass die Ergebnisliste die Schnittmenge der ersten beiden Listen enthält und dieselbe Reihenfolge wie die zweite Liste aufweist. Beachten Sie auch, dass AT&amp;T U-verse nicht in der endgültigen Liste enthalten ist, da nur die ersten übereinstimmenden sechs MVPDs aufgenommen werden.
 
-| Verfügbare MVPDs | Primär-MVPDs | Angezeigte 6 MVPDs |
+| Verfügbare MVPDs | Primäre MVPDs | Angezeigte 6 MVPDs |
 |--- |--- |--- |
-| <ol><li>Comcast XFINITY</li><li>TWC</li><li>Mediacom</li><li>RCN</li><li>Dish</li><li>AT&amp;T U-verse</li><li>CableOne</li><li>Brighthouse</li><li>Atlantischer Breitband</li><li>WOW!</li><li>MetroCast</li><li>DirectTV </li><li>Cox</li><li>Cablevision Optimum</li></ol> | <ol><li>Comcast XFINITY</li><li>DirectTV</li><li>Dish</li><li> TWC</li><li>Cox</li><li>Charta</li><li>Verizon FiOS</li><li>Cablevision Optimum</li><li>AT&amp;T U-verse</li></ol> | <ol><li>Comcast XFINITY</li><li>DirectTV</li><li>Dish</li><li>TWC</li><li>Cox</li><li>Cablevision Optimum</li></ol> |
+| <ol><li>Comcast XFINITY</li><li>TWW</li><li>MediaAcom</li><li>RCN</li><li>Dish</li><li>AT&amp;T U-verse</li><li>CableOne</li><li>Brighthouse</li><li>Atlantischer Breitband</li><li>WOW!</li><li>MetroCast</li><li>DirectTV </li><li>Cox</li><li>Cablevision Optimum</li></ol> | <ol><li>Comcast XFINITY</li><li>DirectTV</li><li>Dish</li><li> TWW</li><li>Cox</li><li>Charta</li><li>Verizon FiOS</li><li>Cablevision Optimum</li><li>AT&amp;T U-verse</li></ol> | <ol><li>Comcast XFINITY</li><li>DirectTV</li><li>Dish</li><li>TWW</li><li>Cox</li><li>Cablevision Optimum</li></ol> |

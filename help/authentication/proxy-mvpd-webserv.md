@@ -1,19 +1,18 @@
 ---
 title: Proxy-MVPD-Webdienst
 description: Proxy-MVPD-Webdienst
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 0%
 
 ---
 
-
 # Proxy-MVPD-Webdienst {#proxy-mvpd-wbservice}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Übersicht {#overview-proxy-mvpd-webserv}
 
@@ -82,7 +81,7 @@ Pusht ein Array von MVPDs, die in das Proxy-MVPD integriert sind, das durch den 
 
 | Endpunkt | aufgerufen von | Anforderungsheader | HTTP-Methode | HTTP-Antwort |
 |:------------------------------:|:---------:|:--------------------------------------------:|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| &lt;fqdn>/control/v1/proxiedMvpds | ProxyMVPD | apikey (obligatorisch) proxied-mvpds (erforderlich) | POST | <ul><li>201 (erstellt) - Push-Benachrichtigung wurde erfolgreich verarbeitet</li><li>400 (ungültige Anforderung) - Der Server weiß nicht, wie die Anfrage verarbeitet werden soll:<ul><li>Eingehende XML entspricht nicht dem in dieser Spezifikation veröffentlichten Schema</li><li>Die proximierten mvpds haben keine eindeutigen IDs</li><li>Die gepushten requestorIds sind nicht vorhanden Andere Servlet-Container-Grund für 400-Antwortcode</li></ul><li>401 (nicht autorisiert) - Der apikey ist ungültig oder die aufrufende IP befindet sich nicht auf der Zulassungsliste</li><li>403 (Verboten) - Gibt an, ob der Vorgang für die angegebenen Parameter nicht unterstützt wird oder der Proxy-MVPD nicht als Proxy festgelegt ist oder fehlt</li><li>405 (Methode nicht erlaubt) - Es wurde eine andere HTTP-Methode als GET oder POST verwendet. Entweder wird die HTTP-Methode im Allgemeinen nicht unterstützt oder für diesen spezifischen Endpunkt wird sie nicht unterstützt.</li><li>500 (interner Server-Fehler) - Auf der Serverseite wurde während des Anfrageprozesses ein Fehler ausgelöst.</li></ul> |
+| &lt;fqdn>/control/v1/proxiedMvpds | ProxyMVPD | apikey (obligatorisch) proxied-mvpds (erforderlich) | POST | <ul><li>201 (erstellt) - Push-Benachrichtigung wurde erfolgreich verarbeitet</li><li>400 (ungültige Anforderung) - Der Server weiß nicht, wie die Anfrage verarbeitet werden soll:<ul><li>Eingehende XML entspricht nicht dem in dieser Spezifikation veröffentlichten Schema</li><li>Die proximierten mvpds verfügen nicht über eindeutige IDs</li><li>Die gepushten requestorIds sind nicht vorhanden Andere Servlet-Container-Grund für 400-Antwortcode</li></ul><li>401 (nicht autorisiert) - Der apikey ist ungültig oder die aufrufende IP befindet sich nicht auf der Zulassungsliste</li><li>403 (Verboten) - Gibt an, ob der Vorgang für die angegebenen Parameter nicht unterstützt wird oder der Proxy-MVPD nicht als Proxy festgelegt ist oder fehlt</li><li>405 (Methode nicht erlaubt) - Es wurde eine andere HTTP-Methode als GET oder POST verwendet. Entweder wird die HTTP-Methode im Allgemeinen nicht unterstützt oder für diesen spezifischen Endpunkt wird sie nicht unterstützt.</li><li>500 (interner Server-Fehler) - Auf der Serverseite wurde während des Anfrageprozesses ein Fehler ausgelöst.</li></ul> |
 
 Curl-Beispiel:
 
@@ -207,14 +206,14 @@ Adobe hat das folgende akzeptierte Format für das Posten/Abrufen von proximiert
 **Hinweise zu Elementen:**
 
 * `id` (erforderlich) - Die Proxied MVPD ID muss eine Zeichenfolge sein, die für den Namen des MVPD relevant ist, wobei eines der folgenden Zeichen verwendet wird (da sie Programmierern zu Tracking-Zwecken bereitgestellt wird):
-   * Alle alphanumerischen Zeichen, Unterstriche (&quot;_&quot;) und Bindestriche (&quot;-&quot;).
+   * Alle alphanumerischen Zeichen, Unterstriche (_) und Bindestriche (&quot;-&quot;).
    * Die idID muss dem folgenden regulären Ausdruck entsprechen:
-      `(a-zA-Z0-9((-)|_)*)`
+     `(a-zA-Z0-9((-)|_)*)`
 
-      Daher muss es mindestens ein Zeichen enthalten, mit einem Brief beginnen und mit jedem Buchstaben, jeder Ziffer, einem Bindestrich oder einem Unterstrich fortfahren.
+     Daher muss es mindestens ein Zeichen enthalten, mit einem Brief beginnen und mit jedem Buchstaben, jeder Ziffer, einem Bindestrich oder einem Unterstrich fortfahren.
 
 * `iframeSize` (optional) - Das iframeSize-Element ist optional und definiert die Größe des iFrame, wenn sich die MVPD-Authentifizierungsseite in einem iFrame befinden soll. Wenn das iframeSize-Element nicht vorhanden ist, erfolgt die Authentifizierung andernfalls auf einer vollständigen Browser-Umleitungsseite.
-* `requestorIds` (optional) - Die requestIds -Werte werden von Adobe bereitgestellt. Eine Anforderung besteht darin, dass ein proximierter MVPD mit mindestens einer requestorId integriert werden muss. Wenn das &quot;requestorIds&quot;-Tag nicht im proximierten MVPD-Element vorhanden ist, wird dieses proximierte MVPD in alle verfügbaren Anforderer integriert, die unter dem Proxy-MVPD integriert sind.
+* `requestorIds` (optional) - Die Werte der requestorIds werden von Adobe bereitgestellt. Eine Anforderung besteht darin, dass ein proximierter MVPD mit mindestens einer requestorId integriert werden muss. Wenn das &quot;requestorIds&quot;-Tag nicht im proximierten MVPD-Element vorhanden ist, wird dieses proximierte MVPD in alle verfügbaren Anforderer integriert, die unter dem Proxy-MVPD integriert sind.
 * `ProviderID` (optional) - Wenn das ProviderID-Attribut im ID-Element vorhanden ist, wird der Wert von ProviderID bei der SAML-Authentifizierungsanfrage als Proxy-MVPD/SubMVPD-ID (anstelle des ID-Werts) an den Proxy-MVPD gesendet. In diesem Fall wird der Wert der ID nur in der auf der Programmier-Seite angezeigten MVPD-Auswahl und intern durch Adobe Primetime-Authentifizierung verwendet. Das ProviderID-Attribut muss zwischen 1 und 128 Zeichen lang sein.
 
 ## Sicherheit {#security}

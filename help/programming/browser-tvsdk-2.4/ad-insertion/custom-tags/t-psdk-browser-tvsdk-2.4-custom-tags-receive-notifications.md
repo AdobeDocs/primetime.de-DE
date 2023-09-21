@@ -1,20 +1,18 @@
 ---
 description: Um Benachrichtigungen über Tags im Manifest zu erhalten, überwachen Sie AdobePSDK.TimedMetadataEvent.
-title: hinzufügen Listener für Benachrichtigungen über zeitgesteuerte Metadaten
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Hinzufügen von Listenern für Benachrichtigungen mit zeitgesteuerten Metadaten
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%
 
 ---
 
-
-# hinzufügen Listener für Benachrichtigungen über zeitgesteuerte Metadaten{#add-listeners-for-timed-metadata-notifications}
+# Hinzufügen von Listenern für Benachrichtigungen mit zeitgesteuerten Metadaten{#add-listeners-for-timed-metadata-notifications}
 
 Um Benachrichtigungen über Tags im Manifest zu erhalten, überwachen Sie AdobePSDK.TimedMetadataEvent.
 
-Wenn ein neues `TimedMetadata`-Objekt erstellt wird, löst der MediaPlayer `AdobePSDK.TimedMetadataEvent` aus.
+Wenn ein neuer `TimedMetadata` -Objekt erstellt wird, sendet der MediaPlayer `AdobePSDK.TimedMetadataEvent`.
 
 1. Implementieren Sie die entsprechenden Listener.
 
@@ -31,5 +29,4 @@ Wenn ein neues `TimedMetadata`-Objekt erstellt wird, löst der MediaPlayer `Adob
    player.addEventListener(AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE, onTimedMetadataEvent);
    ```
 
-ID3-Metadaten werden über dasselbe `Events.TimedMetadataEvent` gesendet. Mit der Eigenschaft `timedMetadata.type` können Sie zwischen TAG und ID3 unterscheiden.
-
+ID3-Metadaten werden über denselben `Events.TimedMetadataEvent`. Sie können die `timedMetadata.type` -Eigenschaft, um zwischen TAG und ID3 zu unterscheiden.

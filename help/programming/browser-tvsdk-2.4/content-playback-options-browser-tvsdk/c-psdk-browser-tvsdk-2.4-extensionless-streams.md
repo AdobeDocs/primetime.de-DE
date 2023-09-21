@@ -1,28 +1,26 @@
 ---
 description: Browser TVSDK unterstützt derzeit die Wiedergabe von Streams, in denen Manifeste und Fragmente keine Erweiterungen enthalten.
-title: Extreme Streams
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Erweiterungslose Streams
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
 
 ---
 
-
-# Extensionslose Streams{#extensionless-streams}
+# Erweiterungslose Streams{#extensionless-streams}
 
 Browser TVSDK unterstützt derzeit die Wiedergabe von Streams, in denen Manifeste und Fragmente keine Erweiterungen enthalten.
 
-## Fragmentstufe {#section_0E035129501D4A77BBC14192D8A53A86}
+## Fragmentebene {#section_0E035129501D4A77BBC14192D8A53A86}
 
-Browser TVSDK analysiert die ersten Byte der Antwort, um den Content-Typ der extensionfreien Fragmente zu ermitteln. Wenn kein gültiger Inhaltstyp erkannt wird, gibt Browser TVSDK einen Fehler aus.
+Browser TVSDK analysiert die ersten Byte der Antwort, um den Inhaltstyp von extensionlosen Fragmenten zu erkennen. Wenn kein gültiger Inhaltstyp erkannt wird, gibt Browser TVSDK einen Fehler aus.
 
-## Manifeststufe {#section_AAD9EBAC883D4CC3A0133A45B555EECF}
+## Manifestebene {#section_AAD9EBAC883D4CC3A0133A45B555EECF}
 
-Browser TVSDK verwendet den Parameter `mediaResource.resourceType`, der in der `replaceCurrentResource`-Methode übergeben wird, um den Inhaltstyp der Manifest-URL zu erkennen. Weitere Informationen finden Sie unter der `AdobePSDK.MediaPlayer`-Klasse.
+Browser TVSDK verwendet die `mediaResource.resourceType` -Parameter, der im `replaceCurrentResource` -Methode, um den Inhaltstyp der Manifest-URL zu erkennen. Weitere Informationen finden Sie unter `AdobePSDK.MediaPlayer` -Klasse.
 
-Im UI-Framework-Player können Sie den Ressourcentyp in der Medienressource wie folgt angeben:
+Im UI Framework-Player können Sie den Ressourcentyp in der Medienressource wie folgt angeben:
 
 ```js
 var playerWrapper = ptp.videoPlayer('.videoDiv', { 
@@ -35,9 +33,8 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-Wenn `resourceType` nicht angegeben ist, bestimmt das UI-Framework den Ressourcentyp aus der Ressourcen-URL-Erweiterung, der dann an die `replaceCurrentResource`-Methode übergeben wird.
+Wenn `resourceType` nicht angegeben ist, bestimmt das UI Framework den Ressourcentyp aus der Ressource-URL-Erweiterung, die dann an `replaceCurrentResource` -Methode.
 
 >[!TIP]
 >
->Stellen Sie bei erweiterungsfreiem Manifest sicher, dass `resourceType` immer weitergeleitet wird, während eine Ressource im UI-Framework geladen wird.
-
+>Stellen Sie für ein Manifest ohne Erweiterung sicher, dass `resourceType` beim Laden einer Ressource im UI-Framework immer übergeben wird.

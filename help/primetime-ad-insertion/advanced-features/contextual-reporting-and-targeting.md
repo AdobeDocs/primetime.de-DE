@@ -1,16 +1,14 @@
 ---
-title: Kontextueller Berichte und Targeting
-description: Kontextueller Berichte und Targeting
+title: Kontextbezogene Berichterstellung und Zielgruppenbestimmung
+description: Kontextbezogene Berichterstellung und Zielgruppenbestimmung
 copied-description: true
-exl-id: 6d6c1f48-95ca-4055-a369-97ff27782ff0
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
-# Kontextueller Berichte und Targeting {#contextual-reporting-and-targeting}
+# Kontextbezogene Berichterstellung und Zielgruppenbestimmung {#contextual-reporting-and-targeting}
 
-Primetime Ad Insertion enthält eine Inhaltsbibliothek, mit der Sie Inhaltsmetadaten für Ihre VOD-Assets erfassen und verwenden können. Diese Metadaten können über die API aus vielen Quellen erfasst werden. Die Informationen in der Inhaltsbibliothek können für Targeting und Berichte verwendet werden.
+Primetime Ad Insertion enthält eine Inhaltsbibliothek, die Inhaltsmetadaten für Ihre VOD-Assets erfassen und verwenden kann. Diese Metadaten können über API aus vielen Quellen erfasst werden. Informationen in der Inhaltsbibliothek können für Targeting und Reporting verwendet werden.

@@ -1,20 +1,18 @@
 ---
 description: Sie können Ihre eigenen Opportunity-Generatoren implementieren, indem Sie die OpportunityGenerator-Klasse implementieren.
-title: Implementieren eines benutzerdefinierten Opportunitätsgenerators
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Implementieren eines benutzerdefinierten Opportunity-Generators
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
-
-# Implementieren eines benutzerdefinierten Opportunitätsgenerators {#implement-a-custom-opportunity-generator}
+# Implementieren eines benutzerdefinierten Opportunity-Generators {#implement-a-custom-opportunity-generator}
 
 Sie können Ihre eigenen Opportunity-Generatoren implementieren, indem Sie die OpportunityGenerator-Klasse implementieren.
 
-1. Implementieren Sie Ihre benutzerdefinierte `ContentFactory`, indem Sie die `ContentFactory`-Schnittstelle implementieren und `retrieveGenerators` überschreiben.
+1. Benutzerdefinierte Implementierung `ContentFactory` durch Umsetzung der `ContentFactory` Benutzeroberfläche und Überschreiben `retrieveGenerators`.
 
    Beispiel:
 
@@ -30,7 +28,7 @@ Sie können Ihre eigenen Opportunity-Generatoren implementieren, indem Sie die O
    }
    ```
 
-1. Registrieren Sie `ContentFactory` auf `MediaPlayer`.
+1. Registrieren `ContentFactory` der `MediaPlayer`.
 
    Beispiel:
 
@@ -47,14 +45,14 @@ Sie können Ihre eigenen Opportunity-Generatoren implementieren, indem Sie die O
    itemLoader.load(resource, id, config);
    ```
 
-1. Erstellen Sie eine benutzerdefinierte Opportunitätsgenerator-Klasse, die die `OpportunityGenerator`-Klasse implementiert.
+1. Erstellen Sie eine benutzerdefinierte Opportunities Generator-Klasse, die die `OpportunityGenerator` -Klasse.
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. Überschreiben Sie im benutzerdefinierten Opportunitätsgenerator `doConfigure`, `doUpdate` und `doCleanup`:
+   1. Überschreiben Sie im benutzerdefinierten Opportunity-Generator. `doConfigure`, `doUpdate` und `doCleanup`:
 
       ```java
       @Override 
@@ -69,13 +67,13 @@ Sie können Ihre eigenen Opportunity-Generatoren implementieren, indem Sie die O
       }
       ```
 
-      Abrufen der Zeitmetadaten:
+      So rufen Sie die zeitgesteuerten Metadaten ab:
 
       ```java
       List<TimedMetadata> tList = getItem().getTimedMetadata(); 
       ```
 
-   1. Erstellen Sie für jede `TimedMetadata`- oder Gruppe von `TimedMetadata` eine Gelegenheit mit den folgenden Attributen:
+   1. Für jeden `TimedMetadata` oder Gruppe von `TimedMetadata`, erstellen Sie eine Chance mit den folgenden Attributen:
 
       ```java
       Opportunity( 
@@ -86,11 +84,11 @@ Sie können Ihre eigenen Opportunity-Generatoren implementieren, indem Sie die O
       ); 
       ```
 
-   1. Rufen Sie für jede erstellte Gelegenheit `resolve` auf dem `OpportunityGeneratorClient:getClient().resolve(opportunity);` auf.
+   1. Rufen Sie für jede erstellte Gelegenheit auf. `resolve` auf `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
-Dies ist ein Beispiel für eine benutzerdefinierte Platzierungsmöglichkeit:
+Dies ist ein Beispiel für einen benutzerdefinierten Platzierungsoptionsdetektor:
 
 ```java
 public class MyOpportunityGenerator implements OpportunityGenerator {
@@ -150,4 +148,3 @@ public class MyOpportunityGenerator implements OpportunityGenerator {
     protected void cleanup() {} 
 }
 ```
-

@@ -1,51 +1,49 @@
 ---
 description: Der MediaPlayer bietet Methoden zum Festlegen und Abrufen der anfänglichen Pufferzeit und der Wiedergabepufferzeit.
-title: Pufferzeiten einstellen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Pufferzeiten festlegen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
 
 ---
 
-
-# Festlegen der Pufferzeiten{#set-buffering-times}
+# Pufferzeiten festlegen{#set-buffering-times}
 
 Der MediaPlayer bietet Methoden zum Festlegen und Abrufen der anfänglichen Pufferzeit und der Wiedergabepufferzeit.
 
 >[!TIP]
 >
->Wenn Sie die Parameter für die Puffersteuerung nicht vor Beginn der Wiedergabe festlegen, wird der Medienplayer standardmäßig auf 2 Sekunden für den anfänglichen Puffer und auf 30 Sekunden für die laufende Wiedergabepufferzeit eingestellt.
+>Wenn Sie die Puffersteuerungsparameter nicht vor Beginn der Wiedergabe festlegen, wird der Medienplayer für den anfänglichen Puffer auf 2 Sekunden und für die laufende Wiedergabepufferzeit auf 30 Sekunden gesetzt.
 
-1. Richten Sie das `BufferControlParameters`-Objekt ein, das die Steuerungsparameter für die anfängliche Pufferzeit und die Wiedergabepufferzeit enthält:
+1. Richten Sie die `BufferControlParameters` -Objekt, das die Steuerungsparameter für die anfängliche Pufferzeit und die Wiedergabepufferdauer enthält:
 
        Diese Klasse stellt die folgenden Factory-Methoden bereit:
    
    * So legen Sie die anfängliche Pufferzeit auf die Wiedergabepufferzeit fest:
 
-      ```
-      createSimple(bufferTime:uint):BufferControlParameters
-      ```
+     ```
+     createSimple(bufferTime:uint):BufferControlParameters
+     ```
 
-   * So legen Sie sowohl die Anfangs- als auch die Wiedergabepufferzeit fest:
+   * So legen Sie sowohl die Start- als auch die Wiedergabepufferzeiten fest:
 
-      ```
-      createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
-      ```
+     ```
+     createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
+     ```
 
-      Diese Methoden geben ein `IllegalArgumentException` aus, wenn die Parameter nicht gültig sind, z. B. wenn:
+     Diese Methoden geben `IllegalArgumentException` wenn die Parameter nicht gültig sind, z. B. wenn:
 
    * Die anfängliche Pufferzeit ist kleiner als null.
    * Die anfängliche Pufferzeit ist größer als die Pufferzeit.
 
-1. Verwenden Sie zum Festlegen der Pufferparameterwerte die folgende `MediaPlayer`-Methode:
+1. Verwenden Sie zum Festlegen der Pufferparameterwerte Folgendes `MediaPlayer` -Methode:
 
    ```
    public function set bufferControlParameters(value:BufferControlParameters):void
    ```
 
-1. Um die aktuellen Pufferparameterwerte abzurufen, verwenden Sie die folgende `MediaPlayer`-Methode:
+1. Um die aktuellen Pufferparameterwerte zu erhalten, verwenden Sie diese `MediaPlayer` -Methode:
 
    ```
    public function get bufferControlParameters():BufferControlParameters
@@ -59,4 +57,4 @@ So legen Sie beispielsweise den anfänglichen Puffer auf 2 Sekunden und die Wied
 mediaPlayer.bufferControlParameters = BufferControlParameters.createDual(2000, 30000); 
 ```
 
-Diese Funktion wird mit dem `psdkdemo`-Zeichen veranschaulicht. Verwenden Sie die Einstellungen der Anwendung, um die Pufferwerte festzulegen.
+Die `psdkdemo` zeigt diese Funktion an. Verwenden Sie die Einstellungen der Anwendung, um die Pufferwerte festzulegen.

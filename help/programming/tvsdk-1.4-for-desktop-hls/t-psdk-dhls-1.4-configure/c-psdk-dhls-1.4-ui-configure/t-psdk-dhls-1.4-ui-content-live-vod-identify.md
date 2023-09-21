@@ -1,23 +1,20 @@
 ---
 description: In einigen Fällen müssen Sie wissen, ob der Medieninhalt live oder VOD ist.
-title: Identifizieren Sie, ob der Inhalt live oder VOD ist.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Identifizieren, ob der Inhalt live oder VOD ist
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%
 
 ---
 
-
-# Identifizieren Sie, ob der Inhalt live oder VOD{#identify-whether-the-content-is-live-or-vod} ist.
+# Identifizieren, ob der Inhalt live oder VOD ist{#identify-whether-the-content-is-live-or-vod}
 
 In einigen Fällen müssen Sie wissen, ob der Medieninhalt live oder VOD ist.
 
-1. Stellen Sie sicher, dass der Player mindestens den Status INITIALIZED aufweist.
-1. Stellen Sie fest, ob der Inhalt von `MediaPlayerItem` live (true) oder VOD (false) ist.
+1. Stellen Sie sicher, dass der Player mindestens den Status INITIALISIERT aufweist.
+1. Bestimmen Sie, ob die `MediaPlayerItem` Inhalt ist live (true) oder VOD (false).
 
    ```
    function get isLive():Boolean;
    ```
-

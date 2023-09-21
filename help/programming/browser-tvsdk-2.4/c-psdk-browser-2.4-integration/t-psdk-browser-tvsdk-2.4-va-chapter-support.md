@@ -1,21 +1,19 @@
 ---
-title: Kapitelunterstützung implementieren
-description: Kapitelunterstützung implementieren
+title: Implementieren der Kapitelunterstützung
+description: Implementieren der Kapitelunterstützung
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%
 
 ---
 
+# Implementieren der Kapitelunterstützung{#implement-chapter-support}
 
-# Kapitelunterstützung implementieren{#implement-chapter-support}
+Ein Kapitel ist definiert als die Zeit zwischen den einzelnen Werbeunterbrechungen. Beispielsweise wird die Zeit zwischen einer Pre-Roll-Werbeunterbrechung und der ersten Mid-Roll als erstes Kapitel definiert. Sie können Kapitel für die Videoverfolgung in einer Browser TVSDK-basierten Anwendung mit benutzerdefinierten Kapiteln definieren und verfolgen. Benutzerdefinierte Kapitel werden von der Anwendung verwaltet und basieren auf CMS-Daten oder einer anderen Methode, mit der die Anwendung Kapitel definiert.
 
-Ein Kapitel ist definiert als die Zeit zwischen den einzelnen Werbeunterbrechungen. Beispielsweise wird die Zeit zwischen einer Pre-Roll-Werbeunterbrechung und der ersten Mid-Roll-Unterbrechung als erstes Kapitel definiert. Sie können Kapitel für die Videoverfolgung in einer Browser TVSDK-basierten Anwendung mit benutzerdefinierten Kapiteln definieren und verfolgen. Benutzerspezifische Kapitel werden von der Anwendung verwaltet und basieren auf CMS-Daten oder einer anderen Methode, die die Anwendung zum Definieren von Kapiteln verwendet.
-
-1. Definieren und verfolgen Sie benutzerspezifische Kapitel.
+1. Definieren und verfolgen Sie benutzerdefinierte Kapitel.
 
    ```js
    vaObj.enableChapterTracking = true; 
@@ -31,4 +29,3 @@ Ein Kapitel ist definiert als die Zeit zwischen den einzelnen Werbeunterbrechung
    
    vaObj.chapters = chapters;
    ```
-

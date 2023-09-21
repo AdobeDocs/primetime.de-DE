@@ -1,8 +1,7 @@
 ---
 title: Verwenden von Konto-IQ-Metriken für ein bestimmtes MVPD
 description: Verwendung und Erkennen von Konto-IQ-Berichten.
-exl-id: ada9a80a-b31b-4bdc-838c-dcd94a0a6c59
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
@@ -23,23 +22,23 @@ So zeigen Sie Berichte in Konto IQ an, sobald Sie sich erfolgreich als Programmi
    >Sie können einen, zwei oder mehrere Kanäle oder sogar die Standardauswahl der zehn Top-Kanäle auswählen (durch Weitergeben von Bewertungen, Nutzung oder Konten).
    >
    >
-   >Sie können jedoch [höchstens 10 Kanäle](/help/AccountIQ/limitations.md) über die Kanalauswahl in der [Segment- und Zeitrahmen-Bedienfeld](/help/AccountIQ/segments-timeframe.md).
+   >Sie können jedoch [höchstens 10 Kanäle](/help/AccountIQ/limitations.md) über die Kanalauswahl in der [Segment- und Zeitrahmenbereich](/help/AccountIQ/segments-timeframe.md).
 
 1. Wählen Sie im linken Navigationsbereich eine gewünschte Berichtseite aus:
 
 * [Allgemeine Nutzung](/help/AccountIQ/general-usage-reports.md)
 
-   ![](assets/specific-mvpd-gen-usage.png)
+  ![](assets/specific-mvpd-gen-usage.png)
 * [Freigegebene Konten](/help/AccountIQ/shared-acc-reports.md)
 
-   ![](assets/specific-mvpd-shared-acc.png)
+  ![](assets/specific-mvpd-shared-acc.png)
 * [Nutzungsmuster](/help/AccountIQ/usage-patterns.md)
 
-   ![](assets/specific-mvpd-usage-pattern.png)
+  ![](assets/specific-mvpd-usage-pattern.png)
 
 * [Dashboard](/help/AccountIQ/dashboard.md) (Dashboard gibt einen Überblick über die ausgewählten Diagramme aus verschiedenen Seiten in Berichten).
 
-   ![](assets/specific-mvpd-dashboard.png)
+  ![](assets/specific-mvpd-dashboard.png)
 
 Jede dieser Seiten spiegelt die Aktivität des ausgewählten Segments wider.
 

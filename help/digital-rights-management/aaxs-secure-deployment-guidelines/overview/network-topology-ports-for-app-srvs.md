@@ -1,16 +1,14 @@
 ---
-title: Anschlüsse für Anwendungsserver
-description: Anschlüsse für Anwendungsserver
+title: Ports für Anwendungsserver
+description: Ports für Anwendungsserver
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
+# Ports für Anwendungsserver{#ports-for-application-servers}
 
-# Anschlüsse für Anwendungsserver{#ports-for-application-servers}
-
-Sie können den Lizenzserver für Adobe Access so konfigurieren, dass er einen beliebigen Netzwerkanschluss verwendet. Diese Anschlüsse müssen auf der inneren Firewall aktiviert oder deaktiviert werden, je nachdem, welche Netzwerkfunktionalität Sie für Clients zulassen möchten, die eine Verbindung zu dem Anwendungsserver herstellen, auf dem Adobe Access ausgeführt wird.
+Sie können den Adobe Access-Lizenzserver so konfigurieren, dass er einen beliebigen Netzwerkport verwendet. Diese Ports müssen in der inneren Firewall aktiviert oder deaktiviert werden, je nachdem, welche Netzwerkfunktionalität Sie für Clients zulassen möchten, die eine Verbindung zum Anwendungsserver herstellen, auf dem Adobe Access ausgeführt wird.

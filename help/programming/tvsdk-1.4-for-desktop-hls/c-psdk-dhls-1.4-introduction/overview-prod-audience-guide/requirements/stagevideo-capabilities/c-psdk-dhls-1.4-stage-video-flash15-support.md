@@ -1,32 +1,30 @@
 ---
-description: Ab Flash 15 wird StageVideo, wenn die Hardware-Wiedergabe mit StageVideo nicht verfügbar ist, nahtlos auf ein StageVideo-Softwareobjekt zurückgesetzt.
+description: Wenn ab Flash 15 kein Hardware-Rendering mit StageVideo verfügbar ist, kehrt StageVideo nahtlos zu einem StageVideo-Softwareobjekt zurück.
 title: Flash 15-Unterstützung für StageVideo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 0%
 
 ---
 
+# Flash 15-Unterstützung für StageVideo{#flash-support-for-stagevideo}
 
-# Flash 15 unterstützt StageVideo{#flash-support-for-stagevideo}
+Wenn ab Flash 15 kein Hardware-Rendering mit StageVideo verfügbar ist, kehrt StageVideo nahtlos zu einem StageVideo-Softwareobjekt zurück.
 
-Ab Flash 15 wird StageVideo, wenn die Hardware-Wiedergabe mit StageVideo nicht verfügbar ist, nahtlos auf ein StageVideo-Softwareobjekt zurückgesetzt.
-
-Beachten Sie die folgenden Informationen zum StageVideo-Fallback von Flash 15 auf Software:
+Beachten Sie die folgenden Informationen zum Flash 15 StageVideo-Fallback zur Software:
 
 * In Ihrer Anwendung sind keine Codeänderungen erforderlich.
-* Es ist keine Änderung an TVSDK erforderlich.
+* Es ist keine Änderung am TVSDK erforderlich.
 
-   Sie benötigen kein TVSDK-Update, um StageVideo-Fallback zur Software zu verwenden.
-* Ihre Anwendungen müssen für Flash 15 neu kompiliert werden.
-* Anwendungen, die Sie für Flash 15 neu kompilieren, funktionieren weiterhin mit Flash 14 und früher, sofern diese Anwendungen keine neuen APIs verwenden, die in Flash Player 15 eingeführt wurden.
+  Sie benötigen kein TVSDK-Update, um StageVideo-Fallback für Software zu verwenden.
+* Ihre Applikationen müssen für Flash 15 neu kompiliert werden.
+* Anwendungen, die Sie für Flash 15 neu kompilieren, funktionieren weiterhin mit Flash 14 und früher, solange diese Anwendungen keine neuen APIs verwenden, die in Flash Player 15 eingeführt wurden.
 
-   Wenn Ihre Flash 14-Anwendung eine neue Flash 15-API verwenden muss, müssen Sie die API mit einer Umwandlung in den Objekttyp dynamisch aufrufen, damit die Anwendung zur Laufzeit nicht in Flash Player 14 fehlschlägt.
+  Wenn Ihre Flash 14-Anwendung eine neue Flash 15-API verwenden muss, müssen Sie die API dynamisch mit einer Umwandlung in den Objekttyp aufrufen, damit die Anwendung zur Laufzeit in Flash Player 14 nicht fehlschlägt.
 
 ## HTML-Überlagerungen {#html-overlays}
 
-In Flash 15 und höher können Sie eine nahtlose Anzeige von HTML-Überlagerungen beibehalten, wenn Hardware-StageVideo nicht mehr verfügbar ist und auf StageVideo zurückfällt. Um diese Funktion zu aktivieren, legen Sie `wmode=opaque` fest.
+In Flash 15 und höher können Sie eine nahtlose Anzeige von HTML-Überlagerungen gewährleisten, wenn die Hardware StageVideo nicht mehr verfügbar ist und auf StageVideo zurückfällt. Um diese Funktion zu aktivieren, legen Sie `wmode=opaque`.
 
-Einige ältere Browser unterstützen keine Hardwarebeschleunigung. Weitere Informationen zu diesen Anforderungen finden Sie unter [StageVideo-Mindestanforderungen](../../../../../tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/r-psdk-dhls-1.4-requirements-stage-video.md). Wenn Sie `wmode=opaque` festlegen, wird das Video mit der Software StageVideo gerendert, was sich auf die Leistung auswirken kann. Normalerweise rendert das Festlegen von `wmode=direct` Videos direkt in GPU, was zu einer wesentlich besseren Leistung führt. Diese Option überschreibt jedoch auch HTML-Überlagerungen.
+Einige ältere Browser unterstützen keine Hardwarebeschleunigung. Weitere Informationen zu diesen Anforderungen finden Sie unter [Mindestanforderungen für StageVideo](../../../../../tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-introduction/overview-prod-audience-guide/requirements/stagevideo-capabilities/r-psdk-dhls-1.4-requirements-stage-video.md). Wenn Sie `wmode=opaque`, wird das Video mit der Software StageVideo gerendert, was sich auf die Leistung auswirken kann. In der Regel wird `wmode=direct` rendert Videos direkt an GPU, was zu einer deutlich besseren Leistung führt. Diese Option überschreibt jedoch auch HTML-Überlagerungen.

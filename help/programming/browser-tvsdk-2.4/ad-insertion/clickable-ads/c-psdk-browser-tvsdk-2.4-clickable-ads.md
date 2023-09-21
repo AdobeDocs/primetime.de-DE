@@ -1,23 +1,21 @@
 ---
-description: Browser TVSDK stellt Ihre Video-App mit Informationen zur Verfügung, die erforderlich sind, um auf den Klick eines Benutzers auf eine anklickbare Anzeige zu reagieren.
+description: Browser TVSDK stellt Ihrer Video-App Informationen bereit, die erforderlich sind, um auf den Klick eines Benutzers auf eine anklickbare Anzeige zu reagieren.
 title: Klickbare Anzeigen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#clickable-ads-overview}
 
-Browser TVSDK stellt Ihre Video-App mit Informationen zur Verfügung, die erforderlich sind, um auf den Klick eines Benutzers auf eine anklickbare Anzeige zu reagieren.
+Browser TVSDK stellt Ihrer Video-App Informationen bereit, die erforderlich sind, um auf den Klick eines Benutzers auf eine anklickbare Anzeige zu reagieren.
 
-Wenn ein Benutzer auf eine anklickbare Anzeige klickt, besteht eine typische Antwort aus einer Video-App darin, ein neues Browserfenster zu öffnen und zu der mit der Anzeige verknüpften URL zu navigieren. Um dies zu erleichtern, löst Browser TVSDK Anzeigenbenachrichtigungen aus, die Ihre App zur Verwaltung des Clickthrough-Prozesses verwenden kann.
+Wenn ein Benutzer auf eine anklickbare Anzeige klickt, besteht eine typische Antwort von einer Video-App darin, ein neues Browser-Fenster zu öffnen und zu der mit der Anzeige verknüpften URL zu navigieren. Um dies zu erleichtern, löst Browser TVSDK Anzeigenbenachrichtigungen aus, die Ihre App zum Verwalten des Clickthrough-Prozesses verwenden kann.
 
-In Ihrer App können Sie dem Benutzer ein Steuerelement zum Klicken (z. B. eine Schaltfläche) bereitstellen, während die anklickbare Anzeige abgespielt wird. Sie müssen Handler für von Browser TVSDK ausgelöste Ereignis erstellen, die mit der Anzeige verknüpft sind (z. B. Anzeigen-Beginn, Anklicken und Abschließen). Schließlich müssen Sie die spezifischen Verhaltensweisen implementieren, die Ihre App nach dem Klick eines Benutzers hat (z. B. ob die Anzeige angehalten werden soll oder nicht, ob die Clickthrough-URL angezeigt werden soll usw.).
+In Ihrer App können Sie dem Benutzer ein Steuerelement bereitstellen, auf das er klicken kann (z. B. eine Schaltfläche), während die anklickbare Anzeige wiedergegeben wird. Sie müssen Handler für Ereignisse erstellen, die von Browser TVSDK ausgelöst werden und mit der Anzeige verknüpft sind (z. B. Anzeigenstart, Anzeigenklick, Anzeigenbeendigung). Schließlich müssen Sie die spezifischen Verhaltensweisen implementieren, die Ihre App nach dem Anzeigenklick eines Benutzers hat (z. B. ob Sie die Anzeige anhalten oder nicht, die Clickthrough-URL anzeigen usw.).
 
 >[!NOTE]
 >
->Der im Lieferumfang von Browser TVSDK enthaltene Referenz-Player enthält eine mögliche Arbeitslösung zur Verarbeitung von Clickthrough-Anzeigen.
+>Der im Browser TVSDK enthaltene Referenz-Player enthält eine mögliche Arbeitslösung zur Verarbeitung von Clickthrough-Anzeigen.

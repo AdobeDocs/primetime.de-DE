@@ -2,18 +2,16 @@
 title: Pre-Roll-Anzeigen deaktivieren
 description: Pre-Roll-Anzeigen deaktivieren
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%
 
 ---
 
-
 # Pre-Roll-Anzeigen deaktivieren{#disable-pre-roll-ads}
 
-Um Pre-Roll zu deaktivieren, ändern Sie die standardmäßigen Opportunitätserzeuger, um den Pre-Roll-Aufruf nicht vorzunehmen. Die standardmäßigen Opportunitätsgeneratoren sind:
+Um die Pre-Roll-Funktion zu deaktivieren, ändern Sie die standardmäßigen Opportunity-Generatoren, sodass der Pre-Roll-Aufruf nicht erfolgt. Die standardmäßigen Opportunity-Generatoren sind:
 
 ```
 @inheritDoc 
@@ -26,7 +24,7 @@ return result;
 }
 ```
 
-Um die Pre-Roll-Funktion für Live-Streams zu deaktivieren, ändern Sie die obige Option, sodass nur SpliceOutOpportunityGenerator enthalten ist:
+Um die Pre-Roll-Funktion für Live-Streams zu deaktivieren, ändern Sie die obigen Parameter so, dass nur der SpliceOutOpportunityGenerator enthalten ist:
 
 ```
 @inheritDoc 
@@ -39,4 +37,3 @@ result.push(new SpliceOutOpportunityGenerator());
 return result; 
 }
 ```
-

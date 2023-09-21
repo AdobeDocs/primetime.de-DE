@@ -1,20 +1,18 @@
 ---
-description: TVSDK bietet Klassen und Methoden, mit denen Sie das Wiedergabeverhalten von Inhalten, die Werbung enthalten, anpassen können.
+description: TVSDK bietet Klassen und Methoden, mit denen Sie das Wiedergabeverhalten von Inhalt anpassen können, der Werbung enthält.
 title: API-Elemente für die Anzeigenwiedergabe
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
-
 # API-Elemente für die Anzeigenwiedergabe {#api-elements-for-ad-playback}
 
-TVSDK bietet Klassen und Methoden, mit denen Sie das Wiedergabeverhalten von Inhalten, die Werbung enthalten, anpassen können.
+TVSDK bietet Klassen und Methoden, mit denen Sie das Wiedergabeverhalten von Inhalt anpassen können, der Werbung enthält.
 
-Die folgenden API-Elemente eignen sich zum Anpassen der Wiedergabe:
+Die folgenden API-Elemente sind zum Anpassen der Wiedergabe nützlich:
 
 <table id="table_B07E373B9D2B425AB36466B1D42411AD"> 
  <thead> 
@@ -26,37 +24,36 @@ Die folgenden API-Elemente eignen sich zum Anpassen der Wiedergabe:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
-   <td colname="col2">Legen Sie fest, ob eine Werbeunterbrechung als von einem Viewer gesehen gekennzeichnet werden soll, und wann, wenn ja, wann sie markiert werden soll. Legen Sie die überwachte Richtlinie mit <span class="codeph"> setAdBreakAsWatched</span> und <span class="codeph"> getAdBreakAsWatched</span> fest und rufen Sie sie ab. </td> 
+   <td colname="col2">Legen Sie fest, ob eine Werbeunterbrechung von einem Viewer als überwacht markiert werden soll und wann sie mit einer Markierung versehen werden soll. Überwachte Richtlinie mithilfe von festlegen und abrufen <span class="codeph"> setAdBreakAsWatched</span> und <span class="codeph"> getAdBreakAsWatched</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdBreakPolicy</span> </td> 
-   <td colname="col2"> Listet mögliche Wiedergaberichtlinien für Werbeunterbrechungen auf. </td> 
+   <td colname="col2"> Auflistet mögliche Wiedergaberichtlinien für Werbeunterbrechungen. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdPolicy</span> </td> 
-   <td colname="col2"> Listet mögliche Wiedergaberichtlinien für Anzeigen auf. </td> 
+   <td colname="col2"> Auflistet mögliche Wiedergaberichtlinien für Anzeigen. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdPolicySelector</span> </td> 
-   <td colname="col2"> Schnittstelle, die die Anpassung des TVSDK Anzeigenverhaltens ermöglicht. </td> 
+   <td colname="col2"> Schnittstelle, die die Anpassung des TVSDK-Anzeigenverhaltens ermöglicht. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> DefaultAdPolicySelector</span> </td> 
-   <td colname="col2"> Klasse, die das standardmäßige TVSDK-Verhalten implementiert. Ihre Anwendung kann diese Klasse außer Kraft setzen, um das Standardverhalten anzupassen, ohne die vollständige Schnittstelle zu implementieren. </td> 
+   <td colname="col2"> Klasse, die das standardmäßige TVSDK-Verhalten implementiert. Ihre Anwendung kann diese Klasse überschreiben, um das Standardverhalten anzupassen, ohne die vollständige Benutzeroberfläche zu implementieren. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> MediaPlayer</span> </td> 
    <td colname="col2"> 
     <ul id="ul_37700A741403448A8760FDDA68B099AA"> 
-     <li id="li_B465170D449E49489C5924572BEEB4A5"><span class="codeph"> getLocalTime</span>. <p>Dies ist die lokale Zeit der Wiedergabe, wobei die platzierten Werbeunterbrechungen ausgeschlossen werden. </p> </li> 
-     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"><span class="codeph"> searchingToLocal</span>. <p>Hier erfolgt die Suche relativ zu einer lokalen Zeit im Stream. </p> </li> 
-     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"><span class="codeph"> getTimeline.convertToLocalTime</span>. <p>Die virtuelle Position auf der Zeitleiste wird in die lokale Position umgewandelt. </p> </li> 
-    </ul> <p>Wichtig:  <span class="codeph"> getLocalTime</span> in <span class="codeph"> MediaPlayer</span> gibt die aktuelle Zeit relativ zum ursprünglichen Inhalt ohne dynamisch aufgeteilte Anzeigen zurück. <span class="codeph"> </span> getLocalTimein  <span class="codeph"> </span> AdBreakgibt die Beginn-Zeit des Umbruchs relativ zum Originalinhalt zurück. </p> </td> 
+     <li id="li_B465170D449E49489C5924572BEEB4A5"><span class="codeph"> getLocalTime</span>. <p>Dies ist die lokale Zeit der Wiedergabe ohne die platzierten Werbeunterbrechungen. </p> </li> 
+     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"><span class="codeph"> searchToLocal</span>. <p>Hier erfolgt die Suche relativ zu einer lokalen Zeit im Stream. </p> </li> 
+     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"><span class="codeph"> getTimeline.convertToLocalTime</span>. <p>Die virtuelle Position auf der Timeline wird in die lokale Position konvertiert. </p> </li> 
+    </ul> <p>Wichtig:  <span class="codeph"> getLocalTime</span> in <span class="codeph"> MediaPlayer</span> gibt die aktuelle Zeit relativ zum ursprünglichen Inhalt zurück, ohne dynamisch aufgeteilte Anzeigen zu erstellen. <span class="codeph"> getLocalTime</span> in <span class="codeph"> AdBreak</span> gibt die Startzeit des Umbruchs relativ zum ursprünglichen Inhalt zurück. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdBreak</span> </td> 
-   <td colname="col2"><span class="codeph"> </span> isWatchedproperty Gibt an, ob der Viewer die Anzeige gesehen hat. </td> 
+   <td colname="col2"><span class="codeph"> isWatched</span> -Eigenschaft. Gibt an, ob der Viewer die Anzeige gesehen hat. </td> 
   </tr> 
  </tbody> 
 </table>
-

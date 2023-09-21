@@ -1,14 +1,12 @@
 ---
 description: Browser TVSDK unterstützt eine Reihe von MP3- und MP4-Funktionen, die Sie implementieren können, um Ihren Anwendungen Funktionen hinzuzufügen.
 title: Unterstützte MP3- und MP4-Funktionen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
-
 
 # Unterstützte MP3- und MP4-Funktionen {#supported-mp-and-mp-features}
 
@@ -19,13 +17,13 @@ Browser TVSDK unterstützt eine Reihe von MP3- und MP4-Funktionen, die Sie imple
 
 >[!TIP]
 >
->In den unten stehenden Funktionsmatrix-Tabellen bedeutet ![unterstütztes Symbol](assets/supported15.png), dass die Funktion in der aktuellen Version unterstützt wird.
+>In den Funktionsmatrix-Tabellen unten: ![unterstütztes Symbol](assets/supported15.png) bedeutet, dass die Funktion in der aktuellen Version unterstützt wird.
 
 ## MP3-Audiofunktionen {#section_C900C301291A40529D02EACC3CD4D55A}
 
 ### Core-Wiedergabe {#core-playback}
 
-| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategorie | Content-Typ | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Wiedergabe | MP3 VOD | Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | Nicht unterstützt | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 
@@ -33,7 +31,7 @@ Browser TVSDK unterstützt eine Reihe von MP3- und MP4-Funktionen, die Sie imple
 
 ### Core-Wiedergabe {#mp4-core-playback}
 
-| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategorie | Content-Typ | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
 | Wiedergabe | MP4 VOD | Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | Nicht unterstützt | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 
@@ -41,7 +39,7 @@ Browser TVSDK unterstützt eine Reihe von MP3- und MP4-Funktionen, die Sie imple
 
 ### Einfügen von Core-Anzeigen
 
-| Kategorie | Inhaltstyp | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
+| Kategorie | Content-Typ | Funktion | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML 5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Ad Insertion | MP4 VOD | Pre-Roll | Nicht unterstützt | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
+| Ad Insertion | MP4 VOD | Pre-roll | Nicht unterstützt | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |
 | Ad Insertion | MP4 VOD | Post-Roll | Nicht unterstützt | ![unterstütztes Symbol](assets/supported15.png) | ![unterstütztes Symbol](assets/supported15.png) |

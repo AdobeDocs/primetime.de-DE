@@ -2,37 +2,35 @@
 title: Paketmedien
 description: Paketmedien
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
 
 ---
 
-
 # Paketmedien {#package-media}
 
-Verwenden Sie die Registerkarte &quot;Paketmedien&quot;, um Inhalte zu verpacken. Im Abschnitt &quot;Eigenschaften von Packager&quot;werden die Packager-Einstellungen angezeigt, die auf der Registerkarte &quot;Voreinstellungen&quot;eingegeben wurden. Um diese Einstellungen zu ändern, wechseln Sie zur Registerkarte &quot;Voreinstellungen&quot;, ändern Sie die Einstellungen und speichern Sie.
+Verwenden Sie die Registerkarte Paketmedien , um Inhalte zu verpacken. Im Abschnitt Eigenschaften von Packager werden die auf der Registerkarte Voreinstellungen eingegebenen Paketeinstellungen angezeigt. Um diese Einstellungen zu ändern, wechseln Sie zur Registerkarte Voreinstellungen , ändern Sie die Einstellungen und speichern Sie.
 
-Wenn Sie eine einzelne FLV- oder F4V-Datei verpacken möchten, wählen Sie die Option **[!UICONTROL Select Single File]** und geben Sie den vollständigen Pfad zur Quelldatei und den vollständigen Pfad ein, in dem die verschlüsselte Datei gespeichert werden soll.
+Wenn Sie eine einzelne FLV- oder F4V-Datei verpacken möchten, wählen Sie die **[!UICONTROL Select Single File]** und geben Sie den vollständigen Pfad zur Quelldatei und den vollständigen Pfad ein, in dem die verschlüsselte Datei gespeichert werden soll.
 
-Wenn Sie alle Dateien in einem Ordner verpacken möchten, wählen Sie die Option **[!UICONTROL Select Single Folder]**. Geben Sie den Ordner mit den Quelldateien an. Es werden nur Dateien im Eingabeordner gepackt, die den Kriterien **[!UICONTROL Input Media File Selection]** entsprechen (Dateien in Unterordnern werden nicht gepackt). Sie können [!DNL .flv]-Dateien, [!DNL .f4v]-Dateien verschlüsseln oder einen benutzerdefinierten regulären Ausdruck eingeben (z. B. &quot;.*&quot; verschlüsselt alle Dateien im Ordner). Die verschlüsselten Dateien werden im angegebenen Ausgabeordner unter demselben Dateinamen wie die Originaldatei gespeichert.
+Wenn Sie alle Dateien in einem Ordner verpacken möchten, wählen Sie die **[!UICONTROL Select Single Folder]** -Option. Geben Sie den Ordner an, der die Quelldateien enthält. Nur Dateien im Eingabeordner, die mit dem **[!UICONTROL Input Media File Selection]** Kriterien werden gepackt (Dateien in Unterordnern werden nicht gepackt). Verschlüsselung auswählen [!DNL .flv] Dateien, [!DNL .f4v] oder geben Sie einen benutzerdefinierten regulären Ausdruck ein (z. B. &quot;.&#42;&quot; verschlüsselt alle Dateien im Ordner). Die verschlüsselten Dateien werden im angegebenen Ausgabeordner unter Verwendung des gleichen Dateinamens wie die Originaldatei gespeichert.
 
 >[!NOTE]
 >
->Dateipfade müssen auf Dateien verweisen, die dem Verpackungsserver zur Verfügung stehen. Wenn Sie den Flash Access Manager auf einem anderen Rechner als dem Verpackungsserver ausführen, müssen Sie einen Pfad angeben, auf den der Server zugreifen kann (entweder auf einem Netzlaufwerk oder auf dem Server selbst).
+>Dateipfade müssen sich auf Dateien beziehen, die dem Paketserver zur Verfügung stehen. Wenn Sie den Flash Access Manager auf einem anderen Computer als dem Paketserver ausführen, müssen Sie einen Pfad angeben, auf den der Server zugreifen kann (entweder auf einem Netzlaufwerk oder auf dem Server selbst).
 
-Die folgende Tabelle beschreibt die Voreinstellungen für Paketmedien:
+In der folgenden Tabelle werden die Package Media-Voreinstellungen beschrieben:
 
-| Voreinstellung | Beschreibung |
+| Präferenz | Beschreibung |
 |---|---|
-| Richtliniendateinamen | Wählen Sie eine oder mehrere Richtlinien aus der Dropdown-Liste aus, die auf den Inhalt angewendet werden sollen. Um mehrere Richtlinien auszuwählen, halten Sie die STRG-Taste gedrückt, während Sie Richtlinien auswählen. |
-| Sekunden unverschlüsselt | Gibt an, wie viele Sekunden Inhalt am Anfang der Datei unverschlüsselt bleiben soll. Geben Sie &quot;0&quot;ein, um die Verschlüsselung von Anfang an durchzuführen. |
+| Policy File Name(s) | Wählen Sie eine oder mehrere Richtlinien aus der Dropdownliste aus, die auf den Inhalt angewendet werden sollen. Um mehrere Richtlinien auszuwählen, halten Sie die Strg-Taste gedrückt, während Sie Richtlinien auswählen. |
+| Unverschlüsselte Sekunden | Gibt die Anzahl der Sekunden an Inhalt an, der am Anfang der Datei unverschlüsselt bleiben soll. Geben Sie &quot;0&quot;ein, um die Verschlüsselung von Anfang an durchzuführen. |
 | Video verschlüsseln | Aktivieren Sie dieses Kontrollkästchen, um Videodaten zu verschlüsseln |
-| Verschlüsselungsstufe | Wenn die Videoverschlüsselung aktiviert ist, wählen Sie die Verschlüsselungsstufe für Videodaten aus. Hoch verschlüsselt alle Videodaten. Mittel- und Niedrig-Bereiche werden selektiv verschlüsselt. (Nur für F4V mit H.264-Video) |
-| Audio verschlüsseln | Aktivieren Sie dieses Kontrollkästchen, um Audiodaten zu verschlüsseln |
-| Verschlüsselungsskript | Aktivieren Sie dieses Kontrollkästchen, um Skriptdaten zu verschlüsseln (nur FLV) |
-| Benutzerdefinierte Eigenschaften | Geben Sie benutzerdefinierte Eigenschaften an, die in den gepackten Inhalt aufgenommen werden sollen. Diese Eigenschaften stehen dem Lizenzserver bei der Lizenzerteilung zur Verfügung. (Optional) |
+| Verschlüsselungsstufe | Wenn die Videoverschlüsselung aktiviert ist, wählen Sie die Verschlüsselungsstufe für Videodaten aus. Hoch verschlüsselt alle Videodaten. Mittel und Niedrig verschlüsseln selektiv Teile des Videos. (Nur für F4V mit H.264-Video) |
+| Audio verschlüsseln | Aktivieren Sie dieses Kontrollkästchen zum Verschlüsseln von Audiodaten |
+| Verschlüsselungsskript | Aktivieren Sie dieses Kontrollkästchen, um Skriptdaten zu verschlüsseln (nur FLV). |
+| Benutzerdefinierte Eigenschaften | Geben Sie benutzerdefinierte Eigenschaften an, die in den gepackten Inhalt eingefügt werden sollen. Diese Eigenschaften stehen dem Lizenzserver bei der Lizenzerteilung zur Verfügung. (Optional) |
 
-Klicken Sie nach Auswahl der Verpackungsoptionen auf die Schaltfläche **[!UICONTROL Package Media]**, um mit dem Verpacken der Dateien zu beginnen.
+Nachdem Sie die Verpackungsoptionen ausgewählt haben, klicken Sie auf das **[!UICONTROL Package Media]** -Schaltfläche, um mit der Verpackung der Dateien zu beginnen.

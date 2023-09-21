@@ -1,29 +1,27 @@
 ---
 description: Browser TVSDK unterstützt eine Reihe von DASH-Funktionen, die Sie implementieren können, um Ihren Videoanwendungen Funktionen hinzuzufügen.
 title: Unterstützte DASH-Funktionen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 0%
 
 ---
 
-
 # Unterstützte DASH-Funktionen{#supported-dash-features}
 
 Browser TVSDK unterstützt eine Reihe von DASH-Funktionen, die Sie implementieren können, um Ihren Videoanwendungen Funktionen hinzuzufügen.
 
-* [DASH-Core-Wiedergabe](#dash-core-playback)
-* [DASH Advanced-Wiedergabe-Funktionen](#dash-advanced-playback)
+* [DASH-Core-Wiedergabefunktionen](#dash-core-playback)
+* [DASH Advanced-Wiedergabefunktionen](#dash-advanced-playback)
 * [DASH-Inhaltsschutzfunktionen](#dash-content-protection)
-* [DASH-Kern-Anzeigeneinfügefunktionen](#dash-core-ad-insertion)
-* [DASH Advanced Ad-Einfügefunktionen](#dash-advanced-insertion-features)
+* [DASH-Core-Anzeigeneinfüge-Funktionen](#dash-core-ad-insertion)
+* [DASH Erweiterte Anzeigeneinfüge-Funktionen](#dash-advanced-insertion-features)
 * [DASH-Integrationen](#dash-integrations)
 
 >[!TIP]
 >
->In der Tabelle mit Funktionsmatrix unten ![](assets/supported15.png)
+>In den Funktionsmatrix-Tabellen unten:  ![](assets/supported15.png)
 >bedeutet, dass die Funktion in der aktuellen Version unterstützt wird.
 
 Die folgenden Funktionen werden unterstützt:
@@ -87,26 +85,26 @@ Die folgenden Funktionen werden unterstützt:
 | Integrationen | VOD + Live | Rechnungsstellung | ![](assets/supported15.png) |
 | Integrationen | VOD + Live | Durchsuchen | ![](assets/supported15.png) |
 
-## Erweiterte DASH-Anzeigeneinfügefunktionen (CSAI) {#dash-advanced-insertion-features}
+## Erweiterte DASH-Funktionen für Anzeigeneinfügungen (CSAI) {#dash-advanced-insertion-features}
 
 | Kategorie | Inhaltstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
 | Ad Insertion | VOD | Nur Anzeige | Nicht unterstützt |
 | Ad Insertion | VOD | Targeting-Parameter | Nur VOD |
 | Ad Insertion | VOD | Benutzerdefinierte Parameter | Nur VOD |
-| Ad Insertion | VOD + Live | Benutzerspezifische Anzeigenrichtlinie | Nicht unterstützt |
-| Ad Insertion | VOD + Live | Verzögertes Laden von Werbeanzeigen | Nicht unterstützt |
-| Ad Insertion | VOD | Ergänzende Anzeigen, Banneranzeigen und anklickbare Anzeigen | Nicht unterstützt |
+| Ad Insertion | VOD + Live | Benutzerdefinierte Anzeigenrichtlinie | Nicht unterstützt |
+| Ad Insertion | VOD + Live | Verzögertes Laden von Anzeigen | Nicht unterstützt |
+| Ad Insertion | VOD | Companion-Anzeigen, Banneranzeigen und anklickbare Anzeigen | Nicht unterstützt |
 | Ad Insertion | VOD | VPAID 2.0 | Nicht unterstützt |
 
-## DASH-Kern-Anzeigeneinfügefunktionen (CSAI) {#dash-core-ad-insertion}
+## DASH-Kern-Anzeigeneinfüge-Funktionen (CSAI) {#dash-core-ad-insertion}
 
 | Kategorie | Inhaltstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Ad Insertion | VOD + Live | Pre-Roll | Nur VOD |
-| Ad Insertion | VOD + Live | Mid-Roll | Nur VOD |
+| Ad Insertion | VOD + Live | Pre-roll | Nur VOD |
+| Ad Insertion | VOD + Live | Mid-roll | Nur VOD |
 | Ad Insertion | VOD + Live | Post-Roll | Nur VOD |
-| Ad Insertion | FER VOD | Anzeigenauflösung und -verhalten | Nicht unterstützt |
+| Ad Insertion | FER VOD | Auflösung und Verhalten von Anzeigen | Nicht unterstützt |
 | Ad Insertion | VOD + Live | Standard-Anzeigenrichtlinie | Nur VOD |
 | Ad Insertion | VOD + Live | VAST 2.0/3.0 | Nur VOD |
 | Ad Insertion | VOD + Live | VMAP 1.0 | Nur VOD |
@@ -133,7 +131,7 @@ Die folgenden Funktionen werden unterstützt:
   <tr> 
    <td colname="col1"> Inhaltsschutz </td> 
    <td colname="col2"> VOD + Live </td> 
-   <td colname="col3"> Beispiel-AES </td> 
+   <td colname="col3"> Sample-AES </td> 
    <td colname="col6"> Nicht unterstützt </td> 
   </tr> 
   <tr> 
@@ -142,47 +140,47 @@ Die folgenden Funktionen werden unterstützt:
    <td colname="col3"> DRM </td> 
    <td colname="col6"> 
     <ul id="ul_irb_p2g_xx"> 
-     <li id="li_C4643F2978BC4C8ABDB3E6C72C75A468">Widevine 
+     <li id="li_C4643F2978BC4C8ABDB3E6C72C75A468">Widevine on 
       <ul id="ul_7047EA49AA3F40FE8F90E0ED6C028D83"> 
        <li id="li_B575735388D74D789D56BF373A470A6D">Chrome </li> 
        <li id="li_855146E4AC3A48E69B65F0022E1C0156">Firefox 47+ </li> 
        <li id="li_BC06B0A6EAAC4FC991C713775A8BB4DA">Chromecast </li> 
       </ul> </li> 
      <li id="li_D48B51C2208F423CB85D08886C2E1C66">PlayReady in Internet Explorer unter Windows 8.1 und Edge </li> 
-     <li id="li_2786AC19387241A296E015EE6FD07F2D">Adobe Access for Windows Firefox (nur Video) </li> 
+     <li id="li_2786AC19387241A296E015EE6FD07F2D">Adobe-Zugriff für Windows Firefox (nur Video) </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Erweiterte DASH-Wiedergabe-Funktionen {#dash-advanced-playback}
+## Erweiterte DASH-Wiedergabefunktionen {#dash-advanced-playback}
 
 | Kategorie | Inhaltstyp | Funktion | HTML5, FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Wiedergabe | VOD | Wiedergabe beim Versatz | ![](assets/supported15.png) |
+| Wiedergabe | VOD | Wiedergabe mit Versatz | ![](assets/supported15.png) |
 | Wiedergabe | VOD | Nur-Audio-Wiedergabe | ![](assets/supported15.png) |
-| Wiedergabe | VOD | Trick Play | ![](assets/supported15.png) |
-| Wiedergabe | VOD | Glatte Trick-Wiedergabe | ![](assets/supported15.png) |
-| Wiedergabe | VOD + Live | ID3-Analyse | Nicht unterstützt |
-| Wiedergabe | VOD | Unterstützung über mehrere Jahre | Nur VOD |
+| Wiedergabe | VOD | Trick play | ![](assets/supported15.png) |
+| Wiedergabe | VOD | Glätte Trick Play | ![](assets/supported15.png) |
+| Wiedergabe | VOD + Live | ID3-Parsing | Nicht unterstützt |
+| Wiedergabe | VOD | Unterstützung für mehrere Zeiträume | Nur VOD |
 | Wiedergabe | VOD + Live | Tokenisierte Streams | Nicht unterstützt |
 | Wiedergabe | VOD + Live | Rechnungsstellung | ![](assets/supported15.png) |
 | Wiedergabe | VOD + Live | Durchsuchen | ![](assets/supported15.png) |
 
-## DASH-Core-Wiedergabe-Funktionen {#dash-core-playback}
+## DASH-Core-Wiedergabefunktionen {#dash-core-playback}
 
 | Kategorie | Inhaltstyp | Funktion | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
 | Wiedergabe | VOD + Live | Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | ![](assets/supported15.png) |
 | Wiedergabe | FER VOD | Allgemeine Wiedergabe (Wiedergabe, Pause, Suche) | Nicht unterstützt |
 | Wiedergabe | VOD + Live | Adaptive Bitrate | ![](assets/supported15.png) |
-| Wiedergabe | VOD + Live | 608/708 Beschriftungen | ![](assets/supported15.png) |
+| Wiedergabe | VOD + Live | 608/708 Untertitel | ![](assets/supported15.png) |
 | Wiedergabe | VOD + Live | WebVTT | Nur VOD |
 | Wiedergabe | VOD + Live | Failover | Nur VOD |
-| Wiedergabe | VOD + Live | Servicequalitäts- und Player-Benachrichtigungen | ![](assets/supported15.png) |
+| Wiedergabe | VOD + Live | QoS- und Player-Benachrichtigungen | ![](assets/supported15.png) |
 | Wiedergabe | VOD + Live | Unterstützung für Cookie-Kopfzeilen | ![](assets/supported15.png) |
-| Wiedergabe | VOD + Live | Festlegen von Puffersteuerungsparametern | ![](assets/supported15.png) |
+| Wiedergabe | VOD + Live | Einrichten von Puffersteuerparametern | ![](assets/supported15.png) |
 | Wiedergabe | VOD + Live | Festlegen der Steuerelemente für die adaptive Bitrate | ![](assets/supported15.png) |
 | Wiedergabe | VOD + Live | Benutzerdefinierte Tags (EventStream) | Nur VOD (Inline) |
-| Wiedergabe | VOD + Live | Spätbindendes Audio | Nur VOD |
-| Wiedergabe | VOD + Live | 302 Umleitung | Nur VOD |
+| Wiedergabe | VOD + Live | Spätbindende Audiowiedergabe | Nur VOD |
+| Wiedergabe | VOD + Live | 302-Umleitung | Nur VOD |

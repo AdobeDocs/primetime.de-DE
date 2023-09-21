@@ -2,19 +2,16 @@
 title: Domänenregistrierung implementieren
 description: Domänenregistrierung implementieren
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
 
 ---
 
+# Domänenregistrierung implementieren {#implementing-domain-registration}
 
-# Implementierung der Domänenregistrierung {#implementing-domain-registration}
-
-Der Referenz-Implementierungslizenzserver zeigt zwei Varianten der Geschäftslogik zur Domänenregistrierung. Ein typischer Domänenserver würde nur eine dieser Workflows implementieren:
+Der Referenz-Implementierungs-Lizenzserver weist zwei Varianten der Geschäftslogik zur Domänenregistrierung auf. Ein typischer Domain-Server implementiert nur einen dieser Workflows:
 
 * Identitätsbasierte Domänen
 * Anonyme Domänen
-

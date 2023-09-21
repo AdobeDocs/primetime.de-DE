@@ -1,32 +1,30 @@
 ---
-description: Sie können auf einfache Weise eine benutzerdefinierte Benutzeroberfläche erstellen, die auf dem Referenz-Implementierungsframework basiert.
+description: Sie können einfach eine benutzerdefinierte Benutzeroberfläche erstellen, die auf dem Referenzimplementierungs-Framework basiert.
 title: Benutzerdefinierte Benutzeroberfläche erstellen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
 
 ---
 
+# Benutzerdefinierte Benutzeroberfläche erstellen {#build-a-custom-user-interface}
 
-# Erstellen einer benutzerdefinierten Benutzeroberfläche {#build-a-custom-user-interface}
-
-Sie können eine benutzerdefinierte Benutzeroberfläche erstellen, die auf dem Referenz-Implementierungsframework basiert.
+Sie können eine benutzerdefinierte Benutzeroberfläche erstellen, die auf dem Referenzimplementierungs-Framework basiert.
 
 Die UI-Komponenten der folgenden Funktionen sind bereits integriert:
 
 * Klickbare Anzeigen
 * Anzeigenüberlagerungen
-* Spätbindendes Audio
-* Untertitel
+* Spätbindende Audiowiedergabe
+* Geschlossene Untertitel
 * Listener für alle oben genannten Komponenten
 
-1. Bearbeiten Sie die Datei [!DNL PlayerFragment.java], um die Komponenten der Benutzeroberfläche zu initialisieren, die Sie im Player verwenden möchten.
+1. Bearbeiten Sie die [!DNL PlayerFragment.java] -Datei, um die UI-Komponenten zu initialisieren, die Sie im Player verwenden möchten.
 
-1. Bearbeiten Sie die Datei [!DNL res/player/player_fragment.xml], um die Benutzeroberfläche anzupassen.
+1. Bearbeiten Sie die [!DNL res/player/player_fragment.xml] -Datei, um die Benutzeroberfläche anzupassen.
 1. Erstellen Sie das Projekt.
 
 >[!NOTE]
 >
->Um Änderungen an der Suchleiste der Benutzeroberfläche vorzunehmen, können Sie die MarkableSeekBar-Klasse bearbeiten. Die [MarkableSeekBar](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/player/MarkableSeekBar.html)-Klasse verarbeitet den Schieberegler, den Schieberegler, den Anzeigenmarkenhalter, Cue-Marker, den Pufferbereich und den Suchbereich-Hintergrund.
+>Um UI-Änderungen an der Suchleiste vorzunehmen, können Sie die MarkableSeekBar-Klasse bearbeiten. Die [MarkableSeekBar](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/player/MarkableSeekBar.html) -Klasse verarbeitet den Schieberegler, den Daumen des Reglers, den Anzeigenmarkierungshalter, Cue-Markierungen, den Pufferbereich und die Suchbereich-Hintergründe.

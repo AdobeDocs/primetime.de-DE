@@ -1,18 +1,16 @@
 ---
-title: JSON-Objekt für Berechtigungsressourcen-ID
-description: Der folgende Codeblock enthält ein Beispiel für ein JSON-Objekt, wenn die Berechtigungsressourcen-ID eine einfache Textzeichenfolge ist.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: JSON-Objekt für Kennung der Berechtigungsressource
+description: Der folgende Codeblock bietet ein Beispiel für ein JSON-Objekt, wenn die Kennung der Berechtigungsressource eine einfache Textzeichenfolge ist.
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
 
 ---
 
+# JSON-Objekt für Kennung der Berechtigungsressource {#json-object-for-entitlement-resource-id}
 
-# JSON-Objekt für Berechtigungsressourcen-ID {#json-object-for-entitlement-resource-id}
-
-Der folgende Codeblock enthält ein Beispiel für ein JSON-Objekt, wenn die Berechtigungsressourcen-ID eine einfache Textzeichenfolge ist. In diesem Fall ist die Ressourcen-ID die Zeichenfolge &quot;resource&quot;.
+Der folgende Codeblock bietet ein Beispiel für ein JSON-Objekt, wenn die Kennung der Berechtigungsressource eine einfache Textzeichenfolge ist. In diesem Fall ist die Ressourcen-ID die Zeichenfolge &quot;resource&quot;.
 
 ```
 "metadata" : { 
@@ -22,7 +20,7 @@ Der folgende Codeblock enthält ein Beispiel für ein JSON-Objekt, wenn die Bere
 }
 ```
 
-Der folgende Codeblock enthält ein Beispiel für ein JSON-Objekt, wenn die Berechtigungsressourcen-ID eine HTML-kodierte mRSS-Zeichenfolge ist.
+Der folgende Codeblock bietet ein Beispiel für ein JSON-Objekt, wenn die Kennung der Berechtigungsressource eine HTML-kodierte mRSS-Zeichenfolge ist.
 
 ```
 <rss version="2.0" xmlns:media="https://search.yahoo.com/mrss/"> 

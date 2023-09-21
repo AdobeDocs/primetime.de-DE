@@ -1,34 +1,32 @@
 ---
 description: Ein MediaPlayer-Objekt kapselt das Verhalten und die Funktionalität eines Medienplayers.
 title: MediaPlayer einrichten
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
 
 ---
 
-
-# MediaPlayer{#set-up-the-mediaplayer} einrichten
+# MediaPlayer einrichten{#set-up-the-mediaplayer}
 
 Ein MediaPlayer-Objekt kapselt das Verhalten und die Funktionalität eines Medienplayers.
 
-1. Instanziieren Sie ein `MediaPlayer` mit folgendem Code:
+1. Instanziieren eines `MediaPlayer` Verwenden Sie Folgendes:
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. Erstellen Sie eine `MediaPlayerView`-Instanz:
+1. Erstellen Sie eine `MediaPlayerView` instance:
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(container);
    ```
 
-   wobei `container` das Element der Zielgruppe `div` ist, das Ihr `HTMLMediaElement` enthält.
+   where `container` ist die Zielgruppe `div` -Element enthält, das `HTMLMediaElement`.
 
-   Beispiel:
+   Beispielsweise auf einer HTML-Seite:
 
    ```
    <div id="videoDiv"> 
@@ -50,15 +48,15 @@ Ein MediaPlayer-Objekt kapselt das Verhalten und die Funktionalität eines Medie
          document.getElementById("videoDiv"));  
    ```
 
-1. Hängen Sie die `MediaPlayerView`-Instanz an Ihre `MediaPlayer`-Instanz an:
+1. Anhängen Ihrer `MediaPlayerView` -Instanz zu Ihrer `MediaPlayer` instance:
 
    ```js
    player.view = view;
    ```
 
-1. Fügen Sie die benutzerdefinierten Steuerelemente `div` an Ihre MediaPlayer-Instanz an.
+1. Anfügen der benutzerdefinierten Steuerelemente `div` -Element zu Ihrer MediaPlayer-Instanz hinzufügen.
 
-   In HTML:
+   Beispiel für HTML:
 
    ```
    <div id="videoDiv"> 
@@ -77,4 +75,4 @@ Ein MediaPlayer-Objekt kapselt das Verhalten und die Funktionalität eines Medie
    }
    ```
 
-Die `MediaPlayer`-Instanz ist jetzt verfügbar und ordnungsgemäß konfiguriert, um Videoinhalte auf dem Gerätebildschirm anzuzeigen.
+Die `MediaPlayer` -Instanz ist jetzt verfügbar und ordnungsgemäß konfiguriert, um Videoinhalte auf dem Gerätebildschirm anzuzeigen.

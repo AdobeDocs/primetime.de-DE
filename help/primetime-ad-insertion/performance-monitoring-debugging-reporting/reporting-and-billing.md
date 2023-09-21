@@ -1,16 +1,14 @@
 ---
-title: Berichte und Rechnungsstellung
-description: Berichte und Rechnungsstellung
+title: Berichterstellung und Rechnungsstellung
+description: Berichterstellung und Rechnungsstellung
 copied-description: true
-exl-id: efe91d97-a429-448a-9b7f-cac50b850f35
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%
 
 ---
 
-# Berichte und Rechnungsstellung {#reporting-and-billing}
+# Berichterstellung und Rechnungsstellung {#reporting-and-billing}
 
-Die Primetime-Ad Insertion-Konsole enthält einen Berichte und ein Rechnungsmodul, mit dem Sie alle Werkzeuge zur Bestimmung des Zustands Ihres Anzeigeneinfügegeschäfts nutzen können. Mit dem Berichte-Modul können Sie Impressionsberichte zeitgebunden über viele Dimensionen hinweg ausführen. Berichte können auf Ad-hoc-Basis ausgeführt und/oder für die geplante Bereitstellung an bestimmte E-Mail-Adressen eingerichtet werden. Der Rechnungsstellungsbericht ermöglicht Ihnen, benutzerspezifische Berichte für Ihre Kunden oder Partner zu erstellen, die für Rechnungsvorgänge wie die Bezahlung von Werbeanzeigen verwendet werden können.
+Die Primetime-Ad Insertion-Konsole enthält eine Berichterstellung und ein Rechnungsmodul, mit dem Sie alle Tools nutzen können, die Sie zur Bestimmung des Zustands Ihres Anzeigeneinfügegeschäfts benötigen. Mit dem Reporting-Modul können Sie zeitgebundene Impressionsberichte über viele Dimensionen hinweg ausführen. Berichte können auf Ad-hoc-Basis ausgeführt und/oder für einen geplanten Versand an bestimmte E-Mail-Adressen eingerichtet werden. Mit dem Rechnungsbericht können Sie benutzerdefinierte Berichte für Ihre Kunden oder Partner erstellen, die für Abrechnungsvorgänge wie die Anzeigeinfügung verwendet werden können.

@@ -1,23 +1,21 @@
 ---
 description: Bevor Sie die meisten TVSDK-Player-Methoden verwenden können, muss sich der Player in einem gültigen Status befinden.
-title: Warten auf gültigen Status
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Auf gültigen Status warten
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
+# Auf gültigen Status warten {#wait-for-a-valid-state}
 
-# Warten Sie auf einen gültigen Status {#wait-for-a-valid-state}
-
-Mit TVSDK können Sie die grundlegende Wiedergabe von Live- und Video On Demand (VOD) steuern. TVSDK stellt Methoden und Eigenschaften für die Player-Instanz bereit, die Sie zum Konfigurieren der Player-Benutzeroberfläche verwenden können.
+Mit TVSDK können Sie das grundlegende Wiedergabeerlebnis für Live- und Video On Demand (VOD) steuern. TVSDK stellt Methoden und Eigenschaften in der Player-Instanz bereit, die Sie zum Konfigurieren der Player-Benutzeroberfläche verwenden können.
 
 Bevor Sie die meisten TVSDK-Player-Methoden verwenden können, muss sich der Player in einem gültigen Status befinden.
 
-Wenn Sie darauf warten, dass der Player den richtigen Status hat, wird sichergestellt, dass die Medienressource erfolgreich geladen wurde. Wenn sich der Player nicht in mindestens dem erforderlichen Status befindet, geben viele Player-Methoden `MediaPlayerException` aus.
+Wenn darauf gewartet wird, dass der Player den richtigen Status aufweist, wird sichergestellt, dass die Medienressource erfolgreich geladen wurde. Wenn der Player nicht mindestens den erforderlichen Status aufweist, werden von vielen Player-Methoden `MediaPlayerException`.
 
-Der erforderliche Status wird in der Regel VORBEREITT. In diesem Fall wird die Callback-Routine für `StatusChangeEventListener.onStatusChanged()` ausgeführt.
+Der erforderliche Status ist normalerweise VORBEREITT. In diesem Fall wird die Callback-Routine für `StatusChangeEventListener.onStatusChanged()` wird ausgeführt.
 
-1. Um zu bestätigen, dass der Status `PREPARED` lautet, markieren Sie `MediaPlayer.MediaPlayerStatus`.
+1. So bestätigen Sie den Status `PREPARED`, check `MediaPlayer.MediaPlayerStatus`.

@@ -1,18 +1,16 @@
 ---
-description: Es gibt einige APIs, die Ihnen bei der Verwendung des Adobe-Flash Players helfen können.
-title: Hilfreiche APIs für den Adobe Flash Player
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Es gibt einige APIs, die Ihnen bei der Verwendung der Adobe-Flash Player helfen können.
+title: Hilfreiche APIs für das Adobe-Flash Player
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
 
 ---
 
+# Hilfreiche APIs für das Adobe-Flash Player{#helpful-apis-for-the-adobe-flash-player}
 
-# Hilfreiche APIs für den Adobe-Flash Player{#helpful-apis-for-the-adobe-flash-player}
-
-Es gibt einige APIs, die Ihnen bei der Verwendung des Adobe-Flash Players helfen können.
+Es gibt einige APIs, die Ihnen bei der Verwendung der Adobe-Flash Player helfen können.
 
 ## AdobePSDK.MediaResource {#section_8C339FA1386D4B1A926A1459B2619E5E}
 
@@ -20,7 +18,7 @@ Es gibt einige APIs, die Ihnen bei der Verwendung des Adobe-Flash Players helfen
 new MediaResource(url, type, metadata, forceFlash)
 ```
 
-Falls unterstützt, können Sie den Parameter `forceFlash` verwenden, um die Wiedergabetechnologiebestimmungssequenz zu überschreiben und die Implementierung zur Verwendung des Flash Players zu zwingen.
+Falls unterstützt, können Sie die `forceFlash` -Parameter, um die Wiedergabetechnologiebestimmungssequenz zu überschreiben und die Implementierung zur Verwendung der Flash Player zu zwingen.
 
 <!--<a id="section_FEE3205B532446498771F7DD55B5E79F"></a>-->
 
@@ -69,4 +67,3 @@ AdobePSDK.setAuthorizationTokenFilename(authorizationTokenFilename);
 */ 
 AdobePSDK.setAuthorizationTokenType(authorizationTokenType);
 ```
-

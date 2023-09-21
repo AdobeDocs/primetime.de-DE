@@ -1,27 +1,25 @@
 ---
 keywords: kreative Auswahlregeln;AdobeTVSDKConfig
-title: Kreative Auswahlregeln anwenden
-description: Kreative Auswahlregeln anwenden
+title: Anwenden von kreativen Auswahlregeln
+description: Anwenden von kreativen Auswahlregeln
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%
 
 ---
 
-
-# Anwenden kreativer Auswahlregeln{#apply-creative-selection-rules}
+# Anwenden von kreativen Auswahlregeln{#apply-creative-selection-rules}
 
 TVSDK wendet kreative Auswahlregeln wie folgt an:
 
-* TVSDK wendet zuerst alle `default`-Regeln an, gefolgt von den zonenspezifischen Regeln.
+* TVSDK gilt für alle `default` Regeln zuerst, gefolgt von den zonenspezifischen Regeln.
 * TVSDK ignoriert alle Regeln, die nicht für die aktuelle Zonen-ID definiert sind.
-* Sobald TVSDK die Standardregeln anwendet, können die zonenspezifischen Regeln die kreativen Prioritäten anhand der `host` (Domäne)-Übereinstimmungen mit den von den `default`-Regeln ausgewählten kreativen Elementen weiter ändern.
+* Sobald TVSDK die Standardregeln anwendet, können die zonenspezifischen Regeln die kreativen Prioritäten basierend auf der `host` (Domäne) stimmt mit dem vom `default` Regeln.
 
-* Wenn in der enthaltenen Beispielregeldatei mit zusätzlichen Zonenregeln TVSDK die `default`-Regeln angewendet wird und die kreative Domäne M3U8 weder [!DNL my.domain.com] noch [!DNL a.bcd.com] enthält und die Anzeigenzone `1234` ist, werden die kreativen Elemente neu angeordnet und das Flash-VPAID-Kreativelement wird zuerst wiedergegeben, wenn verfügbar. Andernfalls wird eine MP4-Anzeige wiedergegeben usw. bis zu JavaScript.
+* In der enthaltenen Beispielregeldatei mit zusätzlichen Zonenregeln, sobald TVSDK die Variable `default` Regeln, wenn die kreative Domäne M3U8 nicht enthält. [!DNL my.domain.com] oder [!DNL a.bcd.com] und die Anzeigenzone `1234`, werden die Kreativen neu angeordnet und das Flash VPAID-Kreativ zuerst abgespielt, sofern verfügbar. Andernfalls wird eine MP4-Anzeige abgespielt, usw. bis zu JavaScript.
 
-* Wenn ein Werbekreativ ausgewählt ist, dass TVSDK nicht nativ wiedergegeben werden kann ( [!DNL .mp4], [!DNL .flv] usw.), stellt TVSDK eine Anforderung zum Umpacken aus.
+* Wenn ein Werbekreativ ausgewählt wurde, kann TVSDK nicht nativ wiedergegeben werden ( [!DNL .mp4], [!DNL .flv]usw.), gibt TVSDK eine Neuverpackungsanfrage aus.
 
-Beachten Sie, dass die Anzeigentypen, die von TVSDK verarbeitet werden können, weiterhin über die Einstellung `validMimeTypes` in `AuditudeSettings` definiert werden.
+Beachten Sie, dass die Anzeigentypen, die von TVSDK verarbeitet werden können, weiterhin über die `validMimeTypes` Einstellung in `AuditudeSettings`.

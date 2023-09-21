@@ -1,8 +1,7 @@
 ---
 title: Anzeigen von Berichten im Isolationsmodus
 description: Anzeigen von Berichten im Isolationsmodus für Xfinity
-exl-id: e7cf24c5-9bfa-48f6-b5c8-20443a976891
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
@@ -30,13 +29,13 @@ Die Bewertungen und Wahrscheinlichkeiten der Freigabe werden nur anhand des Stre
 
 So zeigen Sie Metriken im Isolationsmodus an:
 
-1. Auswählen **Isolationsmodus** von **MVPDs im Segment** und wählen Sie **Auswahl anwenden**.
+1. Auswählen **Isolationsmodus** aus dem **MVPDs im Segment** Dropdown-Option und wählen Sie **Auswahl anwenden**.
 
    ![](assets/xfinity-in-segment.gif)
 
    *Abbildung: MVPD-Auswahl im Isolationsmodus*
 
-1. Wählen Sie die gewünschten Kanäle aus dem **Kanäle im Segment** und wählen Sie **Auswahl anwenden**. Wählen Sie außerdem eine [Zeitrahmen](/help/AccountIQ/product-concepts.md#granularity-def).
+1. Wählen Sie die gewünschten Kanäle aus dem **Kanäle im Segment** Dropdown-Option und wählen Sie **Auswahl anwenden**. Wählen Sie außerdem eine [Zeitrahmen](/help/AccountIQ/product-concepts.md#granularity-def).
 
    >[!IMPORTANT]
    >
@@ -46,4 +45,4 @@ So zeigen Sie Metriken im Isolationsmodus an:
 
    *Abbildung: Freigeben von Wahrscheinlichkeitsmesswerten im Isolationsmodus*
 
-   Beachten Sie, dass die oben genannten Kennzahlen zeigen, dass nur 6 % aller Konten freigegeben werden. und nur 8 % des Inhalts werden von diesen 8 % konsumiert. Die Kanäle können also ihre Punktzahl im Isolationsmodus mit der anderer MVPDs vergleichen. Daher sollten die Informationen, die mit dem Isolationsmodus abgerufen werden, anders interpretiert werden als die anderen Daten.
+   Beachten Sie, dass die oben genannten Kennzahlen zeigen, dass nur 6 % aller Konten freigegeben werden und dass nur 8 % des Inhalts von diesen 8 % genutzt werden. Die Kanäle können also ihre Punktzahl im Isolationsmodus mit der anderer MVPDs vergleichen. Daher sollten die Informationen, die mit dem Isolationsmodus abgerufen werden, anders interpretiert werden als die anderen Daten.

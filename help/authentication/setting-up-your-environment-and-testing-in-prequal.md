@@ -1,29 +1,28 @@
 ---
 title: Einrichten der Umgebung und Testen in der Pre-Qual-Phase
 description: Einrichten der Umgebung und Testen in der Pre-Qual-Phase
-exl-id: f822c0a1-045a-401f-a44f-742ed25bfcdc
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
 
 ---
 
-# Einrichten von Umgebung und testen in vorqualen{#setting-up-your-environment-and-testing-in-prequal}
+# Einrichten der Umgebung und Testen in der Qualitur{#setting-up-your-environment-and-testing-in-prequal}
 
 >[!NOTE]
 >
->Die Inhalte dieser Seite wird nur zu Informationszwecken bereitgestellt. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe Systems erforderlich. Es ist keine unbefugte Nutzung zulässig.
+>Die Inhalte auf dieser Seite werden nur zu Informationszwecken zur Verfügung gestellt. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe Systems erforderlich. Eine unbefugte Nutzung ist nicht gestattet.
 
-Der Zweck dieser technischen Notiz besteht darin, unseren Partnern dabei zu helfen, Ihre Umgebung und Beginn beim Testen einer neuen Build zu testen, die im Adobe Systems Umgebung vor der Qualifikation bereitgestellt wurde.
+Der Zweck dieses technischen Hinweises besteht darin, unseren Partnern bei der Einrichtung ihrer Umgebung zu helfen und Beginn eine neue Build zu testen, die auf dem Adobe Systems Präqualifikations-Umgebung bereitgestellt wird.
 
-Da es zwei Build Geschmacksrichtungen gibt: ***Produktion*** und ***Inszenierung*** , in diesem Dokument werden wir in der Produktionseinrichtung konzentrieren mit der Erwähnung, dass alle Schritte für die Inszenierung gleich sind, sind nur die URLs unterschiedlich.
+Da es zwei Build Varianten gibt: ***Produktion*** und ***Staging, werden wir in diesem Dokument auf das Produktions-Setup konzentrieren mit der Erwähnung, dass alle Schritte für das Staging*** gleich sind, nur die URLs sind unterschiedlich.
 
-In den Schritten 1 und 2 wird die Test Umgebung auf einem der Testmaschinen eingerichtet. Schritt 3 ist eine Prüfung des grundlegenden Flusses und die Schritte 4 &amp; 5 stellen einige Testrichtlinien vor.
+In den Schritten 1 und 2 wird die Test Umgebung auf einer der Prüfmaschinen eingerichtet, in Schritt 3 wird der grundlegende Ablauf überprüft und in den Schritten 4 und 5 werden einige Prüfrichtlinien vorgestellt.
 
 >[!IMPORTANT]
 >
-> Es ist sehr wichtig, die Schritte 1 und 2 jedes Mal auszuführen, wenn Sie Ihre Testtests Umgebung (von der Inszenierung in die Produktion wechseln Profil oder umgekehrt).
+> Es ist sehr wichtig, die Schritte 1 und 2 jedes Mal auszuführen, wenn Sie Ihre Test-Umgebung ändern möchten (Wechsel von Staging- zu Produktions-Profil oder umgekehrt)
 
 
 ## SCHRITT 1 Auflösen der Weiterleitung der Domain an eine IP {#resolving-pass-domain-to-an-ip}
@@ -56,19 +55,19 @@ In den Schritten 1 und 2 wird die Test Umgebung auf einem der Testmaschinen eing
 
 >[!NOTE]
 >
->Domänen, die von der Antwort ausgeschlossen sind, da Sie nicht relevant sind und sich von User zu User unterscheiden.
+>Domänen wurden von der Antwort ausgeschlossen, da sie nicht relevant sind und sich von User zu User unterscheiden können.
 
 >[!IMPORTANT]
 >
-> Diese IP-Adressen können sich in Zukunft ändern, was für Benutzer in verschiedenen geografischen Regionen möglicherweise nicht der gleiche ist.
+> Diese IP-Adressen können sich in Zukunft ändern und sind möglicherweise für Benutzer in verschiedenen geografischen Regionen nicht gleich.
 
 
-## Schritt 2.  Spudeln der Umgebung vor der Qualifikation, um die Produktion zu sein {#spoofing-the-prequalification-environment}
+## SCHRITT 2.  Fälschung der Präqualifikation Umgebung zur Produktion {#spoofing-the-prequalification-environment}
 
-* Bearbeiten die *Datei &quot;c:\\Windows\\system32\\Drivers\\etc\\&quot;* (in Windows) oder */etc/Hosts* (unter Macintosh/Linux/Android) und fügen Sie Folgendes hinzu:
+* Bearbeiten die *Datei c:\\windows\\System32\\drivers\\etc\\hosts* (unter Windows) bzw *. /etc/hosts* (unter Macintosh/Linux/Android) und fügen Sie Folgendes hinzu:
 
-* Spoof Production Profil
-   * 52.13.71.11 http://Entitlement.auth.Adobe.com, http://SP.auth.Adobe.com, http://API.auth.Adobe.com
+* Spoof-Produktion Profil
+   * 52.13.71.11 http://entitlement.auth.adobe.com, http://sp.auth.adobe.com http://api.auth.adobe.com
 
 **Spoofing unter Android:** Um unter Android zu spielen, müssen Sie einen Android-Emulator verwenden.
 
@@ -79,16 +78,16 @@ In den Schritten 1 und 2 wird die Test Umgebung auf einem der Testmaschinen eing
 
 **Dies ist ein einfacher Schritt:**
 
-* Ladeanspruch [ PreQual Umgebung ](https://entitlement-prequal.auth.adobe.com/environment.html) und [ Berechtigung ](https://entitlement.auth.adobe.com/environment.html) . Sie sollten dieselbe Antwort zurückstellen.
+* Ladeberechtigung [entspricht Umgebung](https://entitlement-prequal.auth.adobe.com/environment.html) und [Berechtigung](https://entitlement.auth.adobe.com/environment.html). Sie sollten dieselbe Antwort zurückgeben.
 
 
-## Schritt 4.  Führen Sie einen einfachen Authentifizierung/Autorisierung mit der Website des Programmierers durch. {#peform-a-simple-auth-flow}
+## SCHRITT 4.  Durchführen einer einfachen Authentifizierung/eines Autorisierung-Flows über die Website des Programmierers {#peform-a-simple-auth-flow}
 
-* Dieser Schritt erfordert die Website-Adresse des Programmierers und einige gültige &quot;mivpd&quot;-Berechtigungen (eine User, dass Sie authentifiziert und autorisiert ist).
+* Für diesen Schritt sind die Website-Adresse des Programmierers und einige gültige MVPD-Anmeldeinformationen erforderlich (eine User, dass es authentifiziert und autorisiert ist).
 
-## Schritt 5.  Szenarientests mit den Websites des Programmierers durchführen {#perform-scenario-testing-using-programmer-website}
+## SCHRITT 5.  Szenariotests auf den Websites des Programmierers durchführen {#perform-scenario-testing-using-programmer-website}
 
-* Nachdem Sie die Umgebung eingerichtet und sichergestellt haben, dass der grundlegende Autorisierung Fluss arbeitet, können Sie mit dem Testen komplexerer Szenarien fortfahren.
+* Nachdem Sie die Einrichtung des Umgebung abgeschlossen und sichergestellt haben, dass der Ablauf für die grundlegende Authentifizierung Autorisierung funktioniert, können Sie mit dem Testen komplexerer Szenarien fortfahren.
 
 
 ## SCHRITT 6.  Testen mit der API-Test-Site {#perform-testing-using-api-testing-site}

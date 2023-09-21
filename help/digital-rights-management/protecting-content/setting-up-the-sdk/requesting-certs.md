@@ -2,19 +2,17 @@
 title: Anfordern von Zertifikaten
 description: Anfordern von Zertifikaten
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
-
 # Anfordern von Zertifikaten{#requesting-certificates}
 
-Bei der Registrierung wird von der Adobe ein Zertifikat angefordert. Sie können Schlüssel generieren und eine Anforderung erstellen, die an die Adobe gesendet wird. Adobe generiert dann das Zertifikat und sendet es an Sie. Adobe kennt den Inhalt des privaten Schlüssels nicht. Daher müssen Sie den Schlüssel sichern, um ihn wiederherzustellen, wenn eine Ihrer Hardware fehlschlägt.
+Bei der Registrierung wird ein Zertifikat von der Adobe angefordert. Sie können Schlüssel generieren und eine Anfrage erstellen, die an Adobe gesendet wird. Adobe generiert dann das Zertifikat und sendet es an Sie. Adobe kennt den Inhalt des privaten Schlüssels nicht. Daher müssen Sie den Schlüssel sichern, um ihn wiederherzustellen, wenn eine Ihrer Hardware fehlschlägt.
 
-Im Gegensatz zum Lizenzserver-, Packager- oder Transportzertifikat stellt Adobe das CA-Domänenzertifikat nicht aus. Sie können dieses Zertifikat von einer Zertifizierungsstelle abrufen oder ein selbst signiertes Zertifikat generieren.
+Im Gegensatz zum Lizenzserver-, Packager- oder Transportzertifikat stellt Adobe das CA-Zertifikat der Domain nicht aus. Sie können dieses Zertifikat von einer Zertifizierungsstelle abrufen oder ein selbstsigniertes Zertifikat generieren.
 
-Informationen zum Abrufen der Primetime-DRM-Anmeldeinformationen finden Sie im Handbuch zur Registrierung von DRM-Zertifikaten für Primetime.
+Informationen zum Abrufen von Primetime DRM-Anmeldeinformationen finden Sie im * Primetime DRM Certificate Enrollment Guide* .

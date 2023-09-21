@@ -1,20 +1,18 @@
 ---
-description: Das TVSDK stellt APIs und Beispielcode für die Handhabung von Sperrzeiträumen bereit.
-title: Implementierung der Blackout-Behandlung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Das TVSDK stellt APIs und Beispielcode für die Handhabung von Blackout-Zeiträumen bereit.
+title: Blackout-Handhabung implementieren
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Blackout-Handhabung implementieren {#implement-blackout-handling}
 
-# Implementierung der Blackout-Behandlung {#implement-blackout-handling}
+Das TVSDK stellt APIs und Beispielcode für die Handhabung von Blackout-Zeiträumen bereit.
 
-Das TVSDK stellt APIs und Beispielcode für die Handhabung von Sperrzeiträumen bereit.
-
-So implementieren Sie die Blackout-Behandlung und stellen alternative Inhalte während der Blackout-Aktion bereit:
+So implementieren Sie die Blackout-Handhabung und stellen alternative Inhalte während der Blackout-Phase bereit:
 
 1. Richten Sie Ihre App so ein, dass sie Blackout-Tags in einem Live-Stream-Manifest abonniert.
 
@@ -27,7 +25,7 @@ So implementieren Sie die Blackout-Behandlung und stellen alternative Inhalte w�
  }
 ```
 
-1. hinzufügen einen Benachrichtigungs-Listener für `PTTimedMetadataChangedNotification`.
+1. Hinzufügen eines Benachrichtigungs-Listeners für `PTTimedMetadataChangedNotification`.
 
    ```
    - (void)addobservers 
@@ -37,7 +35,7 @@ So implementieren Sie die Blackout-Behandlung und stellen alternative Inhalte w�
    }
    ```
 
-1. Implementieren Sie eine Listener-Methode für `PTTimedMetadata`-Objekte im Vordergrund.
+1. Implementieren einer Listener-Methode für `PTTimedMetadata` Objekte im Vordergrund.
 
    Beispiel:
 
@@ -61,7 +59,7 @@ So implementieren Sie die Blackout-Behandlung und stellen alternative Inhalte w�
    }
    ```
 
-1. Behandeln Sie `TimedMetadata`-Objekte mit konstanten Aktualisierungen während der Wiedergabe.
+1. Handle `TimedMetadata` Objekte mit konstanten Aktualisierungen während der Wiedergabe.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +80,7 @@ So implementieren Sie die Blackout-Behandlung und stellen alternative Inhalte w�
    }
    ```
 
-1. hinzufügen Sie den `PTTimedMetadata`-Handler, um zu alternativen Inhalten zu wechseln und zum Hauptinhalt zurückzukehren, wie durch das `PTTimedMetadata`-Objekt und dessen Wiedergabezeit angegeben.
+1. Fügen Sie die `PTTimedMetadata` Handler zum Wechseln zu alternativen Inhalten und zum Hauptinhalt zurückkehren, wie durch `PTTimedMetadata` -Objekt und dessen Wiedergabedauer.
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +195,7 @@ So implementieren Sie die Blackout-Behandlung und stellen alternative Inhalte w�
    }
    ```
 
-1. Implementieren Sie eine Listener-Methode für `PTTimedMetadata`-Objekte im Hintergrund.
+1. Implementieren einer Listener-Methode für `PTTimedMetadata` Objekte im Hintergrund.
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
@@ -227,7 +225,7 @@ So implementieren Sie die Blackout-Behandlung und stellen alternative Inhalte w�
    }
    ```
 
-1. Wenn sich der Blackout-Bereich auf dem DVR im Wiedergabestream befindet, aktualisieren Sie die nicht suchbaren Bereiche.
+1. Wenn sich der Blackout-Bereich im DVR im Wiedergabestream befindet, aktualisieren Sie die nicht suchbaren Bereiche.
 
    ```
    // This sample assumes that blackoutStartTimedMetadata is the PTTimedMetadata  

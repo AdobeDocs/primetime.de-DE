@@ -1,37 +1,35 @@
 ---
-title: Überblick über den Lizenzerwerb
-description: Überblick über den Lizenzerwerb
+title: Übersicht über den Lizenzakquise-Prozess
+description: Übersicht über den Lizenzakquise-Prozess
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
 
 ---
 
+# Übersicht über den Lizenzakquise-Prozess{#license-acquisition-process-overview}
 
-# Übersicht über den Lizenzerwerb{#license-acquisition-process-overview}
-
-Die Aktivierung Ihrer Anwendung zum Abspielen von Inhalten unter dem Schutz von Primetime DRM wird in den folgenden Abschnitten beschrieben, wobei ActionScript 3 (AS3)-Codebeispiele verwendet werden. Gegebenenfalls werden die nuancierten Abläufe von diesem Arbeitsablauf für native Apps auf mobilen Plattformen vorgestellt. Die Primetime-DRM-Workflows sind jedoch auf allen Plattformen sehr ähnlich, sodass Ihr Verständnis des AS3-Codes die Extrapolation auf andere Plattformen ziemlich einfach macht.
+Die Aktivierung Ihrer Anwendung zum Abspielen von Inhalten unter dem Schutz von Primetime DRM ist in den folgenden Abschnitten unter Verwendung von ActionScript 3 (AS3)-Codebeispielen beschrieben. Gegebenenfalls werden die nuancierten Abweichungen von diesem Workflow für native Apps auf mobilen Plattformen vorgestellt. Die Primetime-DRM-Workflows sind jedoch auf allen Plattformen sehr ähnlich, sodass Ihr Verständnis des AS3-Codes die Extrapolation auf andere Plattformen relativ einfach macht.
 
 **Lizenzakquise:**
 
 1. Rufen Sie die DRM-Metadaten des geschützten Inhalts ab.
 1. Überprüfen Sie, ob eine Lizenz lokal verfügbar ist:
 
-   * Wenn die Lizenz lokal verfügbar ist, laden Sie die Lizenz und fahren Sie mit Schritt 6 fort.
+   * Wenn die Lizenz lokal verfügbar ist, laden Sie die Lizenz und gehen Sie zu Schritt 6.
    * Wenn die Lizenz nicht lokal verfügbar ist, fahren Sie mit Schritt 3 fort.
 
-1. Prüfen Sie, ob Authentifizierung erforderlich ist:
+1. Überprüfen Sie, ob die Authentifizierung erforderlich ist:
 
-   * Wenn eine Authentifizierung erforderlich ist, rufen Sie die Authentifizierungsberechtigungen vom Benutzer ab und leiten Sie sie an den Lizenzserver weiter.
-   * Wenn keine Authentifizierung erforderlich ist, fahren Sie mit Schritt 6 fort.
+   * Wenn eine Authentifizierung erforderlich ist, rufen Sie die Authentifizierungsberechtigungen vom Benutzer ab und übergeben Sie sie an den Lizenzserver.
+   * Wenn keine Authentifizierung erforderlich ist, gehen Sie zu Schritt 6.
 
 1. Wenn die Registrierung der Gerätedomäne erforderlich ist, schließen Sie sich der Gerätedomäne an.
 1. Wenn die Authentifizierung erforderlich war und jetzt abgeschlossen ist, laden Sie die Lizenz vom Lizenzserver herunter.
-1. Spielen Sie den Inhalt ab.
+1. Inhalt abspielen.
 
-Wenn keine Fehler aufgetreten sind und der Benutzer erfolgreich zur Ansicht des Inhalts autorisiert wurde, löst Primetime ein `DRMStatusEvent`-Objekt aus und die Wiedergabe beginnt. Das `DRMStatusEvent`-Objekt enthält die zugehörigen Lizenzinformationen, die die Richtlinien und Berechtigungen des Benutzers identifizieren. Beispielsweise kann `DRMStatusEvent` Informationen darüber enthalten, ob der Inhalt offline verfügbar gemacht werden kann, wann die Lizenz abläuft usw.
+Wenn keine Fehler aufgetreten sind und der Benutzer erfolgreich zur Anzeige des Inhalts autorisiert wurde, sendet Primetime einen `DRMStatusEvent` -Objekt und die Anwendung beginnt die Wiedergabe. Die `DRMStatusEvent` -Objekt speichert die zugehörigen Lizenzinformationen, die die Richtlinie und Berechtigungen des Benutzers identifizieren. Beispiel: `DRMStatusEvent` kann Informationen darüber enthalten, ob der Inhalt offline verfügbar gemacht werden kann, wann die Lizenz abläuft usw.
 
-Die Anwendung kann die Lizenzinformationen verwenden, um den Benutzer über den Status ihrer Richtlinie zu informieren. Beispielsweise kann die Anwendung die Anzahl der verbleibenden Tage anzeigen, die der Benutzer zum Anzeigen des Inhalts in einer Statusleiste hat. Wenn der Benutzer Offline-Zugriff hat, wird die Lizenz zwischengespeichert und der verschlüsselte Inhalt auf den Computer des Benutzers heruntergeladen. Der Inhalt wird für die Dauer der Lizenzzwischenspeicherung verfügbar gemacht. Die detail-Eigenschaft im Ereignis enthält `DRM.voucherObtained`. Die Anwendung entscheidet, wo die Inhalte lokal gespeichert werden, damit sie offline verfügbar sind. Sie können Lizenzen auch mit der Klasse `DRMManager` vorladen.
+Die Anwendung kann die Lizenzinformationen verwenden, um den Benutzer über den Status ihrer Richtlinie zu informieren. Beispielsweise kann die Anwendung die Anzahl der verbleibenden Tage anzeigen, die der Benutzer zum Anzeigen des Inhalts in einer Statusleiste hat. Wenn der Benutzer Offline-Zugriff erlaubt, wird die Lizenz zwischengespeichert und der verschlüsselte Inhalt wird auf den Computer des Benutzers heruntergeladen. Der Inhalt wird für die in der Lizenzzwischenspeicherungsdauer definierte Dauer zugänglich gemacht. Die Eigenschaft &quot;detail&quot;im Ereignis enthält `DRM.voucherObtained`. Die Anwendung entscheidet, wo der Inhalt lokal gespeichert werden soll, damit er offline verfügbar ist. Sie können Lizenzen auch vorab mit der Variablen `DRMManager` -Klasse.

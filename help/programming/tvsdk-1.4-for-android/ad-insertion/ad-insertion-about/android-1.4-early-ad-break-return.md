@@ -1,26 +1,24 @@
 ---
-description: Beim Einfügen von Livestream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
-title: Implementieren einer Rückgabe einer frühen Werbeunterbrechung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Für das Einfügen von Live-Stream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
+title: Implementieren einer frühen Werbeunterbrechung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '176'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Implementieren einer frühen Werbeunterbrechung {#implement-an-early-ad-break-return}
 
-# Implementieren eines Zeilenumbruchs für eine frühe Werbeunterbrechung {#implement-an-early-ad-break-return}
+Für das Einfügen von Live-Stream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
 
-Beim Einfügen von Livestream-Anzeigen müssen Sie möglicherweise eine Werbeunterbrechung beenden, bevor alle Anzeigen in der Werbeunterbrechung bis zum Ende wiedergegeben werden.
+Beispielsweise ist die Dauer der Werbeunterbrechung bei bestimmten Sportereignissen möglicherweise nicht bekannt, bevor die Werbeunterbrechung beginnt. TVSDK bietet eine Standarddauer. Wenn das Spiel jedoch wieder aufgenommen wird, bevor die Pause beendet wird, muss die Werbepause beendet werden. Ein weiteres Beispiel ist ein Notsignal während einer Werbeunterbrechung in einem Live-Stream.
 
-Beispielsweise ist die Dauer der Werbeunterbrechung in bestimmten Sportartikeln möglicherweise nicht vor den Beginn der Werbeunterbrechung bekannt. TVSDK gibt eine Standarddauer an. Wenn das Spiel jedoch vor Abschluss der Pause fortgesetzt wird, muss die Werbeunterbrechung beendet werden. Ein weiteres Beispiel ist ein Notsignal während einer Werbeunterbrechung in einem Live-Stream.
+1. Abonnieren Sie die Anzeigenmarkierungen ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN`, und `#EXT-X-CUE`).
 
-1. Abonnieren Sie die Splice-out-/In-Anzeigenmarken ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` und `#EXT-X-CUE`).
-
-   Weitere Informationen zum Austeilen/Einteilen von Anzeigenmarken finden Sie unter [Gelegenheitsgeneratoren und Inhaltsauflöser](../../../tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-about.md).
-1. Verwenden Sie ein benutzerdefiniertes `ContentFactory`.
-1. Verwenden Sie in `retrieveGenerators()` die `SpliceInPlacementOpportunityGenerator`-Variable.
+   Weitere Informationen zum Aufteilen von Anzeigen/Markierungen finden Sie unter [Opportunity-Generatoren und Content-Resolver](../../../tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-about.md).
+1. Verwenden eines benutzerdefinierten `ContentFactory`.
+1. In `retrieveGenerators()`, verwenden Sie die `SpliceInPlacementOpportunityGenerator`.
 
    Beispiel:
 
@@ -32,9 +30,9 @@ Beispielsweise ist die Dauer der Werbeunterbrechung in bestimmten Sportartikeln 
    }
    ```
 
-   Weitere Informationen zur Verwendung eines benutzerdefinierten `ContentFactory` finden Sie in Schritt 1 unter [Implementieren eines benutzerdefinierten Opportunitätsdetektors](../../../tvsdk-1.4-for-android/content-resolver/android-1.4-opp-detector-impl.md) .
+   Weitere Informationen zur Verwendung eines benutzerdefinierten `ContentFactory`Siehe Schritt 1 unter [Implementieren eines benutzerdefinierten Opportunity-Detektors](../../../tvsdk-1.4-for-android/content-resolver/android-1.4-opp-detector-impl.md) .
 
-1. Implementieren Sie für dasselbe benutzerdefinierte `ContentFactory` `retrieveResolvers` und fügen Sie `AuditudeResolver` und `SpliceInCustomResolver` ein.
+1. Im selben benutzerdefinierten `ContentFactory`, implementieren `retrieveResolvers` und einschließen `AuditudeResolver` und `SpliceInCustomResolver`.
 
    Beispiel:
 
@@ -44,4 +42,3 @@ Beispielsweise ist die Dauer der Werbeunterbrechung in bestimmten Sportartikeln 
    contentResolvers.add(new SpliceInCustomResolver()); 
    return contentResolvers;
    ```
-

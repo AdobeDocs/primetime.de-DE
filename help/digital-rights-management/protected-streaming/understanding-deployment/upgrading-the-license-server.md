@@ -1,18 +1,16 @@
 ---
-title: Adobe Primetime DRM-Server für geschütztes Streaming aktualisieren
-description: Adobe Primetime DRM-Server für geschütztes Streaming aktualisieren
+title: Aktualisieren des Adobe Primetime DRM-Servers für geschütztes Streaming
+description: Aktualisieren des Adobe Primetime DRM-Servers für geschütztes Streaming
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
+# Aktualisieren des Adobe Primetime DRM-Servers für geschütztes Streaming{#upgrading-the-adobe-primetime-drm-server-for-protected-streaming}
 
-# Adobe Primetime DRM-Server für geschütztes Streaming aktualisieren{#upgrading-the-adobe-primetime-drm-server-for-protected-streaming}
+Wenn Sie einen Server aktualisieren möchten, auf dem der Primetime-DRM-Server für geschütztes Streaming ausgeführt wird, müssen Sie die Variable `flashaccessserver.war` -Datei, die auf Ihrem Anwendungsserver mit der Datei bereitgestellt wurde, die mit dem neuesten Primetime-DRM bereitgestellt wurde.
 
-Wenn Sie einen Server aktualisieren möchten, auf dem Primetime DRM Server für geschütztes Streaming ausgeführt wird, müssen Sie die `flashaccessserver.war`-Datei, die auf Ihrem Anwendungsserver bereitgestellt wurde, durch die Datei ersetzen, die im neuesten Primetime DRM enthalten ist.
-
-Wenn Sie die neuen Konfigurationsoptionen verwenden möchten, müssen Sie die `flashaccess-tenant.xml` Ihres Servers aktualisieren. Sie müssen auch [!DNL jsafe.dll] oder [!DNL libjsafe.so] mit der Version aktualisieren, die in der neuesten Primetime DRM enthalten ist.
+Wenn Sie die neuen Konfigurationsoptionen verwenden möchten, müssen Sie die `flashaccess-tenant.xml`. Außerdem müssen Sie [!DNL jsafe.dll] oder [!DNL libjsafe.so] mit der Version, die mit dem neuesten Primetime DRM integriert wurde.

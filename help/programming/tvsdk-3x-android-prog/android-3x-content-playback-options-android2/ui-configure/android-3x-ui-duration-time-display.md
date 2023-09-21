@@ -1,8 +1,7 @@
 ---
 description: Sie können TVSDK verwenden, um Informationen über die Position des Players in den Medien abzurufen und in der Suchleiste anzuzeigen.
 title: Dauer, aktuelle Zeit und verbleibende Zeit des Videos anzeigen
-exl-id: 68501c81-346a-4c3e-aa20-a98b8b1c6b17
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%
@@ -23,18 +22,18 @@ Sie können TVSDK verwenden, um Informationen über die Position des Players in 
    ```
 
 1. Rufen Sie den Wiedergabebereich des Streams ab und bestimmen Sie die Dauer.
-   1. Verwenden Sie die `MediaPlayer.getPlaybackRange` -Methode, um den virtuellen Zeitbereich der Zeitleiste abzurufen.
+   1. Verwenden Sie die `MediaPlayer.getPlaybackRange` Methode zum Abrufen des virtuellen Zeitbereichs der Zeitleiste.
 
       ```java
       TimeRange getPlaybackRange() throws MediaPlayerException;
       ```
 
-   1. Verwenden Sie die `MediaPlayer.getPlaybackRange` -Methode, um den virtuellen Zeitbereich der Zeitleiste abzurufen.
+   1. Verwenden Sie die `MediaPlayer.getPlaybackRange` Methode zum Abrufen des virtuellen Zeitbereichs der Zeitleiste.
 
       * Bei VOD beginnt der Bereich immer mit null und der Endwert entspricht der Summe der Dauer des Hauptinhalts und der Dauer des zusätzlichen Inhalts im Stream (Anzeigen).
       * Bei einem linearen/Live-Asset stellt der Bereich den Bereich des Wiedergabefensters dar. Dieser Bereich ändert sich während der Wiedergabe.
 
-         TVSDK ruft die `ITEM_Updated` Callback , um anzugeben, dass das Medienelement aktualisiert wurde und seine Attribute, einschließlich des Wiedergabebereichs, aktualisiert wurden.
+        TVSDK ruft die `ITEM_Updated` Callback , um anzugeben, dass das Medienelement aktualisiert wurde und seine Attribute, einschließlich des Wiedergabebereichs, aktualisiert wurden.
 
 1. Verwenden Sie die Methoden, die unter `MediaPlayer` und auf `SeekBar` -Klasse im Android-SDK verwenden, um die Suchleistenparameter einzurichten.
 

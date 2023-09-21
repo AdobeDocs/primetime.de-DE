@@ -2,17 +2,15 @@
 title: Client-Integration
 description: Client-Integration
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 0%
 
 ---
 
-
 # Client-Integration{#client-integration}
 
-Um den Client in eine Individualisierung an den On Premises Individualization Server (im Gegensatz zu der Adobe Hosted Global Individualization Server) zu leiten, sollte der Client die zuvor erstellten DRM-Metadaten &quot;On Premises&quot;verwenden. Wenn ein nicht individualisierter Client eine Lizenzerfassung oder Initialisierung von DRM mithilfe der speziellen Metadaten durchführt, führt dies dazu, dass der Client eine Verbindung zur benutzerdefinierten Individualisierungsserver-URL herstellt.
+Um den Client zur Individualisierung an den On-Premises-Individualisierungsserver (im Gegensatz zum Adobe gehosteten globalen Individualisierungsserver) zu leiten, sollte der Client die zuvor erstellten DRM-Metadaten für Premises verwenden. Wenn ein nicht individualisierter Client eine Lizenzakquise durchführt oder DRM mithilfe der speziellen Metadaten initialisiert, führt dies dazu, dass der Client eine Verbindung zur benutzerdefinierten URL des Individualization Server herstellt.
 
-Im Ordner [!DNL client_sample] ist ein Codebeispiel enthalten.
+Ein Codebeispiel ist im [!DNL client_sample] Ordner.

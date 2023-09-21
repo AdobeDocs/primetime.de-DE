@@ -1,23 +1,21 @@
 ---
-title: Spezialanwendungsfälle
-description: Spezialanwendungsfälle
+title: Besondere Anwendungsfälle
+description: Besondere Anwendungsfälle
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
+# Besondere Anwendungsfälle{#special-use-cases}
 
-# Sonderverwendungsfälle{#special-use-cases}
-
-TVSDK bevorzugt benutzerdefinierte Bereichseinstellungen im Vergleich zu standardmäßigen Anzeigeneinstellungen. Wenn beispielsweise MARK-Bereiche definiert sind, werden die Einfügeeinstellungen der Anzeige ignoriert. Wenn REPLACE-Bereiche definiert sind, verwendet TVSDK automatisch den Signalisierungsmodus `CustomRanges`.
+TVSDK bevorzugt benutzerdefinierte Bereichseinstellungen gegenüber den Standardanzeigeneinstellungen. Wenn beispielsweise MARK-Bereiche definiert sind, werden die Einfügeeinstellungen der Anzeige ignoriert. Wenn Ersatzbereiche definiert sind, verwendet TVSDK automatisch die `CustomRanges` Signalmodus.
 
 1. `ReplaceRange` ohne Ersatzdauer
 
-   Wenn die Ersatzdauer fehlt, wird die tatsächliche Austauschdauer vom Server bestimmt. Die Anzahl der in diesem `AdBreak` platzierten Anzeigen wird auch vom Server bestimmt.
+   Wenn die Ersatzdauer fehlt, wird die tatsächliche Ersatzdauer vom Server bestimmt. Die Anzahl der hier platzierten Anzeigen `AdBreak` wird auch vom Server bestimmt.
 
    ```
    {
@@ -61,6 +59,6 @@ TVSDK bevorzugt benutzerdefinierte Bereichseinstellungen im Vergleich zu standar
    }
    ```
 
-1. MARK- und DELETE-Bereiche mit Austauschdauer
+1. MARK- und DELETE-Bereiche mit Ersatzdauer
 
-   Die zusätzliche Ersetzungsdauer wird ignoriert.
+   Die zusätzliche Ersatzdauer wird ignoriert.

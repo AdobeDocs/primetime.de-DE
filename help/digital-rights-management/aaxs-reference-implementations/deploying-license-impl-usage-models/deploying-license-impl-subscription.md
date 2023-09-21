@@ -2,15 +2,13 @@
 title: Abonnement
 description: Abonnement
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
-
 # Abonnement {#subscription}
 
-Einige Dienste bieten kostenpflichtige Abonnement, die Benutzern unbegrenzten Zugriff auf eine umfangreiche Inhaltsbibliothek gewähren, solange sie weiterhin die Monatsgebühren zahlen. Der Lizenzserver stellt für jeden Inhaltsabschnitt eine eindeutige Lizenz aus und stellt auch eine Stammlizenz aus, deren Ablauf mit dem Abonnement zusammenfällt. Wenn der Benutzer monatlich sein Abonnement verlängert, kann auch die Root-Lizenz erneuert werden. Beim Anfordern einer Lizenz muss sich der Benutzer authentifizieren, damit der Server überprüfen kann, ob das Abonnement des Benutzers auf dem neuesten Stand ist.
+Einige Dienste bieten bezahlte Abonnements an, die den Nutzern unbegrenzten Zugriff auf eine große Inhaltsbibliothek bieten, solange sie weiterhin die monatlichen Gebühren zahlen. Der Lizenzserver erteilt für jeden Inhalt eine eindeutige Lizenz und erteilt außerdem eine Stammlizenz, deren Ablauf mit der Abonnementdauer übereinstimmt. Wenn der Benutzer seinen Abonnement monatlich erneuert, kann auch die Root-Lizenz erneuert werden. Bei Lizenzanfragen muss sich der Benutzer authentifizieren, damit der Server überprüfen kann, ob das Abonnement des Benutzers aktuell ist.

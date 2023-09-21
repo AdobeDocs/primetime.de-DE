@@ -1,18 +1,16 @@
 ---
-description: Wenn Sie die Standardkonfiguration verwenden, müssen Sie nichts weiter tun, um die Rechnungsstellung zu aktivieren oder zu konfigurieren. Wenn Sie von Ihrem Kundenbetreuer für die Aktivierung der Adobe unterschiedliche Konfigurationsparameter erhalten haben, verwenden Sie die BillingMetricsConfiguration-Klasse, um diese Parameter vor dem Initialisieren des Medienplayers festzulegen.
+description: Wenn Sie die Standardkonfiguration verwenden, müssen Sie nichts anderes tun, um die Rechnungsstellung zu aktivieren oder zu konfigurieren. Wenn Sie von Ihrem Adobe-Aktivierungsbeauftragten verschiedene Konfigurationsparameter erhalten haben, verwenden Sie die BillingMetricsConfiguration -Klasse, um diese Parameter einzurichten, bevor Sie den Medienplayer initialisieren.
 title: Rechnungsmetriken konfigurieren
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
+# Rechnungsmetriken konfigurieren {#configure-billing-metrics}
 
-# Rechnungsmetriken {#configure-billing-metrics} konfigurieren
-
-Wenn Sie die Standardkonfiguration verwenden, müssen Sie nichts weiter tun, um die Rechnungsstellung zu aktivieren oder zu konfigurieren. Wenn Sie von Ihrem Kundenbetreuer für die Aktivierung der Adobe unterschiedliche Konfigurationsparameter erhalten haben, verwenden Sie die BillingMetricsConfiguration-Klasse, um diese Parameter vor dem Initialisieren des Medienplayers festzulegen.
+Wenn Sie die Standardkonfiguration verwenden, müssen Sie nichts anderes tun, um die Rechnungsstellung zu aktivieren oder zu konfigurieren. Wenn Sie von Ihrem Adobe-Aktivierungsbeauftragten verschiedene Konfigurationsparameter erhalten haben, verwenden Sie die BillingMetricsConfiguration -Klasse, um diese Parameter einzurichten, bevor Sie den Medienplayer initialisieren.
 
 >[!TIP]
 >
@@ -20,7 +18,7 @@ Wenn Sie die Standardkonfiguration verwenden, müssen Sie nichts weiter tun, um 
 
 >[!IMPORTANT]
 >
->Die von Ihnen festgelegte Konfiguration bleibt während der gesamten Laufzeit des Medienplayers gültig. Nachdem Sie den Medienplayer initialisiert haben, können Sie die Konfiguration nicht mehr ändern.
+>Die von Ihnen festgelegte Konfiguration bleibt für die Lebensdauer des Medienplayers in Kraft. Nachdem Sie den Medienplayer initialisiert haben, können Sie die Konfiguration nicht mehr ändern.
 
 So konfigurieren Sie Rechnungsmetriken:
 
@@ -36,4 +34,3 @@ So konfigurieren Sie Rechnungsmetriken:
    config.setBillingMetricsConfiguration(billingConfig); 
    mediaPlayer.replaceCurrentResource(mediaResource, config);
    ```
-

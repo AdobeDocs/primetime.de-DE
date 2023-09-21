@@ -1,30 +1,27 @@
 ---
-description: Bevor Sie die meisten Browser TVSDK Player-Methoden verwenden können, muss sich der Player in einem gültigen Status befinden.
-title: Warten auf gültigen Status
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Bevor Sie die meisten Browser TVSDK-Player-Methoden verwenden können, muss der Player einen gültigen Status aufweisen.
+title: Auf gültigen Status warten
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
+# Auf gültigen Status warten {#wait-for-a-valid-state}
 
-# Warten Sie auf einen gültigen Status {#wait-for-a-valid-state}
+Bevor Sie die meisten Browser TVSDK-Player-Methoden verwenden können, muss der Player einen gültigen Status aufweisen.
 
-Bevor Sie die meisten Browser TVSDK Player-Methoden verwenden können, muss sich der Player in einem gültigen Status befinden.
+Der Player durchläuft verschiedene Status. Wenn darauf gewartet wird, dass der Player den richtigen Status aufweist, wird sichergestellt, dass die Medienressource erfolgreich geladen wurde. Wenn der Player nicht mindestens den erforderlichen Status aufweist, werden bei vielen Player-Methoden `IllegalStateException`.
 
-Der Spieler durchläuft verschiedene Status. Wenn Sie darauf warten, dass der Player den richtigen Status hat, wird sichergestellt, dass die Medienressource erfolgreich geladen wurde. Wenn sich der Player nicht in mindestens dem erforderlichen Status befindet, geben viele Player-Methoden `IllegalStateException` aus.
-
-Der erforderliche Status wird in der Regel VORBEREITT.
+Der erforderliche Status wird normalerweise VORBEREITT.
 
 1. So bestätigen Sie, dass der Status VORBEREITET ist:
 
-   Wenn der Player initialisiert wird, warten Sie, bis Browser TVSDK das `AdobePSDK.MediaPlayerStatusChangeEvent`-Ereignis mit einem `event.status` von `MediaPlayerStatus.PREPARED` auslöst.
+   Wenn der Player initialisiert wird, warten Sie, bis Browser TVSDK den `AdobePSDK.MediaPlayerStatusChangeEvent` -Ereignis mit einer `event.status` von `MediaPlayerStatus.PREPARED`.
 
-   So prüfen Sie, ob der aktuelle Status des MediaPlayer-Objekts mindestens VORBEREITET ist.
+   So überprüfen Sie, ob der aktuelle Status des MediaPlayer-Objekts mindestens VORBEREITET ist.
 
    ```
    <readonly> status :AdobePSDK.MediaPlayerStatus
    ```
-

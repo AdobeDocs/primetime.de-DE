@@ -1,28 +1,26 @@
 ---
-description: TVSDK stellt Informationen bereit, damit Sie Clickthrough-Anzeigen bearbeiten können. Beim Erstellen der Player-Benutzeroberfläche müssen Sie entscheiden, wie Sie reagieren, wenn ein Benutzer auf eine anklickbare Anzeige klickt.
+description: TVSDK stellt Ihnen Informationen bereit, damit Sie auf Clickthrough-Anzeigen reagieren können. Bei der Erstellung Ihrer Player-Benutzeroberfläche müssen Sie entscheiden, wie Sie reagieren, wenn ein Benutzer auf eine anklickbare Anzeige klickt.
 title: Klickbare Anzeigen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
 
 ---
 
-
 # Klickbare Anzeigen {#clickable-ads}
 
-TVSDK stellt Informationen bereit, damit Sie Clickthrough-Anzeigen bearbeiten können. Beim Erstellen der Player-Benutzeroberfläche müssen Sie entscheiden, wie Sie reagieren, wenn ein Benutzer auf eine anklickbare Anzeige klickt.
+TVSDK stellt Ihnen Informationen bereit, damit Sie auf Clickthrough-Anzeigen reagieren können. Bei der Erstellung Ihrer Player-Benutzeroberfläche müssen Sie entscheiden, wie Sie reagieren, wenn ein Benutzer auf eine anklickbare Anzeige klickt.
 
 Für TVSDK für Flash Runtime können nur lineare Anzeigen angeklickt werden.
 
-## Antworten Sie auf Klicks auf Anzeigen {#respond-to-clicks-on-ads}
+## Antworten auf Klicks auf Anzeigen {#respond-to-clicks-on-ads}
 
-Wenn ein Benutzer auf eine Anzeige oder eine zugehörige Schaltfläche klickt, ist Ihre Anwendung für die Beantwortung verantwortlich. TVSDK liefert Informationen zur Ziel-URL.
+Wenn ein Benutzer auf eine Anzeige oder eine zugehörige Schaltfläche klickt, ist Ihre Anwendung für die Antwort verantwortlich. TVSDK liefert Informationen zur Ziel-URL.
 
-Dieses Beispiel zeigt eine Möglichkeit, Anzeigenklicks zu verwalten.
+In diesem Beispiel wird eine mögliche Methode zur Verwaltung von Anzeigenklicks gezeigt.
 
-1. Bei jeder Wiedergabe einer Anzeige wird eine Schaltfläche über dem Medienplayer angezeigt. Ein Benutzer, der auf die Anzeige klickt, wird zur Anzeigen-URL umgeleitet. Diese Schaltfläche ist Teil von [!DNL ClickableAdsOverlay.xml].
+1. Zeigen Sie bei jeder Wiedergabe einer Anzeige eine Schaltfläche über dem Medienplayer an. Ein Benutzer, der auf die Anzeige klickt, wird zur Anzeigen-URL weitergeleitet. Diese Schaltfläche ist Teil der [!DNL ClickableAdsOverlay.xml].
 
    ```xml
       <?xml version="1.0"?> 
@@ -35,7 +33,7 @@ Dieses Beispiel zeigt eine Möglichkeit, Anzeigenklicks zu verwalten.
    </s:VGroup>
    ```
 
-1. Schließen Sie diese Überlagerung in unser Medienplayer-Beispiel ein, [!DNL psdkdemo.xml].
+1. Fügen Sie diese Überlagerung in unser Beispiel für den Medienplayer ein. [!DNL psdkdemo.xml].
 
    ```xml
       <psdk:ClickableAdsOverlay id="clickableAdsOverlay"  
@@ -45,7 +43,7 @@ Dieses Beispiel zeigt eine Möglichkeit, Anzeigenklicks zu verwalten.
    </psdk:ClickableAdsOverlay
    ```
 
-1. Um die Ansicht nur bei der Wiedergabe einer Anzeige sichtbar zu machen, suchen Sie nach den von ausgelösten Ereignissen `onAdStart` und `onAdComplete`.
+1. Um die Ansicht nur sichtbar zu machen, wenn eine Anzeige wiedergegeben wird, achten Sie auf die `onAdStart` und `onAdComplete` -Ereignisse, die von gesendet werden.
 
    ```
    _player.addEventListener(AdPlaybackEvent.AD_STARTED, onAdStarted); 
@@ -64,7 +62,7 @@ Dieses Beispiel zeigt eine Möglichkeit, Anzeigenklicks zu verwalten.
    }
    ```
 
-1. Überwachen Sie Benutzerinteraktionen auf klickbaren Anzeigen. Wenn der Benutzer die Anzeige oder Schaltfläche berührt oder klickt, benachrichtigen Sie TVSDK mit `notifyClick`.
+1. Überwachen Sie Benutzerinteraktionen auf anklickbaren Anzeigen. Wenn der Benutzer die Anzeige oder Schaltfläche berührt oder klickt, benachrichtigen Sie TVSDK mit `notifyClick`.
 
    ```
    private function onAdsOverlayClicked():void {     
@@ -72,9 +70,9 @@ Dieses Beispiel zeigt eine Möglichkeit, Anzeigenklicks zu verwalten.
    }
    ```
 
-1. Suchen Sie nach dem Ereignis `AdclickEvent.AD_CLICK`.
+1. Suchen Sie nach `AdclickEvent.AD_CLICK` -Ereignis.
 
-   Bei der Wiedergabe einer Anzeige löst TVSDK das `AdClickEvent.AD_CLICK`-Ereignis aus, aus dem Sie die Clickthrough-URL und zugehörige Informationen abrufen können.
+   Wenn eine Anzeige wiedergegeben wird, sendet TVSDK die `AdClickEvent.AD_CLICK` -Ereignis, aus dem Sie die Clickthrough-URL und die zugehörigen Informationen abrufen können.
 
    ```
       _player.addEventListener(AdClickEvent.AD_CLICK, onAdClick);
@@ -97,9 +95,9 @@ Dieses Beispiel zeigt eine Möglichkeit, Anzeigenklicks zu verwalten.
    
    * Öffnen Sie die Clickthrough-URL in einem Browser in Ihrer Anwendung.
 
-      Auf Desktop-Plattformen wird der Videoanzeigenwiedergabebereich in der Regel zum Aufrufen von Clickthrough-URLs beim Klicken auf den Benutzer verwendet.
-   * Leitet den Benutzer zum externen mobilen Webbrowser um.
+     Auf Desktop-Plattformen wird der Bereich für die Videoanzeige normalerweise zum Aufrufen von Clickthrough-URLs bei Benutzerklicks verwendet.
+   * Leiten Sie den Benutzer zum externen mobilen Webbrowser um.
 
-      Auf Mobilgeräten wird der Bereich für Video- und Wiedergabe für andere Funktionen verwendet, z. B. zum Ausblenden und Anzeigen von Steuerelementen, zum Anhalten der Wiedergabe, zum Erweitern auf den Vollbildmodus usw. Daher wird dem Benutzer auf Mobilgeräten in der Regel eine separate Ansicht, z. B. eine Sponsorschaltfläche, angezeigt, um die Clickthrough-URL zu starten.
+     Auf Mobilgeräten wird der Bereich für die Videoanzeige für andere Funktionen verwendet, z. B. zum Ausblenden und Anzeigen von Steuerelementen, zum Anhalten der Wiedergabe, zum Erweitern auf den Vollbildmodus usw. Daher wird dem Benutzer auf Mobilgeräten in der Regel eine separate Ansicht wie eine Sponsorschaltfläche als Möglichkeit zum Starten der Clickthrough-URL angezeigt.
 
-1. Schließen Sie das Browserfenster, in dem die Clickthrough-Informationen angezeigt werden, und nehmen Sie die Wiedergabe des Videos wieder auf.
+1. Schließen Sie das Browser-Fenster, in dem die Clickthrough-Informationen angezeigt werden, und setzen Sie die Wiedergabe des Videos fort.

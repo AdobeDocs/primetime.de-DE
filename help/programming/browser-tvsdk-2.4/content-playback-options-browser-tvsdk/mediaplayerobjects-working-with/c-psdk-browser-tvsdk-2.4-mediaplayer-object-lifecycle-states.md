@@ -1,73 +1,71 @@
 ---
-description: Diese Instanz wird von dem Zeitpunkt an, zu dem die MediaPlayer-Instanz erstellt wurde, bis zu dem Zeitpunkt, zu dem sie beendet wird, von einem Status zum nächsten Transition.
+description: Vom Zeitpunkt der Erstellung der MediaPlayer-Instanz bis zum Zeitpunkt ihrer Beendigung wird diese Instanz von einem Status zum nächsten übergegangen.
 title: Lebenszyklus und Status des MediaPlayer-Objekts
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
 
 ---
 
-
 # Lebenszyklus und Status des MediaPlayer-Objekts{#life-cycle-and-states-of-the-mediaplayer-object}
 
-Diese Instanz wird von dem Zeitpunkt an, zu dem die MediaPlayer-Instanz erstellt wurde, bis zu dem Zeitpunkt, zu dem sie beendet wird, von einem Status zum nächsten Transition.
+Vom Zeitpunkt der Erstellung der MediaPlayer-Instanz bis zum Zeitpunkt ihrer Beendigung wird diese Instanz von einem Status zum nächsten übergegangen.
 
-Die folgenden Statusangaben sind möglich:
+Folgende Status sind möglich:
 
-* **IDLE**:  `MediaPlayerStatus.IDLE`
+* **IDLE**: `MediaPlayerStatus.IDLE`
 
-* **INITIALISIERUNG**:  `MediaPlayerStatus.INITIALIZING`
+* **INITIALISIERUNG**: `MediaPlayerStatus.INITIALIZING`
 
-* **INITIALISIERT**:  `MediaPlayerStatus.INITIALIZED`
+* **INITIALISIERT**: `MediaPlayerStatus.INITIALIZED`
 
-* **VORBEREITUNG**:  `MediaPlayerStatus.PREPARING`
+* **VORBEREITUNG**: `MediaPlayerStatus.PREPARING`
 
-* **VORBEREITET**:  `MediaPlayerStatus.PREPARED`
+* **VORBEREITET**: `MediaPlayerStatus.PREPARED`
 
-* **ABSPIELEN**:  `MediaPlayerStatus.PLAYING`
+* **PLAYING**: `MediaPlayerStatus.PLAYING`
 
-* **ANGEHALTEN**:  `MediaPlayerStatus.PAUSED`
+* **PAUSED**: `MediaPlayerStatus.PAUSED`
 
-* **SUCHEN**:  `MediaPlayerStatus.SEEKING`
+* **SUCHEN**: `MediaPlayerStatus.SEEKING`
 
-* **ABGESCHLOSSEN**:  `MediaPlayerStatus.COMPLETE`
+* **COMPLETE**: `MediaPlayerStatus.COMPLETE`
 
-* **FEHLER**:  `MediaPlayerStatus.ERROR`
+* **FEHLER**: `MediaPlayerStatus.ERROR`
 
-* **VERÖFFENTLICHT**:  `MediaPlayerStatus.RELEASED`
+* **VERÖFFENTLICHT**: `MediaPlayerStatus.RELEASED`
 
-Die vollständige Liste der Statusangaben ist in `MediaPlayerStatus` definiert.
+Die vollständige Liste der Status wird unter `MediaPlayerStatus`.
 
-Es ist nützlich, den Status des Players zu kennen, da einige Operationen nur zulässig sind, wenn der Player sich in einem bestimmten Status befindet. Beispielsweise kann `play` im IDLE-Status nicht aufgerufen werden. Sie muss aufgerufen werden, nachdem der Status &quot;VORBEREITT&quot;erreicht wurde. Der FEHLER-Status ändert auch, was als Nächstes passieren kann.
+Es ist nützlich, den Status des Players zu kennen, da einige Vorgänge nur zulässig sind, während sich der Player in einem bestimmten Status befindet. Beispiel: `play` kann nicht aufgerufen werden, während sie sich im IDLE-Status befinden. Sie muss aufgerufen werden, nachdem der Status VORBEREITET erreicht wurde. Der FEHLER-Status ändert auch, was als Nächstes passieren kann.
 
-Beim Laden und Abspielen einer Medienressource wird der Player wie folgt Transition:
+Wenn eine Medienressource geladen und wiedergegeben wird, wechselt der Player wie folgt:
 
-1. Der Ausgangszustand ist IDLE.
-1. Ihre Anwendung ruft `MediaPlayer.replaceCurrentResource` auf, wodurch der Player in den INITIALIZING-Status verschoben wird.
-1. Wenn Browser TVSDK die Ressource erfolgreich lädt, ändert sich der Status in INITIALIZED.
-1. Ihre Anwendung ruft `MediaPlayer.prepareToPlay` auf und der Status wechselt zu &quot;VORBEREITEN&quot;.
-1. Browser TVSDK bereitet den Medienstream vor und Beginn die Auflösung und das Einfügen der Anzeige (sofern aktiviert).
+1. Der Anfangsstatus lautet IDLE.
+1. Ihre App-Aufrufe `MediaPlayer.replaceCurrentResource`, wodurch der Player in den Status INITIALISIEREN wechselt.
+1. Wenn Browser TVSDK die Ressource erfolgreich lädt, ändert sich der Status in INITIALISIERT.
+1. Ihre App-Aufrufe `MediaPlayer.prepareToPlay`und der Status in VORBEREITUNG geändert wird.
+1. Browser TVSDK bereitet den Medien-Stream vor und startet die Auflösung der Anzeige und das Einfügen der Anzeige (sofern aktiviert).
 
-   Wenn dieser Schritt abgeschlossen ist, werden Anzeigen in die Zeitleiste eingefügt oder der Anzeigenvorgang ist fehlgeschlagen, und der Player-Status ändert sich in &quot;VORBEREITET&quot;.
+   Wenn dieser Schritt abgeschlossen ist, werden Anzeigen in die Timeline eingefügt oder die Anzeigenverarbeitung ist fehlgeschlagen, und der Player-Status ändert sich in VORBEREITT.
 1. Während Ihre Anwendung die Medien wiedergibt und anhält, wechselt der Status zwischen PLAYING und PAUSED.
 
    >[!TIP]
    >
-   >Wenn Sie während der Wiedergabe oder beim Anhalten der Wiedergabe weg von der Wiedergabe navigieren, das Gerät herunterfahren oder die Anwendung wechseln, wird der Status auf AUSGESETZT geändert und Ressourcen werden freigegeben. Um fortzufahren, stellen Sie den Medienplayer wieder her.
+   >Wenn Sie während der Wiedergabe oder Pause navigieren, das Gerät herunterfahren oder Anwendungen wechseln, ändert sich der Status in AUSGESETZT und die Ressourcen werden freigegeben. Um fortzufahren, stellen Sie den Medienplayer wieder her.
 
 1. Wenn der Player das Ende des Streams erreicht, wird der Status ABGESCHLOSSEN.
-1. Wenn Ihre Anwendung den Medienplayer veröffentlicht, ändert sich der Status in RELEASED.
-1. Tritt während des Prozesses ein Fehler auf, ändert sich der Status in ERROR.
+1. Wenn Ihre Anwendung den Medienplayer veröffentlicht, ändert sich der Status in VERÖFFENTLICHT.
+1. Wenn während des Prozesses ein Fehler auftritt, ändert sich der Status in ERROR.
 
-Hier ist eine Abbildung des Lebenszyklus einer MediaPlayer-Instanz:
+Hier finden Sie eine Abbildung des Lebenszyklus einer MediaPlayer-Instanz:
 
 <!--<a id="fig_DD3DAE7507C549C8A4720A26DFCFFCCB"></a>-->
 
 ![](assets/player-state-transitions-diagram-android_1.2_web.png)
 
-Sie können den Status verwenden, um dem Benutzer Feedback zum Prozess zu geben (z. B. ein Kreisel, während er auf die nächste Statusänderung wartet) oder um die nächsten Schritte beim Abspielen des Mediums zu unternehmen, z. B. auf den entsprechenden Status zu warten, bevor die nächste Methode aufgerufen wird.
+Sie können den Status verwenden, um dem Benutzer Feedback zum Prozess zu geben (z. B. ein Spinner beim Warten auf die nächste Statusänderung) oder die nächsten Schritte beim Abspielen der Medien durchzuführen, z. B. auf den entsprechenden Status zu warten, bevor die nächste Methode aufgerufen wird.
 
 Beispiel:
 
@@ -82,4 +80,3 @@ function onStateChanged(state) {
     } 
 } 
 ```
-

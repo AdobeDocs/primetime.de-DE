@@ -1,19 +1,18 @@
 ---
 title: Proxy-MVPD-SAML-Integration
 description: Proxy-MVPD-SAML-Integration
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 1%
 
 ---
 
-
 # Proxy-MVPD-SAML-Integration
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Übersicht {#overview-proxy-mvpd-saml-int}
 
@@ -25,8 +24,8 @@ Jeder MVPD-Proxy stellt Proxy-Konfigurationsdaten für die proximierten MVPDs f�
 
 | Eigenschaft | Beschreibung |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MVPD ID | Zeichenfolge, die den intern bereitgestellten MVPD für die Adobe Primetime-Authentifizierung darstellt.  Wird von Adobe als eindeutig im Kontext der Adobe Primetime-Authentifizierung bestätigt. |
-| MVPD-Standardlogo-URL | URL zu einem Logo, das in einem MVPD-Selektor-Erlebnis für den Benutzer angezeigt werden kann.  Sollte einen transparenten Hintergrund verwenden. |
+| MVPD ID | Zeichenfolge, die den intern bereitgestellten MVPD für die Adobe Primetime-Authentifizierung darstellt.  Von Adobe als eindeutig im Kontext der Adobe Primetime-Authentifizierung zu bestätigen. |
+| Standard-Logo-URL von MVPD | URL zu einem Logo, das in einem MVPD-Selektor-Erlebnis für den Benutzer angezeigt werden kann.  Sollte einen transparenten Hintergrund verwenden. |
 | MVPD-Anzeigename | Zeichenfolge, die als Text für den Anzeigenamen verwendet wird, der mit dem Logo angezeigt werden könnte, möglicherweise als alternativer Text. |
 
 
@@ -41,7 +40,7 @@ Bei einem integrierten MVPD-Proxy erfolgt die Integration zwischen der Adobe Pri
 
 Damit die Adobe Primetime-Authentifizierung mit einem Proxy-MVPD integriert werden kann, ist Folgendes erforderlich:
 
-* Ein Proxy-MVPD hat eine Liste von proximierten MVPDs bereitgestellt, die an den Adobe Proxy Web Service gesendet werden
+* Ein Proxy-MVPD hat eine Liste von proximierten MVPDs bereitgestellt, die an den Adobe Proxy-Webdienst gesendet werden
 
 * SAML-Metadaten für den übergeordneten MVPD-Proxy
 
@@ -71,7 +70,7 @@ Es gibt eine zusätzliche Scoping-Eigenschaft für RequestorID, die verwendet we
 
 In der SAML-AuthN-Antwort sollte das Proxy-MVPD den Proxied-MVPD als IdP-Entität in den folgenden Eigenschaften angeben:
 
-* SAML-Ausgabe
+* SAML-Aussteller
 * Name Qualifier
 
 
@@ -162,7 +161,7 @@ In der SAML-AuthN-Antwort sollte das Proxy-MVPD den Proxied-MVPD als IdP-Entitä
 </samlp:Response>
 ```
 
-### Genehmigung {#authz-proxy-mvpd-saml-int}
+### Autorisierung {#authz-proxy-mvpd-saml-int}
 
 Für den Autorisierungsteil müsste der MVPD die vom Programmierer angegebene Ressource zur Autorisierung akzeptieren.  In den meisten Fällen ist dies eine Zeichenfolgenkennung für das Kanalnetzwerk, z. B. TBS oder TNT.
 

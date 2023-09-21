@@ -1,25 +1,23 @@
 ---
-title: Sicheres Laden der Anzeige über HTTPS
-description: Sicheres Laden der Anzeige über HTTPS
+title: Sicheres Laden von Anzeigen über HTTPS
+description: Sicheres Laden von Anzeigen über HTTPS
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 0%
 
 ---
 
+# Sicheres Laden von Anzeigen über HTTPS{#secure-ad-loading-over-https}
 
-# Secure Ad Loading over HTTPS{#secure-ad-loading-over-https}
-
-Adobe Primetime kann Anzeigen-Server von Drittanbietern über HTTPS anfordern, auch wenn der Player auf HTTP gehostet wird. Nur diese Ad-Server-Aufrufe werden auf HTTPS aktualisiert, die der Client während der Auditude Ad-Resolver-Phase durchsucht.
+Adobe Primetime kann Werbeserver von Drittanbietern über HTTPS anfordern, selbst wenn der Player auf HTTP gehostet wird. Nur diese Ad-Server-Aufrufe werden auf HTTPS aktualisiert, das der Client während der Auditude Ad Resolver-Phase durchsucht.
 
 >[!NOTE]
 >
 >Diese Funktion wird für Flash nicht unterstützt.
 
-Verwenden Sie Folgendes, um sicheres Laden der Anzeige zu aktivieren. Es ist nicht standardmäßig aktiviert.
+Verwenden Sie Folgendes, um sicheres Laden von Anzeigen zu aktivieren. Sie ist standardmäßig nicht aktiviert.
 
 ```
 var auditudeSettings = new AdobePSDK.AuditudeSettings(); 

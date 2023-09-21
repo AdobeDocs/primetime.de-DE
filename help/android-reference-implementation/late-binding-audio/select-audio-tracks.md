@@ -1,27 +1,25 @@
 ---
-title: Audiospuren auswählen
-description: Audiospuren auswählen
+title: Auswählen der Audiospuren
+description: Auswählen der Audiospuren
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
 
 ---
 
+# Auswählen der Audiospuren{#select-the-audio-tracks}
 
-# Wählen Sie die Audiospuren{#select-the-audio-tracks}
+Implementieren Sie zum Auswählen von Audiospuren für spät bindende Audiodateien [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html).
 
-Implementieren Sie [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html), um Audiospuren für späte Bindungen auszuwählen.
-
-| An... | Aufruf... |
+| Bis... | Rufen Sie ... |
 |---|---|
 | Liste der verfügbaren AA-Tracks abrufen | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
 | Aktuell ausgewählten Track abrufen | [getSelectedAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getSelectedAudioTrack()) |
-| Eine AA-Spur auswählen | [selectAlternateAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#selectAlternateAudioTrack(int)) |
+| AA-Tracking auswählen | [selectAlternateAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#selectAlternateAudioTrack(int)) |
 
-Das folgende Codebeispiel veranschaulicht, wie die Referenzimplementierung die Audiospuren aus dem TVSDK abruft und dem zugehörigen Medienelement die ausgewählte Spur zuweist:
+Das folgende Codebeispiel veranschaulicht, wie die Referenzimplementierung die Audiospuren aus dem TVSDK abruft und den ausgewählten Track dem zugehörigen Medienelement zuweist:
 
 ```java
 /** 

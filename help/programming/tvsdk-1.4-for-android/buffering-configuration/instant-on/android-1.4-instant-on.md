@@ -1,37 +1,35 @@
 ---
-description: Der Begriff "Sofort-Ein"bezieht sich auf das Vorausladen eines oder mehrerer Kanal, sodass ein Benutzer, der einen Kanal auswählt oder Kanal wechselt, sofort die Inhaltswiedergabe sieht. Die Pufferung erfolgt bereits, wenn der Beginn sie ansieht.
-title: Sofort ein
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Der Begriff "Instant on"bezieht sich auf das Vorausfüllen eines oder mehrerer Kanäle, sodass Benutzer, die einen Kanal auswählen oder Kanäle wechseln, sofort Inhalte wiedergeben können. Die Pufferung ist bereits zu dem Zeitpunkt abgeschlossen, zu dem der Benutzer die Wiedergabe startet.
+title: Sofort aktiviert
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
 
 ---
 
+# Sofort aktiviert {#instant-on}
 
-# Instant on {#instant-on}
+Der Begriff &quot;Instant on&quot;bezieht sich auf das Vorausfüllen eines oder mehrerer Kanäle, sodass Benutzer, die einen Kanal auswählen oder Kanäle wechseln, sofort Inhalte wiedergeben können. Die Pufferung ist bereits zu dem Zeitpunkt abgeschlossen, zu dem der Benutzer die Wiedergabe startet.
 
-Der Begriff &quot;Sofort-Ein&quot;bezieht sich auf das Vorausladen eines oder mehrerer Kanal, sodass ein Benutzer, der einen Kanal auswählt oder Kanal wechselt, sofort die Inhaltswiedergabe sieht. Die Pufferung erfolgt bereits, wenn der Beginn sie ansieht.
+TVSDK initialisiert ohne sofortigen Start die abzuspielenden Medien, startet jedoch nicht die Pufferung des Streams, bis die Anwendung aufruft `play`. Der Benutzer sieht keinen Inhalt, bis die Pufferung abgeschlossen ist. Mit sofortiger Wirkung können Sie mehrere Instanzen des Medienplayers (oder des Medienplayer-Element-Laders) starten, und TVSDK startet sofort die Pufferung der Streams.
 
-TVSDK initialisiert ohne sofortige Aktivierung die wiederzugebenden Medien, jedoch nicht die Pufferung des Streams, bis die Anwendung `play` aufruft. Dem Benutzer werden erst dann Inhalte angezeigt, wenn die Pufferung abgeschlossen ist. Mit dem sofortigen Start können Sie mehrere Instanzen des Medienplayers (oder des Medienplayer-Elementladers) starten, und TVSDK-Beginn können die Streams sofort zwischenspeichern.
+Wenn ein Benutzer den Kanal ändert und der Stream ordnungsgemäß gepuffert wurde, wird `play` im neuen Kanal wird die Wiedergabe sofort gestartet.
 
-Wenn ein Benutzer den Kanal ändert und der Stream ordnungsgemäß gepuffert wurde, wird `play` auf den neuen Kanal-Beginn sofort wiedergegeben.
-
-Obwohl die Anzahl der `MediaPlayer`-Instanzen, die TVSDK ausführen kann, nicht begrenzt ist, verbraucht das Ausführen von mehr Instanzen mehr Ressourcen. Die Anwendungsleistung kann durch die Anzahl der ausgeführten Instanzen beeinträchtigt werden. Weitere Informationen zu diesen Instanzen finden Sie unter [Medienressource mit MediaPlayerItemLoader](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md) laden.
+Die Anzahl der `MediaPlayer` -Instanzen, die TVSDK ausführen kann, wodurch mehr Instanzen ausgeführt werden, mehr Ressourcen verbrauchen. Die Anwendungsleistung kann von der Anzahl der ausgeführten Instanzen beeinflusst werden. Weitere Informationen zu diesen Instanzen finden Sie unter [Laden einer Medienressource mit MediaPlayerItemLoader](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md).
 
 ## Pufferung für sofortige Wiedergabe konfigurieren {#configure-buffering-for-instant-on-playback}
 
-Bei sofortigem Einschalten können Benutzer die Kanal und die Wiedergabe-Beginn sofort ohne Wartezeit wechseln. Wenn Sie &quot;Sofort aktivieren&quot;aktivieren, puffert TVSDK einen oder mehrere Kanal, bevor die Wiedergabe beginnt.
+Mit sofortigem Einschalten können Benutzer die Kanäle wechseln und die Wiedergabe wird sofort ohne Wartezeit gestartet. Wenn Sie Sofort aktiviert haben, puffert TVSDK mindestens einen Kanal, bevor die Wiedergabe beginnt.
 
 1. Vergewissern Sie sich, dass die Ressource geladen wurde und wiedergegeben werden kann, indem Sie überprüfen, ob der Status VORBEREITET ist.
-1. Rufen Sie vor dem Aufruf von `play` für jede `MediaPlayer`-Instanz `prepareBuffer` auf.
+1. Vor dem Aufruf `play`, Aufruf `prepareBuffer` für jeden `MediaPlayer` -Instanz.
 
-   Dies ermöglicht sofortiges Ein, was bedeutet, dass TVSDK-Beginn Pufferung ohne tatsächliche Wiedergabe der Medienressource durchführen. TVSDK löst das `BUFFERING_COMPLETED`-Ereignis aus, wenn der Puffer voll ist.
+   Dies ermöglicht den sofortigen Start, was bedeutet, dass TVSDK mit der Pufferung beginnt, ohne die Medienressource tatsächlich wiederzugeben. TVSDK sendet die `BUFFERING_COMPLETED` -Ereignis, wenn der Puffer voll ist.
 
    >[!NOTE]
    >
-   >Standardmäßig richten `prepareBuffer` und `prepareToPlay` den Medienstream auf Beginn ein, der von Anfang an abgespielt wird. Übergeben Sie die Position (in Millisekunden) an `prepareToPlay`, um einen Beginn an einer anderen Position durchzuführen.
+   >Standardmäßig ist `prepareBuffer` und `prepareToPlay` Richten Sie den Medien-Stream so ein, dass die Wiedergabe von Anfang an beginnt. Um an einer anderen Position zu beginnen, übergeben Sie die Position (in Millisekunden) an `prepareToPlay`.
 
    ```java
    @Override 
@@ -54,9 +52,9 @@ Bei sofortigem Einschalten können Benutzer die Kanal und die Wiedergabe-Beginn 
    }
    ```
 
-1. Wenn Sie das `BUFFERING_COMPLETE`-Ereignis erhalten, geben Sie beim Abspielen des Elements oder durch visuelles Feedback an, dass der Inhalt vollständig gepuffert ist.
+1. Wenn Sie die `BUFFERING_COMPLETE` -Ereignis, starten Sie die Wiedergabe des Elements oder zeigen Sie visuelles Feedback an, um anzuzeigen, dass der Inhalt vollständig gepuffert ist.
 
-   Wenn Sie `play` aufrufen, sollte die Wiedergabe sofort beginnen.
+   Wenn Sie `play`, sollte die Wiedergabe sofort beginnen.
 
    ```java
    void onBufferPrepared(const psdk::PSDKEvent *ev) { 

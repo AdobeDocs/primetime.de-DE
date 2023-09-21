@@ -1,20 +1,18 @@
 ---
-description: Sie können die aktuelle und die restliche Zeit des Inhalts anzeigen, der wiedergegeben wird.
-title: Aktuelle Zeit und Restzeit anzeigen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können die aktuelle und die verbleibende Zeit des Inhalts anzeigen, der wiedergegeben wird.
+title: Aktuelle Zeit und verbleibende Zeit anzeigen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%
 
 ---
 
+# Aktuelle Zeit und verbleibende Zeit anzeigen {#display-the-current-time-and-remaining-time}
 
-# Aktuelle Zeit und verbleibende Zeit {#display-the-current-time-and-remaining-time} anzeigen
+Sie können die aktuelle und die verbleibende Zeit des Inhalts anzeigen, der wiedergegeben wird.
 
-Sie können die aktuelle und die restliche Zeit des Inhalts anzeigen, der wiedergegeben wird.
-
-1. Verwenden Sie den folgenden Beispielcode, um eine Anzeige zu implementieren, die die aktuelle und verbleibende Zeit des aktiven Inhalts anzeigt:
+1. Verwenden Sie den folgenden Beispielcode, um eine Anzeige zu implementieren, die die aktuelle und die verbleibende Zeit des aktiven Inhalts anzeigt:
 
    ```
    // 1. Register for the PTMediaPlayerTimeChangeNotification 
@@ -102,4 +100,3 @@ Sie können die aktuelle und die restliche Zeit des Inhalts anzeigen, der wieder
    ```
 
 <!--<a id="example_D2FC658F27FC42A0B3E1AEC99B36788B"></a>-->
-

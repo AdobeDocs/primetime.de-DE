@@ -1,51 +1,49 @@
 ---
-description: Einige Anzeigen (oder kreative Elemente) von Drittanbietern können nicht in den HTTP Live Streaming (HLS)-Inhaltsstream eingefügt werden, da ihr Videoformat mit HLS nicht kompatibel ist. Primetime-Anzeigen und TVSDK können optional versuchen, inkompatible Anzeigen in kompatible M3U8-Videos zu verpacken.
-title: Verpacken Sie inkompatible Anzeigen mit dem Adobe Creative Repackage Service neu.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Einige Drittanbieter-Anzeigen (oder Kreative) können nicht in den HTTP Live Streaming (HLS)-Inhaltsstream eingebunden werden, da ihr Videoformat mit HLS inkompatibel ist. Primetime-Anzeigeneinfügung und TVSDK können optional versuchen, inkompatible Anzeigen in kompatible M3U8-Videos zu verpacken.
+title: Komprimieren inkompatibler Anzeigen mit dem Adobe Creative Repackaging Service neu
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
+# Komprimieren inkompatibler Anzeigen mit dem Adobe Creative Repackaging Service neu{#repackage-incompatible-ads-using-adobe-creative-repackaging-service}
 
-# Komprimieren Sie inkompatible Anzeigen mit dem Adobe Creative Repackage Service{#repackage-incompatible-ads-using-adobe-creative-repackaging-service}.
+Einige Drittanbieter-Anzeigen (oder Kreative) können nicht in den HTTP Live Streaming (HLS)-Inhaltsstream eingebunden werden, da ihr Videoformat mit HLS inkompatibel ist. Primetime-Anzeigeneinfügung und TVSDK können optional versuchen, inkompatible Anzeigen in kompatible M3U8-Videos zu verpacken.
 
-Einige Anzeigen (oder kreative Elemente) von Drittanbietern können nicht in den HTTP Live Streaming (HLS)-Inhaltsstream eingefügt werden, da ihr Videoformat mit HLS nicht kompatibel ist. Primetime-Anzeigen und TVSDK können optional versuchen, inkompatible Anzeigen in kompatible M3U8-Videos zu verpacken.
+Anzeigen, die von verschiedenen Drittanbietern bereitgestellt werden, z. B. von einer Agentur und einem Server, Ihrem Inventarpartner oder einem Werbenetzwerk, werden häufig in inkompatiblen Formaten wie progressiv herunterladbarem MP4 bereitgestellt.
 
-Anzeigen, die von verschiedenen Drittanbietern bereitgestellt werden, z. B. von einer Agentur und einem Server, Ihrem Bestandspartner oder einem Werbenetzwerk, werden häufig in inkompatiblen Formaten wie dem progressiven Download von MP4 bereitgestellt.
+Wenn TVSDK erstmals auf eine inkompatible Anzeige trifft, ignoriert der Player die Anzeige und sendet eine Anfrage an den CRS (Creative Repackaging Service), der Teil des Primetime-Anzeigeneinfüge-Backend ist, um die Anzeige in ein kompatibles Format zu verpacken. CRS versucht, M3U8-Ausgabeformate mit mehreren Bit zu generieren und speichert diese Ausgabeformate im Primetime Content Delivery Network (CDN). Wenn TVSDK das nächste Mal eine Anzeigenantwort erhält, die auf diese Anzeige verweist, verwendet der Player die HLS-kompatible M3U8-Version aus dem CDN.
 
-Wenn TVSDK zum ersten Mal auf eine inkompatible Anzeige stößt, ignoriert der Player die Anzeige und sendet eine Anforderung an den Kreativ-Umverpackungsdienst (CRS), der Teil des Primetime-Anzeigenende ist, um die Anzeige in ein kompatibles Format zu verpacken. CRS versucht, M3U8-Darstellungen der Anzeige mit mehreren Bitraten zu generieren, und speichert diese Darstellungen im Primetime Content Versand Network (CDN). Wenn TVSDK das nächste Mal eine Anzeigenantwort erhält, die auf diese Anzeige verweist, verwendet der Player die HLS-kompatible M3U8-Version vom CDN.
-
-Wenden Sie sich an Ihren Kundenbetreuer, um diese optionale Funktion zu aktivieren.
+Wenden Sie sich zur Aktivierung dieser optionalen Funktion an Ihren Adobe-Support-Mitarbeiter.
 
 Weitere Informationen zu CRS finden Sie unter [Creative Packaging Service (CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/guides/crs.pdf).
 
-## Mehrere CDN-Unterstützung für CRS und Versand {#section_900FDDA5454143718F1EB4C9732C8E1C}
+## Mehrere CDN-Unterstützung für CRS-Anzeigenbereitstellung {#section_900FDDA5454143718F1EB4C9732C8E1C}
 
-Während das Standard-Szenario für den Creative Repackage Service (CRS) darin besteht, ein Content Data Network (CDN) zu verwenden, können Sie CRS-Elemente auf mehr als einem CDN bereitstellen.
+Während das Standardszenario Creative Repackaging Service (CRS) darin besteht, ein Content Data Network (CDN) zu verwenden, können Sie CRS-Assets für mehr als ein CDN bereitstellen.
 
 Sie können aus den folgenden Gründen mehrere CDNs verwenden:
 
-* Eine Anforderung zum Vergrößern für große Ereignis.
+* Eine Anforderung zum Skalieren für große Anzeigeereignisse.
 * Eine Anforderung, die CDN-Quelle des CRS-Assets mit der CDN-Quelle des Hauptinhalts abzugleichen.
 
-Sie können die Standard-URL, die vom CRS bereitgestellt wird, mithilfe der TVSDK URL Transformer-APIs transformieren.
+Sie können die Standard-URL, die von CRS bereitgestellt wird, mithilfe der TVSDK URL Transformer-APIs transformieren.
 
-Im Folgenden finden Sie die API-Ergänzungen in TVSDK:
+Hier finden Sie die API-Ergänzungen in TVSDK:
 
-* `PTURLTransformer` Ein Protokoll, das die Methoden beschreibt, die zum Transformieren der CRS- und URLs erforderlich sind, die von TVSDK angefordert werden. Anwendungen können dieses Protokoll implementieren und Implementierungen für die erforderlichen Methoden bereitstellen.
+* `PTURLTransformer` Ein Protokoll, das die Methoden beschreibt, die zum Transformieren der von TVSDK angeforderten CRS-Anzeigen-URLs erforderlich sind. Anwendungen können dieses Protokoll implementieren und Implementierungen für die erforderlichen Methoden bereitstellen.
 
-* `PTDefaultURLTransformer` Die Standard-URL-Transformer-Instanz, die in TVSDK erstellt wird und das  `PTURLTransformer` Protokoll implementiert. Anwendungen können diese Klasse überschreiben oder einen Post-URL-Konvertierungs-Handler hinzufügen. Dieser Handler ist nützlich, wenn die Anwendung Änderungen an der URL-Anforderung vornehmen möchte, nachdem die Standardtransformation angewendet wurde.
+* `PTDefaultURLTransformer` Die Standard-URL-Transformatorinstanz, die in TVSDK erstellt wird und die die `PTURLTransformer` Protokoll. Anwendungen können diese Klasse überschreiben oder einen Post-URL-Transformations-Handler hinzufügen. Dieser Handler ist nützlich, wenn die Anwendung Änderungen an der URL-Anforderung vornehmen möchte, nachdem die Standardumwandlung vorgenommen wurde.
 
-* `PTNetworkConfiguration setURLTransformer:defaultTransformer` Eine Setter-Methode, die für die  `PTNetworkConfiguration` Metadateninstanz bereitgestellt wird, um die  `PTURLTransformer` Implementierung festzulegen.
+* `PTNetworkConfiguration setURLTransformer:defaultTransformer` Eine Setter-Methode, die für die `PTNetworkConfiguration` Metadateninstanz zum Festlegen der `PTURLTransformer` Implementierung.
 
 >[!IMPORTANT]
 >
->Ihre App-Implementierungen müssen nach der `PTURLTransformerInputType`-Auflistung suchen und nur URLs vom Typ `PTURLTransformerInputTypeCRSCreative` für CRS transformieren.
+>Ihre App-Implementierungen müssen nach der `PTURLTransformerInputType` Auflistung und nur Umwandlung von URLs des Typs `PTURLTransformerInputTypeCRSCreative` für CRS.
 
-Das folgende Codebeispiel zeigt, wie Ihre Anwendung die Standard-Hostkomponente in eine andere Zeichenfolge ändern kann (z. B. `cdn.mycrsdomain.com`):
+Das folgende Codebeispiel zeigt, wie Ihre Anwendung die standardmäßige Hostkomponente in eine andere Zeichenfolge ändern kann (z. B. `cdn.mycrsdomain.com`):
 
 ```
 // The sample code below uses Non-ARC code 
@@ -65,4 +63,3 @@ PTDefaultURLTransformer *defaultTransformer = [[[PTDefaultURLTransformer alloc] 
 // metadata is the PTMetadata instance set on a PTMediaPlayerItem instance. 
 [metadata setMetadata:[self getNetworkConfiguration] forKey:PTNetworkConfigurationMetadataKey];
 ```
-

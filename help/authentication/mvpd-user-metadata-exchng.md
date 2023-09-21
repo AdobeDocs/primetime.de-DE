@@ -1,19 +1,18 @@
 ---
 title: MVPD-Benutzermetadaten-Exchange
 description: MVPD-Benutzermetadaten-Exchange
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '943'
 ht-degree: 0%
 
 ---
 
-
 # MVPD-Benutzermetadaten-Exchange
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Einführung {#intro-user-metadata-exchange}
 
@@ -35,7 +34,7 @@ Wichtige Punkte zu Benutzermetadaten:
 * Die Adobe Primetime-Authentifizierung speichert die Metadatenwerte in den AuthN- und AuthZ-Token
 * Die Adobe Primetime-Authentifizierung kann Werte für MVPDs normalisieren, die Benutzermetadaten in verschiedenen Formaten bereitstellen
 * Einige Parameter können mit dem Schlüssel des Programmierers verschlüsselt werden
-* Spezifische Werte werden von Adobe über eine Konfigurationsänderung zur Verfügung gestellt
+* Spezifische Werte werden durch Adobe über eine Konfigurationsänderung bereitgestellt
 
 >[!NOTE]
 >
@@ -68,7 +67,7 @@ var resource = '<rss version="2.0" xmlns:media="http://video.search.yahoo.com/mr
 getAuthorization(resource);
 ```
 
-Die Adobe Primetime-Authentifizierung unterstützt eine detailliertere Autorisierung bis hin zur Asset-Ebene, wenn sie sowohl vom MVPD als auch vom Programmierer unterstützt wird. Die Ressource und ihre Metadaten sind für die Adobe opak. Ziel ist es, ein Standardformat für die normalisierte Angabe der Ressourcen-ID und Metadaten festzulegen, um Ressourcen-IDs an verschiedene MVPDs zu senden.
+Die Adobe Primetime-Authentifizierung unterstützt eine detailliertere Autorisierung bis hin zur Asset-Ebene, wenn sie sowohl vom MVPD als auch vom Programmierer unterstützt wird. Die Ressource und ihre Metadaten sind für Adobe opak. Ziel ist es, ein Standardformat für die normalisierte Angabe der Ressourcen-ID und Metadaten festzulegen, um Ressourcen-IDs an verschiedene MVPDs zu senden.
 
 >[!NOTE]
 >
@@ -111,19 +110,19 @@ Bei der Adobe Primetime-Authentifizierung werden die folgenden Annahmen getroffe
 
 Die Adobe Primetime-Authentifizierung kann auch eine transparente Konvertierung von der Legacy-Kanalzeichenfolge in die entsprechende RSS-Ressource für MVPDs unterstützen, die RSS erfordern. Andernfalls unterstützt die Adobe Primetime-Authentifizierung die Konvertierung von RSS+MRSS in den reinen Kanaltitel für nur kanalübergreifende MVPDs.
 
-**Die Adobe Primetime-Authentifizierung stellt eine vollständige Abwärtskompatibilität mit bestehenden Integrationen sicher.** Das heißt, für Programmierer, die eine Authentifizierung auf Kanalebene verwenden, sorgt die Adobe Primetime-Authentifizierung dafür, die Kanalkennung im erforderlichen Format zu verpacken, bevor sie an ein MVPD gesendet wird, das dieses Format versteht. Das Gegenteil gilt auch: Wenn ein Programmierer alle seine Ressourcen in einem neuen Format angibt, übersetzt die Adobe Primetime-Authentifizierung das neue Format in eine einfache Kanalzeichenfolge, wenn sie für eine MVPD autorisiert wird, die nur eine Kanalebenenautorisierung durchführt.
+**Die Adobe Primetime-Authentifizierung stellt eine vollständige Abwärtskompatibilität mit bestehenden Integrationen sicher.** Das heißt, für Programmierer, die eine Authentifizierung auf Kanalebene verwenden, sorgt die Adobe Primetime-Authentifizierung dafür, die Kanalkennung im erforderlichen Format zu verpacken, bevor sie an ein MVPD gesendet wird, das dieses Format versteht. Das Gegenteil trifft auch zu: Wenn ein Programmierer alle seine Ressourcen in einem neuen Format angibt, übersetzt die Adobe Primetime-Authentifizierung das neue Format in eine einfache Kanalzeichenfolge, wenn er für eine MVPD autorisiert wird, die nur die Kanalebenenautorisierung durchführt.
 
 ## Anwendungsfälle für Benutzermetadaten {#user-metadata-use-cases}
 
 Anwendungsfälle ändern sich ständig und erweitern sich, da mehr MVPDs rechtliche Vorkehrungen treffen und Funktionen hinzufügen. Im Folgenden finden Sie Beispiele dafür, wofür Benutzermetadaten verwendet werden können.
 
-* [MVPD-Benutzer-ID](#mvpd-user-id)
+* [MVPD User ID](#mvpd-user-id)
 * [Haushalts-ID](#household-user-id)
 * [Postleitzahl](#zip-code)
 * [Max Rating (Elternkontrolle)](#max-rating-parental-control)
 * [Kanalverbindung](#channel-line-up)
 
-### MVPD-Benutzer-ID {#mvpd-user-id}
+### MVPD User ID {#mvpd-user-id}
 
 * Wie vom MVPD bereitgestellt
 * Nicht die tatsächlichen Anmeldeinformationen des Benutzers, da sie vom MVPD gehasht werden
@@ -139,7 +138,7 @@ Anwendungsfälle ändern sich ständig und erweitern sich, da mehr MVPDs rechtli
 
 ### Postleitzahl {#zip-code}
 
-* Postleitzahl der Rechnungsstellung des Benutzers
+* Postleitzahl der Abrechnung des Benutzers
 * Wird hauptsächlich verwendet, um die Regeln zum Einfrieren von Ereignissen zu erzwingen.
 * Kann mit der AuthZ-Antwort für schnelle Aktualisierungen bereitgestellt werden
 * MVPD-Unterstützung: Einige MVPDs
@@ -147,7 +146,7 @@ Anwendungsfälle ändern sich ständig und erweitern sich, da mehr MVPDs rechtli
 ### Max Rating (Elternkontrolle) {#max-rating-parental-control}
 
 * AuthN anfangs, plus AuthZ-Aktualisierung
-* Inhalt aus der Benutzeroberfläche filtern
+* Filtern von Inhalten über die Benutzeroberfläche
 * MPAA- oder VChip-Bewertungen
 * MVPD-Unterstützung: Einige MVPDs
 

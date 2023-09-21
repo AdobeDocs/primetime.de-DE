@@ -1,20 +1,18 @@
 ---
 description: Dies ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mit der ein Benutzer eine Untertitelspur auswählen kann.
-title: Beispiel Benutzer dürfen die Untertitelspur ändern
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: 'Beispiel: Benutzern erlauben, die Beschriftungsspur zu ändern'
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
-
-# Beispiel: Benutzer dürfen die Beschriftungsspur{#example-allow-users-to-change-the-caption-track} ändern
+# Beispiel: Benutzer können die Beschriftungsspur ändern{#example-allow-users-to-change-the-caption-track}
 
 Dies ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mit der ein Benutzer eine Untertitelspur auswählen kann.
 
-1. Erstellen Sie eine einfache Schaltfläche, um die Untertitelspur zu ändern.
+1. Erstellen Sie eine einfache Schaltfläche, um den Track der Untertitel zu ändern.
 
    ```xml
       <Button 
@@ -28,7 +26,7 @@ Dies ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mit der ein 
      android:text="CC" /> 
    ```
 
-1. Konvertieren Sie die Liste der verfügbaren Untertitelspuren in ein Zeichenfolgenarray. Die Untertitel-Tracks mit Aktivität, d. h. Kanal, für die TVSDK Daten entdeckt hat, werden entsprechend markiert:
+1. Konvertieren Sie die Liste der verfügbaren Untertitelspuren in ein Zeichenfolgen-Array. Die von TVSDK erkannten Untertitelspuren mit Aktivitäten, d. h. Kanäle, für die TVSDK Daten gefunden hat, werden entsprechend markiert:
 
    ```java
    /** 
@@ -54,7 +52,7 @@ Dies ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mit der ein 
    } 
    ```
 
-1. Wenn der Benutzer auf die Schaltfläche klickt, wird ein Dialogfeld angezeigt, in dem alle standardmäßigen CC-Tracks Liste werden.
+1. Wenn der Benutzer auf die Schaltfläche klickt, zeigen Sie ein Dialogfeld an, in dem alle standardmäßigen CC-Tracks aufgeführt sind.
 
    ```java
       public void selectClosedCaptioningClick(View view) { 
@@ -82,4 +80,3 @@ Dies ist ein Beispiel dafür, wie eine Schaltfläche erstellt wird, mit der ein 
        ab.show(); 
    } 
    ```
-

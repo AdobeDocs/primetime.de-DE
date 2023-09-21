@@ -1,35 +1,33 @@
 ---
-description: Sie können eine TV-ähnliche Erfahrung aktivieren, um mitten in einer Anzeige in Live-Streams mitmachen zu können.
-title: Einfügen von Werbeunterbrechungen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können ein TV-ähnliches Erlebnis aktivieren, um mitten in einer Anzeige in Live-Streams mitmachen zu können.
+title: Teilweise Einfügen einer Werbeunterbrechung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
 
 ---
 
+# Teilweise Einfügen einer Werbeunterbrechung {#partial-ad-break-insertion}
 
-# Einfügen von Werbeunterbrechungen {#partial-ad-break-insertion}
+Sie können ein TV-ähnliches Erlebnis aktivieren, um mitten in einer Anzeige in Live-Streams mitmachen zu können.
 
-Sie können eine TV-ähnliche Erfahrung aktivieren, um mitten in einer Anzeige in Live-Streams mitmachen zu können.
+Mit der Funktion &quot;Teilweise Werbeunterbrechung&quot;können Sie ein TV-ähnliches Erlebnis nachahmen, bei dem der Client einen Live-Stream innerhalb eines Midroll startet, dieser in diesem Midroll beginnt. Es ähnelt dem Wechsel zu einem Fernsehkanal und die Werbung läuft nahtlos.
 
-Mit der Funktion &quot;Teilen-Werbeunterbrechung&quot;können Sie ein TV-ähnliches Erlebnis nachahmen, bei dem der Client einen Live-Stream innerhalb eines Midroll Beginn, der dann in diesem Midroll Beginn wird. Es ähnelt dem Wechsel zu einem TV-Kanal und die Werbespots laufen nahtlos.
+Wenn ein Benutzer beispielsweise mitten in einer 90-Sekunden-Werbeunterbrechung (drei 30-Sekunden-Anzeigen) und 10 Sekunden nach der zweiten Anzeige (d. h. nach 40 Sekunden Werbeunterbrechung) Mitglied wird, passiert Folgendes:
 
-Wenn sich ein Benutzer beispielsweise mitten in einer 90-Sekunden-Werbeunterbrechung (drei 30-Sekunden-Anzeigen) und 10 Sekunden nach der zweiten Anzeige (d. h. nach 40 Sekunden Werbeunterbrechung) anmeldet, passiert Folgendes:
-
-* Die zweite Anzeige wird für die verbleibende Dauer (20 Sekunden) und die dritte Anzeige abgespielt.
+* Die zweite Anzeige wird für die verbleibende Dauer (20 Sek.) gefolgt von der dritten Anzeige wiedergegeben.
 * Anzeigentracker für die teilweise wiedergegebene Anzeige (die zweite Anzeige) werden nicht ausgelöst. Nur der Tracker für die dritte Anzeige wird ausgelöst.
 
-Dieses Verhalten ist nicht standardmäßig aktiviert. Gehen Sie wie folgt vor, um diese Funktion in Ihrer App zu aktivieren.
+Dieses Verhalten ist standardmäßig nicht aktiviert. Gehen Sie wie folgt vor, um diese Funktion in Ihrer App zu aktivieren.
 
-1. Deaktivieren Sie die Live-Prerolls mit der Methode setEnableLivePreroll der AdvertisingMetadata-Klasse.
+1. Deaktivieren Sie die Live-Vorwahlen mithilfe der Methode setEnableLivePreroll der AdvertisingMetadata-Klasse.
 
    ```
    advertisingMetadata.setEnableLivePreroll(String.valueOf(false))
    ```
 
-1. Schalten Sie die Voreinstellung für Einfügen von Werbeunterbrechungen ein. Verwenden Sie die neue Methode setPartialAdBreakPref in der MediaPlayer-Oberfläche, um diese Funktion EIN zu aktivieren. Verwenden Sie die getPartialAdBreakPref-Methode, um den aktuellen Status dieser Voreinstellung zu ermitteln.
+1. Schalten Sie die Voreinstellung für &quot;Teil-Werbeunterbrechung einfügen&quot;ein. Verwenden Sie die neue Methode setPartialAdBreakPref in der MediaPlayer-Oberfläche, um diese Funktion EIN zu schalten. Verwenden Sie die Methode getPartialAdBreakPref , um den aktuellen Status dieser Voreinstellung zu ermitteln.
 
    ```
    MediaPlayer mediaPlayer = DefaultMediaPlayer.create(getActivity().getApplicationContext()); 
@@ -37,11 +35,11 @@ Dieses Verhalten ist nicht standardmäßig aktiviert. Gehen Sie wie folgt vor, u
           mediaPlayer.setPartialAdBreakPref(true); 
    ```
 
-1. Für diese Funktion müssen Sie eine benutzerdefinierte Anzeigenrichtlinien-Auswahl implementieren, um das Verhalten anzupassen. Wenn Sie noch keine benutzerdefinierte Implementierung der AdvertisingFactory-Klasse haben, fügen Sie eine neue AdvertisingFactory-Implementierung hinzu. Überschreibt die createAdPolicySelector-Methode. Diese Methode gibt eine neue Instanz der Implementierung von AdPolicySelector zurück.
+1. Für diese Funktion müssen Sie eine benutzerdefinierte Auswahl für Anzeigenrichtlinien implementieren, um das Verhalten anzupassen. Wenn Sie noch keine benutzerdefinierte Implementierung der AdvertisingFactory-Klasse haben, fügen Sie eine neue AdvertisingFactory-Implementierung hinzu. Überschreiben Sie die Methode createAdPolicySelector . Diese Methode gibt eine neue Instanz der Implementierung von AdPolicySelector zurück.
 
-   Nachstehend finden Sie eine Beispielimplementierung als Referenz. Die folgende Beispielimplementierung steht im com.adobe.mediacore-Paket zur Verfügung. Es wird jedoch vereinfacht, um eine einfache Referenz zu erhalten, und es wird nicht empfohlen, wie es ist.
+   Nachfolgend finden Sie eine Beispielimplementierung als Referenz. Die folgende Beispielimplementierung ist im com.adobe.mediacore -Paket verfügbar. Es ist jedoch vereinfacht, um eine einfache Referenz zu erhalten, und es wird nicht empfohlen, unverändert zu verwenden.
 
-   1. Beispiel-Anzeigenrichtlinien-Auswahl
+   1. Auswahl von Beispielanzeigenrichtlinien
 
       ```
        package com.adobe.mediacore;
@@ -159,7 +157,7 @@ Dieses Verhalten ist nicht standardmäßig aktiviert. Gehen Sie wie folgt vor, u
       } 
       ```
 
-   1. Beispiel-Werbefabrik
+   1. Beispiel-Werbewerkstatt
 
       ```
       private AdvertisingFactory createPartialAdBreakFactory() { 
@@ -184,7 +182,7 @@ Dieses Verhalten ist nicht standardmäßig aktiviert. Gehen Sie wie folgt vor, u
       } 
       ```
 
-   1. Registrieren Sie unsere AdvertisingFactory mit dem Medienplayer
+   1. Registrieren Sie unsere AdvertisingFactory beim Medienplayer.
 
       ```
       AdvertisingFactory advertisingFactory = createPartialAdBreakFactory();  
@@ -194,7 +192,7 @@ Dieses Verhalten ist nicht standardmäßig aktiviert. Gehen Sie wie folgt vor, u
       } 
       ```
 
-   1. Die createAdPolicySelector-Methode überschreiben
+   1. createAdPolicySelector -Methode überschreiben
 
       ```
       @Override 
@@ -203,4 +201,3 @@ Dieses Verhalten ist nicht standardmäßig aktiviert. Gehen Sie wie folgt vor, u
          return new PartialAdBreakAdPolicySelector(mediaPlayerItem); 
       } 
       ```
-

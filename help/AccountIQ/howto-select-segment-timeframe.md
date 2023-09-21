@@ -1,21 +1,20 @@
 ---
-title: Definieren eines Segments und eines Zeitrahmens
-description: Definieren eines Segments und eines Zeitrahmens
-exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: c17fb003d8c8103aac36696f696c9e3c7bb83c4f
+title: Segment und Zeitraum definieren
+description: Segment und Zeitraum definieren
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
 
 ---
 
-# Definieren eines Segments und eines Zeitrahmens {#define-segment}
+# Segment und Zeitraum definieren {#define-segment}
 
 Alle Analysen oder Anzeigen von Berichten in Konto IQ beginnen mit der Definition des Segments und der Auswahl des Zeitrahmens für die Auswertung. [Segment](/help/AccountIQ/product-concepts.md#segmet-def) bezieht sich auf alle Abonnenten oder Viewer, die Ihre Kriterien erfüllen (Abonnieren eines MVPD und Anzeigen bestimmter Kanäle).
 
 ![](assets/segment-panel.png)
 
-*Abbildung: Auswahl von Segmenten und Zeitrahmen*
+*Abbildung: Auswahl von Segment und Zeitrahmen*
 
 Oben auf allen Berichtseiten in Konto IQ gibt es ein Bedienfeld, in dem das Segment definiert werden kann, indem MVPDs, Kanalprogrammierer sowie Granularität und Zeitrahmen ausgewählt werden.
 
@@ -35,7 +34,7 @@ So wählen Sie MVPDs aus **MVPDs im Segment** Option:
 
    Sie können einen MVPD aus der Auswahl entfernen, indem Sie die Auswahl aufheben.
 
-1. Klicken oder tippen Sie auf **Auswahl anwenden** , damit Ihre Auswahl wirksam wird. Andernfalls verlieren Sie die von Ihnen ausgewählte Auswahl.
+1. Klicken oder tippen Sie **Auswahl anwenden** , damit Ihre Auswahl wirksam wird. Andernfalls verlieren Sie die Auswahl, die Sie vorgenommen haben.
 
    >[!NOTE]
    >
@@ -67,7 +66,7 @@ So wählen Sie die gewünschten Programmierkanäle aus dem **Kanäle im Segment*
    >
    >Wenn Sie einzelne Kanäle auswählen, werden die Aktivitäten dieser Kanäle in einigen Berichten einzeln aufgeschlüsselt. Wenn Sie jedoch den übergeordneten Programmierer all dieser Kanäle auswählen, werden alle Aktivitäten dieser Kanäle eingeschlossen, aber nicht einzeln in Berichten aufgeschlüsselt.
 
-1. Klicken oder tippen Sie auf **Auswahl anwenden** , damit Ihre Auswahl wirksam wird.
+1. Klicken oder tippen Sie **Auswahl anwenden** , damit Ihre Auswahl wirksam wird.
 
 >[!NOTE]
 >

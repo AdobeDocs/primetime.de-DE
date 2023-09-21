@@ -1,26 +1,24 @@
 ---
-description: Standardmäßig erzwingt TVSDK die Wiedergabe einer Werbeunterbrechung, wenn der Benutzer über eine Werbeunterbrechung sucht. Sie können das Verhalten anpassen, um einen Werbeunterbrechung zu überspringen, wenn der Zeitraum, der nach dem Abschluss eines vorherigen Umbruchs abgelaufen ist, innerhalb einer bestimmten Anzahl von Minuten liegt.
-title: Werbeunterbrechungen für einen Zeitraum überspringen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Standardmäßig erzwingt TVSDK die Wiedergabe einer Werbeunterbrechung, wenn der Benutzer die Suche über eine Werbeunterbrechung durchführt. Sie können das Verhalten so anpassen, dass eine Werbeunterbrechung übersprungen wird, wenn die seit dem Abschluss einer vorherigen Werbeunterbrechung verstrichene Zeit innerhalb einer bestimmten Anzahl von Minuten liegt.
+title: Werbeunterbrechungen für einen bestimmten Zeitraum überspringen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
 
 ---
 
+# Werbeunterbrechungen für einen bestimmten Zeitraum überspringen {#skip-ad-breaks-for-a-period-of-time}
 
-# Werbeunterbrechungen für einen Zeitraum {#skip-ad-breaks-for-a-period-of-time} überspringen
-
-Standardmäßig erzwingt TVSDK die Wiedergabe einer Werbeunterbrechung, wenn der Benutzer über eine Werbeunterbrechung sucht. Sie können das Verhalten anpassen, um einen Werbeunterbrechung zu überspringen, wenn der Zeitraum, der nach dem Abschluss eines vorherigen Umbruchs abgelaufen ist, innerhalb einer bestimmten Anzahl von Minuten liegt.
+Standardmäßig erzwingt TVSDK die Wiedergabe einer Werbeunterbrechung, wenn der Benutzer die Suche über eine Werbeunterbrechung durchführt. Sie können das Verhalten so anpassen, dass eine Werbeunterbrechung übersprungen wird, wenn die seit dem Abschluss einer vorherigen Werbeunterbrechung verstrichene Zeit innerhalb einer bestimmten Anzahl von Minuten liegt.
 
 >[!IMPORTANT]
 >
->Bei einer internen Suche, eine Anzeige zu überspringen, kann es zu einer leichten Pause bei der Wiedergabe kommen.
+>Wenn eine interne Suche besteht, um eine Anzeige zu überspringen, kann es bei der Wiedergabe zu einer leichten Pause kommen.
 
-Im folgenden Beispiel einer benutzerdefinierten Anzeigenrichtlinienauswahl werden Anzeigen in den nächsten fünf Minuten (Pinnwandzeit) übersprungen, nachdem ein Benutzer eine Werbeunterbrechung gesehen hat.
+Im folgenden Beispiel einer benutzerdefinierten Anzeigenrichtlinienauswahl werden Anzeigen in den nächsten fünf Minuten (Uhrzeit) übersprungen, nachdem ein Benutzer eine Werbeunterbrechung gesehen hat.
 
-1. Speichern Sie die aktuelle Systemzeit, wenn der Benutzer eine Werbeunterbrechung ansieht.
+1. Speichern Sie die aktuelle Systemzeit, wenn der Benutzer eine Werbeunterbrechung abschließt.
 
    ```java
    @Override 
@@ -32,7 +30,7 @@ Im folgenden Beispiel einer benutzerdefinierten Anzeigenrichtlinienauswahl werde
    }
    ```
 
-1. Erweitern Sie die standardmäßige Anzeigenrichtlinien-Auswahl, um das Standardverhalten zu überschreiben.
+1. Erweitern Sie die standardmäßige Anzeigenrichtlinienauswahl, um das Standardverhalten zu überschreiben.
 
    ```java
    package com.adobe.mediacore.sample.advertising; 
@@ -188,4 +186,3 @@ Im folgenden Beispiel einer benutzerdefinierten Anzeigenrichtlinienauswahl werde
        } 
    } 
    ```
-

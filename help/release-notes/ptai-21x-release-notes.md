@@ -1,10 +1,9 @@
 ---
 title: Versionshinweise zu PTAI 21.11.1
 description: Die PTAI-Versionshinweise beschreiben, was neu oder geändert ist, welche gelösten und bekannten Probleme im Primetime-Ad Insertion im Jahr 2021 aufgetreten sind.
-exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ Die Primetime-Ad Insertion-Versionshinweise 21.xx.x beschreiben, was neu ist ode
 
 ## Neue Funktionen in PTAI 21.11.1
 
-Wenn: Dienstag, 9. November 2021, 1:30 Uhr bis 04:30 Uhr Ostzeit
+Wann: Dienstag, 9. November 2021 von 1:30 Uhr bis 04:30 Uhr Ostzeit
 
 * [!UICONTROL EXT-X-IMAGE-STREAM-INF] ist jetzt pro Zone konfigurierbar.
 
@@ -25,31 +24,31 @@ Wenn: Dienstag, 9. November 2021, 1:30 Uhr bis 04:30 Uhr Ostzeit
 
 ### Version 21.10.1
 
-Wenn: Dienstag, 12. Oktober 2021 von 7:45 Uhr bis 13:45 Uhr Ostzeit
+Wann: Dienstag, 12. Oktober 2021 von 7:45 Uhr bis 13:45 Uhr Ostzeit
 
 * Konsolidierte Server, produktionsfremde und nicht nützliche Server wurden entfernt.
 
 ### Primetime Ad Insertion Maintenance Release
 
-Wenn: Dienstag, 28. September 2021, von 5:00 Uhr bis 6:00 Uhr Ostzeit
+Wann: Dienstag, 28. September 2021, von 5:00 Uhr bis 6:00 Uhr Ostzeit
 
-* Aktualisierungen des Lastenausgleichs vom Elastic Load Balancer von AWS zum AWS Application Load Balancer für verbesserte Funktionalität und Skalierbarkeit. Diese Lastenausgleichsmodule werden verwendet, um den Datenverkehr von der Ad Insertion-Ebene (SSAI/CSAI) zum Auditude-Backend zu leiten und anzufordern.
+* Aktualisierungen des Lastenausgleichs vom Elastic Load Balancer von AWS zum AWS Application Load Balancer, um die Funktionalität und Skalierbarkeit zu verbessern. Diese Lastenausgleichsmodule werden verwendet, um den Datenverkehr von der Ad Insertion-Ebene (SSAI/CSAI) zum Auditude-Backend zu leiten.
 
 ### Version 21.9.1
 
-Wenn: Dienstag, 7. September 2021 von 02:30 Uhr bis 05:30 Uhr Ostzeit
+Wann: Dienstag, 7. September 2021 von 02:30 Uhr bis 05:30 Uhr Ostzeit
 
 * Aktualisierungen der Infrastrukturkomponenten hinter den Mediations- und Reporting-Komponenten von Primetime Ad Insertion (Primetime Ads GUI).
 
 ### Version 21.8.1
 
-Wenn: Dienstag, 24. August 2021 von 2:00 Uhr bis 05:00 Uhr Ostzeit
+Wann: Dienstag, 24. August 2021 von 2:00 Uhr bis 05:00 Uhr Ostzeit
 
 * Unterstützung für DASH Live-/Linear-Streams hinzugefügt (VOD wird bereits unterstützt).
 
 ### Version 21.5.1
 
-Wenn: Mittwoch, 26. Mai 2021 von 3:30 Uhr bis 06:30 Uhr Ostzeit
+Wann: Mittwoch, 26. Mai 2021 von 3:30 Uhr bis 06:30 Uhr Ostzeit
 
 **Änderungen**
 
@@ -81,7 +80,7 @@ Wenn: Mittwoch, 26. Mai 2021 von 3:30 Uhr bis 06:30 Uhr Ostzeit
 
 **Änderungen**
 
-* Unterstützung für die DASH-Ausgabeoptimierung hinzugefügt: zeitbasierte Knotenkonsolidierung.
+* Unterstützung für DASH-Ausgabeoptimierung hinzugefügt: zeitbasierte Knotenkonsolidierung
 
 ### Version 21.1.2
 

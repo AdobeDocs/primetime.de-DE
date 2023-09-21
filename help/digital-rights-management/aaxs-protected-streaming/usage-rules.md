@@ -2,29 +2,26 @@
 title: Nutzungsregeln
 description: Nutzungsregeln
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
 
 ---
 
-
 # Nutzungsregeln{#usage-rules}
 
-Beim Adobe Access Server für geschütztes Streaming werden alle Nutzungsregeln über Konfigurationsdateien auf dem Server angegeben. Alle im geschützten Inhalt festgelegten Nutzungsregeln werden überschrieben. Daher wird empfohlen, beim Verpacken von Inhalten eine einfache anonyme Richtlinie zu verwenden. Benutzerregeln, die konfigurierbar sind, können pro Mandant festgelegt werden.
+Mit Adobe Access Server für geschütztes Streaming werden alle Nutzungsregeln über Konfigurationsdateien auf dem Server angegeben. Sämtliche im geschützten Inhalt festgelegten Nutzungsregeln werden überschrieben. Daher wird empfohlen, bei der Inhaltspakete eine einfache anonyme Richtlinie zu verwenden. konfigurierbare Nutzungsregeln können pro Mandant festgelegt werden.
 
-Adobe Access Server for Protected Streaming unterstützt die folgenden Nutzungsregeln:
+Adobe Access Server für geschütztes Streaming unterstützt die folgenden Nutzungsregeln:
 
 * Output Protection
-* Einschränkungen für Adobe® AIR®-, SWF-, iOS- und Android-Anwendungen
-* Einschränkungen für DRM- und Laufzeitmodule
-* Durchsetzung der Jailbreak-Erkennung (auf Adobe Access-Plattformen, die die Erkennung von Jailbreak unterstützen)
-* Die Lizenzzwischenspeicherung ist standardmäßig deaktiviert. Die Lizenzzwischenspeicherung kann durch Angabe des Enddatums für die Zwischenspeicherung aktiviert werden, oder es ist eine zeitliche Zwischenspeicherung zulässig (beginnend mit der Lizenzerteilung).
-* Rechte für mehrere Wiedergabe, mit denen Sie verschiedene Kombinationen aus Output Protection, Anwendungseinschränkungen und DRM-/Laufzeiteinschränkungen angeben können. Beispielsweise ist es möglich, mithilfe der DRM Module Restriction mit Output Protection unterschiedliche Ausgabeschutzanforderungen für jede Client-Plattform festzulegen.
+* Anwendungsbeschränkungen für Adobe® AIR®, SWF, iOS und Android
+* DRM- und Laufzeitmodulbeschränkungen
+* Durchsetzung der Jailbreak-Erkennung (auf Adobe Access-Plattformen, die die Jailbreak-Erkennung unterstützen)
+* Die Lizenzzwischenspeicherung ist standardmäßig deaktiviert. Lizenzzwischenspeicherung kann durch Angabe des Enddatums für die Zwischenspeicherung aktiviert werden. Andernfalls ist eine zeitliche Zwischenspeicherung zulässig (beginnend mit der Lizenzerteilung).
+* Mehrere Wiedergabeberechtigungen, mit denen Sie verschiedene Kombinationen aus Output Protection, Application Restrictions und DRM/Runtime Restrictions angeben können. Beispielsweise ist es möglich, mithilfe der DRM Module Restriction mit Output Protection verschiedene Output Protection-Anforderungen für jede Client-Plattform anzugeben.
 
 >[!NOTE]
 >
->Zur Unterstützung von Remote-Key-Versänden für iOS-Geräte muss der Remote-Key-Versand für die Richtlinie, die während der Paketerstellung verwendet wird, aktiviert sein. Diese Einstellung kann nicht durch die Mandantenkonfiguration auf dem Server geändert werden. ***Adobe Primetime ist erforderlich, um iOS-Anwendungen zu erstellen, die Adobe Access-geschützte Inhalte wiedergeben können.***
-
+>Um die Bereitstellung von Remote-Schlüsseln auf iOS-Geräten zu unterstützen, muss die Bereitstellung von Remote-Schlüsseln für die bei der Paketierung verwendete Richtlinie aktiviert sein. Diese Einstellung kann nicht über die Mandantenkonfiguration auf dem Server geändert werden. ***Adobe Primetime ist erforderlich, um iOS-Anwendungen zu erstellen, die Adobe-zugriffsgeschützte Inhalte wiedergeben können.***

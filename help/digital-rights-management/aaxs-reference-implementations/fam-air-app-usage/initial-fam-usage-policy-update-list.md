@@ -1,24 +1,22 @@
 ---
-title: Liste der Richtlinienaktualisierung
-description: Liste der Richtlinienaktualisierung
+title: Liste der Richtlinienaktualisierungen
+description: Liste der Richtlinienaktualisierungen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
+# Liste der Richtlinienaktualisierungen {#policy-update-list}
 
-# Liste zur Richtlinienaktualisierung {#policy-update-list}
+Sie können mithilfe von Listen für Richtlinienaktualisierungen Richtlinienänderungen an einen Lizenzserver weiterleiten. Wenn eine Richtlinie geändert wird, nachdem sie zum Verpacken von Inhalten verwendet wurde, ist es wünschenswert, den Lizenzserver über die neueste Version der Richtlinie zu informieren, damit die Version zur Lizenzerteilung verwendet werden kann.
 
-Sie können Listen zur Richtlinienaktualisierung verwenden, um Richtlinienänderungen an einem Lizenzserver zu kommunizieren. Wenn eine Richtlinie geändert wird, nachdem sie zum Verpacken von Inhalten verwendet wurde, sollte der Lizenzserver über die neueste Version der Richtlinie informiert werden, damit eine Lizenz mit der Version ausgegeben werden kann.
+Um zum ersten Mal eine Liste mit Richtlinienaktualisierungen zu erstellen, klicken Sie auf **[!UICONTROL Add policies]** , um alle auf dem Server verfügbaren Richtlinien anzuzeigen. Wählen Sie für Richtlinien, die seit ihrer Verwendung für das Verpacken von Inhalten aktualisiert wurden, die **[!UICONTROL update]** Optionsfeld.
 
-Um zum ersten Mal eine Liste zur Richtlinienaktualisierung zu erstellen, klicken Sie auf **[!UICONTROL Add policies]**, um alle auf dem Server verfügbaren Richtlinien Ansicht. Wählen Sie für Richtlinien, die aktualisiert wurden, seit sie zum Verpacken von Inhalten verwendet wurden, das Optionsfeld **[!UICONTROL update]**.
+Wenn Sie keine Richtlinie mehr zur Lizenzerteilung verwenden möchten und die Richtlinie bereits zum Verpacken von Inhalten verwendet wurde, können Sie die Richtlinie widerrufen. Wählen Sie dazu die **[!UICONTROL revoke]** Optionsfeld. Wenn die gewünschten Richtlinien ausgewählt wurden, wählen Sie **[!UICONTROL Create Policy Update List]**. Eine Datei namens [!DNL PolicyUpdateList.dat] wird im [!DNL Resources] Verzeichnis.
 
-Wenn Sie zum Ausstellen von Lizenzen keine Richtlinie mehr verwenden möchten und die Richtlinie bereits zum Verpacken von Inhalten verwendet wurde, sollten Sie die Richtlinie möglicherweise widerrufen. Wählen Sie dazu das Optionsfeld **[!UICONTROL revoke]** aus. Wenn die gewünschten Richtlinien ausgewählt wurden, wählen Sie **[!UICONTROL Create Policy Update List]**. Eine Datei mit dem Namen [!DNL PolicyUpdateList.dat] wird im Ordner [!DNL Resources] gespeichert.
+Um eine vorhandene Liste für Richtlinienaktualisierungen zu ändern, klicken Sie auf **[!UICONTROL Add policies]** , um alle auf dem Server verfügbaren Richtlinien anzuzeigen. Wählen Sie die zusätzlichen Richtlinien zum Hinzufügen oder Sperren aus. Vorhandene Einträge in der Liste für Richtlinienaktualisierungen können im oberen Bereich des Bildschirms geändert werden. Richtlinien, die markiert sind **[!UICONTROL updated]** kann geändert werden in **[!UICONTROL revoked]**, aber sobald eine Richtlinie **[!UICONTROL revoked]** festgelegt ist, kann nicht zurück zu **[!UICONTROL updated]**.
 
-Um eine vorhandene Liste zur Richtlinienaktualisierung zu ändern, klicken Sie auf **[!UICONTROL Add policies]**, um alle auf dem Server verfügbaren Richtlinien Ansicht. Wählen Sie die zusätzlichen Richtlinien aus, die hinzugefügt oder widerrufen werden sollen. Vorhandene Einträge in der Liste &quot;Richtlinienaktualisierung&quot;können im oberen Bildschirmbereich geändert werden. Richtlinien, die mit **[!UICONTROL updated]** markiert sind, können in **[!UICONTROL revoked]** geändert werden. Ist eine Richtlinie jedoch **[!UICONTROL revoked]**, kann sie nicht mehr in **[!UICONTROL updated]** zurückgesetzt werden.
-
-Wenn die gewünschten Änderungen vorgenommen wurden, wählen Sie **[!UICONTROL Create Policy Update List]** und die [!DNL PolicyUpdateList.dat]-Datei wird neu generiert. Wenn sich eine Richtlinie bereits in der Liste zur Richtlinienaktualisierung befindet und sie seit der letzten Generierung der Liste aktualisiert wurde, wird beim erneuten Generieren der Liste zur Richtlinienaktualisierung die neueste Richtlinienversion verwendet.
+Wenn die gewünschten Änderungen vorgenommen wurden, wählen Sie **[!UICONTROL Create Policy Update List]** und die [!DNL PolicyUpdateList.dat] -Datei neu generiert. Wenn eine Richtlinie bereits in der Liste der Richtlinienaktualisierungen enthalten ist und seit der letzten Erstellung der Liste aktualisiert wurde, wird die neueste Version der Richtlinie verwendet, wenn die Liste für Richtlinienaktualisierungen erneut generiert wird.

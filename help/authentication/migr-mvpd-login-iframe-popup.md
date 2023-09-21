@@ -1,19 +1,18 @@
 ---
 title: Migrieren der MVPD-Anmeldeseite von iFrame zu Popup
 description: Migrieren der MVPD-Anmeldeseite von iFrame zu Popup
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
 
 ---
 
-
 # Migrieren der MVPD-Anmeldeseite von iFrame zu Popup {#migr-mvpd-login-iframe-popup}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Popup versus iFrame {#popup-vs-iframe}
 
@@ -23,7 +22,7 @@ Bei einigen Benutzern traten bei der iFrame-Implementierung einer MVPD-Anmeldese
 * [Adobe Primetime authentication and Safari login issues](https://tve.helpdocsonline.com/adobe-pass)
 * [MVPD iFrame login and 3rd party cookies](https://tve.helpdocsonline.com/mvpd)-->
 
-Das Adobe Primetime-Authentifizierungsteam **empfiehlt die Implementierung der Anmeldeseite des Popup-/neuen Fensters** anstatt der iFrame-Version in Firefox und Safari.  Wenn Sie jedoch eine Anmeldeseite für Internet Explorer implementieren, kann es bei der Popup-Implementierung zu Problemen kommen. Die IE-Probleme werden dadurch verursacht, dass die Adobe Primetime-Authentifizierung nach der Authentifizierung des Benutzers mit seinem MVPD im Popup-Fenster eine Umleitung der übergeordneten Seite erzwingt, die von Internet Explorer als Popup-Blocker betrachtet wird. Das Adobe Primetime-Authentifizierungsteam **empfiehlt die Implementierung der iFrame-Anmeldung für Internet Explorer**.
+Das Adobe Primetime-Authentifizierungsteam **empfiehlt die Implementierung der Anmeldeseite für Popup/neues Fenster** anstatt der iFrame-Version in Firefox und Safari.  Wenn Sie jedoch eine Anmeldeseite für Internet Explorer implementieren, kann es bei der Popup-Implementierung zu Problemen kommen. Die IE-Probleme werden dadurch verursacht, dass die Adobe Primetime-Authentifizierung nach der Authentifizierung des Benutzers mit seinem MVPD im Popup-Fenster eine Umleitung der übergeordneten Seite erzwingt, die von Internet Explorer als Popup-Blocker betrachtet wird. Das Adobe Primetime-Authentifizierungsteam **empfiehlt die Implementierung der iFrame-Anmeldung für Internet Explorer**.
 
 Der in dieser Technote vorgestellte Beispielcode verwendet eine hybride Implementierung von iFrame und Popup - Öffnen eines iFrame in Internet Explorer und ein Popup in den anderen Browsern.
 
@@ -107,7 +106,7 @@ function setSelectedProvider(providerID) {
 
 Da wir keine **iFrame** Der HTML-Code enthält nicht mehr den iFrame oder die Schaltfläche zum Schließen des iFrames. Das div, das zuvor den iFrame enthielt: **mvpddiv** - wird aufbewahrt und für Folgendes verwendet:
 
-* , um den Benutzer darüber zu informieren, dass die MVPD-Anmeldeseite bereits geöffnet ist, wenn der Popup-Fokus verloren geht.
+* , um den Benutzer darüber zu informieren, dass die MVPD-Anmeldeseite bereits geöffnet ist, wenn der Popup-Fokus verloren geht
 * um einen Link bereitzustellen, um den Fokus wieder auf das Popup zu lenken
 
 ```HTML
@@ -230,6 +229,5 @@ function checkClosed() {
 >
 >* Der Beispielcode enthält eine fest codierte Variable für die verwendete Anforderer-ID - &quot;REF&quot;, die durch eine reale Programmierer-Anforderer-ID ersetzt werden sollte.
 >* Der Beispielcode wird nur ordnungsgemäß von einer auf die Whitelist gesetzten Domäne ausgeführt, die mit der verwendeten Anforderer-ID verknüpft ist.
->* Da der gesamte Code zum Herunterladen verfügbar ist, wurde der in dieser Technote dargestellte Code abgeschnitten. Ein vollständiges Beispiel finden Sie unter **JS-iFrame vs. Popup-Beispiel**.
+>* Da der gesamte Code zum Herunterladen verfügbar ist, wurde der in dieser Technote vorgestellte Code abgeschnitten. Ein vollständiges Beispiel finden Sie unter **JS-iFrame vs. Popup-Beispiel**.
 >* Die externen JavaScript-Bibliotheken wurden aus [Von Google gehostete Dienste](https://developers.google.com/speed/libraries/).
-

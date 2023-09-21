@@ -1,31 +1,29 @@
 ---
-description: Mit der TextFormat-Klasse können Sie Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle Untertitel festgelegt, die vom Player angezeigt werden.
-title: Steuern des Stils für Untertitel
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können mithilfe der TextFormat -Klasse Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle von Ihrem Player angezeigten Untertitel festgelegt.
+title: Steuern des Stils von Untertiteln
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
 
 ---
 
+# Steuern des Stils von Untertiteln {#control-closed-caption-styling-overview}
 
-# Steuerelement mit geschlossenem Beschriftungsstil {#control-closed-caption-styling-overview}
+Sie können mithilfe der TextFormat -Klasse Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle von Ihrem Player angezeigten Untertitel festgelegt.
 
-Mit der TextFormat-Klasse können Sie Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle Untertitel festgelegt, die vom Player angezeigt werden.
+Diese Klasse enthält Informationen zum Stil von Untertiteln wie Schriftart, Größe, Farbe und Hintergrunddeckkraft. eine zugehörige Helper-Klasse, `TextFormatBuilder`, erleichtert die Arbeit mit Einstellungen für Beschriftungsstile.
 
-Diese Klasse kapselt Stilinformationen für Untertitel, wie Schriftart, Größe, Farbe und Hintergrunddeckkraft. Die zugehörige Helferklasse `TextFormatBuilder` erleichtert die Arbeit mit Stileinstellungen für Untertitel.
+## Festlegen von Stilen für Untertitel {#set-closed-caption-styles}
 
-## Stile für Untertitel festlegen {#set-closed-caption-styles}
+Sie können den Text mit Beschriftungen mit TVSDK-Methoden formatieren.
 
-Sie können den Untertiteltext mit TVSDK-Methoden formatieren.
+1. Warten Sie, bis der Medienplayer mindestens den Status VORBEREITET aufweist.
+1. Erstellen Sie eine `TextFormatBuilder` -Instanz.
 
-1. Warten Sie, bis der Medienplayer mindestens den Status &quot;VORBEREITT&quot;aufweist.
-1. Erstellen Sie eine `TextFormatBuilder`-Instanz.
+   Sie können jetzt alle Stilparameter für Beschriftungen bereitstellen oder sie später festlegen.
 
-   Sie können jetzt alle Formatierungsparameter für Bildunterschriften bereitstellen oder sie später festlegen.
-
-   TVSDK kapselt Stilinformationen für Bildunterschriften in der `TextFormat`-Schnittstelle. Die `TextFormatBuilder`-Klasse erstellt Objekte, die diese Schnittstelle implementieren.
+   TVSDK kapselt Informationen zum Design von Untertiteln in die `TextFormat` -Schnittstelle. Die `TextFormatBuilder` -Klasse erstellt Objekte, die diese Schnittstelle implementieren.
 
    ```java
    public TextFormatBuilder( 
@@ -41,93 +39,93 @@ Sie können den Untertiteltext mit TVSDK-Methoden formatieren.
       int fillOpacity)
    ```
 
-1. Um einen Verweis auf ein Objekt abzurufen, das die `TextFormat`-Schnittstelle implementiert, rufen Sie die Methode `TextFormatBuilder.toTextFormat` public auf.
+1. So rufen Sie einen Verweis auf ein Objekt ab, das die `TextFormat` -Schnittstelle, rufen Sie die `TextFormatBuilder.toTextFormat` public -Methode.
 
-   Gibt ein `TextFormat`-Objekt zurück, das auf den Medienplayer angewendet werden kann.
+   Dadurch wird eine `TextFormat` -Objekt, das auf den Medienplayer angewendet werden kann.
 
    ```java
    public TextFormat toTextFormat()
    ```
 
-1. Rufen Sie optional die aktuellen Stileinstellungen für Bildunterschriften ab, indem Sie einen der folgenden Schritte ausführen:
+1. Rufen Sie optional die aktuellen Einstellungen für den Untertitelstil ab, indem Sie einen der folgenden Schritte ausführen:
 
-   * Rufen Sie alle Stileinstellungen mit `MediaPlayer.getCCStyle` ab.
+   * Abrufen aller Stileinstellungen mit `MediaPlayer.getCCStyle`.
 
-      Der Rückgabewert ist eine Instanz der `TextFormat`-Schnittstelle.
+     Der Rückgabewert ist eine Instanz der `TextFormat` -Schnittstelle.
 
-      ```js
-      /** 
-      * @return the current closed captioning style.  
-      * If no style was previously set, it returns a TextFormat object 
-      * with default values for each attribute. 
-      * @throws IllegalStateException if media player was already released. 
-      */ 
-      public TextFormat getCCStyle() throws IllegalStateException;
-      ```
+     ```js
+     /** 
+     * @return the current closed captioning style.  
+     * If no style was previously set, it returns a TextFormat object 
+     * with default values for each attribute. 
+     * @throws IllegalStateException if media player was already released. 
+     */ 
+     public TextFormat getCCStyle() throws IllegalStateException;
+     ```
 
-   * Rufen Sie die Einstellungen einzeln durch die `TextFormat` Schnittstelle-Getter-Methoden ab.
+   * Rufen Sie die Einstellungen einzeln durch. `TextFormat` -Methoden.
 
-      ```js
-      public Color getFontColor(); 
-      public Color getBackgroundColor(); 
-      public Color getFillColor(); // retrieve the font fill color 
-      public Color getEdgeColor(); // retrieve the font edge color 
-      public Size getSize(); // retrieve the font size 
-      public FontEdge getFontEdge(); // retrieve the font edge type 
-      public Font getFont(); // retrieve the font type 
-      public int getFontOpacity(); 
-      public int getBackgroundOpacity();
-      ```
+     ```js
+     public Color getFontColor(); 
+     public Color getBackgroundColor(); 
+     public Color getFillColor(); // retrieve the font fill color 
+     public Color getEdgeColor(); // retrieve the font edge color 
+     public Size getSize(); // retrieve the font size 
+     public FontEdge getFontEdge(); // retrieve the font edge type 
+     public Font getFont(); // retrieve the font type 
+     public int getFontOpacity(); 
+     public int getBackgroundOpacity();
+     ```
 
-1. Um die Stileinstellungen zu ändern, führen Sie einen der folgenden Schritte aus:
+1. Führen Sie einen der folgenden Schritte aus, um die Stileinstellungen zu ändern:
 
    >[!NOTE]
    >
    >Die Größe von WebVTT-Beschriftungen kann nicht geändert werden.
 
-   * Verwenden Sie die set-Methode `MediaPlayer.setCCStyle` und übergeben Sie eine Instanz der `TextFormat`-Schnittstelle:
+   * Verwenden der Setter-Methode `MediaPlayer.setCCStyle`, wobei eine Instanz der `TextFormat` -Schnittstelle:
 
-      ```js
-      /** 
-      * Sets the closed captioning style. Used to control the closed captioning font, 
-      * size, color, edge and opacity.  
-      * 
-      * This method is safe to use even if the current media stream doesn't have closed 
-      * captions. 
-      * 
-      * @param textFormat 
-      * @throws IllegalStateException 
-      */ 
-      public void setCCStyle(TextFormat textFormat) throws IllegalStateException;
-      ```
+     ```js
+     /** 
+     * Sets the closed captioning style. Used to control the closed captioning font, 
+     * size, color, edge and opacity.  
+     * 
+     * This method is safe to use even if the current media stream doesn't have closed 
+     * captions. 
+     * 
+     * @param textFormat 
+     * @throws IllegalStateException 
+     */ 
+     public void setCCStyle(TextFormat textFormat) throws IllegalStateException;
+     ```
 
-   * Verwenden Sie die `TextFormatBuilder`-Klasse, die einzelne Setter-Methoden definiert.
+   * Verwenden Sie die `TextFormatBuilder` -Klasse, die einzelne Setter-Methoden definiert.
 
-      Die `TextFormat`-Schnittstelle definiert ein unveränderliches Objekt, sodass nur Getter-Methoden und keine Setter vorhanden sind. Sie können die Stilparameter für Untertitel nur mit der Klasse `TextFormatBuilder` festlegen:
+     Die `TextFormat` -Schnittstelle definiert ein unveränderliches Objekt, sodass es nur Getter-Methoden und keine Setter gibt. Sie können die Formatierungsparameter für Beschriftungen nur mit dem `TextFormatBuilder` -Klasse:
 
-      ```js
-      // set font type 
-      public void setFont(Font font)  
-      public void setBackgroundColor(Color backgroundColor) 
-      public void setFillColor(Color fillColor) 
-      // set the font-edge color 
-      public void setEdgeColor(Color edgeColor)  
-      // set the font size 
-      public void setSize(Size size)  
-      // set the font edge type 
-      public void setFontEdge(FontEdge fontEdge)  
-      public void setFontOpacity(int fontOpacity) 
-      public void setBackgroundOpacity(int backgroundOpacity) 
-      // set the font-fill opacity level 
-      public void setFillOpacity(int fillOpacity)  
-      public void setFontColor(Color fontColor)
-      ```
+     ```js
+     // set font type 
+     public void setFont(Font font)  
+     public void setBackgroundColor(Color backgroundColor) 
+     public void setFillColor(Color fillColor) 
+     // set the font-edge color 
+     public void setEdgeColor(Color edgeColor)  
+     // set the font size 
+     public void setSize(Size size)  
+     // set the font edge type 
+     public void setFontEdge(FontEdge fontEdge)  
+     public void setFontOpacity(int fontOpacity) 
+     public void setBackgroundOpacity(int backgroundOpacity) 
+     // set the font-fill opacity level 
+     public void setFillOpacity(int fillOpacity)  
+     public void setFontColor(Color fontColor)
+     ```
 
-Das Festlegen des Stils für Untertitel ist ein asynchroner Vorgang. Es kann daher einige Sekunden dauern, bis die Änderungen auf dem Bildschirm angezeigt werden.
+Das Festlegen des Stils für geschlossene Untertitel ist ein asynchroner Vorgang, sodass es bis zu einigen Sekunden dauern kann, bis die Änderungen auf dem Bildschirm angezeigt werden.
 
-## Stiloptionen für Bildunterschriften {#closed-caption-styling-options}
+## Stiloptionen für geschlossene Beschriftungen {#closed-caption-styling-options}
 
-Sie können mehrere Optionen für die Formatierung von Beschriftungen festlegen. Diese Optionen setzen die Stiloptionen in den ursprünglichen Beschriftungen außer Kraft
+Sie können mehrere Beschriftungsstil-Optionen festlegen. Diese Optionen überschreiben die Stiloptionen in den ursprünglichen Beschriftungen
 
 ```
 public TextFormatBuilder(
@@ -146,7 +144,7 @@ public TextFormatBuilder(
 
 >[!TIP]
 >
->In Optionen, die Standardwerte definieren (z. B. DEFAULT), bezieht sich dieser Wert auf die Einstellung, die bei der ursprünglichen Angabe der Beschriftung festgelegt wurde.
+>In Optionen, die Standardwerte definieren (z. B. DEFAULT), bezieht sich dieser Wert auf die Einstellung, als die Beschriftung ursprünglich angegeben wurde.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -157,59 +155,59 @@ public TextFormatBuilder(
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"> Schrift </td> 
-   <td colname="2"> <p>Der Schrifttyp. </p> <p>Kann nur auf einen Wert eingestellt werden, der von der Auflistung <span class="codeph"> TextFormat.Font </span> definiert wird und beispielsweise mit oder ohne Serifen konstatiert ist. </p> <p>Tipp:  Die tatsächlichen Schriftarten, die auf einem Gerät verfügbar sind, können variieren und bei Bedarf werden Ersatzschriften verwendet. Monospace mit Serifen wird normalerweise als Ersatz verwendet, obwohl diese Ersetzung systemspezifisch sein kann. </p> </td> 
+   <td colname="1"> Schriftart </td> 
+   <td colname="2"> <p>Der Schrifttyp. </p> <p>Kann nur auf einen Wert festgelegt werden, der durch die Variable <span class="codeph"> TextFormat.Font </span> -Auflistung und stellt z. B. mit oder ohne Serifen einen Abstand dar. </p> <p>Tipp: Die tatsächlichen Schriftarten, die auf einem Gerät verfügbar sind, können variieren und bei Bedarf werden Ersatzschriften verwendet. Monospace mit Serifen wird in der Regel als Ersatz verwendet, obwohl diese Substitution systemspezifisch sein kann. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Größe </td> 
-   <td colname="2"> <p>Die Größe der Beschriftung. </p> <p> Kann nur auf einen Wert eingestellt werden, der von der Auflistung <span class="codeph"> TextFormat.Size </span> definiert wird: 
+   <td colname="2"> <p>Die Größe der Beschriftung. </p> <p> Kann nur auf einen Wert gesetzt werden, der durch die Variable <span class="codeph"> TextFormat.Size </span> Auflistung: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM  </span> - Standardgröße </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GROSS  </span> - Ca. 30% größer als mittel </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> KLEIN  </span> - Ca. 30 % kleiner als mittel </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD  </span> - Die Standardgröße für die Beschriftung; gleich mittel </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM </span> - Standardgröße </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GROSS </span> - Etwa 30% größer als mittel </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> KLEIN </span> - Etwa 30% kleiner als mittel </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - Die Standardgröße für die Beschriftung; identisch mit Medium </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Schriftrand </td> 
-   <td colname="2"> <p>Der für die Schrift verwendete Effekt, z. B. "erhöht"oder "Ohne". </p> <p>Kann nur auf einen Wert eingestellt werden, der durch die Auflistung <span class="codeph"> TextFormat.FontEdge </span> definiert wird. </p> </td> 
+   <td colname="1"> Schriftgrad </td> 
+   <td colname="2"> <p>Der für den Schriftrand verwendete Effekt, z. B. angehoben oder keine. </p> <p>Kann nur auf einen Wert festgelegt werden, der durch die Variable <span class="codeph"> TextFormat.FontEdge </span> -Auflistung. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Schriftfarbe </td> 
-   <td colname="2"> <p>Die Schriftfarbe. </p> <p>Kann nur auf einen Wert eingestellt werden, der von der Auflistung <span class="codeph"> TextFormat.Color </span> definiert wird. </p> </td> 
+   <td colname="2"> <p>Die Schriftfarbe. </p> <p>Kann nur auf einen Wert gesetzt werden, der durch die Variable <span class="codeph"> TextFormat.Color </span> -Auflistung. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Kantenfarbe </td> 
-   <td colname="2"> <p>Die Farbe des Kanteneffekts. </p> <p>Kann auf einen beliebigen Wert eingestellt werden, der für die Schriftfarbe verfügbar ist. </p> </td> 
+   <td colname="2"> <p>Die Farbe des Kanteneffekts. </p> <p>Kann auf einen der Werte gesetzt werden, die für die Schriftfarbe verfügbar sind. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Hintergrundfarbe </td> 
-   <td colname="2"> <p>Die Farbe der Hintergrundzeichenzelle. </p> <p>Kann nur auf Werte eingestellt werden, die für die Schriftfarbe verfügbar sind. </p> </td> 
+   <td colname="2"> <p>Die Hintergrundfarbe der Zeichenzelle. </p> <p>Kann nur auf Werte gesetzt werden, die für die Schriftfarbe verfügbar sind. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Füllfarbe </td> 
-   <td colname="2"> <p>Die Hintergrundfarbe des Fensters, in dem sich der Text befindet. </p> <p>Kann auf einen beliebigen Wert eingestellt werden, der für die Schriftfarbe verfügbar ist. </p> </td> 
+   <td colname="2"> <p>Die Hintergrundfarbe des Fensters, in dem sich der Text befindet. </p> <p>Kann auf einen der Werte gesetzt werden, die für die Schriftfarbe verfügbar sind. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Schriftdeckkraft </td> 
-   <td colname="2"> <p>Die Deckkraft des Textes. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig undurchsichtig) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY  </span> für die Schriftart ist 100. </p> </td> 
+   <td colname="2"> <p>Die Deckkraft des Textes. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig opak) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY </span> für die Schriftart 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Hintergrunddeckkraft </td> 
-   <td colname="2"> <p>Die Deckkraft der Hintergrundzeichenzelle. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig undurchsichtig) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY  </span> für den Hintergrund ist 100. </p> </td> 
+   <td colname="2"> <p>Die Deckkraft der Hintergrundzeichenzelle. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig opak) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY </span> für den Hintergrund ist 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Fülldeckkraft </td> 
-   <td colname="2"> <p>Die Deckkraft des Hintergrunds des Beschriftungsfensters. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig undurchsichtig) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY  </span> für fill ist 0. </p> </td> 
+   <td colname="2"> <p>Die Deckkraft des Hintergrunds des Beschriftungsfensters. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig opak) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY </span> für die Füllung 0 ist. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Beispiele für die Beschriftungsformatierung {#examples-caption-formatting}
+## Beispiele für Beschriftungsformatierung {#examples-caption-formatting}
 
-Sie können die Formatierung für Untertitel festlegen.
+Sie können die Formatierung der Beschriftung festlegen.
 
-**Beispiel 1: Festlegen von Formatwerten explizit**
+**Beispiel 1: explizit Formatwerte angeben**
 
 ```java
 private final MediaPlayer.PlaybackEventListener  

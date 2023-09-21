@@ -2,25 +2,23 @@
 title: Übersicht
 description: Übersicht
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#overview}
 
-Die Adobe Primetime DRM-Referenzimplementierungen mit Befehlszeilenwerkzeugen ermöglichen es Ihnen, eine Vielzahl DRM-bezogener Aufgaben direkt über die Befehlszeile durchzuführen.
+Mit den Befehlszeilentools für Adobe Primetime DRM-Referenzimplementierungen können Sie eine Vielzahl von DRM-bezogenen Aufgaben direkt über die Befehlszeile ausführen.
 
-Die Primetime DRM-Referenzimplementierung umfasst die folgenden Befehlszeilenwerkzeuge:
+Die Primetime-DRM-Referenzimplementierung umfasst die folgenden Befehlszeilenwerkzeuge:
 
 * Policy Manager - Erstellt und verwaltet DRM-Richtlinien
 * Media Packager - Erstellt verschlüsselte Dateien
-* Policy Update Liste Manager - Erstellt und zeigt Listen zur Aktualisierung von DRM-Richtlinien an
-* Revocation Liste Manager - Erstellt und zeigt Listen zum Sperren an
-* AIR-Herausgeber-ID - Berechnet die Herausgeber-ID für eine AIR-Anwendung
-* Dienstprogrammlizenzgenerator - Generiert lokal Lizenzen (ohne Lizenzanforderung an einen Server)
-* Lizenzeinbettung - Bettet vorab erstellte Lizenzen in Inhalte ein
+* Listen-Manager für Richtlinienaktualisierungen - Erstellt und zeigt Listen für DRM-Richtlinienaktualisierungen an
+* Sperrlisten-Manager - Erstellt und zeigt Sperrlisten an
+* AIR Publisher ID - Berechnet die Publisher ID für eine AIR-Anwendung
+* Utility License Generator - Generiert lokal Lizenzen (ohne Lizenzanforderung an einen Server)
+* Lizenzeinbettung - Bettet vorgenerierte Lizenzen in Inhalte ein

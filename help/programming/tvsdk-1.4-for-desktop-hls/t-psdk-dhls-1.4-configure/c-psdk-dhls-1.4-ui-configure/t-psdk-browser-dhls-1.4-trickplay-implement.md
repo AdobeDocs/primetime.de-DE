@@ -1,34 +1,32 @@
 ---
-description: Wenn Benutzer die Medien schnell vorwärts oder schnell zurückspulen, befinden sie sich im Trick Play-Modus. Um in den Trick Play-Modus zu wechseln, müssen Sie die MediaPlayer-Wiedergaberate auf einen anderen Wert als 1 einstellen.
-title: Schnelles Vorwärts- und Zurückspulen implementieren
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Wenn Benutzer schnell vorwärts oder schnell durch die Medien zurückkehren, befinden sie sich im Trick Play-Modus. Um in den Trick Play-Modus zu wechseln, müssen Sie die MediaPlayer-Wiedergaberate auf einen anderen Wert als 1 festlegen.
+title: Schnelles Vorwärts- und Rückspulen implementieren
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 0%
 
 ---
 
+# Schnelles Vorwärts- und Rückspulen implementieren {#implement-fast-forward-and-rewind}
 
-# Schnelles Vorwärts- und Zurückspulen {#implement-fast-forward-and-rewind} implementieren
+Wenn Benutzer schnell vorwärts oder schnell durch die Medien zurückkehren, befinden sie sich im Trick Play-Modus. Um in den Trick Play-Modus zu wechseln, müssen Sie die MediaPlayer-Wiedergaberate auf einen anderen Wert als 1 festlegen.
 
-Wenn Benutzer die Medien schnell vorwärts oder schnell zurückspulen, befinden sie sich im Trick Play-Modus. Um in den Trick Play-Modus zu wechseln, müssen Sie die MediaPlayer-Wiedergaberate auf einen anderen Wert als 1 einstellen.
+Um die Geschwindigkeit zu wechseln, müssen Sie einen Wert festlegen.
 
-Um die Geschwindigkeit zu wechseln, müssen Sie einen Wert einstellen.
+1. Wechseln Sie vom normalen Wiedergabemodus (1x) zum Wiedergabemodus, indem Sie die `rate` -Eigenschaft auf `MediaPlayer` auf einen zulässigen Wert.
 
-1. Wechseln Sie vom normalen Wiedergabemodus (1x) zum Wiedergabemodus, indem Sie die `rate`-Eigenschaft für `MediaPlayer` auf einen zulässigen Wert setzen.
-
-   * Die `MediaPlayerItem`-Klasse definiert die zulässigen Wiedergaberaten.
+   * Die `MediaPlayerItem` -Klasse definiert die zulässigen Wiedergaberaten.
    * TVSDK wählt die nächstzulässige Rate aus, wenn die angegebene Rate nicht zulässig ist.
 
-      Wenn die Trickplay-Rate von 0 (Pause) oder 1 (normale Wiedergabe) in eine Rate geändert wird, die größer als 1 oder kleiner als -1 ist, werden alle Anzeigen in der Zeitleiste entfernt. Es gibt nur einen Punkt auf der gesamten Zeitschiene, der eine Trickplay-Aktion ermöglicht, damit der Inhalt schnell weitergeleitet und zurückgegeben werden kann, ohne an einer beliebigen Anzeigenposition anzuhalten. Diese Aktion wird durch eine Zeitschienen-Abtrennungsaktion auf TVSDK aktiviert, um alle aufgelösten adBreaks zu entfernen. Wenn das Trickplay bei 0 oder 1 fortgesetzt wird, werden die AdBreaks zuerst durch die Zeitschienenanlagenaktion wiederhergestellt.
+     Wenn die Trickplay-Rate von 0 (Pause) oder 1 (normale Wiedergabe) in eine Rate geändert wird, die größer als 1 oder kleiner als -1 ist, werden alle Anzeigen auf der Timeline entfernt. Es gibt nur einen Zeitraum auf der gesamten Timeline, der eine Trickplay-Aktion erleichtert, damit der Inhalt schnell weitergeleitet und zurückgesetzt werden kann, ohne an einer Anzeigenposition anzuhalten. Diese Aktion wird durch eine Zeitleistensenkungsaktion auf TVSDK aktiviert, um alle aufgelösten adBreaks zu entfernen. Wenn die Trickplay-Wiedergabe bei 0 oder 1 fortgesetzt wird, werden die adBreaks zuerst durch die Aktion für Zeitleistenanhang wiederhergestellt.
 
-      Beachten Sie die folgenden Informationen:
+     Beachten Sie die folgenden Informationen:
 
    * Wenn die Trickplay-Aktion den Inhalt zurückspulen soll, wird die Wiedergabe fortgesetzt, wenn die Rate auf 1 geändert wird.
-   * Wenn bei der Trickplay-Aktion der Inhalt schnell weitergeleitet werden soll, wird das zuletzt übersprungene adBreak an der Wiederaufnahmeposition abgespielt.
+   * Wenn die Trickplay-Aktion darin besteht, den Inhalt schnell weiterzuleiten, wird die zuletzt übersprungene adBreak an der Wiederaufnahmeposition wiedergegeben.
 
-   In diesem Beispiel wird die interne Wiedergaberate des Players auf die angeforderte Rate eingestellt.
+   In diesem Beispiel wird die interne Wiedergaberate des Players auf die angeforderte Rate gesetzt.
 
    ```
    private function onPlaybackRateChange(event:IndexChangeEvent):void { 
@@ -39,56 +37,56 @@ Um die Geschwindigkeit zu wechseln, müssen Sie einen Wert einstellen.
    } 
    ```
 
-1. Sie können optional auf Ratenänderungen-Ereignis hören, die Sie darüber informieren, wann Sie eine Ratenänderung angefordert haben und wann eine Ratenänderung tatsächlich stattfindet.
+1. Optional können Sie auf Ratenänderungs-Ereignisse warten, die Sie darüber informieren, wann Sie eine Ratenänderung angefordert haben und wann eine Ratenänderung tatsächlich stattfindet.
 
-   TVSDK sendet die folgenden Ereignisse im Zusammenhang mit der Trickwiedergabe:
+   TVSDK sendet die folgenden Ereignisse im Zusammenhang mit der Trick Play-Methode:
 
-   * `mediacore.events.PlaybackRateEvent.RATE_SELECTED` wenn sich der  `rate` Wert in einen anderen Wert ändert.
+   * `mediacore.events.PlaybackRateEvent.RATE_SELECTED` wenn die `rate` ändert sich in einen anderen Wert.
 
    * `mediacore.events.PlaybackRateEvent.RATE_PLAYING` wenn die Wiedergabe mit der ausgewählten Rate fortgesetzt wird.
 
-   TVSDK löst beide Ereignis aus, wenn der Player vom Trick-Play-Modus zum normalen Wiedergabemodus zurückkehrt.
+   TVSDK sendet beide Ereignisse, wenn der Player aus dem Trick-Play-Modus in den normalen Wiedergabemodus zurückkehrt.
 
 ## API-Elemente für Ratenänderungen {#rate-change-api}
 
-TVSDK umfasst Methoden, Eigenschaften und Ereignis zur Bestimmung gültiger Raten, aktueller Raten, zur Unterstützung von Trick Play und andere Funktionen im Zusammenhang mit dem schnellen Vor- und Zurückspulen.
+TVSDK enthält Methoden, Eigenschaften und Ereignisse zur Bestimmung gültiger Raten, aktueller Raten, zur Unterstützung von Trick Play und andere Funktionen im Zusammenhang mit der schnellen Vorwärts- und Rückspaltung.
 
 Verwenden Sie die folgenden API-Elemente, um die Abspielraten zu ändern:
 
 * `MediaPlayer.rate` Eigenschaft mit Setter- und Getter-Funktionen
-* `MediaPlayer.localTime property` with getter function
+* `MediaPlayer.localTime property` mit Getter-Funktion
 * `mediacore.events.PlaybackRateEvent.RATE_SELECTED`
 * `mediacore.events.PlaybackRateEvent.RATE_PLAYING`
-* `MediaPlayerItem.IsTrickPlaySupported` Eigenschaft mit getter-Funktion
+* `MediaPlayerItem.IsTrickPlaySupported` Eigenschaft mit Getter-Funktion
 * `AdBreakPlaybackEvent.AD_BREAK_SKIPPED`
 * `MediaPlayerItem.availablePlaybackRates` -Eigenschaft mit Getter-Funktion - gibt gültige Raten an.
 
-| Ratenwert | Auswirkungen auf die Wiedergabe |
+| Kurswert | Auswirkung auf die Wiedergabe |
 |---|---|
-| 2.0, 4.0, 8.0, 16.0, 32.0, 64.0, 128.0 | Wechselt in den Vorwärtsmodus mit dem angegebenen Multiplikator schneller als normal (z. B. 4 ist viermal schneller als normal) |
-| -2.0, -4.0, -8.0, -16.0, -32.0, -64.0, -128.0 | Wechselt in den Modus &quot;Fast-Retwind&quot; |
-| 1,0 | Wechselt in den normalen Wiedergabemodus (das Aufrufen von `play` entspricht dem Festlegen der rate-Eigenschaft auf 1,0) |
-| 0,0 | Pausen (Aufrufen von `pause` entspricht dem Festlegen der rate-Eigenschaft auf 0,0) |
+| 2.0, 4.0, 8.0, 16.0, 32.0, 64.0  , 128.0 | Wechselt mit dem angegebenen Multiplikator schneller als normal in den Vorwärtsmodus (z. B. 4 ist viermal schneller als normal) |
+| -2.0, -4.0, -8.0, -16.0, -32.0, -64.0  , -128.0 | Wechselt in den Fast-Retail-Modus |
+| 1.0 | Wechselt in den normalen Wiedergabemodus (Aufruf von `play` entspricht dem Festlegen der rate-Eigenschaft auf 1,0) |
+| 0.0 | Pausen (aufrufen `pause` entspricht dem Festlegen der rate-Eigenschaft auf 0,0) |
 
-## Einschränkungen und Verhalten bei Trick Play {#limitations-behavior-trick-play}
+## Einschränkungen und Verhalten bei der Trickwiedergabe {#limitations-behavior-trick-play}
 
-Im Folgenden finden Sie die Einschränkungen für den Trick Play-Modus:
+Hier finden Sie die Einschränkungen für den Trick Play-Modus:
 
-* Die Übergeordnet-Wiedergabeliste muss nur I-Frame-Segmente enthalten. Auf dem Bildschirm werden nur die Schlüsselbilder aus der I-Frame-Spur angezeigt.
-* Die Audiospur und die Untertitel sind deaktiviert.
+* Die Master-Wiedergabeliste muss nur I-Frame-Segmente enthalten. Auf dem Bildschirm werden nur die Schlüsselrahmen der I-Frame-Spur angezeigt.
+* Der Audio-Track und die Untertitel sind deaktiviert.
 * Die Logik der adaptiven Bitrate (ABR) ist deaktiviert. TVSDK wählt eine Bitrate zwischen der niedrigsten bereitgestellten Rate und 800 Kbit/s aus und verwendet diese Rate während der gesamten Trick-Play-Sitzung.
 * Wiedergabe und Pause sind aktiviert.
-* Suche ist verboten. Um zu suchen, rufen Sie `pause` auf, um den Trick Play-Modus zu beenden, und rufen Sie dann `seek` auf.
+* Suche ist verboten. Um zu suchen, rufen Sie `pause` , um den Wiedergabemodus zu beenden, und rufen Sie dann `seek`.
 
 * Sie können den Trick-Play-Modus in eine beliebige zulässige Wiedergabegeschwindigkeit (Wiedergabe oder Pause) beenden.
-* Wenn Anzeigen in den Stream eingebunden werden:
+* Wenn Anzeigen in den Stream integriert werden:
 
-   * Sie können nur zum Trick play gehen, während Sie den Hauptinhalt wiedergeben. Wenn Sie versuchen, während einer Werbeunterbrechung zu &quot;trick play&quot;zu wechseln, wird ein Fehler ausgelöst.
-   * Nach dem Starten des Trick Play-Modus werden Werbeunterbrechungen ignoriert und es werden keine Ereignis ausgelöst.
+   * Sie können nur während der Wiedergabe des Hauptinhalts zum Trick Play gehen. Ein Fehler wird ausgelöst, wenn Sie versuchen, während einer Werbeunterbrechung zu &quot;trick play&quot;zu wechseln.
+   * Nach dem Starten des Trick Play-Modus werden die Werbeunterbrechungen ignoriert und es werden keine Anzeigenereignisse ausgelöst.
    * Die Zeitleiste, die TVSDK der Player-Anwendung zur Verfügung stellt, wird auch dann nicht geändert, wenn Werbeunterbrechungen übersprungen werden.
-   * Die `MediaPlayer.currentTime`-Eigenschaft springt mit der Dauer der übersprungenen Werbeunterbrechung vorwärts (bei schneller Vorwärtsbewegung) oder rückwärts (bei schnellem Zurückspulen). Durch dieses Sprungverhalten für die aktuelle Zeit bleibt die Stream-Dauer während der Trick-Wiedergabe unverändert. Ihre Player-Anwendung kann die `localTime`-Eigenschaft verwenden, um die Zeit relativ zum Hauptinhalt zu verfolgen. Für die Werte, die für die lokale Zeit zurückgegeben werden, wenn eine Anzeige übersprungen wird, werden keine Zeitsprünge ausgeführt.
+   * Die `MediaPlayer.currentTime` -Eigenschaft springt vorwärts (bei schneller Vorwärts) oder rückwärts (bei schneller Rückspaltung) mit der Dauer der übersprungenen Werbeunterbrechung. Durch dieses Sprungverhalten für die aktuelle Zeit kann die Stream-Dauer während der Trick Play-Zeit unverändert bleiben. Ihre Player-Anwendung kann `localTime` -Eigenschaft, um die Zeit zu verfolgen, die nur relativ zum Hauptinhalt ist. Für die Werte, die beim Überspringen einer Anzeige für die lokale Zeit zurückgegeben werden, werden keine Zeitpunkte ausgeführt.
 
-   * Das `AdBreakPlaybackEvent.AD_BREAK_SKIPPED`-Ereignis wird unmittelbar vor dem Überspringen einer Werbeunterbrechung ausgelöst. Ihr Player kann dieses Ereignis verwenden, um benutzerdefinierte Logik in Bezug auf die übersprungenen Werbeunterbrechungen zu implementieren.
-   * Beim Beenden der Trick-Wiedergabe werden dieselben Regeln für die Anzeigenwiedergabe aufgerufen wie beim Beenden der Suche.
+   * Die `AdBreakPlaybackEvent.AD_BREAK_SKIPPED` -Ereignis unmittelbar bevor eine Werbeunterbrechung übersprungen wird. Ihr Player kann dieses Ereignis verwenden, um benutzerdefinierte Logik im Zusammenhang mit den übersprungenen Werbeunterbrechungen zu implementieren.
+   * Beim Beenden der Suche wird dieselbe Richtlinie für die Anzeigenwiedergabe aufgerufen wie beim Beenden der Suche.
 
-      Wie bei der Suche hängt das Verhalten daher davon ab, ob sich die Wiedergaberichtlinie Ihrer Anwendung von der Standardrichtlinie unterscheidet. Die Standardeinstellung ist, dass die letzte übersprungene Werbeunterbrechung an dem Punkt wiedergegeben wird, an dem Sie die Trick-Wiedergabe beendet haben.
+     Wie bei der Suche hängt das Verhalten daher davon ab, ob sich die Wiedergaberichtlinie Ihrer Anwendung von der standardmäßigen unterscheidet. Die Standardeinstellung ist, dass die letzte übersprungene Werbeunterbrechung an dem Punkt wiedergegeben wird, an dem Sie aus der Trickwiedergabe herausgekommen sind.

@@ -1,8 +1,7 @@
 ---
 title: Übersicht über Konto-IQ
 description: Konto-IQ hilft MVPDs und Programmierern, die Risiken für ihren Umsatz und Geschäftsbetrieb zu verstehen und die wirksamsten Maßnahmen zu bestimmen, um die Auswirkungen von Anmeldebetrug zu mildern.
-exl-id: c0d85fc8-b5ab-4284-802e-82f52eff401f
-source-git-commit: 4475faca828510153a7ec3e505704ee8d8b044d0
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Im Allgemeinen verstehen Anbieter von Video-Streaming-Diensten das Risiko und di
 
 *Abbildung: Informationsfluss für Konto-IQ*
 
-Mit Adobe Primetime Account IQ können Video-Streaming-Dienste die Nutzungsmuster der Abonnenten verstehen und die Freigabe von Anmeldedaten identifizieren. Durch die eingehende Analyse des langen Datenflusses, den jeder Abonnent mit dem proprietären maschinellen Lernmodell der Adobe hinterlassen hat, können Streaming-Dienste das Nutzungsverhalten verstehen und die Weitergabe von Anmeldeinformationen mit größerer Sicherheit identifizieren. Darüber hinaus ermöglicht sie Maßnahmen durch Integrationen mit anderen Systemen, wie z. B. die Begrenzung gleichzeitiger Streams oder die Anpassung von Angeboten, und validiert die Auswirkungen dieser Aktionen - ob zur Förderung des legitimen Verhaltens bei der Anzeige oder zur Steigerung von Abonnenten und Einnahmen.
+Mit Adobe Primetime Account IQ können Video-Streaming-Dienste die Nutzungsmuster der Abonnenten verstehen und die Freigabe von Anmeldedaten identifizieren. Durch die eingehende Analyse des langen Trails von Daten, die jeder Abonnent mit dem proprietären Adobe-Multilayer-Modell für maschinelles Lernen hinter sich hat, können Streaming-Dienste das Nutzungsverhalten verstehen und die Weitergabe von Anmeldeinformationen mit größerer Sicherheit identifizieren. Darüber hinaus ermöglicht sie Maßnahmen durch Integrationen mit anderen Systemen, wie z. B. die Begrenzung gleichzeitiger Streams oder die Anpassung von Angeboten, und validiert die Auswirkungen dieser Aktionen - ob zur Förderung des legitimen Verhaltens bei der Anzeige oder zur Steigerung von Abonnenten und Einnahmen.
 
 Konto IQ bietet die Tools und Funktionen zum Messen, Verwalten und Monetarisieren der Freigabe von Anmeldedaten. Berichte, Analysen und Dashboards ermöglichen die Datenexploration, um Muster zu identifizieren. Direkte Aktionen werden durch Exporte und Integrationen mit Adobe- und Drittanbietersystemen wie Kampagnenverwaltung, Währungsbegrenzung oder Abonnentenregistrierung unterstützt. Mit dedizierten Tracking-Tools wird der Erfolg dieser Aktionen gemessen, sodass sie aktualisiert oder erweitert werden können.
 
@@ -44,7 +43,6 @@ Nehmen wir einen tiefen Einblick in die Diagramme und Berichte in den einzelnen 
 >* [Nutzungsmuster](/help/AccountIQ/usage-patterns.md)
 >* [Glossar der Produktbegriffe](/help/AccountIQ/product-concepts.md)
 >* [Whitepaper zu Konto-IQ](https://www.adobe.com/content/dam/dx/us/en/products/primetime/resources/primetime-account-iq-whitepaper.pdf)
-
 
 <!-- Credential sharing is rampant and prevalent among subscribers in the video streaming industry. To add to it, understanding, identifying, and acting on password sharing is a complex process. There is complexity involved in understanding the subscriber usage behavior and developing a holistic view of viewer activity—for example, distinguishing sharing among members within the same household and outside. Due to this challenge, streaming service providers have inhibitions in acting against password sharing.
 

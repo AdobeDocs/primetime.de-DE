@@ -1,24 +1,22 @@
 ---
-description: Mit MediaPlayerItemLoader können Sie Informationen zu einem Medienstream abrufen, ohne eine MediaPlayer-Instanz zu instanziieren. Dies ist besonders nützlich, wenn Sie Streams vor dem Puffern zwischenspeichern möchten, damit die Wiedergabe ohne Verzögerung beginnen kann.
-title: Medienressource mit MediaPlayerItemLoader laden
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Mit MediaPlayerItemLoader können Sie Informationen zu einem Medien-Stream abrufen, ohne eine MediaPlayer-Instanz zu instanziieren. Dies ist besonders bei der Vorab-Pufferung von Streams nützlich, damit die Wiedergabe ohne Verzögerung beginnen kann.
+title: Laden einer Medienressource mit MediaPlayerItemLoader
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
 
 ---
 
+# Laden einer Medienressource mit MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
 
-# Medienressource mit MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader} laden
+Mit MediaPlayerItemLoader können Sie Informationen zu einem Medien-Stream abrufen, ohne eine MediaPlayer-Instanz zu instanziieren. Dies ist besonders bei der Vorab-Pufferung von Streams nützlich, damit die Wiedergabe ohne Verzögerung beginnen kann.
 
-Mit MediaPlayerItemLoader können Sie Informationen zu einem Medienstream abrufen, ohne eine MediaPlayer-Instanz zu instanziieren. Dies ist besonders nützlich, wenn Sie Streams vor dem Puffern zwischenspeichern möchten, damit die Wiedergabe ohne Verzögerung beginnen kann.
-
-Mit der `MediaPlayerItemLoader`-Klasse können Sie eine Medienressource gegen die aktuelle `MediaPlayerItem`-Instanz austauschen, ohne eine Ansicht an eine `MediaPlayer`-Instanz anzuhängen, die Hardware-Ressourcen für die Videodekodierung zuweist. Weitere Schritte sind für DRM-geschützte Inhalte erforderlich, in diesem Handbuch werden sie jedoch nicht beschrieben.
+Die `MediaPlayerItemLoader` -Klasse hilft Ihnen beim Austausch einer Medienressource für die aktuelle `MediaPlayerItem` , ohne eine Ansicht an eine `MediaPlayer` -Instanz, die Hardware-Ressourcen für die Videodekodierung zuweist. Für DRM-geschützte Inhalte sind zusätzliche Schritte erforderlich, diese werden jedoch in diesem Handbuch nicht beschrieben.
 
 >[!IMPORTANT]
 >
->TVSDK unterstützt kein einzelnes `QoSProvider`, um sowohl mit `itemLoader` als auch mit `MediaPlayer` zu arbeiten. Wenn Ihre Anwendung Instant On verwendet, muss die Anwendung zwei `QoS`-Instanzen verwalten und beide Instanzen für die Informationen verwalten. Weitere Informationen finden Sie unter [Instant-on](../../android-3x-content-playback-options-android2/buffering-configuration/android-3x-instant-on.md).
+>TVSDK unterstützt keine einzelne `QoSProvider` für beide `itemLoader` und `MediaPlayer`. Wenn Ihre Anwendung Instant On verwendet, muss die Anwendung zwei `QoS` Instanzen und verwalten Sie beide Instanzen für die Informationen. Siehe [Sofort-On](../../android-3x-content-playback-options-android2/buffering-configuration/android-3x-instant-on.md) für weitere Informationen.
 
 1. Erstellen Sie eine Instanz von `MediaPlayerItemLoader`.
 
@@ -50,9 +48,9 @@ Mit der `MediaPlayerItemLoader`-Klasse können Sie eine Medienressource gegen di
 
    >[!TIP]
    >
-   >Erstellen Sie für jede Ressource eine separate Instanz von `MediaPlayerItemLoader`. Verwenden Sie keine `MediaPlayerItemLoader`-Instanz, um mehrere Ressourcen zu laden.
+   >Erstellen Sie eine separate Instanz von `MediaPlayerItemLoader` für jede Ressource. Verwenden Sie keinen `MediaPlayerItemLoader` -Instanz, um mehrere Ressourcen zu laden.
 
-1. Implementieren Sie die `ItemLoaderListener`-Klasse, um Benachrichtigungen von der `MediaPlayerItemLoader`-Instanz zu erhalten.
+1. Implementieren des `ItemLoaderListener` -Klasse zum Empfangen von Benachrichtigungen von `MediaPlayerItemLoader` -Instanz.
 
    ```java
    private MediaPlayerItemLoader createLoader() { 
@@ -77,13 +75,13 @@ Mit der `MediaPlayerItemLoader`-Klasse können Sie eine Medienressource gegen di
    }
    ```
 
-   Führen Sie im Rückruf `onLoadComplete()` einen der folgenden Schritte aus:
+   Im `onLoadComplete()` Callback ausführen, führen Sie einen der folgenden Schritte aus:
 
-   * Vergewissern Sie sich, dass alles, was sich auf die Pufferung auswirken könnte, z. B. die Auswahl von WebVTT oder Audiospuren, abgeschlossen ist, und rufen Sie `prepareBuffer()` auf, um die Vorteile des sofortigen Einsatzes zu nutzen.
-   * Hängen Sie das Element mit `MediaPlayer` an die Instanz an, indem Sie `replaceCurrentItem()` verwenden.
+   * Stellen Sie sicher, dass alles, was sich auf die Pufferung auswirken könnte, z. B. Auswählen von WebVTT- oder Audio-Tracks, abgeschlossen ist und aufruft `prepareBuffer()` , um die Vorteile von sofortiger Verwendung zu nutzen.
+   * Hängen Sie das Element an die `MediaPlayer` -Instanz mithilfe von `replaceCurrentItem()`.
 
-   Wenn Sie `prepareBuffer()` aufrufen, erhalten Sie das Ereignis BUFFER_PREPARED im `onBufferPrepared`-Handler, wenn die Vorbereitung abgeschlossen ist.
-1. Rufen Sie `load` auf der `MediaPlayerItemLoader`-Instanz auf und übergeben Sie die zu ladende Ressource sowie optional die Inhalts-ID und eine `MediaPlayerItemConfig`-Instanz.
+   Wenn Sie `prepareBuffer()`, erhalten Sie das Ereignis &quot;BUFFER_PREPARED&quot;in Ihrem `onBufferPrepared` Handler, wenn die Vorbereitung abgeschlossen ist.
+1. Aufruf `load` auf `MediaPlayerItemLoader` -Instanz und übergeben Sie die zu ladende Ressource sowie optional die Inhalts-ID und eine `MediaPlayerItemConfig` -Instanz.
 
    ```java
    loader = createLoader(); 
@@ -91,18 +89,19 @@ Mit der `MediaPlayerItemLoader`-Klasse können Sie eine Medienressource gegen di
    loader.load(res, 233, getConfig());
    ```
 
-1. Um einen Puffer von einem anderen Punkt als dem Anfang des Streams aus zu erstellen, rufen Sie `prepareBuffer()` mit der Position (in Millisekunden) auf, an der die Pufferung des Beginns erfolgen soll.
-1. Verwenden Sie die `replaceCurrentItem()`- und `play()`-Methoden von `MediaPlayer`, um ab diesem Zeitpunkt die Wiedergabe des Beginns zu starten.
-1. Warten Sie auf den Status &quot;Leerlauf&quot;und rufen Sie `replaceCurrentItem` auf.
-1. Spielen Sie das Element ab.
+1. Rufen Sie auf, um von einem anderen Punkt als dem Anfang des Streams aus zu puffern. `prepareBuffer()` mit der Position (in Millisekunden), an der die Pufferung gestartet werden soll.
+1. Verwenden Sie die `replaceCurrentItem()` und `play()` Methoden `MediaPlayer` um ab diesem Zeitpunkt mit dem Abspielen zu beginnen.
+1. Warten auf Leerlaufstatus und Aufruf `replaceCurrentItem`.
+1. Spiel das Element ab.
 
    * Wenn das Element geladen, aber nicht gepuffert wird:
 
       1. Warten Sie auf den initialisierten Status.
-      1. Aufruf von `prepareToPlay()`.
-      1. Warten Sie auf den Status &quot;VORBEREITT&quot;.
-      1. Aufruf von `play()`.
+      1. Aufruf `prepareToPlay()`.
+      1. Warten Sie auf den Status VORBEREITT .
+      1. Aufruf `play()`.
+
    * Wenn das Element gepuffert wird:
 
-      1. Warten Sie auf das puffervorbereitete Ereignis.
-      1. Aufruf von `play()`.
+      1. Warten Sie auf das Ereignis, das vom Puffer vorbereitet wurde.
+      1. Aufruf `play()`.

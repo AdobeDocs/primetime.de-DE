@@ -1,16 +1,14 @@
 ---
-title: Routing-Anzeigen auf Grundlage von Regeln
-description: Routing-Anzeigen auf Grundlage von Regeln
+title: Auf Regeln basierende Routing-Anzeigen
+description: Auf Regeln basierende Routing-Anzeigen
 copied-description: true
-exl-id: e057e53d-a6c0-4e24-b6c7-29850f7cde60
-translation-type: tm+mt
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 0%
 
 ---
 
-# Routing-Anzeigen auf Basis von Regeln {#routing-ads-based-on-rules}
+# Auf Regeln basierende Routing-Anzeigen {#routing-ads-based-on-rules}
 
-Primetime Ad Insertion unterstützt die Möglichkeit, Anzeigenanforderungen mithilfe von Inhaltsmetadaten, Audience-Targeting-Daten oder anderen Parametern an einen oder mehrere Anzeigen-Server umzuleiten. Dies könnte für Anwendungsfälle von Bedeutung sein, in denen Bestandsrechte von mehreren Parteien gemeinsam genutzt werden, wie z. B. einem TV-Netz und einem Kabel-/Satellitenbetreiber. Verwenden Sie die Abschnitte &quot;Zielgerichtete Anzeigenumleitung&quot;und &quot;Partner-/Verkaufsrechte&quot;der Primetime-Ad Insertion-Konsole, um diese Regeln einzurichten. Weitere Informationen erhalten Sie von Ihrem Primetime-Support-Mitarbeiter.
+Primetime Ad Insertion unterstützt die Möglichkeit, Anzeigenanforderungen mithilfe von Inhaltsmetadaten, Zielgruppen-Targeting-Daten oder anderen Parametern an einen oder mehrere Adserver umzuleiten. Dies könnte für Anwendungsfälle von Bedeutung sein, in denen Inventarrechte von mehreren Parteien gemeinsam genutzt werden, beispielsweise einem TV-Netz und einem Kabel-/Satellitenbetreiber. Verwenden Sie die Abschnitte Zielgerichtete Anzeigenumleitung und Partner-/Verkaufsrechte der Primetime-Ad Insertion-Konsole, um diese Regeln einzurichten. Weitere Informationen erhalten Sie von Ihrem Primetime-Support-Mitarbeiter.

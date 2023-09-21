@@ -1,19 +1,18 @@
 ---
 title: Datenschutzanfrage stellen
 description: Datenschutzanfrage stellen
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
 
 ---
 
-
 # Datenschutzanfrage stellen {#howto-make-privacy-request}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Kennungen und Namespaces {#identifier-namespace}
 
@@ -36,7 +35,7 @@ Sehen Sie sich das folgende Muster an:
 
 >[!IMPORTANT]
 >
->Benutzer müssen authentifiziert werden, damit sie Datenschutzanfragen für die Primetime-Authentifizierung generieren können. Andernfalls müssen Programmierer andere Möglichkeiten zum Extrahieren der MVPD-Benutzer-ID finden.
+>Benutzer müssen authentifiziert werden, damit sie Datenschutzanfragen für die Primetime-Authentifizierung generieren können. Andernfalls müssen Programmierer andere Möglichkeiten finden, die MVPD-Benutzer-ID zu extrahieren.
 
 ## Anforderungstypen {#req-type}
 
@@ -222,23 +221,23 @@ Für eine Löschanfrage:
 Kunden haben zwei Möglichkeiten, Datenschutzanfragen an Adobe zu senden:
 
 * **manuell** - durch Verwendung von [Privacy Service-Benutzeroberfläche](#privacy-service-ui)
-* **automatisch** - durch Verwendung von [Privacy Service-API ](#privacy-service-api)
+* **automatisch** - durch Verwendung von [Privacy Service-API](#privacy-service-api)
 
 ### Über die Privacy Service-Benutzeroberfläche {#privacy-service-ui}
 
-A [complete-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) Informationen zum Zugriff auf und zur Verwendung der Privacy Service-Benutzeroberfläche finden Sie online über Adobe I/O Services. Darüber hinaus können Kunden über diesen Link auf die Bibliothek mit Videos und Artikeln zu Datenschutzbestimmungen zugreifen. Klicken Sie auf das Menü Adobe Experience Cloud und DSGVO . Dadurch werden eine Reihe von Videos geöffnet. In &quot;Anleitung zur DSGVO-Benutzeroberfläche&quot;wird erläutert, wie sie verwendet werden kann.
+A [complete-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md) Informationen zum Zugriff auf und zur Verwendung der Privacy Service-Benutzeroberfläche finden Sie online über Adobe I/O-Dienste. Darüber hinaus können Kunden über diesen Link auf die Bibliothek mit Videos und Artikeln zu Datenschutzbestimmungen zugreifen. Klicken Sie auf das Menü Adobe Experience Cloud und DSGVO . Dadurch werden eine Reihe von Videos geöffnet. In &quot;Anleitung zur DSGVO-Benutzeroberfläche&quot;wird erläutert, wie sie verwendet werden kann.
 
 In der Benutzeroberfläche müssen Kunden ihre eigene IMSOrgID und eine JSON mit Details zu DSGVO-Anfragen für jedes Produkt laden.
 
 ### Durch Verwendung der Privacy Service-API {#privacy-service-api}
 
-Adobe Experience Platform Privacy Service bietet eine gebräuchliche, zentralisierte Erleichterung von Zugriffs-/Löschanfragen und Opt-out-Anfragen für private Daten.
+Adobe Experience Platform Privacy Service bietet eine gebräuchliche, zentralisierte Erleichterung von Zugriffs-/Löschanfragen und Opt-out-Anfragen für personenbezogene Daten.
 
-Die **Dokumentation zur Privacy Service-API** behandelt ausführlich, wie ein Adobe-Kunde in die Adobe-API integrieren kann.
+Die **Dokumentation zur Privacy Service-API** beschreibt ausführlich, wie ein Adobe-Kunde mit der Adobe-API integriert werden kann.
 
 **Visualisieren Sie API-Aufrufe mit Postman (einer kostenlosen Drittanbietersoftware):**
 
-* [Privacy Service-API Postman-Sammlung auf GitHub](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Privacy%20Service%20API.postman_collection.json)
+* [Privacy Service API Postman-Sammlung auf GitHub](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Privacy%20Service%20API.postman_collection.json)
 * [Videoleitfaden zum Erstellen der Postman-Umgebung](https://video.tv.adobe.com/v/28832)
 * [Schritte zum Importieren von Umgebungen und Sammlungen in Postman](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)
 
@@ -252,7 +251,7 @@ Die **Dokumentation zur Privacy Service-API** behandelt ausführlich, wie ein Ad
 
 **Erforderliche Kopfzeilen:**
 
-* Alle Aufrufe erfordern die Kopfzeilen `Authorization`, `x-gw-ims-org-id`und `x-api-key`. Weitere Informationen zum Abrufen dieser Werte finden Sie unter **Authentifizierungs-Tutorial**.
+* Alle Aufrufe erfordern die Kopfzeilen `Authorization`, `x-gw-ims-org-id`, und `x-api-key`. Weitere Informationen zum Abrufen dieser Werte finden Sie unter **Authentifizierungs-Tutorial**.
 * Alle Anfragen mit einer Payload im Anfragetext (wie POST-, PUT- und PATCH-Aufrufe) müssen die Kopfzeile enthalten `Content-Type` mit dem Wert `application/json`.
 
 <!--

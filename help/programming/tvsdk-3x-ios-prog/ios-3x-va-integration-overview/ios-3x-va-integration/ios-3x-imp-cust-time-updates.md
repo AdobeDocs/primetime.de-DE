@@ -1,24 +1,22 @@
 ---
-description: In einigen Analytics-Implementierungen sollte die Clientanwendung möglicherweise eine andere Abspielposition als die Position angeben, die vom localTime-Wert des TVSDK gemeldet wird. Beispielsweise kann bei einer linearen Stream-Wiedergabe der Abspielkopf jedes Programms relativ zur Beginn-Zeit angegeben werden.
-title: Implementieren benutzerdefinierter Zeitaktualisierungen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: In einigen Analytics-Implementierungen möchte die Client-Anwendung möglicherweise eine andere Abspielposition als die Position bereitstellen, die durch den localTime -Wert des TVSDK gemeldet wird. Beispielsweise kann während einer linearen Stream-Wiedergabe die Abspielleiste jedes Programms relativ zur Startzeit angegeben werden.
+title: Benutzerdefinierte Zeitaktualisierungen implementieren
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
 
 ---
 
+# Benutzerdefinierte Zeitaktualisierungen implementieren {#implement-custom-time-updates}
 
-# Implementieren benutzerdefinierter Zeitaktualisierungen {#implement-custom-time-updates}
-
-In einigen Analytics-Implementierungen sollte die Clientanwendung möglicherweise eine andere Abspielposition als die Position angeben, die vom localTime-Wert des TVSDK gemeldet wird. Beispielsweise kann bei einer linearen Stream-Wiedergabe der Abspielkopf jedes Programms relativ zur Beginn-Zeit angegeben werden.
+In einigen Analytics-Implementierungen möchte die Client-Anwendung möglicherweise eine andere Abspielposition als die Position bereitstellen, die durch den localTime -Wert des TVSDK gemeldet wird. Beispielsweise kann während einer linearen Stream-Wiedergabe die Abspielleiste jedes Programms relativ zur Startzeit angegeben werden.
 
 >[!TIP]
 >
 >Überschreiben Sie diese Methode nur, wenn Sie eine Abspielposition festlegen möchten, die sich von der Standardposition unterscheidet.
 
-So überschreiben Sie die Standardposition der Abspielleiste:
+So überschreiben Sie die standardmäßige Abspielposition:
 
 ```
 vaTrackingMetadata.currentTimeUpdateBlock = ^CMTime () { 

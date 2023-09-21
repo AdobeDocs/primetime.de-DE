@@ -1,29 +1,27 @@
 ---
-title: Überblick über den Lizenzserver
-description: Überblick über den Lizenzserver
+title: Übersicht über den Lizenzserver
+description: Übersicht über den Lizenzserver
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#license-server-overview}
 
-Bevor Sie Lizenzen für Clients ausstellen können, müssen Sie einen Adobe Primetime DRM-Lizenzserver bereitstellen. Der Lizenzserver verwendet das Primetime DRM SDK, um eine Reihe von Aufgaben durchzuführen.
+Bevor Sie Lizenzen für Clients erteilen können, müssen Sie einen Adobe Primetime DRM-Lizenzserver bereitstellen. Der Lizenzserver verwendet das Primetime DRM SDK, um eine Reihe von Aufgaben auszuführen.
 
 So implementieren Sie einen Lizenzserver:
 
-* Verarbeiten Sie Authentifizierungsanforderungen, wenn die Authentifizierung mit Benutzername/Kennwort unterstützt wird.
+* Verarbeiten Sie Authentifizierungsanfragen, wenn die Authentifizierung mit Benutzername/Kennwort unterstützt wird.
 * Lizenzanforderungen bearbeiten
-* Serverversionsanforderungen verarbeiten - Alle Server müssen Unterstützung für diesen Anforderungstyp implementieren.
-* Anforderungen zur Domänenregistrierung verarbeiten - nur erforderlich, wenn ein Domänenserver implementiert wird.
-* Domänenderegistrierungsanforderungen verarbeiten - nur erforderlich, wenn ein Domänenserver implementiert wird.
-* Prozesssynchronisierung: Wird nur benötigt, wenn in den Lizenzen die Synchronisierungsanforderungen angegeben sind.
+* Verarbeitung von Server-Versionsanfragen - Alle Server müssen Unterstützung für diesen Anforderungstyp implementieren.
+* Registrierungsanfragen für Domänen verarbeiten - nur bei Implementierung eines Domänenservers erforderlich.
+* Domänenderegistrierungsanfragen verarbeiten - nur bei Implementierung eines Domänenservers erforderlich.
+* Synchronisation von Prozessen - nur erforderlich, wenn in Lizenzen Synchronisierungsanforderungen angegeben sind.
 
-Darüber hinaus muss der Server eine Geschäftslogik für die Authentifizierung von Benutzern bereitstellen, feststellen, ob Benutzer zur Ansicht von Inhalten berechtigt sind, und optional die Lizenznutzung verfolgen.
+Darüber hinaus muss der Server Geschäftslogik für die Authentifizierung von Benutzern bereitstellen, um zu bestimmen, ob Benutzer berechtigt sind, Inhalte anzuzeigen und optional die Lizenznutzung zu verfolgen.
 
-Weitere Informationen zur Java-API finden Sie unter *Adobe Primetime DRM-API-Referenz*.
+Siehe *Adobe Primetime DRM API-Referenz* für Details zur Java-API.

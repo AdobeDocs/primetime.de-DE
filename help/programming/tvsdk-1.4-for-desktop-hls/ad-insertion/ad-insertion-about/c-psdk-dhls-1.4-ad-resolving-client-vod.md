@@ -1,38 +1,35 @@
 ---
-description: Für Video-on-Demand-Inhalte (VOD) fügt TVSDK Werbeunterbrechungen ein, indem die Anzeigen im Hauptinhalt aufgeteilt werden, sodass die Zeitschiene länger ist.
-title: VOD-Anzeige auflösen und einfügen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Bei Video-On-Demand (VOD)-Inhalten fügt TVSDK die Anzeigen durch Aufspaltung der Anzeigen im Hauptinhalt ein, sodass die Timeline-Dauer erhöht wird.
+title: Auflösung und Einfügen von VOD-Anzeigen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
+# Auflösung und Einfügen von VOD-Anzeigen{#vod-ad-resolving-and-insertion}
 
-# VOD-Anzeige auflösen und einfügen{#vod-ad-resolving-and-insertion}
+Bei Video-On-Demand (VOD)-Inhalten fügt TVSDK die Anzeigen durch Aufspaltung der Anzeigen im Hauptinhalt ein, sodass die Timeline-Dauer erhöht wird.
 
-Für Video-on-Demand-Inhalte (VOD) fügt TVSDK Werbeunterbrechungen ein, indem die Anzeigen im Hauptinhalt aufgeteilt werden, sodass die Zeitschiene länger ist.
-
-Vor der Wiedergabe löst TVSDK bekannte Anzeigen auf, fügt Anzeigenumbrüche in den Hauptinhalt ein, wie in einer Zeitleiste beschrieben, die von TVSDK zurückgegeben wird, und berechnet die virtuelle Zeitleiste gegebenenfalls neu.
+TVSDK löst vor der Wiedergabe bekannte Anzeigen auf, fügt Anzeigen ein und unterbricht sie im Hauptinhalt, wie durch eine von TVSDK zurückgegebene Timeline beschrieben, und berechnet die virtuelle Timeline ggf. neu.
 
 TVSDK fügt Anzeigen wie folgt ein:
 
-* **Pre-Roll**, d. h. vor dem Inhalt.
-* **Mid-Roll**, der sich im Inhalt befindet.
-* **Post-Roll**, der nach dem Inhalt liegt.
+* **Pre-roll**, der vor dem Inhalt steht.
+* **Mid-roll**, der sich im Inhalt befindet.
+* **Post-Roll**, der hinter dem Inhalt steht.
 
 >[!IMPORTANT]
 >
->Bei der Implementierung eines benutzerdefinierten `AdPolicySelector` kann jeder Typ von `AdBreakTimelineItem` (Pre-Roll, Mid-Roll oder Post-Roll) in `AdPolicyInfo` je nach Typ des `AdBreakTimelineItem` eine andere Richtlinie zugewiesen werden. Sie können beispielsweise Inhalte mit mittlerem Roll nach der Wiedergabe beibehalten, Inhalte mit Pre-Roll-Charakter jedoch nach der Wiedergabe entfernen.
+>Bei der Implementierung eines benutzerdefinierten `AdPolicySelector`kann für jeden Typ von `AdBreakTimelineItem` (Pre-Roll, Mid-Roll oder Post-Roll) in `AdPolicyInfo`, basierend auf dem Typ der `AdBreakTimelineItem`. Sie können beispielsweise Mid-Roll-Inhalte nach der Wiedergabe beibehalten, aber Pre-Roll-Inhalte nach der Wiedergabe entfernen.
 
-Nach der Wiedergabe können keine weiteren Beginn am Inhalt auftreten. Anzeigen können nicht sein:
+Nach dem Start der Wiedergabe können keine weiteren Änderungen am Inhalt vorgenommen werden. Anzeigen können nicht sein:
 
-* Eingefügt
+* Einfügen
 * Gelöscht
 
-   So können Sie beispielsweise keine integrierten Anzeigen aus den Inhalten löschen, um ein werbefreies Erlebnis Angebot.
+  Sie können beispielsweise keine integrierten Anzeigen aus dem Inhalt löschen, um ein anzeigenfreies Erlebnis anzubieten.
 * Ersetzt
 
-   Beispielsweise können integrierte Anzeigen nicht durch zielgerichtete Anzeigen ersetzt werden.
-
+  Sie können beispielsweise keine integrierten Anzeigen durch zielgerichtete Anzeigen ersetzen.

@@ -1,8 +1,7 @@
 ---
 title: Vorgänge für Konto-IQ
 description: Der Betrieb von Account IQ umfasst die Durchführung von Aktionen zur Durchführung von Automatisierungen und Massenvorgängen auf Abonnentenkonten und zur Verfolgung ihrer Auswirkungen.
-exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
-source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Zur Ansicht **Aktivitäten** Seitenauswahl **Aktivitäten** Option unter **Aktio
 
 ![](assets/operations-page.png)
 
-*Abbildung: Liste und Details vorhandener Vorgänge in Konto IQ*
+*Abbildung: Liste und Details der bestehenden Vorgänge in Konto IQ*
 
 Auf der Seite &quot;Vorgänge&quot;haben Sie folgende Möglichkeiten:
 
@@ -31,11 +30,11 @@ Auf der Seite &quot;Vorgänge&quot;haben Sie folgende Möglichkeiten:
 
    * Fortschritt (in % Abschluss)
 
-   * Zielgruppe (Segment, auf dem der Vorgang ausgeführt werden soll)
+   * Zielgruppe (Segment zur Ausführung des Vorgangs)
 
-   * Zeitplan (Beginn und Ende des Betriebs)
+   * Zeitplan (Start- und Enddatum des Betriebs)
 
-   * Erstellung und Enddatum des Vorgangs
+   * Erstellungs- und Enddatum des Vorgangs
 
 * [Neuen Vorgang erstellen](/help/AccountIQ/operation-affecting-user-segment.md)
 
@@ -53,13 +52,13 @@ Auf der Seite &quot;Vorgänge&quot;haben Sie folgende Möglichkeiten:
 
 Sie können die Auswirkungen eines Vorgangs analysieren, indem Sie dessen Bericht anzeigen. So zeigen Sie den Bericht eines Vorgangs an:
 
-1. Wählen Sie auf der Hauptseite &quot;Vorgänge&quot;den Vorgangsnamen aus.
+1. Wählen Sie auf der Hauptseite Vorgänge den Vorgangsnamen aus.
 
    Der Bericht wird in Form eines gestapelten Spaltendiagramms angezeigt.
 
    ![](assets/operation-impact-report.png)
 
-   *Abbildung: Tätigkeitsbericht mit Blick auf die Auswirkungen der Vorgänge*
+   *Abbildung: Betriebsbericht mit den Auswirkungen der Vorgänge*
 
    Die X-Achse stellt den Bewertungszeitraum dar und die Y-Achse zeigt die Auswirkungen des Vorgangs (in Bezug auf die Anzahl der Konten in einem Segment während des Bewertungszeitraums). Jeder Balken ist in drei Teile unterteilt.
 
@@ -68,6 +67,7 @@ Sie können die Auswirkungen eines Vorgangs analysieren, indem Sie dessen Berich
    * Ein anderer Teil stellt die Anzahl der aktiven Konten für diesen Zeitraum dar, die sich ursprünglich im Segment befanden, aber die Kriterien des Vorgangssegments nicht mehr erfüllen.
 
    * Der dritte Teil stellt die Konten dar, die in diesem Zeitraum nicht aktiv waren.
+
    >[!NOTE]
    >
    >Die erste Leiste stellt die Anzahl der Konten dar, die zu Beginn des Bewertungszeitraums die Bedingungen des Vorgangssegments erfüllen.

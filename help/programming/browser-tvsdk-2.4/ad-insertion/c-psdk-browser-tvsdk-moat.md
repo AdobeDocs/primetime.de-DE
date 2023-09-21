@@ -2,24 +2,22 @@
 title: Anzeigenmessung von Moat
 description: Anzeigenmessung von Moat
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
-
 # Anzeigenmessung von Moat {#ad-measurement-from-moat}
 
-TVSDK nimmt Informationen von FreeWheel und anderen Adservern entgegen, die VAST-Antworten bereitstellen. FreeWheel bietet innerhalb der VAST-Antworten Informationen vom Moat-Dienst. Der Moat-Dienst zählt Anzeigenimpressionen mit einer Genauigkeit, die besser zeigt, dass Kreative die Interessen einer Audience erfassen oder vernachlässigen.
+TVSDK übernimmt Informationen von FreeWheel und anderen Adservern, die VAST-Antworten bereitstellen. FreeWheel bietet innerhalb von VAST-Antworten Informationen vom Moat-Dienst an. Der Moat-Dienst zählt und beeindruckt mit einer Genauigkeit, die besser zeigt, dass Kreative die Interessen einer Zielgruppe erfassen oder vernachlässigen.
 
-Moat ist ein Dienst, der die Anzeige und Anzeige über viele Verwendungen hinweg misst, von Browsern bis hin zu Anwendungen. Moat generiert Marketinganalysedaten in Echtzeit über mehrere Plattformen hinweg.
+Moat ist ein Dienst, der die Messung und Anzeige von Inhalten über viele Anwendungen hinweg misst, von Browsern bis hin zu Anwendungen. Moat generiert Marketing-Analysedaten in Echtzeit über mehrere Plattformen hinweg.
 
-Die VAST-Antwort-XML verfügt über eine Eigenschaft und ein Element, das Ihr Code lesen kann, die äußerste Anzeige-ID-Eigenschaft und das äußerste Erweiterungselement. So oder so kann Ihr Code TVSDK verwenden, um sowohl die Anzeigen-ID-Informationen als auch die Erweiterungen zu speichern und die Informationen in einer Baumstruktur zu organisieren. Mit dieser Organisation kann Ihr Code die Daten von jeder beliebigen Ebene abrufen und an die gewünschte Stelle weiterleiten. Der Wert der äußersten Anzeige-ID-Eigenschaft ermöglicht es Ihrem Code, Informationen aus der zugehörigen Kampagne zu koordinieren.
+Die VAST-Antwort-XML verfügt über eine Eigenschaft und ein Element, das Ihr Code lesen kann, die äußerste Anzeige-ID-Eigenschaft und das äußere Erweiterungselement. In beiden Fällen kann Ihr Code TVSDK verwenden, um sowohl die Anzeigen-ID-Informationen als auch die Erweiterungsinformationen zu speichern und die Informationen in einer Baumstruktur zu organisieren. Mit dieser Organisation kann Ihr Code die Daten von einer beliebigen Ebene abrufen und an einen beliebigen Ort weitergeben. Der Wert der Eigenschaft &quot;äußerste Anzeigen-ID&quot;ermöglicht es Ihrem Code, Informationen aus der zugehörigen Kampagne zu koordinieren.
 
-Beispielsweise kann FreeWheel Daten in einem Extensions-Element zurückgeben. Nachfolgend finden Sie ein Beispielelement.
+Beispielsweise kann FreeWheel Daten in einem Erweiterungselement zurückgeben. Nachfolgend finden Sie ein Beispielelement.
 
 ```
 <?xml version="1.0"?> 
@@ -37,10 +35,10 @@ Beispielsweise kann FreeWheel Daten in einem Extensions-Element zurückgeben. Na
     </Extensions> 
 ```
 
-Wie im Beispiel unten dargestellt, kann FreeWheel auch die ID-Eigenschaft im Anzeigenelement festlegen.
+Freewheel kann auch die ID-Eigenschaft im Anzeigenelement festlegen, wie im Beispiel unten dargestellt.
 
 ```
 <Ad id="118566" sequence="1">
 ```
 
-Lesen Sie die API-Dokumentation für die Klasse AdobePSDK.NetworkAdInfo.
+Weitere Informationen finden Sie in der API-Dokumentation für die Klasse AdobePSDK.NetworkAdInfo .

@@ -1,16 +1,14 @@
 ---
-title: Erstellen von Videoplayern
-description: Erstellen von Videoplayern
+title: Videoplayer erstellen
+description: Videoplayer erstellen
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
 
 ---
 
+# Videoplayer erstellen{#creating-video-players}
 
-# Erstellen von Videoplayern{#creating-video-players}
-
-Um geschützte Inhalte wiederzugeben, muss Ihre Anwendung die ActionScript 3 DRM-APIs oder Adobe Primetime verwenden. Weitere Informationen finden Sie unter *Programmieren mit ActionScript 3* und im *ActionScript 3.4 Referenzhandbuch für das Adobe Flash Platform*. Informationen zum Erstellen von iOS-basierten Videoplayern finden Sie in der *Adobe Primetime PSDK-Dokumentation*.
+Um geschützte Inhalte wiederzugeben, muss Ihre Anwendung die ActionScript 3 DRM-APIs oder Adobe Primetime verwenden. Siehe *Programmieren von ActionScript 3* und *ActionScript 3.4-Referenz für die Adobe Flash Platform* für weitere Informationen. Informationen zum Erstellen von iOS-basierten Videoplayern finden Sie im Abschnitt *Dokumentation zum Adobe Primetime PSDK*.

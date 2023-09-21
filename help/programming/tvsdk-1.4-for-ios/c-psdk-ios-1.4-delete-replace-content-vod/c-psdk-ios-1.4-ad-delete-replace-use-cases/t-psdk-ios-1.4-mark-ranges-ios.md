@@ -2,22 +2,20 @@
 title: Markierbereiche
 description: Markierbereiche
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
-
 # Markierbereiche{#mark-ranges}
 
 So implementieren Sie `PTTimeRangeCollection` und markieren Inhaltsbereiche als Anzeigen:
-1. Bereiten Sie das `PTTimeRangeCollection` vor.
-1. Legen Sie den Typ von `PTTimeRangeCollection` auf `PTTimeRangeCollectionTypeMarkRanges` fest.
+1. Bereiten Sie die `PTTimeRangeCollection`.
+1. Festlegen des Typs der `PTTimeRangeCollection` nach `PTTimeRangeCollectionTypeMarkRanges`.
 
-   Dieser Schritt benachrichtigt TVSDK, dass die benutzerdefinierten Bereiche wie Anzeigen behandelt werden müssen.
+   Dieser Schritt informiert TVSDK darüber, dass die benutzerdefinierten Bereiche wie Anzeigen behandelt werden müssen.
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -36,7 +34,7 @@ So implementieren Sie `PTTimeRangeCollection` und markieren Inhaltsbereiche als 
        type:PTTimeRangeCollectionTypeMarkRanges];
    ```
 
-1. Erstellen Sie `PTAdMetadata` und legen Sie `PTTimeRangeCollection` fest.
+1. Erstellen Sie die `PTAdMetadata` und legen Sie die `PTTimeRangeCollection`.
 
    ```
    // Create the PTPlayerItem metadata 
@@ -55,7 +53,7 @@ So implementieren Sie `PTTimeRangeCollection` und markieren Inhaltsbereiche als 
                                                                   metadata:metadata];
    ```
 
-1. Erstellen Sie die Wiedergabe des Players und Beginns.
+1. Erstellen Sie den Player und starten Sie die Wiedergabe.
 
    ```
    //Create PTMediaPlayer using the created PTMediaPlayer 
@@ -68,13 +66,13 @@ So implementieren Sie `PTTimeRangeCollection` und markieren Inhaltsbereiche als 
    [player play];
    ```
 
-## Ersetzen Sie Bereiche{#replace-ranges}
+## Ersetzen von Bereichen{#replace-ranges}
 
-So implementieren Sie die Inhaltsbereiche `PTTimeRangeCollection` und löschen Sie sie als Anzeigen:
-1. `PTTimeRangeCollection` vorbereiten.
-1. Legen Sie den Typ von `PTTimeRangeCollection` auf `PTTimeRangeCollectionTypeReplaceRanges` fest.
+So implementieren Sie `PTTimeRangeCollection` und löschen Inhaltsbereiche als Anzeigen:
+1. Vorbereiten `PTTimeRangeCollection`.
+1. Festlegen des Typs der `PTTimeRangeCollection` nach `PTTimeRangeCollectionTypeReplaceRanges`.
 
-   Dieser Schritt benachrichtigt TVSDK, dass die bereitgestellten Bereiche durch alternative Inhalte (Anzeigen) ersetzt werden müssen.
+   Dieser Schritt informiert TVSDK darüber, dass die bereitgestellten Bereiche durch alternative Inhalte (Anzeigen) ersetzt werden müssen.
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -95,9 +93,9 @@ So implementieren Sie die Inhaltsbereiche `PTTimeRangeCollection` und löschen S
 
    >[!TIP]
    >
-   >Das Argument `replacementDuration` ist optional. Wenn sie nicht definiert ist, bestimmt das `AdServer` die Dauer der Werbeunterbrechung.
+   >Das Argument `replacementDuration` ist optional. Wenn sie nicht definiert ist, wird die `AdServer` bestimmt die Dauer der Werbeunterbrechung.
 
-1. Erstellen Sie `PTAdMetadata` und legen Sie `PTTimeRangeCollection` fest.
+1. Erstellen Sie die `PTAdMetadata` und legen Sie die `PTTimeRangeCollection`.
 
    ```
    //Create the PTPlayerItem metadata 
@@ -121,9 +119,9 @@ So implementieren Sie die Inhaltsbereiche `PTTimeRangeCollection` und löschen S
 
    >[!TIP]
    >
-   >Obwohl `signalingMode` als `PTAdSignalingModeCustomRanges` eingestellt ist, wird dieser Anzeigensignalisierungsmodus automatisch eingestellt, wenn `PTTimeRangeCollection` des Typs `PTTimeRangeCollectionTypeReplace` eingestellt wird.
+   >Obwohl die Variable `signalingMode` festgelegt als `PTAdSignalingModeCustomRanges`festgelegt wird, wird dieser Anzeigenanzeigemodus automatisch eingestellt, wenn die `PTTimeRangeCollection` des Typs `PTTimeRangeCollectionTypeReplace`.
 
-1. Erstellen Sie die Wiedergabe des Players und Beginns.
+1. Erstellen Sie den Player und starten Sie die Wiedergabe.
 
    ```
    //Create PTMediaPlayer using the created PTMediaPlayer 
@@ -136,11 +134,11 @@ So implementieren Sie die Inhaltsbereiche `PTTimeRangeCollection` und löschen S
    [player play];
    ```
 
-## Bereiche {#delete-ranges} löschen
+## Löschen von Bereichen {#delete-ranges}
 
-So implementieren Sie die Inhaltsbereiche `PTTimeRangeCollection` und löschen Sie sie als Anzeigen:
-1. Bereiten Sie das `PTTimeRangeCollection` vor.
-1. Stellen Sie den Typ von `PTTimeRangeCollection` auf `PTTimeRangeCollectionTypeDeleteRanges` ein, wodurch TVSDK benachrichtigt wird, dass die bereitgestellten Bereiche gelöscht werden müssen.
+So implementieren Sie `PTTimeRangeCollection` und löschen Inhaltsbereiche als Anzeigen:
+1. Bereiten Sie die `PTTimeRangeCollection`.
+1. Festlegen des Typs der `PTTimeRangeCollection` nach `PTTimeRangeCollectionTypeDeleteRanges`, das TVSDK darüber informiert, dass die bereitgestellten Bereiche gelöscht werden müssen.
 
    ```
    #define PSDK_TIMESCALE 100000 
@@ -157,7 +155,7 @@ So implementieren Sie die Inhaltsbereiche `PTTimeRangeCollection` und löschen S
                                               type:PTTimeRangeCollectionTypeDeleteRanges];
    ```
 
-1. Erstellen Sie `PTAdMetadata` und legen Sie `PTTimeRangeCollection` fest.
+1. Erstellen Sie die `PTAdMetadata` und legen Sie die `PTTimeRangeCollection`.
 
    ```
    //Create the PTPlayerItem metadata 
@@ -181,9 +179,9 @@ So implementieren Sie die Inhaltsbereiche `PTTimeRangeCollection` und löschen S
 
    >[!TIP]
    >
-   >Das Einfügen von Anzeigen erfolgt nach dem Löschen der benutzerdefinierten Bereiche basierend auf dem `PTAdMetadata` und dem aktuellen `PTAdSignalingMode`.
+   >Das Einfügen von Anzeigen erfolgt nach dem Löschen der benutzerdefinierten Bereiche basierend auf der `PTAdMetadata` und der aktuelle `PTAdSignalingMode`.
 
-1. Erstellen Sie die Wiedergabe des Players und Beginns.
+1. Erstellen Sie den Player und starten Sie die Wiedergabe.
 
    ```
    //Create PTMediaPlayer using the created PTMediaPlayer 

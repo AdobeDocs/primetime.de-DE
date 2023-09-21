@@ -1,8 +1,7 @@
 ---
 title: Glossar zu Konto-IQ
 description: Ein Glossar der Produktterminologie.
-exl-id: 2ee54442-9538-4c30-b999-265310b3935f
-source-git-commit: 4eb5ba53fb3e0a0c314695fcd30cf15c7242b53c
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1456'
 ht-degree: 0%
@@ -35,7 +34,7 @@ Die Anzahl erfolgreicher Authentifizierungen. Eine erfolgreiche Authentifizierun
 
 ## AuthZ {#authz-def}
 
-Autorisierung oder die Anzahl der Genehmigungsanträge. Eine Autorisierungsanfrage ist der Prozess, bei dem ein Programmierer von einem MVPD über die Adobe die Erlaubnis anfordert, mit dem Streaming der angeforderten Inhalte eines Benutzers zu beginnen. Der MVPD gewährt die Anfrage in der Regel basierend auf den Inhaltsrechten, die mit dem MVPD-Abonnement des Benutzers verknüpft sind (z. B. ob sich der mit dem Inhalt verknüpfte Kanal im Abonnement des Benutzers befindet). Einige Antworten auf Autorisierungsanfragen werden von Adobe zwischengespeichert, was es der Adobe ermöglicht, sofort zu antworten, ohne die Anfrage an den MVPD weiterzuleiten.
+Autorisierung oder die Anzahl der Genehmigungsanträge. Eine Autorisierungsanfrage ist der Prozess, bei dem ein Programmierer von einem MVPD über Adobe die Erlaubnis anfordert, mit dem Streaming des angeforderten Inhalts eines Benutzers zu beginnen. Der MVPD gewährt die Anfrage in der Regel basierend auf den Inhaltsrechten, die mit dem MVPD-Abonnement des Benutzers verknüpft sind (z. B. ob sich der mit dem Inhalt verknüpfte Kanal im Abonnement des Benutzers befindet). Einige Autorisierungsanfrageantworten werden von Adobe zwischengespeichert, was es Adobe ermöglicht, sofort zu antworten, ohne die Anfrage an den MVPD weiterzuleiten.
 
 ## AuthZ OK {#authz-ok-def}
 
@@ -68,11 +67,11 @@ Ein Hardware-Produkt für digitale Videos, das überall TV-Inhalte wiedergibt un
 
 ## Geografische Region {#geographical-span-def}
 
-Die Entfernung zwischen den am weitesten gelegenen Punkten einer Reihe von Orten.
+Der Abstand zwischen den am weitesten gelegenen Punkten einer Reihe von Orten.
 
 ## Granularität {#granularity-def}
 
-in Bezug auf den Zeitrahmen die Größe des Zeitraums; z. B. eine Woche oder einen Monat.
+In Bezug auf den Zeitraum die Größe des Zeitraums, z. B. eine Woche oder einen Monat.
 
 ## Durchschnittlicher Branchenindex {#industry-avg-index-def}
 
@@ -80,7 +79,7 @@ Ein für jeden Risikoindex (Konten, Nutzung, Allgemein) berechneter Wert für al
 
 ## IP {#ip-def}
 
-Die Internetprotokolladresse, die einem Gerät von einem Internetdienstanbieter zugewiesen wurde. Beispiel: Kabeldienstanbieter und Zellendienstanbieter.
+Die Internet-Protokolladresse, die einem Gerät von einem Internet Service Provider zugewiesen wurde. Beispiel: Kabeldienstanbieter und Zellendienstanbieter.
 
 ## Isolationsmodus {#isolation-mode-def}
 
@@ -126,7 +125,7 @@ A value computed as an average of "Risk Index - Accounts" and the "Risk Index - 
 
 ## Play-Anfrage {#play-requests-def}
 
-Eine Anfrage von einer Client-App oder Site an Adobe, um ein Medien-Token zur Aufzeichnung und Sicherung eines Stream-Starts anzufordern.
+Eine Anfrage von einer Client-App oder -Site an Adobe, um ein Medien-Token zur Aufzeichnung und Sicherung eines Stream-Starts anzufordern.
 
 ## Programmierer {#programmer-def}
 
@@ -148,9 +147,9 @@ Dieser Wert, auch Verwendung von freigegebenen Konten genannt, wird auf der Grun
 
 Segment ist ein Satz von Konten, die die von den ausgewählten Metriken definierten benutzerspezifischen Bedingungen erfüllen (z. B. &quot;Benutzer von MVPD A, B, C, D oder E, die die Kanäle X, Y oder Z angesehen haben&quot;).
 
-## Teilungsebene {#sharing-level-def}
+## Freigabestufe {#sharing-level-def}
 
-Dieser Wert wird auch als Risikoindex - Konten oder Risikoindex für freigegebene Konten bezeichnet und basiert auf einem Durchschnitt der Freigabewahrscheinlichkeit, die für jedes Konto in der Gruppe ausgewählter MVPDs berechnet wird, das während des ausgewählten Zeitraums von einem der ausgewählten Programmierkanäle gestreamt wurde.
+Dieser Wert wird auch als Risikoindex - Accounts or Shared Accounts Risk Index (Risikoindex für Konten oder gemeinsame Konten) bezeichnet und basiert auf einem Durchschnitt der Freigabewahrscheinlichkeit, die für jedes Konto in der Gruppe ausgewählter MVPDs berechnet wird, das während des ausgewählten Zeitraums von einem der ausgewählten Programmierkanäle gestreamt wurde.
 
 ## Statische Vorrichtung {#static-device-def}
 
@@ -168,9 +167,9 @@ Die obersten (höchstens 10) MVPDs im ausgewählten Segment als Maß für die Te
 
 Die prozentuale Differenz in der zugehörigen Metrik (z. B. Prozentsatz der gesamten Wiedergabeanforderungen) zwischen dem aktuellen und vorherigen Zeitraum.
 
-## Eindeutige Abonnenten {#unique-subscriber-def}
+## Unique Subscribers {#unique-subscriber-def}
 
-Die Anzahl der eindeutigen MVPD-Konten für einen bestimmten Zeitraum, die in einem bestimmten Zeitraum mit Programmierer TV-Programmen oder -Sites, an denen Adobe Pass beteiligt war, interagiert haben.  Diese Interaktion umfasst alle Aktivitäten in der Programmieranwendung oder Site, die zu einem Aufruf an einen Adobe Pass-Dienst führen. Überprüfen Sie beispielsweise den Status authN oder authZ, authentifizieren und autorisieren. Die Gesamtanzahl der Unique Abonnenten umfasst auch die Anzahl der individuellen Geräte, wenn die Nutzung der Adobe TempPass durch Programmierer (d. h. die kostenlose Vorschau) Teil des Segments ist.
+Die Anzahl der eindeutigen MVPD-Konten für einen bestimmten Zeitraum, die in einem bestimmten Zeitraum mit Programmierer TV-Programmen oder -Sites, an denen Adobe Pass beteiligt war, interagiert haben.  Diese Interaktion umfasst alle Aktivitäten in der Programmieranwendung oder Site, die zu einem Aufruf an einen Adobe Pass-Dienst führen. Überprüfen Sie beispielsweise den Status authN oder authZ, authentifizieren und autorisieren. Die Gesamtanzahl der Unique Abonnenten umfasst auch die Anzahl der individuellen Geräte, wenn die Nutzung des Adobe TempPass durch Programmierer (d. h. die kostenlose Vorschau) Teil des Segments ist.
 
 ## Nutzung {#usage-defs}
 

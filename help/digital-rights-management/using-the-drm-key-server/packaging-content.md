@@ -2,29 +2,27 @@
 title: Verpacken von Inhalten
 description: Verpacken von Inhalten
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
+# Verpacken von Inhalten{#packaging-content}
 
-# Verpacken von Inhalt{#packaging-content}
-
-Verwenden Sie beim Verpacken von Inhalten für Remote-Key-Versand eine Richtlinie, die angibt, dass Remote-Key-Versand erforderlich sind. Die Key Server-URL muss für den HLS-Inhalt in die M3U8 (Manifestdatei) eingeschlossen werden. Die Primetime-URL des DRM-Schlüsselservers hat das folgende Format:
+Verwenden Sie beim Verpacken von Inhalten für die Remote-Schlüsselbereitstellung eine Richtlinie, die angibt, dass eine Remote-Schlüsselbereitstellung erforderlich ist. Die Key Server URL muss in der M3U8 (Manifestdatei) für den HLS-Inhalt enthalten sein. Die Primetime-URL des DRM-Schlüsselservers hat das Format:
 
 ```
 https://key-server-host:port/faxsks/tenant-name/key
 ```
 
-Beispiel: Für den Hostnamen des Schlüsselservers [!DNL mykeyserver.com], der auf Port 443 und einem Pächter mit dem Namen `tenant1` überwacht wird, lautet die URL des Schlüsselservers, die in M3U8 angegeben werden soll:
+Beispiel: Hostname des Schlüsselservers [!DNL mykeyserver.com] Listening auf Port 443 und einem Mandanten namens `tenant1`lautet die wichtige Server-URL, die in M3U8 angegeben werden soll:
 
 ```
 https://mykeyserver.com:443/faxsks/tenant1/key
 ```
 
-Für iOS- und Xbox 360-Clients kann dieselbe URL verwendet werden. Wenn der Server für jeden Clienttyp mit separaten Mietern konfiguriert ist, können auch andere URLs verwendet werden.
+Dieselbe URL kann für iOS- und Xbox 360-Clients verwendet werden. Oder wenn der Server für jeden Client-Typ mit separaten Mandanten konfiguriert ist, können unterschiedliche URLs verwendet werden.
 
-Derselbe Inhalt kann auf Clients ohne Schlüsselserver wiedergegeben werden, solange die URL des Lizenzservers auf einen ordnungsgemäß konfigurierten, ausgeführten Lizenzserver verweist.
+Derselbe Inhalt kann auf Clients wiedergegeben werden, die keinen Schlüsselserver benötigen, sofern die URL des Lizenzservers auf einen ordnungsgemäß konfigurierten laufenden Lizenzserver verweist.

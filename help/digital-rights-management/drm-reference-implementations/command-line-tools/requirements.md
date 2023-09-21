@@ -1,22 +1,20 @@
 ---
-title: Anforderungen an Befehlszeilenwerkzeuge
-description: Anforderungen an Befehlszeilenwerkzeuge
+title: Anforderungen an Befehlszeilen-Tools
+description: Anforderungen an Befehlszeilen-Tools
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
 
 ---
 
-
-# Befehlszeilenwerkzeug-Anforderungen {#command-line-tools-requirements}
+# Anforderungen an Befehlszeilen-Tools {#command-line-tools-requirements}
 
 * Java 1.5 oder höher.
-* Von der Adobe ausgestellte Packager-, Transport- und Lizenzserverberechtigungen (Zertifikat und Kennwort).
+* Von Adobe ausgestellte Anmeldeinformationen für Packager, Transport und Lizenzserver (Zertifikat und Passwort).
 
-   Dabei handelt es sich um Berechtigungen zum Verschlüsseln und Signieren von Videodateien, zum Signieren von Listen zur Richtlinienaktualisierung und -sperrung und zum Vorgenerieren von Lizenzen.
+  Hierbei handelt es sich um Anmeldeinformationen, die zum Verschlüsseln und Signieren von Videodateien, zum Signieren von Listen zum Aktualisieren und Sperren von Richtlinien und zum Vorgenerieren von Lizenzen verwendet werden.
 
 >[!NOTE]
 >

@@ -1,17 +1,15 @@
 ---
-description: Kunden können DRM (Adobe Access, AAXS) mit ihren eigenen Content Key Management Systems (CKMS) mit der Funktion External CEK verwenden.
-title: Adobe Access DRM External CEK Überblick
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Kunden können mit der externen CEK-Funktion Adobe Access (AAXS) DRM mit ihren eigenen Content Key Management Systems (CKMS) verwenden.
+title: Adobe Access DRM External CEK - Überblick
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
 
 ---
 
+# Adobe Access DRM External CEK - Überblick {#adobe-access-drm-external-cek-overview}
 
-# Adobe Access DRM External CEK Overview {#adobe-access-drm-external-cek-overview}
+Kunden können mit der externen CEK-Funktion Adobe Access (AAXS) DRM mit ihren eigenen Content Key Management Systems (CKMS) verwenden.
 
-Kunden können DRM (Adobe Access, AAXS) mit ihren eigenen Content Key Management Systems (CKMS) mit der Funktion External CEK verwenden.
-
-DRM (Adobe Access, AAXS) verhindert standardmäßig die direkte Verarbeitung von Schlüsseln, Zertifikaten und DRM-Metadaten während des Verpackungsvorgangs. Das AAXS Java SDK generiert während der Verpackungszeit automatisch einen zufälligen Content Encryption Key (CEK) und verwendet ihn zum Verschlüsseln des Inhalts. Anschließend verschlüsselt das SDK das CEK selbst und fügt es in die Metadaten des Inhalts ein. Zum Zeitpunkt der Lizenzausgabe benötigt der AAXS-Server nur seinen privaten AAXS-Lizenzserver-Schlüssel, um von den Metadaten aus auf das CEK zuzugreifen, um eine Lizenz zu generieren.
+Adobe Access (AAXS) DRM stellt standardmäßig die Notwendigkeit dar, Schlüssel, Zertifikate und DRM-Metadaten während des Inhaltspaketprozesses direkt zu verarbeiten. Das AXS Java SDK generiert während der Verpackungszeit automatisch einen zufälligen Inhaltsverschlüsselungsschlüssel (CEK) und verschlüsselt den Inhalt. Als Nächstes verschlüsselt das SDK das CEK selbst und fügt es in die Metadaten des Inhalts ein. Zum Zeitpunkt der Lizenzausgabe benötigt der AXS-Server nur seinen privaten AXS-Lizenzserver-Schlüssel, um von den Metadaten aus auf den CEK zuzugreifen und eine Lizenz zu generieren.

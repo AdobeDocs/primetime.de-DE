@@ -1,15 +1,13 @@
 ---
-description: Der Video-on-Demand-Anzeigeneinfügeprozess (VOD) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift sie geeignete Maßnahmen.
-title: Insertion und Failover von Anzeigen für VOD
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Der Video-On-Demand (VOD)-Anzeigeneinfüge-Prozess besteht aus den Phasen der Anzeigenauflösung, des Anzeigeneinfügens und der Anzeigenwiedergabe. Für das Anzeigen-Tracking muss TVSDK einen Remote-Tracking-Server über den Wiedergabestatus jeder Anzeige informieren. Wenn unerwartete Situationen auftreten, ergreift sie geeignete Maßnahmen.
+title: Advertising Insertion and Failover für VOD
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#advertising-insertion-and-failover-for-vod-overview}
 
-Der Video-on-Demand-Anzeigeneinfügeprozess (VOD) besteht aus der Phase der Auflösung der Anzeige, des Einfügens der Anzeige und der Wiedergabe der Anzeige. Zur Anzeigenverfolgung muss TVSDK einen Remote-Tracking-Server über den Wiedergabegeschwindigkeit jeder Anzeige informieren. Treten unerwartete Situationen auf, ergreift sie geeignete Maßnahmen.
+Der Video-On-Demand (VOD)-Anzeigeneinfüge-Prozess besteht aus den Phasen der Anzeigenauflösung, des Anzeigeneinfügens und der Anzeigenwiedergabe. Für das Anzeigen-Tracking muss TVSDK einen Remote-Tracking-Server über den Wiedergabestatus jeder Anzeige informieren. Wenn unerwartete Situationen auftreten, ergreift sie geeignete Maßnahmen.

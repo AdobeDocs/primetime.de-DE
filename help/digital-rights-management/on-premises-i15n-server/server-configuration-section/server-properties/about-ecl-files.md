@@ -1,29 +1,27 @@
 ---
-title: Info zu ECI-Dateien
-description: Info zu ECI-Dateien
+title: Über ECI-Dateien
+description: Über ECI-Dateien
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
 
 ---
 
+# Über ECI-Dateien{#about-eci-files}
 
-# Info zu ECI-Dateien{#about-eci-files}
+Zusätzlich zu den Zertifikatsperrlisten müssen Sie auch regelmäßig ECI-Dateien (Embedded Common Interface) aktualisieren. Jedes Mal, wenn Adobe Unterstützung für eine neue Primetime DRM-Clientplattform (z. B. iOS, Android, Windows FlashPlayer usw.) hinzufügt, wird ein neuer ECI-Datensatz erstellt. Um die Individualisierung dieses Clients zu unterstützen, muss ein entsprechender ECI-Datensatz auf dem Individualization Server vorhanden sein.
 
-Zusätzlich zu den Zertifikatsperrlisten müssen Sie auch regelmäßig ECI-Dateien (Embedded Common Interface) aktualisieren. Wenn Adobe Unterstützung für eine neue Primetime DRM-Clientplattform hinzufügt (z. B.: iOS, Android, Windows FlashPlayer usw.) wird ein neuer ECI-Datensatz erstellt. Um die Individualisierung dieses Clients zu unterstützen, muss ein entsprechender ECI-Datensatz auf dem Individualisierungsserver vorhanden sein.
-
-Da die Veröffentlichung neuer Primetime DRM-Clients nicht sehr häufig erfolgt, wird die Adobe nach Bedarf aktualisierte ECI-Daten veröffentlichen. In regelmäßigen Abständen sammelt die Adobe ECI-Dateien und hostet sie zur Verteilung an folgendem Speicherort:
+Da die Veröffentlichung neuer Primetime DRM-Clients nicht sehr häufig erfolgt, wird Adobe aktualisierte ECI-Daten nach Bedarf veröffentlichen. Adobe sammelt regelmäßig ECI-Dateien und hostet sie zur Verteilung an dem unten stehenden Speicherort:
 
 ```
 http://cdmdownload.adobe.com/indiv/onprem/eci/Latest.txt
 ```
 
-Die [!DNL Latest.txt]-Datei enthält die URL zur aktuellsten Zertifikatsperrlisten-Verteilungsdatei.
+Die [!DNL Latest.txt] enthält die URL zur neuesten CRL-Verteilungsdatei.
 
-Die ECI-ZIP-Datei wird in der unten beschriebenen Adobe erstellt:
+Adobe erstellt die ECI-ZIP-Datei wie unten beschrieben:
 
 Ordnerstruktur:
 
@@ -57,12 +55,11 @@ Beispiel:
 
 Sie sollten regelmäßig den obigen Speicherort auf aktualisierte ECI-Dateien überprüfen.
 
-Führen Sie nach dem Herunterladen den folgenden Installationsvorgang durch:
+Führen Sie den folgenden Prozess für die Installation nach dem Download durch:
 
-1. Beachten Sie den SHA-256-Digest und berechnen Sie ihn mithilfe von OpenSSL oder einem entsprechenden Tool neu.
+1. Beachten Sie den SHA-256-Digest und berechnen Sie ihn mit OpenSSL oder einem entsprechenden Tool neu.
 1. Vergleichen Sie ihn mit dem im Dateinamen angegebenen.
-1. Benennen Sie die Datei in [!DNL ECI.zip] um.
-1. Dekomprimieren Sie den Ordner [!DNL ECI].
-1. Ersetzen Sie den alten ECI-Ordner durch den neuen.
+1. Benennen Sie die Datei in [!DNL ECI.zip].
+1. Entpacken Sie die [!DNL ECI] Verzeichnis.
+1. Ersetzen Sie das alte ECI-Verzeichnis durch das neue.
 1. Starten Sie den Individualisierungsserver neu.
-

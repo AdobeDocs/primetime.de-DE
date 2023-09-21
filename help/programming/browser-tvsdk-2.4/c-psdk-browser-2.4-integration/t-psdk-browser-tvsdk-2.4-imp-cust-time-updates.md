@@ -1,26 +1,24 @@
 ---
-description: In einigen Analytics-Implementierungen sollte die Clientanwendung möglicherweise eine andere Abspielposition als die vom "Browser TVSDK localTime"-Wert gemeldete Position angeben.
-title: Implementieren benutzerdefinierter Zeitaktualisierungen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: In einigen Analytics-Implementierungen möchte die Client-Anwendung möglicherweise eine andere Abspielposition als die Position bereitstellen, die vom lokalenTime-Wert des Browser TVSDK angegeben wird.
+title: Benutzerdefinierte Zeitaktualisierungen implementieren
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
+# Benutzerdefinierte Zeitaktualisierungen implementieren{#implement-custom-time-updates}
 
-# Implementieren von benutzerdefinierten Zeitaktualisierungen{#implement-custom-time-updates}
+In einigen Analytics-Implementierungen möchte die Client-Anwendung möglicherweise eine andere Abspielposition als die Position bereitstellen, die vom lokalenTime-Wert des Browser TVSDK angegeben wird.
 
-In einigen Analytics-Implementierungen sollte die Clientanwendung möglicherweise eine andere Abspielposition als die vom &quot;Browser TVSDK localTime&quot;-Wert gemeldete Position angeben.
-
-Beispielsweise kann bei einer linearen Stream-Wiedergabe der Abspielkopf jedes Programms relativ zur Beginn-Zeit angegeben werden.
+Beispielsweise kann während einer linearen Stream-Wiedergabe die Abspielleiste jedes Programms relativ zur Startzeit angegeben werden.
 
 >[!TIP]
 >
 >Überschreiben Sie diese Methode nur, wenn Sie eine andere Abspielposition als die Standardposition festlegen möchten.
 
-So überschreiben Sie die Standardposition der Abspielleiste:
+So überschreiben Sie die standardmäßige Abspielposition:
 
 ```js
 vaMetadata.currentTimeUpdateBlock = function() { 
@@ -30,5 +28,4 @@ vaMetadata.currentTimeUpdateBlock = function() {
 
 >[!IMPORTANT]
 >
->Die Werte in diesem Codefragment sind nur Beispiele. Sie müssen unterschiedliche Werte für Ihre benutzerdefinierte Abspielposition verwenden.
-
+>Die Werte in diesem Code-Snippet sind nur Beispiele. Sie müssen für Ihre benutzerdefinierte Abspielposition unterschiedliche Werte verwenden.

@@ -1,8 +1,7 @@
 ---
 title: Erstellen eines Vorgangs für ein Benutzersegment und Verfolgen des Effekts
 description: So erstellen Sie einen Vorgang, der die Auswirkungen auf ein definiertes Segment von Benutzern auswirkt und verfolgt.
-exl-id: ab74f857-e178-4120-8f9c-655ec921d096
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Erstellen eines Vorgangs für ein Benutzersegment {#operation-to-track-segment}
 
-Jede Berichtsseite in Konto-IQ verfügt über eine **Neuen Vorgang erstellen** -Option, mit der Sie Workflows erstellen können, um verschiedene (Massen-)Aktionen für Abonnentenkonten zu automatisieren (und zu vereinfachen); Definieren Sie Regeln, um ein Beispiel anzugeben, Aktionen zu definieren und die Auswirkungen dieser Aktionen aufzuzeichnen und zu analysieren. Auf der Seite, auf der Vorgänge erstellt werden sollen, können Sie das Beispiel von Benutzergruppen definieren, für die Vorgänge ausgeführt werden sollen, und die Ausführung des Vorgangs für ein künftiges Datum planen.
+Jede Berichtsseite in Konto-IQ verfügt über eine **Neuen Vorgang erstellen** -Option, mit der Sie Workflows erstellen können, um verschiedene (Massen-)Aktionen für Abonnentenkonten zu automatisieren (und zu vereinfachen); Regeln definieren, um ein Beispiel zu definieren, Aktionen zu definieren und die Auswirkungen dieser Aktionen aufzuzeichnen und zu analysieren. Auf der Seite, auf der Vorgänge erstellt werden sollen, können Sie das Beispiel von Benutzergruppen definieren, für die Vorgänge ausgeführt werden sollen, und die Ausführung des Vorgangs für ein künftiges Datum planen.
 
 So erstellen Sie einen Vorgang:
 
@@ -50,7 +49,7 @@ Benennen Sie den neuen Vorgang in **Vorgangsname** Feld unter &quot;Details der 
 
 +++Programmer- Target-Segment
 
-Die **Segment** definiert hier die Benutzer, die von diesem Vorgang bedient werden; oder die Beispielgruppe für Ihren Vorgang. Das Standardsegment ist die **Segment** Sie haben mit [Segment- und Zeitrahmen-Bedienfeld](/help/AccountIQ/howto-select-segment-timeframe.md) auf der Hauptseite &quot;Berichte&quot;oder &quot;Dashboards&quot;in Schritt 1 oben beschrieben.
+Die **Segment** definiert hier die Benutzer, die von diesem Vorgang bedient werden sollen, oder die Beispielgruppe für Ihren Vorgang. Das Standardsegment ist die **Segment** Sie haben mit [Segment- und Zeitrahmen-Bedienfeld](/help/AccountIQ/howto-select-segment-timeframe.md) auf der Hauptseite &quot;Berichte&quot;oder &quot;Dashboards&quot;in Schritt 1 oben beschrieben.
 
 <!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
 
@@ -64,7 +63,7 @@ Dieses Segment definiert die Abonnenten, die von dem zu erstellenden Vorgang bet
 
 +++MVPD- Target-Segment
 
-Die **Segment** definiert hier die Benutzer, die von diesem Vorgang bedient werden; oder die Beispielgruppe für Ihren Vorgang. Das Standardsegment ist die **Segment** Sie haben mit [Segment- und Zeitrahmen-Bedienfeld](/help/AccountIQ/howto-select-segment-timeframe.md) auf der Hauptseite &quot;Berichte&quot;oder &quot;Dashboards&quot;in Schritt 1 oben beschrieben.
+Die **Segment** definiert hier die Benutzer, die von diesem Vorgang bedient werden sollen, oder die Beispielgruppe für Ihren Vorgang. Das Standardsegment ist die **Segment** Sie haben mit [Segment- und Zeitrahmen-Bedienfeld](/help/AccountIQ/howto-select-segment-timeframe.md) auf der Hauptseite &quot;Berichte&quot;oder &quot;Dashboards&quot;in Schritt 1 oben beschrieben.
 
 <!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
 
@@ -81,7 +80,7 @@ Darüber hinaus können Sie Ihr Zielsegment verfeinern, indem Sie weitere Metrik
 
 ![](assets/additional-segment.gif)
 
-*Abbildung: Weitere Segmentierung*
+*Abbildung: Zusätzliche Segmentierung*
 
 Wenn Sie den Vorgang weiter verfeinern, indem Sie eine weitere Metrik für die Anzahl der Geräte hinzufügen, lautet die aktualisierte Problemanweisung *&quot;einen Vorgang für Abonnentenkonten von MVPD mit dem Namen &quot;C&quot;erstellen, die den Kanal &quot;N Sports&quot;anzeigen, deren Teilungswert über 90 liegt und mehr als 5 Geräte verwenden, um während des Auswertungszeitraums Inhalte anzuzeigen&quot;*.
 
@@ -97,7 +96,7 @@ Der Segmenttyp ist die Art und Weise, wie ein Segment während des gesamten Ausw
 
 ![](assets/segment-type.png)
 
-*Abbildung: Die Anzahl der Segmente, die mit dem Segmenttyp ausgeführt werden sollen, präzisieren*
+*Abbildung: Verfeinern der Anzahl der Segmente, die mit dem Segmenttyp ausgeführt werden sollen*
 
 <!--The segment type option allows you to further refine your segment based on the evaluation period (or time).
 
@@ -113,7 +112,7 @@ When you select **Variable number of accounts** segment type, you do not limit t
 
 >[!IMPORTANT]
 >
->Sie können **Feste Anzahl von Konten** ab sofort verfügbar. Die auszuwählende Option **Variablenanzahl der Konten** wird in den kommenden Versionen verfügbar sein.
+>Sie können **Feste Anzahl von Konten** ab sofort verfügbar. Die ausgewählte Option **Variablenanzahl Konten** wird in den kommenden Versionen verfügbar sein.
 
 <!--
 
@@ -146,7 +145,7 @@ Die **Aktion** definiert, welchen Vorgang Sie für das definierte Segment ausfü
 
 Es gibt zwei Arten von Aktionen:
 
-* Aktionen mit Systemen, die mit Account IQ integriert sind; wie **Überwachung der Parallelität** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
+* Aktionen mit in Account IQ integrierten Systemen, wie z. B. **Überwachung der Parallelität** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
 
 * Aktionen zum Erstellen und Verarbeiten von Workflows, die außerhalb von Account IQ und nicht mit Account IQ integriert sind. Beispielsweise eine Aktion für den Kanalprogrammierer &#39;N&#39;, um Massen-E-Mails an alle Abonnenten von MVPD &#39;C&#39; zu senden.
 
@@ -163,7 +162,7 @@ Sie können die Aktivierung für den Vorgang planen, indem Sie Start- und Enddat
 >Das Start- und Enddatum haben dieselbe Granularität wie die Granularität, die Sie für die Auswertung bei der Definition des Segments mit **Segment- und Zeitrahmen-Bedienfeld**, in Schritt 1.
 >
 >
->Wenn Sie also die Granularität als Woche ausgewählt haben, beziehen sich die Start- und Enddaten auf die Woche (z. B. Woche 14). Wenn Sie als Granularität &quot;Monat&quot;auswählen, werden das Start- und das Enddatum in Form von Monaten angegeben.
+>Wenn Sie also als Granularität &quot;Woche&quot;ausgewählt haben, dann beziehen sich die Start- und Enddaten auf die Woche (z. B. Woche 14). Wenn Sie als Granularität &quot;Monat&quot;auswählen, werden Start- und Enddaten in Form von Monaten angegeben.
 
 
 >[!IMPORTANT]
@@ -176,7 +175,7 @@ Wenn Sie den Vorgang speichern, wird ein Meldungsbildschirm angezeigt, der Sie d
 
 ![](assets/save-operation.png)
 
-*Abbildung: Vorgang &quot;Save&quot;und Segmentname angeben*
+*Abbildung: Speichervorgang und Angabe des Segmentnamens*
 
 >[!NOTE]
 >
@@ -200,4 +199,4 @@ Die Details Ihres gespeicherten Vorgangs finden Sie im [Aktivitäten](/help/Acco
 
 ![](assets/new-operation-created.png)
 
-*Abbildung: Der neu erstellte Vorgang wird auf der Hauptseite &quot;Vorgänge&quot;aufgelistet*
+*Abbildung: Neu erstellter Vorgang wird auf der Hauptseite Vorgänge aufgelistet*

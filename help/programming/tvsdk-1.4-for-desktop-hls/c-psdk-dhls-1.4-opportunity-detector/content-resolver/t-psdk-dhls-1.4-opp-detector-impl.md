@@ -1,29 +1,27 @@
 ---
-description: Sie können eigene Opportunitätsdetektoren implementieren.
-title: Implementieren eines benutzerdefinierten Opportunitätsdetektors
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können Ihre eigenen Opportunitäts-Detektoren implementieren.
+title: Implementieren eines benutzerdefinierten Opportunity-Detektors
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%
 
 ---
 
+# Implementieren eines benutzerdefinierten Opportunity-Detektors{#implement-a-custom-opportunity-detector}
 
-# Implementieren eines benutzerdefinierten Opportunitätsdetektors{#implement-a-custom-opportunity-detector}
+Sie können Ihre eigenen Opportunitäts-Detektoren implementieren.
 
-Sie können eigene Opportunitätsdetektoren implementieren.
+* Wenn Ihr Opportunity-Generator auf `TimedMetadata` Objekte, die mit dem aktuellen Medien-Stream verknüpft sind, sollten Sie dann die `SpliceOutOpportunityGenerator` oder `TimedMetadataOpportunityGenerator`.
 
-* Wenn Ihr Opportunitätsgenerator auf `TimedMetadata`-Objekten basiert, die mit dem aktuellen Medienstream verknüpft sind, sollte er die Elemente `SpliceOutOpportunityGenerator` oder `TimedMetadataOpportunityGenerator` erweitern.
+* Wenn Ihr Opportunity-Generator auf Out-of-Band-Daten basiert, die von einem externen Dienst (z. B. einem CIS) bereitgestellt werden, sollte der `OpportunityGenerator`.
 
-* Wenn Ihr Opportunitätsgenerator auf Out-of-Band-Daten basiert, die von einem externen Dienst (z. B. einem CIS) bereitgestellt werden, sollte er das `OpportunityGenerator` erweitern.
+1. Erstellen Sie den benutzerdefinierten Opportunity-Generator.
 
-1. Erstellen Sie den benutzerdefinierten Opportunitätsgenerator.
-
-       Wenn Ihr benutzerdefinierter Opportunity-Generator auf &quot;TimedMetadata&quot;-Objekten basiert, erweitern Sie &quot;TimedMetadataOpportunityGenerator&quot; und überschreiben Sie diese Methoden:
+       Wenn Ihr benutzerdefinierter Opportunity-Generator auf &quot;TimedMetadata&quot;-Objekten basiert, erweitern Sie &quot;TimedMetadataOpportunityGenerator&quot;und überschreiben Sie diese Methoden:
    
-   * `doConfigure` - Diese Methode wird aufgerufen, nachdem das Medienplayer-Element erstellt wurde und bietet dem Medienplayer die Möglichkeit, bei Bedarf eine Reihe anfänglicher Möglichkeiten zu erstellen.
-   * `doProcess` - Diese Methode wird jedes Mal aufgerufen, wenn neue Funktionen erkannt  `TimedMetadata` werden (z. B. bei Live-/linearen Streams bei jeder Aktualisierung der Playlist/des Manifests)
+   * `doConfigure` - Diese Methode wird aufgerufen, nachdem das Medienplayer-Element erstellt wurde, und bietet dem Opportunity-Generator die Möglichkeit, bei Bedarf einen anfänglichen Satz von Möglichkeiten zu erstellen
+   * `doProcess` - Diese Methode wird jedes Mal aufgerufen, wenn neue `TimedMetadata` erkannt wird (z. B. bei Live-/linearen Streams, sobald die Wiedergabeliste/das Manifest aktualisiert wird)
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
@@ -47,7 +45,7 @@ Sie können eigene Opportunitätsdetektoren implementieren.
    }
    ```
 
-1. Erstellen Sie die benutzerdefinierte Inhaltsfabrik, die den benutzerdefinierten Opportunitätsgenerator verwendet.
+1. Erstellen Sie die benutzerdefinierte Inhaltsfactory, die den benutzerdefinierten Opportunity-Generator verwendet.
 
    ```
    public class CustomContentFactory extends DefaultContentFactory { 
@@ -65,7 +63,7 @@ Sie können eigene Opportunitätsdetektoren implementieren.
    }
    ```
 
-1. Registrieren Sie die benutzerdefinierte Inhaltsfactory für den wiederzugebenden Medienstream.
+1. Registrieren Sie die benutzerdefinierte Inhaltsfactory für die Wiedergabe des Medien-Streams.
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig = new DefaultMediaPlayerItemConfig(); 
@@ -74,4 +72,3 @@ Sie können eigene Opportunitätsdetektoren implementieren.
    
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
    ```
-

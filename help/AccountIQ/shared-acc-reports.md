@@ -1,8 +1,7 @@
 ---
 title: Berichte zu freigegebenen Konten
 description: Berichte zu freigegebenen Konten
-exl-id: 16c5ded1-2a95-4373-8b90-b445131f333a
-source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
@@ -27,7 +26,7 @@ Konto-IQ klassifiziert alle Abonnentenkonten des definierten Segments in die Kon
 
 Das Ringdiagramm hier kategorisiert und zeigt die Prozentsätze (und absoluten Zahlen) der Abonnentenkonten aus verschiedenen Wahrscheinlichkeitskategorien.
 
-Die rote Linie markiert den von den Benutzern in [Konten über dem Schwellenwert im aktuellen Segment](#threshold-selector) Bereich.
+Die rote Linie markiert den von den Benutzern in [Konten über dem Schwellenwert im aktuellen Segment](#threshold-selector) Bedienfeld.
 
 ![](assets/accounts-sharing-probability-pie.png)
 
@@ -57,7 +56,7 @@ Nachdem Sie den Schwellenwert ausgewählt haben, zeigt das Bedienfeld den Prozen
 
 ## Segment - Wiedergabe von Anforderungen insgesamt {#play-request-out-total}
 
-Das Ringdiagramm zeigt den Prozentsatz (und die Anzahl) der Wiedergabeanforderungen an, die von Abonnenten im Segment gestellt werden. und ermöglicht Ihnen den Vergleich der Wiedergabeanforderungen von Abonnenten, die nicht im definierten Segment enthalten sind.
+Das Ringdiagramm zeigt den Prozentsatz (und die Anzahl) der Wiedergabeanforderungen, die von Abonnenten im Segment gestellt werden, und ermöglicht den Vergleich der Wiedergabeanforderungen von Abonnenten, die nicht im definierten Segment enthalten sind.
 
 ![](assets/play-req-outof-total.png)
 

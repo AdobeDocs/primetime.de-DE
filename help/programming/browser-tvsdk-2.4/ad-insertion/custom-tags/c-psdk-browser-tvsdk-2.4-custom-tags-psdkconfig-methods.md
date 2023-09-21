@@ -1,26 +1,24 @@
 ---
-description: Mit der MediaPlayerItemConfig-Klasse können Sie benutzerdefinierte Tag-Namen in einem Stream konfigurieren.
-title: Methoden der Config-Klasse für Tags
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können benutzerdefinierte Tag-Namen in einem Stream mit der MediaPlayerItemConfig -Klasse konfigurieren.
+title: Konfigurationsklassenmethoden für Tags
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%
 
 ---
 
+# Konfigurationsklassenmethoden für Tags{#config-class-methods-for-tags}
 
-# Methoden der Config-Klasse für Tags{#config-class-methods-for-tags}
+Sie können benutzerdefinierte Tag-Namen in einem Stream mit der MediaPlayerItemConfig -Klasse konfigurieren.
 
-Mit der MediaPlayerItemConfig-Klasse können Sie benutzerdefinierte Tag-Namen in einem Stream konfigurieren.
-
-So erstellen Sie ein neues `MediaPlayerItemConfig`:
+So erstellen Sie eine neue `MediaPlayerItemConfig`:
 
 ```js
 var mediaPlayerItemConfig = new AdobePSDK.MediPlayerItemConfig();
 ```
 
-Im Folgenden finden Sie einige Informationen darüber, wie die `MediaPlayerItemConfig`-Methoden zum Verwalten benutzerdefinierter Tags verwendet werden:
+Im Folgenden finden Sie einige Informationen darüber, wie die `MediaPlayerItemConfig` -Methoden werden verwendet, um benutzerdefinierte Tags zu verwalten:
 
 <table id="table_0AC0973497144DDAB05726E3F031ACD1"> 
  <tbody> 
@@ -40,10 +38,10 @@ Im Folgenden finden Sie einige Informationen darüber, wie die `MediaPlayerItemC
     <code class="syntax javascript">
       var&nbsp;subscribeTags&nbsp;=&nbsp;["#EXT-X-PROGRAM-DATE-TIME"];mediaPlayerItemConfig.subscribeTags&nbsp;=&nbsp;subscribeTags;
     </code> </td> 
-   <td colname="col2"> <p>Legt die Liste der abonnierten Tags fest, die der Anwendung angezeigt werden. </p> <p>Ihre Anwendung wird auch automatisch für alle Tags abonniert, die über <span class="codeph"> adTags </span> übertragen werden. </p> </td> 
+   <td colname="col2"> <p>Legt die Liste der abonnierten Tags fest, die der Anwendung angezeigt werden. </p> <p>Ihre Anwendung wird auch automatisch für alle Tags angemeldet, die über übertragen werden <span class="codeph"> adTags </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <b>Anpassen der vom Standard-Opportunitätsdetektor verwendeten Anzeigen-Tags  </b> </td> 
+   <td colname="col1"> <b>Anpassen der Anzeigen-Tags, die vom standardmäßigen Opportunity-Detektor verwendet werden </b> </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
@@ -58,16 +56,15 @@ Im Folgenden finden Sie einige Informationen darüber, wie die `MediaPlayerItemC
     <code class="syntax javascript">
       var&nbsp;adTags&nbsp;=&nbsp;["#EXT-X-CUE"];mediaPlayerItemConfig.adTags&nbsp;=&nbsp;adTags;
     </code> </td> 
-   <td colname="col2"> <p>Legt die Liste der Anzeigen-Tags fest, die vom standardmäßigen Opportunitätsgenerator verwendet werden. </p> </td> 
+   <td colname="col2"> <p>Legt die Liste der Anzeigen-Tags fest, die vom standardmäßigen Opportunity-Generator verwendet werden sollen. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 Beachten Sie Folgendes:
 
-* Der benutzerdefinierte Tag-Name muss das Präfix `#` enthalten.
+* Der benutzerdefinierte Tag-Name muss die Variable `#` -Präfix.
 
-   `#EXT-X-ASSET` ist beispielsweise ein korrekter benutzerdefinierter Tag-Name, `EXT-X-ASSET` ist jedoch nicht korrekt.
+  Beispiel: `#EXT-X-ASSET` ist ein korrekter benutzerdefinierter Tag-Name, aber `EXT-X-ASSET` ist falsch.
 
-* Sie können die Konfiguration nach dem Laden des Medienstreams nicht mehr ändern.
-
+* Sie können die Konfiguration nach dem Laden des Medien-Streams nicht mehr ändern.

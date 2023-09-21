@@ -1,37 +1,34 @@
 ---
-description: Jeder Einsatz von Adobe Access besteht aus zwei Hauptschritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
+description: Jede Verwendung von Adobe Access besteht aus zwei wichtigen Schritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset erfolgen und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
 title: Inhaltsvorbereitung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
 
 ---
 
-
 # Inhaltsvorbereitung {#content-preparation}
 
-Jeder Einsatz von Adobe Access besteht aus zwei Hauptschritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset durchgeführt werden und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
+Jede Verwendung von Adobe Access besteht aus zwei wichtigen Schritten an verschiedenen Stellen des Workflows. Die Inhaltsvorbereitung muss einmal pro Asset erfolgen und führt zur Erstellung geschützter Inhalte. Die Inhaltsakquise erfolgt mehrmals, einmal für jeden Verbraucher, der dieses geschützte Asset sehen möchte.
 
-Bevor Sie Inhalte für die Distribution bereitstellen, müssen Sie zunächst die Inhalte im FLV- oder F4V-Videoformat kodieren, eine oder mehrere Richtlinien erstellen, die Nutzungsregeln für die Inhalte festlegen, und die Inhalte mit dem Adobe Access SDK verpacken.
+Bevor Sie Inhalte für die Verteilung verfügbar machen, müssen Sie zunächst den Inhalt im FLV- oder F4V-Videoformat kodieren, eine oder mehrere Richtlinien erstellen, die Nutzungsregeln für den Inhalt festlegen, und den Inhalt mit dem Adobe Access SDK verpacken.
 
-Die Schritte zum Kodieren, Verpacken und Verteilen von Inhalten sind wie folgt:
+Die Schritte zum Kodieren, Verpacken und Verteilen von Inhalten lauten wie folgt:
 
-1. Kodieren Sie den Inhalt im FLV- oder F4V-Format mit Kodierungstools, die von Adobe oder von Dritten zur Verfügung stehen.
-1. Erstellen Sie Richtlinien, die die Nutzungsregeln festlegen, unter denen die Ansicht der Inhalte für die Benutzer möglich ist.
+1. Kodieren Sie den Inhalt im FLV- oder F4V-Format mithilfe von Kodierungs-Tools, die von Adobe oder von Dritten verfügbar sind.
+1. Erstellen Sie Richtlinien, die die Nutzungsregeln festlegen, unter denen Verbraucher den Inhalt anzeigen können.
 
    Eine Richtlinie ist der Container für die Regeln und Einschränkungen, die bestimmen, wie, wann und wo geschützte Inhalte von Verbrauchern angezeigt werden können.
 
-   Für den Packager ist mindestens eine Richtlinie mit mindestens einer Nutzungsregel erforderlich. Sie können die Nutzungsregel überschreiben und zusätzliche Nutzungsregeln hinzufügen, wenn der Lizenzserver die Lizenz generiert.
+   Der Packager erfordert mindestens eine Richtlinie mit mindestens einer Nutzungsregel. Sie können die Nutzungsregel überschreiben und zusätzliche Nutzungsregeln hinzufügen, wenn der Lizenzserver die Lizenz generiert.
 
 1. Verpacken Sie den Inhalt und geben Sie an, welche Richtlinien angewendet werden sollen.
 
-   Adobe Access SDK verschlüsselt den Inhalt mit einem Content Encryption Key (CEK) und bindet eine oder mehrere Richtlinien an den Inhalt. Das Ergebnis ist eine *geschützte Inhaltsdatei *die nur von einem Benutzer wiedergegeben werden kann, der eine Lizenz vom entsprechenden License Server erhalten hat.
+   Adobe Access SDK verschlüsselt den Inhalt mit einem Inhaltsverschlüsselungsschlüssel (Content Encryption Key, CEK) und bindet eine oder mehrere Richtlinien an den Inhalt. Das Ergebnis ist eine *geschützte Inhaltsdatei *, die nur von einem Verbraucher wiedergegeben werden kann, der eine Lizenz vom entsprechenden Lizenzserver erhalten hat.
 
-   Während der Verpackung wird der Inhalt mit dem CEK verschlüsselt. Das CEK wird mit dem öffentlichen Lizenzserver-Schlüssel verschlüsselt und zusammen mit den Richtlinien in die DRM-Metadaten eingeschlossen. Die DRM-Metadaten werden mit dem privaten Schlüssel von Packager signiert und die Metadaten werden in den geschützten Inhalt eingefügt.
+   Während der Verpackung wird der Inhalt mit dem CEK verschlüsselt. Das CEK wird mithilfe des öffentlichen Lizenzserver-Schlüssels verschlüsselt und zusammen mit den Richtlinien in die DRM-Metadaten aufgenommen. Die DRM-Metadaten werden mit dem privaten Schlüssel Packager signiert und die Metadaten werden in den geschützten Inhalt aufgenommen.
 
-1. Bereitstellung geschützter Inhalte für die Verteilung an Verbraucher.
+1. Bereitstellung geschützter Inhalte für den Vertrieb an Verbraucher.
 
-   Der geschützte Inhalt wird in der Regel über ein CDN (Content Distribution Network) verteilt. Das CDN kann jeden von der Client-Laufzeit unterstützten Mechanismus verwenden, z. B. Flash Media Server, Adobe-HTTP Dynamic Streaming für das Streaming mit mehreren Bitraten oder einen HTTP-Webserver für das progressive Herunterladen.
-
+   Der geschützte Inhalt wird in der Regel über ein CDN (Content Distribution Network) verteilt. Das CDN kann jeden von der Client-Laufzeitumgebung unterstützten Mechanismus verwenden, z. B. Flash Media Server, Adobe-HTTP Dynamic Streaming für das Streaming mit mehreren Bitraten oder einen HTTP-Webserver für den progressiven Download.

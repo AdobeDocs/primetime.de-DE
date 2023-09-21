@@ -1,21 +1,19 @@
 ---
-description: Die Prioritätsregel definiert die Prioritätsreihenfolge der Werbeinhalte, die für die Wiedergabe aus einer VAST-/VMAP-Antwort ausgewählt werden.
-keywords: Prioritätsregel:kreative Auswahlregeln
+description: Die Prioritätsregel definiert die Prioritätsreihenfolge der Werbeinformationen, die für die Wiedergabe über eine VAST-/VMAP-Antwort ausgewählt werden.
+keywords: Prioritätsregel; kreative Auswahlregeln
 title: Prioritätsregeln
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
-
 # Prioritätsregeln {#priority-rules}
 
-Die Prioritätsregel definiert die Prioritätsreihenfolge der Werbeinhalte, die für die Wiedergabe aus einer VAST-/VMAP-Antwort ausgewählt werden.
+Die Prioritätsregel definiert die Prioritätsreihenfolge der Werbeinformationen, die für die Wiedergabe über eine VAST-/VMAP-Antwort ausgewählt werden.
 
-## Eine Prioritätsregel verfügt über die folgenden Attribute und möglichen Werte:
+## Eine Prioritätsregel hat die folgenden Attribute und möglichen Werte:
 
 <table id="table_ljp_tgx_hz">  
  <thead> 
@@ -28,19 +26,19 @@ Die Prioritätsregel definiert die Prioritätsreihenfolge der Werbeinhalte, die 
  </thead>
  <tbody> 
   <tr> 
-   <td><span class="codeph"> Priorität</span></td> 
+   <td><span class="codeph"> priority</span></td> 
    <td><span class="codeph"> Array</span></td> 
    <td></td> 
-   <td> Ein Array mit Kleinbuchstaben-MIME-Typen, die die Priorität festlegen, in der Quellkreative für die Wiedergabe ausgewählt werden müssen.</td> 
+   <td> Ein Array von MIME-Typen in Kleinbuchstaben, die die Priorität definieren, in der kreative Quellelemente für die Wiedergabe ausgewählt werden müssen.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> Zeichenfolge</span></td> 
-   <td><span class="codeph"> host</span></td> 
-   <td>Derzeit wird nur der Eintrag <span class="codeph"> host</span> unterstützt. Dieses Attribut muss vorhanden sein, wenn <span class="codeph"> Übereinstimmungen</span> und <span class="codeph"> Werte</span>-Attribute definiert sind.</td> 
+   <td><span class="codeph"> Host</span></td> 
+   <td>Derzeit nur <span class="codeph"> Host</span> wird unterstützt. Dieses Attribut muss vorhanden sein, wenn <span class="codeph"> matches</span> und <span class="codeph"> values</span> -Attribute definiert werden.</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> match</span></td> 
+   <td><span class="codeph"> matches</span></td> 
    <td><span class="codeph"> Zeichenfolge</span></td> 
    <td><span class="codeph"> multiple</span></td> 
    <td>Mögliche Werte:
@@ -48,28 +46,28 @@ Die Prioritätsregel definiert die Prioritätsreihenfolge der Werbeinhalte, die 
      <li><span class="codeph"> eq</span> - gleich</li> 
      <li><span class="codeph"> ne</span> - nicht gleich</li> 
      <li><span class="codeph"> co</span> - enthält</li> 
-     <li><span class="codeph"> nc</span> - enthält nicht</li> 
-     <li><span class="codeph"> sw</span>  - Beginn mit</li> 
-     <li><span class="codeph"> new</span>  - endet mit</li> 
+     <li><span class="codeph"> nc</span> - nicht enthält</li> 
+     <li><span class="codeph"> sw</span> - beginnt mit</li> 
+     <li><span class="codeph"> ew</span> - endet mit</li> 
     </ul></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> type</span></td> 
    <td><span class="codeph"> Zeichenfolge</span></td> 
-   <td><span class="codeph"> Priorität</span></td> 
-   <td>Der Wert muss immer <span class="codeph"> Priorität</span> haben</td> 
+   <td><span class="codeph"> priority</span></td> 
+   <td>Der Wert muss immer <span class="codeph"> priority</span></td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> Werte</span></td> 
+   <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Array</span></td> 
    <td></td> 
-   <td> <p>TVSDK verwendet das Attribut <span class="codeph"> stimmt mit </span> überein mit dem <span class="codeph">-Element</span> des Quellkreativen und stimmt mit den in diesem Array definierten Werten überein</p> </td> 
+   <td> <p>TVSDK verwendet die <span class="codeph"> matches</span> -Attribut in der <span class="codeph"> item</span> des Quell-Kreativ und Übereinstimmung mit den in diesem Array definierten Werten</p> </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> stream</span></td> 
    <td><span class="codeph"> Zeichenfolge</span></td> 
    <td></td> 
-   <td> <p>Der Wert kann <span class="codeph"> vod</span> oder <span class="codeph"> live</span> sein.</p> </td> 
+   <td> <p>Wert kann <span class="codeph"> vod</span> oder <span class="codeph"> live</span></p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -104,4 +102,3 @@ Die Prioritätsregel definiert die Prioritätsreihenfolge der Werbeinhalte, die 
     }
 }
 ```
-

@@ -1,26 +1,24 @@
 ---
-description: Wenn die DRM-Metadaten für ein Video im Medienstream enthalten sind, können Sie während der Wiedergabe eine Authentifizierung durchführen.
+description: Wenn die DRM-Metadaten für ein Video im Medien-Stream enthalten sind, können Sie während der Wiedergabe eine Authentifizierung durchführen.
 title: DRM-Authentifizierung während der Wiedergabe
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '194'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # DRM-Authentifizierung während der Wiedergabe {#drm-authentication-during-playback}
 
-Wenn die DRM-Metadaten für ein Video im Medienstream enthalten sind, können Sie während der Wiedergabe eine Authentifizierung durchführen.
+Wenn die DRM-Metadaten für ein Video im Medien-Stream enthalten sind, können Sie während der Wiedergabe eine Authentifizierung durchführen.
 
-Bei der Lizenzrotation wird ein Asset mit mehreren DRM-Lizenzen verschlüsselt. Jedes Mal, wenn neue DRM-Metadaten gefunden werden, werden die `DRMHelper`-Methoden verwendet, um zu prüfen, ob die DRM-Metadaten DRM-Authentifizierung erfordern.
+Mit der Lizenzrotation wird ein Asset mit mehreren DRM-Lizenzen verschlüsselt. Jedes Mal, wenn neue DRM-Metadaten gefunden werden, wird die `DRMHelper` -Methoden werden verwendet, um zu überprüfen, ob die DRM-Metadaten DRM-Authentifizierung erfordern.
 
 >[!TIP]
 >
->Stellen Sie vor dem Starten der Wiedergabe fest, ob Sie mit einer domänengebundenen Lizenz zu tun haben und ob eine Domänenauthentifizierung erforderlich ist. Falls ja, führen Sie die Domänenauthentifizierung durch und schließen Sie sich der Domäne an.
+>Ermitteln Sie vor dem Start der Wiedergabe, ob Sie es mit einer domänengebundenen Lizenz zu tun haben und ob eine Domänenauthentifizierung erforderlich ist. Wenn ja, schließen Sie die Domänenauthentifizierung ab und treten Sie der Domäne bei.
 
-1. Wenn neue DRM-Metadaten in einem Asset gefunden werden, wird ein Ereignis auf der Anwendungsebene ausgelöst.
+1. Wenn neue DRM-Metadaten in einem Asset gefunden werden, wird ein Ereignis auf der Anwendungsebene gesendet.
 
    ```java
    mediaPlayer.addEventListener(MediaPlayerEvent.DRM_METADATA,  
@@ -35,14 +33,14 @@ Bei der Lizenzrotation wird ein Asset mit mehreren DRM-Lizenzen verschlüsselt. 
    };
    ```
 
-1. Verwenden Sie das `DRMMetadata`, um zu prüfen, ob eine Authentifizierung erforderlich ist.
+1. Verwenden Sie die `DRMMetadata` , um zu überprüfen, ob eine Authentifizierung erforderlich ist.
 
-   * Wenn keine Authentifizierung erforderlich ist, müssen Sie nichts tun, und die Wiedergabe wird ununterbrochen fortgesetzt.
-   * Ist eine Authentifizierung erforderlich, führen Sie die DRM-Authentifizierung durch.
+   * Wenn keine Authentifizierung erforderlich ist, müssen Sie nichts unternehmen und die Wiedergabe wird unterbrechungsfrei fortgesetzt.
+   * Wenn eine Authentifizierung erforderlich ist, führen Sie die DRM-Authentifizierung durch.
 
-      Da dieser Vorgang asynchron abläuft und in einem anderen Thread verarbeitet wird, hat er keine Auswirkungen auf die Benutzeroberfläche und auch nicht auf die Videowiedergabe.
+     Da dieser Vorgang asynchron ist und in einem anderen Thread verarbeitet wird, hat er keine Auswirkungen auf die Benutzeroberfläche und auch keine Videowiedergabe.
 
-1. Wenn die Authentifizierung fehlschlägt, kann der Benutzer das Video nicht weiter anzeigen und die Wiedergabe wird beendet.
+1. Wenn die Authentifizierung fehlschlägt, kann der Benutzer die Wiedergabe des Videos nicht fortsetzen und die Wiedergabe wird beendet.
 
 <!--<a id="example_939B95F831A245869F9248E2767F260C"></a>-->
 
@@ -111,4 +109,3 @@ DRMMetadataInfoEventListener drmMetadataInfoEventListener =
     } 
 }; 
 ```
-

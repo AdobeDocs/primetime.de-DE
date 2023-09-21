@@ -1,24 +1,22 @@
 ---
-description: Sie können TimeRanges zwischen "begin"und "end"in localTime aus der Zeitleiste entfernen.
-title: Bereiche löschen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können "TimeRanges"zwischen Beginn und Ende in localTime aus der Timeline entfernen.
+title: Löschen von Bereichen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
 
 ---
 
+# Löschen von Bereichen{#delete-ranges}
 
-# Bereiche{#delete-ranges} löschen
-
-Sie können TimeRanges zwischen &quot;begin&quot;und &quot;end&quot;in localTime aus der Zeitleiste entfernen.
+Sie können &quot;TimeRanges&quot;zwischen Beginn und Ende in localTime aus der Timeline entfernen.
 
 >[!NOTE]
 >
->Wenn Sie nur bestimmte Bereiche aus dem Inhalt entfernen möchten und die Anzeigenzuordnung wie vom Anzeigen-Server definiert verwendet werden muss, erstellen Sie eine `CustomRangeMetadata`-Instanz und geben Sie den Typ als DELETE-Vorgang mit den definierten benutzerdefinierten Bereichen an.
+>Wenn Sie nur bestimmte Bereiche aus dem Inhalt entfernen möchten und die Anzeigenzuordnung wie vom Anzeigen-Server definiert verwendet werden muss, erstellen Sie eine `CustomRangeMetadata` und geben Sie den Typ als DELETE-Vorgang mit den definierten benutzerdefinierten Bereichen an.
 
-Löschen Sie Bereiche mit einer Adobe Primetime-Anzeige zur Anzeigenentscheidung.
+Löschen von Bereichen mit einer Adobe Primetime-Anzeigenentscheidung.
 
 ```
 {   
@@ -76,4 +74,3 @@ Löschen Sie Bereiche mit einer Adobe Primetime-Anzeige zur Anzeigenentscheidung
     "id": "vod_003"
 }
 ```
-

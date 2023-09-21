@@ -1,31 +1,29 @@
 ---
-description: Sie können beliebige Streams aus einer TVSDK-basierten Sender-App abspielen lassen und den Stream mit Browser TVSDK auf Chromecast wiedergeben.
-title: Google Cast app for Browser TVSDK
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können beliebige Streams aus einer TVSDK-basierten Absender-App senden und den Stream mit Browser TVSDK auf Chromecast wiedergeben lassen.
+title: Google Cast App für Browser TVSDK
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
 
 ---
 
+# Google Cast App für Browser TVSDK{#google-cast-app-for-browser-tvsdk}
 
-# Google Cast app for Browser TVSDK{#google-cast-app-for-browser-tvsdk}
-
-Sie können beliebige Streams aus einer TVSDK-basierten Sender-App abspielen lassen und den Stream mit Browser TVSDK auf Chromecast wiedergeben.
+Sie können beliebige Streams aus einer TVSDK-basierten Absender-App senden und den Stream mit Browser TVSDK auf Chromecast wiedergeben lassen.
 
 <!--<a id="section_87CE5D6D46F0439EB6E63A742D6DD9C8"></a>-->
 
-Es gibt zwei Komponenten einer App, die Cast-fähig ist:
+Es gibt zwei Komponenten einer Cast-fähigen App:
 
-* Die Sender-App, die als Remote-Steuerung fungiert.
+* Die Absender-App, die als Remote-Steuerung fungiert.
 
-   Absender-Apps umfassen Smartphones, PCs usw. Die App kann mit nativen SDKs für iOS, Android und Chrome entwickelt werden.
-* Die Receiver-App, die auf Chromecast ausgeführt wird und den Inhalt abspielt.
+  Absender-Apps umfassen Smartphones, PCs usw. Die App kann mit nativen SDKs für iOS, Android und Chrome entwickelt werden.
+* Die Receiver-App, die auf Chromecast ausgeführt wird und den Inhalt wiedergibt.
 
-   >[!IMPORTANT]
-   >
-   >Diese App kann nur eine HTML5-App sein.
+  >[!IMPORTANT]
+  >
+  >Diese App kann nur eine HTML5-App sein.
 
 Absender und Empfänger kommunizieren mit den Cast SDKs, um Nachrichten zu übermitteln.
 
@@ -33,15 +31,15 @@ Absender und Empfänger kommunizieren mit den Cast SDKs, um Nachrichten zu über
 
 Im Folgenden finden Sie eine Übersicht über den Prozess:
 
-1. Die Sender-App stellt eine Verbindung mit der Empfänger-App her.
-1. Die Sender-App sendet eine Nachricht, um das Medium in die Empfänger-App zu laden.
+1. Die Absender-App stellt eine Verbindung mit der Empfänger-App her.
+1. Die Absender-App sendet eine Nachricht, um die Medien in die Empfänger-App zu laden.
 1. Die Receiver-App beginnt mit der Wiedergabe.
-1. Die Sender-App sendet Steuerungsmeldungen zur Wiedergabe, z. B. &quot;Abspielen&quot;, &quot;Anhalten&quot;, &quot;Suchen&quot;, &quot;Schnelles Vorspulen&quot;, &quot;Schnelles Zurückspulen&quot;, &quot;Zurückspulen&quot;, &quot;Lautstärkeänderung&quot;usw. an die Empfänger-App.
-1. Die Empfänger-App reagiert auf diese Meldungen.
+1. Die Absender-App sendet Kontrollnachrichten für die Wiedergabe, wie z. B. Wiedergabe, Pause, Suchen, Vorwärts, schnelle Zurückspulen, Zurückspulen, Volumenänderung usw. an die Empfänger-App.
+1. Die Empfänger-App reagiert auf diese Nachrichten.
 
 ## Nachrichtenformat {#section_1624159DD51D4C87B3E5803DEEBCB6B7}
 
-Sie müssen die Nachrichten definieren, damit Absender und Empfänger sie verstehen können. Hier ein Beispiel für eine Suchmeldung:
+Sie müssen die Nachrichten definieren, damit der Absender und der Empfänger sie verstehen können. Im Folgenden finden Sie ein Beispiel für eine Suchmeldung:
 
 ```js
 { 
@@ -50,56 +48,56 @@ Sie müssen die Nachrichten definieren, damit Absender und Empfänger sie verste
 } 
 ```
 
-Beim Senden benutzerdefinierter Nachrichten wie der Suchmeldung über die Cast-SDKs ist ein benutzerdefinierter Namensraum erforderlich. Beispiel in JavaScript:
+Beim Senden benutzerdefinierter Nachrichten wie der Suchnachricht über die Cast-SDKs ist ein benutzerdefinierter Namespace für Nachrichten erforderlich. Hier ist ein Beispiel in JavaScript:
 
 ```js
 Custom Message Namespace 
 var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime"; 
 ```
 
-## Einrichten einer Verbindung {#section_B4D40CABDD3E46FDBE7B5651DFF91653}
+## Herstellen einer Verbindung {#section_B4D40CABDD3E46FDBE7B5651DFF91653}
 
 >[!IMPORTANT]
 >
->Browser TVSDK-APIs werden beim Herstellen der Verbindung nicht einbezogen.
+>Browser TVSDK-APIs sind bei der Herstellung der Verbindung nicht beteiligt.
 
-Um eine Verbindung herzustellen, müssen Sender und Empfänger die folgenden Aufgaben ausführen:
+Um eine Verbindung herzustellen, müssen Absender und Empfänger die folgenden Aufgaben ausführen:
 
-* Der Absender muss die Dokumentation für die Plattform unter [Sender App Development](https://developers.google.com/cast/docs/sender_apps) lesen.
-* Der Empfänger verwendet die Cast-Empfänger-APIs, um eine Verbindung zur Sender-App herzustellen. Beispiel:
+* Der Absender muss die Plattformdokumentation unter [Entwicklung der Sender App](https://developers.google.com/cast/docs/sender_apps).
+* Der Empfänger verwendet die Cast-Empfänger-APIs, um eine Verbindung mit der Absender-App herzustellen. Beispiel:
 
-   ```js
-   window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance(); 
-   
-   window.castReceiverManager.onReady = function (event) { /*handle event*/ }; 
-   window.castReceiverManager.onSenderConnected = function (event) { /*handle event*/ }; 
-   window.castReceiverManager.onSenderDisconnected = function (event) { /*handle event*/ }; 
-   
-   var customMessageBus = window.castReceiverManager.getCastMessageBus(MSG_NAMESPACE); 
-   customMessageBus.onMessage = function (event) { /*handle messages*/ }; 
-   
-   window.castReceiverManager.start(); 
-   ```
+  ```js
+  window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance(); 
+  
+  window.castReceiverManager.onReady = function (event) { /*handle event*/ }; 
+  window.castReceiverManager.onSenderConnected = function (event) { /*handle event*/ }; 
+  window.castReceiverManager.onSenderDisconnected = function (event) { /*handle event*/ }; 
+  
+  var customMessageBus = window.castReceiverManager.getCastMessageBus(MSG_NAMESPACE); 
+  customMessageBus.onMessage = function (event) { /*handle messages*/ }; 
+  
+  window.castReceiverManager.start(); 
+  ```
 
 ## Nachrichtenverarbeitung {#section_3E4814546F5946C9B3E7A1AE384B4FF8}
 
-Informationen zum Senden von Nachrichten an den Empfänger finden Sie in der Dokumentation zur Plattform des Absenders.
+Informationen zum Senden von Nachrichten an den Empfänger finden Sie in der Dokumentation zur Plattform Ihres Absenders.
 
 >[!IMPORTANT]
 >
->Sie müssen den Namensraum für die benutzerdefinierte Nachricht `MSG_NAMESPACE` in alle Nachrichten einschließen.
+>Sie müssen den benutzerdefinierten Nachrichten-Namespace einschließen, `MSG_NAMESPACE` in allen Nachrichten.
 
-Für die Receiver-App befolgen Sie die Dokumentation für die APIs für die Empfänger-Empfänger.
+Befolgen Sie für die Receiver-App die Dokumentation für die APIs für den gecast-Empfänger.
 
-**Beispiel einer Chrome-basierten Sender-Nachricht**
+**Beispiel einer Chrome-basierten Absendernachricht**
 
 ```js
 window.session.sendMessage(MSG_NAMESPACE, message, successCallback, errorCallback); //https://developers.google.com/cast/docs/reference/chrome/chrome.cast.Session#sendMessage
 ```
 
-**Chrome-basiertes Ereignis-Handling**
+**Ereignisbehandlung für Chrome-basierten Absender**
 
-Binden Sie Ereignis-Handler an Ihre Benutzeroberflächenelemente, die Meldungen senden, wenn die entsprechenden Ereignis ausgelöst werden. Bei einer Chrome-basierten Absender-App kann das Ereignis &quot;Suchen&quot;beispielsweise wie folgt gesendet werden:
+Binden Sie Ereignis-Handler an Ihre UI-Elemente, die Nachrichten senden, wenn die entsprechenden Ereignisse ausgelöst werden. Bei einer Chrome-basierten Absender-App kann das Suchereignis beispielsweise wie folgt gesendet werden:
 
 ```js
 document.getElementById("#seekBar").addEventListener("click", seekEventHandler); 
@@ -110,9 +108,9 @@ function seekEventHandler(event) {
 } 
 ```
 
-**Umgang mit Empfängermeldungen**
+**Umgang mit Empfängernachrichten**
 
-In der Empfänger-App ist hier ein Beispiel für die Handhabung der Suchmeldung aufgeführt:
+Hier ist ein Beispiel für die Verarbeitung der Suchmeldung in der Empfänger-App:
 
 ```js
 customMessageBus.onMessage = function (event) { 
@@ -127,4 +125,3 @@ customMessageBus.onMessage = function (event) {
     } 
 }; 
 ```
-

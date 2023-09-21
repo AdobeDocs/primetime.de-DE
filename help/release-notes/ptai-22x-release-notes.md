@@ -1,8 +1,7 @@
 ---
 title: Versionshinweise zu PTAI 22.9.2
 description: Die PTAI-Versionshinweise beschreiben, was neu oder geändert ist, welche gelösten und bekannten Probleme im Primetime-Ad Insertion im Jahr 2022 aufgetreten sind.
-exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Die Primetime-Ad Insertion-Versionshinweise 22.xx.x beschreiben, was neu ist ode
 
 ## Verbesserungen und Fehlerbehebungen in früheren Versionen
 
-### Version PTAI 22.9.1
+### Version PTAI 2.9.1
 
 **Wenn:** Dienstag, 6. September 2022, 3:00 Uhr bis 6:00 Uhr Ostzeit
 
@@ -31,7 +30,7 @@ Die Primetime-Ad Insertion-Versionshinweise 22.xx.x beschreiben, was neu ist ode
 
 * Aktualisierungen der Telemetriekarten des Content Repackaging Service (CRS) in der Primetime-Ad Insertion-Benutzeroberfläche.
 
-### Version 22.7.1
+### Version 2.7.1
 
 **Wenn:** Mittwoch, 20. Juli 2022, 3:00 Uhr bis 6:00 Uhr Ostzeit
 
@@ -41,7 +40,7 @@ Die Primetime-Ad Insertion-Versionshinweise 22.xx.x beschreiben, was neu ist ode
 
 * Datenbankmigration.
 
-### Version 22.6.2
+### Version 2.6.2
 
 **Wenn:** Mittwoch, 29. Juni 2022, 3:00 Uhr bis 6:00 Uhr Ostzeit
 
@@ -51,7 +50,7 @@ Die Primetime-Ad Insertion-Versionshinweise 22.xx.x beschreiben, was neu ist ode
 
 * Zusätzliche Nettospeicherursprünge für CRS.
 
-### Version 22.6.1
+### Version 2.6.1
 
 **Wenn:** Dienstag, 14. Juni 2022, 3:00 Uhr bis 6:00 Uhr Ostzeit
 
@@ -62,7 +61,7 @@ Die Primetime-Ad Insertion-Versionshinweise 22.xx.x beschreiben, was neu ist ode
 * Integrierte alte Konsolen in der einheitlichen Benutzeroberfläche
 * Neue Impressionsdimensionswerte werden an den Dienst übergeben
 
-### Version 22.5.2
+### Version 2.5.2
 
 **Wenn:** Mittwoch, 25. Mai 2022, 3:00 Uhr bis 6:00 Uhr Ostzeit
 
@@ -70,7 +69,7 @@ Die Primetime-Ad Insertion-Versionshinweise 22.xx.x beschreiben, was neu ist ode
 
 * Verbesserungen an Funktionalität, Benutzerfreundlichkeit und Zuverlässigkeit in alten SSAI- und CRS-Konsolen.
 
-### Version 22.4.4
+### Version 2.4.4
 
 **Wenn:** Mittwoch, 20. April 2022, 3:00 Uhr bis 6:00 Uhr Ostzeit
 
@@ -80,7 +79,7 @@ Die Primetime-Ad Insertion-Versionshinweise 22.xx.x beschreiben, was neu ist ode
 
 * Ein Update zur Erfassung neuer Impressionsdimensionen zur Anreicherung der Berichterstellungsoberfläche, interner Abrechnungs- und Anzeigenleistungsinitiativen.
 
-### Version 22.3.2
+### Version 2.3.2
 
 **Wenn:** Dienstag, 8. März 2022, 1:30 Uhr bis 4:30 Uhr Ostzeit
 
@@ -92,7 +91,7 @@ Die Primetime-Ad Insertion-Versionshinweise 22.xx.x beschreiben, was neu ist ode
 
 * Asset-Bereinigung und -Optimierung.
 
-### Version 22.2.2
+### Version 2.2.2
 
 **Wenn:** Mittwoch, 2. März 2022, 1:30 Uhr bis 4:30 Uhr Ostzeit
 

@@ -2,27 +2,25 @@
 title: Übersicht
 description: Übersicht
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht{#overview}
 
-Der allgemeine Ansatz zur Bearbeitung von Anforderungen besteht darin, einen Handler zu erstellen, die Anforderung zu analysieren, die Antwortdaten oder den Fehlercode festzulegen und den Handler zu schließen.
+Der allgemeine Ansatz bei der Verarbeitung von Anforderungen besteht darin, einen Handler zu erstellen, die Anfrage zu analysieren, die Antwortdaten oder den Fehlercode festzulegen und den Handler zu schließen.
 
-Die Basisklasse, die für die Verarbeitung der Interaktion einzelner Anforderungen/Antworten verwendet wird, ist `com.adobe.flashaccess.sdk.protocol.MessageHandlerBase`. Zum Initialisieren des Handlers wird eine Instanz der Klasse `HandlerConfiguration` verwendet. `HandlerConfiguration` speichert Serverkonfigurationsinformationen, einschließlich Transport-Anmeldeinformationen, Zeitstempeltoleranz, Listen zur Richtlinienaktualisierung und Listen zum Sperren. Der Handler liest die Anforderungsdaten und analysiert die Anforderung in eine Instanz von  `RequestMessageBase`. Der Aufrufer kann die Informationen in der Anforderung prüfen und entscheiden, ob er einen Fehler oder eine erfolgreiche Antwort zurückgibt (Unterklassen von `RequestMessageBase` bieten eine Methode zum Festlegen von Antwortdaten).
+Die Basisklasse, die für die Verarbeitung der einzelnen Anfrage-/Antwortakaktionen verwendet wird, lautet `com.adobe.flashaccess.sdk.protocol.MessageHandlerBase`. Eine Instanz der `HandlerConfiguration` -Klasse verwendet wird, um den Handler zu initialisieren. `HandlerConfiguration` speichert Serverkonfigurationsinformationen, einschließlich Transport-Anmeldeinformationen, Toleranz bei Zeitstempeln, Listen für Richtlinienaktualisierungen und Sperrlisten. Der Handler liest die Anfragedaten und analysiert die Anfrage in einer Instanz von `RequestMessageBase`. Der Aufrufer kann die Informationen in der Anfrage untersuchen und entscheiden, ob ein Fehler oder eine erfolgreiche Antwort zurückgegeben wird (Unterklassen von `RequestMessageBase` eine Methode zum Festlegen von Antwortdaten bereitstellen).
 
-Wenn die Anforderung erfolgreich ist, stellen Sie die Antwortdaten ein. andernfalls `RequestMessageBase.setErrorData()` bei Fehler aufrufen. Beenden Sie die Implementierung immer, indem Sie die `close()`-Methode aufrufen (es wird empfohlen, `close()` im `finally`-Block einer `try`-Anweisung aufzurufen). Ein Beispiel zum Aufrufen des Handlers finden Sie in der API-Referenzdokumentation.`MessageHandlerBase`
+Wenn die Anfrage erfolgreich ist, legen Sie die Antwortdaten fest. Rufen Sie andernfalls auf `RequestMessageBase.setErrorData()` bei Fehlschlagen. Beenden Sie die Implementierung immer, indem Sie die `close()` -Methode (es wird empfohlen, dass `close()` in der `finally` Block eines `try` -Anweisung). Siehe `MessageHandlerBase` API-Referenzdokumentation für ein Beispiel zum Aufrufen des Handlers.
 
 >[!NOTE]
 >
->HTTP-Statuscode 200 (OK) sollte als Antwort auf alle vom Handler verarbeiteten Anforderungen gesendet werden. Wenn der Handler aufgrund eines Serverfehlers nicht erstellt werden konnte, reagiert der Server möglicherweise mit einem anderen Statuscode, z. B. 500 (Interner Serverfehler).
+>HTTP-Status-Code 200 (OK) sollte als Antwort auf alle vom Handler verarbeiteten Anfragen gesendet werden. Wenn der Handler aufgrund eines Serverfehlers nicht erstellt werden konnte, antwortet der Server möglicherweise mit einem anderen Statuscode, z. B. 500 (Interner Serverfehler).
 
-Der Client verwendet für alle an den Lizenzserver gesendeten Anforderungen die bei der Paketerstellung angegebene Lizenzserver-URL als Basis-URL. Wenn die Server-URL beispielsweise als &quot;ht<span></span>tps://licenseserver.com/path&quot;angegeben ist, sendet der Client Anfragen an &quot;ht<span></span>tps://licenseserver.com/path/flashaccess/...&quot;. In den folgenden Abschnitten finden Sie Details zum jeweiligen Pfad, der für die einzelnen Anforderungstypen verwendet wird. Stellen Sie bei der Implementierung des Lizenzservers sicher, dass der Server die für jeden Anforderungstyp erforderlichen Pfade einhält.
+Der Client verwendet die während der Verpackung angegebene Lizenzserver-URL als Basis-URL für alle Anfragen, die an den Lizenzserver gesendet werden. Wenn die Server-URL beispielsweise als &quot;ht&quot;angegeben ist<span></span>tps://licenseserver.com/path&quot;sendet der Client Anfragen an &quot;th&quot;<span></span>tps://licenseserver.com/path/flashaccess/...&quot; In den folgenden Abschnitten finden Sie Details zum spezifischen Pfad, der für die einzelnen Anforderungstypen verwendet wird. Stellen Sie bei der Implementierung Ihres Lizenzservers sicher, dass der Server auf die Pfade reagiert, die für die einzelnen Anforderungstypen erforderlich sind.
 
-Eine Lizenzanforderung kann ein Authentifizierungstoken enthalten. Wenn Benutzername/Kennwort-Authentifizierung verwendet wurde, kann die Anforderung ein `AuthenticationToken` enthalten, das von `AuthenticationHandler` generiert wurde, und das SDK stellt sicher, dass das Token gültig ist, bevor eine Lizenz erteilt wird.
+Eine Lizenzanfrage kann ein Authentifizierungstoken enthalten. Wenn Benutzername/Kennwort-Authentifizierung verwendet wurde, kann die Anfrage eine `AuthenticationToken` von der `AuthenticationHandler`und das SDK stellt sicher, dass das Token gültig ist, bevor es eine Lizenz erteilt.

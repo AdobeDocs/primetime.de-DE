@@ -1,44 +1,42 @@
 ---
-description: Das TVSDK bietet derzeit integrierte Metadatenunterstützung für Anzeigen-Provider für TVSDK-Anzeigen, direkte Werbeunterbrechungen und benutzerdefinierte Anzeigenmarken.
+description: Das TVSDK bietet derzeit integrierte Metadatenunterstützung für Anzeigen-Anbieter für TVSDK-Anzeigen, Werbeunterbrechungen und benutzerdefinierte Anzeigenmarken.
 title: Anzeigeneinfügetypen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
 
 ---
 
-
 # Anzeigeneinfügetypen {#ad-insertion-types}
 
-Das TVSDK bietet derzeit integrierte Metadatenunterstützung für Anzeigen-Provider für TVSDK-Anzeigen, direkte Werbeunterbrechungen und benutzerdefinierte Anzeigenmarken.
+Das TVSDK bietet derzeit integrierte Metadatenunterstützung für Anzeigen-Anbieter für TVSDK-Anzeigen, Werbeunterbrechungen und benutzerdefinierte Anzeigenmarken.
 
-Es unterstützt die folgenden Typen von Workflows für die Anzeigeneinfügung für VOD und Live/Lineare Inhalte.
+Es unterstützt die folgenden Arten von Workflows zum Einfügen von Anzeigen für VOD und Live-/Lineare Inhalte.
 
 <table id="table_1C3A659BDDB7453CA953A103045FCA01"> 
  <thead> 
   <tr> 
    <th colname="col1" class="entry"> Einfügetyp </th> 
-   <th colname="col2" class="entry"> Unterstützt in... </th> 
+   <th colname="col2" class="entry"> Unterstützt in ... </th> 
    <th colname="col3" class="entry"> Beschreibung </th> 
   </tr>
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> Adobe Primetime und Entscheidungsanzeigen </td> 
+   <td colname="col1"> Adobe Primetime-Anzeigen-Entscheidungsfindungs-Anzeigen </td> 
    <td colname="col2">VOD <p>Live </p> <p>Linear </p> </td> 
-   <td colname="col3">Die Referenzimplementierung stellt <span class="codeph"> AuditudeMetadata</span> Informationen bereit, um eine Verbindung zum Server für Primetime-Anzeigenentscheidungen (früher Auditude genannt) herzustellen, basierend auf den Informationen, die im Abschnitt \"Primetime-Anzeigen\"</a> der JSON-Konfigurationsdatei</a> bereitgestellt werden. </td> 
+   <td colname="col3">Die Referenzimplementierung bietet <span class="codeph"> AuditudeMetadata</span> Informationen, die basierend auf den Informationen im Abschnitt "Primetime-Anzeigen"für die Primetime-Anzeigenentscheidung (früher als Auditude bezeichnet) mit dem Server verbunden werden sollen.</a> der JSON-Konfigurationsdatei</a>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Direkte Werbeunterbrechungen </td> 
    <td colname="col2"> VOD </td> 
-   <td colname="col3">Sie müssen Anzeigen-URLs in der JSON-Eingabedatei angeben. Wenn das TVSDK versucht, eine Anzeige aufzulösen, ruft es den Auflöser für die direkte Werbeunterbrechung auf und löst die Anzeigen auf der Grundlage der Informationen über die direkte Werbeunterbrechung, die in der JSON-Konfigurationsdatei</a> angegeben sind. </td> 
+   <td colname="col3">Sie müssen Anzeigen-URLs in der JSON-Eingabedatei angeben. Wenn das TVSDK versucht, eine Anzeige aufzulösen, ruft es den Resolver für die direkte Werbeunterbrechung auf und löst die Anzeigen auf der Grundlage der direkten Anzeige auf Informationen auf, die in der JSON-Konfigurationsdatei bereitgestellt werden</a>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Benutzerspezifische Anzeigenmarken </td> 
+   <td colname="col1"> Benutzerdefinierte Anzeigenmarken </td> 
    <td colname="col2"> VOD </td> 
-   <td colname="col3">Benutzerspezifische Anzeigenmarkierungen sind nützlich, wenn der Videostream sowohl Hauptinhalt als auch Anzeigen enthält, jedoch keine Informationen zu den Anzeigenpositionen und -zeitpunkten enthält. Wenn die Positionierungsinformationen der Anzeige auf andere Weise abgerufen werden, z. B. über ein externes CMS, können Sie benutzerdefinierte Anzeigenmarken definieren und an die Player-Zeitleiste weiterleiten. <p>Um einen Player für das Einfügen von Anzeigen einzurichten, müssen Sie Anzeigenmetadaten im Abschnitt "Benutzerspezifische Anzeigenmetadaten"der JSON-Konfigurationsdatei</a> übermitteln, die über eine unterstützende Ad-Provider-Implementierung in der Referenz-Implementierung verfügt. </p> </td>
+   <td colname="col3">Benutzerdefinierte Anzeigenmarkierungen sind nützlich, wenn der Video-Stream sowohl Hauptinhalte als auch Anzeigen enthält, jedoch keine Informationen zu den Anzeigenpositionen und der Anzeigenzeit enthält. Wenn die Anzeigenpositionsinformationen auf andere Weise abgerufen werden, z. B. über ein externes CMS, können Sie benutzerdefinierte Anzeigenmarkierungen definieren und an die Player-Timeline übergeben. <p>Um einen Player für das Einfügen von Anzeigen einzurichten, müssen Sie Anzeigenmetadaten im Abschnitt für benutzerdefinierte Anzeigenmetadaten der JSON-Konfigurationsdatei übergeben.</a>, die eine unterstützende Implementierung des Anzeigenanbieters in der Referenzimplementierung enthält. </p> </td>
   </tr>
  </tbody>
 </table>

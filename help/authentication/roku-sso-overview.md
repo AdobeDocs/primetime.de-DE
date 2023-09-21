@@ -1,19 +1,18 @@
 ---
 title: Roku SSO-Übersicht
 description: Über Roku SSO
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
 
 ---
 
-
 # Roku SSO-Übersicht {#overview}
 
 >[!NOTE]
 >
->Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle -Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
+>Der Inhalt dieser Seite dient nur Informationszwecken. Für die Verwendung dieser API ist eine aktuelle Lizenz von Adobe erforderlich. Eine unbefugte Anwendung ist nicht zulässig.
 
 ## Einführung {#roku-sso-intro}
 
@@ -35,29 +34,33 @@ Bei Programmiereranwendungen, die eine Server-zu-Server-Lösung für REST-API im
 
 Von Roku bereitgestellte Abonnenten-ID, die anstelle der von der Anwendung übergebenen Geräte-ID verwendet werden soll, um eine anwendungsübergreifende (und geräteübergreifende) SSO zu gewährleisten.
 
-Wenden Sie sich an Ihren Kundenbetreuer, um genauere Informationen zum Format der erforderlichen Kopfzeilen zu erhalten.
+Wenden Sie sich an Ihren Adobe-Kundenbetreuer, um genauere Informationen zum Format der benötigten Kopfzeilen zu erhalten.
 
 ### Mögliche Probleme {#possible-issues}
 
-Programmierer sollten überprüfen, ob ihre aktuellen Implementierungen, die auf der Client-losen REST-API der Adobe basieren, die Plattform-SSO von Roku nicht behindern. Unten finden Sie eine Liste möglicher Probleme und wie diese gelöst werden sollten.
+Programmierer sollten überprüfen, ob ihre aktuellen Implementierungen, die auf der Adobe Client less REST API basieren, die Plattform-SSO von Roku nicht behindern. Unten finden Sie eine Liste möglicher Probleme und wie diese gelöst werden sollten.
 
-| Problem | Mögliche Ursache | Mögliche Lösungen | |-|-|-| |Kein Roku-SSO-Header an Adobe gesendet|Verwenden von HTTP anstelle von HTTPS für Aufrufe an Adobe Primetime-Authentifizierungsdomänen|HTTPS verwenden| |Das MVPD-Logo wird für SSO-Token nicht angezeigt/nicht aktualisiert|Die Benutzeroberfläche basiert auf lokalem Speicher. Anwendungen sollten die Benutzeroberfläche (und den lokalen Speicher bei Bedarf aktualisieren, nachdem die Authentifizierung überprüft wurde)| |Logout auf kein AuthZ|Anwendungsdesign|Anwendung sollte aktualisiert werden, damit sich das Programm nicht hinter den Kulissen abmelden kann|
+| Problem | Mögliche Ursache | Mögliche Lösungen |
+|-|-|-|
+| Kein Roku-SSO-Header an Adobe gesendet | Verwenden von HTTP anstelle von HTTPS für Aufrufe an Adobe Primetime-Authentifizierungsdomänen | HTTPS verwenden |
+| MVPD-Logo wird für SSO-Token nicht angezeigt/nicht aktualisiert | Die Benutzeroberfläche basiert auf lokalem Speicher | Die Anwendungen sollten die Benutzeroberfläche (und ggf. den lokalen Speicher) aktualisieren, nachdem die Authentifizierung überprüft wurde |
+| Abmeldeauslösung bei keiner AuthZ | Anwendungsdesign | Die Anwendung sollte so aktualisiert werden, dass sie sich nie hinter den Kulissen abmelden kann |
 
 ## FAQs {#faq}
 
 * **Wie wird die einmalige Anmeldung funktionieren?**
 
-   SSO funktioniert für alle Programmierer-Anwendungen, die durch Adobe Primetime-Authentifizierung unterstützt werden, auf allen Roku-Geräten, die demselben Roku-Benutzer zugeordnet sind.
+  SSO funktioniert für alle Programmierer-Anwendungen, die durch Adobe Primetime-Authentifizierung unterstützt werden, auf allen Roku-Geräten, die demselben Roku-Benutzer zugeordnet sind.
 Nicht alle MVPDs ermöglichen Roku SSO.
 
 * **Werden die Authentifizierungs-TTLs geändert?**
 
-   Das erste gültige Authentifizierungstoken wird für die Durchführung der einmaligen Anmeldung verwendet. In diesem Fall verwenden alle anderen Anwendungen, die über SSO authentifiziert werden, dieselbe TTL, bis sie abläuft. Wenn Sie also von einer Anwendung zur anderen navigieren, teilt die zweite Anwendung die TTL der ersten authentifizierten Anwendung.
+  Das erste gültige Authentifizierungstoken wird für die Durchführung der einmaligen Anmeldung verwendet. In diesem Fall verwenden alle anderen Anwendungen, die über SSO authentifiziert werden, dieselbe TTL, bis sie abläuft. Wenn Sie also von einer Anwendung zur anderen navigieren, teilt die zweite Anwendung die TTL der ersten authentifizierten Anwendung.
 
 * **Funktionieren andere Adobe-Funktionen wie bisher?**
 
-   Alle Primetime-Authentifizierungsfunktionen funktionieren wie bisher.
+  Alle Primetime-Authentifizierungsfunktionen funktionieren wie bisher.
 
 * **Gibt es einen Opt-in-/Opt-out-Prozess für Programmierer, der von SSO auf der Roku-Plattform profitiert?**
 
-   Dies ist eine Konfigurationsänderung im TVE-Dashboard der Adobe. Jeder Programmierer kann SSO für bestimmte Integrationen auf der Roku-Plattform aktivieren/deaktivieren.
+  Dies ist eine Konfigurationsänderung im Adobe TVE Dashboard. Jeder Programmierer kann SSO für bestimmte Integrationen auf der Roku-Plattform aktivieren/deaktivieren.

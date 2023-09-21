@@ -1,8 +1,7 @@
 ---
 title: Best Practices
 description: Lesen Sie weiter, um zu erfahren, wie Sie das Konto-IQ-Tool besser nutzen können.
-exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -36,13 +35,13 @@ Verwenden Sie das Kampagnenwerkzeug, um das Zielsegment und einen Betriebszeitra
 
 * Erstellen Sie einen Vorgang, der das Zielsegment und den Zeitrahmen der Vorgänge definiert.
 
-* Je nach Zielen wie dem Hochladen, Erhöhen der Anzeigenladezeit oder der Reduzierung des Zugriffs auf betrügerische Konten sollten Sie relevante Maßnahmen für das definierte Benutzerset ergreifen, z. B.: in App-Angeboten, zusätzlichen Anzeigen oder erfordert Authentifizierung mit mehreren Faktoren.
+* Je nach Zielen wie dem Hochladen, Erhöhen der Anzeigenladezeit oder der Reduzierung des Zugriffs auf betrügerische Konten müssen Sie relevante Maßnahmen für das definierte Benutzerstapel ergreifen, z. B.: In-App-Angebote, zusätzliche Anzeigen oder Authentifizierung mit mehreren Faktoren.
 
 <!--If necessary, gauge the affect [by measuring the impact of actions taken](#track-measure-impact).-->
 
 ## Auswirkungen von Aktionen verfolgen und messen {#track-measure-impact}
 
-Aktionen benötigen Zeit, um wirksam zu werden. Verwenden Sie den Vorgang und die zugehörigen Diagramme, um den Vorgangsstatus und die Segmentmerkmale in den nachfolgenden Wochen oder Monaten des Vorgangs-Zeitrahmens zu verfolgen. Kombinieren Sie diese Informationen mit anderen Analysen, um das Ergebnis zu beantworten oder zu verstehen. Beispiel: Wie hoch ist der Prozentsatz der in Abonnenten umgerechneten Kreditnehmer? Wie viele zusätzliche Anzeigen wurden angezeigt? Ist die Zahl der Kreditnehmer gesunken?
+Aktionen benötigen Zeit, um wirksam zu werden. Verwenden Sie den Vorgang und die zugehörigen Diagramme, um den Vorgangsstatus und die Segmentmerkmale in den nachfolgenden Wochen oder Monaten des Vorgangs-Zeitrahmens zu verfolgen. Kombinieren Sie diese Informationen mit anderen Analysen, um das Ergebnis zu beantworten oder zu verstehen. Beispiel: Welcher Prozentsatz der in Abonnenten konvertierten Kreditnehmer? Wie viele zusätzliche Anzeigen wurden angezeigt? Ist die Zahl der Kreditnehmer gesunken?
 
 * Verwenden Sie Diagramme und andere Analysen, um die Wirkung von Aktionen zu verfolgen und zu messen.
 

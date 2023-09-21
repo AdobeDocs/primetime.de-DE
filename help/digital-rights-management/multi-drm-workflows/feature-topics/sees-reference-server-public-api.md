@@ -1,26 +1,24 @@
 ---
-description: Die Berechtigungsanforderung und die Antwort werden über eine gegenseitig authentifizierte SSL-Verbindung zwischen dem Lizenzserver und dem Berechtigungsdienst des Kunden weitergeleitet.
+description: Die Berechtigungsanfrage und die Antwort werden über eine gegenseitig authentifizierte SSL-Verbindung zwischen dem Lizenzserver und dem Berechtigungsdienst des Kunden weitergeleitet.
 title: SIEHE Öffentliche API
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
 
 ---
 
-
 # SIEHE Öffentliche API {#sees-public-api}
 
-Die Berechtigungsanforderung und die Antwort werden über eine gegenseitig authentifizierte SSL-Verbindung zwischen dem Lizenzserver und dem Berechtigungsdienst des Kunden weitergeleitet.
+Die Berechtigungsanfrage und die Antwort werden über eine gegenseitig authentifizierte SSL-Verbindung zwischen dem Lizenzserver und dem Berechtigungsdienst des Kunden weitergeleitet.
 
-Das HTTPS-URI-Schema ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) wird zum Definieren des Berechtigungsendpunkts verwendet, und die HTTP-POST-Anforderungsmethode ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) wird für die Anforderung verwendet. Der Berechtigungsendpunkt sowie ein Flag, das die Back-End-Berechtigung angibt, sind erforderlich und müssen zur Verpackungszeit in die Richtlinie aufgenommen werden.
+Das HTTPS-URI-Schema ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) verwendet wird, um den Berechtigungs-Endpunkt und die HTTP-POST-Anforderungsmethode ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) für die Anfrage verwendet. Der Berechtigungs-Endpunkt sowie eine Markierung, die die Back-End-Berechtigung angibt, sind erforderlich und müssen während der Verpackung in die Richtlinie aufgenommen werden.
 
 ## Berechtigungsanfrage {#section_BFBFEF0795CA46D6842C479256B95F95}
 
-Der Hauptteil der Berechtigungsanforderung ist ein JSON-Objekt, das wie unten dargestellt definiert wird.
+Der Hauptteil der Berechtigungsanforderung ist ein JSON-Objekt, das wie unten dargestellt definiert ist.
 
-**Objektdefinition für JSON-Berechtigungsanforderung**
+**Definition des JSON-Berechtigungsanfrageobjekts**
 
 ```
 { 
@@ -52,11 +50,11 @@ Der Hauptteil der Berechtigungsanforderung ist ein JSON-Objekt, das wie unten da
 }
 ```
 
-## Antwort auf Berechtigung {#section_F15A9FD6BAD946B3B4C5C14612F90154}
+## Antwort auf Berechtigungen {#section_F15A9FD6BAD946B3B4C5C14612F90154}
 
-Der Hauptteil der Berechtigungsantwort ist ein JSON-Objekt.
+Der Hauptteil der Antwort auf die Berechtigung ist ein JSON-Objekt.
 
-**Definition des JSON-Berechtigungsreaktionsobjekts**
+**Definition des JSON-Berechtigungsantwortobjekts**
 
 ```
 { 

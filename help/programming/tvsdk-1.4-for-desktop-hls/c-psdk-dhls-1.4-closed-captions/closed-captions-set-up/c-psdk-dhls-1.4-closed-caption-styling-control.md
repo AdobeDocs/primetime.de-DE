@@ -1,38 +1,36 @@
 ---
-description: Mit der ClosedCaptionStyles-Klasse können Sie Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle Untertitel festgelegt, die vom Player angezeigt werden.
-title: Steuern des Stils für Untertitel
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können mithilfe der ClosedCaptionStyles-Klasse Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle von Ihrem Player angezeigten Untertitel festgelegt.
+title: Steuern des Stils von Untertiteln
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
+# Steuern des Stils von Untertiteln{#control-closed-caption-styling}
 
-# Steuerelement mit Untertitelstil{#control-closed-caption-styling}
+Sie können mithilfe der ClosedCaptionStyles-Klasse Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle von Ihrem Player angezeigten Untertitel festgelegt.
 
-Mit der ClosedCaptionStyles-Klasse können Sie Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle Untertitel festgelegt, die vom Player angezeigt werden.
+Diese Klasse enthält Informationen zum Stil von Untertiteln wie Schriftart, Größe, Farbe und Hintergrunddeckkraft. eine zugehörige Helper-Klasse, `ClosedCaptionStylesBuilder`, erleichtert die Arbeit mit Einstellungen für Beschriftungsstile.
 
-Diese Klasse kapselt Stilinformationen für Untertitel, wie Schriftart, Größe, Farbe und Hintergrunddeckkraft. Die zugehörige Helferklasse `ClosedCaptionStylesBuilder` erleichtert die Arbeit mit Stileinstellungen für Untertitel.
+## Festlegen von Stilen für Untertitel {#section_DAE84659D1964DB1B518F91B59AF29D9}
 
-## Stile für Untertitel festlegen {#section_DAE84659D1964DB1B518F91B59AF29D9}
+Sie können den Text mit Beschriftungen mit TVSDK-Methoden formatieren.
 
-Sie können den Untertiteltext mit TVSDK-Methoden formatieren.
+1. Warten Sie, bis der MediaPlayer mindestens den Status VORBEREITET aufweist (siehe [Auf gültigen Status warten](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
+1. Führen Sie einen der folgenden Schritte aus, um die Stileinstellungen zu ändern:
 
-1. Warten Sie, bis der MediaPlayer mindestens den Status &quot;VORBEREITET&quot;aufweist (siehe [Warten Sie auf einen gültigen Status](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
-1. Um die Stileinstellungen zu ändern, führen Sie einen der folgenden Schritte aus:
-
-   * Verwenden Sie die Helper-Klasse `ClosedCaptionStylesBuilder` (arbeitet hinter den Kulissen mit `ClosedCaptionStyles`).
-   * Verwenden Sie die `ClosedCaptionStyles`-Klasse direkt.
+   * Verwenden Sie die `ClosedCaptionStylesBuilder` Helper-Klasse (funktioniert mit `ClosedCaptionStyles` im Hintergrund).
+   * Verwenden Sie die `ClosedCaptionStyles` -Klasse direkt.
 
 >[!NOTE]
 >
->Das Festlegen des Stils für die Bildunterschrift ist ein asynchroner Vorgang, sodass es bis zu einigen Sekunden dauern kann, bis die Änderungen auf dem Bildschirm angezeigt werden.
+>Das Festlegen des Stils für geschlossene Untertitel ist ein asynchroner Vorgang, sodass es bis zu einigen Sekunden dauern kann, bis die Änderungen auf dem Bildschirm angezeigt werden.
 
-## Stiloptionen für Bildunterschriften {#section_D28F50B98C0D48CF89C4FB6DC81C5185}
+## Stiloptionen für geschlossene Beschriftungen {#section_D28F50B98C0D48CF89C4FB6DC81C5185}
 
-Mit der `ClosedCaptionStyles`-Klasse können Sie Stilinformationen für Untertitelspuren bereitstellen. Dadurch wird der Stil für alle Untertitel festgelegt, die vom Player angezeigt werden.
+Sie können Styling-Informationen für Tracks mit geschlossenen Untertiteln mithilfe der `ClosedCaptionStyles` -Klasse. Dadurch wird der Stil für alle von Ihrem Player angezeigten Untertitel festgelegt.
 
 ```
 public function TextFormat( 
@@ -50,7 +48,7 @@ public function TextFormat(
 
 >[!TIP]
 >
->In Optionen, die Standardwerte definieren (z. B. `DEFAULT`), bezieht sich dieser Wert auf die Einstellung, die bei der ursprünglichen Angabe der Beschriftung festgelegt wurde.
+>In Optionen, die Standardwerte definieren (z. B. `DEFAULT`), bezieht sich dieser Wert auf die Einstellung, als die Beschriftung ursprünglich angegeben wurde.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -61,8 +59,8 @@ public function TextFormat(
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"> Schrift </td> 
-   <td colname="2"> <p>Der Schrifttyp. </p> <p>Kann nur auf einen Wert eingestellt werden, der durch das <span class="codeph"> ClosedCaptionStyles.FONT </span>-Array definiert ist und beispielsweise mit oder ohne Serifen konstatiert ist. 
+   <td colname="1"> Schriftart </td> 
+   <td colname="2"> <p>Der Schrifttyp. </p> <p>Kann nur auf einen Wert festgelegt werden, der durch die Variable <span class="codeph"> ClosedCaptionStyles.FONT </span> -Array und stellt beispielsweise mit oder ohne Serifen als Konstantinfolge dar. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;FONT&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;AVCaptionStyle.DEFAULT, 
@@ -74,21 +72,21 @@ public function TextFormat(
       &nbsp;AVCaptionStyle.CURSIVE, 
       &nbsp;AVCaptionStyle.SMALL_CAPITALS 
       &nbsp;]; 
-     </code> </p> <p>Tipp:  Die tatsächlichen Schriftarten, die auf einem Gerät verfügbar sind, können variieren und bei Bedarf werden Ersatzschriften verwendet. Monospace mit Serifen wird normalerweise als Ersatz verwendet, obwohl diese Ersetzung systemspezifisch sein kann. </p> </td> 
+     </code> </p> <p>Tipp: Die tatsächlichen Schriftarten, die auf einem Gerät verfügbar sind, können variieren und bei Bedarf werden Ersatzschriften verwendet. Monospace mit Serifen wird in der Regel als Ersatz verwendet, obwohl diese Substitution systemspezifisch sein kann. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Größe </td> 
-   <td colname="2"> <p>Die Größe der Beschriftung. </p> <p> Kann nur auf einen Wert eingestellt werden, der vom <span class="codeph">-Array ClosedCaptionStyles.FONT_SIZE </span> definiert wird: 
+   <td colname="2"> <p>Die Größe der Beschriftung. </p> <p> Kann nur auf einen Wert gesetzt werden, der durch die Variable <span class="codeph"> ClosedCaptionStyles.FONT_SIZE </span> array: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM  </span> - Standardgröße </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GROSS  </span> - Ca. 30% größer als mittel </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> KLEIN  </span> - Ca. 30 % kleiner als mittel </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD  </span> - Die Standardgröße für die Beschriftung; gleich mittel </li> 
-     </ul> </p> <p>Tipp:  Sie können die Schriftgröße von WebVTT-Beschriftungen ändern, indem Sie den Parameter size für die Funktion <span class="codeph"> DefaultMediaPlayer.ccStyles set </span> ändern. </p> </td> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIUM </span> - Standardgröße </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GROSS </span> - Etwa 30% größer als mittel </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> KLEIN </span> - Etwa 30% kleiner als mittel </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> STANDARD </span> - Die Standardgröße für die Beschriftung; identisch mit Medium </li> 
+     </ul> </p> <p>Tipp: Sie können die Schriftgröße von WebVTT-Beschriftungen ändern, indem Sie den Parameter size für <span class="codeph"> DefaultMediaPlayer.ccStyles-Setter </span> -Funktion. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> Schriftrand </td> 
-   <td colname="2"> <p>Der für die Schrift verwendete Effekt, z. B. "erhöht"oder "Ohne". </p> <p>Kann nur auf einen Wert eingestellt werden, der vom <span class="codeph">-Array ClosedCaptionStyles.FONT_EDGE </span> definiert wird. 
+   <td colname="1"> Schriftgrad </td> 
+   <td colname="2"> <p>Der für den Schriftrand verwendete Effekt, z. B. angehoben oder keine. </p> <p>Kann nur auf einen Wert festgelegt werden, der durch die Variable <span class="codeph"> ClosedCaptionStyles.FONT_EDGE </span> Array. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;FONT_EDGE&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -103,7 +101,7 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Schriftfarbe </td> 
-   <td colname="2"> <p>Die Schriftfarbe. </p> <p>Kann nur auf einen Wert eingestellt werden, der durch das <span class="codeph">-Array ClosedCaptionStyles.COLOR </span> definiert wird. 
+   <td colname="2"> <p>Die Schriftfarbe. </p> <p>Kann nur auf einen Wert gesetzt werden, der durch die Variable <span class="codeph"> ClosedCaptionStyles.COLOR </span> Array. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;COLOR&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -133,36 +131,36 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Kantenfarbe </td> 
-   <td colname="2"> <p>Die Farbe des Kanteneffekts. </p> <p>Kann auf einen beliebigen Wert eingestellt werden, der für die Schriftfarbe verfügbar ist. </p> </td> 
+   <td colname="2"> <p>Die Farbe des Kanteneffekts. </p> <p>Kann auf einen der Werte gesetzt werden, die für die Schriftfarbe verfügbar sind. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Hintergrundfarbe </td> 
-   <td colname="2"> <p>Die Farbe der Hintergrundzeichenzelle. </p> <p>Kann nur auf Werte eingestellt werden, die für die Schriftfarbe verfügbar sind. </p> </td> 
+   <td colname="2"> <p>Die Hintergrundfarbe der Zeichenzelle. </p> <p>Kann nur auf Werte gesetzt werden, die für die Schriftfarbe verfügbar sind. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Füllfarbe </td> 
-   <td colname="2"> <p>Die Hintergrundfarbe des Fensters, in dem sich der Text befindet. </p> <p>Kann auf einen beliebigen Wert eingestellt werden, der für die Schriftfarbe verfügbar ist. </p> <p>Wichtig:  Dies gilt nicht für WebVTT-Beschriftungen, da WebVTT diese Funktion nicht verwendet. </p> </td> 
+   <td colname="2"> <p>Die Hintergrundfarbe des Fensters, in dem sich der Text befindet. </p> <p>Kann auf einen der Werte gesetzt werden, die für die Schriftfarbe verfügbar sind. </p> <p>Wichtig: Dies gilt nicht für WebVTT-Untertitel, da WebVTT diese Funktion nicht verwendet. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Schriftdeckkraft </td> 
-   <td colname="2"> <p>Die Deckkraft des Textes. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig undurchsichtig) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY  </span> für die Schriftart ist 100. </p> </td> 
+   <td colname="2"> <p>Die Deckkraft des Textes. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig opak) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY </span> für die Schriftart 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Hintergrunddeckkraft </td> 
-   <td colname="2"> <p>Die Deckkraft der Hintergrundzeichenzelle. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig undurchsichtig) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY  </span> für den Hintergrund ist 100. </p> </td> 
+   <td colname="2"> <p>Die Deckkraft der Hintergrundzeichenzelle. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig opak) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY </span> für den Hintergrund ist 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Fülldeckkraft </td> 
-   <td colname="2"> <p>Die Deckkraft des Hintergrunds des Beschriftungsfensters. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig undurchsichtig) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY  </span> für fill ist 0. </p> </td> 
+   <td colname="2"> <p>Die Deckkraft des Hintergrunds des Beschriftungsfensters. </p> <p>Wird als Prozentsatz von 0 (vollständig transparent) bis 100 (vollständig opak) ausgedrückt. <span class="codeph"> DEFAULT_OPACITY </span> für die Füllung 0 ist. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Beispiele: Beschriftungsformatierung {#section_63E33840B7A14D26990046E2ACF2ECA1}
 
-Sie können die Formatierung für Untertitel festlegen.
+Sie können die Formatierung der Beschriftung festlegen.
 
-## Beispiel 1: Festlegen von Formatwerten explizit {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
+## Beispiel 1: explizit Formatwerte angeben {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
 
 ```
 private function onStatusChanged(event:MediaPlayerStatusChangeEvent):void { 

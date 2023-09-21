@@ -1,35 +1,32 @@
 ---
-description: Die Lizenzierung ist der wichtigste Mechanismus, mit dem Benutzern die Wiedergabe geschützter Videoinhalte gestattet oder verweigert wird. Ein legitimer (berechtigter) Benutzer kann eine Lizenz (einen Schlüssel) zum Entschlüsseln und Abspielen eines bestimmten Teils des verschlüsselten Inhalts seines Inhalts-Providers erhalten.
+description: Lizenzierung ist der Hauptmechanismus, mit dem Benutzer die Wiedergabe eines Teils geschützter Videoinhalte zulassen oder verweigern können. Ein legitimer (berechtigter) Benutzer kann eine Lizenz (einen Schlüssel) zum Entschlüsseln und Abspielen eines bestimmten Teils des verschlüsselten Inhalts seines Inhaltsanbieters erhalten.
 title: Lizenzierung
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
 
 ---
 
-
 # Lizenzierung{#licensing}
 
-Die Lizenzierung ist der wichtigste Mechanismus, mit dem Benutzern die Wiedergabe geschützter Videoinhalte gestattet oder verweigert wird. Ein legitimer (berechtigter) Benutzer kann eine Lizenz (einen Schlüssel) zum Entschlüsseln und Abspielen eines bestimmten Teils des verschlüsselten Inhalts seines Inhalts-Providers erhalten.
+Lizenzierung ist der Hauptmechanismus, mit dem Benutzer die Wiedergabe eines Teils geschützter Videoinhalte zulassen oder verweigern können. Ein legitimer (berechtigter) Benutzer kann eine Lizenz (einen Schlüssel) zum Entschlüsseln und Abspielen eines bestimmten Teils des verschlüsselten Inhalts seines Inhaltsanbieters erhalten.
 
-Bevor Ihre App oder Webseite auf dem Gerät eines Endbenutzers DRM-geschützte Inhalte wiedergeben kann, muss sie ein Token von einem Berechtigungs- oder Store-Server erwerben, den Sie, der Kunde, betreiben. Adobe bietet hierfür einen Beispielverweisserver: [Referenz-Server: Beispiel für einen ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Bevor Ihre App oder Webseite auf dem Gerät eines Endbenutzers DRM-geschützte Inhalte wiedergeben kann, muss sie ein Token von einem Berechtigungs- oder Storefront-Server erwerben, den Sie, der Kunde, betreiben. Adobe stellt zu diesem Zweck einen Beispiel-Referenzserver bereit: [Referenz-Server: Beispiel für ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
-Ihr Berechtigungs- oder Schaufensterserver fordert vom jeweiligen ExpressPlay-Server ein Lizenz-Token erst dann an, wenn Sie mit Ihren eigenen Back-End-Systemen prüfen, ob der betreffende Benutzer berechtigt ist, den angeforderten Inhalt zu überwachen. Die von der Lizenztoken-Anforderung zurückgegebene Antwort ist entweder eine einsatzbereite URL für den Lizenzserver oder die Antwort enthält die URL in einer JSON-Struktur, je nachdem, mit welcher DRM-Lösung Sie arbeiten.
+Ihr Berechtigungs- oder Storefront-Server fordert vom relevanten ExpressPlay-Server ein Lizenztoken an, nachdem Sie mit Ihren eigenen Backend-Systemen geprüft haben, ob der jeweilige Benutzer berechtigt ist, den angeforderten Inhalt zu überwachen. Die von der Lizenztoken-Anfrage zurückgegebene Antwort ist entweder eine gebrauchsfertige URL für den Lizenzserver oder die Antwort enthält die URL in einer JSON-Struktur, je nach der DRM-Lösung, mit der Sie arbeiten.
 
 >[!NOTE]
 >
->Die Lizenztoken-Anforderung kann nicht vom Client selbst gesendet werden:
->1. Die Berechtigungen müssen in einer vertrauenswürdigen Umgebung überprüft werden. und
->1. Der Kundenauthentifizierer muss geheim gehalten werden.
+>Die Lizenztoken-Anfrage kann nicht vom Client selbst gestellt werden:
+>1. Die Berechtigungen müssen in einer vertrauenswürdigen Umgebung überprüft werden.
+>1. Der Kundenauthentifikator muss geheim gehalten werden.
 
+1. Stellen Sie die Lizenztoken-Anfrage.
 
-1. Nehmen Sie eine Lizenztoken-Anforderung vor.
+   Für ein Schnellstartszenario, in dem Sie lediglich sicherstellen möchten, dass die verschiedenen beteiligten Komponenten zusammenarbeiten, können Sie Folgendes verwenden: [!DNL curl] , um Ihre Lizenztoken-Anfrage zu stellen (im Gegensatz zu den anfänglichen Aufrufen zum Einrichten und Ausführen einer App und zum Testen von dort). Beispiel:
 
-   Bei einem Schnellanwendungsszenario, bei dem Sie lediglich sicherstellen möchten, dass die verschiedenen beteiligten Komponenten zusammenarbeiten, sollten Sie z. B. [!DNL curl] verwenden, um Ihre Lizenztoken-Anforderung zu stellen (im Gegensatz zu anfänglichen Aufrufen und Testaufrufen von dort). Beispiel:
-
-   * Wendevine:
+   * Wöchentlich:
 
    ```
    curl "https://wv-gen.test.expressplay.com/hms/wv/token?customerAuthenticator= 
@@ -66,7 +63,7 @@ Ihr Berechtigungs- oder Schaufensterserver fordert vom jeweiligen ExpressPlay-Se
       O1PqRkx59Q2q1s2cFNrqfml8Y3RQ 
    ```
 
-   Beachten Sie, dass die Widevine-Antwort eine &quot;einsatzbereite&quot;URL-Zeichenfolge ist.
+   Beachten Sie, dass es sich bei der umfassenden Antwort um eine URL-Zeichenfolge handelt, die sofort verwendet werden kann.
 
    * PlayReady:
 
@@ -144,4 +141,4 @@ Ihr Berechtigungs- oder Schaufensterserver fordert vom jeweiligen ExpressPlay-Se
    O1PqRkx59Q2q1s2cFNrqfml8Y3RQ
    ```
 
-   Beachten Sie, dass die FairPlay-Antwort eine &quot;einsatzbereite&quot;URL-Zeichenfolge ist.
+   Beachten Sie, dass die FairPlay-Antwort eine gebrauchsfertige URL-Zeichenfolge ist.

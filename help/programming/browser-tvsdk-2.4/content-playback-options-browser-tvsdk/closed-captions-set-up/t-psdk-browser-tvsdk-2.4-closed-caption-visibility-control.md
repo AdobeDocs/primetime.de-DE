@@ -1,28 +1,25 @@
 ---
-description: Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarkeit aktiviert ist, wird die aktuell ausgewählte Spur angezeigt.
-title: Sichtbarkeit von Bildunterschriften steuern
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können die Sichtbarkeit geschlossener Untertitel steuern. Wenn die Sichtbarkeit aktiviert ist, wird der aktuell ausgewählte Track angezeigt.
+title: Sichtbarkeit der Untertitel steuern
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
 
 ---
 
+# Sichtbarkeit der Untertitel steuern{#control-closed-caption-visibility}
 
-# Sichtbarkeit bei geschlossener Beschriftung kontrollieren{#control-closed-caption-visibility}
-
-Sie können die Sichtbarkeit von Bildunterschriften steuern. Wenn die Sichtbarkeit aktiviert ist, wird die aktuell ausgewählte Spur angezeigt.
-
->[!TIP]
->
->Wenn Sie ändern, welche Spur aktuell ist, bleibt die Sichtbarkeitseinstellung gleich.
-
-Wenn Untertiteltext angezeigt wird, wenn der Player in den Suchmodus wechselt, wird der Text nach Abschluss der Suche nicht mehr angezeigt. Stattdessen zeigt Browser TVSDK nach einigen Sekunden den nächsten Untertiteltext im Video nach der Endsuchposition an.
+Sie können die Sichtbarkeit geschlossener Untertitel steuern. Wenn die Sichtbarkeit aktiviert ist, wird der aktuell ausgewählte Track angezeigt.
 
 >[!TIP]
 >
->Die Sichtbarkeitswerte für Untertitel werden mit `MediaPlayer.VISIBLE` und `MediaPlayer.INVISIBLE` gesteuert.
+>Wenn Sie ändern, welcher Track aktuell ist, bleibt die Sichtbarkeitseinstellung gleich.
 
-1. Verwenden Sie die Eigenschaft `MediaPlayer.ccVisibility`, um auf die aktuelle Sichtbarkeitseinstellung für die Bildunterschriften zuzugreifen.
+Wenn der Untertiteltext angezeigt wird, wenn der Player in den Suchmodus wechselt, wird der Text nach Abschluss der Suche nicht mehr angezeigt. Stattdessen zeigt Browser TVSDK nach einigen Sekunden den nächsten Untertiteltext im Video nach der Endsuchposition an.
 
+>[!TIP]
+>
+>Die Sichtbarkeitswerte für geschlossene Untertitel werden mit `MediaPlayer.VISIBLE` und `MediaPlayer.INVISIBLE`.
+
+1. Verwenden Sie die `MediaPlayer.ccVisibility` -Eigenschaft, um auf die aktuelle Sichtbarkeitseinstellung für die geschlossenen Beschriftungen zuzugreifen.

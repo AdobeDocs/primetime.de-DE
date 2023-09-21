@@ -1,64 +1,57 @@
 ---
-description: Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiedergabe auf dem Beginn wartet, zu einer inakzeptablen Verzögerung führen. Die Funktionen "Verzögertes Laden von Werbeanzeigen"und "Verzögertes Auflösen von Werbeanzeigen"können diese Startverzögerung verringern.
-keywords: Verzögert;Auflösen der Anzeige;Laden der Anzeige
-title: Verzögerte und gelöste Anzeige
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Das Auflösen von Anzeigen und Laden von Anzeigen kann zu einer inakzeptablen Verzögerung für einen Benutzer führen, der auf den Start der Wiedergabe wartet. Die Funktionen "Lazy Ad Loading"und "Lazy Ad Resolving"können diese Startverzögerung reduzieren.
+keywords: Verzögert; auflösen von Anzeigen; Laden von Anzeigen
+title: Verzögerte Anzeigenauflösung
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#lazy-ad-resolving}
 
-Das Auflösen und Laden von Anzeigen kann für einen Benutzer, der auf die Wiedergabe auf dem Beginn wartet, zu einer inakzeptablen Verzögerung führen. Die Funktionen &quot;Verzögertes Laden von Werbeanzeigen&quot;und &quot;Verzögertes Auflösen von Werbeanzeigen&quot;können diese Startverzögerung verringern.
+Das Auflösen von Anzeigen und Laden von Anzeigen kann zu einer inakzeptablen Verzögerung für einen Benutzer führen, der auf den Start der Wiedergabe wartet. Die Funktionen &quot;Lazy Ad Loading&quot;und &quot;Lazy Ad Resolving&quot;können diese Startverzögerung reduzieren.
 
-* Grundlegender Prozess zum Auflösen und Laden von Anzeigen:
+* Grundlegender Prozess zur Anzeigenauflösung und zum Laden:
 
-   1. TVSDK lädt ein Manifest (Wiedergabeliste) und *löst* alle Anzeigen auf.
-   1. TVSDK *lädt* alle Anzeigen und platziert sie auf der Zeitschiene.
-   1. TVSDK verschiebt den Player in den Status &quot;VORBEREITT&quot;, und die Wiedergabe des Inhalts beginnt.
+   1. TVSDK lädt ein Manifest (Wiedergabeliste) herunter und *auflöst* alle Anzeigen.
+   1. TVSDK *lädt* alle Anzeigen und platzieren sie auf der Timeline.
+   1. TVSDK verschiebt den Player in den Status VORBEREITT , und die Wiedergabe des Inhalts beginnt.
 
-   Der Player verwendet die URLs im Manifest, um den Anzeigeninhalt (kreative Elemente) abzurufen, stellt sicher, dass der Anzeigeninhalt in einem Format vorliegt, das TVSDK wiedergeben kann, und TVSDK platziert die Anzeigen auf der Zeitleiste. Dieser grundlegende Prozess des Auflösens und Ladens von Anzeigen kann zu einer unannehmbar langen Verzögerung für Benutzer führen, die auf die Wiedergabe ihres Inhalts warten, insbesondere wenn das Manifest mehrere Anzeigen-URLs enthält.
+  Der Player verwendet die URLs im Manifest, um den Anzeigeninhalt (kreative Inhalte) zu erhalten, stellt sicher, dass der Anzeigeninhalt in einem Format vorliegt, das TVSDK wiedergeben kann, und TVSDK platziert die Anzeigen auf der Timeline. Dieser grundlegende Prozess der Auflösung und des Ladens von Anzeigen kann dazu führen, dass ein Benutzer, der darauf wartet, seinen Inhalt wiederzugeben, unannehmbar lange verzögert ist, insbesondere wenn das Manifest mehrere Anzeigen-URLs enthält.
 
-* *Verzögertes Laden* von Anzeigen:
+* *Lazy Ad Loading*:
 
-   1. TVSDK lädt eine Wiedergabeliste herunter und *löst* alle Anzeigen auf.
-   1. TVSDK *lädt* Pre-Roll-Anzeigen, verschiebt den Player in den Status &quot;VORBEREITT&quot;und die Wiedergabe des Inhalts beginnt.
-   1. TVSDK *lädt* die verbleibenden Anzeigen und setzt sie bei der Wiedergabe auf die Zeitleiste.
+   1. TVSDK lädt eine Wiedergabeliste herunter und *auflöst* alle Anzeigen.
+   1. TVSDK *lädt* Pre-Roll-Anzeigen, verschiebt den Player in den Status VORBEREITET und die Inhaltswiedergabe beginnt.
+   1. TVSDK *lädt* die verbleibenden Anzeigen und setzt sie bei der Wiedergabe auf die Timeline.
 
-   Diese Funktion verbessert den grundlegenden Prozess, indem der Player in den Status &quot;VORBEREITT&quot;versetzt wird, bevor alle Anzeigen geladen werden.
+  Diese Funktion verbessert den grundlegenden Prozess, indem der Player vor dem Laden aller Anzeigen in den Status VORBEREITET versetzt wird.
 
-* *Lazy Ad Resolving*:
+* *Auflösung verzögerter Anzeigen*:
 
    1. TVSDK lädt die Wiedergabeliste herunter.
-   1. TVSDK löst und lädt alle Pre-Roll-Anzeigen, verschiebt den Player in den Status &quot;VORBEREITT&quot;und die Inhaltswiedergabe beginnt.
-   1. TVSDK löst und lädt die verbleibenden Anzeigen und setzt sie bei der Wiedergabe auf die Zeitleiste.
+   1. TVSDK löst alle Pre-Roll-Anzeigen auf und lädt sie, verschiebt den Player in den Status VORBEREITT und die Inhaltswiedergabe beginnt.
+   1. TVSDK löst die verbleibenden Anzeigen auf und lädt sie, sobald die Wiedergabe erfolgt, auf die Timeline.
 
-   Die Lazy Ad Resolving-Funktion baut auf Lazy Ad Loading auf, um einen noch schnelleren Beginn zu ermöglichen. Nachdem TVSDK Pre-Roll-Anzeigen platziert hat, wird der Player in den Status &quot;VORBEREITET&quot;verschoben und löst dann zusätzliche Anzeigen auf und platziert sie auf der Zeitschiene.
+  Die Lazy Ad Resolving-Builds auf &quot;Lazy Ad Loading&quot;, um einen noch schnelleren Start zu ermöglichen. Nachdem TVSDK Pre-Roll-Anzeigen platziert hat, wechselt der Player in den Status VORBEREITT , löst dann zusätzliche Anzeigen auf und platziert sie auf der Timeline.
 
 >[!IMPORTANT]
 >
->Faktoren, die bei der Auflösung von Lazy Ad zu berücksichtigen sind:
+>Faktoren, die bei der verzögerten Anzeigenauflösung berücksichtigt werden sollten:
 >
->* Die verzögerte Anzeigenauflösung ist standardmäßig aktiviert. Wenn Sie sie deaktivieren, werden alle Anzeigen vor dem Beginn der Wiedergabe aufgelöst.
->* Die verzögerte Anzeigenauflösung erlaubt keine Suche oder Trickplay, bis alle Anzeigen aufgelöst sind:
-
-   >
-   >    
-   * Der Player muss auf das `kEventAdResolutionComplete`-Ereignis warten, bevor die Suche oder das Trick-Abspielen zugelassen wird.
-   >    * Wenn der Benutzer versucht, Vorgänge zum Suchen oder Tricken von Wiedergabe auszuführen, während Anzeigen noch aufgelöst werden, gibt TVSDK den Fehler `kECLazyAdResolutionInProgress` aus.
-   >    * Falls erforderlich, sollte der Player die Scrubbing-Leiste aktualisieren, *nachdem* das `kEventAdResolutionComplete`-Ereignis empfangen wurde.
+>* Die verzögerte Anzeigenauflösung ist standardmäßig aktiviert. Wenn Sie sie deaktivieren, werden alle Anzeigen vor dem Start der Wiedergabe aufgelöst.
+>* Die verzögerte Anzeigenauflösung erlaubt keine Suche oder Trickplay, bis alle Anzeigen aufgelöst wurden:
 >
->* Lazy Ad Resolving ist nur für VOD gedacht. Es funktioniert nicht mit LIVE-Streams.
->* Lazy Ad Resolving ist nicht mit der Funktion *Instant On* kompatibel.
-
+>    * Der Player muss auf die `kEventAdResolutionComplete` -Ereignis, bevor Sie die Suche oder das Tricken der Wiedergabe zulassen.
+>    * Wenn der Benutzer versucht, Play-Vorgänge auszuführen, während Anzeigen aufgelöst werden, gibt TVSDK die `kECLazyAdResolutionInProgress` Fehler.
+>    * Bei Bedarf sollte der Player die Scrubbing-Leiste aktualisieren. *after* die `kEventAdResolutionComplete` -Ereignis.
 >
->  
-
-Weitere Informationen zu &quot;Sofort ein&quot;finden Sie unter Sofort-on .
+>* Die verzögerte Anzeigenauflösung ist nur für VOD vorgesehen. Es funktioniert nicht mit LIVE-Streams.
+>* Die verzögerte Anzeigenauflösung ist nicht mit der *Sofort aktiviert* Funktion.
 >
->* Beim Auflösen von verzögerter Anzeige beginnt die Wiedergabe zwar viel schneller, aber wenn in den ersten 60 Sekunden der Wiedergabe ein Werbeunterbrechung auftritt, wird dieser möglicherweise nicht behoben.
+>  Weitere Informationen zu Instant On finden Sie unter Instant On .
+>
+>* Während die verzögerte Anzeigenauflösung dazu führt, dass die Wiedergabe viel schneller startet, wird sie möglicherweise nicht behoben, wenn in den ersten 60 Sekunden der Wiedergabe eine Werbeunterbrechung auftritt.
 >* Eine verzögerte Anzeigenauflösung wirkt sich nicht auf Pre-Roll-Anzeigen aus.

@@ -1,14 +1,12 @@
 ---
 description: Dieser Abschnitt bietet einen konzeptionellen Überblick über die Konfiguration, Optionen und Bedeutungen im Zusammenhang mit dem Ausgabeschutz.
 title: RBOP-Konzepte
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 0%
 
 ---
-
 
 # RBOP-Konzepte {#rbop-concepts}
 
@@ -16,17 +14,17 @@ Dieser Abschnitt bietet einen konzeptionellen Überblick über die Konfiguration
 
 Sie legen Ihre auflösungsbasierten Ausgabeschutzanforderungen in einer hierarchischen JSON-Struktur fest. *Die Ausgabeanforderungen sind pixelbasiert.*
 
-Auf der höchsten Ebene der JSON-Spezifikation können Sie maximale Pixelauflösung und Pixeleinschränkungen für bestimmte Auflösungen definieren:
+Auf der höchsten Ebene der JSON-Spezifikation können Sie die maximale Pixelauflösung und Pixelbegrenzungen für bestimmte Auflösungen definieren:
 
-* `maxPixel` - Die maximale Pixelauflösung definiert die maximale Auflösung für die Entschlüsselung.
-* `pixelConstraints` - Pixeleinschränkungen definieren Ausgabeanforderungen, die für eine bestimmte Auflösung erzwungen werden müssen.
+* `maxPixel` - Die maximale Pixelauflösung definiert die maximale Auflösung, für die eine Entschlüsselung vorgenommen wird.
+* `pixelConstraints` - Pixelbeschränkungen definieren Ausgabeanforderungen, die für eine bestimmte Auflösung erzwungen werden müssen.
 
-Sie verbinden Ausgabeanforderungen mit bestimmten Pixelbeschränkungen. Zu den Anforderungen, die Sie mit einer bestimmten Pixelbeschränkung verknüpfen können, zählen Einschränkungen für digitale, analoge und OTA-Verbindungen (Over-the-Air).
+Sie verknüpfen Ausgabeanforderungen mit bestimmten Pixelbeschränkungen. Die Arten von Anforderungen, die Sie mit einer bestimmten Pixelbegrenzung verknüpfen können, umfassen Einschränkungen für digitale, analoge und OTA-Verbindungen (Over-the-Air).
 
 **Digitale Ausgabe**
 
-Die Anforderung für die digitale Ausgabe kann restriktive Optionen festlegen, z. B. &quot;Digitalausgabeschutz erforderlich&quot;oder &quot;Wiedergabe ist nicht zulässig&quot;. In den Ausgabeanforderungen können auch weniger restriktive Optionen festgelegt werden, z. B. &quot;Es sollte kein Schutz angewendet werden&quot;oder &quot;Digitaler Schutz sollte verwendet werden, wenn er verfügbar ist&quot;.
+Die digitale Ausgabeanforderung kann restriktive Optionen festlegen, z. B. &quot;Digital Output Protection ist erforderlich&quot;oder &quot;Play-back ist nicht erlaubt&quot;. In den Ausgabeanforderungen können auch weniger restriktive Optionen festgelegt werden, z. B. &quot;kein Schutz sollte angewendet werden&quot;oder &quot;digitaler Schutz sollte verwendet werden, wenn er verfügbar ist&quot;.
 
-**Analogausgabe**
+**Analog Output**
 
-Analoge Ausgangsverbindungen sind einfacher als die digitale Ausgabe. sie bestehen aus einer einzigen Ausgabeanforderung.
+Analog-Ausgabeverbindungen sind einfacher als die digitale Ausgabe; sie bestehen aus einer einzigen Ausgabeanforderung.

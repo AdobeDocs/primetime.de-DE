@@ -1,20 +1,18 @@
 ---
-description: Sie können Ihren eigenen Opportunity Generator implementieren, indem Sie die OpportunityGenerator-Schnittstelle erweitern.
-title: Implementieren eines benutzerdefinierten Opportunitätsgenerators
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können Ihren eigenen Opportunity-Generator implementieren, indem Sie die OpportunityGenerator-Schnittstelle erweitern.
+title: Implementieren eines benutzerdefinierten Opportunity-Generators
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '78'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
+# Implementieren eines benutzerdefinierten Opportunity-Generators{#implement-a-custom-opportunity-generator}
 
-# Implementieren eines benutzerdefinierten Opportunitätsgenerators{#implement-a-custom-opportunity-generator}
+Sie können Ihren eigenen Opportunity-Generator implementieren, indem Sie die OpportunityGenerator-Schnittstelle erweitern.
 
-Sie können Ihren eigenen Opportunity Generator implementieren, indem Sie die OpportunityGenerator-Schnittstelle erweitern.
-
-1. Erstellen Sie den benutzerdefinierten Opportunitätsgenerator.
+1. Erstellen Sie den benutzerdefinierten Opportunity-Generator.
 
    Beispiel:
 
@@ -44,7 +42,7 @@ Sie können Ihren eigenen Opportunity Generator implementieren, indem Sie die Op
    }; 
    ```
 
-1. Erstellen Sie die benutzerdefinierte Inhaltsfabrik, die den benutzerdefinierten Opportunitätsgenerator verwendet.
+1. Erstellen Sie die benutzerdefinierte Inhaltsfactory, die den benutzerdefinierten Opportunity-Generator verwendet.
 
    Beispiel:
 
@@ -66,9 +64,9 @@ Sie können Ihren eigenen Opportunity Generator implementieren, indem Sie die Op
    }; 
    ```
 
-1. Registrieren Sie die benutzerdefinierte Inhaltsfactory für den wiederzugebenden Medienstream.
+1. Registrieren Sie die benutzerdefinierte Inhaltsfactory für die Wiedergabe des Medien-Streams.
 
-   Im UI-Framework-Player können Sie die Factory für benutzerdefinierte Inhalte wie folgt festlegen:
+   Im UI Framework-Player können Sie die benutzerdefinierte Inhaltsfactory wie folgt angeben:
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
@@ -83,4 +81,3 @@ Sie können Ihren eigenen Opportunity Generator implementieren, indem Sie die Op
      } 
    }); 
    ```
-

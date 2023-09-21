@@ -1,20 +1,18 @@
 ---
-description: Sie können Beschriftungen beim Abspielen von Videoinhalten anzeigen.
-title: Beschriftungen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können beim Abspielen von Videoinhalten Beschriftungen anzeigen.
+title: Untertitel
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '55'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
+# Untertitel{#captions}
 
-# Beschriftungen{#captions}
+Sie können beim Abspielen von Videoinhalten Beschriftungen anzeigen.
 
-Sie können Beschriftungen beim Abspielen von Videoinhalten anzeigen.
-
-Um Beschriftungen zu verarbeiten, müssen Sie den `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`-Ereignis-Listener hinzufügen:
+Zur Handhabung von Beschriftungen müssen Sie die `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` Ereignis-Listener:
 
 ```js
 ... 
@@ -34,7 +32,7 @@ function onCaptionsUpdateEvent (event) {
 </pre>
 ```
 
-Das UI-Framework bietet eine standardmäßige Verhaltensimplementierung von Beschriftungen, die geändert werden kann. Das Verhalten von Untertiteln kann auch geändert werden, indem das Verhalten von Untertiteln erweitert wird. Beispiel:
+Das UI Framework bietet eine standardmäßige Implementierung des Verhaltens von Untertiteln, die geändert werden kann. Das Verhalten von verdeckten Untertiteln kann auch geändert werden, indem das standardmäßige Verhalten von verdeckten Untertiteln erweitert wird. Beispiel:
 
 ```js
 // Using UI Framework 

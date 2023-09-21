@@ -1,26 +1,24 @@
 ---
-description: Die 302-Umleitungsoptimierung minimiert die Anzahl der 302 Umleitungs-Antworten, wodurch Ihre Anwendung den Lastenausgleich effektiver gestalten kann.
-title: Umleitungsoptimierung für 302 deaktivieren oder aktivieren
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Die 302-Umleitungsoptimierung minimiert die Anzahl der 302 Umleitantworten, was es Ihrer Anwendung ermöglicht, den Lastenausgleich effektiver zu gestalten.
+title: 302-Umleitungsoptimierung deaktivieren oder aktivieren
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '104'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# HTTP 302-Umleitungsoptimierung {#http-302-redirect-optimization}
 
-# HTTP 302 Umleitungsoptimierung {#http-302-redirect-optimization}
+Die 302-Umleitungsoptimierung minimiert die Anzahl der 302 Umleitantworten, was es Ihrer Anwendung ermöglicht, den Lastenausgleich effektiver zu gestalten.
 
-Die 302-Umleitungsoptimierung minimiert die Anzahl der 302 Umleitungs-Antworten, wodurch Ihre Anwendung den Lastenausgleich effektiver gestalten kann.
+Wenn eine Hauptmanifest-Anforderung umgeleitet wird und die Optimierung von 302 in Ihrem Player aktiviert ist, verwenden nachfolgende Anforderungen für Assets aus diesem Manifest den endgültigen Domänenspeicherort, wodurch zusätzliche 302 Antworten vermieden werden.
 
-Wenn eine Hauptmanifestanforderung umgeleitet wird und die 302-Optimierung im Player aktiviert ist, verwenden nachfolgende Anforderungen für Assets aus diesem Manifest den endgültigen Domänenspeicherort, wodurch weitere 302 Antworten vermieden werden.
+Diese Funktion ist standardmäßig aktiviert und Sie können diese Einstellung ändern.
 
-Diese Funktion ist standardmäßig aktiviert. Sie können diese Einstellung ändern.
+## 302-Umleitungsoptimierung deaktivieren oder aktivieren{#disable-or-enable-redirect-optimization}
 
-## Umleitungsoptimierung für 302 deaktivieren oder aktivieren{#disable-or-enable-redirect-optimization}
-
-Verwenden Sie die Eigenschaft `useRedirectedUrl`, um die 302-Umleitung zu aktivieren (true) oder zu deaktivieren (false).
+Verwenden Sie die `useRedirectedUrl` -Eigenschaft zum Aktivieren (true) oder Deaktivieren (false) der 302-Umleitung.
 Beispiel:
 
 ```java
@@ -39,4 +37,3 @@ MediaResource resource = MediaResource.createFromURL(url, resourceMetadata);
 //Load the resource 
 mediaPlayer.replaceCurrentItem(resource);
 ```
-

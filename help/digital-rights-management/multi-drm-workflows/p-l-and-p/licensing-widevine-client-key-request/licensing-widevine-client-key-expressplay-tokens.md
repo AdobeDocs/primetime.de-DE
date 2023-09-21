@@ -1,18 +1,16 @@
 ---
-description: Sie können Ausdrucks-Token für ihren verschlüsselten Inhalt generieren, indem Sie Token-Anforderungen an den entsprechenden Ausdrucks-Token-Server senden.
-title: Ausdruckstoken
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Sie können Ausdrucks-Token für ihren verschlüsselten Inhalt generieren, indem Sie Token-Anfragen an den entsprechenden Ausdrucks-Token-Server senden.
+title: Ausdrucks-Token
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
 
 ---
 
-
 # Ausdrucks-Token {#expressplay-tokens}
 
-Sie können Ausdrucks-Token für ihren verschlüsselten Inhalt generieren, indem Sie Token-Anforderungen an den entsprechenden Ausdrucks-Token-Server senden.
+Sie können Ausdrucks-Token für ihren verschlüsselten Inhalt generieren, indem Sie Token-Anfragen an den entsprechenden Ausdrucks-Token-Server senden.
 
 Ein Beispiel ist die folgende URL:
 
@@ -25,7 +23,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-Die Content-Verschlüsselungsschlüssel-Datenspeicherung-ID oder die CEKSID, die dem `kid`-Parameter übergeben werden, und der Inhaltsverschlüsselungsschlüssel oder der CEK, der dem `contentKey`-Parameter übergeben wird, müssen mit der Datenspeicherung-ID des Inhaltsverschlüsselungsschlüssels und dem Inhaltsverschlüsselungsschlüssel für die Verpackung übereinstimmen. Der folgende Text ist ein Beispiel für die Token-Serverantwort:
+Die Speicherkennung des Inhaltsverschlüsselungsschlüssels oder die CEKSID, die der `kid` Parameter und der dem `contentKey` -Parameter muss mit der Speicherkennung des Schlüssels für die Inhaltsverschlüsselung und dem Schlüssel für die Inhaltsverschlüsselung übereinstimmen, der für die Verpackung verwendet wird. Der folgende Text ist ein Beispiel für die Token-Server-Antwort:
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -34,7 +32,7 @@ https://wv.service.expressplay.com/hms/wv/rights/
  SJ4o-d8teAkUZUtW3Od5V-SHsCLnAlbFW84K71h2xNUiMAvRcUFBG3bjxMQ
 ```
 
-Anschließend können Sie
+Sie können dann
 
 * die zurückgegebene URL und Abfrage als Lizenzserver-URL verwenden oder
-* Entfernen Sie die Abfrage aus der URL und geben Sie das ExpressPlayToken separat als HTTP-POST-Header ein.
+* Entfernen Sie die Abfrage aus der URL und übergeben Sie den ExpressPlayToken separat als HTTP-POST-Header.

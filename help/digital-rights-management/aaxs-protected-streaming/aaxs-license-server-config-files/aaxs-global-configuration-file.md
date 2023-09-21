@@ -2,21 +2,19 @@
 title: Globale Konfigurationsdatei
 description: Globale Konfigurationsdatei
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
 
 ---
 
-
 # Globale Konfigurationsdatei{#global-configuration-file}
 
-Die Konfigurationsdatei &quot;flashaccess-global.xml&quot;enthält Einstellungen, die für alle Mieter des Lizenzservers gelten. Diese Datei muss sich unter *LicenseServer.ConfigRoot* befinden. Im Ordner &quot;configs&quot;finden Sie eine Beispiel für eine globale Konfigurationsdatei. Die globale Konfigurationsdatei enthält Folgendes:
+Die Konfigurationsdatei &quot;flashaccess-global.xml&quot;enthält Einstellungen, die für alle Mandanten des Lizenzservers gelten. Diese Datei muss sich unter *LicenseServer.ConfigRoot*. Eine globale Beispielkonfigurationsdatei finden Sie im Ordner &quot;configs&quot;. Die globale Konfigurationsdatei enthält Folgendes:
 
-* Zwischenspeicherung — Steuert die Zwischenspeicherung von Konfigurationsdateien im Speicher. Eine Erläuterung der Cacheeinstellungen finden Sie unter &quot;Aktualisieren von Konfigurationsdateien&quot;.
-* Protokollierung — Gibt die Protokollierungsstufe und die Häufigkeit des Rollovers von Protokolldateien an.
-* HSM-Kennwort — Nur erforderlich, wenn ein HSM zum Speichern von Serverberechtigungen verwendet wird.
+* Zwischenspeicherung - Steuert die Zwischenspeicherung von Konfigurationsdateien im Speicher. Eine Erläuterung der Cacheeinstellungen finden Sie unter &quot;Aktualisieren von Konfigurationsdateien&quot;.
+* Protokollierung - Gibt die Protokollierungsstufe und die Häufigkeit des Rollierens von Protokolldateien an.
+* HSM-Kennwort: Nur erforderlich, wenn HSM zum Speichern von Server-Anmeldeinformationen verwendet wird.
 
-Weitere Informationen finden Sie in den Kommentaren in der Beispiel-globalen Konfigurationsdatei unter `<AdobeAccessDVD>\Adobe Access Server for Protected Streaming\configs`.
+Siehe die Kommentare in der Beispiel-globalen Konfigurationsdatei unter `<AdobeAccessDVD>\Adobe Access Server for Protected Streaming\configs` für weitere Details.

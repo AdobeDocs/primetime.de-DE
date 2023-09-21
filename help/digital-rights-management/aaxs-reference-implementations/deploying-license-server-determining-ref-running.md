@@ -1,29 +1,27 @@
 ---
-title: Bestimmen, ob der Referenz-Implementierungslizenzserver ordnungsgemäß ausgeführt wird
-description: Bestimmen, ob der Referenz-Implementierungslizenzserver ordnungsgemäß ausgeführt wird
+title: Bestimmen, ob der Lizenzserver für Referenzimplementierung ordnungsgemäß ausgeführt wird
+description: Bestimmen, ob der Lizenzserver für Referenzimplementierung ordnungsgemäß ausgeführt wird
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
+# Bestimmen, ob der Lizenzserver für Referenzimplementierung ordnungsgemäß ausgeführt wird {#determining-if-reference-implementation-license-server-is-running-properly}
 
-# Bestimmen, ob der Referenz-Implementierungslizenzserver ordnungsgemäß ausgeführt wird {#determining-if-reference-implementation-license-server-is-running-properly}
+Es gibt mehrere Möglichkeiten, festzustellen, ob Ihr Server ordnungsgemäß gestartet wurde. Anzeigen der [!DNL catalina.log] -Protokolle reichen möglicherweise nicht aus, da der Lizenzserver seine eigenen Protokolldateien protokolliert. Führen Sie die folgenden Schritte aus, um sicherzustellen, dass Ihre Referenzimplementierung ordnungsgemäß gestartet wurde.
 
-Es gibt mehrere Möglichkeiten, um festzustellen, ob Ihr Server korrekt gestartet wurde. Die Anzeige der [!DNL catalina.log]-Protokolle ist möglicherweise nicht ausreichend, da der Lizenzserver sich bei seinen eigenen Protokolldateien anmeldet. Führen Sie die folgenden Schritte aus, um sicherzustellen, dass Ihre Referenzimplementierung ordnungsgemäß gestartet wurde.
+* Überprüfen Sie Ihre [!DNL AdobeFlashAccess.log] -Datei. Hier schreibt die Referenzimplementierung Protokollinformationen. Der Speicherort dieser Protokolldatei wird durch Ihre [!DNL log4j.xml] und können geändert werden, um auf einen beliebigen Ort zu verweisen. Standardmäßig wird die Protokolldatei in das Arbeitsverzeichnis ausgegeben, in dem Sie catalina ausgeführt haben.
 
-* Überprüfen Sie Ihre [!DNL AdobeFlashAccess.log]-Datei. Hier schreibt die Referenzimplementierung Protokollinformationen. Der Speicherort dieser Protokolldatei wird durch Ihre [!DNL log4j.xml]-Datei angegeben und kann so geändert werden, dass sie auf einen beliebigen Speicherort verweist. Standardmäßig wird die Protokolldatei in das Arbeitsverzeichnis ausgegeben, in dem Sie catalina ausgeführt haben.
+* Navigieren Sie zur folgenden URL: `https:///flashaccess/license/v4<your server:server port>`. Sie sollten den Text &quot;Lizenzserver ist richtig eingerichtet&quot;sehen.
 
-* Navigieren Sie zur folgenden URL: `https:///flashaccess/license/v4<your server:server port>`. Sie sollten den Text &quot;License Server ist korrekt eingerichtet&quot;sehen.
+Eine andere Möglichkeit, zu testen, ob Ihr Server ordnungsgemäß ausgeführt wird, besteht darin, einen Teil des Testinhalts zu verpacken, einen Beispiel-Videoplayer einzurichten und abzuspielen. Im folgenden Verfahren wird dieser Vorgang beschrieben:
 
-Eine andere Möglichkeit, zu testen, ob Ihr Server ordnungsgemäß ausgeführt wird, besteht darin, ein Testinhalt zu verpacken, einen Beispiel-Videoplayer einzurichten und abzuspielen. Im folgenden Verfahren wird dieser Vorgang beschrieben:
+1. Navigieren Sie zum [!DNL \Reference Implementation\Command Line Tools] Ordner. Informationen zum Installieren der Befehlszeilen-Tools finden Sie unter [Installieren der Befehlszeilen-Tools](../aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md#installing-the-command-line-tools).
 
-1. Navigieren Sie zum Ordner [!DNL \Reference Implementation\Command Line Tools]. Informationen zum Installieren der Befehlszeilenwerkzeuge finden Sie unter [Installieren der Befehlszeilenwerkzeuge](../aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md#installing-the-command-line-tools).
-
-1. Erstellen Sie eine einfache anonyme Richtlinie mit dem folgenden Befehl:
+1. Erstellen Sie mit dem folgenden Befehl eine einfache anonyme Richtlinie:
 
    ```
        java -jar libs\AdobePolicyManager.jar new policy_test.pol -x
@@ -31,9 +29,9 @@ Eine andere Möglichkeit, zu testen, ob Ihr Server ordnungsgemäß ausgeführt w
 
    Weitere Informationen zum Erstellen von Richtlinien mit dem Policy Manager finden Sie unter [Befehlszeilenverwendung](../aaxs-reference-implementations/command-line-tools/policy-manager/command-line-usage.md).
 
-1. Legen Sie die Eigenschaft `encrypt.license.serverurl` in der Datei [!DNL flashaccesstools.properties] auf die URL des Lizenzservers fest (z. B. `https:// localhost:8080/`). Die Datei [!DNL flashaccesstools.properties] befindet sich im Ordner [!DNL \Reference Implementation\Command Line Tools].
+1. Legen Sie die `encrypt.license.serverurl` -Eigenschaft in der [!DNL flashaccesstools.properties] Datei an die URL des Lizenzservers (z. B. `https:// localhost:8080/`). Die [!DNL flashaccesstools.properties] befindet sich unter der [!DNL \Reference Implementation\Command Line Tools] Ordner.
 
-1. Komprimieren Sie Inhalte mit dem folgenden Befehl:
+1. Komprimieren Sie ein Inhaltselement mit dem folgenden Befehl:
 
    ```java
        java -jar libs\AdobePackager.jar  
@@ -46,13 +44,13 @@ Eine andere Möglichkeit, zu testen, ob Ihr Server ordnungsgemäß ausgeführt w
    </i class="+ topic>
    ```
 
-1. Kopieren Sie die 2 generierten Dateien in den Ordner Tomcat [!DNL webapps\ROOT\Content].
-1. Navigieren Sie zu `Reference Implementation\Sample Video Players\Desktop\Flash Player\Release` und kopieren Sie den Inhalt in den Ordner Tomcat `webapps\ROOT\SVP\`.
+1. Kopieren Sie die beiden generierten Dateien in den Tomcat [!DNL webapps\ROOT\Content] Ordner.
+1. Navigieren Sie zu `Reference Implementation\Sample Video Players\Desktop\Flash Player\Release` und kopieren Sie den Inhalt in den Tomcat `webapps\ROOT\SVP\` Ordner.
 1. Installieren Sie Flash Player 10.1 oder höher.
 1. Öffnen Sie den Webbrowser und navigieren Sie zur folgenden URL:
 
    `https:// localhost:8080/SVP/player.html`
-1. Navigieren Sie zur folgenden URL und klicken Sie dann auf die Schaltfläche Abspielen:
+1. Navigieren Sie zur folgenden URL und klicken Sie auf die Schaltfläche Abspielen :
 
    `https:// localhost:8080/Content/<your_encrypted_FLV>`
-1. Wenn das Video nicht abgespielt werden kann, prüfen Sie, ob Fehlercodes im Protokollbereich des Beispiel-Video-Players oder in der Datei `AdobeFlashAccess.log` geschrieben wurden. Der Speicherort der Protokolldatei `AdobeFlashAccess.log` wird durch Ihre Datei &quot;log4j.xml&quot;angegeben und kann so geändert werden, dass sie auf einen beliebigen Speicherort verweist. Standardmäßig wird die Protokolldatei in das Arbeitsverzeichnis geschrieben, in dem Sie catalina ausgeführt haben.
+1. Wenn die Wiedergabe des Videos fehlschlägt, überprüfen Sie, ob im Protokollbereich des Beispiel-Video-Players oder im `AdobeFlashAccess.log` -Datei. Der Speicherort der `AdobeFlashAccess.log` Die Protokolldatei wird durch Ihre Datei log4j.xml angegeben und kann geändert werden, um auf einen beliebigen Speicherort zu verweisen. Standardmäßig wird die Protokolldatei in das Arbeitsverzeichnis geschrieben, in dem Sie catalina ausgeführt haben.

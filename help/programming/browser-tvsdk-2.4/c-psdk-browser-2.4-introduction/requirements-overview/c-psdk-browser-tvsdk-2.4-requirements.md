@@ -1,27 +1,25 @@
 ---
 description: Diese Version umfasst Player und unterstützt eine breite Palette von Browsern.
-title: Anforderungen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Voraussetzungen
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
-
 # Übersicht {#requirements-overview}
 
-Browser TVSDK erfordert bestimmte Eigenschaften für Medieninhalte, Manifestinhalte und Softwareversionen.
+Browser TVSDK erfordert spezifische Eigenschaften für Medieninhalte, Manifestinhalte und Softwareversionen.
 
-Das Browser TVSDK-Release umfasst die folgenden Player:
+Die Browser TVSDK-Version umfasst die folgenden Player:
 
-* `Primetime.js` für HLS auf Desktop- und Mobilgeräten
+* `Primetime.js` für HLS auf Desktop und Mobile
 
 Player enthalten die folgenden Referenz-APIs:
 
 * `Primetime.js` Browser TVSDK
-* JavaScript-API für Core Play-back
+* JavaScript-API für Core-Wiedergabe
 * Referenz-Demo-Player
 
 **Zertifizierte Plattformen:**
@@ -33,22 +31,22 @@ Player enthalten die folgenden Referenz-APIs:
       * Internet Explorer 11+
       * Chrome 33+
       * Firefox 38+
+
    * Microsoft Windows 8.1
 
       * Internet Explorer 11+
       * Chrome 33+
       * Firefox 38+
+
    * Microsoft Windows 10
 
       * Edge+
-   * Apple OS X
+
+   * APPLE OS X
 
       * Safari 8+
       * Chrome 33+
       * Firefox 38+
-
-
-
 
 * **Mobile Web-Konfigurationen**
 
@@ -56,18 +54,22 @@ Player enthalten die folgenden Referenz-APIs:
 
       * Nativer Browser
       * Chrome 33+
+
    * Android 5.0
 
       * Nativer Browser
       * Chrome 33+
+
    * Android 6.0
 
       * Chrome 33+
-   * Apple iOS 8
+
+   * APPLE IOS 8
 
       * Safari 8+
       * Chrome 33+
-   * Apple iOS 9
+
+   * APPLE IOS 9
 
       * Safari 8+
       * Chrome 33+
