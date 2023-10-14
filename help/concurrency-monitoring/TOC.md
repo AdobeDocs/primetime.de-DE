@@ -7,12 +7,12 @@ user-guide-description: Erfahren Sie, wie Sie Begrenzungen für die gleichzeitig
 source-git-commit: 11ca161ebaaeca08b6bdc84f9bd719dfc8509d09
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 0%
+ht-degree: 15%
 
 ---
 
 
-# Hilfe zur Überwachung der Parallelität von Primetime {#cm}
+# Überwachung der Primetime-Parallelität help {#cm}
 
 + [Einführung der Parallelüberwachung](cm-home.md)
 + [Glossar zur Überwachung der Parallelität](cm-glossary.md)

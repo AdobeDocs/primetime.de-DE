@@ -5,7 +5,7 @@ user-guide-title: Hilfe zu Primetime Ad Insertion
 source-git-commit: 2b8aa2d4d20dac0f6f8467043dd2e55a88e9e9f1
 workflow-type: tm+mt
 source-wordcount: '176'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
@@ -28,12 +28,12 @@ ht-degree: 4%
    + [Übersicht](just-in-time-transcoding/jit-transcoding-overview.md)
    + [Transkodierung und Normalisierung](just-in-time-transcoding/transcoding-and-normalization.md)
    + [Versand und Speicherung](https://experienceleague.adobe.com/docs/primetime/ad-insertion/technical-reference/delivery-and-storage.html)
-   + [Pre-Transcoding API](just-in-time-transcoding/pre-transcoding-api.md)
+   + [Pre-Transcoding-API](just-in-time-transcoding/pre-transcoding-api.md)
    + [Unterstützung für ID3-Injektion](just-in-time-transcoding/id3-injection-support.md)
 + Erweiterte Funktionen{#advanced-features}
    + [Routing von Anzeigen basierend auf Regeln](advanced-features/route-ads-based-on-rules.md)
    + [Werbeerlebnisse optimieren](advanced-features/optimize-ad-experiences.md)
-   + [Hinzufügen von Inhaltsbausteinen](advanced-features/add-content-bumpers.md)
+   + [Hinzufügen von Inhalts-Stoßstangen](advanced-features/add-content-bumpers.md)
    + [Kontextbezogene Berichterstellung und Zielgruppenbestimmung](advanced-features/contextual-reporting-and-targeting.md)
 + Leistung: Überwachung, Debugging und Reporting{#performance}
    + [Übersicht](performance-monitoring-debugging-reporting/performance-overview.md)
@@ -53,11 +53,11 @@ ht-degree: 4%
       + [Optimieren der Startzeiten von Videos](best-practices/optimize-video-startup-time.md)
       + [Analysieren der Leistung](best-practices/analyze-performance.md)
       + [Zwischenspeicherung](best-practices/caching.md)
-      + [Optimieren von Routen und Protokollen](best-practices/optimize-routes-protocols.md)
+      + [Routen und Protokolle optimieren](best-practices/optimize-routes-protocols.md)
       + [Anz. Auflösungsbegrenzungen anwenden](best-practices/apply-ad-resolution-constraints.md)
    + [Unterstützte CDNs](technical-reference/supported-cdns.md)
    + [Neuschreiben des Manifests](technical-reference/manifest-rewriting.md)
-   + [Verbose-Protokollierung](performance-monitoring-debugging-reporting/verbose-logging.md)
+   + [Verbose protokollieren](performance-monitoring-debugging-reporting/verbose-logging.md)
    + [Verbose-Kopfzeilen (X-ADBE-AI-X1)](performance-monitoring-debugging-reporting/debugging-headers.md)
    + [Versand und Speicherung](/help/primetime-ad-insertion/just-in-time-transcoding/delivery-and-storage.md)
    + [Erleichtern des HLS-Players beim Wechseln zu Failover/Backup-Streams](technical-reference/hls-switching-to-failover.md)

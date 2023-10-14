@@ -6,7 +6,7 @@ user-guide-description: Das Tutorial hilft, das TVSDK zu verstehen und die Funkt
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '246'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -17,8 +17,8 @@ ht-degree: 7%
 + Primetime-Referenzimplementierung {#reference}
    + [Verwendung der Primetime-Referenzimplementierung](ref-implementation/how-to-use-ref-player.md)
    + [Referenz-Implementierungsstruktur](ref-implementation/ref-player-structure.md)
-   + Verwenden von Feature Manager {#feature-managers}
-      + [Verwenden von Feature Manager](ref-implementation/using-feature-managers/how-to-use-feature-managers.md)
+   + Verwenden von Feature Managers {#feature-managers}
+      + [Verwenden von Feature Managers](ref-implementation/using-feature-managers/how-to-use-feature-managers.md)
       + [Erstellen von Funktions-Managern durch Weiterleiten von Konfigurationsinformationen an den MediaPlayer ...](ref-implementation/using-feature-managers/creating-feature-managers.md)
       + [Aktivieren oder Deaktivieren von Funktionen mit ManagerFactory](ref-implementation/using-feature-managers/turning-features-on-off.md)
       + [Umgang mit Ereignissen](ref-implementation/using-feature-managers/handling-events.md)
@@ -36,7 +36,7 @@ ht-degree: 7%
       + [JSON-Objekt für direkte Werbeunterbrechungen](set-up-dev-environment/exploring-code/json-direct-ad-breaks.md)
       + [JSON-Objekt für benutzerdefinierte Anzeigenmarken](set-up-dev-environment/exploring-code/json-custom-ad-markers.md)
       + [JSON-Objekt für Kennung der Berechtigungsressource](set-up-dev-environment/exploring-code/json-entitlement-resource-id.md)
-      + [Beispiel für ein JSON-Feed-Format](set-up-dev-environment/exploring-code/example-json-feed-format.md)
+      + [Beispielformat für JSON-Feeds](set-up-dev-environment/exploring-code/example-json-feed-format.md)
    + Implementieren der Videowiedergabe {#implement-video}
       + [Grundlegende Vorgänge der Videowiedergabe](implement-video-playback/video-playback.md)
       + [Videowiedergabe aktivieren](implement-video-playback/enable-video-playback.md)
